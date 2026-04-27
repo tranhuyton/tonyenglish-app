@@ -22,7 +22,7 @@ export default function ComputerTest({ onBack }: { onBack: () => void }) {
     }
   };
 
-  // --- LOGIC HIGHLIGHT (MỚI THÊM) ---
+  // --- LOGIC COPY, HIGHLIGHT & NOTE ---
   const [highlightMenu, setHighlightMenu] = useState({ x: 0, y: 0, show: false });
   const [currentRange, setCurrentRange] = useState<Range | null>(null);
 
@@ -31,11 +31,24 @@ export default function ComputerTest({ onBack }: { onBack: () => void }) {
     if (selection && selection.toString().trim().length > 0) {
       const range = selection.getRangeAt(0);
       const rect = range.getBoundingClientRect();
-      setHighlightMenu({ x: rect.left + rect.width / 2, y: rect.top - 45, show: true });
+      // Điều chỉnh vị trí y một chút để menu không đè lên text (giống ảnh)
+      setHighlightMenu({ x: rect.left + rect.width / 2, y: rect.top - 10, show: true });
       setCurrentRange(range);
     } else {
       setHighlightMenu({ ...highlightMenu, show: false });
       setCurrentRange(null);
+    }
+  };
+
+  const handleCopy = async () => {
+    if (currentRange) {
+      try {
+        await navigator.clipboard.writeText(currentRange.toString());
+      } catch (err) {
+        console.error('Failed to copy text: ', err);
+      }
+      setHighlightMenu({ ...highlightMenu, show: false });
+      window.getSelection()?.removeAllRanges();
     }
   };
 
@@ -45,7 +58,6 @@ export default function ComputerTest({ onBack }: { onBack: () => void }) {
       span.className = 'bg-yellow-300 cursor-pointer rounded-sm';
       span.title = "Click để xóa highlight";
       span.onclick = function() {
-        // Logic xóa highlight khi click lại vào đoạn đã tô vàng
         const parent = this.parentNode;
         if (parent) {
           const textNode = document.createTextNode(this.textContent || '');
@@ -61,6 +73,37 @@ export default function ComputerTest({ onBack }: { onBack: () => void }) {
       window.getSelection()?.removeAllRanges();
     }
   };
+
+  const handleNote = () => {
+    if (currentRange) {
+      const noteText = window.prompt("Nhập nội dung ghi chú của bạn:");
+      if (noteText && noteText.trim() !== "") {
+        const span = document.createElement('span');
+        // Thêm gạch chân đỏ để phân biệt Note với Highlight thường
+        span.className = 'bg-yellow-300 cursor-pointer rounded-sm border-b-2 border-red-500';
+        span.title = `Ghi chú: ${noteText}`;
+        span.dataset.note = noteText; // Lưu data note vào DOM
+        span.onclick = function() {
+          // Khi click vào đoạn có note, hỏi xem muốn xóa không
+          if(window.confirm(`Ghi chú của bạn: "${this.dataset.note}"\n\nBạn có muốn xóa ghi chú này không?`)) {
+            const parent = this.parentNode;
+            if (parent) {
+              const textNode = document.createTextNode(this.textContent || '');
+              parent.replaceChild(textNode, this);
+            }
+          }
+        };
+        try {
+          currentRange.surroundContents(span);
+        } catch (e) {
+          alert("Lưu ý: Chỉ nên bôi đen gọn trong 1 đoạn văn để không bị lỗi nhé!");
+        }
+      }
+      setHighlightMenu({ ...highlightMenu, show: false });
+      window.getSelection()?.removeAllRanges();
+    }
+  };
+
 
   // --- LOGIC KÉO THẢ ---
   const [leftWidth, setLeftWidth] = useState(50);
@@ -126,14 +169,28 @@ export default function ComputerTest({ onBack }: { onBack: () => void }) {
   return (
     <div className="flex flex-col h-screen bg-white font-sans text-gray-900 relative">
       
-      {/* POPUP MENU HIGHLIGHT (Hiện ra khi bôi đen text) */}
+      {/* POPUP MENU HIGHLIGHT, COPY, NOTE (Thiết kế giống ảnh mẫu) */}
       {highlightMenu.show && (
         <div 
-          style={{ left: highlightMenu.x, top: highlightMenu.y, transform: 'translateX(-50%)' }} 
-          className="fixed z-50 bg-gray-900 text-white px-3 py-1.5 rounded shadow-xl text-sm font-bold cursor-pointer hover:bg-gray-800 border border-gray-700 flex items-center gap-2"
-          onMouseDown={(e) => { e.preventDefault(); applyHighlight(); }}
+          style={{ left: highlightMenu.x, top: highlightMenu.y, transform: 'translate(-50%, -100%)' }} 
+          className="fixed z-50 bg-white text-gray-800 rounded shadow-[0_4px_15px_rgba(0,0,0,0.15)] border border-gray-200 text-sm flex flex-col py-1 min-w-[130px]"
+          // Dùng onMouseDown với preventDefault để không bị mất bôi đen khi bấm vào menu
+          onMouseDown={(e) => e.preventDefault()}
         >
-          <span className="w-3 h-3 rounded-full bg-yellow-400 inline-block"></span> Highlight
+          <button onClick={handleCopy} className="flex items-center gap-3 px-4 py-2 hover:bg-gray-100 text-left w-full transition-colors">
+            <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+            <span className="font-medium">Copy</span>
+          </button>
+          
+          <button onClick={applyHighlight} className="flex items-center gap-3 px-4 py-2 hover:bg-gray-100 text-left w-full transition-colors">
+            <svg className="w-4 h-4 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+            <span className="font-medium">Highlight</span>
+          </button>
+
+          <button onClick={handleNote} className="flex items-center gap-3 px-4 py-2 hover:bg-gray-100 text-left w-full transition-colors">
+            <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+            <span className="font-medium">Note</span>
+          </button>
         </div>
       )}
 
@@ -160,7 +217,7 @@ export default function ComputerTest({ onBack }: { onBack: () => void }) {
             <p>It wasn't until the 1860s that pedals were added to the front wheel, creating what became known as the velocipede. This invention was significantly improved in the 1870s with the introduction of the penny-farthing, a bicycle with a massive front wheel and a tiny rear wheel. Although it allowed for higher speeds, it was notoriously dangerous to ride due to its height and poor weight distribution.</p>
             <p>The modern bicycle design, featuring two wheels of the same size and a chain drive to the rear wheel, emerged in the late 1880s. This design, called the "safety bicycle," revolutionized personal transport and made cycling accessible to a much broader public.</p>
             <div className="h-[600px] mt-8 flex items-center justify-center text-gray-400 border-2 border-dashed border-gray-200 bg-gray-50">
-              (Giả lập bài đọc rất dài - Hãy thử bôi đen chữ để test tính năng Highlight anh nhé)
+              (Giả lập bài đọc rất dài - Hãy thử bôi đen chữ để test tính năng Highlight, Copy, Note anh nhé)
             </div>
           </div>
         </section>

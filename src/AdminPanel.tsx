@@ -1,229 +1,239 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import ComputerTest from './ComputerTest';
+import PaperTest from './PaperTest';
+import AdminPanel from './AdminPanel';
+import AuthModal from './AuthModal'; // Kéo Popup Đăng nhập vào
 import { supabase } from './supabase';
-// Import thư viện đọc Excel vừa cài
-import * as XLSX from 'xlsx';
+import { testData as localTestData } from './testData';
+import './tailwind.css';
 
-export default function AdminPanel({ onBack }: { onBack: () => void }) {
-  const [dbTests, setDbTests] = useState<any[]>([]);
+export default function App() {
+  const [currentView, setCurrentView] = useState<'menu' | 'computer' | 'paper' | 'admin'>('menu');
+  const [cloudTests, setCloudTests] = useState<any[]>([]);
+  const [selectedTest, setSelectedTest] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
   
-  // Các trường thông tin của bài test
-  const [testId, setTestId] = useState('');
-  const [title, setTitle] = useState('');
-  const [timeLimit, setTimeLimit] = useState('60:00 phút');
-  const [audioUrl, setAudioUrl] = useState('');
-  const [questionsData, setQuestionsData] = useState<any[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  // TÀI KHOẢN VÀ LỊCH SỬ HỌC TẬP
+  const [user, setUser] = useState<any>(null);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [history, setHistory] = useState<any[]>([]);
 
   useEffect(() => {
-    fetchTestsFromCloud();
+    // Check xem có ai đang đăng nhập không
+    supabase.auth.getSession().then(({ data: { session } }) => setUser(session?.user || null));
+    // Tự động thay đổi Trạng thái trên giao diện khi Đăng nhập/Đăng xuất
+    const { data: authListener } = supabase.auth.onAuthStateChange((_event, session) => setUser(session?.user || null));
+    return () => authListener.subscription.unsubscribe();
   }, []);
 
-  const fetchTestsFromCloud = async () => {
-    const { data, error } = await supabase.from('mock_tests').select('*').order('created_at', { ascending: false });
-    if (data) setDbTests(data);
-    if (error) console.error("Lỗi tải data:", error);
-  };
-
-  // HÀM MA THUẬT: ĐỌC FILE EXCEL VÀ TỰ ĐỘNG DỊCH SANG JSON
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    setIsLoading(true);
-    const reader = new FileReader();
-    
-    reader.onload = async (evt) => {
-      try {
-        const data = new Uint8Array(evt.target?.result as ArrayBuffer);
-        const workbook = XLSX.read(data, { type: 'array' });
-        
-        // Lấy dữ liệu từ Sheet đầu tiên của file Excel
-        const firstSheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[firstSheetName];
-        
-        // Chuyển đổi Excel thành mảng Object
-        const rawJson: any[] = XLSX.utils.sheet_to_json(worksheet);
-
-        if (rawJson.length === 0) throw new Error("File Excel trống!");
-
-        // Vòng lặp: Chuyển đổi từng hàng Excel thành chuẩn dữ liệu hệ thống cần
-        const formattedQuestions = rawJson.map((row: any, index: number) => {
-          const options = [];
-          
-          // Gộp các đáp án lại. Nếu người dùng nhập thẳng "A. Hello" thì lấy luôn, nếu nhập "Hello" thì tự thêm "A. "
-          if (row['A']) options.push(String(row['A']).startsWith('A.') ? row['A'] : `A. ${row['A']}`);
-          if (row['B']) options.push(String(row['B']).startsWith('B.') ? row['B'] : `B. ${row['B']}`);
-          if (row['C']) options.push(String(row['C']).startsWith('C.') ? row['C'] : `C. ${row['C']}`);
-          if (row['D']) options.push(String(row['D']).startsWith('D.') ? row['D'] : `D. ${row['D']}`);
-
-          let correct = String(row['Đáp án đúng'] || '').trim();
-          
-          // SỰ THÔNG MINH CỦA CODE: Nếu GV chỉ gõ chữ "A" vào cột Đáp án, hệ thống tự động tìm đoạn "A. ..." để khớp vào.
-          if (correct.length === 1 && options.length > 0) {
-            const found = options.find(o => o.toUpperCase().startsWith(correct.toUpperCase() + '.'));
-            if (found) correct = found;
-          }
-
-          return {
-            id: row['ID'] || index + 1,
-            text: row['Câu hỏi'] || "",
-            options: options, // Nếu file Excel không có cột ABCD (Dạng điền từ) thì mảng này sẽ tự động rỗng []
-            correctAnswer: correct,
-            explanation: row['Giải thích'] || ""
-          };
-        });
-
-        setQuestionsData(formattedQuestions);
-        alert(`✅ Xử lý thành công! Tìm thấy ${formattedQuestions.length} câu hỏi. Hãy bấm "XUẤT BẢN" để đẩy lên máy chủ.`);
-      } catch (error: any) {
-        alert("❌ Lỗi đọc file Excel. Vui lòng kiểm tra lại cấu trúc cột. Chi tiết: " + error.message);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    reader.readAsArrayBuffer(file);
-  };
-
-  // HÀM ĐẨY ĐỀ LÊN ĐÁM MÂY SUPABASE
-  const handlePublish = async () => {
-    if (!testId || !title) return alert("⚠️ Vui lòng nhập Mã đề và Tên bài thi!");
-    if (questionsData.length === 0) return alert("⚠️ Bạn chưa tải file Excel câu hỏi lên!");
-    
-    setIsLoading(true);
-    
-    // Gom dữ liệu Form và dữ liệu Excel thành 1 cục hoàn chỉnh
-    const finalTestData = {
-      testId: testId,
-      title: title,
-      type: 'paper',
-      timeLimit: timeLimit,
-      audioUrl: audioUrl,
-      partName: "Nội dung bài thi:",
-      instructions: ["Đề thi này được tạo tự động từ file Excel."],
-      totalQuestions: questionsData.length,
-      questions: questionsData
-    };
-
-    const { error } = await supabase.from('mock_tests').insert([{
-      test_id: testId,
-      title: title,
-      type: 'paper',
-      test_data: finalTestData
-    }]);
-
-    if (error) {
-      alert("Lỗi tải lên Đám mây: " + error.message);
-    } else {
-      alert("🚀 Đã xuất bản lên Máy chủ Cloud thành công!");
-      // Reset form cho sạch sẽ
-      setTestId(''); setTitle(''); setAudioUrl(''); setQuestionsData([]);
-      if (fileInputRef.current) fileInputRef.current.value = '';
+  useEffect(() => {
+    if (currentView === 'menu') {
       fetchTestsFromCloud();
+      if (user) fetchUserHistory(user.email);
+      else setHistory([]); // Nếu chưa đăng nhập thì xóa trắng bảng lịch sử
     }
+  }, [currentView, user]);
+
+  const fetchTestsFromCloud = async () => {
+    setIsLoading(true);
+    const { data } = await supabase.from('mock_tests').select('*').order('created_at', { ascending: false });
+    if (data) setCloudTests(data);
     setIsLoading(false);
   };
 
-  const handleDelete = async (id: string) => {
-    if(window.confirm("Xóa vĩnh viễn đề thi này khỏi Máy chủ?")) {
-      await supabase.from('mock_tests').delete().eq('id', id);
-      fetchTestsFromCloud();
-    }
+  const fetchUserHistory = async (email: string) => {
+    // CHỈ LẤY ĐIỂM CỦA ĐÚNG HỌC SINH ĐÓ
+    const { data } = await supabase.from('test_results').select('*').eq('user_email', email).order('created_at', { ascending: false });
+    if (data) setHistory(data);
   };
 
+  const handleLogout = async () => {
+    if (window.confirm("Bạn có chắc muốn đăng xuất?")) await supabase.auth.signOut();
+  };
+
+  const handleBackToMenu = () => { setCurrentView('menu'); setSelectedTest(null); };
+
+  // HÀM CHẶN CỬA: Nếu chưa đăng nhập thì hiện Popup bắt Đăng nhập
+  const handleStartTest = (type: 'computer' | 'paper', testData: any = null) => {
+    if (!user) {
+      alert("⚠️ Vui lòng Đăng Nhập để hệ thống lưu trữ điểm số của bạn!");
+      setShowAuthModal(true);
+      return;
+    }
+    setSelectedTest(testData);
+    setCurrentView(type);
+  };
+
+  if (currentView === 'computer') return <ComputerTest onBack={handleBackToMenu} />;
+  if (currentView === 'paper') return <PaperTest onBack={handleBackToMenu} testData={selectedTest || localTestData} />;
+  if (currentView === 'admin') return <AdminPanel onBack={handleBackToMenu} />;
+
   return (
-    <div className="min-h-screen bg-slate-900 p-8 font-sans text-slate-200">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex justify-between items-center mb-8 border-b border-slate-700 pb-4">
-          <h1 className="text-2xl font-bold text-white flex items-center gap-3">
-            <span className="text-emerald-400">📊</span> Quản trị Đề thi (Upload bằng Excel)
-          </h1>
-          <button onClick={onBack} className="bg-slate-700 hover:bg-slate-600 px-4 py-2 rounded text-sm font-bold text-white transition">
-            ⬅ Thoát về Trang chủ
-          </button>
+    <div className="min-h-screen bg-[#f1f5f9] flex flex-col items-center py-8 px-4 font-sans relative">
+      
+      {/* NẾU showAuthModal = true THÌ BẬT POPUP LÊN */}
+      {showAuthModal && <AuthModal onClose={() => setShowAuthModal(false)} />}
+      
+      <div className="max-w-6xl w-full">
+        {/* THANH ĐIỀU HƯỚNG TÀI KHOẢN TRÊN CÙNG */}
+        <div className="flex justify-between items-center bg-white p-4 rounded-xl shadow-sm mb-6 border border-gray-200">
+          <div className="flex items-center gap-3">
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl uppercase ${user ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-400'}`}>
+              {user ? user.email.charAt(0) : 'G'}
+            </div>
+            <div>
+              <p className="text-xs text-gray-500">{user ? 'Xin chào học viên,' : 'Khách truy cập'}</p>
+              <p className="font-bold text-gray-800">{user ? user.email : 'Chưa đăng nhập'}</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <button onClick={() => setCurrentView('admin')} className="bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm px-4 py-2 rounded-lg font-bold transition">
+              ⚙️ Quản Trị
+            </button>
+            {user ? (
+              <button onClick={handleLogout} className="bg-red-50 hover:bg-red-100 text-red-600 text-sm px-4 py-2 rounded-lg font-bold transition border border-red-100">
+                Đăng xuất
+              </button>
+            ) : (
+              <button onClick={() => setShowAuthModal(true)} className="bg-[#2b88c9] hover:bg-[#1a6ea6] text-white text-sm px-5 py-2 rounded-lg font-bold transition shadow-sm">
+                Đăng Nhập
+              </button>
+            )}
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* CỘT TRÁI: FORM UPLOAD */}
-          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-xl flex flex-col gap-4 h-fit">
-            <h2 className="text-lg font-bold text-blue-400 mb-2 border-b border-slate-700 pb-2">1. Thông tin chung</h2>
+        <div className="grid lg:grid-cols-3 gap-8">
+          
+          {/* ================ CỘT TRÁI: DANH SÁCH ĐỀ THI ================ */}
+          <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden h-fit">
             
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-bold text-slate-400 mb-1">Mã đề thi (VD: test_01)</label>
-                <input value={testId} onChange={e => setTestId(e.target.value)} className="w-full bg-slate-900 border border-slate-600 rounded px-3 py-2 text-white focus:border-blue-500 outline-none text-sm" placeholder="Mã đề viết liền không dấu" />
+            {/* CẬP NHẬT HEADER GIỐNG BẢN CŨ (To, rõ ràng và sang trọng hơn) */}
+            <div className="bg-[#1f2937] px-8 py-10 text-center relative overflow-hidden">
+              <h1 className="text-3xl font-bold text-white mb-3">Hệ Thống Luyện Thi Mock Test</h1>
+              <p className="text-gray-300 text-sm">Vui lòng chọn định dạng bài thi bạn muốn trải nghiệm.</p>
+              <p className="text-emerald-400 text-sm font-bold mt-2">Dữ liệu làm bài được tự động lưu & đồng bộ Máy chủ.</p>
+            </div>
+            
+            <div className="p-8">
+              
+              {/* PHẦN 1: BÀI THI MẪU - ĐƯỢC THAY BẰNG GIAO DIỆN NÚT TO CỦA BẢN CŨ */}
+              <h3 className="font-bold text-lg text-gray-800 mb-4 flex items-center gap-2">
+                <span className="w-1.5 h-5 bg-blue-500 rounded"></span> Bài Thi Mẫu (Demo Offline)
+              </h3>
+              
+              <div className="grid md:grid-cols-2 gap-6 mb-10">
+                {/* NÚT THI MÁY */}
+                <button 
+                  onClick={() => handleStartTest('computer')}
+                  className="flex flex-col items-center text-center p-8 border-2 border-gray-200 rounded-xl hover:border-[#3b82f6] hover:bg-blue-50 transition-all group cursor-pointer"
+                >
+                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">💻</div>
+                  <h2 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">Computer-Delivered</h2>
+                  <p className="text-sm text-gray-500">Giao diện chia đôi màn hình kéo thả, ô điền từ nội tuyến. Chuẩn format thi máy IDP/BC.</p>
+                </button>
+
+                {/* NÚT THI GIẤY / NGHE */}
+                <button 
+                  onClick={() => handleStartTest('paper')}
+                  className="flex flex-col items-center text-center p-8 border-2 border-gray-200 rounded-xl hover:border-[#2b88c9] hover:bg-blue-50 transition-all group cursor-pointer"
+                >
+                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">📝</div>
+                  <h2 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-[#2b88c9]">Paper-based / Listening</h2>
+                  <p className="text-sm text-gray-500">Giao diện chia cột cố định, có Audio nghe, ghim Navigation trượt theo mắt, đánh dấu câu.</p>
+                </button>
               </div>
-              <div>
-                <label className="block text-xs font-bold text-slate-400 mb-1">Thời gian làm bài</label>
-                <input value={timeLimit} onChange={e => setTimeLimit(e.target.value)} className="w-full bg-slate-900 border border-slate-600 rounded px-3 py-2 text-white focus:border-blue-500 outline-none text-sm" placeholder="VD: 60:00 phút" />
-              </div>
-            </div>
 
-            <div>
-              <label className="block text-xs font-bold text-slate-400 mb-1">Tên bài thi hiển thị</label>
-              <input value={title} onChange={e => setTitle(e.target.value)} className="w-full bg-slate-900 border border-slate-600 rounded px-3 py-2 text-white focus:border-blue-500 outline-none text-sm" placeholder="VD: Đề thi IELTS Tháng 10" />
-            </div>
+              {/* PHẦN 2: KHO ĐỀ TỪ ĐÁM MÂY */}
+              <h3 className="font-bold text-lg text-gray-800 mb-4 flex items-center gap-2 pt-6 border-t border-gray-100">
+                <span className="w-1.5 h-5 bg-purple-500 rounded"></span> Kho Đề Từ Đám Mây (Live Database)
+              </h3>
+              
+              {isLoading ? (
+                 <div className="text-center py-6 text-gray-500 animate-pulse">Đang tải đề...</div>
+              ) : cloudTests.length === 0 ? (
+                 <p className="text-gray-500 italic text-sm py-4">Chưa có đề thi nào trên Server.</p>
+              ) : (
+                <div className="grid sm:grid-cols-2 gap-6">
+                  {cloudTests.map((test) => {
+                    // Tự động nhận diện loại đề từ Database hoặc JSON data
+                    const testType = test.type || (test.test_data && test.test_data.type) || 'paper';
+                    
+                    return (
+                      <div key={test.id} className="border border-purple-200 bg-purple-50/30 rounded-xl p-5 hover:shadow-md transition group">
+                        <div className="flex justify-between items-start mb-2">
+                          <span className="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-1 rounded uppercase inline-block">LIVE CLOUD</span>
+                          {/* Hiển thị Badge cho phù hợp nền sáng */}
+                          {testType === 'computer' ? (
+                            <span className="bg-purple-100 text-purple-700 text-[10px] px-2 py-0.5 rounded uppercase font-bold border border-purple-200">
+                              💻 Thi Máy
+                            </span>
+                          ) : (
+                            <span className="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded uppercase font-bold border border-blue-200">
+                              📝 Thi Giấy
+                            </span>
+                          )}
+                        </div>
+                        <h2 className="text-base font-bold text-gray-800 mb-1 truncate" title={test.title}>{test.title}</h2>
+                        <p className="text-xs text-gray-500 mb-4 font-mono">ID: {test.test_id}</p>
+                        <button 
+                          onClick={() => handleStartTest(testType, test.test_data)} 
+                          className="w-full bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold py-2.5 rounded-lg transition shadow-sm"
+                        >
+                          Làm bài thi này ➔
+                        </button>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
 
-            <div>
-              <label className="block text-xs font-bold text-slate-400 mb-1">Link Audio (Phần Listening - Tùy chọn)</label>
-              <input value={audioUrl} onChange={e => setAudioUrl(e.target.value)} className="w-full bg-slate-900 border border-slate-600 rounded px-3 py-2 text-white focus:border-blue-500 outline-none text-sm" placeholder="Dán link file .mp3 vào đây" />
-            </div>
-
-            <h2 className="text-lg font-bold text-emerald-400 mt-4 border-b border-slate-700 pb-2">2. Upload Câu hỏi (File Excel)</h2>
-            <div className="bg-slate-900 border-2 border-dashed border-slate-600 rounded-lg p-6 text-center hover:border-emerald-500 hover:bg-slate-800 transition relative">
-              <input 
-                type="file" 
-                accept=".xlsx, .xls"
-                onChange={handleFileUpload}
-                ref={fileInputRef}
-                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-              />
-              <div className="text-4xl mb-2">📑</div>
-              <p className="text-sm font-bold text-emerald-400 mb-1">Kéo thả hoặc Bấm vào đây để tải file Excel</p>
-              <p className="text-xs text-slate-500">
-                {questionsData.length > 0 ? <span className="text-emerald-400 font-bold">Đã tải lên sẵn sàng {questionsData.length} câu hỏi!</span> : "Chưa có file nào được chọn (.xlsx)"}
-              </p>
-            </div>
-
-            <button 
-              onClick={handlePublish} 
-              disabled={isLoading || questionsData.length === 0}
-              className={`w-full text-white font-bold py-3.5 rounded-lg mt-4 transition shadow-lg ${isLoading || questionsData.length === 0 ? 'bg-slate-600 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-500'}`}
-            >
-              {isLoading ? "⏳ Đang xử lý..." : "🚀 TẠO ĐỀ & ĐẨY LÊN CLOUD"}
-            </button>
-
-            <div className="mt-2 bg-slate-950 p-4 rounded border border-slate-800">
-              <p className="text-[11px] text-emerald-400 font-bold mb-2">💡 QUY CÁCH FILE EXCEL (HÀNG SỐ 1):</p>
-              <code className="text-[10px] text-slate-400 block break-all">
-                ID | Câu hỏi | A | B | C | D | Đáp án đúng | Giải thích
-              </code>
             </div>
           </div>
 
-          {/* CỘT PHẢI: KHO MÁY CHỦ */}
-          <div className="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-xl flex flex-col h-fit">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-lg font-bold text-emerald-400">3. Kho đề Máy chủ Supabase</h2>
-              <span className="text-xs bg-emerald-900 text-emerald-300 px-2 py-1 rounded border border-emerald-700">Online</span>
+          {/* ================ CỘT PHẢI: BẢNG LỊCH SỬ DASHBOARD ================ */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden h-fit max-h-[700px] flex flex-col">
+            <div className="bg-gray-50 border-b border-gray-200 px-6 py-4 shrink-0">
+              <h2 className="font-bold text-gray-800 flex items-center gap-2"><span>📈</span> Lịch Sử Học Tập</h2>
             </div>
             
-            <div className="space-y-3 flex-1 overflow-y-auto pr-2 custom-scrollbar" style={{ maxHeight: '600px' }}>
-              {dbTests.length === 0 ? (
-                <div className="text-slate-500 italic text-center py-10 border border-dashed border-slate-700 rounded">Kho Máy chủ trống.</div>
+            <div className="p-6 overflow-y-auto custom-scrollbar flex-1">
+              {!user ? (
+                <div className="text-center py-10">
+                  <div className="text-4xl mb-3">🔒</div>
+                  <p className="text-gray-500 text-sm">Đăng nhập để xem lịch sử làm bài của bạn.</p>
+                  <button onClick={() => setShowAuthModal(true)} className="mt-4 text-sm font-bold text-[#2b88c9] underline">Đăng nhập ngay</button>
+                </div>
+              ) : history.length === 0 ? (
+                <div className="text-center py-10">
+                  <div className="text-4xl mb-3">📭</div>
+                  <p className="text-gray-500 text-sm">Bạn chưa nộp bài thi nào.</p>
+                </div>
               ) : (
-                dbTests.map((test) => (
-                  <div key={test.id} className="bg-slate-900 border border-slate-700 p-4 rounded flex justify-between items-center hover:border-slate-500 transition">
-                    <div className="overflow-hidden pr-4">
-                      <h3 className="font-bold text-white text-sm truncate">{test.title}</h3>
-                      <p className="text-xs text-slate-400 mt-1 truncate">Mã: {test.test_id}</p>
+                <div className="space-y-4">
+                  {history.map((record, index) => (
+                    <div key={index} className="bg-gray-50 border border-gray-200 p-4 rounded-xl relative overflow-hidden hover:shadow-md transition">
+                      <div className={`absolute left-0 top-0 bottom-0 w-1 ${record.accuracy >= 70 ? 'bg-green-500' : record.accuracy >= 50 ? 'bg-yellow-400' : 'bg-red-500'}`}></div>
+                      
+                      <h3 className="font-bold text-sm text-gray-800 truncate mb-1 pr-2" title={record.test_title}>{record.test_title}</h3>
+                      <p className="text-[11px] text-gray-400 mb-3">{new Date(record.created_at).toLocaleString('vi-VN')}</p>
+                      
+                      <div className="flex justify-between items-end">
+                        <div>
+                          <p className="text-[10px] text-gray-500 uppercase font-bold tracking-wider mb-1">Điểm số</p>
+                          <p className="text-lg font-black text-gray-800">{record.score} <span className="text-sm font-medium text-gray-400">/ {record.total_questions}</span></p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-[10px] text-gray-500 uppercase font-bold tracking-wider mb-1">Chính xác</p>
+                          <p className={`font-bold ${record.accuracy >= 70 ? 'text-green-600' : record.accuracy >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>{record.accuracy}%</p>
+                        </div>
+                      </div>
                     </div>
-                    <button onClick={() => handleDelete(test.id)} className="bg-red-900/30 hover:bg-red-900 text-red-400 text-xs px-2.5 py-1.5 rounded border border-red-800 transition shrink-0">Xóa</button>
-                  </div>
-                ))
+                  ))}
+                </div>
               )}
             </div>
           </div>
+
         </div>
       </div>
     </div>

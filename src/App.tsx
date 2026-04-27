@@ -143,7 +143,7 @@ export default function App() {
                 </button>
               </div>
 
-              {/* PHẦN 2: KHO ĐỀ TỪ ĐÁM MÂY (Vẫn giữ nguyên chức năng load từ Supabase) */}
+              {/* PHẦN 2: KHO ĐỀ TỪ ĐÁM MÂY */}
               <h3 className="font-bold text-lg text-gray-800 mb-4 flex items-center gap-2 pt-6 border-t border-gray-100">
                 <span className="w-1.5 h-5 bg-purple-500 rounded"></span> Kho Đề Từ Đám Mây (Live Database)
               </h3>
@@ -154,16 +154,36 @@ export default function App() {
                  <p className="text-gray-500 italic text-sm py-4">Chưa có đề thi nào trên Server.</p>
               ) : (
                 <div className="grid sm:grid-cols-2 gap-6">
-                  {cloudTests.map((test) => (
-                    <div key={test.id} className="border border-purple-200 bg-purple-50/30 rounded-xl p-5 hover:shadow-md transition group">
-                      <span className="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block">LIVE CLOUD</span>
-                      <h2 className="text-base font-bold text-gray-800 mb-1 truncate" title={test.title}>{test.title}</h2>
-                      <p className="text-xs text-gray-500 mb-4 font-mono">ID: {test.test_id}</p>
-                      <button onClick={() => handleStartTest('paper', test.test_data)} className="w-full bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold py-2.5 rounded-lg transition shadow-sm">
-                        Làm bài thi này ➔
-                      </button>
-                    </div>
-                  ))}
+                  {cloudTests.map((test) => {
+                    // Tự động nhận diện loại đề từ Database hoặc JSON data
+                    const testType = test.type || (test.test_data && test.test_data.type) || 'paper';
+                    
+                    return (
+                      <div key={test.id} className="border border-purple-200 bg-purple-50/30 rounded-xl p-5 hover:shadow-md transition group">
+                        <div className="flex justify-between items-start mb-2">
+                          <span className="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-1 rounded uppercase inline-block">LIVE CLOUD</span>
+                          {/* Hiển thị Badge cho phù hợp nền sáng */}
+                          {testType === 'computer' ? (
+                            <span className="bg-purple-100 text-purple-700 text-[10px] px-2 py-0.5 rounded uppercase font-bold border border-purple-200">
+                              💻 Thi Máy
+                            </span>
+                          ) : (
+                            <span className="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded uppercase font-bold border border-blue-200">
+                              📝 Thi Giấy
+                            </span>
+                          )}
+                        </div>
+                        <h2 className="text-base font-bold text-gray-800 mb-1 truncate" title={test.title}>{test.title}</h2>
+                        <p className="text-xs text-gray-500 mb-4 font-mono">ID: {test.test_id}</p>
+                        <button 
+                          onClick={() => handleStartTest(testType, test.test_data)} 
+                          className="w-full bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold py-2.5 rounded-lg transition shadow-sm"
+                        >
+                          Làm bài thi này ➔
+                        </button>
+                      </div>
+                    );
+                  })}
                 </div>
               )}
 
