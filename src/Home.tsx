@@ -46,10 +46,10 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
       {/* NAVBAR TRANG CHỦ */}
       <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          {/* CẬP NHẬT: GẮN LINK TRANG CHỦ CHÍNH THỨC VÀO LOGO */}
+          {/* LOGO CHUYỂN HƯỚNG VỀ TRANG CHỦ TONYENGLISH.VN MỞ TAB MỚI */}
           <div 
             className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
-            onClick={() => window.location.href = 'https://tonyenglish.vn/vi'}
+            onClick={() => window.open('https://tonyenglish.vn/vi', '_blank')}
             title="Về trang chủ TonyEnglish"
           >
             <img src="/logo-shield.png" alt="TonyEnglish" className="h-10 w-auto object-contain" />
@@ -60,11 +60,18 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
             </div>
           </div>
 
+          {/* 3 NÚT BẤM ĐỀU GỌI POPUP ĐĂNG NHẬP */}
           <div className="flex items-center gap-4">
-            <button className="text-[14px] font-bold text-slate-500 hover:text-[#0a5482] transition hidden sm:block">
+            <button 
+              onClick={() => setShowLoginModal(true)} 
+              className="text-[14px] font-bold text-slate-500 hover:text-[#0a5482] transition hidden sm:block"
+            >
               Dành cho Giáo viên
             </button>
-            <button className="bg-slate-100 hover:bg-slate-200 text-slate-700 text-[14px] font-bold px-5 py-2.5 rounded-xl transition shadow-sm border border-slate-200">
+            <button 
+              onClick={() => setShowLoginModal(true)} 
+              className="bg-slate-100 hover:bg-slate-200 text-slate-700 text-[14px] font-bold px-5 py-2.5 rounded-xl transition shadow-sm border border-slate-200"
+            >
               Góc Học Viên
             </button>
             <button 
@@ -173,7 +180,7 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
       {/* FOOTER */}
       <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-3 opacity-50 grayscale hover:grayscale-0 transition-all cursor-pointer" onClick={() => window.location.href = 'https://tonyenglish.vn/vi'}>
+          <div className="flex items-center gap-3 opacity-50 grayscale hover:grayscale-0 transition-all cursor-pointer" onClick={() => window.open('https://tonyenglish.vn/vi', '_blank')}>
              <img src="/logo-shield.png" alt="TonyEnglish" className="h-8 w-auto object-contain" />
              <div className="font-black text-xl tracking-tight text-white">TONYENGLISH</div>
           </div>
@@ -184,7 +191,9 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
         </div>
       </footer>
 
-      {/* MODAL ĐĂNG NHẬP */}
+      {/* ========================================================= */}
+      {/* MODAL ĐĂNG NHẬP TRẢI LÊN TRÊN CÙNG KHI SHOW = TRUE */}
+      {/* ========================================================= */}
       {showLoginModal && (
         <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden animate-in zoom-in-95">
