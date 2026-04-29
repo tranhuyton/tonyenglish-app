@@ -1,17 +1,34 @@
 import React, { useState } from 'react';
 import { supabase } from './supabase';
 
+// ĐƯA CÁC COMPONENT NÀY RA NGOÀI ĐỂ KHÔNG BỊ VĂNG CON TRỎ CHUỘT KHI GÕ
+const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
+  <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
+    <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
+    <input type="text" value={value || ''} onChange={onChange} placeholder={placeholder} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] focus:border-[#00a651] outline-none transition" />
+  </div>
+);
+
+const FileRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", uploadingId, handleFileUpload }: any) => (
+  <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
+    <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
+    <div className="flex items-center gap-3 flex-1 w-full">
+      <label className="bg-slate-50 border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[13px] cursor-pointer hover:bg-slate-100 transition shadow-sm">
+        <input type="file" className="hidden" accept={accept} onChange={(e) => handleFileUpload(e, onUpload, id)} /> 
+        {uploadingId === id ? '⏳ Đang tải...' : 'Chọn tệp'}
+      </label>
+      <span className="text-[12px] text-slate-400 truncate flex-1">{value ? '✅ Đã tải lên thành công' : 'Không có tệp... được chọn'}</span>
+    </div>
+  </div>
+);
+
+// HÀM CHÍNH
 export default function TestEditorModal({ testData: testRecord, courses, onClose, onSave }: any) {
   const isImportMode = testRecord.mode === 'import'; 
   const [activeTab, setActiveTab] = useState('basic'); 
   
   const getInitialData = () => {
-    // NẾU LÀ ĐỀ SỬA LẠI
-    if (testRecord.content_json) {
-      return {...testRecord.content_json};
-    }
-
-    // NẾU LÀ ĐỀ TẠO MỚI (CHỈ GIỮ LẠI CÁC MÔN STANDARD)
+    if (testRecord.content_json) return {...testRecord.content_json};
     return {
       basicInfo: {
         title: testRecord.title || '',
@@ -120,26 +137,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     onSave(testData); 
   };
 
-  const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
-    <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
-      <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
-      <input type="text" value={value || ''} onChange={onChange} placeholder={placeholder} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] focus:border-[#00a651] outline-none transition" />
-    </div>
-  );
-
-  const FileRow = ({ label, value, onUpload, id, accept = "audio/*, image/*" }: any) => (
-    <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
-      <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
-      <div className="flex items-center gap-3 flex-1 w-full">
-        <label className="bg-slate-50 border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[13px] cursor-pointer hover:bg-slate-100 transition shadow-sm">
-          <input type="file" className="hidden" accept={accept} onChange={(e) => handleFileUpload(e, onUpload, id)} /> 
-          {uploadingId === id ? '⏳ Đang tải...' : 'Chọn tệp'}
-        </label>
-        <span className="text-[12px] text-slate-400 truncate flex-1">{value ? '✅ Đã tải lên thành công' : 'Không có tệp... được chọn'}</span>
-      </div>
-    </div>
-  );
-
   return (
     <div className="fixed inset-0 bg-[#f0f2f5] z-[60] flex flex-col animate-in fade-in">
       <div className="bg-white px-6 py-3 flex justify-between items-center shrink-0 border-b border-slate-200 shadow-sm relative z-20">
@@ -165,12 +162,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                       <label className="text-[12px] font-bold text-slate-600">Tên đề <span className="text-red-500">*</span></label>
                       <input value={testData.basicInfo.title} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, title: e.target.value}})} placeholder="Ví dụ: Đề thi tiếng Anh 10" className="w-full mt-1.5 p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-[#00a651] text-[14px] transition" />
                     </div>
-                    <div>
-                      <label className="text-[12px] font-bold text-slate-600 mb-1.5 block">Ảnh đại diện</label>
-                      <div className="w-full aspect-[4/3] bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center text-slate-400 hover:bg-slate-100 transition cursor-pointer">
-                        <span className="text-5xl opacity-30 mb-3">🖼️</span><p className="text-[13px] font-medium">Kéo thả hoặc tải lên...</p>
-                      </div>
-                    </div>
                 </div>
               </div>
 
@@ -187,7 +178,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                     <div>
                       <label className="text-[12px] font-bold text-slate-600">Kỹ năng / Dạng đề <span className="text-red-500">*</span></label>
                       <select value={testData.basicInfo.skill} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
-                        {/* ĐÃ LƯỢC BỎ CASE STUDY Ở ĐÂY, CHỈ GIỮ LẠI STANDARD */}
                         <option value="IELTS-Listening">Listening (IELTS)</option>
                         <option value="IELTS-Reading">Reading (IELTS)</option>
                         <option value="Standard-Listening">Listening (Standard)</option>
@@ -197,7 +187,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                         <option value="Standard-Test">Standard (TOEIC/IGCSE)</option>
                       </select>
                     </div>
-
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <label className="text-[12px] font-bold text-slate-600">Loại bài làm</label>
@@ -239,7 +228,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                         <FieldRow label="Tiêu đề" value={part.title} onChange={(e:any) => updateField([pIdx], 'title', e.target.value)} />
                         <FieldRow label="Nội dung" value={part.content} onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} />
                         <FieldRow label="Tags" value={part.tags} onChange={(e:any) => updateField([pIdx], 'tags', e.target.value)} />
-                        <FileRow label="Âm thanh" value={part.audioUrl} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} id={`part-${part.id}`} />
+                        <FileRow label="Âm thanh" value={part.audioUrl} handleFileUpload={handleFileUpload} uploadingId={uploadingId} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} id={`part-${part.id}`} />
                       </div>
 
                       <div className="px-6 md:px-8 pb-8 space-y-8">
@@ -260,7 +249,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                                   <option value="Điền từ">Điền từ</option>
                                 </select>
                               </div>
-                              <FileRow label="Âm thanh" value={sec.audioUrl} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} id={`sec-${sec.id}`} />
+                              <FileRow label="Âm thanh" value={sec.audioUrl} handleFileUpload={handleFileUpload} uploadingId={uploadingId} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} id={`sec-${sec.id}`} />
                             </div>
 
                             <div className="px-6 md:px-8 pb-8 space-y-6">

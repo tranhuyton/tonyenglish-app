@@ -3,7 +3,6 @@ import { supabase } from './supabase';
 
 export default function CaseStudyEditorModal({ testData: testRecord, courses, onClose, onSave }: any) {
   const getInitialData = () => {
-    // NẾU LÀ ĐỀ SỬA LẠI
     if (testRecord.content_json) {
       const data = {...testRecord.content_json};
       if (testRecord.insert_pdf_url) {
@@ -14,7 +13,6 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
       return data;
     }
 
-    // NẾU LÀ ĐỀ TẠO MỚI
     return {
       basicInfo: {
         title: testRecord.title || '',
@@ -22,7 +20,7 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
         skill: 'Case-Study',
         mode: 'Đề thi',
         timeLimit: '90',
-        scoreType: 'IGCSE Grading', // Điểm IGCSE mặc định
+        scoreType: 'IGCSE Grading', 
         insert_pdf_url: '' 
       },
       json_config_string: ''
@@ -32,10 +30,14 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
   const [testData, setTestData] = useState<any>(getInitialData());
   const [isSaving, setIsSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [isDragging, setIsDragging] = useState(false); // STATE KÉO THẢ
 
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  // Hàm xử lý chung khi upload file (qua click hoặc kéo thả)
+  const processFile = async (file: File) => {
+    if (file.type !== "application/pdf") {
+      alert("⚠️ Vui lòng chỉ tải lên file định dạng PDF.");
+      return;
+    }
     setUploading(true);
     try {
       const fileExt = file.name.split('.').pop();
@@ -44,8 +46,34 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
       if (error) throw error;
       const url = supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
       setTestData({...testData, basicInfo: {...testData.basicInfo, insert_pdf_url: url}});
-    } catch (error: any) { alert("Lỗi upload: " + error.message); } 
-    finally { setUploading(false); }
+    } catch (error: any) { 
+      alert("Lỗi upload: " + error.message); 
+    } finally { 
+      setUploading(false); 
+    }
+  };
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) processFile(file);
+  };
+
+  // CÁC HÀM XỬ LÝ SỰ KIỆN KÉO THẢ (DRAG & DROP)
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file) processFile(file);
   };
 
   const handleSave = () => {
@@ -55,7 +83,6 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
 
   return (
     <div className="fixed inset-0 bg-[#f4f7f6] z-[60] flex flex-col animate-in fade-in">
-      {/* HEADER */}
       <div className="bg-white px-8 py-4 flex justify-between items-center shrink-0 border-b border-slate-200 shadow-sm">
         <div className="flex items-center gap-4">
           <button onClick={onClose} className="text-slate-400 hover:text-red-500 font-bold text-2xl transition">&times;</button>
@@ -63,11 +90,9 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
         </div>
       </div>
 
-      {/* CONTENT: 2 CỘT TỐI GIẢN */}
       <div className="flex-1 overflow-y-auto p-8">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
           
-          {/* CỘT TRÁI: THÔNG TIN & UPLOAD */}
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-4">
               <h3 className="font-black text-slate-800 border-b border-slate-100 pb-3 mb-4 uppercase text-sm">1. Cài đặt hệ thống</h3>
@@ -100,23 +125,36 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
               </div>
             </div>
 
-            <div className="bg-blue-50 p-6 rounded-2xl shadow-sm border border-blue-200">
-              <h3 className="font-black text-[#0a5482] border-b border-blue-200/50 pb-3 mb-4 uppercase text-sm">2. Tài liệu đính kèm</h3>
+            {/* KHU VỰC KÉO THẢ PDF */}
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+              <h3 className="font-black text-[#0a5482] border-b border-slate-100 pb-3 mb-4 uppercase text-sm">2. Tài liệu đính kèm</h3>
               <label className="text-[13px] font-bold text-slate-600 block mb-2">File PDF Case Study (Hiển thị nửa trái màn hình)</label>
               
-              <div className="flex items-center gap-3 w-full">
-                <label className="bg-white border border-slate-300 text-slate-700 px-5 py-3 rounded-xl text-[13px] font-bold cursor-pointer hover:bg-slate-100 transition shadow-sm shrink-0">
+              <div 
+                className={`w-full mt-2 border-2 border-dashed rounded-xl p-8 flex flex-col items-center justify-center transition-colors ${isDragging ? 'border-[#0a5482] bg-blue-50' : 'border-slate-300 bg-slate-50 hover:bg-slate-100'}`}
+                onDragOver={handleDragOver}
+                onDragLeave={handleDragLeave}
+                onDrop={handleDrop}
+              >
+                <span className="text-4xl mb-3 opacity-50">📄</span>
+                <p className="text-[14px] font-bold text-slate-600 mb-1">Kéo thả file PDF vào đây</p>
+                <p className="text-[12px] font-medium text-slate-400 mb-4">hoặc</p>
+                
+                <label className="bg-white border border-slate-300 text-slate-700 px-5 py-2.5 rounded-lg text-[13px] font-bold cursor-pointer hover:bg-slate-50 shadow-sm transition">
                   <input type="file" className="hidden" accept=".pdf" onChange={handleFileUpload} /> 
-                  {uploading ? '⏳ Đang tải...' : '📁 Chọn tệp PDF'}
+                  {uploading ? '⏳ Đang tải lên...' : 'Duyệt tệp trong máy'}
                 </label>
-                <span className="text-[13px] font-medium text-slate-500 truncate">
-                  {testData.basicInfo.insert_pdf_url ? '✅ Đã tải lên thành công' : 'Chưa có file nào'}
-                </span>
               </div>
+
+              {testData.basicInfo.insert_pdf_url && (
+                <div className="mt-4 p-3 bg-emerald-50 border border-emerald-200 rounded-lg flex items-center gap-2">
+                  <span className="text-emerald-500">✅</span>
+                  <span className="text-[13px] font-bold text-emerald-700 truncate">Đã tải file PDF thành công!</span>
+                </div>
+              )}
             </div>
           </div>
 
-          {/* CỘT PHẢI: MÃ JSON */}
           <div className="bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-700 flex flex-col h-[600px]">
             <div className="flex justify-between items-center mb-4">
               <h3 className="font-black text-emerald-400 uppercase text-sm flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 3. Dán mã cấu trúc đề (JSON)</h3>
