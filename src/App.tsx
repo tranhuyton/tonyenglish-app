@@ -8,13 +8,14 @@ import AdminPanel from './AdminPanel';
 import AdminLogin from './AdminLogin';
 import IeltsWriting from './IeltsWriting';
 import IeltsSpeaking from './IeltsSpeaking';
+// THÊM IMPORT CHO PHÒNG THI CHIA ĐÔI MÀN HÌNH
+import SplitScreenTest from './SplitScreenTest';
 
 export default function App() {
-  // KIỂM TRA URL NGAY KHI WEB VỪA KHỞI ĐỘNG
   const getInitialView = () => {
     const path = window.location.pathname;
     if (path === '/admin' || path === '/admin/') {
-      return 'admin-login'; // CẬP NHẬT: Mở thẳng form Đăng nhập của Admin
+      return 'admin-login'; 
     }
     return 'home'; 
   };
@@ -22,7 +23,6 @@ export default function App() {
   const [currentView, setCurrentView] = useState(getInitialView()); 
   const [currentTestData, setCurrentTestData] = useState<any>(null);
 
-  // ĐỒNG BỘ URL TRÊN THANH TRÌNH DUYỆT
   useEffect(() => {
     if (currentView === 'admin' || currentView === 'admin-login') {
       window.history.pushState(null, '', '/admin');
@@ -91,7 +91,7 @@ export default function App() {
         />
       )}
 
-      {/* 8. PHÒNG THI TIÊU CHUẨN (STANDARD TEST - BAO GỒM IGCSE/TOEIC) */}
+      {/* 8. PHÒNG THI TIÊU CHUẨN (STANDARD TEST) */}
       {currentView === 'standard' && (
         <StandardTest 
           onBack={() => setCurrentView('portal')} 
@@ -100,6 +100,13 @@ export default function App() {
             console.log("Kết quả bài thi:", res);
             setCurrentView('portal');
           }} 
+        />
+      )}
+
+      {/* 9. PHÒNG THI CHIA ĐÔI MÀN HÌNH (CHO CASE STUDY 0450/0455) */}
+      {currentView === 'split-screen' && (
+        <SplitScreenTest 
+          onBack={() => setCurrentView('portal')} 
         />
       )}
     </React.Fragment>
