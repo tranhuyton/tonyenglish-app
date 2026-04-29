@@ -48,13 +48,13 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
             </div>
           </div>
 
-          {/* CHỈ CÒN DUY NHẤT 1 NÚT CHO HỌC VIÊN */}
+          {/* CHỈ CÒN DUY NHẤT 1 NÚT CHO HỌC VIÊN - ĐÃ ĐỔI TÊN */}
           <div className="flex items-center">
             <button 
               onClick={() => setShowLoginModal(true)} 
               className="bg-[#0a5482] hover:bg-[#084266] text-white text-[14px] font-bold px-6 py-2.5 rounded-xl transition shadow-lg shadow-blue-900/20 active:scale-95"
             >
-              Đăng Nhập Học Viên
+              Đăng nhập
             </button>
           </div>
         </div>
