@@ -99,7 +99,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
   return (
     <div className="h-screen w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
       
-      {/* HEADER TỐI GIẢN */}
+      {/* HEADER */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-4 sm:px-6 shrink-0 z-20 box-border">
         <div className="flex items-center gap-3 sm:gap-4 overflow-hidden">
           <button onClick={onBack} className="text-slate-600 hover:text-black font-bold text-sm transition-colors whitespace-nowrap">
@@ -162,75 +162,70 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
           </div>
         </div>
 
-        {/* NỬA PHẢI: KHU VỰC LÀM BÀI (MÔ PHỎNG GIẤY THI) */}
-        {/* Đổi nền thành màu xám (slate-200) để làm nổi bật tờ giấy trắng ở giữa */}
+        {/* NỬA PHẢI: KHU VỰC LÀM BÀI (TỪNG TRANG GIẤY RỜI) */}
         <div style={{ width: `calc(${100 - leftWidth}% - 8px)` }} className="h-full bg-slate-200 relative flex flex-col shrink-0">
           
-          {/* Thanh Toolbar nửa phải đồng bộ hoàn toàn với nửa trái */}
           <div className="absolute top-0 left-0 right-0 bg-slate-100 border-b border-slate-300 px-4 py-2 z-10 flex justify-between items-center h-10">
             <span className="font-bold text-slate-700 text-xs uppercase tracking-widest flex items-center gap-2">
               Khu vực làm bài
             </span>
           </div>
 
-          {/* Vùng cuộn: Tăng pt-16 lên pt-20 để cách xa mép trên */}
-          <div className={`flex-1 overflow-y-auto p-4 sm:p-8 pt-20 pb-16 ${isDragging ? 'pointer-events-none' : ''}`}>
-            
-            {/* TỜ GIẤY THI: Nền trắng, viền đen, đổ bóng, padding rộng */}
-            <div className="max-w-4xl mx-auto bg-white border border-black shadow-md px-6 py-12 sm:px-14 sm:py-16 min-h-full">
+          <div className={`flex-1 overflow-y-auto p-4 sm:p-8 pt-20 pb-24 ${isDragging ? 'pointer-events-none' : ''}`}>
+            {/* space-y-12 tạo khoảng cách lớn giữa các "tờ giấy" */}
+            <div className="max-w-4xl mx-auto space-y-12">
               
-              <div className="space-y-14">
-                {testData.json_config.questions.map((q: any, index: number) => (
-                  <div key={index} className="bg-white border-b border-slate-200 pb-12 last:border-0">
-                    
-                    {/* CÂU HỎI */}
-                    <div className="flex gap-3 mb-8 items-baseline">
-                      <div className="font-bold text-black text-[16px] sm:text-[18px] min-w-[30px]">
-                        {q.question_number}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline">
-                          {q.question_text}
-                        </h3>
-                        <span className="inline-block text-slate-500 text-[12px] font-bold ml-2 uppercase tracking-wider">
-                          [{q.total_marks} marks]
-                        </span>
-                      </div>
+              {testData.json_config.questions.map((q: any, index: number) => (
+                /* MỖI CÂU HỎI LÀ MỘT TỜ GIẤY ĐỘC LẬP */
+                <div key={index} className="bg-white border border-black shadow-md px-6 py-12 sm:px-14 sm:py-16">
+                  
+                  {/* CÂU HỎI */}
+                  <div className="flex gap-3 mb-8 items-baseline">
+                    <div className="font-bold text-black text-[16px] sm:text-[18px] min-w-[30px]">
+                      {q.question_number}
                     </div>
-
-                    {/* CÁC Ô NHẬP LIỆU */}
-                    <div className="space-y-8 pl-0 sm:pl-[42px]">
-                      {q.inputs.map((input: any, i: number) => {
-                        const inputId = `${q.question_number}_input_${i}`;
-                        return (
-                          <div key={inputId} className="space-y-2">
-                            <label className="block text-[14px] font-semibold text-black">
-                              {input.label}
-                            </label>
-                            <textarea
-                              value={answers[inputId] || ''}
-                              onChange={(e) => handleAnswerChange(inputId, e.target.value)}
-                              className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-black focus:ring-1 focus:ring-black transition-all resize-y bg-transparent"
-                            />
-                          </div>
-                        )
-                      })}
+                    <div className="flex-1">
+                      <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline">
+                        {q.question_text}
+                      </h3>
+                      <span className="inline-block text-slate-500 text-[12px] font-bold ml-2 uppercase tracking-wider">
+                        [{q.total_marks} marks]
+                      </span>
                     </div>
-
                   </div>
-                ))}
 
-                {/* NÚT NỘP BÀI (Được căn lùi xuống dưới cùng tờ giấy) */}
-                <div className="pt-8 flex justify-end">
-                   <button 
-                     onClick={handleSubmit} 
-                     className="bg-black hover:bg-slate-800 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 border border-black"
-                   >
-                     Nộp bài thi
-                   </button>
+                  {/* CÁC Ô NHẬP LIỆU */}
+                  <div className="space-y-8 pl-0 sm:pl-[42px]">
+                    {q.inputs.map((input: any, i: number) => {
+                      const inputId = `${q.question_number}_input_${i}`;
+                      return (
+                        <div key={inputId} className="space-y-2">
+                          <label className="block text-[14px] font-semibold text-black">
+                            {input.label}
+                          </label>
+                          <textarea
+                            value={answers[inputId] || ''}
+                            onChange={(e) => handleAnswerChange(inputId, e.target.value)}
+                            className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-black focus:ring-1 focus:ring-black transition-all resize-y bg-transparent"
+                          />
+                        </div>
+                      )
+                    })}
+                  </div>
+
                 </div>
+              ))}
 
+              {/* NÚT NỘP BÀI CŨNG NẰM RIÊNG BIỆT DƯỚI CÙNG */}
+              <div className="flex justify-end pt-4">
+                 <button 
+                   onClick={handleSubmit} 
+                   className="bg-black hover:bg-slate-800 text-white font-bold px-10 py-4 rounded-none transition-transform active:scale-95 flex items-center gap-2 border border-black shadow-md"
+                 >
+                   Hoàn tất & Nộp bài thi
+                 </button>
               </div>
+
             </div>
           </div>
         </div>
