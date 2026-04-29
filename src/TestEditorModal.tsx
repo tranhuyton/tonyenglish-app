@@ -4,17 +4,18 @@ import { supabase } from './supabase';
 export default function TestEditorModal({ testData: testRecord, courses, onClose, onSave }: any) {
   const isImportMode = testRecord.mode === 'import'; 
   const isCaseStudyMode = testRecord.mode === 'case-study';
-  const [activeTab, setActiveTab] = useState('basic'); // 'basic' hoặc 'content'
+  const [activeTab, setActiveTab] = useState('basic'); 
   
   const getInitialData = () => {
     // NẾU LÀ ĐỀ SỬA LẠI
     if (testRecord.content_json) {
       const data = {...testRecord.content_json};
-      // Đổ link PDF từ database vào basicInfo để hiển thị lên UI
       if (testRecord.insert_pdf_url) {
         if (!data.basicInfo) data.basicInfo = {};
         data.basicInfo.insert_pdf_url = testRecord.insert_pdf_url;
       }
+      // Load lại JSON config nếu có
+      data.json_config_string = testRecord.json_config ? JSON.stringify(testRecord.json_config, null, 2) : '';
       return data;
     }
 
@@ -22,15 +23,16 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     return {
       basicInfo: {
         title: testRecord.title || '',
-        courseId: 'all', // Mặc định là Dùng chung
+        courseId: 'all', 
         thumbnail: '',
         skill: isCaseStudyMode ? 'Case-Study' : (testRecord.test_type || 'IELTS-Listening'),
         mode: 'Đề thi',
         timeLimit: isCaseStudyMode ? '90' : '40',
         scoreType: '1 điểm/ câu đúng',
         limit: '',
-        insert_pdf_url: '' // TRƯỜNG DỮ LIỆU MỚI CHO PDF
+        insert_pdf_url: '' 
       },
+      json_config_string: '', // CHỖ ĐỂ LƯU MÃ JSON CASE STUDY
       parts: isImportMode ? [] : [
         {
           id: Date.now().toString(), title: 'Part 1', content: '', tags: '', audioUrl: '', explanation: '',
@@ -51,7 +53,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
   const [isSaving, setIsSaving] = useState(false);
   const [uploadingId, setUploadingId] = useState<string | null>(null);
 
-  // --- HÀM UPLOAD MEDIA & PDF ---
   const uploadToSupabase = async (file: File) => {
     const fileExt = file.name ? file.name.split('.').pop() : 'png';
     const fileName = `media_${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
@@ -72,7 +73,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     }
   };
 
-  // --- HÀM THÊM / XÓA CẤU TRÚC ---
   const addPart = () => {
     const newData = { ...testData };
     newData.parts.push({ id: Date.now().toString(), title: `Part ${newData.parts.length + 1}`, content: '', tags: '', audioUrl: '', explanation: '', sections: [] });
@@ -124,7 +124,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     onSave(testData); 
   };
 
-  // UI Component: Giao diện một dòng nhập liệu chuẩn
   const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
     <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
       <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
@@ -132,7 +131,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     </div>
   );
 
-  // ĐÃ SỬA: Cho phép truyền accept để giới hạn loại file (dùng cho PDF)
   const FileRow = ({ label, value, onUpload, id, accept = "audio/*, image/*" }: any) => (
     <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
       <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
@@ -148,42 +146,22 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
 
   return (
     <div className="fixed inset-0 bg-[#f0f2f5] z-[60] flex flex-col animate-in fade-in">
-      
-      {/* HEADER ĐIỀU HƯỚNG BÊN TRÊN CÙNG */}
       <div className="bg-white px-6 py-3 flex justify-between items-center shrink-0 border-b border-slate-200 shadow-sm relative z-20">
         <div className="flex items-center gap-3">
           <button onClick={onClose} className="text-slate-500 hover:text-slate-800 font-bold text-xl transition">←</button>
           <h2 className="font-black text-[15px] text-slate-800 uppercase tracking-tight">{isImportMode ? 'Import Đề Thi' : 'Soạn Thảo Đề Thi'}</h2>
         </div>
-        <div className="flex gap-4">
-          <button className="text-[13px] font-bold text-slate-500 hover:text-slate-800 transition">Trang chủ</button>
-          <button className="text-[13px] font-bold text-[#00a651]">Đề thi</button>
-        </div>
       </div>
 
-      {/* CONTAINER CUỘN CHÍNH */}
       <div className="flex-1 overflow-y-auto relative custom-scrollbar">
         <div className="max-w-[1400px] mx-auto w-full p-4 md:p-8 space-y-8 pb-20"> 
-          
-          <button className="text-[13px] text-[#00a651] font-medium mb-4 flex items-center gap-1 hover:underline">📺 Xem hướng dẫn</button>
-
-          {/* TAB ĐIỀU HƯỚNG NỘI BỘ (THÔNG TIN / NỘI DUNG) */}
           <div className="flex flex-col md:flex-row gap-4 mb-6">
-            <button onClick={() => setActiveTab('basic')} className={`w-full md:w-1/2 py-3 rounded-t-xl font-black text-sm uppercase tracking-widest transition-all border-b-4 ${activeTab === 'basic' ? 'bg-white border-[#00a651] text-[#00a651] shadow-sm' : 'bg-slate-200/50 border-transparent text-slate-400 hover:bg-slate-200'}`}>
-              Thông tin chính
-            </button>
-            <button onClick={() => setActiveTab('content')} className={`w-full md:w-1/2 py-3 rounded-t-xl font-black text-sm uppercase tracking-widest transition-all border-b-4 ${activeTab === 'content' ? 'bg-white border-[#00a651] text-[#00a651] shadow-sm' : 'bg-slate-200/50 border-transparent text-slate-400 hover:bg-slate-200'}`}>
-              Cài đặt & Nội dung đề
-            </button>
+            <button onClick={() => setActiveTab('basic')} className={`w-full md:w-1/2 py-3 rounded-t-xl font-black text-sm uppercase tracking-widest transition-all border-b-4 ${activeTab === 'basic' ? 'bg-white border-[#00a651] text-[#00a651] shadow-sm' : 'bg-slate-200/50 border-transparent text-slate-400 hover:bg-slate-200'}`}>Thông tin chính</button>
+            <button onClick={() => setActiveTab('content')} className={`w-full md:w-1/2 py-3 rounded-t-xl font-black text-sm uppercase tracking-widest transition-all border-b-4 ${activeTab === 'content' ? 'bg-white border-[#00a651] text-[#00a651] shadow-sm' : 'bg-slate-200/50 border-transparent text-slate-400 hover:bg-slate-200'}`}>Cài đặt & Nội dung đề</button>
           </div>
 
-          {/* ==================================================== */}
-          {/* PHẦN 1: THÔNG TIN CHÍNH & CÀI ĐẶT                    */}
-          {/* ==================================================== */}
           {activeTab === 'basic' && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start animate-in slide-in-from-left-4">
-              
-              {/* CỘT TRÁI: Thông tin cơ bản */}
               <div className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm">
                 <div className="bg-[#00a651] text-white text-center py-2.5 font-bold text-[13px] uppercase tracking-widest">Thông tin chính</div>
                 <div className="p-6 space-y-5">
@@ -194,15 +172,12 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                     <div>
                       <label className="text-[12px] font-bold text-slate-600 mb-1.5 block">Ảnh đại diện</label>
                       <div className="w-full aspect-[4/3] bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center text-slate-400 hover:bg-slate-100 transition cursor-pointer">
-                        <span className="text-5xl opacity-30 mb-3">🖼️</span>
-                        <p className="text-[13px] font-medium">Kéo thả hoặc tải lên...</p>
+                        <span className="text-5xl opacity-30 mb-3">🖼️</span><p className="text-[13px] font-medium">Kéo thả hoặc tải lên...</p>
                       </div>
-                      <button className="mt-4 bg-[#00a651] hover:bg-[#008f45] text-white px-5 py-2 rounded-lg text-[13px] font-bold shadow-sm transition">📷 Upload ảnh</button>
                     </div>
                 </div>
               </div>
 
-              {/* CỘT PHẢI: Cài đặt */}
               <div className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm">
                 <div className="bg-slate-100 text-slate-600 text-center py-2.5 font-bold text-[13px] uppercase tracking-widest border-b border-slate-200">Cài đặt hệ thống</div>
                 <div className="p-6 space-y-5">
@@ -210,9 +185,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                       <label className="text-[12px] font-bold text-slate-600">Thuộc Khóa học <span className="text-red-500">*</span></label>
                       <select value={testData.basicInfo.courseId} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, courseId: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
                         <option value="all">Dùng chung (Không thuộc khóa nào)</option>
-                        {courses?.map((c: any) => (
-                          <option key={c.id} value={c.id}>{c.title}</option>
-                        ))}
+                        {courses?.map((c: any) => <option key={c.id} value={c.id}>{c.title}</option>)}
                       </select>
                     </div>
                     <div>
@@ -227,24 +200,16 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                       </select>
                     </div>
 
-                    {/* DÒNG UPLOAD PDF DÀNH CHO CASE STUDY */}
                     <div className="bg-blue-50 p-4 border border-blue-200 rounded-xl">
                       <label className="text-[13px] font-black text-[#0a5482] mb-1.5 block">📄 File PDF đính kèm (Dành cho Case Study)</label>
-                      <FileRow 
-                        label="Tệp PDF" 
-                        value={testData.basicInfo.insert_pdf_url} 
-                        onUpload={(url: string) => setTestData({...testData, basicInfo: {...testData.basicInfo, insert_pdf_url: url}})} 
-                        id="pdf-upload" 
-                        accept=".pdf" 
-                      />
+                      <FileRow label="Tệp PDF" value={testData.basicInfo.insert_pdf_url} onUpload={(url: string) => setTestData({...testData, basicInfo: {...testData.basicInfo, insert_pdf_url: url}})} id="pdf-upload" accept=".pdf" />
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <label className="text-[12px] font-bold text-slate-600">Loại bài làm</label>
                         <select value={testData.basicInfo.mode} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, mode: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
-                          <option value="Đề thi">Đề thi</option>
-                          <option value="Bài tập">Bài tập</option>
+                          <option value="Đề thi">Đề thi</option><option value="Bài tập">Bài tập</option>
                         </select>
                       </div>
                       <div>
@@ -257,6 +222,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                       <select value={testData.basicInfo.scoreType} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
                         <option value="1 điểm/ câu đúng">1 điểm/ câu đúng</option>
                         <option value="IELTS Band Score">IELTS Band Score</option>
+                        <option value="IGCSE Grading">Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)</option>
                       </select>
                     </div>
                 </div>
@@ -264,160 +230,112 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
             </div>
           )}
 
-          {/* ==================================================== */}
-          {/* PHẦN 2: NỘI DUNG ĐỀ (3 TẦNG: PART - SECTION - QUESTION) */}
-          {/* ==================================================== */}
           {activeTab === 'content' && (
             <div className="animate-in slide-in-from-right-4">
               <h3 className="text-center font-black text-slate-700 uppercase tracking-widest text-[14px] mb-6">NỘI DUNG ĐỀ / MARKING SCHEME</h3>
               
-              <div className="bg-[#f4f9fd] border border-[#bae0f5] rounded-2xl overflow-hidden p-4 md:p-8 shadow-sm">
-                <div className="text-[#0a5482] font-black uppercase text-sm mb-6 flex items-center gap-2">
-                    <span className="w-1.5 h-5 bg-[#0a5482] rounded-full inline-block"></span> Chọn thêm chi tiết
-                </div>
-                
-                {/* CHẾ ĐỘ IMPORT: UPLOAD FILE EXCEL */}
-                {isImportMode && (
-                  <div className="bg-white p-8 rounded-xl border border-slate-200 mb-8 flex flex-col md:flex-row items-start md:items-center gap-6 shadow-sm">
-                    <label className="text-[14px] font-bold text-slate-700 shrink-0 w-32">File upload</label>
-                    <div className="flex-1 flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full">
-                      <label className="bg-white border border-slate-300 text-slate-700 px-5 py-2.5 rounded-lg text-[14px] font-bold cursor-pointer hover:bg-slate-50 shadow-sm transition shrink-0 flex items-center gap-2">
-                        <input type="file" accept=".xlsx, .xls, .csv" className="hidden" /> 
-                        <svg className="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        Chọn tệp Excel/CSV
-                      </label>
-                      <div>
-                        <p className="text-[13px] font-medium text-slate-500">Không có tệp nào được chọn</p>
-                        <p className="text-[11px] text-slate-400 italic mt-1">Hệ thống sẽ tự động bóc tách dữ liệu từ file Excel vào cấu trúc bên dưới.</p>
-                      </div>
-                    </div>
+              {testData.basicInfo.skill === 'Case-Study' ? (
+                <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                  <div className="flex justify-between items-center mb-4">
+                    <label className="text-[15px] font-black text-[#0a5482] uppercase tracking-wider">Cấu trúc JSON Case Study</label>
+                    <span className="text-[12px] font-bold text-amber-500 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">⚠️ Paste chuẩn cú pháp nhé anh!</span>
                   </div>
-                )}
-
-                {/* VÒNG LẶP RENDER 3 TẦNG VỚI NÚT GỘP MỚI */}
-                {testData.parts.map((part: any, pIdx: number) => (
-                  <div key={part.id} className="border-2 border-[#00a651] rounded-xl bg-[#f8fcf9] overflow-hidden mb-8 relative shadow-sm">
-                      
-                      {/* PART HEADER (XANH LÁ) */}
-                      <div className="bg-[#e6f4ea] px-6 py-3.5 border-b border-[#00a651]/20 flex justify-between items-center group">
-                        <input value={part.title} onChange={(e) => updateField([pIdx], 'title', e.target.value)} className="font-black text-[#00a651] text-lg bg-transparent outline-none border-b border-dashed border-[#00a651]/50 focus:border-[#00a651] w-64" placeholder="Part Title..." />
-                        <button onClick={() => removePart(pIdx)} className="text-red-500 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
-                      </div>
-                      
-                      {/* PART BODY */}
-                      <div className="p-6 md:p-8">
-                        <FieldRow label="Tiêu đề" value={part.title} onChange={(e:any) => updateField([pIdx], 'title', e.target.value)} />
-                        <FieldRow label="Nội dung" value={part.content} onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} />
-                        <FieldRow label="Tags" value={part.tags} onChange={(e:any) => updateField([pIdx], 'tags', e.target.value)} />
-                        <FileRow label="Âm thanh" value={part.audioUrl} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} id={`part-${part.id}`} />
-                        <FieldRow label="Giải thích" value={part.explanation} onChange={(e:any) => updateField([pIdx], 'explanation', e.target.value)} />
-                      </div>
-
-                      {/* SECTIONS */}
-                      <div className="px-6 md:px-8 pb-8 space-y-8">
-                        {part.sections.map((sec: any, sIdx: number) => (
-                          <div key={sec.id} className="border-2 border-[#3b82f6] rounded-xl bg-[#f4f8ff] overflow-hidden shadow-sm">
-                            
-                            {/* SECTION HEADER (XANH DƯƠNG) */}
-                            <div className="bg-[#3b82f6] px-6 py-3 flex justify-between items-center group">
-                              <input value={sec.title} onChange={(e) => updateField([pIdx, sIdx], 'title', e.target.value)} className="font-black text-white text-base bg-transparent outline-none border-b border-dashed border-white/50 focus:border-white w-64 placeholder:text-white/60" placeholder="Section Title..." />
-                              <button onClick={() => removeSection(pIdx, sIdx)} className="text-white hover:text-red-200 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
-                            </div>
-                            
-                            {/* SECTION BODY */}
-                            <div className="p-6 md:p-8">
-                              <FieldRow label="Nội dung" value={sec.content} onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} />
-                              <FieldRow label="Tags" value={sec.tags} onChange={(e:any) => updateField([pIdx, sIdx], 'tags', e.target.value)} />
-                              <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 gap-2">
-                                <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">Kiểu làm</label>
-                                <select value={sec.questionType} onChange={(e) => updateField([pIdx, sIdx], 'questionType', e.target.value)} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] text-slate-700 outline-none focus:border-[#3b82f6] transition">
-                                  <option value="Tự luận (Case Study)">Tự luận (Case Study AI Chấm)</option>
-                                  <option value="Kéo thả vào Part">Kéo thả vào Part</option>
-                                  <option value="Trắc nghiệm">Trắc nghiệm</option>
-                                  <option value="Điền từ">Điền từ</option>
-                                </select>
-                              </div>
-                              <FileRow label="Âm thanh" value={sec.audioUrl} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} id={`sec-${sec.id}`} />
-                              <FieldRow label="Giải thích chung" value={sec.explanation} onChange={(e:any) => updateField([pIdx, sIdx], 'explanation', e.target.value)} />
-                            </div>
-
-                            {/* QUESTIONS */}
-                            <div className="px-6 md:px-8 pb-8 space-y-6">
-                              {sec.questions.map((q: any, qIdx: number) => (
-                                <div key={q.id} className="border-2 border-amber-300 rounded-xl bg-white overflow-hidden relative shadow-sm">
-                                  
-                                  {/* QUESTION HEADER (CAM/VÀNG) */}
-                                  <div className="bg-[#fef3c7] px-6 py-3 flex justify-between items-center group border-b border-amber-200">
-                                    <span className="font-black text-amber-600 text-[15px]">⬍ Question {qIdx + 1}</span>
-                                    <button onClick={() => removeQuestion(pIdx, sIdx, qIdx)} className="text-red-500 hover:text-red-700 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
-                                  </div>
-                                  
-                                  {/* QUESTION BODY */}
-                                  <div className="p-6">
-                                      <FieldRow label="Câu hỏi / Tiêu đề" value={q.content} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} placeholder="VD: 1(a) Explain one way... HOẶC Câu hỏi trắc nghiệm" />
-                                      <FieldRow label="Tags / Điểm" value={q.tags} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'tags', e.target.value)} placeholder="VD: 8 marks" />
-                                      <FileRow label="Âm thanh" value={q.audioUrl} onUpload={(url: string) => updateField([pIdx, sIdx, qIdx], 'audioUrl', url)} id={`q-${q.id}`} />
-                                      
-                                      {/* OPTIONS (DÀNH CHO TRẮC NGHIỆM) - KHÔI PHỤC LẠI */}
-                                      <div className="pt-5 md:pl-[136px] space-y-3">
-                                        {q.options.map((opt: string, oIdx: number) => (
-                                          <div key={oIdx} className="flex items-center gap-3">
-                                            <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 text-slate-600 font-black text-[13px] flex items-center justify-center shrink-0 shadow-sm">{String.fromCharCode(65+oIdx)}</div>
-                                            <input value={opt} onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} placeholder="Nhập đáp án A, B, C, D..." className="flex-1 bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] outline-none focus:border-[#00a651] focus:ring-1 focus:ring-[#00a651] transition" />
-                                            <button onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} className="text-slate-300 hover:text-red-500 font-bold px-2 py-1 text-lg">×</button>
-                                          </div>
-                                        ))}
-                                        <div className="pt-3">
-                                          <button onClick={() => addOption(pIdx, sIdx, qIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-5 py-2 rounded-full text-[12px] font-bold shadow-sm transition flex items-center gap-1"><span className="text-lg leading-none">+</span> Thêm lựa chọn A, B, C...</button>
-                                        </div>
-                                      </div>
-
-                                      <div className="pt-4 border-t border-slate-100 mt-6">
-                                        <FieldRow label="Marking Scheme / Lời giải" value={q.explanation} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} placeholder="Nhập đáp án chuẩn để AI chấm điểm (Hoặc lời giải cho câu trắc nghiệm)..." />
-                                      </div>
-                                  </div>
-                                </div>
-                              ))}
-
-                              {/* NÚT THÊM CÂU (XANH LÁ) */}
-                              <div className="flex justify-center pt-2">
-                                <button onClick={() => addQuestion(pIdx, sIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md flex items-center gap-1.5 transition-transform active:scale-95"><span className="text-lg leading-none">+</span> Thêm câu hỏi</button>
-                              </div>
-                            </div>
-
-                          </div>
-                        ))}
+                  <textarea
+                    value={testData.json_config_string || ''}
+                    onChange={e => setTestData({...testData, json_config_string: e.target.value})}
+                    className="w-full h-[500px] font-mono text-[13px] bg-slate-800 text-emerald-400 border-none p-6 rounded-xl outline-none focus:ring-4 focus:ring-blue-500/20 shadow-inner"
+                    spellCheck={false}
+                    placeholder={`{\n  "questions": [\n    {\n      "question_number": "1(a)",\n      "question_text": "...",\n      "total_marks": 8,\n      "inputs": [{ "label": "Cultural differences:" }]\n    }\n  ]\n}`}
+                  />
+                </div>
+              ) : (
+                <div className="bg-[#f4f9fd] border border-[#bae0f5] rounded-2xl overflow-hidden p-4 md:p-8 shadow-sm">
+                  {testData.parts.map((part: any, pIdx: number) => (
+                    <div key={part.id} className="border-2 border-[#00a651] rounded-xl bg-[#f8fcf9] overflow-hidden mb-8 relative shadow-sm">
+                        <div className="bg-[#e6f4ea] px-6 py-3.5 border-b border-[#00a651]/20 flex justify-between items-center group">
+                          <input value={part.title} onChange={(e) => updateField([pIdx], 'title', e.target.value)} className="font-black text-[#00a651] text-lg bg-transparent outline-none border-b border-dashed border-[#00a651]/50 focus:border-[#00a651] w-64" placeholder="Part Title..." />
+                          <button onClick={() => removePart(pIdx)} className="text-red-500 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
+                        </div>
                         
-                        {/* NÚT THÊM NHÓM (XANH LÁ) */}
-                        <div className="flex justify-center pt-2">
-                          <button onClick={() => addSection(pIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md flex items-center gap-1.5 transition-transform active:scale-95"><span className="text-lg leading-none">+</span> Thêm nhóm (Section)</button>
+                        <div className="p-6 md:p-8">
+                          <FieldRow label="Tiêu đề" value={part.title} onChange={(e:any) => updateField([pIdx], 'title', e.target.value)} />
+                          <FieldRow label="Nội dung" value={part.content} onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} />
+                          <FieldRow label="Tags" value={part.tags} onChange={(e:any) => updateField([pIdx], 'tags', e.target.value)} />
+                          <FileRow label="Âm thanh" value={part.audioUrl} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} id={`part-${part.id}`} />
                         </div>
 
-                      </div>
+                        <div className="px-6 md:px-8 pb-8 space-y-8">
+                          {part.sections.map((sec: any, sIdx: number) => (
+                            <div key={sec.id} className="border-2 border-[#3b82f6] rounded-xl bg-[#f4f8ff] overflow-hidden shadow-sm">
+                              <div className="bg-[#3b82f6] px-6 py-3 flex justify-between items-center group">
+                                <input value={sec.title} onChange={(e) => updateField([pIdx, sIdx], 'title', e.target.value)} className="font-black text-white text-base bg-transparent outline-none border-b border-dashed border-white/50 focus:border-white w-64 placeholder:text-white/60" placeholder="Section Title..." />
+                                <button onClick={() => removeSection(pIdx, sIdx)} className="text-white hover:text-red-200 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
+                              </div>
+                              
+                              <div className="p-6 md:p-8">
+                                <FieldRow label="Nội dung" value={sec.content} onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} />
+                                <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 gap-2">
+                                  <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">Kiểu làm</label>
+                                  <select value={sec.questionType} onChange={(e) => updateField([pIdx, sIdx], 'questionType', e.target.value)} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] text-slate-700 outline-none focus:border-[#3b82f6] transition">
+                                    <option value="Kéo thả vào Part">Kéo thả vào Part</option>
+                                    <option value="Trắc nghiệm">Trắc nghiệm</option>
+                                    <option value="Điền từ">Điền từ</option>
+                                  </select>
+                                </div>
+                                <FileRow label="Âm thanh" value={sec.audioUrl} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} id={`sec-${sec.id}`} />
+                              </div>
+
+                              <div className="px-6 md:px-8 pb-8 space-y-6">
+                                {sec.questions.map((q: any, qIdx: number) => (
+                                  <div key={q.id} className="border-2 border-amber-300 rounded-xl bg-white overflow-hidden relative shadow-sm">
+                                    <div className="bg-[#fef3c7] px-6 py-3 flex justify-between items-center group border-b border-amber-200">
+                                      <span className="font-black text-amber-600 text-[15px]">⬍ Question {qIdx + 1}</span>
+                                      <button onClick={() => removeQuestion(pIdx, sIdx, qIdx)} className="text-red-500 hover:text-red-700 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
+                                    </div>
+                                    
+                                    <div className="p-6">
+                                        <FieldRow label="Câu hỏi" value={q.content} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} />
+                                        
+                                        <div className="pt-5 md:pl-[136px] space-y-3">
+                                          {q.options.map((opt: string, oIdx: number) => (
+                                            <div key={oIdx} className="flex items-center gap-3">
+                                              <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 text-slate-600 font-black text-[13px] flex items-center justify-center shrink-0 shadow-sm">{String.fromCharCode(65+oIdx)}</div>
+                                              <input value={opt} onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} placeholder="Nhập đáp án..." className="flex-1 bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] outline-none focus:border-[#00a651] focus:ring-1 focus:ring-[#00a651] transition" />
+                                              <button onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} className="text-slate-300 hover:text-red-500 font-bold px-2 py-1 text-lg">×</button>
+                                            </div>
+                                          ))}
+                                          <div className="pt-3">
+                                            <button onClick={() => addOption(pIdx, sIdx, qIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-5 py-2 rounded-full text-[12px] font-bold shadow-sm transition">+ Thêm lựa chọn</button>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                ))}
+                                <div className="flex justify-center pt-2">
+                                  <button onClick={() => addQuestion(pIdx, sIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md">+ Thêm câu hỏi</button>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                          <div className="flex justify-center pt-2">
+                            <button onClick={() => addSection(pIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md">+ Thêm nhóm (Section)</button>
+                          </div>
+                        </div>
+                    </div>
+                  ))}
+                  <div className="flex justify-center pt-6 border-t border-[#b6dff5]">
+                      <button onClick={addPart} className="bg-[#00a651] hover:bg-[#008f45] text-white px-8 py-3 rounded-full text-[14px] font-bold shadow-lg">+ Thêm Part</button>
                   </div>
-                ))}
-
-                {/* NÚT THÊM PHẦN (XANH LÁ) */}
-                <div className="flex justify-center pt-6 border-t border-[#b6dff5]">
-                    <button onClick={addPart} className="bg-[#00a651] hover:bg-[#008f45] text-white px-8 py-3 rounded-full text-[14px] font-bold shadow-lg flex items-center gap-2 transition-transform active:scale-95 hover:scale-105"><span className="text-xl leading-none">+</span> Thêm Part</button>
                 </div>
-              </div>
+              )}
             </div>
-          )}
+          </div>
+
+          <button onClick={handleSave} disabled={isSaving} className="fixed bottom-10 right-10 w-20 h-20 bg-[#2bd6eb] hover:bg-[#1bc1d6] text-white rounded-full shadow-[0_10px_25px_rgba(43,214,235,0.4)] flex flex-col items-center justify-center z-[100] transition-all hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:scale-100">
+            <span className="text-[26px] mb-0.5">{isSaving ? '⏳' : '💾'}</span>
+            <span className="text-[10px] font-black uppercase tracking-wider">{isSaving ? 'Đang lưu' : 'Lưu Đề'}</span>
+          </button>
+
         </div>
-      </div>
-
-      {/* FLOAT NÚT LƯU ĐỀ THI */}
-      <button 
-        onClick={handleSave} 
-        disabled={isSaving} 
-        className="fixed bottom-10 right-10 w-20 h-20 bg-[#2bd6eb] hover:bg-[#1bc1d6] text-white rounded-full shadow-[0_10px_25px_rgba(43,214,235,0.4)] flex flex-col items-center justify-center z-[100] transition-all hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:scale-100"
-        title="Lưu Đề Thi"
-      >
-        <span className="text-[26px] mb-0.5">{isSaving ? '⏳' : '💾'}</span>
-        <span className="text-[10px] font-black uppercase tracking-wider">{isSaving ? 'Đang lưu' : 'Lưu Đề'}</span>
-      </button>
-
-    </div>
-  );
-}
+      );
+    }

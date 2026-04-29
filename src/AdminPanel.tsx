@@ -8,6 +8,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [showCreateDropdown, setShowCreateDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   
+  // --- DATABASE STATES ---
   const [courses, setCourses] = useState<any[]>([]);
   const [folders, setFolders] = useState<any[]>([]);
   const [allFolders, setAllFolders] = useState<any[]>([]); 
@@ -15,6 +16,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [assignedTests, setAssignedTests] = useState<any[]>([]); 
   const [selectedCourse, setSelectedCourse] = useState<any>(null);
   
+  // --- UI & SEARCH/SORT ---
   const [currentFolderId, setCurrentFolderId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterCourse, setFilterCourse] = useState('all');
@@ -29,6 +31,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [newCourse, setNewCourse] = useState({ title: '', type: 'IELTS' });
   const [newFolderTitle, setNewFolderTitle] = useState('');
 
+  // MOCK DATA QUẢN LÝ HỌC VIÊN
   const mockStudents = [
     { id: 'HV001', name: 'Nguyễn Văn A', email: 'vana@gmail.com', phone: '0901234567', courses: ['IELTS Preparation'], status: 'Active' },
     { id: 'HV002', name: 'Trần Thị B', email: 'tranb@gmail.com', phone: '0987654321', courses: ['IGCSE Science'], status: 'Active' },
@@ -117,7 +120,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     }
   };
 
-  // ĐÃ SỬA: Hỗ trợ truyền thẳng mode 'case-study'
   const handleInitiateTest = (mode: 'manual' | 'import' | 'case-study') => {
     setShowCreateDropdown(false);
     setEditingTest({ 
@@ -130,25 +132,48 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     });
   };
 
-  // ĐÃ SỬA: Bắt lấy link insert_pdf_url từ finalData và đẩy lên Database
+  // =========================================================================
+  // HÀM QUAN TRỌNG: LƯU ĐỀ THI (HỖ TRỢ JSON CASE STUDY & PDF LINK)
+  // =========================================================================
   const handleSaveTestContent = async (testId: string, finalData: any) => {
-    const payload = {
+    let parsedJsonConfig = null;
+    
+    // Nếu anh Tôn dán mã JSON vào bảng đen, hệ thống sẽ dịch nó ra trước khi lưu
+    if (finalData.basicInfo?.skill === 'Case-Study' && finalData.json_config_string) {
+      try {
+        parsedJsonConfig = JSON.parse(finalData.json_config_string);
+      } catch(e) {
+        alert("⚠️ Lỗi cú pháp JSON. Anh vui lòng kiểm tra lại dấu ngoặc hoặc dấu phẩy trước khi lưu nhé!");
+        return; 
+      }
+    }
+
+    const payload: any = {
       title: finalData.basicInfo?.title || 'Untitled Test',
       test_type: finalData.basicInfo?.skill || 'IELTS-Listening',
       content_json: finalData,
+      json_config: parsedJsonConfig, 
       folder_id: finalData.folder_id, 
       is_published: true,
-      insert_pdf_url: finalData.basicInfo?.insert_pdf_url || null // LƯU LINK PDF VÀO DATABASE
+      insert_pdf_url: finalData.basicInfo?.insert_pdf_url || null 
     };
 
-    if (testId === 'new') {
-      await supabase.from('tests').insert([payload]);
-    } else {
-      await supabase.from('tests').update(payload).eq('id', testId);
+    try {
+      if (testId === 'new') {
+        const { error } = await supabase.from('tests').insert([payload]);
+        if (error) throw error;
+      } else {
+        const { error } = await supabase.from('tests').update(payload).eq('id', testId);
+        if (error) throw error;
+      }
+      
+      setEditingTest(null);
+      fetchLibraryTests();
+      if (selectedCourse) fetchAssignedTests(selectedCourse.id);
+      alert("✅ Đã lưu đề thi thành công!");
+    } catch (err: any) {
+      alert("❌ Lỗi khi lưu vào Database: " + err.message);
     }
-    setEditingTest(null);
-    fetchLibraryTests();
-    if (selectedCourse) fetchAssignedTests(selectedCourse.id);
   };
 
   const handleAssignTest = async (testId: string) => {
@@ -275,7 +300,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       {/* MAIN CONTENT */}
       <main className="flex-1 flex flex-col min-w-0 relative">
         
-        {/* HEADER CHÍNH */}
+        {/* HEADER */}
         <header className="h-20 bg-white border-b border-slate-200 px-8 flex items-center justify-between sticky top-0 z-40 shadow-sm">
           <h1 className="text-xl font-black text-slate-800 uppercase tracking-tight">
             {activeTab === 'courses' ? 'Danh sách Khóa học' : activeTab === 'library' ? 'Kho lưu trữ đề thi' : activeTab === 'students' ? 'Quản lý Học viên' : 'Cấu trúc Khóa học'}
@@ -297,7 +322,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                 {showCreateDropdown && (
                   <div className="absolute right-0 mt-2 w-64 bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 py-2 animate-in fade-in zoom-in-95">
                     <button onClick={() => handleInitiateTest('manual')} className="w-full text-left px-5 py-3 hover:bg-slate-50 font-bold text-[13px] text-slate-700 border-b border-slate-100">✍️ Tạo thủ công (Standard)</button>
-                    {/* ĐÃ THÊM NÚT TẠO ĐỀ CASE STUDY */}
                     <button onClick={() => handleInitiateTest('case-study')} className="w-full text-left px-5 py-3 hover:bg-blue-50 font-bold text-[13px] text-[#0a5482] border-b border-slate-100">📄 Tạo đề Case Study (Kèm PDF)</button>
                     <button onClick={() => handleInitiateTest('import')} className="w-full text-left px-5 py-3 hover:bg-slate-50 font-bold text-[13px] text-slate-700">📥 Import Excel/CSV</button>
                   </div>
@@ -330,7 +354,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           {/* TAB: COURSE DETAIL */}
           {activeTab === 'course-detail' && selectedCourse && (
             <div className="space-y-6">
-              
               <div className="flex justify-between items-center bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                 <div className="flex items-center gap-2 text-sm font-bold text-slate-500">
                   <button onClick={() => setActiveTab('courses')} className="hover:text-[#2bd6eb] transition-colors">Khóa học</button>
@@ -348,29 +371,21 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
 
               <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
                 <div className="p-6 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
-                  <p className="font-black text-slate-500 text-xs uppercase tracking-widest">
-                    {currentFolderId ? `Danh mục con của: ${breadcrumbs[breadcrumbs.length-1]?.title}` : 'Danh mục gốc'}
-                  </p>
+                  <p className="font-black text-slate-500 text-xs uppercase tracking-widest">{currentFolderId ? `Danh mục con của: ${breadcrumbs[breadcrumbs.length-1]?.title}` : 'Danh mục gốc'}</p>
                   <button onClick={() => setShowFolderModal(true)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-xl font-black text-xs shadow-md transition">+ THÊM THƯ MỤC</button>
                 </div>
-                
                 <div className="p-8">
                   {currentSubFolders.length > 0 && (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                      {currentSubFolders.map(sf => {
-                        const childCount = folders.filter(f => f.parent_id === sf.id).length;
-                        const testCount = assignedTests.filter(t => t.folder_id === sf.id).length;
-                        return (
-                          <div key={sf.id} className="relative group">
-                            <div onClick={() => setCurrentFolderId(sf.id)} className="bg-white border-2 border-slate-100 hover:border-[#2bd6eb] p-6 rounded-2xl shadow-sm cursor-pointer transition-all flex flex-col items-center text-center h-full">
-                              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📁</div>
-                              <h4 className="font-black text-slate-700 text-sm line-clamp-2">{sf.title}</h4>
-                              <p className="text-[11px] font-bold text-slate-400 mt-2">{childCount > 0 ? `${childCount} mục con` : `${testCount} đề thi`}</p>
-                            </div>
-                            <button onClick={(e) => { e.stopPropagation(); handleDeleteFolder(sf.id); }} className="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 text-white w-7 h-7 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-lg flex items-center justify-center text-xs font-bold">✕</button>
+                      {currentSubFolders.map(sf => (
+                        <div key={sf.id} className="relative group">
+                          <div onClick={() => setCurrentFolderId(sf.id)} className="bg-white border-2 border-slate-100 hover:border-[#2bd6eb] p-6 rounded-2xl shadow-sm cursor-pointer transition-all flex flex-col items-center text-center h-full">
+                            <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📁</div>
+                            <h4 className="font-black text-slate-700 text-sm line-clamp-2">{sf.title}</h4>
                           </div>
-                        );
-                      })}
+                          <button onClick={(e) => { e.stopPropagation(); handleDeleteFolder(sf.id); }} className="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 text-white w-7 h-7 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-lg flex items-center justify-center text-xs font-bold">✕</button>
+                        </div>
+                      ))}
                     </div>
                   )}
 
@@ -380,7 +395,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                           <h3 className="font-black text-slate-800 text-lg">📝 Đề thi trong mục này</h3>
                           <button onClick={() => setShowAssignModal(true)} className="bg-[#2bd6eb] hover:bg-[#1bc1d6] text-white px-5 py-2 rounded-lg font-bold text-xs shadow-sm transition">+ GÁN ĐỀ</button>
                        </div>
-                       
                        {currentTests.length === 0 ? (
                          <div className="text-center py-10 border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-medium">Chưa có đề thi nào. Bấm nút + Gán đề để thêm từ Kho tổng.</div>
                        ) : (
@@ -401,18 +415,12 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                        )}
                     </div>
                   )}
-
-                  {!currentFolderId && currentSubFolders.length === 0 && (
-                    <div className="text-center py-20 text-slate-400 font-bold text-lg">
-                      Khóa học chưa có danh mục nào. Hãy bấm "+ Thêm thư mục" để bắt đầu xây dựng cấu trúc.
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
           )}
 
-          {/* TAB: LIBRARY (KHO ĐỀ TỔNG) */}
+          {/* TAB: LIBRARY */}
           {activeTab === 'library' && (
             <div className="space-y-6">
               <div className="flex flex-col lg:flex-row justify-between gap-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative z-20">
@@ -421,20 +429,11 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                   <button onClick={() => handleBulkVisibility(false)} className="px-4 py-1.5 text-[13px] font-bold text-slate-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95">👁️‍🗨️ Ẩn đi</button>
                   <button onClick={handleBulkDelete} className="px-4 py-1.5 text-[13px] font-bold text-red-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95">🗑️ Xóa</button>
                 </div>
-
                 <div className="flex flex-col sm:flex-row gap-4 flex-1 justify-end">
-                  <div className="relative w-full sm:max-w-xs">
-                    <input type="text" placeholder="Tìm kiếm tên đề..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-xl outline-none focus:border-[#2bd6eb] text-sm" />
-                    <span className="absolute left-4 top-1/2 -translate-y-1/2">🔍</span>
-                  </div>
+                  <input type="text" placeholder="Tìm kiếm tên đề..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="w-full sm:max-w-xs pl-4 pr-4 py-2.5 border border-slate-200 rounded-xl outline-none focus:border-[#2bd6eb] text-sm" />
                   <select value={filterCourse} onChange={e => setFilterCourse(e.target.value)} className="px-4 py-2.5 border border-slate-200 rounded-xl text-sm font-bold text-slate-600 outline-none w-full sm:w-auto">
                     <option value="all">Tất cả khóa học</option>
                     {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
-                  </select>
-                  <select value={sortLibrary} onChange={e => setSortLibrary(e.target.value)} className="px-4 py-2.5 border border-slate-200 rounded-xl text-sm font-bold text-slate-600 outline-none w-full sm:w-auto">
-                    <option value="name-asc">Tên A-Z</option>
-                    <option value="name-desc">Tên Z-A</option>
-                    <option value="date-desc">Mới nhất</option>
                   </select>
                 </div>
               </div>
@@ -451,53 +450,28 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                         <th className="px-6 py-4">TÊN ĐỀ THI</th>
                         <th className="px-6 py-4">THUỘC KHÓA HỌC</th>
                         <th className="px-6 py-4">KỸ NĂNG</th>
-                        <th className="px-6 py-4">THÔNG TIN CẬP NHẬT</th>
                         <th className="px-6 py-4 text-center">TRẠNG THÁI</th>
                         <th className="px-6 py-4 text-right">THAO TÁC</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
                       {filteredLibraryTests.length === 0 ? (
-                        <tr><td colSpan={8} className="text-center py-10 text-slate-400 font-medium">Không tìm thấy đề thi nào phù hợp.</td></tr>
+                        <tr><td colSpan={7} className="text-center py-10 text-slate-400 font-medium">Không tìm thấy đề thi nào phù hợp.</td></tr>
                       ) : (
-                        filteredLibraryTests.map((test, index) => {
-                          const hasChildren = allFolders.some(f => f.parent_id === test.folder_id);
-                          return (
-                            <tr key={test.id} className={`hover:bg-slate-50 transition group bg-white ${selectedTests.includes(test.id) ? 'bg-blue-50/30' : ''}`}>
-                              <td className="px-4 py-5 text-center text-[13px] font-bold text-slate-400">{index + 1}</td>
-                              <td className="px-2 py-5">
-                                <input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedTests.includes(test.id)} onChange={() => handleSelectOne(test.id)} />
-                              </td>
-                              <td className="px-6 py-5">
-                                <div className="font-bold text-slate-800 text-[15px]">{test.title}</div>
-                                {hasChildren ? (
-                                  <div className="text-[10px] text-red-500 font-bold uppercase mt-1 tracking-tight">⚠ Lỗi: Đang gán vào thư mục chứa thư mục con</div>
-                                ) : (
-                                  <div className="text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? 'Đã gán cấu trúc' : 'CẢNH BÁO: CHƯA GÁN THƯ MỤC'}</div>
-                                )}
-                              </td>
-                              <td className="px-6 py-5">
-                                <span className={`px-2.5 py-1 rounded-md text-[11px] font-bold border ${test.folder_id && !hasChildren ? 'bg-slate-100 border-slate-200 text-slate-600' : 'bg-red-50 border-red-200 text-red-500'}`}>
-                                  {getCourseNameByFolderId(test.folder_id)}
-                                </span>
-                              </td>
-                              <td className="px-6 py-5 font-black text-blue-600 uppercase text-[11px] tracking-tight">{test.test_type}</td>
-                              <td className="px-6 py-5">
-                                <div className="text-[11px] text-slate-500 mb-0.5"><span className="font-bold text-slate-600">Thời gian sửa:</span> {formatDate(test.created_at)}</div>
-                                <div className="text-[11px] text-slate-500"><span className="font-bold text-slate-600">Người sửa:</span> administrator</div>
-                              </td>
-                              <td className="px-6 py-5 text-center">
-                                <button onClick={() => handleToggleTestVisibility(test)} className={`text-[12px] font-bold transition-colors ${test.is_published ? 'text-emerald-500' : 'text-slate-400'}`}>
-                                  {test.is_published ? 'Hiển thị' : 'Đang ẩn'}
-                                </button>
-                              </td>
-                              <td className="px-6 py-5 text-right space-x-3 flex justify-end items-center gap-1">
-                                <button onClick={() => setEditingTest(test)} className="text-[#2bd6eb] hover:bg-[#e0faff] px-4 py-2 rounded-lg font-bold text-[13px] flex items-center gap-1.5 transition">✏️ Editor</button>
-                                <button onClick={() => handleDeleteTest(test.id)} className="text-slate-300 hover:text-red-500 hover:bg-red-50 p-2.5 rounded-lg transition">🗑️</button>
-                              </td>
-                            </tr>
-                          );
-                        })
+                        filteredLibraryTests.map((test, index) => (
+                          <tr key={test.id} className={`hover:bg-slate-50 transition group bg-white ${selectedTests.includes(test.id) ? 'bg-blue-50/30' : ''}`}>
+                            <td className="px-4 py-5 text-center text-[13px] font-bold text-slate-400">{index + 1}</td>
+                            <td className="px-2 py-5"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedTests.includes(test.id)} onChange={() => handleSelectOne(test.id)} /></td>
+                            <td className="px-6 py-5"><div className="font-bold text-slate-800 text-[15px]">{test.title}</div><div className="text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? 'Đã gán cấu trúc' : 'CẢNH BÁO: CHƯA GÁN'}</div></td>
+                            <td className="px-6 py-5"><span className="px-2.5 py-1 rounded-md text-[11px] font-bold border bg-slate-100 border-slate-200 text-slate-600">{getCourseNameByFolderId(test.folder_id)}</span></td>
+                            <td className="px-6 py-5 font-black text-blue-600 uppercase text-[11px] tracking-tight">{test.test_type}</td>
+                            <td className="px-6 py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[12px] font-bold transition-colors ${test.is_published ? 'text-emerald-500' : 'text-slate-400'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
+                            <td className="px-6 py-5 text-right space-x-3 flex justify-end items-center gap-1">
+                              <button onClick={() => setEditingTest(test)} className="text-[#2bd6eb] hover:bg-[#e0faff] px-4 py-2 rounded-lg font-bold text-[13px] flex items-center gap-1.5 transition">✏️ Editor</button>
+                              <button onClick={() => handleDeleteTest(test.id)} className="text-slate-300 hover:text-red-500 hover:bg-red-50 p-2.5 rounded-lg transition">🗑️</button>
+                            </td>
+                          </tr>
+                        ))
                       )}
                     </tbody>
                   </table>
@@ -508,54 +482,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
 
           {/* TAB: STUDENTS */}
           {activeTab === 'students' && (
-            <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row justify-between gap-4">
-                <div className="relative w-full sm:w-96">
-                  <input type="text" placeholder="Tìm kiếm học viên..." className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 font-medium text-[14px] outline-none focus:ring-2 focus:ring-[#2bd6eb] bg-white" />
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
-                </div>
-                <button className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold px-6 py-2.5 rounded-xl transition shadow-md flex items-center gap-2">
-                  <span className="text-lg">+</span> Thêm học viên mới
-                </button>
-              </div>
-
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                <table className="w-full text-left border-collapse">
-                  <thead className="bg-[#f8fafc] text-[11px] font-black uppercase text-slate-400 tracking-widest border-b border-slate-200">
-                    <tr>
-                      <th className="px-6 py-4">Thông tin học viên</th>
-                      <th className="px-6 py-4">Khóa học ghi danh</th>
-                      <th className="px-6 py-4 text-center">Trạng thái</th>
-                      <th className="px-6 py-4 text-right">Thao tác</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100">
-                    {mockStudents.map(student => (
-                      <tr key={student.id} className="hover:bg-slate-50 transition-colors bg-white">
-                        <td className="px-6 py-4">
-                          <div className="font-bold text-[15px] text-slate-800">{student.name}</div>
-                          <div className="text-[12px] text-slate-500 mt-0.5">{student.email} • {student.phone}</div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="flex flex-wrap gap-1.5">
-                            {student.courses.map((course, idx) => (
-                              <span key={idx} className="bg-slate-100 border border-slate-200 text-slate-600 px-2 py-0.5 rounded text-[11px] font-bold">{course}</span>
-                            ))}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 text-center">
-                          <span className="text-emerald-500 font-bold text-[12px]">Hoạt động</span>
-                        </td>
-                        <td className="px-6 py-4 text-right space-x-2">
-                          <button className="text-slate-400 hover:text-blue-500 transition" title="Sửa">✏️</button>
-                          <button className="text-slate-400 hover:text-red-500 transition" title="Khóa">🔒</button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden p-8 text-center text-slate-400 font-bold">Tính năng quản lý học viên đang được phát triển...</div>
           )}
         </div>
 
@@ -567,8 +494,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
               <div className="space-y-4">
                 <input required value={newCourse.title} onChange={e => setNewCourse({...newCourse, title: e.target.value})} placeholder="Tên khóa học..." className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#2bd6eb]" />
                 <select value={newCourse.type} onChange={e => setNewCourse({...newCourse, type: e.target.value})} className="w-full border border-slate-200 rounded-xl px-4 py-3 bg-white outline-none">
-                  <option value="IELTS">Hệ IELTS</option>
-                  <option value="Standard">Hệ Standard (IGCSE/TOEIC)</option>
+                  <option value="IELTS">Hệ IELTS</option><option value="Standard">Hệ Standard (IGCSE/TOEIC)</option>
                 </select>
               </div>
               <div className="flex gap-4 pt-2">
@@ -602,22 +528,15 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
               <div className="p-6 max-h-[60vh] overflow-y-auto space-y-3 custom-scrollbar">
                 {libraryTests.filter(t => !t.folder_id).map(test => (
                   <div key={test.id} className="flex justify-between items-center p-4 border border-slate-100 rounded-2xl hover:border-[#2bd6eb] transition bg-slate-50 group">
-                    <div>
-                      <p className="font-black text-slate-700 text-sm">{test.title}</p>
-                      <p className="text-[10px] font-black text-slate-400 uppercase tracking-tighter">{test.test_type}</p>
-                    </div>
+                    <div><p className="font-black text-slate-700 text-sm">{test.title}</p><p className="text-[10px] font-black text-slate-400 uppercase tracking-tighter">{test.test_type}</p></div>
                     <button onClick={() => handleAssignTest(test.id)} className="bg-white group-hover:bg-[#2bd6eb] group-hover:text-white px-5 py-2 rounded-xl font-bold text-xs transition border border-slate-200">GÁN ➜</button>
                   </div>
                 ))}
-                {libraryTests.filter(t => !t.folder_id).length === 0 && (
-                  <div className="text-center py-10 text-slate-400 font-bold">Không còn đề rảnh nào trong kho.</div>
-                )}
               </div>
             </div>
           </div>
         )}
 
-        {/* EDITOR ĐƯỢC TRUYỀN ALL FOLDERS VÀ COURSES VÀO */}
         {editingTest && (
           <TestEditorModal 
             testData={editingTest} 
