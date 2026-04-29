@@ -3,36 +3,26 @@ import { supabase } from './supabase';
 
 export default function TestEditorModal({ testData: testRecord, courses, onClose, onSave }: any) {
   const isImportMode = testRecord.mode === 'import'; 
-  const isCaseStudyMode = testRecord.mode === 'case-study';
   const [activeTab, setActiveTab] = useState('basic'); 
   
   const getInitialData = () => {
     // NẾU LÀ ĐỀ SỬA LẠI
     if (testRecord.content_json) {
-      const data = {...testRecord.content_json};
-      if (testRecord.insert_pdf_url) {
-        if (!data.basicInfo) data.basicInfo = {};
-        data.basicInfo.insert_pdf_url = testRecord.insert_pdf_url;
-      }
-      // Load lại JSON config nếu có
-      data.json_config_string = testRecord.json_config ? JSON.stringify(testRecord.json_config, null, 2) : '';
-      return data;
+      return {...testRecord.content_json};
     }
 
-    // NẾU LÀ ĐỀ TẠO MỚI
+    // NẾU LÀ ĐỀ TẠO MỚI (CHỈ GIỮ LẠI CÁC MÔN STANDARD)
     return {
       basicInfo: {
         title: testRecord.title || '',
         courseId: 'all', 
         thumbnail: '',
-        skill: isCaseStudyMode ? 'Case-Study' : (testRecord.test_type || 'IELTS-Listening'),
+        skill: testRecord.test_type || 'IELTS-Listening',
         mode: 'Đề thi',
-        timeLimit: isCaseStudyMode ? '90' : '40',
+        timeLimit: '40',
         scoreType: '1 điểm/ câu đúng',
-        limit: '',
-        insert_pdf_url: '' 
+        limit: ''
       },
-      json_config_string: '', // CHỖ ĐỂ LƯU MÃ JSON CASE STUDY
       parts: isImportMode ? [] : [
         {
           id: Date.now().toString(), title: 'Part 1', content: '', tags: '', audioUrl: '', explanation: '',
@@ -40,7 +30,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
             {
               id: (Date.now()+1).toString(), title: 'Section 1', content: '', tags: '', questionType: 'Kéo thả vào Part', audioUrl: '', explanation: '',
               questions: [
-                { id: (Date.now()+2).toString(), content: '', tags: '', audioUrl: '', explanation: '', options: ['A', 'B'], correctAnswer: '' }
+                { id: (Date.now()+2).toString(), content: '', tags: '', audioUrl: '', explanation: '', options: ['A', 'B', 'C', 'D'], correctAnswer: '' }
               ]
             }
           ]
@@ -75,6 +65,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
 
   const addPart = () => {
     const newData = { ...testData };
+    if (!newData.parts) newData.parts = [];
     newData.parts.push({ id: Date.now().toString(), title: `Part ${newData.parts.length + 1}`, content: '', tags: '', audioUrl: '', explanation: '', sections: [] });
     setTestData(newData);
   };
@@ -84,6 +75,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
 
   const addSection = (pIdx: number) => {
     const newData = { ...testData };
+    if (!newData.parts[pIdx].sections) newData.parts[pIdx].sections = [];
     newData.parts[pIdx].sections.push({ id: Date.now().toString(), title: `Section ${newData.parts[pIdx].sections.length + 1}`, content: '', tags: '', questionType: 'Kéo thả vào Part', audioUrl: '', explanation: '', questions: [] });
     setTestData(newData);
   };
@@ -93,7 +85,8 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
 
   const addQuestion = (pIdx: number, sIdx: number) => {
     const newData = { ...testData };
-    newData.parts[pIdx].sections[sIdx].questions.push({ id: Date.now().toString(), content: '', tags: '', audioUrl: '', explanation: '', options: ['A', 'B'], correctAnswer: '' });
+    if (!newData.parts[pIdx].sections[sIdx].questions) newData.parts[pIdx].sections[sIdx].questions = [];
+    newData.parts[pIdx].sections[sIdx].questions.push({ id: Date.now().toString(), content: '', tags: '', audioUrl: '', explanation: '', options: ['A', 'B', 'C', 'D'], correctAnswer: '' });
     setTestData(newData);
   };
   const removeQuestion = (pIdx: number, sIdx: number, qIdx: number) => {
@@ -101,7 +94,10 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
   };
 
   const addOption = (pIdx: number, sIdx: number, qIdx: number) => {
-    const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions[qIdx].options.push(''); setTestData(newData);
+    const newData = { ...testData }; 
+    if (!newData.parts[pIdx].sections[sIdx].questions[qIdx].options) newData.parts[pIdx].sections[sIdx].questions[qIdx].options = [];
+    newData.parts[pIdx].sections[sIdx].questions[qIdx].options.push(''); 
+    setTestData(newData);
   };
   const removeOption = (pIdx: number, sIdx: number, qIdx: number, oIdx: number) => {
     const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions[qIdx].options.splice(oIdx, 1); setTestData(newData);
@@ -127,7 +123,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
   const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
     <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
       <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
-      <input type="text" value={value} onChange={onChange} placeholder={placeholder} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] focus:border-[#00a651] outline-none transition" />
+      <input type="text" value={value || ''} onChange={onChange} placeholder={placeholder} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] focus:border-[#00a651] outline-none transition" />
     </div>
   );
 
@@ -167,7 +163,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                 <div className="p-6 space-y-5">
                     <div>
                       <label className="text-[12px] font-bold text-slate-600">Tên đề <span className="text-red-500">*</span></label>
-                      <input value={testData.basicInfo.title} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, title: e.target.value}})} placeholder="Ví dụ: Business mock T4/ 2026" className="w-full mt-1.5 p-3 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg outline-none focus:border-[#00a651] focus:ring-1 focus:ring-[#00a651] text-[14px] transition" />
+                      <input value={testData.basicInfo.title} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, title: e.target.value}})} placeholder="Ví dụ: Đề thi tiếng Anh 10" className="w-full mt-1.5 p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-[#00a651] text-[14px] transition" />
                     </div>
                     <div>
                       <label className="text-[12px] font-bold text-slate-600 mb-1.5 block">Ảnh đại diện</label>
@@ -183,43 +179,40 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                 <div className="p-6 space-y-5">
                     <div>
                       <label className="text-[12px] font-bold text-slate-600">Thuộc Khóa học <span className="text-red-500">*</span></label>
-                      <select value={testData.basicInfo.courseId} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, courseId: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
+                      <select value={testData.basicInfo.courseId} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, courseId: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
                         <option value="all">Dùng chung (Không thuộc khóa nào)</option>
                         {courses?.map((c: any) => <option key={c.id} value={c.id}>{c.title}</option>)}
                       </select>
                     </div>
                     <div>
                       <label className="text-[12px] font-bold text-slate-600">Kỹ năng / Dạng đề <span className="text-red-500">*</span></label>
-                      <select value={testData.basicInfo.skill} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
-                        <option value="Case-Study">Case Study (Chia đôi màn hình + PDF)</option>
+                      <select value={testData.basicInfo.skill} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
+                        {/* ĐÃ LƯỢC BỎ CASE STUDY Ở ĐÂY, CHỈ GIỮ LẠI STANDARD */}
                         <option value="IELTS-Listening">Listening (IELTS)</option>
                         <option value="IELTS-Reading">Reading (IELTS)</option>
+                        <option value="Standard-Listening">Listening (Standard)</option>
+                        <option value="Standard-Reading">Reading (Standard)</option>
                         <option value="IELTS-Writing">Writing (IELTS - Chấm AI)</option>
                         <option value="IELTS-Speaking">Speaking (IELTS - Chấm AI)</option>
                         <option value="Standard-Test">Standard (TOEIC/IGCSE)</option>
                       </select>
                     </div>
 
-                    <div className="bg-blue-50 p-4 border border-blue-200 rounded-xl">
-                      <label className="text-[13px] font-black text-[#0a5482] mb-1.5 block">📄 File PDF đính kèm (Dành cho Case Study)</label>
-                      <FileRow label="Tệp PDF" value={testData.basicInfo.insert_pdf_url} onUpload={(url: string) => setTestData({...testData, basicInfo: {...testData.basicInfo, insert_pdf_url: url}})} id="pdf-upload" accept=".pdf" />
-                    </div>
-
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <label className="text-[12px] font-bold text-slate-600">Loại bài làm</label>
-                        <select value={testData.basicInfo.mode} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, mode: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
+                        <select value={testData.basicInfo.mode} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, mode: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
                           <option value="Đề thi">Đề thi</option><option value="Bài tập">Bài tập</option>
                         </select>
                       </div>
                       <div>
                         <label className="text-[12px] font-bold text-slate-600">Thời gian làm (phút)</label>
-                        <input type="number" value={testData.basicInfo.timeLimit} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, timeLimit: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition" />
+                        <input type="number" value={testData.basicInfo.timeLimit} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, timeLimit: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition" />
                       </div>
                     </div>
                     <div>
                       <label className="text-[12px] font-bold text-slate-600">Cách tính điểm</label>
-                      <select value={testData.basicInfo.scoreType} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
+                      <select value={testData.basicInfo.scoreType} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} className="w-full mt-1.5 p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] text-slate-800 transition">
                         <option value="1 điểm/ câu đúng">1 điểm/ câu đúng</option>
                         <option value="IELTS Band Score">IELTS Band Score</option>
                         <option value="IGCSE Grading">Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)</option>
@@ -234,108 +227,94 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
             <div className="animate-in slide-in-from-right-4">
               <h3 className="text-center font-black text-slate-700 uppercase tracking-widest text-[14px] mb-6">NỘI DUNG ĐỀ / MARKING SCHEME</h3>
               
-              {testData.basicInfo.skill === 'Case-Study' ? (
-                <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                  <div className="flex justify-between items-center mb-4">
-                    <label className="text-[15px] font-black text-[#0a5482] uppercase tracking-wider">Cấu trúc JSON Case Study</label>
-                    <span className="text-[12px] font-bold text-amber-500 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">⚠️ Paste chuẩn cú pháp nhé anh!</span>
-                  </div>
-                  <textarea
-                    value={testData.json_config_string || ''}
-                    onChange={e => setTestData({...testData, json_config_string: e.target.value})}
-                    className="w-full h-[500px] font-mono text-[13px] bg-slate-800 text-emerald-400 border-none p-6 rounded-xl outline-none focus:ring-4 focus:ring-blue-500/20 shadow-inner"
-                    spellCheck={false}
-                    placeholder={`{\n  "questions": [\n    {\n      "question_number": "1(a)",\n      "question_text": "...",\n      "total_marks": 8,\n      "inputs": [{ "label": "Cultural differences:" }]\n    }\n  ]\n}`}
-                  />
-                </div>
-              ) : (
-                <div className="bg-[#f4f9fd] border border-[#bae0f5] rounded-2xl overflow-hidden p-4 md:p-8 shadow-sm">
-                  {testData.parts.map((part: any, pIdx: number) => (
-                    <div key={part.id} className="border-2 border-[#00a651] rounded-xl bg-[#f8fcf9] overflow-hidden mb-8 relative shadow-sm">
-                        <div className="bg-[#e6f4ea] px-6 py-3.5 border-b border-[#00a651]/20 flex justify-between items-center group">
-                          <input value={part.title} onChange={(e) => updateField([pIdx], 'title', e.target.value)} className="font-black text-[#00a651] text-lg bg-transparent outline-none border-b border-dashed border-[#00a651]/50 focus:border-[#00a651] w-64" placeholder="Part Title..." />
-                          <button onClick={() => removePart(pIdx)} className="text-red-500 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
-                        </div>
-                        
-                        <div className="p-6 md:p-8">
-                          <FieldRow label="Tiêu đề" value={part.title} onChange={(e:any) => updateField([pIdx], 'title', e.target.value)} />
-                          <FieldRow label="Nội dung" value={part.content} onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} />
-                          <FieldRow label="Tags" value={part.tags} onChange={(e:any) => updateField([pIdx], 'tags', e.target.value)} />
-                          <FileRow label="Âm thanh" value={part.audioUrl} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} id={`part-${part.id}`} />
-                        </div>
+              <div className="bg-[#f4f9fd] border border-[#bae0f5] rounded-2xl overflow-hidden p-4 md:p-8 shadow-sm">
+                {testData.parts?.map((part: any, pIdx: number) => (
+                  <div key={part.id} className="border-2 border-[#00a651] rounded-xl bg-[#f8fcf9] overflow-hidden mb-8 relative shadow-sm">
+                      <div className="bg-[#e6f4ea] px-6 py-3.5 border-b border-[#00a651]/20 flex justify-between items-center group">
+                        <input value={part.title} onChange={(e) => updateField([pIdx], 'title', e.target.value)} className="font-black text-[#00a651] text-lg bg-transparent outline-none border-b border-dashed border-[#00a651]/50 focus:border-[#00a651] w-64" placeholder="Part Title..." />
+                        <button onClick={() => removePart(pIdx)} className="text-red-500 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
+                      </div>
+                      
+                      <div className="p-6 md:p-8">
+                        <FieldRow label="Tiêu đề" value={part.title} onChange={(e:any) => updateField([pIdx], 'title', e.target.value)} />
+                        <FieldRow label="Nội dung" value={part.content} onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} />
+                        <FieldRow label="Tags" value={part.tags} onChange={(e:any) => updateField([pIdx], 'tags', e.target.value)} />
+                        <FileRow label="Âm thanh" value={part.audioUrl} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} id={`part-${part.id}`} />
+                      </div>
 
-                        <div className="px-6 md:px-8 pb-8 space-y-8">
-                          {part.sections.map((sec: any, sIdx: number) => (
-                            <div key={sec.id} className="border-2 border-[#3b82f6] rounded-xl bg-[#f4f8ff] overflow-hidden shadow-sm">
-                              <div className="bg-[#3b82f6] px-6 py-3 flex justify-between items-center group">
-                                <input value={sec.title} onChange={(e) => updateField([pIdx, sIdx], 'title', e.target.value)} className="font-black text-white text-base bg-transparent outline-none border-b border-dashed border-white/50 focus:border-white w-64 placeholder:text-white/60" placeholder="Section Title..." />
-                                <button onClick={() => removeSection(pIdx, sIdx)} className="text-white hover:text-red-200 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
+                      <div className="px-6 md:px-8 pb-8 space-y-8">
+                        {part.sections?.map((sec: any, sIdx: number) => (
+                          <div key={sec.id} className="border-2 border-[#3b82f6] rounded-xl bg-[#f4f8ff] overflow-hidden shadow-sm">
+                            <div className="bg-[#3b82f6] px-6 py-3 flex justify-between items-center group">
+                              <input value={sec.title} onChange={(e) => updateField([pIdx, sIdx], 'title', e.target.value)} className="font-black text-white text-base bg-transparent outline-none border-b border-dashed border-white/50 focus:border-white w-64 placeholder:text-white/60" placeholder="Section Title..." />
+                              <button onClick={() => removeSection(pIdx, sIdx)} className="text-white hover:text-red-200 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
+                            </div>
+                            
+                            <div className="p-6 md:p-8">
+                              <FieldRow label="Nội dung" value={sec.content} onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} />
+                              <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 gap-2">
+                                <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">Kiểu làm</label>
+                                <select value={sec.questionType} onChange={(e) => updateField([pIdx, sIdx], 'questionType', e.target.value)} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] text-slate-700 outline-none focus:border-[#3b82f6] transition">
+                                  <option value="Kéo thả vào Part">Kéo thả vào Part</option>
+                                  <option value="Trắc nghiệm">Trắc nghiệm</option>
+                                  <option value="Điền từ">Điền từ</option>
+                                </select>
                               </div>
-                              
-                              <div className="p-6 md:p-8">
-                                <FieldRow label="Nội dung" value={sec.content} onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} />
-                                <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 gap-2">
-                                  <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">Kiểu làm</label>
-                                  <select value={sec.questionType} onChange={(e) => updateField([pIdx, sIdx], 'questionType', e.target.value)} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] text-slate-700 outline-none focus:border-[#3b82f6] transition">
-                                    <option value="Kéo thả vào Part">Kéo thả vào Part</option>
-                                    <option value="Trắc nghiệm">Trắc nghiệm</option>
-                                    <option value="Điền từ">Điền từ</option>
-                                  </select>
-                                </div>
-                                <FileRow label="Âm thanh" value={sec.audioUrl} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} id={`sec-${sec.id}`} />
-                              </div>
+                              <FileRow label="Âm thanh" value={sec.audioUrl} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} id={`sec-${sec.id}`} />
+                            </div>
 
-                              <div className="px-6 md:px-8 pb-8 space-y-6">
-                                {sec.questions.map((q: any, qIdx: number) => (
-                                  <div key={q.id} className="border-2 border-amber-300 rounded-xl bg-white overflow-hidden relative shadow-sm">
-                                    <div className="bg-[#fef3c7] px-6 py-3 flex justify-between items-center group border-b border-amber-200">
-                                      <span className="font-black text-amber-600 text-[15px]">⬍ Question {qIdx + 1}</span>
-                                      <button onClick={() => removeQuestion(pIdx, sIdx, qIdx)} className="text-red-500 hover:text-red-700 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
-                                    </div>
-                                    
-                                    <div className="p-6">
-                                        <FieldRow label="Câu hỏi" value={q.content} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} />
-                                        
-                                        <div className="pt-5 md:pl-[136px] space-y-3">
-                                          {q.options.map((opt: string, oIdx: number) => (
-                                            <div key={oIdx} className="flex items-center gap-3">
-                                              <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 text-slate-600 font-black text-[13px] flex items-center justify-center shrink-0 shadow-sm">{String.fromCharCode(65+oIdx)}</div>
-                                              <input value={opt} onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} placeholder="Nhập đáp án..." className="flex-1 bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] outline-none focus:border-[#00a651] focus:ring-1 focus:ring-[#00a651] transition" />
-                                              <button onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} className="text-slate-300 hover:text-red-500 font-bold px-2 py-1 text-lg">×</button>
-                                            </div>
-                                          ))}
-                                          <div className="pt-3">
-                                            <button onClick={() => addOption(pIdx, sIdx, qIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-5 py-2 rounded-full text-[12px] font-bold shadow-sm transition">+ Thêm lựa chọn</button>
-                                          </div>
-                                        </div>
-                                    </div>
+                            <div className="px-6 md:px-8 pb-8 space-y-6">
+                              {sec.questions?.map((q: any, qIdx: number) => (
+                                <div key={q.id} className="border-2 border-amber-300 rounded-xl bg-white overflow-hidden relative shadow-sm">
+                                  <div className="bg-[#fef3c7] px-6 py-3 flex justify-between items-center group border-b border-amber-200">
+                                    <span className="font-black text-amber-600 text-[15px]">⬍ Question {qIdx + 1}</span>
+                                    <button onClick={() => removeQuestion(pIdx, sIdx, qIdx)} className="text-red-500 hover:text-red-700 font-bold px-3 py-1 opacity-0 group-hover:opacity-100 transition">✖</button>
                                   </div>
-                                ))}
-                                <div className="flex justify-center pt-2">
-                                  <button onClick={() => addQuestion(pIdx, sIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md">+ Thêm câu hỏi</button>
+                                  
+                                  <div className="p-6">
+                                      <FieldRow label="Câu hỏi" value={q.content} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} />
+                                      
+                                      <div className="pt-5 md:pl-[136px] space-y-3">
+                                        {q.options?.map((opt: string, oIdx: number) => (
+                                          <div key={oIdx} className="flex items-center gap-3">
+                                            <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 text-slate-600 font-black text-[13px] flex items-center justify-center shrink-0 shadow-sm">{String.fromCharCode(65+oIdx)}</div>
+                                            <input value={opt || ''} onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} placeholder="Nhập đáp án..." className="flex-1 bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] outline-none focus:border-[#00a651] focus:ring-1 focus:ring-[#00a651] transition" />
+                                            <button onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} className="text-slate-300 hover:text-red-500 font-bold px-2 py-1 text-lg">×</button>
+                                          </div>
+                                        ))}
+                                        <div className="pt-3">
+                                          <button onClick={() => addOption(pIdx, sIdx, qIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-5 py-2 rounded-full text-[12px] font-bold shadow-sm transition">+ Thêm lựa chọn</button>
+                                        </div>
+                                      </div>
+                                  </div>
                                 </div>
+                              ))}
+                              <div className="flex justify-center pt-2">
+                                <button onClick={() => addQuestion(pIdx, sIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md">+ Thêm câu hỏi</button>
                               </div>
                             </div>
-                          ))}
-                          <div className="flex justify-center pt-2">
-                            <button onClick={() => addSection(pIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md">+ Thêm nhóm (Section)</button>
                           </div>
+                        ))}
+                        <div className="flex justify-center pt-2">
+                          <button onClick={() => addSection(pIdx)} className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md">+ Thêm nhóm (Section)</button>
                         </div>
-                    </div>
-                  ))}
-                  <div className="flex justify-center pt-6 border-t border-[#b6dff5]">
-                      <button onClick={addPart} className="bg-[#00a651] hover:bg-[#008f45] text-white px-8 py-3 rounded-full text-[14px] font-bold shadow-lg">+ Thêm Part</button>
+                      </div>
                   </div>
+                ))}
+                <div className="flex justify-center pt-6 border-t border-[#b6dff5]">
+                    <button onClick={addPart} className="bg-[#00a651] hover:bg-[#008f45] text-white px-8 py-3 rounded-full text-[14px] font-bold shadow-lg">+ Thêm Part</button>
                 </div>
-              )}
+              </div>
             </div>
-          </div>
-
-          <button onClick={handleSave} disabled={isSaving} className="fixed bottom-10 right-10 w-20 h-20 bg-[#2bd6eb] hover:bg-[#1bc1d6] text-white rounded-full shadow-[0_10px_25px_rgba(43,214,235,0.4)] flex flex-col items-center justify-center z-[100] transition-all hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:scale-100">
-            <span className="text-[26px] mb-0.5">{isSaving ? '⏳' : '💾'}</span>
-            <span className="text-[10px] font-black uppercase tracking-wider">{isSaving ? 'Đang lưu' : 'Lưu Đề'}</span>
-          </button>
-
+          )}
         </div>
-      );
-    }
+      </div>
+
+      <button onClick={handleSave} disabled={isSaving} className="fixed bottom-10 right-10 w-20 h-20 bg-[#2bd6eb] hover:bg-[#1bc1d6] text-white rounded-full shadow-[0_10px_25px_rgba(43,214,235,0.4)] flex flex-col items-center justify-center z-[100] transition-all hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:scale-100">
+        <span className="text-[26px] mb-0.5">{isSaving ? '⏳' : '💾'}</span>
+        <span className="text-[10px] font-black uppercase tracking-wider">{isSaving ? 'Đang lưu' : 'Lưu Đề'}</span>
+      </button>
+
+    </div>
+  );
+}

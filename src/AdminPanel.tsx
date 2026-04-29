@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import TestEditorModal from './TestEditorModal';
+import CaseStudyEditorModal from './CaseStudyEditorModal'; // IMPORT FILE MỚI VÀO ĐÂY
 import './tailwind.css';
 
 export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string) => void }) {
@@ -537,14 +538,24 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           </div>
         )}
 
+        {/* LOGIC CHIA NHÁNH RENDER EDITOR MODAL */}
         {editingTest && (
-          <TestEditorModal 
-            testData={editingTest} 
-            courses={courses} 
-            folders={allFolders} 
-            onClose={() => setEditingTest(null)} 
-            onSave={(finalData: any) => handleSaveTestContent(editingTest.id, finalData)} 
-          />
+          editingTest.test_type === 'Case-Study' || editingTest.mode === 'case-study' ? (
+            <CaseStudyEditorModal 
+              testData={editingTest} 
+              courses={courses} 
+              onClose={() => setEditingTest(null)} 
+              onSave={(finalData: any) => handleSaveTestContent(editingTest.id, finalData)} 
+            />
+          ) : (
+            <TestEditorModal 
+              testData={editingTest} 
+              courses={courses} 
+              folders={allFolders} 
+              onClose={() => setEditingTest(null)} 
+              onSave={(finalData: any) => handleSaveTestContent(editingTest.id, finalData)} 
+            />
+          )
         )}
       </main>
     </div>
