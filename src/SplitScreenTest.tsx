@@ -1,34 +1,35 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { supabase } from './supabase'; // Bắt buộc phải import supabase để lấy dữ liệu
+import { supabase } from './supabase';
 
 export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
-  // --- TRẠNG THÁI LƯU TRỮ DỮ LIỆU THẬT TỪ SUPABASE ---
   const [testData, setTestData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Trạng thái cho thanh kéo (Resizer)
   const [leftWidth, setLeftWidth] = useState(50); 
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // --- GỌI API LẤY ĐỀ MỚI NHẤT TỪ SUPABASE KHI MỞ PHÒNG THI ---
   useEffect(() => {
     const fetchLatestTest = async () => {
       setIsLoading(true);
       try {
-        // Lấy 1 đề thi mới nhất từ bảng case_study_tests
         const { data, error } = await supabase
           .from('case_study_tests')
           .select('*')
-          .order('id', { ascending: false }) // Sắp xếp giảm dần để lấy cái mới nhất
-          .limit(1)
-          .single();
+          .order('id', { ascending: false })
+          .limit(1);
 
         if (error) throw error;
-        setTestData(data);
+
+        if (data && data.length > 0) {
+          setTestData(data[0]);
+        } else {
+          setTestData(null);
+        }
+
       } catch (err: any) {
         console.error("Lỗi khi tải đề thi:", err);
         alert("Không thể tải đề thi từ máy chủ!");
@@ -54,7 +55,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     }, 1500);
   };
 
-  // Logic xử lý kéo thả
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging || !containerRef.current) return;
@@ -78,17 +78,15 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     };
   }, [isDragging]);
 
-  // MÀN HÌNH CHỜ (LOADING)
   if (isLoading) {
     return (
       <div className="h-screen w-screen flex flex-col items-center justify-center bg-slate-50 text-slate-500 font-bold">
         <div className="animate-spin text-4xl mb-4">⏳</div>
-        <p>Đang tải đề thi từ hệ thống...</p>
+        <p>Đang tải đề thi và tài liệu...</p>
       </div>
     );
   }
 
-  // MÀN HÌNH LỖI (NẾU CHƯA CÓ ĐỀ NÀO TRONG KHO)
   if (!testData || !testData.json_config || !testData.json_config.questions) {
     return (
       <div className="h-screen w-screen flex flex-col items-center justify-center bg-slate-50 text-slate-500 font-bold gap-4">
@@ -98,7 +96,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     );
   }
 
-  // --- GIAO DIỆN CHÍNH ---
   return (
     <div className="h-screen w-screen flex flex-col bg-slate-50 font-sans text-slate-800 overflow-hidden">
       
@@ -131,19 +128,25 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
       {/* WORKSPACE (SPLIT SCREEN) */}
       <div ref={containerRef} className="flex-1 flex overflow-hidden w-full select-none">
         
-        {/* NỬA TRÁI: HIỂN THỊ FILE PDF (Tạm thời là Text giữ chỗ) */}
-        <div style={{ width: `${leftWidth}%` }} className="h-full bg-slate-200/50 flex flex-col relative shrink-0">
-          <div className="absolute top-0 left-0 right-0 bg-white/80 backdrop-blur-sm border-b border-slate-200 px-4 py-2 flex justify-between items-center z-10">
+        {/* NỬA TRÁI: HIỂN THỊ FILE PDF THẬT TỪ SUPABASE */}
+        <div style={{ width: `${leftWidth}%` }} className="h-full bg-slate-300 flex flex-col relative shrink-0">
+          <div className="absolute top-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-b border-slate-200 px-4 py-2 flex justify-between items-center z-10 shadow-sm">
             <span className="font-black text-slate-700 text-xs sm:text-sm uppercase tracking-wider">📄 Tài liệu tham khảo</span>
           </div>
           
-          <div className={`flex-1 overflow-y-auto p-4 sm:p-6 pt-14 ${isDragging ? 'pointer-events-none' : ''}`}>
-             <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-slate-200 min-h-[800px]">
-               <h2 className="text-2xl font-black text-center mb-6">Tài liệu Case Study</h2>
-               <p className="text-slate-600 leading-relaxed mb-4 text-justify">
-                 Tính năng hiển thị file PDF Insert chuẩn bị được kích hoạt. Bạn đang làm bài: <strong>{testData.title}</strong>
-               </p>
-             </div>
+          <div className={`flex-1 w-full h-full pt-10 ${isDragging ? 'pointer-events-none' : ''}`}>
+             {testData.insert_pdf_url ? (
+               <iframe 
+                 src={`${testData.insert_pdf_url}#view=FitH`} 
+                 className="w-full h-full border-none bg-white"
+                 title="PDF Insert"
+               />
+             ) : (
+               <div className="flex flex-col items-center justify-center h-full text-slate-500 p-8 text-center bg-white m-4 rounded-xl border border-slate-200 shadow-sm">
+                 <span className="text-4xl mb-4">📄</span>
+                 <p className="font-bold">Không có tài liệu PDF đính kèm cho bài thi này.</p>
+               </div>
+             )}
           </div>
         </div>
 
@@ -169,7 +172,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
 
           <div className={`flex-1 overflow-y-auto p-4 sm:p-8 pt-16 ${isDragging ? 'pointer-events-none' : ''}`}>
             <div className="max-w-3xl mx-auto space-y-8">
-              {/* LẶP QUA CẤU TRÚC JSON ĐỂ VẼ CÂU HỎI */}
               {testData.json_config.questions.map((q: any, index: number) => (
                 <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-5 sm:p-6 shadow-sm hover:border-blue-100 transition-colors">
                   
@@ -189,7 +191,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
 
                   <div className="space-y-5 pl-2 sm:pl-14">
                     {q.inputs.map((input: any, i: number) => {
-                      // Tạo ID độc nhất cho mỗi input để lưu bài
                       const inputId = `${q.question_number}_input_${i}`;
                       return (
                         <div key={inputId} className="space-y-2">
