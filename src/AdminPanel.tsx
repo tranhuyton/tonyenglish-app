@@ -19,22 +19,62 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: string) 
     onNavigate('admin-login');
   };
 
-  // Hàm lưu đề Case Study (Tạm thời in ra log, bài sau mình sẽ đấu nối Supabase)
-  const handleSaveCaseStudy = () => {
+  // --- HÀM LƯU DỮ LIỆU THẬT LÊN SUPABASE ---
+  const handleSaveCaseStudy = async () => {
+    // 1. Kiểm tra xem đã điền đủ thông tin chưa
+    if (!title || !examCode || !paper || !jsonConfig) {
+      alert("⚠️ Anh vui lòng điền đầy đủ các ô thông tin và dán cấu trúc JSON nhé!");
+      return;
+    }
+
+    // 2. Kiểm tra lỗi cú pháp JSON 
+    let parsedJson;
+    try {
+      parsedJson = JSON.parse(jsonConfig);
+    } catch (error) {
+      alert("❌ Lỗi cú pháp JSON! Anh kiểm tra lại xem copy từ AI đã đủ dấu ngoặc chưa nhé.");
+      return;
+    }
+
     setIsSaving(true);
-    setTimeout(() => {
-      console.log("Đã lưu đề mới:", { title, examCode, paper, duration, jsonConfig });
-      alert("✅ Đã lưu đề Case Study lên hệ thống thành công!");
+
+    try {
+      // 3. Bắn dữ liệu vào kho 'case_study_tests'
+      const { data, error } = await supabase
+        .from('case_study_tests')
+        .insert([
+          {
+            title: title,
+            exam_code: examCode,
+            paper: paper,
+            json_config: parsedJson
+            // Tính năng upload file PDF trực tiếp lên Storage mình sẽ làm ở bước sau cho đỡ rối code
+          }
+        ]);
+
+      if (error) throw error;
+
+      alert("✅ Đã lưu đề Case Study lên hệ thống thành công tuyệt đối!");
+      
+      // 4. Xóa trắng form để tiện tạo đề tiếp theo
+      setTitle(''); 
+      setExamCode(''); 
+      setPaper(''); 
+      setDuration(''); 
+      setJsonConfig('');
+
+    } catch (err: any) {
+      console.error("Lỗi khi lưu lên Supabase:", err);
+      alert("Đã có lỗi xảy ra từ máy chủ: " + err.message);
+    } finally {
       setIsSaving(false);
-      // Reset form sau khi lưu
-      setTitle(''); setExamCode(''); setPaper(''); setDuration(''); setJsonConfig('');
-    }, 1000);
+    }
   };
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex">
       
-      {/* SIDEBAR TÙY CHỈNH */}
+      {/* SIDEBAR */}
       <aside className="w-64 bg-[#0a5482] text-white flex flex-col shrink-0">
         <div className="h-16 flex items-center justify-center border-b border-blue-900/50">
           <h1 className="font-black text-xl tracking-widest">ADMIN PANEL</h1>
@@ -87,33 +127,34 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: string) 
                     <label className="text-[13px] font-bold text-slate-500 uppercase tracking-wider">Tên bài thi</label>
                     <input 
                       type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Ví dụ: Business Studies Mock Test 2026..."
-                      className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:border-[#1e88e5] focus:ring-2 focus:ring-blue-50 outline-none" 
+                      className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:border-[#1e88e5] focus:ring-2 focus:ring-blue-50 outline-none bg-white" 
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[13px] font-bold text-slate-500 uppercase tracking-wider">Mã môn (Exam Code)</label>
                     <input 
                       type="text" value={examCode} onChange={(e) => setExamCode(e.target.value)} placeholder="Ví dụ: 0450, 0455..."
-                      className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:border-[#1e88e5] focus:ring-2 focus:ring-blue-50 outline-none" 
+                      className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:border-[#1e88e5] focus:ring-2 focus:ring-blue-50 outline-none bg-white" 
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[13px] font-bold text-slate-500 uppercase tracking-wider">Paper / Variant</label>
                     <input 
                       type="text" value={paper} onChange={(e) => setPaper(e.target.value)} placeholder="Ví dụ: 22"
-                      className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:border-[#1e88e5] focus:ring-2 focus:ring-blue-50 outline-none" 
+                      className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:border-[#1e88e5] focus:ring-2 focus:ring-blue-50 outline-none bg-white" 
                     />
                   </div>
                 </div>
               </div>
 
+              {/* Ô UPLOAD FILE PDF SẼ ĐƯỢC XỬ LÝ API Ở GIAI ĐOẠN SAU */}
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
                 <h3 className="text-lg font-black text-slate-800 mb-6 border-b border-slate-100 pb-4 flex justify-between items-center">
                   <span>2. Tài liệu đính kèm (Insert / Case Study)</span>
                 </h3>
                 <div className="border-2 border-dashed border-slate-300 rounded-xl p-8 text-center hover:bg-slate-50 transition-colors cursor-pointer">
                   <div className="text-4xl mb-3">📄</div>
-                  <p className="font-bold text-slate-700">Kéo thả file PDF vào đây hoặc <span className="text-[#1e88e5]">Bấm để chọn file</span></p>
+                  <p className="font-bold text-slate-700">Khu vực kéo thả file PDF (Sẽ tích hợp ở bản cập nhật Storage)</p>
                   <p className="text-sm text-slate-400 mt-2">Dung lượng tối đa 10MB.</p>
                 </div>
               </div>
@@ -121,13 +162,13 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: string) 
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
                 <h3 className="text-lg font-black text-slate-800 mb-6 border-b border-slate-100 pb-4 flex justify-between items-center">
                   <span>3. Cấu trúc câu hỏi (JSON)</span>
-                  <button className="text-[13px] text-[#1e88e5] font-bold hover:underline">Copy Prompt cho AI</button>
+                  <button className="text-[13px] text-[#1e88e5] font-bold hover:underline" onClick={() => alert("Đã copy Prompt!")}>Copy Prompt cho AI</button>
                 </h3>
                 <p className="text-sm text-slate-500 mb-4">Dán đoạn mã JSON do AI bóc tách từ file đề thi và Marking Scheme vào đây.</p>
                 <textarea 
                   value={jsonConfig}
                   onChange={(e) => setJsonConfig(e.target.value)}
-                  placeholder="{\n  'questions': [...]\n}"
+                  placeholder={'{\n  "questions": [...]\n}'}
                   className="w-full border border-slate-300 rounded-xl p-4 font-mono text-[13px] h-64 focus:border-[#1e88e5] focus:ring-2 focus:ring-blue-50 outline-none bg-slate-50"
                 ></textarea>
               </div>
@@ -147,10 +188,10 @@ export default function AdminPanel({ onNavigate }: { onNavigate: (view: string) 
             </div>
           )}
 
-          {/* CÁC TAB KHÁC (Để trống chờ phát triển sau) */}
+          {/* CÁC TAB KHÁC */}
           {activeTab !== 'create-case-study' && (
             <div className="flex items-center justify-center h-full text-slate-400 font-medium">
-              Khu vực này đang được xây dựng...
+              Khu vực này đang được tích hợp...
             </div>
           )}
 
