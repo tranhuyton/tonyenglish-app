@@ -150,7 +150,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
           </div>
         </div>
 
-        {/* THANH KÉO (RESIZER) - Phẳng hóa */}
+        {/* THANH KÉO (RESIZER) */}
         <div 
           onMouseDown={() => setIsDragging(true)}
           className={`w-2 h-full bg-slate-200 border-x border-slate-300 hover:bg-slate-400 cursor-col-resize flex items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-slate-400' : ''}`}
@@ -162,67 +162,75 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
           </div>
         </div>
 
-        {/* NỬA PHẢI: KHU VỰC LÀM BÀI (GIAO DIỆN GIẤY THI) */}
-        <div style={{ width: `calc(${100 - leftWidth}% - 8px)` }} className="h-full bg-white relative flex flex-col shrink-0">
-          <div className="absolute top-0 left-0 right-0 bg-white border-b border-slate-300 px-6 py-2 z-10 flex justify-between items-center h-10">
-            <span className="font-bold text-black text-xs uppercase tracking-widest flex items-center gap-2">
+        {/* NỬA PHẢI: KHU VỰC LÀM BÀI (MÔ PHỎNG GIẤY THI) */}
+        {/* Đổi nền thành màu xám (slate-200) để làm nổi bật tờ giấy trắng ở giữa */}
+        <div style={{ width: `calc(${100 - leftWidth}% - 8px)` }} className="h-full bg-slate-200 relative flex flex-col shrink-0">
+          
+          {/* Thanh Toolbar nửa phải đồng bộ hoàn toàn với nửa trái */}
+          <div className="absolute top-0 left-0 right-0 bg-slate-100 border-b border-slate-300 px-4 py-2 z-10 flex justify-between items-center h-10">
+            <span className="font-bold text-slate-700 text-xs uppercase tracking-widest flex items-center gap-2">
               Khu vực làm bài
             </span>
           </div>
 
-          <div className={`flex-1 overflow-y-auto p-4 sm:px-12 sm:py-8 pt-16 ${isDragging ? 'pointer-events-none' : ''}`}>
-            {/* Đổi max-w-3xl thành max-w-5xl để mở rộng khung, cho chữ tràn ra sát mép */}
-            <div className="max-w-5xl mx-auto space-y-12">
+          {/* Vùng cuộn: Tăng pt-16 lên pt-20 để cách xa mép trên */}
+          <div className={`flex-1 overflow-y-auto p-4 sm:p-8 pt-20 pb-16 ${isDragging ? 'pointer-events-none' : ''}`}>
+            
+            {/* TỜ GIẤY THI: Nền trắng, viền đen, đổ bóng, padding rộng */}
+            <div className="max-w-4xl mx-auto bg-white border border-black shadow-md px-6 py-12 sm:px-14 sm:py-16 min-h-full">
               
-              {testData.json_config.questions.map((q: any, index: number) => (
-                <div key={index} className="bg-white border-b border-slate-200 pb-10 last:border-0">
-                  
-                  {/* CÂU HỎI */}
-                  <div className="flex gap-3 mb-6 items-baseline">
-                    <div className="font-bold text-black text-[16px] sm:text-[18px] min-w-[30px]">
-                      {q.question_number}
+              <div className="space-y-14">
+                {testData.json_config.questions.map((q: any, index: number) => (
+                  <div key={index} className="bg-white border-b border-slate-200 pb-12 last:border-0">
+                    
+                    {/* CÂU HỎI */}
+                    <div className="flex gap-3 mb-8 items-baseline">
+                      <div className="font-bold text-black text-[16px] sm:text-[18px] min-w-[30px]">
+                        {q.question_number}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline">
+                          {q.question_text}
+                        </h3>
+                        <span className="inline-block text-slate-500 text-[12px] font-bold ml-2 uppercase tracking-wider">
+                          [{q.total_marks} marks]
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline">
-                        {q.question_text}
-                      </h3>
-                      <span className="inline-block text-slate-500 text-[12px] font-bold ml-2 uppercase tracking-wider">
-                        [{q.total_marks} marks]
-                      </span>
+
+                    {/* CÁC Ô NHẬP LIỆU */}
+                    <div className="space-y-8 pl-0 sm:pl-[42px]">
+                      {q.inputs.map((input: any, i: number) => {
+                        const inputId = `${q.question_number}_input_${i}`;
+                        return (
+                          <div key={inputId} className="space-y-2">
+                            <label className="block text-[14px] font-semibold text-black">
+                              {input.label}
+                            </label>
+                            <textarea
+                              value={answers[inputId] || ''}
+                              onChange={(e) => handleAnswerChange(inputId, e.target.value)}
+                              className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-black focus:ring-1 focus:ring-black transition-all resize-y bg-transparent"
+                            />
+                          </div>
+                        )
+                      })}
                     </div>
-                  </div>
 
-                  {/* CÁC Ô NHẬP LIỆU */}
-                  <div className="space-y-6 pl-0 sm:pl-[42px]">
-                    {q.inputs.map((input: any, i: number) => {
-                      const inputId = `${q.question_number}_input_${i}`;
-                      return (
-                        <div key={inputId} className="space-y-2">
-                          <label className="block text-[14px] font-semibold text-black">
-                            {input.label}
-                          </label>
-                          <textarea
-                            value={answers[inputId] || ''}
-                            onChange={(e) => handleAnswerChange(inputId, e.target.value)}
-                            className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-black focus:ring-1 focus:ring-black transition-all resize-y bg-transparent"
-                          />
-                        </div>
-                      )
-                    })}
                   </div>
+                ))}
 
+                {/* NÚT NỘP BÀI (Được căn lùi xuống dưới cùng tờ giấy) */}
+                <div className="pt-8 flex justify-end">
+                   <button 
+                     onClick={handleSubmit} 
+                     className="bg-black hover:bg-slate-800 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 border border-black"
+                   >
+                     Nộp bài thi
+                   </button>
                 </div>
-              ))}
 
-              <div className="pt-4 pb-12 flex justify-end">
-                 <button 
-                   onClick={handleSubmit} 
-                   className="bg-black hover:bg-slate-800 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 border border-black"
-                 >
-                   Nộp bài thi
-                 </button>
               </div>
-
             </div>
           </div>
         </div>
