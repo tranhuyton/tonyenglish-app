@@ -80,7 +80,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
 
   if (isLoading) {
     return (
-      <div className="h-screen w-screen flex flex-col items-center justify-center bg-white text-slate-500 font-bold">
+      <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
         <div className="animate-spin text-4xl mb-4">⏳</div>
         <p>Đang tải đề thi và tài liệu...</p>
       </div>
@@ -89,9 +89,9 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
 
   if (!testData || !testData.json_config || !testData.json_config.questions) {
     return (
-      <div className="h-screen w-screen flex flex-col items-center justify-center bg-white text-slate-500 font-bold gap-4">
+      <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
         <p>⚠️ Chưa có đề thi nào trong hệ thống hoặc dữ liệu bị lỗi.</p>
-        <button onClick={onBack} className="bg-black text-white px-6 py-2 rounded-none">Quay lại</button>
+        <button onClick={onBack} className="bg-[#1e88e5] text-white px-6 py-2 rounded-none">Quay lại</button>
       </div>
     );
   }
@@ -99,7 +99,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
   return (
     <div className="h-screen w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
       
-      {/* HEADER */}
+      {/* HEADER CHÍNH CỦA ỨNG DỤNG (GIỮ NGUYÊN) */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-4 sm:px-6 shrink-0 z-20 box-border">
         <div className="flex items-center gap-3 sm:gap-4 overflow-hidden">
           <button onClick={onBack} className="text-slate-600 hover:text-black font-bold text-sm transition-colors whitespace-nowrap">
@@ -118,7 +118,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
            <button 
              onClick={handleSubmit} 
              disabled={isSubmitting}
-             className="bg-black hover:bg-slate-800 text-white font-bold text-sm px-6 py-1.5 rounded-none transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap"
+             className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold text-sm px-6 py-1.5 rounded-none transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap"
            >
              {isSubmitting ? 'Đang nộp...' : 'Nộp Bài'}
            </button>
@@ -126,23 +126,27 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
       </header>
 
       {/* WORKSPACE (SPLIT SCREEN) */}
-      <div ref={containerRef} className="flex-1 flex overflow-hidden w-full select-none">
+      <div ref={containerRef} className="flex-1 flex overflow-hidden w-full select-none bg-[#525659]">
         
+        {/* ========================================================= */}
         {/* NỬA TRÁI: PDF */}
-        <div style={{ width: `${leftWidth}%` }} className="h-full bg-slate-200 flex flex-col relative shrink-0">
-          <div className="absolute top-0 left-0 right-0 bg-slate-100 border-b border-slate-300 px-4 py-2 flex justify-between items-center z-10 h-10">
-            <span className="font-bold text-slate-700 text-xs uppercase tracking-widest">Tài liệu tham khảo</span>
+        {/* ========================================================= */}
+        <div style={{ width: `${leftWidth}%` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
+          
+          {/* THANH TIÊU ĐỀ TRÁI (Màu xám đen đồng bộ trình duyệt PDF) */}
+          <div className="bg-[#323639] border-b border-[#202224] px-4 flex justify-between items-center h-10 shrink-0 shadow-sm">
+            <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest">Tài liệu tham khảo</span>
           </div>
           
-          <div className={`flex-1 w-full h-full pt-10 ${isDragging ? 'pointer-events-none' : ''}`}>
+          <div className={`flex-1 w-full h-full ${isDragging ? 'pointer-events-none' : ''}`}>
              {testData.insert_pdf_url ? (
                <iframe 
                  src={`${testData.insert_pdf_url}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} 
-                 className="w-full h-full border-none bg-white"
+                 className="w-full h-full border-none bg-transparent"
                  title="PDF Insert"
                />
              ) : (
-               <div className="flex flex-col items-center justify-center h-full text-slate-500 p-8 text-center bg-white m-4 border border-slate-300">
+               <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">
                  <span className="text-4xl mb-4">📄</span>
                  <p className="font-bold">Không có tài liệu PDF đính kèm cho bài thi này.</p>
                </div>
@@ -150,10 +154,12 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
           </div>
         </div>
 
-        {/* THANH KÉO (RESIZER) */}
+        {/* ========================================================= */}
+        {/* THANH KÉO (RESIZER) - Màu tối */}
+        {/* ========================================================= */}
         <div 
           onMouseDown={() => setIsDragging(true)}
-          className={`w-2 h-full bg-slate-200 border-x border-slate-300 hover:bg-slate-400 cursor-col-resize flex items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-slate-400' : ''}`}
+          className={`w-[6px] h-full bg-[#202224] hover:bg-[#1e88e5] cursor-col-resize flex items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-[#1e88e5]' : ''}`}
         >
           <div className="flex flex-col gap-1">
             <div className="w-[2px] h-[2px] bg-slate-500"></div>
@@ -162,71 +168,72 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
           </div>
         </div>
 
-        {/* NỬA PHẢI: KHU VỰC LÀM BÀI (TỪNG TRANG GIẤY RỜI) */}
-        <div style={{ width: `calc(${100 - leftWidth}% - 8px)` }} className="h-full bg-slate-200 relative flex flex-col shrink-0">
+        {/* ========================================================= */}
+        {/* NỬA PHẢI: KHU VỰC LÀM BÀI (COPY Y ĐÚC PDF) */}
+        {/* ========================================================= */}
+        <div style={{ width: `calc(${100 - leftWidth}% - 6px)` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
           
-          <div className="absolute top-0 left-0 right-0 bg-slate-100 border-b border-slate-300 px-4 py-2 z-10 flex justify-between items-center h-10">
-            <span className="font-bold text-slate-700 text-xs uppercase tracking-widest flex items-center gap-2">
-              Khu vực làm bài
+          {/* THANH TIÊU ĐỀ PHẢI (Copy y hệt bên trái) */}
+          <div className="bg-[#323639] border-b border-[#202224] px-6 flex justify-between items-center h-10 shrink-0 shadow-sm">
+            <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Khu vực làm bài
             </span>
           </div>
 
-          <div className={`flex-1 overflow-y-auto p-4 sm:p-8 pt-20 pb-24 ${isDragging ? 'pointer-events-none' : ''}`}>
-            {/* space-y-12 tạo khoảng cách lớn giữa các "tờ giấy" */}
-            <div className="max-w-4xl mx-auto space-y-12">
-              
-              {testData.json_config.questions.map((q: any, index: number) => (
-                /* MỖI CÂU HỎI LÀ MỘT TỜ GIẤY ĐỘC LẬP */
-                <div key={index} className="bg-white border border-black shadow-md px-6 py-12 sm:px-14 sm:py-16">
-                  
-                  {/* CÂU HỎI */}
-                  <div className="flex gap-3 mb-8 items-baseline">
-                    <div className="font-bold text-black text-[16px] sm:text-[18px] min-w-[30px]">
-                      {q.question_number}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline">
-                        {q.question_text}
-                      </h3>
-                      <span className="inline-block text-slate-500 text-[12px] font-bold ml-2 uppercase tracking-wider">
-                        [{q.total_marks} marks]
-                      </span>
-                    </div>
+          {/* VÙNG CUỘN CHỨA CÁC "TỜ GIẤY" */}
+          <div className={`flex-1 overflow-y-auto p-4 sm:p-6 ${isDragging ? 'pointer-events-none' : ''}`}>
+            
+            {testData.json_config.questions.map((q: any, index: number) => (
+              /* MỖI CÂU HỎI LÀ 1 TỜ GIẤY A4 */
+              <div key={index} className="w-full max-w-[850px] mx-auto bg-white shadow-xl mb-6 px-8 py-12 sm:px-14 sm:py-16">
+                
+                {/* CÂU HỎI */}
+                <div className="flex gap-3 mb-8 items-baseline">
+                  <div className="font-bold text-black text-[16px] sm:text-[18px] min-w-[30px]">
+                    {q.question_number}
                   </div>
-
-                  {/* CÁC Ô NHẬP LIỆU */}
-                  <div className="space-y-8 pl-0 sm:pl-[42px]">
-                    {q.inputs.map((input: any, i: number) => {
-                      const inputId = `${q.question_number}_input_${i}`;
-                      return (
-                        <div key={inputId} className="space-y-2">
-                          <label className="block text-[14px] font-semibold text-black">
-                            {input.label}
-                          </label>
-                          <textarea
-                            value={answers[inputId] || ''}
-                            onChange={(e) => handleAnswerChange(inputId, e.target.value)}
-                            className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-black focus:ring-1 focus:ring-black transition-all resize-y bg-transparent"
-                          />
-                        </div>
-                      )
-                    })}
+                  <div className="flex-1">
+                    <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline">
+                      {q.question_text}
+                    </h3>
+                    <span className="inline-block text-slate-500 text-[12px] font-bold ml-2 uppercase tracking-wider">
+                      [{q.total_marks} marks]
+                    </span>
                   </div>
-
                 </div>
-              ))}
 
-              {/* NÚT NỘP BÀI CŨNG NẰM RIÊNG BIỆT DƯỚI CÙNG */}
-              <div className="flex justify-end pt-4">
-                 <button 
-                   onClick={handleSubmit} 
-                   className="bg-black hover:bg-slate-800 text-white font-bold px-10 py-4 rounded-none transition-transform active:scale-95 flex items-center gap-2 border border-black shadow-md"
-                 >
-                   Hoàn tất & Nộp bài thi
-                 </button>
+                {/* CÁC Ô NHẬP LIỆU */}
+                <div className="space-y-8 pl-0 sm:pl-[42px]">
+                  {q.inputs.map((input: any, i: number) => {
+                    const inputId = `${q.question_number}_input_${i}`;
+                    return (
+                      <div key={inputId} className="space-y-2">
+                        <label className="block text-[14px] font-semibold text-black">
+                          {input.label}
+                        </label>
+                        <textarea
+                          value={answers[inputId] || ''}
+                          onChange={(e) => handleAnswerChange(inputId, e.target.value)}
+                          className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5] transition-all resize-y bg-transparent"
+                        />
+                      </div>
+                    )
+                  })}
+                </div>
+
               </div>
+            ))}
 
+            {/* NÚT NỘP BÀI (Nằm trong 1 mẩu giấy nhỏ ở cuối cùng) */}
+            <div className="w-full max-w-[850px] mx-auto bg-white shadow-xl px-8 py-6 sm:px-14 flex justify-end mb-12">
+               <button 
+                 onClick={handleSubmit} 
+                 className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 shadow-md"
+               >
+                 Hoàn tất & Nộp bài thi
+               </button>
             </div>
+
           </div>
         </div>
 
