@@ -99,26 +99,26 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
   return (
     <div className="h-screen w-screen flex flex-col bg-slate-50 font-sans text-slate-800 overflow-hidden">
       
-      {/* HEADER */}
-      <header className="h-16 w-full bg-white border-b border-slate-200 flex items-center justify-between px-4 sm:px-6 shrink-0 z-20 shadow-sm box-border">
+      {/* HEADER - Đã giảm chiều cao xuống h-14 để mở rộng không gian làm bài */}
+      <header className="h-14 w-full bg-white border-b border-slate-200 flex items-center justify-between px-4 sm:px-6 shrink-0 z-20 shadow-sm box-border">
         <div className="flex items-center gap-3 sm:gap-4 overflow-hidden">
-          <button onClick={onBack} className="text-slate-500 hover:text-[#0a5482] font-bold transition-colors whitespace-nowrap">
+          <button onClick={onBack} className="text-slate-500 hover:text-[#0a5482] font-bold text-sm transition-colors whitespace-nowrap">
             ← Quay lại
           </button>
-          <div className="h-6 w-px bg-slate-300 hidden sm:block"></div>
-          <div className="truncate">
-            <h1 className="font-black text-[#0a5482] text-[15px] sm:text-lg leading-tight truncate">{testData.title}</h1>
-            <p className="text-[10px] sm:text-[12px] font-bold text-slate-500 uppercase tracking-wider">Mã đề: {testData.exam_code} / Paper {testData.paper}</p>
+          <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
+          <div className="truncate flex items-baseline gap-2">
+            <h1 className="font-black text-[#0a5482] text-[15px] leading-tight truncate">{testData.title}</h1>
+            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider hidden md:block">Mã đề: {testData.exam_code} / Paper {testData.paper}</p>
           </div>
         </div>
         <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-           <div className="bg-orange-100 text-orange-600 px-3 py-1.5 rounded-full font-bold text-[12px] sm:text-[13px] flex items-center gap-2 border border-orange-200">
+           <div className="bg-orange-50 text-orange-600 px-3 py-1 rounded-full font-bold text-[12px] flex items-center gap-2 border border-orange-200">
              <span>⏱️</span> <span className="hidden sm:inline">01:30:00</span>
            </div>
            <button 
              onClick={handleSubmit} 
              disabled={isSubmitting}
-             className="bg-[#1e88e5] hover:bg-[#1565c0] text-white font-bold px-4 sm:px-6 py-2 rounded-lg transition-all shadow-md active:scale-95 disabled:opacity-50 whitespace-nowrap"
+             className="bg-[#1e88e5] hover:bg-[#1565c0] text-white font-bold text-sm px-5 py-1.5 rounded-lg transition-all shadow-sm active:scale-95 disabled:opacity-50 whitespace-nowrap"
            >
              {isSubmitting ? 'Đang nộp...' : 'Nộp Bài'}
            </button>
@@ -129,15 +129,16 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
       <div ref={containerRef} className="flex-1 flex overflow-hidden w-full select-none">
         
         {/* NỬA TRÁI: HIỂN THỊ FILE PDF THẬT TỪ SUPABASE */}
-        <div style={{ width: `${leftWidth}%` }} className="h-full bg-slate-300 flex flex-col relative shrink-0">
-          <div className="absolute top-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-b border-slate-200 px-4 py-2 flex justify-between items-center z-10 shadow-sm">
-            <span className="font-black text-slate-700 text-xs sm:text-sm uppercase tracking-wider">📄 Tài liệu tham khảo</span>
+        <div style={{ width: `${leftWidth}%` }} className="h-full bg-slate-200 flex flex-col relative shrink-0">
+          <div className="absolute top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-slate-200 px-4 py-2 flex justify-between items-center z-10 shadow-sm h-10">
+            <span className="font-black text-slate-700 text-xs uppercase tracking-wider">📄 Tài liệu tham khảo</span>
           </div>
           
           <div className={`flex-1 w-full h-full pt-10 ${isDragging ? 'pointer-events-none' : ''}`}>
              {testData.insert_pdf_url ? (
                <iframe 
-                 src={`${testData.insert_pdf_url}#view=FitH`} 
+                 /* THÊM #toolbar=0 VÀO ĐUÔI ĐỂ ẨN THANH CÔNG CỤ CỦA PDF */
+                 src={`${testData.insert_pdf_url}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} 
                  className="w-full h-full border-none bg-white"
                  title="PDF Insert"
                />
@@ -162,46 +163,47 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
           </div>
         </div>
 
-        {/* NỬA PHẢI: KHU VỰC LÀM BÀI GỌI TỪ JSON TRONG SUPABASE */}
-        <div style={{ width: `calc(${100 - leftWidth}% - 8px)` }} className="h-full bg-white relative flex flex-col shrink-0">
-          <div className="absolute top-0 left-0 right-0 bg-white/90 backdrop-blur-sm border-b border-slate-200 px-6 py-2 z-10 shadow-sm flex justify-between items-center">
-            <span className="font-black text-emerald-600 text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2">
+        {/* NỬA PHẢI: KHU VỰC LÀM BÀI */}
+        <div style={{ width: `calc(${100 - leftWidth}% - 8px)` }} className="h-full bg-[#f8fafc] relative flex flex-col shrink-0">
+          <div className="absolute top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-slate-200 px-6 py-2 z-10 shadow-sm flex justify-between items-center h-10">
+            <span className="font-black text-emerald-600 text-xs uppercase tracking-wider flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Khu vực làm bài
             </span>
           </div>
 
-          <div className={`flex-1 overflow-y-auto p-4 sm:p-8 pt-16 ${isDragging ? 'pointer-events-none' : ''}`}>
-            <div className="max-w-3xl mx-auto space-y-8">
+          {/* Đã giảm pt-16 xuống pt-12 để phần câu hỏi đẩy lên ngang bằng với phần PDF bên trái */}
+          <div className={`flex-1 overflow-y-auto p-4 sm:p-8 pt-12 ${isDragging ? 'pointer-events-none' : ''}`}>
+            <div className="max-w-3xl mx-auto space-y-6">
               {testData.json_config.questions.map((q: any, index: number) => (
                 <div key={index} className="bg-white border-2 border-slate-100 rounded-2xl p-5 sm:p-6 shadow-sm hover:border-blue-100 transition-colors">
                   
-                  <div className="flex gap-4 mb-6">
-                    <div className="w-10 h-10 shrink-0 bg-[#0a5482] text-white rounded-xl flex items-center justify-center font-black text-lg shadow-inner">
+                  <div className="flex gap-4 mb-5">
+                    <div className="w-8 h-8 shrink-0 bg-[#0a5482] text-white rounded-lg flex items-center justify-center font-black shadow-inner">
                       {q.question_number.replace(/[^0-9]/g, '')}
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-800 text-[15px] sm:text-[16px] leading-relaxed mb-2">
+                      <h3 className="font-bold text-slate-800 text-[14px] sm:text-[15px] leading-relaxed mb-2">
                         <span className="text-[#1e88e5] mr-1">{q.question_number}</span> {q.question_text}
                       </h3>
-                      <span className="inline-block bg-slate-100 text-slate-500 text-[11px] font-black px-2 py-1 rounded uppercase tracking-wider">
+                      <span className="inline-block bg-slate-100 text-slate-500 text-[10px] font-black px-2 py-1 rounded uppercase tracking-wider">
                         [{q.total_marks} marks]
                       </span>
                     </div>
                   </div>
 
-                  <div className="space-y-5 pl-2 sm:pl-14">
+                  <div className="space-y-4 pl-2 sm:pl-12">
                     {q.inputs.map((input: any, i: number) => {
                       const inputId = `${q.question_number}_input_${i}`;
                       return (
-                        <div key={inputId} className="space-y-2">
-                          <label className="block text-[13px] sm:text-[14px] font-bold text-slate-700">
+                        <div key={inputId} className="space-y-1.5">
+                          <label className="block text-[13px] font-bold text-slate-700">
                             {input.label}
                           </label>
                           <textarea
                             value={answers[inputId] || ''}
                             onChange={(e) => handleAnswerChange(inputId, e.target.value)}
                             placeholder="Nhập câu trả lời..."
-                            className="w-full border border-slate-300 rounded-xl p-3 sm:p-4 min-h-[100px] text-[14px] sm:text-[15px] text-slate-800 leading-relaxed outline-none focus:border-[#1e88e5] focus:ring-4 focus:ring-blue-50 transition-all resize-y bg-slate-50 focus:bg-white"
+                            className="w-full border border-slate-300 rounded-xl p-3 min-h-[90px] text-[14px] text-slate-800 leading-relaxed outline-none focus:border-[#1e88e5] focus:ring-4 focus:ring-blue-50 transition-all resize-y bg-slate-50 focus:bg-white"
                           />
                         </div>
                       )
@@ -211,7 +213,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
                 </div>
               ))}
 
-              <div className="pt-6 pb-12 flex justify-end">
+              <div className="pt-4 pb-12 flex justify-end">
                  <button 
                    onClick={handleSubmit} 
                    className="bg-emerald-500 hover:bg-emerald-600 text-white font-black px-6 sm:px-8 py-3 rounded-xl shadow-lg shadow-emerald-500/30 transition-transform active:scale-95 flex items-center gap-2"
