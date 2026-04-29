@@ -1,34 +1,17 @@
 import React, { useState } from 'react';
 import { supabase } from './supabase';
 
-// ĐƯA CÁC COMPONENT NÀY RA NGOÀI ĐỂ KHÔNG BỊ VĂNG CON TRỎ CHUỘT KHI GÕ
-const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
-  <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
-    <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
-    <input type="text" value={value || ''} onChange={onChange} placeholder={placeholder} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] focus:border-[#00a651] outline-none transition" />
-  </div>
-);
-
-const FileRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", uploadingId, handleFileUpload }: any) => (
-  <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
-    <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
-    <div className="flex items-center gap-3 flex-1 w-full">
-      <label className="bg-slate-50 border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[13px] cursor-pointer hover:bg-slate-100 transition shadow-sm">
-        <input type="file" className="hidden" accept={accept} onChange={(e) => handleFileUpload(e, onUpload, id)} /> 
-        {uploadingId === id ? '⏳ Đang tải...' : 'Chọn tệp'}
-      </label>
-      <span className="text-[12px] text-slate-400 truncate flex-1">{value ? '✅ Đã tải lên thành công' : 'Không có tệp... được chọn'}</span>
-    </div>
-  </div>
-);
-
-// HÀM CHÍNH
 export default function TestEditorModal({ testData: testRecord, courses, onClose, onSave }: any) {
   const isImportMode = testRecord.mode === 'import'; 
   const [activeTab, setActiveTab] = useState('basic'); 
   
   const getInitialData = () => {
-    if (testRecord.content_json) return {...testRecord.content_json};
+    // NẾU LÀ ĐỀ SỬA LẠI
+    if (testRecord.content_json) {
+      return {...testRecord.content_json};
+    }
+
+    // NẾU LÀ ĐỀ TẠO MỚI (CHỈ GIỮ LẠI CÁC MÔN STANDARD)
     return {
       basicInfo: {
         title: testRecord.title || '',
@@ -60,6 +43,9 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
   const [isSaving, setIsSaving] = useState(false);
   const [uploadingId, setUploadingId] = useState<string | null>(null);
 
+  // State phục vụ kéo thả Excel
+  const [isDraggingExcel, setIsDraggingExcel] = useState(false);
+
   const uploadToSupabase = async (file: File) => {
     const fileExt = file.name ? file.name.split('.').pop() : 'png';
     const fileName = `media_${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
@@ -77,6 +63,26 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
         updateCallback(url);
       } catch (error: any) { alert("Lỗi upload: " + error.message); } 
       finally { setUploadingId(null); }
+    }
+  };
+
+  // Các hàm hỗ trợ Kéo - Thả Excel
+  const handleDragOverExcel = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingExcel(true);
+  };
+
+  const handleDragLeaveExcel = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingExcel(false);
+  };
+
+  const handleDropExcel = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingExcel(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file) {
+      alert(`✅ Đã nhận file: ${file.name}. Tính năng bóc tách Excel đang được kết nối...`);
     }
   };
 
@@ -137,6 +143,26 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     onSave(testData); 
   };
 
+  const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
+    <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
+      <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
+      <input type="text" value={value || ''} onChange={onChange} placeholder={placeholder} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] focus:border-[#00a651] outline-none transition" />
+    </div>
+  );
+
+  const FileRow = ({ label, value, onUpload, id, accept = "audio/*, image/*" }: any) => (
+    <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
+      <label className="w-32 shrink-0 text-[13px] font-medium text-slate-500">{label}</label>
+      <div className="flex items-center gap-3 flex-1 w-full">
+        <label className="bg-slate-50 border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[13px] cursor-pointer hover:bg-slate-100 transition shadow-sm">
+          <input type="file" className="hidden" accept={accept} onChange={(e) => handleFileUpload(e, onUpload, id)} /> 
+          {uploadingId === id ? '⏳ Đang tải...' : 'Chọn tệp'}
+        </label>
+        <span className="text-[12px] text-slate-400 truncate flex-1">{value ? '✅ Đã tải lên thành công' : 'Không có tệp... được chọn'}</span>
+      </div>
+    </div>
+  );
+
   return (
     <div className="fixed inset-0 bg-[#f0f2f5] z-[60] flex flex-col animate-in fade-in">
       <div className="bg-white px-6 py-3 flex justify-between items-center shrink-0 border-b border-slate-200 shadow-sm relative z-20">
@@ -162,6 +188,12 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                       <label className="text-[12px] font-bold text-slate-600">Tên đề <span className="text-red-500">*</span></label>
                       <input value={testData.basicInfo.title} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, title: e.target.value}})} placeholder="Ví dụ: Đề thi tiếng Anh 10" className="w-full mt-1.5 p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-[#00a651] text-[14px] transition" />
                     </div>
+                    <div>
+                      <label className="text-[12px] font-bold text-slate-600 mb-1.5 block">Ảnh đại diện</label>
+                      <div className="w-full aspect-[4/3] bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center text-slate-400 hover:bg-slate-100 transition cursor-pointer">
+                        <span className="text-5xl opacity-30 mb-3">🖼️</span><p className="text-[13px] font-medium">Kéo thả hoặc tải lên...</p>
+                      </div>
+                    </div>
                 </div>
               </div>
 
@@ -184,9 +216,10 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                         <option value="Standard-Reading">Reading (Standard)</option>
                         <option value="IELTS-Writing">Writing (IELTS - Chấm AI)</option>
                         <option value="IELTS-Speaking">Speaking (IELTS - Chấm AI)</option>
-                        <option value="Standard-Test">Standard (TOEIC/IGCSE)</option>
+                        {/* Đã xóa Standard (TOEIC/IGCSE) */}
                       </select>
                     </div>
+
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <label className="text-[12px] font-bold text-slate-600">Loại bài làm</label>
@@ -217,6 +250,32 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
               <h3 className="text-center font-black text-slate-700 uppercase tracking-widest text-[14px] mb-6">NỘI DUNG ĐỀ / MARKING SCHEME</h3>
               
               <div className="bg-[#f4f9fd] border border-[#bae0f5] rounded-2xl overflow-hidden p-4 md:p-8 shadow-sm">
+                
+                {/* --- KHU VỰC KÉO THẢ EXCEL CHO CHẾ ĐỘ IMPORT --- */}
+                {isImportMode && (
+                  <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+                    <h3 className="font-black text-[#0a5482] border-b border-slate-100 pb-3 mb-4 uppercase text-sm">📥 Nhập dữ liệu từ Excel/CSV</h3>
+                    <div 
+                      className={`w-full mt-2 border-2 border-dashed rounded-xl p-8 flex flex-col items-center justify-center transition-colors ${isDraggingExcel ? 'border-[#0a5482] bg-blue-50' : 'border-slate-300 bg-slate-50 hover:bg-slate-100'}`}
+                      onDragOver={handleDragOverExcel}
+                      onDragLeave={handleDragLeaveExcel}
+                      onDrop={handleDropExcel}
+                    >
+                      <span className="text-4xl mb-3 opacity-50">📊</span>
+                      <p className="text-[14px] font-bold text-slate-600 mb-1">Kéo thả file Excel/CSV vào đây</p>
+                      <p className="text-[12px] font-medium text-slate-400 mb-4">hoặc</p>
+                      
+                      <label className="bg-white border border-slate-300 text-slate-700 px-5 py-2.5 rounded-lg text-[13px] font-bold cursor-pointer hover:bg-slate-50 shadow-sm transition">
+                        <input type="file" className="hidden" accept=".xlsx, .xls, .csv" onChange={(e) => {
+                          if(e.target.files?.[0]) alert(`✅ Đã nhận file: ${e.target.files[0].name}. Tính năng bóc tách Excel đang được kết nối...`);
+                        }} /> 
+                        Duyệt tệp trong máy
+                      </label>
+                      <p className="text-[11px] text-slate-400 italic mt-4 text-center">Hệ thống sẽ tự động bóc tách dữ liệu và tạo cấu trúc Part/Section/Question bên dưới.</p>
+                    </div>
+                  </div>
+                )}
+
                 {testData.parts?.map((part: any, pIdx: number) => (
                   <div key={part.id} className="border-2 border-[#00a651] rounded-xl bg-[#f8fcf9] overflow-hidden mb-8 relative shadow-sm">
                       <div className="bg-[#e6f4ea] px-6 py-3.5 border-b border-[#00a651]/20 flex justify-between items-center group">
