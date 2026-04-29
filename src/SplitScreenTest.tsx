@@ -99,7 +99,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
   return (
     <div className="h-screen w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
       
-      {/* HEADER CHÍNH CỦA ỨNG DỤNG (GIỮ NGUYÊN) */}
+      {/* HEADER */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-4 sm:px-6 shrink-0 z-20 box-border">
         <div className="flex items-center gap-3 sm:gap-4 overflow-hidden">
           <button onClick={onBack} className="text-slate-600 hover:text-black font-bold text-sm transition-colors whitespace-nowrap">
@@ -132,8 +132,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
         {/* NỬA TRÁI: PDF */}
         {/* ========================================================= */}
         <div style={{ width: `${leftWidth}%` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
-          
-          {/* THANH TIÊU ĐỀ TRÁI (Màu xám đen đồng bộ trình duyệt PDF) */}
           <div className="bg-[#323639] border-b border-[#202224] px-4 flex justify-between items-center h-10 shrink-0 shadow-sm">
             <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest">Tài liệu tham khảo</span>
           </div>
@@ -155,7 +153,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
         </div>
 
         {/* ========================================================= */}
-        {/* THANH KÉO (RESIZER) - Màu tối */}
+        {/* THANH KÉO (RESIZER) */}
         {/* ========================================================= */}
         <div 
           onMouseDown={() => setIsDragging(true)}
@@ -169,23 +167,22 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
         </div>
 
         {/* ========================================================= */}
-        {/* NỬA PHẢI: KHU VỰC LÀM BÀI (COPY Y ĐÚC PDF) */}
+        {/* NỬA PHẢI: KHU VỰC LÀM BÀI */}
         {/* ========================================================= */}
         <div style={{ width: `calc(${100 - leftWidth}% - 6px)` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
           
-          {/* THANH TIÊU ĐỀ PHẢI (Copy y hệt bên trái) */}
           <div className="bg-[#323639] border-b border-[#202224] px-6 flex justify-between items-center h-10 shrink-0 shadow-sm">
             <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Khu vực làm bài
             </span>
           </div>
 
-          {/* VÙNG CUỘN CHỨA CÁC "TỜ GIẤY" */}
-          <div className={`flex-1 overflow-y-auto p-4 sm:p-6 ${isDragging ? 'pointer-events-none' : ''}`}>
+          {/* Thay đổi lề cuộn mỏng hơn để tờ giấy phình to hết cỡ (p-4 sm:p-5) */}
+          <div className={`flex-1 overflow-y-auto p-4 sm:p-5 ${isDragging ? 'pointer-events-none' : ''}`}>
             
             {testData.json_config.questions.map((q: any, index: number) => (
-              /* MỖI CÂU HỎI LÀ 1 TỜ GIẤY A4 */
-              <div key={index} className="w-full max-w-[850px] mx-auto bg-white shadow-xl mb-6 px-8 py-12 sm:px-14 sm:py-16">
+              /* Đã gỡ bỏ max-w, dùng w-full. Thêm min-h-[85vh] để trang giấy luôn dài */
+              <div key={index} className="w-full bg-white shadow-xl mb-5 px-6 py-12 sm:px-16 sm:py-20 min-h-[85vh]">
                 
                 {/* CÂU HỎI */}
                 <div className="flex gap-3 mb-8 items-baseline">
@@ -224,8 +221,8 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
               </div>
             ))}
 
-            {/* NÚT NỘP BÀI (Nằm trong 1 mẩu giấy nhỏ ở cuối cùng) */}
-            <div className="w-full max-w-[850px] mx-auto bg-white shadow-xl px-8 py-6 sm:px-14 flex justify-end mb-12">
+            {/* NÚT NỘP BÀI (Rộng full) */}
+            <div className="w-full bg-white shadow-xl px-8 py-8 sm:px-16 flex justify-end mb-12 border-t border-slate-100">
                <button 
                  onClick={handleSubmit} 
                  className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 shadow-md"
