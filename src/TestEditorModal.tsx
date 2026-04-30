@@ -1,41 +1,33 @@
 import React, { useState } from 'react';
 import { supabase } from './supabase';
+import * as XLSX from 'xlsx'; // IMPORT BẢO BỐI ĐỌC EXCEL
 
 export default function TestEditorModal({ testData: testRecord, courses, onClose, onSave }: any) {
   const isImportMode = testRecord.mode === 'import'; 
-  const [activeTab, setActiveTab] = useState('basic'); 
+  const [activeTab, setActiveTab] = useState(isImportMode ? 'content' : 'basic'); // Import thì mở tab content luôn
   
+  // State phục vụ kéo thả Excel
+  const [isDraggingExcel, setIsDraggingExcel] = useState(false);
+
   const getInitialData = () => {
     // NẾU LÀ ĐỀ SỬA LẠI
     if (testRecord.content_json) {
       return {...testRecord.content_json};
     }
 
-    // NẾU LÀ ĐỀ TẠO MỚI (CHỈ GIỮ LẠI CÁC MÔN STANDARD)
+    // NẾU LÀ ĐỀ TẠO MỚI HOẶC IMPORT
     return {
       basicInfo: {
-        title: testRecord.title || '',
+        title: testRecord.title || (isImportMode ? 'Đề thi Import từ Excel' : ''),
         courseId: 'all', 
         thumbnail: '',
-        skill: testRecord.test_type || 'IELTS-Listening',
+        skill: testRecord.test_type || 'Standard-Test',
         mode: 'Đề thi',
         timeLimit: '40',
         scoreType: '1 điểm/ câu đúng',
         limit: ''
       },
-      parts: isImportMode ? [] : [
-        {
-          id: Date.now().toString(), title: 'Part 1', content: '', tags: '', audioUrl: '', explanation: '',
-          sections: [
-            {
-              id: (Date.now()+1).toString(), title: 'Section 1', content: '', tags: '', questionType: 'Kéo thả vào Part', audioUrl: '', explanation: '',
-              questions: [
-                { id: (Date.now()+2).toString(), content: '', tags: '', audioUrl: '', explanation: '', options: ['A', 'B', 'C', 'D'], correctAnswer: '' }
-              ]
-            }
-          ]
-        }
-      ]
+      parts: [] // Import thì để trống ban đầu
     };
   };
 
@@ -43,15 +35,95 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
   const [isSaving, setIsSaving] = useState(false);
   const [uploadingId, setUploadingId] = useState<string | null>(null);
 
-  // State phục vụ kéo thả Excel
-  const [isDraggingExcel, setIsDraggingExcel] = useState(false);
+  // =======================================================================
+  // THUẬT TOÁN ĐỌC FILE EXCEL & TỰ ĐỘNG BÓC TÁCH THÀNH ĐỀ THI
+  // =======================================================================
+  const processExcelFile = async (file: File) => {
+    alert(`⏳ Đang xử lý file: ${file.name}... Anh chờ chút nhé!`);
+    const reader = new FileReader();
+    
+    reader.onload = (e) => {
+      try {
+        const data = e.target?.result;
+        // Đọc dữ liệu Excel
+        const workbook = XLSX.read(data, { type: 'binary' });
+        const firstSheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[firstSheetName];
+        // Chuyển Excel thành mảng JSON
+        const jsonData = XLSX.utils.sheet_to_json(worksheet);
 
-  const uploadToSupabase = async (file: File) => {
-    const fileExt = file.name ? file.name.split('.').pop() : 'png';
-    const fileName = `media_${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
-    const { error } = await supabase.storage.from('test_assets').upload(`uploads/${fileName}`, file, { cacheControl: '3600', upsert: false });
-    if (error) throw error;
-    return supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
+        if (jsonData.length === 0) {
+          alert("⚠️ File Excel đang trống hoặc không đúng định dạng.");
+          return;
+        }
+
+        // Thuật toán nhóm dữ liệu thành cấu trúc 3 tầng: Part -> Section -> Question
+        let newParts: any[] = [];
+        let currentPart: any = null;
+        let currentSection: any = null;
+
+        jsonData.forEach((row: any) => {
+          // Linh hoạt nhận diện tên cột (tiếng Anh hoặc tiếng Việt)
+          const partTitle = row['Part'] || row['Phần'] || 'Part 1';
+          const secTitle = row['Section'] || row['Nhóm'] || 'Section 1';
+          const qContent = row['Question'] || row['Câu hỏi'] || row['Nội dung'] || '';
+          
+          const optA = row['Option A'] || row['Đáp án A'] || '';
+          const optB = row['Option B'] || row['Đáp án B'] || '';
+          const optC = row['Option C'] || row['Đáp án C'] || '';
+          const optD = row['Option D'] || row['Đáp án D'] || '';
+          
+          const exp = row['Explanation'] || row['Giải thích'] || '';
+          const tags = row['Tags'] || row['Điểm'] || '';
+
+          // 1. Tạo hoặc tìm Part
+          if (!currentPart || currentPart.title !== partTitle) {
+            currentPart = { id: Date.now().toString() + Math.random(), title: partTitle, content: '', tags: '', audioUrl: '', explanation: '', sections: [] };
+            newParts.push(currentPart);
+            currentSection = null; // Chuyển Part thì reset Section
+          }
+
+          // 2. Tạo hoặc tìm Section
+          if (!currentSection || currentSection.title !== secTitle) {
+            currentSection = { id: Date.now().toString() + Math.random(), title: secTitle, content: '', tags: '', questionType: 'Trắc nghiệm', audioUrl: '', explanation: '', questions: [] };
+            currentPart.sections.push(currentSection);
+          }
+
+          // 3. Đổ Question vào Section
+          if (qContent) {
+            const options = [];
+            if (optA) options.push(optA);
+            if (optB) options.push(optB);
+            if (optC) options.push(optC);
+            if (optD) options.push(optD);
+
+            currentSection.questions.push({
+              id: Date.now().toString() + Math.random(),
+              content: qContent,
+              tags: tags,
+              audioUrl: '',
+              explanation: exp,
+              options: options.length > 0 ? options : ['A', 'B', 'C', 'D'], // Mặc định nếu không điền cột option
+              correctAnswer: row['Answer'] || row['Đáp án đúng'] || ''
+            });
+          }
+        });
+
+        // Cập nhật State để render ra màn hình
+        setTestData((prev: any) => ({
+          ...prev,
+          parts: [...prev.parts, ...newParts]
+        }));
+
+        alert("🎉 Đã nhập dữ liệu Excel thành công! Anh cuộn xuống để xem cấu trúc đề vừa được tự động tạo nhé.");
+
+      } catch (err) {
+        console.error(err);
+        alert("❌ Lỗi khi đọc file Excel. Đảm bảo cấu trúc các cột (Part, Section, Question, Option...) chuẩn xác.");
+      }
+    };
+
+    reader.readAsBinaryString(file);
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, updateCallback: (url: string) => void, id: string) => {
@@ -59,33 +131,34 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     if (file) {
       setUploadingId(id);
       try {
-        const url = await uploadToSupabase(file);
+        const fileExt = file.name.split('.').pop();
+        const fileName = `media_${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
+        const { error } = await supabase.storage.from('test_assets').upload(`uploads/${fileName}`, file);
+        if (error) throw error;
+        const url = supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
         updateCallback(url);
       } catch (error: any) { alert("Lỗi upload: " + error.message); } 
       finally { setUploadingId(null); }
     }
   };
 
-  // Các hàm hỗ trợ Kéo - Thả Excel
-  const handleDragOverExcel = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDraggingExcel(true);
-  };
-
-  const handleDragLeaveExcel = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDraggingExcel(false);
-  };
-
+  // --- Kéo thả Excel ---
+  const handleDragOverExcel = (e: React.DragEvent) => { e.preventDefault(); setIsDraggingExcel(true); };
+  const handleDragLeaveExcel = (e: React.DragEvent) => { e.preventDefault(); setIsDraggingExcel(false); };
   const handleDropExcel = (e: React.DragEvent) => {
     e.preventDefault();
     setIsDraggingExcel(false);
     const file = e.dataTransfer.files?.[0];
-    if (file) {
-      alert(`✅ Đã nhận file: ${file.name}. Tính năng bóc tách Excel đang được kết nối...`);
-    }
+    if (file) processExcelFile(file);
   };
 
+  // --- Kéo thả File Button ---
+  const handleExcelButtonUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) processExcelFile(file);
+  };
+
+  // --- HÀM THÊM / XÓA CẤU TRÚC (MANUAL) ---
   const addPart = () => {
     const newData = { ...testData };
     if (!newData.parts) newData.parts = [];
@@ -99,7 +172,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
   const addSection = (pIdx: number) => {
     const newData = { ...testData };
     if (!newData.parts[pIdx].sections) newData.parts[pIdx].sections = [];
-    newData.parts[pIdx].sections.push({ id: Date.now().toString(), title: `Section ${newData.parts[pIdx].sections.length + 1}`, content: '', tags: '', questionType: 'Kéo thả vào Part', audioUrl: '', explanation: '', questions: [] });
+    newData.parts[pIdx].sections.push({ id: Date.now().toString(), title: `Section ${newData.parts[pIdx].sections.length + 1}`, content: '', tags: '', questionType: 'Trắc nghiệm', audioUrl: '', explanation: '', questions: [] });
     setTestData(newData);
   };
   const removeSection = (pIdx: number, sIdx: number) => {
@@ -168,7 +241,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
       <div className="bg-white px-6 py-3 flex justify-between items-center shrink-0 border-b border-slate-200 shadow-sm relative z-20">
         <div className="flex items-center gap-3">
           <button onClick={onClose} className="text-slate-500 hover:text-slate-800 font-bold text-xl transition">←</button>
-          <h2 className="font-black text-[15px] text-slate-800 uppercase tracking-tight">{isImportMode ? 'Import Đề Thi' : 'Soạn Thảo Đề Thi'}</h2>
+          <h2 className="font-black text-[15px] text-slate-800 uppercase tracking-tight">{isImportMode ? 'Import Đề Thi Bằng Excel' : 'Soạn Thảo Đề Thi'}</h2>
         </div>
       </div>
 
@@ -216,7 +289,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                         <option value="Standard-Reading">Reading (Standard)</option>
                         <option value="IELTS-Writing">Writing (IELTS - Chấm AI)</option>
                         <option value="IELTS-Speaking">Speaking (IELTS - Chấm AI)</option>
-                        {/* Đã xóa Standard (TOEIC/IGCSE) */}
                       </select>
                     </div>
 
@@ -254,7 +326,11 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                 {/* --- KHU VỰC KÉO THẢ EXCEL CHO CHẾ ĐỘ IMPORT --- */}
                 {isImportMode && (
                   <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
-                    <h3 className="font-black text-[#0a5482] border-b border-slate-100 pb-3 mb-4 uppercase text-sm">📥 Nhập dữ liệu từ Excel/CSV</h3>
+                    <div className="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">
+                       <h3 className="font-black text-[#0a5482] uppercase text-sm">📥 Nhập dữ liệu từ Excel/CSV</h3>
+                       <a href="#" className="text-[12px] font-bold text-emerald-600 hover:underline flex items-center gap-1">⬇️ Tải file Excel mẫu</a>
+                    </div>
+
                     <div 
                       className={`w-full mt-2 border-2 border-dashed rounded-xl p-8 flex flex-col items-center justify-center transition-colors ${isDraggingExcel ? 'border-[#0a5482] bg-blue-50' : 'border-slate-300 bg-slate-50 hover:bg-slate-100'}`}
                       onDragOver={handleDragOverExcel}
@@ -265,15 +341,18 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                       <p className="text-[14px] font-bold text-slate-600 mb-1">Kéo thả file Excel/CSV vào đây</p>
                       <p className="text-[12px] font-medium text-slate-400 mb-4">hoặc</p>
                       
-                      <label className="bg-white border border-slate-300 text-slate-700 px-5 py-2.5 rounded-lg text-[13px] font-bold cursor-pointer hover:bg-slate-50 shadow-sm transition">
-                        <input type="file" className="hidden" accept=".xlsx, .xls, .csv" onChange={(e) => {
-                          if(e.target.files?.[0]) alert(`✅ Đã nhận file: ${e.target.files[0].name}. Tính năng bóc tách Excel đang được kết nối...`);
-                        }} /> 
+                      <label className="bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2.5 rounded-lg text-[13px] font-bold cursor-pointer shadow-md transition active:scale-95">
+                        <input type="file" className="hidden" accept=".xlsx, .xls, .csv" onChange={handleExcelButtonUpload} /> 
                         Duyệt tệp trong máy
                       </label>
                       <p className="text-[11px] text-slate-400 italic mt-4 text-center">Hệ thống sẽ tự động bóc tách dữ liệu và tạo cấu trúc Part/Section/Question bên dưới.</p>
                     </div>
                   </div>
+                )}
+
+                {/* VÒNG LẶP RENDER CẤU TRÚC ĐỀ */}
+                {testData.parts?.length === 0 && !isImportMode && (
+                  <div className="text-center py-10 text-slate-400 font-medium">Chưa có phần nào. Bấm nút "Thêm Part" bên dưới để bắt đầu.</div>
                 )}
 
                 {testData.parts?.map((part: any, pIdx: number) => (
@@ -349,9 +428,13 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                       </div>
                   </div>
                 ))}
-                <div className="flex justify-center pt-6 border-t border-[#b6dff5]">
-                    <button onClick={addPart} className="bg-[#00a651] hover:bg-[#008f45] text-white px-8 py-3 rounded-full text-[14px] font-bold shadow-lg">+ Thêm Part</button>
-                </div>
+                
+                {/* Ẩn nút Thêm Part nếu đang ở chế độ Import mà chưa upload file */}
+                {(!isImportMode || testData.parts.length > 0) && (
+                  <div className="flex justify-center pt-6 border-t border-[#b6dff5]">
+                      <button onClick={addPart} className="bg-[#00a651] hover:bg-[#008f45] text-white px-8 py-3 rounded-full text-[14px] font-bold shadow-lg">+ Thêm Part</button>
+                  </div>
+                )}
               </div>
             </div>
           )}
