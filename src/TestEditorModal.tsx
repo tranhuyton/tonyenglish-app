@@ -280,7 +280,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
   const addSection = (pIdx: number) => {
     const newData = { ...testData };
     if (!newData.parts[pIdx].sections) newData.parts[pIdx].sections = [];
-    newData.parts[pIdx].sections.push({ id: Date.now().toString(), title: `Section ${newData.parts[pIdx].sections.length + 1}`, content: '', tags: '', questionType: 'Kéo thả vào Part', audioUrl: '', explanation: '', questions: [] });
+    newData.parts[pIdx].sections.push({ id: Date.now().toString(), title: `Section ${newData.parts[pIdx].sections.length + 1}`, content: '', tags: '', questionType: 'Trắc nghiệm', audioUrl: '', explanation: '', questions: [] });
     setTestData(newData);
   };
   const removeSection = (pIdx: number, sIdx: number) => {
@@ -440,7 +440,9 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                               <label className="w-32 shrink-0 text-[13px] font-bold text-slate-600">Kiểu làm</label>
                               <select value={sec.questionType} onChange={(e) => updateField([pIdx, sIdx], 'questionType', e.target.value)} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] text-slate-700 outline-none focus:border-[#3b82f6] transition">
                                 <option value="Kéo thả vào Part">Kéo thả vào Part</option>
-                                <option value="Trắc nghiệm">Trắc nghiệm</option>
+                                <option value="Trắc nghiệm">Trắc nghiệm (1 đáp án / TFNG)</option>
+                                <option value="Checkbox">Checkbox (Nhiều đáp án)</option>
+                                <option value="Droplist">Droplist (Nối đáp án)</option>
                                 <option value="Điền từ">Điền từ</option>
                               </select>
                             </div>
@@ -477,8 +479,8 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                                             <FieldRow label="Lời giải thích" value={q.explanation} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} placeholder="Giải thích vì sao đúng..." />
                                           </div>
                                           <div className="shrink-0 w-32">
-                                            <label className="text-[12px] font-bold text-slate-600 block mb-1">Đáp án đúng (VD: A)</label>
-                                            <input value={q.correctAnswer || ''} onChange={(e) => updateField([pIdx, sIdx, qIdx], 'correctAnswer', e.target.value)} className="w-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-center rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-emerald-400" />
+                                            <label className="text-[12px] font-bold text-slate-600 block mb-1">Đáp án đúng</label>
+                                            <input value={q.correctAnswer || ''} onChange={(e) => updateField([pIdx, sIdx, qIdx], 'correctAnswer', e.target.value)} className="w-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-center rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-emerald-400" placeholder="VD: A hoặc A, C" />
                                           </div>
                                         </div>
                                       </div>

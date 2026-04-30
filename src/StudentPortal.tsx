@@ -315,9 +315,9 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
     if (totalPages <= 1) return null;
     return (
       <div className="flex justify-center items-center gap-4 mt-10">
-        <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)} className="w-12 h-12 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-all disabled:opacity-30 shadow-sm font-black text-xl">←</button>
+        <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)} className="w-12 h-12 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black text-xl">←</button>
         <span className="text-[15px] font-bold text-slate-500 bg-white px-5 py-2.5 rounded-xl border border-slate-200 shadow-sm">Trang {currentPage} / {totalPages}</span>
-        <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)} className="w-12 h-12 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-all disabled:opacity-30 shadow-sm font-black text-xl">→</button>
+        <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)} className="w-12 h-12 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black text-xl">→</button>
       </div>
     );
   };
@@ -339,21 +339,34 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
         </div>
 
         <div className="hidden md:flex items-center gap-2 lg:gap-6 bg-slate-100/50 rounded-xl p-1 border border-slate-200">
-          <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourse(null); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${activeTab === 'library' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📚</span> Thư viện đề</button>
-          <button onClick={() => setActiveTab('analytics')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${activeTab === 'analytics' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📊</span> Phân tích & Lịch sử</button>
-          <button onClick={() => setActiveTab('profile')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${activeTab === 'profile' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">👤</span> Tài khoản</button>
+          <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourse(null); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors ${activeTab === 'library' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📚</span> Thư viện đề</button>
+          <button onClick={() => setActiveTab('analytics')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors ${activeTab === 'analytics' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📊</span> Phân tích & Lịch sử</button>
+          <button onClick={() => setActiveTab('profile')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors ${activeTab === 'profile' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">👤</span> Tài khoản</button>
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-4 cursor-pointer hover:opacity-80 transition group" onClick={() => setActiveTab('profile')}>
+          
+          {/* NÚT THOÁT VỀ ADMIN (CHỈ HIỂN THỊ NẾU LÀ ADMIN ĐANG VI HÀNH) */}
+          {userProfile?.role === 'admin' && (
+            <button 
+              onClick={() => onNavigate?.('admin')} 
+              className="hidden sm:flex bg-slate-800 hover:bg-slate-700 text-white font-bold text-[12px] px-4 py-2 rounded-lg transition-colors items-center uppercase tracking-wider shadow-md"
+            >
+              ⚙️ Về trang Admin
+            </button>
+          )}
+
+          <div className="flex items-center gap-4 cursor-pointer hover:opacity-80 transition-opacity group" onClick={() => setActiveTab('profile')}>
             <div className="text-right hidden sm:block">
               <div className="font-black text-sm text-slate-800 group-hover:text-[#1e88e5] transition-colors">{displayUserName}</div>
-              <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider">Học viên</div>
+              <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider">
+                {userProfile?.role === 'admin' ? 'Quản trị viên' : 'Học viên'}
+              </div>
             </div>
             <div className="w-10 h-10 rounded-full bg-[#0a5482] group-hover:bg-[#1e88e5] transition-colors text-white flex items-center justify-center font-black shadow-inner border-2 border-white">{displayUserInitial}</div>
           </div>
           <div className="h-8 w-px bg-slate-300 mx-1"></div>
-          <button onClick={handleLogout} className="text-[#e53935] font-black text-[13px] bg-red-50 hover:bg-red-100 border border-red-100 px-4 py-2 rounded-lg transition active:scale-95">Đăng Xuất</button>
+          <button onClick={handleLogout} className="text-[#e53935] font-black text-[13px] bg-red-50 hover:bg-red-100 border border-red-100 px-4 py-2 rounded-lg transition-colors active:scale-95">Đăng Xuất</button>
         </div>
       </header>
 
@@ -682,7 +695,9 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                 {displayUserInitial}
               </div>
               <h2 className="text-2xl font-black text-slate-800">{displayUserName}</h2>
-              <p className="text-slate-500 font-medium mb-8">Học viên TonyEnglish</p>
+              <p className="text-slate-500 font-medium mb-8">
+                {userProfile?.role === 'admin' ? 'Quản trị viên TonyEnglish' : 'Học viên TonyEnglish'}
+              </p>
               <div className="space-y-5 border-t border-slate-100 pt-8 text-left">
                 <h3 className="font-black text-lg text-slate-800 mb-2">🔐 Cấu hình thông tin</h3>
                 <div className="space-y-1">
@@ -715,7 +730,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
 
       {/* POPUP XEM CHI TIẾT LỊCH SỬ & LÀM LẠI */}
       {viewingHistoryDetail && (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-slate-900/70 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl w-full max-w-xl shadow-2xl overflow-hidden animate-in zoom-in-95">
              <div className="bg-slate-50 px-8 py-5 border-b border-slate-200 flex justify-between items-center">
                 <h3 className="font-black text-slate-800 text-lg uppercase tracking-widest">📝 Bảng Kết Quả</h3>
@@ -741,7 +756,6 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                    </div>
                 </div>
 
-                {/* Nếu có data bóc tách từng dạng bài thì hiện ra */}
                 {viewingHistoryDetail.details?.questionTypeStats && Object.keys(viewingHistoryDetail.details.questionTypeStats).length > 0 && (
                    <div className="mb-8">
                       <h4 className="font-bold text-slate-700 text-sm uppercase tracking-widest mb-4">Độ chính xác từng dạng bài:</h4>
@@ -770,24 +784,24 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
         </div>
       )}
 
-      {/* POPUP CHỌN HÌNH THỨC THI IELTS */}
+      {/* POPUP CHỌN HÌNH THỨC THI IELTS (ĐÃ TỐI ƯU PERFORMANCE) */}
       {showModeSelection && testToStart && (
-        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-slate-900/70 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl w-full max-w-lg shadow-2xl p-8 animate-in zoom-in-95">
             <h2 className="text-2xl font-black text-slate-800 mb-2">{testToStart.title}</h2>
             <p className="text-slate-500 font-medium mb-8">Vui lòng chọn hình thức thi bạn muốn tham gia:</p>
             
             <div className="space-y-4">
-              <button onClick={() => handleConfirmMode('computer')} className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-[#3b82f6] hover:bg-blue-50 transition-all text-left group">
-                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">💻</div>
+              <button onClick={() => handleConfirmMode('computer')} className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-blue-400 hover:bg-blue-50/50 transition-colors duration-200 text-left group">
+                <div className="w-12 h-12 shrink-0 rounded-full bg-blue-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-200 ease-out will-change-transform">💻</div>
                 <div><h3 className="font-bold text-[16px] text-slate-800">Thi trên máy tính (Computer-delivered)</h3><p className="text-[13px] text-slate-500 mt-1">Giao diện chuẩn thi máy, làm bài trực tiếp trên màn hình.</p></div>
               </button>
-              <button onClick={() => handleConfirmMode('paper')} className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 transition-all text-left group">
-                <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">📝</div>
+              <button onClick={() => handleConfirmMode('paper')} className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/50 transition-colors duration-200 text-left group">
+                <div className="w-12 h-12 shrink-0 rounded-full bg-emerald-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-200 ease-out will-change-transform">📝</div>
                 <div><h3 className="font-bold text-[16px] text-slate-800">Thi trên giấy (Paper-based)</h3><p className="text-[13px] text-slate-500 mt-1">Giao diện mô phỏng phiếu trả lời, kết hợp đề thi giấy PDF.</p></div>
               </button>
             </div>
-            <button onClick={() => setShowModeSelection(false)} className="mt-8 w-full py-3 font-bold text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy bỏ</button>
+            <button onClick={() => setShowModeSelection(false)} className="mt-8 w-full py-3 font-bold text-slate-400 hover:bg-slate-50 rounded-xl transition-colors">Hủy bỏ</button>
           </div>
         </div>
       )}

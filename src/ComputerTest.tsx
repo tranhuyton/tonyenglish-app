@@ -35,10 +35,31 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const handleAnswer = (qNum: string, value: string) => { if (!isReviewMode) setAnswers(prev => ({ ...prev, [String(qNum)]: String(value) })); };
 
+  // HÀM LẤY MỐC THỜI GIAN ĐÃ LƯU
+  const getSavedEndTime = () => {
+    if (!safeTestData?.id) return null;
+    const saved = localStorage.getItem(`ielts_endtime_${safeTestData.id}`);
+    return saved ? parseInt(saved, 10) : null;
+  };
+
+  const parseInitialTime = (timeStr: string) => {
+    if (!timeStr) return 3600; const timeParts = String(timeStr).replace(/[^0-9:]/g, '').split(':');
+    return timeParts.length === 2 ? parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]) : (parseInt(timeParts[0]) || 60) * 60;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
+
   const clearDraft = () => {
     if(window.confirm('Xóa bản nháp và làm lại từ đầu?')) { 
-      if (safeTestData?.id) localStorage.removeItem(`ielts_ans_${safeTestData.id}`); 
+      if (safeTestData?.id) {
+          localStorage.removeItem(`ielts_ans_${safeTestData.id}`); 
+          localStorage.removeItem(`ielts_endtime_${safeTestData.id}`);
+      }
       setAnswers({}); 
+      const initialSeconds = parseInitialTime(basicInfo.timeLimit);
+      const newEndTime = Date.now() + initialSeconds * 1000;
+      if (safeTestData?.id) localStorage.setItem(`ielts_endtime_${safeTestData.id}`, newEndTime.toString());
+      setTimeLeft(initialSeconds);
     }
   };
 
@@ -47,7 +68,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
       
       isFinishingRef.current = true;
-      if (safeTestData?.id) localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
+      if (safeTestData?.id) {
+          localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
+          localStorage.removeItem(`ielts_endtime_${safeTestData.id}`);
+      }
 
       let score = 0; let total = 0;
       let questionTypeStats: Record<string, { correct: number, total: number }> = {};
@@ -62,9 +86,17 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           
           const userAns = String(answers[String(q.id)] || "").trim().toUpperCase();
           const correctAns = String(q.correctAnswer || "").trim().toUpperCase();
-          if (userAns === correctAns && correctAns !== "") {
-            score++;
-            questionTypeStats[qType].correct++;
+          
+          if (qType === 'Checkbox') {
+             const userAnsArr = userAns.split(',').map(x => x.trim()).filter(x => x);
+             const correctAnsArr = correctAns.split(',').map(x => x.trim()).filter(x => x);
+             if (correctAnsArr.length > 0 && correctAnsArr.every(v => userAnsArr.includes(v)) && userAnsArr.length === correctAnsArr.length) {
+                score++; questionTypeStats[qType].correct++;
+             }
+          } else {
+             if (userAns === correctAns && correctAns !== "") {
+               score++; questionTypeStats[qType].correct++;
+             }
           }
         });
       }));
@@ -77,30 +109,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
       setScoreResult({ score, total, band }); setIsReviewMode(true); window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // LƯU KẾT QUẢ VÀO SUPABASE (KÈM CHỈ SỐ DẠNG BÀI VÀ TEST_ID)
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
           const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
           await supabase.from('test_results').insert([{
-            user_id: user.id,
-            course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
-            test_title: basicInfo.title || safeTestData?.title || "IELTS Test",
-            test_type: safeTestData?.test_type || 'IELTS Computer',
-            score: score,
-            total_score: total,
-            time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
-            details: { 
-              test_id: safeTestData?.id, 
-              bandScore: band, 
-              userAnswers: answers,
-              questionTypeStats: questionTypeStats 
-            }
+            user_id: user.id, course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
+            test_title: basicInfo.title || safeTestData?.title || "IELTS Test", test_type: safeTestData?.test_type || 'IELTS Computer',
+            score: score, total_score: total, time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
+            details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, questionTypeStats: questionTypeStats }
           }]);
         }
-      } catch (error) {
-        console.error("Lỗi lưu kết quả thi:", error);
-      }
+      } catch (error) { console.error("Lỗi lưu kết quả thi:", error); }
 
     } else {
       if (onFinish) onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title, bandScore: scoreResult.band }); 
@@ -109,7 +129,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   };
 
   const resetTest = () => {
-    if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { setAnswers({}); setIsReviewMode(false); setTestStarted(false); setTimeLeft(parseInitialTime(basicInfo.timeLimit)); }
+    if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { 
+        if (safeTestData?.id) localStorage.removeItem(`ielts_endtime_${safeTestData.id}`);
+        setAnswers({}); setIsReviewMode(false); setTestStarted(false); setTimeLeft(parseInitialTime(basicInfo.timeLimit)); 
+    }
   };
 
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
@@ -132,18 +155,23 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
-  const parseInitialTime = (timeStr: string) => {
-    if (!timeStr) return 3600; const timeParts = String(timeStr).replace(/[^0-9:]/g, '').split(':');
-    return timeParts.length === 2 ? parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]) : (parseInt(timeParts[0]) || 60) * 60;
-  };
-
-  const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
-
+  // LOGIC TIMER CHỐNG RESET KHI CHUYỂN TAB
   useEffect(() => {
-    if (!testStarted || timeLeft <= 0 || isReviewMode) return;
-    const timer = setInterval(() => { setTimeLeft(prev => { if (prev <= 1) { clearInterval(timer); alert("⏰ Hết giờ!"); handleFinish(); return 0; } return prev - 1; }); }, 1000);
+    if (!testStarted || isReviewMode) return;
+    const timer = setInterval(() => { 
+        const currentEndTime = getSavedEndTime();
+        if (currentEndTime) {
+            const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
+            setTimeLeft(remaining);
+            if (remaining <= 0) {
+                clearInterval(timer);
+                alert("⏰ Hết giờ!");
+                handleFinish();
+            }
+        } else { setTimeLeft(prev => prev - 1); }
+    }, 1000);
     return () => clearInterval(timer);
-  }, [testStarted, timeLeft, isReviewMode]);
+  }, [testStarted, isReviewMode]);
 
   const formatTime = (seconds: number) => { return `${Math.floor(seconds / 60).toString().padStart(2, '0')}:${(seconds % 60).toString().padStart(2, '0')}`; };
 
@@ -187,32 +215,21 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   };
   useEffect(() => { window.addEventListener('mousemove', onDrag); window.addEventListener('mouseup', stopDrag); return () => { window.removeEventListener('mousemove', onDrag); window.removeEventListener('mouseup', stopDrag); }; }, []);
 
-  // --- THUẬT TOÁN ĐỒNG BỘ ID CÂU HỎI AN TOÀN ---
   const allQuestionIds: string[] = [];
   parts?.forEach((p: any) => {
     p?.sections?.forEach((s: any) => {
       if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part") {
         const matches = String(s?.content || '').match(/\[(\d+)\]/g);
         if (matches) {
-          matches.forEach((m: string) => {
-            const num = m.replace(/\D/g, '');
-            if (!allQuestionIds.includes(num)) allQuestionIds.push(num);
-          });
+          matches.forEach((m: string) => { const num = m.replace(/\D/g, ''); if (!allQuestionIds.includes(num)) allQuestionIds.push(num); });
         }
       } else {
-        s?.questions?.forEach((q: any) => {
-          if (q?.id && !allQuestionIds.includes(String(q.id))) {
-            allQuestionIds.push(String(q.id));
-          }
-        });
+        s?.questions?.forEach((q: any) => { if (q?.id && !allQuestionIds.includes(String(q.id))) { allQuestionIds.push(String(q.id)); } });
       }
     });
   });
 
-  const questionIndexMap = allQuestionIds.reduce((acc: any, id: string, idx: number) => { 
-    acc[id] = idx + 1; 
-    return acc; 
-  }, {});
+  const questionIndexMap = allQuestionIds.reduce((acc: any, id: string, idx: number) => { acc[id] = idx + 1; return acc; }, {});
 
   const renderInlineQuestion = (text: any) => {
     if (!text) return null; 
@@ -265,6 +282,21 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const handleStartTest = () => {
     setTestStarted(true);
+    let currentEndTime = getSavedEndTime();
+    if (!currentEndTime) {
+        const initialSeconds = parseInitialTime(basicInfo.timeLimit);
+        currentEndTime = Date.now() + initialSeconds * 1000;
+        if (safeTestData?.id) localStorage.setItem(`ielts_endtime_${safeTestData.id}`, currentEndTime.toString());
+        setTimeLeft(initialSeconds);
+    } else {
+        const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
+        setTimeLeft(remaining);
+        if (remaining <= 0) {
+            alert("⏰ Bài thi này đã hết thời gian làm bài!");
+            handleFinish();
+            return;
+        }
+    }
     if (globalAudioRef.current && isListening) { globalAudioRef.current.play().catch(e => { console.error("Autoplay blocked:", e); alert("Trình duyệt không cho phép tự động phát âm thanh. Vui lòng ấn nút Bắt Đầu lại."); }); }
   };
   
@@ -384,16 +416,46 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                             const isCorrect = userAns === correctAns;
                             const displayIdx = questionIndexMap[String(q.id)] || q.id;
                             
+                            const isTFNG = q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
+
+                            if (isTFNG) {
+                                return (
+                                 <div key={q.id} id={`q-${q.id}`} className={`p-6 rounded-xl border relative group ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'bg-white border-slate-200 shadow-sm hover:border-slate-300'}`}>
+                                   <div className="flex items-start gap-3 mb-4">
+                                     <span className={`inline-flex items-center justify-center font-bold min-w-[30px] h-[30px] text-[14px] rounded-sm shadow-sm shrink-0 ${isReviewMode ? (isCorrect ? 'bg-emerald-500 text-white' : 'bg-red-500 text-white') : 'bg-[#1f2937] text-white'}`}>
+                                       {displayIdx}
+                                     </span>
+                                     <p className="text-[15px] font-medium text-slate-800 pt-[4px]">{String(q.content || '')}</p>
+                                   </div>
+                                   <div className={`flex flex-row flex-wrap gap-4 ml-10 mt-2`}>
+                                     {q.options?.map((opt: any, i: number) => {
+                                       const safeOpt = String(opt || '');
+                                       const optionValue = safeOpt.trim().toUpperCase(); 
+                                       const isSelected = userAns === optionValue; 
+                                       const isCorrectOpt = correctAns === optionValue;
+                                       let labelClass = "flex items-center gap-2 p-2 rounded transition border border-transparent";
+                                       if (isReviewMode) { if (isCorrectOpt) labelClass += " bg-emerald-100 border-emerald-400 font-bold text-emerald-800"; else if (isSelected) labelClass += " bg-red-100 border-red-300 text-red-700 line-through opacity-60"; else labelClass += " opacity-50"; } else { labelClass += " cursor-pointer hover:bg-gray-100 hover:border-gray-300"; }
+                                       return (
+                                         <label key={i} className={labelClass}>
+                                           <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="w-4 h-4 accent-blue-600" disabled={isReviewMode} />
+                                           <span className="text-[14px] leading-relaxed font-semibold">{safeOpt}</span>
+                                         </label>
+                                       )
+                                     })}
+                                   </div>
+                                   {isReviewMode && (<div className="mt-5 ml-10 pt-4 border-t border-slate-200"><p className="text-[13px] font-black text-amber-600 uppercase mb-1">💡 Giải thích đáp án:</p><p className="text-[14px] text-slate-700 font-medium">{String(q.explanation || '') || "Không có lời giải thích."}</p></div>)}
+                                 </div>
+                                )
+                            }
+                            
                             return (
                              <div key={q.id} id={`q-${q.id}`} className={`p-6 rounded-xl border relative group ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'bg-white border-slate-200 shadow-sm hover:border-slate-300'}`}>
-                               
                                <div className="flex items-start gap-3 mb-4">
                                  <span className={`inline-flex items-center justify-center font-bold min-w-[30px] h-[30px] text-[14px] rounded-sm shadow-sm shrink-0 ${isReviewMode ? (isCorrect ? 'bg-emerald-500 text-white' : 'bg-red-500 text-white') : 'bg-[#1f2937] text-white'}`}>
                                    {displayIdx}
                                  </span>
                                  <p className="text-[15px] font-medium text-slate-800 pt-[4px]">{String(q.content || '')}</p>
                                </div>
-
                                <div className={`flex flex-col gap-3 ml-10 mt-4`}>
                                  {q.options?.map((opt: any, i: number) => {
                                    const safeOpt = String(opt || '');
@@ -416,6 +478,133 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                          })}
                        </div>
                     )}
+                    
+                    {sec.questionType === "Droplist" && (
+                       <div className="space-y-4">
+                         {sec.questions?.map((q: any) => {
+                            if (!q?.id) return null;
+                            const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
+                            const userAns = String(answers[String(q.id)] || '').trim().toUpperCase(); 
+                            const isCorrect = userAns === correctAns;
+                            const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                            
+                            const otherSelectedAnswers = sec.questions
+                                .filter((otherQ: any) => otherQ.id !== q.id)
+                                .map((otherQ: any) => String(answers[String(otherQ.id)] || '').trim().toUpperCase())
+                                .filter((ans: string) => ans !== '');
+
+                            return (
+                             <div key={q.id} id={`q-${q.id}`} className={`p-4 rounded-xl border flex flex-col sm:flex-row sm:items-center gap-4 ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'bg-white border-slate-200 shadow-sm hover:border-slate-300'}`}>
+                               <div className="flex items-center gap-3 flex-1">
+                                 <span className={`inline-flex items-center justify-center font-bold min-w-[30px] h-[30px] text-[14px] rounded-sm shadow-sm shrink-0 ${isReviewMode ? (isCorrect ? 'bg-emerald-500 text-white' : 'bg-red-500 text-white') : 'bg-[#1f2937] text-white'}`}>
+                                   {displayIdx}
+                                 </span>
+                                 <p className="text-[15px] font-medium text-slate-800 line-clamp-2">{String(q.content || '')}</p>
+                               </div>
+                               <div className="shrink-0">
+                                   {isReviewMode ? (
+                                      <div className="flex flex-col items-end gap-1">
+                                          <div className={`px-4 py-1.5 rounded-md font-bold text-[14px] border ${isCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
+                                             {userAns || '(chưa chọn)'}
+                                          </div>
+                                          {!isCorrect && <div className="text-[12px] font-bold text-emerald-600 bg-emerald-50 px-2 border border-emerald-200 rounded">ĐA: {correctAns}</div>}
+                                      </div>
+                                   ) : (
+                                      <select 
+                                         className="border border-slate-300 bg-slate-50 focus:bg-white focus:border-blue-500 rounded-lg px-3 py-2 outline-none font-bold text-slate-700 min-w-[150px] cursor-pointer"
+                                         value={userAns}
+                                         onChange={(e) => handleAnswer(String(q.id), e.target.value)}
+                                      >
+                                         <option value="" disabled>-- Chọn đáp án --</option>
+                                         {q.options?.map((opt: any, i: number) => {
+                                            const optionValue = String(opt || '').trim().toUpperCase();
+                                            const isDisabled = otherSelectedAnswers.includes(optionValue);
+                                            return (
+                                                <option key={i} value={optionValue} disabled={isDisabled}>
+                                                   {optionValue} {isDisabled ? '(Đã chọn)' : ''}
+                                                </option>
+                                            )
+                                         })}
+                                      </select>
+                                   )}
+                               </div>
+                             </div>
+                            )
+                         })}
+                       </div>
+                    )}
+                    
+                    {sec.questionType === "Checkbox" && (
+                       <div className="space-y-6">
+                         {sec.questions?.map((q: any) => {
+                            if (!q?.id) return null;
+                            const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
+                            const userAns = String(answers[String(q.id)] || '').trim().toUpperCase(); 
+                            const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                            
+                            const correctAnsArr = correctAns.split(',').map(x => x.trim()).filter(x => x);
+                            const userAnsArr = userAns.split(',').map(x => x.trim()).filter(x => x);
+                            
+                            const isCorrect = correctAnsArr.length > 0 && correctAnsArr.every(v => userAnsArr.includes(v)) && userAnsArr.length === correctAnsArr.length;
+
+                            return (
+                             <div key={q.id} id={`q-${q.id}`} className={`p-6 rounded-xl border relative group ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'bg-white border-slate-200 shadow-sm hover:border-slate-300'}`}>
+                               
+                               <div className="flex items-start gap-3 mb-4">
+                                 <span className={`inline-flex items-center justify-center font-bold px-2 h-[30px] text-[14px] rounded-sm shadow-sm shrink-0 ${isReviewMode ? (isCorrect ? 'bg-emerald-500 text-white' : 'bg-red-500 text-white') : 'bg-[#1f2937] text-white'}`}>
+                                   {displayIdx}
+                                 </span>
+                                 <p className="text-[15px] font-medium text-slate-800 pt-[4px]">{String(q.content || '')}</p>
+                               </div>
+
+                               <div className={`flex flex-col gap-3 ml-10 mt-4`}>
+                                 {q.options?.map((opt: any, i: number) => {
+                                   const safeOpt = String(opt || '');
+                                   const optionValue = safeOpt.split('.')[0]?.trim().toUpperCase() || String.fromCharCode(65+i); 
+                                   const isSelected = userAnsArr.includes(optionValue); 
+                                   const isCorrectOpt = correctAnsArr.includes(optionValue);
+                                   let labelClass = "flex items-start gap-3 p-2 rounded transition border border-transparent";
+                                   
+                                   if (isReviewMode) { 
+                                       if (isCorrectOpt && isSelected) labelClass += " bg-emerald-100 border-emerald-400 font-bold text-emerald-800"; 
+                                       else if (isCorrectOpt && !isSelected) labelClass += " bg-amber-50 border-amber-300 font-bold text-amber-700"; 
+                                       else if (isSelected && !isCorrectOpt) labelClass += " bg-red-100 border-red-300 text-red-700 line-through opacity-60";
+                                       else labelClass += " opacity-50"; 
+                                   } else { 
+                                       labelClass += " cursor-pointer hover:bg-gray-100 hover:border-gray-300"; 
+                                   }
+                                   
+                                   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+                                       let newArr = [...userAnsArr];
+                                       if(e.target.checked) {
+                                           const maxAllowed = correctAnsArr.length > 0 ? correctAnsArr.length : 1; 
+                                           if (newArr.length >= maxAllowed) {
+                                               alert(`Lưu ý: Câu hỏi này chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án. Vui lòng bỏ chọn một đáp án cũ trước khi chọn cái mới nhé!`);
+                                               e.preventDefault();
+                                               return;
+                                           }
+                                           newArr.push(optionValue);
+                                       } else {
+                                           newArr = newArr.filter(v => v !== optionValue);
+                                       }
+                                       handleAnswer(String(q.id), newArr.join(','));
+                                   };
+
+                                   return (
+                                     <label key={i} className={labelClass}>
+                                       <input type="checkbox" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={handleCheckboxChange} className="mt-1 w-4 h-4 accent-blue-600 rounded-sm" disabled={isReviewMode} />
+                                       <span className="text-[14px] leading-relaxed">{safeOpt}</span>
+                                     </label>
+                                   )
+                                 })}
+                               </div>
+                               {isReviewMode && (<div className="mt-5 ml-10 pt-4 border-t border-slate-200"><p className="text-[13px] font-black text-amber-600 uppercase mb-1">💡 Giải thích đáp án:</p><p className="text-[14px] text-slate-700 font-medium">{String(q.explanation || '') || "Không có lời giải thích."}</p></div>)}
+                             </div>
+                            )
+                         })}
+                       </div>
+                    )}
+
                   </div>
                 ))}
               </div>
@@ -434,7 +623,17 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 let btnClass = `w-8 h-8 flex items-center justify-center font-bold text-sm bg-white transition-all box-border shrink-0 `;
                 if (isReviewMode) {
                   const q = parts.flatMap((p: any) => p.sections?.flatMap((s: any) => s.questions) || []).find((q: any) => String(q.id) === id);
-                  const isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase();
+                  
+                  const qType = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id))?.questionType;
+                  let isCorrect = false;
+                  if (qType === 'Checkbox') {
+                     const correctAnsArr = String(q?.correctAnswer || '').split(',').map(x => x.trim().toUpperCase()).filter(x => x);
+                     const userAnsArr = String(answers[id] || '').split(',').map(x => x.trim().toUpperCase()).filter(x => x);
+                     isCorrect = correctAnsArr.length > 0 && correctAnsArr.every(v => userAnsArr.includes(v)) && userAnsArr.length === correctAnsArr.length;
+                  } else {
+                     isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase();
+                  }
+                  
                   btnClass += isCorrect ? 'bg-emerald-200 border border-emerald-400 text-emerald-800' : 'bg-red-200 border border-red-400 text-red-800';
                 } else { btnClass += isAnswered ? 'border-b-[4px] border-b-black border-t border-x border-gray-400 text-black' : 'border border-gray-400 text-black hover:bg-gray-100 cursor-pointer'; }
                 return (<button key={id} onClick={() => scrollToQuestion(id)} className={btnClass}>{questionIndexMap[id]}</button>)

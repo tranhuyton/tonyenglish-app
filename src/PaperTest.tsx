@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 import './tailwind.css';
 
@@ -6,7 +6,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   let safeTestData = testData;
   if (typeof safeTestData === 'string') { try { safeTestData = JSON.parse(safeTestData); } catch (e) { } }
 
-  // ĐỒNG BỘ CẤU TRÚC DỮ LIỆU MỚI TỪ ADMIN
   const contentJSON = safeTestData?.content_json || safeTestData || {};
   const basicInfo = contentJSON.basicInfo || { title: "IELTS Paper-based", timeLimit: "60", skill: "" };
   const parts = contentJSON.parts || [];
@@ -22,7 +21,10 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   const isFinishingRef = useRef(false);
 
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
-    const saved = localStorage.getItem(`ielts_paper_ans_${safeTestData?.id}`); return saved ? JSON.parse(saved) : {};
+    try {
+        const saved = localStorage.getItem(`ielts_paper_ans_${safeTestData?.id}`); 
+        return saved ? JSON.parse(saved) : {};
+    } catch(e) { return {}; }
   });
 
   useEffect(() => { 
@@ -54,9 +56,20 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           
           const userAns = answers[String(q.id)]?.trim().toUpperCase() || "";
           const correctAns = String(q.correctAnswer || "").trim().toUpperCase();
-          if (userAns === correctAns && correctAns !== "") {
-            score++;
-            questionTypeStats[qType].correct++;
+          
+          // Logic xử lý chấm điểm Checkbox
+          if (qType === 'Checkbox') {
+             const userAnsArr = userAns.split(',').map(x => x.trim()).filter(x => x);
+             const correctAnsArr = correctAns.split(',').map(x => x.trim()).filter(x => x);
+             if (correctAnsArr.length > 0 && correctAnsArr.every(v => userAnsArr.includes(v)) && userAnsArr.length === correctAnsArr.length) {
+                score++;
+                questionTypeStats[qType].correct++;
+             }
+          } else {
+             if (userAns === correctAns && correctAns !== "") {
+               score++;
+               questionTypeStats[qType].correct++;
+             }
           }
         });
       }));
@@ -69,7 +82,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
 
       setScoreResult({ score, total, band }); setIsReviewMode(true); window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // LƯU KẾT QUẢ VÀO SUPABASE (KÈM CHỈ SỐ DẠNG BÀI VÀ TEST_ID)
+      // LƯU KẾT QUẢ VÀO SUPABASE
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
@@ -237,7 +250,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           )}
           <div className="flex gap-4 justify-center">
             <button onClick={onBack} className="px-6 py-3 rounded-lg font-bold text-slate-500 hover:bg-slate-100 border border-slate-300 transition">Quay lại</button>
-            <button onClick={handleStartTest} className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition">Bắt Đầu Làm Bài</button>
+            <button onClick={handleStartTest} className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition">Bắt Đầu Làm Bài</button>
           </div>
         </div>
       </div>
@@ -337,19 +350,57 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                         {sec.questionType === "Trắc nghiệm" && (
                           <div className="space-y-6">
                             {sec.questions?.map((q: any) => {
-                              const correctAns = q.correctAnswer?.trim().toUpperCase(); 
-                              const userAns = answers[String(q.id)]?.trim().toUpperCase(); 
+                              const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
+                              const userAns = String(answers[String(q.id)] || '').trim().toUpperCase(); 
                               const isCorrect = userAns === correctAns;
                               const displayIndex = questionIndexMap[q.id] || q.id;
+                              
+                              const isTFNG = q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
 
+                              // Dàn hàng ngang cho TFNG
+                              if (isTFNG) {
+                                 return (
+                                    <div key={q.id} id={`q-${q.id}`} className={`p-6 rounded-xl border shadow-sm ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'border-gray-200'}`}>
+                                      <div className="flex gap-4 mb-2">
+                                        <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
+                                        <div className="flex-1">
+                                          {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">✅ ĐÚNG</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">❌ SAI</span>}</div>)}
+                                          {q.content && <p className="text-[16px] mb-4 font-serif leading-relaxed">{q.content}</p>}
+                                          <div className={`flex flex-row flex-wrap gap-4`}>
+                                            {q.options?.map((opt: string, i: number) => {
+                                              const optionValue = opt.trim().toUpperCase(); 
+                                              const isSelected = userAns === optionValue; 
+                                              const isCorrectOpt = correctAns === optionValue;
+                                              let labelClass = "flex items-center gap-2 p-1.5 transition";
+                                              
+                                              if (isReviewMode) { 
+                                                if (isCorrectOpt) labelClass += " font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded"; 
+                                                else if (isSelected) labelClass += " text-red-500 line-through opacity-70 bg-red-50 rounded"; 
+                                                else labelClass += " opacity-50"; 
+                                              } else { labelClass += " cursor-pointer group hover:text-blue-600"; }
+                                              return (
+                                                <label key={i} className={labelClass}>
+                                                  <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="w-4 h-4 accent-blue-600 cursor-pointer" disabled={isReviewMode} />
+                                                  <span className="text-[15px] font-serif leading-relaxed font-medium">{opt}</span>
+                                                </label>
+                                              );
+                                            })}
+                                          </div>
+                                          {isReviewMode && (<div className="mt-6 pt-4 border-t border-slate-200"><p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p><p className="text-[14px] text-slate-700 italic">{q.explanation || "Không có lời giải thích."}</p></div>)}
+                                        </div>
+                                      </div>
+                                    </div>
+                                 );
+                              }
+
+                              // Layout dọc thông thường cho Multiple Choice
                               return (
                                 <div key={q.id} id={`q-${q.id}`} className={`p-6 rounded-xl border shadow-sm ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'border-gray-200'}`}>
                                   <div className="flex gap-4 mb-4">
-                                    <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-1">{displayIndex}.</span>
+                                    <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
                                     <div className="flex-1">
                                       {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">✅ ĐÚNG</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">❌ SAI</span>}</div>)}
                                       {q.content && <p className="text-[16px] mb-4 font-serif leading-relaxed">{q.content}</p>}
-                                      
                                       <div className={`flex flex-col gap-2`}>
                                         {q.options?.map((opt: string, i: number) => {
                                           const optionValue = opt.split('.')[0]?.trim().toUpperCase() || String.fromCharCode(65+i); 
@@ -361,9 +412,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                             if (isCorrectOpt) labelClass += " font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded"; 
                                             else if (isSelected) labelClass += " text-red-500 line-through opacity-70 bg-red-50 rounded"; 
                                             else labelClass += " opacity-50"; 
-                                          } else { 
-                                            labelClass += " cursor-pointer group hover:text-blue-600"; 
-                                          }
+                                          } else { labelClass += " cursor-pointer group hover:text-blue-600"; }
                                           return (
                                             <label key={i} className={labelClass}>
                                               <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="mt-1 accent-blue-600 cursor-pointer" disabled={isReviewMode} />
@@ -380,6 +429,125 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                             })}
                           </div>
                         )}
+
+                        {sec.questionType === "Droplist" && (
+                          <div className="space-y-4">
+                            {sec.questions?.map((q: any) => {
+                              const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
+                              const userAns = String(answers[String(q.id)] || '').trim().toUpperCase(); 
+                              const isCorrect = userAns === correctAns;
+                              const displayIndex = questionIndexMap[q.id] || q.id;
+                              
+                              const otherSelectedAnswers = sec.questions
+                                  .filter((otherQ: any) => otherQ.id !== q.id)
+                                  .map((otherQ: any) => String(answers[String(otherQ.id)] || '').trim().toUpperCase())
+                                  .filter((ans: string) => ans !== '');
+
+                              return (
+                                <div key={q.id} id={`q-${q.id}`} className={`p-5 rounded-xl border flex flex-col sm:flex-row sm:items-center gap-4 shadow-sm ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'border-gray-200 bg-white'}`}>
+                                  <div className="flex items-center gap-3 flex-1">
+                                    <span className="font-bold text-gray-800 shrink-0">{displayIndex}.</span>
+                                    <p className="text-[15px] font-serif text-slate-800 line-clamp-2">{q.content}</p>
+                                  </div>
+                                  <div className="shrink-0 flex items-center justify-end">
+                                      {isReviewMode ? (
+                                         <div className="flex items-center gap-2">
+                                             <div className={`px-4 py-1.5 rounded font-bold text-[14px] border ${isCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
+                                                {userAns || '(chưa chọn)'}
+                                             </div>
+                                             {!isCorrect && <div className="text-[12px] font-bold text-emerald-700">Đúng: {correctAns}</div>}
+                                         </div>
+                                      ) : (
+                                         <select 
+                                            className="border-b-2 border-slate-400 bg-transparent focus:border-blue-600 rounded-none px-3 py-1 outline-none text-blue-800 font-serif font-medium text-[15px] min-w-[150px] cursor-pointer"
+                                            value={userAns}
+                                            onChange={(e) => handleAnswer(String(q.id), e.target.value)}
+                                         >
+                                            <option value="" disabled className="text-gray-500 font-sans">-- Chọn --</option>
+                                            {q.options?.map((opt: any, i: number) => {
+                                               const optionValue = String(opt || '').trim().toUpperCase();
+                                               const isDisabled = otherSelectedAnswers.includes(optionValue);
+                                               return (
+                                                   <option key={i} value={optionValue} disabled={isDisabled} className="text-gray-800 font-sans">
+                                                      {optionValue} {isDisabled ? '(Đã chọn)' : ''}
+                                                   </option>
+                                               )
+                                            })}
+                                         </select>
+                                      )}
+                                  </div>
+                                </div>
+                              )
+                            })}
+                          </div>
+                        )}
+
+                        {sec.questionType === "Checkbox" && (
+                          <div className="space-y-6">
+                            {sec.questions?.map((q: any) => {
+                              const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
+                              const userAns = String(answers[String(q.id)] || '').trim().toUpperCase(); 
+                              const displayIndex = questionIndexMap[q.id] || q.id;
+                              
+                              const correctAnsArr = correctAns.split(',').map(x => x.trim()).filter(x => x);
+                              const userAnsArr = userAns.split(',').map(x => x.trim()).filter(x => x);
+                              const isCorrect = correctAnsArr.length > 0 && correctAnsArr.every(v => userAnsArr.includes(v)) && userAnsArr.length === correctAnsArr.length;
+
+                              return (
+                                <div key={q.id} id={`q-${q.id}`} className={`p-6 rounded-xl border shadow-sm ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'border-gray-200'}`}>
+                                  <div className="flex gap-4 mb-4">
+                                    <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
+                                    <div className="flex-1">
+                                      {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">✅ ĐÚNG</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">❌ SAI</span>}</div>)}
+                                      {q.content && <p className="text-[16px] mb-4 font-serif leading-relaxed">{q.content}</p>}
+                                      
+                                      <div className={`flex flex-col gap-2`}>
+                                        {q.options?.map((opt: string, i: number) => {
+                                          const optionValue = opt.split('.')[0]?.trim().toUpperCase() || String.fromCharCode(65+i); 
+                                          const isSelected = userAnsArr.includes(optionValue); 
+                                          const isCorrectOpt = correctAnsArr.includes(optionValue);
+                                          let labelClass = "flex items-start gap-3 p-1.5 transition";
+                                          
+                                          if (isReviewMode) { 
+                                            if (isCorrectOpt && isSelected) labelClass += " font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded"; 
+                                            else if (isCorrectOpt && !isSelected) labelClass += " font-bold text-amber-600 bg-amber-50 border border-amber-200 rounded"; 
+                                            else if (isSelected && !isCorrectOpt) labelClass += " text-red-500 line-through opacity-70 bg-red-50 rounded"; 
+                                            else labelClass += " opacity-50"; 
+                                          } else { labelClass += " cursor-pointer group hover:text-blue-600"; }
+                                          
+                                          const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+                                              let newArr = [...userAnsArr];
+                                              if(e.target.checked) {
+                                                  const maxAllowed = correctAnsArr.length > 0 ? correctAnsArr.length : 1; 
+                                                  if (newArr.length >= maxAllowed) {
+                                                      alert(`Cẩn thận! Đề bài chỉ yêu cầu chọn tối đa ${maxAllowed} đáp án. Vui lòng bỏ chọn bớt trước khi tick cái mới.`);
+                                                      e.preventDefault();
+                                                      return;
+                                                  }
+                                                  newArr.push(optionValue);
+                                              } else {
+                                                  newArr = newArr.filter(v => v !== optionValue);
+                                              }
+                                              handleAnswer(String(q.id), newArr.join(','));
+                                          };
+
+                                          return (
+                                            <label key={i} className={labelClass}>
+                                              <input type="checkbox" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={handleCheckboxChange} className="mt-1 w-4 h-4 accent-blue-600 cursor-pointer rounded-sm" disabled={isReviewMode} />
+                                              <span className="text-[15px] font-serif leading-relaxed">{opt}</span>
+                                            </label>
+                                          );
+                                        })}
+                                      </div>
+                                      {isReviewMode && (<div className="mt-6 pt-4 border-t border-slate-200"><p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p><p className="text-[14px] text-slate-700 italic">{q.explanation || "Không có lời giải thích."}</p></div>)}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+
                       </div>
                     ))}
                   </div>
@@ -398,7 +566,17 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
             let btnClass = `w-9 h-9 shrink-0 flex items-center justify-center font-bold text-[14px] rounded transition-all `;
             if (isReviewMode) {
               const q = parts.flatMap((p: any) => p.sections?.flatMap((s: any) => s.questions) || []).find((q: any) => String(q.id) === id);
-              const isCorrect = q && answers[id]?.trim().toUpperCase() === q.correctAnswer?.trim().toUpperCase();
+              
+              const qType = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id))?.questionType;
+              let isCorrect = false;
+              if (qType === 'Checkbox') {
+                 const correctAnsArr = String(q?.correctAnswer || '').split(',').map(x => x.trim().toUpperCase()).filter(x => x);
+                 const userAnsArr = String(answers[id] || '').split(',').map(x => x.trim().toUpperCase()).filter(x => x);
+                 isCorrect = correctAnsArr.length > 0 && correctAnsArr.every(v => userAnsArr.includes(v)) && userAnsArr.length === correctAnsArr.length;
+              } else {
+                 isCorrect = q && answers[id]?.trim().toUpperCase() === q.correctAnswer?.trim().toUpperCase();
+              }
+              
               btnClass += isCorrect ? 'bg-emerald-100 text-emerald-700 border border-emerald-300' : 'bg-red-100 text-red-700 border border-red-300';
             } else { btnClass += isAnswered ? 'bg-blue-600 text-white border-none' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 border border-gray-300 cursor-pointer'; }
             return (<button key={id} onClick={() => scrollToQuestion(id)} className={btnClass}>{questionIndexMap[id]}</button>)

@@ -33,6 +33,10 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [newCourse, setNewCourse] = useState({ title: '', type: 'IELTS' });
   const [newFolderTitle, setNewFolderTitle] = useState('');
 
+  // --- STATE SỬA TÊN KHÓA HỌC TRỰC TIẾP ---
+  const [editingCourseId, setEditingCourseId] = useState<string | null>(null);
+  const [editingCourseTitle, setEditingCourseTitle] = useState('');
+
   useEffect(() => {
     fetchCourses();
     fetchLibraryTests();
@@ -79,6 +83,21 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       setShowCreateCourseModal(false);
       setNewCourse({ title: '', type: 'IELTS' });
     }
+  };
+
+  // --- HÀM LƯU TÊN KHÓA HỌC SAU KHI SỬA ---
+  const handleUpdateCourseName = async (courseId: string) => {
+    if (!editingCourseTitle.trim()) {
+      setEditingCourseId(null);
+      return;
+    }
+    const { error } = await supabase.from('courses').update({ title: editingCourseTitle }).eq('id', courseId);
+    if (!error) {
+      setCourses(courses.map(c => c.id === courseId ? { ...c, title: editingCourseTitle } : c));
+    } else {
+      alert("Lỗi cập nhật tên khóa học!");
+    }
+    setEditingCourseId(null);
   };
 
   const handleCreateFolder = async (e: React.FormEvent) => {
@@ -324,11 +343,47 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                 const folderIds = allFolders.filter(f => f.course_id === course.id).map(f => f.id);
                 const testCount = libraryTests.filter(t => folderIds.includes(t.folder_id)).length;
                 return (
-                  <div key={course.id} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all group">
-                    <span className="px-2.5 py-1 rounded-md text-[10px] font-black uppercase bg-blue-100 text-blue-700">{course.type}</span>
-                    <h3 className="font-black text-lg mt-4 mb-2 text-slate-800 line-clamp-2">{course.title}</h3>
-                    <p className="text-xs font-bold text-slate-400 mb-6">{testCount} đề thi đã gán</p>
-                    <button onClick={() => handleViewCourseDetail(course)} className="w-full bg-[#f8fafc] group-hover:bg-[#2bd6eb] group-hover:text-white text-slate-600 border border-slate-200 font-bold py-3 rounded-xl transition shadow-sm">Quản lý cấu trúc ➜</button>
+                  <div key={course.id} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-48 relative">
+                    <div className="flex justify-between items-start">
+                       <span className="px-2.5 py-1 rounded-md text-[10px] font-black uppercase bg-blue-100 text-blue-700">{course.type}</span>
+                       
+                       {/* Nút sửa tên nhỏ xinh (hiện khi hover vào card) */}
+                       {editingCourseId !== course.id && (
+                         <button 
+                           onClick={(e) => { e.stopPropagation(); setEditingCourseId(course.id); setEditingCourseTitle(course.title); }} 
+                           className="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-[#0a5482] transition-opacity"
+                           title="Sửa tên khóa học"
+                         >
+                           ✏️
+                         </button>
+                       )}
+                    </div>
+                    
+                    {/* Phần hiển thị tên hoặc ô sửa tên */}
+                    <div className="flex-1 mt-4 mb-2">
+                       {editingCourseId === course.id ? (
+                         <div className="flex flex-col gap-2">
+                            <input 
+                              autoFocus
+                              value={editingCourseTitle} 
+                              onChange={(e) => setEditingCourseTitle(e.target.value)} 
+                              onKeyDown={(e) => { if (e.key === 'Enter') handleUpdateCourseName(course.id); }}
+                              className="w-full border border-slate-300 rounded-lg px-3 py-1.5 font-black text-[15px] outline-none focus:border-[#0a5482]" 
+                            />
+                            <div className="flex gap-2">
+                               <button onClick={(e) => { e.stopPropagation(); handleUpdateCourseName(course.id); }} className="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 px-3 py-1 rounded shadow-sm">Lưu</button>
+                               <button onClick={(e) => { e.stopPropagation(); setEditingCourseId(null); }} className="text-xs font-bold text-slate-500 hover:bg-slate-100 border border-slate-200 px-3 py-1 rounded">Hủy</button>
+                            </div>
+                         </div>
+                       ) : (
+                         <h3 className="font-black text-lg text-slate-800 line-clamp-2">{course.title}</h3>
+                       )}
+                    </div>
+
+                    <div>
+                       <p className="text-xs font-bold text-slate-400 mb-4">{testCount} đề thi đã gán</p>
+                       <button onClick={() => handleViewCourseDetail(course)} className="w-full bg-[#f8fafc] group-hover:bg-[#2bd6eb] group-hover:text-white text-slate-600 border border-slate-200 font-bold py-2.5 rounded-xl transition shadow-sm text-sm">Quản lý cấu trúc ➜</button>
+                    </div>
                   </div>
                 );
               })}
