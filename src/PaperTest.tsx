@@ -34,14 +34,44 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   }, [answers, safeTestData?.id, isReviewMode]);
 
   const handleAnswer = (qNum: string, value: string) => { if (!isReviewMode) setAnswers(prev => ({ ...prev, [qNum]: value })); };
-  const clearDraft = () => { if (window.confirm('Xóa toàn bộ bản nháp?')) { if (safeTestData?.id) localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`); setAnswers({}); } };
+  
+  // HÀM LẤY MỐC THỜI GIAN ĐÃ LƯU (THỜI GIAN THỰC)
+  const getSavedEndTime = () => {
+    if (!safeTestData?.id) return null;
+    const saved = localStorage.getItem(`ielts_paper_endtime_${safeTestData.id}`);
+    return saved ? parseInt(saved, 10) : null;
+  };
+
+  const parseInitialTime = (timeStr: string) => {
+    if (!timeStr) return 3600; const timeParts = String(timeStr).replace(/[^0-9:]/g, '').split(':');
+    return timeParts.length === 2 ? parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]) : (parseInt(timeParts[0]) || 60) * 60;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
+
+  const clearDraft = () => { 
+    if (window.confirm('Xóa toàn bộ bản nháp và làm lại từ đầu?')) { 
+      if (safeTestData?.id) {
+         localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`); 
+         localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
+      }
+      setAnswers({}); 
+      const initialSeconds = parseInitialTime(basicInfo.timeLimit);
+      const newEndTime = Date.now() + initialSeconds * 1000;
+      if (safeTestData?.id) localStorage.setItem(`ielts_paper_endtime_${safeTestData.id}`, newEndTime.toString());
+      setTimeLeft(initialSeconds);
+    } 
+  };
 
   const handleFinish = async () => {
     if (!isReviewMode) {
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
       
       isFinishingRef.current = true;
-      if (safeTestData?.id) localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
+      if (safeTestData?.id) {
+         localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
+         localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
+      }
 
       let score = 0; let total = 0;
       let questionTypeStats: Record<string, { correct: number, total: number }> = {};
@@ -57,7 +87,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           const userAns = answers[String(q.id)]?.trim().toUpperCase() || "";
           const correctAns = String(q.correctAnswer || "").trim().toUpperCase();
           
-          // Logic xử lý chấm điểm Checkbox
           if (qType === 'Checkbox') {
              const userAnsArr = userAns.split(',').map(x => x.trim()).filter(x => x);
              const correctAnsArr = correctAns.split(',').map(x => x.trim()).filter(x => x);
@@ -82,7 +111,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
 
       setScoreResult({ score, total, band }); setIsReviewMode(true); window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // LƯU KẾT QUẢ VÀO SUPABASE
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
@@ -112,19 +140,30 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     }
   };
 
-  const resetTest = () => { if (window.confirm("Làm lại từ đầu?")) { setAnswers({}); setIsReviewMode(false); setTestStarted(false); setTimeLeft(parseInitialTime(basicInfo.timeLimit)); } };
-
-  const parseInitialTime = (timeStr: string) => {
-    if (!timeStr) return 3600; const timeParts = String(timeStr).replace(/[^0-9:]/g, '').split(':');
-    return timeParts.length === 2 ? parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]) : (parseInt(timeParts[0]) || 60) * 60;
+  const resetTest = () => { 
+    if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { 
+      if (safeTestData?.id) localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
+      setAnswers({}); setIsReviewMode(false); setTestStarted(false); setTimeLeft(parseInitialTime(basicInfo.timeLimit)); 
+    } 
   };
 
-  const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
+  // LOGIC TIMER ĐỒNG BỘ THỜI GIAN THỰC (CHỐNG F5)
   useEffect(() => {
-    if (!testStarted || timeLeft <= 0 || isReviewMode) return;
-    const timer = setInterval(() => { setTimeLeft(prev => { if (prev <= 1) { clearInterval(timer); alert("⏰ Hết giờ!"); handleFinish(); return 0; } return prev - 1; }); }, 1000);
+    if (!testStarted || isReviewMode) return;
+    const timer = setInterval(() => { 
+        const currentEndTime = getSavedEndTime();
+        if (currentEndTime) {
+            const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
+            setTimeLeft(remaining);
+            if (remaining <= 0) {
+                clearInterval(timer);
+                alert("⏰ Hết giờ!");
+                handleFinish();
+            }
+        } else { setTimeLeft(prev => prev - 1); }
+    }, 1000);
     return () => clearInterval(timer);
-  }, [testStarted, timeLeft, isReviewMode]);
+  }, [testStarted, isReviewMode]);
 
   const formatTime = (seconds: number) => { return `${Math.floor(seconds / 60).toString().padStart(2, '0')}:${(seconds % 60).toString().padStart(2, '0')}`; };
 
@@ -160,7 +199,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     if (target.tagName === 'SPAN' && target.dataset.noteId) { const rect = target.getBoundingClientRect(); setStickyNote({ show: true, id: target.dataset.noteId, text: target.dataset.noteText || '', x: rect.left, y: rect.bottom + 10 }); }
   };
 
-  // --- THUẬT TOÁN ĐỒNG BỘ ID VÀ SỐ THỨ TỰ ---
   const allQuestionIds: string[] = [];
   parts.forEach((p: any) => p.sections?.forEach((s: any) => {
     if (s.questionType === "Điền từ" || s.questionType === "Kéo thả vào Part") {
@@ -182,7 +220,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     acc[id] = idx + 1; 
     return acc; 
   }, {});
-  // ------------------------------------------
 
   const renderInlineQuestion = (text: string) => {
     if (!text) return null;
@@ -232,6 +269,22 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
 
   const handleStartTest = () => {
     setTestStarted(true);
+    // KHÓA MỐC THỜI GIAN KẾT THÚC KHI BẮT ĐẦU VÀO THI
+    let currentEndTime = getSavedEndTime();
+    if (!currentEndTime) {
+        const initialSeconds = parseInitialTime(basicInfo.timeLimit);
+        currentEndTime = Date.now() + initialSeconds * 1000;
+        if (safeTestData?.id) localStorage.setItem(`ielts_paper_endtime_${safeTestData.id}`, currentEndTime.toString());
+        setTimeLeft(initialSeconds);
+    } else {
+        const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
+        setTimeLeft(remaining);
+        if (remaining <= 0) {
+            alert("⏰ Bài thi này đã hết thời gian làm bài!");
+            handleFinish();
+            return;
+        }
+    }
     if (globalAudioRef.current && isListening) { globalAudioRef.current.play().catch(e => { console.error("Autoplay blocked:", e); alert("Trình duyệt chặn phát âm thanh. Vui lòng bấm Bắt Đầu lại."); }); }
   };
 
@@ -381,7 +434,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                               return (
                                                 <label key={i} className={labelClass}>
                                                   <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="w-4 h-4 accent-blue-600 cursor-pointer" disabled={isReviewMode} />
-                                                  <span className="text-[15px] font-serif leading-relaxed font-medium">{opt}</span>
+                                                  <span className="text-[15px] font-serif leading-relaxed font-semibold">{opt}</span>
                                                 </label>
                                               );
                                             })}

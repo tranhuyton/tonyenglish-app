@@ -58,22 +58,22 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
   // --- QUẢN LÝ LOCAL STORAGE AN TOÀN ---
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
     try {
-      const saved = localStorage.getItem(`std_ans_${safeData?.id}`);
+      const saved = localStorage.getItem(`standard_ans_${safeData?.id}`);
       return saved ? JSON.parse(saved) : {};
     } catch (e) { return {}; }
   });
 
   const [marked, setMarked] = useState<Record<string, boolean>>(() => {
     try {
-      const saved = localStorage.getItem(`std_mark_${safeData?.id}`);
+      const saved = localStorage.getItem(`standard_mark_${safeData?.id}`);
       return saved ? JSON.parse(saved) : {};
     } catch (e) { return {}; }
   });
 
   useEffect(() => {
     if (!isReviewMode && !isFinishingRef.current && safeData?.id) {
-      localStorage.setItem(`std_ans_${safeData.id}`, JSON.stringify(answers));
-      localStorage.setItem(`std_mark_${safeData.id}`, JSON.stringify(marked));
+      localStorage.setItem(`standard_ans_${safeData.id}`, JSON.stringify(answers));
+      localStorage.setItem(`standard_mark_${safeData.id}`, JSON.stringify(marked));
     }
   }, [answers, marked, safeData?.id, isReviewMode]);
 
@@ -91,21 +91,39 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
       
       isFinishingRef.current = true;
       if (safeData?.id) {
-        localStorage.removeItem(`std_ans_${safeData.id}`);
-        localStorage.removeItem(`std_mark_${safeData.id}`);
+        localStorage.removeItem(`standard_ans_${safeData.id}`);
+        localStorage.removeItem(`standard_mark_${safeData.id}`);
+        localStorage.removeItem(`standard_endtime_${safeData.id}`);
       }
 
       let score = 0;
       let total = 0;
+      let questionTypeStats: Record<string, { correct: number, total: number }> = {};
+
       parts?.forEach((p: any) => {
         p?.sections?.forEach((s: any) => {
+          const qType = s.questionType || 'Khác';
+          if (!questionTypeStats[qType]) questionTypeStats[qType] = { correct: 0, total: 0 };
+
           s?.questions?.forEach((q: any) => {
             if (!q?.id) return;
             total++;
-            // BỌC STRING() ĐỂ CHỐNG CRASH KHI ĐÁP ÁN LÀ SỐ
+            questionTypeStats[qType].total++;
+
             const uAns = String(answers[String(q.id)] || '').trim().toUpperCase();
             const cAns = String(q.correctAnswer || '').trim().toUpperCase();
-            if (uAns === cAns && cAns !== '') score++;
+            
+            if (qType === 'Checkbox') {
+               const uAnsArr = uAns.split(',').map(x => x.trim()).filter(x => x);
+               const cAnsArr = cAns.split(',').map(x => x.trim()).filter(x => x);
+               if (cAnsArr.length > 0 && cAnsArr.every(v => uAnsArr.includes(v)) && uAnsArr.length === cAnsArr.length) {
+                  score++; questionTypeStats[qType].correct++;
+               }
+            } else {
+               if (uAns === cAns && cAns !== '') {
+                 score++; questionTypeStats[qType].correct++;
+               }
+            }
           });
         });
       });
@@ -115,7 +133,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
       setShowPalette(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // LƯU KẾT QUẢ VÀO SUPABASE
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
@@ -128,7 +145,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
             score: score,
             total_score: total,
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
-            details: { userAnswers: answers }
+            details: { test_id: safeData?.id, userAnswers: answers, questionTypeStats: questionTypeStats }
           }]);
         }
       } catch (error) {
@@ -148,18 +165,31 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
     return isNaN(num) ? 3600 : num * 60;
   };
 
+  // --- LẤY MỐC THỜI GIAN THỰC TỪ BỘ NHỚ ---
+  const getSavedEndTime = () => {
+    if (!safeData?.id) return null;
+    const saved = localStorage.getItem(`standard_endtime_${safeData.id}`);
+    return saved ? parseInt(saved, 10) : null;
+  };
+
   const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
   
   useEffect(() => {
-    if (!testStarted || timeLeft <= 0 || isReviewMode) return;
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev <= 1) { clearInterval(timer); alert("⏰ Hết giờ làm bài!"); handleFinish(); return 0; }
-        return prev - 1;
-      });
+    if (!testStarted || isReviewMode) return;
+    const timer = setInterval(() => { 
+        const currentEndTime = getSavedEndTime();
+        if (currentEndTime) {
+            const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
+            setTimeLeft(remaining);
+            if (remaining <= 0) {
+                clearInterval(timer);
+                alert("⏰ Hết giờ làm bài!");
+                handleFinish();
+            }
+        } else { setTimeLeft(prev => prev - 1); }
     }, 1000);
     return () => clearInterval(timer);
-  }, [testStarted, timeLeft, isReviewMode]);
+  }, [testStarted, isReviewMode]);
 
   const formatTime = (sec: number) => {
     const m = Math.floor(sec / 60).toString().padStart(2, '0');
@@ -259,6 +289,21 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
 
   const handleStartTest = () => {
     setTestStarted(true);
+    let currentEndTime = getSavedEndTime();
+    if (!currentEndTime) {
+        const initialSeconds = parseInitialTime(basicInfo.timeLimit);
+        currentEndTime = Date.now() + initialSeconds * 1000;
+        if (safeData?.id) localStorage.setItem(`standard_endtime_${safeData.id}`, currentEndTime.toString());
+        setTimeLeft(initialSeconds);
+    } else {
+        const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
+        setTimeLeft(remaining);
+        if (remaining <= 0) {
+            alert("⏰ Bài thi này đã hết thời gian làm bài!");
+            handleFinish();
+            return;
+        }
+    }
     if (globalAudioRef.current && isListening) {
       globalAudioRef.current.play().catch(e => {
         console.error("Autoplay blocked:", e);
@@ -321,9 +366,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
           title="Kéo để điều chỉnh độ rộng 2 bên"
         >
           <div className="flex flex-col gap-1">
-            <div className="w-1 h-1 rounded-full bg-slate-400"></div>
-            <div className="w-1 h-1 rounded-full bg-slate-400"></div>
-            <div className="w-1 h-1 rounded-full bg-slate-400"></div>
+            <div className="w-1 h-1 rounded-full bg-slate-400"></div><div className="w-1 h-1 rounded-full bg-slate-400"></div><div className="w-1 h-1 rounded-full bg-slate-400"></div>
           </div>
         </div>
 
@@ -351,6 +394,51 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                             const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
                             const isQuestionCorrect = userAns === correctAns;
                             const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                            
+                            const isTFNG = q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
+
+                            if (isTFNG) {
+                               return (
+                                 <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
+                                   {!isReviewMode && (
+                                     <button onClick={() => toggleMark(String(q.id))} className={`absolute top-5 right-5 transition-colors ${marked[String(q.id)] ? 'text-amber-400' : 'text-slate-200 hover:text-slate-400'}`}>
+                                        <svg className="w-6 h-6" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 1 : 2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                     </button>
+                                   )}
+                                   {isReviewMode && (<div className="absolute top-5 right-5 font-bold text-[12px]">{isQuestionCorrect ? <span className="text-emerald-700">✅ Đúng</span> : <span className="text-red-600">❌ Sai</span>}</div>)}
+
+                                   <div className="font-bold text-slate-800 text-[15px] mb-3 pr-10">Question {displayIdx}:</div>
+                                   {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-3">{String(q.content)}</div>}
+                                   
+                                   <div className="flex flex-row flex-wrap gap-4 pl-2">
+                                     {q.options?.map((opt: string, i: number) => {
+                                        const safeOpt = String(opt || '');
+                                        const val = safeOpt.trim().toUpperCase();
+                                        const isSelected = userAns === val;
+                                        const isCorrectOpt = correctAns === val;
+
+                                        let labelStyle = "flex items-center gap-2 p-1.5 transition";
+                                        if (isReviewMode) {
+                                           if (isCorrectOpt) labelStyle += " font-bold text-emerald-800 bg-emerald-100 rounded";
+                                           else if (isSelected) labelStyle += " text-red-600 line-through opacity-70 bg-red-100 rounded";
+                                        } else {
+                                           labelStyle += " cursor-pointer hover:bg-slate-50";
+                                        }
+
+                                        return (
+                                           <label key={i} className={labelStyle}>
+                                              <input type="radio" name={`q-${q.id}`} value={val} checked={isSelected} onChange={() => handleAnswer(String(q.id), val)} disabled={isReviewMode} className="w-4 h-4 accent-[#3ba1e2]" />
+                                              <span className="text-[14px] font-semibold">{safeOpt}</span>
+                                           </label>
+                                        );
+                                     })}
+                                   </div>
+                                   {isReviewMode && q.explanation && (
+                                     <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg"><p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p><p className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap">{String(q.explanation)}</p></div>
+                                   )}
+                                 </div>
+                               );
+                            }
 
                             return (
                               <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
@@ -395,6 +483,130 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                                 <div className={`w-2 h-2 rounded-full ${isSelected || isCorrectOpt ? 'bg-white' : 'bg-transparent'}`}></div>
                                              </div>
                                              <span className={`text-[14px] ${textStyle}`}>{safeOpt}</span>
+                                          </label>
+                                       );
+                                    })}
+                                 </div>
+
+                                 {isReviewMode && q.explanation && (
+                                    <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg">
+                                       <p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p>
+                                       <p className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap">{String(q.explanation)}</p>
+                                    </div>
+                                 )}
+                              </div>
+                            );
+                         })}
+
+                         {sec?.questionType === "Droplist" && (
+                           <div className="space-y-4">
+                             {sec?.questions?.map((q: any) => {
+                               if (!q?.id) return null;
+                               const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
+                               const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
+                               const isQuestionCorrect = userAns === correctAns;
+                               const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                               
+                               const otherSelectedAnswers = sec.questions
+                                   .filter((otherQ: any) => otherQ.id !== q.id)
+                                   .map((otherQ: any) => String(answers[String(otherQ.id)] || '').trim().toUpperCase())
+                                   .filter((ans: string) => ans !== '');
+
+                               return (
+                                  <div key={q.id} id={`q-${q.id}`} className={`bg-white p-5 rounded-xl shadow-sm border flex flex-col sm:flex-row gap-4 items-center mb-4 transition-all scroll-mt-20 ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200'}`}>
+                                     <div className="font-bold text-slate-800 text-[15px] shrink-0">Q. {displayIdx}</div>
+                                     <div className="flex-1 text-[14px] text-slate-700 line-clamp-2">{String(q.content || '')}</div>
+                                     <div className="shrink-0">
+                                        {isReviewMode ? (
+                                           <div className="flex flex-col items-end gap-1">
+                                              <div className={`px-4 py-1.5 rounded-md font-bold text-[13px] border ${isQuestionCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
+                                                 {userAns || '(chưa chọn)'}
+                                              </div>
+                                              {!isQuestionCorrect && <div className="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 rounded border border-emerald-200">ĐA: {correctAns}</div>}
+                                           </div>
+                                        ) : (
+                                           <select 
+                                              className="border border-slate-300 bg-slate-50 focus:bg-white focus:border-[#3ba1e2] rounded-lg px-3 py-2 outline-none font-bold text-slate-700 min-w-[150px] cursor-pointer text-[13px]"
+                                              value={userAns}
+                                              onChange={(e) => handleAnswer(String(q.id), e.target.value)}
+                                           >
+                                              <option value="" disabled>-- Chọn đáp án --</option>
+                                              {q.options?.map((opt: any, i: number) => {
+                                                 const val = String(opt || '').trim().toUpperCase();
+                                                 const isDisabled = otherSelectedAnswers.includes(val);
+                                                 return <option key={i} value={val} disabled={isDisabled}>{val} {isDisabled ? '(Đã chọn)' : ''}</option>
+                                              })}
+                                           </select>
+                                        )}
+                                     </div>
+                                  </div>
+                               )
+                             })}
+                           </div>
+                         )}
+
+                         {sec?.questionType === "Checkbox" && sec?.questions?.map((q: any) => {
+                            if (!q?.id) return null;
+                            const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
+                            const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
+                            const displayIdx = questionIndexMap[String(q.id)] || q.id;
+
+                            const cAnsArr = correctAns.split(',').map(x => x.trim()).filter(x => x);
+                            const uAnsArr = userAns.split(',').map(x => x.trim()).filter(x => x);
+                            const isQuestionCorrect = cAnsArr.length > 0 && cAnsArr.every(v => uAnsArr.includes(v)) && uAnsArr.length === cAnsArr.length;
+
+                            return (
+                              <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
+                                 {!isReviewMode && (
+                                    <button onClick={() => toggleMark(String(q.id))} className={`absolute top-5 right-5 transition-colors ${marked[String(q.id)] ? 'text-amber-400' : 'text-slate-200 hover:text-slate-400'}`}>
+                                       <svg className="w-6 h-6" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 1 : 2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                    </button>
+                                 )}
+                                 {isReviewMode && (
+                                    <div className="absolute top-5 right-5 font-bold text-[12px]">
+                                       {isQuestionCorrect ? <span className="text-emerald-700">✅ Đúng</span> : <span className="text-red-600">❌ Sai</span>}
+                                    </div>
+                                 )}
+
+                                 <div className="font-bold text-slate-800 text-[15px] mb-3 pr-10">Question {displayIdx}:</div>
+                                 {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-5">{String(q.content)}</div>}
+                                 
+                                 <div className="space-y-3 pl-2">
+                                    {q.options?.map((opt: any, i: number) => {
+                                       const safeOpt = String(opt || '');
+                                       const val = safeOpt.split('.')[0]?.trim().toUpperCase() || String.fromCharCode(65+i);
+                                       const isSelected = uAnsArr.includes(val);
+                                       const isCorrectOpt = cAnsArr.includes(val);
+
+                                       let labelClass = "flex items-start gap-3 p-1.5 transition";
+                                       if (isReviewMode) {
+                                          if (isCorrectOpt && isSelected) labelClass += " bg-emerald-100 border-emerald-400 font-bold text-emerald-800 rounded";
+                                          else if (isCorrectOpt && !isSelected) labelClass += " bg-amber-50 border-amber-300 font-bold text-amber-700 rounded";
+                                          else if (isSelected && !isCorrectOpt) labelClass += " bg-red-100 border-red-300 text-red-700 line-through opacity-70 rounded";
+                                          else labelClass += " opacity-50";
+                                       } else {
+                                          labelClass += " cursor-pointer hover:bg-slate-50";
+                                       }
+
+                                       const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+                                          let newArr = [...uAnsArr];
+                                          if (e.target.checked) {
+                                             const maxAllowed = cAnsArr.length > 0 ? cAnsArr.length : 1;
+                                             if (newArr.length >= maxAllowed) {
+                                                alert(`Đề bài yêu cầu chọn tối đa ${maxAllowed} đáp án. Hãy bỏ chọn bớt nhé.`);
+                                                e.preventDefault(); return;
+                                             }
+                                             newArr.push(val);
+                                          } else {
+                                             newArr = newArr.filter(v => v !== val);
+                                          }
+                                          handleAnswer(String(q.id), newArr.join(','));
+                                       };
+
+                                       return (
+                                          <label key={i} className={labelClass}>
+                                             <input type="checkbox" name={`q-${q.id}`} value={val} checked={isSelected} onChange={handleCheck} disabled={isReviewMode} className="mt-1 w-4 h-4 accent-[#3ba1e2] rounded-sm cursor-pointer" />
+                                             <span className="text-[14px] leading-relaxed">{safeOpt}</span>
                                           </label>
                                        );
                                     })}
@@ -509,7 +721,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
       </header>
 
       <div className="flex-1 overflow-y-auto custom-scrollbar w-full">
-        <div className="max-w-[1400px] mx-auto w-full flex items-start gap-8 p-6 md:p-8">
+        <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-start gap-8 p-6 md:p-8">
           
           <div className="flex-1 w-full space-y-12">
             {parts?.map((part: any, pIdx: number) => {
@@ -523,9 +735,9 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                     </div>
                   )}
 
-                  <div className={`flex items-start gap-8 ${hasPassage ? 'flex-row' : 'flex-col max-w-3xl mx-auto'}`}>
+                  <div className={`flex items-start gap-8 ${hasPassage ? 'flex-col xl:flex-row' : 'flex-col max-w-3xl mx-auto'}`}>
                     {hasPassage && (
-                      <div className="w-[45%] sticky top-2 h-[calc(100vh-120px)] overflow-y-auto custom-scrollbar pr-3">
+                      <div className="w-full xl:w-[45%] xl:sticky top-2 xl:h-[calc(100vh-120px)] overflow-y-auto custom-scrollbar pr-3 mb-8 xl:mb-0">
                         <h2 className="font-bold text-[18px] text-slate-800 mb-3">{part.title}</h2>
                         {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-4 rounded-lg shadow-sm" alt="Part" />}
                         <div className="prose prose-slate max-w-none text-justify leading-loose text-[16px] bg-white p-8 border border-slate-200 rounded-2xl shadow-sm">
@@ -534,7 +746,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                       </div>
                     )}
 
-                    <div className={`${hasPassage ? 'w-[55%] py-2' : 'w-full'}`}>
+                    <div className={`${hasPassage ? 'w-full xl:w-[55%] py-2' : 'w-full'}`}>
                       {part?.audioUrl && (!isListening || isReviewMode) && (
                         <div className="bg-white p-3 rounded-lg shadow-sm border border-slate-200 mb-8 flex items-center">
                           <audio src={part.audioUrl} controls className="w-full h-10 outline-none" controlsList="nodownload" />
@@ -563,8 +775,52 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                               const isQuestionCorrect = userAns === correctAns;
                               const displayIdx = questionIndexMap[String(q.id)] || q.id;
 
+                              const isTFNG = q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
+
+                              if (isTFNG) {
+                                 return (
+                                    <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
+                                      {!isReviewMode && (
+                                        <button onClick={() => toggleMark(String(q.id))} className={`absolute top-5 right-5 transition-colors ${marked[String(q.id)] ? 'text-amber-400' : 'text-slate-200 hover:text-slate-400'}`}>
+                                           <svg className="w-6 h-6" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 1 : 2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                        </button>
+                                      )}
+                                      {isReviewMode && (<div className="absolute top-5 right-5 font-bold text-[12px]">{isQuestionCorrect ? <span className="text-emerald-700">✅ Đúng</span> : <span className="text-red-600">❌ Sai</span>}</div>)}
+
+                                      <div className="font-bold text-slate-800 text-[15px] mb-3 pr-10">Question {displayIdx}:</div>
+                                      {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-3">{String(q.content)}</div>}
+                                      
+                                      <div className="flex flex-row flex-wrap gap-4 pl-2">
+                                        {q.options?.map((opt: string, i: number) => {
+                                           const val = opt.trim().toUpperCase();
+                                           const isSelected = userAns === val;
+                                           const isCorrectOpt = correctAns === val;
+
+                                           let labelStyle = "flex items-center gap-2 p-1.5 transition";
+                                           if (isReviewMode) {
+                                              if (isCorrectOpt) labelStyle += " font-bold text-emerald-800 bg-emerald-100 rounded";
+                                              else if (isSelected) labelStyle += " text-red-600 line-through opacity-70 bg-red-100 rounded";
+                                           } else {
+                                              labelStyle += " cursor-pointer hover:bg-slate-50";
+                                           }
+
+                                           return (
+                                              <label key={i} className={labelStyle}>
+                                                 <input type="radio" name={`q-${q.id}`} value={val} checked={isSelected} onChange={() => handleAnswer(String(q.id), val)} disabled={isReviewMode} className="w-4 h-4 accent-[#3ba1e2]" />
+                                                 <span className="text-[14px] font-semibold">{opt}</span>
+                                              </label>
+                                           );
+                                        })}
+                                      </div>
+                                      {isReviewMode && q.explanation && (
+                                        <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg"><p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p><p className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap">{String(q.explanation)}</p></div>
+                                      )}
+                                    </div>
+                                 );
+                              }
+
                               return (
-                                <div key={q.id} id={`q-${q.id}`} className={`p-8 rounded-2xl border shadow-sm relative group scroll-mt-20 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-50/30 border-emerald-200' : 'bg-red-50/30 border-red-200') : 'bg-white border-slate-200 hover:border-slate-300'}`}>
+                                <div key={q.id} id={`q-${q.id}`} className={`bg-white p-8 rounded-2xl border shadow-sm relative group scroll-mt-20 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-50/30 border-emerald-200' : 'bg-red-50/30 border-red-200') : 'bg-white border-slate-200 hover:border-slate-300'}`}>
                                   {!isReviewMode && (
                                     <button onClick={() => toggleMark(String(q.id))} className={`absolute top-6 right-6 transition-colors ${marked[String(q.id)] ? 'text-amber-500' : 'text-slate-300 hover:text-slate-500'}`}>
                                       <svg className="w-7 h-7" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 1 : 2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
@@ -626,6 +882,130 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                 </div>
                               );
                             })}
+
+                            {sec?.questionType === "Droplist" && (
+                               <div className="space-y-4">
+                                 {sec?.questions?.map((q: any) => {
+                                   if (!q?.id) return null;
+                                   const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
+                                   const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
+                                   const isQuestionCorrect = userAns === correctAns;
+                                   const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                                   
+                                   const otherSelectedAnswers = sec.questions
+                                       .filter((otherQ: any) => otherQ.id !== q.id)
+                                       .map((otherQ: any) => String(answers[String(otherQ.id)] || '').trim().toUpperCase())
+                                       .filter((ans: string) => ans !== '');
+
+                                   return (
+                                      <div key={q.id} id={`q-${q.id}`} className={`bg-white p-5 rounded-xl shadow-sm border flex flex-col sm:flex-row gap-4 items-center mb-4 transition-all scroll-mt-20 ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200'}`}>
+                                         <div className="font-bold text-slate-800 text-[15px] shrink-0">Q. {displayIdx}</div>
+                                         <div className="flex-1 text-[14px] text-slate-700 line-clamp-2">{String(q.content || '')}</div>
+                                         <div className="shrink-0">
+                                            {isReviewMode ? (
+                                               <div className="flex flex-col items-end gap-1">
+                                                  <div className={`px-4 py-1.5 rounded-md font-bold text-[13px] border ${isQuestionCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
+                                                     {userAns || '(chưa chọn)'}
+                                                  </div>
+                                                  {!isQuestionCorrect && <div className="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 rounded border border-emerald-200">ĐA: {correctAns}</div>}
+                                               </div>
+                                            ) : (
+                                               <select 
+                                                  className="border border-slate-300 bg-slate-50 focus:bg-white focus:border-[#3ba1e2] rounded-lg px-3 py-2 outline-none font-bold text-slate-700 min-w-[150px] cursor-pointer text-[13px]"
+                                                  value={userAns}
+                                                  onChange={(e) => handleAnswer(String(q.id), e.target.value)}
+                                               >
+                                                  <option value="" disabled>-- Chọn đáp án --</option>
+                                                  {q.options?.map((opt: any, i: number) => {
+                                                     const val = String(opt || '').trim().toUpperCase();
+                                                     const isDisabled = otherSelectedAnswers.includes(val);
+                                                     return <option key={i} value={val} disabled={isDisabled}>{val} {isDisabled ? '(Đã chọn)' : ''}</option>
+                                                  })}
+                                               </select>
+                                            )}
+                                         </div>
+                                      </div>
+                                   )
+                                 })}
+                               </div>
+                            )}
+
+                            {sec?.questionType === "Checkbox" && sec?.questions?.map((q: any) => {
+                               if (!q?.id) return null;
+                               const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
+                               const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
+                               const displayIdx = questionIndexMap[String(q.id)] || q.id;
+
+                               const cAnsArr = correctAns.split(',').map(x => x.trim()).filter(x => x);
+                               const uAnsArr = userAns.split(',').map(x => x.trim()).filter(x => x);
+                               const isQuestionCorrect = cAnsArr.length > 0 && cAnsArr.every(v => uAnsArr.includes(v)) && uAnsArr.length === cAnsArr.length;
+
+                               return (
+                                 <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
+                                    {!isReviewMode && (
+                                       <button onClick={() => toggleMark(String(q.id))} className={`absolute top-5 right-5 transition-colors ${marked[String(q.id)] ? 'text-amber-400' : 'text-slate-200 hover:text-slate-400'}`}>
+                                          <svg className="w-6 h-6" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 1 : 2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                       </button>
+                                    )}
+                                    {isReviewMode && (
+                                       <div className="absolute top-5 right-5 font-bold text-[12px]">
+                                          {isQuestionCorrect ? <span className="text-emerald-700">✅ Đúng</span> : <span className="text-red-600">❌ Sai</span>}
+                                       </div>
+                                    )}
+
+                                    <div className="font-bold text-slate-800 text-[15px] mb-3 pr-10">Question {displayIdx}:</div>
+                                    {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-5">{String(q.content)}</div>}
+                                    
+                                    <div className="space-y-3 pl-2">
+                                       {q.options?.map((opt: any, i: number) => {
+                                          const safeOpt = String(opt || '');
+                                          const val = safeOpt.split('.')[0]?.trim().toUpperCase() || String.fromCharCode(65+i);
+                                          const isSelected = uAnsArr.includes(val);
+                                          const isCorrectOpt = cAnsArr.includes(val);
+
+                                          let labelClass = "flex items-start gap-3 p-1.5 transition";
+                                          if (isReviewMode) {
+                                             if (isCorrectOpt && isSelected) labelClass += " bg-emerald-100 border-emerald-400 font-bold text-emerald-800 rounded";
+                                             else if (isCorrectOpt && !isSelected) labelClass += " bg-amber-50 border-amber-300 font-bold text-amber-700 rounded";
+                                             else if (isSelected && !isCorrectOpt) labelClass += " bg-red-100 border-red-300 text-red-700 line-through opacity-70 rounded";
+                                             else labelClass += " opacity-50";
+                                          } else {
+                                             labelClass += " cursor-pointer hover:bg-slate-50";
+                                          }
+
+                                          const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+                                             let newArr = [...uAnsArr];
+                                             if (e.target.checked) {
+                                                const maxAllowed = cAnsArr.length > 0 ? cAnsArr.length : 1;
+                                                if (newArr.length >= maxAllowed) {
+                                                   alert(`Đề bài yêu cầu chọn tối đa ${maxAllowed} đáp án. Hãy bỏ chọn bớt nhé.`);
+                                                   e.preventDefault(); return;
+                                                }
+                                                newArr.push(val);
+                                             } else {
+                                                newArr = newArr.filter(v => v !== val);
+                                             }
+                                             handleAnswer(String(q.id), newArr.join(','));
+                                          };
+
+                                          return (
+                                             <label key={i} className={labelClass}>
+                                                <input type="checkbox" name={`q-${q.id}`} value={val} checked={isSelected} onChange={handleCheck} disabled={isReviewMode} className="mt-1 w-4 h-4 accent-[#3ba1e2] rounded-sm cursor-pointer" />
+                                                <span className="text-[14px] leading-relaxed">{safeOpt}</span>
+                                             </label>
+                                          );
+                                       })}
+                                    </div>
+
+                                    {isReviewMode && q.explanation && (
+                                       <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg">
+                                          <p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p>
+                                          <p className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap">{String(q.explanation)}</p>
+                                       </div>
+                                    )}
+                                 </div>
+                               );
+                            })}
                           </div>
                         ))}
                       </div>
@@ -639,7 +1019,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
             )}
           </div>
 
-          <aside className="w-[320px] shrink-0 sticky top-2 h-[calc(100vh-120px)] flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <aside className="w-full lg:w-[320px] shrink-0 lg:sticky top-2 h-auto lg:h-[calc(100vh-120px)] flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
             <div className="p-6 border-b border-slate-200 flex flex-col items-center">
               {isReviewMode ? (
                 <div className="bg-emerald-50 text-emerald-700 p-5 rounded-xl border border-emerald-200 w-full text-center shadow-sm">
@@ -667,7 +1047,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
             
             <div className="flex-1 overflow-y-auto p-6 custom-scrollbar bg-slate-50/50">
               <p className="text-[12px] text-slate-400 mb-4 italic text-center">Bấm vào ô để đến câu hỏi</p>
-              <div className="grid grid-cols-4 gap-x-2 gap-y-3">
+              <div className="grid grid-cols-4 lg:grid-cols-4 sm:grid-cols-6 gap-x-2 gap-y-3">
                 {allQuestionIds.map(id => {
                   const isAns = answers[id] && answers[id].trim() !== '';
                   const isMarked = marked[id];

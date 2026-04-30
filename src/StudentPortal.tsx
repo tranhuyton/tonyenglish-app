@@ -19,6 +19,27 @@ const formatDate = (isoString: string) => {
   return `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth() + 1).toString().padStart(2, '0')}/${d.getFullYear()} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
 };
 
+// THUẬT TOÁN KIỂM TRA BÀI THI ĐANG LÀM DỞ ĐÃ ĐƯỢC FIX LẠI CÚ PHÁP
+const checkInProgress = (testId: string) => {
+  try {
+      const compEndTime = localStorage.getItem(`ielts_endtime_${testId}`) || localStorage.getItem(`standard_endtime_${testId}`) || localStorage.getItem(`ielts_paper_endtime_${testId}`);
+      if (compEndTime && parseInt(compEndTime) > Date.now()) return true;
+      
+      // Đã cập nhật lại prefix 'std_ans_' cho đúng với StandardTest
+      const keys = [`ielts_ans_${testId}`, `ielts_paper_ans_${testId}`, `std_ans_${testId}`];
+      for (const key of keys) {
+          const data = localStorage.getItem(key);
+          if (data) {
+              const parsed = JSON.parse(data);
+              if (Object.keys(parsed).length > 0) return true;
+          }
+      }
+  } catch (e) {
+      // Bỏ qua lỗi parse JSON nếu có
+  }
+  return false;
+};
+
 export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?: (view: string) => void, onStartTest?: (type: string, data: any) => void }) {
   const [activeTab, setActiveTab] = useState<'library' | 'analytics' | 'profile'>('library');
   const [activeView, setActiveView] = useState<'dashboard' | 'course'>('dashboard');
@@ -47,15 +68,20 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
   const [showModeSelection, setShowModeSelection] = useState(false);
   const [testToStart, setTestToStart] = useState<any>(null);
   
-  // State quản lý Modal chi tiết bài thi lịch sử
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
 
   const [newPassword, setNewPassword] = useState('');
   const [newFullName, setNewFullName] = useState('');
   const [isUpdatingProfile, setIsUpdatingProfile] = useState(false);
 
+  const [triggerRender, setTriggerRender] = useState(0);
+
   useEffect(() => {
     checkUserAndFetchData();
+    
+    const handleFocus = () => setTriggerRender(prev => prev + 1);
+    window.addEventListener('focus', handleFocus);
+    return () => window.removeEventListener('focus', handleFocus);
   }, [activeTab]);
 
   const checkUserAndFetchData = async () => {
@@ -76,7 +102,6 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
     if (activeTab === 'analytics') {
       if (courses.length === 0) fetchCourses(user?.id);
       fetchUserHistory(user?.id);
-      // Tải sẵn danh sách toàn bộ test để Lấy data làm lại bài
       if (tests.length === 0) fetchAllTestsForRetake();
     }
   };
@@ -109,7 +134,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
           scoreObj: { value: item.score || 0, display: `${item.score || 0} / ${item.total_score || 0}` },
           timeSpent: Math.round((item.time_spent || 0) / 60), 
           date: item.created_at,
-          details: item.details || {} // Lấy toàn bộ data ẩn (dạng bài, bandscore)
+          details: item.details || {}
         }));
         setHistoryData(formattedHistory);
       } else { setHistoryData([]); }
@@ -177,7 +202,6 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
     else { onStartTest('standard', test); }
   };
 
-  // Nút bấm làm lại từ History
   const handleRetakeFromHistory = (historyItem: any) => {
     const testId = historyItem.details?.test_id;
     if (!testId) return alert("Rất tiếc, đề thi này là phiên bản cũ, không hỗ trợ tính năng làm lại tự động.");
@@ -229,7 +253,6 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
   const totalTimeMinutes = processedHistory.reduce((acc, curr) => acc + curr.timeSpent, 0);
   const totalTimeHours = (totalTimeMinutes / 60).toFixed(1);
 
-  // LOGIC TEXT NHẬN XÉT ĐỘNG DỰA TRÊN ĐIỂM
   const getDynamicScoreFeedback = () => {
     if (totalTestsDone < 2) return "Bạn mới bắt đầu luyện tập. Cứ làm từ từ, duy trì làm thêm nhiều bài để hệ thống phân tích nhé!";
     const recentScores = processedHistory.slice(0, 3).map(h => h.scoreObj.value);
@@ -254,11 +277,10 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
   const sparklineAttemptsArr = processedHistory.slice(0, 5).reverse().map((h, i) => ({ v: (i + 1) * 2 })); 
   const sparklineTimeArr = processedHistory.slice(0, 5).reverse().map(h => ({ v: h.timeSpent }));
 
-  // XỬ LÝ DỮ LIỆU RIÊNG CHO BẢNG IELTS
-  const ieltsHistory = processedHistory.filter(h => h.subject.includes('IELTS')).slice().reverse(); // Từ cũ tới mới để vẽ biểu đồ
+  const ieltsHistory = processedHistory.filter(h => h.subject.includes('IELTS')).slice().reverse(); 
   const dynamicProgressData = ieltsHistory.map((h, i) => {
     let band = parseFloat(h.details?.bandScore);
-    if (isNaN(band)) band = (h.scoreObj.value / (h.scoreObj.value + 0.01)); // Tránh lỗi chia 0
+    if (isNaN(band)) band = (h.scoreObj.value / (h.scoreObj.value + 0.01)); 
     return {
       date: formatDateShort(h.date) || `Lần ${i+1}`,
       listening: h.subject.includes('Listening') ? band : null,
@@ -268,7 +290,6 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
     };
   });
 
-  // TÍNH TOÁN ĐỘ CHÍNH XÁC THEO TỪNG DẠNG BÀI (Chỉ áp dụng nếu có data)
   const qTypeAgg: Record<string, { correct: number, total: number }> = {};
   ieltsHistory.forEach(h => {
      const stats = h.details?.questionTypeStats;
@@ -286,7 +307,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
       accuracy: Math.round((qTypeAgg[k].correct / qTypeAgg[k].total) * 100),
       correct: qTypeAgg[k].correct,
       total: qTypeAgg[k].total
-  })).filter(d => d.total > 0).sort((a,b) => b.accuracy - a.accuracy); // Lọc dạng có dữ liệu và sắp xếp
+  })).filter(d => d.total > 0).sort((a,b) => b.accuracy - a.accuracy); 
 
   const breadcrumbs = [];
   let curr = folders.find(f => f.id === currentFolderId);
@@ -346,7 +367,6 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
 
         <div className="flex items-center gap-4">
           
-          {/* NÚT THOÁT VỀ ADMIN (CHỈ HIỂN THỊ NẾU LÀ ADMIN ĐANG VI HÀNH) */}
           {userProfile?.role === 'admin' && (
             <button 
               onClick={() => onNavigate?.('admin')} 
@@ -478,21 +498,31 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
 
                       <div className="p-6 md:p-8 bg-white">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                          {paginatedTests.map(test => (
-                            <div key={test.id} onClick={() => handleStartTestClick(test)} className="bg-white border-2 border-slate-100 hover:border-[#1e88e5] p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between group h-full">
-                              <div>
-                                <div className="flex justify-between items-start mb-4">
-                                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner">{getTestIcon(test.test_type)}</div>
-                                  <span className="text-[10px] font-black text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md uppercase tracking-widest border border-emerald-100">Sẵn sàng</span>
+                          {paginatedTests.map(test => {
+                            const inProgress = checkInProgress(test.id);
+
+                            return (
+                              <div key={test.id} onClick={() => handleStartTestClick(test)} className={`bg-white border-2 hover:border-[#1e88e5] p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between group h-full ${inProgress ? 'border-amber-100' : 'border-slate-100'}`}>
+                                <div>
+                                  <div className="flex justify-between items-start mb-4">
+                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner ${inProgress ? 'bg-amber-50' : 'bg-blue-50'}`}>{getTestIcon(test.test_type)}</div>
+                                    {inProgress ? (
+                                       <span className="text-[10px] font-black text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md uppercase tracking-widest border border-amber-200">Đang làm</span>
+                                    ) : (
+                                       <span className="text-[10px] font-black text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md uppercase tracking-widest border border-emerald-100">Sẵn sàng</span>
+                                    )}
+                                  </div>
+                                  <h3 className="font-bold text-slate-800 text-[15px] group-hover:text-[#1e88e5] transition-colors mb-3 line-clamp-2 leading-relaxed">{test.title}</h3>
+                                  <div className="flex gap-2">
+                                    <span className="text-[10px] font-black text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wider">{test.test_type}</span>
+                                  </div>
                                 </div>
-                                <h3 className="font-bold text-slate-800 text-[15px] group-hover:text-[#1e88e5] transition-colors mb-3 line-clamp-2 leading-relaxed">{test.title}</h3>
-                                <div className="flex gap-2">
-                                  <span className="text-[10px] font-black text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wider">{test.test_type}</span>
-                                </div>
+                                <button className={`mt-6 w-full text-center font-bold text-[13px] py-3 rounded-xl transition-colors uppercase tracking-widest ${inProgress ? 'text-amber-600 bg-amber-50 group-hover:bg-amber-500 group-hover:text-white' : 'text-[#1e88e5] bg-blue-50 group-hover:bg-[#1e88e5] group-hover:text-white'}`}>
+                                   {inProgress ? 'TIẾP TỤC LÀM BÀI' : 'BẮT ĐẦU LÀM BÀI'}
+                                </button>
                               </div>
-                              <button className="mt-6 w-full text-center text-[#1e88e5] font-bold text-[13px] bg-blue-50 py-3 rounded-xl group-hover:bg-[#1e88e5] group-hover:text-white transition-colors uppercase tracking-widest">BẮT ĐẦU LÀM BÀI</button>
-                            </div>
-                          ))}
+                            );
+                          })}
                         </div>
                         {processedTests.length === 0 ? (
                           <div className="text-center py-12 text-slate-400 font-medium">Không có bài thi nào khớp với tìm kiếm của bạn.</div>

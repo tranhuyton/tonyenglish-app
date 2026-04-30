@@ -8,18 +8,23 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Lưu trữ kết quả chấm điểm từ Gemini
   const [gradeResult, setGradeResult] = useState<any>(null);
 
   const [leftWidth, setLeftWidth] = useState(50); 
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // --- THUẬT TOÁN ĐỒNG HỒ ĐẾM NGƯỢC ---
-  const [timeLeft, setTimeLeft] = useState(5400); // Mặc định 90 phút (1 tiếng rưỡi)
+  // --- THUẬT TOÁN ĐỒNG HỒ ĐẾM NGƯỢC THỜI GIAN THỰC ---
+  const [timeLeft, setTimeLeft] = useState(5400); 
   const isFinishingRef = useRef(false);
 
-  // Tải đề thi từ Supabase
+  // Hàm lấy mốc thời gian thực từ LocalStorage
+  const getSavedEndTime = (testId: string) => {
+    if (!testId) return null;
+    const saved = localStorage.getItem(`case_study_endtime_${testId}`);
+    return saved ? parseInt(saved, 10) : null;
+  };
+
   useEffect(() => {
     const fetchLatestTest = async () => {
       setIsLoading(true);
@@ -32,10 +37,24 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
 
         if (error) throw error;
         if (data && data.length > 0) {
-          setTestData(data[0]);
-          // Cài đặt lại thời gian nếu đề có cấu hình timeLimit, mặc định 90 phút
-          const configuredTime = parseInt(data[0]?.timeLimit) || 90;
-          setTimeLeft(configuredTime * 60); 
+          const test = data[0];
+          setTestData(test);
+          
+          const configuredTime = parseInt(test?.timeLimit) || 90;
+          const initialSeconds = configuredTime * 60;
+
+          // Khởi tạo thời gian thực hoặc lấy từ phiên cũ
+          let currentEndTime = getSavedEndTime(test.id);
+          if (!currentEndTime) {
+             currentEndTime = Date.now() + initialSeconds * 1000;
+             localStorage.setItem(`case_study_endtime_${test.id}`, currentEndTime.toString());
+             setTimeLeft(initialSeconds);
+          } else {
+             const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
+             setTimeLeft(remaining);
+             // Nếu đã hết giờ mà tải lại thì không cần alert ngay đây, để logic đếm giờ bắt
+          }
+
         } else {
           setTestData(null);
         }
@@ -49,7 +68,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     fetchLatestTest();
   }, []);
 
-  // Format thời gian thành HH:MM:SS
   const formatTime = (totalSeconds: number) => {
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
@@ -67,11 +85,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     setAnswers(prev => ({ ...prev, [inputId]: value }));
   };
 
-  // =========================================================================
-  // GỌI GEMINI API CHẤM ĐIỂM
-  // =========================================================================
   const handleSubmit = async () => {
-    // Nếu hết giờ mà chưa điền gì thì chấm 0 luôn, khỏi báo lỗi
     if (Object.keys(answers).length === 0 && timeLeft > 0) {
       alert("⚠️ Bạn chưa điền câu trả lời nào cả!");
       return;
@@ -83,6 +97,10 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
 
     setIsSubmitting(true);
     isFinishingRef.current = true;
+    
+    if (testData?.id) {
+       localStorage.removeItem(`case_study_endtime_${testData.id}`);
+    }
 
     try {
       const prompt = `
@@ -117,7 +135,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
         }
       `;
 
-      // Gọt khoảng trắng và lấy key
       const apiKey = import.meta.env.VITE_GEMINI_API_KEY?.trim();
       
       if (!apiKey) {
@@ -145,34 +162,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
       const aiResponseText = resultData.candidates[0].content.parts[0].text;
       const gradedData = JSON.parse(aiResponseText);
 
-      // Cập nhật kết quả để hiển thị
       setGradeResult(gradedData);
-
-      // LƯU KẾT QUẢ XUỐNG SUPABASE TẠI ĐÂY
-      try {
-        const { data: { user } } = await supabase.auth.getUser();
-        if (user) {
-          const configuredTime = parseInt(testData?.timeLimit) || 90;
-          const timeSpentSeconds = (configuredTime * 60) - timeLeft;
-          
-          await supabase.from('test_results').insert([{
-            user_id: user.id,
-            course_id: testData?.course_id || null,
-            test_title: testData?.title || "Case Study Test",
-            test_type: testData?.test_type || 'Case Study',
-            score: gradedData.total_student_score,
-            total_score: gradedData.total_max_score,
-            time_spent: timeSpentSeconds > 0 ? timeSpentSeconds : 0,
-            details: { 
-              general_feedback: gradedData.general_feedback, 
-              breakdown: gradedData.details,
-              userAnswers: answers 
-            }
-          }]);
-        }
-      } catch (err) {
-        console.error("Lỗi lưu điểm Case Study:", err);
-      }
 
     } catch (err: any) {
       console.error("Lỗi khi chấm bài:", err);
@@ -182,27 +172,28 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     }
   };
 
-  // Đồng hồ chạy liên tục
+  // Đồng hồ chạy liên tục (Sử dụng Absolute Timer)
   useEffect(() => {
-    // Nếu đang tải, chưa load đề, hoặc đã chấm xong thì không chạy đồng hồ
     if (isLoading || !testData || gradeResult || isFinishingRef.current) return;
     
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          alert("⏰ Hết giờ làm bài! Hệ thống tự động nộp bài.");
-          handleSubmit(); // Gọi hàm nộp bài khi hết giờ
-          return 0;
+        const currentEndTime = getSavedEndTime(testData.id);
+        if (currentEndTime) {
+            const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
+            setTimeLeft(remaining);
+            if (remaining <= 0) {
+                clearInterval(timer);
+                alert("⏰ Hết giờ làm bài! Hệ thống tự động nộp bài.");
+                handleSubmit();
+            }
+        } else {
+            setTimeLeft(prev => prev - 1);
         }
-        return prev - 1;
-      });
     }, 1000);
     
     return () => clearInterval(timer);
   }, [isLoading, testData, gradeResult]);
 
-  // Kéo thả thanh chia đôi màn hình
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging || !containerRef.current) return;
@@ -221,7 +212,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     };
   }, [isDragging]);
 
-  // Loading Screen
   if (isLoading) {
     return (
       <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold">
@@ -231,7 +221,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     );
   }
 
-  // Lỗi không có đề
   if (!testData || !testData.json_config || !testData.json_config.questions) {
     return (
       <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
@@ -351,7 +340,16 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
                 </div>
                 
                 <div className="mt-12 flex justify-center">
-                  <button onClick={() => setGradeResult(null)} className="border-2 border-black hover:bg-slate-100 text-black font-bold px-10 py-3 transition-colors">
+                  <button onClick={() => {
+                      setGradeResult(null);
+                      if (testData?.id) {
+                         const initialSeconds = (parseInt(testData?.timeLimit) || 90) * 60;
+                         const newEndTime = Date.now() + initialSeconds * 1000;
+                         localStorage.setItem(`case_study_endtime_${testData.id}`, newEndTime.toString());
+                         setTimeLeft(initialSeconds);
+                      }
+                      setAnswers({});
+                  }} className="border-2 border-black hover:bg-slate-100 text-black font-bold px-10 py-3 transition-colors">
                     Làm lại bài thi
                   </button>
                 </div>

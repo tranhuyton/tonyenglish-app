@@ -17,11 +17,18 @@ export default function App() {
     if (path === '/admin' || path === '/admin/') {
       return 'admin-login'; 
     }
-    return 'home'; 
+    // Khôi phục trạng thái màn hình cũ nếu có (Chống F5 Reload & Tiết kiệm RAM)
+    const savedView = sessionStorage.getItem('lms_current_view');
+    return savedView || 'home'; 
   };
 
   const [currentView, setCurrentView] = useState(getInitialView()); 
-  const [currentTestData, setCurrentTestData] = useState<any>(null);
+  
+  // Khôi phục đề thi cũ đang làm dở nếu bị Reload
+  const [currentTestData, setCurrentTestData] = useState<any>(() => {
+    const savedTest = sessionStorage.getItem('lms_current_test');
+    return savedTest ? JSON.parse(savedTest) : null;
+  });
 
   useEffect(() => {
     if (currentView === 'admin' || currentView === 'admin-login') {
@@ -31,7 +38,6 @@ export default function App() {
     }
   }, [currentView]);
 
-  // ĐÃ FIX: CHỈ CHẠY 1 LẦN DUY NHẤT, KHÔNG BỊ VÒNG LẶP GIẬT NGƯỢC VỀ PORTAL NỮA
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) {
@@ -40,29 +46,39 @@ export default function App() {
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      // ĐÃ FIX: Chỉ đẩy về Portal nếu người dùng đang đứng ở ngoài Home.
+      // Nếu đang trong phòng thi (computer/paper), kệ cho họ thi tiếp!
       if (event === 'SIGNED_IN') {
-        setCurrentView('portal'); 
+        setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
       } else if (event === 'SIGNED_OUT') {
         setCurrentView(prev => (prev !== 'admin' && prev !== 'admin-login') ? 'home' : prev); 
+        // Xóa sạch bộ nhớ đệm khi đăng xuất
+        sessionStorage.removeItem('lms_current_view');
+        sessionStorage.removeItem('lms_current_test');
       }
     });
 
     return () => subscription.unsubscribe();
-  }, []); // <== Mấu chốt ở đây: bỏ mảng dependency đi để nó không chạy lại liên tục
+  }, []); 
 
+  // Hàm chuyển trang kèm lưu bộ nhớ đệm
+  const handleNavigate = (view: string) => {
+    setCurrentView(view);
+    sessionStorage.setItem('lms_current_view', view);
+  };
+
+  // Hàm vào phòng thi kèm lưu đề thi vào bộ nhớ đệm
   const handleStartTest = (type: string, data: any) => {
     setCurrentTestData(data);
     setCurrentView(type);
-  };
-
-  const handleNavigate = (view: string) => {
-    setCurrentView(view);
+    sessionStorage.setItem('lms_current_view', type);
+    sessionStorage.setItem('lms_current_test', JSON.stringify(data));
   };
 
   return (
     <React.Fragment>
       {currentView === 'admin-login' && (
-        <AdminLogin onLoginSuccess={() => setCurrentView('admin')} />
+        <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />
       )}
 
       {currentView === 'home' && (
@@ -81,40 +97,40 @@ export default function App() {
       )}
       
       {currentView === 'ielts-writing' && (
-        <IeltsWriting onBack={() => setCurrentView('portal')} />
+        <IeltsWriting onBack={() => handleNavigate('portal')} />
       )}
       
       {currentView === 'ielts-speaking' && (
-        <IeltsSpeaking onBack={() => setCurrentView('portal')} />
+        <IeltsSpeaking onBack={() => handleNavigate('portal')} />
       )}
 
       {currentView === 'computer' && (
         <ComputerTest 
-          onBack={() => setCurrentView('portal')} 
+          onBack={() => handleNavigate('portal')} 
           testData={currentTestData} 
         />
       )}
 
       {currentView === 'paper' && (
         <PaperTest 
-          onBack={() => setCurrentView('portal')} 
+          onBack={() => handleNavigate('portal')} 
           testData={currentTestData} 
         />
       )}
 
       {currentView === 'standard' && (
         <StandardTest 
-          onBack={() => setCurrentView('portal')} 
+          onBack={() => handleNavigate('portal')} 
           testData={currentTestData} 
           onFinish={(res: any) => {
             console.log("Kết quả bài thi:", res);
-            setCurrentView('portal');
+            handleNavigate('portal');
           }} 
         />
       )}
 
       {currentView === 'case-study' && (
-        <SplitScreenTest onBack={() => setCurrentView('portal')} />
+        <SplitScreenTest onBack={() => handleNavigate('portal')} />
       )}
     </React.Fragment>
   );
