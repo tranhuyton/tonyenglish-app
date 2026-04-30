@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from './supabase';
 import { createClient } from '@supabase/supabase-js';
 
-// KHỞI TẠO CLIENT ADMIN (DÙNG CHÌA KHÓA VẠN NĂNG ĐỂ TẠO/XÓA USER)
-const supabaseAdmin = createClient(
+// TẠO BẢN SAO CLIENT ĐỂ ĐĂNG KÝ HỘ (KHÔNG LƯU PHIÊN ĐỂ TRÁNH VĂNG ACC ADMIN)
+const authSupabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_SERVICE_ROLE_KEY || ''
+  import.meta.env.VITE_SUPABASE_ANON_KEY,
+  { auth: { persistSession: false } }
 );
 
 export default function StudentManagement() {
@@ -73,30 +74,30 @@ export default function StudentManagement() {
   };
 
   // ==========================================
-  // LOGIC TẠO / XÓA TÀI KHOẢN (QUYỀN ADMIN)
+  // LOGIC TẠO / XÓA TÀI KHOẢN AN TOÀN TRÊN TRÌNH DUYỆT
   // ==========================================
   const handleCreateUser = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!import.meta.env.VITE_SUPABASE_SERVICE_ROLE_KEY) {
-      alert("⚠️ Anh Tôn ơi, anh chưa cấu hình VITE_SUPABASE_SERVICE_ROLE_KEY trong file .env nên không thể tạo tài khoản từ Admin được đâu ạ!");
-      return;
-    }
-
     setIsCreatingUser(true);
     try {
-      // 1. Dùng quyền Admin tạo user trên Supabase Auth (bỏ qua bắt buộc xác nhận email)
-      const { data, error } = await supabaseAdmin.auth.admin.createUser({
+      // 1. Dùng client phụ để "Đăng ký" tài khoản mới
+      const { data, error } = await authSupabase.auth.signUp({
         email: newUser.email,
         password: newUser.password,
-        email_confirm: true 
+        options: {
+          data: {
+            full_name: newUser.fullName,
+            role: newUser.role
+          }
+        }
       });
 
       if (error) throw error;
 
-      // 2. Chờ 1 giây để Trigger Postgres kịp tạo dòng trong bảng profiles
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // 2. Chờ 1.5 giây để Trigger bên Supabase tự động tạo dòng trong bảng profiles
+      await new Promise(resolve => setTimeout(resolve, 1500));
 
-      // 3. Cập nhật lại Tên và Role (Học viên / Admin) cho đúng ý anh
+      // 3. Dùng quyền Admin hiện tại update lại thông tin Profile cho chắc chắn
       if (data.user) {
         await supabase.from('profiles').update({
           full_name: newUser.fullName,
@@ -107,7 +108,7 @@ export default function StudentManagement() {
       alert(`✅ Đã tạo tài khoản ${newUser.role === 'admin' ? 'Quản trị viên' : 'Học viên'} thành công!`);
       setShowCreateUserModal(false);
       setNewUser({ fullName: '', email: '', password: '', role: 'student' });
-      fetchStudents(); // Tải lại danh sách
+      fetchStudents(); 
     } catch (err: any) {
       alert("❌ Lỗi tạo tài khoản: " + err.message);
     } finally {
@@ -116,23 +117,20 @@ export default function StudentManagement() {
   };
 
   const handleDeleteUser = async (id: string, name: string) => {
-    if (!import.meta.env.VITE_SUPABASE_SERVICE_ROLE_KEY) {
-      alert("⚠️ Anh Tôn ơi, anh chưa cấu hình VITE_SUPABASE_SERVICE_ROLE_KEY trong file .env nên không thể xóa tài khoản được ạ!");
-      return;
-    }
-
     if (!window.confirm(`Anh có chắc chắn muốn xóa VĨNH VIỄN tài khoản của ${name || 'học viên này'} không? Toàn bộ lịch sử làm bài sẽ bị mất!`)) {
       return;
     }
 
     try {
-      // Dùng quyền Admin xóa tận gốc từ bảng auth.users
-      // (Dữ liệu ở bảng profiles, enrollments, test_results sẽ tự động bay theo nhờ tính năng CASCADE)
-      const { error } = await supabaseAdmin.auth.admin.deleteUser(id);
+      // Gọi hàm siêu quyền lực RPC mình vừa tạo dưới Database để xóa ngầm
+      const { error } = await supabase.rpc('delete_admin_user', {
+        target_user_id: id
+      });
+
       if (error) throw error;
 
       alert("🗑️ Đã xóa tài khoản thành công!");
-      fetchStudents();
+      fetchStudents(); // Cập nhật lại danh sách ngay lập tức
     } catch (err: any) {
       alert("❌ Lỗi xóa tài khoản: " + err.message);
     }

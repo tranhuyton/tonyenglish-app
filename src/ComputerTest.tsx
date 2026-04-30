@@ -6,7 +6,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   let safeTestData = testData;
   if (typeof safeTestData === 'string') { try { safeTestData = JSON.parse(safeTestData); } catch (e) { } }
 
-  // ĐỒNG BỘ CẤU TRÚC DỮ LIỆU MỚI TỪ ADMIN
   const contentJSON = safeTestData?.content_json || safeTestData || {};
   const basicInfo = contentJSON.basicInfo || { title: "IELTS Test", timeLimit: "40", skill: "" };
   const parts = contentJSON.parts || []; 
@@ -25,9 +24,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     try {
       const saved = localStorage.getItem(`ielts_ans_${safeTestData?.id}`);
       return saved ? JSON.parse(saved) : {};
-    } catch (error) {
-      return {};
-    }
+    } catch (error) { return {}; }
   });
 
   useEffect(() => {
@@ -53,12 +50,25 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       if (safeTestData?.id) localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
 
       let score = 0; let total = 0;
-      parts.forEach((p: any) => p.sections?.forEach((s: any) => s.questions?.forEach((q: any) => {
-        total++;
-        const userAns = String(answers[String(q.id)] || "").trim().toUpperCase();
-        const correctAns = String(q.correctAnswer || "").trim().toUpperCase();
-        if (userAns === correctAns && correctAns !== "") score++;
-      })));
+      let questionTypeStats: Record<string, { correct: number, total: number }> = {};
+
+      parts.forEach((p: any) => p.sections?.forEach((s: any) => {
+        const qType = s.questionType || 'Khác';
+        if (!questionTypeStats[qType]) questionTypeStats[qType] = { correct: 0, total: 0 };
+
+        s.questions?.forEach((q: any) => {
+          total++;
+          questionTypeStats[qType].total++;
+          
+          const userAns = String(answers[String(q.id)] || "").trim().toUpperCase();
+          const correctAns = String(q.correctAnswer || "").trim().toUpperCase();
+          if (userAns === correctAns && correctAns !== "") {
+            score++;
+            questionTypeStats[qType].correct++;
+          }
+        });
+      }));
+
       let band = "0.0";
       if (score >= 39) band = "9.0"; else if (score >= 37) band = "8.5"; else if (score >= 35) band = "8.0"; else if (score >= 33) band = "7.5";
       else if (score >= 30) band = "7.0"; else if (score >= 27) band = "6.5"; else if (score >= 23) band = "6.0"; else if (score >= 19) band = "5.5";
@@ -67,7 +77,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
       setScoreResult({ score, total, band }); setIsReviewMode(true); window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // LƯU KẾT QUẢ VÀO SUPABASE
+      // LƯU KẾT QUẢ VÀO SUPABASE (KÈM CHỈ SỐ DẠNG BÀI VÀ TEST_ID)
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
@@ -80,7 +90,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             score: score,
             total_score: total,
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
-            details: { bandScore: band, userAnswers: answers }
+            details: { 
+              test_id: safeTestData?.id, 
+              bandScore: band, 
+              userAnswers: answers,
+              questionTypeStats: questionTypeStats 
+            }
           }]);
         }
       } catch (error) {

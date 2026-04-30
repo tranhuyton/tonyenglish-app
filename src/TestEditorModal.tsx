@@ -18,7 +18,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
         skill: testRecord.test_type || 'Standard-Test',
         mode: 'Đề thi',
         timeLimit: '40',
-        scoreType: '1 điểm/ câu đúng',
+        scoreType: '1 điểm/ câu đúng', // Default
       },
       parts: [] 
     };
@@ -39,7 +39,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
   };
 
   // ==========================================
-  // 2. THUẬT TOÁN ĐỌC EXCEL/CSV (SIÊU NHẠY)
+  // 2. THUẬT TOÁN ĐỌC EXCEL/CSV (ĐÃ CẬP NHẬT)
   // ==========================================
   const processExcelFile = async (file: File) => {
     setUploadingId('excel');
@@ -74,9 +74,17 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
         };
 
         jsonData.forEach((row: any) => {
-          const partTitle = getCol(row, ['part']) || 'Part 1';
-          const secTitle = getCol(row, ['section', 'nhóm', 'đoạn']) || 'Section 1';
-          const qContent = getCol(row, ['question', 'câu', 'nộidung']);
+          // Bắt đầy đủ Part
+          const partTitle = getCol(row, ['parttitle', 'part']) || 'Part 1';
+          const partContent = getCol(row, ['partcontent', 'bàiđọc']);
+
+          // Bắt đầy đủ Section & Dạng bài
+          const secTitle = getCol(row, ['sectiontitle', 'section', 'nhóm', 'đoạn']) || 'Section 1';
+          const secContent = getCol(row, ['sectioncontent', 'hướngdẫn']);
+          const qType = getCol(row, ['questiontype', 'loạicâu', 'dạng']) || 'Trắc nghiệm';
+
+          // Bắt câu hỏi & đáp án
+          const qContent = getCol(row, ['questiontext', 'question', 'câu', 'nộidung']);
           const optA = getCol(row, ['optiona', 'đápána', 'lựachọna']);
           const optB = getCol(row, ['optionb', 'đápánb', 'lựachọnb']);
           const optC = getCol(row, ['optionc', 'đápánc', 'lựachọnc']);
@@ -86,18 +94,21 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
 
           if (!qContent && !optA && !partTitle) return;
 
+          // Tạo Part mới nếu khác tên
           if (!currentPart || currentPart.title !== partTitle) {
-            currentPart = { id: Date.now().toString() + Math.random(), title: partTitle, content: '', tags: '', audioUrl: '', explanation: '', sections: [] };
+            currentPart = { id: Date.now().toString() + Math.random(), title: partTitle, content: partContent || '', tags: '', audioUrl: '', explanation: '', sections: [] };
             newParts.push(currentPart);
             currentSection = null; 
           }
 
+          // Tạo Section mới nếu khác tên
           if (!currentSection || currentSection.title !== secTitle) {
-            currentSection = { id: Date.now().toString() + Math.random(), title: secTitle, content: '', tags: '', questionType: 'Trắc nghiệm', audioUrl: '', explanation: '', questions: [] };
+            currentSection = { id: Date.now().toString() + Math.random(), title: secTitle, content: secContent || '', tags: '', questionType: qType, audioUrl: '', explanation: '', questions: [] };
             currentPart.sections.push(currentSection);
           }
 
-          if (qContent || optA) {
+          // Gắn câu hỏi vào Section
+          if (qContent || optA || qType === 'Điền từ') {
             const options = [];
             if (optA) options.push(optA.toString());
             if (optB) options.push(optB.toString());
@@ -106,12 +117,12 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
 
             currentSection.questions.push({
               id: Date.now().toString() + Math.random(),
-              content: qContent.toString(),
+              content: qContent ? qContent.toString() : '',
               tags: '',
               audioUrl: '',
-              explanation: exp.toString(),
+              explanation: exp ? exp.toString() : '',
               options: options.length > 0 ? options : ['A', 'B', 'C', 'D'],
-              correctAnswer: answer.toString()
+              correctAnswer: answer ? answer.toString() : ''
             });
             importCount++;
           }
@@ -132,7 +143,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     reader.readAsArrayBuffer(file);
   };
 
-  // ĐÃ KHÔI PHỤC LẠI 2 HÀM NÀY ĐỂ TRÁNH LỖI MÀN HÌNH TRẮNG
   const handleDragOverExcel = (e: React.DragEvent) => {
     e.preventDefault();
     setIsDraggingExcel(true);
@@ -367,6 +377,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                     <select value={testData.basicInfo.scoreType} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition">
                       <option value="1 điểm/ câu đúng">1 điểm/ câu đúng</option>
                       <option value="IELTS Band Score">IELTS Band Score</option>
+                      <option value="Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)">Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)</option>
                     </select>
                   </div>
                 </div>

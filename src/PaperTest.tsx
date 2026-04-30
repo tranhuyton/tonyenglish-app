@@ -42,12 +42,24 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
       if (safeTestData?.id) localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
 
       let score = 0; let total = 0;
-      parts.forEach((p: any) => p.sections?.forEach((s: any) => s.questions?.forEach((q: any) => {
-        total++;
-        const userAns = answers[String(q.id)]?.trim().toUpperCase() || "";
-        const correctAns = String(q.correctAnswer || "").trim().toUpperCase();
-        if (userAns === correctAns && correctAns !== "") score++;
-      })));
+      let questionTypeStats: Record<string, { correct: number, total: number }> = {};
+
+      parts.forEach((p: any) => p.sections?.forEach((s: any) => {
+        const qType = s.questionType || 'Khác';
+        if (!questionTypeStats[qType]) questionTypeStats[qType] = { correct: 0, total: 0 };
+
+        s.questions?.forEach((q: any) => {
+          total++;
+          questionTypeStats[qType].total++;
+          
+          const userAns = answers[String(q.id)]?.trim().toUpperCase() || "";
+          const correctAns = String(q.correctAnswer || "").trim().toUpperCase();
+          if (userAns === correctAns && correctAns !== "") {
+            score++;
+            questionTypeStats[qType].correct++;
+          }
+        });
+      }));
 
       let band = "0.0";
       if (score >= 39) band = "9.0"; else if (score >= 37) band = "8.5"; else if (score >= 35) band = "8.0"; else if (score >= 33) band = "7.5";
@@ -57,7 +69,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
 
       setScoreResult({ score, total, band }); setIsReviewMode(true); window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // LƯU KẾT QUẢ VÀO SUPABASE
+      // LƯU KẾT QUẢ VÀO SUPABASE (KÈM CHỈ SỐ DẠNG BÀI VÀ TEST_ID)
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
@@ -70,7 +82,12 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
             score: score,
             total_score: total,
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
-            details: { bandScore: band, userAnswers: answers }
+            details: { 
+              test_id: safeTestData?.id,
+              bandScore: band, 
+              userAnswers: answers,
+              questionTypeStats: questionTypeStats 
+            }
           }]);
         }
       } catch (error) {
