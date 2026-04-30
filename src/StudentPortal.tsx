@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from './supabase';
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer,
-  Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
 const FOLDER_COLORS = ['bg-[#3b82f6]', 'bg-[#10b981]', 'bg-[#f59e0b]', 'bg-[#8b5cf6]', 'bg-[#ec4899]', 'bg-[#14b8a6]', 'bg-[#f43f5e]'];
 const ITEMS_PER_PAGE = 12;
 
-const formatDate = (isoString: string) => {
-  if (!isoString) return '';
-  const d = new Date(isoString);
-  return `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth() + 1).toString().padStart(2, '0')}/${d.getFullYear()} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
-};
-
 const formatDateShort = (isoString: string) => {
   if (!isoString) return '';
   const d = new Date(isoString);
   return `${d.getDate()}/${d.getMonth() + 1}`;
+};
+
+const formatDate = (isoString: string) => {
+  if (!isoString) return '';
+  const d = new Date(isoString);
+  return `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth() + 1).toString().padStart(2, '0')}/${d.getFullYear()} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
 };
 
 export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?: (view: string) => void, onStartTest?: (type: string, data: any) => void }) {
@@ -34,6 +33,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
 
   const [historyData, setHistoryData] = useState<any[]>([]);
   const [currentUser, setCurrentUser] = useState<any>(null);
+  const [userProfile, setUserProfile] = useState<any>(null);
 
   const [currentFolderId, setCurrentFolderId] = useState<string | null>(null);
   const [searchTest, setSearchTest] = useState('');
@@ -48,7 +48,8 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
   const [testToStart, setTestToStart] = useState<any>(null);
 
   const [newPassword, setNewPassword] = useState('');
-  const [isUpdatingPassword, setIsUpdatingPassword] = useState(false);
+  const [newFullName, setNewFullName] = useState('');
+  const [isUpdatingProfile, setIsUpdatingProfile] = useState(false);
 
   useEffect(() => {
     checkUserAndFetchData();
@@ -57,15 +58,38 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
   const checkUserAndFetchData = async () => {
     const { data: { user } } = await supabase.auth.getUser();
     setCurrentUser(user);
+    
+    if (user) {
+      const { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).single();
+      setUserProfile(profile);
+      if (profile && !newFullName) setNewFullName(profile.full_name || '');
+    }
 
     if (activeTab === 'library') {
-      fetchCourses();
+      fetchCourses(user?.id);
       fetchAllFolders(); 
       fetchAllTestsCount();
     }
     if (activeTab === 'analytics') {
-      if (courses.length === 0) fetchCourses();
+      if (courses.length === 0) fetchCourses(user?.id);
       fetchUserHistory(user?.id);
+    }
+  };
+
+  // --- LOGIC LỌC KHÓA HỌC DỰA TRÊN BẢNG ENROLLMENTS ---
+  const fetchCourses = async (userId?: string) => {
+    if (!userId) return;
+    
+    // Bước 1: Lấy danh sách ID các khóa học đã được gán
+    const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
+    const courseIds = enrolls?.map(e => e.course_id) || [];
+
+    // Bước 2: Tải thông tin các khóa học đó
+    if (courseIds.length > 0) {
+      const { data } = await supabase.from('courses').select('*').in('id', courseIds).order('created_at', { ascending: false });
+      setCourses(data || []);
+    } else {
+      setCourses([]); // Nếu chưa được gán khóa nào thì rỗng
     }
   };
 
@@ -94,44 +118,6 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
     }
   };
 
-  const handleUpdatePassword = async () => {
-    if (!newPassword || newPassword.length < 6) {
-      alert("Mật khẩu mới phải có ít nhất 6 ký tự!");
-      return;
-    }
-    setIsUpdatingPassword(true);
-    try {
-      const { error } = await supabase.auth.updateUser({ password: newPassword });
-      if (error) throw error;
-      alert("🎉 Cập nhật mật khẩu thành công!");
-      setNewPassword('');
-    } catch (error: any) {
-      alert("Lỗi cập nhật: " + error.message);
-    } finally {
-      setIsUpdatingPassword(false);
-    }
-  };
-
-  const handleLogout = async () => {
-    try {
-      await supabase.auth.signOut(); 
-    } catch (error) {
-      console.error("Lỗi đăng xuất Supabase:", error);
-    } finally {
-      localStorage.clear();
-      sessionStorage.clear();
-      onNavigate?.('home'); 
-      setTimeout(() => {
-        window.location.reload(); 
-      }, 100);
-    }
-  };
-
-  const fetchCourses = async () => {
-    const { data } = await supabase.from('courses').select('*').order('created_at', { ascending: false });
-    setCourses(data || []);
-  };
-
   const fetchAllFolders = async () => {
     const { data } = await supabase.from('folders').select('id, course_id');
     setAllFolders(data || []);
@@ -155,6 +141,45 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
     setTests(courseTests);
   };
 
+  const handleUpdateProfile = async () => {
+    setIsUpdatingProfile(true);
+    try {
+      if (newFullName && currentUser?.id) {
+        await supabase.from('profiles').update({ full_name: newFullName }).eq('id', currentUser.id);
+      }
+      
+      if (newPassword && newPassword.length >= 6) {
+        const { error } = await supabase.auth.updateUser({ password: newPassword });
+        if (error) throw error;
+        setNewPassword('');
+      } else if (newPassword && newPassword.length < 6) {
+        alert("Mật khẩu mới phải có ít nhất 6 ký tự!");
+        setIsUpdatingProfile(false);
+        return;
+      }
+      
+      alert("🎉 Cập nhật tài khoản thành công!");
+      checkUserAndFetchData(); // Tải lại tên hiển thị
+    } catch (error: any) {
+      alert("Lỗi cập nhật: " + error.message);
+    } finally {
+      setIsUpdatingProfile(false);
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await supabase.auth.signOut(); 
+    } catch (error) {
+      console.error("Lỗi đăng xuất Supabase:", error);
+    } finally {
+      localStorage.clear();
+      sessionStorage.clear();
+      onNavigate?.('home'); 
+      setTimeout(() => window.location.reload(), 100);
+    }
+  };
+
   const handleOpenCourse = (course: any) => {
     setSelectedCourse(course);
     setCurrentFolderId(null); 
@@ -171,27 +196,18 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
     setTestPage(1);
   };
 
-  // =================================================================================
-  // CẬP NHẬT LUỒNG CHUYỂN HƯỚNG BÀI THI (CASE STUDY)
-  // =================================================================================
   const handleStartTestClick = (test: any) => {
     if (!onStartTest) return;
     const type = test.test_type || '';
     
-    if (type === 'IELTS-Writing') {
-      onStartTest('ielts-writing', test);
-    } else if (type === 'IELTS-Speaking') {
-      onStartTest('ielts-speaking', test);
-    } else if (type === 'IELTS-Listening' || type === 'IELTS-Reading') {
+    if (type === 'IELTS-Writing') onStartTest('ielts-writing', test);
+    else if (type === 'IELTS-Speaking') onStartTest('ielts-speaking', test);
+    else if (type === 'IELTS-Listening' || type === 'IELTS-Reading') {
       setTestToStart(test);
       setShowModeSelection(true);
-    } 
-    // KIỂM TRA: NẾU TÊN BÀI CÓ CHỮ BUSINESS HOẶC ECON THÌ GỌI GIAO DIỆN CHIA ĐÔI
-    else if (test.title.toLowerCase().includes('business') || test.title.toLowerCase().includes('econ')) {
+    } else if (test.title.toLowerCase().includes('business') || test.title.toLowerCase().includes('econ')) {
       onStartTest('case-study', test);
-    } 
-    // CÁC MÔN CÒN LẠI THÌ VÀO PHÒNG THI TIÊU CHUẨN
-    else {
+    } else {
       onStartTest('standard', test);
     }
   };
@@ -284,10 +300,9 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
   };
 
   const currentAnalyticsCourseObj = courses.find(c => String(c.id) === String(analyticsCourse));
-  const isStandardCourse = currentAnalyticsCourseObj?.type === 'Standard';
-  const showIeltsCharts = !isStandardCourse && dynamicProgressData.length > 0; 
+  const showIeltsCharts = currentAnalyticsCourseObj?.type === 'IELTS' && dynamicProgressData.length > 0; 
 
-  const displayUserName = currentUser?.email ? currentUser.email.split('@')[0] : 'Tài khoản Học viên';
+  const displayUserName = userProfile?.full_name || (currentUser?.email ? currentUser.email.split('@')[0] : 'Tài khoản Học viên');
   const displayUserInitial = displayUserName.charAt(0).toUpperCase();
 
   return (
@@ -295,47 +310,27 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
       
       {/* HEADER */}
       <header className="bg-[#f8f9fb] border-b border-slate-200 px-6 py-3 flex items-center justify-between sticky top-0 z-30 shadow-sm">
-        
-        {/* ĐÃ GẮN LINK CHUYỂN HƯỚNG VỀ TONYENGLISH.VN KHI BẤM VÀO LOGO */}
-        <div 
-          className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" 
-          onClick={() => window.location.href = 'https://tonyenglish.vn/vi'}
-          title="Về trang chủ TonyEnglish"
-        >
+        <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => window.location.href = 'https://tonyenglish.vn/vi'}>
           <div className="flex flex-col items-end">
             <h1 className="font-black text-2xl tracking-tighter text-[#1e88e5] leading-none">TONY<span className="text-slate-800">ENGLISH</span></h1>
             <span className="text-[10px] italic text-slate-500 font-medium mt-0.5 pr-0.5">The future begins here</span>
           </div>
-          <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
-             <img src="/logo-shield.png" alt="TonyEnglish Logo" className="w-auto h-full object-contain" />
-          </div>
+          <div className="w-10 h-10 flex items-center justify-center overflow-hidden"><img src="/logo-shield.png" alt="TonyEnglish Logo" className="w-auto h-full object-contain" /></div>
         </div>
 
         <div className="hidden md:flex items-center gap-2 lg:gap-6 bg-slate-100/50 rounded-xl p-1 border border-slate-200">
-          <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourse(null); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${activeTab === 'library' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}>
-            <span className="text-lg">📚</span> Thư viện đề
-          </button>
-          <button onClick={() => setActiveTab('analytics')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${activeTab === 'analytics' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}>
-            <span className="text-lg">📊</span> Phân tích & Lịch sử
-          </button>
-          <button onClick={() => setActiveTab('profile')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${activeTab === 'profile' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}>
-            <span className="text-lg">👤</span> Tài khoản
-          </button>
+          <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourse(null); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${activeTab === 'library' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📚</span> Thư viện đề</button>
+          <button onClick={() => setActiveTab('analytics')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${activeTab === 'analytics' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📊</span> Phân tích & Lịch sử</button>
+          <button onClick={() => setActiveTab('profile')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-all ${activeTab === 'profile' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">👤</span> Tài khoản</button>
         </div>
 
         <div className="flex items-center gap-4">
-          <div 
-            className="flex items-center gap-4 cursor-pointer hover:opacity-80 transition group" 
-            onClick={() => setActiveTab('profile')}
-            title="Xem thông tin Tài khoản"
-          >
+          <div className="flex items-center gap-4 cursor-pointer hover:opacity-80 transition group" onClick={() => setActiveTab('profile')}>
             <div className="text-right hidden sm:block">
               <div className="font-black text-sm text-slate-800 group-hover:text-[#1e88e5] transition-colors">{displayUserName}</div>
               <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider">Học viên</div>
             </div>
-            <div className="w-10 h-10 rounded-full bg-[#0a5482] group-hover:bg-[#1e88e5] transition-colors text-white flex items-center justify-center font-black shadow-inner border-2 border-white">
-              {displayUserInitial}
-            </div>
+            <div className="w-10 h-10 rounded-full bg-[#0a5482] group-hover:bg-[#1e88e5] transition-colors text-white flex items-center justify-center font-black shadow-inner border-2 border-white">{displayUserInitial}</div>
           </div>
           <div className="h-8 w-px bg-slate-300 mx-1"></div>
           <button onClick={handleLogout} className="text-[#e53935] font-black text-[13px] bg-red-50 hover:bg-red-100 border border-red-100 px-4 py-2 rounded-lg transition active:scale-95">Đăng Xuất</button>
@@ -355,7 +350,11 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                 </div>
 
                 {courses.length === 0 ? (
-                  <div className="text-center py-20 text-slate-400 font-medium">Chưa có khóa học nào được hiển thị.</div>
+                  <div className="bg-white border-2 border-dashed border-slate-200 rounded-2xl py-20 text-center shadow-sm">
+                    <span className="text-5xl block mb-4 opacity-50">🔒</span>
+                    <h3 className="font-bold text-slate-700 text-lg mb-2">Chưa có khóa học nào</h3>
+                    <p className="text-slate-500 text-sm">Anh/chị vui lòng liên hệ TonyEnglish để được cấp quyền truy cập vào các Khóa học nhé!</p>
+                  </div>
                 ) : (
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
                     {courses.map(course => {
@@ -417,9 +416,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                               <div className="flex-1 bg-white p-5 flex flex-col justify-center relative">
                                 <h4 className="font-black text-[15px] text-slate-800 mb-1 truncate">{subFolder.title}</h4>
                                 <div className="flex justify-between items-center text-slate-400 mt-1">
-                                  <p className="text-[12px] font-bold">
-                                    {childCount > 0 ? `${childCount} mục con` : `${testCount} đề thi`}
-                                  </p>
+                                  <p className="text-[12px] font-bold">{childCount > 0 ? `${childCount} mục con` : `${testCount} đề thi`}</p>
                                   <span className="text-[#1e88e5] font-black group-hover:translate-x-1 transition-transform">→</span>
                                 </div>
                               </div>
@@ -440,10 +437,8 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                         </div>
                         <div className="w-full sm:w-48">
                           <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="w-full px-4 py-2.5 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-[#1e88e5] text-[13px] font-bold text-slate-600 bg-white cursor-pointer">
-                            <option value="name-asc">A-Z (Tên bài)</option>
-                            <option value="name-desc">Z-A (Tên bài)</option>
-                            <option value="date-desc">Mới nhất trước</option>
-                            <option value="date-asc">Cũ nhất trước</option>
+                            <option value="name-asc">A-Z (Tên bài)</option><option value="name-desc">Z-A (Tên bài)</option>
+                            <option value="date-desc">Mới nhất trước</option><option value="date-asc">Cũ nhất trước</option>
                           </select>
                         </div>
                       </div>
@@ -454,9 +449,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                             <div key={test.id} onClick={() => handleStartTestClick(test)} className="bg-white border-2 border-slate-100 hover:border-[#1e88e5] p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between group h-full">
                               <div>
                                 <div className="flex justify-between items-start mb-4">
-                                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner">
-                                    {getTestIcon(test.test_type)}
-                                  </div>
+                                  <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner">{getTestIcon(test.test_type)}</div>
                                   <span className="text-[10px] font-black text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md uppercase tracking-widest border border-emerald-100">Sẵn sàng</span>
                                 </div>
                                 <h3 className="font-bold text-slate-800 text-[15px] group-hover:text-[#1e88e5] transition-colors mb-3 line-clamp-2 leading-relaxed">{test.title}</h3>
@@ -478,9 +471,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                   )}
 
                   {currentSubFolders.length === 0 && currentTests.length === 0 && (
-                    <div className="text-center py-20 bg-white rounded-2xl border-2 border-dashed border-slate-200 text-slate-400 font-medium text-lg">
-                      📭 Thư mục này hiện đang trống.
-                    </div>
+                    <div className="text-center py-20 bg-white rounded-2xl border-2 border-dashed border-slate-200 text-slate-400 font-medium text-lg">📭 Thư mục này hiện đang trống.</div>
                   )}
                 </div>
               </div>
@@ -498,9 +489,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
               </div>
               <select value={analyticsCourse} onChange={(e) => setAnalyticsCourse(e.target.value)} className="w-full md:w-64 border-2 border-slate-200 rounded-xl px-4 py-2.5 font-bold text-[15px] text-[#0a5482] outline-none focus:border-[#2ab4e8] bg-slate-50 cursor-pointer">
                 <option value="all">Tất cả khóa học</option>
-                {courses.length > 0 && (
-                  courses.map(course => ( <option key={course.id} value={course.id}>{course.title}</option> ))
-                )}
+                {courses.length > 0 && courses.map(course => ( <option key={course.id} value={course.id}>{course.title}</option> ))}
               </select>
             </div>
 
@@ -519,13 +508,8 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                       <span className="font-black text-blue-500 text-xl">{avgScore}</span>
                     </div>
                     <div className="h-20 w-full mt-2 px-2 bg-blue-50/50">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={sparklineScoreArr}>
-                          <Line type="monotone" dataKey="v" stroke="#3b82f6" strokeWidth={3} dot={{r: 4, fill: '#3b82f6', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} />
-                        </LineChart>
-                      </ResponsiveContainer>
+                      <ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineScoreArr}><Line type="monotone" dataKey="v" stroke="#3b82f6" strokeWidth={3} dot={{r: 4, fill: '#3b82f6', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer>
                     </div>
-                    <div className="p-4 text-[13px] text-slate-500 bg-slate-50/50 border-t border-slate-100 mt-auto leading-relaxed">Điểm số trung bình từ các bài thi đã làm.</div>
                   </div>
 
                   <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
@@ -534,13 +518,8 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                       <span className="font-black text-emerald-500 text-xl">{totalTestsDone}</span>
                     </div>
                     <div className="h-20 w-full mt-2 px-2 bg-emerald-50/50">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={sparklineCompletedArr}>
-                          <Line type="monotone" dataKey="v" stroke="#10b981" strokeWidth={3} dot={{r: 4, fill: '#10b981', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} />
-                        </LineChart>
-                      </ResponsiveContainer>
+                      <ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineCompletedArr}><Line type="monotone" dataKey="v" stroke="#10b981" strokeWidth={3} dot={{r: 4, fill: '#10b981', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer>
                     </div>
-                    <div className="p-4 text-[13px] text-slate-500 bg-slate-50/50 border-t border-slate-100 mt-auto leading-relaxed">Tổng số bài thi/bài tập bạn đã nộp trên hệ thống.</div>
                   </div>
 
                   <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
@@ -549,13 +528,8 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                       <span className="font-black text-fuchsia-500 text-xl">{totalTestsDone}</span>
                     </div>
                     <div className="h-20 w-full mt-2 px-2 bg-fuchsia-50/30">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={sparklineAttemptsArr}>
-                          <Line type="monotone" dataKey="v" stroke="#d946ef" strokeWidth={3} dot={{r: 4, fill: '#d946ef', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} />
-                        </LineChart>
-                      </ResponsiveContainer>
+                      <ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineAttemptsArr}><Line type="monotone" dataKey="v" stroke="#d946ef" strokeWidth={3} dot={{r: 4, fill: '#d946ef', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer>
                     </div>
-                    <div className="p-4 text-[13px] text-slate-500 bg-slate-50/50 border-t border-slate-100 mt-auto leading-relaxed">Mỗi lần nộp bài được tính là một lượt.</div>
                   </div>
 
                   <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
@@ -564,38 +538,26 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                       <span className="font-black text-orange-500 text-xl">{totalTimeHours}h</span>
                     </div>
                     <div className="h-20 w-full mt-2 px-2 bg-orange-50/50">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={sparklineTimeArr}>
-                          <Line type="monotone" dataKey="v" stroke="#f97316" strokeWidth={3} dot={{r: 4, fill: '#f97316', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} />
-                        </LineChart>
-                      </ResponsiveContainer>
+                      <ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineTimeArr}><Line type="monotone" dataKey="v" stroke="#f97316" strokeWidth={3} dot={{r: 4, fill: '#f97316', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer>
                     </div>
-                    <div className="p-4 text-[13px] text-slate-500 bg-slate-50/50 border-t border-slate-100 mt-auto leading-relaxed">Tổng thời gian luyện tập của bạn trên hệ thống.</div>
                   </div>
                 </div>
 
                 {showIeltsCharts && (
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6 animate-in slide-in-from-bottom-4">
-                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                      <h3 className="font-black text-lg text-slate-800 mb-6">📈 Tiến Độ Band Score Từng Kỹ Năng</h3>
-                      <div className="h-[300px] w-full">
-                        <ResponsiveContainer width="100%" height="100%">
-                          <LineChart data={dynamicProgressData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                            <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13, fontWeight: 600}} dy={10} />
-                            <YAxis domain={[0, 9]} ticks={[0, 3, 5, 6, 7, 8, 9]} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13, fontWeight: 600}} dx={-10} />
-                            <RechartsTooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', fontWeight: 'bold' }} />
-                            <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px', fontWeight: 'bold', fontSize: '14px' }} />
-                            <Line type="monotone" dataKey="listening" name="Listening" stroke="#10b981" strokeWidth={3} activeDot={{ r: 6 }} connectNulls />
-                            <Line type="monotone" dataKey="reading" name="Reading" stroke="#a855f7" strokeWidth={3} activeDot={{ r: 6 }} connectNulls />
-                          </LineChart>
-                        </ResponsiveContainer>
-                      </div>
-                    </div>
-                    <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-center items-center text-center">
-                       <span className="text-4xl opacity-50 mb-3 block">📊</span>
-                       <h3 className="font-bold text-slate-600 mb-2">Phân Tích Dạng Bài (Radar)</h3>
-                       <p className="text-slate-400 text-sm w-3/4">Để vẽ biểu đồ phân tích sâu từng dạng bài, hệ thống cần lưu trữ log chi tiết từng câu hỏi trong bài làm của học viên.</p>
+                  <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mt-6 animate-in slide-in-from-bottom-4">
+                    <h3 className="font-black text-lg text-slate-800 mb-6">📈 Tiến Độ Band Score (IELTS)</h3>
+                    <div className="h-[300px] w-full">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <LineChart data={dynamicProgressData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                          <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13, fontWeight: 600}} dy={10} />
+                          <YAxis domain={[0, 9]} ticks={[0, 3, 5, 6, 7, 8, 9]} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13, fontWeight: 600}} dx={-10} />
+                          <RechartsTooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', fontWeight: 'bold' }} />
+                          <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px', fontWeight: 'bold', fontSize: '14px' }} />
+                          <Line type="monotone" dataKey="listening" name="Listening" stroke="#10b981" strokeWidth={3} activeDot={{ r: 6 }} connectNulls />
+                          <Line type="monotone" dataKey="reading" name="Reading" stroke="#a855f7" strokeWidth={3} activeDot={{ r: 6 }} connectNulls />
+                        </LineChart>
+                      </ResponsiveContainer>
                     </div>
                   </div>
                 )}
@@ -604,20 +566,16 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                   <div className="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50/50">
                     <h3 className="font-black text-lg text-slate-800">🕰️ Lịch Sử Đề Thi Đã Làm</h3>
                     <select value={historySort} onChange={(e) => setHistorySort(e.target.value)} className="border border-slate-300 rounded-lg px-4 py-2 font-medium text-[14px] outline-none focus:ring-2 focus:ring-[#1e88e5] cursor-pointer bg-white">
-                      <option value="date-desc">Ngày gần nhất</option>
-                      <option value="date-asc">Ngày cũ nhất</option>
-                      <option value="score-desc">Điểm cao nhất</option>
-                      <option value="score-asc">Điểm thấp nhất</option>
+                      <option value="date-desc">Ngày gần nhất</option><option value="date-asc">Ngày cũ nhất</option>
+                      <option value="score-desc">Điểm cao nhất</option><option value="score-asc">Điểm thấp nhất</option>
                     </select>
                   </div>
                   <div className="overflow-x-auto">
                     <table className="w-full text-left border-collapse">
                       <thead>
                         <tr className="bg-white border-b border-slate-200 text-[12px] uppercase tracking-wider text-slate-500">
-                          <th className="px-6 py-4 font-bold">Đề thi</th>
-                          <th className="px-6 py-4 font-bold text-center">Môn học</th>
-                          <th className="px-6 py-4 font-bold text-center">Điểm số</th>
-                          <th className="px-6 py-4 font-bold text-center">Thời gian làm</th>
+                          <th className="px-6 py-4 font-bold">Đề thi</th><th className="px-6 py-4 font-bold text-center">Môn học</th>
+                          <th className="px-6 py-4 font-bold text-center">Điểm số</th><th className="px-6 py-4 font-bold text-center">Thời gian làm</th>
                           <th className="px-6 py-4 font-bold text-center">Ngày nộp</th>
                         </tr>
                       </thead>
@@ -650,27 +608,27 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
               <h2 className="text-2xl font-black text-slate-800">{displayUserName}</h2>
               <p className="text-slate-500 font-medium mb-8">Học viên TonyEnglish</p>
               <div className="space-y-5 border-t border-slate-100 pt-8 text-left">
-                <h3 className="font-black text-lg text-slate-800 mb-2">🔐 Thay đổi mật khẩu</h3>
+                <h3 className="font-black text-lg text-slate-800 mb-2">🔐 Cấu hình thông tin</h3>
                 <div className="space-y-1">
-                  <label className="text-[13px] font-bold text-slate-500 uppercase">Email đăng nhập</label>
-                  <input type="email" defaultValue={currentUser?.email || "tony@tonyenglish.vn"} disabled className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 font-medium text-slate-700 outline-none" />
-                </div>
-                <div className="space-y-1">
-                  <label className="text-[13px] font-bold text-slate-500 uppercase">Mật khẩu mới</label>
+                  <label className="text-[13px] font-bold text-slate-500 uppercase">Họ và tên</label>
                   <input 
-                    type="password" 
-                    placeholder="••••••••" 
-                    value={newPassword}
-                    onChange={(e) => setNewPassword(e.target.value)}
+                    type="text" 
+                    value={newFullName} 
+                    onChange={e => setNewFullName(e.target.value)} 
                     className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-[#1e88e5] outline-none" 
+                    placeholder="Nhập họ và tên..."
                   />
                 </div>
-                <button 
-                  onClick={handleUpdatePassword}
-                  disabled={isUpdatingPassword}
-                  className="bg-[#1e88e5] hover:bg-[#1565c0] disabled:bg-slate-300 text-white font-bold px-6 py-3 rounded-xl transition shadow-md w-full mt-4"
-                >
-                  {isUpdatingPassword ? 'Đang cập nhật...' : 'Cập nhật tài khoản'}
+                <div className="space-y-1">
+                  <label className="text-[13px] font-bold text-slate-500 uppercase">Email đăng nhập</label>
+                  <input type="email" defaultValue={currentUser?.email || ""} disabled className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 font-medium text-slate-700 outline-none" />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-[13px] font-bold text-slate-500 uppercase">Mật khẩu mới (Nếu muốn đổi)</label>
+                  <input type="password" placeholder="••••••••" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-[#1e88e5] outline-none" />
+                </div>
+                <button onClick={handleUpdateProfile} disabled={isUpdatingProfile} className="bg-[#1e88e5] hover:bg-[#1565c0] disabled:bg-slate-300 text-white font-bold px-6 py-3 rounded-xl transition shadow-md w-full mt-4">
+                  {isUpdatingProfile ? 'Đang cập nhật...' : 'Cập nhật tài khoản'}
                 </button>
               </div>
             </div>
@@ -687,34 +645,19 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
             <p className="text-slate-500 font-medium mb-8">Vui lòng chọn hình thức thi bạn muốn tham gia:</p>
             
             <div className="space-y-4">
-              <button 
-                onClick={() => handleConfirmMode('computer')} 
-                className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-[#3b82f6] hover:bg-blue-50 transition-all text-left group"
-              >
+              <button onClick={() => handleConfirmMode('computer')} className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-[#3b82f6] hover:bg-blue-50 transition-all text-left group">
                 <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">💻</div>
-                <div>
-                  <h3 className="font-bold text-[16px] text-slate-800">Thi trên máy tính (Computer-delivered)</h3>
-                  <p className="text-[13px] text-slate-500 mt-1">Giao diện chuẩn thi máy, làm bài trực tiếp trên màn hình.</p>
-                </div>
+                <div><h3 className="font-bold text-[16px] text-slate-800">Thi trên máy tính (Computer-delivered)</h3><p className="text-[13px] text-slate-500 mt-1">Giao diện chuẩn thi máy, làm bài trực tiếp trên màn hình.</p></div>
               </button>
-
-              <button 
-                onClick={() => handleConfirmMode('paper')} 
-                className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 transition-all text-left group"
-              >
+              <button onClick={() => handleConfirmMode('paper')} className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 transition-all text-left group">
                 <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">📝</div>
-                <div>
-                  <h3 className="font-bold text-[16px] text-slate-800">Thi trên giấy (Paper-based)</h3>
-                  <p className="text-[13px] text-slate-500 mt-1">Giao diện mô phỏng phiếu trả lời, kết hợp đề thi giấy PDF.</p>
-                </div>
+                <div><h3 className="font-bold text-[16px] text-slate-800">Thi trên giấy (Paper-based)</h3><p className="text-[13px] text-slate-500 mt-1">Giao diện mô phỏng phiếu trả lời, kết hợp đề thi giấy PDF.</p></div>
               </button>
             </div>
-
             <button onClick={() => setShowModeSelection(false)} className="mt-8 w-full py-3 font-bold text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy bỏ</button>
           </div>
         </div>
       )}
-
     </div>
   );
 }

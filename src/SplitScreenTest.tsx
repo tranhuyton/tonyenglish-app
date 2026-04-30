@@ -15,6 +15,10 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // --- THUẬT TOÁN ĐỒNG HỒ ĐẾM NGƯỢC ---
+  const [timeLeft, setTimeLeft] = useState(5400); // Mặc định 90 phút (1 tiếng rưỡi)
+  const isFinishingRef = useRef(false);
+
   // Tải đề thi từ Supabase
   useEffect(() => {
     const fetchLatestTest = async () => {
@@ -29,6 +33,9 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
         if (error) throw error;
         if (data && data.length > 0) {
           setTestData(data[0]);
+          // Cài đặt lại thời gian nếu đề có cấu hình timeLimit, mặc định 90 phút
+          const configuredTime = parseInt(data[0]?.timeLimit) || 90;
+          setTimeLeft(configuredTime * 60); 
         } else {
           setTestData(null);
         }
@@ -42,6 +49,20 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     fetchLatestTest();
   }, []);
 
+  // Format thời gian thành HH:MM:SS
+  const formatTime = (totalSeconds: number) => {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    
+    const pad = (num: number) => num.toString().padStart(2, '0');
+    
+    if (hours > 0) {
+        return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    }
+    return `${pad(minutes)}:${pad(seconds)}`;
+  };
+
   const handleAnswerChange = (inputId: string, value: string) => {
     setAnswers(prev => ({ ...prev, [inputId]: value }));
   };
@@ -50,12 +71,18 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
   // GỌI GEMINI API CHẤM ĐIỂM
   // =========================================================================
   const handleSubmit = async () => {
-    if (Object.keys(answers).length === 0) {
+    // Nếu hết giờ mà chưa điền gì thì chấm 0 luôn, khỏi báo lỗi
+    if (Object.keys(answers).length === 0 && timeLeft > 0) {
       alert("⚠️ Bạn chưa điền câu trả lời nào cả!");
       return;
     }
 
+    if (timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) {
+      return; 
+    }
+
     setIsSubmitting(true);
+    isFinishingRef.current = true;
 
     try {
       const prompt = `
@@ -129,6 +156,26 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     }
   };
 
+  // Đồng hồ chạy liên tục
+  useEffect(() => {
+    // Nếu đang tải, chưa load đề, hoặc đã chấm xong thì không chạy đồng hồ
+    if (isLoading || !testData || gradeResult || isFinishingRef.current) return;
+    
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          alert("⏰ Hết giờ làm bài! Hệ thống tự động nộp bài.");
+          handleSubmit(); // Gọi hàm nộp bài khi hết giờ
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+    
+    return () => clearInterval(timer);
+  }, [isLoading, testData, gradeResult]);
+
   // Kéo thả thanh chia đôi màn hình
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -183,8 +230,8 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
         </div>
         {!gradeResult && (
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-             <div className="text-slate-600 font-bold text-[13px] flex items-center gap-2">
-               <span>⏱️</span> <span className="hidden sm:inline">01:30:00</span>
+             <div className={`font-bold flex items-center gap-2 px-3 py-1 rounded ${timeLeft <= 300 ? 'text-red-600 bg-red-50 animate-pulse' : 'text-slate-600'}`}>
+               <span>⏱️</span> <span className="hidden sm:inline font-mono tracking-widest">{formatTime(timeLeft)}</span>
              </div>
              <button 
                onClick={handleSubmit} 
@@ -260,7 +307,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
                         </span>
                       </div>
                       
-                      {/* Hiển thị lại câu trả lời của học sinh (Nếu cần) */}
                       <div className="mb-4">
                          <span className="font-bold text-slate-500 uppercase text-[11px] tracking-widest block mb-2">Bài làm của bạn:</span>
                          <div className="bg-slate-50 p-4 border border-slate-200 text-[14px] text-slate-600 italic">

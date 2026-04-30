@@ -47,7 +47,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     
     reader.onload = (e) => {
       try {
-        // Dùng ArrayBuffer để chống lỗi font chữ tiếng Việt của file CSV
         const data = new Uint8Array(e.target?.result as ArrayBuffer);
         const workbook = XLSX.read(data, { type: 'array' });
         const firstSheetName = workbook.SheetNames[0];
@@ -65,7 +64,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
         let currentSection: any = null;
         let importCount = 0;
 
-        // Hàm dò tìm tên cột thông minh (Bỏ qua viết hoa, viết thường, dấu cách)
         const getCol = (row: any, keywords: string[]) => {
           const keys = Object.keys(row);
           for (let key of keys) {
@@ -86,22 +84,19 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
           const answer = getCol(row, ['correct', 'answer', 'đápánđúng']);
           const exp = getCol(row, ['explanation', 'giảithích']);
 
-          if (!qContent && !optA && !partTitle) return; // Bỏ qua dòng trống
+          if (!qContent && !optA && !partTitle) return;
 
-          // 1. Tạo Part
           if (!currentPart || currentPart.title !== partTitle) {
             currentPart = { id: Date.now().toString() + Math.random(), title: partTitle, content: '', tags: '', audioUrl: '', explanation: '', sections: [] };
             newParts.push(currentPart);
             currentSection = null; 
           }
 
-          // 2. Tạo Section
           if (!currentSection || currentSection.title !== secTitle) {
             currentSection = { id: Date.now().toString() + Math.random(), title: secTitle, content: '', tags: '', questionType: 'Trắc nghiệm', audioUrl: '', explanation: '', questions: [] };
             currentPart.sections.push(currentSection);
           }
 
-          // 3. Tạo Question
           if (qContent || optA) {
             const options = [];
             if (optA) options.push(optA.toString());
@@ -137,23 +132,33 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     reader.readAsArrayBuffer(file);
   };
 
+  // ĐÃ KHÔI PHỤC LẠI 2 HÀM NÀY ĐỂ TRÁNH LỖI MÀN HÌNH TRẮNG
+  const handleDragOverExcel = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingExcel(true);
+  };
+
+  const handleDragLeaveExcel = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDraggingExcel(false);
+  };
+
   const handleExcelDrop = (e: React.DragEvent) => {
-    e.preventDefault(); setIsDraggingExcel(false);
+    e.preventDefault(); 
+    setIsDraggingExcel(false);
     if (e.dataTransfer.files?.[0]) processExcelFile(e.dataTransfer.files[0]);
   };
 
   const handleExcelUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files?.[0]) {
       processExcelFile(e.target.files[0]);
-      e.target.value = ''; // Reset để chọn lại file cũ nếu cần
+      e.target.value = ''; 
     }
   };
 
   // ==========================================
   // 3. GIAO DIỆN HỖ TRỢ CHÈN ẢNH VÀ AUDIO TRỰC TIẾP
   // ==========================================
-  
-  // Nút chèn ảnh và ô Text hỗ trợ Paste
   const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const [isUploading, setIsUploading] = useState(false);
@@ -205,7 +210,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     );
   };
 
-  // Nút Audio đính kèm
   const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*" }: any) => {
     const [isDrag, setIsDrag] = useState(false);
     const handleFile = async (file: File) => {
@@ -243,7 +247,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     );
   };
 
-  // Các thẻ input Text bình thường (Tiêu đề, Tags...)
   const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
     <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
       <label className="w-32 shrink-0 text-[13px] font-bold text-slate-600">{label}</label>

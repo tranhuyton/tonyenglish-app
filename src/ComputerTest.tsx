@@ -4,13 +4,14 @@ import './tailwind.css';
 export default function ComputerTest({ onBack, testData, onFinish }: { onBack: () => void, testData?: any, onFinish?: (res: any) => void }) {
   let safeTestData = testData;
   if (typeof safeTestData === 'string') { try { safeTestData = JSON.parse(safeTestData); } catch (e) { } }
-  if (typeof safeTestData === 'string') { try { safeTestData = JSON.parse(safeTestData); } catch (e) { } }
 
-  const data = safeTestData || {};
-  const parts = data.parts || []; 
+  // ĐỒNG BỘ CẤU TRÚC DỮ LIỆU MỚI TỪ ADMIN
+  const contentJSON = safeTestData?.content_json || safeTestData || {};
+  const basicInfo = contentJSON.basicInfo || { title: "IELTS Test", timeLimit: "40", skill: "" };
+  const parts = contentJSON.parts || []; 
   
-  const isListening = data.skill === 'listening';
-  const globalAudio = data.audioUrl || parts?.[0]?.audioUrl;
+  const isListening = basicInfo.skill?.toLowerCase().includes('listening');
+  const globalAudio = basicInfo.audioUrl || parts?.[0]?.audioUrl;
 
   const [testStarted, setTestStarted] = useState(false);
   const [isReviewMode, setIsReviewMode] = useState(false);
@@ -21,7 +22,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
     try {
-      const saved = localStorage.getItem(`ielts_ans_${data.testId}`);
+      const saved = localStorage.getItem(`ielts_ans_${safeTestData?.id}`);
       return saved ? JSON.parse(saved) : {};
     } catch (error) {
       return {};
@@ -29,16 +30,16 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   });
 
   useEffect(() => {
-    if (!isReviewMode && !isFinishingRef.current && data.testId) {
-      localStorage.setItem(`ielts_ans_${data.testId}`, JSON.stringify(answers));
+    if (!isReviewMode && !isFinishingRef.current && safeTestData?.id) {
+      localStorage.setItem(`ielts_ans_${safeTestData.id}`, JSON.stringify(answers));
     }
-  }, [answers, data.testId, isReviewMode]);
+  }, [answers, safeTestData?.id, isReviewMode]);
 
-  const handleAnswer = (qNum: string, value: string) => { if (!isReviewMode) setAnswers(prev => ({ ...prev, [String(qNum)]: value })); };
+  const handleAnswer = (qNum: string, value: string) => { if (!isReviewMode) setAnswers(prev => ({ ...prev, [String(qNum)]: String(value) })); };
 
   const clearDraft = () => {
     if(window.confirm('Xóa bản nháp và làm lại từ đầu?')) { 
-      if (data.testId) localStorage.removeItem(`ielts_ans_${data.testId}`); 
+      if (safeTestData?.id) localStorage.removeItem(`ielts_ans_${safeTestData.id}`); 
       setAnswers({}); 
     }
   };
@@ -48,12 +49,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
       
       isFinishingRef.current = true;
-      if (data.testId) localStorage.removeItem(`ielts_ans_${data.testId}`);
+      if (safeTestData?.id) localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
 
       let score = 0; let total = 0;
-      parts.forEach((p: any) => p.questionGroups?.forEach((g: any) => g.questions?.forEach((q: any) => {
+      parts.forEach((p: any) => p.sections?.forEach((s: any) => s.questions?.forEach((q: any) => {
         total++;
-        const userAns = answers[String(q.id)]?.trim().toUpperCase() || "";
+        const userAns = String(answers[String(q.id)] || "").trim().toUpperCase();
         const correctAns = String(q.correctAnswer || "").trim().toUpperCase();
         if (userAns === correctAns && correctAns !== "") score++;
       })));
@@ -65,20 +66,20 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
       setScoreResult({ score, total, band }); setIsReviewMode(true); window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      if (onFinish) onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: data.title || "IELTS Test", bandScore: scoreResult.band }); 
+      if (onFinish) onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title, bandScore: scoreResult.band }); 
       else onBack();
     }
   };
 
   const resetTest = () => {
-    if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { setAnswers({}); setIsReviewMode(false); setTestStarted(false); setTimeLeft(parseInitialTime(data.timeLimit)); }
+    if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { setAnswers({}); setIsReviewMode(false); setTestStarted(false); setTimeLeft(parseInitialTime(basicInfo.timeLimit)); }
   };
 
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
   const currentPart = parts[currentPartIndex];
   
   const questionToPartMap: Record<string, number> = {};
-  parts.forEach((p: any, pIndex: number) => { p.questionGroups?.forEach((g: any) => g.questions?.forEach((q: any) => { questionToPartMap[String(q.id)] = pIndex; })); });
+  parts.forEach((p: any, pIndex: number) => { p.sections?.forEach((s: any) => s.questions?.forEach((q: any) => { questionToPartMap[String(q.id)] = pIndex; })); });
 
   const scrollToQuestion = (qNum: number | string) => {
     const targetPartIndex = questionToPartMap[String(qNum)];
@@ -99,7 +100,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     return timeParts.length === 2 ? parseInt(timeParts[0]) * 60 + parseInt(timeParts[1]) : (parseInt(timeParts[0]) || 60) * 60;
   };
 
-  const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(data.timeLimit));
+  const [timeLeft, setTimeLeft] = useState(() => parseInitialTime(basicInfo.timeLimit));
 
   useEffect(() => {
     if (!testStarted || timeLeft <= 0 || isReviewMode) return;
@@ -149,24 +150,53 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   };
   useEffect(() => { window.addEventListener('mousemove', onDrag); window.addEventListener('mouseup', stopDrag); return () => { window.removeEventListener('mousemove', onDrag); window.removeEventListener('mouseup', stopDrag); }; }, []);
 
-  const renderInlineQuestion = (text: string) => {
+  // --- THUẬT TOÁN ĐỒNG BỘ ID CÂU HỎI AN TOÀN ---
+  const allQuestionIds: string[] = [];
+  parts?.forEach((p: any) => {
+    p?.sections?.forEach((s: any) => {
+      if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part") {
+        const matches = String(s?.content || '').match(/\[(\d+)\]/g);
+        if (matches) {
+          matches.forEach((m: string) => {
+            const num = m.replace(/\D/g, '');
+            if (!allQuestionIds.includes(num)) allQuestionIds.push(num);
+          });
+        }
+      } else {
+        s?.questions?.forEach((q: any) => {
+          if (q?.id && !allQuestionIds.includes(String(q.id))) {
+            allQuestionIds.push(String(q.id));
+          }
+        });
+      }
+    });
+  });
+
+  const questionIndexMap = allQuestionIds.reduce((acc: any, id: string, idx: number) => { 
+    acc[id] = idx + 1; 
+    return acc; 
+  }, {});
+
+  const renderInlineQuestion = (text: any) => {
     if (!text) return null; 
-    const textParts = text.split(/(\[\d+\])/g);
+    const safeText = String(text);
+    const textParts = safeText.split(/(\[\d+\])/g);
     return textParts.map((part, index) => {
       const match = part.match(/\[(\d+)\]/);
       if (match) {
         const qNum = match[1];
-        const userAns = answers[String(qNum)] || '';
+        const userAns = String(answers[qNum] || '');
+        const displayIndex = questionIndexMap[qNum] || qNum;
         
         if (isReviewMode) {
-          const qData = parts.flatMap((p: any) => p.questionGroups?.flatMap((g: any) => g.questions) || []).find((q: any) => String(q.id) === String(qNum));
-          const correctAns = qData?.correctAnswer || '';
-          const isCorrect = String(userAns).trim().toUpperCase() === String(correctAns).trim().toUpperCase();
+          const qData = parts.flatMap((p: any) => p?.sections?.flatMap((s: any) => s?.questions) || []).find((q: any) => String(q?.id) === String(qNum));
+          const correctAns = String(qData?.correctAnswer || '');
+          const isCorrect = userAns.trim().toUpperCase() === correctAns.trim().toUpperCase();
           
           return (
             <span key={index} className="relative inline-flex items-center align-middle mx-1 -translate-y-[14px] whitespace-nowrap">
               <span className={`inline-flex items-center justify-center px-3 py-1 text-[14px] font-bold text-white rounded-md shadow-sm border h-[30px] ${isCorrect ? 'bg-emerald-500 border-emerald-600' : 'bg-red-500 border-red-600'}`}>
-                {qNum}. {userAns || '(trống)'}
+                {displayIndex}. {userAns || '(trống)'}
               </span>
               {!isCorrect && (
                 <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[12px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded-md shadow-sm whitespace-nowrap z-10">
@@ -180,7 +210,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         return (
           <span key={index} id={`q-${qNum}`} className="inline-flex items-center align-middle mx-1 -translate-y-[14px] whitespace-nowrap">
             <span className="inline-flex items-center justify-center bg-[#1f2937] text-white font-bold px-2 min-w-[30px] h-[30px] text-[14px] rounded-sm shadow-sm">
-              {qNum}
+              {displayIndex}
             </span>
             <input 
               type="text" 
@@ -200,9 +230,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     setTestStarted(true);
     if (globalAudioRef.current && isListening) { globalAudioRef.current.play().catch(e => { console.error("Autoplay blocked:", e); alert("Trình duyệt không cho phép tự động phát âm thanh. Vui lòng ấn nút Bắt Đầu lại."); }); }
   };
-
-  const totalQuestions = data.totalQuestions || parts.reduce((acc: number, p: any) => acc + (p.questionGroups?.reduce((gAcc: number, g: any) => gAcc + (g.questions?.length || 0), 0) || 0), 0) || 40;
-  const footerQuestions = Array.from({ length: totalQuestions }, (_, i) => i + 1);
   
   const showLeftColumn = !(isListening && !isReviewMode);
 
@@ -213,9 +240,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       {!testStarted ? (
         <div className="flex flex-col h-screen items-center justify-center bg-[#f0f2f5] font-sans">
           <div className="bg-white p-10 rounded-2xl shadow-xl text-center max-w-lg border border-slate-200 w-full">
-            <div className="text-6xl mb-6">{isListening ? '🎧' : '📖'}</div>
-            <h1 className="text-2xl font-black text-slate-800 mb-2">{data.title || "IELTS Test"}</h1>
-            <p className="text-slate-500 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(data.timeLimit))}</p>
+            <div className="text-6xl mb-6">{isListening ? '🎧' : '💻'}</div>
+            <h1 className="text-2xl font-black text-slate-800 mb-2">{basicInfo.title || "IELTS Test"}</h1>
+            <p className="text-slate-500 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
             {isListening && (
               <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg text-amber-700 text-[13px] font-medium mb-8 text-left leading-relaxed shadow-inner">
                 <span className="font-bold">⚠️ LƯU Ý THI LISTENING:</span> File âm thanh đã được tải ngầm và sẽ <span className="font-bold underline">tự động phát ngay lập tức</span> khi bạn bấm Bắt Đầu. Bạn chỉ có thể chỉnh âm lượng, KHÔNG THỂ tạm dừng hay tua lại.
@@ -256,7 +283,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           <header className={`px-6 py-3 flex justify-between items-center z-10 shrink-0 shadow ${isReviewMode ? 'bg-emerald-700' : 'bg-[#1f2937]'} text-white`}>
             <div className="flex items-center gap-4">
               <button onClick={onBack} className="bg-black/20 hover:bg-black/40 border border-white/20 text-sm px-3 py-1.5 rounded font-bold transition shrink-0">⬅ Thoát</button>
-              <div className="font-bold text-lg tracking-wide border-l border-white/30 pl-4 truncate max-w-[200px] md:max-w-md">{isReviewMode ? `[CHỮA BÀI] ${data.title || "IELTS"}` : (data.title || "IELTS Test")}</div>
+              <div className="font-bold text-lg tracking-wide border-l border-white/30 pl-4 truncate max-w-[200px] md:max-w-md">{isReviewMode ? `[CHỮA BÀI] ${basicInfo.title || "IELTS"}` : (basicInfo.title || "IELTS Test")}</div>
             </div>
             {isListening && globalAudio && (
               <div className="flex-1 max-w-lg mx-8 flex items-center justify-center">
@@ -271,9 +298,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             </div>
           </header>
 
-          <div className={`border-b border-gray-300 px-6 py-2 flex gap-2 ${isReviewMode ? 'bg-emerald-50' : 'bg-gray-100'}`}>
+          <div className={`border-b border-gray-300 px-6 py-2 flex gap-2 overflow-x-auto ${isReviewMode ? 'bg-emerald-50' : 'bg-gray-100'}`}>
             {parts.map((p: any, index: number) => (
-              <button key={index} onClick={() => setCurrentPartIndex(index)} className={`px-4 py-1.5 text-sm font-bold rounded shadow-sm transition-colors ${currentPartIndex === index ? (isReviewMode ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-white text-blue-600 border border-gray-300 border-b-transparent') : 'bg-gray-200 text-gray-600 hover:bg-gray-300 border border-transparent'}`}>{p.title || `Part ${index + 1}`}</button>
+              <button key={index} onClick={() => setCurrentPartIndex(index)} className={`px-4 py-1.5 text-sm font-bold rounded shadow-sm transition-colors whitespace-nowrap ${currentPartIndex === index ? (isReviewMode ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-white text-blue-600 border border-gray-300 border-b-transparent') : 'bg-gray-200 text-gray-600 hover:bg-gray-300 border border-transparent'}`}>{p.title || `Part ${index + 1}`}</button>
             ))}
           </div>
 
@@ -281,9 +308,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             {showLeftColumn && (
               <>
                 <section className="p-8 overflow-y-auto leading-relaxed custom-scrollbar relative" style={{ width: `${leftWidth}%`, flex: 'none' }} onClick={handleContentClick}>
-                  {currentPart?.passageContent ? (
-                    <div><h2 className="font-bold text-xl mb-4 text-slate-800">{currentPart?.title}</h2>{isReviewMode && isListening && <div className="bg-amber-100 text-amber-800 p-3 rounded font-bold text-[13px] mb-6 border border-amber-300 inline-block shadow-sm">🎙️ TAPESCRIPT CHỮA BÀI NẰM Ở ĐÂY ➔</div>}<p className="font-bold mb-6 text-gray-700">{currentPart?.instructions}</p><h3 className="font-bold text-center mb-6 text-2xl text-slate-900">{currentPart?.passageTitle}</h3><div className="text-justify space-y-4 text-[15px]" dangerouslySetInnerHTML={{ __html: currentPart?.passageContent || "" }} /></div>
-                  ) : (<div className="flex flex-col items-center justify-center h-full text-gray-400 opacity-70"><span className="text-6xl mb-4">📄</span><p className="font-bold text-lg">Không có dữ liệu văn bản</p></div>)}
+                  {currentPart?.content ? (
+                    <div>
+                      <h2 className="font-bold text-xl mb-4 text-slate-800">{currentPart?.title}</h2>
+                      {isReviewMode && isListening && <div className="bg-amber-100 text-amber-800 p-3 rounded font-bold text-[13px] mb-6 border border-amber-300 inline-block shadow-sm">🎙️ TAPESCRIPT CHỮA BÀI NẰM Ở ĐÂY ➔</div>}
+                      <div className="text-justify space-y-4 text-[15px]" dangerouslySetInnerHTML={{ __html: currentPart?.content || "" }} />
+                    </div>
+                  ) : (<div className="flex flex-col items-center justify-center h-full text-gray-400 opacity-70"><span className="text-6xl mb-4">📄</span><p className="font-bold text-lg">Không có dữ liệu bài đọc</p></div>)}
                   <div className="h-[200px]" />
                 </section>
                 <div className="w-2 bg-gray-200 hover:bg-gray-300 cursor-col-resize flex flex-col justify-center items-center z-10 border-x border-gray-300" onMouseDown={startDrag}><div className="w-0.5 h-10 bg-gray-500"></div></div>
@@ -293,91 +324,61 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             <section className={`p-8 overflow-y-auto leading-relaxed custom-scrollbar ${isReviewMode ? 'bg-slate-50' : 'bg-[#f9fafb]'}`} style={{ width: showLeftColumn ? `${100 - leftWidth}%` : '100%', flex: 'none' }}>
               <div className={`${!showLeftColumn ? 'max-w-3xl mx-auto' : ''}`}>
                 {currentPart?.audioUrl && (!isListening || isReviewMode) && (<div className="mb-8 bg-white p-4 rounded-xl border border-gray-300 shadow-sm flex items-center gap-4"><p className="text-xs font-bold text-gray-500 uppercase tracking-widest shrink-0">Audio Part:</p><audio controls controlsList="nodownload" className="h-10 flex-1 outline-none"><source src={currentPart.audioUrl} type="audio/mpeg" /></audio></div>)}
-                {currentPart?.questionGroups?.map((group: any, index: number) => (
+                
+                {currentPart?.sections?.map((sec: any, index: number) => (
                   <div key={index} className="mb-12">
-                    <h3 className="font-bold text-lg mb-2 text-slate-800">{group.title}</h3><p className="italic mb-4 text-gray-600">{group.instruction}</p>
+                    <h3 className="font-bold text-lg mb-2 text-slate-800">{sec.title}</h3>
+                    {sec.content && sec.questionType !== "Điền từ" && sec.questionType !== "Kéo thả vào Part" && (
+                      <div className="italic mb-4 text-gray-600" dangerouslySetInnerHTML={{ __html: sec.content }} />
+                    )}
                     
-                    {group.type === "GAP_FILL" && (
+                    {(sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") && (
                       <div className={`border p-8 shadow-sm rounded-xl ${isReviewMode ? 'bg-white border-slate-300' : 'bg-white border-gray-200'}`}>
-                        {group.boxTitle && <h4 className="font-bold mb-4">{group.boxTitle}</h4>}
-                        <div className="space-y-6 leading-loose text-[16px] font-serif text-slate-800">{renderInlineQuestion(group.content)}</div>
+                        <div className="space-y-6 leading-loose text-[16px] font-serif text-slate-800">{renderInlineQuestion(sec.content)}</div>
                       </div>
                     )}
                     
-                    {(group.type === "TFNG" || group.type === "MCQ") && (
+                    {sec.questionType === "Trắc nghiệm" && (
                        <div className="space-y-6">
-                         {group.questions?.map((q: any) => {
-                            const correctAns = q.correctAnswer?.trim().toUpperCase(); const userAns = answers[q.id]?.trim().toUpperCase(); const isCorrect = userAns === correctAns;
-                            const optionsList = group.type === "TFNG" ? ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'] : q.options;
+                         {sec.questions?.map((q: any) => {
+                            if (!q?.id) return null;
+                            const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
+                            const userAns = String(answers[String(q.id)] || '').trim().toUpperCase(); 
+                            const isCorrect = userAns === correctAns;
+                            const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                            
                             return (
                              <div key={q.id} id={`q-${q.id}`} className={`p-6 rounded-xl border relative group ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'bg-white border-slate-200 shadow-sm hover:border-slate-300'}`}>
                                
-                               {/* ĐÃ FIX: ĐỒNG BỘ BOX ĐEN CHUẨN IDP CHO TFNG/MCQ */}
                                <div className="flex items-start gap-3 mb-4">
                                  <span className={`inline-flex items-center justify-center font-bold min-w-[30px] h-[30px] text-[14px] rounded-sm shadow-sm shrink-0 ${isReviewMode ? (isCorrect ? 'bg-emerald-500 text-white' : 'bg-red-500 text-white') : 'bg-[#1f2937] text-white'}`}>
-                                   {q.id}
+                                   {displayIdx}
                                  </span>
-                                 <p className="text-[15px] font-medium text-slate-800 pt-[4px]">{q.text}</p>
+                                 <p className="text-[15px] font-medium text-slate-800 pt-[4px]">{String(q.content || '')}</p>
                                </div>
 
-                               <div className={`flex ${group.type === "TFNG" ? 'gap-8' : 'flex-col gap-3'} ml-10 mt-4`}>
-                                 {optionsList?.map((opt: string, i: number) => {
-                                   const optionValue = group.type === "TFNG" ? opt : opt.split('.')[0]?.trim().toUpperCase(); const isSelected = userAns === optionValue; const isCorrectOpt = correctAns === optionValue;
+                               <div className={`flex flex-col gap-3 ml-10 mt-4`}>
+                                 {q.options?.map((opt: any, i: number) => {
+                                   const safeOpt = String(opt || '');
+                                   const optionValue = safeOpt.split('.')[0]?.trim().toUpperCase() || String.fromCharCode(65+i); 
+                                   const isSelected = userAns === optionValue; 
+                                   const isCorrectOpt = correctAns === optionValue;
                                    let labelClass = "flex items-start gap-3 p-2 rounded transition border border-transparent";
                                    if (isReviewMode) { if (isCorrectOpt) labelClass += " bg-emerald-100 border-emerald-400 font-bold text-emerald-800"; else if (isSelected) labelClass += " bg-red-100 border-red-300 text-red-700 line-through opacity-60"; else labelClass += " opacity-50"; } else { labelClass += " cursor-pointer hover:bg-gray-100 hover:border-gray-300"; }
                                    return (
                                      <label key={i} className={labelClass}>
                                        <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="mt-1 w-4 h-4 accent-blue-600" disabled={isReviewMode} />
-                                       <span className="text-[14px] leading-relaxed">{opt}</span>
+                                       <span className="text-[14px] leading-relaxed">{safeOpt}</span>
                                      </label>
                                    )
                                  })}
                                </div>
-                               {isReviewMode && (<div className="mt-5 ml-10 pt-4 border-t border-slate-200"><p className="text-[13px] font-black text-amber-600 uppercase mb-1">💡 Giải thích đáp án:</p><p className="text-[14px] text-slate-700 font-medium">{q.explanation || "Không có lời giải thích."}</p></div>)}
+                               {isReviewMode && (<div className="mt-5 ml-10 pt-4 border-t border-slate-200"><p className="text-[13px] font-black text-amber-600 uppercase mb-1">💡 Giải thích đáp án:</p><p className="text-[14px] text-slate-700 font-medium">{String(q.explanation || '') || "Không có lời giải thích."}</p></div>)}
                              </div>
                             )
                          })}
                        </div>
                     )}
-
-                    {(group.type === "MATCHING") && (
-                      <div className="space-y-6">
-                        {group.questions?.[0]?.options?.length > 0 && (
-                          <div className="border border-gray-300 p-4 mb-6 bg-gray-50 rounded-lg">
-                            <div className="space-y-2">
-                              {group.questions[0].options.map((opt: string, i: number) => (<p key={i} className="text-[15px] font-medium font-sans text-slate-700">{opt}</p>))}
-                            </div>
-                          </div>
-                        )}
-                        <div className="space-y-4">
-                          {group.questions?.map((q: any) => {
-                            const correctAns = q.correctAnswer?.trim().toUpperCase(); const userAns = answers[String(q.id)]?.trim().toUpperCase() || ''; const isCorrect = userAns === correctAns;
-                            return (
-                              <div key={q.id} id={`q-${q.id}`} className={`p-5 rounded-xl border ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : 'bg-slate-50 border-slate-200'}`}>
-                                
-                                {/* ĐÃ FIX: ĐỒNG BỘ BOX ĐEN CHUẨN IDP CHO MATCHING */}
-                                <div className="flex items-start gap-3 mb-4">
-                                  <span className={`inline-flex items-center justify-center font-bold min-w-[30px] h-[30px] text-[14px] rounded-sm shadow-sm shrink-0 ${isReviewMode ? (isCorrect ? 'bg-emerald-500 text-white' : 'bg-red-500 text-white') : 'bg-[#1f2937] text-white'}`}>
-                                    {q.id}
-                                  </span>
-                                  <p className="text-[16px] font-normal text-slate-800 leading-relaxed pt-[3px]">{q.text}</p>
-                                </div>
-                                
-                                <div className="relative max-w-sm">
-                                  <select className={`w-full p-3 rounded-lg border appearance-none font-medium text-[15px] outline-none focus:ring-2 focus:ring-blue-400 ${isReviewMode ? (isCorrect ? 'bg-emerald-100 border-emerald-400 text-emerald-800' : 'bg-red-100 border-red-400 text-red-800') : 'bg-white border-slate-300 text-slate-700 cursor-pointer'}`} value={userAns} onChange={(e) => handleAnswer(String(q.id), e.target.value.toUpperCase())} disabled={isReviewMode}>
-                                    <option value="" disabled>-- Chọn câu trả lời --</option>
-                                    {group.questions[0].options?.map((opt:string, i:number) => { const letter = opt.split('.')[0]?.trim().toUpperCase(); return <option key={i} value={letter}>{opt}</option> })}
-                                  </select>
-                                  {!isReviewMode && (<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500"><svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg></div>)}
-                                </div>
-                                {isReviewMode && !isCorrect && (<p className="mt-3 text-[13px] font-bold text-emerald-700">✅ Đáp án đúng: {correctAns}</p>)}
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </div>
-                    )}
-
                   </div>
                 ))}
               </div>
@@ -391,15 +392,15 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               <label htmlFor="review" className="text-sm font-bold cursor-pointer">Review</label>
             </div>
             <div className="flex-1 flex justify-center items-center gap-1.5 overflow-x-auto px-4 py-1 custom-scrollbar">
-              {footerQuestions.map(num => {
-                const isAnswered = answers[String(num)] && answers[String(num)].trim() !== '';
+              {allQuestionIds.map(id => {
+                const isAnswered = answers[id] && answers[id].trim() !== '';
                 let btnClass = `w-8 h-8 flex items-center justify-center font-bold text-sm bg-white transition-all box-border shrink-0 `;
                 if (isReviewMode) {
-                  const q = parts.flatMap((p: any) => p.questionGroups?.flatMap((g: any) => g.questions) || []).find((q: any) => String(q.id) === String(num));
-                  const isCorrect = q && answers[String(num)]?.trim().toUpperCase() === q.correctAnswer?.trim().toUpperCase();
+                  const q = parts.flatMap((p: any) => p.sections?.flatMap((s: any) => s.questions) || []).find((q: any) => String(q.id) === id);
+                  const isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase();
                   btnClass += isCorrect ? 'bg-emerald-200 border border-emerald-400 text-emerald-800' : 'bg-red-200 border border-red-400 text-red-800';
                 } else { btnClass += isAnswered ? 'border-b-[4px] border-b-black border-t border-x border-gray-400 text-black' : 'border border-gray-400 text-black hover:bg-gray-100 cursor-pointer'; }
-                return (<button key={num} onClick={() => scrollToQuestion(num)} className={btnClass}>{num}</button>)
+                return (<button key={id} onClick={() => scrollToQuestion(id)} className={btnClass}>{questionIndexMap[id]}</button>)
               })}
             </div>
           </footer>
