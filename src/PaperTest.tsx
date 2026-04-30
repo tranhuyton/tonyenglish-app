@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { supabase } from './supabase';
 import './tailwind.css';
 
 export default function PaperTest({ onBack, testData, onFinish }: { onBack: () => void, testData?: any, onFinish?: (res: any) => void }) {
@@ -33,7 +34,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   const handleAnswer = (qNum: string, value: string) => { if (!isReviewMode) setAnswers(prev => ({ ...prev, [qNum]: value })); };
   const clearDraft = () => { if (window.confirm('Xóa toàn bộ bản nháp?')) { if (safeTestData?.id) localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`); setAnswers({}); } };
 
-  const handleFinish = () => {
+  const handleFinish = async () => {
     if (!isReviewMode) {
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
       
@@ -55,6 +56,27 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
       else if (score >= 6) band = "3.0"; else if (score >= 4) band = "2.5"; else if (score >= 2) band = "2.0"; else if (score >= 1) band = "1.0";
 
       setScoreResult({ score, total, band }); setIsReviewMode(true); window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // LƯU KẾT QUẢ VÀO SUPABASE
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (user) {
+          const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
+          await supabase.from('test_results').insert([{
+            user_id: user.id,
+            course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
+            test_title: basicInfo.title || safeTestData?.title || "IELTS Test",
+            test_type: safeTestData?.test_type || 'IELTS Paper',
+            score: score,
+            total_score: total,
+            time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
+            details: { bandScore: band, userAnswers: answers }
+          }]);
+        }
+      } catch (error) {
+        console.error("Lỗi lưu kết quả thi:", error);
+      }
+
     } else {
       if (onFinish) onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title, bandScore: scoreResult.band }); else onBack();
     }

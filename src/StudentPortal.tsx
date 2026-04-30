@@ -76,20 +76,17 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
     }
   };
 
-  // --- LOGIC LỌC KHÓA HỌC DỰA TRÊN BẢNG ENROLLMENTS ---
   const fetchCourses = async (userId?: string) => {
     if (!userId) return;
     
-    // Bước 1: Lấy danh sách ID các khóa học đã được gán
     const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
     const courseIds = enrolls?.map(e => e.course_id) || [];
 
-    // Bước 2: Tải thông tin các khóa học đó
     if (courseIds.length > 0) {
       const { data } = await supabase.from('courses').select('*').in('id', courseIds).order('created_at', { ascending: false });
       setCourses(data || []);
     } else {
-      setCourses([]); // Nếu chưa được gán khóa nào thì rỗng
+      setCourses([]); 
     }
   };
 
@@ -159,7 +156,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
       }
       
       alert("🎉 Cập nhật tài khoản thành công!");
-      checkUserAndFetchData(); // Tải lại tên hiển thị
+      checkUserAndFetchData(); 
     } catch (error: any) {
       alert("Lỗi cập nhật: " + error.message);
     } finally {
@@ -481,112 +478,135 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
 
         {/* ================= TAB 2: PHÂN TÍCH & LỊCH SỬ ================= */}
         {activeTab === 'analytics' && (
-          <div className="space-y-6 animate-in fade-in duration-300">
-            <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="space-y-8 animate-in fade-in duration-300">
+            {/* Thanh Filter */}
+            <div className="bg-white px-6 py-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
               <div>
-                <h2 className="text-xl font-black text-slate-800">Hiệu Suất Học Tập</h2>
-                <p className="text-sm text-slate-500 font-medium">Lựa chọn khóa học để xem biểu đồ và lịch sử chi tiết</p>
+                <h2 className="text-[22px] font-black text-slate-800">Hiệu Suất Học Tập</h2>
+                <p className="text-sm text-slate-500 font-medium mt-1">Lựa chọn khóa học để xem biểu đồ và lịch sử chi tiết</p>
               </div>
-              <select value={analyticsCourse} onChange={(e) => setAnalyticsCourse(e.target.value)} className="w-full md:w-64 border-2 border-slate-200 rounded-xl px-4 py-2.5 font-bold text-[15px] text-[#0a5482] outline-none focus:border-[#2ab4e8] bg-slate-50 cursor-pointer">
-                <option value="all">Tất cả khóa học</option>
-                {courses.length > 0 && courses.map(course => ( <option key={course.id} value={course.id}>{course.title}</option> ))}
-              </select>
+              <div className="w-full md:w-64 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors">
+                <select value={analyticsCourse} onChange={(e) => setAnalyticsCourse(e.target.value)} className="w-full bg-transparent font-bold text-[14px] text-slate-700 outline-none cursor-pointer appearance-none">
+                  <option value="all">Tất cả khóa học</option>
+                  {courses.length > 0 && courses.map(course => ( <option key={course.id} value={course.id}>{course.title}</option> ))}
+                </select>
+                <span className="text-slate-400 text-xs">▼</span>
+              </div>
             </div>
 
             {totalTestsDone === 0 ? (
-              <div className="bg-white rounded-2xl border-2 border-dashed border-slate-200 py-20 text-center shadow-sm">
-                <span className="text-6xl mb-4 block opacity-50">📊</span>
-                <h3 className="text-xl font-bold text-slate-600 mb-2">Chưa có dữ liệu làm bài</h3>
-                <p className="text-slate-400 font-medium">Anh hãy vào Thư viện đề, làm thử một bài test và nộp bài để hệ thống phân tích nhé!</p>
+              // Trạng thái trống
+              <div className="bg-white rounded-2xl border-2 border-dashed border-slate-200 py-24 text-center shadow-sm flex flex-col items-center justify-center">
+                <div className="w-20 h-20 mb-6 flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+                  <div className="flex items-end gap-1.5 h-10">
+                    <div className="w-3 bg-emerald-200 h-6 rounded-sm"></div>
+                    <div className="w-3 bg-pink-300 h-8 rounded-sm"></div>
+                    <div className="w-3 bg-blue-400 h-10 rounded-sm"></div>
+                  </div>
+                </div>
+                <h3 className="text-xl font-black text-slate-700 mb-2">Chưa có dữ liệu làm bài</h3>
+                <p className="text-slate-500 font-medium text-[15px]">Anh hãy vào Thư viện đề, làm thử một bài test và nộp bài để hệ thống phân tích nhé!</p>
               </div>
             ) : (
               <>
+                {/* 4 Ô Sparklines */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-                    <div className="p-5 pb-0 flex justify-between items-start">
-                      <div className="flex items-center gap-2"><span className="w-6 h-6 rounded bg-blue-100 flex items-center justify-center text-[12px]">📊</span><span className="font-bold text-slate-600 text-[14px]">Điểm trung bình</span></div>
-                      <span className="font-black text-blue-500 text-xl">{avgScore}</span>
+                  {/* Ô 1: Điểm trung bình */}
+                  <div className="bg-[#f8fafc] rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between">
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-2"><span className="text-blue-500">📊</span><span className="font-bold text-slate-700 text-[14px]">Điểm trung bình</span></div>
+                      <span className="font-black text-blue-500 text-lg">{avgScore}</span>
                     </div>
-                    <div className="h-20 w-full mt-2 px-2 bg-blue-50/50">
-                      <ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineScoreArr}><Line type="monotone" dataKey="v" stroke="#3b82f6" strokeWidth={3} dot={{r: 4, fill: '#3b82f6', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer>
-                    </div>
+                    <div className="h-16 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineScoreArr}><Line type="monotone" dataKey="v" stroke="#3b82f6" strokeWidth={3} dot={{r: 4, fill: '#3b82f6', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
+                    <p className="text-[11px] text-slate-500 font-medium mt-4 leading-relaxed">Tuyệt vời, tuần vừa qua điểm của bạn đã duy trì tốt. Tiếp tục giữ phong độ nhé!</p>
                   </div>
 
-                  <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-                    <div className="p-5 pb-0 flex justify-between items-start">
-                      <div className="flex items-center gap-2"><span className="w-6 h-6 rounded bg-emerald-100 flex items-center justify-center text-[12px]">📝</span><span className="font-bold text-slate-600 text-[14px]">Bài hoàn thành</span></div>
-                      <span className="font-black text-emerald-500 text-xl">{totalTestsDone}</span>
+                  {/* Ô 2: Bài hoàn thành */}
+                  <div className="bg-[#f0fdf4] rounded-2xl border border-emerald-100 shadow-sm p-5 flex flex-col justify-between">
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-2"><span className="text-emerald-500">📝</span><span className="font-bold text-slate-700 text-[14px]">Bài hoàn thành</span></div>
+                      <span className="font-black text-emerald-500 text-lg">{totalTestsDone}</span>
                     </div>
-                    <div className="h-20 w-full mt-2 px-2 bg-emerald-50/50">
-                      <ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineCompletedArr}><Line type="monotone" dataKey="v" stroke="#10b981" strokeWidth={3} dot={{r: 4, fill: '#10b981', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer>
-                    </div>
+                    <div className="h-16 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineCompletedArr}><Line type="monotone" dataKey="v" stroke="#10b981" strokeWidth={3} dot={{r: 4, fill: '#10b981', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
+                    <p className="text-[11px] text-slate-500 font-medium mt-4 leading-relaxed">Wow, tuần vừa qua bạn đã rất chăm chỉ, hoàn thành hơn {totalTestsDone} bài so với tuần trước đó.</p>
                   </div>
 
-                  <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-                    <div className="p-5 pb-0 flex justify-between items-start">
-                      <div className="flex items-center gap-2"><span className="w-6 h-6 rounded bg-fuchsia-100 flex items-center justify-center text-[12px]">🔄</span><span className="font-bold text-slate-600 text-[14px]">Lượt làm bài</span></div>
-                      <span className="font-black text-fuchsia-500 text-xl">{totalTestsDone}</span>
+                  {/* Ô 3: Lượt làm bài */}
+                  <div className="bg-[#fdf4ff] rounded-2xl border border-fuchsia-100 shadow-sm p-5 flex flex-col justify-between">
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-2"><span className="text-fuchsia-500">🔄</span><span className="font-bold text-slate-700 text-[14px]">Lượt làm bài</span></div>
+                      <span className="font-black text-fuchsia-500 text-lg">{totalTestsDone}</span>
                     </div>
-                    <div className="h-20 w-full mt-2 px-2 bg-fuchsia-50/30">
-                      <ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineAttemptsArr}><Line type="monotone" dataKey="v" stroke="#d946ef" strokeWidth={3} dot={{r: 4, fill: '#d946ef', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer>
-                    </div>
+                    <div className="h-16 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineAttemptsArr}><Line type="monotone" dataKey="v" stroke="#d946ef" strokeWidth={3} dot={{r: 4, fill: '#d946ef', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
+                    <p className="text-[11px] text-slate-500 font-medium mt-4 leading-relaxed">Thật tuyệt, tuần vừa qua bạn đã luyện tập rất chăm chỉ. Tiếp tục phát huy nha!</p>
                   </div>
 
-                  <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-                    <div className="p-5 pb-0 flex justify-between items-start">
-                      <div className="flex items-center gap-2"><span className="w-6 h-6 rounded bg-orange-100 flex items-center justify-center text-[12px]">⏱️</span><span className="font-bold text-slate-600 text-[14px]">Thời gian học</span></div>
-                      <span className="font-black text-orange-500 text-xl">{totalTimeHours}h</span>
+                  {/* Ô 4: Thời gian học */}
+                  <div className="bg-[#fff7ed] rounded-2xl border border-orange-100 shadow-sm p-5 flex flex-col justify-between">
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-2"><span className="text-orange-500">⏱️</span><span className="font-bold text-slate-700 text-[14px]">Thời gian học</span></div>
+                      <span className="font-black text-orange-500 text-lg">{totalTimeHours}h</span>
                     </div>
-                    <div className="h-20 w-full mt-2 px-2 bg-orange-50/50">
-                      <ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineTimeArr}><Line type="monotone" dataKey="v" stroke="#f97316" strokeWidth={3} dot={{r: 4, fill: '#f97316', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer>
-                    </div>
+                    <div className="h-16 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineTimeArr}><Line type="monotone" dataKey="v" stroke="#f97316" strokeWidth={3} dot={{r: 4, fill: '#f97316', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
+                    <p className="text-[11px] text-slate-500 font-medium mt-4 leading-relaxed">Thời gian học trung bình của bạn đang ở mức ổn định. Hãy duy trì thói quen này nhé.</p>
                   </div>
                 </div>
 
-                {showIeltsCharts && (
-                  <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mt-6 animate-in slide-in-from-bottom-4">
-                    <h3 className="font-black text-lg text-slate-800 mb-6">📈 Tiến Độ Band Score (IELTS)</h3>
-                    <div className="h-[300px] w-full">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={dynamicProgressData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                          <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                          <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13, fontWeight: 600}} dy={10} />
-                          <YAxis domain={[0, 9]} ticks={[0, 3, 5, 6, 7, 8, 9]} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 13, fontWeight: 600}} dx={-10} />
-                          <RechartsTooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', fontWeight: 'bold' }} />
-                          <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px', fontWeight: 'bold', fontSize: '14px' }} />
-                          <Line type="monotone" dataKey="listening" name="Listening" stroke="#10b981" strokeWidth={3} activeDot={{ r: 6 }} connectNulls />
-                          <Line type="monotone" dataKey="reading" name="Reading" stroke="#a855f7" strokeWidth={3} activeDot={{ r: 6 }} connectNulls />
-                        </LineChart>
-                      </ResponsiveContainer>
+                {/* Biểu đồ phân tích kỹ năng lớn */}
+                <div className="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200 shadow-sm mt-8">
+                  <div className="flex justify-between items-center mb-8">
+                    <h3 className="font-black text-lg text-slate-800">Phân tích kỹ năng</h3>
+                    <div className="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 flex items-center gap-2">
+                       <span className="text-[13px] font-bold text-slate-600">30 ngày qua</span>
+                       <span className="text-slate-400 text-xs">▼</span>
                     </div>
                   </div>
-                )}
-
-                <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mt-6">
-                  <div className="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50/50">
-                    <h3 className="font-black text-lg text-slate-800">🕰️ Lịch Sử Đề Thi Đã Làm</h3>
-                    <select value={historySort} onChange={(e) => setHistorySort(e.target.value)} className="border border-slate-300 rounded-lg px-4 py-2 font-medium text-[14px] outline-none focus:ring-2 focus:ring-[#1e88e5] cursor-pointer bg-white">
-                      <option value="date-desc">Ngày gần nhất</option><option value="date-asc">Ngày cũ nhất</option>
-                      <option value="score-desc">Điểm cao nhất</option><option value="score-asc">Điểm thấp nhất</option>
-                    </select>
+                  <div className="h-[300px] w-full">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <LineChart data={dynamicProgressData.length > 0 ? dynamicProgressData : [{date: 'Tuần này', reading: avgScore, listening: avgScore}]} margin={{ top: 10, right: 30, left: -20, bottom: 0 }}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                        <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12, fontWeight: 600}} dy={10} />
+                        <YAxis domain={[0, 100]} ticks={[0, 20, 40, 60, 80, 100]} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} />
+                        <RechartsTooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }} />
+                        <Legend iconType="circle" verticalAlign="bottom" height={36} wrapperStyle={{ paddingTop: '20px', fontSize: '13px', fontWeight: 'bold' }} />
+                        <Line type="monotone" dataKey="listening" name="Nghe" stroke="#10b981" strokeWidth={3} activeDot={{ r: 6 }} dot={{r: 4, strokeWidth: 2}} connectNulls />
+                        <Line type="monotone" dataKey="reading" name="Đọc" stroke="#3b82f6" strokeWidth={3} activeDot={{ r: 6 }} dot={{r: 4, strokeWidth: 2}} connectNulls />
+                      </LineChart>
+                    </ResponsiveContainer>
                   </div>
-                  <div className="overflow-x-auto">
+                </div>
+
+                {/* Bảng Lịch sử làm bài */}
+                <div className="mt-8">
+                  <h3 className="font-black text-lg text-slate-800 mb-4">Lịch sử làm bài kiểm tra</h3>
+                  <div className="bg-[#f8fafc] rounded-2xl border border-slate-200 overflow-hidden">
                     <table className="w-full text-left border-collapse">
                       <thead>
-                        <tr className="bg-white border-b border-slate-200 text-[12px] uppercase tracking-wider text-slate-500">
-                          <th className="px-6 py-4 font-bold">Đề thi</th><th className="px-6 py-4 font-bold text-center">Môn học</th>
-                          <th className="px-6 py-4 font-bold text-center">Điểm số</th><th className="px-6 py-4 font-bold text-center">Thời gian làm</th>
-                          <th className="px-6 py-4 font-bold text-center">Ngày nộp</th>
+                        <tr className="border-b border-slate-200 text-[13px] text-slate-600 bg-slate-50/50">
+                          <th className="px-6 py-4 font-bold w-1/2">Tên bài kiểm tra</th>
+                          <th className="px-6 py-4 font-bold text-center">Điểm số</th>
+                          <th className="px-6 py-4 font-bold text-right">Xem chi tiết</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100">
                         {processedHistory.map(history => (
-                          <tr key={history.id} className="hover:bg-slate-50 transition-colors">
-                            <td className="px-6 py-4 font-bold text-[14px] text-slate-800">{history.name}</td>
-                            <td className="px-6 py-4 text-center"><span className="bg-slate-100 text-slate-600 px-2.5 py-1 rounded text-[12px] font-bold border border-slate-200">{history.subject}</span></td>
-                            <td className="px-6 py-4 text-center font-bold text-[15px] text-emerald-600">{history.scoreObj.display}</td>
-                            <td className="px-6 py-4 text-center font-medium text-[14px] text-slate-600">{history.timeSpent} phút</td>
-                            <td className="px-6 py-4 text-center text-slate-500 font-medium text-[13px]">{formatDate(history.date)}</td>
+                          <tr key={history.id} className="hover:bg-white transition-colors group">
+                            <td className="px-6 py-5">
+                              <div className="font-bold text-[14px] text-slate-800 mb-1">{history.name}</div>
+                              <div className="text-[12px] font-medium text-slate-400">
+                                {formatDate(history.date).split(' ')[1]} - {formatDate(history.date).split(' ')[0]}
+                              </div>
+                            </td>
+                            <td className="px-6 py-5 text-center">
+                              <span className="inline-flex items-center justify-center bg-[#10b981] text-white px-4 py-1.5 rounded-full text-[13px] font-black shadow-sm">
+                                {history.scoreObj.value} điểm
+                              </span>
+                            </td>
+                            <td className="px-6 py-5 text-right">
+                              <button className="w-8 h-8 inline-flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors">
+                                👁️
+                              </button>
+                            </td>
                           </tr>
                         ))}
                       </tbody>

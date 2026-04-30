@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { supabase } from './supabase';
 import './tailwind.css';
 
 export default function StandardTest({ onBack, testData, onFinish }: { onBack: () => void, testData: any, onFinish: (res: any) => void }) {
@@ -84,7 +85,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
     if(!isReviewMode) setMarked(prev => ({ ...prev, [qId]: !prev[qId] })); 
   };
 
-  const handleFinish = () => {
+  const handleFinish = async () => {
     if (!isReviewMode) {
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài?")) return;
       
@@ -113,6 +114,27 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
       setIsReviewMode(true);
       setShowPalette(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // LƯU KẾT QUẢ VÀO SUPABASE
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (user) {
+          const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
+          await supabase.from('test_results').insert([{
+            user_id: user.id,
+            course_id: safeData?.course_id || safeData?.content_json?.basicInfo?.courseId || null,
+            test_title: basicInfo.title || safeData?.title || "Standard Test",
+            test_type: safeData?.test_type || 'Standard',
+            score: score,
+            total_score: total,
+            time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
+            details: { userAnswers: answers }
+          }]);
+        }
+      } catch (error) {
+        console.error("Lỗi lưu kết quả thi:", error);
+      }
+
     } else {
       if (onFinish) onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title });
       else onBack();

@@ -148,6 +148,32 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
       // Cập nhật kết quả để hiển thị
       setGradeResult(gradedData);
 
+      // LƯU KẾT QUẢ XUỐNG SUPABASE TẠI ĐÂY
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (user) {
+          const configuredTime = parseInt(testData?.timeLimit) || 90;
+          const timeSpentSeconds = (configuredTime * 60) - timeLeft;
+          
+          await supabase.from('test_results').insert([{
+            user_id: user.id,
+            course_id: testData?.course_id || null,
+            test_title: testData?.title || "Case Study Test",
+            test_type: testData?.test_type || 'Case Study',
+            score: gradedData.total_student_score,
+            total_score: gradedData.total_max_score,
+            time_spent: timeSpentSeconds > 0 ? timeSpentSeconds : 0,
+            details: { 
+              general_feedback: gradedData.general_feedback, 
+              breakdown: gradedData.details,
+              userAnswers: answers 
+            }
+          }]);
+        }
+      } catch (err) {
+        console.error("Lỗi lưu điểm Case Study:", err);
+      }
+
     } catch (err: any) {
       console.error("Lỗi khi chấm bài:", err);
       alert("❌ Đã có lỗi xảy ra: " + err.message);
