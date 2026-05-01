@@ -19,7 +19,6 @@ export default function AdminLogin({ onLoginSuccess }: { onLoginSuccess: () => v
       if (error) {
         alert("Đăng nhập thất bại! Vui lòng kiểm tra lại Email hoặc Mật khẩu.");
       } else if (data.user) {
-        // Có thể thêm bước check xem email có chữ admin không nếu muốn bảo mật thêm
         if (email.toLowerCase().includes('admin')) {
           onLoginSuccess();
         } else {
@@ -39,14 +38,16 @@ export default function AdminLogin({ onLoginSuccess }: { onLoginSuccess: () => v
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[url('https://placehold.co/1920x1080/0f172a/1e293b?text=+')] opacity-20 bg-cover bg-center"></div>
       
-      <div className="bg-white rounded-[2rem] w-full max-w-md shadow-2xl overflow-hidden relative z-10 animate-in fade-in zoom-in-95 duration-500">
+      <div className="bg-white rounded-[2rem] w-full max-w-md shadow-2xl overflow-hidden relative z-10 animate-in fade-in zoom-in-95 duration-500 transform-gpu">
         <div className="bg-[#0a5482] px-8 py-10 text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-400 opacity-20 rounded-full blur-3xl -mr-10 -mt-10"></div>
-          <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+          {/* Đã gỡ bỏ blur-3xl gây lag, thay bằng gradient nhẹ nhàng mượt mà */}
+          <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-blue-400/30 to-transparent rounded-full -mr-12 -mt-12 pointer-events-none"></div>
+          
+          <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg relative z-10">
             <span className="text-3xl">🛡️</span>
           </div>
-          <h2 className="text-2xl font-black text-white tracking-tight">HỆ THỐNG QUẢN TRỊ</h2>
-          <p className="text-blue-100/80 font-medium text-[13px] mt-1">Dành riêng cho Giáo viên TonyEnglish</p>
+          <h2 className="text-2xl font-black text-white tracking-tight relative z-10">HỆ THỐNG QUẢN TRỊ</h2>
+          <p className="text-blue-100/80 font-medium text-[13px] mt-1 relative z-10">Dành riêng cho Giáo viên TonyEnglish</p>
         </div>
 
         <form onSubmit={handleLogin} className="p-8 space-y-6">

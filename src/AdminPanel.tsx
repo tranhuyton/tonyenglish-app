@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import TestEditorModal from './TestEditorModal';
 import CaseStudyEditorModal from './CaseStudyEditorModal'; 
-import StudentManagement from './StudentManagement'; // <-- IMPORT GIAO DIỆN QUẢN LÝ HỌC VIÊN
+import StudentManagement from './StudentManagement'; 
 import './tailwind.css';
 
 export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string) => void }) {
@@ -18,6 +18,9 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [assignedTests, setAssignedTests] = useState<any[]>([]); 
   const [selectedCourse, setSelectedCourse] = useState<any>(null);
   
+  // --- THÊM STATE ĐỂ LÀM SKELETON LOADER CHỐNG GIẬT LAG ---
+  const [isLoadingCourses, setIsLoadingCourses] = useState(true);
+
   // --- UI STATES ---
   const [currentFolderId, setCurrentFolderId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -51,8 +54,10 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   }, []);
 
   const fetchCourses = async () => {
+    setIsLoadingCourses(true); // Bật nhấp nháy tải dữ liệu
     const { data } = await supabase.from('courses').select('*').order('created_at', { ascending: false });
     setCourses(data || []);
+    setIsLoadingCourses(false); // Tắt nhấp nháy, hiện cục data
   };
 
   const fetchLibraryTests = async () => {
@@ -85,7 +90,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     }
   };
 
-  // --- HÀM LƯU TÊN KHÓA HỌC SAU KHI SỬA ---
   const handleUpdateCourseName = async (courseId: string) => {
     if (!editingCourseTitle.trim()) {
       setEditingCourseId(null);
@@ -336,19 +340,32 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
 
         <div className="flex-1 p-8 overflow-y-auto">
           
-          {/* TAB: COURSES */}
+          {/* TAB: COURSES CÓ TÍCH HỢP SKELETON LOADER */}
           {activeTab === 'courses' && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {courses.map(course => {
-                const folderIds = allFolders.filter(f => f.course_id === course.id).map(f => f.id);
-                const testCount = libraryTests.filter(t => folderIds.includes(t.folder_id)).length;
-                return (
-                  <div key={course.id} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-48 relative">
-                    <div className="flex justify-between items-start">
-                       <span className="px-2.5 py-1 rounded-md text-[10px] font-black uppercase bg-blue-100 text-blue-700">{course.type}</span>
-                       
-                       {/* Nút sửa tên nhỏ xinh (hiện khi hover vào card) */}
-                       {editingCourseId !== course.id && (
+              {isLoadingCourses ? (
+                // --- SKELETON CARDS ---
+                Array(8).fill(0).map((_, i) => (
+                  <div key={`skel-${i}`} className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm h-48 relative flex flex-col overflow-hidden">
+                    <div className="animate-pulse flex flex-col h-full w-full">
+                       <div className="w-16 h-5 bg-slate-200 rounded-md mb-5"></div>
+                       <div className="w-3/4 h-6 bg-slate-200 rounded-lg mb-2"></div>
+                       <div className="w-1/2 h-6 bg-slate-200 rounded-lg mb-auto"></div>
+                       <div className="w-24 h-3 bg-slate-200 rounded mb-4 mt-4"></div>
+                       <div className="w-full h-10 bg-slate-100 rounded-xl"></div>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                // --- DATA CARDS THẬT ---
+                courses.map(course => {
+                  const folderIds = allFolders.filter(f => f.course_id === course.id).map(f => f.id);
+                  const testCount = libraryTests.filter(t => folderIds.includes(t.folder_id)).length;
+                  return (
+                    <div key={course.id} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-48 relative">
+                      <div className="flex justify-between items-start">
+                         <span className="px-2.5 py-1 rounded-md text-[10px] font-black uppercase bg-blue-100 text-blue-700">{course.type}</span>
+                         
                          <button 
                            onClick={(e) => { e.stopPropagation(); setEditingCourseId(course.id); setEditingCourseTitle(course.title); }} 
                            className="opacity-0 group-hover:opacity-100 text-slate-400 hover:text-[#0a5482] transition-opacity"
@@ -356,37 +373,36 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                          >
                            ✏️
                          </button>
-                       )}
-                    </div>
-                    
-                    {/* Phần hiển thị tên hoặc ô sửa tên */}
-                    <div className="flex-1 mt-4 mb-2">
-                       {editingCourseId === course.id ? (
-                         <div className="flex flex-col gap-2">
-                            <input 
-                              autoFocus
-                              value={editingCourseTitle} 
-                              onChange={(e) => setEditingCourseTitle(e.target.value)} 
-                              onKeyDown={(e) => { if (e.key === 'Enter') handleUpdateCourseName(course.id); }}
-                              className="w-full border border-slate-300 rounded-lg px-3 py-1.5 font-black text-[15px] outline-none focus:border-[#0a5482]" 
-                            />
-                            <div className="flex gap-2">
-                               <button onClick={(e) => { e.stopPropagation(); handleUpdateCourseName(course.id); }} className="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 px-3 py-1 rounded shadow-sm">Lưu</button>
-                               <button onClick={(e) => { e.stopPropagation(); setEditingCourseId(null); }} className="text-xs font-bold text-slate-500 hover:bg-slate-100 border border-slate-200 px-3 py-1 rounded">Hủy</button>
-                            </div>
-                         </div>
-                       ) : (
-                         <h3 className="font-black text-lg text-slate-800 line-clamp-2">{course.title}</h3>
-                       )}
-                    </div>
+                      </div>
+                      
+                      <div className="flex-1 mt-4 mb-2">
+                         {editingCourseId === course.id ? (
+                           <div className="flex flex-col gap-2">
+                              <input 
+                                autoFocus
+                                value={editingCourseTitle} 
+                                onChange={(e) => setEditingCourseTitle(e.target.value)} 
+                                onKeyDown={(e) => { if (e.key === 'Enter') handleUpdateCourseName(course.id); }}
+                                className="w-full border border-slate-300 rounded-lg px-3 py-1.5 font-black text-[15px] outline-none focus:border-[#0a5482]" 
+                              />
+                              <div className="flex gap-2">
+                                 <button onClick={(e) => { e.stopPropagation(); handleUpdateCourseName(course.id); }} className="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 px-3 py-1 rounded shadow-sm">Lưu</button>
+                                 <button onClick={(e) => { e.stopPropagation(); setEditingCourseId(null); }} className="text-xs font-bold text-slate-500 hover:bg-slate-100 border border-slate-200 px-3 py-1 rounded">Hủy</button>
+                              </div>
+                           </div>
+                         ) : (
+                           <h3 className="font-black text-lg text-slate-800 line-clamp-2">{course.title}</h3>
+                         )}
+                      </div>
 
-                    <div>
-                       <p className="text-xs font-bold text-slate-400 mb-4">{testCount} đề thi đã gán</p>
-                       <button onClick={() => handleViewCourseDetail(course)} className="w-full bg-[#f8fafc] group-hover:bg-[#2bd6eb] group-hover:text-white text-slate-600 border border-slate-200 font-bold py-2.5 rounded-xl transition shadow-sm text-sm">Quản lý cấu trúc ➜</button>
+                      <div>
+                         <p className="text-xs font-bold text-slate-400 mb-4">{testCount} đề thi đã gán</p>
+                         <button onClick={() => handleViewCourseDetail(course)} className="w-full bg-[#f8fafc] group-hover:bg-[#2bd6eb] group-hover:text-white text-slate-600 border border-slate-200 font-bold py-2.5 rounded-xl transition shadow-sm text-sm">Quản lý cấu trúc ➜</button>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })
+              )}
             </div>
           )}
 
