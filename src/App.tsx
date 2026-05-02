@@ -10,6 +10,7 @@ import AdminLogin from './AdminLogin';
 import IeltsWriting from './IeltsWriting';
 import IeltsSpeaking from './IeltsSpeaking';
 import SplitScreenTest from './SplitScreenTest';
+import LectureViewer from './LectureViewer'; // BỔ SUNG IMPORT BÀI GIẢNG
 
 export default function App() {
   const getInitialView = () => {
@@ -77,6 +78,17 @@ export default function App() {
 
   return (
     <React.Fragment>
+      
+      {/* NÚT TEST TẠM THỜI (Góc dưới bên phải) CHO BÀI GIẢNG */}
+      {(currentView === 'home' || currentView === 'portal') && (
+        <button
+          onClick={() => handleNavigate('lecture')}
+          className="fixed bottom-8 right-8 bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full shadow-2xl z-50 transition-transform active:scale-95"
+        >
+          🚀 Test Giao diện Bài Giảng
+        </button>
+      )}
+
       {currentView === 'admin-login' && (
         <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />
       )}
@@ -132,6 +144,12 @@ export default function App() {
       {currentView === 'case-study' && (
         <SplitScreenTest onBack={() => handleNavigate('portal')} />
       )}
+
+      {/* MÀN HÌNH BÀI GIẢNG (LECTURE) */}
+      {currentView === 'lecture' && (
+        <LectureViewer onBack={() => handleNavigate('portal')} />
+      )}
+
     </React.Fragment>
   );
 }

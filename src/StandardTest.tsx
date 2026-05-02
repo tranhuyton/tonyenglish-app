@@ -58,7 +58,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
   // --- QUẢN LÝ LOCAL STORAGE AN TOÀN ---
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
     try {
-      const saved = localStorage.getItem(`standard_ans_${safeData?.id}`);
+      const saved = localStorage.getItem(`std_ans_${safeData?.id}`);
       return saved ? JSON.parse(saved) : {};
     } catch (e) { return {}; }
   });
@@ -72,7 +72,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
 
   useEffect(() => {
     if (!isReviewMode && !isFinishingRef.current && safeData?.id) {
-      localStorage.setItem(`standard_ans_${safeData.id}`, JSON.stringify(answers));
+      localStorage.setItem(`std_ans_${safeData.id}`, JSON.stringify(answers));
       localStorage.setItem(`standard_mark_${safeData.id}`, JSON.stringify(marked));
     }
   }, [answers, marked, safeData?.id, isReviewMode]);
@@ -90,8 +90,9 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài?")) return;
       
       isFinishingRef.current = true;
+      // BỔ SUNG: Dọn sạch cả std_ans và standard_endtime
       if (safeData?.id) {
-        localStorage.removeItem(`standard_ans_${safeData.id}`);
+        localStorage.removeItem(`std_ans_${safeData.id}`);
         localStorage.removeItem(`standard_mark_${safeData.id}`);
         localStorage.removeItem(`standard_endtime_${safeData.id}`);
       }

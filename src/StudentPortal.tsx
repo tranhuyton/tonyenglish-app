@@ -4,6 +4,8 @@ import {
   LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
+import ImmersionReading from './ImmersionReading';
+
 const FOLDER_COLORS = ['bg-[#3b82f6]', 'bg-[#10b981]', 'bg-[#f59e0b]', 'bg-[#8b5cf6]', 'bg-[#ec4899]', 'bg-[#14b8a6]', 'bg-[#f43f5e]'];
 const ITEMS_PER_PAGE = 12;
 
@@ -19,14 +21,12 @@ const formatDate = (isoString: string) => {
   return `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth() + 1).toString().padStart(2, '0')}/${d.getFullYear()} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
 };
 
-// THUẬT TOÁN KIỂM TRA BÀI THI ĐANG LÀM DỞ ĐÃ ĐƯỢC FIX LẠI CÚ PHÁP
 const checkInProgress = (testId: string) => {
   try {
-      const compEndTime = localStorage.getItem(`ielts_endtime_${testId}`) || localStorage.getItem(`standard_endtime_${testId}`) || localStorage.getItem(`ielts_paper_endtime_${testId}`);
+      const compEndTime = localStorage.getItem(`ielts_endtime_${testId}`) || localStorage.getItem(`standard_endtime_${testId}`) || localStorage.getItem(`ielts_paper_endtime_${testId}`) || localStorage.getItem(`case_study_endtime_${testId}`);
       if (compEndTime && parseInt(compEndTime) > Date.now()) return true;
       
-      // Đã cập nhật lại prefix 'std_ans_' cho đúng với StandardTest
-      const keys = [`ielts_ans_${testId}`, `ielts_paper_ans_${testId}`, `std_ans_${testId}`];
+      const keys = [`ielts_ans_${testId}`, `ielts_paper_ans_${testId}`, `std_ans_${testId}`, `case_study_ans_${testId}`];
       for (const key of keys) {
           const data = localStorage.getItem(key);
           if (data) {
@@ -35,14 +35,17 @@ const checkInProgress = (testId: string) => {
           }
       }
   } catch (e) {
-      // Bỏ qua lỗi parse JSON nếu có
+      // Bỏ qua lỗi
   }
   return false;
 };
 
-export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?: (view: string) => void, onStartTest?: (type: string, data: any) => void }) {
+// ĐÃ CẬP NHẬT: Thêm prop onOpenLecture để điều hướng sang màn hình học bài
+export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: { onNavigate?: (view: string) => void, onStartTest?: (type: string, data: any) => void, onOpenLecture?: (courseId: string) => void }) {
   const [activeTab, setActiveTab] = useState<'library' | 'analytics' | 'profile'>('library');
   const [activeView, setActiveView] = useState<'dashboard' | 'course'>('dashboard');
+  
+  const [isReadingMode, setIsReadingMode] = useState(false);
   
   const [courses, setCourses] = useState<any[]>([]);
   const [selectedCourse, setSelectedCourse] = useState<any>(null);
@@ -98,6 +101,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
       fetchCourses(user?.id);
       fetchAllFolders(); 
       fetchAllTestsCount();
+      fetchUserHistory(user?.id);
     }
     if (activeTab === 'analytics') {
       if (courses.length === 0) fetchCourses(user?.id);
@@ -128,6 +132,7 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
       if (data && data.length > 0) {
         const formattedHistory = data.map((item: any) => ({
           id: item.id,
+          testId: item.test_id, 
           name: item.test_title || 'Bài thi không tên',
           courseId: item.course_id,
           subject: item.test_type || 'Standard',
@@ -198,14 +203,17 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
     if (type === 'IELTS-Writing') onStartTest('ielts-writing', test);
     else if (type === 'IELTS-Speaking') onStartTest('ielts-speaking', test);
     else if (type === 'IELTS-Listening' || type === 'IELTS-Reading') { setTestToStart(test); setShowModeSelection(true); } 
-    else if (test.title.toLowerCase().includes('business') || test.title.toLowerCase().includes('econ')) { onStartTest('case-study', test); } 
+    else if (test.title.toLowerCase().includes('business') || test.title.toLowerCase().includes('econ') || type === 'Case-Study') { onStartTest('case-study', test); } 
     else { onStartTest('standard', test); }
   };
 
   const handleRetakeFromHistory = (historyItem: any) => {
-    const testId = historyItem.details?.test_id;
-    if (!testId) return alert("Rất tiếc, đề thi này là phiên bản cũ, không hỗ trợ tính năng làm lại tự động.");
-    const foundTest = tests.find(t => t.id === testId);
+    const testId = historyItem.testId || historyItem.details?.test_id;
+    let foundTest = tests.find(t => String(t.id) === String(testId));
+    if (!foundTest) {
+       foundTest = tests.find(t => t.title.trim() === historyItem.name.trim());
+    }
+
     if (foundTest) {
        setViewingHistoryDetail(null);
        handleStartTestClick(foundTest);
@@ -346,6 +354,10 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
   const displayUserName = userProfile?.full_name || (currentUser?.email ? currentUser.email.split('@')[0] : 'Tài khoản Học viên');
   const displayUserInitial = displayUserName.charAt(0).toUpperCase();
 
+  if (isReadingMode) {
+    return <ImmersionReading onBack={() => setIsReadingMode(false)} />;
+  }
+
   return (
     <div className="min-h-screen bg-[#f4f6f9] font-sans text-slate-800">
       
@@ -363,6 +375,10 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
           <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourse(null); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors ${activeTab === 'library' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📚</span> Thư viện đề</button>
           <button onClick={() => setActiveTab('analytics')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors ${activeTab === 'analytics' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📊</span> Phân tích & Lịch sử</button>
           <button onClick={() => setActiveTab('profile')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors ${activeTab === 'profile' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">👤</span> Tài khoản</button>
+          
+          <button onClick={() => setIsReadingMode(true)} className="flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors text-slate-500 hover:text-[#0a5482] hover:bg-white hover:shadow-md">
+            <span className="text-lg">📰</span> Đọc báo
+          </button>
         </div>
 
         <div className="flex items-center gap-4">
@@ -451,6 +467,25 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                      </React.Fragment>
                    ))}
                 </div>
+                
+                {/* NÚT VÀO HỌC BÀI GIẢNG HIỂN THỊ KHI Ở THƯ MỤC GỐC */}
+                {!currentFolderId && (
+                   <div className="mb-8">
+                     <button 
+                       onClick={() => onOpenLecture && onOpenLecture(selectedCourse.id)}
+                       className="w-full bg-gradient-to-r from-[#1e88e5] to-[#2bd6eb] hover:from-[#1565c0] hover:to-[#1e88e5] text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-between group"
+                     >
+                       <div className="flex items-center gap-4">
+                         <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center text-3xl backdrop-blur-sm group-hover:scale-110 transition-transform">📖</div>
+                         <div className="text-left">
+                           <h3 className="font-black text-xl tracking-wide">VÀO HỌC BÀI GIẢNG</h3>
+                           <p className="text-white/80 font-medium text-sm mt-1">Xem hệ thống giáo trình và lý thuyết của {selectedCourse.title}</p>
+                         </div>
+                       </div>
+                       <span className="text-3xl font-black opacity-50 group-hover:opacity-100 group-hover:translate-x-2 transition-all">→</span>
+                     </button>
+                   </div>
+                )}
 
                 <div className="space-y-8">
                   {currentSubFolders.length > 0 && (
@@ -500,25 +535,56 @@ export default function StudentPortal({ onNavigate, onStartTest }: { onNavigate?
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                           {paginatedTests.map(test => {
                             const inProgress = checkInProgress(test.id);
+                            const isCompleted = historyData.some(h => 
+                                (h.testId && String(h.testId) === String(test.id)) || 
+                                (h.details?.test_id && String(h.details?.test_id) === String(test.id)) || 
+                                (h.details?.testId && String(h.details?.testId) === String(test.id)) ||
+                                (h.name && test.title && h.name.trim() === test.title.trim())
+                            );
+
+                            let statusConfig = {
+                               badge: "Sẵn sàng",
+                               badgeClass: "text-emerald-600 bg-emerald-50 border-emerald-100",
+                               btnText: "BẮT ĐẦU LÀM BÀI",
+                               btnClass: "text-[#1e88e5] bg-blue-50 group-hover:bg-[#1e88e5] group-hover:text-white",
+                               borderClass: "border-slate-100",
+                               iconClass: "bg-blue-50"
+                            };
+
+                            if (inProgress) {
+                               statusConfig = {
+                                  badge: "Đang làm dở",
+                                  badgeClass: "text-amber-600 bg-amber-50 border-amber-200",
+                                  btnText: "TIẾP TỤC LÀM BÀI",
+                                  btnClass: "text-amber-600 bg-amber-50 group-hover:bg-amber-500 group-hover:text-white",
+                                  borderClass: "border-amber-100",
+                                  iconClass: "bg-amber-50"
+                               };
+                            } else if (isCompleted) {
+                               statusConfig = {
+                                  badge: "Đã hoàn thành",
+                                  badgeClass: "text-purple-600 bg-purple-50 border-purple-200",
+                                  btnText: "LÀM LẠI ĐỀ NÀY",
+                                  btnClass: "text-purple-600 bg-purple-50 group-hover:bg-purple-600 group-hover:text-white",
+                                  borderClass: "border-purple-100",
+                                  iconClass: "bg-purple-50"
+                               };
+                            }
 
                             return (
-                              <div key={test.id} onClick={() => handleStartTestClick(test)} className={`bg-white border-2 hover:border-[#1e88e5] p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between group h-full ${inProgress ? 'border-amber-100' : 'border-slate-100'}`}>
+                              <div key={test.id} onClick={() => handleStartTestClick(test)} className={`bg-white border-2 hover:border-[#1e88e5] p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between group h-full ${statusConfig.borderClass}`}>
                                 <div>
                                   <div className="flex justify-between items-start mb-4">
-                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner ${inProgress ? 'bg-amber-50' : 'bg-blue-50'}`}>{getTestIcon(test.test_type)}</div>
-                                    {inProgress ? (
-                                       <span className="text-[10px] font-black text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md uppercase tracking-widest border border-amber-200">Đang làm</span>
-                                    ) : (
-                                       <span className="text-[10px] font-black text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md uppercase tracking-widest border border-emerald-100">Sẵn sàng</span>
-                                    )}
+                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner ${statusConfig.iconClass}`}>{getTestIcon(test.test_type)}</div>
+                                    <span className={`text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-widest border ${statusConfig.badgeClass}`}>{statusConfig.badge}</span>
                                   </div>
                                   <h3 className="font-bold text-slate-800 text-[15px] group-hover:text-[#1e88e5] transition-colors mb-3 line-clamp-2 leading-relaxed">{test.title}</h3>
                                   <div className="flex gap-2">
                                     <span className="text-[10px] font-black text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wider">{test.test_type}</span>
                                   </div>
                                 </div>
-                                <button className={`mt-6 w-full text-center font-bold text-[13px] py-3 rounded-xl transition-colors uppercase tracking-widest ${inProgress ? 'text-amber-600 bg-amber-50 group-hover:bg-amber-500 group-hover:text-white' : 'text-[#1e88e5] bg-blue-50 group-hover:bg-[#1e88e5] group-hover:text-white'}`}>
-                                   {inProgress ? 'TIẾP TỤC LÀM BÀI' : 'BẮT ĐẦU LÀM BÀI'}
+                                <button className={`mt-6 w-full text-center font-bold text-[13px] py-3 rounded-xl transition-colors uppercase tracking-widest ${statusConfig.btnClass}`}>
+                                   {statusConfig.btnText}
                                 </button>
                               </div>
                             );

@@ -2,82 +2,76 @@ import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 
 export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
-  const [testData, setTestData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  // LẤY ĐÚNG ĐỀ THI TỪ THƯ VIỆN TRUYỀN VÀO (Không tải lung tung từ bảng cũ nữa)
+  const [testData, setTestData] = useState<any>(() => {
+     const saved = sessionStorage.getItem('lms_current_test');
+     return saved ? JSON.parse(saved) : null;
+  });
+  const [isLoading, setIsLoading] = useState(!testData);
 
-  const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // KHÔI PHỤC BẢN NHÁP TỪ TRƯỚC (NẾU CÓ) ĐỂ CHỐNG F5 MẤT CHỮ
+  const [answers, setAnswers] = useState<Record<string, string>>(() => {
+     if (!testData?.id) return {};
+     try {
+        const saved = localStorage.getItem(`case_study_ans_${testData.id}`);
+        return saved ? JSON.parse(saved) : {};
+     } catch(e) { return {}; }
+  });
   
+  // Dùng Ref để đồng hồ khi hết giờ không bị nộp bài trắng
+  const answersRef = useRef(answers);
+  useEffect(() => { answersRef.current = answers; }, [answers]);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [gradeResult, setGradeResult] = useState<any>(null);
 
   const [leftWidth, setLeftWidth] = useState(50); 
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // --- THUẬT TOÁN ĐỒNG HỒ ĐẾM NGƯỢC THỜI GIAN THỰC ---
+  // --- THUẬT TOÁN ĐỒNG HỒ ĐẾM NGƯỢC ---
   const [timeLeft, setTimeLeft] = useState(5400); 
   const isFinishingRef = useRef(false);
 
-  // Hàm lấy mốc thời gian thực từ LocalStorage
   const getSavedEndTime = (testId: string) => {
     if (!testId) return null;
     const saved = localStorage.getItem(`case_study_endtime_${testId}`);
     return saved ? parseInt(saved, 10) : null;
   };
 
+  // TỰ ĐỘNG LƯU NHÁP TỪNG CHỮ VÀO BỘ NHỚ TRÌNH DUYỆT
   useEffect(() => {
-    const fetchLatestTest = async () => {
-      setIsLoading(true);
-      try {
-        const { data, error } = await supabase
-          .from('case_study_tests')
-          .select('*')
-          .order('id', { ascending: false })
-          .limit(1);
+    if (testData?.id && !isFinishingRef.current && !gradeResult) {
+      localStorage.setItem(`case_study_ans_${testData.id}`, JSON.stringify(answers));
+    }
+  }, [answers, testData?.id, gradeResult]);
 
-        if (error) throw error;
-        if (data && data.length > 0) {
-          const test = data[0];
-          setTestData(test);
-          
-          const configuredTime = parseInt(test?.timeLimit) || 90;
-          const initialSeconds = configuredTime * 60;
+  // Khởi tạo thời gian thực cho bài thi
+  useEffect(() => {
+    if (testData) {
+       const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
+       const configuredTime = parseInt(rawTime) || 90;
+       const initialSeconds = configuredTime * 60;
 
-          // Khởi tạo thời gian thực hoặc lấy từ phiên cũ
-          let currentEndTime = getSavedEndTime(test.id);
-          if (!currentEndTime) {
-             currentEndTime = Date.now() + initialSeconds * 1000;
-             localStorage.setItem(`case_study_endtime_${test.id}`, currentEndTime.toString());
-             setTimeLeft(initialSeconds);
-          } else {
-             const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
-             setTimeLeft(remaining);
-             // Nếu đã hết giờ mà tải lại thì không cần alert ngay đây, để logic đếm giờ bắt
-          }
-
-        } else {
-          setTestData(null);
-        }
-      } catch (err: any) {
-        console.error("Lỗi khi tải đề thi:", err);
-        alert("Không thể tải đề thi từ máy chủ!");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchLatestTest();
-  }, []);
+       let currentEndTime = getSavedEndTime(testData.id);
+       if (!currentEndTime) {
+           currentEndTime = Date.now() + initialSeconds * 1000;
+           localStorage.setItem(`case_study_endtime_${testData.id}`, currentEndTime.toString());
+           setTimeLeft(initialSeconds);
+       } else {
+           const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
+           setTimeLeft(remaining);
+       }
+       setIsLoading(false);
+    }
+  }, [testData]);
 
   const formatTime = (totalSeconds: number) => {
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
-    
     const pad = (num: number) => num.toString().padStart(2, '0');
-    
-    if (hours > 0) {
-        return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-    }
+    if (hours > 0) return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
     return `${pad(minutes)}:${pad(seconds)}`;
   };
 
@@ -86,7 +80,8 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
   };
 
   const handleSubmit = async () => {
-    if (Object.keys(answers).length === 0 && timeLeft > 0) {
+    const currentAnswers = answersRef.current; // Lấy đáp án mới nhất kể cả khi bị timer ép nộp
+    if (Object.keys(currentAnswers).length === 0 && timeLeft > 0) {
       alert("⚠️ Bạn chưa điền câu trả lời nào cả!");
       return;
     }
@@ -98,8 +93,10 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     setIsSubmitting(true);
     isFinishingRef.current = true;
     
+    // BỔ SUNG: Xóa sạch bộ nhớ nháp khi nộp bài
     if (testData?.id) {
        localStorage.removeItem(`case_study_endtime_${testData.id}`);
+       localStorage.removeItem(`case_study_ans_${testData.id}`);
     }
 
     try {
@@ -108,10 +105,10 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
         Nhiệm vụ của bạn là chấm điểm bài làm của học sinh dựa trên Marking Scheme chính thức.
 
         THÔNG TIN ĐỀ THI VÀ MARKING SCHEME:
-        ${JSON.stringify(testData.json_config.questions)}
+        ${JSON.stringify(testData.json_config?.questions || [])}
 
         BÀI LÀM CỦA HỌC SINH:
-        ${JSON.stringify(answers)}
+        ${JSON.stringify(currentAnswers)}
 
         YÊU CẦU:
         - So sánh từng câu trả lời của học sinh với Marking Scheme.
@@ -135,34 +132,46 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
         }
       `;
 
-      const apiKey = import.meta.env.VITE_GEMINI_API_KEY?.trim();
-      
-      if (!apiKey) {
-        throw new Error("Không tìm thấy mã API Key trong hệ thống (File .env).");
-      }
-
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { 
-            responseMimeType: "application/json" 
-          }
-        })
+      // GỌI QUA SUPABASE EDGE FUNCTION
+      const { data, error } = await supabase.functions.invoke('ai-grader', {
+        body: { 
+          prompt: prompt,
+          // Đề xuất dùng model Pro cho dạng Case Study IGCSE để chấm chuẩn Marking Scheme hơn
+          model: 'gemini-2.5-flash' 
+        }
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error("Lỗi chi tiết từ máy chủ Google:", errorData);
-        throw new Error(errorData.error?.message || "Từ chối kết nối từ Google AI");
-      }
+      if (error) throw new Error("Lỗi gọi Server: " + error.message);
+      if (data?.error) throw new Error("Lỗi chấm điểm AI: " + data.error);
 
-      const resultData = await response.json();
-      const aiResponseText = resultData.candidates[0].content.parts[0].text;
+      // Xử lý làm sạch JSON đề phòng AI trả về markdown backticks
+      const aiResponseText = data.result.replace(/\u0060{3}(json)?/gi, "").trim();
       const gradedData = JSON.parse(aiResponseText);
 
       setGradeResult(gradedData);
+
+      // Lưu kết quả vào Database
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        if (user) {
+          const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
+          const initialSeconds = (parseInt(rawTime) || 90) * 60;
+          const timeSpentSecs = initialSeconds - timeLeft;
+          
+          await supabase.from('test_results').insert([{
+            user_id: user.id,
+            course_id: testData.course_id,
+            test_title: testData.title || "Case Study Test",
+            test_type: testData.test_type || 'Case-Study',
+            score: gradedData.total_student_score,
+            total_score: gradedData.total_max_score,
+            time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
+            details: { test_id: testData.id, userAnswers: currentAnswers, aiFeedback: gradedData }
+          }]);
+        }
+      } catch (dbError) {
+        console.error("Lỗi lưu DB:", dbError);
+      }
 
     } catch (err: any) {
       console.error("Lỗi khi chấm bài:", err);
@@ -172,7 +181,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     }
   };
 
-  // Đồng hồ chạy liên tục (Sử dụng Absolute Timer)
+  // Đồng hồ chạy liên tục
   useEffect(() => {
     if (isLoading || !testData || gradeResult || isFinishingRef.current) return;
     
@@ -239,8 +248,8 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
           <button onClick={onBack} className="text-slate-600 hover:text-black font-bold text-sm transition-colors whitespace-nowrap">← Quay lại</button>
           <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
           <div className="truncate flex items-baseline gap-2">
-            <h1 className="font-bold text-black text-[15px] leading-tight truncate">{testData.title}</h1>
-            <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider hidden md:block">Mã đề: {testData.exam_code} / Paper {testData.paper}</p>
+            <h1 className="font-bold text-black text-[15px] leading-tight truncate">{testData.title || 'Bài thi Case Study'}</h1>
+            <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider hidden md:block">Phân loại: {testData.test_type || 'Case-Study'}</p>
           </div>
         </div>
         {!gradeResult && (
@@ -343,12 +352,15 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
                   <button onClick={() => {
                       setGradeResult(null);
                       if (testData?.id) {
-                         const initialSeconds = (parseInt(testData?.timeLimit) || 90) * 60;
+                         localStorage.removeItem(`case_study_ans_${testData.id}`);
+                         const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
+                         const initialSeconds = (parseInt(rawTime) || 90) * 60;
                          const newEndTime = Date.now() + initialSeconds * 1000;
                          localStorage.setItem(`case_study_endtime_${testData.id}`, newEndTime.toString());
                          setTimeLeft(initialSeconds);
                       }
                       setAnswers({});
+                      isFinishingRef.current = false; // Reset lại cờ nộp bài
                   }} className="border-2 border-black hover:bg-slate-100 text-black font-bold px-10 py-3 transition-colors">
                     Làm lại bài thi
                   </button>

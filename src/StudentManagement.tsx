@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from './supabase';
 import { createClient } from '@supabase/supabase-js';
 
-// TẠO BẢN SAO CLIENT ĐỂ ĐĂNG KÝ HỘ (KHÔNG LƯU PHIÊN ĐỂ TRÁNH VĂNG ACC ADMIN)
 const authSupabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
   import.meta.env.VITE_SUPABASE_ANON_KEY,
   { auth: { persistSession: false } }
 );
+
+// Khai báo biến đếm giờ ngoài component để chống render
+let studentSearchTimer: any;
 
 export default function StudentManagement() {
   const [students, setStudents] = useState<any[]>([]);
@@ -15,22 +17,18 @@ export default function StudentManagement() {
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   
-  // States cho màn hình Chi tiết
   const [selectedStudent, setSelectedStudent] = useState<any>(null);
   const [studentHistory, setStudentHistory] = useState<any[]>([]);
   const [studentEnrollments, setStudentEnrollments] = useState<any[]>([]);
   const [isLoadingDetails, setIsLoadingDetails] = useState(false);
   const [activeDetailTab, setActiveDetailTab] = useState<'courses' | 'history'>('courses');
 
-  // States Modal Tạo/Gán
   const [showAssignModal, setShowAssignModal] = useState(false);
-  const [selectedCourseToAssign, setSelectedCourseToAssign] = useState('');
   const [isAssigning, setIsAssigning] = useState(false);
 
-  // States cho Modal Tạo Tài Khoản Mới
   const [showCreateUserModal, setShowCreateUserModal] = useState(false);
   const [isCreatingUser, setIsCreatingUser] = useState(false);
-  const [newUser, setNewUser] = useState({ fullName: '', email: '', password: '', role: 'student' });
+  const [newUserRole, setNewUserRole] = useState('student');
 
   useEffect(() => {
     fetchStudents();
@@ -73,41 +71,32 @@ export default function StudentManagement() {
     }
   };
 
-  // ==========================================
-  // LOGIC TẠO / XÓA TÀI KHOẢN AN TOÀN TRÊN TRÌNH DUYỆT
-  // ==========================================
-  const handleCreateUser = async (e: React.FormEvent) => {
+  const handleCreateUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsCreatingUser(true);
+    
+    const formData = new FormData(e.currentTarget);
+    const fullName = formData.get('fullName') as string;
+    const email = formData.get('email') as string;
+    const password = formData.get('password') as string;
+    
     try {
-      // 1. Dùng client phụ để "Đăng ký" tài khoản mới
       const { data, error } = await authSupabase.auth.signUp({
-        email: newUser.email,
-        password: newUser.password,
-        options: {
-          data: {
-            full_name: newUser.fullName,
-            role: newUser.role
-          }
-        }
+        email: email,
+        password: password,
+        options: { data: { full_name: fullName, role: newUserRole } }
       });
 
       if (error) throw error;
-
-      // 2. Chờ 1.5 giây để Trigger bên Supabase tự động tạo dòng trong bảng profiles
       await new Promise(resolve => setTimeout(resolve, 1500));
 
-      // 3. Dùng quyền Admin hiện tại update lại thông tin Profile cho chắc chắn
       if (data.user) {
-        await supabase.from('profiles').update({
-          full_name: newUser.fullName,
-          role: newUser.role
-        }).eq('id', data.user.id);
+        await supabase.from('profiles').update({ full_name: fullName, role: newUserRole }).eq('id', data.user.id);
       }
 
-      alert(`✅ Đã tạo tài khoản ${newUser.role === 'admin' ? 'Quản trị viên' : 'Học viên'} thành công!`);
+      alert(`✅ Đã tạo tài khoản ${newUserRole === 'admin' ? 'Quản trị viên' : 'Học viên'} thành công!`);
       setShowCreateUserModal(false);
-      setNewUser({ fullName: '', email: '', password: '', role: 'student' });
+      setNewUserRole('student');
       fetchStudents(); 
     } catch (err: any) {
       alert("❌ Lỗi tạo tài khoản: " + err.message);
@@ -117,33 +106,30 @@ export default function StudentManagement() {
   };
 
   const handleDeleteUser = async (id: string, name: string) => {
-    if (!window.confirm(`Anh có chắc chắn muốn xóa VĨNH VIỄN tài khoản của ${name || 'học viên này'} không? Toàn bộ lịch sử làm bài sẽ bị mất!`)) {
-      return;
-    }
+    if (!window.confirm(`Anh có chắc chắn muốn xóa VĨNH VIỄN tài khoản của ${name || 'học viên này'} không? Toàn bộ lịch sử làm bài sẽ bị mất!`)) return;
 
     try {
-      // Gọi hàm siêu quyền lực RPC mình vừa tạo dưới Database để xóa ngầm
-      const { error } = await supabase.rpc('delete_admin_user', {
-        target_user_id: id
-      });
-
+      const { error } = await supabase.rpc('delete_admin_user', { target_user_id: id });
       if (error) throw error;
-
       alert("🗑️ Đã xóa tài khoản thành công!");
-      fetchStudents(); // Cập nhật lại danh sách ngay lập tức
+      fetchStudents(); 
     } catch (err: any) {
       alert("❌ Lỗi xóa tài khoản: " + err.message);
     }
   };
 
-  // --- LOGIC GÁN KHÓA HỌC ---
-  const handleAssignCourse = async () => {
-    if (!selectedCourseToAssign || !selectedStudent) return;
+  const handleAssignCourse = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const courseId = formData.get('courseId') as string;
+    
+    if (!courseId || !selectedStudent) return;
     setIsAssigning(true);
+    
     try {
       const { data, error } = await supabase.from('enrollments').insert([{
         user_id: selectedStudent.id,
-        course_id: selectedCourseToAssign,
+        course_id: courseId,
         status: 'active'
       }]).select('*, courses(title, type)');
 
@@ -154,7 +140,6 @@ export default function StudentManagement() {
       
       setStudentEnrollments([data[0], ...studentEnrollments]);
       setShowAssignModal(false);
-      setSelectedCourseToAssign('');
       alert("✅ Đã gán khóa học thành công!");
     } catch (err: any) {
       alert("❌ Lỗi: " + err.message);
@@ -184,9 +169,9 @@ export default function StudentManagement() {
     (s.full_name && s.full_name.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
-  // ==========================================
-  // VIEW 2: CHI TIẾT 1 HỌC VIÊN
-  // ==========================================
+  // Tính toán danh sách khóa học chưa được gán (để đưa vào Dropdown)
+  const availableCourses = courses.filter(c => !studentEnrollments.some(e => e.course_id === c.id));
+
   if (selectedStudent) {
     const totalTests = studentHistory.length;
     const avgScore = totalTests > 0 ? (studentHistory.reduce((acc, curr) => acc + (curr.score || 0), 0) / totalTests).toFixed(1) : 0;
@@ -294,23 +279,30 @@ export default function StudentManagement() {
           </div>
         </div>
 
-        {/* Modal Gán Khóa Học */}
+        {/* Modal Gán Khóa Học Tối Ưu */}
         {showAssignModal && (
           <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4">
-            <div className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
+            <form onSubmit={handleAssignCourse} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
               <h2 className="text-xl font-black text-slate-800 mb-6 uppercase tracking-tight border-b pb-4">Gán Khóa Học</h2>
               <div className="space-y-4 mb-8">
                 <label className="text-[13px] font-bold text-slate-500 uppercase">Chọn khóa học</label>
-                <select value={selectedCourseToAssign} onChange={e => setSelectedCourseToAssign(e.target.value)} className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] font-medium bg-slate-50">
-                  <option value="">-- Chọn khóa học --</option>
-                  {courses.map(c => <option key={c.id} value={c.id}>[{c.type}] {c.title}</option>)}
+                <select name="courseId" required defaultValue="" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] font-medium bg-slate-50">
+                  <option value="" disabled>-- Chọn khóa học --</option>
+                  
+                  {/* ĐOẠN NÀY ĐÃ ĐƯỢC LỌC CHỈ HIỆN KHÓA CHƯA GÁN */}
+                  {availableCourses.length === 0 ? (
+                     <option value="" disabled>Học viên đã gán tất cả khóa học</option>
+                  ) : (
+                     availableCourses.map(c => <option key={c.id} value={c.id}>[{c.type}] {c.title}</option>)
+                  )}
+                  
                 </select>
               </div>
               <div className="flex gap-4">
-                <button onClick={() => setShowAssignModal(false)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button>
-                <button onClick={handleAssignCourse} disabled={isAssigning || !selectedCourseToAssign} className="flex-1 bg-[#0a5482] text-white font-black py-3 rounded-xl shadow-lg transition disabled:opacity-50">GÁN NGAY</button>
+                <button type="button" onClick={() => setShowAssignModal(false)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button>
+                <button type="submit" disabled={isAssigning} className="flex-1 bg-[#0a5482] text-white font-black py-3 rounded-xl shadow-lg transition disabled:opacity-50">GÁN NGAY</button>
               </div>
-            </div>
+            </form>
           </div>
         )}
       </div>
@@ -325,7 +317,18 @@ export default function StudentManagement() {
       <div className="bg-slate-50 px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
         <h2 className="font-black text-xl text-[#0a5482]">Quản lý Tài Khoản</h2>
         <div className="relative w-full sm:w-80">
-          <input type="text" placeholder="Tìm kiếm theo email hoặc tên..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 font-medium text-[13px] outline-none focus:border-[#0a5482] focus:ring-1 focus:ring-[#0a5482] bg-white transition-all shadow-sm" />
+          
+          {/* BỘ LỌC TÌM KIẾM ĐÃ CÓ DEBOUNCE CHỐNG LAG */}
+          <input 
+            type="text" 
+            placeholder="Tìm kiếm theo email hoặc tên..." 
+            defaultValue={searchQuery}
+            onChange={(e) => {
+              clearTimeout(studentSearchTimer);
+              studentSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350);
+            }} 
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 font-medium text-[13px] outline-none focus:border-[#0a5482] focus:ring-1 focus:ring-[#0a5482] bg-white transition-all shadow-sm" 
+          />
           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
         </div>
         <button onClick={() => setShowCreateUserModal(true)} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold px-6 py-2.5 rounded-xl transition shadow-md text-sm whitespace-nowrap">+ Tạo Tài Khoản</button>
@@ -383,37 +386,37 @@ export default function StudentManagement() {
         )}
       </div>
 
-      {/* Modal Tạo Tài Khoản Mới */}
+      {/* Modal Tạo Tài Khoản Mới (Đã bỏ backdrop-blur) */}
       {showCreateUserModal && (
-        <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4">
           <form onSubmit={handleCreateUser} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
             <h2 className="text-xl font-black text-slate-800 mb-6 uppercase tracking-tight border-b pb-4 text-center">Tạo Tài Khoản Mới</h2>
             
             <div className="space-y-4 mb-8">
               <div>
                 <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Họ và tên</label>
-                <input required type="text" value={newUser.fullName} onChange={e => setNewUser({...newUser, fullName: e.target.value})} placeholder="Nguyễn Văn A" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
+                <input name="fullName" required type="text" defaultValue="" autoComplete="off" placeholder="Nguyễn Văn A" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
               </div>
               
               <div>
                 <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Email đăng nhập</label>
-                <input required type="email" value={newUser.email} onChange={e => setNewUser({...newUser, email: e.target.value})} placeholder="email@tonyenglish.vn" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
+                <input name="email" required type="email" defaultValue="" autoComplete="off" placeholder="email@tonyenglish.vn" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
               </div>
 
               <div>
                 <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Mật khẩu</label>
-                <input required type="password" minLength={6} value={newUser.password} onChange={e => setNewUser({...newUser, password: e.target.value})} placeholder="Ít nhất 6 ký tự" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
+                <input name="password" required type="password" minLength={6} defaultValue="" autoComplete="off" placeholder="Ít nhất 6 ký tự" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
               </div>
 
               <div>
                 <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Phân quyền</label>
                 <div className="grid grid-cols-2 gap-3 mt-2">
-                  <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${newUser.role === 'student' ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
-                    <input type="radio" name="role" value="student" checked={newUser.role === 'student'} onChange={() => setNewUser({...newUser, role: 'student'})} className="hidden" />
+                  <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${newUserRole === 'student' ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
+                    <input type="radio" name="role" value="student" checked={newUserRole === 'student'} onChange={() => setNewUserRole('student')} className="hidden" />
                     👨‍🎓 Học viên
                   </label>
-                  <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${newUser.role === 'admin' ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
-                    <input type="radio" name="role" value="admin" checked={newUser.role === 'admin'} onChange={() => setNewUser({...newUser, role: 'admin'})} className="hidden" />
+                  <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${newUserRole === 'admin' ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
+                    <input type="radio" name="role" value="admin" checked={newUserRole === 'admin'} onChange={() => setNewUserRole('admin')} className="hidden" />
                     👑 Quản trị viên
                   </label>
                 </div>

@@ -1,8 +1,137 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useMemo } from 'react';
 import { supabase } from './supabase';
 import * as XLSX from 'xlsx';
+// @ts-ignore
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
-export default function TestEditorModal({ testData: testRecord, courses, onClose, onSave }: any) {
+// ==========================================
+// 1. CÁC HÀM VÀ COMPONENT CON
+// ==========================================
+
+const uploadToSupabase = async (file: File) => {
+  const fileExt = file.name ? file.name.split('.').pop() : 'png';
+  const fileName = `media_${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
+  const { error } = await supabase.storage.from('test_assets').upload(`uploads/${fileName}`, file, { cacheControl: '3600', upsert: false });
+  if (error) throw error;
+  return supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
+};
+
+// COMPONENT EDITOR DÀNH CHO CÁC Ô NHẬP NỘI DUNG
+const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
+  const quillRef = useRef<any>(null);
+  const [isUploading, setIsUploading] = useState(false);
+
+  const imageHandler = () => {
+    const input = document.createElement('input');
+    input.setAttribute('type', 'file');
+    input.setAttribute('accept', 'image/*');
+    input.click();
+    input.onchange = async () => {
+      const file = input.files ? input.files[0] : null;
+      if (file) {
+        setIsUploading(true);
+        try {
+          const url = await uploadToSupabase(file);
+          const quill = quillRef.current?.getEditor();
+          if (quill) {
+            const range = quill.getSelection(true);
+            quill.insertEmbed(range?.index || 0, 'image', url);
+          }
+        } catch (err) {
+          alert("Lỗi tải ảnh lên hệ thống!");
+        } finally {
+          setIsUploading(false);
+        }
+      }
+    };
+  };
+
+  const modules = useMemo(() => ({
+    toolbar: {
+      container: [
+        [{ 'header': [1, 2, 3, false] }],
+        ['bold', 'italic', 'underline', 'strike'],
+        [{ 'color': [] }, { 'background': [] }],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        ['link', 'image'],
+        ['clean']
+      ],
+      handlers: { image: imageHandler }
+    }
+  }), []);
+
+  return (
+    <div className="flex flex-col py-3 border-b border-slate-100 last:border-0 gap-2">
+      <div className="flex justify-between items-center">
+        <label className="text-[13px] font-bold text-slate-600">{label}</label>
+        {isUploading && <span className="text-[11px] font-bold text-amber-500 bg-amber-50 px-2 py-1 rounded">⏳ Đang tải ảnh lên Cloud...</span>}
+      </div>
+      {/* ĐÃ FIX: Khung Editor cố định chiều cao, có thanh cuộn và nút kéo góc phải dưới */}
+      <div className="bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col resize-y overflow-hidden h-[250px] min-h-[150px]">
+         <ReactQuill 
+            ref={quillRef} 
+            theme="snow" 
+            value={value || ''} 
+            onChange={(content) => onChange({ target: { value: content } })} 
+            modules={modules} 
+            placeholder={placeholder || "Nhập nội dung vào đây..."} 
+            className="flex-1 flex flex-col min-h-0 [&_.ql-container]:flex-1 [&_.ql-container]:!overflow-y-auto [&_.ql-editor]:min-h-full [&_.ql-editor]:text-[14px] [&_.ql-editor]:font-sans [&_.ql-toolbar]:bg-slate-50"
+         />
+      </div>
+    </div>
+  );
+};
+
+const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", uploadingId, setUploadingId }: any) => {
+  const [isDrag, setIsDrag] = useState(false);
+  const handleFile = async (file: File) => {
+    setUploadingId(id);
+    try {
+      const url = await uploadToSupabase(file);
+      onUpload(url);
+    } catch (err) { alert("Lỗi tải file!"); }
+    finally { setUploadingId(null); }
+  };
+
+  return (
+    <div className="flex flex-col py-3 border-b border-slate-100 last:border-0 gap-2">
+      <label className="text-[13px] font-bold text-slate-600">{label}</label>
+      <div 
+        className={`w-full border-2 border-dashed rounded-lg p-4 flex items-center justify-between transition ${isDrag ? 'border-[#00a651] bg-[#e6f4ea]' : 'border-slate-300 bg-slate-50'}`}
+        onDragOver={(e) => { e.preventDefault(); setIsDrag(true); }}
+        onDragLeave={(e) => { e.preventDefault(); setIsDrag(false); }}
+        onDrop={(e) => { e.preventDefault(); setIsDrag(false); if(e.dataTransfer.files?.[0]) handleFile(e.dataTransfer.files[0]); }}
+      >
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">{value ? '✅' : '🎵'}</span>
+          <div className="text-[13px] text-slate-500">
+            {uploadingId === id ? <span className="text-amber-500 font-bold">⏳ Đang tải lên...</span> : 
+             value ? <span className="text-emerald-600 font-bold truncate block max-w-[200px]">Đã có file đính kèm</span> : 
+             <span>Kéo thả file Âm thanh vào đây</span>}
+          </div>
+        </div>
+        <label className="bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[12px] font-bold cursor-pointer hover:bg-slate-100 transition shadow-sm">
+          <input type="file" className="hidden" accept={accept} onChange={(e) => { if(e.target.files?.[0]) handleFile(e.target.files[0]); }} /> 
+          Tải lên
+        </label>
+      </div>
+    </div>
+  );
+};
+
+const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
+  <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
+    <label className="w-32 shrink-0 text-[13px] font-bold text-slate-600">{label}</label>
+    <input type="text" value={value || ''} onChange={onChange} placeholder={placeholder} className="flex-1 w-full bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] focus:border-[#00a651] outline-none transition" />
+  </div>
+);
+
+
+// ==========================================
+// 2. COMPONENT CHÍNH TEST EDITOR
+// ==========================================
+export default function TestEditorModal({ testData: testRecord, courses, folders, onClose, onSave }: any) {
   const isImportMode = testRecord.mode === 'import'; 
   const [activeTab, setActiveTab] = useState(isImportMode ? 'content' : 'basic'); 
   
@@ -14,11 +143,12 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     return {
       basicInfo: {
         title: testRecord.title || (isImportMode ? 'Đề thi Import từ Excel/CSV' : ''),
-        courseId: 'all', 
+        courseId: testRecord.course_id || 'all', 
+        folderId: testRecord.folder_id || '', 
         skill: testRecord.test_type || 'Standard-Test',
         mode: 'Đề thi',
         timeLimit: '40',
-        scoreType: '1 điểm/ câu đúng', // Default
+        scoreType: '1 điểm/ câu đúng',
       },
       parts: [] 
     };
@@ -27,20 +157,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
   const [testData, setTestData] = useState<any>(getInitialData());
   const [isSaving, setIsSaving] = useState(false);
 
-  // ==========================================
-  // 1. HÀM UPLOAD FILE CHUNG
-  // ==========================================
-  const uploadToSupabase = async (file: File) => {
-    const fileExt = file.name ? file.name.split('.').pop() : 'png';
-    const fileName = `media_${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
-    const { error } = await supabase.storage.from('test_assets').upload(`uploads/${fileName}`, file, { cacheControl: '3600', upsert: false });
-    if (error) throw error;
-    return supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
-  };
-
-  // ==========================================
-  // 2. THUẬT TOÁN ĐỌC EXCEL/CSV (ĐÃ CẬP NHẬT)
-  // ==========================================
+  // --- THUẬT TOÁN ĐỌC EXCEL ---
   const processExcelFile = async (file: File) => {
     setUploadingId('excel');
     const reader = new FileReader();
@@ -74,16 +191,12 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
         };
 
         jsonData.forEach((row: any) => {
-          // Bắt đầy đủ Part
           const partTitle = getCol(row, ['parttitle', 'part']) || 'Part 1';
           const partContent = getCol(row, ['partcontent', 'bàiđọc']);
-
-          // Bắt đầy đủ Section & Dạng bài
           const secTitle = getCol(row, ['sectiontitle', 'section', 'nhóm', 'đoạn']) || 'Section 1';
           const secContent = getCol(row, ['sectioncontent', 'hướngdẫn']);
           const qType = getCol(row, ['questiontype', 'loạicâu', 'dạng']) || 'Trắc nghiệm';
 
-          // Bắt câu hỏi & đáp án
           const qContent = getCol(row, ['questiontext', 'question', 'câu', 'nộidung']);
           const optA = getCol(row, ['optiona', 'đápána', 'lựachọna']);
           const optB = getCol(row, ['optionb', 'đápánb', 'lựachọnb']);
@@ -94,20 +207,17 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
 
           if (!qContent && !optA && !partTitle) return;
 
-          // Tạo Part mới nếu khác tên
           if (!currentPart || currentPart.title !== partTitle) {
             currentPart = { id: Date.now().toString() + Math.random(), title: partTitle, content: partContent || '', tags: '', audioUrl: '', explanation: '', sections: [] };
             newParts.push(currentPart);
             currentSection = null; 
           }
 
-          // Tạo Section mới nếu khác tên
           if (!currentSection || currentSection.title !== secTitle) {
             currentSection = { id: Date.now().toString() + Math.random(), title: secTitle, content: secContent || '', tags: '', questionType: qType, audioUrl: '', explanation: '', questions: [] };
             currentPart.sections.push(currentSection);
           }
 
-          // Gắn câu hỏi vào Section
           if (qContent || optA || qType === 'Điền từ') {
             const options = [];
             if (optA) options.push(optA.toString());
@@ -143,165 +253,41 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     reader.readAsArrayBuffer(file);
   };
 
-  const handleDragOverExcel = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDraggingExcel(true);
-  };
-
-  const handleDragLeaveExcel = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDraggingExcel(false);
-  };
-
+  const handleDragOverExcel = (e: React.DragEvent) => { e.preventDefault(); setIsDraggingExcel(true); };
+  const handleDragLeaveExcel = (e: React.DragEvent) => { e.preventDefault(); setIsDraggingExcel(false); };
   const handleExcelDrop = (e: React.DragEvent) => {
-    e.preventDefault(); 
-    setIsDraggingExcel(false);
+    e.preventDefault(); setIsDraggingExcel(false);
     if (e.dataTransfer.files?.[0]) processExcelFile(e.dataTransfer.files[0]);
   };
-
   const handleExcelUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files?.[0]) {
-      processExcelFile(e.target.files[0]);
-      e.target.value = ''; 
-    }
+    if (e.target.files?.[0]) { processExcelFile(e.target.files[0]); e.target.value = ''; }
   };
 
-  // ==========================================
-  // 3. GIAO DIỆN HỖ TRỢ CHÈN ẢNH VÀ AUDIO TRỰC TIẾP
-  // ==========================================
-  const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
-    const fileInputRef = useRef<HTMLInputElement>(null);
-    const [isUploading, setIsUploading] = useState(false);
-
-    const appendImageToText = async (file: File) => {
-      setIsUploading(true);
-      try {
-        const url = await uploadToSupabase(file);
-        const newText = (value || '') + `\n<img src="${url}" alt="image" style="max-width:100%; border-radius:8px; margin: 10px 0;"/>\n`;
-        onChange({ target: { value: newText } });
-      } catch (err) {
-        alert("Lỗi tải ảnh!");
-      } finally {
-        setIsUploading(false);
-      }
-    };
-
-    const handlePaste = (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
-      const items = e.clipboardData.items;
-      for (let i = 0; i < items.length; i++) {
-        if (items[i].type.indexOf('image') !== -1) {
-          e.preventDefault();
-          const file = items[i].getAsFile();
-          if (file) appendImageToText(file);
-        }
-      }
-    };
-
-    return (
-      <div className="flex flex-col py-3 border-b border-slate-100 last:border-0 gap-2">
-        <div className="flex justify-between items-center">
-          <label className="text-[13px] font-bold text-slate-600">{label}</label>
-          <button 
-            onClick={() => fileInputRef.current?.click()} 
-            className="text-[12px] bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg border border-slate-300 transition flex items-center gap-1.5 font-bold shadow-sm active:scale-95"
-          >
-            {isUploading ? '⏳ Đang tải...' : '📷 Chèn ảnh/Hình'}
-          </button>
-          <input type="file" accept="image/*" className="hidden" ref={fileInputRef} onChange={(e) => { if(e.target.files?.[0]) appendImageToText(e.target.files[0]); }} />
-        </div>
-        <textarea 
-          value={value || ''} 
-          onChange={onChange} 
-          onPaste={handlePaste}
-          placeholder={placeholder + " (Anh có thể ấn Ctrl+V để dán trực tiếp ảnh vào đây)"} 
-          className="w-full bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg p-3 text-[14px] focus:border-[#00a651] outline-none transition min-h-[100px] custom-scrollbar" 
-        />
-      </div>
-    );
-  };
-
-  const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*" }: any) => {
-    const [isDrag, setIsDrag] = useState(false);
-    const handleFile = async (file: File) => {
-      setUploadingId(id);
-      try {
-        const url = await uploadToSupabase(file);
-        onUpload(url);
-      } catch (err) { alert("Lỗi tải file!"); }
-      finally { setUploadingId(null); }
-    };
-
-    return (
-      <div className="flex flex-col py-3 border-b border-slate-100 last:border-0 gap-2">
-        <label className="text-[13px] font-bold text-slate-600">{label}</label>
-        <div 
-          className={`w-full border-2 border-dashed rounded-lg p-4 flex items-center justify-between transition ${isDrag ? 'border-[#00a651] bg-[#e6f4ea]' : 'border-slate-300 bg-slate-50'}`}
-          onDragOver={(e) => { e.preventDefault(); setIsDrag(true); }}
-          onDragLeave={(e) => { e.preventDefault(); setIsDrag(false); }}
-          onDrop={(e) => { e.preventDefault(); setIsDrag(false); if(e.dataTransfer.files?.[0]) handleFile(e.dataTransfer.files[0]); }}
-        >
-          <div className="flex items-center gap-3">
-            <span className="text-2xl">{value ? '✅' : '🎵'}</span>
-            <div className="text-[13px] text-slate-500">
-              {uploadingId === id ? <span className="text-amber-500 font-bold">⏳ Đang tải lên...</span> : 
-               value ? <span className="text-emerald-600 font-bold truncate block max-w-[200px]">Đã có file đính kèm</span> : 
-               <span>Kéo thả file Âm thanh vào đây</span>}
-            </div>
-          </div>
-          <label className="bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[12px] font-bold cursor-pointer hover:bg-slate-100 transition shadow-sm">
-            <input type="file" className="hidden" accept={accept} onChange={(e) => { if(e.target.files?.[0]) handleFile(e.target.files[0]); }} /> 
-            Tải lên
-          </label>
-        </div>
-      </div>
-    );
-  };
-
-  const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
-    <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
-      <label className="w-32 shrink-0 text-[13px] font-bold text-slate-600">{label}</label>
-      <input type="text" value={value || ''} onChange={onChange} placeholder={placeholder} className="flex-1 w-full bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] focus:border-[#00a651] outline-none transition" />
-    </div>
-  );
-
-  // ==========================================
-  // 4. HÀM QUẢN LÝ THÊM SỬA XÓA MẢNG
-  // ==========================================
+  // --- QUẢN LÝ MẢNG ---
   const addPart = () => {
-    const newData = { ...testData };
-    if (!newData.parts) newData.parts = [];
+    const newData = { ...testData }; if (!newData.parts) newData.parts = [];
     newData.parts.push({ id: Date.now().toString(), title: `Part ${newData.parts.length + 1}`, content: '', tags: '', audioUrl: '', explanation: '', sections: [] });
     setTestData(newData);
   };
-  const removePart = (pIdx: number) => {
-    const newData = { ...testData }; newData.parts.splice(pIdx, 1); setTestData(newData);
-  };
+  const removePart = (pIdx: number) => { const newData = { ...testData }; newData.parts.splice(pIdx, 1); setTestData(newData); };
 
   const addSection = (pIdx: number) => {
-    const newData = { ...testData };
-    if (!newData.parts[pIdx].sections) newData.parts[pIdx].sections = [];
+    const newData = { ...testData }; if (!newData.parts[pIdx].sections) newData.parts[pIdx].sections = [];
     newData.parts[pIdx].sections.push({ id: Date.now().toString(), title: `Section ${newData.parts[pIdx].sections.length + 1}`, content: '', tags: '', questionType: 'Trắc nghiệm', audioUrl: '', explanation: '', questions: [] });
     setTestData(newData);
   };
-  const removeSection = (pIdx: number, sIdx: number) => {
-    const newData = { ...testData }; newData.parts[pIdx].sections.splice(sIdx, 1); setTestData(newData);
-  };
+  const removeSection = (pIdx: number, sIdx: number) => { const newData = { ...testData }; newData.parts[pIdx].sections.splice(sIdx, 1); setTestData(newData); };
 
   const addQuestion = (pIdx: number, sIdx: number) => {
-    const newData = { ...testData };
-    if (!newData.parts[pIdx].sections[sIdx].questions) newData.parts[pIdx].sections[sIdx].questions = [];
+    const newData = { ...testData }; if (!newData.parts[pIdx].sections[sIdx].questions) newData.parts[pIdx].sections[sIdx].questions = [];
     newData.parts[pIdx].sections[sIdx].questions.push({ id: Date.now().toString(), content: '', tags: '', audioUrl: '', explanation: '', options: ['A', 'B', 'C', 'D'], correctAnswer: '' });
     setTestData(newData);
   };
-  const removeQuestion = (pIdx: number, sIdx: number, qIdx: number) => {
-    const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions.splice(qIdx, 1); setTestData(newData);
-  };
+  const removeQuestion = (pIdx: number, sIdx: number, qIdx: number) => { const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions.splice(qIdx, 1); setTestData(newData); };
 
   const addOption = (pIdx: number, sIdx: number, qIdx: number) => {
-    const newData = { ...testData }; 
-    if (!newData.parts[pIdx].sections[sIdx].questions[qIdx].options) newData.parts[pIdx].sections[sIdx].questions[qIdx].options = [];
-    newData.parts[pIdx].sections[sIdx].questions[qIdx].options.push(''); 
-    setTestData(newData);
+    const newData = { ...testData }; if (!newData.parts[pIdx].sections[sIdx].questions[qIdx].options) newData.parts[pIdx].sections[sIdx].questions[qIdx].options = [];
+    newData.parts[pIdx].sections[sIdx].questions[qIdx].options.push(''); setTestData(newData);
   };
   const removeOption = (pIdx: number, sIdx: number, qIdx: number, oIdx: number) => {
     const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions[qIdx].options.splice(oIdx, 1); setTestData(newData);
@@ -314,7 +300,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
     else if (path.length === 3) newData.parts[path[0]].sections[path[1]].questions[path[2]][field] = value;
     setTestData(newData);
   };
-
   const updateOption = (pIdx: number, sIdx: number, qIdx: number, oIdx: number, value: string) => {
     const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions[qIdx].options[oIdx] = value; setTestData(newData);
   };
@@ -364,6 +349,9 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                       <option value="IELTS-Reading">Reading (IELTS)</option>
                       <option value="Standard-Listening">Listening (Standard)</option>
                       <option value="Standard-Reading">Reading (Standard)</option>
+                      <option value="IELTS-Writing">Writing (IELTS)</option>
+                      <option value="IELTS-Speaking">Speaking (IELTS)</option>
+                      <option value="Case-Study">Case Study / Business</option>
                     </select>
                   </div>
                 </div>
@@ -388,7 +376,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
           {activeTab === 'content' && (
             <div className="animate-in slide-in-from-right-4 space-y-6">
               
-              {/* --- KHU VỰC KÉO THẢ EXCEL CHUẨN --- */}
               {isImportMode && (
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                   <div className="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">
@@ -413,7 +400,6 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                 </div>
               )}
 
-              {/* VÒNG LẶP RENDER CẤU TRÚC ĐỀ */}
               {testData.parts?.map((part: any, pIdx: number) => (
                 <div key={part.id} className="border-2 border-[#00a651] rounded-2xl bg-white overflow-hidden shadow-sm">
                     <div className="bg-[#e6f4ea] px-6 py-4 border-b border-[#00a651]/20 flex justify-between items-center group">
@@ -423,7 +409,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                     
                     <div className="p-6 md:p-8 space-y-4 bg-slate-50 border-b border-slate-200">
                       <RichFieldRow label="Nội dung Part (Bài đọc/Giới thiệu)" value={part.content} onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} />
-                      <MediaRow label="File Âm thanh Part" value={part.audioUrl} id={`part-${part.id}`} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} />
+                      <MediaRow label="File Âm thanh Part" value={part.audioUrl} id={`part-${part.id}`} uploadingId={uploadingId} setUploadingId={setUploadingId} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} />
                     </div>
 
                     <div className="p-6 md:p-8 space-y-8">
@@ -446,7 +432,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
                                 <option value="Điền từ">Điền từ</option>
                               </select>
                             </div>
-                            <MediaRow label="File Âm thanh Section" value={sec.audioUrl} id={`sec-${sec.id}`} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} />
+                            <MediaRow label="File Âm thanh Section" value={sec.audioUrl} id={`sec-${sec.id}`} uploadingId={uploadingId} setUploadingId={setUploadingId} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} />
                           </div>
 
                           <div className="p-6 space-y-6">
@@ -476,7 +462,7 @@ export default function TestEditorModal({ testData: testRecord, courses, onClose
 
                                         <div className="flex gap-4">
                                           <div className="flex-1">
-                                            <FieldRow label="Lời giải thích" value={q.explanation} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} placeholder="Giải thích vì sao đúng..." />
+                                            <RichFieldRow label="Lời giải thích" value={q.explanation} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} placeholder="Giải thích vì sao đúng..." />
                                           </div>
                                           <div className="shrink-0 w-32">
                                             <label className="text-[12px] font-bold text-slate-600 block mb-1">Đáp án đúng</label>
