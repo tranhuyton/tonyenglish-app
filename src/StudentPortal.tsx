@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import {
   LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer
@@ -6,7 +6,7 @@ import {
 
 import ImmersionReading from './ImmersionReading';
 
-const FOLDER_COLORS = ['bg-[#3b82f6]', 'bg-[#10b981]', 'bg-[#f59e0b]', 'bg-[#8b5cf6]', 'bg-[#ec4899]', 'bg-[#14b8a6]', 'bg-[#f43f5e]'];
+const FOLDER_COLORS = ['from-blue-50 to-indigo-50', 'from-emerald-50 to-teal-50', 'from-amber-50 to-orange-50', 'from-purple-50 to-fuchsia-50', 'from-rose-50 to-pink-50'];
 const ITEMS_PER_PAGE = 12;
 
 const formatDateShort = (isoString: string) => {
@@ -34,18 +34,16 @@ const checkInProgress = (testId: string) => {
               if (Object.keys(parsed).length > 0) return true;
           }
       }
-  } catch (e) {
-      // Bỏ qua lỗi
-  }
+  } catch (e) {}
   return false;
 };
 
-// ĐÃ CẬP NHẬT: Thêm prop onOpenLecture để điều hướng sang màn hình học bài
 export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: { onNavigate?: (view: string) => void, onStartTest?: (type: string, data: any) => void, onOpenLecture?: (courseId: string) => void }) {
   const [activeTab, setActiveTab] = useState<'library' | 'analytics' | 'profile'>('library');
   const [activeView, setActiveView] = useState<'dashboard' | 'course'>('dashboard');
-  
   const [isReadingMode, setIsReadingMode] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   
   const [courses, setCourses] = useState<any[]>([]);
   const [selectedCourse, setSelectedCourse] = useState<any>(null);
@@ -53,7 +51,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [tests, setTests] = useState<any[]>([]);
   
   const [allFolders, setAllFolders] = useState<any[]>([]);
-  const [allTestsCount, setAllTestsCount] = useState<any[]>([]);
+  const [allTests, setAllTests] = useState<any[]>([]);
+  const [allLectures, setAllLectures] = useState<any[]>([]);
 
   const [historyData, setHistoryData] = useState<any[]>([]);
   const [currentUser, setCurrentUser] = useState<any>(null);
@@ -70,21 +69,24 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const [showModeSelection, setShowModeSelection] = useState(false);
   const [testToStart, setTestToStart] = useState<any>(null);
-  
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
 
   const [newPassword, setNewPassword] = useState('');
   const [newFullName, setNewFullName] = useState('');
   const [isUpdatingProfile, setIsUpdatingProfile] = useState(false);
 
-  const [triggerRender, setTriggerRender] = useState(0);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   useEffect(() => {
     checkUserAndFetchData();
-    
-    const handleFocus = () => setTriggerRender(prev => prev + 1);
-    window.addEventListener('focus', handleFocus);
-    return () => window.removeEventListener('focus', handleFocus);
   }, [activeTab]);
 
   const checkUserAndFetchData = async () => {
@@ -100,7 +102,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     if (activeTab === 'library') {
       fetchCourses(user?.id);
       fetchAllFolders(); 
-      fetchAllTestsCount();
+      fetchAllTests();
+      fetchAllLectures();
       fetchUserHistory(user?.id);
     }
     if (activeTab === 'analytics') {
@@ -108,6 +111,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       fetchUserHistory(user?.id);
       if (tests.length === 0) fetchAllTestsForRetake();
     }
+  };
+
+  const fetchAllLectures = async () => {
+     const { data } = await supabase.from('lectures').select('id, course_id').eq('is_published', true);
+     setAllLectures(data || []);
   };
 
   const fetchAllTestsForRetake = async () => {
@@ -128,7 +136,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const fetchUserHistory = async (userId?: string) => {
     if (!userId) return;
     try {
-      const { data, error } = await supabase.from('test_results').select('*').eq('user_id', userId).order('created_at', { ascending: false });
+      const { data } = await supabase.from('test_results').select('*').eq('user_id', userId).order('created_at', { ascending: false });
       if (data && data.length > 0) {
         const formattedHistory = data.map((item: any) => ({
           id: item.id,
@@ -143,7 +151,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         }));
         setHistoryData(formattedHistory);
       } else { setHistoryData([]); }
-    } catch (e) { console.error(e); setHistoryData([]); }
+    } catch (e) {}
   };
 
   const fetchAllFolders = async () => {
@@ -151,16 +159,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     setAllFolders(data || []);
   };
 
-  const fetchAllTestsCount = async () => {
-    const { data } = await supabase.from('tests').select('id, content_json, folder_id, is_published').eq('is_published', true);
-    setAllTestsCount(data || []);
+  const fetchAllTests = async () => {
+    const { data } = await supabase.from('tests').select('*').eq('is_published', true);
+    setAllTests(data || []);
   };
 
   const fetchCourseContent = async (courseId: string) => {
     const { data: folderData } = await supabase.from('folders').select('*').eq('course_id', courseId).order('display_order', { ascending: true });
     setFolders(folderData || []);
-    const { data: testData } = await supabase.from('tests').select('*').eq('is_published', true);
-    const courseTests = (testData || []).filter(t => {
+    const courseTests = allTests.filter(t => {
       const inFolder = folderData?.some((f: any) => f.id === t.folder_id);
       const inJson = t.content_json?.basicInfo?.courseId === courseId;
       return inFolder || inJson;
@@ -185,7 +192,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   };
 
   const handleLogout = async () => {
-    try { await supabase.auth.signOut(); } catch (error) { console.error("Lỗi:", error); } finally {
+    try { await supabase.auth.signOut(); } catch (error) {} finally {
       localStorage.clear(); sessionStorage.clear(); onNavigate?.('home'); setTimeout(() => window.location.reload(), 100);
     }
   };
@@ -229,10 +236,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const getCourseStyle = (title: string, type: string) => {
     const lowerTitle = title.toLowerCase();
-    if (lowerTitle.includes('ielts') || type === 'IELTS') return { bg: 'bg-[#3b82f6]', label: 'IELTS Master' };
-    if (lowerTitle.includes('igcse') || lowerTitle.includes('science')) return { bg: 'bg-[#10b981]', label: 'IGCSE Science' };
-    if (lowerTitle.includes('toeic')) return { bg: 'bg-[#e81e62]', label: 'TOEIC' };
-    return { bg: 'bg-[#6b7280]', label: title };
+    if (lowerTitle.includes('ielts') || type === 'IELTS') return { bg: 'from-[#e0f2fe] to-[#bae6fd]', text: 'text-[#0284c7]', label: 'IELTS Master' };
+    if (lowerTitle.includes('igcse') || lowerTitle.includes('science')) return { bg: 'from-[#ecfdf5] to-[#a7f3d0]', text: 'text-[#059669]', label: 'IGCSE Science' };
+    if (lowerTitle.includes('toeic')) return { bg: 'from-[#fff1f2] to-[#fecdd3]', text: 'text-[#e11d48]', label: 'TOEIC' };
+    return { bg: 'from-[#f1f5f9] to-[#e2e8f0]', text: 'text-[#475569]', label: title };
   };
 
   const getTestIcon = (testType: string) => {
@@ -240,9 +247,54 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     if (testType.includes('Speaking')) return '🎙️';
     if (testType.includes('Writing')) return '✍️';
     if (testType.includes('Case-Study')) return '📄';
-    return '📖';
+    return '📝';
   };
 
+  // Tính toán Gamification
+  const globalTotalTestsDone = historyData.length;
+  const globalTotalTimeHours = (historyData.reduce((acc, curr) => acc + curr.timeSpent, 0) / 60).toFixed(1);
+  const displayUserName = userProfile?.full_name || (currentUser?.email ? currentUser.email.split('@')[0] : 'Học viên');
+  const displayUserInitial = displayUserName.charAt(0).toUpperCase();
+
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? "Chào buổi sáng" : hour < 18 ? "Chào buổi chiều" : "Chào buổi tối";
+
+  const inProgressTest = allTests.find(t => checkInProgress(t.id));
+
+  // --- Logic Phân Trang & Lọc ---
+  const currentSubFolders = folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === ''));
+  let currentTests = tests.filter(t => t.folder_id === currentFolderId);
+  if (!currentFolderId || currentSubFolders.length > 0) currentTests = []; 
+
+  const processedTests = currentTests
+    .filter(t => t.title.toLowerCase().includes(searchTest.toLowerCase()))
+    .sort((a, b) => {
+       if (sortTest === 'name-asc') return a.title.localeCompare(b.title);
+       if (sortTest === 'name-desc') return b.title.localeCompare(a.title);
+       if (sortTest === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
+       if (sortTest === 'date-asc') return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
+       return 0;
+    });
+
+  const totalFolderPages = Math.ceil(currentSubFolders.length / ITEMS_PER_PAGE);
+  const paginatedFolders = currentSubFolders.slice((folderPage - 1) * ITEMS_PER_PAGE, folderPage * ITEMS_PER_PAGE);
+  const totalTestPages = Math.ceil(processedTests.length / ITEMS_PER_PAGE);
+  const paginatedTests = processedTests.slice((testPage - 1) * ITEMS_PER_PAGE, testPage * ITEMS_PER_PAGE);
+
+  const renderPagination = (currentPage: number, totalPages: number, setPage: (p: number) => void) => {
+    if (totalPages <= 1) return null;
+    return (
+      <div className="flex justify-center items-center gap-4 mt-10">
+        <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)} className="w-10 h-10 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black">→</button>
+        <span className="text-[14px] font-bold text-slate-500 bg-white px-5 py-2 rounded-xl border border-slate-200 shadow-sm">Trang {currentPage} / {totalPages}</span>
+        <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)} className="w-10 h-10 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black">→</button>
+      </div>
+    );
+  };
+
+  // ==========================================
+  // XỬ LÝ DỮ LIỆU TAB ANALYTICS (PHÂN TÍCH)
+  // ==========================================
   const currentAnalyticsCourseObj = courses.find(c => String(c.id) === String(analyticsCourse));
   const isIeltsAnalytics = currentAnalyticsCourseObj?.type === 'IELTS';
 
@@ -256,13 +308,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       return 0;
     });
 
-  const totalTestsDone = processedHistory.length;
-  const avgScore = totalTestsDone > 0 ? (processedHistory.reduce((acc, curr) => acc + curr.scoreObj.value, 0) / totalTestsDone).toFixed(1) : '0';
-  const totalTimeMinutes = processedHistory.reduce((acc, curr) => acc + curr.timeSpent, 0);
-  const totalTimeHours = (totalTimeMinutes / 60).toFixed(1);
+  const analyticsTotalTestsDone = processedHistory.length;
+  const avgScore = analyticsTotalTestsDone > 0 ? (processedHistory.reduce((acc, curr) => acc + curr.scoreObj.value, 0) / analyticsTotalTestsDone).toFixed(1) : '0';
+  const analyticsTotalTimeMinutes = processedHistory.reduce((acc, curr) => acc + curr.timeSpent, 0);
+  const analyticsTotalTimeHours = (analyticsTotalTimeMinutes / 60).toFixed(1);
 
   const getDynamicScoreFeedback = () => {
-    if (totalTestsDone < 2) return "Bạn mới bắt đầu luyện tập. Cứ làm từ từ, duy trì làm thêm nhiều bài để hệ thống phân tích nhé!";
+    if (analyticsTotalTestsDone < 2) return "Bạn mới bắt đầu luyện tập. Cứ làm từ từ, duy trì làm thêm nhiều bài để hệ thống phân tích nhé!";
     const recentScores = processedHistory.slice(0, 3).map(h => h.scoreObj.value);
     const olderScores = processedHistory.slice(3, 6).map(h => h.scoreObj.value);
     const avgRecent = recentScores.length ? recentScores.reduce((a,b)=>a+b,0)/recentScores.length : 0;
@@ -275,9 +327,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   };
 
   const getDynamicCompleteFeedback = () => {
-    if (totalTestsDone === 0) return "Cùng khởi động với bài thi đầu tiên nào!";
-    if (totalTestsDone < 5) return `Bạn đã hoàn thành ${totalTestsDone} bài. Bước đệm hoàn hảo để bứt phá.`;
-    return `Wow, bạn đã hoàn thành ${totalTestsDone} bài thi! Sự kiên trì của bạn thực sự đáng nể đó.`;
+    if (analyticsTotalTestsDone === 0) return "Cùng khởi động với bài thi đầu tiên nào!";
+    if (analyticsTotalTestsDone < 5) return `Bạn đã hoàn thành ${analyticsTotalTestsDone} bài. Bước đệm hoàn hảo để bứt phá.`;
+    return `Wow, bạn đã hoàn thành ${analyticsTotalTestsDone} bài thi! Sự kiên trì của bạn thực sự đáng nể đó.`;
   };
 
   const sparklineScoreArr = processedHistory.slice(0, 5).reverse().map(h => ({ v: h.scoreObj.value }));
@@ -321,129 +373,273 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   let curr = folders.find(f => f.id === currentFolderId);
   while (curr) { breadcrumbs.unshift(curr); curr = folders.find(f => f.id === curr.parent_id); }
 
-  const currentSubFolders = folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === ''));
-  let currentTests = tests.filter(t => t.folder_id === currentFolderId);
-  if (!currentFolderId || currentSubFolders.length > 0) currentTests = []; 
 
-  const processedTests = currentTests
-    .filter(t => t.title.toLowerCase().includes(searchTest.toLowerCase()))
-    .sort((a, b) => {
-       if (sortTest === 'name-asc') return a.title.localeCompare(b.title);
-       if (sortTest === 'name-desc') return b.title.localeCompare(a.title);
-       if (sortTest === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
-       if (sortTest === 'date-asc') return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
-       return 0;
-    });
-
-  const totalFolderPages = Math.ceil(currentSubFolders.length / ITEMS_PER_PAGE);
-  const paginatedFolders = currentSubFolders.slice((folderPage - 1) * ITEMS_PER_PAGE, folderPage * ITEMS_PER_PAGE);
-  const totalTestPages = Math.ceil(processedTests.length / ITEMS_PER_PAGE);
-  const paginatedTests = processedTests.slice((testPage - 1) * ITEMS_PER_PAGE, testPage * ITEMS_PER_PAGE);
-
-  const renderPagination = (currentPage: number, totalPages: number, setPage: (p: number) => void) => {
-    if (totalPages <= 1) return null;
-    return (
-      <div className="flex justify-center items-center gap-4 mt-10">
-        <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)} className="w-12 h-12 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black text-xl">←</button>
-        <span className="text-[15px] font-bold text-slate-500 bg-white px-5 py-2.5 rounded-xl border border-slate-200 shadow-sm">Trang {currentPage} / {totalPages}</span>
-        <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)} className="w-12 h-12 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black text-xl">→</button>
-      </div>
-    );
-  };
-
-  const displayUserName = userProfile?.full_name || (currentUser?.email ? currentUser.email.split('@')[0] : 'Tài khoản Học viên');
-  const displayUserInitial = displayUserName.charAt(0).toUpperCase();
-
+  // ==========================================
+  // KHỐI RENDER CHẾ ĐỘ ĐỌC BÁO (IMMERSION READING)
+  // ==========================================
   if (isReadingMode) {
-    return <ImmersionReading onBack={() => setIsReadingMode(false)} />;
+    if (!selectedCourse) { 
+      return (
+        <div className="min-h-screen bg-[#f4f7f9] font-sans text-slate-800">
+           {/* HEADER BÁO */}
+           <header className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-40 shadow-sm">
+             <div className="max-w-[1200px] w-full mx-auto px-6 py-3 flex items-center justify-between">
+               <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setIsReadingMode(false)}>
+                 <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 font-black shadow-inner">←</div>
+                 <div className="flex flex-col ml-2">
+                   <h1 className="font-black text-[18px] tracking-tighter text-[#1e88e5] leading-none uppercase">Immersion <span className="text-slate-800">Reading</span></h1>
+                   <span className="text-[10px] font-bold text-slate-500 tracking-widest mt-0.5">Luyện đọc thực tế</span>
+                 </div>
+               </div>
+             </div>
+           </header>
+
+           {/* DANH SÁCH BÀI BÁO */}
+           <main className="max-w-[1200px] w-full mx-auto p-6 md:p-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
+             
+             {/* Banner Tin Tức */}
+             <div className="bg-white rounded-[2rem] p-8 md:p-12 mb-10 border border-slate-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+                <div>
+                   <h2 className="text-3xl font-black text-slate-800 mb-3">Today's <span className="text-[#1e88e5]">Featured</span></h2>
+                   <p className="text-slate-500 font-medium text-[16px] max-w-xl">Đọc báo tiếng Anh mỗi ngày là cách nhanh nhất để tăng vốn từ vựng và cải thiện khả năng đọc hiểu tự nhiên.</p>
+                </div>
+                <div className="bg-amber-50 text-amber-700 px-6 py-4 rounded-2xl border border-amber-100">
+                   <p className="text-[12px] font-black uppercase tracking-widest mb-1">Mẹo nhỏ</p>
+                   <p className="text-[14px] font-medium">Click đúp vào từ mới để tra từ điển ngay lập tức!</p>
+                </div>
+             </div>
+
+             <div className="flex items-center justify-between mb-6">
+                <h3 className="font-black text-xl text-slate-800">Mới cập nhật</h3>
+                <div className="flex gap-2">
+                   <button className="bg-[#1e88e5] text-white px-4 py-2 rounded-xl text-[13px] font-bold shadow-sm">Tất cả</button>
+                   <button className="bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 px-4 py-2 rounded-xl text-[13px] font-bold transition-colors">IELTS Academic</button>
+                   <button className="bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 px-4 py-2 rounded-xl text-[13px] font-bold transition-colors">Business</button>
+                </div>
+             </div>
+
+             {/* Lưới Bài Báo */}
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Card 1 */}
+                <div onClick={() => setSelectedCourse('reading-1')} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group flex flex-col">
+                   <div className="h-48 bg-slate-200 overflow-hidden relative">
+                      <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=800" alt="Cover" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-[11px] font-black uppercase tracking-widest text-[#1e88e5] shadow-sm">Academic</div>
+                   </div>
+                   <div className="p-6 flex-1 flex flex-col">
+                      <h4 className="font-black text-[18px] text-slate-800 mb-3 line-clamp-2 leading-snug group-hover:text-[#1e88e5] transition-colors">The Evolution of Urban Planning: Building Sustainable Cities</h4>
+                      <p className="text-slate-500 text-[14px] line-clamp-3 mb-4 leading-relaxed">The concept of urban planning has undergone a massive transformation over the past century. Historically, cities were designed with a primary focus...</p>
+                      <div className="mt-auto flex items-center justify-between text-slate-400 border-t border-slate-50 pt-4">
+                         <span className="text-[12px] font-bold">⏱️ 5 min read</span>
+                         <span className="text-[12px] font-bold">12/05/2026</span>
+                      </div>
+                   </div>
+                </div>
+
+                {/* Card 2 */}
+                <div onClick={() => setSelectedCourse('reading-1')} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group flex flex-col">
+                   <div className="h-48 bg-slate-200 overflow-hidden relative">
+                      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Cover" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-[11px] font-black uppercase tracking-widest text-emerald-600 shadow-sm">Business</div>
+                   </div>
+                   <div className="p-6 flex-1 flex flex-col">
+                      <h4 className="font-black text-[18px] text-slate-800 mb-3 line-clamp-2 leading-snug group-hover:text-[#1e88e5] transition-colors">Global Markets React to New AI Regulations</h4>
+                      <p className="text-slate-500 text-[14px] line-clamp-3 mb-4 leading-relaxed">Tech stocks saw unprecedented volatility this morning as new international frameworks regarding artificial intelligence deployment were announced...</p>
+                      <div className="mt-auto flex items-center justify-between text-slate-400 border-t border-slate-50 pt-4">
+                         <span className="text-[12px] font-bold">⏱️ 3 min read</span>
+                         <span className="text-[12px] font-bold">10/05/2026</span>
+                      </div>
+                   </div>
+                </div>
+
+                {/* Card 3 */}
+                <div onClick={() => setSelectedCourse('reading-1')} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group flex flex-col">
+                   <div className="h-48 bg-slate-200 overflow-hidden relative">
+                      <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800" alt="Cover" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-[11px] font-black uppercase tracking-widest text-purple-600 shadow-sm">Science</div>
+                   </div>
+                   <div className="p-6 flex-1 flex flex-col">
+                      <h4 className="font-black text-[18px] text-slate-800 mb-3 line-clamp-2 leading-snug group-hover:text-[#1e88e5] transition-colors">Breakthrough in Quantum Computing Explained</h4>
+                      <p className="text-slate-500 text-[14px] line-clamp-3 mb-4 leading-relaxed">Researchers at MIT have successfully maintained a stable qubit state at room temperature, potentially revolutionizing the future of processing power...</p>
+                      <div className="mt-auto flex items-center justify-between text-slate-400 border-t border-slate-50 pt-4">
+                         <span className="text-[12px] font-bold">⏱️ 7 min read</span>
+                         <span className="text-[12px] font-bold">08/05/2026</span>
+                      </div>
+                   </div>
+                </div>
+             </div>
+           </main>
+        </div>
+      );
+    } 
+    // Giao diện đọc chi tiết
+    else {
+      return <ImmersionReading onBack={() => setSelectedCourse(null)} />;
+    }
   }
 
+  // ==========================================
+  // KHỐI RENDER CHẾ ĐỘ CỔNG HỌC VIÊN CHÍNH
+  // ==========================================
   return (
-    <div className="min-h-screen bg-[#f4f6f9] font-sans text-slate-800">
+    <div className="min-h-screen bg-[#f4f7f9] font-sans text-slate-800">
       
-      {/* HEADER */}
-      <header className="bg-[#f8f9fb] border-b border-slate-200 px-6 py-3 flex items-center justify-between sticky top-0 z-30 shadow-sm">
-        <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => window.location.href = 'https://tonyenglish.vn/vi'}>
-          <div className="flex flex-col items-end">
-            <h1 className="font-black text-2xl tracking-tighter text-[#1e88e5] leading-none">TONY<span className="text-slate-800">ENGLISH</span></h1>
-            <span className="text-[10px] italic text-slate-500 font-medium mt-0.5 pr-0.5">The future begins here</span>
-          </div>
-          <div className="w-10 h-10 flex items-center justify-center overflow-hidden"><img src="/logo-shield.png" alt="TonyEnglish Logo" className="w-auto h-full object-contain" /></div>
-        </div>
-
-        <div className="hidden md:flex items-center gap-2 lg:gap-6 bg-slate-100/50 rounded-xl p-1 border border-slate-200">
-          <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourse(null); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors ${activeTab === 'library' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📚</span> Thư viện đề</button>
-          <button onClick={() => setActiveTab('analytics')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors ${activeTab === 'analytics' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">📊</span> Phân tích & Lịch sử</button>
-          <button onClick={() => setActiveTab('profile')} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors ${activeTab === 'profile' ? 'bg-white shadow-md text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800'}`}><span className="text-lg">👤</span> Tài khoản</button>
-          
-          <button onClick={() => setIsReadingMode(true)} className="flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-sm transition-colors text-slate-500 hover:text-[#0a5482] hover:bg-white hover:shadow-md">
-            <span className="text-lg">📰</span> Đọc báo
-          </button>
-        </div>
-
-        <div className="flex items-center gap-4">
-          
-          {userProfile?.role === 'admin' && (
-            <button 
-              onClick={() => onNavigate?.('admin')} 
-              className="hidden sm:flex bg-slate-800 hover:bg-slate-700 text-white font-bold text-[12px] px-4 py-2 rounded-lg transition-colors items-center uppercase tracking-wider shadow-md"
-            >
-              ⚙️ Về trang Admin
-            </button>
-          )}
-
-          <div className="flex items-center gap-4 cursor-pointer hover:opacity-80 transition-opacity group" onClick={() => setActiveTab('profile')}>
-            <div className="text-right hidden sm:block">
-              <div className="font-black text-sm text-slate-800 group-hover:text-[#1e88e5] transition-colors">{displayUserName}</div>
-              <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider">
-                {userProfile?.role === 'admin' ? 'Quản trị viên' : 'Học viên'}
-              </div>
+      {/* HEADER CĂN GIỮA */}
+      <header className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-40 shadow-sm">
+        <div className="max-w-[1200px] w-full mx-auto px-6 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => window.location.href = 'https://tonyenglish.vn/vi'}>
+            <div className="flex flex-col items-end">
+              <h1 className="font-black text-2xl tracking-tighter text-[#0a5482] leading-none">TONY<span className="text-slate-800">ENGLISH</span></h1>
+              <span className="text-[10px] italic text-[#1e88e5] font-medium mt-0.5 pr-0.5">The future begins here</span>
             </div>
-            <div className="w-10 h-10 rounded-full bg-[#0a5482] group-hover:bg-[#1e88e5] transition-colors text-white flex items-center justify-center font-black shadow-inner border-2 border-white">{displayUserInitial}</div>
+            <div className="w-10 h-10 flex items-center justify-center overflow-hidden"><img src="/logo-shield.png" alt="TonyEnglish Logo" className="w-auto h-full object-contain" /></div>
           </div>
-          <div className="h-8 w-px bg-slate-300 mx-1"></div>
-          <button onClick={handleLogout} className="text-[#e53935] font-black text-[13px] bg-red-50 hover:bg-red-100 border border-red-100 px-4 py-2 rounded-lg transition-colors active:scale-95">Đăng Xuất</button>
+
+          <div className="hidden md:flex items-center gap-2 bg-slate-100/50 rounded-2xl p-1 border border-slate-200/50">
+            <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourse(null); }} className={`flex items-center gap-2 px-6 py-2 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-white shadow text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'}`}>📚 Không gian học tập</button>
+            <button onClick={() => setActiveTab('analytics')} className={`flex items-center gap-2 px-6 py-2 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'analytics' ? 'bg-white shadow text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'}`}>📊 Phân tích & Lịch sử</button>
+          </div>
+
+          <div className="flex items-center gap-5">
+            <div className="hidden lg:flex items-center gap-3">
+               <div className="flex items-center gap-1.5 bg-orange-50 text-orange-600 px-3 py-1.5 rounded-lg border border-orange-100 font-bold text-[13px] shadow-sm" title="Số bài đã hoàn thành">
+                  🔥 {globalTotalTestsDone}
+               </div>
+               <div className="flex items-center gap-1.5 bg-blue-50 text-blue-600 px-3 py-1.5 rounded-lg border border-blue-100 font-bold text-[13px] shadow-sm" title="Tổng thời gian học">
+                  ⏱️ {globalTotalTimeHours}h
+               </div>
+            </div>
+
+            <div className="relative" ref={dropdownRef}>
+               <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-3 hover:opacity-80 transition-opacity focus:outline-none">
+                 <div className="text-right hidden sm:block">
+                   <div className="font-black text-[14px] text-slate-800">{displayUserName}</div>
+                   <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider">{userProfile?.role === 'admin' ? 'Quản trị viên' : 'Học viên'}</div>
+                 </div>
+                 <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#0a5482] to-[#1e88e5] text-white flex items-center justify-center font-black shadow-md border-2 border-white ring-2 ring-blue-50">{displayUserInitial}</div>
+               </button>
+
+               {/* USER DROPDOWN - CÓ NÚT ĐỌC BÁO */}
+               {isDropdownOpen && (
+                  <div className="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-50 animate-in fade-in slide-in-from-top-2">
+                     <button onClick={() => { setActiveTab('profile'); setIsDropdownOpen(false); }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5] flex items-center gap-3 transition-colors">
+                        <span className="text-lg">👤</span> Cấu hình tài khoản
+                     </button>
+                     <button onClick={() => { setIsReadingMode(true); setSelectedCourse(null); setIsDropdownOpen(false); }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5] flex items-center gap-3 transition-colors">
+                        <span className="text-lg">📰</span> Đọc báo tiếng Anh
+                     </button>
+                     
+                     {userProfile?.role === 'admin' && (
+                       <button onClick={() => onNavigate?.('admin')} className="w-full text-left px-5 py-3 text-sm font-black text-[#8b5cf6] hover:bg-purple-50 flex items-center gap-3 transition-colors border-t border-slate-100 mt-1 pt-3">
+                          <span className="text-lg">⚙️</span> Trang Quản Trị
+                       </button>
+                     )}
+                     
+                     <div className="h-px bg-slate-100 my-1"></div>
+                     <button onClick={handleLogout} className="w-full text-left px-5 py-3 text-sm font-bold text-red-600 hover:bg-red-50 flex items-center gap-3 transition-colors">
+                        <span className="text-lg">🚪</span> Đăng xuất
+                     </button>
+                  </div>
+               )}
+            </div>
+          </div>
         </div>
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="max-w-7xl w-full mx-auto p-6 md:p-10 relative">
+      <main className="max-w-[1200px] w-full mx-auto p-6 md:p-8 relative">
         
         {/* ================= TAB 1: THƯ VIỆN ĐỀ ================= */}
         {activeTab === 'library' && (
           <>
             {activeView === 'dashboard' && (
-              <div className="animate-in fade-in duration-300">
-                <div className="bg-[#f0f2f5] rounded-xl px-6 py-4 mb-8 border border-slate-200">
-                  <h2 className="font-bold text-slate-700 text-[15px]">Khóa học của tôi</h2>
+              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                
+                {/* HERO BANNER */}
+                <div className="relative bg-gradient-to-br from-[#0a5482] to-[#1e88e5] rounded-[2rem] p-8 md:p-12 mb-10 overflow-hidden shadow-xl">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+                  <div className="absolute bottom-0 left-10 w-40 h-40 bg-blue-300 opacity-20 rounded-full blur-2xl translate-y-1/3"></div>
+                  
+                  <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+                    <div className="text-white flex-1 text-center md:text-left">
+                      <h2 className="text-3xl md:text-4xl font-black mb-3 drop-shadow-md">{greeting}, {displayUserName}! 🚀</h2>
+                      <p className="text-blue-100 text-[16px] md:text-lg font-medium leading-relaxed max-w-xl">Hôm nay là một ngày tuyệt vời để nâng cấp bản thân. Hành trình chinh phục mục tiêu đang chờ bạn phía trước!</p>
+                    </div>
+
+                    {inProgressTest ? (
+                       <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-3xl w-full md:w-80 shadow-lg text-white group cursor-pointer hover:bg-white/20 transition-all" onClick={() => handleStartTestClick(inProgressTest)}>
+                          <div className="flex items-center gap-2 mb-3">
+                             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                             <span className="text-[11px] font-black uppercase tracking-widest text-amber-300">Đang làm dở</span>
+                          </div>
+                          <h3 className="font-bold text-lg mb-4 line-clamp-2 leading-tight">{inProgressTest.title}</h3>
+                          <button className="w-full bg-white text-[#1e88e5] font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">TIẾP TỤC NGAY →</button>
+                       </div>
+                    ) : courses.length > 0 && (
+                       <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-3xl w-full md:w-80 shadow-lg text-white group cursor-pointer hover:bg-white/20 transition-all" onClick={() => handleOpenCourse(courses[0])}>
+                          <div className="flex items-center gap-2 mb-3">
+                             <span className="text-[11px] font-black uppercase tracking-widest text-emerald-300">Gợi ý học tập</span>
+                          </div>
+                          <h3 className="font-bold text-lg mb-4 line-clamp-2 leading-tight">Khóa học {courses[0].title}</h3>
+                          <button className="w-full bg-white text-[#1e88e5] font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">VÀO HỌC NGAY →</button>
+                       </div>
+                    )}
+                  </div>
+                </div>
+
+                <div className="mb-6 flex items-center justify-between">
+                  <h2 className="font-black text-2xl text-slate-800">Khóa học của tôi</h2>
                 </div>
 
                 {courses.length === 0 ? (
-                  <div className="bg-white border-2 border-dashed border-slate-200 rounded-2xl py-20 text-center shadow-sm">
+                  <div className="bg-white border-2 border-dashed border-slate-200 rounded-[2rem] py-24 text-center shadow-sm">
                     <span className="text-5xl block mb-4 opacity-50">🔒</span>
                     <h3 className="font-bold text-slate-700 text-lg mb-2">Chưa có khóa học nào</h3>
-                    <p className="text-slate-500 text-sm">Anh/chị vui lòng liên hệ TonyEnglish để được cấp quyền truy cập vào các Khóa học nhé!</p>
+                    <p className="text-slate-500 text-sm">Vui lòng liên hệ TonyEnglish để được cấp quyền truy cập nhé!</p>
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {courses.map(course => {
                       const style = getCourseStyle(course.title, course.type);
                       const courseFolderIds = allFolders.filter(f => f.course_id === course.id).map(f => f.id);
-                      const testCount = allTestsCount.filter(t => courseFolderIds.includes(t.folder_id)).length;
+                      const testCount = allTests.filter(t => courseFolderIds.includes(t.folder_id)).length;
+                      
+                      const lectureCount = allLectures.filter(l => l.course_id === course.id).length;
+                      const uniqueCompletedTests = new Set(historyData.filter(h => h.courseId === course.id).map(h => h.testId)).size;
+                      const progress = testCount > 0 ? Math.min(100, Math.round((uniqueCompletedTests / testCount) * 100)) : 0;
 
                       return (
-                        <div key={course.id} onClick={() => handleOpenCourse(course)} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer flex flex-col h-64 relative group">
-                          <div className={`${style.bg} h-36 flex items-center justify-center relative p-6`}>
-                            <h3 className="text-white text-3xl font-black text-center leading-tight tracking-wide drop-shadow-sm group-hover:scale-105 transition-transform">{style.label}</h3>
-                            <div className="absolute -bottom-4 right-0 bg-[#f4f6f9] text-slate-600 font-bold text-[12px] px-4 py-1.5 rounded-l-lg border-y border-l border-slate-200 shadow-sm z-10">
-                              {testCount > 0 ? `${testCount} đề thi` : 'Chưa có đề thi'}
+                        <div key={course.id} onClick={() => handleOpenCourse(course)} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full min-h-[310px] group relative">
+                          <div className={`h-[140px] bg-gradient-to-br ${style.bg} flex items-center p-6 relative overflow-hidden shrink-0`}>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/3"></div>
+                            
+                            <h3 className={`text-2xl font-black leading-tight tracking-wide ${style.text} drop-shadow-sm group-hover:scale-105 transition-transform duration-300 origin-left z-10 w-2/3`}>{style.label}</h3>
+                            
+                            <div className="absolute top-4 right-4 flex flex-col gap-1.5 items-end z-10">
+                              <div className="bg-white/60 backdrop-blur-sm text-slate-700 font-bold text-[10px] px-2.5 py-1.5 rounded-md shadow-sm flex items-center gap-1.5">
+                                <span>📚 {lectureCount} bài</span>
+                                <span className="w-1 h-1 rounded-full bg-slate-400"></span>
+                                <span>📝 {testCount} đề</span>
+                              </div>
                             </div>
                           </div>
-                          <div className="flex-1 bg-white p-5 flex flex-col justify-center relative mt-2">
-                            <h4 className="font-black text-lg text-slate-800 mb-1 truncate">{course.title}</h4>
-                            <div className="flex justify-between items-center text-slate-400">
-                              <p className="text-[12px] font-medium group-hover:text-[#1e88e5] transition-colors">Bấm để xem chi tiết</p>
-                              <span className="text-[#1e88e5] font-black group-hover:translate-x-1 transition-transform">→</span>
+                          
+                          <div className="flex-1 bg-white p-6 flex flex-col justify-between relative">
+                            <h4 className="font-black text-lg text-slate-800 mb-3 line-clamp-2">{course.title}</h4>
+                            
+                            <div className="mb-4 mt-auto">
+                              <div className="flex justify-between items-end mb-1.5">
+                                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ thi</span>
+                                <span className="text-[12px] font-black text-[#1e88e5]">{progress}%</span>
+                              </div>
+                              <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${progress}%` }}></div>
+                              </div>
+                            </div>
+
+                            <div className="flex justify-between items-center text-slate-400 pt-3 border-t border-slate-50 mt-2">
+                              <p className="text-[12px] font-bold uppercase tracking-wider group-hover:text-[#1e88e5] transition-colors">Bấm để học</p>
+                              <div className="w-7 h-7 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-[#1e88e5] group-hover:text-white transition-colors text-xs font-black shadow-sm">→</div>
                             </div>
                           </div>
                         </div>
@@ -456,8 +652,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
             {activeView === 'course' && selectedCourse && (
               <div className="animate-in fade-in slide-in-from-right-4 duration-300">
-                <div className="flex flex-wrap items-center gap-2 text-[14px] font-bold text-slate-500 mb-6 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
-                   <button onClick={() => { setActiveView('dashboard'); setSelectedCourse(null); }} className="hover:text-[#1e88e5] transition-colors">Khóa học</button>
+                <div className="flex flex-wrap items-center gap-2 text-[14px] font-bold text-slate-500 mb-6 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
+                   <button onClick={() => { setActiveView('dashboard'); setSelectedCourse(null); }} className="hover:text-[#1e88e5] transition-colors">Trang chủ</button>
                    <span className="text-slate-300">/</span>
                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); }} className={`hover:text-[#1e88e5] transition-colors ${!currentFolderId ? 'text-[#1e88e5]' : ''}`}>{selectedCourse.title}</button>
                    {breadcrumbs.map((b, i) => (
@@ -468,21 +664,23 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                    ))}
                 </div>
                 
-                {/* NÚT VÀO HỌC BÀI GIẢNG HIỂN THỊ KHI Ở THƯ MỤC GỐC */}
                 {!currentFolderId && (
                    <div className="mb-8">
                      <button 
                        onClick={() => onOpenLecture && onOpenLecture(selectedCourse.id)}
-                       className="w-full bg-gradient-to-r from-[#1e88e5] to-[#2bd6eb] hover:from-[#1565c0] hover:to-[#1e88e5] text-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-between group"
+                       className="w-full bg-gradient-to-r from-[#0a5482] to-[#1e88e5] hover:from-[#1565c0] hover:to-[#0a5482] text-white p-6 md:p-8 rounded-[2rem] shadow-[0_10px_30px_rgba(30,136,229,0.2)] hover:shadow-[0_15px_40px_rgba(30,136,229,0.3)] transition-all flex items-center justify-between group overflow-hidden relative"
                      >
-                       <div className="flex items-center gap-4">
-                         <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center text-3xl backdrop-blur-sm group-hover:scale-110 transition-transform">📖</div>
+                       <div className="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+                       <div className="flex items-center gap-6 relative z-10">
+                         <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-4xl backdrop-blur-sm group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-inner">📖</div>
                          <div className="text-left">
-                           <h3 className="font-black text-xl tracking-wide">VÀO HỌC BÀI GIẢNG</h3>
-                           <p className="text-white/80 font-medium text-sm mt-1">Xem hệ thống giáo trình và lý thuyết của {selectedCourse.title}</p>
+                           <h3 className="font-black text-2xl tracking-wide">VÀO HỌC BÀI GIẢNG</h3>
+                           <p className="text-blue-100 font-medium text-[15px] mt-1">Xem hệ thống giáo trình và lý thuyết của {selectedCourse.title}</p>
                          </div>
                        </div>
-                       <span className="text-3xl font-black opacity-50 group-hover:opacity-100 group-hover:translate-x-2 transition-all">→</span>
+                       <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:bg-white text-white group-hover:text-[#1e88e5] transition-colors relative z-10 shadow-sm">
+                         <span className="text-2xl font-black">→</span>
+                       </div>
                      </button>
                    </div>
                 )}
@@ -490,22 +688,23 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <div className="space-y-8">
                   {currentSubFolders.length > 0 && (
                     <div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                      <h3 className="font-black text-xl text-slate-800 mb-4 ml-1">Danh mục</h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                         {paginatedFolders.map((subFolder, idx) => {
                           const childCount = folders.filter(f => f.parent_id === subFolder.id).length;
-                          const testCount = tests.filter(t => t.folder_id === subFolder.id).length;
-                          const colorClass = FOLDER_COLORS[idx % FOLDER_COLORS.length];
+                          const testCount = allTests.filter(t => t.folder_id === subFolder.id).length;
+                          const bgClass = FOLDER_COLORS[idx % FOLDER_COLORS.length];
 
                           return (
-                            <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer flex flex-col h-[200px] relative group">
-                              <div className={`${colorClass} h-[110px] flex items-center justify-center relative p-5`}>
-                                <h3 className="text-white text-xl font-black text-center leading-tight tracking-wide drop-shadow-sm group-hover:scale-105 transition-transform line-clamp-2">{subFolder.title}</h3>
+                            <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer flex flex-col h-[180px] relative group">
+                              <div className={`bg-gradient-to-br ${bgClass} h-[90px] flex items-center relative p-5 overflow-hidden`}>
+                                <div className="w-10 h-10 bg-white/50 backdrop-blur-sm rounded-xl flex items-center justify-center text-xl shadow-sm mr-3">📁</div>
+                                <h3 className="text-slate-800 text-[16px] font-black leading-tight line-clamp-2 flex-1">{subFolder.title}</h3>
                               </div>
                               <div className="flex-1 bg-white p-5 flex flex-col justify-center relative">
-                                <h4 className="font-black text-[15px] text-slate-800 mb-1 truncate">{subFolder.title}</h4>
-                                <div className="flex justify-between items-center text-slate-400 mt-1">
-                                  <p className="text-[12px] font-bold">{childCount > 0 ? `${childCount} mục con` : `${testCount} đề thi`}</p>
-                                  <span className="text-[#1e88e5] font-black group-hover:translate-x-1 transition-transform">→</span>
+                                <div className="flex justify-between items-center text-slate-500">
+                                  <p className="text-[13px] font-bold bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-100">{childCount > 0 ? `${childCount} mục con` : `${testCount} đề thi`}</p>
+                                  <span className="text-[#1e88e5] font-black group-hover:translate-x-1 transition-transform bg-blue-50 w-8 h-8 rounded-full flex items-center justify-center">→</span>
                                 </div>
                               </div>
                             </div>
@@ -517,73 +716,70 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   )}
 
                   {currentTests.length > 0 && (
-                    <div className="bg-white rounded-[1.5rem] border border-slate-200 overflow-hidden shadow-sm mt-8 animate-in fade-in zoom-in-95">
-                      <div className="bg-slate-50 px-6 py-4 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-                        <div className="relative w-full sm:w-80">
-                          <input type="text" placeholder="Tìm kiếm bài thi..." value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 font-medium text-[13px] outline-none focus:ring-2 focus:ring-[#1e88e5] bg-white" />
-                          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+                    <div className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm mt-8 animate-in fade-in zoom-in-95">
+                      <div className="bg-white px-6 py-5 border-b border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <div className="relative w-full sm:w-96">
+                          <input type="text" placeholder="Tìm kiếm bài thi..." value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-12 pr-4 py-3 rounded-2xl bg-slate-50 border-none font-medium text-[14px] outline-none focus:ring-2 focus:ring-[#1e88e5] transition-shadow" />
+                          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">🔍</span>
                         </div>
-                        <div className="w-full sm:w-48">
-                          <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="w-full px-4 py-2.5 border border-slate-300 rounded-xl outline-none focus:ring-2 focus:ring-[#1e88e5] text-[13px] font-bold text-slate-600 bg-white cursor-pointer">
+                        <div className="w-full sm:w-48 bg-slate-50 rounded-2xl px-4 py-1 border-none focus-within:ring-2 focus-within:ring-[#1e88e5] transition-shadow">
+                          <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="w-full py-2 bg-transparent outline-none text-[13px] font-bold text-slate-600 cursor-pointer appearance-none">
                             <option value="name-asc">A-Z (Tên bài)</option><option value="name-desc">Z-A (Tên bài)</option>
                             <option value="date-desc">Mới nhất trước</option><option value="date-asc">Cũ nhất trước</option>
                           </select>
                         </div>
                       </div>
 
-                      <div className="p-6 md:p-8 bg-white">
+                      <div className="p-6 md:p-8 bg-slate-50/50">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                           {paginatedTests.map(test => {
                             const inProgress = checkInProgress(test.id);
                             const isCompleted = historyData.some(h => 
                                 (h.testId && String(h.testId) === String(test.id)) || 
                                 (h.details?.test_id && String(h.details?.test_id) === String(test.id)) || 
-                                (h.details?.testId && String(h.details?.testId) === String(test.id)) ||
                                 (h.name && test.title && h.name.trim() === test.title.trim())
                             );
 
                             let statusConfig = {
-                               badge: "Sẵn sàng",
-                               badgeClass: "text-emerald-600 bg-emerald-50 border-emerald-100",
-                               btnText: "BẮT ĐẦU LÀM BÀI",
-                               btnClass: "text-[#1e88e5] bg-blue-50 group-hover:bg-[#1e88e5] group-hover:text-white",
-                               borderClass: "border-slate-100",
-                               iconClass: "bg-blue-50"
+                               progress: 0,
+                               badge: "Chưa làm",
+                               badgeClass: "text-slate-500 bg-slate-100",
+                               btnText: "Bắt đầu làm bài",
+                               btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white"
                             };
 
-                            if (inProgress) {
+                            if (isCompleted) {
                                statusConfig = {
-                                  badge: "Đang làm dở",
-                                  badgeClass: "text-amber-600 bg-amber-50 border-amber-200",
-                                  btnText: "TIẾP TỤC LÀM BÀI",
-                                  btnClass: "text-amber-600 bg-amber-50 group-hover:bg-amber-500 group-hover:text-white",
-                                  borderClass: "border-amber-100",
-                                  iconClass: "bg-amber-50"
+                                  progress: 100,
+                                  badge: "Hoàn thành",
+                                  badgeClass: "text-emerald-600 bg-emerald-100",
+                                  btnText: "Làm lại bài",
+                                  btnClass: "bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-transparent"
                                };
-                            } else if (isCompleted) {
+                            } else if (inProgress) {
                                statusConfig = {
-                                  badge: "Đã hoàn thành",
-                                  badgeClass: "text-purple-600 bg-purple-50 border-purple-200",
-                                  btnText: "LÀM LẠI ĐỀ NÀY",
-                                  btnClass: "text-purple-600 bg-purple-50 group-hover:bg-purple-600 group-hover:text-white",
-                                  borderClass: "border-purple-100",
-                                  iconClass: "bg-purple-50"
+                                  progress: 50,
+                                  badge: "Đang làm dở",
+                                  badgeClass: "text-amber-600 bg-amber-100",
+                                  btnText: "Tiếp tục bài",
+                                  btnClass: "bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-transparent"
                                };
                             }
 
                             return (
-                              <div key={test.id} onClick={() => handleStartTestClick(test)} className={`bg-white border-2 hover:border-[#1e88e5] p-5 rounded-2xl shadow-sm hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between group h-full ${statusConfig.borderClass}`}>
-                                <div>
-                                  <div className="flex justify-between items-start mb-4">
-                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner ${statusConfig.iconClass}`}>{getTestIcon(test.test_type)}</div>
-                                    <span className={`text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-widest border ${statusConfig.badgeClass}`}>{statusConfig.badge}</span>
-                                  </div>
-                                  <h3 className="font-bold text-slate-800 text-[15px] group-hover:text-[#1e88e5] transition-colors mb-3 line-clamp-2 leading-relaxed">{test.title}</h3>
-                                  <div className="flex gap-2">
-                                    <span className="text-[10px] font-black text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wider">{test.test_type}</span>
-                                  </div>
+                              <div key={test.id} onClick={() => handleStartTestClick(test)} className="bg-white border border-slate-100 p-6 rounded-3xl shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group relative overflow-hidden">
+                                <div className="absolute top-0 left-0 right-0 h-1 bg-slate-100">
+                                   <div className={`h-full transition-all duration-500 ${isCompleted ? 'bg-emerald-500' : inProgress ? 'bg-amber-500' : 'bg-transparent'}`} style={{ width: `${statusConfig.progress}%` }}></div>
                                 </div>
-                                <button className={`mt-6 w-full text-center font-bold text-[13px] py-3 rounded-xl transition-colors uppercase tracking-widest ${statusConfig.btnClass}`}>
+                                <div>
+                                  <div className="flex justify-between items-center mb-5 mt-2">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-sm">{getTestIcon(test.test_type)}</div>
+                                    <span className={`text-[10px] font-black px-3 py-1.5 rounded-lg uppercase tracking-widest ${statusConfig.badgeClass}`}>{statusConfig.badge}</span>
+                                  </div>
+                                  <h3 className="font-bold text-slate-800 text-[16px] group-hover:text-[#1e88e5] transition-colors mb-3 line-clamp-2 leading-snug">{test.title}</h3>
+                                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{test.test_type}</span>
+                                </div>
+                                <button className={`mt-6 w-full font-black text-[13px] py-3 rounded-xl transition-colors shadow-sm ${statusConfig.btnClass}`}>
                                    {statusConfig.btnText}
                                 </button>
                               </div>
@@ -591,7 +787,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           })}
                         </div>
                         {processedTests.length === 0 ? (
-                          <div className="text-center py-12 text-slate-400 font-medium">Không có bài thi nào khớp với tìm kiếm của bạn.</div>
+                          <div className="text-center py-16 text-slate-400 font-medium">Không có bài thi nào khớp với tìm kiếm của bạn.</div>
                         ) : (
                           renderPagination(testPage, totalTestPages, setTestPage)
                         )}
@@ -600,7 +796,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   )}
 
                   {currentSubFolders.length === 0 && currentTests.length === 0 && (
-                    <div className="text-center py-20 bg-white rounded-2xl border-2 border-dashed border-slate-200 text-slate-400 font-medium text-lg">📭 Thư mục này hiện đang trống.</div>
+                    <div className="text-center py-20 bg-white rounded-3xl border border-slate-100 text-slate-400 font-medium text-lg shadow-sm">📭 Thư mục này hiện đang trống.</div>
                   )}
                 </div>
               </div>
@@ -611,13 +807,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         {/* ================= TAB 2: PHÂN TÍCH & LỊCH SỬ ================= */}
         {activeTab === 'analytics' && (
           <div className="space-y-8 animate-in fade-in duration-300">
-            {/* Thanh Filter */}
-            <div className="bg-white px-6 py-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <div className="bg-white px-8 py-6 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
               <div>
                 <h2 className="text-[22px] font-black text-slate-800">Hiệu Suất Học Tập</h2>
                 <p className="text-sm text-slate-500 font-medium mt-1">Lựa chọn khóa học để xem biểu đồ và lịch sử chi tiết</p>
               </div>
-              <div className="w-full md:w-64 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors">
+              <div className="w-full md:w-64 bg-slate-50 border border-slate-100 rounded-2xl px-5 py-3 flex items-center justify-between cursor-pointer focus-within:ring-2 focus-within:ring-[#1e88e5] transition-shadow">
                 <select value={analyticsCourse} onChange={(e) => setAnalyticsCourse(e.target.value)} className="w-full bg-transparent font-bold text-[14px] text-slate-700 outline-none cursor-pointer appearance-none">
                   <option value="all">Tất cả khóa học</option>
                   {courses.length > 0 && courses.map(course => ( <option key={course.id} value={course.id}>{course.title}</option> ))}
@@ -626,10 +822,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
             </div>
 
-            {totalTestsDone === 0 ? (
-              // Trạng thái trống
-              <div className="bg-white rounded-2xl border-2 border-dashed border-slate-200 py-24 text-center shadow-sm flex flex-col items-center justify-center">
-                <div className="w-20 h-20 mb-6 flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 shadow-sm">
+            {analyticsTotalTestsDone === 0 ? (
+              <div className="bg-white rounded-[2rem] border-2 border-dashed border-slate-200 py-24 text-center shadow-sm flex flex-col items-center justify-center">
+                <div className="w-20 h-20 mb-6 flex items-center justify-center bg-slate-50 rounded-3xl border border-slate-100 shadow-sm">
                   <div className="flex items-end gap-1.5 h-10">
                     <div className="w-3 bg-emerald-200 h-6 rounded-sm"></div>
                     <div className="w-3 bg-pink-300 h-8 rounded-sm"></div>
@@ -637,60 +832,54 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </div>
                 </div>
                 <h3 className="text-xl font-black text-slate-700 mb-2">Chưa có dữ liệu làm bài</h3>
-                <p className="text-slate-500 font-medium text-[15px]">Anh hãy vào Thư viện đề, làm thử một bài test và nộp bài để hệ thống phân tích nhé!</p>
+                <p className="text-slate-500 font-medium text-[15px]">Anh/chị hãy vào Thư viện đề, làm thử một bài test và nộp bài để hệ thống phân tích nhé!</p>
               </div>
             ) : (
               <>
-                {/* 4 Ô Sparklines Cơ Bản (Áp dụng cho mọi hệ) */}
+                {/* 4 Ô Sparklines */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {/* Ô 1: Điểm trung bình */}
-                  <div className="bg-[#f8fafc] rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between">
+                  <div className="bg-[#f8fafc] rounded-[2rem] border border-slate-100 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div className="flex justify-between items-center mb-4">
-                      <div className="flex items-center gap-2"><span className="text-blue-500">📊</span><span className="font-bold text-slate-700 text-[14px]">Điểm trung bình</span></div>
-                      <span className="font-black text-blue-500 text-lg">{avgScore}</span>
+                      <div className="flex items-center gap-2"><span className="text-blue-500 text-xl">📊</span><span className="font-bold text-slate-700 text-[14px]">Điểm trung bình</span></div>
+                      <span className="font-black text-blue-500 text-2xl">{avgScore}</span>
                     </div>
                     <div className="h-16 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineScoreArr}><Line type="monotone" dataKey="v" stroke="#3b82f6" strokeWidth={3} dot={{r: 4, fill: '#3b82f6', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
                     <p className="text-[12px] text-slate-500 font-medium mt-4 leading-relaxed">{getDynamicScoreFeedback()}</p>
                   </div>
 
-                  {/* Ô 2: Bài hoàn thành */}
-                  <div className="bg-[#f0fdf4] rounded-2xl border border-emerald-100 shadow-sm p-5 flex flex-col justify-between">
+                  <div className="bg-[#f0fdf4] rounded-[2rem] border border-emerald-50 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div className="flex justify-between items-center mb-4">
-                      <div className="flex items-center gap-2"><span className="text-emerald-500">📝</span><span className="font-bold text-slate-700 text-[14px]">Bài hoàn thành</span></div>
-                      <span className="font-black text-emerald-500 text-lg">{totalTestsDone}</span>
+                      <div className="flex items-center gap-2"><span className="text-emerald-500 text-xl">📝</span><span className="font-bold text-slate-700 text-[14px]">Bài hoàn thành</span></div>
+                      <span className="font-black text-emerald-500 text-2xl">{analyticsTotalTestsDone}</span>
                     </div>
                     <div className="h-16 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineCompletedArr}><Line type="monotone" dataKey="v" stroke="#10b981" strokeWidth={3} dot={{r: 4, fill: '#10b981', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
                     <p className="text-[12px] text-slate-500 font-medium mt-4 leading-relaxed">{getDynamicCompleteFeedback()}</p>
                   </div>
 
-                  {/* Ô 3: Lượt làm bài */}
-                  <div className="bg-[#fdf4ff] rounded-2xl border border-fuchsia-100 shadow-sm p-5 flex flex-col justify-between">
+                  <div className="bg-[#fdf4ff] rounded-[2rem] border border-fuchsia-50 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div className="flex justify-between items-center mb-4">
-                      <div className="flex items-center gap-2"><span className="text-fuchsia-500">🔄</span><span className="font-bold text-slate-700 text-[14px]">Lượt làm bài</span></div>
-                      <span className="font-black text-fuchsia-500 text-lg">{totalTestsDone}</span>
+                      <div className="flex items-center gap-2"><span className="text-fuchsia-500 text-xl">🔄</span><span className="font-bold text-slate-700 text-[14px]">Lượt làm bài</span></div>
+                      <span className="font-black text-fuchsia-500 text-2xl">{analyticsTotalTestsDone}</span>
                     </div>
                     <div className="h-16 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineAttemptsArr}><Line type="monotone" dataKey="v" stroke="#d946ef" strokeWidth={3} dot={{r: 4, fill: '#d946ef', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
                     <p className="text-[12px] text-slate-500 font-medium mt-4 leading-relaxed">Việc ôn tập và làm lại đề cũ giúp củng cố kiến thức cực kỳ hiệu quả.</p>
                   </div>
 
-                  {/* Ô 4: Thời gian học */}
-                  <div className="bg-[#fff7ed] rounded-2xl border border-orange-100 shadow-sm p-5 flex flex-col justify-between">
+                  <div className="bg-[#fff7ed] rounded-[2rem] border border-orange-50 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div className="flex justify-between items-center mb-4">
-                      <div className="flex items-center gap-2"><span className="text-orange-500">⏱️</span><span className="font-bold text-slate-700 text-[14px]">Thời gian học</span></div>
-                      <span className="font-black text-orange-500 text-lg">{totalTimeHours}h</span>
+                      <div className="flex items-center gap-2"><span className="text-orange-500 text-xl">⏱️</span><span className="font-bold text-slate-700 text-[14px]">Thời gian học</span></div>
+                      <span className="font-black text-orange-500 text-2xl">{analyticsTotalTimeHours}h</span>
                     </div>
                     <div className="h-16 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineTimeArr}><Line type="monotone" dataKey="v" stroke="#f97316" strokeWidth={3} dot={{r: 4, fill: '#f97316', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
                     <p className="text-[12px] text-slate-500 font-medium mt-4 leading-relaxed">Giờ bay tích lũy càng cao, kỹ năng giải đề của bạn sẽ càng phản xạ nhanh hơn.</p>
                   </div>
                 </div>
 
-                {/* BIỂU ĐỒ NÂNG CAO (CHỈ HIỂN THỊ KHI CHỌN KHÓA HỆ IELTS) */}
+                {/* BIỂU ĐỒ IELTS NÂNG CAO */}
                 {isIeltsAnalytics && ieltsHistory.length > 0 && (
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 animate-in slide-in-from-bottom-4">
-                     
-                     {/* Biểu đồ Line - 4 Kỹ năng */}
-                     <div className="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200 shadow-sm">
-                        <div className="flex justify-between items-center mb-6">
+                     <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                        <div className="flex justify-between items-center mb-8">
                            <h3 className="font-black text-lg text-slate-800">📈 Tiến độ Band Score 4 kỹ năng</h3>
                         </div>
                         <div className="h-[280px] w-full">
@@ -699,7 +888,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                                  <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12, fontWeight: 600}} dy={10} />
                                  <YAxis domain={[0, 9]} ticks={[0, 3, 5, 6, 7, 8, 9]} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12, fontWeight: 600}} />
-                                 <RechartsTooltip contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', fontWeight: 'bold' }} />
+                                 <RechartsTooltip contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', fontWeight: 'bold' }} />
                                  <Legend iconType="circle" verticalAlign="bottom" height={36} wrapperStyle={{ paddingTop: '20px', fontSize: '13px', fontWeight: 'bold' }} />
                                  <Line type="monotone" dataKey="listening" name="Listening" stroke="#10b981" strokeWidth={3} activeDot={{ r: 6 }} dot={{r:4, strokeWidth:2}} connectNulls />
                                  <Line type="monotone" dataKey="reading" name="Reading" stroke="#3b82f6" strokeWidth={3} activeDot={{ r: 6 }} dot={{r:4, strokeWidth:2}} connectNulls />
@@ -710,9 +899,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         </div>
                      </div>
 
-                     {/* Biểu đồ Bar - Độ chính xác theo dạng bài */}
-                     <div className="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200 shadow-sm">
-                        <div className="flex justify-between items-center mb-6">
+                     <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                        <div className="flex justify-between items-center mb-8">
                            <h3 className="font-black text-lg text-slate-800">🎯 Phân tích theo Dạng bài (L & R)</h3>
                         </div>
                         {qTypeChartData.length > 0 ? (
@@ -722,8 +910,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                                     <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 11, fontWeight: 600}} dy={10} interval={0} angle={-15} textAnchor="end" height={60} />
                                     <YAxis domain={[0, 100]} ticks={[0, 20, 40, 60, 80, 100]} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12, fontWeight: 600}} tickFormatter={(v)=>`${v}%`} />
-                                    <RechartsTooltip cursor={{fill: '#f1f5f9'}} contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', fontWeight: 'bold' }} />
-                                    <Bar dataKey="accuracy" name="Tỷ lệ Đúng (%)" radius={[4, 4, 0, 0]}>
+                                    <RechartsTooltip cursor={{fill: '#f1f5f9'}} contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', fontWeight: 'bold' }} />
+                                    <Bar dataKey="accuracy" name="Tỷ lệ Đúng (%)" radius={[6, 6, 0, 0]}>
                                        {qTypeChartData.map((entry, index) => (
                                           <Cell key={`cell-${index}`} fill={entry.accuracy >= 70 ? '#10b981' : entry.accuracy >= 50 ? '#f59e0b' : '#ef4444'} />
                                        ))}
@@ -738,38 +926,40 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </div>
                 )}
 
-                {/* Bảng Lịch sử làm bài có Cột Ngày & Nút Xem chi tiết */}
-                <div className="mt-8">
-                  <h3 className="font-black text-lg text-slate-800 mb-4">Lịch sử làm bài kiểm tra</h3>
-                  <div className="bg-[#f8fafc] rounded-2xl border border-slate-200 overflow-hidden">
-                    <table className="w-full text-left border-collapse">
+                {/* Bảng Lịch sử làm bài */}
+                <div className="mt-10 bg-white rounded-[2rem] border border-slate-100 shadow-sm overflow-hidden">
+                  <div className="px-8 py-6 border-b border-slate-100">
+                     <h3 className="font-black text-xl text-slate-800">Lịch sử làm bài kiểm tra</h3>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse min-w-[800px]">
                       <thead>
-                        <tr className="border-b border-slate-200 text-[13px] text-slate-600 bg-slate-50/50 uppercase tracking-widest">
-                          <th className="px-6 py-4 font-bold w-2/5">Tên bài kiểm tra</th>
-                          <th className="px-6 py-4 font-bold text-center">Ngày làm bài</th>
-                          <th className="px-6 py-4 font-bold text-center">Điểm số</th>
-                          <th className="px-6 py-4 font-bold text-right">Xem chi tiết</th>
+                        <tr className="border-b border-slate-100 text-[13px] text-slate-500 bg-slate-50/50 uppercase tracking-widest">
+                          <th className="px-8 py-5 font-bold w-2/5">Tên bài kiểm tra</th>
+                          <th className="px-8 py-5 font-bold text-center">Ngày làm bài</th>
+                          <th className="px-8 py-5 font-bold text-center">Điểm số</th>
+                          <th className="px-8 py-5 font-bold text-right">Thao tác</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-slate-100">
+                      <tbody className="divide-y divide-slate-50">
                         {processedHistory.map(history => (
-                          <tr key={history.id} className="hover:bg-white transition-colors group">
-                            <td className="px-6 py-5">
-                              <div className="font-bold text-[14px] text-slate-800 mb-1">{history.name}</div>
+                          <tr key={history.id} className="hover:bg-slate-50/50 transition-colors group">
+                            <td className="px-8 py-6">
+                              <div className="font-bold text-[15px] text-slate-800 mb-1.5">{history.name}</div>
                               <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wider">{history.subject}</span>
                             </td>
-                            <td className="px-6 py-5 text-center">
-                              <div className="font-bold text-[13px] text-slate-700">{formatDate(history.date).split(' ')[0]}</div>
-                              <div className="text-[11px] font-medium text-slate-400">{formatDate(history.date).split(' ')[1]}</div>
+                            <td className="px-8 py-6 text-center">
+                              <div className="font-bold text-[14px] text-slate-700">{formatDate(history.date).split(' ')[0]}</div>
+                              <div className="text-[12px] font-medium text-slate-400 mt-0.5">{formatDate(history.date).split(' ')[1]}</div>
                             </td>
-                            <td className="px-6 py-5 text-center">
-                              <span className={`inline-flex items-center justify-center text-white px-4 py-1.5 rounded-full text-[13px] font-black shadow-sm ${history.scoreObj.value > 60 || parseFloat(history.details?.bandScore) >= 6.0 ? 'bg-[#10b981]' : 'bg-amber-500'}`}>
+                            <td className="px-8 py-6 text-center">
+                              <span className={`inline-flex items-center justify-center text-white px-5 py-2 rounded-xl text-[14px] font-black shadow-sm ${history.scoreObj.value > 60 || parseFloat(history.details?.bandScore) >= 6.0 ? 'bg-emerald-500' : 'bg-amber-500'}`}>
                                 {history.details?.bandScore ? `Band ${history.details.bandScore}` : `${history.scoreObj.value} điểm`}
                               </span>
                             </td>
-                            <td className="px-6 py-5 text-right">
-                              <button onClick={() => setViewingHistoryDetail(history)} className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 font-bold px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-[12px] uppercase tracking-wider">
-                                👁️ Chi tiết
+                            <td className="px-8 py-6 text-right">
+                              <button onClick={() => setViewingHistoryDetail(history)} className="inline-flex items-center gap-2 bg-white border border-slate-200 text-slate-600 font-bold px-5 py-2.5 rounded-xl hover:border-blue-500 hover:text-blue-600 shadow-sm transition-all text-[12px] uppercase tracking-wider">
+                                👁️ Xem chi tiết
                               </button>
                             </td>
                           </tr>
@@ -783,39 +973,40 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         )}
 
-        {/* ================= TAB 3: TÀI KHOẢN ================= */}
+        {/* TAB 3: TÀI KHOẢN */}
         {activeTab === 'profile' && (
-          <div className="max-w-2xl mx-auto mt-8 animate-in fade-in duration-300">
-            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
-              <div className="w-24 h-24 rounded-full bg-[#0a5482] text-white flex items-center justify-center font-black text-4xl mx-auto mb-4 shadow-md border-4 border-white ring-4 ring-blue-50">
+          <div className="max-w-2xl mx-auto mt-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
+            <div className="bg-white p-10 rounded-[2rem] border border-slate-100 shadow-xl text-center">
+              <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-[#0a5482] to-[#1e88e5] text-white flex items-center justify-center font-black text-5xl mx-auto mb-6 shadow-lg border-4 border-white ring-4 ring-blue-50">
                 {displayUserInitial}
               </div>
-              <h2 className="text-2xl font-black text-slate-800">{displayUserName}</h2>
-              <p className="text-slate-500 font-medium mb-8">
-                {userProfile?.role === 'admin' ? 'Quản trị viên TonyEnglish' : 'Học viên TonyEnglish'}
+              <h2 className="text-3xl font-black text-slate-800 mb-1">{displayUserName}</h2>
+              <p className="text-slate-500 font-medium mb-10 text-lg">
+                {userProfile?.role === 'admin' ? 'Quản trị viên hệ thống' : 'Học viên TonyEnglish'}
               </p>
-              <div className="space-y-5 border-t border-slate-100 pt-8 text-left">
-                <h3 className="font-black text-lg text-slate-800 mb-2">🔐 Cấu hình thông tin</h3>
-                <div className="space-y-1">
-                  <label className="text-[13px] font-bold text-slate-500 uppercase">Họ và tên</label>
+              
+              <div className="space-y-6 border-t border-slate-100 pt-8 text-left bg-slate-50/50 p-8 rounded-3xl">
+                <h3 className="font-black text-xl text-slate-800 mb-4">🔐 Cấu hình thông tin</h3>
+                <div className="space-y-2">
+                  <label className="text-[13px] font-bold text-slate-500 uppercase ml-1">Họ và tên</label>
                   <input 
                     type="text" 
                     value={newFullName} 
                     onChange={e => setNewFullName(e.target.value)} 
-                    className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-[#1e88e5] outline-none" 
+                    className="w-full bg-white border border-slate-200 rounded-2xl px-5 py-3.5 font-medium focus:ring-2 focus:ring-[#1e88e5] outline-none shadow-sm transition-shadow" 
                     placeholder="Nhập họ và tên..."
                   />
                 </div>
-                <div className="space-y-1">
-                  <label className="text-[13px] font-bold text-slate-500 uppercase">Email đăng nhập</label>
-                  <input type="email" defaultValue={currentUser?.email || ""} disabled className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 font-medium text-slate-700 outline-none" />
+                <div className="space-y-2">
+                  <label className="text-[13px] font-bold text-slate-500 uppercase ml-1">Email đăng nhập</label>
+                  <input type="email" defaultValue={currentUser?.email || ""} disabled className="w-full bg-slate-100 border border-slate-200 rounded-2xl px-5 py-3.5 font-medium text-slate-500 outline-none cursor-not-allowed" />
                 </div>
-                <div className="space-y-1">
-                  <label className="text-[13px] font-bold text-slate-500 uppercase">Mật khẩu mới (Nếu muốn đổi)</label>
-                  <input type="password" placeholder="••••••••" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} className="w-full border border-slate-300 rounded-xl px-4 py-3 font-medium focus:ring-2 focus:ring-[#1e88e5] outline-none" />
+                <div className="space-y-2">
+                  <label className="text-[13px] font-bold text-slate-500 uppercase ml-1">Mật khẩu mới (Nếu muốn đổi)</label>
+                  <input type="password" placeholder="••••••••" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} className="w-full bg-white border border-slate-200 rounded-2xl px-5 py-3.5 font-medium focus:ring-2 focus:ring-[#1e88e5] outline-none shadow-sm transition-shadow" />
                 </div>
-                <button onClick={handleUpdateProfile} disabled={isUpdatingProfile} className="bg-[#1e88e5] hover:bg-[#1565c0] disabled:bg-slate-300 text-white font-bold px-6 py-3 rounded-xl transition shadow-md w-full mt-4">
-                  {isUpdatingProfile ? 'Đang cập nhật...' : 'Cập nhật tài khoản'}
+                <button onClick={handleUpdateProfile} disabled={isUpdatingProfile} className="bg-gradient-to-r from-[#0a5482] to-[#1e88e5] hover:from-[#1565c0] hover:to-[#0a5482] disabled:from-slate-300 disabled:to-slate-400 text-white font-black px-6 py-4 rounded-2xl transition-all shadow-lg hover:shadow-xl w-full mt-4 text-[15px]">
+                  {isUpdatingProfile ? 'ĐANG CẬP NHẬT...' : 'CẬP NHẬT TÀI KHOẢN'}
                 </button>
               </div>
             </div>
@@ -824,27 +1015,27 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
       </main>
 
-      {/* POPUP XEM CHI TIẾT LỊCH SỬ & LÀM LẠI */}
+      {/* POPUP CHI TIẾT LỊCH SỬ */}
       {viewingHistoryDetail && (
-        <div className="fixed inset-0 bg-slate-900/70 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl w-full max-w-xl shadow-2xl overflow-hidden animate-in zoom-in-95">
-             <div className="bg-slate-50 px-8 py-5 border-b border-slate-200 flex justify-between items-center">
+        <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-[2rem] w-full max-w-xl shadow-2xl overflow-hidden animate-in zoom-in-95">
+             <div className="bg-slate-50/80 px-8 py-6 border-b border-slate-100 flex justify-between items-center">
                 <h3 className="font-black text-slate-800 text-lg uppercase tracking-widest">📝 Bảng Kết Quả</h3>
-                <button onClick={() => setViewingHistoryDetail(null)} className="text-slate-400 hover:text-red-500 text-2xl font-bold transition-colors">&times;</button>
+                <button onClick={() => setViewingHistoryDetail(null)} className="w-10 h-10 rounded-full bg-white border border-slate-200 text-slate-400 hover:text-red-500 hover:border-red-200 hover:bg-red-50 text-xl font-bold flex items-center justify-center transition-colors">&times;</button>
              </div>
              
              <div className="p-8">
-                <div className="text-center mb-8 border-b-2 border-dashed border-slate-200 pb-8">
+                <div className="text-center mb-8 border-b-2 border-dashed border-slate-100 pb-8">
                    <h2 className="text-2xl font-black text-slate-800 mb-2">{viewingHistoryDetail.name}</h2>
-                   <p className="text-slate-500 font-medium text-sm mb-6">Nộp lúc: {formatDate(viewingHistoryDetail.date)}</p>
+                   <p className="text-slate-500 font-medium text-sm mb-8">Nộp lúc: {formatDate(viewingHistoryDetail.date)}</p>
                    
                    <div className="flex justify-center gap-6">
-                      <div className="bg-blue-50 border border-blue-200 px-6 py-4 rounded-2xl">
-                         <p className="text-[10px] font-black uppercase text-blue-500 tracking-widest mb-1">Thời gian làm</p>
+                      <div className="bg-blue-50/50 border border-blue-100 px-8 py-5 rounded-3xl">
+                         <p className="text-[11px] font-black uppercase text-blue-500 tracking-widest mb-1.5">Thời gian làm</p>
                          <p className="text-2xl font-black text-blue-700">{viewingHistoryDetail.timeSpent} <span className="text-sm font-bold">phút</span></p>
                       </div>
-                      <div className="bg-emerald-50 border border-emerald-200 px-8 py-4 rounded-2xl">
-                         <p className="text-[10px] font-black uppercase text-emerald-500 tracking-widest mb-1">Kết quả chung</p>
+                      <div className="bg-emerald-50/50 border border-emerald-100 px-10 py-5 rounded-3xl">
+                         <p className="text-[11px] font-black uppercase text-emerald-500 tracking-widest mb-1.5">Kết quả chung</p>
                          <p className="text-3xl font-black text-emerald-600">
                            {viewingHistoryDetail.details?.bandScore ? `Band ${viewingHistoryDetail.details.bandScore}` : viewingHistoryDetail.scoreObj.display}
                          </p>
@@ -854,17 +1045,17 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                 {viewingHistoryDetail.details?.questionTypeStats && Object.keys(viewingHistoryDetail.details.questionTypeStats).length > 0 && (
                    <div className="mb-8">
-                      <h4 className="font-bold text-slate-700 text-sm uppercase tracking-widest mb-4">Độ chính xác từng dạng bài:</h4>
-                      <div className="space-y-3 max-h-[150px] overflow-y-auto custom-scrollbar pr-2">
+                      <h4 className="font-bold text-slate-700 text-[13px] uppercase tracking-widest mb-4 ml-1">Độ chính xác từng dạng bài:</h4>
+                      <div className="space-y-3 max-h-[180px] overflow-y-auto custom-scrollbar pr-3">
                          {Object.entries(viewingHistoryDetail.details.questionTypeStats).map(([qType, stats]: any) => {
                             const acc = Math.round((stats.correct / stats.total) * 100);
                             return (
-                               <div key={qType} className="flex items-center justify-between bg-slate-50 px-4 py-2 rounded-lg border border-slate-100">
-                                  <span className="font-bold text-[13px] text-slate-600 truncate w-1/2">{qType}</span>
-                                  <div className="w-1/3 bg-slate-200 h-2 rounded-full overflow-hidden">
-                                     <div className={`h-full ${acc >= 70 ? 'bg-emerald-500' : acc >= 50 ? 'bg-amber-500' : 'bg-red-500'}`} style={{ width: `${acc}%` }}></div>
+                               <div key={qType} className="flex items-center justify-between bg-slate-50 px-5 py-3.5 rounded-2xl border border-slate-100">
+                                  <span className="font-bold text-[13px] text-slate-700 truncate w-1/2">{qType}</span>
+                                  <div className="w-1/3 bg-slate-200 h-2.5 rounded-full overflow-hidden">
+                                     <div className={`h-full rounded-full ${acc >= 70 ? 'bg-emerald-500' : acc >= 50 ? 'bg-amber-500' : 'bg-red-500'}`} style={{ width: `${acc}%` }}></div>
                                   </div>
-                                  <span className="font-black text-[13px] text-slate-700 w-12 text-right">{acc}%</span>
+                                  <span className="font-black text-[13px] text-slate-800 w-12 text-right">{acc}%</span>
                                </div>
                             )
                          })}
@@ -872,7 +1063,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                    </div>
                 )}
 
-                <button onClick={() => handleRetakeFromHistory(viewingHistoryDetail)} className="w-full bg-[#1e88e5] hover:bg-[#1565c0] text-white font-black py-4 rounded-xl shadow-lg transition-transform active:scale-95 uppercase tracking-widest flex items-center justify-center gap-2">
+                <button onClick={() => handleRetakeFromHistory(viewingHistoryDetail)} className="w-full bg-gradient-to-r from-[#0a5482] to-[#1e88e5] hover:from-[#1565c0] hover:to-[#0a5482] text-white font-black py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all active:scale-95 uppercase tracking-widest flex items-center justify-center gap-3 text-[14px]">
                    🔄 Làm lại đề thi này ngay
                 </button>
              </div>
@@ -880,24 +1071,24 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       )}
 
-      {/* POPUP CHỌN HÌNH THỨC THI IELTS (ĐÃ TỐI ƯU PERFORMANCE) */}
+      {/* POPUP CHỌN HÌNH THỨC THI IELTS */}
       {showModeSelection && testToStart && (
-        <div className="fixed inset-0 bg-slate-900/70 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl w-full max-w-lg shadow-2xl p-8 animate-in zoom-in-95">
-            <h2 className="text-2xl font-black text-slate-800 mb-2">{testToStart.title}</h2>
-            <p className="text-slate-500 font-medium mb-8">Vui lòng chọn hình thức thi bạn muốn tham gia:</p>
+        <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-[2rem] w-full max-w-lg shadow-2xl p-10 animate-in zoom-in-95 duration-200">
+            <h2 className="text-2xl font-black text-slate-800 mb-2 leading-tight">{testToStart.title}</h2>
+            <p className="text-slate-500 font-medium mb-8 text-[15px]">Vui lòng chọn hình thức thi bạn muốn tham gia:</p>
             
             <div className="space-y-4">
-              <button onClick={() => handleConfirmMode('computer')} className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-blue-400 hover:bg-blue-50/50 transition-colors duration-200 text-left group">
-                <div className="w-12 h-12 shrink-0 rounded-full bg-blue-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-200 ease-out will-change-transform">💻</div>
-                <div><h3 className="font-bold text-[16px] text-slate-800">Thi trên máy tính (Computer-delivered)</h3><p className="text-[13px] text-slate-500 mt-1">Giao diện chuẩn thi máy, làm bài trực tiếp trên màn hình.</p></div>
+              <button onClick={() => handleConfirmMode('computer')} className="w-full flex items-center gap-5 p-6 rounded-3xl border-2 border-slate-100 hover:border-blue-400 hover:bg-blue-50/50 transition-all duration-300 text-left group shadow-sm hover:shadow-md">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-blue-100 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">💻</div>
+                <div><h3 className="font-black text-[16px] text-slate-800 group-hover:text-[#1e88e5] transition-colors">Thi trên máy tính</h3><p className="text-[13px] text-slate-500 mt-1 font-medium">Làm bài trực tiếp trên màn hình</p></div>
               </button>
-              <button onClick={() => handleConfirmMode('paper')} className="w-full flex items-center gap-4 p-5 rounded-2xl border-2 border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/50 transition-colors duration-200 text-left group">
-                <div className="w-12 h-12 shrink-0 rounded-full bg-emerald-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-200 ease-out will-change-transform">📝</div>
-                <div><h3 className="font-bold text-[16px] text-slate-800">Thi trên giấy (Paper-based)</h3><p className="text-[13px] text-slate-500 mt-1">Giao diện mô phỏng phiếu trả lời, kết hợp đề thi giấy PDF.</p></div>
+              <button onClick={() => handleConfirmMode('paper')} className="w-full flex items-center gap-5 p-6 rounded-3xl border-2 border-slate-100 hover:border-emerald-400 hover:bg-emerald-50/50 transition-all duration-300 text-left group shadow-sm hover:shadow-md">
+                <div className="w-14 h-14 shrink-0 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">📝</div>
+                <div><h3 className="font-black text-[16px] text-slate-800 group-hover:text-emerald-600 transition-colors">Thi trên giấy</h3><p className="text-[13px] text-slate-500 mt-1 font-medium">Làm trên giấy, xem đề PDF</p></div>
               </button>
             </div>
-            <button onClick={() => setShowModeSelection(false)} className="mt-8 w-full py-3 font-bold text-slate-400 hover:bg-slate-50 rounded-xl transition-colors">Hủy bỏ</button>
+            <button onClick={() => setShowModeSelection(false)} className="mt-8 w-full py-4 font-black text-slate-400 hover:text-slate-600 hover:bg-slate-50 rounded-2xl transition-colors">HỦY BỎ</button>
           </div>
         </div>
       )}

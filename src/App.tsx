@@ -10,7 +10,7 @@ import AdminLogin from './AdminLogin';
 import IeltsWriting from './IeltsWriting';
 import IeltsSpeaking from './IeltsSpeaking';
 import SplitScreenTest from './SplitScreenTest';
-import LectureViewer from './LectureViewer'; // BỔ SUNG IMPORT BÀI GIẢNG
+import LectureViewer from './LectureViewer'; 
 
 export default function App() {
   const getInitialView = () => {
@@ -31,6 +31,11 @@ export default function App() {
     return savedTest ? JSON.parse(savedTest) : null;
   });
 
+  // --- MỚI: State lưu mã khóa học khi bấm vào học bài giảng (Chống văng khi F5) ---
+  const [activeCourseId, setActiveCourseId] = useState<string | null>(() => {
+    return sessionStorage.getItem('lms_active_course_id') || null;
+  });
+
   useEffect(() => {
     if (currentView === 'admin' || currentView === 'admin-login') {
       window.history.pushState(null, '', '/admin');
@@ -47,8 +52,6 @@ export default function App() {
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      // ĐÃ FIX: Chỉ đẩy về Portal nếu người dùng đang đứng ở ngoài Home.
-      // Nếu đang trong phòng thi (computer/paper), kệ cho họ thi tiếp!
       if (event === 'SIGNED_IN') {
         setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
       } else if (event === 'SIGNED_OUT') {
@@ -56,6 +59,7 @@ export default function App() {
         // Xóa sạch bộ nhớ đệm khi đăng xuất
         sessionStorage.removeItem('lms_current_view');
         sessionStorage.removeItem('lms_current_test');
+        sessionStorage.removeItem('lms_active_course_id');
       }
     });
 
@@ -71,23 +75,19 @@ export default function App() {
   // Hàm vào phòng thi kèm lưu đề thi vào bộ nhớ đệm
   const handleStartTest = (type: string, data: any) => {
     setCurrentTestData(data);
-    setCurrentView(type);
-    sessionStorage.setItem('lms_current_view', type);
+    handleNavigate(type);
     sessionStorage.setItem('lms_current_test', JSON.stringify(data));
+  };
+
+  // Hàm mở bài giảng kèm lưu lại Khóa học đang học
+  const handleOpenLecture = (courseId: string) => {
+    setActiveCourseId(courseId);
+    sessionStorage.setItem('lms_active_course_id', courseId);
+    handleNavigate('lecture');
   };
 
   return (
     <React.Fragment>
-      
-      {/* NÚT TEST TẠM THỜI (Góc dưới bên phải) CHO BÀI GIẢNG */}
-      {(currentView === 'home' || currentView === 'portal') && (
-        <button
-          onClick={() => handleNavigate('lecture')}
-          className="fixed bottom-8 right-8 bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full shadow-2xl z-50 transition-transform active:scale-95"
-        >
-          🚀 Test Giao diện Bài Giảng
-        </button>
-      )}
 
       {currentView === 'admin-login' && (
         <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />
@@ -101,6 +101,7 @@ export default function App() {
         <StudentPortal 
           onNavigate={handleNavigate} 
           onStartTest={handleStartTest} 
+          onOpenLecture={handleOpenLecture}
         />
       )}
       
@@ -146,8 +147,11 @@ export default function App() {
       )}
 
       {/* MÀN HÌNH BÀI GIẢNG (LECTURE) */}
-      {currentView === 'lecture' && (
-        <LectureViewer onBack={() => handleNavigate('portal')} />
+      {currentView === 'lecture' && activeCourseId && (
+        <LectureViewer 
+          courseId={activeCourseId}
+          onBack={() => handleNavigate('portal')} 
+        />
       )}
 
     </React.Fragment>

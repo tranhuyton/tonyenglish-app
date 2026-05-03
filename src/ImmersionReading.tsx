@@ -43,7 +43,6 @@ export default function ImmersionReading({ onBack }: { onBack?: () => void }) {
     if (!selection || selection.toString().trim() === '') return;
 
     const word = selection.toString().trim();
-    // Bỏ qua nếu bôi đen cả 1 đoạn dài (chứa dấu cách)
     if (word.includes(' ')) return;
 
     const range = selection.getRangeAt(0);
@@ -53,14 +52,13 @@ export default function ImmersionReading({ onBack }: { onBack?: () => void }) {
       show: true,
       x: rect.left + rect.width / 2,
       y: rect.top - 10,
-      word: word.replace(/[.,;!?]/g, '') // Lọc bỏ dấu câu thừa
+      word: word.replace(/[.,;!?]/g, '') 
     });
     setNotePopup(prev => ({ ...prev, show: false }));
   };
 
   // THUẬT TOÁN 2: BÔI ĐEN HIỆN THANH GHI CHÚ
   const handleMouseUp = (e: React.MouseEvent) => {
-    // Tránh xung đột với Double Click
     setTimeout(() => {
       const selection = window.getSelection();
       if (!selection || selection.toString().trim() === '') {
@@ -68,7 +66,6 @@ export default function ImmersionReading({ onBack }: { onBack?: () => void }) {
       }
 
       const text = selection.toString().trim();
-      // Chỉ hiện thanh Highlight khi bôi đen cụm từ (có dấu cách)
       if (text.includes(' ') && !dictPopup.show) {
         const range = selection.getRangeAt(0);
         const rect = range.getBoundingClientRect();
@@ -83,130 +80,128 @@ export default function ImmersionReading({ onBack }: { onBack?: () => void }) {
     }, 50);
   };
 
-  // Giả lập Dữ liệu từ điển API
   const mockTranslate = (word: string) => {
     const dict: Record<string, string> = {
       'sustainable': 'bền vững, thân thiện với môi trường',
       'paradigm': 'mô hình, hệ chuẩn',
       'unprecedented': 'chưa từng có tiền lệ',
-      'cohesion': 'sự gắn kết, sự liên kết',
+      'cohesion': 'sự gắn kết, liên kết',
       'mitigate': 'giảm nhẹ, làm dịu bớt',
-      'metamorphosis': 'sự lột xác, sự biến đổi hoàn toàn'
+      'metamorphosis': 'sự lột xác, sự biến đổi hoàn toàn',
+      'quintessential': 'tinh túy, tinh hoa, ví dụ điển hình',
+      'degradation': 'sự suy thoái, sự giảm sút',
+      'utopian': 'không tưởng, hoàn hảo đến mức không thực tế'
     };
     const lowerWord = word.toLowerCase();
     return dict[lowerWord] || 'Đang tải dữ liệu từ điển API...';
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFCF8] font-sans text-slate-800 relative selection:bg-blue-200">
+    <div className="min-h-screen bg-[#FAFAFA] font-serif text-slate-800 relative selection:bg-amber-200">
       
       {/* THANH ĐIỀU HƯỚNG BÊN TRÊN */}
-      <header className="fixed top-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md border-b border-slate-200 flex items-center px-6 z-40 transition-all">
-        <div className="max-w-4xl w-full mx-auto flex items-center justify-between">
-          <button onClick={onBack} className="flex items-center gap-2 text-slate-500 hover:text-[#0a5482] font-bold text-sm transition-colors px-4 py-2 rounded-full hover:bg-slate-100">
-            <span className="text-lg leading-none">←</span> Quay lại
+      <header className="fixed top-0 left-0 right-0 h-[70px] bg-white/95 backdrop-blur-sm border-b border-slate-200 flex items-center px-6 z-40 transition-all shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+        <div className="max-w-[800px] w-full mx-auto flex items-center justify-between">
+          <button onClick={onBack} className="flex items-center gap-2 text-slate-500 hover:text-[#1e88e5] font-sans font-bold text-[14px] transition-colors px-4 py-2 rounded-xl hover:bg-slate-50">
+            <span className="text-xl leading-none">←</span> Quay lại
           </button>
           
-          <div className="flex gap-3">
-            <button className="w-10 h-10 rounded-full flex items-center justify-center text-slate-400 hover:bg-slate-100 hover:text-amber-500 transition-colors tooltip-trigger" title="Đổi cỡ chữ">A<span className="text-[10px]">a</span></button>
-            <button className="w-10 h-10 rounded-full flex items-center justify-center text-slate-400 hover:bg-slate-100 hover:text-[#0a5482] transition-colors tooltip-trigger" title="Nghe Audio (AI Đọc)">🎧</button>
+          <div className="flex gap-2">
+            <button className="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 hover:text-amber-600 transition-colors font-sans" title="Đổi cỡ chữ">A<span className="text-[10px]">a</span></button>
+            <button className="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 hover:text-[#1e88e5] transition-colors" title="Nghe Audio (AI Đọc)">🎧</button>
           </div>
         </div>
       </header>
 
-      {/* KHU VỰC ĐỌC BÀI (DISTRACTION-FREE) */}
-      <main className="pt-32 pb-32 px-6">
-        <article className="max-w-2xl mx-auto">
+      {/* KHU VỰC ĐỌC BÀI */}
+      <main className="pt-32 pb-40 px-6">
+        <article className="max-w-[700px] mx-auto">
           {/* Tiêu đề bài báo */}
-          <header className="mb-12 text-center sm:text-left">
-            <div className="flex items-center justify-center sm:justify-start gap-3 mb-6">
-              <span className="px-3 py-1 bg-[#0a5482] text-white text-[11px] font-black uppercase tracking-widest rounded-md">{article.category}</span>
-              <span className="text-sm font-medium text-slate-400">{article.date}</span>
+          <header className="mb-12">
+            <div className="flex items-center gap-3 mb-6 font-sans">
+              <span className="px-3 py-1 bg-amber-100 text-amber-800 text-[11px] font-black uppercase tracking-widest rounded-md">{article.category}</span>
+              <span className="text-[13px] font-medium text-slate-400">{article.date}</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight mb-6">
+            <h1 className="text-4xl lg:text-5xl font-black text-slate-900 leading-[1.15] tracking-tight mb-8">
               {article.title}
             </h1>
-            <div className="flex items-center justify-center sm:justify-start gap-4 text-sm text-slate-500 font-medium border-t border-slate-200 pt-6">
+            <div className="flex items-center gap-6 text-[14px] text-slate-500 font-sans font-medium border-t border-slate-200 pt-6">
               <span className="flex items-center gap-2">⏱️ 5 min read</span>
               <span className="flex items-center gap-2">👀 1.2k views</span>
             </div>
           </header>
 
-          {/* Nội dung bài báo - ĐÃ FIX LỖI __html VÀ CSS CĂN BẢN */}
+          {/* Nội dung bài báo */}
           <div 
             ref={containerRef}
             onDoubleClick={handleDoubleClick}
             onMouseUp={handleMouseUp}
-            className="font-serif text-[19px] leading-[1.9] text-[#333333] [&>p]:mb-6 [&>p>strong]:font-black [&>p>strong]:text-black [&>p>em]:text-[#0a5482]"
+            className="text-[20px] leading-[1.9] text-[#2c3e50] tracking-wide [&>p]:mb-8 [&>p>strong]:font-black [&>p>strong]:text-black [&>p>em]:text-[#1e88e5] [&>p>em]:font-medium"
             dangerouslySetInnerHTML={{ __html: article.content }} 
           />
         </article>
       </main>
 
-      {/* ========================================================= */}
-      {/* POPUP 1: TỪ ĐIỂN (HIỂN THỊ KHI CLICK ĐÚP 1 TỪ) */}
-      {/* ========================================================= */}
+      {/* POPUP TỪ ĐIỂN */}
       {dictPopup.show && (
         <div 
-          className="fixed z-50 bg-white rounded-2xl shadow-2xl border border-slate-200 p-5 w-72 animate-in zoom-in-95 fade-in duration-200"
+          className="fixed z-50 bg-white rounded-[1.5rem] shadow-[0_10px_40px_rgba(0,0,0,0.15)] border border-slate-100 p-6 w-80 animate-in zoom-in-95 fade-in duration-200 font-sans"
           style={{ 
             left: `${dictPopup.x}px`, 
             top: `${dictPopup.y}px`, 
             transform: 'translate(-50%, -100%)',
-            marginTop: '-12px'
+            marginTop: '-16px'
           }}
-          onMouseDown={e => e.stopPropagation()} // Chống click nhầm đóng popup
+          onMouseDown={e => e.stopPropagation()} 
         >
-          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-b border-r border-slate-200 rotate-45"></div>
+          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-5 h-5 bg-white border-b border-r border-slate-100 rotate-45"></div>
           <div className="relative z-10">
-            <div className="flex justify-between items-start mb-2">
-              <h4 className="font-black text-xl text-[#0a5482]">{dictPopup.word}</h4>
-              <button className="text-slate-400 hover:text-[#0a5482] transition-colors" title="Phát âm">🔊</button>
+            <div className="flex justify-between items-start mb-3">
+              <h4 className="font-black text-2xl text-[#1e88e5]">{dictPopup.word}</h4>
+              <button className="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center hover:bg-[#1e88e5] hover:text-white transition-colors" title="Phát âm">🔊</button>
             </div>
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3 border-b border-slate-100 pb-2">Từ điển Anh-Việt</p>
-            <p className="text-[14px] text-slate-700 font-medium leading-relaxed">
+            <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-3 bg-emerald-50 inline-block px-2.5 py-1 rounded-md">Từ điển Anh-Việt</p>
+            <p className="text-[15px] text-slate-700 font-medium leading-relaxed">
               {mockTranslate(dictPopup.word)}
             </p>
-            <div className="mt-4 pt-3 border-t border-slate-100 flex gap-2">
-              <button className="flex-1 bg-blue-50 hover:bg-blue-100 text-[#0a5482] font-bold text-xs py-2 rounded-lg transition-colors">Lưu Flashcard</button>
-              <button className="flex-1 bg-slate-50 hover:bg-slate-100 text-slate-600 font-bold text-xs py-2 rounded-lg transition-colors">Hỏi AI thêm</button>
+            <div className="mt-5 pt-4 border-t border-slate-100 flex gap-3">
+              <button className="flex-1 bg-[#1e88e5] hover:bg-[#1565c0] text-white font-bold text-[13px] py-2.5 rounded-xl transition-colors shadow-sm">Lưu Flashcard</button>
+              <button className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold text-[13px] py-2.5 rounded-xl transition-colors">Hỏi AI thêm</button>
             </div>
           </div>
         </div>
       )}
 
-      {/* ========================================================= */}
-      {/* POPUP 2: CÔNG CỤ NOTE (HIỂN THỊ KHI BÔI ĐEN ĐOẠN DÀI) */}
-      {/* ========================================================= */}
+      {/* POPUP NOTE/HIGHLIGHT */}
       {notePopup.show && (
         <div 
-          className="fixed z-50 bg-slate-900 rounded-xl shadow-2xl p-1.5 flex items-center gap-1 animate-in slide-in-from-bottom-2 fade-in duration-200"
+          className="fixed z-50 bg-[#1e293b] rounded-2xl shadow-2xl p-2 flex items-center gap-1.5 animate-in slide-in-from-bottom-2 fade-in duration-200 font-sans border border-slate-700"
           style={{ 
             left: `${notePopup.x}px`, 
             top: `${notePopup.y}px`, 
             transform: 'translate(-50%, -100%)',
-            marginTop: '-12px'
+            marginTop: '-16px'
           }}
           onMouseDown={e => e.stopPropagation()}
         >
-          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-slate-900 rotate-45"></div>
+          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#1e293b] border-b border-r border-slate-700 rotate-45"></div>
           
-          <button className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-800 transition-colors group" title="Highlight Vàng">
-            <div className="w-4 h-4 rounded-full bg-yellow-400 border-2 border-slate-900 group-hover:scale-110 transition-transform"></div>
+          <button className="w-10 h-10 rounded-xl flex items-center justify-center hover:bg-slate-800 transition-colors group" title="Highlight Vàng">
+            <div className="w-5 h-5 rounded-full bg-yellow-400 shadow-[0_0_10px_rgba(250,204,21,0.5)] group-hover:scale-110 transition-transform"></div>
           </button>
-          <button className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-800 transition-colors group" title="Highlight Xanh">
-            <div className="w-4 h-4 rounded-full bg-emerald-400 border-2 border-slate-900 group-hover:scale-110 transition-transform"></div>
+          <button className="w-10 h-10 rounded-xl flex items-center justify-center hover:bg-slate-800 transition-colors group" title="Highlight Xanh">
+            <div className="w-5 h-5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.5)] group-hover:scale-110 transition-transform"></div>
           </button>
-          <button className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-800 transition-colors group" title="Highlight Đỏ">
-            <div className="w-4 h-4 rounded-full bg-rose-400 border-2 border-slate-900 group-hover:scale-110 transition-transform"></div>
+          <button className="w-10 h-10 rounded-xl flex items-center justify-center hover:bg-slate-800 transition-colors group" title="Highlight Đỏ">
+            <div className="w-5 h-5 rounded-full bg-rose-400 shadow-[0_0_10px_rgba(251,113,133,0.5)] group-hover:scale-110 transition-transform"></div>
           </button>
           
-          <div className="w-px h-5 bg-slate-700 mx-1"></div>
+          <div className="w-px h-6 bg-slate-600 mx-2"></div>
           
-          <button className="px-3 h-8 rounded-lg flex items-center justify-center hover:bg-slate-800 text-white font-bold text-xs transition-colors gap-1.5">
-            📝 Nháp Note
+          <button className="px-4 h-10 rounded-xl flex items-center justify-center hover:bg-slate-800 text-white font-bold text-[13px] transition-colors gap-2">
+            📝 Ghi chú
           </button>
-          <button className="px-3 h-8 rounded-lg flex items-center justify-center hover:bg-slate-800 text-amber-400 font-bold text-xs transition-colors gap-1.5">
+          <button className="px-4 h-10 rounded-xl flex items-center justify-center hover:bg-slate-800 text-amber-400 font-bold text-[13px] transition-colors gap-2">
             ✨ Dịch AI
           </button>
         </div>
