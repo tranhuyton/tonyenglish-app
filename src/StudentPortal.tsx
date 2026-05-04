@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
-import {
-  LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer
-} from 'recharts';
+import { LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
 
-import ImmersionReading from './ImmersionReading';
+const FOLDER_IMAGES = [
+  'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800', 
+  'https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80&w=800', 
+  'https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&q=80&w=800', 
+  'https://images.unsplash.com/photo-1513001900722-370f803f498d?auto=format&fit=crop&q=80&w=800', 
+  'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800',
+  'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800'
+];
 
-const FOLDER_COLORS = ['from-blue-50 to-indigo-50', 'from-emerald-50 to-teal-50', 'from-amber-50 to-orange-50', 'from-purple-50 to-fuchsia-50', 'from-rose-50 to-pink-50'];
 const ITEMS_PER_PAGE = 12;
+const HISTORY_PER_PAGE = 10;
 
 const formatDateShort = (isoString: string) => {
   if (!isoString) return '';
@@ -25,24 +30,19 @@ const checkInProgress = (testId: string) => {
   try {
       const compEndTime = localStorage.getItem(`ielts_endtime_${testId}`) || localStorage.getItem(`standard_endtime_${testId}`) || localStorage.getItem(`ielts_paper_endtime_${testId}`) || localStorage.getItem(`case_study_endtime_${testId}`);
       if (compEndTime && parseInt(compEndTime) > Date.now()) return true;
-      
       const keys = [`ielts_ans_${testId}`, `ielts_paper_ans_${testId}`, `std_ans_${testId}`, `case_study_ans_${testId}`];
       for (const key of keys) {
           const data = localStorage.getItem(key);
-          if (data) {
-              const parsed = JSON.parse(data);
-              if (Object.keys(parsed).length > 0) return true;
-          }
+          if (data && Object.keys(JSON.parse(data)).length > 0) return true;
       }
-  } catch (e) {}
-  return false;
+  } catch (e) {} return false;
 };
 
 export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: { onNavigate?: (view: string) => void, onStartTest?: (type: string, data: any) => void, onOpenLecture?: (courseId: string) => void }) {
   const [activeTab, setActiveTab] = useState<'library' | 'analytics' | 'profile'>('library');
   const [activeView, setActiveView] = useState<'dashboard' | 'course'>('dashboard');
-  const [isReadingMode, setIsReadingMode] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   
   const [courses, setCourses] = useState<any[]>([]);
@@ -55,6 +55,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [allLectures, setAllLectures] = useState<any[]>([]);
 
   const [historyData, setHistoryData] = useState<any[]>([]);
+  const [lectureProgressData, setLectureProgressData] = useState<any[]>([]);
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [userProfile, setUserProfile] = useState<any>(null);
 
@@ -63,6 +64,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [sortTest, setSortTest] = useState('name-asc');
   const [folderPage, setFolderPage] = useState(1);
   const [testPage, setTestPage] = useState(1);
+  const [historyPage, setHistoryPage] = useState(1);
 
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
   const [historySort, setHistorySort] = useState('date-desc');
@@ -86,25 +88,27 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   }, []);
 
   useEffect(() => {
-    checkUserAndFetchData();
-  }, [activeTab]);
+    const handleFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  useEffect(() => { checkUserAndFetchData(); }, [activeTab]);
 
   const checkUserAndFetchData = async () => {
     const { data: { user } } = await supabase.auth.getUser();
     setCurrentUser(user);
-    
     if (user) {
       const { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).single();
       setUserProfile(profile);
       if (profile && !newFullName) setNewFullName(profile.full_name || '');
+      
+      const { data: lp } = await supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id);
+      setLectureProgressData(lp || []);
     }
 
     if (activeTab === 'library') {
-      fetchCourses(user?.id);
-      fetchAllFolders(); 
-      fetchAllTests();
-      fetchAllLectures();
-      fetchUserHistory(user?.id);
+      fetchCourses(user?.id); fetchAllFolders(); fetchAllTests(); fetchAllLectures(); fetchUserHistory(user?.id);
     }
     if (activeTab === 'analytics') {
       if (courses.length === 0) fetchCourses(user?.id);
@@ -128,8 +132,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
     const courseIds = enrolls?.map(e => e.course_id) || [];
     if (courseIds.length > 0) {
-      const { data } = await supabase.from('courses').select('*').in('id', courseIds).order('created_at', { ascending: false });
-      setCourses(data || []);
+      const { data } = await supabase.from('courses').select('*').in('id', courseIds);
+      const sortedData = (data || []).sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999));
+      setCourses(sortedData);
     } else { setCourses([]); }
   };
 
@@ -139,15 +144,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       const { data } = await supabase.from('test_results').select('*').eq('user_id', userId).order('created_at', { ascending: false });
       if (data && data.length > 0) {
         const formattedHistory = data.map((item: any) => ({
-          id: item.id,
-          testId: item.test_id, 
-          name: item.test_title || 'Bài thi không tên',
-          courseId: item.course_id,
-          subject: item.test_type || 'Standard',
+          id: item.id, testId: item.test_id, name: item.test_title || 'Bài thi không tên', courseId: item.course_id, subject: item.test_type || 'Standard',
           scoreObj: { value: item.score || 0, display: `${item.score || 0} / ${item.total_score || 0}` },
-          timeSpent: Math.round((item.time_spent || 0) / 60), 
-          date: item.created_at,
-          details: item.details || {}
+          timeSpent: Math.round((item.time_spent || 0) / 60), date: item.created_at, details: item.details || {}
         }));
         setHistoryData(formattedHistory);
       } else { setHistoryData([]); }
@@ -155,7 +154,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   };
 
   const fetchAllFolders = async () => {
-    const { data } = await supabase.from('folders').select('id, course_id');
+    const { data } = await supabase.from('folders').select('*');
     setAllFolders(data || []);
   };
 
@@ -181,13 +180,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       if (newFullName && currentUser?.id) await supabase.from('profiles').update({ full_name: newFullName }).eq('id', currentUser.id);
       if (newPassword && newPassword.length >= 6) {
         const { error } = await supabase.auth.updateUser({ password: newPassword });
-        if (error) throw error;
-        setNewPassword('');
+        if (error) throw error; setNewPassword('');
       } else if (newPassword && newPassword.length < 6) {
         alert("Mật khẩu mới phải có ít nhất 6 ký tự!"); setIsUpdatingProfile(false); return;
       }
-      alert("🎉 Cập nhật tài khoản thành công!");
-      checkUserAndFetchData(); 
+      alert("🎉 Cập nhật tài khoản thành công!"); checkUserAndFetchData(); 
     } catch (error: any) { alert("Lỗi cập nhật: " + error.message); } finally { setIsUpdatingProfile(false); }
   };
 
@@ -217,29 +214,56 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const handleRetakeFromHistory = (historyItem: any) => {
     const testId = historyItem.testId || historyItem.details?.test_id;
     let foundTest = tests.find(t => String(t.id) === String(testId));
-    if (!foundTest) {
-       foundTest = tests.find(t => t.title.trim() === historyItem.name.trim());
-    }
-
-    if (foundTest) {
-       setViewingHistoryDetail(null);
-       handleStartTestClick(foundTest);
-    } else {
-       alert("Đề thi này không còn tồn tại hoặc đã bị ẩn khỏi hệ thống.");
-    }
+    if (!foundTest) foundTest = tests.find(t => t.title.trim() === historyItem.name.trim());
+    if (foundTest) { setViewingHistoryDetail(null); handleStartTestClick(foundTest); } 
+    else alert("Đề thi này không còn tồn tại hoặc đã bị ẩn khỏi hệ thống.");
   };
 
-  const handleConfirmMode = (mode: 'computer' | 'paper') => {
-    setShowModeSelection(false);
-    if (onStartTest && testToStart) onStartTest(mode, testToStart);
+  const handleConfirmMode = (mode: 'computer' | 'paper') => { setShowModeSelection(false); if (onStartTest && testToStart) onStartTest(mode, testToStart); };
+  
+  const toggleFullScreen = () => { 
+    if (!document.fullscreenElement) { 
+        document.documentElement.requestFullscreen().catch(); 
+    } else { 
+        if (document.exitFullscreen) document.exitFullscreen(); 
+    } 
   };
 
-  const getCourseStyle = (title: string, type: string) => {
-    const lowerTitle = title.toLowerCase();
-    if (lowerTitle.includes('ielts') || type === 'IELTS') return { bg: 'from-[#e0f2fe] to-[#bae6fd]', text: 'text-[#0284c7]', label: 'IELTS Master' };
-    if (lowerTitle.includes('igcse') || lowerTitle.includes('science')) return { bg: 'from-[#ecfdf5] to-[#a7f3d0]', text: 'text-[#059669]', label: 'IGCSE Science' };
-    if (lowerTitle.includes('toeic')) return { bg: 'from-[#fff1f2] to-[#fecdd3]', text: 'text-[#e11d48]', label: 'TOEIC' };
-    return { bg: 'from-[#f1f5f9] to-[#e2e8f0]', text: 'text-[#475569]', label: title };
+  // --- LOGIC XỬ LÝ TÊN & BANNER THỜI GIAN ---
+  const rawFullName = userProfile?.full_name || (currentUser?.email ? currentUser.email.split('@')[0] : 'Học viên');
+  const nameParts = rawFullName.trim().split(' ');
+  const displayUserName = nameParts[nameParts.length - 1]; 
+  const displayUserInitial = displayUserName.charAt(0).toUpperCase();
+
+  const hour = new Date().getHours();
+  let bannerConfig = { greeting: '', gradient: '', icon: '', subtitle: '' };
+  if (hour >= 5 && hour < 12) {
+      bannerConfig = { greeting: 'Chào buổi sáng', gradient: 'from-amber-400 to-orange-500', icon: '🌅', subtitle: 'Bắt đầu ngày mới tràn đầy năng lượng! Một chút nỗ lực hôm nay sẽ mang lại kết quả lớn ngày mai.' };
+  } else if (hour >= 12 && hour < 18) {
+      bannerConfig = { greeting: 'Chào buổi chiều', gradient: 'from-[#0a5482] to-[#1e88e5]', icon: '🌤️', subtitle: 'Tiếp tục hành trình chinh phục mục tiêu nào! Giữ vững sự tập trung nhé.' };
+  } else {
+      bannerConfig = { greeting: 'Chào buổi tối', gradient: 'from-slate-800 to-indigo-900', icon: '🌙', subtitle: 'Thời gian tĩnh lặng tuyệt vời để tập trung ôn tập và nhìn lại những gì đã học.' };
+  }
+
+  const getCourseCover = (course: any) => {
+    const lowerTitle = course.title?.toLowerCase() || '';
+
+    // 1. Ưu tiên check môn học cụ thể trước
+    if (lowerTitle.includes('business') || lowerTitle.includes('econ')) 
+        return { image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800', badge: 'Business & Econ', color: 'text-amber-600' };
+    if (lowerTitle.includes('science')) 
+        return { image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800', badge: 'IGCSE Science', color: 'text-emerald-600' };
+    if (lowerTitle.includes('math')) 
+        return { image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=800', badge: 'Mathematics', color: 'text-purple-600' };
+
+    // 2. Sau đó mới check hệ chương trình chung
+    if (lowerTitle.includes('ielts') || course.type === 'IELTS') 
+        return { image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800', badge: 'IELTS Mastery', color: 'text-blue-600' };
+    if (lowerTitle.includes('igcse')) 
+        return { image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800', badge: 'IGCSE Program', color: 'text-teal-600' };
+    
+    // 3. Mặc định nếu không khớp
+    return { image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800', badge: course.type || 'Khóa học', color: 'text-slate-600' };
   };
 
   const getTestIcon = (testType: string) => {
@@ -250,19 +274,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     return '📝';
   };
 
-  // Tính toán Gamification
   const globalTotalTestsDone = historyData.length;
   const globalTotalTimeHours = (historyData.reduce((acc, curr) => acc + curr.timeSpent, 0) / 60).toFixed(1);
-  const displayUserName = userProfile?.full_name || (currentUser?.email ? currentUser.email.split('@')[0] : 'Học viên');
-  const displayUserInitial = displayUserName.charAt(0).toUpperCase();
-
-  const hour = new Date().getHours();
-  const greeting = hour < 12 ? "Chào buổi sáng" : hour < 18 ? "Chào buổi chiều" : "Chào buổi tối";
-
   const inProgressTest = allTests.find(t => checkInProgress(t.id));
 
-  // --- Logic Phân Trang & Lọc ---
-  const currentSubFolders = folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === ''));
+  const currentSubFolders = folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === '')).sort((a,b) => (a.display_order||0) - (b.display_order||0));
   let currentTests = tests.filter(t => t.folder_id === currentFolderId);
   if (!currentFolderId || currentSubFolders.length > 0) currentTests = []; 
 
@@ -292,12 +308,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     );
   };
 
-  // ==========================================
-  // XỬ LÝ DỮ LIỆU TAB ANALYTICS (PHÂN TÍCH)
-  // ==========================================
-  const currentAnalyticsCourseObj = courses.find(c => String(c.id) === String(analyticsCourse));
-  const isIeltsAnalytics = currentAnalyticsCourseObj?.type === 'IELTS';
-
   const processedHistory = [...historyData]
     .filter(h => analyticsCourse === 'all' || h.courseId === analyticsCourse)
     .sort((a, b) => {
@@ -307,6 +317,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       if (historySort === 'score-asc') return a.scoreObj.value - b.scoreObj.value;
       return 0;
     });
+
+  const totalHistoryPages = Math.ceil(processedHistory.length / HISTORY_PER_PAGE);
+  const paginatedHistory = processedHistory.slice((historyPage - 1) * HISTORY_PER_PAGE, historyPage * HISTORY_PER_PAGE);
 
   const analyticsTotalTestsDone = processedHistory.length;
   const avgScore = analyticsTotalTestsDone > 0 ? (processedHistory.reduce((acc, curr) => acc + curr.scoreObj.value, 0) / analyticsTotalTestsDone).toFixed(1) : '0';
@@ -343,156 +356,31 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     if (isNaN(band)) band = (h.scoreObj.value / (h.scoreObj.value + 0.01)); 
     return {
       date: formatDateShort(h.date) || `Lần ${i+1}`,
-      listening: h.subject.includes('Listening') ? band : null,
-      reading: h.subject.includes('Reading') ? band : null,
-      writing: h.subject.includes('Writing') ? band : null,
-      speaking: h.subject.includes('Speaking') ? band : null,
+      listening: h.subject.includes('Listening') ? band : null, reading: h.subject.includes('Reading') ? band : null,
+      writing: h.subject.includes('Writing') ? band : null, speaking: h.subject.includes('Speaking') ? band : null,
     };
   });
-
-  const qTypeAgg: Record<string, { correct: number, total: number }> = {};
-  ieltsHistory.forEach(h => {
-     const stats = h.details?.questionTypeStats;
-     if (stats) {
-         Object.keys(stats).forEach(k => {
-             if (!qTypeAgg[k]) qTypeAgg[k] = { correct: 0, total: 0 };
-             qTypeAgg[k].correct += stats[k].correct;
-             qTypeAgg[k].total += stats[k].total;
-         });
-     }
-  });
-  
-  const qTypeChartData = Object.keys(qTypeAgg).map(k => ({
-      name: k,
-      accuracy: Math.round((qTypeAgg[k].correct / qTypeAgg[k].total) * 100),
-      correct: qTypeAgg[k].correct,
-      total: qTypeAgg[k].total
-  })).filter(d => d.total > 0).sort((a,b) => b.accuracy - a.accuracy); 
 
   const breadcrumbs = [];
   let curr = folders.find(f => f.id === currentFolderId);
   while (curr) { breadcrumbs.unshift(curr); curr = folders.find(f => f.id === curr.parent_id); }
 
-
-  // ==========================================
-  // KHỐI RENDER CHẾ ĐỘ ĐỌC BÁO (IMMERSION READING)
-  // ==========================================
-  if (isReadingMode) {
-    if (!selectedCourse) { 
-      return (
-        <div className="min-h-screen bg-[#f4f7f9] font-sans text-slate-800">
-           {/* HEADER BÁO */}
-           <header className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-40 shadow-sm">
-             <div className="max-w-[1200px] w-full mx-auto px-6 py-3 flex items-center justify-between">
-               <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setIsReadingMode(false)}>
-                 <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 font-black shadow-inner">←</div>
-                 <div className="flex flex-col ml-2">
-                   <h1 className="font-black text-[18px] tracking-tighter text-[#1e88e5] leading-none uppercase">Immersion <span className="text-slate-800">Reading</span></h1>
-                   <span className="text-[10px] font-bold text-slate-500 tracking-widest mt-0.5">Luyện đọc thực tế</span>
-                 </div>
-               </div>
-             </div>
-           </header>
-
-           {/* DANH SÁCH BÀI BÁO */}
-           <main className="max-w-[1200px] w-full mx-auto p-6 md:p-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
-             
-             {/* Banner Tin Tức */}
-             <div className="bg-white rounded-[2rem] p-8 md:p-12 mb-10 border border-slate-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
-                <div>
-                   <h2 className="text-3xl font-black text-slate-800 mb-3">Today's <span className="text-[#1e88e5]">Featured</span></h2>
-                   <p className="text-slate-500 font-medium text-[16px] max-w-xl">Đọc báo tiếng Anh mỗi ngày là cách nhanh nhất để tăng vốn từ vựng và cải thiện khả năng đọc hiểu tự nhiên.</p>
-                </div>
-                <div className="bg-amber-50 text-amber-700 px-6 py-4 rounded-2xl border border-amber-100">
-                   <p className="text-[12px] font-black uppercase tracking-widest mb-1">Mẹo nhỏ</p>
-                   <p className="text-[14px] font-medium">Click đúp vào từ mới để tra từ điển ngay lập tức!</p>
-                </div>
-             </div>
-
-             <div className="flex items-center justify-between mb-6">
-                <h3 className="font-black text-xl text-slate-800">Mới cập nhật</h3>
-                <div className="flex gap-2">
-                   <button className="bg-[#1e88e5] text-white px-4 py-2 rounded-xl text-[13px] font-bold shadow-sm">Tất cả</button>
-                   <button className="bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 px-4 py-2 rounded-xl text-[13px] font-bold transition-colors">IELTS Academic</button>
-                   <button className="bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 px-4 py-2 rounded-xl text-[13px] font-bold transition-colors">Business</button>
-                </div>
-             </div>
-
-             {/* Lưới Bài Báo */}
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {/* Card 1 */}
-                <div onClick={() => setSelectedCourse('reading-1')} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group flex flex-col">
-                   <div className="h-48 bg-slate-200 overflow-hidden relative">
-                      <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80&w=800" alt="Cover" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-[11px] font-black uppercase tracking-widest text-[#1e88e5] shadow-sm">Academic</div>
-                   </div>
-                   <div className="p-6 flex-1 flex flex-col">
-                      <h4 className="font-black text-[18px] text-slate-800 mb-3 line-clamp-2 leading-snug group-hover:text-[#1e88e5] transition-colors">The Evolution of Urban Planning: Building Sustainable Cities</h4>
-                      <p className="text-slate-500 text-[14px] line-clamp-3 mb-4 leading-relaxed">The concept of urban planning has undergone a massive transformation over the past century. Historically, cities were designed with a primary focus...</p>
-                      <div className="mt-auto flex items-center justify-between text-slate-400 border-t border-slate-50 pt-4">
-                         <span className="text-[12px] font-bold">⏱️ 5 min read</span>
-                         <span className="text-[12px] font-bold">12/05/2026</span>
-                      </div>
-                   </div>
-                </div>
-
-                {/* Card 2 */}
-                <div onClick={() => setSelectedCourse('reading-1')} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group flex flex-col">
-                   <div className="h-48 bg-slate-200 overflow-hidden relative">
-                      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Cover" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-[11px] font-black uppercase tracking-widest text-emerald-600 shadow-sm">Business</div>
-                   </div>
-                   <div className="p-6 flex-1 flex flex-col">
-                      <h4 className="font-black text-[18px] text-slate-800 mb-3 line-clamp-2 leading-snug group-hover:text-[#1e88e5] transition-colors">Global Markets React to New AI Regulations</h4>
-                      <p className="text-slate-500 text-[14px] line-clamp-3 mb-4 leading-relaxed">Tech stocks saw unprecedented volatility this morning as new international frameworks regarding artificial intelligence deployment were announced...</p>
-                      <div className="mt-auto flex items-center justify-between text-slate-400 border-t border-slate-50 pt-4">
-                         <span className="text-[12px] font-bold">⏱️ 3 min read</span>
-                         <span className="text-[12px] font-bold">10/05/2026</span>
-                      </div>
-                   </div>
-                </div>
-
-                {/* Card 3 */}
-                <div onClick={() => setSelectedCourse('reading-1')} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group flex flex-col">
-                   <div className="h-48 bg-slate-200 overflow-hidden relative">
-                      <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800" alt="Cover" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-[11px] font-black uppercase tracking-widest text-purple-600 shadow-sm">Science</div>
-                   </div>
-                   <div className="p-6 flex-1 flex flex-col">
-                      <h4 className="font-black text-[18px] text-slate-800 mb-3 line-clamp-2 leading-snug group-hover:text-[#1e88e5] transition-colors">Breakthrough in Quantum Computing Explained</h4>
-                      <p className="text-slate-500 text-[14px] line-clamp-3 mb-4 leading-relaxed">Researchers at MIT have successfully maintained a stable qubit state at room temperature, potentially revolutionizing the future of processing power...</p>
-                      <div className="mt-auto flex items-center justify-between text-slate-400 border-t border-slate-50 pt-4">
-                         <span className="text-[12px] font-bold">⏱️ 7 min read</span>
-                         <span className="text-[12px] font-bold">08/05/2026</span>
-                      </div>
-                   </div>
-                </div>
-             </div>
-           </main>
-        </div>
-      );
-    } 
-    // Giao diện đọc chi tiết
-    else {
-      return <ImmersionReading onBack={() => setSelectedCourse(null)} />;
-    }
-  }
-
-  // ==========================================
-  // KHỐI RENDER CHẾ ĐỘ CỔNG HỌC VIÊN CHÍNH
-  // ==========================================
   return (
     <div className="min-h-screen bg-[#f4f7f9] font-sans text-slate-800">
       
-      {/* HEADER CĂN GIỮA */}
+      {/* HEADER: KHÔI PHỤC LẠI LOGO HÌNH ẢNH */}
       <header className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-40 shadow-sm">
         <div className="max-w-[1200px] w-full mx-auto px-6 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => window.location.href = 'https://tonyenglish.vn/vi'}>
+          
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate?.('home')}>
             <div className="flex flex-col items-end">
               <h1 className="font-black text-2xl tracking-tighter text-[#0a5482] leading-none">TONY<span className="text-slate-800">ENGLISH</span></h1>
               <span className="text-[10px] italic text-[#1e88e5] font-medium mt-0.5 pr-0.5">The future begins here</span>
             </div>
-            <div className="w-10 h-10 flex items-center justify-center overflow-hidden"><img src="/logo-shield.png" alt="TonyEnglish Logo" className="w-auto h-full object-contain" /></div>
+            {/* TRẢ LẠI LOGO KHIÊN GỐC */}
+            <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
+               <img src="/logo-shield.png" alt="TonyEnglish Logo" className="w-auto h-full object-contain" />
+            </div>
           </div>
 
           <div className="hidden md:flex items-center gap-2 bg-slate-100/50 rounded-2xl p-1 border border-slate-200/50">
@@ -502,12 +390,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
           <div className="flex items-center gap-5">
             <div className="hidden lg:flex items-center gap-3">
-               <div className="flex items-center gap-1.5 bg-orange-50 text-orange-600 px-3 py-1.5 rounded-lg border border-orange-100 font-bold text-[13px] shadow-sm" title="Số bài đã hoàn thành">
+               <div className="flex items-center gap-1.5 bg-orange-50 text-orange-600 px-3 py-1.5 rounded-lg border border-orange-100 font-bold text-[13px] shadow-sm">
                   🔥 {globalTotalTestsDone}
                </div>
-               <div className="flex items-center gap-1.5 bg-blue-50 text-blue-600 px-3 py-1.5 rounded-lg border border-blue-100 font-bold text-[13px] shadow-sm" title="Tổng thời gian học">
+               <div className="flex items-center gap-1.5 bg-blue-50 text-blue-600 px-3 py-1.5 rounded-lg border border-blue-100 font-bold text-[13px] shadow-sm">
                   ⏱️ {globalTotalTimeHours}h
                </div>
+               <div className="h-6 w-px bg-slate-200 mx-1"></div>
+               <button onClick={toggleFullScreen} className="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 hover:text-[#1e88e5] transition-colors">
+                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
+               </button>
             </div>
 
             <div className="relative" ref={dropdownRef}>
@@ -519,22 +411,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#0a5482] to-[#1e88e5] text-white flex items-center justify-center font-black shadow-md border-2 border-white ring-2 ring-blue-50">{displayUserInitial}</div>
                </button>
 
-               {/* USER DROPDOWN - CÓ NÚT ĐỌC BÁO */}
                {isDropdownOpen && (
                   <div className="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-50 animate-in fade-in slide-in-from-top-2">
-                     <button onClick={() => { setActiveTab('profile'); setIsDropdownOpen(false); }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5] flex items-center gap-3 transition-colors">
+                     <button onClick={() => window.open('https://tonyenglish.vn/vi', '_blank')} className="w-full text-left px-5 py-3 text-sm font-black text-emerald-600 hover:bg-emerald-50 flex items-center gap-3 transition-colors border-b border-slate-100 mb-1 pb-3">
+                        <span className="text-lg">🏠</span> Về Website Chính
+                     </button>
+                     <button onClick={() => { setActiveTab('profile'); setIsDropdownOpen(false); }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5] flex items-center gap-3 transition-colors mt-1">
                         <span className="text-lg">👤</span> Cấu hình tài khoản
                      </button>
-                     <button onClick={() => { setIsReadingMode(true); setSelectedCourse(null); setIsDropdownOpen(false); }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5] flex items-center gap-3 transition-colors">
-                        <span className="text-lg">📰</span> Đọc báo tiếng Anh
-                     </button>
-                     
                      {userProfile?.role === 'admin' && (
                        <button onClick={() => onNavigate?.('admin')} className="w-full text-left px-5 py-3 text-sm font-black text-[#8b5cf6] hover:bg-purple-50 flex items-center gap-3 transition-colors border-t border-slate-100 mt-1 pt-3">
                           <span className="text-lg">⚙️</span> Trang Quản Trị
                        </button>
                      )}
-                     
                      <div className="h-px bg-slate-100 my-1"></div>
                      <button onClick={handleLogout} className="w-full text-left px-5 py-3 text-sm font-bold text-red-600 hover:bg-red-50 flex items-center gap-3 transition-colors">
                         <span className="text-lg">🚪</span> Đăng xuất
@@ -555,15 +444,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {activeView === 'dashboard' && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                 
-                {/* HERO BANNER */}
-                <div className="relative bg-gradient-to-br from-[#0a5482] to-[#1e88e5] rounded-[2rem] p-8 md:p-12 mb-10 overflow-hidden shadow-xl">
+                {/* HERO BANNER TỰ ĐỘNG ĐỔI MÀU THEO THỜI GIAN */}
+                <div className={`relative bg-gradient-to-br ${bannerConfig.gradient} rounded-[2rem] p-8 md:p-12 mb-10 overflow-hidden shadow-xl`}>
                   <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-                  <div className="absolute bottom-0 left-10 w-40 h-40 bg-blue-300 opacity-20 rounded-full blur-2xl translate-y-1/3"></div>
+                  <div className="absolute bottom-0 left-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl translate-y-1/3"></div>
                   
                   <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
                     <div className="text-white flex-1 text-center md:text-left">
-                      <h2 className="text-3xl md:text-4xl font-black mb-3 drop-shadow-md">{greeting}, {displayUserName}! 🚀</h2>
-                      <p className="text-blue-100 text-[16px] md:text-lg font-medium leading-relaxed max-w-xl">Hôm nay là một ngày tuyệt vời để nâng cấp bản thân. Hành trình chinh phục mục tiêu đang chờ bạn phía trước!</p>
+                      <h2 className="text-3xl md:text-4xl font-black mb-3 drop-shadow-md">{bannerConfig.greeting}, {displayUserName}! {bannerConfig.icon}</h2>
+                      <p className="text-white/80 text-[16px] md:text-lg font-medium leading-relaxed max-w-xl">{bannerConfig.subtitle}</p>
                     </div>
 
                     {inProgressTest ? (
@@ -573,16 +462,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                              <span className="text-[11px] font-black uppercase tracking-widest text-amber-300">Đang làm dở</span>
                           </div>
                           <h3 className="font-bold text-lg mb-4 line-clamp-2 leading-tight">{inProgressTest.title}</h3>
-                          <button className="w-full bg-white text-[#1e88e5] font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">TIẾP TỤC NGAY →</button>
+                          <button className="w-full bg-white text-slate-800 font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">TIẾP TỤC NGAY →</button>
                        </div>
                     ) : courses.length > 0 && (
-                       <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-3xl w-full md:w-80 shadow-lg text-white group cursor-pointer hover:bg-white/20 transition-all" onClick={() => handleOpenCourse(courses[0])}>
-                          <div className="flex items-center gap-2 mb-3">
-                             <span className="text-[11px] font-black uppercase tracking-widest text-emerald-300">Gợi ý học tập</span>
-                          </div>
-                          <h3 className="font-bold text-lg mb-4 line-clamp-2 leading-tight">Khóa học {courses[0].title}</h3>
-                          <button className="w-full bg-white text-[#1e88e5] font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">VÀO HỌC NGAY →</button>
-                       </div>
+                      <div 
+                        className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-3xl w-full md:w-80 shadow-lg text-white group cursor-pointer hover:bg-white/20 transition-all" 
+                        onClick={() => onOpenLecture && onOpenLecture(courses[0].id)}
+                      >
+                        <div className="flex items-center gap-2 mb-3">
+                           <span className="text-[11px] font-black uppercase tracking-widest text-white/70">Gợi ý học tập</span>
+                        </div>
+                        <h3 className="font-bold text-lg mb-4 line-clamp-2 leading-tight">Khóa học {courses[0].title}</h3>
+                        <button className="w-full bg-white text-slate-800 font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">
+                           VÀO HỌC NGAY →
+                        </button>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -598,49 +492,68 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <p className="text-slate-500 text-sm">Vui lòng liên hệ TonyEnglish để được cấp quyền truy cập nhé!</p>
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="flex flex-col gap-6">
                     {courses.map(course => {
-                      const style = getCourseStyle(course.title, course.type);
+                      const cover = getCourseCover(course);
                       const courseFolderIds = allFolders.filter(f => f.course_id === course.id).map(f => f.id);
                       const testCount = allTests.filter(t => courseFolderIds.includes(t.folder_id)).length;
-                      
                       const lectureCount = allLectures.filter(l => l.course_id === course.id).length;
+                      
+                      // Tính tiến độ Bài giảng
+                      const completedLecs = lectureProgressData.filter(lp => lp.is_completed && allLectures.find(l => l.id === lp.lecture_id && l.course_id === course.id)).length;
+                      const lecProgress = lectureCount > 0 ? Math.min(100, Math.round((completedLecs / lectureCount) * 100)) : 0;
+                      
+                      // Tính tiến độ Đề thi
                       const uniqueCompletedTests = new Set(historyData.filter(h => h.courseId === course.id).map(h => h.testId)).size;
-                      const progress = testCount > 0 ? Math.min(100, Math.round((uniqueCompletedTests / testCount) * 100)) : 0;
+                      const testProgress = testCount > 0 ? Math.min(100, Math.round((uniqueCompletedTests / testCount) * 100)) : 0;
 
                       return (
-                        <div key={course.id} onClick={() => handleOpenCourse(course)} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full min-h-[310px] group relative">
-                          <div className={`h-[140px] bg-gradient-to-br ${style.bg} flex items-center p-6 relative overflow-hidden shrink-0`}>
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/3"></div>
+                        <div key={course.id} className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row group relative">
+                          <div className="w-full md:w-[300px] lg:w-[350px] min-h-[180px] relative overflow-hidden shrink-0 bg-slate-100">
+                             <img src={cover.image} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                             <div className={`absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg text-[11px] font-black uppercase tracking-widest ${cover.color} shadow-sm`}>
+                                {cover.badge}
+                             </div>
+                          </div>
+                          
+                          <div className="flex-1 p-6 md:p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100">
+                            <h4 className="font-black text-xl text-slate-800 mb-3">{course.title}</h4>
+                            <div className="flex items-center gap-4 mb-6">
+                              <span className="bg-slate-50 text-slate-600 text-[12px] font-bold px-3 py-1.5 rounded-lg border border-slate-100">📚 {lectureCount} bài giảng</span>
+                              <span className="bg-slate-50 text-slate-600 text-[12px] font-bold px-3 py-1.5 rounded-lg border border-slate-100">📝 {testCount} đề thi</span>
+                            </div>
                             
-                            <h3 className={`text-2xl font-black leading-tight tracking-wide ${style.text} drop-shadow-sm group-hover:scale-105 transition-transform duration-300 origin-left z-10 w-2/3`}>{style.label}</h3>
-                            
-                            <div className="absolute top-4 right-4 flex flex-col gap-1.5 items-end z-10">
-                              <div className="bg-white/60 backdrop-blur-sm text-slate-700 font-bold text-[10px] px-2.5 py-1.5 rounded-md shadow-sm flex items-center gap-1.5">
-                                <span>📚 {lectureCount} bài</span>
-                                <span className="w-1 h-1 rounded-full bg-slate-400"></span>
-                                <span>📝 {testCount} đề</span>
+                            <div className="w-full mt-auto flex flex-col md:flex-row gap-6">
+                              {/* Thanh 1: Tiến độ bài giảng */}
+                              <div className="flex-1">
+                                <div className="flex justify-between items-end mb-1.5">
+                                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ bài giảng</span>
+                                  <span className="text-[12px] font-black text-emerald-600">{lecProgress}%</span>
+                                </div>
+                                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                  <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${lecProgress}%` }}></div>
+                                </div>
+                              </div>
+                              {/* Thanh 2: Tiến độ Đề thi */}
+                              <div className="flex-1">
+                                <div className="flex justify-between items-end mb-1.5">
+                                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ đề thi</span>
+                                  <span className="text-[12px] font-black text-blue-600">{testProgress}%</span>
+                                </div>
+                                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                  <div className="h-full bg-blue-500 rounded-full transition-all duration-1000" style={{ width: `${testProgress}%` }}></div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          
-                          <div className="flex-1 bg-white p-6 flex flex-col justify-between relative">
-                            <h4 className="font-black text-lg text-slate-800 mb-3 line-clamp-2">{course.title}</h4>
-                            
-                            <div className="mb-4 mt-auto">
-                              <div className="flex justify-between items-end mb-1.5">
-                                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ thi</span>
-                                <span className="text-[12px] font-black text-[#1e88e5]">{progress}%</span>
-                              </div>
-                              <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                                <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${progress}%` }}></div>
-                              </div>
-                            </div>
 
-                            <div className="flex justify-between items-center text-slate-400 pt-3 border-t border-slate-50 mt-2">
-                              <p className="text-[12px] font-bold uppercase tracking-wider group-hover:text-[#1e88e5] transition-colors">Bấm để học</p>
-                              <div className="w-7 h-7 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-[#1e88e5] group-hover:text-white transition-colors text-xs font-black shadow-sm">→</div>
-                            </div>
+                          <div className="w-full md:w-[260px] lg:w-[280px] p-6 flex flex-col justify-center gap-3 bg-slate-50/50 shrink-0">
+                             <button onClick={() => onOpenLecture && onOpenLecture(course.id)} className="w-full bg-white hover:bg-emerald-50 border-2 border-emerald-100 hover:border-emerald-500 text-emerald-600 font-black text-[13px] py-3.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
+                               <span className="text-lg">📖</span> VÀO BÀI GIẢNG
+                             </button>
+                             <button onClick={() => handleOpenCourse(course)} className="w-full bg-gradient-to-r from-[#0a5482] to-[#1e88e5] hover:from-[#1565c0] hover:to-[#0a5482] text-white font-black text-[13px] py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                               <span className="text-lg">📝</span> KHO ĐỀ THI
+                             </button>
                           </div>
                         </div>
                       )
@@ -653,7 +566,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {activeView === 'course' && selectedCourse && (
               <div className="animate-in fade-in slide-in-from-right-4 duration-300">
                 <div className="flex flex-wrap items-center gap-2 text-[14px] font-bold text-slate-500 mb-6 bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
-                   <button onClick={() => { setActiveView('dashboard'); setSelectedCourse(null); }} className="hover:text-[#1e88e5] transition-colors">Trang chủ</button>
+                   <button onClick={() => { setActiveView('dashboard'); setSelectedCourse(null); }} className="hover:text-[#1e88e5] transition-colors">Khóa học</button>
                    <span className="text-slate-300">/</span>
                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); }} className={`hover:text-[#1e88e5] transition-colors ${!currentFolderId ? 'text-[#1e88e5]' : ''}`}>{selectedCourse.title}</button>
                    {breadcrumbs.map((b, i) => (
@@ -663,27 +576,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                      </React.Fragment>
                    ))}
                 </div>
-                
-                {!currentFolderId && (
-                   <div className="mb-8">
-                     <button 
-                       onClick={() => onOpenLecture && onOpenLecture(selectedCourse.id)}
-                       className="w-full bg-gradient-to-r from-[#0a5482] to-[#1e88e5] hover:from-[#1565c0] hover:to-[#0a5482] text-white p-6 md:p-8 rounded-[2rem] shadow-[0_10px_30px_rgba(30,136,229,0.2)] hover:shadow-[0_15px_40px_rgba(30,136,229,0.3)] transition-all flex items-center justify-between group overflow-hidden relative"
-                     >
-                       <div className="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
-                       <div className="flex items-center gap-6 relative z-10">
-                         <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center text-4xl backdrop-blur-sm group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-inner">📖</div>
-                         <div className="text-left">
-                           <h3 className="font-black text-2xl tracking-wide">VÀO HỌC BÀI GIẢNG</h3>
-                           <p className="text-blue-100 font-medium text-[15px] mt-1">Xem hệ thống giáo trình và lý thuyết của {selectedCourse.title}</p>
-                         </div>
-                       </div>
-                       <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:bg-white text-white group-hover:text-[#1e88e5] transition-colors relative z-10 shadow-sm">
-                         <span className="text-2xl font-black">→</span>
-                       </div>
-                     </button>
-                   </div>
-                )}
 
                 <div className="space-y-8">
                   {currentSubFolders.length > 0 && (
@@ -693,17 +585,24 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         {paginatedFolders.map((subFolder, idx) => {
                           const childCount = folders.filter(f => f.parent_id === subFolder.id).length;
                           const testCount = allTests.filter(t => t.folder_id === subFolder.id).length;
-                          const bgClass = FOLDER_COLORS[idx % FOLDER_COLORS.length];
+                          
+                          // LẤY ẢNH NỀN GÁN SẴN HOẶC RANDOM ĐẸP MẮT
+                          const defaultImage = FOLDER_IMAGES[idx % FOLDER_IMAGES.length];
+                          const displayImage = subFolder.thumbnail_url || defaultImage;
 
                           return (
                             <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer flex flex-col h-[180px] relative group">
-                              <div className={`bg-gradient-to-br ${bgClass} h-[90px] flex items-center relative p-5 overflow-hidden`}>
-                                <div className="w-10 h-10 bg-white/50 backdrop-blur-sm rounded-xl flex items-center justify-center text-xl shadow-sm mr-3">📁</div>
-                                <h3 className="text-slate-800 text-[16px] font-black leading-tight line-clamp-2 flex-1">{subFolder.title}</h3>
+                              {/* PHẦN ĐẦU THƯ MỤC CÓ HÌNH ẢNH */}
+                              <div className={`h-[110px] relative p-5 overflow-hidden flex items-end`}>
+                                <img src={displayImage} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="folder" />
+                                <div className={`absolute inset-0 bg-gradient-to-t from-black/80 to-black/10`}></div>
+                                <h3 className={`relative z-10 text-[18px] font-black leading-tight line-clamp-2 w-full text-white drop-shadow-md`}>
+                                   {subFolder.title}
+                                </h3>
                               </div>
                               <div className="flex-1 bg-white p-5 flex flex-col justify-center relative">
                                 <div className="flex justify-between items-center text-slate-500">
-                                  <p className="text-[13px] font-bold bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-100">{childCount > 0 ? `${childCount} mục con` : `${testCount} đề thi`}</p>
+                                  <p className="text-[12px] font-bold bg-slate-50 px-3 py-1 rounded-lg border border-slate-100">{childCount > 0 ? `${childCount} mục con` : `${testCount} đề thi`}</p>
                                   <span className="text-[#1e88e5] font-black group-hover:translate-x-1 transition-transform bg-blue-50 w-8 h-8 rounded-full flex items-center justify-center">→</span>
                                 </div>
                               </div>
@@ -740,31 +639,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 (h.name && test.title && h.name.trim() === test.title.trim())
                             );
 
-                            let statusConfig = {
-                               progress: 0,
-                               badge: "Chưa làm",
-                               badgeClass: "text-slate-500 bg-slate-100",
-                               btnText: "Bắt đầu làm bài",
-                               btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white"
-                            };
-
-                            if (isCompleted) {
-                               statusConfig = {
-                                  progress: 100,
-                                  badge: "Hoàn thành",
-                                  badgeClass: "text-emerald-600 bg-emerald-100",
-                                  btnText: "Làm lại bài",
-                                  btnClass: "bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-transparent"
-                               };
-                            } else if (inProgress) {
-                               statusConfig = {
-                                  progress: 50,
-                                  badge: "Đang làm dở",
-                                  badgeClass: "text-amber-600 bg-amber-100",
-                                  btnText: "Tiếp tục bài",
-                                  btnClass: "bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-transparent"
-                               };
-                            }
+                            let statusConfig = { progress: 0, badge: "Chưa làm", badgeClass: "text-slate-500 bg-slate-100", btnText: "Bắt đầu làm bài", btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white" };
+                            if (isCompleted) statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-600 bg-emerald-100", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-transparent" };
+                            else if (inProgress) statusConfig = { progress: 50, badge: "Đang làm dở", badgeClass: "text-amber-600 bg-amber-100", btnText: "Tiếp tục bài", btnClass: "bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-transparent" };
 
                             return (
                               <div key={test.id} onClick={() => handleStartTestClick(test)} className="bg-white border border-slate-100 p-6 rounded-3xl shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group relative overflow-hidden">
@@ -779,9 +656,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   <h3 className="font-bold text-slate-800 text-[16px] group-hover:text-[#1e88e5] transition-colors mb-3 line-clamp-2 leading-snug">{test.title}</h3>
                                   <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{test.test_type}</span>
                                 </div>
-                                <button className={`mt-6 w-full font-black text-[13px] py-3 rounded-xl transition-colors shadow-sm ${statusConfig.btnClass}`}>
-                                   {statusConfig.btnText}
-                                </button>
+                                <button className={`mt-6 w-full font-black text-[13px] py-3 rounded-xl transition-colors shadow-sm ${statusConfig.btnClass}`}>{statusConfig.btnText}</button>
                               </div>
                             );
                           })}
@@ -875,60 +750,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </div>
                 </div>
 
-                {/* BIỂU ĐỒ IELTS NÂNG CAO */}
-                {isIeltsAnalytics && ieltsHistory.length > 0 && (
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 animate-in slide-in-from-bottom-4">
-                     <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
-                        <div className="flex justify-between items-center mb-8">
-                           <h3 className="font-black text-lg text-slate-800">📈 Tiến độ Band Score 4 kỹ năng</h3>
-                        </div>
-                        <div className="h-[280px] w-full">
-                           <ResponsiveContainer width="100%" height="100%">
-                              <LineChart data={dynamicProgressData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                                 <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12, fontWeight: 600}} dy={10} />
-                                 <YAxis domain={[0, 9]} ticks={[0, 3, 5, 6, 7, 8, 9]} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12, fontWeight: 600}} />
-                                 <RechartsTooltip contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', fontWeight: 'bold' }} />
-                                 <Legend iconType="circle" verticalAlign="bottom" height={36} wrapperStyle={{ paddingTop: '20px', fontSize: '13px', fontWeight: 'bold' }} />
-                                 <Line type="monotone" dataKey="listening" name="Listening" stroke="#10b981" strokeWidth={3} activeDot={{ r: 6 }} dot={{r:4, strokeWidth:2}} connectNulls />
-                                 <Line type="monotone" dataKey="reading" name="Reading" stroke="#3b82f6" strokeWidth={3} activeDot={{ r: 6 }} dot={{r:4, strokeWidth:2}} connectNulls />
-                                 <Line type="monotone" dataKey="writing" name="Writing" stroke="#f59e0b" strokeWidth={3} activeDot={{ r: 6 }} dot={{r:4, strokeWidth:2}} connectNulls />
-                                 <Line type="monotone" dataKey="speaking" name="Speaking" stroke="#8b5cf6" strokeWidth={3} activeDot={{ r: 6 }} dot={{r:4, strokeWidth:2}} connectNulls />
-                              </LineChart>
-                           </ResponsiveContainer>
-                        </div>
-                     </div>
-
-                     <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
-                        <div className="flex justify-between items-center mb-8">
-                           <h3 className="font-black text-lg text-slate-800">🎯 Phân tích theo Dạng bài (L & R)</h3>
-                        </div>
-                        {qTypeChartData.length > 0 ? (
-                           <div className="h-[280px] w-full">
-                              <ResponsiveContainer width="100%" height="100%">
-                                 <BarChart data={qTypeChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                                    <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 11, fontWeight: 600}} dy={10} interval={0} angle={-15} textAnchor="end" height={60} />
-                                    <YAxis domain={[0, 100]} ticks={[0, 20, 40, 60, 80, 100]} axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12, fontWeight: 600}} tickFormatter={(v)=>`${v}%`} />
-                                    <RechartsTooltip cursor={{fill: '#f1f5f9'}} contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', fontWeight: 'bold' }} />
-                                    <Bar dataKey="accuracy" name="Tỷ lệ Đúng (%)" radius={[6, 6, 0, 0]}>
-                                       {qTypeChartData.map((entry, index) => (
-                                          <Cell key={`cell-${index}`} fill={entry.accuracy >= 70 ? '#10b981' : entry.accuracy >= 50 ? '#f59e0b' : '#ef4444'} />
-                                       ))}
-                                    </Bar>
-                                 </BarChart>
-                              </ResponsiveContainer>
-                           </div>
-                        ) : (
-                           <div className="h-full flex items-center justify-center text-slate-400 font-medium pb-10">Chưa có dữ liệu phân tích dạng bài.</div>
-                        )}
-                     </div>
-                  </div>
-                )}
-
-                {/* Bảng Lịch sử làm bài */}
+                {/* Lịch sử làm bài: ĐÃ PHÂN TRANG VÀ LÀM LẠI BADGE MÀU SẮC */}
                 <div className="mt-10 bg-white rounded-[2rem] border border-slate-100 shadow-sm overflow-hidden">
-                  <div className="px-8 py-6 border-b border-slate-100">
+                  <div className="px-8 py-6 border-b border-slate-100 flex justify-between items-center">
                      <h3 className="font-black text-xl text-slate-800">Lịch sử làm bài kiểm tra</h3>
                   </div>
                   <div className="overflow-x-auto">
@@ -942,7 +766,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-50">
-                        {processedHistory.map(history => (
+                        {paginatedHistory.map(history => {
+                          const isHigh = history.scoreObj.value > 60 || parseFloat(history.details?.bandScore) >= 6.0;
+                          return (
                           <tr key={history.id} className="hover:bg-slate-50/50 transition-colors group">
                             <td className="px-8 py-6">
                               <div className="font-bold text-[15px] text-slate-800 mb-1.5">{history.name}</div>
@@ -953,7 +779,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               <div className="text-[12px] font-medium text-slate-400 mt-0.5">{formatDate(history.date).split(' ')[1]}</div>
                             </td>
                             <td className="px-8 py-6 text-center">
-                              <span className={`inline-flex items-center justify-center text-white px-5 py-2 rounded-xl text-[14px] font-black shadow-sm ${history.scoreObj.value > 60 || parseFloat(history.details?.bandScore) >= 6.0 ? 'bg-emerald-500' : 'bg-amber-500'}`}>
+                              <span className={`inline-flex items-center justify-center px-4 py-2 rounded-xl text-[13px] font-black border shadow-sm ${isHigh ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-slate-50 text-slate-700 border-slate-200'}`}>
                                 {history.details?.bandScore ? `Band ${history.details.bandScore}` : `${history.scoreObj.value} điểm`}
                               </span>
                             </td>
@@ -963,10 +789,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </button>
                             </td>
                           </tr>
-                        ))}
+                        )})}
                       </tbody>
                     </table>
                   </div>
+                  {renderPagination(historyPage, totalHistoryPages, setHistoryPage)}
                 </div>
               </>
             )}
@@ -989,13 +816,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <h3 className="font-black text-xl text-slate-800 mb-4">🔐 Cấu hình thông tin</h3>
                 <div className="space-y-2">
                   <label className="text-[13px] font-bold text-slate-500 uppercase ml-1">Họ và tên</label>
-                  <input 
-                    type="text" 
-                    value={newFullName} 
-                    onChange={e => setNewFullName(e.target.value)} 
-                    className="w-full bg-white border border-slate-200 rounded-2xl px-5 py-3.5 font-medium focus:ring-2 focus:ring-[#1e88e5] outline-none shadow-sm transition-shadow" 
-                    placeholder="Nhập họ và tên..."
-                  />
+                  <input type="text" value={newFullName} onChange={e => setNewFullName(e.target.value)} className="w-full bg-white border border-slate-200 rounded-2xl px-5 py-3.5 font-medium focus:ring-2 focus:ring-[#1e88e5] outline-none shadow-sm transition-shadow" placeholder="Nhập họ và tên..." />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[13px] font-bold text-slate-500 uppercase ml-1">Email đăng nhập</label>
@@ -1042,26 +863,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       </div>
                    </div>
                 </div>
-
-                {viewingHistoryDetail.details?.questionTypeStats && Object.keys(viewingHistoryDetail.details.questionTypeStats).length > 0 && (
-                   <div className="mb-8">
-                      <h4 className="font-bold text-slate-700 text-[13px] uppercase tracking-widest mb-4 ml-1">Độ chính xác từng dạng bài:</h4>
-                      <div className="space-y-3 max-h-[180px] overflow-y-auto custom-scrollbar pr-3">
-                         {Object.entries(viewingHistoryDetail.details.questionTypeStats).map(([qType, stats]: any) => {
-                            const acc = Math.round((stats.correct / stats.total) * 100);
-                            return (
-                               <div key={qType} className="flex items-center justify-between bg-slate-50 px-5 py-3.5 rounded-2xl border border-slate-100">
-                                  <span className="font-bold text-[13px] text-slate-700 truncate w-1/2">{qType}</span>
-                                  <div className="w-1/3 bg-slate-200 h-2.5 rounded-full overflow-hidden">
-                                     <div className={`h-full rounded-full ${acc >= 70 ? 'bg-emerald-500' : acc >= 50 ? 'bg-amber-500' : 'bg-red-500'}`} style={{ width: `${acc}%` }}></div>
-                                  </div>
-                                  <span className="font-black text-[13px] text-slate-800 w-12 text-right">{acc}%</span>
-                               </div>
-                            )
-                         })}
-                      </div>
-                   </div>
-                )}
 
                 <button onClick={() => handleRetakeFromHistory(viewingHistoryDetail)} className="w-full bg-gradient-to-r from-[#0a5482] to-[#1e88e5] hover:from-[#1565c0] hover:to-[#0a5482] text-white font-black py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all active:scale-95 uppercase tracking-widest flex items-center justify-center gap-3 text-[14px]">
                    🔄 Làm lại đề thi này ngay

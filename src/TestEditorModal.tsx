@@ -67,7 +67,6 @@ const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
         <label className="text-[13px] font-bold text-slate-600">{label}</label>
         {isUploading && <span className="text-[11px] font-bold text-amber-500 bg-amber-50 px-2 py-1 rounded">⏳ Đang tải ảnh lên Cloud...</span>}
       </div>
-      {/* ĐÃ FIX: Khung Editor cố định chiều cao, có thanh cuộn và nút kéo góc phải dưới */}
       <div className="bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col resize-y overflow-hidden h-[250px] min-h-[150px]">
          <ReactQuill 
             ref={quillRef} 
@@ -83,8 +82,13 @@ const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
   );
 };
 
+// --- COMPONENT MEDIA ROW: THÊM TÍNH NĂNG XÓA FILE THÔNG MINH ---
 const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", uploadingId, setUploadingId }: any) => {
   const [isDrag, setIsDrag] = useState(false);
+  const [showLink, setShowLink] = useState(false);
+  const [linkVal, setLinkVal] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
   const handleFile = async (file: File) => {
     setUploadingId(id);
     try {
@@ -94,27 +98,97 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
     finally { setUploadingId(null); }
   };
 
+  const handleSaveLink = () => {
+    if (linkVal.trim()) onUpload(linkVal.trim());
+    setShowLink(false);
+    setLinkVal('');
+  };
+
+  const handleRemoveFile = async () => {
+    if (!window.confirm("Anh có chắc muốn xóa file âm thanh này không?")) return;
+    
+    setIsDeleting(true);
+    try {
+      // Nhận diện nếu là link của Supabase thì phải xóa file thật trên Host để giải phóng dung lượng
+      if (value && value.includes('supabase.co/storage/v1/object/public/test_assets/')) {
+        const urlParts = value.split('/test_assets/');
+        if (urlParts.length === 2) {
+          const filePath = urlParts[1];
+          await supabase.storage.from('test_assets').remove([filePath]);
+        }
+      }
+      // Sau khi xóa file trên Host (hoặc nếu là link web ngoài), thì reset lại trường giá trị
+      onUpload('');
+    } catch (error) {
+      console.error("Lỗi khi xóa file:", error);
+      alert("Có lỗi khi xóa file trên server, nhưng hệ thống đã gỡ link khỏi đề thi.");
+      onUpload('');
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
   return (
     <div className="flex flex-col py-3 border-b border-slate-100 last:border-0 gap-2">
       <label className="text-[13px] font-bold text-slate-600">{label}</label>
       <div 
-        className={`w-full border-2 border-dashed rounded-lg p-4 flex items-center justify-between transition ${isDrag ? 'border-[#00a651] bg-[#e6f4ea]' : 'border-slate-300 bg-slate-50'}`}
+        className={`w-full border-2 border-dashed rounded-lg p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition ${isDrag ? 'border-[#00a651] bg-[#e6f4ea]' : 'border-slate-300 bg-slate-50'}`}
         onDragOver={(e) => { e.preventDefault(); setIsDrag(true); }}
         onDragLeave={(e) => { e.preventDefault(); setIsDrag(false); }}
         onDrop={(e) => { e.preventDefault(); setIsDrag(false); if(e.dataTransfer.files?.[0]) handleFile(e.dataTransfer.files[0]); }}
       >
-        <div className="flex items-center gap-3">
-          <span className="text-2xl">{value ? '✅' : '🎵'}</span>
-          <div className="text-[13px] text-slate-500">
+        <div className="flex items-center gap-3 w-full md:w-auto">
+          <span className="text-2xl shrink-0">{value ? '✅' : '🎵'}</span>
+          <div className="text-[13px] text-slate-500 w-full min-w-0">
             {uploadingId === id ? <span className="text-amber-500 font-bold">⏳ Đang tải lên...</span> : 
-             value ? <span className="text-emerald-600 font-bold truncate block max-w-[200px]">Đã có file đính kèm</span> : 
+             isDeleting ? <span className="text-red-500 font-bold">🗑️ Đang xóa file...</span> :
+             value ? (
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full min-w-0">
+                   <span className="text-emerald-600 font-bold truncate block w-full sm:max-w-[200px] md:max-w-[250px] lg:max-w-[350px]" title={value}>
+                      {value.startsWith('http') ? value : 'Đã có file đính kèm'}
+                   </span>
+                   <button 
+                      onClick={handleRemoveFile} 
+                      className="bg-red-50 hover:bg-red-500 text-red-500 hover:text-white border border-red-200 hover:border-red-500 px-2.5 py-1 rounded text-[11px] font-bold transition flex items-center justify-center gap-1 shrink-0 w-fit mt-2 sm:mt-0"
+                   >
+                      ✖ Xóa
+                   </button>
+                </div>
+             ) : 
              <span>Kéo thả file Âm thanh vào đây</span>}
           </div>
         </div>
-        <label className="bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[12px] font-bold cursor-pointer hover:bg-slate-100 transition shadow-sm">
-          <input type="file" className="hidden" accept={accept} onChange={(e) => { if(e.target.files?.[0]) handleFile(e.target.files[0]); }} /> 
-          Tải lên
-        </label>
+        
+        <div className="flex items-center gap-2 w-full md:w-auto mt-2 md:mt-0">
+           {showLink && !value ? (
+              <div className="flex items-center gap-1 bg-white border border-slate-300 rounded-lg p-1 shadow-sm w-full md:w-[280px]">
+                <input
+                  type="text"
+                  autoFocus
+                  placeholder="Dán link audio (R2, host ngoài)..."
+                  value={linkVal}
+                  onChange={e => setLinkVal(e.target.value)}
+                  className="flex-1 text-[12px] font-medium text-slate-700 outline-none px-2 py-1 bg-transparent min-w-0"
+                />
+                <button onClick={handleSaveLink} className="bg-[#00a651] hover:bg-[#008f45] text-white px-3 py-1.5 rounded text-[11px] font-bold transition shrink-0">OK</button>
+                <button onClick={() => setShowLink(false)} className="bg-slate-200 hover:bg-slate-300 text-slate-600 px-2 py-1.5 rounded text-[11px] font-bold transition shrink-0">✖</button>
+              </div>
+           ) : !value ? (
+              <>
+                 <button 
+                    onClick={() => setShowLink(true)} 
+                    className="bg-white border border-slate-300 text-slate-700 px-3 py-2 rounded-lg text-[12px] font-bold cursor-pointer hover:bg-slate-100 transition shadow-sm flex items-center justify-center gap-1.5 shrink-0 flex-1 md:flex-none"
+                    title="Dùng link audio từ host ngoài (Cloudflare R2, AWS...)"
+                 >
+                    <span className="text-blue-500 text-sm leading-none">🔗</span> Thêm Link
+                 </button>
+                 <label className="bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[12px] font-bold cursor-pointer hover:bg-slate-100 transition shadow-sm shrink-0 flex-1 md:flex-none text-center">
+                   <input type="file" className="hidden" accept={accept} onChange={(e) => { if(e.target.files?.[0]) handleFile(e.target.files[0]); }} /> 
+                   Tải lên
+                 </label>
+              </>
+           ) : null}
+        </div>
       </div>
     </div>
   );
