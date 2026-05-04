@@ -3,57 +3,120 @@ import { supabase } from './supabase';
 import 'react-quill/dist/quill.snow.css';
 
 // =========================================================================================
-// 🚀 COMPONENT RENDER HTML "CHẾT" (STATIC RENDER) CHỐNG LAG 100%
+// 🚀 COMPONENT RENDER (VŨ KHÍ HẠNG NẶNG: IFRAME SRCDOC CÁCH LY HOÀN TOÀN)
 // =========================================================================================
-const StaticLectureContent = React.memo(({ html }: { html: string }) => {
-   // Đảm bảo chữ viewBox của SVG viết đúng chuẩn CamelCase để đồ thị co giãn tốt
+const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict }: any) => {
+   const iframeRef = useRef<HTMLIFrameElement>(null);
+   const [iframeHeight, setIframeHeight] = useState(500);
+
+   // Lắng nghe tín hiệu cấp cứu từ bên trong "Phòng cách ly" gửi ra ngoài
+   useEffect(() => {
+     const handleMessage = (e: MessageEvent) => {
+       // 1. Tín hiệu Bấm Link
+       if (e.data?.type === 'LECTURE_LINK_CLICK') {
+         const href = e.data.href;
+         if (href.includes('tonyenglish.vn/uploads') || href.includes('youtube.com') || href.includes('youtu.be')) {
+           onOpenPopup(href);
+         } else {
+           window.open(href, '_blank', 'noopener,noreferrer');
+         }
+       } 
+       // 2. Tín hiệu Báo Cáo Chiều Cao (để Iframe tự động giãn ra không bị thanh cuộn)
+       else if (e.data?.type === 'LECTURE_RESIZE') {
+         setIframeHeight(e.data.height + 30); // Cộng thêm 30px đệm cho an toàn
+       } 
+       // 3. Tín hiệu Bôi Đen Chữ (Để bật Từ Điển)
+       else if (e.data?.type === 'LECTURE_OPEN_DICT') {
+         if (iframeRef.current) {
+            const rect = iframeRef.current.getBoundingClientRect();
+            // Căn tọa độ chữ bên trong Iframe khớp với tọa độ màn hình gốc
+            onOpenDict(e.data.word, rect.left + e.data.x, rect.top + e.data.y, rect.top + e.data.rectTop);
+         }
+       } 
+       // 4. Tín hiệu Click ra ngoài chữ (Tắt Từ Điển)
+       else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
+         onCloseDict();
+       }
+     };
+
+     window.addEventListener('message', handleMessage);
+     return () => window.removeEventListener('message', handleMessage);
+   }, [onOpenPopup, onOpenDict, onCloseDict]);
+
+   // Nắn lại viewbox SVG
    const safeHtml = html ? html.replace(/viewbox=/gi, 'viewBox=') : '';
- 
+
+   // XÂY DỰNG MỘT TRANG WEB ĐỘC LẬP BÊN TRONG IFRAME
+   const iframeContent = `
+     <!DOCTYPE html>
+     <html lang="vi">
+     <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <style>
+         body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #334155; background: transparent; overflow-x: hidden; }
+         * { box-sizing: border-box; }
+         img, video, iframe { max-width: 100%; height: auto; display: block; }
+         svg { max-width: 100%; height: auto; }
+         a { cursor: pointer; color: #0284c7; text-decoration: none; font-weight: 600; transition: all 0.2s; }
+         a:hover { opacity: 0.8; text-decoration: underline; }
+       </style>
+     </head>
+     <body>
+       ${safeHtml}
+       <script>
+         // Bắt sự kiện Click Link
+         document.addEventListener('click', function(e) {
+           var anchor = e.target.closest('a');
+           if (anchor) {
+             e.preventDefault();
+             window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: anchor.href }, '*');
+           }
+         });
+
+         // Bắt sự kiện bôi đen text để tra từ điển
+         document.addEventListener('mouseup', function(e) {
+           var sel = window.getSelection();
+           var text = sel.toString().trim();
+           if (text && text.length > 0 && text.length < 40 && text.split(' ').length <= 4) {
+             var range = sel.getRangeAt(0);
+             var rect = range.getBoundingClientRect();
+             window.parent.postMessage({ 
+                type: 'LECTURE_OPEN_DICT', word: text, 
+                x: rect.left + (rect.width/2), y: rect.bottom, rectTop: rect.top 
+             }, '*');
+           }
+         });
+
+         // Click chỗ khác thì đóng từ điển
+         document.addEventListener('mousedown', function(e) {
+           var sel = window.getSelection();
+           if (!sel.toString().trim()) {
+              window.parent.postMessage({ type: 'LECTURE_CLOSE_DICT' }, '*');
+           }
+         });
+
+         // Tự động đo và báo cáo chiều cao
+         function reportHeight() {
+            var h = document.documentElement.scrollHeight || document.body.scrollHeight;
+            window.parent.postMessage({ type: 'LECTURE_RESIZE', height: h }, '*');
+         }
+         window.addEventListener('load', reportHeight);
+         if (window.ResizeObserver) new ResizeObserver(reportHeight).observe(document.body);
+       </script>
+     </body>
+     </html>
+   `;
+
    return (
-     <div className="animate-in fade-in duration-500 w-full overflow-hidden">
-       <style>{`
-         .html-content-isolate { 
-            font-family: 'Segoe UI', Arial, sans-serif !important; 
-            display: block; 
-            width: 100%;
-         }
-         
-         /* 1. Ép các thẻ dùng border-box để Padding không làm phình khung ngang */
-         .html-content-isolate * { 
-            box-sizing: border-box !important; 
-            max-width: 100% !important; 
-         }
- 
-         /* 2. CỨU CÁI IFRAME: Trả lại content-box cho thẻ bọc Iframe để không bị vỡ tỷ lệ */
-         .html-content-isolate div[style*="padding-bottom"] {
-            box-sizing: content-box !important;
-         }
-         
-         /* Giải phóng Iframe khỏi các giới hạn */
-         .html-content-isolate iframe {
-            max-width: none !important;
-            width: 100% !important;
-            height: 100% !important;
-            display: block;
-         }
-         
-         /* 3. ĐẶC TRỊ ĐỒ THỊ SVG: Ép co giãn theo khung */
-         .html-content-isolate svg { 
-            width: 100% !important;
-            max-width: 100% !important; 
-            height: auto !important; 
-            display: block; 
-         }
- 
-         .html-content-isolate img { 
-            max-width: 100% !important; 
-            height: auto !important; 
-         }
-         
-         .html-content-isolate a { cursor: pointer; color: #0284c7; text-decoration: none; font-weight: 600; }
-         .html-content-isolate a:hover { text-decoration: underline; }
-       `}</style>
-       <div className="html-content-isolate" dangerouslySetInnerHTML={{ __html: safeHtml }} />
+     <div className="w-full animate-in fade-in duration-500">
+       <iframe
+         ref={iframeRef}
+         srcDoc={iframeContent}
+         style={{ width: '100%', height: `${iframeHeight}px`, border: 'none', transition: 'height 0.2s ease', overflow: 'hidden' }}
+         sandbox="allow-scripts allow-same-origin allow-popups"
+         scrolling="no"
+       />
      </div>
    );
  }, (prevProps, nextProps) => prevProps.html === nextProps.html);
@@ -80,7 +143,9 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
+  const [popupUrl, setPopupUrl] = useState<string | null>(null);
   const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
+  
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -94,6 +159,7 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
 
+  // Tắt Từ điển khi click ra ngoài popup
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
        const popup = document.getElementById('dict-popup');
@@ -103,39 +169,30 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // ---------------------------------------------------------------------------
-  // 🚀 EVENT DELEGATION: Tự động mở TẤT CẢ các link ra Tab mới cực sạch sẽ
-  // ---------------------------------------------------------------------------
-  const handleContainerClick = useCallback((e: React.MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const link = target.closest('a');
-      
-      if (link) {
-          const href = link.getAttribute('href');
-          if (!href) return;
-
-          e.preventDefault(); 
-          // Mở link ra Tab mới bằng trình duyệt native (Không iframe, không lag)
-          window.open(href, '_blank', 'noopener,noreferrer');
-      }
-  }, []);
-
   const fetchCourseData = async () => {
     setIsLoading(true); setErrorMessage(null);
     try {
       const { data: { user } } = await supabase.auth.getUser();
       setCurrentUser(user);
+
       const { data: courseData, error: courseErr } = await supabase.from('courses').select('*').eq('id', courseId).single();
       if (courseErr || !courseData) throw new Error("Không tìm thấy dữ liệu Khóa học trên hệ thống.");
       setCourse(courseData);
+
       const { data: modData } = await supabase.from('lecture_modules').select('*').eq('course_id', courseId).order('order_index');
       setModules(modData || []);
       if (modData && modData.length > 0) setExpandedModules([modData[0].id]);
+
       const { data: lecData } = await supabase.from('lectures').select('*').eq('course_id', courseId).eq('is_published', true).order('order_index');
-      setLectures(lecData || []);
-      if (lecData && lecData.length > 0) handleSelectLecture(lecData[0].id, user?.id);
-    } catch (error: any) { setErrorMessage(error.message); } 
-    finally { setIsLoading(false); }
+      const validLectures = (lecData || []).filter(lec => lec.module_id && (modData || []).some(mod => mod.id === lec.module_id));
+      
+      setLectures(validLectures);
+      if (validLectures && validLectures.length > 0) handleSelectLecture(validLectures[0].id, user?.id);
+    } catch (error: any) { 
+       setErrorMessage(error.message); 
+    } finally { 
+       setIsLoading(false); 
+    }
   };
 
   const handleSelectLecture = async (lectureId: string, userIdOverride?: string) => {
@@ -158,13 +215,9 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
     setExpandedModules(prev => prev.includes(modId) ? prev.filter(id => id !== modId) : [...prev, modId]);
   };
 
-  const activeLecture = lectures.find(l => l.id === activeLectureId);
-  const totalPages = useMemo(() => pages.length, [pages]);
-  const safeLectureTasks = useMemo(() => Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [], [activeLecture]);
-  const safeCompletedTasks = Array.isArray(completedTasks) ? completedTasks : [];
-
   const handleToggleTask = useCallback(async (taskId: string) => {
       if (!currentUser || !activeLectureId) return;
+      const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
       setCompletedTasks(prev => {
          const newCompleted = prev.includes(taskId) ? prev.filter(id => id !== taskId) : [...prev, taskId];
          const isCompleted = safeLectureTasks.length > 0 && newCompleted.length === safeLectureTasks.length;
@@ -178,10 +231,10 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
          }).catch();
          return newCompleted;
       });
-  }, [currentUser, activeLectureId, safeLectureTasks]);
+  }, [currentUser, activeLectureId, lectures]);
 
   const handleNextPage = () => {
-    if (currentPage < totalPages) setCurrentPage(prev => prev + 1);
+    if (currentPage < pages.length) setCurrentPage(prev => prev + 1);
     else {
       const currentIndex = lectures.findIndex(l => l.id === activeLectureId);
       if (currentIndex !== -1 && currentIndex < lectures.length - 1) {
@@ -204,8 +257,34 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
     }
   };
 
+  // 🚀 TÁCH HÀM TRA TỪ ĐIỂN RA RIÊNG ĐỂ DÙNG CHUNG CHO CẢ IFRAME VÀ BÊN NGOÀI
+  const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
+    setDictPopup({ show: true, word, x, y, rectTop, data: null, isLoading: true });
+
+    setTimeout(async () => {
+       try {
+          let phonetics = '', audio = '', translation = '';
+          try {
+             const enRes = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
+             if (enRes.ok) {
+                 const enData = await enRes.json();
+                 phonetics = enData[0]?.phonetics?.find((p:any) => p.text)?.text || '';
+                 audio = enData[0]?.phonetics?.find((p:any) => p.audio)?.audio || '';
+             }
+          } catch(err) {}
+          try {
+             const viRes = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|vi`);
+             const viData = await viRes.json();
+             translation = viData.responseData.translatedText;
+          } catch(err) { translation = "Không thể tải bản dịch lúc này."; }
+          setDictPopup(prev => prev ? { ...prev, data: { phonetics, audio, translation }, isLoading: false } : null);
+       } catch (error) { setDictPopup(prev => prev ? { ...prev, data: { translation: "Lỗi kết nối." }, isLoading: false } : null); }
+    }, 100);
+  }, []);
+
+  // Lắng nghe bôi đen text ở tiêu đề bên ngoài Iframe
   const handleTextSelection = useCallback(() => {
-     setTimeout(async () => {
+     setTimeout(() => {
         const selection = window.getSelection();
         if (!selection || selection.rangeCount === 0) return;
         const text = selection.toString().trim();
@@ -214,28 +293,10 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
         if (text.length > 0 && text.length < 40 && text.split(' ').length <= 4) {
            const range = selection.getRangeAt(0);
            const rect = range.getBoundingClientRect();
-           setDictPopup({ show: true, word: text, x: rect.left + (rect.width/2), y: rect.bottom, rectTop: rect.top, data: null, isLoading: true });
-
-           try {
-              let phonetics = '', audio = '', translation = '';
-              try {
-                 const enRes = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(text)}`);
-                 if (enRes.ok) {
-                    const enData = await enRes.json();
-                    phonetics = enData[0]?.phonetics?.find((p:any) => p.text)?.text || '';
-                    audio = enData[0]?.phonetics?.find((p:any) => p.audio)?.audio || '';
-                 }
-              } catch(err) {}
-              try {
-                 const viRes = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|vi`);
-                 const viData = await viRes.json();
-                 translation = viData.responseData.translatedText;
-              } catch(err) { translation = "Không thể tải bản dịch lúc này."; }
-              setDictPopup(prev => prev ? { ...prev, data: { phonetics, audio, translation }, isLoading: false } : null);
-           } catch (error) { setDictPopup(prev => prev ? { ...prev, data: { translation: "Lỗi kết nối." }, isLoading: false } : null); }
+           triggerDictionary(text, rect.left + (rect.width/2), rect.bottom, rect.top);
         }
      }, 100);
-  }, []);
+  }, [triggerDictionary]);
 
   const playAudio = (url: string) => { if (!url) return; new Audio(url).play(); };
   
@@ -244,9 +305,19 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
     else if (document.exitFullscreen) document.exitFullscreen();
   };
 
+  const getEmbedUrl = (url: string) => {
+    if (url.includes('youtube.com/playlist?list=')) return url.replace('playlist?list=', 'embed/videoseries?list=');
+    if (url.includes('youtube.com/watch?v=')) return url.replace('watch?v=', 'embed/');
+    if (url.includes('youtu.be/')) return url.replace('youtu.be/', 'youtube.com/embed/');
+    return url;
+  };
+
+  const activeLecture = lectures.find(l => l.id === activeLectureId);
+  const totalPages = pages.length;
+  const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
+  const safeCompletedTasks = Array.isArray(completedTasks) ? completedTasks : [];
   const isLastLectureAndPage = currentPage === totalPages && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
   const currentHtmlContent = useMemo(() => { const page = pages.find(p => p.page_number === currentPage); return page ? page.content_html : ''; }, [pages, currentPage]);
-
 
   if (isLoading) return <div className="min-h-screen flex items-center justify-center bg-[#e6e9ee]"><div className="animate-spin text-4xl text-[#3ea6e6]">⏳</div></div>;
   if (errorMessage) return (
@@ -327,7 +398,6 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
          <main 
             className="flex-1 overflow-y-auto bg-[#e6e9ee] custom-scrollbar relative"
             ref={containerRef}
-            onClick={handleContainerClick} 
             onMouseUp={handleTextSelection}
          >
              <div className="min-h-full flex flex-col items-center py-10 px-4 md:px-8">
@@ -339,7 +409,12 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
                   ) : (
                     <div>
                        <h2 className="text-[26px] md:text-[32px] text-slate-800 font-normal mb-12 pb-6 border-b border-slate-100">{activeLecture?.title}</h2>
-                       <StaticLectureContent html={currentHtmlContent} />
+                       <StaticLectureContent 
+                          html={currentHtmlContent} 
+                          onOpenPopup={setPopupUrl} 
+                          onOpenDict={triggerDictionary}
+                          onCloseDict={() => setDictPopup(null)}
+                       />
                     </div>
                   )}
                </div>
@@ -394,9 +469,11 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
          )}
       </div>
 
-      {/* TỪ ĐIỂN POPUP VỚI LOGO TONYENGLISH LỆCH TRÁI */}
+      {/* =====================================================================
+          TỪ ĐIỂN POPUP
+          ===================================================================== */}
       {dictPopup && dictPopup.show && (
-         <div id="dict-popup" className="fixed z-[100] bg-white rounded-[1.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.25)] border-2 border-slate-100 w-80 flex flex-col animate-in fade-in zoom-in-95 duration-200 overflow-hidden"
+         <div id="dict-popup" className="fixed z-[100] bg-white rounded-[1.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.25)] border-2 border-slate-100 w-80 flex flex-col overflow-hidden"
            style={{ left: Math.min(dictPopup.x, window.innerWidth - 330), ...(window.innerHeight - dictPopup.y < 300 ? { bottom: window.innerHeight - dictPopup.rectTop + 10 } : { top: dictPopup.y + 10 }), maxHeight: '380px' }}>
             
             <div className="bg-[#f0f9ff] border-b border-[#e0f2fe] py-2.5 px-5 flex items-center justify-start shrink-0">
@@ -417,6 +494,38 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
               )}
             </div>
          </div>
+      )}
+
+      {/* =====================================================================
+          CÁI POP-UP (MODAL) TỐI ƯU HIỆU NĂNG - KHÔNG HIỆU ỨNG THỪA
+          ===================================================================== */}
+      {popupUrl && (
+        <div className="fixed inset-0 z-[9999] bg-slate-900/95 flex flex-col items-center justify-center p-4 md:p-8">
+          
+          <div className="w-full max-w-6xl flex justify-end mb-3">
+             <button 
+                onClick={() => setPopupUrl(null)} 
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-red-500 flex items-center justify-center text-white text-xl font-black transition-colors"
+                title="Đóng cửa sổ"
+             >
+                ✕
+             </button>
+          </div>
+
+          <div className="w-full max-w-6xl h-[85vh] bg-white rounded-2xl overflow-hidden shadow-2xl relative">
+             <div className="absolute inset-0 flex items-center justify-center bg-slate-50 z-0">
+                <div className="flex flex-col items-center gap-3">
+                   <div className="w-8 h-8 border-4 border-[#2bd6eb] border-t-transparent rounded-full animate-spin"></div>
+                   <span className="font-bold text-slate-400">Đang tải tài liệu...</span>
+                </div>
+             </div>
+             <iframe 
+                src={getEmbedUrl(popupUrl)} 
+                className="absolute inset-0 w-full h-full border-0 z-10 bg-white" 
+                allowFullScreen
+             ></iframe>
+          </div>
+        </div>
       )}
 
     </div>

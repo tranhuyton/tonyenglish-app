@@ -13,17 +13,26 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
   const editorRef = useRef(null);
 
-  // Cấu hình Jodit Editor: Giữ nguyên HTML, thêm Toolbar đầy đủ
+  // 🚀 CẤU HÌNH VÔ HIỆU HÓA HOÀN TOÀN TÍNH NĂNG "CẮT CODE" CỦA EDITOR
   const editorConfig = useMemo(() => ({
     readonly: false,
     height: 550,
     allowResizeY: false,
     statusbar: false,
     toolbarAdaptive: false,
-    defaultActionOnPaste: 'insert_as_html', // Quan trọng: Báo cho Editor giữ nguyên HTML khi paste
+    defaultActionOnPaste: 'insert_as_html', 
     askBeforePasteHTML: false,
     askBeforePasteFromWord: false,
-    uploader: { insertImageAsBase64URI: true } // Cho phép copy paste ảnh trực tiếp
+    uploader: { insertImageAsBase64URI: true },
+    
+    // Thuốc lú: Bắt Editor cho phép chạy mọi thẻ (kể cả Script/Iframe/SVG)
+    safeMode: false, 
+    htmlParseBrowser: false,
+    disablePlugins: ['clean-html', 'sanitize'], // Bắn bỏ 2 plugin chuyên xóa code
+    cleanHTML: { 
+        fillEmptyParagraph: false, 
+        cleanOnPaste: false 
+    }
   }), []);
 
   useEffect(() => {
@@ -32,7 +41,11 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   }, [lectureData]);
 
   const fetchPages = async () => {
-    const { data } = await supabase.from('lecture_pages').select('*').eq('lecture_id', lectureData.id).order('page_number', { ascending: true });
+    const { data } = await supabase.from('lecture_pages')
+      .select('*')
+      .eq('lecture_id', lectureData.id)
+      .order('page_number', { ascending: true });
+      
     if (data && data.length > 0) setPages(data);
     else setPages([{ id: 'temp_1', page_number: 1, content_html: '' }]);
   };
@@ -100,6 +113,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     <div className="fixed inset-0 bg-slate-900/80 z-[100] flex justify-center items-center p-4">
       <div className="bg-[#f4f6f9] w-full max-w-7xl h-[95vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95">
         
+        {/* HEADER MODAL */}
         <div className="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-4">
              <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-xl">📝</div>
@@ -115,6 +129,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           </div>
         </div>
 
+        {/* TOP BAR INFO */}
         <div className="p-4 bg-white border-b border-slate-200 flex gap-4 shrink-0">
           <div className="flex-1">
              <label className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-1 block">Tên bài giảng <span className="text-red-500">*</span></label>
@@ -131,19 +146,21 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
         <div className="flex-1 flex overflow-hidden">
           
+          {/* VÙNG SOẠN THẢO CHÍNH BẰNG JODIT */}
           <div className="flex-1 flex flex-col bg-white border-r border-slate-200 overflow-hidden relative">
              <div className="flex items-center justify-between p-3 border-b border-slate-200 bg-slate-50 shrink-0">
                 <div className="text-sm font-bold text-[#0a5482] flex items-center gap-2">
                    <span className="animate-pulse text-emerald-500">🟢</span> Đang xử lý: Trang {activePageIndex + 1}
                 </div>
-                <div className="text-[12px] font-medium text-slate-500">
-                   💡 Bấm vào nút <b>&lt;/&gt;</b> trên thanh công cụ để dán mã HTML gốc.
+                <div className="text-[12px] font-medium text-slate-500 bg-amber-100 text-amber-800 px-3 py-1 rounded">
+                   ⚠️ Nhớ gõ nhẹ nhàng khi sửa text trong vùng biểu đồ anh nhé!
                 </div>
              </div>
 
-             <div className="flex-1 overflow-auto bg-[#f8fafc] p-2">
+             <div className="flex-1 overflow-auto bg-[#f8fafc] p-2 relative">
                  <JoditEditor
                     ref={editorRef}
+                    key={activePage?.id || activePageIndex}
                     value={activePage?.content_html || ''}
                     config={editorConfig}
                     onBlur={(newContent) => handleHtmlChange(newContent)}
@@ -151,6 +168,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
              </div>
           </div>
 
+          {/* CỘT QUẢN LÝ TRANG (SIDEBAR) */}
           <div className="w-80 bg-slate-50 flex flex-col shrink-0">
              <div className="p-4 border-b border-slate-200 bg-white">
                 <button onClick={handleAddPage} className="w-full border-2 border-dashed border-[#2bd6eb] text-[#0a5482] bg-blue-50 hover:bg-[#2bd6eb] hover:text-white transition px-4 py-3 rounded-xl font-black text-sm flex items-center justify-center gap-2">
