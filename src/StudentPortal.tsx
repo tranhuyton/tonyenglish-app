@@ -66,7 +66,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [testPage, setTestPage] = useState(1);
   const [historyPage, setHistoryPage] = useState(1);
 
+  // 🚀 STATE MỚI CHO BỘ LỌC PHÂN TÍCH
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
+  const [analyticsCategory, setAnalyticsCategory] = useState('all');
   const [historySort, setHistorySort] = useState('date-desc');
 
   const [showModeSelection, setShowModeSelection] = useState(false);
@@ -229,7 +231,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     } 
   };
 
-  // --- LOGIC XỬ LÝ TÊN & BANNER THỜI GIAN ĐÃ CHỐNG LỖI KHOẢNG TRẮNG ---
   const rawFullName = userProfile?.full_name || (currentUser?.email ? currentUser.email.split('@')[0] : 'Học viên');
   const nameParts = rawFullName.trim().split(/\s+/);
   const displayUserName = nameParts[nameParts.length - 1]; 
@@ -247,22 +248,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const getCourseCover = (course: any) => {
     const lowerTitle = course.title?.toLowerCase() || '';
-
-    // 1. Ưu tiên check môn học cụ thể trước
     if (lowerTitle.includes('business') || lowerTitle.includes('econ')) 
         return { image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800', badge: 'Business & Econ', color: 'text-amber-600' };
     if (lowerTitle.includes('science')) 
         return { image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800', badge: 'IGCSE Science', color: 'text-emerald-600' };
     if (lowerTitle.includes('math')) 
         return { image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=800', badge: 'Mathematics', color: 'text-purple-600' };
-
-    // 2. Sau đó mới check hệ chương trình chung
     if (lowerTitle.includes('ielts') || course.type === 'IELTS') 
         return { image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800', badge: 'IELTS Mastery', color: 'text-blue-600' };
     if (lowerTitle.includes('igcse')) 
         return { image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800', badge: 'IGCSE Program', color: 'text-teal-600' };
-    
-    // 3. Mặc định nếu không khớp
     return { image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800', badge: course.type || 'Khóa học', color: 'text-slate-600' };
   };
 
@@ -308,8 +303,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     );
   };
 
+  // 🚀 LỌC DỮ LIỆU LỊCH SỬ KẾT HỢP ĐỀ THI VÀ BÀI TẬP
   const processedHistory = [...historyData]
     .filter(h => analyticsCourse === 'all' || h.courseId === analyticsCourse)
+    .filter(h => {
+       if (analyticsCategory === 'all') return true;
+       // Tìm nguồn gốc bài test để xem nó là category gì
+       const foundTest = tests.find(t => String(t.id) === String(h.testId) || t.title.trim() === h.name.trim());
+       const cat = foundTest?.content_json?.basicInfo?.category || 'test';
+       return cat === analyticsCategory;
+    })
     .sort((a, b) => {
       if (historySort === 'date-desc') return new Date(b.date).getTime() - new Date(a.date).getTime();
       if (historySort === 'date-asc') return new Date(a.date).getTime() - new Date(b.date).getTime();
@@ -342,7 +345,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const getDynamicCompleteFeedback = () => {
     if (analyticsTotalTestsDone === 0) return "Cùng khởi động với bài thi đầu tiên nào!";
     if (analyticsTotalTestsDone < 5) return `Bạn đã hoàn thành ${analyticsTotalTestsDone} bài. Bước đệm hoàn hảo để bứt phá.`;
-    return `Wow, bạn đã hoàn thành ${analyticsTotalTestsDone} bài thi! Sự kiên trì của bạn thực sự đáng nể đó.`;
+    return `Wow, bạn đã hoàn thành ${analyticsTotalTestsDone} bài! Sự kiên trì của bạn thực sự đáng nể đó.`;
   };
 
   const sparklineScoreArr = processedHistory.slice(0, 5).reverse().map(h => ({ v: h.scoreObj.value }));
@@ -368,7 +371,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   return (
     <div className="min-h-screen bg-[#f4f7f9] font-sans text-slate-800">
       
-      {/* HEADER: KHÔI PHỤC LẠI LOGO HÌNH ẢNH */}
       <header className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-40 shadow-sm">
         <div className="max-w-[1200px] w-full mx-auto px-6 py-3 flex items-center justify-between">
           
@@ -377,7 +379,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <h1 className="font-black text-2xl tracking-tighter text-[#0a5482] leading-none">TONY<span className="text-slate-800">ENGLISH</span></h1>
               <span className="text-[10px] italic text-[#1e88e5] font-medium mt-0.5 pr-0.5">The future begins here</span>
             </div>
-            {/* TRẢ LẠI LOGO KHIÊN GỐC */}
             <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
                <img src="/logo-shield.png" alt="TonyEnglish Logo" className="w-auto h-full object-contain" />
             </div>
@@ -398,7 +399,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                </div>
                <div className="h-6 w-px bg-slate-200 mx-1"></div>
                <button onClick={toggleFullScreen} className="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 hover:text-[#1e88e5] transition-colors">
-                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
+                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
                </button>
             </div>
 
@@ -435,7 +436,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       </header>
 
-      {/* MAIN CONTENT */}
       <main className="max-w-[1200px] w-full mx-auto p-6 md:p-8 relative">
         
         {/* ================= TAB 1: THƯ VIỆN ĐỀ ================= */}
@@ -444,7 +444,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {activeView === 'dashboard' && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
                 
-                {/* HERO BANNER TỰ ĐỘNG ĐỔI MÀU THEO THỜI GIAN */}
                 <div className={`relative bg-gradient-to-br ${bannerConfig.gradient} rounded-[2rem] p-8 md:p-12 mb-10 overflow-hidden shadow-xl`}>
                   <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
                   <div className="absolute bottom-0 left-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl translate-y-1/3"></div>
@@ -499,11 +498,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       const testCount = allTests.filter(t => courseFolderIds.includes(t.folder_id)).length;
                       const lectureCount = allLectures.filter(l => l.course_id === course.id).length;
                       
-                      // Tính tiến độ Bài giảng
                       const completedLecs = lectureProgressData.filter(lp => lp.is_completed && allLectures.find(l => l.id === lp.lecture_id && l.course_id === course.id)).length;
                       const lecProgress = lectureCount > 0 ? Math.min(100, Math.round((completedLecs / lectureCount) * 100)) : 0;
                       
-                      // Tính tiến độ Đề thi
                       const uniqueCompletedTests = new Set(historyData.filter(h => h.courseId === course.id).map(h => h.testId)).size;
                       const testProgress = testCount > 0 ? Math.min(100, Math.round((uniqueCompletedTests / testCount) * 100)) : 0;
 
@@ -520,11 +517,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             <h4 className="font-black text-xl text-slate-800 mb-3">{course.title}</h4>
                             <div className="flex items-center gap-4 mb-6">
                               <span className="bg-slate-50 text-slate-600 text-[12px] font-bold px-3 py-1.5 rounded-lg border border-slate-100">📚 {lectureCount} bài giảng</span>
-                              <span className="bg-slate-50 text-slate-600 text-[12px] font-bold px-3 py-1.5 rounded-lg border border-slate-100">📝 {testCount} đề thi</span>
+                              <span className="bg-slate-50 text-slate-600 text-[12px] font-bold px-3 py-1.5 rounded-lg border border-slate-100">📝 {testCount} đề & bài tập</span>
                             </div>
                             
                             <div className="w-full mt-auto flex flex-col md:flex-row gap-6">
-                              {/* Thanh 1: Tiến độ bài giảng */}
                               <div className="flex-1">
                                 <div className="flex justify-between items-end mb-1.5">
                                   <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ bài giảng</span>
@@ -534,10 +530,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${lecProgress}%` }}></div>
                                 </div>
                               </div>
-                              {/* Thanh 2: Tiến độ Đề thi */}
                               <div className="flex-1">
                                 <div className="flex justify-between items-end mb-1.5">
-                                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ đề thi</span>
+                                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ làm bài</span>
                                   <span className="text-[12px] font-black text-blue-600">{testProgress}%</span>
                                 </div>
                                 <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
@@ -552,7 +547,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                <span className="text-lg">📖</span> VÀO BÀI GIẢNG
                              </button>
                              <button onClick={() => handleOpenCourse(course)} className="w-full bg-gradient-to-r from-[#0a5482] to-[#1e88e5] hover:from-[#1565c0] hover:to-[#0a5482] text-white font-black text-[13px] py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
-                               <span className="text-lg">📝</span> KHO ĐỀ THI
+                               <span className="text-lg">📝</span> KHO ĐỀ & BÀI TẬP
                              </button>
                           </div>
                         </div>
@@ -586,13 +581,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           const childCount = folders.filter(f => f.parent_id === subFolder.id).length;
                           const testCount = allTests.filter(t => t.folder_id === subFolder.id).length;
                           
-                          // LẤY ẢNH NỀN GÁN SẴN HOẶC RANDOM ĐẸP MẮT
                           const defaultImage = FOLDER_IMAGES[idx % FOLDER_IMAGES.length];
                           const displayImage = subFolder.thumbnail_url || defaultImage;
 
                           return (
                             <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer flex flex-col h-[180px] relative group">
-                              {/* PHẦN ĐẦU THƯ MỤC CÓ HÌNH ẢNH */}
                               <div className={`h-[110px] relative p-5 overflow-hidden flex items-end`}>
                                 <img src={displayImage} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="folder" />
                                 <div className={`absolute inset-0 bg-gradient-to-t from-black/80 to-black/10`}></div>
@@ -618,7 +611,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <div className="bg-white rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm mt-8 animate-in fade-in zoom-in-95">
                       <div className="bg-white px-6 py-5 border-b border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
                         <div className="relative w-full sm:w-96">
-                          <input type="text" placeholder="Tìm kiếm bài thi..." value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-12 pr-4 py-3 rounded-2xl bg-slate-50 border-none font-medium text-[14px] outline-none focus:ring-2 focus:ring-[#1e88e5] transition-shadow" />
+                          <input type="text" placeholder="Tìm kiếm đề thi / bài tập..." value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-12 pr-4 py-3 rounded-2xl bg-slate-50 border-none font-medium text-[14px] outline-none focus:ring-2 focus:ring-[#1e88e5] transition-shadow" />
                           <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">🔍</span>
                         </div>
                         <div className="w-full sm:w-48 bg-slate-50 rounded-2xl px-4 py-1 border-none focus-within:ring-2 focus-within:ring-[#1e88e5] transition-shadow">
@@ -653,8 +646,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                     <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-sm">{getTestIcon(test.test_type)}</div>
                                     <span className={`text-[10px] font-black px-3 py-1.5 rounded-lg uppercase tracking-widest ${statusConfig.badgeClass}`}>{statusConfig.badge}</span>
                                   </div>
-                                  <h3 className="font-bold text-slate-800 text-[16px] group-hover:text-[#1e88e5] transition-colors mb-3 line-clamp-2 leading-snug">{test.title}</h3>
-                                  <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{test.test_type}</span>
+                                  <h3 className="font-bold text-slate-800 text-[16px] group-hover:text-[#1e88e5] transition-colors mb-2 line-clamp-2 leading-snug">{test.title}</h3>
+                                  
+                                  {/* 🚀 HIỂN THỊ BADGE BÀI TẬP HAY ĐỀ THI BÊN NGOÀI KHUNG THƯ VIỆN */}
+                                  <div className="flex items-center gap-2 mb-3">
+                                      <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{test.test_type}</span>
+                                      <span className={`text-[9px] px-1.5 py-0.5 rounded uppercase font-black ${test.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                          {test.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
+                                      </span>
+                                  </div>
+
                                 </div>
                                 <button className={`mt-6 w-full font-black text-[13px] py-3 rounded-xl transition-colors shadow-sm ${statusConfig.btnClass}`}>{statusConfig.btnText}</button>
                               </div>
@@ -686,14 +687,26 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             <div className="bg-white px-8 py-6 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
               <div>
                 <h2 className="text-[22px] font-black text-slate-800">Hiệu Suất Học Tập</h2>
-                <p className="text-sm text-slate-500 font-medium mt-1">Lựa chọn khóa học để xem biểu đồ và lịch sử chi tiết</p>
+                <p className="text-sm text-slate-500 font-medium mt-1">Lựa chọn bộ lọc để xem biểu đồ và lịch sử chi tiết</p>
               </div>
-              <div className="w-full md:w-64 bg-slate-50 border border-slate-100 rounded-2xl px-5 py-3 flex items-center justify-between cursor-pointer focus-within:ring-2 focus-within:ring-[#1e88e5] transition-shadow">
-                <select value={analyticsCourse} onChange={(e) => setAnalyticsCourse(e.target.value)} className="w-full bg-transparent font-bold text-[14px] text-slate-700 outline-none cursor-pointer appearance-none">
-                  <option value="all">Tất cả khóa học</option>
-                  {courses.length > 0 && courses.map(course => ( <option key={course.id} value={course.id}>{course.title}</option> ))}
-                </select>
-                <span className="text-slate-400 text-xs">▼</span>
+              <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <div className="w-full sm:w-48 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-2.5 flex items-center justify-between cursor-pointer focus-within:ring-2 focus-within:ring-[#1e88e5] transition-shadow">
+                  <select value={analyticsCourse} onChange={(e) => setAnalyticsCourse(e.target.value)} className="w-full bg-transparent font-bold text-[13px] text-slate-700 outline-none cursor-pointer appearance-none">
+                    <option value="all">Tất cả khóa học</option>
+                    {courses.length > 0 && courses.map(course => ( <option key={course.id} value={course.id}>{course.title}</option> ))}
+                  </select>
+                  <span className="text-slate-400 text-xs">▼</span>
+                </div>
+
+                {/* 🚀 BỘ LỌC MỚI: PHÂN LOẠI BÀI TẬP VÀ ĐỀ THI */}
+                <div className="w-full sm:w-48 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-2.5 flex items-center justify-between cursor-pointer focus-within:ring-2 focus-within:ring-[#1e88e5] transition-shadow">
+                  <select value={analyticsCategory} onChange={(e) => setAnalyticsCategory(e.target.value)} className="w-full bg-transparent font-bold text-[13px] text-slate-700 outline-none cursor-pointer appearance-none">
+                    <option value="all">Tất cả bài làm</option>
+                    <option value="test">Chỉ xem Đề thi</option>
+                    <option value="exercise">Chỉ xem Bài tập</option>
+                  </select>
+                  <span className="text-slate-400 text-xs">▼</span>
+                </div>
               </div>
             </div>
 
@@ -707,7 +720,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </div>
                 </div>
                 <h3 className="text-xl font-black text-slate-700 mb-2">Chưa có dữ liệu làm bài</h3>
-                <p className="text-slate-500 font-medium text-[15px]">Anh/chị hãy vào Thư viện đề, làm thử một bài test và nộp bài để hệ thống phân tích nhé!</p>
+                <p className="text-slate-500 font-medium text-[15px]">Anh/chị hãy đổi bộ lọc hoặc làm thử một bài để hệ thống phân tích nhé!</p>
               </div>
             ) : (
               <>
@@ -750,10 +763,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </div>
                 </div>
 
-                {/* Lịch sử làm bài: ĐÃ PHÂN TRANG VÀ LÀM LẠI BADGE MÀU SẮC */}
                 <div className="mt-10 bg-white rounded-[2rem] border border-slate-100 shadow-sm overflow-hidden">
                   <div className="px-8 py-6 border-b border-slate-100 flex justify-between items-center">
-                     <h3 className="font-black text-xl text-slate-800">Lịch sử làm bài kiểm tra</h3>
+                     <h3 className="font-black text-xl text-slate-800">Lịch sử làm bài</h3>
                   </div>
                   <div className="overflow-x-auto">
                     <table className="w-full text-left border-collapse min-w-[800px]">
@@ -771,7 +783,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           return (
                           <tr key={history.id} className="hover:bg-slate-50/50 transition-colors group">
                             <td className="px-8 py-6">
-                              <div className="font-bold text-[15px] text-slate-800 mb-1.5">{history.name}</div>
+                              {/* 🚀 HIỂN THỊ BADGE BÀI TẬP/ĐỀ THI TRONG BẢNG LỊCH SỬ */}
+                              <div className="font-bold text-[15px] text-slate-800 mb-1.5 flex items-center gap-2">
+                                 {history.name}
+                                 {(() => {
+                                    const foundTest = tests.find(t => String(t.id) === String(history.testId)) || tests.find(t => t.title.trim() === history.name.trim());
+                                    const isEx = foundTest?.content_json?.basicInfo?.category === 'exercise';
+                                    return (
+                                        <span className={`text-[9px] px-1.5 py-0.5 rounded uppercase font-black ${isEx ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                            {isEx ? 'BÀI TẬP' : 'ĐỀ THI'}
+                                        </span>
+                                    );
+                                 })()}
+                              </div>
                               <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wider">{history.subject}</span>
                             </td>
                             <td className="px-8 py-6 text-center">
@@ -836,7 +860,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
       </main>
 
-      {/* POPUP CHI TIẾT LỊCH SỬ */}
       {viewingHistoryDetail && (
         <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-[2rem] w-full max-w-xl shadow-2xl overflow-hidden animate-in zoom-in-95">
@@ -865,14 +888,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
 
                 <button onClick={() => handleRetakeFromHistory(viewingHistoryDetail)} className="w-full bg-gradient-to-r from-[#0a5482] to-[#1e88e5] hover:from-[#1565c0] hover:to-[#0a5482] text-white font-black py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all active:scale-95 uppercase tracking-widest flex items-center justify-center gap-3 text-[14px]">
-                   🔄 Làm lại đề thi này ngay
+                   🔄 Làm lại bài này ngay
                 </button>
              </div>
           </div>
         </div>
       )}
 
-      {/* POPUP CHỌN HÌNH THỨC THI IELTS */}
       {showModeSelection && testToStart && (
         <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-[2rem] w-full max-w-lg shadow-2xl p-10 animate-in zoom-in-95 duration-200">

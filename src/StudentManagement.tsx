@@ -8,7 +8,6 @@ const authSupabase = createClient(
   { auth: { persistSession: false } }
 );
 
-// Khai báo biến đếm giờ ngoài component để chống render
 let studentSearchTimer: any;
 
 export default function StudentManagement() {
@@ -29,6 +28,9 @@ export default function StudentManagement() {
   const [showCreateUserModal, setShowCreateUserModal] = useState(false);
   const [isCreatingUser, setIsCreatingUser] = useState(false);
   const [newUserRole, setNewUserRole] = useState('student');
+
+  const [editingUser, setEditingUser] = useState<any>(null);
+  const [isUpdatingUser, setIsUpdatingUser] = useState(false);
 
   useEffect(() => {
     fetchStudents();
@@ -91,7 +93,12 @@ export default function StudentManagement() {
       await new Promise(resolve => setTimeout(resolve, 1500));
 
       if (data.user) {
-        await supabase.from('profiles').update({ full_name: fullName, role: newUserRole }).eq('id', data.user.id);
+        // 🚀 DÙNG HÀM RPC ĐỂ VƯỢT RÀO BẢO MẬT (CHỐNG LỖI LƯU TÊN BỊ CHẶN NGẦM)
+        await supabase.rpc('update_user_profile', {
+            target_user_id: data.user.id,
+            new_full_name: fullName,
+            new_role: newUserRole
+        });
       }
 
       alert(`✅ Đã tạo tài khoản ${newUserRole === 'admin' ? 'Quản trị viên' : 'Học viên'} thành công!`);
@@ -102,6 +109,38 @@ export default function StudentManagement() {
       alert("❌ Lỗi tạo tài khoản: " + err.message);
     } finally {
       setIsCreatingUser(false);
+    }
+  };
+
+  const handleUpdateUser = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsUpdatingUser(true);
+    const formData = new FormData(e.currentTarget);
+    const fullName = formData.get('fullName') as string;
+    const role = formData.get('role') as string;
+
+    try {
+      // 🚀 DÙNG HÀM RPC ĐỂ VƯỢT RÀO BẢO MẬT
+      const { error } = await supabase.rpc('update_user_profile', {
+          target_user_id: editingUser.id,
+          new_full_name: fullName,
+          new_role: role
+      });
+      
+      if (error) throw error;
+      
+      alert("✅ Đã cập nhật thông tin thành công!");
+      
+      if (selectedStudent && selectedStudent.id === editingUser.id) {
+         setSelectedStudent({ ...selectedStudent, full_name: fullName, role: role });
+      }
+      
+      setEditingUser(null);
+      fetchStudents();
+    } catch (err: any) {
+      alert("❌ Lỗi cập nhật: " + err.message);
+    } finally {
+      setIsUpdatingUser(false);
     }
   };
 
@@ -171,6 +210,9 @@ export default function StudentManagement() {
 
   const availableCourses = courses.filter(c => !studentEnrollments.some(e => e.course_id === c.id));
 
+  // ==========================================
+  // VIEW 2: CHI TIẾT HỌC VIÊN
+  // ==========================================
   if (selectedStudent) {
     const totalTests = studentHistory.length;
     const avgScore = totalTests > 0 ? (studentHistory.reduce((acc, curr) => acc + (curr.score || 0), 0) / totalTests).toFixed(1) : 0;
@@ -190,7 +232,12 @@ export default function StudentManagement() {
             <div className="w-20 h-20 rounded-full bg-[#0a5482] text-white flex items-center justify-center font-black text-3xl mb-4 shadow-inner mt-4">
               {selectedStudent.full_name ? selectedStudent.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (selectedStudent.email ? selectedStudent.email.charAt(0).toUpperCase() : 'U')}
             </div>
-            <h2 className="text-xl font-black text-slate-800 mb-1">{selectedStudent.full_name || 'Học viên ẩn danh'}</h2>
+            
+            <h2 className="text-xl font-black text-slate-800 mb-1 flex items-center justify-center gap-2">
+               {selectedStudent.full_name || <span className="text-orange-500 italic text-lg">[Chưa cập nhật Tên]</span>}
+               <button onClick={() => setEditingUser(selectedStudent)} className="text-sm bg-slate-100 hover:bg-[#0a5482] hover:text-white text-slate-400 p-1.5 rounded-md transition-colors" title="Sửa thông tin">✏️</button>
+            </h2>
+            
             <p className="text-slate-500 font-medium text-[14px] mb-4">{selectedStudent.email}</p>
             <div className="w-full border-t border-slate-100 pt-4 flex justify-between text-[13px]">
               <span className="text-slate-500 font-medium">Ngày tham gia:</span>
@@ -277,6 +324,8 @@ export default function StudentManagement() {
             )}
           </div>
         </div>
+        
+        {renderEditUserModal()}
 
         {showAssignModal && (
           <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4">
@@ -304,11 +353,61 @@ export default function StudentManagement() {
     );
   }
 
+  // ==========================================
+  // VIEW 1: DANH SÁCH HỌC VIÊN TỔNG
+  // ==========================================
+  
+  function renderEditUserModal() {
+    if (!editingUser) return null;
+    return (
+      <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4">
+        <form onSubmit={handleUpdateUser} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
+          <h2 className="text-xl font-black text-slate-800 mb-6 uppercase tracking-tight border-b pb-4 text-center">Sửa Thông Tin</h2>
+          
+          <div className="space-y-4 mb-8">
+            <div>
+              <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Họ và tên</label>
+              <input name="fullName" required type="text" defaultValue={editingUser.full_name || ''} autoComplete="off" placeholder="VD: Trần Huy Tôn" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
+            </div>
+            
+            <div>
+              <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Email đăng nhập</label>
+              <input type="email" defaultValue={editingUser.email} disabled className="w-full border border-slate-200 bg-slate-50 rounded-xl px-4 py-3 outline-none text-slate-400 text-sm cursor-not-allowed" />
+              <p className="text-[10px] text-slate-400 mt-1 italic">* Không thể sửa email từ Admin Panel.</p>
+            </div>
+
+            <div>
+              <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Phân quyền</label>
+              <div className="grid grid-cols-2 gap-3 mt-2">
+                <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${editingUser.role === 'student' || !editingUser.role ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
+                  <input type="radio" name="role" value="student" defaultChecked={editingUser.role === 'student' || !editingUser.role} onChange={(e) => setEditingUser({...editingUser, role: 'student'})} className="hidden" />
+                  👨‍🎓 Học viên
+                </label>
+                <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${editingUser.role === 'admin' ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
+                  <input type="radio" name="role" value="admin" defaultChecked={editingUser.role === 'admin'} onChange={(e) => setEditingUser({...editingUser, role: 'admin'})} className="hidden" />
+                  👑 Quản trị
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <button type="button" onClick={() => setEditingUser(null)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button>
+            <button type="submit" disabled={isUpdatingUser} className="flex-1 bg-[#0a5482] text-white font-black py-3 rounded-xl shadow-lg transition hover:bg-[#084266] disabled:opacity-50">
+              {isUpdatingUser ? 'ĐANG LƯU...' : 'LƯU THAY ĐỔI'}
+            </button>
+          </div>
+        </form>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden animate-in fade-in duration-300">
       <div className="bg-slate-50 px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
         <h2 className="font-black text-xl text-[#0a5482]">Quản lý Tài Khoản</h2>
         <div className="relative w-full sm:w-80">
+          
           <input 
             type="text" 
             placeholder="Tìm kiếm theo email hoặc tên..." 
@@ -330,11 +429,12 @@ export default function StudentManagement() {
         ) : filteredStudents.length === 0 ? (
           <div className="p-16 text-center text-slate-400 font-medium text-lg border-t border-slate-100">Không tìm thấy tài khoản nào.</div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
+          <div className="overflow-x-auto min-h-[500px]">
+            <table className="w-full text-left border-collapse min-w-[800px]">
               <thead>
                 <tr className="bg-white border-b border-slate-200 text-[11px] font-black uppercase tracking-wider text-slate-400">
-                  <th className="px-6 py-4">Tài Khoản</th>
+                  <th className="px-6 py-4">Tài Khoản (Email)</th>
+                  <th className="px-6 py-4">Họ và Tên</th>
                   <th className="px-6 py-4">Phân quyền</th>
                   <th className="px-6 py-4 text-center">Ngày tạo</th>
                   <th className="px-6 py-4 text-right">Hành động</th>
@@ -348,10 +448,12 @@ export default function StudentManagement() {
                         <div className={`w-10 h-10 rounded-full text-white flex items-center justify-center font-bold text-sm shrink-0 ${student.role === 'admin' ? 'bg-red-500' : 'bg-[#0a5482]'}`}>
                           {student.full_name ? student.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (student.email ? student.email.charAt(0).toUpperCase() : 'U')}
                         </div>
-                        <div>
-                          <div className="font-bold text-[14px] text-slate-800">{student.full_name || 'Người dùng ẩn danh'}</div>
-                          <div className="text-[13px] font-medium text-slate-500">{student.email}</div>
-                        </div>
+                        <div className="text-[13px] font-bold text-slate-700">{student.email}</div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className={`font-bold text-[14px] ${student.full_name ? 'text-[#0a5482]' : 'text-orange-500 italic'}`}>
+                         {student.full_name || '[Chưa cập nhật]'}
                       </div>
                     </td>
                     <td className="px-6 py-4">
@@ -364,6 +466,11 @@ export default function StudentManagement() {
                       <button onClick={() => handleSelectStudent(student)} className="text-[#0a5482] font-bold text-[12px] bg-white hover:bg-[#0a5482] hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-200 shadow-sm uppercase tracking-wider">
                         Cấu hình & Tiến độ
                       </button>
+                      
+                      <button onClick={() => setEditingUser(student)} className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-colors border border-transparent hover:border-blue-200" title="Sửa thông tin">
+                        ✏️
+                      </button>
+
                       <button onClick={() => handleDeleteUser(student.id, student.full_name)} className="text-slate-400 hover:text-red-500 hover:bg-red-50 p-2 rounded-lg transition-colors border border-transparent hover:border-red-200" title="Xóa tài khoản">
                         🗑️
                       </button>
@@ -376,8 +483,10 @@ export default function StudentManagement() {
         )}
       </div>
 
+      {renderEditUserModal()}
+
       {showCreateUserModal && (
-        <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4">
           <form onSubmit={handleCreateUser} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
             <h2 className="text-xl font-black text-slate-800 mb-6 uppercase tracking-tight border-b pb-4 text-center">Tạo Tài Khoản Mới</h2>
             

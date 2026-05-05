@@ -11,6 +11,12 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   const [activePageIndex, setActivePageIndex] = useState(0);
   const [isSaving, setIsSaving] = useState(false);
 
+  // 🚀 STATE MỚI CHO BÀI TẬP ĐÍNH KÈM
+  const [taskList, setTaskList] = useState<any[]>(lectureData?.task_list || []);
+  const [rightTab, setRightTab] = useState<'pages' | 'tasks'>('pages');
+  const [availableExercises, setAvailableExercises] = useState<any[]>([]);
+  const [showExerciseDropdown, setShowExerciseDropdown] = useState(false);
+
   const editorRef = useRef(null);
 
   const editorConfig = useMemo(() => ({
@@ -33,6 +39,22 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     if (lectureData.id !== 'new') fetchPages();
     else setPages([{ id: 'temp_1', page_number: 1, content_html: '' }]);
   }, [lectureData]);
+
+  // 🚀 TỰ ĐỘNG LẤY ĐỀ THI / BÀI TẬP CỦA KHÓA HỌC HIỆN TẠI
+  useEffect(() => {
+    if (!courseId) {
+       setAvailableExercises([]);
+       return;
+    }
+    const fetchEx = async () => {
+       const { data } = await supabase.from('tests')
+          .select('id, title, content_json, test_type')
+          .eq('course_id', courseId)
+          .order('created_at', { ascending: false });
+       if (data) setAvailableExercises(data);
+    };
+    fetchEx();
+  }, [courseId]);
 
   const fetchPages = async () => {
     const { data } = await supabase.from('lecture_pages')
@@ -57,22 +79,20 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     setActivePageIndex(pages.length);
   };
 
-  // 🚀 TÍNH NĂNG MỚI: CHUYỂN TRANG LÊN
   const handleMoveUp = (index: number) => {
     if (index === 0) return;
     const newPages = [...pages];
     [newPages[index - 1], newPages[index]] = [newPages[index], newPages[index - 1]];
-    newPages.forEach((p, i) => p.page_number = i + 1); // Cập nhật lại số trang
+    newPages.forEach((p, i) => p.page_number = i + 1); 
     setPages(newPages);
     setActivePageIndex(index - 1);
   };
 
-  // 🚀 TÍNH NĂNG MỚI: CHUYỂN TRANG XUỐNG
   const handleMoveDown = (index: number) => {
     if (index === pages.length - 1) return;
     const newPages = [...pages];
     [newPages[index + 1], newPages[index]] = [newPages[index], newPages[index + 1]];
-    newPages.forEach((p, i) => p.page_number = i + 1); // Cập nhật lại số trang
+    newPages.forEach((p, i) => p.page_number = i + 1); 
     setPages(newPages);
     setActivePageIndex(index + 1);
   };
@@ -85,13 +105,34 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     setActivePageIndex(Math.max(0, indexToRemove - 1));
   };
 
+  // 🚀 CHỨC NĂNG THÊM TASK VÀO BÀI GIẢNG
+  const handleAddExerciseTask = (ex: any) => {
+      const isExercise = ex.content_json?.basicInfo?.category === 'exercise';
+      const newTask = {
+          id: `task_${Date.now()}`,
+          text: `${isExercise ? 'Làm bài tập' : 'Làm bài kiểm tra'}: ${ex.title}`,
+          test_id: ex.id,
+          type: 'exercise'
+      };
+      setTaskList([...taskList, newTask]);
+      setShowExerciseDropdown(false);
+  }
+
+  const handleAddManualTask = () => {
+      const text = window.prompt("Nhập nội dung ghi chú / nhiệm vụ:");
+      if (text && text.trim()) {
+          setTaskList([...taskList, { id: `task_${Date.now()}`, text: text.trim(), type: 'manual' }]);
+      }
+  }
+
   const handleSave = async () => {
     if (!title.trim() || !courseId) return alert('Vui lòng nhập tên và chọn khóa học!');
     setIsSaving(true);
 
     try {
       let currentLectureId = lectureData.id;
-      const lecPayload = { title, course_id: courseId, module_id: moduleId || null, is_published: true };
+      // 🚀 ĐƯA THÊM TASK_LIST VÀO DỮ LIỆU LƯU TRỮ
+      const lecPayload = { title, course_id: courseId, module_id: moduleId || null, is_published: true, task_list: taskList };
       
       if (currentLectureId === 'new') {
         const { data: newLec, error: err1 } = await supabase.from('lectures').insert([lecPayload]).select().single();
@@ -158,6 +199,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
         <div className="flex-1 flex overflow-hidden">
           
+          {/* KHUNG SOẠN THẢO TRÁI */}
           <div className="flex-1 flex flex-col bg-white border-r border-slate-200 overflow-hidden relative">
              <div className="flex items-center justify-between p-3 border-b border-slate-200 bg-slate-50 shrink-0">
                 <div className="text-sm font-bold text-[#0a5482] flex items-center gap-2">
@@ -179,35 +221,86 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
              </div>
           </div>
 
-          <div className="w-80 bg-slate-50 flex flex-col shrink-0">
-             <div className="p-4 border-b border-slate-200 bg-white">
-                <button onClick={handleAddPage} className="w-full border-2 border-dashed border-[#2bd6eb] text-[#0a5482] bg-blue-50 hover:bg-[#2bd6eb] hover:text-white transition px-4 py-3 rounded-xl font-black text-sm flex items-center justify-center gap-2">
-                   ➕ THÊM TRANG NỘI DUNG
-                </button>
+          {/* KHUNG ĐIỀU KHIỂN PHẢI (TRANG & NHIỆM VỤ) */}
+          <div className="w-[340px] bg-slate-50 flex flex-col shrink-0">
+             
+             {/* THANH TAB ĐIỀU KHIỂN */}
+             <div className="flex bg-slate-200/50 p-1 m-3 rounded-xl border border-slate-200">
+                <button onClick={() => setRightTab('pages')} className={`flex-1 py-2 text-[11px] font-black uppercase rounded-lg transition-colors ${rightTab === 'pages' ? 'bg-white shadow-sm text-[#0a5482]' : 'text-slate-500 hover:text-slate-700'}`}>Trang nội dung</button>
+                <button onClick={() => setRightTab('tasks')} className={`flex-1 py-2 text-[11px] font-black uppercase rounded-lg transition-colors ${rightTab === 'tasks' ? 'bg-white shadow-sm text-[#0a5482]' : 'text-slate-500 hover:text-slate-700'}`}>Nhiệm vụ đính kèm</button>
              </div>
-             <div className="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar">
-                {pages.map((p, idx) => (
-                   <div 
-                      key={p.id}
-                      onClick={() => setActivePageIndex(idx)}
-                      className={`flex justify-between items-center p-3 rounded-xl cursor-pointer transition-all border-2 ${activePageIndex === idx ? 'bg-white border-[#2bd6eb] shadow-md' : 'bg-white border-slate-100 hover:border-slate-300'}`}
-                   >
-                      <div className="flex items-center gap-2">
-                         <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0 ${activePageIndex === idx ? 'bg-[#2bd6eb] text-white' : 'bg-slate-200 text-slate-500'}`}>
-                            {idx + 1}
-                         </div>
-                         <span className="font-bold text-[13px] text-slate-700 truncate w-16">Trang {idx + 1}</span>
-                      </div>
-                      
-                      {/* 🚀 BỘ NÚT ĐIỀU KHIỂN CHUYỂN TRANG */}
-                      <div className="flex items-center gap-1 shrink-0">
-                         <button onClick={(e) => { e.stopPropagation(); handleMoveUp(idx); }} disabled={idx === 0} className="w-6 h-6 flex items-center justify-center bg-slate-100 hover:bg-slate-200 rounded disabled:opacity-30 disabled:hover:bg-slate-100 transition" title="Lên trên">⬆️</button>
-                         <button onClick={(e) => { e.stopPropagation(); handleMoveDown(idx); }} disabled={idx === pages.length - 1} className="w-6 h-6 flex items-center justify-center bg-slate-100 hover:bg-slate-200 rounded disabled:opacity-30 disabled:hover:bg-slate-100 transition" title="Xuống dưới">⬇️</button>
-                         <button onClick={(e) => { e.stopPropagation(); handleRemovePage(idx); }} className="w-6 h-6 flex items-center justify-center text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 rounded ml-1 transition" title="Xóa trang">✖</button>
-                      </div>
+
+             {/* TAB 1: QUẢN LÝ SỐ TRANG */}
+             {rightTab === 'pages' && (
+                <>
+                   <div className="px-4 pb-4 border-b border-slate-200">
+                      <button onClick={handleAddPage} className="w-full border-2 border-dashed border-[#2bd6eb] text-[#0a5482] bg-blue-50 hover:bg-[#2bd6eb] hover:text-white transition px-4 py-3 rounded-xl font-black text-sm flex items-center justify-center gap-2">
+                         ➕ THÊM TRANG MỚI
+                      </button>
                    </div>
-                ))}
-             </div>
+                   <div className="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar">
+                      {pages.map((p, idx) => (
+                         <div key={p.id} onClick={() => setActivePageIndex(idx)} className={`flex justify-between items-center p-3 rounded-xl cursor-pointer transition-all border-2 ${activePageIndex === idx ? 'bg-white border-[#2bd6eb] shadow-md' : 'bg-white border-slate-100 hover:border-slate-300'}`}>
+                            <div className="flex items-center gap-2">
+                               <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0 ${activePageIndex === idx ? 'bg-[#2bd6eb] text-white' : 'bg-slate-200 text-slate-500'}`}>{idx + 1}</div>
+                               <span className="font-bold text-[13px] text-slate-700 truncate w-16">Trang {idx + 1}</span>
+                            </div>
+                            <div className="flex items-center gap-1 shrink-0">
+                               <button onClick={(e) => { e.stopPropagation(); handleMoveUp(idx); }} disabled={idx === 0} className="w-6 h-6 flex items-center justify-center bg-slate-100 hover:bg-slate-200 rounded disabled:opacity-30 disabled:hover:bg-slate-100 transition" title="Lên trên">⬆️</button>
+                               <button onClick={(e) => { e.stopPropagation(); handleMoveDown(idx); }} disabled={idx === pages.length - 1} className="w-6 h-6 flex items-center justify-center bg-slate-100 hover:bg-slate-200 rounded disabled:opacity-30 disabled:hover:bg-slate-100 transition" title="Xuống dưới">⬇️</button>
+                               <button onClick={(e) => { e.stopPropagation(); handleRemovePage(idx); }} className="w-6 h-6 flex items-center justify-center text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 rounded ml-1 transition" title="Xóa trang">✖</button>
+                            </div>
+                         </div>
+                      ))}
+                   </div>
+                </>
+             )}
+
+             {/* TAB 2: QUẢN LÝ BÀI TẬP & NHIỆM VỤ */}
+             {rightTab === 'tasks' && (
+                <>
+                   <div className="px-4 pb-4 border-b border-slate-200 flex flex-col gap-2 relative">
+                      {/* NÚT CHỌN BÀI TẬP TỪ KHO */}
+                      <button onClick={() => setShowExerciseDropdown(!showExerciseDropdown)} className="w-full border-2 border-dashed border-emerald-400 text-emerald-700 bg-emerald-50 hover:bg-emerald-500 hover:text-white transition px-2 py-3 rounded-xl font-black text-[12px] flex items-center justify-center">
+                         ➕ CHỌN BÀI TẬP TỪ KHO
+                      </button>
+                      
+                      {/* DROPDOWN DANH SÁCH BÀI TẬP */}
+                      {showExerciseDropdown && (
+                         <div className="absolute top-[60px] left-4 right-4 bg-white border border-slate-200 shadow-2xl rounded-xl max-h-64 overflow-y-auto z-50 animate-in fade-in zoom-in-95">
+                            {availableExercises.length === 0 ? <div className="p-4 text-xs text-slate-400 text-center italic border-2 border-dashed m-2 rounded-lg">Khóa học chưa có bài tập/đề thi nào trong kho.</div> : (
+                               availableExercises.map(ex => (
+                                  <button key={ex.id} onClick={() => handleAddExerciseTask(ex)} className="w-full text-left px-4 py-3 text-xs font-bold hover:bg-emerald-50 hover:text-emerald-700 border-b border-slate-100 last:border-0 flex justify-between items-center transition-colors">
+                                     <span className="truncate pr-2">{ex.title}</span>
+                                     <span className={`shrink-0 text-[9px] px-1.5 py-0.5 rounded uppercase tracking-wider ${ex.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                        {ex.content_json?.basicInfo?.category === 'exercise' ? 'Bài tập' : 'Đề thi'}
+                                     </span>
+                                  </button>
+                               ))
+                            )}
+                         </div>
+                      )}
+
+                      <button onClick={handleAddManualTask} className="w-full bg-white border border-slate-200 text-slate-500 hover:border-slate-400 hover:bg-slate-100 transition px-2 py-2 rounded-lg font-bold text-[12px] flex items-center justify-center shadow-sm">
+                         📝 Thêm ghi chú văn bản
+                      </button>
+                   </div>
+                   <div className="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar bg-white">
+                      {taskList.map((task, idx) => (
+                         <div key={task.id} className="bg-slate-50 border border-slate-200 p-3 rounded-xl shadow-sm flex items-start justify-between group">
+                            <div>
+                               <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">
+                                 {task.type === 'exercise' ? '🔗 BÀI TẬP ĐÍNH KÈM' : '📝 NHIỆM VỤ ĐỌC'}
+                               </div>
+                               <div className="font-bold text-[#0a5482] text-[13px] leading-snug">{task.text}</div>
+                            </div>
+                            <button onClick={() => setTaskList(taskList.filter(t => t.id !== task.id))} className="text-red-400 hover:text-red-600 bg-white border border-red-100 hover:bg-red-50 w-6 h-6 rounded flex items-center justify-center transition-all ml-2 shrink-0">✖</button>
+                         </div>
+                      ))}
+                      {taskList.length === 0 && <div className="text-center text-xs text-slate-400 italic mt-8 border-2 border-dashed border-slate-200 p-6 rounded-2xl mx-2">Chưa có nhiệm vụ nào được giao.<br/>Học sinh sẽ chỉ cần đọc nội dung.</div>}
+                   </div>
+                </>
+             )}
           </div>
 
         </div>

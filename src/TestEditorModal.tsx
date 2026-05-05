@@ -220,6 +220,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
         courseId: testRecord.course_id || 'all', 
         folderId: testRecord.folder_id || '', 
         skill: testRecord.test_type || 'Standard-Test',
+        category: testRecord.content_json?.basicInfo?.category || 'test', // 🚀 DEFAULT CATEGORY LÀ ĐỀ THI
         mode: 'Đề thi',
         timeLimit: '40',
         scoreType: '1 điểm/ câu đúng',
@@ -401,8 +402,8 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
               <div className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm p-6 space-y-5">
                 <h3 className="font-black text-[#00a651] border-b border-slate-100 pb-2 mb-4 uppercase text-[13px]">Thông tin chính</h3>
                 <div>
-                  <label className="text-[12px] font-bold text-slate-600 block mb-1">Tên đề <span className="text-red-500">*</span></label>
-                  <input value={testData.basicInfo.title} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, title: e.target.value}})} placeholder="Ví dụ: Đề thi tiếng Anh 10" className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-[#00a651] text-[14px] transition" />
+                  <label className="text-[12px] font-bold text-slate-600 block mb-1">Tên đề/Bài tập <span className="text-red-500">*</span></label>
+                  <input value={testData.basicInfo.title} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, title: e.target.value}})} placeholder="Ví dụ: Unit 1: Reading Practice" className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-[#00a651] text-[14px] transition" />
                 </div>
               </div>
 
@@ -411,14 +412,26 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Thuộc Khóa học</label>
-                    <select value={testData.basicInfo.courseId} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, courseId: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition">
+                    <select value={testData.basicInfo.courseId} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, courseId: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
                       <option value="all">Dùng chung</option>
                       {courses?.map((c: any) => <option key={c.id} value={c.id}>{c.title}</option>)}
                     </select>
                   </div>
+                  
+                  {/* 🚀 THÊM DROPDOWN PHÂN LOẠI ĐỀ THI / BÀI TẬP Ở ĐÂY */}
+                  <div>
+                    <label className="text-[12px] font-bold text-slate-600 block mb-1">Phân loại (Mục đích)</label>
+                    <select value={testData.basicInfo.category} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, category: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
+                      <option value="test">Đề thi (Test)</option>
+                      <option value="exercise">Bài tập (Exercise)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 mt-2">
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Kỹ năng / Dạng đề</label>
-                    <select value={testData.basicInfo.skill} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition">
+                    <select value={testData.basicInfo.skill} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
                       <option value="IELTS-Listening">Listening (IELTS)</option>
                       <option value="IELTS-Reading">Reading (IELTS)</option>
                       <option value="Standard-Listening">Listening (Standard)</option>
@@ -428,20 +441,19 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                       <option value="Case-Study">Case Study / Business</option>
                     </select>
                   </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Thời gian làm (phút)</label>
-                    <input type="number" value={testData.basicInfo.timeLimit} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, timeLimit: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition" />
+                    <input type="number" value={testData.basicInfo.timeLimit} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, timeLimit: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]" />
                   </div>
-                  <div>
+                </div>
+
+                <div className="mt-2">
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Cách tính điểm</label>
-                    <select value={testData.basicInfo.scoreType} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition">
+                    <select value={testData.basicInfo.scoreType} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
                       <option value="1 điểm/ câu đúng">1 điểm/ câu đúng</option>
                       <option value="IELTS Band Score">IELTS Band Score</option>
                       <option value="Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)">Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)</option>
                     </select>
-                  </div>
                 </div>
               </div>
             </div>

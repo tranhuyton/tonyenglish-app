@@ -31,9 +31,14 @@ export default function App() {
     return savedTest ? JSON.parse(savedTest) : null;
   });
 
-  // --- MỚI: State lưu mã khóa học khi bấm vào học bài giảng (Chống văng khi F5) ---
+  // State lưu mã khóa học khi bấm vào học bài giảng
   const [activeCourseId, setActiveCourseId] = useState<string | null>(() => {
     return sessionStorage.getItem('lms_active_course_id') || null;
+  });
+
+  // 🚀 MỚI: State lưu lại NƠI XUẤT PHÁT (để thi xong biết đường quay về)
+  const [returnView, setReturnView] = useState<string>(() => {
+    return sessionStorage.getItem('lms_return_view') || 'portal';
   });
 
   useEffect(() => {
@@ -60,6 +65,7 @@ export default function App() {
         sessionStorage.removeItem('lms_current_view');
         sessionStorage.removeItem('lms_current_test');
         sessionStorage.removeItem('lms_active_course_id');
+        sessionStorage.removeItem('lms_return_view'); // 🚀 Xóa trí nhớ đường về
       }
     });
 
@@ -75,6 +81,11 @@ export default function App() {
   // Hàm vào phòng thi kèm lưu đề thi vào bộ nhớ đệm
   const handleStartTest = (type: string, data: any) => {
     setCurrentTestData(data);
+    
+    // 🚀 BÍ KÍP: Lưu lại màn hình hiện tại vào "returnView" trước khi nhảy sang bài thi
+    setReturnView(currentView);
+    sessionStorage.setItem('lms_return_view', currentView);
+
     handleNavigate(type);
     sessionStorage.setItem('lms_current_test', JSON.stringify(data));
   };
@@ -84,6 +95,11 @@ export default function App() {
     setActiveCourseId(courseId);
     sessionStorage.setItem('lms_active_course_id', courseId);
     handleNavigate('lecture');
+  };
+
+  // 🚀 HÀM ĐIỀU HƯỚNG QUAY VỀ ĐÚNG NƠI XUẤT PHÁT
+  const handleReturnFromTest = () => {
+    handleNavigate(returnView);
   };
 
   return (
@@ -109,41 +125,42 @@ export default function App() {
         <AdminPanel onNavigate={handleNavigate} />
       )}
       
+      {/* 🚀 Thay toàn bộ 'portal' bằng hàm handleReturnFromTest */}
       {currentView === 'ielts-writing' && (
-        <IeltsWriting onBack={() => handleNavigate('portal')} />
+        <IeltsWriting onBack={handleReturnFromTest} />
       )}
       
       {currentView === 'ielts-speaking' && (
-        <IeltsSpeaking onBack={() => handleNavigate('portal')} />
+        <IeltsSpeaking onBack={handleReturnFromTest} />
       )}
 
       {currentView === 'computer' && (
         <ComputerTest 
-          onBack={() => handleNavigate('portal')} 
+          onBack={handleReturnFromTest} 
           testData={currentTestData} 
         />
       )}
 
       {currentView === 'paper' && (
         <PaperTest 
-          onBack={() => handleNavigate('portal')} 
+          onBack={handleReturnFromTest} 
           testData={currentTestData} 
         />
       )}
 
       {currentView === 'standard' && (
         <StandardTest 
-          onBack={() => handleNavigate('portal')} 
+          onBack={handleReturnFromTest} 
           testData={currentTestData} 
           onFinish={(res: any) => {
             console.log("Kết quả bài thi:", res);
-            handleNavigate('portal');
+            handleReturnFromTest(); // Chạy về nơi xuất phát khi nộp bài
           }} 
         />
       )}
 
       {currentView === 'case-study' && (
-        <SplitScreenTest onBack={() => handleNavigate('portal')} />
+        <SplitScreenTest onBack={handleReturnFromTest} />
       )}
 
       {/* MÀN HÌNH BÀI GIẢNG (LECTURE) */}
@@ -151,6 +168,7 @@ export default function App() {
         <LectureViewer 
           courseId={activeCourseId}
           onBack={() => handleNavigate('portal')} 
+          onStartTest={handleStartTest}
         />
       )}
 

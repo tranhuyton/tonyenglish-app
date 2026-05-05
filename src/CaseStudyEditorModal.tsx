@@ -10,6 +10,10 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
         data.basicInfo.insert_pdf_url = testRecord.insert_pdf_url;
       }
       data.json_config_string = testRecord.json_config ? JSON.stringify(testRecord.json_config, null, 2) : '';
+      
+      // Đảm bảo có trường category
+      if (!data.basicInfo.category) data.basicInfo.category = 'test';
+      
       return data;
     }
 
@@ -18,6 +22,7 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
         title: testRecord.title || '',
         courseId: 'all', 
         skill: 'Case-Study',
+        category: 'test', // 🚀 DEFAULT CATEGORY LÀ ĐỀ THI
         mode: 'Đề thi',
         timeLimit: '90',
         scoreType: 'IGCSE Grading', 
@@ -30,9 +35,8 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
   const [testData, setTestData] = useState<any>(getInitialData());
   const [isSaving, setIsSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
-  const [isDragging, setIsDragging] = useState(false); // STATE KÉO THẢ
+  const [isDragging, setIsDragging] = useState(false);
 
-  // Hàm xử lý chung khi upload file (qua click hoặc kéo thả)
   const processFile = async (file: File) => {
     if (file.type !== "application/pdf") {
       alert("⚠️ Vui lòng chỉ tải lên file định dạng PDF.");
@@ -58,7 +62,6 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
     if (file) processFile(file);
   };
 
-  // CÁC HÀM XỬ LÝ SỰ KIỆN KÉO THẢ (DRAG & DROP)
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
     setIsDragging(true);
@@ -98,7 +101,7 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
               <h3 className="font-black text-slate-800 border-b border-slate-100 pb-3 mb-4 uppercase text-sm">1. Cài đặt hệ thống</h3>
               
               <div>
-                <label className="text-[13px] font-bold text-slate-600 block mb-1">Tên đề thi <span className="text-red-500">*</span></label>
+                <label className="text-[13px] font-bold text-slate-600 block mb-1">Tên đề/Bài tập <span className="text-red-500">*</span></label>
                 <input value={testData.basicInfo.title} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, title: e.target.value}})} placeholder="Ví dụ: Business mock T4/2026" className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-[#0a5482] text-[14px]" />
               </div>
 
@@ -110,22 +113,32 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
                     {courses?.map((c: any) => <option key={c.id} value={c.id}>{c.title}</option>)}
                   </select>
                 </div>
+                
+                {/* 🚀 THÊM DROPDOWN PHÂN LOẠI Ở ĐÂY */}
+                <div>
+                  <label className="text-[13px] font-bold text-slate-600 block mb-1">Phân loại (Mục đích)</label>
+                  <select value={testData.basicInfo.category} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, category: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none text-[14px] focus:ring-2 focus:ring-[#0a5482]">
+                    <option value="test">Đề thi (Test)</option>
+                    <option value="exercise">Bài tập (Exercise)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="text-[13px] font-bold text-slate-600 block mb-1">Thời gian làm (phút)</label>
                   <input type="number" value={testData.basicInfo.timeLimit} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, timeLimit: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none text-[14px]" />
                 </div>
-              </div>
-
-              <div>
-                <label className="text-[13px] font-bold text-slate-600 block mb-1">Cách tính điểm (AI)</label>
-                <select value={testData.basicInfo.scoreType} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none text-[14px]">
-                  <option value="IGCSE Grading">Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)</option>
-                  <option value="1 điểm/ câu đúng">1 điểm/ câu đúng</option>
-                </select>
+                <div>
+                  <label className="text-[13px] font-bold text-slate-600 block mb-1">Cách tính điểm (AI)</label>
+                  <select value={testData.basicInfo.scoreType} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none text-[14px]">
+                    <option value="IGCSE Grading">Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)</option>
+                    <option value="1 điểm/ câu đúng">1 điểm/ câu đúng</option>
+                  </select>
+                </div>
               </div>
             </div>
 
-            {/* KHU VỰC KÉO THẢ PDF */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
               <h3 className="font-black text-[#0a5482] border-b border-slate-100 pb-3 mb-4 uppercase text-sm">2. Tài liệu đính kèm</h3>
               <label className="text-[13px] font-bold text-slate-600 block mb-2">File PDF Case Study (Hiển thị nửa trái màn hình)</label>
@@ -172,7 +185,7 @@ export default function CaseStudyEditorModal({ testData: testRecord, courses, on
       </div>
 
       <button onClick={handleSave} disabled={isSaving || uploading} className="fixed bottom-10 right-10 w-40 bg-[#00a651] hover:bg-[#008f45] text-white font-black py-4 rounded-2xl shadow-xl transition-transform active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2">
-        {isSaving ? '⏳ ĐANG LƯU...' : '💾 LƯU ĐỀ THI'}
+        {isSaving ? '⏳ ĐANG LƯU...' : '💾 LƯU MỤC NÀY'}
       </button>
 
     </div>

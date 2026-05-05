@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { supabase } from './supabase';
-import AITutorSidebar from './AITutorSidebar'; // Tích hợp Gia sư AI
+import AITutorSidebar from './AITutorSidebar'; 
 import 'react-quill/dist/quill.snow.css';
 
 // =========================================================================================
@@ -10,7 +10,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(100);
 
-   // 🚀 BÍ KÍP CHỐNG KẸT CHIỀU CAO: Ép Iframe xẹp về 10px NGAY LẬP TỨC khi đổi trang
    useEffect(() => {
      setIframeHeight(10);
    }, [html]);
@@ -25,7 +24,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            window.open(href, '_blank', 'noopener,noreferrer');
          }
        } else if (e.data?.type === 'LECTURE_RESIZE') {
-         // Nhận kích thước chuẩn và cộng thêm 20px đệm cho an toàn
          const h = e.data.height;
          if (h) setIframeHeight(Math.max(100, h + 20)); 
        } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
@@ -49,7 +47,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
        <style>
-         /* Ép body và html chỉ cao bằng ĐÚNG nội dung, không giãn theo Iframe cũ */
          html, body { 
              height: max-content !important; 
              min-height: 0 !important;
@@ -65,8 +62,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          path, polygon, rect, circle { transition: all 0.2s ease; }
          a { cursor: pointer; color: #0284c7; text-decoration: none; font-weight: 600; transition: all 0.2s; }
          a:hover { opacity: 0.8; text-decoration: underline; }
-         
-         /* Đóng gói nội dung cực chặt để đo không bị sai lệch */
          #content-wrapper { 
             display: flow-root; 
             width: 100%; 
@@ -107,7 +102,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            }
          });
 
-         // ĐO CHIỀU CAO CHÍNH XÁC TUYỆT ĐỐI BẰNG getBoundingClientRect
          function reportHeight() {
             var wrapper = document.getElementById('content-wrapper');
             if (wrapper) {
@@ -134,7 +128,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        <iframe
          ref={iframeRef}
          srcDoc={iframeContent}
-         // 🚀 ĐÃ BỎ LỆNH TRANSITION Ở ĐÂY ĐỂ TRÁNH LỖI ĐO SAI KHI CHUYỂN TRANG
          style={{ width: '100%', height: `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
          sandbox="allow-scripts allow-same-origin allow-popups"
          scrolling="no"
@@ -147,7 +140,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
 // =========================================================================================
 // MAIN COMPONENT: LECTURE VIEWER
 // =========================================================================================
-export default function LectureViewer({ courseId, onBack }: { courseId: string, onBack: () => void }) {
+export default function LectureViewer({ courseId, onBack, onStartTest }: { courseId: string, onBack: () => void, onStartTest?: (type: string, data: any) => void }) {
   const [course, setCourse] = useState<any>(null);
   const [modules, setModules] = useState<any[]>([]);
   const [lectures, setLectures] = useState<any[]>([]);
@@ -157,11 +150,17 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
   const [activeLectureId, setActiveLectureId] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [completedTasks, setCompletedTasks] = useState<string[]>([]);
+  
+  // 🚀 STATE MỚI: QUẢN LÝ TIẾN ĐỘ CỦA TOÀN BỘ KHÓA HỌC (CHO SIDEBAR)
+  const [allLectureProgress, setAllLectureProgress] = useState<Record<string, string[]>>({});
 
   const [expandedModules, setExpandedModules] = useState<string[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [isTaskSidebarOpen, setIsTaskSidebarOpen] = useState(false);
-  const [isAIOpen, setIsAIOpen] = useState(false); // 🚀 STATE CHO GIA SƯ AI
+  
+  const [isTaskMenuOpen, setIsTaskMenuOpen] = useState(false);
+  const taskMenuRef = useRef<HTMLDivElement>(null);
+  
+  const [isAIOpen, setIsAIOpen] = useState(false); 
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -171,7 +170,6 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
   
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Tự động cuộn lên đầu mỗi khi Đổi bài hoặc Đổi trang
   useEffect(() => {
     if (containerRef.current) {
        containerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
@@ -191,8 +189,10 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-       const popup = document.getElementById('dict-popup');
-       if (popup && !popup.contains(e.target as Node)) setDictPopup(null);
+       const dictPop = document.getElementById('dict-popup');
+       if (dictPop && !dictPop.contains(e.target as Node)) setDictPopup(null);
+       
+       if (taskMenuRef.current && !taskMenuRef.current.contains(e.target as Node)) setIsTaskMenuOpen(false);
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -225,6 +225,23 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
       });
       
       setLectures(validLectures);
+
+      // 🚀 TẢI TOÀN BỘ TIẾN ĐỘ CỦA KHÓA HỌC CHO SIDEBAR
+      if (user && validLectures.length > 0) {
+         const lectureIds = validLectures.map(l => l.id);
+         const { data: allProg } = await supabase.from('lecture_progress')
+             .select('lecture_id, completed_tasks')
+             .eq('user_id', user.id)
+             .in('lecture_id', lectureIds);
+             
+         const pMap: Record<string, string[]> = {};
+         if (allProg) {
+             allProg.forEach(p => {
+                 pMap[p.lecture_id] = p.completed_tasks || [];
+             });
+         }
+         setAllLectureProgress(pMap);
+      }
 
       if (validLectures && validLectures.length > 0) {
          const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${courseId}`);
@@ -262,7 +279,12 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
            const { data: progressDataArray } = await supabase.from('lecture_progress').select('*').eq('lecture_id', lectureId).eq('user_id', targetUserId);
            if (progressDataArray && progressDataArray.length > 0) {
                const pData = progressDataArray[0];
-               if (pData && Array.isArray(pData.completed_tasks)) setCompletedTasks(pData.completed_tasks);
+               if (pData && Array.isArray(pData.completed_tasks)) {
+                   setCompletedTasks(pData.completed_tasks);
+                   setAllLectureProgress(prev => ({...prev, [lectureId]: pData.completed_tasks}));
+               }
+           } else {
+               setCompletedTasks([]);
            }
         }
     } catch (err) { console.error(err); }
@@ -278,6 +300,7 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
       setCompletedTasks(prev => {
          const newCompleted = prev.includes(taskId) ? prev.filter(id => id !== taskId) : [...prev, taskId];
          const isCompleted = safeLectureTasks.length > 0 && newCompleted.length === safeLectureTasks.length;
+         
          supabase.from('lecture_progress').select('id').eq('user_id', currentUser.id).eq('lecture_id', activeLectureId)
          .then(({ data: existingArray }) => {
              if (existingArray && existingArray.length > 0) {
@@ -286,9 +309,39 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
                  supabase.from('lecture_progress').insert({ user_id: currentUser.id, lecture_id: activeLectureId, completed_tasks: newCompleted, is_completed: isCompleted }).then();
              }
          }).catch();
+
+         // 🚀 ĐỒNG BỘ LUÔN CHO SIDEBAR HIỂN THỊ CHÍNH XÁC
+         setAllLectureProgress(allPrev => ({ ...allPrev, [activeLectureId]: newCompleted }));
+
          return newCompleted;
       });
   }, [currentUser, activeLectureId, lectures]);
+
+  const handleStartTaskExercise = async (task: any) => {
+      if (!onStartTest || !task.test_id) return;
+      
+      try {
+         const { data: testData, error } = await supabase.from('tests').select('*').eq('id', task.test_id).single();
+         if (error || !testData) {
+            alert("Bài tập này hiện không khả dụng. Vui lòng liên hệ Admin.");
+            return;
+         }
+
+         if (!completedTasks.includes(task.id)) {
+            handleToggleTask(task.id);
+         }
+
+         const type = testData.test_type || '';
+         if (type === 'IELTS-Writing') onStartTest('ielts-writing', testData);
+         else if (type === 'IELTS-Speaking') onStartTest('ielts-speaking', testData);
+         else if (type === 'IELTS-Listening' || type === 'IELTS-Reading') onStartTest('computer', testData); 
+         else if (testData.title.toLowerCase().includes('business') || testData.title.toLowerCase().includes('econ') || type === 'Case-Study') onStartTest('case-study', testData);
+         else onStartTest('standard', testData);
+
+      } catch (err) {
+         alert("Đã có lỗi xảy ra khi tải bài tập.");
+      }
+  };
 
   const handleNextPage = () => {
     if (currentPage < pages.length) setCurrentPage(prev => prev + 1);
@@ -384,7 +437,7 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
       
       {/* THANH TOP BAR */}
       <header className="h-[60px] bg-[#3ea6e6] text-white flex items-center px-4 md:px-8 shrink-0 z-30 shadow-sm justify-between">
-         <div className="flex items-center gap-2 md:gap-3 min-w-0">
+         <div className="flex items-center gap-2 md:gap-3 min-w-0 flex-1">
             <button onClick={onBack} className="w-10 h-10 flex items-center justify-center rounded text-white hover:bg-white/20 transition-colors shrink-0" title="Quay lại danh sách">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" /></svg>
             </button>
@@ -393,15 +446,57 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" /></svg>
             </button>
             <h1 className="text-[20px] md:text-[24px] font-medium leading-none truncate tracking-wide ml-1">{course?.title || 'Đang tải khóa học...'}</h1>
-         </div>
-         <div className="flex items-center gap-3 shrink-0 ml-4">
-             {safeLectureTasks.length > 0 && (
-                <button onClick={() => setIsTaskSidebarOpen(!isTaskSidebarOpen)} className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:h-10 rounded text-[14px] font-medium transition-all bg-white/10 hover:bg-white/20 border border-white/20 text-white shadow-sm" title="Danh sách nhiệm vụ">
-                   <span>📋</span> <span className="hidden sm:inline">Nhiệm vụ ({safeCompletedTasks.length}/{safeLectureTasks.length})</span>
-                </button>
-             )}
+            
+            {safeLectureTasks.length > 0 && (
+               <div className="relative ml-2 shrink-0 hidden md:block" ref={taskMenuRef}>
+                 <button 
+                   onClick={() => setIsTaskMenuOpen(!isTaskMenuOpen)} 
+                   className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-[13px] font-bold transition-all border ${safeCompletedTasks.length === safeLectureTasks.length ? 'bg-emerald-500/20 text-emerald-100 border-emerald-400/30' : 'bg-white/10 hover:bg-white/20 text-white border-white/20 shadow-sm'}`}
+                 >
+                   <span>📋</span> 
+                   <span>Bài tập ({safeCompletedTasks.length}/{safeLectureTasks.length})</span>
+                   <span className={`text-[10px] ml-1 transition-transform duration-200 ${isTaskMenuOpen ? 'rotate-180' : ''}`}>▼</span>
+                 </button>
 
-             {/* 🚀 NÚT GỌI GIA SƯ AI */}
+                 {isTaskMenuOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.2)] border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2">
+                       <div className="bg-[#f8fafc] px-4 py-3 border-b border-slate-100 flex justify-between items-center">
+                          <h4 className="font-black text-[#d97706] text-[12px] uppercase tracking-widest">Nhiệm vụ bài học</h4>
+                          <span className="text-[#d97706] font-bold text-[13px]">{Math.round((safeCompletedTasks.length / safeLectureTasks.length) * 100)}%</span>
+                       </div>
+                       
+                       <div className="max-h-[60vh] overflow-y-auto p-2 custom-scrollbar space-y-1">
+                          {safeLectureTasks.map((task: any) => {
+                             const isCompleted = safeCompletedTasks.includes(task.id);
+                             return (
+                                <div key={task.id} className={`flex items-start gap-3 p-3 rounded-xl transition-all ${isCompleted ? 'bg-emerald-50/50' : 'hover:bg-slate-50'}`}>
+                                   <div className="relative flex items-center justify-center shrink-0 mt-0.5 cursor-pointer" onClick={() => handleToggleTask(task.id)}>
+                                       <div className={`w-5 h-5 rounded flex items-center justify-center transition-colors border-2 ${isCompleted ? 'bg-[#10b981] border-[#10b981]' : 'bg-white border-slate-300 hover:border-blue-400'}`}>
+                                           {isCompleted && <span className="text-white text-xs font-black">✓</span>}
+                                       </div>
+                                   </div>
+                                   <div className="flex-1 min-w-0 flex flex-col items-start gap-1">
+                                      <span className={`text-[13px] font-medium leading-snug transition-colors ${isCompleted ? 'text-emerald-700 opacity-70 line-through' : 'text-slate-700'}`}>{task.text}</span>
+                                      {task.type === 'exercise' && (
+                                         <button 
+                                           onClick={() => handleStartTaskExercise(task)} 
+                                           className={`text-[11px] font-black uppercase tracking-wider px-2 py-1 rounded shadow-sm transition-all ${isCompleted ? 'bg-slate-200 text-slate-500 hover:bg-slate-300' : 'bg-[#1e88e5] text-white hover:bg-blue-600 active:scale-95'}`}
+                                         >
+                                           {isCompleted ? 'Làm lại bài' : 'Làm bài ngay ➜'}
+                                         </button>
+                                      )}
+                                   </div>
+                                </div>
+                             )
+                          })}
+                       </div>
+                    </div>
+                 )}
+               </div>
+            )}
+         </div>
+
+         <div className="flex items-center gap-3 shrink-0 ml-4">
              <button 
                 onClick={() => setIsAIOpen(!isAIOpen)} 
                 className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:h-10 rounded text-[14px] font-bold transition-all bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white shadow-md border border-white/20 animate-pulse" 
@@ -411,13 +506,13 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
              </button>
 
              <button onClick={toggleFullScreen} className="w-10 h-10 rounded flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-colors shadow-sm" title={isFullscreen ? "Thu nhỏ" : "Toàn màn hình"}>
-                {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
+                {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
              </button>
           </div>
       </header>
 
       <div className="flex flex-1 overflow-hidden">
-         {/* SIDEBAR TRÁI */}
+         {/* SIDEBAR TRÁI: HIỂN THỊ TIẾN ĐỘ BÀI TẬP */}
          <aside className={`${isSidebarOpen ? 'w-[300px]' : 'w-0 opacity-0 border-r-0'} transition-all duration-300 ease-in-out bg-[#f8f9fa] border-r border-slate-200 flex flex-col h-full shrink-0 shadow-[2px_0_10px_rgba(0,0,0,0.02)] relative z-20 overflow-hidden`}>
            <div className="p-5 border-b border-slate-200 shrink-0 min-w-[300px]">
               <div className="text-[14px] text-slate-700 mb-4">Khóa học của bạn</div>
@@ -443,9 +538,27 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
                           ) : (
                              moduleLectures.map((lec) => {
                                const isActive = activeLectureId === lec.id;
+                               
+                               // 🚀 LOGIC TÍNH TOÁN HIỂN THỊ TIẾN ĐỘ BÀI TẬP BÊN SIDEBAR
+                               const totalTasks = Array.isArray(lec.task_list) ? lec.task_list.length : 0;
+                               const completedCount = allLectureProgress[lec.id]?.length || 0;
+
                                return (
-                                 <button key={lec.id} onClick={() => handleSelectLecture(lec.id)} className={`w-full text-left pl-10 pr-5 py-2.5 text-[14px] transition-colors flex items-start gap-2 relative ${isActive ? 'bg-[#e0f2fe] text-[#0284c7] font-medium' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'}`}>
-                                   <span className="leading-snug truncate">{lec.title}</span>
+                                 <button key={lec.id} onClick={() => handleSelectLecture(lec.id)} className={`w-full text-left pl-10 pr-4 py-2.5 text-[14px] transition-colors flex items-center justify-between gap-2 relative ${isActive ? 'bg-[#e0f2fe] text-[#0284c7] font-medium' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'}`}>
+                                   <span className="leading-snug truncate flex-1">{lec.title}</span>
+                                   <span className="shrink-0 ml-1 flex items-center">
+                                       {totalTasks > 0 ? (
+                                           completedCount === totalTasks ? (
+                                               <span className="bg-emerald-100 text-emerald-600 text-[10px] font-black px-1.5 py-0.5 rounded shadow-sm" title="Đã hoàn thành">✓ {completedCount}/{totalTasks}</span>
+                                           ) : completedCount > 0 ? (
+                                               <span className="bg-blue-100 text-[#0284c7] text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm" title="Đang làm dở">{completedCount}/{totalTasks}</span>
+                                           ) : (
+                                               <span className="bg-slate-100 text-slate-400 text-[10px] font-bold px-1.5 py-0.5 rounded border border-slate-200" title="Chưa làm">0/{totalTasks}</span>
+                                           )
+                                       ) : (
+                                           <span className="bg-slate-50 text-slate-400 text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded border border-slate-100" title="Chỉ đọc lý thuyết">Lý thuyết</span>
+                                       )}
+                                   </span>
                                  </button>
                                )
                              })
@@ -459,7 +572,6 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
            </div>
          </aside>
 
-         {/* VÙNG GIỮA CHỨA NỘI DUNG VÀ SCROLLBAR */}
          <main 
             className="flex-1 overflow-y-auto bg-[#e6e9ee] custom-scrollbar relative"
             ref={containerRef}
@@ -484,7 +596,6 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
                   )}
                </div>
                
-               {/* THANH PHÂN TRANG */}
                {activeLectureId && (
                   <div className="max-w-[1000px] w-full flex justify-between items-center px-4 pb-10">
                       <button onClick={handlePrevPage} disabled={currentPage === 1 && lectures.findIndex(l => l.id === activeLectureId) === 0} className="text-[#3ea6e6] font-bold text-[14px] hover:text-[#0284c7] disabled:opacity-30 transition-colors uppercase">&lt; TRƯỚC</button>
@@ -500,54 +611,16 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
                )}
              </div>
          </main>
-
-         {/* SIDEBAR PHẢI: TASK LIST */}
-         {safeLectureTasks.length > 0 && (
-           <aside className={`${isTaskSidebarOpen ? 'w-[320px]' : 'w-0 opacity-0 border-l-0'} hidden md:flex transition-all duration-300 ease-in-out bg-[#fdfdfd] border-l border-slate-200 flex-col h-full shrink-0 shadow-[-2px_0_10px_rgba(0,0,0,0.02)] relative z-20 overflow-hidden`}>
-              <div className="p-6 border-b border-slate-200 bg-white flex flex-col justify-center shrink-0 min-w-[320px]">
-                  <div className="flex justify-between items-center mb-3">
-                     <h2 className="font-bold text-[#d97706] text-[15px] uppercase tracking-wide">Danh sách nhiệm vụ</h2>
-                     <span className="text-[#d97706] text-[14px] font-bold">{safeCompletedTasks.length}/{safeLectureTasks.length}</span>
-                  </div>
-                  <div className="w-full h-1.5 bg-[#fef3c7] rounded-full overflow-hidden">
-                     <div className="h-full bg-[#f59e0b] rounded-full transition-all duration-500" style={{ width: `${safeLectureTasks.length > 0 ? (safeCompletedTasks.length / safeLectureTasks.length) * 100 : 0}%` }}></div>
-                  </div>
-              </div>
-
-              <div className="flex-1 overflow-y-auto p-5 space-y-3 custom-scrollbar bg-[#f8fafc]">
-                  {safeLectureTasks.map((task: any) => {
-                      const isCompleted = safeCompletedTasks.includes(task.id);
-                      return (
-                          <label key={task.id} className={`flex items-start gap-3 p-4 rounded border cursor-pointer transition-all ${isCompleted ? 'bg-[#ecfdf5] border-[#bbf7d0]' : 'bg-white border-slate-200 hover:border-slate-300'}`}>
-                              <div className="relative flex items-center justify-center shrink-0 mt-0.5">
-                                  <input type="checkbox" className="peer sr-only" checked={isCompleted} onChange={() => handleToggleTask(task.id)} />
-                                  <div className={`w-5 h-5 rounded flex items-center justify-center transition-colors border-2 ${isCompleted ? 'bg-[#10b981] border-[#10b981]' : 'bg-white border-slate-300 peer-hover:border-slate-400'}`}>
-                                      {isCompleted && <span className="text-white text-xs font-black">✓</span>}
-                                  </div>
-                              </div>
-                              <span className={`text-[14px] leading-relaxed transition-colors ${isCompleted ? 'text-[#047857] font-medium line-through opacity-70' : 'text-slate-700'}`}>{task.text}</span>
-                          </label>
-                      )
-                  })}
-              </div>
-           </aside>
-         )}
       </div>
 
-      {/* =====================================================================
-          GIA SƯ AI TÍCH HỢP BÊN CẠNH PHẢI
-          ===================================================================== */}
       <AITutorSidebar 
          isOpen={isAIOpen}
          onClose={() => setIsAIOpen(false)}
          courseTitle={course?.title || ''}
          lectureTitle={activeLecture?.title || ''}
-         htmlContent={currentHtmlContent || ''} // Bơm bài giảng vào đây cho AI đọc lén
+         htmlContent={currentHtmlContent || ''} 
       />
 
-      {/* =====================================================================
-          TỪ ĐIỂN POPUP
-          ===================================================================== */}
       {dictPopup && dictPopup.show && (
          <div id="dict-popup" className="fixed z-[100] bg-white rounded-[1.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.25)] border-2 border-slate-100 w-80 flex flex-col overflow-hidden"
            style={{ left: Math.min(dictPopup.x, window.innerWidth - 330), ...(window.innerHeight - dictPopup.y < 300 ? { bottom: window.innerHeight - dictPopup.rectTop + 10 } : { top: dictPopup.y + 10 }), maxHeight: '380px' }}>
@@ -572,9 +645,6 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
          </div>
       )}
 
-      {/* =====================================================================
-          CÁI POP-UP (MODAL) NHÚNG YOUTUBE/QUIZ
-          ===================================================================== */}
       {popupUrl && (
         <div className="fixed inset-0 z-[9999] bg-slate-900/95 flex flex-col items-center justify-center p-4 md:p-8">
           

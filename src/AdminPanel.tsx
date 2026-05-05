@@ -49,13 +49,13 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [currentFolderId, setCurrentFolderId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterCourse, setFilterCourse] = useState('all');
+  const [filterCategory, setFilterCategory] = useState('all'); // 🚀 LỌC THEO BÀI TẬP / ĐỀ THI
   const [selectedTests, setSelectedTests] = useState<string[]>([]);
   const [editingTest, setEditingTest] = useState<any>(null);
   const [showCreateCourseModal, setShowCreateCourseModal] = useState(false);
   const [showFolderModal, setShowFolderModal] = useState(false);
   const [showAssignModal, setShowAssignModal] = useState(false);
   
-  // States lưu giữ việc đang Edit nội tuyến
   const [editingCourseId, setEditingCourseId] = useState<string | null>(null);
   const [editingClassId, setEditingClassId] = useState<string | null>(null);
   const [editingModuleId, setEditingModuleId] = useState<string | null>(null);
@@ -137,7 +137,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     } else setClassStudentsList([]);
   };
 
-  // --- ORDERING HANDLERS ---
   const handleUpdateCourseOrder = async (id: string, newOrder: number) => {
     await supabase.from('courses').update({ order_index: newOrder }).eq('id', id); fetchCourses();
   };
@@ -150,7 +149,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const handleUpdateTestOrder = async (id: string, newOrder: number) => {
     await supabase.from('tests').update({ order_index: newOrder }).eq('id', id); fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
-  // CHỨC NĂNG MỚI: CẬP NHẬT THỨ TỰ THƯ MỤC
   const handleUpdateFolderOrder = async (id: string, newOrder: number) => {
     await supabase.from('folders').update({ display_order: newOrder }).eq('id', id); fetchAllFolders(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
@@ -158,7 +156,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     await supabase.from('lectures').update({ is_published: !currentStatus }).eq('id', id); fetchGlobalLectures(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
 
-  // --- EVENT HANDLERS HỌC SINH ---
   const handleAssignStudentToClass = async (userId: string) => {
      if (!selectedClass) return;
      await supabase.from('class_students').insert([{ class_id: selectedClass.id, user_id: userId }]); fetchClassDetails(selectedClass.id);
@@ -170,7 +167,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
      }
   };
 
-  // --- EVENT HANDLERS KHÓA HỌC ---
   const handleCreateCourse = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const title = new FormData(e.currentTarget).get('title') as string;
@@ -188,7 +184,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     }
   };
 
-  // --- EVENT HANDLERS HỌC PHẦN (MODULE) ---
   const handleUpdateModuleName = async (moduleId: string, newTitle: string) => {
     if (!newTitle.trim()) { setEditingModuleId(null); return; }
     await supabase.from('lecture_modules').update({ title: newTitle }).eq('id', moduleId);
@@ -234,7 +229,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     fetchGlobalLectures(); alert("✅ Đã nhân bản bài giảng thành công! Bản sao đã được lưu vào Kho.");
   };
 
-  // --- EVENT HANDLERS LỚP HỌC (CLASS) ---
   const handleUpdateClassName = async (classId: string, newName: string) => {
     if (!newName.trim()) { setEditingClassId(null); return; }
     await supabase.from('classes').update({ name: newName }).eq('id', classId);
@@ -262,7 +256,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     await supabase.from('class_modules').delete().match({ class_id: selectedClass.id, module_id: moduleId }); fetchClassDetails(selectedClass.id);
   };
 
-  // --- EVENT HANDLERS ĐỀ THI VÀ THƯ MỤC ---
   const handleInitiateTest = (mode: 'manual' | 'import' | 'case-study') => {
     setShowCreateDropdown(false);
     setEditingTest({ id: 'new', title: '', folder_id: '', test_type: mode === 'case-study' ? 'Case-Study' : 'IELTS-Listening', content_json: null, mode });
@@ -340,13 +333,13 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
   const handleBulkVisibility = async (status: boolean) => {
-    if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi!");
+    if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
     await supabase.from('tests').update({ is_published: status }).in('id', selectedTests);
     fetchLibraryTests(); setSelectedTests([]); 
   };
   const handleBulkDelete = async () => {
-    if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi!");
-    if (window.confirm(`Xác nhận xóa vĩnh viễn ${selectedTests.length} đề thi đã chọn?`)) {
+    if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 mục!");
+    if (window.confirm(`Xác nhận xóa vĩnh viễn ${selectedTests.length} mục đã chọn?`)) {
       await supabase.from('tests').delete().in('id', selectedTests); fetchLibraryTests(); setSelectedTests([]);
     }
   };
@@ -373,11 +366,16 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   
   const currentTests = useMemo(() => assignedTests.filter(t => t.folder_id === currentFolderId), [assignedTests, currentFolderId]);
 
+  // 🚀 LỌC DỮ LIỆU KHO (THÊM BỘ LỌC CATEGORY)
   const filteredLibraryTests = useMemo(() => libraryTests.filter(test => {
       const matchesSearch = test.title.toLowerCase().includes(searchQuery.toLowerCase());
-      if (filterCourse === 'all') return matchesSearch;
-      return matchesSearch && test.course_id === filterCourse;
-  }), [libraryTests, searchQuery, filterCourse]);
+      const matchesCourse = filterCourse === 'all' || test.course_id === filterCourse;
+      
+      const testCategory = test.content_json?.basicInfo?.category || 'test';
+      const matchesCategory = filterCategory === 'all' || testCategory === filterCategory;
+
+      return matchesSearch && matchesCourse && matchesCategory;
+  }), [libraryTests, searchQuery, filterCourse, filterCategory]);
 
   const filteredGlobalLectures = useMemo(() => globalLectures.filter(lec => {
       const matchesSearch = lec.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -388,7 +386,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   return (
     <div className="min-h-screen bg-[#f8fafc] flex font-sans text-slate-800">
       
-      {/* SIDEBAR BỎ QUẢN LÝ TÀI LIỆU */}
       <aside className="w-64 bg-[#1e293b] text-slate-300 flex flex-col shrink-0 sticky top-0 h-screen z-50 shadow-xl">
         <div className="h-20 flex items-center gap-3 px-6 bg-[#0f172a] border-b border-slate-800 cursor-pointer" onClick={() => onNavigate?.('home')}>
           <div className="font-black text-xl tracking-tight text-white uppercase mt-1">TONY<span className="text-[#2bd6eb]">ADMIN</span></div>
@@ -396,28 +393,27 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
         <div className="p-4 space-y-1">
           <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest ml-3 mb-2 mt-4">Hệ thống LMS</p>
           <button onClick={() => {setActiveTab('courses'); setSelectedCourse(null);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'courses' || activeTab === 'course-detail' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📁 Khóa học & Lớp</button>
-          <button onClick={() => setActiveTab('library')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📚 Kho Đề thi</button>
+          <button onClick={() => setActiveTab('library')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📚 Kho Đề thi & Bài tập</button>
           <button onClick={() => setActiveTab('lectures-library')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'lectures-library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📖 Kho Bài giảng</button>
           <button onClick={() => setActiveTab('students')} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>👨‍🎓 Quản lý học viên</button>
         </div>
       </aside>
 
-      {/* MAIN CONTENT */}
       <main className="flex-1 flex flex-col min-w-0 relative">
         <header className="h-20 bg-white border-b border-slate-200 px-8 flex items-center justify-between sticky top-0 z-40 shadow-sm">
           <h1 className="text-xl font-black text-slate-800 uppercase tracking-tight">
-            {activeTab === 'courses' ? 'Danh sách Khóa học' : activeTab === 'course-detail' ? 'Chi tiết Khóa học' : activeTab === 'lectures-library' ? 'Kho Bài Giảng Chung' : activeTab === 'library' ? 'Kho lưu trữ đề thi' : 'Quản lý Học viên'}
+            {activeTab === 'courses' ? 'Danh sách Khóa học' : activeTab === 'course-detail' ? 'Chi tiết Khóa học' : activeTab === 'lectures-library' ? 'Kho Bài Giảng Chung' : activeTab === 'library' ? 'Kho Đề thi & Bài tập' : 'Quản lý Học viên'}
           </h1>
           <div className="flex items-center gap-4">
             {activeTab === 'courses' && <button onClick={() => setShowCreateCourseModal(true)} className="bg-[#0a5482] text-white font-black px-6 py-2.5 rounded-xl shadow-lg text-sm transition hover:bg-[#084266]">+ THÊM KHÓA HỌC</button>}
             {activeTab === 'lectures-library' && <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: null })} className="bg-[#00a651] text-white font-black px-6 py-2.5 rounded-xl shadow-md text-sm transition hover:bg-[#008f45]">+ TẠO BÀI GIẢNG MỚI</button>}
             {activeTab === 'library' && (
               <div className="relative shrink-0" ref={dropdownRef}>
-                <button onClick={() => setShowCreateDropdown(!showCreateDropdown)} className="bg-[#2bd6eb] text-white font-black px-6 py-2.5 rounded-xl shadow-md flex items-center gap-2 text-sm transition hover:bg-[#1bc1d6]">+ TẠO ĐỀ MỚI <span className={`text-[10px] transition-transform ${showCreateDropdown ? 'rotate-180' : ''}`}>▼</span></button>
+                <button onClick={() => setShowCreateDropdown(!showCreateDropdown)} className="bg-[#2bd6eb] text-white font-black px-6 py-2.5 rounded-xl shadow-md flex items-center gap-2 text-sm transition hover:bg-[#1bc1d6]">+ TẠO MỚI <span className={`text-[10px] transition-transform ${showCreateDropdown ? 'rotate-180' : ''}`}>▼</span></button>
                 {showCreateDropdown && (
                   <div className="absolute right-0 mt-2 w-64 bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 py-2 animate-in fade-in zoom-in-95">
                     <button onClick={() => handleInitiateTest('manual')} className="w-full text-left px-5 py-3 hover:bg-slate-50 font-bold text-[13px] border-b border-slate-100">✍️ Tạo thủ công (Standard)</button>
-                    <button onClick={() => handleInitiateTest('case-study')} className="w-full text-left px-5 py-3 hover:bg-blue-50 font-bold text-[13px] text-[#0a5482] border-b border-slate-100">📄 Tạo đề Case Study</button>
+                    <button onClick={() => handleInitiateTest('case-study')} className="w-full text-left px-5 py-3 hover:bg-blue-50 font-bold text-[13px] text-[#0a5482] border-b border-slate-100">📄 Tạo Case Study / Split Screen</button>
                     <button onClick={() => handleInitiateTest('import')} className="w-full text-left px-5 py-3 hover:bg-slate-50 font-bold text-[13px]">📥 Import Excel/CSV</button>
                   </div>
                 )}
@@ -469,7 +465,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
               <div className="flex gap-6 border-b border-slate-200 px-2">
                  <button onClick={() => setCourseViewMode('classes')} className={`pb-3 font-black text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'classes' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>👨‍🏫 QUẢN LÝ LỚP HỌC</button>
                  <button onClick={() => setCourseViewMode('modules')} className={`pb-3 font-black text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'modules' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>📚 CẤU TRÚC HỌC PHẦN (GIÁO TRÌNH)</button>
-                 <button onClick={() => setCourseViewMode('tests')} className={`pb-3 font-black text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'tests' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>📁 KHO ĐỀ THI</button>
+                 <button onClick={() => setCourseViewMode('tests')} className={`pb-3 font-black text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'tests' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>📁 KHO ĐỀ THI & BÀI TẬP</button>
               </div>
 
               {courseViewMode === 'classes' && (
@@ -607,7 +603,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                 </div>
               )}
 
-              {/* VIEW: QUẢN LÝ ĐỀ THI TRONG ADMIN (CHỈ CÓ THỨ TỰ, KHÔNG CÓ UPLOAD ẢNH) */}
               {courseViewMode === 'tests' && (
                 <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm animate-in fade-in">
                   <div className="p-6 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
@@ -622,8 +617,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         {currentSubFolders.map(sf => (
                           <div key={sf.id} className="relative group h-full">
-                            
-                            {/* Ô NHẬP ĐỔI THỨ TỰ THƯ MỤC */}
                             <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded border border-slate-200 flex items-center gap-1 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
                                <span className="text-[10px] font-bold text-slate-400">TT:</span>
                                <input type="number" defaultValue={sf.display_order || 0} onBlur={e => handleUpdateFolderOrder(sf.id, parseInt(e.target.value) || 0)} className="w-8 text-center text-xs font-bold outline-none bg-transparent" title="Thứ tự hiển thị" />
@@ -655,20 +648,25 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                     )}{currentFolderId && currentSubFolders.length === 0 && (
                       <div className="border-t-2 border-dashed border-slate-200 pt-8 mt-2">
                          <div className="flex justify-between items-center mb-6">
-                            <h3 className="font-black text-slate-800 text-lg">📝 Đề thi trong mục này</h3>
-                            <button onClick={() => setShowAssignModal(true)} className="bg-[#2bd6eb] hover:bg-[#1bc1d6] transition text-white px-5 py-2 rounded-lg font-bold text-xs shadow-sm">+ GÁN ĐỀ</button>
+                            <h3 className="font-black text-slate-800 text-lg">📝 Đề thi / Bài tập trong mục này</h3>
+                            <button onClick={() => setShowAssignModal(true)} className="bg-[#2bd6eb] hover:bg-[#1bc1d6] transition text-white px-5 py-2 rounded-lg font-bold text-xs shadow-sm">+ GÁN THÊM</button>
                          </div>
                          {currentTests.length === 0 ? (
-                           <div className="text-center py-10 border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-medium">Chưa có đề thi nào. Bấm nút + Gán đề để thêm từ Kho tổng.</div>
+                           <div className="text-center py-10 border-2 border-dashed border-slate-200 rounded-2xl text-slate-400 font-medium">Chưa có mục nào. Bấm nút + Gán thêm từ Kho tổng.</div>
                          ) : (
                            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
                              {currentTests.map(t => (
                                <div key={t.id} className="bg-slate-50 border border-slate-200 p-4 rounded-xl flex justify-between items-center group hover:bg-white transition-colors">
                                  <div className="flex items-center gap-3">
                                    <input type="number" defaultValue={t.order_index || 0} onBlur={e => handleUpdateTestOrder(t.id, parseInt(e.target.value) || 0)} className="w-10 h-6 text-center text-[11px] font-bold border border-slate-200 rounded outline-none focus:border-[#2bd6eb]" title="Thứ tự hiển thị" />
-                                   <span className="font-bold text-[14px] text-slate-700">{t.title}</span>
+                                   <div className="flex flex-col">
+                                      <span className="font-bold text-[14px] text-slate-700">{t.title}</span>
+                                      <span className={`text-[9px] w-fit px-1.5 py-0.5 rounded uppercase font-black mt-1 ${t.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                         {t.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
+                                      </span>
+                                   </div>
                                  </div>
-                                 <div className="flex gap-3">
+                                 <div className="flex gap-3 shrink-0">
                                    <button onClick={() => setEditingTest(t)} className="text-[#2bd6eb] font-bold text-xs hover:underline opacity-0 group-hover:opacity-100 transition-opacity">Sửa</button>
                                    <button onClick={() => handleUnassignTest(t.id)} className="text-red-400 font-bold text-xs hover:underline opacity-0 group-hover:opacity-100 transition-opacity">Gỡ ✖</button>
                                  </div>
@@ -729,10 +727,19 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                   <button onClick={() => handleBulkVisibility(false)} className="px-4 py-1.5 text-[13px] font-bold text-slate-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95">👁️‍🗨️ Ẩn đi</button>
                   <button onClick={handleBulkDelete} className="px-4 py-1.5 text-[13px] font-bold text-red-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95">🗑️ Xóa</button>
                 </div>
+                
+                {/* 🚀 ĐÃ THÊM FILTER PHÂN LOẠI ĐỀ THI / BÀI TẬP Ở ĐÂY */}
                 <div className="flex flex-col sm:flex-row gap-4 flex-1 justify-end">
-                  <input type="text" placeholder="Tìm kiếm tên đề..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-xs pl-4 pr-4 py-2.5 border border-slate-200 rounded-xl outline-none focus:border-[#2bd6eb] text-sm transition-colors" />
+                  <input type="text" placeholder="Tìm kiếm tên..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-[200px] pl-4 pr-4 py-2.5 border border-slate-200 rounded-xl outline-none focus:border-[#2bd6eb] text-sm transition-colors" />
+                  
                   <select value={filterCourse} onChange={e => setFilterCourse(e.target.value)} className="px-4 py-2.5 border border-slate-200 rounded-xl text-sm font-bold text-slate-600 outline-none w-full sm:w-auto bg-white">
                     <option value="all">Tất cả khóa học</option>{courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
+                  </select>
+
+                  <select value={filterCategory} onChange={e => setFilterCategory(e.target.value)} className="px-4 py-2.5 border border-slate-200 rounded-xl text-sm font-bold text-slate-600 outline-none w-full sm:w-auto bg-white">
+                    <option value="all">Tất cả loại</option>
+                    <option value="test">Chỉ Đề thi</option>
+                    <option value="exercise">Chỉ Bài tập</option>
                   </select>
                 </div>
               </div>
@@ -741,15 +748,24 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse min-w-[1000px]">
                     <thead className="bg-[#f8fafc] text-[11px] font-black uppercase text-slate-400 tracking-widest border-b border-slate-200">
-                      <tr><th className="px-4 py-4 w-12 text-center">#</th><th className="px-2 py-4 w-10"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedTests.length > 0 && selectedTests.length === filteredLibraryTests.length} onChange={(e) => handleSelectAll(e, filteredLibraryTests)} /></th><th className="px-6 py-4">TÊN ĐỀ THI</th><th className="px-6 py-4">KHÓA HỌC</th><th className="px-6 py-4">KỸ NĂNG</th><th className="px-6 py-4">THÔNG TIN CẬP NHẬT</th><th className="px-6 py-4 text-center">TRẠNG THÁI</th><th className="px-6 py-4 text-center">THỨ TỰ</th><th className="px-6 py-4 text-right">THAO TÁC</th></tr>
+                      <tr><th className="px-4 py-4 w-12 text-center">#</th><th className="px-2 py-4 w-10"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedTests.length > 0 && selectedTests.length === filteredLibraryTests.length} onChange={(e) => handleSelectAll(e, filteredLibraryTests)} /></th><th className="px-6 py-4">TÊN ĐỀ THI / BÀI TẬP</th><th className="px-6 py-4">KHÓA HỌC</th><th className="px-6 py-4">KỸ NĂNG</th><th className="px-6 py-4">THÔNG TIN CẬP NHẬT</th><th className="px-6 py-4 text-center">TRẠNG THÁI</th><th className="px-6 py-4 text-center">THỨ TỰ</th><th className="px-6 py-4 text-right">THAO TÁC</th></tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
-                      {filteredLibraryTests.length === 0 ? <tr><td colSpan={9} className="text-center py-10 text-slate-400 font-medium">Không tìm thấy đề thi nào phù hợp.</td></tr> : (
+                      {filteredLibraryTests.length === 0 ? <tr><td colSpan={9} className="text-center py-10 text-slate-400 font-medium">Không tìm thấy mục nào phù hợp.</td></tr> : (
                         filteredLibraryTests.map((test, index) => (
                           <tr key={test.id} className={`hover:bg-slate-50 transition group bg-white ${selectedTests.includes(test.id) ? 'bg-blue-50/30' : ''}`}>
                             <td className="px-4 py-5 text-center text-[13px] font-bold text-slate-400">{index + 1}</td>
                             <td className="px-2 py-5"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedTests.includes(test.id)} onChange={() => handleSelectOne(test.id)} /></td>
-                            <td className="px-6 py-5"><div className="font-bold text-[#0a5482] text-[15px]">{test.title}</div><div className="text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? 'Đã gán thư mục' : 'Chưa gán thư mục'}</div></td>
+                            <td className="px-6 py-5">
+                               {/* 🚀 ĐÃ BỔ SUNG BADGE BÀI TẬP / ĐỀ THI Ở ĐÂY */}
+                               <div className="font-bold text-[#0a5482] text-[15px] flex items-center gap-2">
+                                  {test.title}
+                                  <span className={`text-[9px] px-1.5 py-0.5 rounded uppercase tracking-wider font-black ${test.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                     {test.content_json?.basicInfo?.category === 'exercise' ? 'Bài tập' : 'Đề thi'}
+                                  </span>
+                               </div>
+                               <div className="text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? 'Đã gán thư mục' : 'Chưa gán thư mục'}</div>
+                            </td>
                             <td className="px-6 py-5">{test.course_id ? <span className="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-[11px] font-bold text-slate-600">{getCourseNameForTest(test.course_id)}</span> : <span className="text-[11px] italic text-slate-400">-- Dùng chung --</span>}</td>
                             <td className="px-6 py-5 font-black text-blue-600 uppercase text-[11px] tracking-tight">{test.test_type}</td>
                             <td className="px-6 py-5"><div className="text-[11px] text-slate-500 font-medium">Tạo: {formatDateTime(test.created_at)}</div></td>
@@ -769,29 +785,17 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           {activeTab === 'students' && <StudentManagement />}
         </div>
 
-        {/* ========================================================================================= */}
-        {/* CÁC MODALS */}
-        {/* ========================================================================================= */}
+        {/* CÁC MODALS GIỮ NGUYÊN (LƯỢC BỎ BỚT CHỮ CHO ĐỠ RỐI TRONG KHUNG HIỂN THỊ) */}
         
         {showClassModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4"><form onSubmit={handleCreateClass} className="bg-white rounded-3xl w-full max-w-md p-8 space-y-6 animate-in zoom-in-95 shadow-2xl"><h2 className="text-lg font-black uppercase text-[#0a5482]">Thêm Lớp Mới</h2><input name="name" required autoFocus placeholder="VD: Lớp IELTS K20" className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-[#0a5482] transition-colors" /><div className="flex gap-4"><button type="button" onClick={() => setShowClassModal(false)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button><button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-3 rounded-xl shadow-lg">TẠO LỚP</button></div></form></div> )}
-        
         {showAssignClassModuleModal && selectedClass && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4"><div className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden animate-in fade-in"><div className="bg-[#0f172a] p-6 text-white flex justify-between items-center"><h2 className="font-black uppercase text-sm tracking-widest">Chọn học phần mở cho lớp</h2><button onClick={() => setShowAssignClassModuleModal(false)} className="text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button></div><div className="p-6 max-h-[60vh] overflow-y-auto space-y-3 custom-scrollbar">{lectureModules.filter(m => !classModules.includes(m.id)).map(mod => (<div key={mod.id} className="flex justify-between items-center p-4 border border-slate-200 rounded-xl bg-slate-50 hover:border-emerald-400 transition-colors"><p className="font-black text-slate-700 text-sm">{mod.title}</p><button onClick={() => handleAssignModuleToClass(mod.id)} className="bg-emerald-500 hover:bg-emerald-600 transition text-white px-5 py-2 rounded-xl font-bold text-xs shadow-sm">MỞ KHÓA ➜</button></div>))}{lectureModules.filter(m => !classModules.includes(m.id)).length === 0 && <p className="text-center text-slate-400 text-sm">Tất cả học phần của khóa học này đã được mở cho lớp.</p>}</div></div></div> )}
-        
         {showAssignStudentModal && selectedClass && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4"><div className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden animate-in fade-in"><div className="bg-[#0f172a] p-6 text-white flex justify-between items-center"><h2 className="font-black uppercase text-sm tracking-widest">Thêm Học Sinh Vào Lớp</h2><button onClick={() => setShowAssignStudentModal(false)} className="text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button></div><div className="p-6 max-h-[60vh] overflow-y-auto space-y-3 custom-scrollbar">{courseStudentsList.filter(cs => !classStudentsList.some(cls => cls.user_id === cs.user_id)).map(st => (<div key={st.user_id} className="flex justify-between items-center p-4 border border-slate-200 rounded-xl bg-slate-50 hover:border-blue-400 transition-colors"><div><p className="font-black text-slate-700 text-sm">{st.full_name || 'Học viên'}</p><p className="text-[11px] text-slate-500">{st.email}</p></div><button onClick={() => handleAssignStudentToClass(st.user_id)} className="bg-blue-500 hover:bg-blue-600 transition text-white px-5 py-2 rounded-xl font-bold text-xs shadow-sm">THÊM ➜</button></div>))}{courseStudentsList.filter(cs => !classStudentsList.some(cls => cls.user_id === cs.user_id)).length === 0 && (<p className="text-center text-slate-400 text-sm">Tất cả học sinh của khóa học đã nằm trong lớp này, hoặc Khóa học chưa có học sinh nào.</p>)}</div></div></div> )}
-        
         {showAssignLectureModal.show && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4"><div className="bg-white rounded-3xl w-full max-w-xl shadow-2xl overflow-hidden animate-in fade-in"><div className="bg-[#0f172a] p-6 text-white flex justify-between items-center"><h2 className="font-black uppercase text-sm tracking-widest">Chọn bài giảng từ Kho chung</h2><button onClick={() => setShowAssignLectureModal({show: false, moduleId: null})} className="text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button></div><div className="p-6 max-h-[60vh] overflow-y-auto space-y-3 custom-scrollbar">{globalLectures.filter(l => !l.module_id && l.course_id === selectedCourse.id).map(lec => (<div key={lec.id} className="flex justify-between items-center p-4 border border-slate-100 rounded-2xl hover:border-blue-400 transition bg-slate-50"><p className="font-black text-slate-700 text-sm">{lec.title}</p><button onClick={() => handleAssignLecture(lec.id, showAssignLectureModal.moduleId!)} className="bg-blue-600 hover:bg-blue-700 transition text-white px-5 py-2 rounded-xl font-bold text-xs shadow-sm">GÁN ➜</button></div>))}{globalLectures.filter(l => !l.module_id && l.course_id === selectedCourse.id).length === 0 && <p className="text-center text-slate-400 text-sm italic">Không có bài giảng nào của khóa này chờ gán.</p>}</div></div></div> )}
-        
         {showCreateCourseModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4"><form onSubmit={handleCreateCourse} className="bg-white rounded-3xl w-full max-w-md p-8 space-y-6 animate-in zoom-in-95 shadow-2xl"><h2 className="text-xl font-black text-slate-800 uppercase tracking-tight">Thêm Khóa Học Mới</h2><div className="space-y-4"><input name="title" required autoFocus placeholder="Tên khóa học..." className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-[#0a5482] transition-colors" /><select name="type" className="w-full border border-slate-200 rounded-xl px-4 py-3 bg-white outline-none"><option value="IELTS">Hệ IELTS</option><option value="Standard">Hệ Standard (IGCSE/TOEIC)</option></select></div><div className="flex gap-4"><button type="button" onClick={() => setShowCreateCourseModal(false)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button><button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-3 rounded-xl shadow-lg">LƯU</button></div></form></div> )}
-        
         {showModuleModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4"><form onSubmit={handleCreateLectureModule} className="bg-white rounded-3xl w-full max-w-md p-8 space-y-6 animate-in zoom-in-95 shadow-2xl"><h2 className="text-lg font-black uppercase text-[#0a5482]">Thêm Học Phần Mới</h2><input name="title" required autoFocus placeholder="VD: Lesson 1: Grammar..." className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-[#0a5482] transition-colors" /><div className="flex gap-4"><button type="button" onClick={() => setShowModuleModal(false)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button><button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-3 rounded-xl shadow-lg">TẠO MỚI</button></div></form></div> )}
-        
         {showFolderModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4"><form onSubmit={handleCreateFolder} className="bg-white rounded-3xl w-full max-w-md p-8 space-y-6 animate-in zoom-in-95 shadow-2xl"><h2 className="text-lg font-black uppercase text-emerald-600">{currentFolderId ? 'Thêm Thư Mục Con' : 'Thêm Thư Mục Cấp 1'}</h2><input name="title" required autoFocus placeholder="Tên thư mục đề thi..." className="w-full border border-slate-200 rounded-xl px-4 py-3 outline-none focus:border-emerald-500 transition-colors" /><div className="flex gap-4"><button type="button" onClick={() => setShowFolderModal(false)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button><button type="submit" className="flex-1 bg-[#00a651] hover:bg-[#008f45] transition text-white font-black py-3 rounded-xl shadow-lg">TẠO MỚI</button></div></form></div> )}
-        
         {showAssignModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4"><div className="bg-white rounded-3xl w-full max-w-xl shadow-2xl overflow-hidden animate-in fade-in"><div className="bg-[#0f172a] p-6 text-white flex justify-between items-center"><h2 className="font-black uppercase text-sm tracking-widest">Chọn đề từ Kho (của khóa học này)</h2><button onClick={() => setShowAssignModal(false)} className="text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button></div><div className="p-6 max-h-[60vh] overflow-y-auto space-y-3 custom-scrollbar">{libraryTests.filter(t => !t.folder_id && t.course_id === selectedCourse.id).map(test => (<div key={test.id} className="flex justify-between items-center p-4 border border-slate-100 rounded-2xl hover:border-[#2bd6eb] transition bg-slate-50 group"><div><p className="font-black text-slate-700 text-sm">{test.title}</p><p className="text-[10px] font-black text-slate-400 uppercase tracking-tighter mt-1">{test.test_type}</p></div><button onClick={() => handleAssignTest(test.id)} className="bg-white group-hover:bg-[#2bd6eb] group-hover:text-white px-5 py-2 rounded-xl font-bold text-xs transition border border-slate-200 shadow-sm">GÁN ➜</button></div>))}{libraryTests.filter(t => !t.folder_id && t.course_id === selectedCourse.id).length === 0 && <p className="text-center text-slate-400 text-sm italic">Không có đề thi nào của khóa học này đang chờ gán.</p>}</div></div></div> )}
-        
-        {/* ========================================================================================= */}
-        {/* CÁC MODAL EDITORS CHÍNH - QUAN TRỌNG NHẤT */}
-        {/* ========================================================================================= */}
+
         {editingLecture && ( 
            <LectureEditorModal 
               lectureData={editingLecture} 
