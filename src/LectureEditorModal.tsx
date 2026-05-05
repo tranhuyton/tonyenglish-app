@@ -11,11 +11,14 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   const [activePageIndex, setActivePageIndex] = useState(0);
   const [isSaving, setIsSaving] = useState(false);
 
-  // 🚀 STATE MỚI CHO BÀI TẬP ĐÍNH KÈM
   const [taskList, setTaskList] = useState<any[]>(lectureData?.task_list || []);
   const [rightTab, setRightTab] = useState<'pages' | 'tasks'>('pages');
+  
   const [availableExercises, setAvailableExercises] = useState<any[]>([]);
-  const [showExerciseDropdown, setShowExerciseDropdown] = useState(false);
+  // 🚀 STATE MỚI CHO POP-UP CHỌN BÀI TẬP
+  const [showExerciseModal, setShowExerciseModal] = useState(false);
+  const [exSearch, setExSearch] = useState('');
+  const [exFilter, setExFilter] = useState('all');
 
   const editorRef = useRef(null);
 
@@ -40,7 +43,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     else setPages([{ id: 'temp_1', page_number: 1, content_html: '' }]);
   }, [lectureData]);
 
-  // 🚀 TỰ ĐỘNG LẤY ĐỀ THI / BÀI TẬP CỦA KHÓA HỌC HIỆN TẠI
   useEffect(() => {
     if (!courseId) {
        setAvailableExercises([]);
@@ -105,7 +107,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     setActivePageIndex(Math.max(0, indexToRemove - 1));
   };
 
-  // 🚀 CHỨC NĂNG THÊM TASK VÀO BÀI GIẢNG
   const handleAddExerciseTask = (ex: any) => {
       const isExercise = ex.content_json?.basicInfo?.category === 'exercise';
       const newTask = {
@@ -115,7 +116,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           type: 'exercise'
       };
       setTaskList([...taskList, newTask]);
-      setShowExerciseDropdown(false);
+      setShowExerciseModal(false); // 🚀 ĐÓNG POPUP SAU KHI THÊM
   }
 
   const handleAddManualTask = () => {
@@ -131,7 +132,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
     try {
       let currentLectureId = lectureData.id;
-      // 🚀 ĐƯA THÊM TASK_LIST VÀO DỮ LIỆU LƯU TRỮ
       const lecPayload = { title, course_id: courseId, module_id: moduleId || null, is_published: true, task_list: taskList };
       
       if (currentLectureId === 'new') {
@@ -164,9 +164,17 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     }
   };
 
+  // 🚀 LỌC DANH SÁCH BÀI TẬP TRONG POPUP
+  const filteredExercises = availableExercises.filter(ex => {
+      const matchesSearch = ex.title.toLowerCase().includes(exSearch.toLowerCase());
+      const cat = ex.content_json?.basicInfo?.category || 'test';
+      const matchesFilter = exFilter === 'all' || cat === exFilter;
+      return matchesSearch && matchesFilter;
+  });
+
   return (
     <div className="fixed inset-0 bg-slate-900/80 z-[100] flex justify-center items-center p-4">
-      <div className="bg-[#f4f6f9] w-full max-w-7xl h-[95vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95">
+      <div className="bg-[#f4f6f9] w-full max-w-7xl h-[95vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95 relative z-10">
         
         <div className="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-4">
@@ -199,7 +207,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
         <div className="flex-1 flex overflow-hidden">
           
-          {/* KHUNG SOẠN THẢO TRÁI */}
           <div className="flex-1 flex flex-col bg-white border-r border-slate-200 overflow-hidden relative">
              <div className="flex items-center justify-between p-3 border-b border-slate-200 bg-slate-50 shrink-0">
                 <div className="text-sm font-bold text-[#0a5482] flex items-center gap-2">
@@ -221,16 +228,13 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
              </div>
           </div>
 
-          {/* KHUNG ĐIỀU KHIỂN PHẢI (TRANG & NHIỆM VỤ) */}
           <div className="w-[340px] bg-slate-50 flex flex-col shrink-0">
              
-             {/* THANH TAB ĐIỀU KHIỂN */}
              <div className="flex bg-slate-200/50 p-1 m-3 rounded-xl border border-slate-200">
                 <button onClick={() => setRightTab('pages')} className={`flex-1 py-2 text-[11px] font-black uppercase rounded-lg transition-colors ${rightTab === 'pages' ? 'bg-white shadow-sm text-[#0a5482]' : 'text-slate-500 hover:text-slate-700'}`}>Trang nội dung</button>
                 <button onClick={() => setRightTab('tasks')} className={`flex-1 py-2 text-[11px] font-black uppercase rounded-lg transition-colors ${rightTab === 'tasks' ? 'bg-white shadow-sm text-[#0a5482]' : 'text-slate-500 hover:text-slate-700'}`}>Nhiệm vụ đính kèm</button>
              </div>
 
-             {/* TAB 1: QUẢN LÝ SỐ TRANG */}
              {rightTab === 'pages' && (
                 <>
                    <div className="px-4 pb-4 border-b border-slate-200">
@@ -256,31 +260,12 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                 </>
              )}
 
-             {/* TAB 2: QUẢN LÝ BÀI TẬP & NHIỆM VỤ */}
              {rightTab === 'tasks' && (
                 <>
                    <div className="px-4 pb-4 border-b border-slate-200 flex flex-col gap-2 relative">
-                      {/* NÚT CHỌN BÀI TẬP TỪ KHO */}
-                      <button onClick={() => setShowExerciseDropdown(!showExerciseDropdown)} className="w-full border-2 border-dashed border-emerald-400 text-emerald-700 bg-emerald-50 hover:bg-emerald-500 hover:text-white transition px-2 py-3 rounded-xl font-black text-[12px] flex items-center justify-center">
+                      <button onClick={() => setShowExerciseModal(true)} className="w-full border-2 border-dashed border-emerald-400 text-emerald-700 bg-emerald-50 hover:bg-emerald-500 hover:text-white transition px-2 py-3 rounded-xl font-black text-[12px] flex items-center justify-center">
                          ➕ CHỌN BÀI TẬP TỪ KHO
                       </button>
-                      
-                      {/* DROPDOWN DANH SÁCH BÀI TẬP */}
-                      {showExerciseDropdown && (
-                         <div className="absolute top-[60px] left-4 right-4 bg-white border border-slate-200 shadow-2xl rounded-xl max-h-64 overflow-y-auto z-50 animate-in fade-in zoom-in-95">
-                            {availableExercises.length === 0 ? <div className="p-4 text-xs text-slate-400 text-center italic border-2 border-dashed m-2 rounded-lg">Khóa học chưa có bài tập/đề thi nào trong kho.</div> : (
-                               availableExercises.map(ex => (
-                                  <button key={ex.id} onClick={() => handleAddExerciseTask(ex)} className="w-full text-left px-4 py-3 text-xs font-bold hover:bg-emerald-50 hover:text-emerald-700 border-b border-slate-100 last:border-0 flex justify-between items-center transition-colors">
-                                     <span className="truncate pr-2">{ex.title}</span>
-                                     <span className={`shrink-0 text-[9px] px-1.5 py-0.5 rounded uppercase tracking-wider ${ex.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
-                                        {ex.content_json?.basicInfo?.category === 'exercise' ? 'Bài tập' : 'Đề thi'}
-                                     </span>
-                                  </button>
-                               ))
-                            )}
-                         </div>
-                      )}
-
                       <button onClick={handleAddManualTask} className="w-full bg-white border border-slate-200 text-slate-500 hover:border-slate-400 hover:bg-slate-100 transition px-2 py-2 rounded-lg font-bold text-[12px] flex items-center justify-center shadow-sm">
                          📝 Thêm ghi chú văn bản
                       </button>
@@ -302,9 +287,59 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                 </>
              )}
           </div>
-
         </div>
       </div>
+
+      {/* 🚀 MODAL (POP-UP) CHỌN BÀI TẬP SIÊU TO KHỔNG LỒ */}
+      {showExerciseModal && (
+        <div className="fixed inset-0 z-[200] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in">
+            <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col overflow-hidden animate-in zoom-in-95">
+                <div className="px-6 py-5 border-b border-slate-100 flex justify-between items-center bg-slate-50 shrink-0">
+                    <h3 className="font-black text-[#0a5482] text-lg uppercase tracking-tight">Thêm Bài Tập / Đề Thi Vào Bài Giảng</h3>
+                    <button onClick={() => setShowExerciseModal(false)} className="w-8 h-8 rounded-full bg-white border border-slate-200 hover:bg-slate-200 hover:text-red-500 flex items-center justify-center text-xl font-bold text-slate-400 transition-colors">&times;</button>
+                </div>
+                
+                <div className="p-5 border-b border-slate-100 flex flex-col sm:flex-row gap-3 bg-white shrink-0">
+                    <div className="relative flex-1">
+                        <input type="text" placeholder="Nhập tên bài tập để tìm kiếm..." value={exSearch} onChange={e => setExSearch(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:border-[#2bd6eb] focus:ring-1 focus:ring-[#2bd6eb] transition-all" />
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+                    </div>
+                    <select value={exFilter} onChange={e => setExFilter(e.target.value)} className="w-full sm:w-48 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-[#2bd6eb] font-bold text-slate-600 cursor-pointer">
+                        <option value="all">Tất cả thể loại</option>
+                        <option value="exercise">Chỉ Bài tập</option>
+                        <option value="test">Chỉ Đề thi</option>
+                    </select>
+                </div>
+                
+                <div className="flex-1 overflow-y-auto p-4 bg-[#f8fafc] custom-scrollbar">
+                    {filteredExercises.length === 0 ? (
+                        <div className="p-10 text-center flex flex-col items-center justify-center border-2 border-dashed border-slate-200 rounded-2xl m-4 bg-white">
+                           <span className="text-4xl mb-3 opacity-50">📭</span>
+                           <span className="text-slate-400 font-bold text-[15px]">Không tìm thấy bài tập/đề thi nào.</span>
+                           <span className="text-slate-400 text-[13px] mt-1">Anh hãy kiểm tra lại bộ lọc hoặc tên tìm kiếm nhé!</span>
+                        </div>
+                    ) : (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            {filteredExercises.map(ex => (
+                                <div key={ex.id} className="flex justify-between items-center bg-white border border-slate-200 p-4 rounded-xl hover:border-emerald-400 hover:shadow-md transition-all group">
+                                    <div className="flex flex-col flex-1 min-w-0 pr-3">
+                                        <span className="font-bold text-slate-700 text-[14px] truncate group-hover:text-emerald-700 transition-colors">{ex.title}</span>
+                                        <span className={`w-fit mt-1.5 text-[9px] px-2 py-0.5 rounded uppercase font-black tracking-wider ${ex.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                            {ex.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
+                                        </span>
+                                    </div>
+                                    <button onClick={() => handleAddExerciseTask(ex)} className="bg-emerald-50 border border-emerald-200 text-emerald-600 hover:bg-emerald-500 hover:text-white px-4 py-2 rounded-lg text-xs font-black transition-all active:scale-95 shrink-0">
+                                        THÊM ➕
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+      )}
+
     </div>
   );
 }

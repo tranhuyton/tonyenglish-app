@@ -4,15 +4,13 @@ import AITutorSidebar from './AITutorSidebar';
 import 'react-quill/dist/quill.snow.css';
 
 // =========================================================================================
-// 🚀 COMPONENT RENDER (IFRAME CÁCH LY + BỘ ĐO CHIỀU CAO CHUẨN XÁC TUYỆT ĐỐI)
+// COMPONENT RENDER 
 // =========================================================================================
 const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(100);
 
-   useEffect(() => {
-     setIframeHeight(10);
-   }, [html]);
+   useEffect(() => { setIframeHeight(10); }, [html]);
 
    useEffect(() => {
      const handleMessage = (e: MessageEvent) => {
@@ -20,9 +18,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          const href = e.data.href;
          if (href.includes('tonyenglish.vn/uploads') || href.includes('youtube.com') || href.includes('youtu.be')) {
            onOpenPopup(href);
-         } else {
-           window.open(href, '_blank', 'noopener,noreferrer');
-         }
+         } else { window.open(href, '_blank', 'noopener,noreferrer'); }
        } else if (e.data?.type === 'LECTURE_RESIZE') {
          const h = e.data.height;
          if (h) setIframeHeight(Math.max(100, h + 20)); 
@@ -44,7 +40,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
      <html lang="vi">
      <head>
        <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
        <style>
          html, body { 
@@ -62,46 +58,29 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          path, polygon, rect, circle { transition: all 0.2s ease; }
          a { cursor: pointer; color: #0284c7; text-decoration: none; font-weight: 600; transition: all 0.2s; }
          a:hover { opacity: 0.8; text-decoration: underline; }
-         #content-wrapper { 
-            display: flow-root; 
-            width: 100%; 
-            padding-bottom: 10px;
-         }
+         #content-wrapper { display: flow-root; width: 100%; padding-bottom: 10px; }
        </style>
      </head>
      <body>
-       <div id="content-wrapper">
-          ${html ? html.replace(/viewbox=/gi, 'viewBox=') : ''}
-       </div>
+       <div id="content-wrapper">${html ? html.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
        <script>
          document.addEventListener('click', function(e) {
            var anchor = e.target.closest('a');
-           if (anchor) {
-             e.preventDefault();
-             window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: anchor.href }, '*');
-           }
+           if (anchor) { e.preventDefault(); window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: anchor.href }, '*'); }
          });
-
          document.addEventListener('mouseup', function(e) {
            var sel = window.getSelection();
            var text = sel.toString().trim();
            if (text && text.length > 0 && text.length < 40 && text.split(' ').length <= 4) {
              var range = sel.getRangeAt(0);
              var rect = range.getBoundingClientRect();
-             window.parent.postMessage({ 
-                type: 'LECTURE_OPEN_DICT', word: text, 
-                x: rect.left + (rect.width/2), y: rect.bottom, rectTop: rect.top 
-             }, '*');
+             window.parent.postMessage({ type: 'LECTURE_OPEN_DICT', word: text, x: rect.left + (rect.width/2), y: rect.bottom, rectTop: rect.top }, '*');
            }
          });
-
          document.addEventListener('mousedown', function(e) {
            var sel = window.getSelection();
-           if (!sel.toString().trim()) {
-              window.parent.postMessage({ type: 'LECTURE_CLOSE_DICT' }, '*');
-           }
+           if (!sel.toString().trim()) { window.parent.postMessage({ type: 'LECTURE_CLOSE_DICT' }, '*'); }
          });
-
          function reportHeight() {
             var wrapper = document.getElementById('content-wrapper');
             if (wrapper) {
@@ -109,15 +88,12 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                 if (h > 0) window.parent.postMessage({ type: 'LECTURE_RESIZE', height: h }, '*');
             }
          }
-         
          window.addEventListener('load', reportHeight);
          if (window.ResizeObserver) {
             var ro = new ResizeObserver(reportHeight);
             ro.observe(document.body);
             ro.observe(document.getElementById('content-wrapper'));
-         } else {
-            setInterval(reportHeight, 500); 
-         }
+         } else { setInterval(reportHeight, 500); }
        </script>
      </body>
      </html>
@@ -151,11 +127,10 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [completedTasks, setCompletedTasks] = useState<string[]>([]);
   
-  // 🚀 STATE MỚI: QUẢN LÝ TIẾN ĐỘ CỦA TOÀN BỘ KHÓA HỌC (CHO SIDEBAR)
   const [allLectureProgress, setAllLectureProgress] = useState<Record<string, string[]>>({});
 
   const [expandedModules, setExpandedModules] = useState<string[]>([]);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Mobile mặc định ẩn cho thoáng
   
   const [isTaskMenuOpen, setIsTaskMenuOpen] = useState(false);
   const taskMenuRef = useRef<HTMLDivElement>(null);
@@ -171,9 +146,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (containerRef.current) {
-       containerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    if (containerRef.current) containerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
   }, [activeLectureId, currentPage]);
 
   useEffect(() => {
@@ -184,6 +157,8 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
   useEffect(() => {
     const handleFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
     document.addEventListener('fullscreenchange', handleFullscreenChange);
+    // Desktop mặc định bật sidebar, mobile mặc định tắt
+    if (window.innerWidth >= 768) setIsSidebarOpen(true);
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
 
@@ -191,7 +166,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
     const handleClickOutside = (e: MouseEvent) => {
        const dictPop = document.getElementById('dict-popup');
        if (dictPop && !dictPop.contains(e.target as Node)) setDictPopup(null);
-       
        if (taskMenuRef.current && !taskMenuRef.current.contains(e.target as Node)) setIsTaskMenuOpen(false);
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -226,20 +200,11 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
       
       setLectures(validLectures);
 
-      // 🚀 TẢI TOÀN BỘ TIẾN ĐỘ CỦA KHÓA HỌC CHO SIDEBAR
       if (user && validLectures.length > 0) {
          const lectureIds = validLectures.map(l => l.id);
-         const { data: allProg } = await supabase.from('lecture_progress')
-             .select('lecture_id, completed_tasks')
-             .eq('user_id', user.id)
-             .in('lecture_id', lectureIds);
-             
+         const { data: allProg } = await supabase.from('lecture_progress').select('lecture_id, completed_tasks').eq('user_id', user.id).in('lecture_id', lectureIds);
          const pMap: Record<string, string[]> = {};
-         if (allProg) {
-             allProg.forEach(p => {
-                 pMap[p.lecture_id] = p.completed_tasks || [];
-             });
-         }
+         if (allProg) { allProg.forEach(p => { pMap[p.lecture_id] = p.completed_tasks || []; }); }
          setAllLectureProgress(pMap);
       }
 
@@ -266,11 +231,11 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
     try {
         setActiveLectureId(lectureId); setCurrentPage(1); setPages([]); setCompletedTasks([]);
         
+        // Tự động đóng Sidebar trên Mobile khi chọn xong bài để tiết kiệm diện tích
+        if (window.innerWidth < 768) setIsSidebarOpen(false);
+
         const targetUserId = userIdOverride || currentUser?.id;
-        
-        if (targetUserId) {
-            localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
-        }
+        if (targetUserId) localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
 
         const { data: pageData } = await supabase.from('lecture_pages').select('*').eq('lecture_id', lectureId).order('page_number');
         setPages(pageData || []);
@@ -310,26 +275,18 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
              }
          }).catch();
 
-         // 🚀 ĐỒNG BỘ LUÔN CHO SIDEBAR HIỂN THỊ CHÍNH XÁC
          setAllLectureProgress(allPrev => ({ ...allPrev, [activeLectureId]: newCompleted }));
-
          return newCompleted;
       });
   }, [currentUser, activeLectureId, lectures]);
 
   const handleStartTaskExercise = async (task: any) => {
       if (!onStartTest || !task.test_id) return;
-      
       try {
          const { data: testData, error } = await supabase.from('tests').select('*').eq('id', task.test_id).single();
-         if (error || !testData) {
-            alert("Bài tập này hiện không khả dụng. Vui lòng liên hệ Admin.");
-            return;
-         }
+         if (error || !testData) { alert("Bài tập này hiện không khả dụng. Vui lòng liên hệ Admin."); return; }
 
-         if (!completedTasks.includes(task.id)) {
-            handleToggleTask(task.id);
-         }
+         if (!completedTasks.includes(task.id)) handleToggleTask(task.id);
 
          const type = testData.test_type || '';
          if (type === 'IELTS-Writing') onStartTest('ielts-writing', testData);
@@ -337,10 +294,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
          else if (type === 'IELTS-Listening' || type === 'IELTS-Reading') onStartTest('computer', testData); 
          else if (testData.title.toLowerCase().includes('business') || testData.title.toLowerCase().includes('econ') || type === 'Case-Study') onStartTest('case-study', testData);
          else onStartTest('standard', testData);
-
-      } catch (err) {
-         alert("Đã có lỗi xảy ra khi tải bài tập.");
-      }
+      } catch (err) { alert("Đã có lỗi xảy ra khi tải bài tập."); }
   };
 
   const handleNextPage = () => {
@@ -369,7 +323,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
 
   const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
     setDictPopup({ show: true, word, x, y, rectTop, data: null, isLoading: true });
-
     setTimeout(async () => {
        try {
           let phonetics = '', audio = '', translation = '';
@@ -397,7 +350,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
         if (!selection || selection.rangeCount === 0) return;
         const text = selection.toString().trim();
         if (!text) return;
-        
         if (text.length > 0 && text.length < 40 && text.split(' ').length <= 4) {
            const range = selection.getRangeAt(0);
            const rect = range.getBoundingClientRect();
@@ -427,15 +379,16 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
   const isLastLectureAndPage = currentPage === totalPages && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
   const currentHtmlContent = useMemo(() => { const page = pages.find(p => p.page_number === currentPage); return page ? page.content_html : ''; }, [pages, currentPage]);
 
-  if (isLoading) return <div className="min-h-screen flex items-center justify-center bg-[#e6e9ee]"><div className="animate-spin text-4xl text-[#3ea6e6]">⏳</div></div>;
+  if (isLoading) return <div className="min-h-[100dvh] flex items-center justify-center bg-[#e6e9ee]"><div className="animate-spin text-4xl text-[#3ea6e6]">⏳</div></div>;
   if (errorMessage) return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-[#e6e9ee]"><div className="text-5xl mb-4">⚠️</div><h2 className="text-xl font-black text-slate-800 mb-2">Lỗi tải bài giảng</h2><p className="text-slate-500 mb-6">{errorMessage}</p><button onClick={onBack} className="bg-[#3ea6e6] text-white px-6 py-2.5 rounded-xl font-bold shadow-md hover:bg-[#0284c7]">Quay lại trang chủ</button></div>
+      <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-[#e6e9ee]"><div className="text-5xl mb-4">⚠️</div><h2 className="text-xl font-black text-slate-800 mb-2">Lỗi tải bài giảng</h2><p className="text-slate-500 mb-6">{errorMessage}</p><button onClick={onBack} className="bg-[#3ea6e6] text-white px-6 py-2.5 rounded-xl font-bold shadow-md hover:bg-[#0284c7]">Quay lại trang chủ</button></div>
   );
 
   return (
-    <div className="flex flex-col h-screen bg-[#e6e9ee] font-sans text-slate-800 overflow-hidden relative">
+    // 🚀 TỐI ƯU MOBILE: Dùng h-[100dvh] thay vì h-screen, thêm w-full và overscroll-none để chống kéo giãn và nảy trang (bounce)
+    <div className="flex flex-col h-[100dvh] w-full bg-[#e6e9ee] font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
-      {/* THANH TOP BAR */}
+      {/* THANH TOP BAR: Luôn cố định chiều cao 60px không bị co bóp */}
       <header className="h-[60px] bg-[#3ea6e6] text-white flex items-center px-4 md:px-8 shrink-0 z-30 shadow-sm justify-between">
          <div className="flex items-center gap-2 md:gap-3 min-w-0 flex-1">
             <button onClick={onBack} className="w-10 h-10 flex items-center justify-center rounded text-white hover:bg-white/20 transition-colors shrink-0" title="Quay lại danh sách">
@@ -445,27 +398,28 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
             <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="w-10 h-10 flex items-center justify-center rounded text-white hover:bg-white/20 transition-colors shrink-0" title="Ẩn/Hiện Sidebar">
                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" /></svg>
             </button>
-            <h1 className="text-[20px] md:text-[24px] font-medium leading-none truncate tracking-wide ml-1">{course?.title || 'Đang tải khóa học...'}</h1>
+            <h1 className="text-[18px] md:text-[24px] font-medium leading-none truncate tracking-wide ml-1">{course?.title || 'Đang tải khóa học...'}</h1>
             
             {safeLectureTasks.length > 0 && (
-               <div className="relative ml-2 shrink-0 hidden md:block" ref={taskMenuRef}>
+               <div className="relative ml-2 shrink-0" ref={taskMenuRef}>
                  <button 
                    onClick={() => setIsTaskMenuOpen(!isTaskMenuOpen)} 
-                   className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-[13px] font-bold transition-all border ${safeCompletedTasks.length === safeLectureTasks.length ? 'bg-emerald-500/20 text-emerald-100 border-emerald-400/30' : 'bg-white/10 hover:bg-white/20 text-white border-white/20 shadow-sm'}`}
+                   className={`flex items-center gap-2 px-2.5 py-1.5 md:px-3 md:py-1.5 rounded-lg text-[12px] md:text-[13px] font-bold transition-all border ${safeCompletedTasks.length === safeLectureTasks.length ? 'bg-emerald-500/20 text-emerald-100 border-emerald-400/30' : 'bg-white/10 hover:bg-white/20 text-white border-white/20 shadow-sm'}`}
                  >
                    <span>📋</span> 
-                   <span>Bài tập ({safeCompletedTasks.length}/{safeLectureTasks.length})</span>
-                   <span className={`text-[10px] ml-1 transition-transform duration-200 ${isTaskMenuOpen ? 'rotate-180' : ''}`}>▼</span>
+                   <span className="hidden sm:inline">Bài tập</span>
+                   <span>({safeCompletedTasks.length}/{safeLectureTasks.length})</span>
+                   <span className={`text-[10px] ml-1 transition-transform duration-200 hidden sm:inline ${isTaskMenuOpen ? 'rotate-180' : ''}`}>▼</span>
                  </button>
 
                  {isTaskMenuOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.2)] border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2">
-                       <div className="bg-[#f8fafc] px-4 py-3 border-b border-slate-100 flex justify-between items-center">
+                    <div className="absolute top-full left-0 md:left-auto md:right-0 mt-3 w-[300px] md:w-[350px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.2)] border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2">
+                       <div className="bg-[#f8fafc] px-5 py-4 border-b border-slate-100 flex justify-between items-center">
                           <h4 className="font-black text-[#d97706] text-[12px] uppercase tracking-widest">Nhiệm vụ bài học</h4>
                           <span className="text-[#d97706] font-bold text-[13px]">{Math.round((safeCompletedTasks.length / safeLectureTasks.length) * 100)}%</span>
                        </div>
                        
-                       <div className="max-h-[60vh] overflow-y-auto p-2 custom-scrollbar space-y-1">
+                       <div className="max-h-[60vh] overflow-y-auto p-2 custom-scrollbar space-y-1" style={{ WebkitOverflowScrolling: 'touch' }}>
                           {safeLectureTasks.map((task: any) => {
                              const isCompleted = safeCompletedTasks.includes(task.id);
                              return (
@@ -475,12 +429,12 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
                                            {isCompleted && <span className="text-white text-xs font-black">✓</span>}
                                        </div>
                                    </div>
-                                   <div className="flex-1 min-w-0 flex flex-col items-start gap-1">
+                                   <div className="flex-1 min-w-0 flex flex-col items-start gap-1.5">
                                       <span className={`text-[13px] font-medium leading-snug transition-colors ${isCompleted ? 'text-emerald-700 opacity-70 line-through' : 'text-slate-700'}`}>{task.text}</span>
                                       {task.type === 'exercise' && (
                                          <button 
                                            onClick={() => handleStartTaskExercise(task)} 
-                                           className={`text-[11px] font-black uppercase tracking-wider px-2 py-1 rounded shadow-sm transition-all ${isCompleted ? 'bg-slate-200 text-slate-500 hover:bg-slate-300' : 'bg-[#1e88e5] text-white hover:bg-blue-600 active:scale-95'}`}
+                                           className={`text-[11px] font-black uppercase tracking-wider px-3 py-1.5 rounded shadow-sm transition-all ${isCompleted ? 'bg-slate-200 text-slate-500 hover:bg-slate-300' : 'bg-[#1e88e5] text-white hover:bg-blue-600 active:scale-95'}`}
                                          >
                                            {isCompleted ? 'Làm lại bài' : 'Làm bài ngay ➜'}
                                          </button>
@@ -496,30 +450,39 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
             )}
          </div>
 
-         <div className="flex items-center gap-3 shrink-0 ml-4">
+         <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2 sm:ml-4">
              <button 
                 onClick={() => setIsAIOpen(!isAIOpen)} 
-                className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:h-10 rounded text-[14px] font-bold transition-all bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white shadow-md border border-white/20 animate-pulse" 
+                className="flex items-center gap-1.5 px-2 py-1.5 md:px-4 md:h-10 rounded text-[13px] md:text-[14px] font-bold transition-all bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white shadow-md border border-white/20 animate-pulse" 
                 title="Hỏi AI"
              >
                 <span>✨</span> <span className="hidden sm:inline">Hỏi AI</span>
              </button>
 
-             <button onClick={toggleFullScreen} className="w-10 h-10 rounded flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-colors shadow-sm" title={isFullscreen ? "Thu nhỏ" : "Toàn màn hình"}>
+             <button onClick={toggleFullScreen} className="hidden md:flex w-10 h-10 rounded items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-colors shadow-sm" title={isFullscreen ? "Thu nhỏ" : "Toàn màn hình"}>
                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
              </button>
           </div>
       </header>
 
-      <div className="flex flex-1 overflow-hidden">
-         {/* SIDEBAR TRÁI: HIỂN THỊ TIẾN ĐỘ BÀI TẬP */}
-         <aside className={`${isSidebarOpen ? 'w-[300px]' : 'w-0 opacity-0 border-r-0'} transition-all duration-300 ease-in-out bg-[#f8f9fa] border-r border-slate-200 flex flex-col h-full shrink-0 shadow-[2px_0_10px_rgba(0,0,0,0.02)] relative z-20 overflow-hidden`}>
-           <div className="p-5 border-b border-slate-200 shrink-0 min-w-[300px]">
+      {/* VÙNG NỘI DUNG CHÍNH */}
+      <div className="flex flex-1 overflow-hidden relative w-full">
+         
+         {/* 🚀 TỐI ƯU MOBILE: Overlay xám đen khi mở Sidebar trên điện thoại */}
+         {isSidebarOpen && (
+            <div className="fixed inset-0 bg-slate-900/50 z-40 md:hidden transition-opacity" onClick={() => setIsSidebarOpen(false)} />
+         )}
+
+         {/* 🚀 TỐI ƯU MOBILE: Sidebar sẽ fixed đè lên trên điện thoại, và relative đẩy nội dung trên Desktop */}
+         <aside className={`fixed md:relative inset-y-0 left-0 z-50 md:z-20 h-[100dvh] md:h-full bg-[#f8f9fa] border-r border-slate-200 flex flex-col shrink-0 transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none
+            ${isSidebarOpen ? 'translate-x-0 w-[280px] md:w-[300px]' : '-translate-x-full w-[280px] md:w-0 md:opacity-0 md:border-r-0 md:translate-x-0'}`}>
+           
+           <div className="p-5 border-b border-slate-200 shrink-0 min-w-[280px] md:min-w-[300px]">
               <div className="text-[14px] text-slate-700 mb-4">Khóa học của bạn</div>
               <h3 className="font-medium text-slate-800 text-[15px] mb-6">{course?.title || '...'}</h3>
            </div>
            
-           <div className="flex-1 overflow-y-auto custom-scrollbar bg-[#f8f9fa]">
+           <div className="flex-1 overflow-y-auto custom-scrollbar bg-[#f8f9fa]" style={{ WebkitOverflowScrolling: 'touch' }}>
              {modules.length === 0 ? (
                 <div className="p-6 text-center text-slate-400 text-sm italic">Chưa có bài giảng nào được xuất bản.</div>
              ) : (
@@ -538,8 +501,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
                           ) : (
                              moduleLectures.map((lec) => {
                                const isActive = activeLectureId === lec.id;
-                               
-                               // 🚀 LOGIC TÍNH TOÁN HIỂN THỊ TIẾN ĐỘ BÀI TẬP BÊN SIDEBAR
                                const totalTasks = Array.isArray(lec.task_list) ? lec.task_list.length : 0;
                                const completedCount = allLectureProgress[lec.id]?.length || 0;
 
@@ -572,20 +533,22 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
            </div>
          </aside>
 
+         {/* 🚀 TỐI ƯU MOBILE: WebkitOverflowScrolling: 'touch' để vuốt tự nhiên trên iOS */}
          <main 
             className="flex-1 overflow-y-auto bg-[#e6e9ee] custom-scrollbar relative"
+            style={{ WebkitOverflowScrolling: 'touch' }}
             ref={containerRef}
             onMouseUp={handleTextSelection}
          >
-             <div className="min-h-full flex flex-col items-center py-10 px-4 md:px-8">
-               <div className="max-w-[1000px] w-full bg-white shadow-md flex-none rounded-none p-10 md:p-14 mb-8">
+             <div className="min-h-full flex flex-col items-center py-6 md:py-10 px-0 sm:px-4 md:px-8">
+               <div className="max-w-[1000px] w-full bg-white shadow-md flex-none rounded-none sm:rounded-2xl p-6 md:p-14 mb-8 min-h-[50vh]">
                   {!activeLectureId ? (
                     <div className="text-center py-20 text-slate-400 font-medium">Vui lòng chọn bài giảng.</div>
                   ) : !currentHtmlContent ? (
                     <div className="text-center py-20 text-slate-400 font-medium">Nội dung đang được cập nhật...</div>
                   ) : (
                     <div>
-                       <h2 className="text-[26px] md:text-[32px] text-slate-800 font-normal mb-12 pb-6 border-b border-slate-100">{activeLecture?.title}</h2>
+                       <h2 className="text-[22px] md:text-[32px] text-slate-800 font-normal mb-8 md:mb-12 pb-4 md:pb-6 border-b border-slate-100 leading-snug">{activeLecture?.title}</h2>
                        <StaticLectureContent 
                           html={currentHtmlContent} 
                           onOpenPopup={setPopupUrl} 
@@ -597,16 +560,16 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
                </div>
                
                {activeLectureId && (
-                  <div className="max-w-[1000px] w-full flex justify-between items-center px-4 pb-10">
-                      <button onClick={handlePrevPage} disabled={currentPage === 1 && lectures.findIndex(l => l.id === activeLectureId) === 0} className="text-[#3ea6e6] font-bold text-[14px] hover:text-[#0284c7] disabled:opacity-30 transition-colors uppercase">&lt; TRƯỚC</button>
+                  <div className="max-w-[1000px] w-full flex justify-between items-center px-6 pb-10">
+                      <button onClick={handlePrevPage} disabled={currentPage === 1 && lectures.findIndex(l => l.id === activeLectureId) === 0} className="text-[#3ea6e6] font-bold text-[13px] md:text-[14px] hover:text-[#0284c7] disabled:opacity-30 transition-colors uppercase">&lt; TRƯỚC</button>
                       {totalPages > 0 && (
-                         <div className="flex gap-4">
+                         <div className="flex gap-2 md:gap-4 flex-wrap justify-center px-4">
                            {Array.from({ length: totalPages }).map((_, i) => (
-                                 <button key={i+1} onClick={() => setCurrentPage(i+1)} className={`w-10 h-10 rounded-full flex items-center justify-center text-[15px] font-bold transition-all ${currentPage === i+1 ? 'bg-[#3ea6e6] text-white shadow-md' : 'text-[#3ea6e6] hover:bg-white hover:shadow-sm'}`}>{i+1}</button>
+                                 <button key={i+1} onClick={() => setCurrentPage(i+1)} className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-[14px] md:text-[15px] font-bold transition-all ${currentPage === i+1 ? 'bg-[#3ea6e6] text-white shadow-md' : 'text-[#3ea6e6] hover:bg-white hover:shadow-sm'}`}>{i+1}</button>
                            ))}
                          </div>
                       )}
-                      <button onClick={handleNextPage} disabled={isLastLectureAndPage} className="text-[#3ea6e6] font-bold text-[14px] hover:text-[#0284c7] disabled:opacity-30 transition-colors uppercase">SAU &gt;</button>
+                      <button onClick={handleNextPage} disabled={isLastLectureAndPage} className="text-[#3ea6e6] font-bold text-[13px] md:text-[14px] hover:text-[#0284c7] disabled:opacity-30 transition-colors uppercase">SAU &gt;</button>
                   </div>
                )}
              </div>
@@ -622,8 +585,8 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
       />
 
       {dictPopup && dictPopup.show && (
-         <div id="dict-popup" className="fixed z-[100] bg-white rounded-[1.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.25)] border-2 border-slate-100 w-80 flex flex-col overflow-hidden"
-           style={{ left: Math.min(dictPopup.x, window.innerWidth - 330), ...(window.innerHeight - dictPopup.y < 300 ? { bottom: window.innerHeight - dictPopup.rectTop + 10 } : { top: dictPopup.y + 10 }), maxHeight: '380px' }}>
+         <div id="dict-popup" className="fixed z-[100] bg-white rounded-[1.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.25)] border-2 border-slate-100 w-[90vw] max-w-[320px] flex flex-col overflow-hidden"
+           style={{ left: Math.max(10, Math.min(dictPopup.x, window.innerWidth - 330)), ...(window.innerHeight - dictPopup.y < 300 ? { bottom: window.innerHeight - dictPopup.rectTop + 10 } : { top: dictPopup.y + 10 }), maxHeight: '380px' }}>
             
             <div className="bg-[#f0f9ff] border-b border-[#e0f2fe] py-2.5 px-5 flex items-center justify-start shrink-0">
                <img src="/logo-shield.png" alt="TonyEnglish" className="h-4 w-auto object-contain mr-1.5" />
@@ -635,7 +598,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
                {dictPopup.data?.audio && (<button onClick={() => playAudio(dictPopup.data.audio)} className="w-8 h-8 rounded-full bg-blue-50 text-[#0ea5e9] flex items-center justify-center hover:bg-[#0ea5e9] hover:text-white transition-colors shrink-0">🔊</button>)}
             </div>
             
-            <div className="p-5 bg-white overflow-y-auto custom-scrollbar">
+            <div className="p-5 bg-white overflow-y-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
               {dictPopup.isLoading ? (
                  <div className="flex flex-col items-center justify-center py-6"><div className="animate-spin text-xl text-slate-300 mb-2">⏳</div><span className="text-[12px] font-medium text-slate-500">Đang tra cứu...</span></div>
               ) : (
@@ -646,7 +609,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
       )}
 
       {popupUrl && (
-        <div className="fixed inset-0 z-[9999] bg-slate-900/95 flex flex-col items-center justify-center p-4 md:p-8">
+        <div className="fixed inset-0 z-[9999] bg-slate-900/95 flex flex-col items-center justify-center p-4 md:p-8 animate-in fade-in">
           
           <div className="w-full max-w-6xl flex justify-end mb-3">
              <button 
