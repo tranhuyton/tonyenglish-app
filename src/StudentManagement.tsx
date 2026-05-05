@@ -169,7 +169,6 @@ export default function StudentManagement() {
     (s.full_name && s.full_name.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
-  // Tính toán danh sách khóa học chưa được gán (để đưa vào Dropdown)
   const availableCourses = courses.filter(c => !studentEnrollments.some(e => e.course_id === c.id));
 
   if (selectedStudent) {
@@ -189,7 +188,7 @@ export default function StudentManagement() {
               {selectedStudent.role === 'admin' ? 'Quản trị viên' : 'Học viên'}
             </span>
             <div className="w-20 h-20 rounded-full bg-[#0a5482] text-white flex items-center justify-center font-black text-3xl mb-4 shadow-inner mt-4">
-              {selectedStudent.full_name ? selectedStudent.full_name.charAt(0).toUpperCase() : (selectedStudent.email ? selectedStudent.email.charAt(0).toUpperCase() : 'U')}
+              {selectedStudent.full_name ? selectedStudent.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (selectedStudent.email ? selectedStudent.email.charAt(0).toUpperCase() : 'U')}
             </div>
             <h2 className="text-xl font-black text-slate-800 mb-1">{selectedStudent.full_name || 'Học viên ẩn danh'}</h2>
             <p className="text-slate-500 font-medium text-[14px] mb-4">{selectedStudent.email}</p>
@@ -279,7 +278,6 @@ export default function StudentManagement() {
           </div>
         </div>
 
-        {/* Modal Gán Khóa Học Tối Ưu */}
         {showAssignModal && (
           <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4">
             <form onSubmit={handleAssignCourse} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
@@ -288,14 +286,11 @@ export default function StudentManagement() {
                 <label className="text-[13px] font-bold text-slate-500 uppercase">Chọn khóa học</label>
                 <select name="courseId" required defaultValue="" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] font-medium bg-slate-50">
                   <option value="" disabled>-- Chọn khóa học --</option>
-                  
-                  {/* ĐOẠN NÀY ĐÃ ĐƯỢC LỌC CHỈ HIỆN KHÓA CHƯA GÁN */}
                   {availableCourses.length === 0 ? (
                      <option value="" disabled>Học viên đã gán tất cả khóa học</option>
                   ) : (
                      availableCourses.map(c => <option key={c.id} value={c.id}>[{c.type}] {c.title}</option>)
                   )}
-                  
                 </select>
               </div>
               <div className="flex gap-4">
@@ -309,16 +304,11 @@ export default function StudentManagement() {
     );
   }
 
-  // ==========================================
-  // VIEW 1: DANH SÁCH HỌC VIÊN TỔNG
-  // ==========================================
   return (
     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden animate-in fade-in duration-300">
       <div className="bg-slate-50 px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
         <h2 className="font-black text-xl text-[#0a5482]">Quản lý Tài Khoản</h2>
         <div className="relative w-full sm:w-80">
-          
-          {/* BỘ LỌC TÌM KIẾM ĐÃ CÓ DEBOUNCE CHỐNG LAG */}
           <input 
             type="text" 
             placeholder="Tìm kiếm theo email hoặc tên..." 
@@ -356,7 +346,7 @@ export default function StudentManagement() {
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
                         <div className={`w-10 h-10 rounded-full text-white flex items-center justify-center font-bold text-sm shrink-0 ${student.role === 'admin' ? 'bg-red-500' : 'bg-[#0a5482]'}`}>
-                          {student.full_name ? student.full_name.charAt(0).toUpperCase() : (student.email ? student.email.charAt(0).toUpperCase() : 'U')}
+                          {student.full_name ? student.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (student.email ? student.email.charAt(0).toUpperCase() : 'U')}
                         </div>
                         <div>
                           <div className="font-bold text-[14px] text-slate-800">{student.full_name || 'Người dùng ẩn danh'}</div>
@@ -386,7 +376,6 @@ export default function StudentManagement() {
         )}
       </div>
 
-      {/* Modal Tạo Tài Khoản Mới (Đã bỏ backdrop-blur) */}
       {showCreateUserModal && (
         <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4">
           <form onSubmit={handleCreateUser} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
