@@ -4,7 +4,7 @@ import AITutorSidebar from './AITutorSidebar';
 import 'react-quill/dist/quill.snow.css';
 
 // =========================================================================================
-// COMPONENT RENDER 
+// 🚀 COMPONENT RENDER 
 // =========================================================================================
 const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -130,7 +130,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
   const [allLectureProgress, setAllLectureProgress] = useState<Record<string, string[]>>({});
 
   const [expandedModules, setExpandedModules] = useState<string[]>([]);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Mobile mặc định ẩn cho thoáng
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
   
   const [isTaskMenuOpen, setIsTaskMenuOpen] = useState(false);
   const taskMenuRef = useRef<HTMLDivElement>(null);
@@ -157,7 +157,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
   useEffect(() => {
     const handleFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
     document.addEventListener('fullscreenchange', handleFullscreenChange);
-    // Desktop mặc định bật sidebar, mobile mặc định tắt
     if (window.innerWidth >= 768) setIsSidebarOpen(true);
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
@@ -231,7 +230,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
     try {
         setActiveLectureId(lectureId); setCurrentPage(1); setPages([]); setCompletedTasks([]);
         
-        // Tự động đóng Sidebar trên Mobile khi chọn xong bài để tiết kiệm diện tích
         if (window.innerWidth < 768) setIsSidebarOpen(false);
 
         const targetUserId = userIdOverride || currentUser?.id;
@@ -385,10 +383,8 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
   );
 
   return (
-    // 🚀 TỐI ƯU MOBILE: Dùng h-[100dvh] thay vì h-screen, thêm w-full và overscroll-none để chống kéo giãn và nảy trang (bounce)
     <div className="flex flex-col h-[100dvh] w-full bg-[#e6e9ee] font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
-      {/* THANH TOP BAR: Luôn cố định chiều cao 60px không bị co bóp */}
       <header className="h-[60px] bg-[#3ea6e6] text-white flex items-center px-4 md:px-8 shrink-0 z-30 shadow-sm justify-between">
          <div className="flex items-center gap-2 md:gap-3 min-w-0 flex-1">
             <button onClick={onBack} className="w-10 h-10 flex items-center justify-center rounded text-white hover:bg-white/20 transition-colors shrink-0" title="Quay lại danh sách">
@@ -412,8 +408,9 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
                    <span className={`text-[10px] ml-1 transition-transform duration-200 hidden sm:inline ${isTaskMenuOpen ? 'rotate-180' : ''}`}>▼</span>
                  </button>
 
+                 {/* 🚀 TỐI ƯU MOBILE: Pop-up Menu canh giữa trên điện thoại, nằm gốc bên phải trên máy tính */}
                  {isTaskMenuOpen && (
-                    <div className="absolute top-full left-0 md:left-auto md:right-0 mt-3 w-[300px] md:w-[350px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.2)] border border-slate-200 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2">
+                    <div className="fixed top-[70px] left-1/2 -translate-x-1/2 w-[92vw] max-w-[360px] md:absolute md:top-full md:left-auto md:right-0 md:translate-x-0 md:mt-3 bg-white rounded-2xl shadow-[0_15px_50px_rgba(0,0,0,0.25)] border border-slate-200 overflow-hidden z-[100] animate-in zoom-in-95 md:slide-in-from-top-2">
                        <div className="bg-[#f8fafc] px-5 py-4 border-b border-slate-100 flex justify-between items-center">
                           <h4 className="font-black text-[#d97706] text-[12px] uppercase tracking-widest">Nhiệm vụ bài học</h4>
                           <span className="text-[#d97706] font-bold text-[13px]">{Math.round((safeCompletedTasks.length / safeLectureTasks.length) * 100)}%</span>
@@ -465,15 +462,12 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
           </div>
       </header>
 
-      {/* VÙNG NỘI DUNG CHÍNH */}
       <div className="flex flex-1 overflow-hidden relative w-full">
          
-         {/* 🚀 TỐI ƯU MOBILE: Overlay xám đen khi mở Sidebar trên điện thoại */}
          {isSidebarOpen && (
             <div className="fixed inset-0 bg-slate-900/50 z-40 md:hidden transition-opacity" onClick={() => setIsSidebarOpen(false)} />
          )}
 
-         {/* 🚀 TỐI ƯU MOBILE: Sidebar sẽ fixed đè lên trên điện thoại, và relative đẩy nội dung trên Desktop */}
          <aside className={`fixed md:relative inset-y-0 left-0 z-50 md:z-20 h-[100dvh] md:h-full bg-[#f8f9fa] border-r border-slate-200 flex flex-col shrink-0 transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none
             ${isSidebarOpen ? 'translate-x-0 w-[280px] md:w-[300px]' : '-translate-x-full w-[280px] md:w-0 md:opacity-0 md:border-r-0 md:translate-x-0'}`}>
            
@@ -533,7 +527,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
            </div>
          </aside>
 
-         {/* 🚀 TỐI ƯU MOBILE: WebkitOverflowScrolling: 'touch' để vuốt tự nhiên trên iOS */}
          <main 
             className="flex-1 overflow-y-auto bg-[#e6e9ee] custom-scrollbar relative"
             style={{ WebkitOverflowScrolling: 'touch' }}
@@ -586,7 +579,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
 
       {dictPopup && dictPopup.show && (
          <div id="dict-popup" className="fixed z-[100] bg-white rounded-[1.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.25)] border-2 border-slate-100 w-[90vw] max-w-[320px] flex flex-col overflow-hidden"
-           style={{ left: Math.max(10, Math.min(dictPopup.x, window.innerWidth - 330)), ...(window.innerHeight - dictPopup.y < 300 ? { bottom: window.innerHeight - dictPopup.rectTop + 10 } : { top: dictPopup.y + 10 }), maxHeight: '380px' }}>
+           style={{ left: Math.min(10, Math.min(dictPopup.x, window.innerWidth - 330)), ...(window.innerHeight - dictPopup.y < 300 ? { bottom: window.innerHeight - dictPopup.rectTop + 10 } : { top: dictPopup.y + 10 }), maxHeight: '380px' }}>
             
             <div className="bg-[#f0f9ff] border-b border-[#e0f2fe] py-2.5 px-5 flex items-center justify-start shrink-0">
                <img src="/logo-shield.png" alt="TonyEnglish" className="h-4 w-auto object-contain mr-1.5" />

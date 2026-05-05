@@ -7,13 +7,11 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
-  // State ẩn để lưu vai trò của người dùng nếu họ đã đăng nhập từ trước
   const [currentUserRole, setCurrentUserRole] = useState<string | null>(null);
 
   const dummyIELTS = { title: "IELTS Simulation Demo", timeLimit: "60:00", parts: [] };
   const dummyStandard = { title: "IGCSE / TOEIC Standard Demo", timeLimit: "45:00", parts: [] };
 
-  // Kiểm tra xem người dùng đã đăng nhập chưa khi vừa load trang
   useEffect(() => {
     checkActiveSession();
   }, []);
@@ -35,11 +33,9 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
       if (error) {
         alert("Đăng nhập thất bại! Vui lòng kiểm tra lại Email hoặc Mật khẩu.");
       } else if (data.user) {
-        // Lấy Profile để biết là Admin hay Học viên
         const { data: profile } = await supabase.from('profiles').select('role').eq('id', data.user.id).single();
         
         setShowLoginModal(false);
-        // Rẽ nhánh: Nếu là admin thì vào trang admin, học viên thì vào portal
         if (profile?.role === 'admin') {
           onNavigate('admin');
         } else {
@@ -58,47 +54,48 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
       
       {/* NAVBAR TRANG CHỦ */}
       <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        {/* 🚀 TỐI ƯU MOBILE: Điều chỉnh khoảng cách và chiều cao phù hợp */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+          
           <div 
-            className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 sm:gap-3 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => window.open('https://tonyenglish.vn/vi', '_blank')}
             title="Về trang chủ TonyEnglish"
           >
-            <img src="/logo-shield.png" alt="TonyEnglish" className="h-10 w-auto object-contain" />
+            {/* 🚀 TỐI ƯU MOBILE: Logo nhỏ lại trên điện thoại */}
+            <img src="/logo-shield.png" alt="TonyEnglish" className="h-8 sm:h-10 w-auto object-contain" />
             <div className="flex flex-col items-start leading-none">
-              <div className="font-black text-[24px] tracking-tight mb-1">
+              <div className="font-black text-[18px] sm:text-[24px] tracking-tight mb-1">
                 <span className="text-[#2ab4e8]">TONY</span><span className="text-[#0a5482]">ENGLISH</span>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            {/* NÚT ĐĂNG NHẬP / ĐIỀU HƯỚNG THÔNG MINH */}
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             {!currentUserRole ? (
               <button 
                 onClick={() => setShowLoginModal(true)} 
-                className="bg-[#0a5482] hover:bg-[#084266] text-white text-[14px] font-bold px-6 py-2.5 rounded-xl transition shadow-lg shadow-blue-900/20 active:scale-95"
+                className="bg-[#0a5482] hover:bg-[#084266] text-white text-[12px] sm:text-[14px] font-bold px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg sm:rounded-xl transition shadow-lg shadow-blue-900/20 active:scale-95 whitespace-nowrap"
               >
                 Đăng nhập
               </button>
             ) : (
               <>
-                {/* Đặc quyền của Admin: Hiển thị thêm nút vào góc nhìn học viên */}
                 {currentUserRole === 'admin' && (
                   <button 
                     onClick={() => onNavigate('portal')} 
-                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[13px] font-black uppercase tracking-wider px-5 py-2.5 rounded-xl transition border border-emerald-200 shadow-sm hidden sm:block active:scale-95"
+                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[13px] font-black uppercase tracking-wider px-5 py-2.5 rounded-xl transition border border-emerald-200 shadow-sm hidden md:block active:scale-95 whitespace-nowrap"
                   >
                     🎓 Thi thử (Góc Học Viên)
                   </button>
                 )}
                 
-                {/* Nút chính */}
+                {/* 🚀 TỐI ƯU MOBILE: Ngăn cấm xuống dòng (whitespace-nowrap), Rút gọn chữ, Thu nhỏ nút */}
                 <button 
                   onClick={() => currentUserRole === 'admin' ? onNavigate('admin') : onNavigate('portal')} 
-                  className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white text-[14px] font-bold px-6 py-2.5 rounded-xl transition shadow-lg shadow-cyan-900/20 active:scale-95"
+                  className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white text-[12px] sm:text-[14px] font-bold px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg sm:rounded-xl transition shadow-lg shadow-cyan-900/20 active:scale-95 whitespace-nowrap"
                 >
-                  {currentUserRole === 'admin' ? 'Quản Trị Hệ Thống ➜' : 'Vào Lớp Học ➜'}
+                  {currentUserRole === 'admin' ? 'Quản Trị ➜' : 'Vào Lớp Học ➜'}
                 </button>
               </>
             )}
@@ -166,7 +163,6 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
             <p className="text-blue-100 font-medium mb-12 text-lg max-w-2xl mx-auto">Bạn không cần tài khoản để thử sức. Hãy chọn một giao diện bài thi mẫu bên dưới để xem hệ thống hoạt động mượt mà như thế nào.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-              {/* Card Demo 1 */}
               <div 
                 onClick={() => onStartTest('computer', dummyIELTS)}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 cursor-pointer hover:bg-white/20 transition-all group"
@@ -180,7 +176,6 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
                 <div className="font-bold text-[#2ab4e8] flex items-center gap-2 group-hover:gap-4 transition-all">Làm thử ngay <span>➜</span></div>
               </div>
 
-              {/* Card Demo 2 */}
               <div 
                 onClick={() => onStartTest('standard', dummyStandard)}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 cursor-pointer hover:bg-white/20 transition-all group"
