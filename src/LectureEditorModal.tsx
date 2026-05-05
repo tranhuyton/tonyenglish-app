@@ -15,7 +15,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   const [rightTab, setRightTab] = useState<'pages' | 'tasks'>('pages');
   
   const [availableExercises, setAvailableExercises] = useState<any[]>([]);
-  // 🚀 STATE MỚI CHO POP-UP CHỌN BÀI TẬP
   const [showExerciseModal, setShowExerciseModal] = useState(false);
   const [exSearch, setExSearch] = useState('');
   const [exFilter, setExFilter] = useState('all');
@@ -107,6 +106,9 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     setActivePageIndex(Math.max(0, indexToRemove - 1));
   };
 
+  // ==========================================
+  // XỬ LÝ NHIỆM VỤ ĐÍNH KÈM (THÊM, SỬA, DI CHUYỂN)
+  // ==========================================
   const handleAddExerciseTask = (ex: any) => {
       const isExercise = ex.content_json?.basicInfo?.category === 'exercise';
       const newTask = {
@@ -116,7 +118,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           type: 'exercise'
       };
       setTaskList([...taskList, newTask]);
-      setShowExerciseModal(false); // 🚀 ĐÓNG POPUP SAU KHI THÊM
+      setShowExerciseModal(false); 
   }
 
   const handleAddManualTask = () => {
@@ -124,6 +126,30 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
       if (text && text.trim()) {
           setTaskList([...taskList, { id: `task_${Date.now()}`, text: text.trim(), type: 'manual' }]);
       }
+  }
+
+  // 🚀 TÍNH NĂNG MỚI: ĐỔI TÊN NHIỆM VỤ
+  const handleEditTask = (task: any) => {
+      const newText = window.prompt("Sửa đổi tên hiển thị của nhiệm vụ:", task.text);
+      if (newText && newText.trim() !== "") {
+          setTaskList(taskList.map(t => t.id === task.id ? { ...t, text: newText.trim() } : t));
+      }
+  }
+
+  // 🚀 TÍNH NĂNG MỚI: DI CHUYỂN NHIỆM VỤ LÊN
+  const handleMoveTaskUp = (index: number) => {
+      if (index === 0) return;
+      const newTasks = [...taskList];
+      [newTasks[index - 1], newTasks[index]] = [newTasks[index], newTasks[index - 1]];
+      setTaskList(newTasks);
+  }
+
+  // 🚀 TÍNH NĂNG MỚI: DI CHUYỂN NHIỆM VỤ XUỐNG
+  const handleMoveTaskDown = (index: number) => {
+      if (index === taskList.length - 1) return;
+      const newTasks = [...taskList];
+      [newTasks[index + 1], newTasks[index]] = [newTasks[index], newTasks[index + 1]];
+      setTaskList(newTasks);
   }
 
   const handleSave = async () => {
@@ -164,7 +190,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     }
   };
 
-  // 🚀 LỌC DANH SÁCH BÀI TẬP TRONG POPUP
   const filteredExercises = availableExercises.filter(ex => {
       const matchesSearch = ex.title.toLowerCase().includes(exSearch.toLowerCase());
       const cat = ex.content_json?.basicInfo?.category || 'test';
@@ -272,14 +297,25 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                    </div>
                    <div className="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar bg-white">
                       {taskList.map((task, idx) => (
-                         <div key={task.id} className="bg-slate-50 border border-slate-200 p-3 rounded-xl shadow-sm flex items-start justify-between group">
-                            <div>
+                         <div key={task.id} className="bg-slate-50 border border-slate-200 p-3 rounded-xl shadow-sm flex items-start justify-between group hover:border-[#0a5482] transition-colors">
+                            <div className="flex-1 min-w-0 pr-2">
                                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1.5">
                                  {task.type === 'exercise' ? '🔗 BÀI TẬP ĐÍNH KÈM' : '📝 NHIỆM VỤ ĐỌC'}
                                </div>
-                               <div className="font-bold text-[#0a5482] text-[13px] leading-snug">{task.text}</div>
+                               <div className="font-bold text-[#0a5482] text-[13px] leading-snug break-words">{task.text}</div>
                             </div>
-                            <button onClick={() => setTaskList(taskList.filter(t => t.id !== task.id))} className="text-red-400 hover:text-red-600 bg-white border border-red-100 hover:bg-red-50 w-6 h-6 rounded flex items-center justify-center transition-all ml-2 shrink-0">✖</button>
+                            
+                            {/* BỘ NÚT ĐIỀU KHIỂN NHIỆM VỤ MỚI */}
+                            <div className="flex flex-col items-center gap-1 shrink-0">
+                               <div className="flex items-center gap-1">
+                                   <button onClick={() => handleMoveTaskUp(idx)} disabled={idx === 0} className="w-6 h-6 flex items-center justify-center bg-white border border-slate-200 hover:bg-slate-100 rounded text-[10px] disabled:opacity-30 transition-colors" title="Chuyển lên">▲</button>
+                                   <button onClick={() => handleMoveTaskDown(idx)} disabled={idx === taskList.length - 1} className="w-6 h-6 flex items-center justify-center bg-white border border-slate-200 hover:bg-slate-100 rounded text-[10px] disabled:opacity-30 transition-colors" title="Chuyển xuống">▼</button>
+                               </div>
+                               <div className="flex items-center gap-1 mt-1">
+                                   <button onClick={() => handleEditTask(task)} className="w-6 h-6 flex items-center justify-center bg-blue-50 text-blue-600 hover:bg-blue-100 rounded text-[12px] transition-colors" title="Sửa tên nhiệm vụ">✏️</button>
+                                   <button onClick={() => setTaskList(taskList.filter(t => t.id !== task.id))} className="w-6 h-6 flex items-center justify-center bg-red-50 text-red-500 hover:bg-red-100 rounded text-[12px] transition-colors" title="Xóa">✖</button>
+                               </div>
+                            </div>
                          </div>
                       ))}
                       {taskList.length === 0 && <div className="text-center text-xs text-slate-400 italic mt-8 border-2 border-dashed border-slate-200 p-6 rounded-2xl mx-2">Chưa có nhiệm vụ nào được giao.<br/>Học sinh sẽ chỉ cần đọc nội dung.</div>}
@@ -290,7 +326,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
         </div>
       </div>
 
-      {/* 🚀 MODAL (POP-UP) CHỌN BÀI TẬP SIÊU TO KHỔNG LỒ */}
+      {/* 🚀 MODAL CHỌN BÀI TẬP: ĐÃ LƯỢC BỎ HIỆU ỨNG NẶNG TẠI KHUNG TÌM KIẾM */}
       {showExerciseModal && (
         <div className="fixed inset-0 z-[200] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in">
             <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col overflow-hidden animate-in zoom-in-95">
@@ -301,10 +337,12 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                 
                 <div className="p-5 border-b border-slate-100 flex flex-col sm:flex-row gap-3 bg-white shrink-0">
                     <div className="relative flex-1">
-                        <input type="text" placeholder="Nhập tên bài tập để tìm kiếm..." value={exSearch} onChange={e => setExSearch(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:border-[#2bd6eb] focus:ring-1 focus:ring-[#2bd6eb] transition-all" />
+                        {/* Bỏ class transition-all, ring... để giảm tải render */}
+                        <input type="text" placeholder="Nhập tên bài tập để tìm kiếm..." value={exSearch} onChange={e => setExSearch(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:border-[#0a5482]" />
                         <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
                     </div>
-                    <select value={exFilter} onChange={e => setExFilter(e.target.value)} className="w-full sm:w-48 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-[#2bd6eb] font-bold text-slate-600 cursor-pointer">
+                    {/* Bỏ class transition-all, ring... để giảm tải render */}
+                    <select value={exFilter} onChange={e => setExFilter(e.target.value)} className="w-full sm:w-48 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-[#0a5482] font-bold text-slate-600 cursor-pointer">
                         <option value="all">Tất cả thể loại</option>
                         <option value="exercise">Chỉ Bài tập</option>
                         <option value="test">Chỉ Đề thi</option>
