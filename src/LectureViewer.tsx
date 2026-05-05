@@ -1,13 +1,19 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { supabase } from './supabase';
+import AITutorSidebar from './AITutorSidebar'; // Tích hợp Gia sư AI
 import 'react-quill/dist/quill.snow.css';
 
 // =========================================================================================
-// 🚀 COMPONENT RENDER (VŨ KHÍ HẠNG NẶNG: IFRAME CÁCH LY + BƠM THÊM JQUERY)
+// 🚀 COMPONENT RENDER (IFRAME CÁCH LY + BỘ ĐO CHIỀU CAO CHUẨN XÁC TUYỆT ĐỐI)
 // =========================================================================================
 const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
-   const [iframeHeight, setIframeHeight] = useState(500);
+   const [iframeHeight, setIframeHeight] = useState(100);
+
+   // 🚀 BÍ KÍP CHỐNG KẸT CHIỀU CAO: Ép Iframe xẹp về 10px NGAY LẬP TỨC khi đổi trang
+   useEffect(() => {
+     setIframeHeight(10);
+   }, [html]);
 
    useEffect(() => {
      const handleMessage = (e: MessageEvent) => {
@@ -19,7 +25,9 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            window.open(href, '_blank', 'noopener,noreferrer');
          }
        } else if (e.data?.type === 'LECTURE_RESIZE') {
-         setIframeHeight(e.data.height + 30);
+         // Nhận kích thước chuẩn và cộng thêm 20px đệm cho an toàn
+         const h = e.data.height;
+         if (h) setIframeHeight(Math.max(100, h + 20)); 
        } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
          if (iframeRef.current) {
             const rect = iframeRef.current.getBoundingClientRect();
@@ -41,17 +49,35 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
        <style>
-         body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #334155; background: transparent; overflow-x: hidden; }
+         /* Ép body và html chỉ cao bằng ĐÚNG nội dung, không giãn theo Iframe cũ */
+         html, body { 
+             height: max-content !important; 
+             min-height: 0 !important;
+             margin: 0; padding: 0; 
+             font-family: 'Segoe UI', Arial, sans-serif; 
+             color: #334155; 
+             background: transparent; 
+             overflow: hidden; 
+         }
          * { box-sizing: border-box; }
          img, video, iframe { max-width: 100%; height: auto; display: block; }
          svg { max-width: 100%; height: auto; pointer-events: all !important; }
          path, polygon, rect, circle { transition: all 0.2s ease; }
          a { cursor: pointer; color: #0284c7; text-decoration: none; font-weight: 600; transition: all 0.2s; }
          a:hover { opacity: 0.8; text-decoration: underline; }
+         
+         /* Đóng gói nội dung cực chặt để đo không bị sai lệch */
+         #content-wrapper { 
+            display: flow-root; 
+            width: 100%; 
+            padding-bottom: 10px;
+         }
        </style>
      </head>
      <body>
-       ${html ? html.replace(/viewbox=/gi, 'viewBox=') : ''}
+       <div id="content-wrapper">
+          ${html ? html.replace(/viewbox=/gi, 'viewBox=') : ''}
+       </div>
        <script>
          document.addEventListener('click', function(e) {
            var anchor = e.target.closest('a');
@@ -81,13 +107,20 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            }
          });
 
+         // ĐO CHIỀU CAO CHÍNH XÁC TUYỆT ĐỐI BẰNG getBoundingClientRect
          function reportHeight() {
-            var h = document.documentElement.scrollHeight || document.body.scrollHeight;
-            window.parent.postMessage({ type: 'LECTURE_RESIZE', height: h }, '*');
+            var wrapper = document.getElementById('content-wrapper');
+            if (wrapper) {
+                var h = wrapper.getBoundingClientRect().height;
+                if (h > 0) window.parent.postMessage({ type: 'LECTURE_RESIZE', height: h }, '*');
+            }
          }
+         
          window.addEventListener('load', reportHeight);
          if (window.ResizeObserver) {
-            new ResizeObserver(reportHeight).observe(document.body);
+            var ro = new ResizeObserver(reportHeight);
+            ro.observe(document.body);
+            ro.observe(document.getElementById('content-wrapper'));
          } else {
             setInterval(reportHeight, 500); 
          }
@@ -101,7 +134,8 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        <iframe
          ref={iframeRef}
          srcDoc={iframeContent}
-         style={{ width: '100%', height: `${iframeHeight}px`, border: 'none', transition: 'height 0.2s ease', overflow: 'hidden' }}
+         // 🚀 ĐÃ BỎ LỆNH TRANSITION Ở ĐÂY ĐỂ TRÁNH LỖI ĐO SAI KHI CHUYỂN TRANG
+         style={{ width: '100%', height: `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
          sandbox="allow-scripts allow-same-origin allow-popups"
          scrolling="no"
        />
@@ -127,6 +161,7 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
   const [expandedModules, setExpandedModules] = useState<string[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isTaskSidebarOpen, setIsTaskSidebarOpen] = useState(false);
+  const [isAIOpen, setIsAIOpen] = useState(false); // 🚀 STATE CHO GIA SƯ AI
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -135,6 +170,13 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
   const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
   
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Tự động cuộn lên đầu mỗi khi Đổi bài hoặc Đổi trang
+  useEffect(() => {
+    if (containerRef.current) {
+       containerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [activeLectureId, currentPage]);
 
   useEffect(() => {
     if (courseId && courseId !== '') fetchCourseData();
@@ -172,35 +214,25 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
 
       const { data: lecData } = await supabase.from('lectures').select('*').eq('course_id', courseId).eq('is_published', true);
       
-      // Lọc các bài giảng hợp lệ (nằm trong thư mục tồn tại)
       let validLectures = (lecData || []).filter(lec => lec.module_id && safeModData.some(mod => mod.id === lec.module_id));
       
-      // SẮP XẾP LẠI BÀI GIẢNG: Theo thứ tự Module -> Thứ tự Bài Giảng trong Module đó
       validLectures.sort((a, b) => {
           const modA = safeModData.find(m => m.id === a.module_id);
           const modB = safeModData.find(m => m.id === b.module_id);
-          
           const modOrderDiff = (modA?.order_index || 0) - (modB?.order_index || 0);
           if (modOrderDiff !== 0) return modOrderDiff;
-          
           return (a.order_index || 0) - (b.order_index || 0);
       });
       
       setLectures(validLectures);
 
-      // 🚀 TỰ ĐỘNG MỞ BÀI GIẢNG ĐANG HỌC DỞ
       if (validLectures && validLectures.length > 0) {
-         // Lấy vết lưu trong trình duyệt (LocalStorage)
          const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${courseId}`);
-         
-         // Kiểm tra xem bài cũ còn tồn tại trên hệ thống không, nếu không thì lấy bài đầu tiên
          const targetLecture = validLectures.find(l => l.id === savedLectureId) || validLectures[0];
 
-         // Tự động bung thư mục chứa bài giảng đó ở thanh Menu
          if (targetLecture.module_id) {
              setExpandedModules([targetLecture.module_id]);
          }
-         
          handleSelectLecture(targetLecture.id, user?.id);
       } else {
          if (safeModData.length > 0) setExpandedModules([safeModData[0].id]);
@@ -219,7 +251,6 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
         
         const targetUserId = userIdOverride || currentUser?.id;
         
-        // 🚀 LƯU VẾT BÀI ĐANG HỌC VÀO TRÍ NHỚ TRÌNH DUYỆT
         if (targetUserId) {
             localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
         }
@@ -369,6 +400,16 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
                    <span>📋</span> <span className="hidden sm:inline">Nhiệm vụ ({safeCompletedTasks.length}/{safeLectureTasks.length})</span>
                 </button>
              )}
+
+             {/* 🚀 NÚT GỌI GIA SƯ AI */}
+             <button 
+                onClick={() => setIsAIOpen(!isAIOpen)} 
+                className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:h-10 rounded text-[14px] font-bold transition-all bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white shadow-md border border-white/20 animate-pulse" 
+                title="Hỏi AI"
+             >
+                <span>✨</span> <span className="hidden sm:inline">Hỏi AI</span>
+             </button>
+
              <button onClick={toggleFullScreen} className="w-10 h-10 rounded flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-colors shadow-sm" title={isFullscreen ? "Thu nhỏ" : "Toàn màn hình"}>
                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
              </button>
@@ -494,6 +535,17 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
       </div>
 
       {/* =====================================================================
+          GIA SƯ AI TÍCH HỢP BÊN CẠNH PHẢI
+          ===================================================================== */}
+      <AITutorSidebar 
+         isOpen={isAIOpen}
+         onClose={() => setIsAIOpen(false)}
+         courseTitle={course?.title || ''}
+         lectureTitle={activeLecture?.title || ''}
+         htmlContent={currentHtmlContent || ''} // Bơm bài giảng vào đây cho AI đọc lén
+      />
+
+      {/* =====================================================================
           TỪ ĐIỂN POPUP
           ===================================================================== */}
       {dictPopup && dictPopup.show && (
@@ -521,7 +573,7 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
       )}
 
       {/* =====================================================================
-          CÁI POP-UP (MODAL)
+          CÁI POP-UP (MODAL) NHÚNG YOUTUBE/QUIZ
           ===================================================================== */}
       {popupUrl && (
         <div className="fixed inset-0 z-[9999] bg-slate-900/95 flex flex-col items-center justify-center p-4 md:p-8">
