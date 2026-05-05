@@ -54,7 +54,6 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
       
       {/* NAVBAR TRANG CHỦ */}
       <nav className="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40">
-        {/* 🚀 TỐI ƯU MOBILE: Điều chỉnh khoảng cách và chiều cao phù hợp */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
           
           <div 
@@ -62,7 +61,6 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
             onClick={() => window.open('https://tonyenglish.vn/vi', '_blank')}
             title="Về trang chủ TonyEnglish"
           >
-            {/* 🚀 TỐI ƯU MOBILE: Logo nhỏ lại trên điện thoại */}
             <img src="/logo-shield.png" alt="TonyEnglish" className="h-8 sm:h-10 w-auto object-contain" />
             <div className="flex flex-col items-start leading-none">
               <div className="font-black text-[18px] sm:text-[24px] tracking-tight mb-1">
@@ -84,13 +82,14 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
                 {currentUserRole === 'admin' && (
                   <button 
                     onClick={() => onNavigate('portal')} 
-                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[13px] font-black uppercase tracking-wider px-5 py-2.5 rounded-xl transition border border-emerald-200 shadow-sm hidden md:block active:scale-95 whitespace-nowrap"
+                    // 🚀 ĐÃ SỬA: Luôn hiện trên Mobile, nhưng rút gọn chữ để khỏi đè giao diện
+                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[11px] sm:text-[13px] font-black uppercase tracking-wider px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg sm:rounded-xl transition border border-emerald-200 shadow-sm active:scale-95 whitespace-nowrap"
                   >
-                    🎓 Thi thử (Góc Học Viên)
+                    <span className="md:hidden">🎓 Thi thử</span>
+                    <span className="hidden md:inline">🎓 Thi thử (Góc Học Viên)</span>
                   </button>
                 )}
                 
-                {/* 🚀 TỐI ƯU MOBILE: Ngăn cấm xuống dòng (whitespace-nowrap), Rút gọn chữ, Thu nhỏ nút */}
                 <button 
                   onClick={() => currentUserRole === 'admin' ? onNavigate('admin') : onNavigate('portal')} 
                   className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white text-[12px] sm:text-[14px] font-bold px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg sm:rounded-xl transition shadow-lg shadow-cyan-900/20 active:scale-95 whitespace-nowrap"
@@ -117,14 +116,39 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
             <p className="text-lg md:text-xl text-slate-600 font-medium max-w-2xl mx-auto mb-10 leading-relaxed">
               Trải nghiệm môi trường thi sát thực tế 100%. Tích hợp AI phân tích điểm mạnh yếu, chấm chữa chuyên sâu. Lộ trình cá nhân hóa từ IELTS đến các môn khoa học chuẩn quốc tế.
             </p>
+            
+            {/* 🚀 ĐÃ SỬA: Chỉnh lại 2 nút khổng lồ ở giữa màn hình cho hợp lý theo Role */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-cyan-500/30 w-full sm:w-auto active:scale-95">
-                Làm bài test năng lực ➜
-              </button>
-              <button onClick={() => !currentUserRole ? setShowLoginModal(true) : (currentUserRole === 'admin' ? onNavigate('admin') : onNavigate('portal'))} className="bg-white hover:bg-slate-50 text-slate-700 text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-md border border-slate-200 w-full sm:w-auto active:scale-95">
-                {currentUserRole === 'admin' ? 'Vào trang Quản trị' : (currentUserRole === 'student' ? 'Vào lớp học' : 'Tìm hiểu khóa học')}
-              </button>
+              {currentUserRole === 'admin' ? (
+                <>
+                  <button onClick={() => onNavigate('admin')} className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-cyan-500/30 w-full sm:w-auto active:scale-95">
+                    Vào Trang Quản Trị ➜
+                  </button>
+                  <button onClick={() => onNavigate('portal')} className="bg-white hover:bg-slate-50 text-slate-700 text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-md border border-slate-200 w-full sm:w-auto active:scale-95">
+                    Vào Góc Học Viên ➜
+                  </button>
+                </>
+              ) : currentUserRole === 'student' ? (
+                <>
+                  <button onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-cyan-500/30 w-full sm:w-auto active:scale-95">
+                    Làm bài test năng lực ➜
+                  </button>
+                  <button onClick={() => onNavigate('portal')} className="bg-white hover:bg-slate-50 text-slate-700 text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-md border border-slate-200 w-full sm:w-auto active:scale-95">
+                    Vào Lớp Học ➜
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button onClick={() => document.getElementById('demo-section')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#2ab4e8] hover:bg-[#1d9ad1] text-white text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-cyan-500/30 w-full sm:w-auto active:scale-95">
+                    Làm bài test năng lực ➜
+                  </button>
+                  <button onClick={() => setShowLoginModal(true)} className="bg-white hover:bg-slate-50 text-slate-700 text-[16px] font-bold px-8 py-4 rounded-xl transition shadow-md border border-slate-200 w-full sm:w-auto active:scale-95">
+                    Tìm hiểu khóa học
+                  </button>
+                </>
+              )}
             </div>
+
           </div>
         </section>
 
@@ -163,6 +187,7 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
             <p className="text-blue-100 font-medium mb-12 text-lg max-w-2xl mx-auto">Bạn không cần tài khoản để thử sức. Hãy chọn một giao diện bài thi mẫu bên dưới để xem hệ thống hoạt động mượt mà như thế nào.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+              {/* Card Demo 1 */}
               <div 
                 onClick={() => onStartTest('computer', dummyIELTS)}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 cursor-pointer hover:bg-white/20 transition-all group"
@@ -176,6 +201,7 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
                 <div className="font-bold text-[#2ab4e8] flex items-center gap-2 group-hover:gap-4 transition-all">Làm thử ngay <span>➜</span></div>
               </div>
 
+              {/* Card Demo 2 */}
               <div 
                 onClick={() => onStartTest('standard', dummyStandard)}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 cursor-pointer hover:bg-white/20 transition-all group"
