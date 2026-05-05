@@ -13,7 +13,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
   const editorRef = useRef(null);
 
-  // 🚀 CẤU HÌNH VÔ HIỆU HÓA HOÀN TOÀN TÍNH NĂNG "CẮT CODE" CỦA EDITOR
   const editorConfig = useMemo(() => ({
     readonly: false,
     height: 550,
@@ -24,15 +23,10 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     askBeforePasteHTML: false,
     askBeforePasteFromWord: false,
     uploader: { insertImageAsBase64URI: true },
-    
-    // Thuốc lú: Bắt Editor cho phép chạy mọi thẻ (kể cả Script/Iframe/SVG)
     safeMode: false, 
     htmlParseBrowser: false,
-    disablePlugins: ['clean-html', 'sanitize'], // Bắn bỏ 2 plugin chuyên xóa code
-    cleanHTML: { 
-        fillEmptyParagraph: false, 
-        cleanOnPaste: false 
-    }
+    disablePlugins: ['clean-html', 'sanitize'], 
+    cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false }
   }), []);
 
   useEffect(() => {
@@ -61,6 +55,26 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   const handleAddPage = () => {
     setPages([...pages, { id: `temp_${Date.now()}`, page_number: pages.length + 1, content_html: '' }]);
     setActivePageIndex(pages.length);
+  };
+
+  // 🚀 TÍNH NĂNG MỚI: CHUYỂN TRANG LÊN
+  const handleMoveUp = (index: number) => {
+    if (index === 0) return;
+    const newPages = [...pages];
+    [newPages[index - 1], newPages[index]] = [newPages[index], newPages[index - 1]];
+    newPages.forEach((p, i) => p.page_number = i + 1); // Cập nhật lại số trang
+    setPages(newPages);
+    setActivePageIndex(index - 1);
+  };
+
+  // 🚀 TÍNH NĂNG MỚI: CHUYỂN TRANG XUỐNG
+  const handleMoveDown = (index: number) => {
+    if (index === pages.length - 1) return;
+    const newPages = [...pages];
+    [newPages[index + 1], newPages[index]] = [newPages[index], newPages[index + 1]];
+    newPages.forEach((p, i) => p.page_number = i + 1); // Cập nhật lại số trang
+    setPages(newPages);
+    setActivePageIndex(index + 1);
   };
 
   const handleRemovePage = (indexToRemove: number) => {
@@ -113,7 +127,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     <div className="fixed inset-0 bg-slate-900/80 z-[100] flex justify-center items-center p-4">
       <div className="bg-[#f4f6f9] w-full max-w-7xl h-[95vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95">
         
-        {/* HEADER MODAL */}
         <div className="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-4">
              <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-xl">📝</div>
@@ -129,7 +142,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           </div>
         </div>
 
-        {/* TOP BAR INFO */}
         <div className="p-4 bg-white border-b border-slate-200 flex gap-4 shrink-0">
           <div className="flex-1">
              <label className="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-1 block">Tên bài giảng <span className="text-red-500">*</span></label>
@@ -146,7 +158,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
         <div className="flex-1 flex overflow-hidden">
           
-          {/* VÙNG SOẠN THẢO CHÍNH BẰNG JODIT */}
           <div className="flex-1 flex flex-col bg-white border-r border-slate-200 overflow-hidden relative">
              <div className="flex items-center justify-between p-3 border-b border-slate-200 bg-slate-50 shrink-0">
                 <div className="text-sm font-bold text-[#0a5482] flex items-center gap-2">
@@ -168,7 +179,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
              </div>
           </div>
 
-          {/* CỘT QUẢN LÝ TRANG (SIDEBAR) */}
           <div className="w-80 bg-slate-50 flex flex-col shrink-0">
              <div className="p-4 border-b border-slate-200 bg-white">
                 <button onClick={handleAddPage} className="w-full border-2 border-dashed border-[#2bd6eb] text-[#0a5482] bg-blue-50 hover:bg-[#2bd6eb] hover:text-white transition px-4 py-3 rounded-xl font-black text-sm flex items-center justify-center gap-2">
@@ -182,13 +192,19 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                       onClick={() => setActivePageIndex(idx)}
                       className={`flex justify-between items-center p-3 rounded-xl cursor-pointer transition-all border-2 ${activePageIndex === idx ? 'bg-white border-[#2bd6eb] shadow-md' : 'bg-white border-slate-100 hover:border-slate-300'}`}
                    >
-                      <div className="flex items-center gap-3">
-                         <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black ${activePageIndex === idx ? 'bg-[#2bd6eb] text-white' : 'bg-slate-200 text-slate-500'}`}>
+                      <div className="flex items-center gap-2">
+                         <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0 ${activePageIndex === idx ? 'bg-[#2bd6eb] text-white' : 'bg-slate-200 text-slate-500'}`}>
                             {idx + 1}
                          </div>
-                         <span className="font-bold text-[13px] text-slate-700">Trang nội dung</span>
+                         <span className="font-bold text-[13px] text-slate-700 truncate w-16">Trang {idx + 1}</span>
                       </div>
-                      <button onClick={(e) => { e.stopPropagation(); handleRemovePage(idx); }} className="text-red-400 hover:text-red-600 font-bold p-1 bg-red-50 rounded">✖</button>
+                      
+                      {/* 🚀 BỘ NÚT ĐIỀU KHIỂN CHUYỂN TRANG */}
+                      <div className="flex items-center gap-1 shrink-0">
+                         <button onClick={(e) => { e.stopPropagation(); handleMoveUp(idx); }} disabled={idx === 0} className="w-6 h-6 flex items-center justify-center bg-slate-100 hover:bg-slate-200 rounded disabled:opacity-30 disabled:hover:bg-slate-100 transition" title="Lên trên">⬆️</button>
+                         <button onClick={(e) => { e.stopPropagation(); handleMoveDown(idx); }} disabled={idx === pages.length - 1} className="w-6 h-6 flex items-center justify-center bg-slate-100 hover:bg-slate-200 rounded disabled:opacity-30 disabled:hover:bg-slate-100 transition" title="Xuống dưới">⬇️</button>
+                         <button onClick={(e) => { e.stopPropagation(); handleRemovePage(idx); }} className="w-6 h-6 flex items-center justify-center text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 rounded ml-1 transition" title="Xóa trang">✖</button>
+                      </div>
                    </div>
                 ))}
              </div>

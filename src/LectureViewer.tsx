@@ -3,16 +3,14 @@ import { supabase } from './supabase';
 import 'react-quill/dist/quill.snow.css';
 
 // =========================================================================================
-// 🚀 COMPONENT RENDER (VŨ KHÍ HẠNG NẶNG: IFRAME SRCDOC CÁCH LY HOÀN TOÀN)
+// 🚀 COMPONENT RENDER (VŨ KHÍ HẠNG NẶNG: IFRAME CÁCH LY + BƠM THÊM JQUERY)
 // =========================================================================================
 const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(500);
 
-   // Lắng nghe tín hiệu cấp cứu từ bên trong "Phòng cách ly" gửi ra ngoài
    useEffect(() => {
      const handleMessage = (e: MessageEvent) => {
-       // 1. Tín hiệu Bấm Link
        if (e.data?.type === 'LECTURE_LINK_CLICK') {
          const href = e.data.href;
          if (href.includes('tonyenglish.vn/uploads') || href.includes('youtube.com') || href.includes('youtu.be')) {
@@ -20,52 +18,41 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          } else {
            window.open(href, '_blank', 'noopener,noreferrer');
          }
-       } 
-       // 2. Tín hiệu Báo Cáo Chiều Cao (để Iframe tự động giãn ra không bị thanh cuộn)
-       else if (e.data?.type === 'LECTURE_RESIZE') {
-         setIframeHeight(e.data.height + 30); // Cộng thêm 30px đệm cho an toàn
-       } 
-       // 3. Tín hiệu Bôi Đen Chữ (Để bật Từ Điển)
-       else if (e.data?.type === 'LECTURE_OPEN_DICT') {
+       } else if (e.data?.type === 'LECTURE_RESIZE') {
+         setIframeHeight(e.data.height + 30);
+       } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
          if (iframeRef.current) {
             const rect = iframeRef.current.getBoundingClientRect();
-            // Căn tọa độ chữ bên trong Iframe khớp với tọa độ màn hình gốc
             onOpenDict(e.data.word, rect.left + e.data.x, rect.top + e.data.y, rect.top + e.data.rectTop);
          }
-       } 
-       // 4. Tín hiệu Click ra ngoài chữ (Tắt Từ Điển)
-       else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
+       } else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
          onCloseDict();
        }
      };
-
      window.addEventListener('message', handleMessage);
      return () => window.removeEventListener('message', handleMessage);
    }, [onOpenPopup, onOpenDict, onCloseDict]);
 
-   // Nắn lại viewbox SVG
-   const safeHtml = html ? html.replace(/viewbox=/gi, 'viewBox=') : '';
-
-   // XÂY DỰNG MỘT TRANG WEB ĐỘC LẬP BÊN TRONG IFRAME
    const iframeContent = `
      <!DOCTYPE html>
      <html lang="vi">
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
        <style>
          body { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; color: #334155; background: transparent; overflow-x: hidden; }
          * { box-sizing: border-box; }
          img, video, iframe { max-width: 100%; height: auto; display: block; }
-         svg { max-width: 100%; height: auto; }
+         svg { max-width: 100%; height: auto; pointer-events: all !important; }
+         path, polygon, rect, circle { transition: all 0.2s ease; }
          a { cursor: pointer; color: #0284c7; text-decoration: none; font-weight: 600; transition: all 0.2s; }
          a:hover { opacity: 0.8; text-decoration: underline; }
        </style>
      </head>
      <body>
-       ${safeHtml}
+       ${html ? html.replace(/viewbox=/gi, 'viewBox=') : ''}
        <script>
-         // Bắt sự kiện Click Link
          document.addEventListener('click', function(e) {
            var anchor = e.target.closest('a');
            if (anchor) {
@@ -74,7 +61,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            }
          });
 
-         // Bắt sự kiện bôi đen text để tra từ điển
          document.addEventListener('mouseup', function(e) {
            var sel = window.getSelection();
            var text = sel.toString().trim();
@@ -88,7 +74,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            }
          });
 
-         // Click chỗ khác thì đóng từ điển
          document.addEventListener('mousedown', function(e) {
            var sel = window.getSelection();
            if (!sel.toString().trim()) {
@@ -96,20 +81,23 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            }
          });
 
-         // Tự động đo và báo cáo chiều cao
          function reportHeight() {
             var h = document.documentElement.scrollHeight || document.body.scrollHeight;
             window.parent.postMessage({ type: 'LECTURE_RESIZE', height: h }, '*');
          }
          window.addEventListener('load', reportHeight);
-         if (window.ResizeObserver) new ResizeObserver(reportHeight).observe(document.body);
+         if (window.ResizeObserver) {
+            new ResizeObserver(reportHeight).observe(document.body);
+         } else {
+            setInterval(reportHeight, 500); 
+         }
        </script>
      </body>
      </html>
    `;
 
    return (
-     <div className="w-full animate-in fade-in duration-500">
+     <div className="w-full animate-in fade-in duration-500 relative">
        <iframe
          ref={iframeRef}
          srcDoc={iframeContent}
@@ -159,7 +147,6 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
 
-  // Tắt Từ điển khi click ra ngoài popup
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
        const popup = document.getElementById('dict-popup');
@@ -180,14 +167,45 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
       setCourse(courseData);
 
       const { data: modData } = await supabase.from('lecture_modules').select('*').eq('course_id', courseId).order('order_index');
-      setModules(modData || []);
-      if (modData && modData.length > 0) setExpandedModules([modData[0].id]);
+      const safeModData = modData || [];
+      setModules(safeModData);
 
-      const { data: lecData } = await supabase.from('lectures').select('*').eq('course_id', courseId).eq('is_published', true).order('order_index');
-      const validLectures = (lecData || []).filter(lec => lec.module_id && (modData || []).some(mod => mod.id === lec.module_id));
+      const { data: lecData } = await supabase.from('lectures').select('*').eq('course_id', courseId).eq('is_published', true);
+      
+      // Lọc các bài giảng hợp lệ (nằm trong thư mục tồn tại)
+      let validLectures = (lecData || []).filter(lec => lec.module_id && safeModData.some(mod => mod.id === lec.module_id));
+      
+      // SẮP XẾP LẠI BÀI GIẢNG: Theo thứ tự Module -> Thứ tự Bài Giảng trong Module đó
+      validLectures.sort((a, b) => {
+          const modA = safeModData.find(m => m.id === a.module_id);
+          const modB = safeModData.find(m => m.id === b.module_id);
+          
+          const modOrderDiff = (modA?.order_index || 0) - (modB?.order_index || 0);
+          if (modOrderDiff !== 0) return modOrderDiff;
+          
+          return (a.order_index || 0) - (b.order_index || 0);
+      });
       
       setLectures(validLectures);
-      if (validLectures && validLectures.length > 0) handleSelectLecture(validLectures[0].id, user?.id);
+
+      // 🚀 TỰ ĐỘNG MỞ BÀI GIẢNG ĐANG HỌC DỞ
+      if (validLectures && validLectures.length > 0) {
+         // Lấy vết lưu trong trình duyệt (LocalStorage)
+         const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${courseId}`);
+         
+         // Kiểm tra xem bài cũ còn tồn tại trên hệ thống không, nếu không thì lấy bài đầu tiên
+         const targetLecture = validLectures.find(l => l.id === savedLectureId) || validLectures[0];
+
+         // Tự động bung thư mục chứa bài giảng đó ở thanh Menu
+         if (targetLecture.module_id) {
+             setExpandedModules([targetLecture.module_id]);
+         }
+         
+         handleSelectLecture(targetLecture.id, user?.id);
+      } else {
+         if (safeModData.length > 0) setExpandedModules([safeModData[0].id]);
+      }
+
     } catch (error: any) { 
        setErrorMessage(error.message); 
     } finally { 
@@ -198,9 +216,17 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
   const handleSelectLecture = async (lectureId: string, userIdOverride?: string) => {
     try {
         setActiveLectureId(lectureId); setCurrentPage(1); setPages([]); setCompletedTasks([]);
+        
+        const targetUserId = userIdOverride || currentUser?.id;
+        
+        // 🚀 LƯU VẾT BÀI ĐANG HỌC VÀO TRÍ NHỚ TRÌNH DUYỆT
+        if (targetUserId) {
+            localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
+        }
+
         const { data: pageData } = await supabase.from('lecture_pages').select('*').eq('lecture_id', lectureId).order('page_number');
         setPages(pageData || []);
-        const targetUserId = userIdOverride || currentUser?.id;
+        
         if (targetUserId) {
            const { data: progressDataArray } = await supabase.from('lecture_progress').select('*').eq('lecture_id', lectureId).eq('user_id', targetUserId);
            if (progressDataArray && progressDataArray.length > 0) {
@@ -257,7 +283,6 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
     }
   };
 
-  // 🚀 TÁCH HÀM TRA TỪ ĐIỂN RA RIÊNG ĐỂ DÙNG CHUNG CHO CẢ IFRAME VÀ BÊN NGOÀI
   const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
     setDictPopup({ show: true, word, x, y, rectTop, data: null, isLoading: true });
 
@@ -282,7 +307,6 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
     }, 100);
   }, []);
 
-  // Lắng nghe bôi đen text ở tiêu đề bên ngoài Iframe
   const handleTextSelection = useCallback(() => {
      setTimeout(() => {
         const selection = window.getSelection();
@@ -497,7 +521,7 @@ export default function LectureViewer({ courseId, onBack }: { courseId: string, 
       )}
 
       {/* =====================================================================
-          CÁI POP-UP (MODAL) TỐI ƯU HIỆU NĂNG - KHÔNG HIỆU ỨNG THỪA
+          CÁI POP-UP (MODAL)
           ===================================================================== */}
       {popupUrl && (
         <div className="fixed inset-0 z-[9999] bg-slate-900/95 flex flex-col items-center justify-center p-4 md:p-8">
