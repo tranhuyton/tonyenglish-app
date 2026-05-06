@@ -1,33 +1,40 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { supabase } from './supabase';
 import JoditEditor from 'jodit-react';
 
 // =========================================================================
-// 🚀 TÁCH HẲN POP-UP THÀNH COMPONENT ĐỘC LẬP ĐỂ CÁCH LY JODIT EDITOR (CHỐNG LAG)
+// COMPONENT CHỌN BÀI TẬP VỚI BỘ GIẢM XÓC (DEBOUNCE) TÌM KIẾM
 // =========================================================================
-const ExerciseSelectionModal = ({ availableExercises, onClose, onAddExercise }: any) => {
-  const [exSearch, setExSearch] = useState('');
+const ExerciseSelectionModal = React.memo(({ availableExercises, onClose, onAddExercise }: any) => {
+  const [searchInput, setSearchInput] = useState(''); 
+  const [exSearch, setExSearch] = useState('');       
   const [exFilter, setExFilter] = useState('all');
 
-  // Lọc dữ liệu độc lập, không làm ảnh hưởng đến màn hình ở dưới
-  const filteredExercises = availableExercises.filter((ex: any) => {
-      const matchesSearch = ex.title.toLowerCase().includes(exSearch.toLowerCase());
-      const cat = ex.content_json?.basicInfo?.category || 'test';
-      const matchesFilter = exFilter === 'all' || cat === exFilter;
-      return matchesSearch && matchesFilter;
-  });
+  useEffect(() => {
+    const timer = setTimeout(() => setExSearch(searchInput), 250);
+    return () => clearTimeout(timer);
+  }, [searchInput]);
+
+  const filteredExercises = useMemo(() => {
+      return availableExercises.filter((ex: any) => {
+          const matchesSearch = ex.title.toLowerCase().includes(exSearch.toLowerCase());
+          const cat = ex.content_json?.basicInfo?.category || 'test';
+          const matchesFilter = exFilter === 'all' || cat === exFilter;
+          return matchesSearch && matchesFilter;
+      });
+  }, [availableExercises, exSearch, exFilter]);
 
   return (
-    <div className="fixed inset-0 z-[200] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in">
+    <div className="fixed inset-0 z-[200] bg-slate-900/80 flex items-center justify-center p-4 animate-in fade-in">
         <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col overflow-hidden animate-in zoom-in-95">
             <div className="px-6 py-5 border-b border-slate-100 flex justify-between items-center bg-slate-50 shrink-0">
                 <h3 className="font-black text-[#0a5482] text-lg uppercase tracking-tight">Thêm Bài Tập / Đề Thi Vào Bài Giảng</h3>
-                <button onClick={onClose} className="w-8 h-8 rounded-full bg-white border border-slate-200 hover:bg-slate-200 hover:text-red-500 flex items-center justify-center text-xl font-bold text-slate-400 transition-colors">&times;</button>
+                <button onClick={onClose} className="w-8 h-8 rounded-full bg-white border border-slate-200 hover:bg-slate-200 hover:text-red-500 flex items-center justify-center text-xl font-bold text-slate-400">&times;</button>
             </div>
             
             <div className="p-5 border-b border-slate-100 flex flex-col sm:flex-row gap-3 bg-white shrink-0">
                 <div className="relative flex-1">
-                    <input type="text" placeholder="Nhập tên bài tập để tìm kiếm..." value={exSearch} onChange={e => setExSearch(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:border-[#0a5482]" autoFocus />
+                    <input type="text" placeholder="Nhập tên bài tập để tìm kiếm..." value={searchInput} onChange={e => setSearchInput(e.target.value)} className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-3 text-sm outline-none focus:border-[#0a5482]" autoFocus />
                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
                 </div>
                 <select value={exFilter} onChange={e => setExFilter(e.target.value)} className="w-full sm:w-48 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-[#0a5482] font-bold text-slate-600 cursor-pointer">
@@ -47,14 +54,14 @@ const ExerciseSelectionModal = ({ availableExercises, onClose, onAddExercise }: 
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         {filteredExercises.map((ex: any) => (
-                            <div key={ex.id} className="flex justify-between items-center bg-white border border-slate-200 p-4 rounded-xl hover:border-emerald-400 hover:shadow-md transition-all group">
+                            <div key={ex.id} className="flex justify-between items-center bg-white border border-slate-200 p-4 rounded-xl hover:border-emerald-400 hover:shadow-md group">
                                 <div className="flex flex-col flex-1 min-w-0 pr-3">
-                                    <span className="font-bold text-slate-700 text-[14px] truncate group-hover:text-emerald-700 transition-colors">{ex.title}</span>
+                                    <span className="font-bold text-slate-700 text-[14px] truncate group-hover:text-emerald-700">{ex.title}</span>
                                     <span className={`w-fit mt-1.5 text-[9px] px-2 py-0.5 rounded uppercase font-black tracking-wider ${ex.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
                                         {ex.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
                                     </span>
                                 </div>
-                                <button onClick={() => onAddExercise(ex)} className="bg-emerald-50 border border-emerald-200 text-emerald-600 hover:bg-emerald-500 hover:text-white px-4 py-2 rounded-lg text-xs font-black transition-all active:scale-95 shrink-0">
+                                <button onClick={() => onAddExercise(ex)} className="bg-emerald-50 border border-emerald-200 text-emerald-600 hover:bg-emerald-500 hover:text-white px-4 py-2 rounded-lg text-xs font-black active:scale-95 shrink-0">
                                     THÊM ➕
                                 </button>
                             </div>
@@ -65,7 +72,30 @@ const ExerciseSelectionModal = ({ availableExercises, onClose, onAddExercise }: 
         </div>
     </div>
   );
-};
+});
+
+
+// =========================================================================
+// CÁCH LY EDITOR: BỎ THANH CUỘN NGANG, CHO NÚT TỰ ĐỘNG XUỐNG DÒNG GỌN GÀNG
+// =========================================================================
+const MemoizedEditor = React.memo(({ initialValue, config, onHtmlChange }: any) => {
+  const editorRef = useRef(null);
+  return (
+     <div className="w-full bg-white relative rounded-b-xl overflow-hidden shadow-sm border border-slate-200">
+         <style>{`
+            .jodit-toolbar__box {
+                flex-wrap: wrap !important;
+            }
+         `}</style>
+         <JoditEditor
+            ref={editorRef}
+            value={initialValue}
+            config={config}
+            onBlur={onHtmlChange}
+         />
+     </div>
+  );
+}, () => true);
 
 
 // =========================================================================
@@ -86,14 +116,25 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   const [availableExercises, setAvailableExercises] = useState<any[]>([]);
   const [showExerciseModal, setShowExerciseModal] = useState(false);
 
-  const editorRef = useRef(null);
-
   const editorConfig = useMemo(() => ({
     readonly: false,
-    height: 550,
-    allowResizeY: false,
-    statusbar: false,
+    height: 600, 
+    allowResizeY: true, 
+    statusbar: true, 
+    toolbarSticky: true, 
     toolbarAdaptive: false,
+    
+    // NÚT "SOURCE" ĐƯỢC ĐẶT Ở CUỐI CÙNG (CẠNH PRINT)
+    buttons: [
+      'bold', 'italic', 'underline', 'strikethrough', '|',
+      'superscript', 'subscript', '|',
+      'ul', 'ol', 'outdent', 'indent', '|',
+      'font', 'fontsize', 'brush', 'paragraph', '|',
+      'image', 'video', 'file', 'table', 'link', '|',
+      'align', 'undo', 'redo', '|',
+      'hr', 'eraser', 'copyformat', 'symbol', 'fullsize', 'print', 'source'
+    ],
+    
     defaultActionOnPaste: 'insert_as_html', 
     askBeforePasteHTML: false,
     askBeforePasteFromWord: false,
@@ -136,11 +177,15 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
   const activePage = pages[activePageIndex] || null;
 
-  const handleHtmlChange = (newHtml: string) => {
-    const updatedPages = [...pages];
-    updatedPages[activePageIndex].content_html = newHtml;
-    setPages(updatedPages);
-  };
+  const handleHtmlChange = useCallback((newHtml: string) => {
+    setPages(prevPages => {
+        const updated = [...prevPages];
+        if (updated[activePageIndex]) {
+            updated[activePageIndex].content_html = newHtml;
+        }
+        return updated;
+    });
+  }, [activePageIndex]);
 
   const handleAddPage = () => {
     setPages([...pages, { id: `temp_${Date.now()}`, page_number: pages.length + 1, content_html: '' }]);
@@ -173,10 +218,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     setActivePageIndex(Math.max(0, indexToRemove - 1));
   };
 
-  // ==========================================
-  // XỬ LÝ NHIỆM VỤ ĐÍNH KÈM (THÊM, SỬA, DI CHUYỂN)
-  // ==========================================
-  const handleAddExerciseTask = (ex: any) => {
+  const handleAddExerciseTask = useCallback((ex: any) => {
       const isExercise = ex.content_json?.basicInfo?.category === 'exercise';
       const newTask = {
           id: `task_${Date.now()}`,
@@ -184,9 +226,9 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
           test_id: ex.id,
           type: 'exercise'
       };
-      setTaskList([...taskList, newTask]);
+      setTaskList(prev => [...prev, newTask]);
       setShowExerciseModal(false); 
-  }
+  }, []);
 
   const handleAddManualTask = () => {
       const text = window.prompt("Nhập nội dung ghi chú / nhiệm vụ:");
@@ -222,17 +264,48 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
 
     try {
       let currentLectureId = lectureData.id;
-      const lecPayload = { title, course_id: courseId, module_id: moduleId || null, is_published: true, task_list: taskList };
+      
+      // Khởi tạo Payload
+      const lecPayload: any = { 
+         title, 
+         course_id: courseId, 
+         module_id: moduleId || null, 
+         is_published: true, 
+         task_list: taskList 
+      };
       
       if (currentLectureId === 'new') {
+        // 🚀 THUẬT TOÁN ĐÁNH SỐ TỰ ĐỘNG: Tìm số TT lớn nhất và cộng 1
+        let maxOrder = 0;
+        
+        if (moduleId) {
+            // Nếu lưu trong Học phần, lấy TT lớn nhất của Học phần đó
+            const { data: existingLecs } = await supabase.from('lectures').select('order_index').eq('module_id', moduleId);
+            if (existingLecs && existingLecs.length > 0) {
+                maxOrder = Math.max(...existingLecs.map(l => l.order_index || 0));
+            }
+        } else {
+            // Nếu lưu ở Kho tổng, lấy TT lớn nhất của Kho tổng khóa học đó
+            const { data: existingLecs } = await supabase.from('lectures').select('order_index').eq('course_id', courseId).is('module_id', null);
+            if (existingLecs && existingLecs.length > 0) {
+                maxOrder = Math.max(...existingLecs.map(l => l.order_index || 0));
+            }
+        }
+        
+        // Gán tự động
+        lecPayload.order_index = maxOrder + 1;
+
+        // Lưu mới vào Database
         const { data: newLec, error: err1 } = await supabase.from('lectures').insert([lecPayload]).select().single();
         if (err1) throw err1;
         currentLectureId = newLec.id;
       } else {
+        // Update bài cũ
         const { error: err2 } = await supabase.from('lectures').update(lecPayload).eq('id', currentLectureId);
         if (err2) throw err2;
       }
 
+      // Xử lý Pages
       await supabase.from('lecture_pages').delete().eq('lecture_id', currentLectureId);
 
       const pagesToInsert = pages.map((p, idx) => ({
@@ -294,18 +367,14 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                 <div className="text-sm font-bold text-[#0a5482] flex items-center gap-2">
                    <span className="animate-pulse text-emerald-500">🟢</span> Đang xử lý: Trang {activePageIndex + 1}
                 </div>
-                <div className="text-[12px] font-medium text-slate-500 bg-amber-100 text-amber-800 px-3 py-1 rounded">
-                   ⚠️ Nhớ gõ nhẹ nhàng khi sửa text trong vùng biểu đồ anh nhé!
-                </div>
              </div>
 
-             <div className="flex-1 overflow-auto bg-[#f8fafc] p-2 relative">
-                 <JoditEditor
-                    ref={editorRef}
-                    key={activePage?.id || activePageIndex}
-                    value={activePage?.content_html || ''}
+             <div className="flex-1 overflow-y-auto bg-[#f8fafc] p-4 custom-scrollbar">
+                 <MemoizedEditor 
+                    key={activePage?.id || `empty_${activePageIndex}`} 
+                    initialValue={activePage?.content_html || ''}
                     config={editorConfig}
-                    onBlur={(newContent) => handleHtmlChange(newContent)}
+                    onHtmlChange={handleHtmlChange}
                  />
              </div>
           </div>
@@ -382,7 +451,6 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
         </div>
       </div>
 
-      {/* 🚀 GỌI COMPONENT POP-UP CHỌN BÀI TẬP (MƯỢT MÀ KHÔNG LAG) */}
       {showExerciseModal && (
         <ExerciseSelectionModal 
             availableExercises={availableExercises} 

@@ -11,6 +11,7 @@ import IeltsWriting from './IeltsWriting';
 import IeltsSpeaking from './IeltsSpeaking';
 import SplitScreenTest from './SplitScreenTest';
 import LectureViewer from './LectureViewer'; 
+import SiegeGame from './SiegeGame'; // 🚀 KHAI BÁO THÊM MINI-GAME VÀO HỆ THỐNG
 
 export default function App() {
   const getInitialView = () => {
@@ -36,7 +37,7 @@ export default function App() {
     return sessionStorage.getItem('lms_active_course_id') || null;
   });
 
-  // 🚀 MỚI: State lưu lại NƠI XUẤT PHÁT (để thi xong biết đường quay về)
+  // State lưu lại NƠI XUẤT PHÁT (để thi xong biết đường quay về)
   const [returnView, setReturnView] = useState<string>(() => {
     return sessionStorage.getItem('lms_return_view') || 'portal';
   });
@@ -65,7 +66,7 @@ export default function App() {
         sessionStorage.removeItem('lms_current_view');
         sessionStorage.removeItem('lms_current_test');
         sessionStorage.removeItem('lms_active_course_id');
-        sessionStorage.removeItem('lms_return_view'); // 🚀 Xóa trí nhớ đường về
+        sessionStorage.removeItem('lms_return_view'); // Xóa trí nhớ đường về
       }
     });
 
@@ -82,7 +83,7 @@ export default function App() {
   const handleStartTest = (type: string, data: any) => {
     setCurrentTestData(data);
     
-    // 🚀 BÍ KÍP: Lưu lại màn hình hiện tại vào "returnView" trước khi nhảy sang bài thi
+    // BÍ KÍP: Lưu lại màn hình hiện tại vào "returnView" trước khi nhảy sang bài thi/game
     setReturnView(currentView);
     sessionStorage.setItem('lms_return_view', currentView);
 
@@ -97,7 +98,7 @@ export default function App() {
     handleNavigate('lecture');
   };
 
-  // 🚀 HÀM ĐIỀU HƯỚNG QUAY VỀ ĐÚNG NƠI XUẤT PHÁT
+  // HÀM ĐIỀU HƯỚNG QUAY VỀ ĐÚNG NƠI XUẤT PHÁT
   const handleReturnFromTest = () => {
     handleNavigate(returnView);
   };
@@ -125,7 +126,6 @@ export default function App() {
         <AdminPanel onNavigate={handleNavigate} />
       )}
       
-      {/* 🚀 Thay toàn bộ 'portal' bằng hàm handleReturnFromTest */}
       {currentView === 'ielts-writing' && (
         <IeltsWriting onBack={handleReturnFromTest} />
       )}
@@ -161,6 +161,11 @@ export default function App() {
 
       {currentView === 'case-study' && (
         <SplitScreenTest onBack={handleReturnFromTest} />
+      )}
+
+      {/* 🚀 LUỒNG RẼ NHÁNH CHO MINI-GAME CÔNG THÀNH CHIẾN */}
+      {currentView === 'siege-game' && (
+        <SiegeGame onBack={handleReturnFromTest} />
       )}
 
       {/* MÀN HÌNH BÀI GIẢNG (LECTURE) */}

@@ -355,7 +355,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   while (curr) { breadcrumbs.unshift(curr); curr = folders.find(f => f.id === curr.parent_id); }
 
   return (
-    // 🚀 TỐI ƯU MOBILE: Đổi min-h-screen thành min-h-[100dvh]
     <div className="min-h-[100dvh] bg-[#f4f7f9] font-sans text-slate-800 overscroll-none w-full">
       
       <header className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-40 shadow-sm">
@@ -374,6 +373,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           <div className="hidden md:flex items-center gap-2 bg-slate-100/50 rounded-2xl p-1 border border-slate-200/50">
             <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourse(null); }} className={`flex items-center gap-2 px-6 py-2 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-white shadow text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'}`}>📚 Không gian học tập</button>
             <button onClick={() => setActiveTab('analytics')} className={`flex items-center gap-2 px-6 py-2 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'analytics' ? 'bg-white shadow text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'}`}>📊 Phân tích & Lịch sử</button>
+            
+            {/* 🚀 BỔ SUNG NÚT CHƠI GAME TEST TRÊN THANH BAR (DESKTOP) */}
+            <button onClick={() => onStartTest && onStartTest('siege-game', null)} className="flex items-center gap-2 px-6 py-2 rounded-xl font-bold text-[14px] transition-all text-amber-500 hover:text-amber-600 hover:bg-white/50 active:scale-95">
+               🎮 Mini Games
+            </button>
           </div>
 
           <div className="flex items-center gap-3 md:gap-5">
@@ -402,12 +406,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                {isDropdownOpen && (
                   <div className="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-50 animate-in fade-in slide-in-from-top-2">
                      
-                     {/* 🚀 TỐI ƯU MOBILE: Bổ sung 2 nút chuyển Tab riêng cho điện thoại */}
                      <button onClick={() => { setActiveTab('library'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-3 transition-colors border-b border-slate-100">
                         <span className="text-lg">📚</span> Không gian học tập
                      </button>
-                     <button onClick={() => { setActiveTab('analytics'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-3 transition-colors border-b border-slate-100 mb-1 pb-3">
+                     <button onClick={() => { setActiveTab('analytics'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-3 transition-colors border-b border-slate-100">
                         <span className="text-lg">📊</span> Phân tích & Lịch sử
+                     </button>
+                     
+                     {/* 🚀 BỔ SUNG NÚT CHƠI GAME VÀO DROP DOWN MENU (CHO MOBILE) */}
+                     <button onClick={() => { setIsDropdownOpen(false); onStartTest && onStartTest('siege-game', null); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-amber-600 hover:bg-amber-50 flex items-center gap-3 transition-colors border-b border-slate-100 mb-1 pb-3">
+                        <span className="text-lg">🎮</span> Giải trí (Games)
                      </button>
 
                      <button onClick={() => window.open('https://tonyenglish.vn/vi', '_blank')} className="w-full text-left px-5 py-3 text-sm font-black text-emerald-600 hover:bg-emerald-50 flex items-center gap-3 transition-colors border-b border-slate-100 mb-1 pb-3 md:mt-1 md:pt-3">
@@ -432,7 +440,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       </header>
 
-      {/* 🚀 TỐI ƯU MOBILE: Ngăn cản lỗi tràn ngang trên di động */}
       <main className="max-w-[1200px] w-full mx-auto p-4 md:p-6 lg:p-8 relative overflow-x-hidden">
         
         {/* ================= TAB 1: THƯ VIỆN ĐỀ ================= */}
