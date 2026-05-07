@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import Home from './Home';
 import StudentPortal from './StudentPortal';
@@ -25,6 +25,7 @@ export default function App() {
   };
 
   const [currentView, setCurrentView] = useState(getInitialView()); 
+  const timerRef = useRef<any>(null); // 🚀 BỘ ĐẾM THỜI GIAN THỰC TẾ (Cho Báo Cáo)
   
   // Khôi phục đề thi cũ đang làm dở nếu bị Reload
   const [currentTestData, setCurrentTestData] = useState<any>(() => {
@@ -51,15 +52,34 @@ export default function App() {
   }, [currentView]);
 
   useEffect(() => {
+    // 🚀 HÀM KHỞI ĐỘNG ĐỒNG HỒ ĐẾM GIỜ HỌC
+    const startGlobalTimer = () => {
+      if (!timerRef.current) {
+        timerRef.current = setInterval(() => {
+          const currentSecs = parseInt(localStorage.getItem('tony_global_time') || '0');
+          localStorage.setItem('tony_global_time', (currentSecs + 1).toString());
+        }, 1000);
+      }
+    };
+
+    const stopGlobalTimer = () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) {
         setCurrentView(prev => prev === 'home' ? 'portal' : prev);
+        startGlobalTimer(); // Bật đồng hồ nếu đã login
       }
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN') {
         setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
+        startGlobalTimer(); // Bật đồng hồ khi login
       } else if (event === 'SIGNED_OUT') {
         setCurrentView(prev => (prev !== 'admin' && prev !== 'admin-login') ? 'home' : prev); 
         // Xóa sạch bộ nhớ đệm khi đăng xuất
@@ -67,10 +87,14 @@ export default function App() {
         sessionStorage.removeItem('lms_current_test');
         sessionStorage.removeItem('lms_active_course_id');
         sessionStorage.removeItem('lms_return_view'); // Xóa trí nhớ đường về
+        stopGlobalTimer(); // Tắt đồng hồ khi logout
       }
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      subscription.unsubscribe();
+      stopGlobalTimer();
+    };
   }, []); 
 
   // Hàm chuyển trang kèm lưu bộ nhớ đệm
@@ -159,8 +183,12 @@ export default function App() {
         />
       )}
 
+      {/* 🚀 ĐÃ VÁ LỖI TRẮNG MÀN HÌNH BẰNG CÁCH TRUYỀN DỮ LIỆU ĐỀ THI VÀO */}
       {currentView === 'case-study' && (
-        <SplitScreenTest onBack={handleReturnFromTest} />
+        <SplitScreenTest 
+          onBack={handleReturnFromTest} 
+          testData={currentTestData} 
+        />
       )}
 
       {/* 🚀 LUỒNG RẼ NHÁNH CHO MINI-GAME CÔNG THÀNH CHIẾN */}

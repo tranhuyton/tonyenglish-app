@@ -3,7 +3,6 @@ import { supabase } from './supabase';
 import './tailwind.css';
 
 export default function StandardTest({ onBack, testData, onFinish }: { onBack: () => void, testData: any, onFinish: (res: any) => void }) {
-  // 1. KIỂM TRA VÀ PARSE DỮ LIỆU SIÊU AN TOÀN
   let safeData = testData || {};
   if (typeof safeData === 'string') {
     try { safeData = JSON.parse(safeData); } catch (e) { safeData = {}; }
@@ -20,6 +19,19 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
   const isListening = String(basicInfo.skill || '').toLowerCase().includes('listening');
   const globalAudio = basicInfo.audioUrl || parts[0]?.audioUrl;
 
+  // 🚀 THUẬT TOÁN QUÉT AUDIO: Để tắt cảnh báo ở màn hình chờ nếu đề không có file nghe
+  let hasAnyAudio = false;
+  if (globalAudio) hasAnyAudio = true;
+  parts?.forEach((p: any) => {
+    if (p?.audioUrl) hasAnyAudio = true;
+    p?.sections?.forEach((s: any) => {
+      if (s?.audioUrl) hasAnyAudio = true;
+      s?.questions?.forEach((q: any) => {
+        if (q?.audioUrl) hasAnyAudio = true;
+      });
+    });
+  });
+
   const [testStarted, setTestStarted] = useState(false);
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [scoreResult, setScoreResult] = useState({ score: 0, total: 0 });
@@ -28,7 +40,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
 
-  // --- LOGIC KÉO THẢ THANH NGĂN CÁCH (SPLIT PANE CHO READING) ---
   const [leftWidth, setLeftWidth] = useState(45); 
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -55,7 +66,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
     document.addEventListener('mouseup', handleMouseUp);
   };
 
-  // --- QUẢN LÝ LOCAL STORAGE AN TOÀN ---
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
     try {
       const saved = localStorage.getItem(`std_ans_${safeData?.id}`);
@@ -90,7 +100,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài?")) return;
       
       isFinishingRef.current = true;
-      // BỔ SUNG: Dọn sạch cả std_ans và standard_endtime
       if (safeData?.id) {
         localStorage.removeItem(`std_ans_${safeData.id}`);
         localStorage.removeItem(`standard_mark_${safeData.id}`);
@@ -166,7 +175,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
     return isNaN(num) ? 3600 : num * 60;
   };
 
-  // --- LẤY MỐC THỜI GIAN THỰC TỪ BỘ NHỚ ---
   const getSavedEndTime = () => {
     if (!safeData?.id) return null;
     const saved = localStorage.getItem(`standard_endtime_${safeData.id}`);
@@ -208,7 +216,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
     setShowPalette(false);
   };
 
-  // --- THUẬT TOÁN ĐỒNG BỘ ID CÂU HỎI AN TOÀN ---
   const allQuestionIds: string[] = [];
   parts?.forEach((p: any) => {
     p?.sections?.forEach((s: any) => {
@@ -239,7 +246,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
   const markedCount = Object.values(marked).filter(Boolean).length;
   const totalCount = allQuestionIds.length;
 
-  // --- RENDER DẠNG ĐIỀN TỪ (CÓ LIÊN KẾT ĐÚNG ID) ---
   const renderInlineQuestion = (text: any) => {
     if (!text) return null;
     const safeText = String(text);
@@ -313,9 +319,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
-  // ==========================================
-  // VIEW 1: GIAO DIỆN READING (SPLIT-PANE) CÓ THANH KÉO
-  // ==========================================
   const renderReadingLayout = () => (
     <div className="flex flex-col h-screen font-sans bg-[#f4f6f8] overflow-hidden">
       <header className="h-14 bg-[#3498db] text-white flex justify-between items-center px-6 shrink-0 shadow-md z-20">
@@ -329,8 +332,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
       </header>
 
       <div className="flex-1 flex overflow-hidden relative" ref={containerRef}>
-        
-        {/* CỘT TRÁI: PASSAGE */}
         <div className="bg-[#f1f5f8] overflow-y-auto custom-scrollbar" style={{ width: `${leftWidth}%` }}>
           <div className="p-8">
             {isReviewMode && (
@@ -343,15 +344,15 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
             {parts?.map((part: any, pIdx: number) => (
               <div key={part?.id || pIdx} className="mb-12">
                 {part?.title && <h3 className="font-black text-lg text-slate-800 mb-4">{part.title}</h3>}
-                {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-lg shadow-sm border border-slate-200" alt="Part Image" />}
-                {part?.content && <div className="prose prose-slate max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed mb-8 bg-white p-6 rounded-xl border border-slate-200 shadow-sm" dangerouslySetInnerHTML={{ __html: part.content || '' }} />}
+                {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-lg shadow-sm border border-slate-200 mx-auto" alt="Part Image" />}
+                {part?.content && <div className="prose prose-slate max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed mb-8 bg-white p-6 rounded-xl border border-slate-200 shadow-sm [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: part.content || '' }} />}
                 
                 {part?.sections?.map((sec: any, sIdx: number) => (
                   <div key={sec?.id || sIdx} className="mb-8">
                     {sec?.title && <h4 className="font-bold text-[16px] text-slate-700 mb-3">{sec.title}</h4>}
-                    {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-lg shadow-sm border border-slate-200" alt="Section Image" />}
+                    {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-lg shadow-sm border border-slate-200 mx-auto" alt="Section Image" />}
                     {sec?.content && sec?.questionType !== "Điền từ" && sec?.questionType !== "Kéo thả vào Part" && (
-                      <div className="prose prose-sm max-w-none text-slate-600 whitespace-pre-wrap leading-relaxed bg-white p-5 rounded-xl border border-slate-200 shadow-sm" dangerouslySetInnerHTML={{ __html: sec.content || '' }} />
+                      <div className="prose prose-sm max-w-none text-slate-600 whitespace-pre-wrap leading-relaxed bg-white p-5 rounded-xl border border-slate-200 shadow-sm [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: sec.content || '' }} />
                     )}
                   </div>
                 ))}
@@ -360,7 +361,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
           </div>
         </div>
 
-        {/* THANH KÉO (SPLITTER) */}
         <div 
           onMouseDown={handleMouseDown}
           className="w-2 bg-slate-200 hover:bg-[#3498db] cursor-col-resize flex flex-col justify-center items-center transition-colors shrink-0 z-10 active:bg-[#2980b9]"
@@ -371,7 +371,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
           </div>
         </div>
 
-        {/* CỘT PHẢI: QUESTIONS */}
         <div className="bg-[#eef2f6] overflow-y-auto custom-scrollbar scroll-smooth" id="questions-container" style={{ width: `${100 - leftWidth}%` }}>
            <div className="p-8">
              {parts?.map((part: any, pIdx: number) => (
@@ -382,21 +381,21 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                          {(sec?.questionType === "Điền từ" || sec?.questionType === "Kéo thả vào Part") && (
                            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
                              {sec?.title && <h4 className="font-bold text-[16px] text-slate-800 mb-6">{sec.title}</h4>}
-                             {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-6 rounded-lg border border-slate-200" alt="Fill Image" />}
+                             {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-6 rounded-lg border border-slate-200 mx-auto" alt="Fill Image" />}
                              <div className="space-y-5 leading-[3] text-[16px] font-serif text-slate-800">
                                {renderInlineQuestion(sec?.content || '')}
                              </div>
                            </div>
                          )}
 
-                         {sec?.questionType === "Trắc nghiệm" && sec?.questions?.map((q: any) => {
+                         {(sec?.questionType === "Trắc nghiệm" || sec?.questionType === "TFNG") && sec?.questions?.map((q: any) => {
                             if (!q?.id) return null;
                             const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
                             const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
                             const isQuestionCorrect = userAns === correctAns;
                             const displayIdx = questionIndexMap[String(q.id)] || q.id;
                             
-                            const isTFNG = q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
+                            const isTFNG = sec?.questionType === "TFNG" || q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
 
                             if (isTFNG) {
                                return (
@@ -409,58 +408,62 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                    {isReviewMode && (<div className="absolute top-5 right-5 font-bold text-[12px]">{isQuestionCorrect ? <span className="text-emerald-700">✅ Đúng</span> : <span className="text-red-600">❌ Sai</span>}</div>)}
 
                                    <div className="font-bold text-slate-800 text-[15px] mb-3 pr-10">Question {displayIdx}:</div>
-                                   {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-3">{String(q.content)}</div>}
+                                   {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded-lg border border-slate-200 mx-auto" alt="Question Image" />}
+                                   {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-3 [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: String(q.content) }} />}
                                    
-                                   <div className="flex flex-row flex-wrap gap-4 pl-2">
+                                   <div className="flex flex-row flex-wrap gap-4 pl-2 mt-4">
                                      {q.options?.map((opt: string, i: number) => {
                                         const safeOpt = String(opt || '');
                                         const val = safeOpt.trim().toUpperCase();
                                         const isSelected = userAns === val;
                                         const isCorrectOpt = correctAns === val;
 
-                                        let labelStyle = "flex items-center gap-2 p-1.5 transition";
+                                        let labelStyle = "flex items-center gap-2 p-2 px-4 rounded-full border-2 transition-all cursor-pointer ";
                                         if (isReviewMode) {
-                                           if (isCorrectOpt) labelStyle += " font-bold text-emerald-800 bg-emerald-100 rounded";
-                                           else if (isSelected) labelStyle += " text-red-600 line-through opacity-70 bg-red-100 rounded";
+                                           labelStyle += "cursor-default ";
+                                           if (isCorrectOpt) labelStyle += " border-emerald-500 bg-emerald-50 text-emerald-800 font-bold";
+                                           else if (isSelected) labelStyle += " border-red-500 bg-red-50 text-red-600 line-through opacity-70";
+                                           else labelStyle += " border-slate-200 bg-white text-slate-500";
                                         } else {
-                                           labelStyle += " cursor-pointer hover:bg-slate-50";
+                                           if (isSelected) labelStyle += " border-slate-800 bg-slate-800 text-white font-bold shadow-md";
+                                           else labelStyle += " border-slate-200 bg-white text-slate-600 hover:border-slate-400";
                                         }
 
                                         return (
                                            <label key={i} className={labelStyle}>
-                                              <input type="radio" name={`q-${q.id}`} value={val} checked={isSelected} onChange={() => handleAnswer(String(q.id), val)} disabled={isReviewMode} className="w-4 h-4 accent-[#3ba1e2]" />
-                                              <span className="text-[14px] font-semibold">{safeOpt}</span>
+                                              <input type="radio" name={`q-${q.id}`} value={val} checked={isSelected} onChange={() => handleAnswer(String(q.id), val)} disabled={isReviewMode} className="hidden" />
+                                              <span className="text-[14px] font-semibold" dangerouslySetInnerHTML={{ __html: safeOpt }} />
                                            </label>
                                         );
                                      })}
                                    </div>
                                    {isReviewMode && q.explanation && (
-                                     <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg"><p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p><p className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap">{String(q.explanation)}</p></div>
+                                     <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg"><p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p><div className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: String(q.explanation) }} /></div>
                                    )}
                                  </div>
                                );
                             }
 
                             return (
-                              <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
+                              <div key={q.id} id={`q-${q.id}`} className={`bg-white p-8 rounded-2xl border shadow-sm relative group scroll-mt-20 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-50/30 border-emerald-200' : 'bg-red-50/30 border-red-200') : 'bg-white border-slate-200 hover:border-slate-300'}`}>
                                  
                                  {!isReviewMode && (
-                                    <button onClick={() => toggleMark(String(q.id))} className={`absolute top-5 right-5 transition-colors ${marked[String(q.id)] ? 'text-amber-400' : 'text-slate-200 hover:text-slate-400'}`}>
-                                       <svg className="w-6 h-6" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 1 : 2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                    <button onClick={() => toggleMark(String(q.id))} className={`absolute top-6 right-6 transition-colors ${marked[String(q.id)] ? 'text-amber-500' : 'text-slate-300 hover:text-slate-500'}`}>
+                                       <svg className="w-7 h-7" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 2 : 1.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
                                     </button>
                                  )}
 
                                  {isReviewMode && (
-                                    <div className="absolute top-5 right-5 font-bold text-[12px]">
-                                       {isQuestionCorrect ? <span className="text-emerald-700">✅ Đúng</span> : <span className="text-red-600">❌ Sai</span>}
+                                    <div className="absolute top-6 right-6 font-bold text-[14px]">
+                                       {isQuestionCorrect ? <span className="text-emerald-700 bg-emerald-100 px-3 py-1.5 rounded">✅ Đúng</span> : <span className="text-red-700 bg-red-100 px-3 py-1.5 rounded">❌ Sai</span>}
                                     </div>
                                  )}
 
-                                 <div className="font-bold text-slate-800 text-[15px] mb-3 pr-10">Question {displayIdx}:</div>
-                                 {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded border border-slate-200" alt="Question Image" />}
-                                 {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-5">{String(q.content)}</div>}
+                                 <div className="font-bold text-slate-800 text-[16px] mb-3 pr-10">Question {displayIdx}:</div>
+                                 {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded border border-slate-200 mx-auto" alt="Question Image" />}
+                                 {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-5 [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: String(q.content) }} />}
                                  
-                                 <div className="space-y-3 pl-2">
+                                 <div className="space-y-2 pl-2">
                                     {q.options?.map((opt: any, i: number) => {
                                        const safeOpt = String(opt || '');
                                        const val = safeOpt.split('.')[0]?.trim().toUpperCase() || String.fromCharCode(65+i);
@@ -483,7 +486,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                              <div className={`w-[20px] h-[20px] rounded-full border-2 flex items-center justify-center shrink-0 mt-0.5 transition-all ${circleStyle}`}>
                                                 <div className={`w-2 h-2 rounded-full ${isSelected || isCorrectOpt ? 'bg-white' : 'bg-transparent'}`}></div>
                                              </div>
-                                             <span className={`text-[14px] ${textStyle}`}>{safeOpt}</span>
+                                             <span className={`text-[15px] pt-[1px] ${textStyle}`} dangerouslySetInnerHTML={{ __html: safeOpt }} />
                                           </label>
                                        );
                                     })}
@@ -492,7 +495,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                  {isReviewMode && q.explanation && (
                                     <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg">
                                        <p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p>
-                                       <p className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap">{String(q.explanation)}</p>
+                                       <div className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: String(q.explanation) }} />
                                     </div>
                                  )}
                               </div>
@@ -516,7 +519,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                return (
                                   <div key={q.id} id={`q-${q.id}`} className={`bg-white p-5 rounded-xl shadow-sm border flex flex-col sm:flex-row gap-4 items-center mb-4 transition-all scroll-mt-20 ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200'}`}>
                                      <div className="font-bold text-slate-800 text-[15px] shrink-0">Q. {displayIdx}</div>
-                                     <div className="flex-1 text-[14px] text-slate-700 line-clamp-2">{String(q.content || '')}</div>
+                                     <div className="flex-1 text-[14px] text-slate-700 line-clamp-2" dangerouslySetInnerHTML={{ __html: String(q.content || '') }} />
                                      <div className="shrink-0">
                                         {isReviewMode ? (
                                            <div className="flex flex-col items-end gap-1">
@@ -557,7 +560,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                             const isQuestionCorrect = cAnsArr.length > 0 && cAnsArr.every(v => uAnsArr.includes(v)) && uAnsArr.length === cAnsArr.length;
 
                             return (
-                              <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
+                              <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 md:p-8 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/30' : 'border-red-300 bg-red-50/30') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
                                  {!isReviewMode && (
                                     <button onClick={() => toggleMark(String(q.id))} className={`absolute top-5 right-5 transition-colors ${marked[String(q.id)] ? 'text-amber-400' : 'text-slate-200 hover:text-slate-400'}`}>
                                        <svg className="w-6 h-6" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 1 : 2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
@@ -570,7 +573,8 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                  )}
 
                                  <div className="font-bold text-slate-800 text-[15px] mb-3 pr-10">Question {displayIdx}:</div>
-                                 {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-5">{String(q.content)}</div>}
+                                 {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded-lg border border-slate-200 mx-auto" alt="Question Image" />}
+                                 {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-5 [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: String(q.content) }} />}
                                  
                                  <div className="space-y-3 pl-2">
                                     {q.options?.map((opt: any, i: number) => {
@@ -607,7 +611,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                        return (
                                           <label key={i} className={labelClass}>
                                              <input type="checkbox" name={`q-${q.id}`} value={val} checked={isSelected} onChange={handleCheck} disabled={isReviewMode} className="mt-1 w-4 h-4 accent-[#3ba1e2] rounded-sm cursor-pointer" />
-                                             <span className="text-[14px] leading-relaxed">{safeOpt}</span>
+                                             <span className="text-[14px] leading-relaxed" dangerouslySetInnerHTML={{ __html: safeOpt }} />
                                           </label>
                                        );
                                     })}
@@ -616,7 +620,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                  {isReviewMode && q.explanation && (
                                     <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg">
                                        <p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p>
-                                       <p className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap">{String(q.explanation)}</p>
+                                       <div className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: String(q.explanation) }} />
                                     </div>
                                  )}
                               </div>
@@ -632,7 +636,6 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
            </div>
         </div>
 
-        {/* Modal Palette */}
         {showPalette && (
            <div className="absolute bottom-16 left-6 w-[360px] bg-white rounded-t-xl shadow-[0_-10px_40px_rgba(0,0,0,0.15)] border border-slate-200 flex flex-col max-h-[60vh] z-40 animate-in slide-in-from-bottom-4">
               <div className="p-4 border-b border-slate-100 flex justify-between items-center bg-slate-50 rounded-t-xl">
@@ -692,7 +695,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
   );
 
   // ==========================================
-  // VIEW 2: GIAO DIỆN LISTENING (CUỘN DỌC - SIDEBAR PHẢI)
+  // GIAO DIỆN HỆ LISTENING (DÀN TRANG DỌC)
   // ==========================================
   const renderListeningLayout = () => (
     <div className="flex flex-col h-screen bg-[#f4f6f8] font-sans text-slate-800 overflow-hidden">
@@ -732,7 +735,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                   {!hasPassage && (
                     <div className="mb-6 max-w-3xl mx-auto">
                       {part?.title && <h2 className="font-bold text-[20px] text-slate-800">{part.title}</h2>}
-                      {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mt-4 rounded-lg shadow-sm border border-slate-200" alt="Part" />}
+                      {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mt-4 rounded-lg shadow-sm border border-slate-200 mx-auto" alt="Part" />}
                     </div>
                   )}
 
@@ -740,8 +743,8 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                     {hasPassage && (
                       <div className="w-full xl:w-[45%] xl:sticky top-2 xl:h-[calc(100vh-120px)] overflow-y-auto custom-scrollbar pr-3 mb-8 xl:mb-0">
                         <h2 className="font-bold text-[18px] text-slate-800 mb-3">{part.title}</h2>
-                        {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-4 rounded-lg shadow-sm" alt="Part" />}
-                        <div className="prose prose-slate max-w-none text-justify leading-loose text-[16px] bg-white p-8 border border-slate-200 rounded-2xl shadow-sm">
+                        {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-4 rounded-lg shadow-sm mx-auto" alt="Part" />}
+                        <div className="prose prose-slate max-w-none text-justify leading-loose text-[16px] bg-white p-8 border border-slate-200 rounded-2xl shadow-sm [&_img]:max-w-full [&_img]:h-auto [&_img]:mx-auto [&_img]:rounded-md [&_img]:my-3">
                           <div dangerouslySetInnerHTML={{ __html: part.content || '' }} />
                         </div>
                       </div>
@@ -758,7 +761,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                         {part?.sections?.map((sec: any, sIdx: number) => (
                           <div key={sIdx} className="space-y-6">
                             
-                            {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full rounded-xl shadow-sm border border-slate-200" alt="Section" />}
+                            {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full rounded-xl shadow-sm border border-slate-200 mx-auto" alt="Section" />}
                             
                             {(sec?.questionType === "Điền từ" || sec?.questionType === "Kéo thả vào Part") && (
                               <div className={`border p-8 rounded-2xl shadow-sm ${isReviewMode ? 'bg-white border-slate-300' : 'bg-white border-slate-200'}`}>
@@ -769,14 +772,14 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                               </div>
                             )}
 
-                            {sec?.questionType === "Trắc nghiệm" && sec?.questions?.map((q: any) => {
+                            {(sec?.questionType === "Trắc nghiệm" || sec?.questionType === "TFNG") && sec?.questions?.map((q: any) => {
                               if (!q?.id) return null;
                               const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
                               const userAns = String(answers[String(q.id)] || '').trim().toUpperCase();
                               const isQuestionCorrect = userAns === correctAns;
                               const displayIdx = questionIndexMap[String(q.id)] || q.id;
 
-                              const isTFNG = q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
+                              const isTFNG = sec?.questionType === "TFNG" || q.options?.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
 
                               if (isTFNG) {
                                  return (
@@ -788,12 +791,20 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                       )}
                                       {isReviewMode && (<div className="absolute top-5 right-5 font-bold text-[12px]">{isQuestionCorrect ? <span className="text-emerald-700">✅ Đúng</span> : <span className="text-red-600">❌ Sai</span>}</div>)}
 
-                                      <div className="font-bold text-slate-800 text-[15px] mb-3 pr-10">Question {displayIdx}:</div>
-                                      {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-3">{String(q.content)}</div>}
+                                      <div className="flex items-start gap-4 mb-5">
+                                         <span className={`inline-flex items-center justify-center font-bold min-w-[30px] h-[30px] text-[14px] rounded-sm shrink-0 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-600 text-white' : 'bg-red-600 text-white') : (answers[String(q.id)] ? 'bg-[#1ea1db] text-white' : 'bg-[#323639] text-white')}`}>
+                                           {displayIdx}
+                                         </span>
+                                         <div className="w-full pt-[2px]">
+                                           {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded-lg shadow-sm border border-gray-200 mx-auto" alt="Question Image" />}
+                                           <div className="text-[16px] leading-relaxed font-medium text-slate-800 cursor-pointer whitespace-pre-wrap [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: String(q.content || '') }} />
+                                         </div>
+                                      </div>
                                       
                                       <div className="flex flex-row flex-wrap gap-4 pl-2">
                                         {q.options?.map((opt: string, i: number) => {
-                                           const val = opt.trim().toUpperCase();
+                                           const safeOpt = String(opt || '');
+                                           const val = safeOpt.trim().toUpperCase();
                                            const isSelected = userAns === val;
                                            const isCorrectOpt = correctAns === val;
 
@@ -808,13 +819,13 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                            return (
                                               <label key={i} className={labelStyle}>
                                                  <input type="radio" name={`q-${q.id}`} value={val} checked={isSelected} onChange={() => handleAnswer(String(q.id), val)} disabled={isReviewMode} className="w-4 h-4 accent-[#3ba1e2]" />
-                                                 <span className="text-[14px] font-semibold">{opt}</span>
+                                                 <span className="text-[15px] font-semibold text-slate-800" dangerouslySetInnerHTML={{ __html: safeOpt }} />
                                               </label>
                                            );
                                         })}
                                       </div>
                                       {isReviewMode && q.explanation && (
-                                        <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg"><p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p><p className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap">{String(q.explanation)}</p></div>
+                                        <div className="mt-6 ml-11 pt-4 border-t border-slate-200"><p className="text-[13px] font-black text-amber-600 uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-700 font-medium leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: String(q.explanation) }} /></div>
                                       )}
                                     </div>
                                  );
@@ -824,7 +835,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                 <div key={q.id} id={`q-${q.id}`} className={`bg-white p-8 rounded-2xl border shadow-sm relative group scroll-mt-20 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-50/30 border-emerald-200' : 'bg-red-50/30 border-red-200') : 'bg-white border-slate-200 hover:border-slate-300'}`}>
                                   {!isReviewMode && (
                                     <button onClick={() => toggleMark(String(q.id))} className={`absolute top-6 right-6 transition-colors ${marked[String(q.id)] ? 'text-amber-500' : 'text-slate-300 hover:text-slate-500'}`}>
-                                      <svg className="w-7 h-7" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 1 : 2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
+                                      <svg className="w-7 h-7" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 2 : 1.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
                                     </button>
                                   )}
                                   {isReviewMode && (
@@ -833,15 +844,19 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                     </div>
                                   )}
 
-                                  <div className="mb-6 pr-16">
-                                    <div className="font-bold text-slate-800 text-[16px] mb-2">Question {displayIdx}:</div>
-                                    {q.imageUrl && <img src={q.imageUrl} className="max-w-full mt-3 mb-4 rounded-lg shadow-sm border border-slate-200" alt="Question" />}
-                                    {q.content && <div className="text-[16px] text-slate-800 leading-relaxed font-normal whitespace-pre-wrap">{String(q.content)}</div>}
+                                  <div className="flex items-start gap-4 mb-5">
+                                     <span className={`inline-flex items-center justify-center font-bold min-w-[30px] h-[30px] text-[14px] rounded-sm shrink-0 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-600 text-white' : 'bg-red-600 text-white') : (answers[String(q.id)] ? 'bg-[#1ea1db] text-white' : 'bg-[#323639] text-white')}`}>
+                                       {displayIdx}
+                                     </span>
+                                     <div className="w-full pt-[2px]">
+                                       {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded-lg shadow-sm border border-gray-200 mx-auto" alt="Question Image" />}
+                                       <div className="text-[16px] leading-relaxed font-medium text-slate-800 cursor-pointer whitespace-pre-wrap [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: String(q.content || '') }} />
+                                     </div>
                                   </div>
                                   
                                   {q.audioUrl && <audio src={q.audioUrl} controls className="w-full h-10 mb-6" />}
                                   
-                                  <div className="space-y-4 ml-1">
+                                  <div className="space-y-2 ml-11">
                                     {q.options?.map((opt: any, i: number) => {
                                       const safeOpt = String(opt || '');
                                       const val = safeOpt.split('.')[0]?.trim().toUpperCase() || String.fromCharCode(65+i);
@@ -857,7 +872,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                         else if (isSelected && !isCorrectOpt) { optStyle = 'bg-red-50 border-red-300 text-red-700 line-through opacity-70'; ringStyle = 'bg-red-500 border-red-500 text-white'; showTick = true; } 
                                         else { optStyle = 'opacity-50 text-slate-400'; }
                                       } else {
-                                        if (isSelected) { optStyle = 'bg-blue-50 border-blue-500 text-blue-800 font-medium'; ringStyle = 'bg-[#3b82f6] border-[#3b82f6] text-white'; showTick = true; }
+                                        if (isSelected) { optStyle = 'bg-blue-50 border-blue-500 text-blue-800 font-medium'; ringStyle = 'bg-[#3ba1e2] border-[#3ba1e2] text-white'; showTick = true; }
                                       }
 
                                       return (
@@ -868,16 +883,16 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                               {showTick && <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>}
                                             </div>
                                           </div>
-                                          <span className={`text-[16px] leading-relaxed`}>{safeOpt}</span>
+                                          <span className={`text-[16px] leading-[1.8] text-slate-800`} dangerouslySetInnerHTML={{ __html: safeOpt }} />
                                         </label>
                                       );
                                     })}
                                   </div>
 
                                   {isReviewMode && q.explanation && (
-                                    <div className="mt-8 pt-5 border-t border-slate-200">
+                                    <div className="mt-8 ml-11 pt-5 border-t border-slate-200">
                                       <p className="text-[14px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p>
-                                      <p className="text-[15px] text-slate-700 font-medium leading-relaxed whitespace-pre-wrap">{String(q.explanation)}</p>
+                                      <div className="text-[15px] text-slate-700 font-medium leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: String(q.explanation) }} />
                                     </div>
                                   )}
                                 </div>
@@ -901,7 +916,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                    return (
                                       <div key={q.id} id={`q-${q.id}`} className={`bg-white p-5 rounded-xl shadow-sm border flex flex-col sm:flex-row gap-4 items-center mb-4 transition-all scroll-mt-20 ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200'}`}>
                                          <div className="font-bold text-slate-800 text-[15px] shrink-0">Q. {displayIdx}</div>
-                                         <div className="flex-1 text-[14px] text-slate-700 line-clamp-2">{String(q.content || '')}</div>
+                                         <div className="flex-1 text-[14px] text-slate-700 line-clamp-2" dangerouslySetInnerHTML={{ __html: String(q.content || '') }} />
                                          <div className="shrink-0">
                                             {isReviewMode ? (
                                                <div className="flex flex-col items-end gap-1">
@@ -942,7 +957,7 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                const isQuestionCorrect = cAnsArr.length > 0 && cAnsArr.every(v => uAnsArr.includes(v)) && uAnsArr.length === cAnsArr.length;
 
                                return (
-                                 <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
+                                 <div key={q.id} id={`q-${q.id}`} className={`bg-white p-6 md:p-8 rounded-xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/30' : 'border-red-300 bg-red-50/30') : 'border-slate-200 hover:border-[#3ba1e2]/50'}`}>
                                     {!isReviewMode && (
                                        <button onClick={() => toggleMark(String(q.id))} className={`absolute top-5 right-5 transition-colors ${marked[String(q.id)] ? 'text-amber-400' : 'text-slate-200 hover:text-slate-400'}`}>
                                           <svg className="w-6 h-6" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 1 : 2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" /></svg>
@@ -954,10 +969,17 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                        </div>
                                     )}
 
-                                    <div className="font-bold text-slate-800 text-[15px] mb-3 pr-10">Question {displayIdx}:</div>
-                                    {q.content && <div className="text-[14px] text-slate-700 leading-relaxed whitespace-pre-wrap mb-5">{String(q.content)}</div>}
+                                    <div className="flex items-start gap-4 mb-5">
+                                       <span className={`inline-flex items-center justify-center font-bold px-2 h-[30px] text-[14px] rounded-sm shrink-0 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-600 text-white' : 'bg-red-600 text-white') : (answers[String(q.id)] ? 'bg-[#1ea1db] text-white' : 'bg-[#323639] text-white')}`}>
+                                         {displayIdx}
+                                       </span>
+                                       <div className="w-full pt-[2px]">
+                                         {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded-lg shadow-sm border border-gray-200 mx-auto" alt="Question Image" />}
+                                         <div className="text-[16px] leading-relaxed font-medium text-slate-800 cursor-pointer whitespace-pre-wrap [&_img]:max-w-full [&_img]:h-auto" dangerouslySetInnerHTML={{ __html: String(q.content || '') }} />
+                                       </div>
+                                    </div>
                                     
-                                    <div className="space-y-3 pl-2">
+                                    <div className="space-y-3 ml-11">
                                        {q.options?.map((opt: any, i: number) => {
                                           const safeOpt = String(opt || '');
                                           const val = safeOpt.split('.')[0]?.trim().toUpperCase() || String.fromCharCode(65+i);
@@ -992,16 +1014,16 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
                                           return (
                                              <label key={i} className={labelClass}>
                                                 <input type="checkbox" name={`q-${q.id}`} value={val} checked={isSelected} onChange={handleCheck} disabled={isReviewMode} className="mt-1 w-4 h-4 accent-[#3ba1e2] rounded-sm cursor-pointer" />
-                                                <span className="text-[14px] leading-relaxed">{safeOpt}</span>
+                                                <span className="text-[15px] leading-[1.8] text-slate-800" dangerouslySetInnerHTML={{ __html: safeOpt }} />
                                              </label>
                                           );
                                        })}
                                     </div>
 
                                     {isReviewMode && q.explanation && (
-                                       <div className="mt-6 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg">
+                                       <div className="mt-6 ml-11 pt-4 border-t border-slate-100 bg-amber-50/50 p-4 rounded-lg">
                                           <p className="text-[12px] font-black text-amber-600 uppercase mb-1">💡 Giải thích:</p>
-                                          <p className="text-[13px] text-slate-700 font-medium whitespace-pre-wrap">{String(q.explanation)}</p>
+                                          <div className="text-[15px] text-slate-700 font-medium leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: String(q.explanation) }} />
                                        </div>
                                     )}
                                  </div>
@@ -1081,19 +1103,20 @@ export default function StandardTest({ onBack, testData, onFinish }: { onBack: (
 
   return (
     <React.Fragment>
-      {/* Ẩn Audio tải trước */}
       {isListening && globalAudio && !isReviewMode && (
         <audio ref={globalAudioRef} src={globalAudio} preload="auto" className="hidden" />
       )}
 
       {!testStarted ? (
-        <div className="flex flex-col h-screen items-center justify-center bg-[#f4f6f8] font-sans">
+        <div className="flex flex-col h-screen items-center justify-center bg-[#f4f6f8] font-sans p-6 text-center">
           <div className="bg-white p-10 rounded-2xl shadow-lg text-center max-w-xl border border-slate-200 w-full">
-            <div className="text-6xl mb-6">{isListening ? '🎧' : '📖'}</div>
+            {/* 🚀 FIXED: THÔNG MINH NHẬN DIỆN ICON Ở MÀN HÌNH CHỜ */}
+            <div className="text-6xl mb-6">{(isListening && hasAnyAudio) ? '🎧' : '📖'}</div>
             <h1 className="text-2xl font-black text-slate-800 mb-2">{basicInfo?.title}</h1>
             <p className="text-slate-500 mb-8 font-medium text-lg">Thời gian: {formatTime(parseInitialTime(basicInfo?.timeLimit))}</p>
             
-            {isListening && (
+            {/* 🚀 FIXED: CHỈ HIỆN CẢNH BÁO NẾU CÓ AUDIO */}
+            {(isListening && hasAnyAudio) && (
               <div className="bg-amber-50 border border-amber-200 p-5 rounded-lg text-amber-700 text-[14px] font-medium mb-8 text-left leading-relaxed shadow-inner">
                 <span className="font-bold">⚠️ LƯU Ý THI LISTENING:</span> File âm thanh sẽ <span className="font-bold underline">tự động phát</span> ngay khi bạn bấm nút Bắt Đầu.
               </div>

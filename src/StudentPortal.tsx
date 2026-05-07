@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
-import { LineChart, Line, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, Tooltip as RechartsTooltip, ResponsiveContainer } from 'recharts';
 
 const FOLDER_IMAGES = [
   'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800', 
@@ -14,12 +14,6 @@ const FOLDER_IMAGES = [
 const ITEMS_PER_PAGE = 12;
 const HISTORY_PER_PAGE = 10;
 
-const formatDateShort = (isoString: string) => {
-  if (!isoString) return '';
-  const d = new Date(isoString);
-  return `${d.getDate()}/${d.getMonth() + 1}`;
-};
-
 const formatDate = (isoString: string) => {
   if (!isoString) return '';
   const d = new Date(isoString);
@@ -28,7 +22,7 @@ const formatDate = (isoString: string) => {
 
 const checkInProgress = (testId: string) => {
   try {
-      const compEndTime = localStorage.getItem(`ielts_endtime_${testId}`) || localStorage.getItem(`standard_endtime_${testId}`) || localStorage.getItem(`ielts_paper_endtime_${testId}`) || localStorage.getItem(`case_study_endtime_${testId}`);
+      const compEndTime = localStorage.getItem(`ielts_endtime_${testId}`) || localStorage.getItem(`standard_endtime_${testId}`) || localStorage.getItem(`case_study_endtime_${testId}`);
       if (compEndTime && parseInt(compEndTime) > Date.now()) return true;
       const keys = [`ielts_ans_${testId}`, `ielts_paper_ans_${testId}`, `std_ans_${testId}`, `case_study_ans_${testId}`];
       for (const key of keys) {
@@ -38,41 +32,94 @@ const checkInProgress = (testId: string) => {
   } catch (e) {} return false;
 };
 
-export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: { onNavigate?: (view: string) => void, onStartTest?: (type: string, data: any) => void, onOpenLecture?: (courseId: string) => void }) {
-  const [activeTab, setActiveTab] = useState<'library' | 'analytics' | 'profile'>('library');
-  const [activeView, setActiveView] = useState<'dashboard' | 'course'>('dashboard');
+const checkTestHasAudio = (test: any) => {
+  let content = test.content_json;
+  if (typeof content === 'string') { try { content = JSON.parse(content); } catch (e) { content = {}; } }
+  if (content?.basicInfo?.audioUrl) return true;
+  const parts = Array.isArray(content?.parts) ? content.parts : [];
+  for (const p of parts) {
+      if (p?.audioUrl) return true;
+      const sections = Array.isArray(p?.sections) ? p.sections : [];
+      for (const s of sections) {
+          if (s?.audioUrl) return true;
+          const questions = Array.isArray(s?.questions) ? s.questions : [];
+          for (const q of questions) { if (q?.audioUrl) return true; }
+      }
+  }
+  return false;
+};
+
+const getTestIcon = (test: any) => {
+  const type = test.test_type || '';
+  if (type.includes('Listening')) return checkTestHasAudio(test) ? '🎧' : '📄';
+  if (type.includes('Speaking')) return '🎙️';
+  if (type.includes('Writing')) return '✍️';
+  if (type.includes('Case-Study')) return '📄';
+  return '📝';
+};
+
+const getCourseCover = (course: any) => {
+  const t = (course.title || '').toLowerCase();
+  
+  if (t.includes('biology')) return { image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80&w=800', badge: 'Biology', color: 'text-emerald-600' };
+  if (t.includes('chemistry')) return { image: 'https://images.unsplash.com/photo-1603126857599-f6e15782afa5?auto=format&fit=crop&q=80&w=800', badge: 'Chemistry', color: 'text-cyan-600' };
+  if (t.includes('physics')) return { image: 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?auto=format&fit=crop&q=80&w=800', badge: 'Physics', color: 'text-indigo-600' };
+  if (t.includes('science')) return { image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800', badge: 'Science', color: 'text-teal-600' };
+
+  if (t.includes('math')) return { image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800', badge: 'Mathematics', color: 'text-purple-600' };
+  if (t.includes('econ')) return { image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800', badge: 'Economics', color: 'text-amber-600' };
+  if (t.includes('business')) return { image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800', badge: 'Business', color: 'text-blue-600' };
+
+  if (t.includes('pronunciation') || t.includes('phát âm')) return { image: 'https://images.unsplash.com/photo-1590402494587-44b71d7772f6?auto=format&fit=crop&q=80&w=800', badge: 'Pronunciation', color: 'text-rose-500' };
+  if (t.includes('reflex') || t.includes('phản ứng') || t.includes('phản xạ')) return { image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800', badge: 'Comm. Reflex', color: 'text-orange-500' };
+  if (t.includes('communication') || t.includes('giao tiếp')) return { image: 'https://images.unsplash.com/photo-1577563908411-50cb989766a3?auto=format&fit=crop&q=80&w=800', badge: 'Communication', color: 'text-pink-600' };
+  if (t.includes('esl') || t.includes('english')) return { image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800', badge: 'ESL Program', color: 'text-rose-600' };
+
+  if (t.includes('ielts') || course.type === 'IELTS') return { image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800', badge: 'IELTS Mastery', color: 'text-blue-600' };
+
+  return { image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800', badge: course.type || 'Khóa học', color: 'text-slate-600' };
+};
+
+export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: any) {
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<'library'|'analytics'|'games'|'profile'>('library');
+  
+  const [activeView, setActiveView] = useState<'dashboard'|'course'>(() => {
+      return (sessionStorage.getItem('portal_active_view') as any) || 'dashboard';
+  });
+  const [selectedCourseId, setSelectedCourseId] = useState<string | null>(() => {
+      return sessionStorage.getItem('portal_selected_course_id') || null;
+  });
+  const [currentFolderId, setCurrentFolderId] = useState<string | null>(() => {
+      return sessionStorage.getItem('portal_current_folder_id') || null;
+  });
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   
   const [courses, setCourses] = useState<any[]>([]);
-  const [selectedCourse, setSelectedCourse] = useState<any>(null);
-  const [folders, setFolders] = useState<any[]>([]);
-  const [tests, setTests] = useState<any[]>([]);
-  
   const [allFolders, setAllFolders] = useState<any[]>([]);
   const [allTests, setAllTests] = useState<any[]>([]);
   const [allLectures, setAllLectures] = useState<any[]>([]);
-
   const [historyData, setHistoryData] = useState<any[]>([]);
   const [lectureProgressData, setLectureProgressData] = useState<any[]>([]);
+  
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [userProfile, setUserProfile] = useState<any>(null);
-
-  const [currentFolderId, setCurrentFolderId] = useState<string | null>(null);
+  
   const [searchTest, setSearchTest] = useState('');
   const [sortTest, setSortTest] = useState('name-asc');
+  const [filterType, setFilterType] = useState('all');
   const [folderPage, setFolderPage] = useState(1);
   const [testPage, setTestPage] = useState(1);
   const [historyPage, setHistoryPage] = useState(1);
 
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
-  const [historySort, setHistorySort] = useState('date-desc');
-
+  const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
   const [showModeSelection, setShowModeSelection] = useState(false);
   const [testToStart, setTestToStart] = useState<any>(null);
-  const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
 
   const [newPassword, setNewPassword] = useState('');
   const [newFullName, setNewFullName] = useState('');
@@ -97,82 +144,41 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   useEffect(() => { checkUserAndFetchData(); }, [activeTab]);
 
   const checkUserAndFetchData = async () => {
+    setIsLoading(true);
     const { data: { user } } = await supabase.auth.getUser();
     setCurrentUser(user);
     if (user) {
       const { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).single();
       setUserProfile(profile);
       if (profile && !newFullName) setNewFullName(profile.full_name || '');
-      
       const { data: lp } = await supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id);
       setLectureProgressData(lp || []);
     }
 
-    if (activeTab === 'library') {
-      fetchCourses(user?.id); fetchAllFolders(); fetchAllTests(); fetchAllLectures(); fetchUserHistory(user?.id);
-    }
-    if (activeTab === 'analytics') {
-      if (courses.length === 0) fetchCourses(user?.id);
-      fetchUserHistory(user?.id);
-      if (tests.length === 0) fetchAllTestsForRetake();
-    }
-  };
+    const { data: allT } = await supabase.from('tests').select('*').eq('is_published', true);
+    setAllTests(allT || []);
+    const { data: allL } = await supabase.from('lectures').select('id, course_id').eq('is_published', true);
+    setAllLectures(allL || []);
+    const { data: allF } = await supabase.from('folders').select('*');
+    setAllFolders(allF || []);
 
-  const fetchAllLectures = async () => {
-     const { data } = await supabase.from('lectures').select('id, course_id').eq('is_published', true);
-     setAllLectures(data || []);
-  };
-
-  const fetchAllTestsForRetake = async () => {
-     const { data } = await supabase.from('tests').select('*').eq('is_published', true);
-     setTests(data || []);
-  };
-
-  const fetchCourses = async (userId?: string) => {
-    if (!userId) return;
-    const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', userId);
-    const courseIds = enrolls?.map(e => e.course_id) || [];
-    if (courseIds.length > 0) {
-      const { data } = await supabase.from('courses').select('*').in('id', courseIds);
-      const sortedData = (data || []).sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999));
-      setCourses(sortedData);
-    } else { setCourses([]); }
-  };
-
-  const fetchUserHistory = async (userId?: string) => {
-    if (!userId) return;
-    try {
-      const { data } = await supabase.from('test_results').select('*').eq('user_id', userId).order('created_at', { ascending: false });
-      if (data && data.length > 0) {
-        const formattedHistory = data.map((item: any) => ({
-          id: item.id, testId: item.test_id, name: item.test_title || 'Bài thi không tên', courseId: item.course_id, subject: item.test_type || 'Standard',
+    if (user) {
+      const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', user.id);
+      const courseIds = enrolls?.map(e => e.course_id) || [];
+      if (courseIds.length > 0) {
+        const { data: cData } = await supabase.from('courses').select('*').in('id', courseIds);
+        setCourses((cData || []).sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999)));
+      }
+      const { data: hData } = await supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false });
+      if (hData) {
+        setHistoryData(hData.map((item: any) => ({
+          id: item.id, testId: item.test_id, name: item.test_title || 'Bài thi không tên', courseId: item.course_id,
           scoreObj: { value: item.score || 0, display: `${item.score || 0} / ${item.total_score || 0}` },
           timeSpent: Math.round((item.time_spent || 0) / 60), date: item.created_at, details: item.details || {}
-        }));
-        setHistoryData(formattedHistory);
-      } else { setHistoryData([]); }
-    } catch (e) {}
-  };
-
-  const fetchAllFolders = async () => {
-    const { data } = await supabase.from('folders').select('*');
-    setAllFolders(data || []);
-  };
-
-  const fetchAllTests = async () => {
-    const { data } = await supabase.from('tests').select('*').eq('is_published', true);
-    setAllTests(data || []);
-  };
-
-  const fetchCourseContent = async (courseId: string) => {
-    const { data: folderData } = await supabase.from('folders').select('*').eq('course_id', courseId).order('display_order', { ascending: true });
-    setFolders(folderData || []);
-    const courseTests = allTests.filter(t => {
-      const inFolder = folderData?.some((f: any) => f.id === t.folder_id);
-      const inJson = t.content_json?.basicInfo?.courseId === courseId;
-      return inFolder || inJson;
-    });
-    setTests(courseTests);
+        })));
+      }
+    }
+    setIsLoading(false);
   };
 
   const handleUpdateProfile = async () => {
@@ -185,43 +191,62 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       } else if (newPassword && newPassword.length < 6) {
         alert("Mật khẩu mới phải có ít nhất 6 ký tự!"); setIsUpdatingProfile(false); return;
       }
-      alert("🎉 Cập nhật tài khoản thành công!"); checkUserAndFetchData(); 
-    } catch (error: any) { alert("Lỗi cập nhật: " + error.message); } finally { setIsUpdatingProfile(false); }
+      alert("Cập nhật tài khoản thành công!");
+    } catch (error: any) { alert("Lỗi cập nhật: " + error.message); } 
+    finally { setIsUpdatingProfile(false); }
   };
 
   const handleLogout = async () => {
-    try { await supabase.auth.signOut(); } catch (error) {} finally {
-      localStorage.clear(); sessionStorage.clear(); onNavigate?.('home'); setTimeout(() => window.location.reload(), 100);
-    }
+    await supabase.auth.signOut();
+    localStorage.clear(); sessionStorage.clear(); onNavigate?.('home'); setTimeout(() => window.location.reload(), 100);
   };
 
   const handleOpenCourse = (course: any) => {
-    setSelectedCourse(course); setCurrentFolderId(null); setSearchTest(''); setFolderPage(1); setTestPage(1);
-    fetchCourseContent(course.id); setActiveView('course');
+    setSelectedCourseId(String(course.id)); 
+    setCurrentFolderId(null); 
+    setSearchTest(''); setFolderPage(1); setTestPage(1);
+    setActiveView('course');
+    sessionStorage.setItem('portal_selected_course_id', String(course.id));
+    sessionStorage.setItem('portal_active_view', 'course');
+    sessionStorage.removeItem('portal_current_folder_id');
   };
 
-  const handleFolderClick = (id: string) => { setCurrentFolderId(id); setFolderPage(1); setTestPage(1); };
+  const handleFolderClick = (id: string) => { 
+      setCurrentFolderId(id); 
+      setFolderPage(1); 
+      setTestPage(1); 
+      sessionStorage.setItem('portal_current_folder_id', id);
+  };
 
   const handleStartTestClick = (test: any) => {
     if (!onStartTest) return;
-    const type = test.test_type || '';
-    if (type === 'IELTS-Writing') onStartTest('ielts-writing', test);
-    else if (type === 'IELTS-Speaking') onStartTest('ielts-speaking', test);
-    else if (type === 'IELTS-Listening' || type === 'IELTS-Reading') { setTestToStart(test); setShowModeSelection(true); } 
-    else if (test.title.toLowerCase().includes('business') || test.title.toLowerCase().includes('econ') || type === 'Case-Study') { onStartTest('case-study', test); } 
-    else { onStartTest('standard', test); }
+    const type = String(test.test_type || '').toLowerCase();
+    
+    if (type.includes('standard')) onStartTest('standard', test);
+    else if (type.includes('case-study') || type.includes('business')) onStartTest('case-study', test);
+    else if (type === 'ielts-writing') onStartTest('ielts-writing', test);
+    else if (type === 'ielts-speaking') onStartTest('ielts-speaking', test);
+    else if (type.includes('ielts')) { 
+      setTestToStart(test); 
+      setShowModeSelection(true); 
+    }
+    else if (test.content_json?.basicInfo?.category === 'game') onStartTest('siege-game', test);
+    else onStartTest('standard', test);
+  };
+
+  const handleConfirmMode = (mode: 'computer' | 'paper') => { 
+    setShowModeSelection(false); 
+    if (onStartTest && testToStart) onStartTest(mode, testToStart); 
   };
 
   const handleRetakeFromHistory = (historyItem: any) => {
     const testId = historyItem.testId || historyItem.details?.test_id;
-    let foundTest = tests.find(t => String(t.id) === String(testId));
-    if (!foundTest) foundTest = tests.find(t => t.title.trim() === historyItem.name.trim());
+    let foundTest = allTests.find(t => String(t.id) === String(testId));
+    if (!foundTest) foundTest = allTests.find(t => t.title.trim() === historyItem.name.trim());
     if (foundTest) { setViewingHistoryDetail(null); handleStartTestClick(foundTest); } 
     else alert("Đề thi này không còn tồn tại hoặc đã bị ẩn khỏi hệ thống.");
   };
 
-  const handleConfirmMode = (mode: 'computer' | 'paper') => { setShowModeSelection(false); if (onStartTest && testToStart) onStartTest(mode, testToStart); };
-  
   const toggleFullScreen = () => { 
     if (!document.fullscreenElement) { 
         document.documentElement.requestFullscreen().catch(); 
@@ -230,10 +255,69 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     } 
   };
 
-  const rawFullName = userProfile?.full_name || (currentUser?.email ? currentUser.email.split('@')[0] : 'Học viên');
-  const nameParts = rawFullName.trim().split(/\s+/);
+  const nameParts = (userProfile?.full_name || currentUser?.email?.split('@')[0] || 'User').trim().split(/\s+/);
   const displayUserName = nameParts[nameParts.length - 1]; 
   const displayUserInitial = displayUserName.charAt(0).toUpperCase();
+
+  const selectedCourse = courses.find(c => String(c.id) === selectedCourseId) || null;
+  const courseFolders = selectedCourse ? allFolders.filter(f => f.course_id === selectedCourse.id).sort((a,b) => (a.display_order||0) - (b.display_order||0)) : [];
+  const courseTests = selectedCourse ? allTests.filter(t => courseFolders.some(f => f.id === t.folder_id) || t.content_json?.basicInfo?.courseId === selectedCourse.id) : [];
+
+  const currentSubFolders = courseFolders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === '')).sort((a,b) => (a.display_order||0) - (b.display_order||0));
+  let currentTests = currentFolderId ? courseTests.filter(t => t.folder_id === currentFolderId) : [];
+  if (!currentFolderId && currentSubFolders.length === 0) {
+      currentTests = courseTests.filter(t => !t.folder_id || t.folder_id === 'null' || t.folder_id === '');
+  }
+
+  const processedTests = currentTests.filter(t => (t.title || '').toLowerCase().includes(searchTest.toLowerCase())).filter(t => filterType === 'all' || t.content_json?.basicInfo?.category === filterType).sort((a, b) => {
+       if (sortTest === 'name-asc') return (a.title || '').localeCompare(b.title || '');
+       if (sortTest === 'name-desc') return (b.title || '').localeCompare(a.title || '');
+       if (sortTest === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
+       return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
+  });
+
+  const totalFolderPages = Math.ceil(currentSubFolders.length / ITEMS_PER_PAGE);
+  const paginatedFolders = currentSubFolders.slice((folderPage - 1) * ITEMS_PER_PAGE, folderPage * ITEMS_PER_PAGE);
+  const totalTestPages = Math.ceil(processedTests.length / ITEMS_PER_PAGE);
+  const paginatedTests = processedTests.slice((testPage - 1) * ITEMS_PER_PAGE, testPage * ITEMS_PER_PAGE);
+
+  const renderPagination = (currentPage: number, totalPages: number, setPage: (p: number) => void) => {
+    if (totalPages <= 1) return null;
+    return (
+      <div className="flex justify-center items-center gap-4 mt-10">
+        <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)} className="w-10 h-10 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black">←</button>
+        <span className="text-[14px] font-bold text-slate-500 bg-white px-5 py-2 rounded-xl border border-slate-200 shadow-sm">Trang {currentPage} / {totalPages}</span>
+        <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)} className="w-10 h-10 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black">→</button>
+      </div>
+    );
+  };
+
+  const processedHistory = historyData.filter(h => analyticsCourse === 'all' || h.courseId === analyticsCourse).filter(h => {
+       if (analyticsCategory === 'all') return true;
+       const ft = allTests.find(t => String(t.id) === String(h.testId));
+       return (ft?.content_json?.basicInfo?.category || 'test') === analyticsCategory;
+    }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  // Logic tính toán cho phần Báo cáo
+  const analyticsTotalTestsDone = processedHistory.length;
+  const analyticsTotalTimeHours = (processedHistory.reduce((acc, curr) => acc + curr.timeSpent, 0) / 60).toFixed(1);
+  const avgScore = analyticsTotalTestsDone > 0 ? (processedHistory.reduce((acc, curr) => acc + curr.scoreObj.value, 0) / analyticsTotalTestsDone).toFixed(1) : '0';
+  const avgIelts = historyData.filter(h => h.details?.bandScore).slice(0, 4).reduce((acc, curr, _, arr) => acc + parseFloat(curr.details?.bandScore)/arr.length, 0).toFixed(1);
+
+  const sparklineScoreArr = processedHistory.map(h => ({v: h.scoreObj.value})).reverse();
+  const sparklineCompletedArr = processedHistory.map((_, i) => ({v: i + 1}));
+  const sparklineAttemptsArr = processedHistory.map((_, i) => ({v: i + 1}));
+  const sparklineTimeArr = processedHistory.map(h => ({v: h.timeSpent})).reverse();
+  
+  const getDynamicScoreFeedback = () => "Điểm số đang duy trì ổn định.";
+  const getDynamicCompleteFeedback = () => "Tiến độ học tập rất tích cực.";
+
+  const totalHistoryPages = Math.ceil(processedHistory.length / HISTORY_PER_PAGE);
+  const paginatedHistory = processedHistory.slice((historyPage - 1) * HISTORY_PER_PAGE, historyPage * HISTORY_PER_PAGE);
+
+  const globalTotalTestsDone = historyData.length;
+  const globalTotalTimeHours = (historyData.reduce((acc, curr) => acc + curr.timeSpent, 0) / 60).toFixed(1);
+  const inProgressTest = allTests.find(t => checkInProgress(t.id));
 
   const hour = new Date().getHours();
   let bannerConfig = { greeting: '', gradient: '', icon: '', subtitle: '' };
@@ -245,194 +329,60 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       bannerConfig = { greeting: 'Chào buổi tối', gradient: 'from-slate-800 to-indigo-900', icon: '🌙', subtitle: 'Thời gian tĩnh lặng tuyệt vời để tập trung ôn tập và nhìn lại những gì đã học.' };
   }
 
-  const getCourseCover = (course: any) => {
-    const lowerTitle = course.title?.toLowerCase() || '';
-    if (lowerTitle.includes('business') || lowerTitle.includes('econ')) 
-        return { image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800', badge: 'Business & Econ', color: 'text-amber-600' };
-    if (lowerTitle.includes('science')) 
-        return { image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800', badge: 'IGCSE Science', color: 'text-emerald-600' };
-    if (lowerTitle.includes('math')) 
-        return { image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=800', badge: 'Mathematics', color: 'text-purple-600' };
-    if (lowerTitle.includes('ielts') || course.type === 'IELTS') 
-        return { image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800', badge: 'IELTS Mastery', color: 'text-blue-600' };
-    if (lowerTitle.includes('igcse')) 
-        return { image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=800', badge: 'IGCSE Program', color: 'text-teal-600' };
-    return { image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800', badge: course.type || 'Khóa học', color: 'text-slate-600' };
-  };
-
-  const getTestIcon = (testType: string) => {
-    if (testType.includes('Listening')) return '🎧';
-    if (testType.includes('Speaking')) return '🎙️';
-    if (testType.includes('Writing')) return '✍️';
-    if (testType.includes('Case-Study')) return '📄';
-    return '📝';
-  };
-
-  const globalTotalTestsDone = historyData.length;
-  const globalTotalTimeHours = (historyData.reduce((acc, curr) => acc + curr.timeSpent, 0) / 60).toFixed(1);
-  const inProgressTest = allTests.find(t => checkInProgress(t.id));
-
-  const currentSubFolders = folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === '')).sort((a,b) => (a.display_order||0) - (b.display_order||0));
-  let currentTests = tests.filter(t => t.folder_id === currentFolderId);
-  if (!currentFolderId || currentSubFolders.length > 0) currentTests = []; 
-
-  const processedTests = currentTests
-    .filter(t => t.title.toLowerCase().includes(searchTest.toLowerCase()))
-    .sort((a, b) => {
-       if (sortTest === 'name-asc') return a.title.localeCompare(b.title);
-       if (sortTest === 'name-desc') return b.title.localeCompare(a.title);
-       if (sortTest === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
-       if (sortTest === 'date-asc') return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
-       return 0;
-    });
-
-  const totalFolderPages = Math.ceil(currentSubFolders.length / ITEMS_PER_PAGE);
-  const paginatedFolders = currentSubFolders.slice((folderPage - 1) * ITEMS_PER_PAGE, folderPage * ITEMS_PER_PAGE);
-  const totalTestPages = Math.ceil(processedTests.length / ITEMS_PER_PAGE);
-  const paginatedTests = processedTests.slice((testPage - 1) * ITEMS_PER_PAGE, testPage * ITEMS_PER_PAGE);
-
-  const renderPagination = (currentPage: number, totalPages: number, setPage: (p: number) => void) => {
-    if (totalPages <= 1) return null;
-    return (
-      <div className="flex justify-center items-center gap-4 mt-10">
-        <button disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)} className="w-10 h-10 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black">→</button>
-        <span className="text-[14px] font-bold text-slate-500 bg-white px-5 py-2 rounded-xl border border-slate-200 shadow-sm">Trang {currentPage} / {totalPages}</span>
-        <button disabled={currentPage === totalPages} onClick={() => setPage(currentPage + 1)} className="w-10 h-10 rounded-full flex items-center justify-center bg-white border border-slate-200 text-slate-500 hover:bg-[#1e88e5] hover:text-white transition-colors disabled:opacity-30 shadow-sm font-black">→</button>
-      </div>
-    );
-  };
-
-  const processedHistory = [...historyData]
-    .filter(h => analyticsCourse === 'all' || h.courseId === analyticsCourse)
-    .filter(h => {
-       if (analyticsCategory === 'all') return true;
-       const foundTest = tests.find(t => String(t.id) === String(h.testId) || t.title.trim() === h.name.trim());
-       const cat = foundTest?.content_json?.basicInfo?.category || 'test';
-       return cat === analyticsCategory;
-    })
-    .sort((a, b) => {
-      if (historySort === 'date-desc') return new Date(b.date).getTime() - new Date(a.date).getTime();
-      if (historySort === 'date-asc') return new Date(a.date).getTime() - new Date(b.date).getTime();
-      if (historySort === 'score-desc') return b.scoreObj.value - a.scoreObj.value;
-      if (historySort === 'score-asc') return a.scoreObj.value - b.scoreObj.value;
-      return 0;
-    });
-
-  const totalHistoryPages = Math.ceil(processedHistory.length / HISTORY_PER_PAGE);
-  const paginatedHistory = processedHistory.slice((historyPage - 1) * HISTORY_PER_PAGE, historyPage * HISTORY_PER_PAGE);
-
-  const analyticsTotalTestsDone = processedHistory.length;
-  const avgScore = analyticsTotalTestsDone > 0 ? (processedHistory.reduce((acc, curr) => acc + curr.scoreObj.value, 0) / analyticsTotalTestsDone).toFixed(1) : '0';
-  const analyticsTotalTimeMinutes = processedHistory.reduce((acc, curr) => acc + curr.timeSpent, 0);
-  const analyticsTotalTimeHours = (analyticsTotalTimeMinutes / 60).toFixed(1);
-
-  const getDynamicScoreFeedback = () => {
-    if (analyticsTotalTestsDone < 2) return "Bạn mới bắt đầu luyện tập. Cứ làm từ từ, duy trì làm thêm nhiều bài để hệ thống phân tích nhé!";
-    const recentScores = processedHistory.slice(0, 3).map(h => h.scoreObj.value);
-    const olderScores = processedHistory.slice(3, 6).map(h => h.scoreObj.value);
-    const avgRecent = recentScores.length ? recentScores.reduce((a,b)=>a+b,0)/recentScores.length : 0;
-    const avgOlder = olderScores.length ? olderScores.reduce((a,b)=>a+b,0)/olderScores.length : 0;
-    
-    if (olderScores.length === 0) return "Khởi đầu rất tốt! Hãy duy trì làm bài đều đặn để nâng cao điểm trung bình nha.";
-    if (avgRecent > avgOlder + 5) return "Tuyệt vời! Các bài kiểm tra gần đây bạn đang có sự tiến bộ vượt bậc.";
-    if (avgRecent < avgOlder - 5) return "Điểm số đang có dấu hiệu giảm sút một chút. Hãy dành thời gian xem lại các lỗi sai thường gặp nhé.";
-    return "Phong độ của bạn đang ở mức rất ổn định. Tiếp tục phát huy và thử thách với các đề khó hơn nhé!";
-  };
-
-  const getDynamicCompleteFeedback = () => {
-    if (analyticsTotalTestsDone === 0) return "Cùng khởi động với bài thi đầu tiên nào!";
-    if (analyticsTotalTestsDone < 5) return `Bạn đã hoàn thành ${analyticsTotalTestsDone} bài. Bước đệm hoàn hảo để bứt phá.`;
-    return `Wow, bạn đã hoàn thành ${analyticsTotalTestsDone} bài! Sự kiên trì của bạn thực sự đáng nể đó.`;
-  };
-
-  const sparklineScoreArr = processedHistory.slice(0, 5).reverse().map(h => ({ v: h.scoreObj.value }));
-  const sparklineCompletedArr = processedHistory.slice(0, 5).reverse().map((h, i) => ({ v: i + 1 })); 
-  const sparklineAttemptsArr = processedHistory.slice(0, 5).reverse().map((h, i) => ({ v: (i + 1) * 2 })); 
-  const sparklineTimeArr = processedHistory.slice(0, 5).reverse().map(h => ({ v: h.timeSpent }));
-
-  const breadcrumbs = [];
-  let curr = folders.find(f => f.id === currentFolderId);
-  while (curr) { breadcrumbs.unshift(curr); curr = folders.find(f => f.id === curr.parent_id); }
+  const breadcrumbs: any[] = [];
+  let curr = courseFolders.find(f => f.id === currentFolderId);
+  while (curr) { breadcrumbs.unshift(curr); curr = courseFolders.find(f => f.id === curr.parent_id); }
 
   return (
-    <div className="min-h-[100dvh] bg-[#f4f7f9] font-sans text-slate-800 overscroll-none w-full">
-      
-      <header className="bg-white/80 backdrop-blur-md border-b border-slate-200/50 sticky top-0 z-40 shadow-sm">
+    <div className="min-h-[100dvh] bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full">
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
         <div className="max-w-[1200px] w-full mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
-          
-          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate?.('home')}>
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition" onClick={() => onNavigate?.('home')}>
             <div className="flex flex-col items-end">
-              <h1 className="font-black text-xl md:text-2xl tracking-tighter text-[#0a5482] leading-none">TONY<span className="text-slate-800">ENGLISH</span></h1>
-              <span className="text-[9px] md:text-[10px] italic text-[#1e88e5] font-medium mt-0.5 pr-0.5">The future begins here</span>
+              <h1 className="font-black text-2xl text-[#0a5482] leading-none">TONY<span className="text-slate-800">ENGLISH</span></h1>
             </div>
-            <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center overflow-hidden">
-               <img src="/logo-shield.png" alt="TonyEnglish Logo" className="w-auto h-full object-contain" />
-            </div>
+            <div className="w-10 h-10 flex items-center justify-center overflow-hidden"><img src="/logo-shield.png" alt="Logo" className="w-auto h-full object-contain" /></div>
           </div>
 
-          <div className="hidden md:flex items-center gap-2 bg-slate-100/50 rounded-2xl p-1 border border-slate-200/50">
-            <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourse(null); }} className={`flex items-center gap-2 px-6 py-2 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-white shadow text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'}`}>📚 Không gian học tập</button>
-            <button onClick={() => setActiveTab('analytics')} className={`flex items-center gap-2 px-6 py-2 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'analytics' ? 'bg-white shadow text-[#1e88e5]' : 'text-slate-500 hover:text-slate-800 hover:bg-white/50'}`}>📊 Phân tích & Lịch sử</button>
-            
-            {/* 🚀 BỔ SUNG NÚT CHƠI GAME TEST TRÊN THANH BAR (DESKTOP) */}
-            <button onClick={() => onStartTest && onStartTest('siege-game', null)} className="flex items-center gap-2 px-6 py-2 rounded-xl font-bold text-[14px] transition-all text-amber-500 hover:text-amber-600 hover:bg-white/50 active:scale-95">
-               🎮 Mini Games
-            </button>
+          <div className="hidden md:flex items-center gap-2 bg-slate-50 rounded-2xl p-1.5 border border-slate-200">
+            <button onClick={() => { 
+                setActiveTab('library'); setActiveView('dashboard'); setSelectedCourseId(null); setCurrentFolderId(null);
+                sessionStorage.setItem('portal_active_view', 'dashboard');
+                sessionStorage.removeItem('portal_selected_course_id');
+                sessionStorage.removeItem('portal_current_folder_id');
+            }} className={`px-6 py-2 rounded-xl font-bold text-[13px] transition ${activeTab === 'library' ? 'bg-white shadow text-[#1e88e5] border border-slate-200' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}>📚 Không gian học tập</button>
+            <button onClick={() => setActiveTab('analytics')} className={`px-6 py-2 rounded-xl font-bold text-[13px] transition ${activeTab === 'analytics' ? 'bg-white shadow text-[#1e88e5] border border-slate-200' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}>📊 Báo cáo</button>
+            <button onClick={() => setActiveTab('games')} className={`px-6 py-2 rounded-xl font-bold text-[13px] transition ${activeTab === 'games' ? 'bg-white shadow text-amber-500 border border-slate-200' : 'text-slate-500 hover:text-amber-500 hover:bg-slate-200/50'}`}>🎮 Mini Games</button>
           </div>
 
           <div className="flex items-center gap-3 md:gap-5">
             <div className="hidden lg:flex items-center gap-3">
-               <div className="flex items-center gap-1.5 bg-orange-50 text-orange-600 px-3 py-1.5 rounded-lg border border-orange-100 font-bold text-[13px] shadow-sm">
-                  🔥 {globalTotalTestsDone}
-               </div>
-               <div className="flex items-center gap-1.5 bg-blue-50 text-blue-600 px-3 py-1.5 rounded-lg border border-blue-100 font-bold text-[13px] shadow-sm">
-                  ⏱️ {globalTotalTimeHours}h
-               </div>
+               <div className="flex items-center gap-1.5 bg-orange-50 text-orange-600 px-3 py-1.5 rounded-lg border border-orange-100 font-bold text-[13px] shadow-sm">🔥 {globalTotalTestsDone}</div>
+               <div className="flex items-center gap-1.5 bg-blue-50 text-blue-600 px-3 py-1.5 rounded-lg border border-blue-100 font-bold text-[13px] shadow-sm">⏱️ {globalTotalTimeHours}h</div>
                <div className="h-6 w-px bg-slate-200 mx-1"></div>
                <button onClick={toggleFullScreen} className="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 hover:text-[#1e88e5] transition-colors">
-                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
+                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
                </button>
             </div>
 
             <div className="relative" ref={dropdownRef}>
-               <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-3 hover:opacity-80 transition-opacity focus:outline-none">
+               <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-3 bg-slate-50 pr-2 pl-4 py-1.5 rounded-full border border-slate-200 shadow-sm hover:opacity-80 transition focus:outline-none">
                  <div className="text-right hidden sm:block">
-                   <div className="font-black text-[14px] text-slate-800">{displayUserName}</div>
-                   <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider">{userProfile?.role === 'admin' ? 'Quản trị viên' : 'Học viên'}</div>
+                   <div className="font-black text-[13px] text-slate-800">{displayUserName}</div>
+                   <div className="text-[10px] font-medium text-slate-500 uppercase tracking-wider">{userProfile?.role === 'admin' ? 'Quản trị viên' : 'Học viên'}</div>
                  </div>
-                 <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-gradient-to-tr from-[#0a5482] to-[#1e88e5] text-white flex items-center justify-center font-black shadow-md border-2 border-white ring-2 ring-blue-50 text-[14px] md:text-base">{displayUserInitial}</div>
+                 <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#0a5482] to-[#1e88e5] text-white flex items-center justify-center font-black shadow-inner text-[13px]">{displayUserInitial}</div>
                </button>
 
                {isDropdownOpen && (
-                  <div className="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-50 animate-in fade-in slide-in-from-top-2">
-                     
-                     <button onClick={() => { setActiveTab('library'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-3 transition-colors border-b border-slate-100">
-                        <span className="text-lg">📚</span> Không gian học tập
-                     </button>
-                     <button onClick={() => { setActiveTab('analytics'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-3 transition-colors border-b border-slate-100">
-                        <span className="text-lg">📊</span> Phân tích & Lịch sử
-                     </button>
-                     
-                     {/* 🚀 BỔ SUNG NÚT CHƠI GAME VÀO DROP DOWN MENU (CHO MOBILE) */}
-                     <button onClick={() => { setIsDropdownOpen(false); onStartTest && onStartTest('siege-game', null); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-amber-600 hover:bg-amber-50 flex items-center gap-3 transition-colors border-b border-slate-100 mb-1 pb-3">
-                        <span className="text-lg">🎮</span> Giải trí (Games)
-                     </button>
-
-                     <button onClick={() => window.open('https://tonyenglish.vn/vi', '_blank')} className="w-full text-left px-5 py-3 text-sm font-black text-emerald-600 hover:bg-emerald-50 flex items-center gap-3 transition-colors border-b border-slate-100 mb-1 pb-3 md:mt-1 md:pt-3">
-                        <span className="text-lg">🏠</span> Về Website Chính
-                     </button>
-                     <button onClick={() => { setActiveTab('profile'); setIsDropdownOpen(false); }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5] flex items-center gap-3 transition-colors mt-1">
-                        <span className="text-lg">👤</span> Cấu hình tài khoản
-                     </button>
-                     {userProfile?.role === 'admin' && (
-                       <button onClick={() => onNavigate?.('admin')} className="w-full text-left px-5 py-3 text-sm font-black text-[#8b5cf6] hover:bg-purple-50 flex items-center gap-3 transition-colors border-t border-slate-100 mt-1 pt-3">
-                          <span className="text-lg">⚙️</span> Trang Quản Trị
-                       </button>
-                     )}
+                  <div className="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-50 animate-in fade-in">
+                     <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourseId(null); setCurrentFolderId(null); sessionStorage.setItem('portal_active_view', 'dashboard'); sessionStorage.removeItem('portal_selected_course_id'); sessionStorage.removeItem('portal_current_folder_id'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">📚 Học tập</button>
+                     <button onClick={() => { setActiveTab('analytics'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">📊 Báo cáo</button>
+                     <button onClick={() => { setActiveTab('games'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-amber-600 hover:bg-amber-50">🎮 Mini Games</button>
+                     <button onClick={() => { setActiveTab('profile'); setIsDropdownOpen(false); }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5]">👤 Cấu hình tài khoản</button>
+                     {userProfile?.role === 'admin' && (<button onClick={() => onNavigate?.('admin')} className="w-full text-left px-5 py-3 text-sm font-black text-[#8b5cf6] hover:bg-purple-50">⚙️ Trang Quản Trị</button>)}
                      <div className="h-px bg-slate-100 my-1"></div>
-                     <button onClick={handleLogout} className="w-full text-left px-5 py-3 text-sm font-bold text-red-600 hover:bg-red-50 flex items-center gap-3 transition-colors">
-                        <span className="text-lg">🚪</span> Đăng xuất
-                     </button>
+                     <button onClick={handleLogout} className="w-full text-left px-5 py-3 text-sm font-bold text-red-600 hover:bg-red-50">🚪 Đăng xuất</button>
                   </div>
                )}
             </div>
@@ -440,250 +390,266 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       </header>
 
-      <main className="max-w-[1200px] w-full mx-auto p-4 md:p-6 lg:p-8 relative overflow-x-hidden">
+      <main className="max-w-[1200px] w-full mx-auto p-4 md:p-8">
         
-        {/* ================= TAB 1: THƯ VIỆN ĐỀ ================= */}
-        {activeTab === 'library' && (
-          <>
-            {activeView === 'dashboard' && (
-              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                
-                <div className={`relative bg-gradient-to-br ${bannerConfig.gradient} rounded-[2rem] p-6 md:p-8 lg:p-12 mb-8 md:mb-10 overflow-hidden shadow-xl`}>
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-                  <div className="absolute bottom-0 left-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl translate-y-1/3"></div>
-                  
-                  <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
-                    <div className="text-white flex-1 text-center md:text-left">
-                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-2 md:mb-3 drop-shadow-md">{bannerConfig.greeting}, {displayUserName}! {bannerConfig.icon}</h2>
-                      <p className="text-white/80 text-[14px] md:text-[16px] lg:text-lg font-medium leading-relaxed max-w-xl">{bannerConfig.subtitle}</p>
-                    </div>
+        {/* ================= THƯ VIỆN KHÓA HỌC ================= */}
+        {activeTab === 'library' && activeView === 'dashboard' && (
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className={`relative bg-gradient-to-br ${bannerConfig.gradient} rounded-[2rem] p-6 md:p-8 lg:p-12 mb-8 md:mb-10 overflow-hidden shadow-xl`}>
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+              <div className="absolute bottom-0 left-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl translate-y-1/3"></div>
+              
+              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
+                <div className="text-white flex-1 text-center md:text-left">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-2 md:mb-3 drop-shadow-md">{bannerConfig.greeting}, {displayUserName}! {bannerConfig.icon}</h2>
+                  <p className="text-white/80 text-[14px] md:text-[16px] lg:text-lg font-medium leading-relaxed max-w-xl">{bannerConfig.subtitle}</p>
+                </div>
 
-                    {inProgressTest ? (
-                       <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 md:p-6 rounded-3xl w-full md:w-80 shadow-lg text-white group cursor-pointer hover:bg-white/20 transition-all" onClick={() => handleStartTestClick(inProgressTest)}>
-                          <div className="flex items-center gap-2 mb-3">
-                             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                             <span className="text-[11px] font-black uppercase tracking-widest text-amber-300">Đang làm dở</span>
-                          </div>
-                          <h3 className="font-bold text-base md:text-lg mb-4 line-clamp-2 leading-tight">{inProgressTest.title}</h3>
-                          <button className="w-full bg-white text-slate-800 font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">TIẾP TỤC NGAY →</button>
-                       </div>
-                    ) : courses.length > 0 && (
-                      <div 
-                        className="bg-white/10 backdrop-blur-md border border-white/20 p-5 md:p-6 rounded-3xl w-full md:w-80 shadow-lg text-white group cursor-pointer hover:bg-white/20 transition-all" 
-                        onClick={() => onOpenLecture && onOpenLecture(courses[0].id)}
-                      >
-                        <div className="flex items-center gap-2 mb-3">
-                           <span className="text-[11px] font-black uppercase tracking-widest text-white/70">Gợi ý học tập</span>
-                        </div>
-                        <h3 className="font-bold text-base md:text-lg mb-4 line-clamp-2 leading-tight">Khóa học {courses[0].title}</h3>
-                        <button className="w-full bg-white text-slate-800 font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">
-                           VÀO HỌC NGAY →
-                        </button>
+                {inProgressTest ? (
+                   <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 md:p-6 rounded-3xl w-full md:w-80 shadow-lg text-white group cursor-pointer hover:bg-white/20 transition-all" onClick={() => handleStartTestClick(inProgressTest)}>
+                      <div className="flex items-center gap-2 mb-3">
+                         <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                         <span className="text-[11px] font-black uppercase tracking-widest text-amber-300">Đang làm dở</span>
                       </div>
-                    )}
-                  </div>
-                </div>
-
-                <div className="mb-6 flex items-center justify-between px-2">
-                  <h2 className="font-black text-xl md:text-2xl text-slate-800">Khóa học của tôi</h2>
-                </div>
-
-                {courses.length === 0 ? (
-                  <div className="bg-white border-2 border-dashed border-slate-200 rounded-[2rem] py-24 text-center shadow-sm mx-2">
-                    <span className="text-5xl block mb-4 opacity-50">🔒</span>
-                    <h3 className="font-bold text-slate-700 text-lg mb-2">Chưa có khóa học nào</h3>
-                    <p className="text-slate-500 text-sm">Vui lòng liên hệ TonyEnglish để được cấp quyền truy cập nhé!</p>
-                  </div>
-                ) : (
-                  <div className="flex flex-col gap-6">
-                    {courses.map(course => {
-                      const cover = getCourseCover(course);
-                      const courseFolderIds = allFolders.filter(f => f.course_id === course.id).map(f => f.id);
-                      const testCount = allTests.filter(t => courseFolderIds.includes(t.folder_id)).length;
-                      const lectureCount = allLectures.filter(l => l.course_id === course.id).length;
-                      
-                      const completedLecs = lectureProgressData.filter(lp => lp.is_completed && allLectures.find(l => l.id === lp.lecture_id && l.course_id === course.id)).length;
-                      const lecProgress = lectureCount > 0 ? Math.min(100, Math.round((completedLecs / lectureCount) * 100)) : 0;
-                      
-                      const uniqueCompletedTests = new Set(historyData.filter(h => h.courseId === course.id).map(h => h.testId)).size;
-                      const testProgress = testCount > 0 ? Math.min(100, Math.round((uniqueCompletedTests / testCount) * 100)) : 0;
-
-                      return (
-                        <div key={course.id} className="bg-white rounded-[1.5rem] md:rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col md:flex-row group relative mx-2 md:mx-0">
-                          <div className="w-full md:w-[280px] lg:w-[350px] h-[160px] md:min-h-[180px] relative overflow-hidden shrink-0 bg-slate-100">
-                             <img src={cover.image} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                             <div className={`absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg text-[10px] md:text-[11px] font-black uppercase tracking-widest ${cover.color} shadow-sm`}>
-                                {cover.badge}
-                             </div>
-                          </div>
-                          
-                          <div className="flex-1 p-5 md:p-6 lg:p-8 flex flex-col justify-center border-b md:border-b-0 md:border-r border-slate-100">
-                            <h4 className="font-black text-lg md:text-xl text-slate-800 mb-3 leading-snug">{course.title}</h4>
-                            <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-6">
-                              <span className="bg-slate-50 text-slate-600 text-[11px] md:text-[12px] font-bold px-3 py-1.5 rounded-lg border border-slate-100">📚 {lectureCount} bài giảng</span>
-                              <span className="bg-slate-50 text-slate-600 text-[11px] md:text-[12px] font-bold px-3 py-1.5 rounded-lg border border-slate-100">📝 {testCount} đề & bài tập</span>
-                            </div>
-                            
-                            <div className="w-full mt-auto flex flex-col sm:flex-row gap-4 sm:gap-6">
-                              <div className="flex-1">
-                                <div className="flex justify-between items-end mb-1.5">
-                                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ bài giảng</span>
-                                  <span className="text-[12px] font-black text-emerald-600">{lecProgress}%</span>
-                                </div>
-                                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                                  <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${lecProgress}%` }}></div>
-                                </div>
-                              </div>
-                              <div className="flex-1">
-                                <div className="flex justify-between items-end mb-1.5">
-                                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ làm bài</span>
-                                  <span className="text-[12px] font-black text-blue-600">{testProgress}%</span>
-                                </div>
-                                <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                                  <div className="h-full bg-blue-500 rounded-full transition-all duration-1000" style={{ width: `${testProgress}%` }}></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="w-full md:w-[240px] lg:w-[280px] p-5 md:p-6 flex flex-col justify-center gap-3 bg-slate-50/50 shrink-0">
-                             <button onClick={() => onOpenLecture && onOpenLecture(course.id)} className="w-full bg-white hover:bg-emerald-50 border-2 border-emerald-100 hover:border-emerald-500 text-emerald-600 font-black text-[12px] md:text-[13px] py-3 md:py-3.5 rounded-xl transition-colors shadow-sm flex items-center justify-center gap-2">
-                               <span className="text-lg">📖</span> VÀO BÀI GIẢNG
-                             </button>
-                             <button onClick={() => handleOpenCourse(course)} className="w-full bg-gradient-to-r from-[#0a5482] to-[#1e88e5] hover:from-[#1565c0] hover:to-[#0a5482] text-white font-black text-[12px] md:text-[13px] py-3 md:py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
-                               <span className="text-lg">📝</span> KHO ĐỀ & BÀI TẬP
-                             </button>
-                          </div>
-                        </div>
-                      )
-                    })}
+                      <h3 className="font-bold text-base md:text-lg mb-4 line-clamp-2 leading-tight">{inProgressTest.title}</h3>
+                      <button className="w-full bg-white text-slate-800 font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">TIẾP TỤC NGAY →</button>
+                   </div>
+                ) : courses.length > 0 && (
+                  <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 md:p-6 rounded-3xl w-full md:w-80 shadow-lg text-white group cursor-pointer hover:bg-white/20 transition-all" onClick={() => onOpenLecture && onOpenLecture(courses[0].id)}>
+                    <div className="flex items-center gap-2 mb-3">
+                       <span className="text-[11px] font-black uppercase tracking-widest text-white/70">Gợi ý học tập</span>
+                    </div>
+                    <h3 className="font-bold text-base md:text-lg mb-4 line-clamp-2 leading-tight">Khóa học {courses[0].title}</h3>
+                    <button className="w-full bg-white text-slate-800 font-black py-2.5 rounded-xl text-sm group-hover:shadow-md transition-all">VÀO HỌC NGAY →</button>
                   </div>
                 )}
               </div>
-            )}
+            </div>
 
-            {activeView === 'course' && selectedCourse && (
-              <div className="animate-in fade-in slide-in-from-right-4 duration-300">
-                <div className="flex flex-wrap items-center gap-2 text-[13px] md:text-[14px] font-bold text-slate-500 mb-6 bg-white p-3 md:p-4 rounded-xl md:rounded-2xl border border-slate-100 shadow-sm mx-2 md:mx-0">
-                   <button onClick={() => { setActiveView('dashboard'); setSelectedCourse(null); }} className="hover:text-[#1e88e5] transition-colors">Khóa học</button>
-                   <span className="text-slate-300">/</span>
-                   <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); }} className={`hover:text-[#1e88e5] transition-colors ${!currentFolderId ? 'text-[#1e88e5]' : ''}`}>{selectedCourse.title}</button>
-                   {breadcrumbs.map((b, i) => (
-                     <React.Fragment key={b.id}>
-                       <span className="text-slate-300">/</span>
-                       <button onClick={() => handleFolderClick(b.id)} className={`hover:text-[#1e88e5] transition-colors ${i === breadcrumbs.length - 1 ? 'text-[#1e88e5]' : ''}`}>{b.title}</button>
-                     </React.Fragment>
-                   ))}
-                </div>
+            <h2 className="font-black text-2xl text-slate-800 mb-6 px-2">Khóa học của tôi</h2>
+            {isLoading ? (
+              <div className="flex flex-col gap-6">
+                  {[1,2].map(i => (
+                   <div key={i} className="bg-white rounded-3xl h-[180px] w-full border border-slate-100 flex p-6 animate-pulse">
+                      <div className="w-[300px] h-full bg-slate-200 rounded-2xl"></div>
+                      <div className="flex-1 px-8 py-2 flex flex-col justify-between"><div className="h-6 w-1/2 bg-slate-200 rounded-md"></div><div className="h-4 w-1/3 bg-slate-200 rounded-md mt-4"></div><div className="mt-auto h-2 w-full bg-slate-200 rounded-full"></div></div>
+                   </div>
+                  ))}
+              </div>
+            ) : courses.length === 0 ? (
+              <div className="bg-white border border-slate-200 rounded-[2rem] py-24 text-center shadow-sm mx-2">
+                <span className="text-5xl block mb-4 opacity-50">🔒</span>
+                <h3 className="font-bold text-slate-700 text-lg mb-2">Chưa có khóa học nào</h3>
+                <p className="text-slate-500 text-sm">Vui lòng liên hệ TonyEnglish để được cấp quyền truy cập nhé!</p>
+              </div>
+            ) : (
+              <div className="flex flex-col gap-6">
+                {courses.map(course => {
+                  const cover = getCourseCover(course);
+                  const courseFolderIds = allFolders.filter(f => f.course_id === course.id).map(f => f.id);
+                  const testCount = allTests.filter(t => courseFolderIds.includes(t.folder_id)).length;
+                  const lectureCount = allLectures.filter(l => l.course_id === course.id).length;
+                  const completedLecs = lectureProgressData.filter(lp => lp.is_completed && allLectures.find(l => l.id === lp.lecture_id && l.course_id === course.id)).length;
+                  const lecProgress = lectureCount > 0 ? Math.min(100, Math.round((completedLecs / lectureCount) * 100)) : 0;
+                  const uniqueCompletedTests = new Set(historyData.filter(h => h.courseId === course.id && h.testId).map(h => h.testId)).size;
+                  const testProgress = testCount > 0 ? Math.min(100, Math.round((uniqueCompletedTests / testCount) * 100)) : 0;
 
-                <div className="space-y-6 md:space-y-8 px-2 md:px-0">
-                  {currentSubFolders.length > 0 && (
-                    <div>
-                      <h3 className="font-black text-lg md:text-xl text-slate-800 mb-4 ml-1">Danh mục</h3>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
-                        {paginatedFolders.map((subFolder, idx) => {
-                          const childCount = folders.filter(f => f.parent_id === subFolder.id).length;
-                          const testCount = allTests.filter(t => t.folder_id === subFolder.id).length;
-                          
-                          const defaultImage = FOLDER_IMAGES[idx % FOLDER_IMAGES.length];
-                          const displayImage = subFolder.thumbnail_url || defaultImage;
-
-                          return (
-                            <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-2xl md:rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer flex flex-col h-[160px] md:h-[180px] relative group">
-                              <div className={`h-[100px] md:h-[110px] relative p-4 md:p-5 overflow-hidden flex items-end`}>
-                                <img src={displayImage} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="folder" />
-                                <div className={`absolute inset-0 bg-gradient-to-t from-black/80 to-black/10`}></div>
-                                <h3 className={`relative z-10 text-[16px] md:text-[18px] font-black leading-tight line-clamp-2 w-full text-white drop-shadow-md`}>
-                                   {subFolder.title}
-                                </h3>
-                              </div>
-                              <div className="flex-1 bg-white p-4 md:p-5 flex flex-col justify-center relative">
-                                <div className="flex justify-between items-center text-slate-500">
-                                  <p className="text-[11px] md:text-[12px] font-bold bg-slate-50 px-3 py-1 rounded-lg border border-slate-100">{childCount > 0 ? `${childCount} mục con` : `${testCount} đề thi`}</p>
-                                  <span className="text-[#1e88e5] font-black group-hover:translate-x-1 transition-transform bg-blue-50 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center">→</span>
-                                </div>
-                              </div>
-                            </div>
-                          );
-                        })}
+                  return (
+                    <div key={course.id} className="bg-white rounded-[2rem] border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col md:flex-row group mx-2 md:mx-0">
+                      <div className="w-full md:w-[320px] h-[180px] shrink-0 bg-slate-100 p-2">
+                         <div className="w-full h-full rounded-2xl overflow-hidden relative shadow-sm">
+                           <img src={cover.image} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+                           <div className={`absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest ${cover.color} shadow-sm`}>{cover.badge}</div>
+                         </div>
                       </div>
-                      {renderPagination(folderPage, totalFolderPages, setFolderPage)}
-                    </div>
-                  )}
-
-                  {currentTests.length > 0 && (
-                    <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm mt-6 md:mt-8 animate-in fade-in zoom-in-95">
-                      <div className="bg-white px-4 md:px-6 py-4 md:py-5 border-b border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-3 md:gap-4">
-                        <div className="relative w-full sm:w-96">
-                          <input type="text" placeholder="Tìm kiếm đề thi / bài tập..." value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-10 pr-4 py-2.5 md:py-3 rounded-xl md:rounded-2xl bg-slate-50 border-none font-medium text-[13px] md:text-[14px] outline-none focus:ring-2 focus:ring-[#1e88e5] transition-shadow" />
-                          <span className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 text-slate-400 text-base md:text-lg">🔍</span>
+                      <div className="flex-1 p-6 lg:p-8 flex flex-col justify-center border-r border-slate-100">
+                        <h4 className="font-black text-xl text-slate-800 mb-3">{course.title}</h4>
+                        <div className="flex items-center gap-4 mb-6 text-[13px] font-bold text-slate-500">
+                          <span className="flex items-center gap-1.5"><span className="text-emerald-500 text-lg">📚</span> {lectureCount} Bài giảng</span>
+                          <span className="flex items-center gap-1.5"><span className="text-blue-500 text-lg">📝</span> {testCount} Đề & Bài tập</span>
                         </div>
-                        <div className="w-full sm:w-48 bg-slate-50 rounded-xl md:rounded-2xl px-3 md:px-4 py-1 border-none focus-within:ring-2 focus-within:ring-[#1e88e5] transition-shadow">
-                          <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="w-full py-2 bg-transparent outline-none text-[12px] md:text-[13px] font-bold text-slate-600 cursor-pointer appearance-none">
-                            <option value="name-asc">A-Z (Tên bài)</option><option value="name-desc">Z-A (Tên bài)</option>
-                            <option value="date-desc">Mới nhất trước</option><option value="date-asc">Cũ nhất trước</option>
-                          </select>
+                        <div className="w-full mt-auto flex gap-6">
+                          <div className="flex-1"><div className="flex justify-between mb-2"><span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Tiến độ bài giảng</span><span className="text-[12px] font-black text-emerald-600">{lecProgress}%</span></div><div className="w-full h-2 bg-slate-100 rounded-full"><div className="h-full bg-emerald-500 rounded-full" style={{ width: `${lecProgress}%` }}></div></div></div>
+                          <div className="flex-1"><div className="flex justify-between mb-2"><span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Tiến độ làm bài</span><span className="text-[12px] font-black text-blue-600">{testProgress}%</span></div><div className="w-full h-2 bg-slate-100 rounded-full"><div className="h-full bg-blue-500 rounded-full" style={{ width: `${testProgress}%` }}></div></div></div>
                         </div>
                       </div>
-
-                      <div className="p-4 md:p-6 lg:p-8 bg-slate-50/50">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-                          {paginatedTests.map(test => {
-                            const inProgress = checkInProgress(test.id);
-                            const isCompleted = historyData.some(h => 
-                                (h.testId && String(h.testId) === String(test.id)) || 
-                                (h.details?.test_id && String(h.details?.test_id) === String(test.id)) || 
-                                (h.name && test.title && h.name.trim() === test.title.trim())
-                            );
-
-                            let statusConfig = { progress: 0, badge: "Chưa làm", badgeClass: "text-slate-500 bg-slate-100", btnText: "Bắt đầu làm bài", btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white" };
-                            if (isCompleted) statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-600 bg-emerald-100", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-transparent" };
-                            else if (inProgress) statusConfig = { progress: 50, badge: "Đang làm dở", badgeClass: "text-amber-600 bg-amber-100", btnText: "Tiếp tục bài", btnClass: "bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-transparent" };
-
-                            return (
-                              <div key={test.id} onClick={() => handleStartTestClick(test)} className="bg-white border border-slate-100 p-5 md:p-6 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group relative overflow-hidden">
-                                <div className="absolute top-0 left-0 right-0 h-1 bg-slate-100">
-                                   <div className={`h-full transition-all duration-500 ${isCompleted ? 'bg-emerald-500' : inProgress ? 'bg-amber-500' : 'bg-transparent'}`} style={{ width: `${statusConfig.progress}%` }}></div>
-                                </div>
-                                <div>
-                                  <div className="flex justify-between items-center mb-4 md:mb-5 mt-1 md:mt-2">
-                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-blue-50 flex items-center justify-center text-xl md:text-2xl group-hover:scale-110 transition-transform shadow-sm">{getTestIcon(test.test_type)}</div>
-                                    <span className={`text-[9px] md:text-[10px] font-black px-2 md:px-3 py-1 md:py-1.5 rounded-md md:rounded-lg uppercase tracking-widest ${statusConfig.badgeClass}`}>{statusConfig.badge}</span>
-                                  </div>
-                                  <h3 className="font-bold text-slate-800 text-[15px] md:text-[16px] group-hover:text-[#1e88e5] transition-colors mb-2 line-clamp-2 leading-snug">{test.title}</h3>
-                                  
-                                  <div className="flex flex-wrap items-center gap-2 mb-2 md:mb-3">
-                                      <span className="text-[10px] md:text-[11px] font-bold text-slate-500 uppercase tracking-wider">{test.test_type}</span>
-                                      <span className={`text-[8px] md:text-[9px] px-1.5 py-0.5 rounded uppercase font-black ${test.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
-                                          {test.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
-                                      </span>
-                                  </div>
-
-                                </div>
-                                <button className={`mt-4 md:mt-6 w-full font-black text-[12px] md:text-[13px] py-2.5 md:py-3 rounded-xl transition-colors shadow-sm ${statusConfig.btnClass}`}>{statusConfig.btnText}</button>
-                              </div>
-                            );
-                          })}
-                        </div>
-                        {processedTests.length === 0 ? (
-                          <div className="text-center py-16 text-slate-400 font-medium">Không có bài thi nào khớp với tìm kiếm của bạn.</div>
-                        ) : (
-                          renderPagination(testPage, totalTestPages, setTestPage)
-                        )}
+                      <div className="w-full md:w-[260px] p-6 flex flex-col justify-center gap-3 bg-slate-50/50 shrink-0">
+                         <button onClick={() => onOpenLecture && onOpenLecture(course.id)} className="w-full bg-white hover:bg-emerald-50 border border-emerald-200 text-emerald-600 font-bold text-[13px] py-3.5 rounded-xl transition flex items-center justify-center gap-2">📖 VÀO BÀI GIẢNG</button>
+                         <button onClick={() => handleOpenCourse(course)} className="w-full bg-[#1e88e5] hover:bg-[#1565c0] text-white font-bold text-[13px] py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2">📝 KHO ĐỀ & BÀI TẬP</button>
                       </div>
                     </div>
-                  )}
-
-                  {currentSubFolders.length === 0 && currentTests.length === 0 && (
-                    <div className="text-center py-16 md:py-20 bg-white rounded-2xl md:rounded-3xl border border-slate-100 text-slate-400 font-medium text-base md:text-lg shadow-sm mx-2 md:mx-0">📭 Thư mục này hiện đang trống.</div>
-                  )}
-                </div>
+                  )
+                })}
               </div>
             )}
-          </>
+          </div>
         )}
 
-        {/* ================= TAB 2: PHÂN TÍCH & LỊCH SỬ ================= */}
+        {/* MÀN HÌNH BÊN TRONG KHÓA HỌC (THƯ MỤC / KHO ĐỀ) */}
+        {activeView === 'course' && selectedCourse && (
+          <div className="animate-in fade-in slide-in-from-right-4 duration-300">
+            <div className="flex flex-wrap items-center gap-2 text-[13px] md:text-[14px] font-bold text-slate-500 mb-6 bg-white p-3 md:p-4 rounded-xl md:rounded-2xl border border-slate-100 shadow-sm mx-2 md:mx-0">
+                <button onClick={() => { 
+                    setActiveView('dashboard'); 
+                    setSelectedCourseId(null); 
+                    sessionStorage.setItem('portal_active_view', 'dashboard');
+                    sessionStorage.removeItem('portal_selected_course_id');
+                    sessionStorage.removeItem('portal_current_folder_id');
+                }} className="hover:text-[#1e88e5] transition-colors">Khóa học</button>
+                <span className="text-slate-300">/</span>
+                <button onClick={() => { 
+                    setCurrentFolderId(null); 
+                    setFolderPage(1); 
+                    setTestPage(1); 
+                    sessionStorage.removeItem('portal_current_folder_id');
+                }} className={`hover:text-[#1e88e5] transition-colors ${!currentFolderId ? 'text-[#1e88e5]' : ''}`}>{selectedCourse.title}</button>
+                {breadcrumbs.map((b, i) => (
+                  <React.Fragment key={b.id}>
+                    <span className="text-slate-300">/</span>
+                    <button onClick={() => handleFolderClick(b.id)} className={`hover:text-[#1e88e5] transition-colors ${i === breadcrumbs.length - 1 ? 'text-[#1e88e5]' : ''}`}>{b.title}</button>
+                  </React.Fragment>
+                ))}
+            </div>
+
+            <div className="space-y-6 md:space-y-8 px-2 md:px-0">
+              {currentSubFolders.length > 0 && (
+                <div>
+                  <h3 className="font-black text-lg md:text-xl text-slate-800 mb-4 ml-1">Danh mục</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
+                    {paginatedFolders.map((subFolder, idx) => {
+                      const childCount = allFolders.filter(f => f.parent_id === subFolder.id).length;
+                      const testCount = allTests.filter(t => t.folder_id === subFolder.id).length;
+                      
+                      const defaultImage = FOLDER_IMAGES[idx % FOLDER_IMAGES.length];
+                      const displayImage = subFolder.thumbnail_url || defaultImage;
+
+                      return (
+                        <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-2xl md:rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer flex flex-col h-[160px] md:h-[180px] relative group">
+                          <div className={`h-[100px] md:h-[110px] relative p-4 md:p-5 overflow-hidden flex items-end`}>
+                            <img src={displayImage} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="folder" />
+                            <div className={`absolute inset-0 bg-gradient-to-t from-black/80 to-black/10`}></div>
+                            <h3 className={`relative z-10 text-[16px] md:text-[18px] font-black leading-tight line-clamp-2 w-full text-white drop-shadow-md`}>
+                               {subFolder.title}
+                            </h3>
+                          </div>
+                          <div className="flex-1 bg-white p-4 md:p-5 flex flex-col justify-center relative">
+                            <div className="flex justify-between items-center text-slate-500">
+                              <p className="text-[11px] md:text-[12px] font-bold bg-slate-50 px-3 py-1 rounded-lg border border-slate-100">{childCount > 0 ? `${childCount} mục con` : `${testCount} đề thi`}</p>
+                              <span className="text-[#1e88e5] font-black group-hover:translate-x-1 transition-transform bg-blue-50 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center">→</span>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  {renderPagination(folderPage, totalFolderPages, setFolderPage)}
+                </div>
+              )}
+
+              {currentTests.length > 0 && (
+                <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] border border-slate-100 overflow-hidden shadow-sm mt-6 md:mt-8 animate-in fade-in zoom-in-95">
+                  <div className="bg-white px-4 md:px-6 py-4 md:py-5 border-b border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-3 md:gap-4">
+                    <div className="relative w-full sm:w-96">
+                      <input type="text" placeholder="Tìm kiếm đề thi / bài tập..." value={searchTest} onChange={(e) => {setSearchTest(e.target.value); setTestPage(1);}} className="w-full pl-10 pr-4 py-2.5 md:py-3 rounded-xl md:rounded-2xl bg-slate-50 border-none font-medium text-[13px] md:text-[14px] outline-none focus:ring-2 focus:ring-[#1e88e5] transition-shadow" />
+                      <span className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 text-slate-400 text-base md:text-lg">🔍</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                       <select value={filterType} onChange={(e) => setFilterType(e.target.value)} className="w-full sm:w-auto bg-slate-50 border border-slate-100 rounded-xl md:rounded-2xl px-4 py-2.5 font-bold text-[12px] md:text-[13px] text-slate-600 outline-none cursor-pointer focus:ring-2 focus:ring-[#1e88e5]">
+                          <option value="all">Tất cả thể loại</option>
+                          <option value="test">Chỉ xem Đề thi</option>
+                          <option value="exercise">Chỉ xem Bài tập</option>
+                       </select>
+                       <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="w-full sm:w-auto bg-slate-50 border border-slate-100 rounded-xl md:rounded-2xl px-4 py-2.5 font-bold text-[12px] md:text-[13px] text-slate-600 outline-none cursor-pointer focus:ring-2 focus:ring-[#1e88e5]">
+                         <option value="name-asc">A-Z (Tên bài)</option><option value="name-desc">Z-A (Tên bài)</option>
+                         <option value="date-desc">Mới nhất trước</option><option value="date-asc">Cũ nhất trước</option>
+                       </select>
+                    </div>
+                  </div>
+
+                  <div className="p-4 md:p-6 lg:p-8 bg-slate-50/50">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+                      {paginatedTests.map(test => {
+                        const inProgress = checkInProgress(test.id);
+                        const isCompleted = historyData.some(h => String(h.testId) === String(test.id) || String(h.details?.test_id) === String(test.id));
+
+                        let statusConfig = { progress: 0, badge: "Chưa làm", badgeClass: "text-slate-500 bg-slate-100", btnText: "Bắt đầu làm bài", btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white" };
+                        if (isCompleted) statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-600 bg-emerald-100", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-transparent" };
+                        else if (inProgress) statusConfig = { progress: 50, badge: "Đang làm dở", badgeClass: "text-amber-600 bg-amber-100", btnText: "Tiếp tục bài", btnClass: "bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-transparent" };
+
+                        return (
+                          <div key={test.id} onClick={() => handleStartTestClick(test)} className="bg-white border border-slate-100 p-5 md:p-6 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer flex flex-col justify-between group relative overflow-hidden">
+                            <div className="absolute top-0 left-0 right-0 h-1 bg-slate-100">
+                               <div className={`h-full transition-all duration-500 ${isCompleted ? 'bg-emerald-500' : inProgress ? 'bg-amber-500' : 'bg-transparent'}`} style={{ width: `${statusConfig.progress}%` }}></div>
+                            </div>
+                            <div>
+                              <div className="flex justify-between items-center mb-4 md:mb-5 mt-1 md:mt-2">
+                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-blue-50 flex items-center justify-center text-xl md:text-2xl group-hover:scale-110 transition-transform shadow-sm">
+                                    {getTestIcon(test)}
+                                </div>
+                                <span className={`text-[9px] md:text-[10px] font-black px-2 md:px-3 py-1 md:py-1.5 rounded-md md:rounded-lg uppercase tracking-widest ${statusConfig.badgeClass}`}>{statusConfig.badge}</span>
+                              </div>
+                              <h3 className="font-bold text-slate-800 text-[15px] md:text-[16px] group-hover:text-[#1e88e5] transition-colors mb-2 line-clamp-2 leading-snug">{test.title}</h3>
+                              <div className="flex flex-wrap items-center gap-2 mb-2 md:mb-3">
+                                  <span className={`text-[8px] md:text-[9px] px-1.5 py-0.5 rounded uppercase font-black tracking-wider ${test.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                      {test.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
+                                  </span>
+                              </div>
+                            </div>
+                            <button className={`mt-4 md:mt-6 w-full font-black text-[12px] md:text-[13px] py-2.5 md:py-3 rounded-xl transition-colors shadow-sm ${statusConfig.btnClass}`}>{statusConfig.btnText}</button>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {processedTests.length === 0 ? (
+                      <div className="text-center py-16 text-slate-400 font-medium">Không có bài thi nào khớp với tìm kiếm của bạn.</div>
+                    ) : (
+                      renderPagination(testPage, totalTestPages, setTestPage)
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {currentSubFolders.length === 0 && currentTests.length === 0 && (
+                <div className="text-center py-16 md:py-20 bg-white rounded-2xl md:rounded-3xl border border-slate-100 text-slate-400 font-medium text-base md:text-lg shadow-sm mx-2 md:mx-0">📭 Thư mục này hiện đang trống.</div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* ================= TAB 2: MINI GAMES HUB ================= */}
+        {activeTab === 'games' && (
+           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+               <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] border border-slate-100 p-8 md:p-12 mb-8 shadow-sm">
+                   <div className="text-center max-w-2xl mx-auto">
+                       <span className="text-6xl mb-6 block">🎮</span>
+                       <h2 className="text-2xl md:text-3xl font-black text-slate-800 mb-4">Góc Giải Trí & Luyện Tập Phản Xạ</h2>
+                       <p className="text-slate-500 font-medium text-[15px] md:text-[16px] leading-relaxed">
+                           Đổi gió với các trò chơi nhỏ được thiết kế lồng ghép kiến thức. Trả lời trắc nghiệm thật nhanh để qua ải hoặc phá án nhé!
+                       </p>
+                   </div>
+               </div>
+
+               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                   {allTests.filter(t => t.content_json?.basicInfo?.category === 'game').map(game => (
+                      <div key={game.id} onClick={() => handleStartTestClick(game)} className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all cursor-pointer group">
+                          <div className="w-16 h-16 rounded-2xl bg-amber-50 flex items-center justify-center text-3xl mb-6 shadow-sm border border-amber-100 group-hover:scale-110 transition-transform">🕹️</div>
+                          <h3 className="font-black text-xl text-slate-800 mb-2 group-hover:text-amber-600 transition-colors">{game.title}</h3>
+                          <p className="text-slate-500 text-[14px] font-medium leading-relaxed mb-8">Tham gia thử thách ngôn ngữ, rèn luyện tốc độ phản xạ ngay!</p>
+                          <button className="w-full bg-amber-50 text-amber-600 font-bold py-3 rounded-xl group-hover:bg-amber-500 group-hover:text-white transition-colors shadow-sm">CHƠI NGAY →</button>
+                      </div>
+                   ))}
+
+                   <div onClick={() => onStartTest && onStartTest('siege-game', null)} className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all cursor-pointer group">
+                       <div className="w-16 h-16 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-3xl mb-6 shadow-sm border border-rose-100 group-hover:scale-110 transition-transform">🏰</div>
+                       <h3 className="font-black text-xl text-slate-800 mb-2 group-hover:text-rose-600 transition-colors">Grammar Siege</h3>
+                       <p className="text-slate-500 text-[14px] font-medium leading-relaxed mb-8">Bảo vệ tòa thành của bạn trước đội quân xâm lăng bằng cách trả lời đúng các câu hỏi ngữ pháp nhanh nhất có thể!</p>
+                       <button className="w-full bg-rose-50 text-rose-600 font-bold py-3 rounded-xl group-hover:bg-rose-500 group-hover:text-white transition-colors">CHƠI NGAY →</button>
+                   </div>
+               </div>
+           </div>
+        )}
+
+        {/* ================= TAB 3: BÁO CÁO (PHÂN TÍCH & LỊCH SỬ) ================= */}
         {activeTab === 'analytics' && (
           <div className="space-y-6 md:space-y-8 animate-in fade-in duration-300">
             
@@ -726,7 +692,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
             ) : (
               <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mx-2 md:mx-0">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mx-2 md:mx-0">
                   <div className="bg-[#f8fafc] rounded-[1.5rem] md:rounded-[2rem] border border-slate-100 shadow-sm p-5 md:p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div className="flex justify-between items-center mb-3 md:mb-4">
                       <div className="flex items-center gap-2"><span className="text-blue-500 text-lg md:text-xl">📊</span><span className="font-bold text-slate-700 text-[13px] md:text-[14px]">Điểm trung bình</span></div>
@@ -756,11 +722,18 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                   <div className="bg-[#fff7ed] rounded-[1.5rem] md:rounded-[2rem] border border-orange-50 shadow-sm p-5 md:p-6 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div className="flex justify-between items-center mb-3 md:mb-4">
-                      <div className="flex items-center gap-2"><span className="text-orange-500 text-lg md:text-xl">⏱️</span><span className="font-bold text-slate-700 text-[13px] md:text-[14px]">Thời gian học</span></div>
+                      <div className="flex items-center gap-2"><span className="text-orange-500 text-lg md:text-xl">⏱️</span><span className="font-bold text-slate-700 text-[13px] md:text-[14px]">Giờ làm test</span></div>
                       <span className="font-black text-orange-500 text-xl md:text-2xl">{analyticsTotalTimeHours}h</span>
                     </div>
                     <div className="h-12 md:h-16 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineTimeArr}><Line type="monotone" dataKey="v" stroke="#f97316" strokeWidth={3} dot={{r: 4, fill: '#f97316', strokeWidth: 2, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
                     <p className="text-[11px] md:text-[12px] text-slate-500 font-medium mt-3 md:mt-4 leading-relaxed">Giờ bay tích lũy càng cao, kỹ năng giải đề của bạn sẽ càng phản xạ nhanh hơn.</p>
+                  </div>
+
+                  <div className="bg-indigo-50/50 rounded-[1.5rem] md:rounded-[2rem] border border-indigo-100 shadow-sm p-5 md:p-6 flex flex-col justify-center text-center">
+                    <span className="text-indigo-400 text-3xl md:text-4xl mb-2">🎓</span>
+                    <h4 className="font-bold text-slate-600 text-[12px] md:text-[13px] uppercase tracking-widest mb-1">IELTS Average</h4>
+                    <span className="font-black text-indigo-600 text-3xl md:text-4xl">{avgIelts}</span>
+                    <p className="text-[10px] md:text-[11px] text-slate-400 mt-2 font-medium">(4 bài gần nhất)</p>
                   </div>
                 </div>
 
@@ -787,16 +760,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               <div className="font-bold text-[14px] md:text-[15px] text-slate-800 mb-1.5 flex flex-wrap items-center gap-2">
                                  {history.name}
                                  {(() => {
-                                    const foundTest = tests.find(t => String(t.id) === String(history.testId)) || tests.find(t => t.title.trim() === history.name.trim());
+                                    const foundTest = allTests.find(t => String(t.id) === String(history.testId));
                                     const isEx = foundTest?.content_json?.basicInfo?.category === 'exercise';
                                     return (
-                                        <span className={`text-[8px] md:text-[9px] px-1.5 py-0.5 rounded uppercase font-black ${isEx ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
-                                            {isEx ? 'BÀI TẬP' : 'ĐỀ THI'}
-                                        </span>
+                                         <span className={`text-[8px] md:text-[9px] px-1.5 py-0.5 rounded uppercase font-black ${isEx ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                             {isEx ? 'BÀI TẬP' : 'ĐỀ THI'}
+                                         </span>
                                     );
                                  })()}
                               </div>
-                              <span className="text-[9px] md:text-[10px] font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md uppercase tracking-wider">{history.subject}</span>
                             </td>
                             <td className="px-6 md:px-8 py-5 md:py-6 text-center">
                               <div className="font-bold text-[13px] md:text-[14px] text-slate-700">{formatDate(history.date).split(' ')[0]}</div>
@@ -824,7 +796,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         )}
 
-        {/* TAB 3: TÀI KHOẢN */}
         {activeTab === 'profile' && (
           <div className="max-w-2xl mx-auto mt-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
             <div className="bg-white p-6 md:p-10 rounded-[1.5rem] md:rounded-[2rem] border border-slate-100 shadow-xl text-center mx-2 md:mx-0">
