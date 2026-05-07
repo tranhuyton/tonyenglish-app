@@ -52,12 +52,27 @@ export default function App() {
   }, [currentView]);
 
   useEffect(() => {
-    // 🚀 HÀM KHỞI ĐỘNG ĐỒNG HỒ ĐẾM GIỜ HỌC
+    // 🚀 HÀM KHỞI ĐỘNG ĐỒNG HỒ ĐẾM GIỜ HỌC (CÓ ĐỒNG BỘ SUPABASE)
     const startGlobalTimer = () => {
       if (!timerRef.current) {
         timerRef.current = setInterval(() => {
           const currentSecs = parseInt(localStorage.getItem('tony_global_time') || '0');
-          localStorage.setItem('tony_global_time', (currentSecs + 1).toString());
+          const newSecs = currentSecs + 1;
+          localStorage.setItem('tony_global_time', newSecs.toString());
+
+          // 🚀 Đồng bộ ngầm lên Supabase mỗi 5 phút (300 giây) để không làm lag Server
+          if (newSecs > 0 && newSecs % 300 === 0) {
+            supabase.auth.getUser().then(({ data: { user } }) => {
+              if (user) {
+                supabase.from('profiles')
+                  .update({ study_time_seconds: newSecs })
+                  .eq('id', user.id)
+                  .then(({ error }) => {
+                    if (error) console.error("Lỗi đồng bộ thời gian học:", error);
+                  });
+              }
+            });
+          }
         }, 1000);
       }
     };
@@ -111,7 +126,19 @@ export default function App() {
     setReturnView(currentView);
     sessionStorage.setItem('lms_return_view', currentView);
 
-    handleNavigate(type);
+    // 🚀 BỘ LỌC ĐỊNH TUYẾN THÔNG MINH (CHỐNG LỖI MÀN HÌNH TRẮNG)
+    let targetView = type.toLowerCase();
+    
+    // Nếu trong tên có chữ "standard" -> ép về "standard"
+    if (targetView.includes('standard')) {
+      targetView = 'standard';
+    } 
+    // Nếu trong tên có chữ "case-study" hoặc "business" -> ép về "case-study"
+    else if (targetView.includes('case-study') || targetView.includes('business')) {
+      targetView = 'case-study';
+    }
+
+    handleNavigate(targetView);
     sessionStorage.setItem('lms_current_test', JSON.stringify(data));
   };
 
