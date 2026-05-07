@@ -11,7 +11,10 @@ import IeltsWriting from './IeltsWriting';
 import IeltsSpeaking from './IeltsSpeaking';
 import SplitScreenTest from './SplitScreenTest';
 import LectureViewer from './LectureViewer'; 
-import SiegeGame from './SiegeGame'; // 🚀 KHAI BÁO THÊM MINI-GAME VÀO HỆ THỐNG
+import SiegeGame from './SiegeGame'; 
+// 🚀 IMPORT 2 GAME MỚI VÀO HỆ THỐNG
+import NinjaSurvival from './NinjaSurvival';
+import VocabRacing from './VocabRacing';
 
 export default function App() {
   const getInitialView = () => {
@@ -218,9 +221,17 @@ export default function App() {
         />
       )}
 
-      {/* 🚀 LUỒNG RẼ NHÁNH CHO MINI-GAME CÔNG THÀNH CHIẾN */}
+      {/* 🚀 LUỒNG RẼ NHÁNH CHO CÁC MINI-GAMES */}
       {currentView === 'siege-game' && (
-        <SiegeGame onBack={handleReturnFromTest} />
+        <SiegeGame onBack={handleReturnFromTest} testData={currentTestData} />
+      )}
+
+      {currentView === 'ninja-survival' && (
+        <NinjaSurvival onBack={handleReturnFromTest} testData={currentTestData} />
+      )}
+
+      {currentView === 'vocab-racing' && (
+        <VocabRacing onBack={handleReturnFromTest} testData={currentTestData} />
       )}
 
       {/* MÀN HÌNH BÀI GIẢNG (LECTURE) */}

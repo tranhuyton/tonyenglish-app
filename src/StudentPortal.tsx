@@ -20,9 +20,10 @@ const formatDate = (isoString: string) => {
   return `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth() + 1).toString().padStart(2, '0')}/${d.getFullYear()} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
 };
 
+// 🚀 FIXED: Bổ sung ielts_paper_endtime để đảm bảo trạng thái "Đang làm dở" chuẩn xác 100%
 const checkInProgress = (testId: string) => {
   try {
-      const compEndTime = localStorage.getItem(`ielts_endtime_${testId}`) || localStorage.getItem(`standard_endtime_${testId}`) || localStorage.getItem(`case_study_endtime_${testId}`);
+      const compEndTime = localStorage.getItem(`ielts_endtime_${testId}`) || localStorage.getItem(`standard_endtime_${testId}`) || localStorage.getItem(`case_study_endtime_${testId}`) || localStorage.getItem(`ielts_paper_endtime_${testId}`);
       if (compEndTime && parseInt(compEndTime) > Date.now()) return true;
       const keys = [`ielts_ans_${testId}`, `ielts_paper_ans_${testId}`, `std_ans_${testId}`, `case_study_ans_${testId}`];
       for (const key of keys) {
@@ -230,7 +231,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       setTestToStart(test); 
       setShowModeSelection(true); 
     }
-    else if (test.content_json?.basicInfo?.category === 'game') onStartTest('siege-game', test);
+    // 🚀 FIXED: Rẽ nhánh linh hoạt theo Giao diện (Theme) đã chọn trong TestEditorModal
+    else if (test.content_json?.basicInfo?.category === 'game') {
+      const theme = test.content_json?.basicInfo?.gameTheme || 'siege-game';
+      onStartTest(theme, test);
+    }
     else onStartTest('standard', test);
   };
 
@@ -429,12 +434,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             <h2 className="font-black text-2xl text-slate-800 mb-6 px-2">Khóa học của tôi</h2>
             {isLoading ? (
               <div className="flex flex-col gap-6">
-                  {[1,2].map(i => (
+                 {[1,2].map(i => (
                    <div key={i} className="bg-white rounded-3xl h-[180px] w-full border border-slate-100 flex p-6 animate-pulse">
                       <div className="w-[300px] h-full bg-slate-200 rounded-2xl"></div>
                       <div className="flex-1 px-8 py-2 flex flex-col justify-between"><div className="h-6 w-1/2 bg-slate-200 rounded-md"></div><div className="h-4 w-1/3 bg-slate-200 rounded-md mt-4"></div><div className="mt-auto h-2 w-full bg-slate-200 rounded-full"></div></div>
                    </div>
-                  ))}
+                 ))}
               </div>
             ) : courses.length === 0 ? (
               <div className="bg-white border border-slate-200 rounded-[2rem] py-24 text-center shadow-sm mx-2">
@@ -484,7 +489,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             )}
           </div>
         )}
-
         {/* MÀN HÌNH BÊN TRONG KHÓA HỌC (THƯ MỤC / KHO ĐỀ) */}
         {activeView === 'course' && selectedCourse && (
           <div className="animate-in fade-in slide-in-from-right-4 duration-300">
@@ -492,6 +496,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 <button onClick={() => { 
                     setActiveView('dashboard'); 
                     setSelectedCourseId(null); 
+                    // 🚀 Xóa trí nhớ khi bấm ra ngoài sảnh
                     sessionStorage.setItem('portal_active_view', 'dashboard');
                     sessionStorage.removeItem('portal_selected_course_id');
                     sessionStorage.removeItem('portal_current_folder_id');
@@ -501,6 +506,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     setCurrentFolderId(null); 
                     setFolderPage(1); 
                     setTestPage(1); 
+                    // 🚀 Xóa trí nhớ thư mục con để về thư mục gốc của khóa
                     sessionStorage.removeItem('portal_current_folder_id');
                 }} className={`hover:text-[#1e88e5] transition-colors ${!currentFolderId ? 'text-[#1e88e5]' : ''}`}>{selectedCourse.title}</button>
                 {breadcrumbs.map((b, i) => (
@@ -574,12 +580,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                         let statusConfig = { progress: 0, badge: "Chưa làm", badgeClass: "text-slate-500 bg-slate-100", btnText: "Bắt đầu làm bài", btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white" };
 
-// 🚀 FIXED: Ưu tiên check trạng thái "Đang làm dở" (inProgress) TRƯỚC trạng thái lịch sử "Hoàn thành"
-if (inProgress) {
-  statusConfig = { progress: 50, badge: "Đang làm dở", badgeClass: "text-amber-600 bg-amber-100", btnText: "Tiếp tục bài", btnClass: "bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-transparent" };
-} else if (isCompleted) {
-  statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-600 bg-emerald-100", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-transparent" };
-}
+                        // 🚀 FIXED: Ưu tiên check trạng thái "Đang làm dở" (inProgress) TRƯỚC trạng thái lịch sử "Hoàn thành"
+                        if (inProgress) {
+                          statusConfig = { progress: 50, badge: "Đang làm dở", badgeClass: "text-amber-600 bg-amber-100", btnText: "Tiếp tục bài", btnClass: "bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-transparent" };
+                        } else if (isCompleted) {
+                          statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-600 bg-emerald-100", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-transparent" };
+                        }
 
                         return (
                           <div key={test.id} onClick={() => handleStartTestClick(test)} className="bg-white border border-slate-100 p-5 md:p-6 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer flex flex-col justify-between group relative overflow-hidden">
@@ -768,9 +774,9 @@ if (inProgress) {
                                     const foundTest = allTests.find(t => String(t.id) === String(history.testId));
                                     const isEx = foundTest?.content_json?.basicInfo?.category === 'exercise';
                                     return (
-                                         <span className={`text-[8px] md:text-[9px] px-1.5 py-0.5 rounded uppercase font-black ${isEx ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
-                                             {isEx ? 'BÀI TẬP' : 'ĐỀ THI'}
-                                         </span>
+                                        <span className={`text-[8px] md:text-[9px] px-1.5 py-0.5 rounded uppercase font-black ${isEx ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                            {isEx ? 'BÀI TẬP' : 'ĐỀ THI'}
+                                        </span>
                                     );
                                  })()}
                               </div>
@@ -801,6 +807,7 @@ if (inProgress) {
           </div>
         )}
 
+        {/* TAB CẤU HÌNH TÀI KHOẢN GIỮ NGUYÊN */}
         {activeTab === 'profile' && (
           <div className="max-w-2xl mx-auto mt-8 animate-in fade-in slide-in-from-bottom-4 duration-300">
             <div className="bg-white p-6 md:p-10 rounded-[1.5rem] md:rounded-[2rem] border border-slate-100 shadow-xl text-center mx-2 md:mx-0">

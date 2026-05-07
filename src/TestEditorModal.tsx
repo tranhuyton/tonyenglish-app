@@ -109,7 +109,6 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
     
     setIsDeleting(true);
     try {
-      // Nhận diện nếu là link của Supabase thì phải xóa file thật trên Host để giải phóng dung lượng
       if (value && value.includes('supabase.co/storage/v1/object/public/test_assets/')) {
         const urlParts = value.split('/test_assets/');
         if (urlParts.length === 2) {
@@ -117,7 +116,6 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
           await supabase.storage.from('test_assets').remove([filePath]);
         }
       }
-      // Sau khi xóa file trên Host (hoặc nếu là link web ngoài), thì reset lại trường giá trị
       onUpload('');
     } catch (error) {
       console.error("Lỗi khi xóa file:", error);
@@ -220,7 +218,8 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
         courseId: testRecord.course_id || 'all', 
         folderId: testRecord.folder_id || '', 
         skill: testRecord.test_type || 'Standard-Test',
-        category: testRecord.content_json?.basicInfo?.category || 'test', // 🚀 DEFAULT CATEGORY LÀ ĐỀ THI
+        category: testRecord.content_json?.basicInfo?.category || 'test', 
+        gameTheme: testRecord.content_json?.basicInfo?.gameTheme || 'siege-game', // 🚀 DEFAULT THEME GAME
         mode: 'Đề thi',
         timeLimit: '40',
         scoreType: '1 điểm/ câu đúng',
@@ -379,7 +378,32 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions[qIdx].options[oIdx] = value; setTestData(newData);
   };
 
-  const handleSave = () => { setIsSaving(true); onSave(testData); };
+  const handleSave = () => { 
+    setIsSaving(true); 
+    
+    // 🚀 BỘ LỌC RÁC: LÀM SẠCH AUDIO ẢO TRƯỚC KHI LƯU VÀO DATABASE
+    const cleanAudio = (url: any) => {
+      if (!url) return '';
+      const trimmed = String(url).trim();
+      if (trimmed === '' || trimmed.toLowerCase() === 'null') return '';
+      return trimmed;
+    };
+
+    const cleanedData = { ...testData };
+    if (cleanedData.basicInfo.audioUrl) cleanedData.basicInfo.audioUrl = cleanAudio(cleanedData.basicInfo.audioUrl);
+    
+    cleanedData.parts?.forEach((p: any) => {
+      p.audioUrl = cleanAudio(p.audioUrl);
+      p.sections?.forEach((s: any) => {
+        s.audioUrl = cleanAudio(s.audioUrl);
+        s.questions?.forEach((q: any) => {
+          q.audioUrl = cleanAudio(q.audioUrl);
+        });
+      });
+    });
+
+    onSave(cleanedData); 
+  };
 
   return (
     <div className="fixed inset-0 bg-[#f0f2f5] z-[60] flex flex-col animate-in fade-in">
@@ -418,17 +442,30 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                     </select>
                   </div>
                   
-                  {/* 🚀 THÊM DROPDOWN PHÂN LOẠI ĐỀ THI / BÀI TẬP Ở ĐÂY */}
+                  {/* 🚀 DROPDOWN PHÂN LOẠI ĐỀ THI / BÀI TẬP / MINI GAME */}
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Phân loại (Mục đích)</label>
                     <select value={testData.basicInfo.category} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, category: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
                       <option value="test">Đề thi (Test)</option>
                       <option value="exercise">Bài tập (Exercise)</option>
+                      <option value="game">Mini Game (Trò chơi)</option>
                     </select>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 mt-2">
+                {/* 🚀 NẾU LÀ GAME THÌ HIỆN THÊM TÙY CHỌN THEME GAME */}
+                {testData.basicInfo.category === 'game' && (
+                  <div className="mt-4 border-t border-slate-100 pt-4 animate-in fade-in">
+                    <label className="text-[12px] font-bold text-amber-600 block mb-1">🎮 Giao diện (Theme) Game</label>
+                    <select value={testData.basicInfo.gameTheme || 'siege-game'} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, gameTheme: e.target.value}})} className="w-full p-3 bg-amber-50 border border-amber-200 text-amber-700 font-bold rounded-lg outline-none text-[14px] transition focus:border-amber-400">
+                      <option value="siege-game">🏰 Grammar Siege (Công thành)</option>
+                      <option value="ninja-survival" >🥷 Ninja Survival </option>
+                      <option value="vocab-racing" >🏎️ Vocab Racing </option>
+                    </select>
+                  </div>
+                )}
+
+                <div className="grid grid-cols-2 gap-4 mt-2 border-t border-slate-100 pt-4">
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Kỹ năng / Dạng đề</label>
                     <select value={testData.basicInfo.skill} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
