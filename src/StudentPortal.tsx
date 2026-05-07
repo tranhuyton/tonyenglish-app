@@ -573,8 +573,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         const isCompleted = historyData.some(h => String(h.testId) === String(test.id) || String(h.details?.test_id) === String(test.id));
 
                         let statusConfig = { progress: 0, badge: "Chưa làm", badgeClass: "text-slate-500 bg-slate-100", btnText: "Bắt đầu làm bài", btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white" };
-                        if (isCompleted) statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-600 bg-emerald-100", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-transparent" };
-                        else if (inProgress) statusConfig = { progress: 50, badge: "Đang làm dở", badgeClass: "text-amber-600 bg-amber-100", btnText: "Tiếp tục bài", btnClass: "bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-transparent" };
+
+// 🚀 FIXED: Ưu tiên check trạng thái "Đang làm dở" (inProgress) TRƯỚC trạng thái lịch sử "Hoàn thành"
+if (inProgress) {
+  statusConfig = { progress: 50, badge: "Đang làm dở", badgeClass: "text-amber-600 bg-amber-100", btnText: "Tiếp tục bài", btnClass: "bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white border-transparent" };
+} else if (isCompleted) {
+  statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-600 bg-emerald-100", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white border-transparent" };
+}
 
                         return (
                           <div key={test.id} onClick={() => handleStartTestClick(test)} className="bg-white border border-slate-100 p-5 md:p-6 rounded-2xl md:rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer flex flex-col justify-between group relative overflow-hidden">
