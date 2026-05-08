@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
-// Dữ liệu câu hỏi mẫu (Sau này mình lấy từ Supabase qua)
+// Dữ liệu dự phòng (Phòng trường hợp anh test độc lập không qua Supabase)
 const DUMMY_QUESTIONS = [
   { id: 1, text: "Từ nào sau đây đồng nghĩa với 'Renewable'?", options: ["Exhaustible", "Sustainable", "Limited", "Depleted"], correct: 1 },
   { id: 2, text: "Chọn giới từ đúng: 'She is good ___ solving problems.'", options: ["in", "on", "at", "about"], correct: 2 },
@@ -9,14 +9,51 @@ const DUMMY_QUESTIONS = [
   { id: 5, text: "Hoàn thành câu: 'If it rains, we ___ at home.'", options: ["will stay", "would stay", "stayed", "staying"], correct: 0 },
 ];
 
-export default function SiegeGame({ onBack }: { onBack?: () => void }) {
-  const [questions, setQuestions] = useState(DUMMY_QUESTIONS);
+export default function SiegeGame({ onBack, testData }: { onBack?: () => void, testData?: any }) {
+  
+  // 🚀 LỌC VÀ CHUYỂN ĐỔI DỮ LIỆU ĐỘNG TỪ SUPABASE
+  const questions = useMemo(() => {
+    if (!testData) return DUMMY_QUESTIONS; 
+    
+    let safeContent = testData?.content_json || {};
+    if (typeof safeContent === 'string') {
+      try { safeContent = JSON.parse(safeContent); } catch (e) { safeContent = {}; }
+    }
+    const parts = Array.isArray(safeContent?.parts) ? safeContent.parts : [];
+    const rawQuestions = parts.flatMap((p: any) => 
+      Array.isArray(p.sections) ? p.sections.flatMap((s: any) => Array.isArray(s.questions) ? s.questions : []) : []
+    );
+
+    if (rawQuestions.length === 0) return [];
+
+    return rawQuestions.map((q: any, idx: number) => {
+      let correctIdx = 0;
+      const correctStr = String(q.correctAnswer || '').trim().toUpperCase();
+      
+      // Thuật toán nhận diện đáp án (Chuyển A,B,C,D thành 0,1,2,3)
+      if (['A', 'B', 'C', 'D', 'E', 'F'].includes(correctStr)) {
+          correctIdx = correctStr.charCodeAt(0) - 65;
+      } else if (q.options) {
+          const foundIdx = q.options.findIndex((o: any) => String(o).trim().toUpperCase() === correctStr);
+          if (foundIdx !== -1) correctIdx = foundIdx;
+      }
+      
+      return {
+          id: q.id || idx,
+          text: q.content || 'Nội dung câu hỏi bị trống',
+          options: q.options && q.options.length > 0 ? q.options : ['A', 'B', 'C', 'D'],
+          correct: correctIdx
+      };
+    });
+  }, [testData]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   
   // Trạng thái Game
   const [hp, setHp] = useState(3); // 3 Mạng
   const [progress, setProgress] = useState(0); // 0% đến 100%
-  const [timeLeft, setTimeLeft] = useState(60); // 60 giây để phá thành
+  // Tự động tính giờ: 15s cho mỗi câu hỏi
+  const [timeLeft, setTimeLeft] = useState(questions.length > 0 && testData ? questions.length * 15 : 60); 
   const [gameStatus, setGameStatus] = useState<'playing' | 'won' | 'lost_hp' | 'lost_time'>('playing');
 
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -38,13 +75,26 @@ export default function SiegeGame({ onBack }: { onBack?: () => void }) {
     return () => clearInterval(timer);
   }, [gameStatus]);
 
+  // Bắt lỗi rỗng
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center font-sans">
+        <h1 className="text-3xl font-black text-amber-500 mb-4">🏰 GRAMMAR SIEGE</h1>
+        <p className="text-slate-400 mb-8">Trận địa này chưa được thiết lập câu hỏi!</p>
+        <button onClick={onBack} className="bg-slate-700 hover:bg-slate-600 px-6 py-2 rounded-lg font-bold transition">Quay lại</button>
+      </div>
+    );
+  }
+
+  const currentQ = questions[currentIndex];
+
   const handleAnswer = (optionIndex: number) => {
-    if (gameStatus !== 'playing' || isAnimating) return;
+    if (gameStatus !== 'playing' || isAnimating || !currentQ) return;
     
     setSelectedAnswer(optionIndex);
     setIsAnimating(true);
 
-    const isCorrect = optionIndex === questions[currentIndex].correct;
+    const isCorrect = optionIndex === currentQ.correct;
     const step = 100 / questions.length; // Trả lời đúng tiến thêm bao nhiêu %
 
     setTimeout(() => {
@@ -52,7 +102,7 @@ export default function SiegeGame({ onBack }: { onBack?: () => void }) {
         const newProgress = progress + step;
         setProgress(newProgress);
         
-        if (newProgress >= 99) { // >= 99 để bù trừ sai số dấu phẩy động
+        if (newProgress >= 99) { // >= 99 để bù trừ sai số
           setGameStatus('won');
         } else {
           setCurrentIndex(prev => prev + 1);
@@ -73,7 +123,7 @@ export default function SiegeGame({ onBack }: { onBack?: () => void }) {
     setCurrentIndex(0);
     setHp(3);
     setProgress(0);
-    setTimeLeft(60);
+    setTimeLeft(questions.length > 0 && testData ? questions.length * 15 : 60);
     setGameStatus('playing');
     setSelectedAnswer(null);
   };
@@ -111,7 +161,7 @@ export default function SiegeGame({ onBack }: { onBack?: () => void }) {
             ))}
           </div>
           <div className={`flex items-center gap-2 font-mono text-xl md:text-2xl font-black px-4 py-2 rounded-xl border-2 shadow-sm ${timeLeft <= 10 ? 'bg-red-900/50 text-red-400 border-red-500 animate-pulse' : 'bg-slate-800 text-amber-400 border-amber-600/50'}`}>
-            ⏱️ 00:{timeLeft.toString().padStart(2, '0')}
+            ⏱️ {Math.floor(timeLeft / 60).toString().padStart(2, '0')}:{(timeLeft % 60).toString().padStart(2, '0')}
           </div>
         </div>
 
@@ -138,19 +188,18 @@ export default function SiegeGame({ onBack }: { onBack?: () => void }) {
         </div>
 
         {/* KHU VỰC CÂU HỎI & TRẢ LỜI */}
-        {gameStatus === 'playing' && (
+        {gameStatus === 'playing' && currentQ && (
           <div className="animate-in fade-in zoom-in-95 duration-300">
             <div className="text-center mb-8">
               <span className="inline-block bg-slate-700 text-amber-400 font-bold px-4 py-1.5 rounded-full text-xs md:text-sm mb-4 border border-slate-600 shadow-sm uppercase tracking-wider">
                 Ải thứ {currentIndex + 1} / {questions.length}
               </span>
-              <h2 className="text-xl md:text-3xl font-black text-white leading-snug">
-                {currentQ.text}
+              <h2 className="text-xl md:text-3xl font-black text-white leading-snug" dangerouslySetInnerHTML={{ __html: currentQ.text }}>
               </h2>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-              {currentQ.options.map((opt, idx) => {
+              {currentQ.options.map((opt: string, idx: number) => {
                 let btnStateClass = "bg-slate-700 text-slate-200 border-slate-600 hover:bg-slate-600 hover:border-slate-500 shadow-md";
                 
                 if (selectedAnswer !== null) {
@@ -168,10 +217,10 @@ export default function SiegeGame({ onBack }: { onBack?: () => void }) {
                     key={idx}
                     disabled={selectedAnswer !== null}
                     onClick={() => handleAnswer(idx)}
-                    className={`w-full text-left px-5 py-4 md:px-6 md:py-5 rounded-2xl border-2 font-bold text-base md:text-lg transition-all duration-300 transform active:scale-95 ${btnStateClass}`}
+                    className={`w-full text-left px-5 py-4 md:px-6 md:py-5 rounded-2xl border-2 font-bold text-base md:text-lg transition-all duration-300 transform active:scale-95 flex gap-3 items-center ${btnStateClass}`}
                   >
-                    <span className="inline-block w-8 md:w-10 text-slate-400 font-black opacity-60">{String.fromCharCode(65+idx)}.</span>
-                    {opt}
+                    <span className="inline-block w-8 md:w-10 text-slate-400 font-black opacity-60 shrink-0">{String.fromCharCode(65+idx)}.</span>
+                    <span dangerouslySetInnerHTML={{ __html: opt }}></span>
                   </button>
                 );
               })}

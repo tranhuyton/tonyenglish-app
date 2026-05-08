@@ -30,6 +30,12 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [courseViewMode, setCourseViewMode] = useState<'tests' | 'modules' | 'classes'>('classes'); 
   const [filterLectureCourse, setFilterLectureCourse] = useState('all'); 
   
+  // 🚀 ĐÃ BỔ SUNG: State hỗ trợ thao tác hàng loạt & Phân trang cho KHO BÀI GIẢNG
+  const [selectedLectures, setSelectedLectures] = useState<string[]>([]);
+  const [lectureCurrentPage, setLectureCurrentPage] = useState(1);
+  const lectureItemsPerPage = 20;
+  const [targetMoveCourseId, setTargetMoveCourseId] = useState('');
+
   const [lectureModules, setLectureModules] = useState<any[]>([]);
   const [lectures, setLectures] = useState<any[]>([]);
   
@@ -75,6 +81,11 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // 🚀 ĐÃ BỔ SUNG: Tự động lùi về trang 1 khi gõ tìm kiếm hoặc lọc
+  useEffect(() => {
+    setLectureCurrentPage(1);
+  }, [searchQuery, filterLectureCourse]);
 
   const formatDateTime = (iso: string) => {
     if (!iso) return '';
@@ -177,10 +188,14 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     const { data, error } = await supabase.from('courses').insert([{ title, type, order_index: courses.length + 1 }]).select();
     if (!error && data) { fetchCourses(); setShowCreateCourseModal(false); }
   };
-  const handleUpdateCourseName = async (courseId: string, newTitle: string) => {
+  
+  const handleUpdateCourseInfo = async (courseId: string, newTitle: string, newType: string) => {
     if (!newTitle.trim()) { setEditingCourseId(null); return; }
-    await supabase.from('courses').update({ title: newTitle }).eq('id', courseId); fetchCourses(); setEditingCourseId(null);
+    await supabase.from('courses').update({ title: newTitle, type: newType }).eq('id', courseId);
+    fetchCourses();
+    setEditingCourseId(null);
   };
+
   const handleDeleteCourse = async () => {
     if (window.confirm("Xác nhận xóa khóa học? Mọi dữ liệu (lớp, học phần, đề thi) bên trong sẽ bị xóa.") && selectedCourse) {
       await supabase.from('courses').delete().eq('id', selectedCourse.id); fetchCourses(); setActiveTab('courses');
@@ -204,10 +219,20 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       await supabase.from('lecture_modules').delete().eq('id', id); fetchCourseDetailsData(selectedCourse.id); fetchGlobalLectures();
     }
   };
+  
   const handleAssignLecture = async (lectureId: string, moduleId: string) => {
-    await supabase.from('lectures').update({ module_id: moduleId }).eq('id', lectureId);
-    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); fetchGlobalLectures(); setShowAssignLectureModal({show: false, moduleId: null});
+    const { data: existingLecs } = await supabase.from('lectures').select('order_index').eq('module_id', moduleId);
+    let maxOrder = 0;
+    if (existingLecs && existingLecs.length > 0) {
+        maxOrder = Math.max(...existingLecs.map(l => l.order_index || 0));
+    }
+    
+    await supabase.from('lectures').update({ module_id: moduleId, order_index: maxOrder + 1 }).eq('id', lectureId);
+    
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
+    fetchGlobalLectures(); 
   };
+  
   const handleUnassignLecture = async (lectureId: string) => {
     if (window.confirm("Gỡ bài giảng này về Kho Tổng?")) {
       await supabase.from('lectures').update({ module_id: null }).eq('id', lectureId);
@@ -230,6 +255,53 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
        await supabase.from('lecture_pages').insert(newPages);
     }
     fetchGlobalLectures(); alert("✅ Đã nhân bản bài giảng thành công! Bản sao đã được lưu vào Kho.");
+  };
+
+  // 🚀 ĐÃ BỔ SUNG: Các hàm xử lý hàng loạt cho BÀI GIẢNG (Giống y hệt Đề Thi)
+  const handleSelectAllLectures = (e: React.ChangeEvent<HTMLInputElement>, currentList: any[]) => {
+    if (e.target.checked) setSelectedLectures(currentList.map(l => l.id));
+    else setSelectedLectures([]);
+  };
+
+  const handleSelectOneLecture = (id: string) => {
+    if (selectedLectures.includes(id)) setSelectedLectures(selectedLectures.filter(l => l !== id));
+    else setSelectedLectures([...selectedLectures, id]);
+  };
+
+  const handleBulkLectureVisibility = async (status: boolean) => {
+    if (selectedLectures.length === 0) return alert("Vui lòng chọn ít nhất 1 bài giảng!");
+    await supabase.from('lectures').update({ is_published: status }).in('id', selectedLectures);
+    fetchGlobalLectures();
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    setSelectedLectures([]);
+  };
+
+  const handleBulkLectureDelete = async () => {
+    if (selectedLectures.length === 0) return alert("Vui lòng chọn ít nhất 1 bài giảng!");
+    if (window.confirm(`Xác nhận xóa VĨNH VIỄN ${selectedLectures.length} bài giảng đã chọn?`)) {
+      await supabase.from('lectures').delete().in('id', selectedLectures);
+      fetchGlobalLectures();
+      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+      setSelectedLectures([]);
+    }
+  };
+
+  const handleBulkMoveCourse = async () => {
+    if (selectedLectures.length === 0) return alert("Vui lòng chọn ít nhất 1 bài giảng!");
+    if (!targetMoveCourseId) return alert("Vui lòng chọn khóa học đích để chuyển tới!");
+    if (window.confirm(`Chuyển ${selectedLectures.length} bài giảng sang khóa học đã chọn?`)) {
+      // Đổi course_id VÀ tự động gỡ module_id để nó về Kho chung của khóa mới
+      await supabase.from('lectures').update({ 
+         course_id: targetMoveCourseId === 'none' ? null : targetMoveCourseId,
+         module_id: null 
+      }).in('id', selectedLectures);
+      
+      fetchGlobalLectures();
+      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+      setSelectedLectures([]);
+      setTargetMoveCourseId('');
+      alert("✅ Chuyển danh mục thành công!");
+    }
   };
 
   const handleUpdateClassName = async (classId: string, newName: string) => {
@@ -383,16 +455,17 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       return matchesSearch && lec.course_id === filterLectureCourse;
   }), [globalLectures, searchQuery, filterLectureCourse]);
 
+  // 🚀 ĐÃ BỔ SUNG: Tính toán phân trang cho danh sách BÀI GIẢNG
+  const totalLecturePages = Math.ceil(filteredGlobalLectures.length / lectureItemsPerPage);
+  const paginatedLectures = filteredGlobalLectures.slice((lectureCurrentPage - 1) * lectureItemsPerPage, lectureCurrentPage * lectureItemsPerPage);
+
   return (
-    // 🚀 TỐI ƯU MOBILE: Dùng h-[100dvh] để fix lỗi thanh địa chỉ Safari, overscroll-none chặn nảy trang
     <div className="h-[100dvh] bg-[#f8fafc] flex font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
-      {/* 🚀 TỐI ƯU MOBILE: Lớp phủ mờ (Overlay) khi mở Sidebar trên Mobile */}
       {isSidebarOpen && (
         <div className="fixed inset-0 bg-slate-900/60 z-40 md:hidden transition-opacity" onClick={() => setIsSidebarOpen(false)} />
       )}
 
-      {/* 🚀 TỐI ƯU MOBILE: Sidebar dạng trượt (Slide-over) trên điện thoại, nằm ngang (Flex) trên PC */}
       <aside className={`fixed md:relative inset-y-0 left-0 z-50 h-[100dvh] w-[260px] md:w-64 bg-[#1e293b] text-slate-300 flex flex-col shrink-0 shadow-2xl md:shadow-xl transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
         <div className="h-16 md:h-20 flex items-center justify-between px-6 bg-[#0f172a] border-b border-slate-800 shrink-0">
           <div className="font-black text-xl tracking-tight text-white uppercase mt-1 cursor-pointer" onClick={() => onNavigate?.('home')}>TONY<span className="text-[#2bd6eb]">ADMIN</span></div>
@@ -407,10 +480,8 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
         </div>
       </aside>
 
-      {/* MAIN CONTENT */}
       <main className="flex-1 flex flex-col min-w-0 relative h-[100dvh] overflow-hidden">
         
-        {/* 🚀 TỐI ƯU MOBILE: Header nhỏ lại, bổ sung nút Hamburger Menu (🍔) */}
         <header className="h-16 md:h-20 bg-white border-b border-slate-200 px-4 md:px-8 flex items-center justify-between sticky top-0 z-30 shadow-sm shrink-0">
           <div className="flex items-center gap-3 min-w-0">
              <button onClick={() => setIsSidebarOpen(true)} className="md:hidden text-slate-500 hover:text-slate-800 p-1 -ml-1">
@@ -439,7 +510,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           </div>
         </header>
 
-        {/* 🚀 TỐI ƯU MOBILE: Thêm WebkitOverflowScrolling cho cảm giác vuốt mượt mà trên iPhone */}
         <div className="flex-1 p-4 md:p-8 overflow-y-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
           
           {/* ========================================================= */}
@@ -461,9 +531,13 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                     </div>
                     <div className="flex-1 mt-3 md:mt-4 mb-2">
                        {editingCourseId === course.id ? (
-                         <form onClick={(e) => e.stopPropagation()} onSubmit={(e) => { e.preventDefault(); e.stopPropagation(); handleUpdateCourseName(course.id, new FormData(e.currentTarget).get('title') as string); }}>
+                         <form onClick={(e) => e.stopPropagation()} onSubmit={(e) => { e.preventDefault(); e.stopPropagation(); handleUpdateCourseInfo(course.id, new FormData(e.currentTarget).get('title') as string, new FormData(e.currentTarget).get('type') as string); }}>
                             <input name="title" autoFocus defaultValue={course.title} className="w-full border border-slate-300 rounded-lg px-2 py-1 font-black text-[13px] md:text-[15px] outline-none mb-2 focus:border-[#0a5482]" />
-                            <div className="flex gap-2"><button type="submit" className="text-[10px] md:text-xs font-bold text-white bg-emerald-500 px-2 md:px-3 py-1 rounded">Lưu</button><button type="button" onClick={() => setEditingCourseId(null)} className="text-[10px] md:text-xs font-bold bg-slate-100 px-2 md:px-3 py-1 rounded border border-slate-200">Hủy</button></div>
+                            <select name="type" defaultValue={course.type} className="w-full border border-slate-300 rounded-lg px-2 py-1 font-bold text-[12px] outline-none mb-2 focus:border-[#0a5482]">
+                               <option value="IELTS">Hệ IELTS</option>
+                               <option value="Standard">Hệ Standard (IGCSE/TOEIC)</option>
+                            </select>
+                            <div className="flex gap-2"><button type="submit" className="text-[10px] md:text-xs font-bold text-white bg-emerald-500 px-2 md:px-3 py-1 rounded">Lưu</button><button type="button" onClick={() => setEditingCourseId(null)} className="text-[10px] md:text-xs font-bold bg-slate-100 px-2 md:px-3 py-1 rounded border border-slate-200 text-slate-600">Hủy</button></div>
                          </form>
                        ) : ( <h3 className="font-black text-[16px] md:text-lg text-slate-800 line-clamp-2 leading-snug">{course.title}</h3> )}
                     </div>
@@ -488,16 +562,13 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                 <button onClick={handleDeleteCourse} className="text-red-500 hover:bg-red-50 px-3 py-1.5 md:px-4 md:py-2 rounded-lg font-bold text-[11px] md:text-xs border border-red-100 transition whitespace-nowrap">🗑️ Xóa Khóa</button>
               </div>
 
-              {/* 🚀 TỐI ƯU MOBILE: Vuốt ngang thanh Tab */}
               <div className="flex gap-4 md:gap-6 border-b border-slate-200 px-1 md:px-2 overflow-x-auto custom-scrollbar whitespace-nowrap" style={{ WebkitOverflowScrolling: 'touch' }}>
                  <button onClick={() => setCourseViewMode('classes')} className={`pb-2 md:pb-3 font-black text-[11px] md:text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'classes' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>👨‍🏫 LỚP HỌC</button>
                  <button onClick={() => setCourseViewMode('modules')} className={`pb-2 md:pb-3 font-black text-[11px] md:text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'modules' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>📚 GIÁO TRÌNH</button>
                  <button onClick={() => setCourseViewMode('tests')} className={`pb-2 md:pb-3 font-black text-[11px] md:text-[13px] uppercase tracking-widest px-2 border-b-[3px] transition-colors ${courseViewMode === 'tests' ? 'border-[#2bd6eb] text-[#0a5482]' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>📁 KHO ĐỀ & BÀI TẬP</button>
               </div>
 
-              {/* TAB LỚP HỌC */}
               {courseViewMode === 'classes' && (
-                // 🚀 TỐI ƯU MOBILE: Xếp chồng (Flex-col) trên Mobile, nằm ngang trên Laptop
                 <div className="flex flex-col lg:flex-row gap-4 md:gap-6 h-auto lg:h-[600px] animate-in fade-in">
                    
                    <div className="w-full lg:w-1/3 bg-white rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm flex flex-col overflow-hidden h-[300px] lg:h-auto shrink-0">
@@ -534,10 +605,8 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                          <div className="flex-1 flex flex-col overflow-hidden animate-in fade-in">
                             <div className="p-4 md:p-6 bg-blue-50/50 border-b border-blue-100 shrink-0"><h2 className="text-[15px] md:text-lg font-black text-[#0a5482] uppercase tracking-wide truncate">LỚP: {selectedClass.name}</h2></div>
                             
-                            {/* 🚀 TỐI ƯU MOBILE: Xếp chồng (Flex-col) trên Mobile, chia cột trên Desktop */}
                             <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
                                
-                               {/* CỘT HỌC PHẦN */}
                                <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col h-[250px] md:h-auto shrink-0 md:shrink">
                                   <div className="p-3 md:p-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center shrink-0">
                                      <h3 className="font-bold text-[12px] md:text-sm text-slate-700">Học phần của lớp</h3>
@@ -555,7 +624,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                                   </div>
                                </div>
 
-                               {/* CỘT HỌC SINH */}
                                <div className="w-full md:w-1/2 flex flex-col bg-[#f8fafc] h-[250px] md:h-auto shrink-0 md:shrink">
                                   <div className="p-3 md:p-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center shrink-0">
                                      <h3 className="font-bold text-[12px] md:text-sm text-slate-700">Học sinh trong lớp</h3>
@@ -724,39 +792,93 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           {/* VIEW: KHO BÀI GIẢNG CHUNG */}
           {activeTab === 'lectures-library' && (
             <div className="space-y-4 md:space-y-6">
-              <div className="flex flex-col sm:flex-row justify-between gap-3 md:gap-4 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm relative z-20">
-                 <input type="text" placeholder="Tìm kiếm tên bài giảng..." onChange={e => setSearchQuery(e.target.value)} className="w-full sm:max-w-xs pl-3 pr-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] text-[13px] md:text-sm transition-colors" />
-                 <select value={filterLectureCourse} onChange={e => setFilterLectureCourse(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
-                    <option value="all">Tất cả khóa học</option>
-                    {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
-                 </select>
+              
+              {/* 🚀 TOOLBAR BÀI GIẢNG ĐƯỢC THIẾT KẾ LẠI */}
+              <div className="flex flex-col xl:flex-row justify-between gap-3 md:gap-4 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm relative z-20">
+                 
+                 {/* Nhóm thao tác hàng loạt & Chuyển danh mục */}
+                 <div className="flex flex-wrap items-center gap-3">
+                    <div className="flex bg-slate-100 rounded-lg p-1 border border-slate-200 shadow-sm shrink-0">
+                       <button onClick={() => handleBulkLectureVisibility(true)} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-emerald-600 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">👁️ Hiện</button>
+                       <button onClick={() => handleBulkLectureVisibility(false)} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-slate-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">👁️‍🗨️ Ẩn</button>
+                       <button onClick={handleBulkLectureDelete} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-red-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">🗑️ Xóa</button>
+                    </div>
+
+                    <div className="flex items-center gap-2 bg-blue-50 p-1.5 md:p-2 rounded-lg border border-blue-100 shadow-sm">
+                       <span className="text-[11px] font-bold text-blue-800 hidden sm:inline ml-1 uppercase tracking-tight">Chuyển:</span>
+                       <select value={targetMoveCourseId} onChange={e=>setTargetMoveCourseId(e.target.value)} className="border border-blue-200 bg-white rounded px-2 py-1 md:py-1.5 text-[11px] md:text-[13px] font-bold text-slate-700 outline-none w-[140px] md:w-[200px] truncate focus:border-[#0a5482]">
+                          <option value="">-- Chọn Khóa Học --</option>
+                          <option value="none">-- 📦 Không thuộc khóa nào --</option>
+                          {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
+                       </select>
+                       <button onClick={handleBulkMoveCourse} className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-3 py-1 md:py-1.5 rounded shadow-sm text-[11px] transition-colors whitespace-nowrap active:scale-95">ÁP DỤNG</button>
+                    </div>
+                 </div>
+
+                 {/* Nhóm Tìm kiếm & Lọc */}
+                 <div className="flex flex-col sm:flex-row gap-3 flex-1 justify-end w-full xl:w-auto">
+                   <input type="text" placeholder="Tìm kiếm tên bài giảng..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-[250px] pl-3 pr-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] text-[13px] md:text-sm transition-colors" />
+                   <select value={filterLectureCourse} onChange={e => setFilterLectureCourse(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
+                      <option value="all">Tất cả khóa học</option>
+                      {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
+                   </select>
+                 </div>
               </div>
-              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                <div className="overflow-x-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
-                  <table className="w-full text-left border-collapse min-w-[800px] md:min-w-[900px]">
-                    <thead className="bg-[#f8fafc] text-[10px] md:text-[11px] font-black uppercase text-slate-400 tracking-widest border-b border-slate-200">
-                      <tr><th className="px-4 md:px-6 py-3 md:py-4 w-10 text-center">#</th><th className="px-4 md:px-6 py-3 md:py-4">TÊN BÀI GIẢNG</th><th className="px-4 md:px-6 py-3 md:py-4">KHÓA HỌC</th><th className="px-4 md:px-6 py-3 md:py-4 text-center">KIỂU NỘI DUNG</th><th className="px-4 md:px-6 py-3 md:py-4">CẬP NHẬT</th><th className="px-4 md:px-6 py-3 md:py-4 text-center">TRẠNG THÁI</th><th className="px-4 md:px-6 py-3 md:py-4 text-center">THỨ TỰ</th><th className="px-4 md:px-6 py-3 md:py-4 text-right">THAO TÁC</th></tr>
+
+              <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+                <div className="overflow-x-auto custom-scrollbar flex-1" style={{ WebkitOverflowScrolling: 'touch' }}>
+                  <table className="w-full text-left border-collapse min-w-[800px] md:min-w-[1000px]">
+                    <thead className="sticky top-0 bg-[#f8fafc] text-[10px] md:text-[11px] font-black uppercase text-slate-400 tracking-widest border-b border-slate-200 shadow-[0_1px_2px_rgba(0,0,0,0.05)] z-10">
+                      <tr>
+                        <th className="px-4 md:px-6 py-3 md:py-4 w-10 text-center">#</th>
+                        <th className="px-2 py-3 md:py-4 w-10"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedLectures.length > 0 && selectedLectures.length === paginatedLectures.length} onChange={(e) => handleSelectAllLectures(e, paginatedLectures)} /></th>
+                        <th className="px-4 md:px-6 py-3 md:py-4">TÊN BÀI GIẢNG</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4">KHÓA HỌC</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4 text-center">KIỂU NỘI DUNG</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4">CẬP NHẬT</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4 text-center">TRẠNG THÁI</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4 text-center">THỨ TỰ</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4 text-right">THAO TÁC</th>
+                      </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
-                      {filteredGlobalLectures.map((lec, index) => (
-                        <tr key={lec.id} className="hover:bg-slate-50 transition-colors group">
-                          <td className="px-4 md:px-6 py-4 text-center text-[12px] md:text-[13px] font-bold text-slate-400">{index + 1}</td>
-                          <td className="px-4 md:px-6 py-4 font-bold text-[#0a5482] text-[13px] md:text-[14px]">{lec.title}</td>
-                          <td className="px-4 md:px-6 py-4">{lec.courses ? <span className="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-[10px] md:text-[11px] font-bold text-slate-600">{lec.courses.title}</span> : <span className="text-[10px] md:text-[11px] italic text-slate-400">-- Trống --</span>}</td>
-                          <td className="px-4 md:px-6 py-4 text-center text-[11px] md:text-[12px] font-bold text-slate-500">HTML</td>
-                          <td className="px-4 md:px-6 py-4"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(lec.created_at)}</div></td>
-                          <td className="px-4 md:px-6 py-4 text-center"><button onClick={() => handleToggleLectureStatus(lec.id, lec.is_published)} className={`text-[10px] md:text-[12px] font-bold px-2 py-1 md:px-3 rounded transition-colors ${lec.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{lec.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
-                          <td className="px-4 md:px-6 py-4 text-center"><input type="number" defaultValue={lec.order_index || 0} onBlur={e => handleUpdateLectureOrder(lec.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
-                          <td className="px-4 md:px-6 py-4 text-right space-x-1 md:space-x-2 whitespace-nowrap">
-                             <button onClick={() => setEditingLecture(lec)} className="text-[#2bd6eb] font-bold text-[10px] md:text-xs bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 transition">Sửa</button>
-                             <button onClick={() => handleDuplicateLecture(lec)} className="text-emerald-600 font-bold text-[10px] md:text-xs bg-white border border-emerald-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-emerald-50 transition">Nhân bản</button>
-                             <button onClick={() => handlePermanentDeleteLecture(lec.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100">Xóa</button>
-                          </td>
-                        </tr>
-                      ))}
+                      {paginatedLectures.length === 0 ? <tr><td colSpan={9} className="text-center py-8 md:py-10 text-[13px] md:text-sm text-slate-400 font-medium">Không tìm thấy bài giảng nào.</td></tr> : (
+                        paginatedLectures.map((lec, index) => (
+                          <tr key={lec.id} className={`hover:bg-slate-50 transition-colors group ${selectedLectures.includes(lec.id) ? 'bg-blue-50/30' : ''}`}>
+                            <td className="px-4 md:px-6 py-4 text-center text-[12px] md:text-[13px] font-bold text-slate-400">{(lectureCurrentPage - 1) * lectureItemsPerPage + index + 1}</td>
+                            <td className="px-2 py-4"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedLectures.includes(lec.id)} onChange={() => handleSelectOneLecture(lec.id)} /></td>
+                            <td className="px-4 md:px-6 py-4 font-bold text-[#0a5482] text-[13px] md:text-[14px]">{lec.title}</td>
+                            <td className="px-4 md:px-6 py-4">{lec.courses ? <span className="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-[10px] md:text-[11px] font-bold text-slate-600">{lec.courses.title}</span> : <span className="text-[10px] md:text-[11px] italic text-slate-400">-- Trống --</span>}</td>
+                            <td className="px-4 md:px-6 py-4 text-center text-[11px] md:text-[12px] font-bold text-slate-500">HTML</td>
+                            <td className="px-4 md:px-6 py-4"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(lec.created_at)}</div></td>
+                            <td className="px-4 md:px-6 py-4 text-center"><button onClick={() => handleToggleLectureStatus(lec.id, lec.is_published)} className={`text-[10px] md:text-[12px] font-bold px-2 py-1 md:px-3 rounded transition-colors ${lec.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{lec.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
+                            <td className="px-4 md:px-6 py-4 text-center"><input type="number" defaultValue={lec.order_index || 0} onBlur={e => handleUpdateLectureOrder(lec.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
+                            <td className="px-4 md:px-6 py-4 text-right space-x-1 md:space-x-2 whitespace-nowrap">
+                               <button onClick={() => setEditingLecture(lec)} className="text-[#2bd6eb] font-bold text-[10px] md:text-xs bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 transition">Sửa</button>
+                               <button onClick={() => handleDuplicateLecture(lec)} className="text-emerald-600 font-bold text-[10px] md:text-xs bg-white border border-emerald-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-emerald-50 transition">Nhân bản</button>
+                               <button onClick={() => handlePermanentDeleteLecture(lec.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100">Xóa</button>
+                            </td>
+                          </tr>
+                        ))
+                      )}
                     </tbody>
                   </table>
                 </div>
+
+                {/* 🚀 THANH PHÂN TRANG BÀI GIẢNG */}
+                {totalLecturePages > 1 && (
+                  <div className="p-4 border-t border-slate-200 bg-slate-50 flex justify-center items-center gap-4 shrink-0">
+                     <button disabled={lectureCurrentPage === 1} onClick={() => setLectureCurrentPage(p => p - 1)} className="px-4 py-2 bg-white border border-slate-200 text-slate-600 hover:text-[#0a5482] hover:border-[#0a5482] rounded-lg disabled:opacity-50 disabled:hover:border-slate-200 disabled:hover:text-slate-600 font-bold text-[13px] transition-colors shadow-sm">
+                        ← Trang trước
+                     </button>
+                     <span className="text-[13px] font-black text-slate-500">
+                        Trang {lectureCurrentPage} <span className="font-medium text-slate-400">/ {totalLecturePages}</span>
+                     </span>
+                     <button disabled={lectureCurrentPage === totalLecturePages} onClick={() => setLectureCurrentPage(p => p + 1)} className="px-4 py-2 bg-white border border-slate-200 text-slate-600 hover:text-[#0a5482] hover:border-[#0a5482] rounded-lg disabled:opacity-50 disabled:hover:border-slate-200 disabled:hover:text-slate-600 font-bold text-[13px] transition-colors shadow-sm">
+                        Trang sau →
+                     </button>
+                  </div>
+                )}
               </div>
             </div>
           )}

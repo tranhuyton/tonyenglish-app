@@ -16,6 +16,9 @@ export default function StudentManagement() {
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 20;
+  
   const [selectedStudent, setSelectedStudent] = useState<any>(null);
   const [studentHistory, setStudentHistory] = useState<any[]>([]);
   const [studentEnrollments, setStudentEnrollments] = useState<any[]>([]);
@@ -37,6 +40,10 @@ export default function StudentManagement() {
     fetchCourses();
   }, []);
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
+
   const fetchStudents = async () => {
     setIsLoading(true);
     try {
@@ -57,6 +64,7 @@ export default function StudentManagement() {
 
   const handleSelectStudent = async (student: any) => {
     setSelectedStudent(student);
+    setEditingUser(null); // Đảm bảo clear form cũ nếu có
     setIsLoadingDetails(true);
     setActiveDetailTab('courses');
     
@@ -81,6 +89,7 @@ export default function StudentManagement() {
     const fullName = formData.get('fullName') as string;
     const email = formData.get('email') as string;
     const password = formData.get('password') as string;
+    const phone = formData.get('phone') as string;
     
     try {
       const { data, error } = await authSupabase.auth.signUp({
@@ -93,11 +102,11 @@ export default function StudentManagement() {
       await new Promise(resolve => setTimeout(resolve, 1500));
 
       if (data.user) {
-        // 🚀 DÙNG HÀM RPC ĐỂ VƯỢT RÀO BẢO MẬT (CHỐNG LỖI LƯU TÊN BỊ CHẶN NGẦM)
         await supabase.rpc('update_user_profile', {
             target_user_id: data.user.id,
             new_full_name: fullName,
-            new_role: newUserRole
+            new_role: newUserRole,
+            new_phone: phone 
         });
       }
 
@@ -118,13 +127,14 @@ export default function StudentManagement() {
     const formData = new FormData(e.currentTarget);
     const fullName = formData.get('fullName') as string;
     const role = formData.get('role') as string;
+    const phone = formData.get('phone') as string;
 
     try {
-      // 🚀 DÙNG HÀM RPC ĐỂ VƯỢT RÀO BẢO MẬT
       const { error } = await supabase.rpc('update_user_profile', {
           target_user_id: editingUser.id,
           new_full_name: fullName,
-          new_role: role
+          new_role: role,
+          new_phone: phone
       });
       
       if (error) throw error;
@@ -132,7 +142,7 @@ export default function StudentManagement() {
       alert("✅ Đã cập nhật thông tin thành công!");
       
       if (selectedStudent && selectedStudent.id === editingUser.id) {
-         setSelectedStudent({ ...selectedStudent, full_name: fullName, role: role });
+         setSelectedStudent({ ...selectedStudent, full_name: fullName, role: role, phone: phone });
       }
       
       setEditingUser(null);
@@ -205,8 +215,12 @@ export default function StudentManagement() {
 
   const filteredStudents = students.filter(s => 
     (s.email && s.email.toLowerCase().includes(searchQuery.toLowerCase())) ||
-    (s.full_name && s.full_name.toLowerCase().includes(searchQuery.toLowerCase()))
+    (s.full_name && s.full_name.toLowerCase().includes(searchQuery.toLowerCase())) ||
+    (s.phone && s.phone.includes(searchQuery))
   );
+
+  const totalPages = Math.ceil(filteredStudents.length / itemsPerPage);
+  const paginatedStudents = filteredStudents.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   const availableCourses = courses.filter(c => !studentEnrollments.some(e => e.course_id === c.id));
 
@@ -219,112 +233,118 @@ export default function StudentManagement() {
     const totalTime = studentHistory.reduce((acc, curr) => acc + Math.round((curr.time_spent || 0) / 60), 0);
 
     return (
-      <div className="animate-in slide-in-from-right-4 duration-300">
-        <button onClick={() => setSelectedStudent(null)} className="mb-6 flex items-center gap-2 text-slate-500 hover:text-[#0a5482] font-bold transition-colors bg-white px-4 py-2 rounded-lg border border-slate-200 shadow-sm w-fit">
-          <span>←</span> Quay lại danh sách
-        </button>
+      // 🚀 BỌC LẠI BẰNG GÓI <></> ĐỂ FORM POPUP KHÔNG BỊ "NHỐT" BÊN TRONG DIV
+      <>
+        <div className="animate-in slide-in-from-right-4 duration-300">
+          <button onClick={() => setSelectedStudent(null)} className="mb-6 flex items-center gap-2 text-slate-500 hover:text-[#0a5482] font-bold transition-colors bg-white px-4 py-2 rounded-lg border border-slate-200 shadow-sm w-fit">
+            <span>←</span> Quay lại danh sách
+          </button>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
-            <span className={`absolute top-0 w-full py-1 text-[10px] font-black uppercase tracking-widest text-white ${selectedStudent.role === 'admin' ? 'bg-red-500' : 'bg-emerald-500'}`}>
-              {selectedStudent.role === 'admin' ? 'Quản trị viên' : 'Học viên'}
-            </span>
-            <div className="w-20 h-20 rounded-full bg-[#0a5482] text-white flex items-center justify-center font-black text-3xl mb-4 shadow-inner mt-4">
-              {selectedStudent.full_name ? selectedStudent.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (selectedStudent.email ? selectedStudent.email.charAt(0).toUpperCase() : 'U')}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+              <span className={`absolute top-0 w-full py-1 text-[10px] font-black uppercase tracking-widest text-white ${selectedStudent.role === 'admin' ? 'bg-red-500' : 'bg-emerald-500'}`}>
+                {selectedStudent.role === 'admin' ? 'Quản trị viên' : 'Học viên'}
+              </span>
+              <div className="w-20 h-20 rounded-full bg-[#0a5482] text-white flex items-center justify-center font-black text-3xl mb-4 shadow-inner mt-4">
+                {selectedStudent.full_name ? selectedStudent.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (selectedStudent.email ? selectedStudent.email.charAt(0).toUpperCase() : 'U')}
+              </div>
+              
+              <h2 className="text-xl font-black text-slate-800 mb-1 flex items-center justify-center gap-2">
+                 {selectedStudent.full_name || <span className="text-orange-500 italic text-lg">[Chưa cập nhật Tên]</span>}
+                 <button onClick={() => setEditingUser(selectedStudent)} className="text-sm bg-slate-100 hover:bg-[#0a5482] hover:text-white text-slate-400 p-1.5 rounded-md transition-colors" title="Sửa thông tin">✏️</button>
+              </h2>
+              
+              <p className="text-slate-500 font-medium text-[14px] mb-1">{selectedStudent.email}</p>
+              {selectedStudent.phone && <p className="text-slate-500 font-bold text-[13px] mb-4 bg-slate-50 px-3 py-1 rounded-full border border-slate-100">📞 {selectedStudent.phone}</p>}
+              
+              <div className="w-full border-t border-slate-100 pt-4 flex justify-between text-[13px] mt-auto">
+                <span className="text-slate-500 font-medium">Ngày tham gia:</span>
+                <span className="font-bold text-slate-700">{formatDate(selectedStudent.created_at).split(' ')[0]}</span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-2 grid grid-cols-3 gap-4">
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-center">
+                <div className="text-slate-500 font-bold text-[13px] uppercase tracking-wider mb-2 flex items-center gap-2"><span className="text-emerald-500 text-lg">📝</span> Tổng bài làm</div>
+                <div className="text-4xl font-black text-slate-800">{totalTests}</div>
+              </div>
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-center">
+                <div className="text-slate-500 font-bold text-[13px] uppercase tracking-wider mb-2 flex items-center gap-2"><span className="text-blue-500 text-lg">📊</span> Điểm trung bình</div>
+                <div className="text-4xl font-black text-slate-800">{avgScore}</div>
+              </div>
+              <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-center">
+                <div className="text-slate-500 font-bold text-[13px] uppercase tracking-wider mb-2 flex items-center gap-2"><span className="text-amber-500 text-lg">⏱️</span> Tổng giờ học</div>
+                <div className="text-4xl font-black text-slate-800">{Math.round(totalTime/60)} <span className="text-base text-slate-400 font-medium">giờ</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col min-h-[400px]">
+            <div className="bg-slate-50 px-2 pt-2 border-b border-slate-200 flex gap-2">
+              <button onClick={() => setActiveDetailTab('courses')} className={`px-6 py-3 font-bold text-sm rounded-t-xl transition-colors ${activeDetailTab === 'courses' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📚 Khóa học ghi danh</button>
+              <button onClick={() => setActiveDetailTab('history')} className={`px-6 py-3 font-bold text-sm rounded-t-xl transition-colors ${activeDetailTab === 'history' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📊 Lịch sử & Tiến độ</button>
             </div>
             
-            <h2 className="text-xl font-black text-slate-800 mb-1 flex items-center justify-center gap-2">
-               {selectedStudent.full_name || <span className="text-orange-500 italic text-lg">[Chưa cập nhật Tên]</span>}
-               <button onClick={() => setEditingUser(selectedStudent)} className="text-sm bg-slate-100 hover:bg-[#0a5482] hover:text-white text-slate-400 p-1.5 rounded-md transition-colors" title="Sửa thông tin">✏️</button>
-            </h2>
-            
-            <p className="text-slate-500 font-medium text-[14px] mb-4">{selectedStudent.email}</p>
-            <div className="w-full border-t border-slate-100 pt-4 flex justify-between text-[13px]">
-              <span className="text-slate-500 font-medium">Ngày tham gia:</span>
-              <span className="font-bold text-slate-700">{formatDate(selectedStudent.created_at).split(' ')[0]}</span>
-            </div>
-          </div>
-
-          <div className="lg:col-span-2 grid grid-cols-3 gap-4">
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-center">
-              <div className="text-slate-500 font-bold text-[13px] uppercase tracking-wider mb-2 flex items-center gap-2"><span className="text-emerald-500 text-lg">📝</span> Tổng bài làm</div>
-              <div className="text-4xl font-black text-slate-800">{totalTests}</div>
-            </div>
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-center">
-              <div className="text-slate-500 font-bold text-[13px] uppercase tracking-wider mb-2 flex items-center gap-2"><span className="text-blue-500 text-lg">📊</span> Điểm trung bình</div>
-              <div className="text-4xl font-black text-slate-800">{avgScore}</div>
-            </div>
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-center">
-              <div className="text-slate-500 font-bold text-[13px] uppercase tracking-wider mb-2 flex items-center gap-2"><span className="text-amber-500 text-lg">⏱️</span> Tổng giờ học</div>
-              <div className="text-4xl font-black text-slate-800">{Math.round(totalTime/60)} <span className="text-base text-slate-400 font-medium">giờ</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col min-h-[400px]">
-          <div className="bg-slate-50 px-2 pt-2 border-b border-slate-200 flex gap-2">
-            <button onClick={() => setActiveDetailTab('courses')} className={`px-6 py-3 font-bold text-sm rounded-t-xl transition-colors ${activeDetailTab === 'courses' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📚 Khóa học ghi danh</button>
-            <button onClick={() => setActiveDetailTab('history')} className={`px-6 py-3 font-bold text-sm rounded-t-xl transition-colors ${activeDetailTab === 'history' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📊 Lịch sử & Tiến độ</button>
-          </div>
-          
-          <div className="p-6 flex-1 bg-white">
-            {isLoadingDetails ? (
-              <div className="py-20 text-center text-slate-400 font-bold">⏳ Đang tải dữ liệu...</div>
-            ) : activeDetailTab === 'courses' ? (
-              <div>
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest">Danh sách khóa học được phép truy cập</h3>
-                  <button onClick={() => setShowAssignModal(true)} className="bg-[#0a5482] hover:bg-[#084266] text-white px-5 py-2.5 rounded-lg font-bold text-xs shadow-sm transition">+ GÁN KHÓA HỌC</button>
+            <div className="p-6 flex-1 bg-white">
+              {isLoadingDetails ? (
+                <div className="py-20 text-center text-slate-400 font-bold">⏳ Đang tải dữ liệu...</div>
+              ) : activeDetailTab === 'courses' ? (
+                <div>
+                  <div className="flex justify-between items-center mb-6">
+                    <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest">Danh sách khóa học được phép truy cập</h3>
+                    <button onClick={() => setShowAssignModal(true)} className="bg-[#0a5482] hover:bg-[#084266] text-white px-5 py-2.5 rounded-lg font-bold text-xs shadow-sm transition">+ GÁN KHÓA HỌC</button>
+                  </div>
+                  
+                  {studentEnrollments.length === 0 ? (
+                    <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-medium">Học viên này chưa được gán khóa học nào.</div>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                      {studentEnrollments.map(e => (
+                        <div key={e.id} className="border border-slate-200 p-5 rounded-xl bg-slate-50 flex flex-col relative group">
+                          <span className="bg-blue-100 text-blue-700 font-black uppercase text-[10px] px-2 py-1 rounded w-fit mb-3">{e.courses?.type || 'Khóa học'}</span>
+                          <h4 className="font-bold text-slate-800 text-[15px] mb-2">{e.courses?.title || 'Khóa học đã xóa'}</h4>
+                          <p className="text-[12px] text-slate-500 font-medium">Gán ngày: {formatDate(e.enrolled_at).split(' ')[0]}</p>
+                          <button onClick={() => handleRemoveCourse(e.id)} className="absolute top-4 right-4 text-red-400 hover:text-red-600 font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">Gỡ bỏ ✖</button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
-                
-                {studentEnrollments.length === 0 ? (
-                  <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-medium">Học viên này chưa được gán khóa học nào.</div>
-                ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                    {studentEnrollments.map(e => (
-                      <div key={e.id} className="border border-slate-200 p-5 rounded-xl bg-slate-50 flex flex-col relative group">
-                        <span className="bg-blue-100 text-blue-700 font-black uppercase text-[10px] px-2 py-1 rounded w-fit mb-3">{e.courses?.type || 'Khóa học'}</span>
-                        <h4 className="font-bold text-slate-800 text-[15px] mb-2">{e.courses?.title || 'Khóa học đã xóa'}</h4>
-                        <p className="text-[12px] text-slate-500 font-medium">Gán ngày: {formatDate(e.enrolled_at).split(' ')[0]}</p>
-                        <button onClick={() => handleRemoveCourse(e.id)} className="absolute top-4 right-4 text-red-400 hover:text-red-600 font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">Gỡ bỏ ✖</button>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div>
-                <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest mb-6">Lịch sử nộp bài ({studentHistory.length} bài)</h3>
-                {studentHistory.length === 0 ? (
-                  <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-medium">Học viên này chưa nộp bài thi nào.</div>
-                ) : (
-                  <div className="border border-slate-200 rounded-xl overflow-hidden">
-                    <table className="w-full text-left border-collapse">
-                      <thead className="bg-[#f8fafc] text-[11px] font-black uppercase tracking-wider text-slate-500 border-b border-slate-200">
-                        <tr>
-                          <th className="px-5 py-3">Tên bài thi</th><th className="px-5 py-3 text-center">Dạng</th>
-                          <th className="px-5 py-3 text-center">Điểm</th><th className="px-5 py-3 text-center">Thời gian</th><th className="px-5 py-3 text-right">Ngày nộp</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-slate-100">
-                        {studentHistory.map(h => (
-                          <tr key={h.id} className="hover:bg-slate-50 transition-colors">
-                            <td className="px-5 py-3 font-bold text-[13px] text-slate-800">{h.test_title}</td>
-                            <td className="px-5 py-3 text-center"><span className="bg-slate-100 text-slate-600 px-2 py-1 rounded text-[10px] font-bold border border-slate-200">{h.test_type}</span></td>
-                            <td className="px-5 py-3 text-center font-black text-[14px] text-emerald-600">{h.score} / {h.total_score}</td>
-                            <td className="px-5 py-3 text-center text-slate-600 text-[12px]">{Math.round((h.time_spent||0)/60)}p</td>
-                            <td className="px-5 py-3 text-right text-slate-500 text-[12px]">{formatDate(h.created_at)}</td>
+              ) : (
+                <div>
+                  <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest mb-6">Lịch sử nộp bài ({studentHistory.length} bài)</h3>
+                  {studentHistory.length === 0 ? (
+                    <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-medium">Học viên này chưa nộp bài thi nào.</div>
+                  ) : (
+                    <div className="border border-slate-200 rounded-xl overflow-hidden">
+                      <table className="w-full text-left border-collapse">
+                        <thead className="bg-[#f8fafc] text-[11px] font-black uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                          <tr>
+                            <th className="px-5 py-3">Tên bài thi</th><th className="px-5 py-3 text-center">Dạng</th>
+                            <th className="px-5 py-3 text-center">Điểm</th><th className="px-5 py-3 text-center">Thời gian</th><th className="px-5 py-3 text-right">Ngày nộp</th>
                           </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-              </div>
-            )}
+                        </thead>
+                        <tbody className="divide-y divide-slate-100">
+                          {studentHistory.map(h => (
+                            <tr key={h.id} className="hover:bg-slate-50 transition-colors">
+                              <td className="px-5 py-3 font-bold text-[13px] text-slate-800">{h.test_title}</td>
+                              <td className="px-5 py-3 text-center"><span className="bg-slate-100 text-slate-600 px-2 py-1 rounded text-[10px] font-bold border border-slate-200">{h.test_type}</span></td>
+                              <td className="px-5 py-3 text-center font-black text-[14px] text-emerald-600">{h.score} / {h.total_score}</td>
+                              <td className="px-5 py-3 text-center text-slate-600 text-[12px]">{Math.round((h.time_spent||0)/60)}p</td>
+                              <td className="px-5 py-3 text-right text-slate-500 text-[12px]">{formatDate(h.created_at)}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-        
+
+        {/* 🚀 ĐẶT MODALS RA BÊN NGOÀI ĐỂ KHÔNG BỊ "NHỐT" NỮA */}
         {renderEditUserModal()}
 
         {showAssignModal && (
@@ -349,7 +369,7 @@ export default function StudentManagement() {
             </form>
           </div>
         )}
-      </div>
+      </>
     );
   }
 
@@ -370,6 +390,11 @@ export default function StudentManagement() {
               <input name="fullName" required type="text" defaultValue={editingUser.full_name || ''} autoComplete="off" placeholder="VD: Trần Huy Tôn" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
             </div>
             
+            <div>
+              <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Số điện thoại</label>
+              <input name="phone" type="text" defaultValue={editingUser.phone || ''} autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
+            </div>
+
             <div>
               <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Email đăng nhập</label>
               <input type="email" defaultValue={editingUser.email} disabled className="w-full border border-slate-200 bg-slate-50 rounded-xl px-4 py-3 outline-none text-slate-400 text-sm cursor-not-allowed" />
@@ -403,86 +428,115 @@ export default function StudentManagement() {
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden animate-in fade-in duration-300">
-      <div className="bg-slate-50 px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <h2 className="font-black text-xl text-[#0a5482]">Quản lý Tài Khoản</h2>
-        <div className="relative w-full sm:w-80">
-          
-          <input 
-            type="text" 
-            placeholder="Tìm kiếm theo email hoặc tên..." 
-            defaultValue={searchQuery}
-            onChange={(e) => {
-              clearTimeout(studentSearchTimer);
-              studentSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350);
-            }} 
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 font-medium text-[13px] outline-none focus:border-[#0a5482] focus:ring-1 focus:ring-[#0a5482] bg-white transition-all shadow-sm" 
-          />
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
-        </div>
-        <button onClick={() => setShowCreateUserModal(true)} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold px-6 py-2.5 rounded-xl transition shadow-md text-sm whitespace-nowrap">+ Tạo Tài Khoản</button>
-      </div>
-
-      <div className="p-0">
-        {isLoading ? (
-          <div className="p-16 text-center text-slate-500 font-bold text-lg flex items-center justify-center gap-3"><span className="animate-spin text-2xl">⏳</span> Đang tải dữ liệu...</div>
-        ) : filteredStudents.length === 0 ? (
-          <div className="p-16 text-center text-slate-400 font-medium text-lg border-t border-slate-100">Không tìm thấy tài khoản nào.</div>
-        ) : (
-          <div className="overflow-x-auto min-h-[500px]">
-            <table className="w-full text-left border-collapse min-w-[800px]">
-              <thead>
-                <tr className="bg-white border-b border-slate-200 text-[11px] font-black uppercase tracking-wider text-slate-400">
-                  <th className="px-6 py-4">Tài Khoản (Email)</th>
-                  <th className="px-6 py-4">Họ và Tên</th>
-                  <th className="px-6 py-4">Phân quyền</th>
-                  <th className="px-6 py-4 text-center">Ngày tạo</th>
-                  <th className="px-6 py-4 text-right">Hành động</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100">
-                {filteredStudents.map((student) => (
-                  <tr key={student.id} className="hover:bg-blue-50/50 transition-colors group">
-                    <td className="px-6 py-4">
-                      <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 rounded-full text-white flex items-center justify-center font-bold text-sm shrink-0 ${student.role === 'admin' ? 'bg-red-500' : 'bg-[#0a5482]'}`}>
-                          {student.full_name ? student.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (student.email ? student.email.charAt(0).toUpperCase() : 'U')}
-                        </div>
-                        <div className="text-[13px] font-bold text-slate-700">{student.email}</div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className={`font-bold text-[14px] ${student.full_name ? 'text-[#0a5482]' : 'text-orange-500 italic'}`}>
-                         {student.full_name || '[Chưa cập nhật]'}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <span className={`px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider border ${student.role === 'admin' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-emerald-50 text-emerald-600 border-emerald-200'}`}>{student.role || 'Student'}</span>
-                    </td>
-                    <td className="px-6 py-4 text-slate-600 font-medium text-[13px] text-center">
-                      {formatDate(student.created_at).split(' ')[0]}
-                    </td>
-                    <td className="px-6 py-4 text-right flex items-center justify-end gap-2">
-                      <button onClick={() => handleSelectStudent(student)} className="text-[#0a5482] font-bold text-[12px] bg-white hover:bg-[#0a5482] hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-200 shadow-sm uppercase tracking-wider">
-                        Cấu hình & Tiến độ
-                      </button>
-                      
-                      <button onClick={() => setEditingUser(student)} className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-colors border border-transparent hover:border-blue-200" title="Sửa thông tin">
-                        ✏️
-                      </button>
-
-                      <button onClick={() => handleDeleteUser(student.id, student.full_name)} className="text-slate-400 hover:text-red-500 hover:bg-red-50 p-2 rounded-lg transition-colors border border-transparent hover:border-red-200" title="Xóa tài khoản">
-                        🗑️
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+    // 🚀 BỌC LẠI BẰNG GÓI <></> ĐỂ FORM KHÔNG BỊ "NHỐT" TRONG DIV CLASS OVERFLOW-HIDDEN
+    <>
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden animate-in fade-in duration-300 flex flex-col h-[calc(100vh-120px)]">
+        <div className="bg-slate-50 px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 shrink-0">
+          <h2 className="font-black text-xl text-[#0a5482]">Quản lý Tài Khoản</h2>
+          <div className="relative w-full sm:w-80">
+            <input 
+              type="text" 
+              placeholder="Tìm kiếm theo email, tên, SĐT..." 
+              defaultValue={searchQuery}
+              onChange={(e) => {
+                clearTimeout(studentSearchTimer);
+                studentSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350);
+              }} 
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 font-medium text-[13px] outline-none focus:border-[#0a5482] focus:ring-1 focus:ring-[#0a5482] bg-white transition-all shadow-sm" 
+            />
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
           </div>
-        )}
+          <button onClick={() => setShowCreateUserModal(true)} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold px-6 py-2.5 rounded-xl transition shadow-md text-sm whitespace-nowrap">+ Tạo Tài Khoản</button>
+        </div>
+
+        <div className="flex-1 flex flex-col overflow-hidden">
+          {isLoading ? (
+            <div className="p-16 text-center text-slate-500 font-bold text-lg flex items-center justify-center gap-3"><span className="animate-spin text-2xl">⏳</span> Đang tải dữ liệu...</div>
+          ) : filteredStudents.length === 0 ? (
+            <div className="p-16 text-center text-slate-400 font-medium text-lg border-t border-slate-100">Không tìm thấy tài khoản nào.</div>
+          ) : (
+            <>
+              <div className="flex-1 overflow-y-auto custom-scrollbar">
+                <table className="w-full text-left border-collapse min-w-[900px]">
+                  <thead className="sticky top-0 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] z-10">
+                    <tr className="text-[11px] font-black uppercase tracking-wider text-slate-400">
+                      <th className="px-6 py-4 text-center w-16">STT</th>
+                      <th className="px-6 py-4">Tài Khoản (Email)</th>
+                      <th className="px-6 py-4">Số Điện Thoại</th>
+                      <th className="px-6 py-4">Họ và Tên</th>
+                      <th className="px-6 py-4">Phân quyền</th>
+                      <th className="px-6 py-4 text-center">Ngày tạo</th>
+                      <th className="px-6 py-4 text-right">Hành động</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {paginatedStudents.map((student, index) => (
+                      <tr key={student.id} className="hover:bg-blue-50/50 transition-colors group">
+                        <td className="px-6 py-4 text-center font-bold text-slate-400 text-[13px]">
+                          {(currentPage - 1) * itemsPerPage + index + 1}
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="flex items-center gap-3">
+                            <div className={`w-10 h-10 rounded-full text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-inner ${student.role === 'admin' ? 'bg-red-500' : 'bg-[#0a5482]'}`}>
+                              {student.full_name ? student.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (student.email ? student.email.charAt(0).toUpperCase() : 'U')}
+                            </div>
+                            <div className="text-[13px] font-bold text-slate-700">{student.email}</div>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                           <div className="font-bold text-[13px] text-slate-600">
+                              {student.phone || '--'}
+                           </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className={`font-bold text-[14px] ${student.full_name ? 'text-[#0a5482]' : 'text-orange-500 italic'}`}>
+                             {student.full_name || '[Chưa cập nhật]'}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <span className={`px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider border ${student.role === 'admin' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-emerald-50 text-emerald-600 border-emerald-200'}`}>{student.role || 'Student'}</span>
+                        </td>
+                        <td className="px-6 py-4 text-slate-600 font-medium text-[13px] text-center">
+                          {formatDate(student.created_at).split(' ')[0]}
+                        </td>
+                        <td className="px-6 py-4 text-right flex items-center justify-end gap-2">
+                          <button onClick={() => handleSelectStudent(student)} className="text-[#0a5482] font-bold text-[12px] bg-white hover:bg-[#0a5482] hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-200 shadow-sm uppercase tracking-wider">
+                            Cấu hình & Tiến độ
+                          </button>
+                          
+                          <button onClick={() => setEditingUser(student)} className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-colors border border-transparent hover:border-blue-200" title="Sửa thông tin">
+                            ✏️
+                          </button>
+    
+                          <button onClick={() => handleDeleteUser(student.id, student.full_name)} className="text-slate-400 hover:text-red-500 hover:bg-red-50 p-2 rounded-lg transition-colors border border-transparent hover:border-red-200" title="Xóa tài khoản">
+                            🗑️
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+  
+              {totalPages > 1 && (
+                <div className="p-4 border-t border-slate-200 bg-slate-50 flex justify-center items-center gap-4 shrink-0">
+                   <button disabled={currentPage === 1} onClick={() => setCurrentPage(p => p - 1)} className="px-4 py-2 bg-white border border-slate-200 text-slate-600 hover:text-[#0a5482] hover:border-[#0a5482] rounded-lg disabled:opacity-50 disabled:hover:border-slate-200 disabled:hover:text-slate-600 font-bold text-[13px] transition-colors shadow-sm">
+                      ← Trang trước
+                   </button>
+                   <span className="text-[13px] font-black text-slate-500">
+                      Trang {currentPage} <span className="font-medium text-slate-400">/ {totalPages}</span>
+                   </span>
+                   <button disabled={currentPage === totalPages} onClick={() => setCurrentPage(p => p + 1)} className="px-4 py-2 bg-white border border-slate-200 text-slate-600 hover:text-[#0a5482] hover:border-[#0a5482] rounded-lg disabled:opacity-50 disabled:hover:border-slate-200 disabled:hover:text-slate-600 font-bold text-[13px] transition-colors shadow-sm">
+                      Trang sau →
+                   </button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
       </div>
 
+      {/* 🚀 ĐẶT MODALS RA BÊN NGOÀI ĐỂ KHÔNG BỊ "NHỐT" NỮA */}
       {renderEditUserModal()}
 
       {showCreateUserModal && (
@@ -497,13 +551,18 @@ export default function StudentManagement() {
               </div>
               
               <div>
+                <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Số điện thoại</label>
+                <input name="phone" type="text" defaultValue="" autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
+              </div>
+
+              <div>
                 <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Email đăng nhập</label>
                 <input name="email" required type="email" defaultValue="" autoComplete="off" placeholder="email@tonyenglish.vn" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
               </div>
 
               <div>
                 <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Mật khẩu</label>
-                <input name="password" required type="password" minLength={6} defaultValue="" autoComplete="off" placeholder="Ít nhất 6 ký tự" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm" />
+                <input name="password" required type="password" minLength={6} defaultValue="123456" autoComplete="off" placeholder="Ít nhất 6 ký tự" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold text-[#0a5482]" />
               </div>
 
               <div>
@@ -530,6 +589,6 @@ export default function StudentManagement() {
           </form>
         </div>
       )}
-    </div>
+    </>
   );
 }

@@ -12,235 +12,168 @@ import IeltsSpeaking from './IeltsSpeaking';
 import SplitScreenTest from './SplitScreenTest';
 import LectureViewer from './LectureViewer'; 
 import SiegeGame from './SiegeGame'; 
-// 🚀 IMPORT 2 GAME MỚI VÀO HỆ THỐNG
 import NinjaSurvival from './NinjaSurvival';
 import VocabRacing from './VocabRacing';
 
 export default function App() {
   const getInitialView = () => {
     const path = window.location.pathname;
-    if (path === '/admin' || path === '/admin/') {
-      return 'admin-login'; 
-    }
-    // Khôi phục trạng thái màn hình cũ nếu có (Chống F5 Reload & Tiết kiệm RAM)
-    const savedView = sessionStorage.getItem('lms_current_view');
-    return savedView || 'home'; 
+    if (path === '/admin' || path === '/admin/') return 'admin-login'; 
+    try { return sessionStorage.getItem('lms_current_view') || 'home'; } 
+    catch(e) { return 'home'; }
   };
 
   const [currentView, setCurrentView] = useState(getInitialView()); 
-  const timerRef = useRef<any>(null); // 🚀 BỘ ĐẾM THỜI GIAN THỰC TẾ (Cho Báo Cáo)
+  const timerRef = useRef<any>(null); 
   
-  // Khôi phục đề thi cũ đang làm dở nếu bị Reload
+  // 🚀 LÁ CHẮN BẢO VỆ KHI ĐỌC BỘ NHỚ TẠM
   const [currentTestData, setCurrentTestData] = useState<any>(() => {
-    const savedTest = sessionStorage.getItem('lms_current_test');
-    return savedTest ? JSON.parse(savedTest) : null;
+    try {
+      const savedTest = sessionStorage.getItem('lms_current_test');
+      return savedTest ? JSON.parse(savedTest) : null;
+    } catch (e) {
+      console.error("Lỗi đọc Session Storage:", e);
+      return null;
+    }
   });
 
-  // State lưu mã khóa học khi bấm vào học bài giảng
   const [activeCourseId, setActiveCourseId] = useState<string | null>(() => {
-    return sessionStorage.getItem('lms_active_course_id') || null;
+    try { return sessionStorage.getItem('lms_active_course_id') || null; } catch(e) { return null; }
   });
 
-  // State lưu lại NƠI XUẤT PHÁT (để thi xong biết đường quay về)
   const [returnView, setReturnView] = useState<string>(() => {
-    return sessionStorage.getItem('lms_return_view') || 'portal';
+    try { return sessionStorage.getItem('lms_return_view') || 'portal'; } catch(e) { return 'portal'; }
   });
 
   useEffect(() => {
-    if (currentView === 'admin' || currentView === 'admin-login') {
-      window.history.pushState(null, '', '/admin');
-    } else if (currentView === 'home') {
-      window.history.pushState(null, '', '/');
-    }
+    if (currentView === 'admin' || currentView === 'admin-login') window.history.pushState(null, '', '/admin');
+    else if (currentView === 'home') window.history.pushState(null, '', '/');
   }, [currentView]);
 
   useEffect(() => {
-    // 🚀 HÀM KHỞI ĐỘNG ĐỒNG HỒ ĐẾM GIỜ HỌC (CÓ ĐỒNG BỘ SUPABASE)
     const startGlobalTimer = () => {
       if (!timerRef.current) {
         timerRef.current = setInterval(() => {
-          const currentSecs = parseInt(localStorage.getItem('tony_global_time') || '0');
-          const newSecs = currentSecs + 1;
-          localStorage.setItem('tony_global_time', newSecs.toString());
+          try {
+            const currentSecs = parseInt(localStorage.getItem('tony_global_time') || '0');
+            const newSecs = currentSecs + 1;
+            localStorage.setItem('tony_global_time', newSecs.toString());
 
-          // 🚀 Đồng bộ ngầm lên Supabase mỗi 5 phút (300 giây) để không làm lag Server
-          if (newSecs > 0 && newSecs % 300 === 0) {
-            supabase.auth.getUser().then(({ data: { user } }) => {
-              if (user) {
-                supabase.from('profiles')
-                  .update({ study_time_seconds: newSecs })
-                  .eq('id', user.id)
-                  .then(({ error }) => {
-                    if (error) console.error("Lỗi đồng bộ thời gian học:", error);
-                  });
-              }
-            });
-          }
+            if (newSecs > 0 && newSecs % 300 === 0) {
+              supabase.auth.getUser().then(({ data: { user } }) => {
+                if (user) {
+                  supabase.from('profiles').update({ study_time_seconds: newSecs }).eq('id', user.id).then();
+                }
+              });
+            }
+          } catch(e) {}
         }, 1000);
       }
     };
 
     const stopGlobalTimer = () => {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-        timerRef.current = null;
-      }
+      if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
     };
 
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) {
         setCurrentView(prev => prev === 'home' ? 'portal' : prev);
-        startGlobalTimer(); // Bật đồng hồ nếu đã login
+        startGlobalTimer(); 
       }
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN') {
         setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
-        startGlobalTimer(); // Bật đồng hồ khi login
+        startGlobalTimer(); 
       } else if (event === 'SIGNED_OUT') {
         setCurrentView(prev => (prev !== 'admin' && prev !== 'admin-login') ? 'home' : prev); 
-        // Xóa sạch bộ nhớ đệm khi đăng xuất
-        sessionStorage.removeItem('lms_current_view');
-        sessionStorage.removeItem('lms_current_test');
-        sessionStorage.removeItem('lms_active_course_id');
-        sessionStorage.removeItem('lms_return_view'); // Xóa trí nhớ đường về
-        stopGlobalTimer(); // Tắt đồng hồ khi logout
+        try {
+          sessionStorage.removeItem('lms_current_view');
+          sessionStorage.removeItem('lms_current_test');
+          sessionStorage.removeItem('lms_active_course_id');
+          sessionStorage.removeItem('lms_return_view'); 
+        } catch(e) {}
+        stopGlobalTimer(); 
       }
     });
 
-    return () => {
-      subscription.unsubscribe();
-      stopGlobalTimer();
-    };
+    return () => { subscription.unsubscribe(); stopGlobalTimer(); };
   }, []); 
 
-  // Hàm chuyển trang kèm lưu bộ nhớ đệm
   const handleNavigate = (view: string) => {
     setCurrentView(view);
-    sessionStorage.setItem('lms_current_view', view);
+    try { sessionStorage.setItem('lms_current_view', view); } catch(e) {}
   };
 
-  // Hàm vào phòng thi kèm lưu đề thi vào bộ nhớ đệm
   const handleStartTest = (type: string, data: any) => {
-    setCurrentTestData(data);
-    
-    // BÍ KÍP: Lưu lại màn hình hiện tại vào "returnView" trước khi nhảy sang bài thi/game
-    setReturnView(currentView);
-    sessionStorage.setItem('lms_return_view', currentView);
+    try {
+      setCurrentTestData(data);
+      setReturnView(currentView);
+      sessionStorage.setItem('lms_return_view', currentView);
 
-    // 🚀 BỘ LỌC ĐỊNH TUYẾN THÔNG MINH (CHỐNG LỖI MÀN HÌNH TRẮNG)
-    let targetView = type.toLowerCase();
-    
-    // Nếu trong tên có chữ "standard" -> ép về "standard"
-    if (targetView.includes('standard')) {
-      targetView = 'standard';
-    } 
-    // Nếu trong tên có chữ "case-study" hoặc "business" -> ép về "case-study"
-    else if (targetView.includes('case-study') || targetView.includes('business')) {
-      targetView = 'case-study';
+      let targetView = type.toLowerCase();
+      if (targetView.includes('standard')) targetView = 'standard';
+      else if (targetView.includes('case-study') || targetView.includes('business')) targetView = 'case-study';
+
+      handleNavigate(targetView);
+      sessionStorage.setItem('lms_current_test', JSON.stringify(data));
+    } catch (error) {
+      console.error("Lỗi khi chuyển trang game:", error);
+      alert("Dữ liệu đề thi quá lớn hoặc bị lỗi cấu trúc, không thể lưu vào bộ nhớ!");
     }
-
-    handleNavigate(targetView);
-    sessionStorage.setItem('lms_current_test', JSON.stringify(data));
   };
 
-  // Hàm mở bài giảng kèm lưu lại Khóa học đang học
   const handleOpenLecture = (courseId: string) => {
     setActiveCourseId(courseId);
-    sessionStorage.setItem('lms_active_course_id', courseId);
+    try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {}
     handleNavigate('lecture');
   };
 
-  // HÀM ĐIỀU HƯỚNG QUAY VỀ ĐÚNG NƠI XUẤT PHÁT
-  const handleReturnFromTest = () => {
-    handleNavigate(returnView);
-  };
+  const handleReturnFromTest = () => { handleNavigate(returnView); };
+
+  // Danh sách các View hợp lệ
+  const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
 
   return (
     <React.Fragment>
 
-      {currentView === 'admin-login' && (
-        <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />
-      )}
-
-      {currentView === 'home' && (
-        <Home onNavigate={handleNavigate} onStartTest={handleStartTest} />
-      )}
+      {currentView === 'admin-login' && <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />}
+      {currentView === 'home' && <Home onNavigate={handleNavigate} onStartTest={handleStartTest} />}
+      {currentView === 'portal' && <StudentPortal onNavigate={handleNavigate} onStartTest={handleStartTest} onOpenLecture={handleOpenLecture} />}
+      {currentView === 'admin' && <AdminPanel onNavigate={handleNavigate} />}
+      {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
+      {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
+      {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
+      {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
       
-      {currentView === 'portal' && (
-        <StudentPortal 
-          onNavigate={handleNavigate} 
-          onStartTest={handleStartTest} 
-          onOpenLecture={handleOpenLecture}
-        />
-      )}
-      
-      {currentView === 'admin' && (
-        <AdminPanel onNavigate={handleNavigate} />
-      )}
-      
-      {currentView === 'ielts-writing' && (
-        <IeltsWriting onBack={handleReturnFromTest} />
-      )}
-      
-      {currentView === 'ielts-speaking' && (
-        <IeltsSpeaking onBack={handleReturnFromTest} />
-      )}
-
-      {currentView === 'computer' && (
-        <ComputerTest 
-          onBack={handleReturnFromTest} 
-          testData={currentTestData} 
-        />
-      )}
-
-      {currentView === 'paper' && (
-        <PaperTest 
-          onBack={handleReturnFromTest} 
-          testData={currentTestData} 
-        />
-      )}
-
       {currentView === 'standard' && (
-        <StandardTest 
-          onBack={handleReturnFromTest} 
-          testData={currentTestData} 
-          onFinish={(res: any) => {
-            console.log("Kết quả bài thi:", res);
-            handleReturnFromTest(); // Chạy về nơi xuất phát khi nộp bài
-          }} 
-        />
+        <StandardTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={() => handleReturnFromTest()} />
       )}
 
-      {/* 🚀 ĐÃ VÁ LỖI TRẮNG MÀN HÌNH BẰNG CÁCH TRUYỀN DỮ LIỆU ĐỀ THI VÀO */}
-      {currentView === 'case-study' && (
-        <SplitScreenTest 
-          onBack={handleReturnFromTest} 
-          testData={currentTestData} 
-        />
-      )}
-
-      {/* 🚀 LUỒNG RẼ NHÁNH CHO CÁC MINI-GAMES */}
-      {currentView === 'siege-game' && (
-        <SiegeGame onBack={handleReturnFromTest} testData={currentTestData} />
-      )}
-
-      {currentView === 'ninja-survival' && (
-        <NinjaSurvival onBack={handleReturnFromTest} testData={currentTestData} />
-      )}
-
-      {currentView === 'vocab-racing' && (
-        <VocabRacing onBack={handleReturnFromTest} testData={currentTestData} />
-      )}
-
-      {/* MÀN HÌNH BÀI GIẢNG (LECTURE) */}
+      {currentView === 'case-study' && <SplitScreenTest onBack={handleReturnFromTest} testData={currentTestData} />}
+      {currentView === 'siege-game' && <SiegeGame onBack={handleReturnFromTest} testData={currentTestData} />}
+      {currentView === 'ninja-survival' && <NinjaSurvival onBack={handleReturnFromTest} testData={currentTestData} />}
+      {currentView === 'vocab-racing' && <VocabRacing onBack={handleReturnFromTest} testData={currentTestData} />}
+      
       {currentView === 'lecture' && activeCourseId && (
-        <LectureViewer 
-          courseId={activeCourseId}
-          onBack={() => handleNavigate('portal')} 
-          onStartTest={handleStartTest}
-        />
+        <LectureViewer courseId={activeCourseId} onBack={() => handleNavigate('portal')} onStartTest={handleStartTest} />
+      )}
+
+      {/* 🚀 RADAR CẢNH BÁO LỖI: NẾU ĐỊNH TUYẾN BỊ LỆCH, SẼ HIỆN MÀN HÌNH ĐỎ THAY VÌ TRẮNG XÓA */}
+      {!validViews.includes(currentView) && (
+        <div className="h-screen bg-red-50 flex flex-col items-center justify-center p-8 text-center font-sans">
+          <h1 className="text-4xl font-black text-red-600 mb-4">⚠️ LỖI ĐỊNH TUYẾN (ROUTE)</h1>
+          <p className="text-slate-700 text-lg mb-8 font-medium">
+            Hệ thống đang cố truy cập vào một giao diện không tồn tại: <strong className="text-red-600 bg-red-100 px-2 py-1 rounded">{currentView}</strong>
+          </p>
+          <button 
+            onClick={() => { sessionStorage.clear(); window.location.reload(); }} 
+            className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-3 rounded-xl shadow-lg transition"
+          >
+            Khôi phục hệ thống (Xóa Cache)
+          </button>
+        </div>
       )}
 
     </React.Fragment>

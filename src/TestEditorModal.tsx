@@ -72,7 +72,7 @@ const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
             ref={quillRef} 
             theme="snow" 
             value={value || ''} 
-            onChange={(content) => onChange({ target: { value: content } })} 
+            onChange={(content: string) => onChange({ target: { value: content } })} 
             modules={modules} 
             placeholder={placeholder || "Nhập nội dung vào đây..."} 
             className="flex-1 flex flex-col min-h-0 [&_.ql-container]:flex-1 [&_.ql-container]:!overflow-y-auto [&_.ql-editor]:min-h-full [&_.ql-editor]:text-[14px] [&_.ql-editor]:font-sans [&_.ql-toolbar]:bg-slate-50"
@@ -82,7 +82,7 @@ const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
   );
 };
 
-// --- COMPONENT MEDIA ROW: THÊM TÍNH NĂNG XÓA FILE THÔNG MINH ---
+// --- COMPONENT MEDIA ROW ---
 const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", uploadingId, setUploadingId }: any) => {
   const [isDrag, setIsDrag] = useState(false);
   const [showLink, setShowLink] = useState(false);
@@ -94,8 +94,11 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
     try {
       const url = await uploadToSupabase(file);
       onUpload(url);
-    } catch (err) { alert("Lỗi tải file!"); }
-    finally { setUploadingId(null); }
+    } catch (err) { 
+      alert("Lỗi tải file!"); 
+    } finally { 
+      setUploadingId(null); 
+    }
   };
 
   const handleSaveLink = () => {
@@ -105,7 +108,7 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
   };
 
   const handleRemoveFile = async () => {
-    if (!window.confirm("Anh có chắc muốn xóa file âm thanh này không?")) return;
+    if (!window.confirm("Anh có chắc muốn xóa file đính kèm này không?")) return;
     
     setIsDeleting(true);
     try {
@@ -138,9 +141,11 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
         <div className="flex items-center gap-3 w-full md:w-auto">
           <span className="text-2xl shrink-0">{value ? '✅' : '🎵'}</span>
           <div className="text-[13px] text-slate-500 w-full min-w-0">
-            {uploadingId === id ? <span className="text-amber-500 font-bold">⏳ Đang tải lên...</span> : 
-             isDeleting ? <span className="text-red-500 font-bold">🗑️ Đang xóa file...</span> :
-             value ? (
+            {uploadingId === id ? (
+               <span className="text-amber-500 font-bold">⏳ Đang tải lên...</span> 
+            ) : isDeleting ? (
+               <span className="text-red-500 font-bold">🗑️ Đang xóa file...</span> 
+            ) : value ? (
                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full min-w-0">
                    <span className="text-emerald-600 font-bold truncate block w-full sm:max-w-[200px] md:max-w-[250px] lg:max-w-[350px]" title={value}>
                       {value.startsWith('http') ? value : 'Đã có file đính kèm'}
@@ -152,8 +157,9 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
                       ✖ Xóa
                    </button>
                 </div>
-             ) : 
-             <span>Kéo thả file Âm thanh vào đây</span>}
+             ) : (
+                <span>Kéo thả file Âm thanh vào đây</span>
+             )}
           </div>
         </div>
         
@@ -192,14 +198,6 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
   );
 };
 
-const FieldRow = ({ label, value, onChange, placeholder = "" }: any) => (
-  <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 last:border-0 gap-2">
-    <label className="w-32 shrink-0 text-[13px] font-bold text-slate-600">{label}</label>
-    <input type="text" value={value || ''} onChange={onChange} placeholder={placeholder} className="flex-1 w-full bg-slate-50 hover:bg-white focus:bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] focus:border-[#00a651] outline-none transition" />
-  </div>
-);
-
-
 // ==========================================
 // 2. COMPONENT CHÍNH TEST EDITOR
 // ==========================================
@@ -219,7 +217,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
         folderId: testRecord.folder_id || '', 
         skill: testRecord.test_type || 'Standard-Test',
         category: testRecord.content_json?.basicInfo?.category || 'test', 
-        gameTheme: testRecord.content_json?.basicInfo?.gameTheme || 'siege-game', // 🚀 DEFAULT THEME GAME
         mode: 'Đề thi',
         timeLimit: '40',
         scoreType: '1 điểm/ câu đúng',
@@ -231,7 +228,9 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const [testData, setTestData] = useState<any>(getInitialData());
   const [isSaving, setIsSaving] = useState(false);
 
-  // --- THUẬT TOÁN ĐỌC EXCEL ---
+  // ==========================================
+  // 🚀 THUẬT TOÁN ĐỌC EXCEL - ÉP GỘP COMBO VÀ DỌN SẠCH LỖI
+  // ==========================================
   const processExcelFile = async (file: File) => {
     setUploadingId('excel');
     const reader = new FileReader();
@@ -250,75 +249,197 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           return;
         }
 
+        let isReplace = true;
+        if (testData.parts && testData.parts.length > 0) {
+           isReplace = window.confirm("CẢNH BÁO: Đề này đang có sẵn câu hỏi.\n\nAnh muốn XÓA SẠCH câu hỏi cũ để thay bằng file mới (Bấm OK)?\nHay muốn NỐI THÊM câu hỏi vào dưới cùng (Bấm Cancel)?");
+        }
+
         let newParts: any[] = [];
         let currentPart: any = null;
         let currentSection: any = null;
         let importCount = 0;
 
-        const getCol = (row: any, keywords: string[]) => {
+        const getCol = (row: any, exactKeywords: string[], partialKeywords: string[] = []) => {
           const keys = Object.keys(row);
           for (let key of keys) {
-            const cleanKey = key.toLowerCase().replace(/[^a-z0-9]/g, '');
-            if (keywords.some(k => cleanKey.includes(k))) return row[key];
+            const cleanKey = key.toLowerCase().replace(/[\s_.,|()[\]-]/g, '');
+            if (exactKeywords.includes(cleanKey)) return row[key];
+          }
+          for (let key of keys) {
+            const cleanKey = key.toLowerCase().replace(/[\s_.,|()[\]-]/g, '');
+            if (partialKeywords.some(k => cleanKey.includes(k))) return row[key];
           }
           return "";
         };
 
+        const cleanText = (val: any) => {
+          if (val === undefined || val === null) return "";
+          let str = String(val).trim();
+          str = str.replace(/<\/?p[^>]*>/gi, '<br><br>'); 
+          str = str.replace(/\n/g, '<br>');
+          str = str.replace(/(<br\s*\/?>\s*){3,}/gi, '<br><br>'); 
+          str = str.replace(/^(<br\s*\/?>\s*)+|(<br\s*\/?>\s*)+$/gi, ''); 
+          return str.trim();
+        };
+
         jsonData.forEach((row: any) => {
-          const partTitle = getCol(row, ['parttitle', 'part']) || 'Part 1';
-          const partContent = getCol(row, ['partcontent', 'bàiđọc']);
-          const secTitle = getCol(row, ['sectiontitle', 'section', 'nhóm', 'đoạn']) || 'Section 1';
-          const secContent = getCol(row, ['sectioncontent', 'hướngdẫn']);
-          const qType = getCol(row, ['questiontype', 'loạicâu', 'dạng']) || 'Trắc nghiệm';
+          if (Object.values(row).some(val => String(val).includes('---'))) return;
 
-          const qContent = getCol(row, ['questiontext', 'question', 'câu', 'nộidung']);
-          const optA = getCol(row, ['optiona', 'đápána', 'lựachọna']);
-          const optB = getCol(row, ['optionb', 'đápánb', 'lựachọnb']);
-          const optC = getCol(row, ['optionc', 'đápánc', 'lựachọnc']);
-          const optD = getCol(row, ['optiond', 'đápánd', 'lựachọnd']);
-          const answer = getCol(row, ['correct', 'answer', 'đápánđúng']);
-          const exp = getCol(row, ['explanation', 'giảithích']);
+          // Trim chuẩn để loại bỏ khoảng trắng rác ở Excel
+          const rawPartTitle = getCol(row, ['parttitle'], ['part']);
+          const partTitle = rawPartTitle !== undefined && rawPartTitle !== null ? String(rawPartTitle).trim() : '';
+          
+          const rawPartContent = getCol(row, ['partcontent'], ['bàiđọc', 'content']);
+          const partContent = rawPartContent !== undefined && rawPartContent !== null ? String(rawPartContent).trim() : '';
+          
+          const rawSecTitle = getCol(row, ['sectiontitle'], ['section', 'nhóm']);
+          const secTitle = rawSecTitle !== undefined && rawSecTitle !== null ? String(rawSecTitle).trim() : '';
+          
+          const rawSecContent = getCol(row, ['sectioncontent'], ['hướngdẫn', 'instruction']);
+          const secContent = rawSecContent !== undefined && rawSecContent !== null ? String(rawSecContent).trim() : '';
+          
+          const qTypeRaw = String(getCol(row, ['questiontype'], ['dạng', 'loạicâu'])).trim();
+          let qType = 'Trắc nghiệm';
+          const upperQType = qTypeRaw.toUpperCase();
+          
+          if (upperQType.includes('TFNG') || upperQType.includes('TRUE')) {
+             qType = 'TFNG';
+          } else if (upperQType.includes('CHECKBOX') || upperQType.includes('COMBO') || upperQType.includes('NHIỀU ĐÁP ÁN')) {
+             qType = 'Checkbox';
+          } else if (upperQType.includes('DROPLIST') || upperQType.includes('NỐI')) {
+             qType = 'Droplist';
+          } else if (upperQType.includes('ĐIỀN TỪ') || upperQType.includes('FILL')) {
+             qType = 'Điền từ';
+          } else if (qTypeRaw) {
+             qType = qTypeRaw;
+          } else if (!qTypeRaw && currentSection && (!secTitle || currentSection.title === secTitle)) {
+             // 🚀 FIX: Tự động kế thừa dạng câu hỏi nếu dòng 21 bị bỏ trống
+             qType = currentSection.questionType;
+          }
 
-          if (!qContent && !optA && !partTitle) return;
+          const qIdRaw = getCol(row, ['id', 'questionid'], ['câu']);
+          if (String(qIdRaw).toLowerCase().trim() === 'id' || String(qIdRaw).toLowerCase().trim() === 'question id') return;
+          
+          const qId = qIdRaw ? String(qIdRaw).trim() : '';
+          let qContent = cleanText(getCol(row, ['questiontext', 'questioncontent'], ['nộidung']));
+          
+          let optA = cleanText(getCol(row, ['optiona', 'a'], ['đápána', 'lựachọna']));
+          let optB = cleanText(getCol(row, ['optionb', 'b'], ['đápánb', 'lựachọnb']));
+          let optC = cleanText(getCol(row, ['optionc', 'c'], ['đápánc', 'lựachọnc']));
+          let optD = cleanText(getCol(row, ['optiond', 'd'], ['đápánd', 'lựachọnd']));
+          let optE = cleanText(getCol(row, ['optione', 'e'], ['đápáne', 'lựachọne']));
+          let optF = cleanText(getCol(row, ['optionf', 'f'], ['đápánf', 'lựachọnf']));
+          let optG = cleanText(getCol(row, ['optiong', 'g'], ['đápáng', 'lựachọng']));
+          let optH = cleanText(getCol(row, ['optionh', 'h'], ['đápánh', 'lựachọnh']));
+          
+          const answer = cleanText(getCol(row, ['answer', 'correctanswer'], ['đápánđúng', 'đápán']));
+          const exp = cleanText(getCol(row, ['explanation'], ['giảithích']));
 
-          if (!currentPart || currentPart.title !== partTitle) {
+          // MÁY HÚT BỤI TỐI THƯỢNG (Hút bất chấp AI ghi bậy)
+          if ((qType === 'Checkbox' || qType === 'Trắc nghiệm') && qContent.includes('A.')) {
+              const lines = qContent.split(/<br\s*\/?>/i);
+              const newLines: string[] = [];
+              const extracted: string[] = [];
+              lines.forEach((line: string) => {
+                  const match = line.trim().match(/^([A-H])[\.\):]\s*(.+)$/i);
+                  if (match) extracted.push(match[2].trim());
+                  else newLines.push(line);
+              });
+              if (extracted.length >= 2) {
+                  qContent = newLines.join('<br>').trim();
+                  optA = extracted[0] || ''; optB = extracted[1] || '';
+                  optC = extracted[2] || ''; optD = extracted[3] || '';
+                  optE = extracted[4] || ''; optF = extracted[5] || '';
+                  optG = extracted[6] || ''; optH = extracted[7] || '';
+              }
+          }
+
+          const isRealQuestion = (qId !== "" && !isNaN(parseInt(qId))) || (answer !== "");
+          if (!partTitle && !secTitle && !partContent && !secContent && !isRealQuestion) return;
+
+          if (partTitle && (!currentPart || currentPart.title !== partTitle)) {
             currentPart = { id: Date.now().toString() + Math.random(), title: partTitle, content: partContent || '', tags: '', audioUrl: '', explanation: '', sections: [] };
             newParts.push(currentPart);
             currentSection = null; 
+          } else if (partContent && currentPart && !currentPart.content) {
+            currentPart.content = partContent;
           }
 
-          if (!currentSection || currentSection.title !== secTitle) {
-            currentSection = { id: Date.now().toString() + Math.random(), title: secTitle, content: secContent || '', tags: '', questionType: qType, audioUrl: '', explanation: '', questions: [] };
-            currentPart.sections.push(currentSection);
+          const options = [];
+          if (optA) options.push(optA); if (optB) options.push(optB);
+          if (optC) options.push(optC); if (optD) options.push(optD);
+          if (optE) options.push(optE); if (optF) options.push(optF);
+          if (optG) options.push(optG); if (optH) options.push(optH);
+
+          // 🚀 Ép buộc các câu nối tiếp của Checkbox phải bám vào Section phía trên
+          let isNewSection = false;
+          if (secTitle && (!currentSection || currentSection.title !== secTitle)) {
+              isNewSection = true;
           }
 
-          if (qContent || optA || qType === 'Điền từ') {
-            const options = [];
-            if (optA) options.push(optA.toString());
-            if (optB) options.push(optB.toString());
-            if (optC) options.push(optC.toString());
-            if (optD) options.push(optD.toString());
+          if (qType === 'Checkbox' && currentSection && currentSection.questionType === 'Checkbox') {
+              const isFollowUp = (!qContent && options.length === 0);
+              if (isFollowUp) {
+                  isNewSection = false; // Mặc kệ secTitle có bị rác, ép nó gộp vào Section liền trước!
+              }
+          }
 
-            currentSection.questions.push({
-              id: Date.now().toString() + Math.random(),
-              content: qContent ? qContent.toString() : '',
-              tags: '',
-              audioUrl: '',
-              explanation: exp ? exp.toString() : '',
-              options: options.length > 0 ? options : ['A', 'B', 'C', 'D'],
-              correctAnswer: answer ? answer.toString() : ''
-            });
-            importCount++;
+          if (isNewSection || !currentSection) {
+            currentSection = { id: Date.now().toString() + Math.random(), title: secTitle || (currentSection ? currentSection.title : `Section ${qId}`), content: secContent || '', tags: '', questionType: qType, audioUrl: '', explanation: '', questions: [] };
+            if (currentPart) currentPart.sections.push(currentSection);
+          } else if (secContent && currentSection && !currentSection.content) {
+            currentSection.content = secContent;
+          }
+
+          if (isRealQuestion && currentSection) {
+            let finalOptions = options;
+            if (options.length === 0) {
+               if (qType === 'TFNG') finalOptions = ['TRUE', 'FALSE', 'NOT GIVEN'];
+               else if (qType === 'Điền từ') finalOptions = []; 
+               // 🚀 Ngăn không cho sinh ra rác A,B,C,D cho câu ăn theo Combo (Câu 21)
+               else if (qType === 'Checkbox' && !qContent) finalOptions = []; 
+               else finalOptions = ['A', 'B', 'C', 'D']; 
+            }
+
+            // MÁY PHÂN BÀO: Tự động đẻ câu nếu AI lười gộp ID trên 1 dòng
+            if (qType === 'Checkbox' && answer.includes(',')) {
+                const ansArr = answer.split(',').map(x => x.trim()).filter(Boolean);
+                let baseIdMatch = qId.match(/\d+/);
+                let baseId = baseIdMatch ? parseInt(baseIdMatch[0]) : null;
+                
+                ansArr.forEach((ans, idx) => {
+                    let cid = qId;
+                    if (baseId !== null) cid = String(baseId + idx);
+                    else if (idx > 0) cid = qId + `_${idx}`;
+
+                    currentSection.questions.push({
+                       id: cid,
+                       content: idx === 0 ? qContent : '', 
+                       tags: '', audioUrl: '', 
+                       explanation: idx === 0 ? exp : '', 
+                       options: idx === 0 ? finalOptions : [], 
+                       correctAnswer: ans 
+                    });
+                    importCount++;
+                });
+            } else {
+                currentSection.questions.push({
+                   id: qId ? qId : (Date.now().toString() + Math.random()),
+                   content: qContent, tags: '', audioUrl: '', explanation: exp, options: finalOptions, correctAnswer: answer
+                });
+                importCount++;
+            }
           }
         });
 
         if (newParts.length > 0) {
-          setTestData((prev: any) => ({ ...prev, parts: [...prev.parts, ...newParts] }));
-          alert(`🎉 Bóc tách thành công ${importCount} câu hỏi! Anh cuộn xuống dưới để xem nhé.`);
+          setTestData((prev: any) => ({ ...prev, parts: isReplace ? newParts : [...prev.parts, ...newParts] }));
+          alert(`🎉 Bóc tách thành công chính xác ${importCount} câu hỏi! Mọi nhóm Combo đã được ép chuẩn lại.`);
         } else {
           alert("⚠️ Không tìm thấy câu hỏi nào hợp lệ. Anh kiểm tra lại tên các cột trong file.");
         }
       } catch (err) {
+        console.error("Error parsing Excel:", err);
         alert("❌ Lỗi hệ thống khi đọc file. Hãy chắc chắn file không bị lỗi định dạng.");
       } finally {
         setUploadingId(null);
@@ -326,45 +447,69 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     };
     reader.readAsArrayBuffer(file);
   };
+  // ==========================================
 
   const handleDragOverExcel = (e: React.DragEvent) => { e.preventDefault(); setIsDraggingExcel(true); };
   const handleDragLeaveExcel = (e: React.DragEvent) => { e.preventDefault(); setIsDraggingExcel(false); };
   const handleExcelDrop = (e: React.DragEvent) => {
-    e.preventDefault(); setIsDraggingExcel(false);
+    e.preventDefault(); 
+    setIsDraggingExcel(false);
     if (e.dataTransfer.files?.[0]) processExcelFile(e.dataTransfer.files[0]);
   };
   const handleExcelUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files?.[0]) { processExcelFile(e.target.files[0]); e.target.value = ''; }
+    if (e.target.files?.[0]) { 
+      processExcelFile(e.target.files[0]); 
+      e.target.value = ''; 
+    }
   };
 
   // --- QUẢN LÝ MẢNG ---
   const addPart = () => {
-    const newData = { ...testData }; if (!newData.parts) newData.parts = [];
+    const newData = { ...testData }; 
+    if (!newData.parts) newData.parts = [];
     newData.parts.push({ id: Date.now().toString(), title: `Part ${newData.parts.length + 1}`, content: '', tags: '', audioUrl: '', explanation: '', sections: [] });
     setTestData(newData);
   };
-  const removePart = (pIdx: number) => { const newData = { ...testData }; newData.parts.splice(pIdx, 1); setTestData(newData); };
+  const removePart = (pIdx: number) => { 
+    const newData = { ...testData }; 
+    newData.parts.splice(pIdx, 1); 
+    setTestData(newData); 
+  };
 
   const addSection = (pIdx: number) => {
-    const newData = { ...testData }; if (!newData.parts[pIdx].sections) newData.parts[pIdx].sections = [];
+    const newData = { ...testData }; 
+    if (!newData.parts[pIdx].sections) newData.parts[pIdx].sections = [];
     newData.parts[pIdx].sections.push({ id: Date.now().toString(), title: `Section ${newData.parts[pIdx].sections.length + 1}`, content: '', tags: '', questionType: 'Trắc nghiệm', audioUrl: '', explanation: '', questions: [] });
     setTestData(newData);
   };
-  const removeSection = (pIdx: number, sIdx: number) => { const newData = { ...testData }; newData.parts[pIdx].sections.splice(sIdx, 1); setTestData(newData); };
+  const removeSection = (pIdx: number, sIdx: number) => { 
+    const newData = { ...testData }; 
+    newData.parts[pIdx].sections.splice(sIdx, 1); 
+    setTestData(newData); 
+  };
 
   const addQuestion = (pIdx: number, sIdx: number) => {
-    const newData = { ...testData }; if (!newData.parts[pIdx].sections[sIdx].questions) newData.parts[pIdx].sections[sIdx].questions = [];
+    const newData = { ...testData }; 
+    if (!newData.parts[pIdx].sections[sIdx].questions) newData.parts[pIdx].sections[sIdx].questions = [];
     newData.parts[pIdx].sections[sIdx].questions.push({ id: Date.now().toString(), content: '', tags: '', audioUrl: '', explanation: '', options: ['A', 'B', 'C', 'D'], correctAnswer: '' });
     setTestData(newData);
   };
-  const removeQuestion = (pIdx: number, sIdx: number, qIdx: number) => { const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions.splice(qIdx, 1); setTestData(newData); };
+  const removeQuestion = (pIdx: number, sIdx: number, qIdx: number) => { 
+    const newData = { ...testData }; 
+    newData.parts[pIdx].sections[sIdx].questions.splice(qIdx, 1); 
+    setTestData(newData); 
+  };
 
   const addOption = (pIdx: number, sIdx: number, qIdx: number) => {
-    const newData = { ...testData }; if (!newData.parts[pIdx].sections[sIdx].questions[qIdx].options) newData.parts[pIdx].sections[sIdx].questions[qIdx].options = [];
-    newData.parts[pIdx].sections[sIdx].questions[qIdx].options.push(''); setTestData(newData);
+    const newData = { ...testData }; 
+    if (!newData.parts[pIdx].sections[sIdx].questions[qIdx].options) newData.parts[pIdx].sections[sIdx].questions[qIdx].options = [];
+    newData.parts[pIdx].sections[sIdx].questions[qIdx].options.push(''); 
+    setTestData(newData);
   };
   const removeOption = (pIdx: number, sIdx: number, qIdx: number, oIdx: number) => {
-    const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions[qIdx].options.splice(oIdx, 1); setTestData(newData);
+    const newData = { ...testData }; 
+    newData.parts[pIdx].sections[sIdx].questions[qIdx].options.splice(oIdx, 1); 
+    setTestData(newData); 
   };
 
   const updateField = (path: number[], field: string, value: any) => {
@@ -375,34 +520,14 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     setTestData(newData);
   };
   const updateOption = (pIdx: number, sIdx: number, qIdx: number, oIdx: number, value: string) => {
-    const newData = { ...testData }; newData.parts[pIdx].sections[sIdx].questions[qIdx].options[oIdx] = value; setTestData(newData);
+    const newData = { ...testData }; 
+    newData.parts[pIdx].sections[sIdx].questions[qIdx].options[oIdx] = value; 
+    setTestData(newData);
   };
 
   const handleSave = () => { 
     setIsSaving(true); 
-    
-    // 🚀 BỘ LỌC RÁC: LÀM SẠCH AUDIO ẢO TRƯỚC KHI LƯU VÀO DATABASE
-    const cleanAudio = (url: any) => {
-      if (!url) return '';
-      const trimmed = String(url).trim();
-      if (trimmed === '' || trimmed.toLowerCase() === 'null') return '';
-      return trimmed;
-    };
-
-    const cleanedData = { ...testData };
-    if (cleanedData.basicInfo.audioUrl) cleanedData.basicInfo.audioUrl = cleanAudio(cleanedData.basicInfo.audioUrl);
-    
-    cleanedData.parts?.forEach((p: any) => {
-      p.audioUrl = cleanAudio(p.audioUrl);
-      p.sections?.forEach((s: any) => {
-        s.audioUrl = cleanAudio(s.audioUrl);
-        s.questions?.forEach((q: any) => {
-          q.audioUrl = cleanAudio(q.audioUrl);
-        });
-      });
-    });
-
-    onSave(cleanedData); 
+    onSave(testData); 
   };
 
   return (
@@ -417,8 +542,18 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       <div className="flex-1 overflow-y-auto relative custom-scrollbar">
         <div className="max-w-[1200px] mx-auto w-full p-4 md:p-8 space-y-8 pb-20"> 
           <div className="flex flex-col md:flex-row gap-4 mb-6">
-            <button onClick={() => setActiveTab('basic')} className={`w-full md:w-1/2 py-3 rounded-t-xl font-black text-sm uppercase tracking-widest transition-all border-b-4 ${activeTab === 'basic' ? 'bg-white border-[#00a651] text-[#00a651] shadow-sm' : 'bg-slate-200/50 border-transparent text-slate-400 hover:bg-slate-200'}`}>Thông tin chính</button>
-            <button onClick={() => setActiveTab('content')} className={`w-full md:w-1/2 py-3 rounded-t-xl font-black text-sm uppercase tracking-widest transition-all border-b-4 ${activeTab === 'content' ? 'bg-white border-[#00a651] text-[#00a651] shadow-sm' : 'bg-slate-200/50 border-transparent text-slate-400 hover:bg-slate-200'}`}>Cài đặt & Nội dung đề</button>
+            <button 
+              onClick={() => setActiveTab('basic')} 
+              className={`w-full md:w-1/2 py-3 rounded-t-xl font-black text-sm uppercase tracking-widest transition-all border-b-4 ${activeTab === 'basic' ? 'bg-white border-[#00a651] text-[#00a651] shadow-sm' : 'bg-slate-200/50 border-transparent text-slate-400 hover:bg-slate-200'}`}
+            >
+              Thông tin chính
+            </button>
+            <button 
+              onClick={() => setActiveTab('content')} 
+              className={`w-full md:w-1/2 py-3 rounded-t-xl font-black text-sm uppercase tracking-widest transition-all border-b-4 ${activeTab === 'content' ? 'bg-white border-[#00a651] text-[#00a651] shadow-sm' : 'bg-slate-200/50 border-transparent text-slate-400 hover:bg-slate-200'}`}
+            >
+              Cài đặt & Nội dung đề
+            </button>
           </div>
 
           {activeTab === 'basic' && (
@@ -427,7 +562,12 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                 <h3 className="font-black text-[#00a651] border-b border-slate-100 pb-2 mb-4 uppercase text-[13px]">Thông tin chính</h3>
                 <div>
                   <label className="text-[12px] font-bold text-slate-600 block mb-1">Tên đề/Bài tập <span className="text-red-500">*</span></label>
-                  <input value={testData.basicInfo.title} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, title: e.target.value}})} placeholder="Ví dụ: Unit 1: Reading Practice" className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-[#00a651] text-[14px] transition" />
+                  <input 
+                    value={testData.basicInfo.title} 
+                    onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, title: e.target.value}})} 
+                    placeholder="Ví dụ: Unit 1: Reading Practice" 
+                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:border-[#00a651] text-[14px] transition" 
+                  />
                 </div>
               </div>
 
@@ -436,16 +576,22 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Thuộc Khóa học</label>
-                    <select value={testData.basicInfo.courseId} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, courseId: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
+                    <select 
+                      value={testData.basicInfo.courseId} 
+                      onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, courseId: e.target.value}})} 
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]"
+                    >
                       <option value="all">Dùng chung</option>
                       {courses?.map((c: any) => <option key={c.id} value={c.id}>{c.title}</option>)}
                     </select>
                   </div>
-                  
-                  {/* 🚀 DROPDOWN PHÂN LOẠI ĐỀ THI / BÀI TẬP / MINI GAME */}
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Phân loại (Mục đích)</label>
-                    <select value={testData.basicInfo.category} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, category: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
+                    <select 
+                      value={testData.basicInfo.category || 'test'} 
+                      onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, category: e.target.value}})} 
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#1e88e5]"
+                    >
                       <option value="test">Đề thi (Test)</option>
                       <option value="exercise">Bài tập (Exercise)</option>
                       <option value="game">Mini Game (Trò chơi)</option>
@@ -453,22 +599,29 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                   </div>
                 </div>
 
-                {/* 🚀 NẾU LÀ GAME THÌ HIỆN THÊM TÙY CHỌN THEME GAME */}
                 {testData.basicInfo.category === 'game' && (
-                  <div className="mt-4 border-t border-slate-100 pt-4 animate-in fade-in">
-                    <label className="text-[12px] font-bold text-amber-600 block mb-1">🎮 Giao diện (Theme) Game</label>
-                    <select value={testData.basicInfo.gameTheme || 'siege-game'} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, gameTheme: e.target.value}})} className="w-full p-3 bg-amber-50 border border-amber-200 text-amber-700 font-bold rounded-lg outline-none text-[14px] transition focus:border-amber-400">
-                      <option value="siege-game">🏰 Grammar Siege (Công thành)</option>
-                      <option value="ninja-survival" >🥷 Ninja Survival </option>
-                      <option value="vocab-racing" >🏎️ Vocab Racing </option>
+                  <div className="mt-2 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+                    <label className="text-[12px] font-bold text-amber-700 block mb-1">Giao diện (Theme) Game</label>
+                    <select 
+                      value={testData.basicInfo.gameTheme || 'siege-game'} 
+                      onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, gameTheme: e.target.value}})} 
+                      className="w-full p-3 bg-white border border-amber-200 text-amber-700 font-bold rounded-lg outline-none text-[14px] transition focus:border-amber-400"
+                    >
+                      <option value="siege-game">Grammar Siege (Công thành)</option>
+                      <option value="ninja-survival">Ninja Survival</option>
+                      <option value="vocab-racing">Vocab Racing</option>
                     </select>
                   </div>
                 )}
 
-                <div className="grid grid-cols-2 gap-4 mt-2 border-t border-slate-100 pt-4">
+                <div className="grid grid-cols-2 gap-4 mt-2">
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Kỹ năng / Dạng đề</label>
-                    <select value={testData.basicInfo.skill} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
+                    <select 
+                      value={testData.basicInfo.skill} 
+                      onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} 
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]"
+                    >
                       <option value="IELTS-Listening">Listening (IELTS)</option>
                       <option value="IELTS-Reading">Reading (IELTS)</option>
                       <option value="Standard-Listening">Listening (Standard)</option>
@@ -480,13 +633,22 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                   </div>
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Thời gian làm (phút)</label>
-                    <input type="number" value={testData.basicInfo.timeLimit} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, timeLimit: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]" />
+                    <input 
+                      type="number" 
+                      value={testData.basicInfo.timeLimit} 
+                      onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, timeLimit: e.target.value}})} 
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]" 
+                    />
                   </div>
                 </div>
 
                 <div className="mt-2">
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Cách tính điểm</label>
-                    <select value={testData.basicInfo.scoreType} onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]">
+                    <select 
+                      value={testData.basicInfo.scoreType} 
+                      onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, scoreType: e.target.value}})} 
+                      className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]"
+                    >
                       <option value="1 điểm/ câu đúng">1 điểm/ câu đúng</option>
                       <option value="IELTS Band Score">IELTS Band Score</option>
                       <option value="Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)">Điểm gốc ➔ Thang điểm IGCSE (A*, A, B...)</option>
@@ -526,91 +688,203 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
               {testData.parts?.map((part: any, pIdx: number) => (
                 <div key={part.id} className="border-2 border-[#00a651] rounded-2xl bg-white overflow-hidden shadow-sm">
                     <div className="bg-[#e6f4ea] px-6 py-4 border-b border-[#00a651]/20 flex justify-between items-center group">
-                      <input value={part.title} onChange={(e) => updateField([pIdx], 'title', e.target.value)} className="font-black text-[#00a651] text-xl bg-transparent outline-none border-b border-dashed border-[#00a651]/50 focus:border-[#00a651] w-64" placeholder="Part Title..." />
-                      <button onClick={() => removePart(pIdx)} className="text-red-500 font-bold px-3 py-1 bg-red-50 rounded-lg opacity-0 group-hover:opacity-100 transition hover:bg-red-500 hover:text-white">Xóa Part ✖</button>
+                      <input 
+                        value={part.title} 
+                        onChange={(e) => updateField([pIdx], 'title', e.target.value)} 
+                        className="font-black text-[#00a651] text-xl bg-transparent outline-none border-b border-dashed border-[#00a651]/50 focus:border-[#00a651] w-64" 
+                        placeholder="Part Title..." 
+                      />
+                      <button 
+                        onClick={() => removePart(pIdx)} 
+                        className="text-red-500 font-bold px-3 py-1 bg-red-50 rounded-lg opacity-0 group-hover:opacity-100 transition hover:bg-red-500 hover:text-white"
+                      >
+                        Xóa Part ✖
+                      </button>
                     </div>
                     
                     <div className="p-6 md:p-8 space-y-4 bg-slate-50 border-b border-slate-200">
-                      <RichFieldRow label="Nội dung Part (Bài đọc/Giới thiệu)" value={part.content} onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} />
-                      <MediaRow label="File Âm thanh Part" value={part.audioUrl} id={`part-${part.id}`} uploadingId={uploadingId} setUploadingId={setUploadingId} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} />
+                      <RichFieldRow 
+                        label="Nội dung Part (Bài đọc/Giới thiệu)" 
+                        value={part.content} 
+                        onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} 
+                      />
+                      <MediaRow 
+                        label="File Âm thanh Part" 
+                        value={part.audioUrl} 
+                        id={`part-${part.id}`} 
+                        uploadingId={uploadingId} 
+                        setUploadingId={setUploadingId} 
+                        onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} 
+                      />
                     </div>
 
                     <div className="p-6 md:p-8 space-y-8">
                       {part.sections?.map((sec: any, sIdx: number) => (
                         <div key={sec.id} className="border-2 border-[#3b82f6] rounded-xl bg-white overflow-hidden shadow-sm">
                           <div className="bg-[#3b82f6] px-6 py-3 flex justify-between items-center group">
-                            <input value={sec.title} onChange={(e) => updateField([pIdx, sIdx], 'title', e.target.value)} className="font-black text-white text-base bg-transparent outline-none border-b border-dashed border-white/50 focus:border-white w-64 placeholder:text-white/60" placeholder="Section Title..." />
-                            <button onClick={() => removeSection(pIdx, sIdx)} className="text-white hover:text-red-200 font-bold opacity-0 group-hover:opacity-100 transition">✖</button>
+                            <input 
+                              value={sec.title} 
+                              onChange={(e) => updateField([pIdx, sIdx], 'title', e.target.value)} 
+                              className="font-black text-white text-base bg-transparent outline-none border-b border-dashed border-white/50 focus:border-white w-64 placeholder:text-white/60" 
+                              placeholder="Section Title..." 
+                            />
+                            <button 
+                              onClick={() => removeSection(pIdx, sIdx)} 
+                              className="text-white hover:text-red-200 font-bold opacity-0 group-hover:opacity-100 transition"
+                            >
+                              ✖
+                            </button>
                           </div>
                           
                           <div className="p-6 bg-blue-50/30 border-b border-blue-100 space-y-4">
-                            <RichFieldRow label="Nội dung Section (Đoạn văn/Hướng dẫn)" value={sec.content} onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} />
+                            <RichFieldRow 
+                              label="Nội dung Section (Đoạn văn/Hướng dẫn)" 
+                              value={sec.content} 
+                              onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} 
+                            />
                             <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 gap-2">
                               <label className="w-32 shrink-0 text-[13px] font-bold text-slate-600">Kiểu làm</label>
-                              <select value={sec.questionType} onChange={(e) => updateField([pIdx, sIdx], 'questionType', e.target.value)} className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] text-slate-700 outline-none focus:border-[#3b82f6] transition">
+                              <select 
+                                value={sec.questionType} 
+                                onChange={(e) => updateField([pIdx, sIdx], 'questionType', e.target.value)} 
+                                className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] text-slate-700 outline-none focus:border-[#3b82f6] transition"
+                              >
                                 <option value="Kéo thả vào Part">Kéo thả vào Part</option>
-                                <option value="Trắc nghiệm">Trắc nghiệm (1 đáp án / TFNG)</option>
-                                <option value="Checkbox">Checkbox (Nhiều đáp án)</option>
+                                <option value="Trắc nghiệm">Trắc nghiệm (4 đáp án dài)</option>
+                                <option value="TFNG">True / False / Not Given (TFNG)</option>
+                                <option value="Checkbox">Checkbox (Nhiều đáp án/ Combo)</option>
                                 <option value="Droplist">Droplist (Nối đáp án)</option>
                                 <option value="Điền từ">Điền từ</option>
                               </select>
                             </div>
-                            <MediaRow label="File Âm thanh Section" value={sec.audioUrl} id={`sec-${sec.id}`} uploadingId={uploadingId} setUploadingId={setUploadingId} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} />
+                            <MediaRow 
+                              label="File Âm thanh Section" 
+                              value={sec.audioUrl} 
+                              id={`sec-${sec.id}`} 
+                              uploadingId={uploadingId} 
+                              setUploadingId={setUploadingId} 
+                              onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} 
+                            />
                           </div>
 
                           <div className="p-6 space-y-6">
-                            {sec.questions?.map((q: any, qIdx: number) => (
-                              <div key={q.id} className="border border-slate-200 rounded-xl bg-white shadow-sm hover:border-amber-300 transition group relative">
-                                <button onClick={() => removeQuestion(pIdx, sIdx, qIdx)} className="absolute -top-3 -right-3 bg-red-500 text-white w-7 h-7 rounded-full opacity-0 group-hover:opacity-100 transition shadow-lg z-10">✖</button>
-                                
-                                <div className="p-5">
-                                    <div className="flex gap-4 items-start">
-                                      <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 font-black rounded-full flex items-center justify-center border border-amber-200">
-                                        {qIdx + 1}
-                                      </div>
-                                      <div className="flex-1 space-y-4">
-                                        <RichFieldRow label="Nội dung câu hỏi" value={q.content} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} />
-                                        
-                                        <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
-                                          <label className="text-[12px] font-bold text-slate-600 block border-b border-slate-200 pb-2">Các lựa chọn đáp án</label>
-                                          {q.options?.map((opt: string, oIdx: number) => (
-                                            <div key={oIdx} className="flex items-center gap-3">
-                                              <div className="w-8 h-8 rounded-full bg-white border border-slate-300 text-slate-600 font-black text-[12px] flex items-center justify-center shrink-0 shadow-sm">{String.fromCharCode(65+oIdx)}</div>
-                                              <input value={opt || ''} onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} placeholder="Nhập đáp án..." className="flex-1 bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] outline-none focus:border-[#0a5482] transition" />
-                                              <button onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} className="text-slate-300 hover:text-red-500 font-bold px-2 py-1 text-lg">×</button>
-                                            </div>
-                                          ))}
-                                          <button onClick={() => addOption(pIdx, sIdx, qIdx)} className="text-[#0a5482] text-[12px] font-bold mt-2 hover:underline">+ Thêm lựa chọn (A, B, C, D...)</button>
-                                        </div>
+                            {sec.questions?.map((q: any, qIdx: number) => {
+                              // 🚀 CẢNH BÁO UX: Rút gọn các câu Combo "ăn theo" để người dùng không bị rối
+                              const rawText = String(q.content || '').replace(/<[^>]*>/g, '').trim();
+                              const hasContent = rawText !== '' || String(q.content || '').includes('<img') || String(q.content || '').includes('<audio');
+                              const isComboChild = sec.questionType === "Checkbox" && qIdx > 0 && !hasContent;
 
-                                        <div className="flex gap-4">
-                                          <div className="flex-1">
-                                            <RichFieldRow label="Lời giải thích" value={q.explanation} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} placeholder="Giải thích vì sao đúng..." />
+                              return (
+                                <div key={q.id} className={`border rounded-xl bg-white shadow-sm transition group relative ${isComboChild ? 'border-amber-300 bg-amber-50/20 ml-8 border-l-[6px]' : 'border-slate-200 hover:border-amber-300'}`}>
+                                  <button 
+                                    onClick={() => removeQuestion(pIdx, sIdx, qIdx)} 
+                                    className="absolute -top-3 -right-3 bg-red-500 text-white w-7 h-7 rounded-full opacity-0 group-hover:opacity-100 transition shadow-lg z-10"
+                                  >
+                                    ✖
+                                  </button>
+                                  
+                                  <div className="p-5">
+                                      <div className="flex gap-4 items-start">
+                                        <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 font-black rounded-full flex items-center justify-center border border-amber-200">
+                                          {qIdx + 1}
+                                        </div>
+                                        <div className="flex-1 space-y-4">
+                                          
+                                          {isComboChild && (
+                                              <div className="bg-amber-50 text-amber-800 p-3 rounded-lg text-[13px] font-bold border border-amber-200 flex items-start gap-3">
+                                                  <span className="text-xl leading-none">🔗</span>
+                                                  <p className="m-0 leading-relaxed">Câu này đang được hệ thống <b>tự động gộp vào cụm Combo Checkbox phía trên</b> do rỗng Nội dung câu hỏi gốc.<br/>Anh chỉ cần thiết lập Đáp án đúng cho nó. Nếu muốn tách nó thành nhóm mới, hãy điền nội dung vào ô bên dưới.</p>
+                                              </div>
+                                          )}
+
+                                          <RichFieldRow 
+                                            label={isComboChild ? "Nội dung câu hỏi (Nhập nội dung nếu muốn tách câu này thành Combo mới)" : "Nội dung câu hỏi"}
+                                            value={q.content} 
+                                            onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} 
+                                          />
+                                          
+                                          {/* Tự động ẨN bớt Options rác nếu là câu ăn theo */}
+                                          <div className={`bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 ${isComboChild && (!q.options || q.options.length === 0) ? 'hidden' : ''}`}>
+                                            <label className="text-[12px] font-bold text-slate-600 block border-b border-slate-200 pb-2">Các lựa chọn đáp án</label>
+                                            {q.options?.map((opt: string, oIdx: number) => (
+                                              <div key={oIdx} className="flex items-center gap-3">
+                                                <div className="w-8 h-8 rounded-full bg-white border border-slate-300 text-slate-600 font-black text-[12px] flex items-center justify-center shrink-0 shadow-sm">
+                                                  {String.fromCharCode(65+oIdx)}
+                                                </div>
+                                                <input 
+                                                  value={opt || ''} 
+                                                  onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} 
+                                                  placeholder="Nhập đáp án..." 
+                                                  className="flex-1 bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] outline-none focus:border-[#0a5482] transition" 
+                                                />
+                                                <button 
+                                                  onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} 
+                                                  className="text-slate-300 hover:text-red-500 font-bold px-2 py-1 text-lg"
+                                                >
+                                                  ×
+                                                </button>
+                                              </div>
+                                            ))}
+                                            <button 
+                                              onClick={() => addOption(pIdx, sIdx, qIdx)} 
+                                              className="text-[#0a5482] text-[12px] font-bold mt-2 hover:underline"
+                                            >
+                                              + Thêm lựa chọn
+                                            </button>
                                           </div>
-                                          <div className="shrink-0 w-32">
-                                            <label className="text-[12px] font-bold text-slate-600 block mb-1">Đáp án đúng</label>
-                                            <input value={q.correctAnswer || ''} onChange={(e) => updateField([pIdx, sIdx, qIdx], 'correctAnswer', e.target.value)} className="w-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-center rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-emerald-400" placeholder="VD: A hoặc A, C" />
+
+                                          <div className="flex gap-4">
+                                            <div className="flex-1">
+                                              <RichFieldRow 
+                                                label="Lời giải thích" 
+                                                value={q.explanation} 
+                                                onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} 
+                                                placeholder="Giải thích vì sao đúng..." 
+                                              />
+                                            </div>
+                                            <div className="shrink-0 w-32">
+                                              <label className="text-[12px] font-bold text-slate-600 block mb-1">Đáp án đúng</label>
+                                              <input 
+                                                value={q.correctAnswer || ''} 
+                                                onChange={(e) => updateField([pIdx, sIdx, qIdx], 'correctAnswer', e.target.value)} 
+                                                className="w-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-center rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-emerald-400" 
+                                                placeholder="VD: A hoặc A, C" 
+                                              />
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
-                                    </div>
+                                  </div>
                                 </div>
-                              </div>
-                            ))}
-                            <button onClick={() => addQuestion(pIdx, sIdx)} className="w-full border-2 border-dashed border-slate-300 text-slate-500 hover:border-[#00a651] hover:text-[#00a651] hover:bg-[#e6f4ea] py-4 rounded-xl font-bold transition flex justify-center items-center gap-2">
+                              );
+                            })}
+                            <button 
+                              onClick={() => addQuestion(pIdx, sIdx)} 
+                              className="w-full border-2 border-dashed border-slate-300 text-slate-500 hover:border-[#00a651] hover:text-[#00a651] hover:bg-[#e6f4ea] py-4 rounded-xl font-bold transition flex justify-center items-center gap-2"
+                            >
                               <span className="text-xl">+</span> Thêm Câu Hỏi Mới
                             </button>
                           </div>
                         </div>
                       ))}
-                      <button onClick={() => addSection(pIdx)} className="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md">+ Thêm Section Mới</button>
+                      <button 
+                        onClick={() => addSection(pIdx)} 
+                        className="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md"
+                      >
+                        + Thêm Section Mới
+                      </button>
                     </div>
                 </div>
               ))}
               
               {(!isImportMode || testData.parts?.length > 0) && (
                 <div className="flex justify-center pt-8 border-t-2 border-dashed border-slate-200 pb-10">
-                    <button onClick={addPart} className="bg-[#00a651] hover:bg-[#008f45] text-white px-10 py-4 rounded-full text-[15px] font-black shadow-lg hover:scale-105 transition-transform">+ THÊM PART MỚI</button>
+                    <button 
+                      onClick={addPart} 
+                      className="bg-[#00a651] hover:bg-[#008f45] text-white px-10 py-4 rounded-full text-[15px] font-black shadow-lg hover:scale-105 transition-transform"
+                    >
+                      + THÊM PART MỚI
+                    </button>
                 </div>
               )}
             </div>
@@ -618,7 +892,11 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
         </div>
       </div>
 
-      <button onClick={handleSave} disabled={isSaving} className="fixed bottom-10 right-10 w-20 h-20 bg-[#2bd6eb] hover:bg-[#1bc1d6] text-white rounded-full shadow-[0_10px_25px_rgba(43,214,235,0.4)] flex flex-col items-center justify-center z-[100] transition-all hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:scale-100">
+      <button 
+        onClick={handleSave} 
+        disabled={isSaving} 
+        className="fixed bottom-10 right-10 w-20 h-20 bg-[#2bd6eb] hover:bg-[#1bc1d6] text-white rounded-full shadow-[0_10px_25px_rgba(43,214,235,0.4)] flex flex-col items-center justify-center z-[100] transition-all hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:scale-100"
+      >
         <span className="text-[26px] mb-0.5">{isSaving ? '⏳' : '💾'}</span>
         <span className="text-[10px] font-black uppercase tracking-wider">{isSaving ? 'Đang lưu' : 'Lưu Đề'}</span>
       </button>
