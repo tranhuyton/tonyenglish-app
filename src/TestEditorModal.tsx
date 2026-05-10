@@ -306,6 +306,8 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
              qType = 'TFNG';
           } else if (upperQType.includes('CHECKBOX') || upperQType.includes('COMBO') || upperQType.includes('NHIỀU ĐÁP ÁN')) {
              qType = 'Checkbox';
+          } else if (upperQType.includes('KÉO THẢ') || upperQType.includes('MATCHING') || upperQType.includes('DRAG')) {
+             qType = 'Kéo thả';
           } else if (upperQType.includes('DROPLIST') || upperQType.includes('NỐI')) {
              qType = 'Droplist';
           } else if (upperQType.includes('ĐIỀN TỪ') || upperQType.includes('FILL')) {
@@ -491,7 +493,12 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const addQuestion = (pIdx: number, sIdx: number) => {
     const newData = { ...testData }; 
     if (!newData.parts[pIdx].sections[sIdx].questions) newData.parts[pIdx].sections[sIdx].questions = [];
-    newData.parts[pIdx].sections[sIdx].questions.push({ id: Date.now().toString(), content: '', tags: '', audioUrl: '', explanation: '', options: ['A', 'B', 'C', 'D'], correctAnswer: '' });
+    // Không fix cứng 4 đáp án nữa, để trống hoặc 4 tùy loại câu hỏi
+    const qType = newData.parts[pIdx].sections[sIdx].questionType;
+    let initialOptions = ['A', 'B', 'C', 'D'];
+    if (qType === 'Điền từ') initialOptions = [];
+    
+    newData.parts[pIdx].sections[sIdx].questions.push({ id: Date.now().toString(), content: '', tags: '', audioUrl: '', explanation: '', options: initialOptions, correctAnswer: '' });
     setTestData(newData);
   };
   const removeQuestion = (pIdx: number, sIdx: number, qIdx: number) => { 
@@ -502,7 +509,9 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
   const addOption = (pIdx: number, sIdx: number, qIdx: number) => {
     const newData = { ...testData }; 
-    if (!newData.parts[pIdx].sections[sIdx].questions[qIdx].options) newData.parts[pIdx].sections[sIdx].questions[qIdx].options = [];
+    if (!newData.parts[pIdx].sections[sIdx].questions[qIdx].options) {
+        newData.parts[pIdx].sections[sIdx].questions[qIdx].options = [];
+    }
     newData.parts[pIdx].sections[sIdx].questions[qIdx].options.push(''); 
     setTestData(newData);
   };
@@ -519,6 +528,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     else if (path.length === 3) newData.parts[path[0]].sections[path[1]].questions[path[2]][field] = value;
     setTestData(newData);
   };
+  
   const updateOption = (pIdx: number, sIdx: number, qIdx: number, oIdx: number, value: string) => {
     const newData = { ...testData }; 
     newData.parts[pIdx].sections[sIdx].questions[qIdx].options[oIdx] = value; 
@@ -753,8 +763,9 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                 <option value="Trắc nghiệm">Trắc nghiệm (4 đáp án dài)</option>
                                 <option value="TFNG">True / False / Not Given (TFNG)</option>
                                 <option value="Checkbox">Checkbox (Nhiều đáp án/ Combo)</option>
-                                <option value="Droplist">Droplist (Nối đáp án)</option>
-                                <option value="Điền từ">Điền từ</option>
+                                <option value="Droplist">Droplist (Sổ chọn)</option>
+                                <option value="Kéo thả">Kéo thả (Matching / Kéo hộp từ)</option>
+                                <option value="Điền từ">Điền từ (Gõ tay)</option>
                               </select>
                             </div>
                             <MediaRow 
@@ -769,7 +780,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
                           <div className="p-6 space-y-6">
                             {sec.questions?.map((q: any, qIdx: number) => {
-                              // 🚀 CẢNH BÁO UX: Rút gọn các câu Combo "ăn theo" để người dùng không bị rối
                               const rawText = String(q.content || '').replace(/<[^>]*>/g, '').trim();
                               const hasContent = rawText !== '' || String(q.content || '').includes('<img') || String(q.content || '').includes('<audio');
                               const isComboChild = sec.questionType === "Checkbox" && qIdx > 0 && !hasContent;
@@ -786,9 +796,9 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                   <div className="p-5">
                                       <div className="flex gap-4 items-start">
                                         <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 font-black rounded-full flex items-center justify-center border border-amber-200">
-                                          {qIdx + 1}
+                                          {q.id || qIdx + 1}
                                         </div>
-                                        <div className="flex-1 space-y-4">
+                                        <div className="flex-1 space-y-4 min-w-0">
                                           
                                           {isComboChild && (
                                               <div className="bg-amber-50 text-amber-800 p-3 rounded-lg text-[13px] font-bold border border-amber-200 flex items-start gap-3">
@@ -797,60 +807,70 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                               </div>
                                           )}
 
-                                          <RichFieldRow 
-                                            label={isComboChild ? "Nội dung câu hỏi (Nhập nội dung nếu muốn tách câu này thành Combo mới)" : "Nội dung câu hỏi"}
-                                            value={q.content} 
-                                            onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} 
-                                          />
-                                          
-                                          {/* Tự động ẨN bớt Options rác nếu là câu ăn theo */}
-                                          <div className={`bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 ${isComboChild && (!q.options || q.options.length === 0) ? 'hidden' : ''}`}>
-                                            <label className="text-[12px] font-bold text-slate-600 block border-b border-slate-200 pb-2">Các lựa chọn đáp án</label>
-                                            {q.options?.map((opt: string, oIdx: number) => (
-                                              <div key={oIdx} className="flex items-center gap-3">
-                                                <div className="w-8 h-8 rounded-full bg-white border border-slate-300 text-slate-600 font-black text-[12px] flex items-center justify-center shrink-0 shadow-sm">
-                                                  {String.fromCharCode(65+oIdx)}
-                                                </div>
-                                                <input 
-                                                  value={opt || ''} 
-                                                  onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} 
-                                                  placeholder="Nhập đáp án..." 
-                                                  className="flex-1 bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] outline-none focus:border-[#0a5482] transition" 
-                                                />
-                                                <button 
-                                                  onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} 
-                                                  className="text-slate-300 hover:text-red-500 font-bold px-2 py-1 text-lg"
-                                                >
-                                                  ×
-                                                </button>
-                                              </div>
-                                            ))}
-                                            <button 
-                                              onClick={() => addOption(pIdx, sIdx, qIdx)} 
-                                              className="text-[#0a5482] text-[12px] font-bold mt-2 hover:underline"
-                                            >
-                                              + Thêm lựa chọn
-                                            </button>
-                                          </div>
-
-                                          <div className="flex gap-4">
+                                          <div className="flex flex-col md:flex-row gap-4">
                                             <div className="flex-1">
                                               <RichFieldRow 
-                                                label="Lời giải thích" 
-                                                value={q.explanation} 
-                                                onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} 
-                                                placeholder="Giải thích vì sao đúng..." 
+                                                label={isComboChild ? "Nội dung câu hỏi (Nhập để tách thành Combo mới)" : "Nội dung câu hỏi"}
+                                                value={q.content} 
+                                                onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} 
                                               />
                                             </div>
-                                            <div className="shrink-0 w-32">
+                                            <div className="shrink-0 w-full md:w-32">
                                               <label className="text-[12px] font-bold text-slate-600 block mb-1">Đáp án đúng</label>
                                               <input 
                                                 value={q.correctAnswer || ''} 
                                                 onChange={(e) => updateField([pIdx, sIdx, qIdx], 'correctAnswer', e.target.value)} 
-                                                className="w-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-center rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-emerald-400" 
-                                                placeholder="VD: A hoặc A, C" 
+                                                className="w-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-center rounded-lg p-3 outline-none focus:ring-2 focus:ring-emerald-400" 
+                                                placeholder="VD: A hoặc A,C" 
                                               />
                                             </div>
+                                          </div>
+                                          
+                                          {/* KHỐI OPTIONS */}
+                                          <div className={`bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 ${isComboChild && (!q.options || q.options.length === 0) ? 'hidden' : ''}`}>
+                                            <div className="flex justify-between items-center border-b border-slate-200 pb-2">
+                                                <label className="text-[12px] font-bold text-slate-600">Các lựa chọn đáp án (Options)</label>
+                                                <span className="text-[11px] text-slate-400 font-medium italic">
+                                                   Dùng cho Trắc nghiệm, Droplist, Kéo thả...
+                                                </span>
+                                            </div>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                              {q.options?.map((opt: string, oIdx: number) => (
+                                                <div key={oIdx} className="flex items-center gap-2">
+                                                  <div className="w-8 h-8 rounded-full bg-white border border-slate-300 text-slate-600 font-black text-[12px] flex items-center justify-center shrink-0 shadow-sm">
+                                                    {String.fromCharCode(65+oIdx)}
+                                                  </div>
+                                                  <input 
+                                                    value={opt || ''} 
+                                                    onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} 
+                                                    placeholder="Nhập nội dung lựa chọn..." 
+                                                    className="flex-1 bg-white border border-slate-200 rounded-lg p-2 text-[14px] outline-none focus:border-[#0a5482] transition min-w-0" 
+                                                  />
+                                                  <button 
+                                                    onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} 
+                                                    className="text-slate-300 hover:text-red-500 font-bold px-1.5 py-1 text-lg shrink-0"
+                                                    title="Xóa lựa chọn này"
+                                                  >
+                                                    ×
+                                                  </button>
+                                                </div>
+                                              ))}
+                                            </div>
+                                            <button 
+                                              onClick={() => addOption(pIdx, sIdx, qIdx)} 
+                                              className="w-full mt-2 py-2 border-2 border-dashed border-slate-300 text-[#0a5482] rounded-lg text-[12px] font-bold hover:bg-slate-100 hover:border-[#0a5482] transition"
+                                            >
+                                              + Thêm lựa chọn (Option {String.fromCharCode(65 + (q.options?.length || 0))})
+                                            </button>
+                                          </div>
+
+                                          <div className="w-full">
+                                            <RichFieldRow 
+                                              label="Lời giải thích (Tùy chọn)" 
+                                              value={q.explanation} 
+                                              onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} 
+                                              placeholder="Giải thích vì sao đúng..." 
+                                            />
                                           </div>
                                         </div>
                                       </div>

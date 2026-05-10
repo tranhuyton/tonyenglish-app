@@ -327,6 +327,23 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     }
   };
 
+  // NẾU TRONG TƯƠNG LAI ANH CÓ THÊM PHẦN DROPDOWN ĐỂ CHỌN LOẠI CÂU HỎI TRONG EDITOR
+  // ANH CHỈ CẦN THÊM OPTION "Kéo thả" VÀO NHƯ DƯỚI ĐÂY:
+  /*
+  <select
+    value={section.questionType}
+    onChange={(e) => handleUpdateSection(sIndex, 'questionType', e.target.value)}
+    className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 font-bold text-slate-700 outline-none focus:border-[#2bd6eb]"
+  >
+    <option value="Điền từ">Điền từ</option>
+    <option value="Trắc nghiệm">Trắc nghiệm</option>
+    <option value="Checkbox">Checkbox</option>
+    <option value="TFNG">TFNG / YNNG</option>
+    <option value="Droplist">Droplist</option>
+    <option value="Kéo thả">Kéo thả</option> 
+  </select>
+  */
+
   return (
     <div className="fixed inset-0 bg-slate-900/80 z-[100] flex justify-center items-center p-4">
       <div className="bg-[#f4f6f9] w-full max-w-7xl h-[95vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95 relative z-10">
