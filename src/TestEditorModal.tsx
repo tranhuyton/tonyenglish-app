@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from 'react';
+import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
 import * as XLSX from 'xlsx';
 // @ts-ignore
@@ -13,19 +13,13 @@ const uploadToSupabase = async (file: File) => {
   const fileExt = file.name ? file.name.split('.').pop() : 'png';
   const fileName = `media_${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
   
-  const { error } = await supabase.storage.from('test_assets').upload(`uploads/${fileName}`, file, {
-    cacheControl: '3600',
-    upsert: false
-  });
-  
+  const { error } = await supabase.storage.from('test_assets').upload(`uploads/${fileName}`, file, { cacheControl: '3600', upsert: false });
   if (error) throw error;
   
   return supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
 };
 
-// ==========================================
-// COMPONENT: RICH FIELD ROW (Dùng ReactQuill)
-// ==========================================
+// COMPONENT EDITOR DÀNH CHO CÁC Ô NHẬP NỘI DUNG
 const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
   const quillRef = useRef<any>(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -95,9 +89,7 @@ const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
   );
 };
 
-// ==========================================
-// COMPONENT: MEDIA ROW (Upload Audio/Image)
-// ==========================================
+// --- COMPONENT MEDIA ROW ---
 const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", uploadingId, setUploadingId }: any) => {
   const [isDrag, setIsDrag] = useState(false);
   const [showLink, setShowLink] = useState(false);
@@ -278,7 +270,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const [isSaving, setIsSaving] = useState(false);
 
   // ==========================================
-  // 🚀 THUẬT TOÁN ĐỌC EXCEL (HỖ TRỢ OPTION A ĐẾN L)
+  // 🚀 THUẬT TOÁN ĐỌC EXCEL (Xử lý Kế thừa & Ép rỗng Option)
   // ==========================================
   const processExcelFile = async (file: File) => {
     setUploadingId('excel');
@@ -486,14 +478,21 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           if (isRealQuestion && currentSection) {
             let finalOptions = options;
             
-            // CHỈ ĐẺ RA A,B,C,D mặc định NẾU LÀ TRẮC NGHIỆM MÀ AI QUÊN GHI VÀO EXCEL.
-            // CÁC DẠNG KHÁC (KÉO THẢ, ĐIỀN TỪ, DROPLIST) KHÔNG ĐƯỢC PHÉP ĐẺ OPTION RÁC.
+            // XỬ LÝ KHÔNG CHO ĐẺ RÁC A,B,C,D VỚI CÁC CÂU THEO SAU NẾU KHÔNG NHẬP
             if (options.length === 0) {
                if (qType === 'TFNG') {
                  finalOptions = ['TRUE', 'FALSE', 'NOT GIVEN'];
                } else if (qType === 'Trắc nghiệm') {
                  finalOptions = ['A', 'B', 'C', 'D'];
+               } else if (qType === 'Droplist') {
+                 // ĐỐI VỚI DROPLIST, CÂU SAU KẾ THỪA OPTIONS CỦA CÂU ĐẦU TIÊN CÙNG SECTION
+                 if (currentSection.questions.length > 0) {
+                    finalOptions = [...currentSection.questions[0].options];
+                 } else {
+                    finalOptions = []; 
+                 }
                } else {
+                 // Các dạng Kéo thả, Điền từ, Checkbox (câu phụ): Ép rỗng hoàn toàn []
                  finalOptions = []; 
                }
             }
@@ -537,7 +536,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
         if (newParts.length > 0) {
           setTestData((prev: any) => ({ ...prev, parts: isReplace ? newParts : [...prev.parts, ...newParts] }));
-          alert(`🎉 Bóc tách thành công chính xác ${importCount} câu hỏi! Mọi cấu trúc đục lỗ và Kéo thả đã được đồng bộ chuẩn xác.`);
+          alert(`🎉 Bóc tách thành công chính xác ${importCount} câu hỏi! Tự động cấu hình chuẩn Kéo Thả và Droplist.`);
         } else {
           alert("⚠️ Không tìm thấy câu hỏi nào hợp lệ. Anh kiểm tra lại tên các cột trong file.");
         }
@@ -624,18 +623,26 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
   const addQuestion = (pIdx: number, sIdx: number) => {
     const newData = { ...testData }; 
-    if (!newData.parts[pIdx].sections[sIdx].questions) {
-      newData.parts[pIdx].sections[sIdx].questions = [];
+    const section = newData.parts[pIdx].sections[sIdx];
+    if (!section.questions) {
+      section.questions = [];
     }
     
-    // KHÔNG FIX CỨNG DỮ LIỆU OPTION NỮA, LINH HOẠT THEO DẠNG
-    const qType = newData.parts[pIdx].sections[sIdx].questionType;
+    // LINH HOẠT TẠO OPTIONS KHI BẤM NÚT "+" 
+    const qType = section.questionType;
     let initialOptions = ['A', 'B', 'C', 'D'];
-    if (["Điền từ", "Kéo thả", "Droplist"].includes(qType)) {
+    
+    if (["Điền từ", "Kéo thả", "Kéo thả vào Part", "Matching"].includes(qType)) {
       initialOptions = [];
+    } else if (qType === 'Droplist') {
+      if (section.questions.length > 0) {
+        initialOptions = [...section.questions[0].options];
+      } else {
+        initialOptions = [];
+      }
     }
     
-    newData.parts[pIdx].sections[sIdx].questions.push({ 
+    section.questions.push({ 
       id: Date.now().toString(), 
       content: '', 
       tags: '', 
