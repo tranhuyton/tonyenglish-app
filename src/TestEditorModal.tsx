@@ -12,12 +12,20 @@ import 'react-quill/dist/quill.snow.css';
 const uploadToSupabase = async (file: File) => {
   const fileExt = file.name ? file.name.split('.').pop() : 'png';
   const fileName = `media_${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
-  const { error } = await supabase.storage.from('test_assets').upload(`uploads/${fileName}`, file, { cacheControl: '3600', upsert: false });
+  
+  const { error } = await supabase.storage.from('test_assets').upload(`uploads/${fileName}`, file, {
+    cacheControl: '3600',
+    upsert: false
+  });
+  
   if (error) throw error;
+  
   return supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
 };
 
-// COMPONENT EDITOR DÀNH CHO CÁC Ô NHẬP NỘI DUNG
+// ==========================================
+// COMPONENT: RICH FIELD ROW (Dùng ReactQuill)
+// ==========================================
 const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
   const quillRef = useRef<any>(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -27,6 +35,7 @@ const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
     input.setAttribute('type', 'file');
     input.setAttribute('accept', 'image/*');
     input.click();
+    
     input.onchange = async () => {
       const file = input.files ? input.files[0] : null;
       if (file) {
@@ -65,7 +74,11 @@ const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
     <div className="flex flex-col py-3 border-b border-slate-100 last:border-0 gap-2">
       <div className="flex justify-between items-center">
         <label className="text-[13px] font-bold text-slate-600">{label}</label>
-        {isUploading && <span className="text-[11px] font-bold text-amber-500 bg-amber-50 px-2 py-1 rounded">⏳ Đang tải ảnh lên Cloud...</span>}
+        {isUploading && (
+          <span className="text-[11px] font-bold text-amber-500 bg-amber-50 px-2 py-1 rounded">
+            ⏳ Đang tải ảnh lên Cloud...
+          </span>
+        )}
       </div>
       <div className="bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col resize-y overflow-hidden h-[250px] min-h-[150px]">
          <ReactQuill 
@@ -82,7 +95,9 @@ const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
   );
 };
 
-// --- COMPONENT MEDIA ROW ---
+// ==========================================
+// COMPONENT: MEDIA ROW (Upload Audio/Image)
+// ==========================================
 const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", uploadingId, setUploadingId }: any) => {
   const [isDrag, setIsDrag] = useState(false);
   const [showLink, setShowLink] = useState(false);
@@ -102,7 +117,9 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
   };
 
   const handleSaveLink = () => {
-    if (linkVal.trim()) onUpload(linkVal.trim());
+    if (linkVal.trim()) {
+      onUpload(linkVal.trim());
+    }
     setShowLink(false);
     setLinkVal('');
   };
@@ -134,9 +151,21 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
       <label className="text-[13px] font-bold text-slate-600">{label}</label>
       <div 
         className={`w-full border-2 border-dashed rounded-lg p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition ${isDrag ? 'border-[#00a651] bg-[#e6f4ea]' : 'border-slate-300 bg-slate-50'}`}
-        onDragOver={(e) => { e.preventDefault(); setIsDrag(true); }}
-        onDragLeave={(e) => { e.preventDefault(); setIsDrag(false); }}
-        onDrop={(e) => { e.preventDefault(); setIsDrag(false); if(e.dataTransfer.files?.[0]) handleFile(e.dataTransfer.files[0]); }}
+        onDragOver={(e) => { 
+          e.preventDefault(); 
+          setIsDrag(true); 
+        }}
+        onDragLeave={(e) => { 
+          e.preventDefault(); 
+          setIsDrag(false); 
+        }}
+        onDrop={(e) => { 
+          e.preventDefault(); 
+          setIsDrag(false); 
+          if(e.dataTransfer.files?.[0]) {
+            handleFile(e.dataTransfer.files[0]); 
+          }
+        }}
       >
         <div className="flex items-center gap-3 w-full md:w-auto">
           <span className="text-2xl shrink-0">{value ? '✅' : '🎵'}</span>
@@ -174,8 +203,18 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
                   onChange={e => setLinkVal(e.target.value)}
                   className="flex-1 text-[12px] font-medium text-slate-700 outline-none px-2 py-1 bg-transparent min-w-0"
                 />
-                <button onClick={handleSaveLink} className="bg-[#00a651] hover:bg-[#008f45] text-white px-3 py-1.5 rounded text-[11px] font-bold transition shrink-0">OK</button>
-                <button onClick={() => setShowLink(false)} className="bg-slate-200 hover:bg-slate-300 text-slate-600 px-2 py-1.5 rounded text-[11px] font-bold transition shrink-0">✖</button>
+                <button 
+                  onClick={handleSaveLink} 
+                  className="bg-[#00a651] hover:bg-[#008f45] text-white px-3 py-1.5 rounded text-[11px] font-bold transition shrink-0"
+                >
+                  OK
+                </button>
+                <button 
+                  onClick={() => setShowLink(false)} 
+                  className="bg-slate-200 hover:bg-slate-300 text-slate-600 px-2 py-1.5 rounded text-[11px] font-bold transition shrink-0"
+                >
+                  ✖
+                </button>
               </div>
            ) : !value ? (
               <>
@@ -187,7 +226,16 @@ const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", upl
                     <span className="text-blue-500 text-sm leading-none">🔗</span> Thêm Link
                  </button>
                  <label className="bg-white border border-slate-300 text-slate-700 px-4 py-2 rounded-lg text-[12px] font-bold cursor-pointer hover:bg-slate-100 transition shadow-sm shrink-0 flex-1 md:flex-none text-center">
-                   <input type="file" className="hidden" accept={accept} onChange={(e) => { if(e.target.files?.[0]) handleFile(e.target.files[0]); }} /> 
+                   <input 
+                      type="file" 
+                      className="hidden" 
+                      accept={accept} 
+                      onChange={(e) => { 
+                        if(e.target.files?.[0]) {
+                          handleFile(e.target.files[0]); 
+                        }
+                      }} 
+                    /> 
                    Tải lên
                  </label>
               </>
@@ -210,6 +258,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
   const getInitialData = () => {
     if (testRecord.content_json) return {...testRecord.content_json};
+    
     return {
       basicInfo: {
         title: testRecord.title || (isImportMode ? 'Đề thi Import từ Excel/CSV' : ''),
@@ -229,7 +278,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const [isSaving, setIsSaving] = useState(false);
 
   // ==========================================
-  // 🚀 THUẬT TOÁN ĐỌC EXCEL - ÉP GỘP COMBO VÀ DỌN SẠCH LỖI
+  // 🚀 THUẬT TOÁN ĐỌC EXCEL (HỖ TRỢ OPTION A ĐẾN L)
   // ==========================================
   const processExcelFile = async (file: File) => {
     setUploadingId('excel');
@@ -261,14 +310,23 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
         const getCol = (row: any, exactKeywords: string[], partialKeywords: string[] = []) => {
           const keys = Object.keys(row);
+          
+          // 1. Tìm chính xác tuyệt đối trước
           for (let key of keys) {
             const cleanKey = key.toLowerCase().replace(/[\s_.,|()[\]-]/g, '');
-            if (exactKeywords.includes(cleanKey)) return row[key];
+            if (exactKeywords.includes(cleanKey)) {
+              return row[key];
+            }
           }
+          
+          // 2. Tìm tương đối
           for (let key of keys) {
             const cleanKey = key.toLowerCase().replace(/[\s_.,|()[\]-]/g, '');
-            if (partialKeywords.some(k => cleanKey.includes(k))) return row[key];
+            if (partialKeywords.some(k => cleanKey.includes(k))) {
+              return row[key];
+            }
           }
+          
           return "";
         };
 
@@ -283,9 +341,9 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
         };
 
         jsonData.forEach((row: any) => {
+          // Bỏ qua các dòng phân cách (----)
           if (Object.values(row).some(val => String(val).includes('---'))) return;
 
-          // Trim chuẩn để loại bỏ khoảng trắng rác ở Excel
           const rawPartTitle = getCol(row, ['parttitle'], ['part']);
           const partTitle = rawPartTitle !== undefined && rawPartTitle !== null ? String(rawPartTitle).trim() : '';
           
@@ -315,7 +373,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           } else if (qTypeRaw) {
              qType = qTypeRaw;
           } else if (!qTypeRaw && currentSection && (!secTitle || currentSection.title === secTitle)) {
-             // 🚀 FIX: Tự động kế thừa dạng câu hỏi nếu dòng 21 bị bỏ trống
+             // 🚀 Tự động kế thừa dạng câu hỏi nếu dòng 21 bị bỏ trống
              qType = currentSection.questionType;
           }
 
@@ -333,34 +391,55 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           let optF = cleanText(getCol(row, ['optionf', 'f'], ['đápánf', 'lựachọnf']));
           let optG = cleanText(getCol(row, ['optiong', 'g'], ['đápáng', 'lựachọng']));
           let optH = cleanText(getCol(row, ['optionh', 'h'], ['đápánh', 'lựachọnh']));
+          let optI = cleanText(getCol(row, ['optioni', 'i'], ['đápáni', 'lựachọni']));
+          let optJ = cleanText(getCol(row, ['optionj', 'j'], ['đápánj', 'lựachọnj']));
+          let optK = cleanText(getCol(row, ['optionk', 'k'], ['đápánk', 'lựachọnk']));
+          let optL = cleanText(getCol(row, ['optionl', 'l'], ['đápánl', 'lựachọnl']));
           
-          const answer = cleanText(getCol(row, ['answer', 'correctanswer'], ['đápánđúng', 'đápán']));
+          // MÁY HÚT BỤI TỐI THƯỢNG: Tránh bắt nhầm Option E vào cột Answer. Từ khóa cực nghiêm ngặt!
+          const answer = cleanText(getCol(row, ['answer', 'correctanswer', 'đápánđúng', 'đápánchínhxác'], []));
           const exp = cleanText(getCol(row, ['explanation'], ['giảithích']));
 
-          // MÁY HÚT BỤI TỐI THƯỢNG (Hút bất chấp AI ghi bậy)
+          // Nếu AI nhét cả rổ Options vào phần Câu hỏi (Thường gặp ở Trắc nghiệm/Checkbox)
           if ((qType === 'Checkbox' || qType === 'Trắc nghiệm') && qContent.includes('A.')) {
               const lines = qContent.split(/<br\s*\/?>/i);
               const newLines: string[] = [];
               const extracted: string[] = [];
+              
               lines.forEach((line: string) => {
-                  const match = line.trim().match(/^([A-H])[\.\):]\s*(.+)$/i);
-                  if (match) extracted.push(match[2].trim());
-                  else newLines.push(line);
+                  const match = line.trim().match(/^([A-L])[\.\):]\s*(.+)$/i);
+                  if (match) {
+                    extracted.push(match[2].trim());
+                  } else {
+                    newLines.push(line);
+                  }
               });
+              
               if (extracted.length >= 2) {
                   qContent = newLines.join('<br>').trim();
                   optA = extracted[0] || ''; optB = extracted[1] || '';
                   optC = extracted[2] || ''; optD = extracted[3] || '';
                   optE = extracted[4] || ''; optF = extracted[5] || '';
                   optG = extracted[6] || ''; optH = extracted[7] || '';
+                  optI = extracted[8] || ''; optJ = extracted[9] || '';
+                  optK = extracted[10] || ''; optL = extracted[11] || '';
               }
           }
 
           const isRealQuestion = (qId !== "" && !isNaN(parseInt(qId))) || (answer !== "");
           if (!partTitle && !secTitle && !partContent && !secContent && !isRealQuestion) return;
 
+          // Xử lý tạo Part mới
           if (partTitle && (!currentPart || currentPart.title !== partTitle)) {
-            currentPart = { id: Date.now().toString() + Math.random(), title: partTitle, content: partContent || '', tags: '', audioUrl: '', explanation: '', sections: [] };
+            currentPart = { 
+              id: Date.now().toString() + Math.random(), 
+              title: partTitle, 
+              content: partContent || '', 
+              tags: '', 
+              audioUrl: '', 
+              explanation: '', 
+              sections: [] 
+            };
             newParts.push(currentPart);
             currentSection = null; 
           } else if (partContent && currentPart && !currentPart.content) {
@@ -372,6 +451,8 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           if (optC) options.push(optC); if (optD) options.push(optD);
           if (optE) options.push(optE); if (optF) options.push(optF);
           if (optG) options.push(optG); if (optH) options.push(optH);
+          if (optI) options.push(optI); if (optJ) options.push(optJ);
+          if (optK) options.push(optK); if (optL) options.push(optL);
 
           // 🚀 Ép buộc các câu nối tiếp của Checkbox phải bám vào Section phía trên
           let isNewSection = false;
@@ -387,7 +468,16 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           }
 
           if (isNewSection || !currentSection) {
-            currentSection = { id: Date.now().toString() + Math.random(), title: secTitle || (currentSection ? currentSection.title : `Section ${qId}`), content: secContent || '', tags: '', questionType: qType, audioUrl: '', explanation: '', questions: [] };
+            currentSection = { 
+              id: Date.now().toString() + Math.random(), 
+              title: secTitle || (currentSection ? currentSection.title : `Section ${qId}`), 
+              content: secContent || '', 
+              tags: '', 
+              questionType: qType, 
+              audioUrl: '', 
+              explanation: '', 
+              questions: [] 
+            };
             if (currentPart) currentPart.sections.push(currentSection);
           } else if (secContent && currentSection && !currentSection.content) {
             currentSection.content = secContent;
@@ -395,12 +485,17 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
           if (isRealQuestion && currentSection) {
             let finalOptions = options;
+            
+            // CHỈ ĐẺ RA A,B,C,D mặc định NẾU LÀ TRẮC NGHIỆM MÀ AI QUÊN GHI VÀO EXCEL.
+            // CÁC DẠNG KHÁC (KÉO THẢ, ĐIỀN TỪ, DROPLIST) KHÔNG ĐƯỢC PHÉP ĐẺ OPTION RÁC.
             if (options.length === 0) {
-               if (qType === 'TFNG') finalOptions = ['TRUE', 'FALSE', 'NOT GIVEN'];
-               else if (qType === 'Điền từ') finalOptions = []; 
-               // 🚀 Ngăn không cho sinh ra rác A,B,C,D cho câu ăn theo Combo (Câu 21)
-               else if (qType === 'Checkbox' && !qContent) finalOptions = []; 
-               else finalOptions = ['A', 'B', 'C', 'D']; 
+               if (qType === 'TFNG') {
+                 finalOptions = ['TRUE', 'FALSE', 'NOT GIVEN'];
+               } else if (qType === 'Trắc nghiệm') {
+                 finalOptions = ['A', 'B', 'C', 'D'];
+               } else {
+                 finalOptions = []; 
+               }
             }
 
             // MÁY PHÂN BÀO: Tự động đẻ câu nếu AI lười gộp ID trên 1 dòng
@@ -417,7 +512,8 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                     currentSection.questions.push({
                        id: cid,
                        content: idx === 0 ? qContent : '', 
-                       tags: '', audioUrl: '', 
+                       tags: '', 
+                       audioUrl: '', 
                        explanation: idx === 0 ? exp : '', 
                        options: idx === 0 ? finalOptions : [], 
                        correctAnswer: ans 
@@ -427,7 +523,12 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
             } else {
                 currentSection.questions.push({
                    id: qId ? qId : (Date.now().toString() + Math.random()),
-                   content: qContent, tags: '', audioUrl: '', explanation: exp, options: finalOptions, correctAnswer: answer
+                   content: qContent, 
+                   tags: '', 
+                   audioUrl: '', 
+                   explanation: exp, 
+                   options: finalOptions, 
+                   correctAnswer: answer
                 });
                 importCount++;
             }
@@ -436,7 +537,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
         if (newParts.length > 0) {
           setTestData((prev: any) => ({ ...prev, parts: isReplace ? newParts : [...prev.parts, ...newParts] }));
-          alert(`🎉 Bóc tách thành công chính xác ${importCount} câu hỏi! Mọi nhóm Combo đã được ép chuẩn lại.`);
+          alert(`🎉 Bóc tách thành công chính xác ${importCount} câu hỏi! Mọi cấu trúc đục lỗ và Kéo thả đã được đồng bộ chuẩn xác.`);
         } else {
           alert("⚠️ Không tìm thấy câu hỏi nào hợp lệ. Anh kiểm tra lại tên các cột trong file.");
         }
@@ -449,15 +550,25 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     };
     reader.readAsArrayBuffer(file);
   };
-  // ==========================================
 
-  const handleDragOverExcel = (e: React.DragEvent) => { e.preventDefault(); setIsDraggingExcel(true); };
-  const handleDragLeaveExcel = (e: React.DragEvent) => { e.preventDefault(); setIsDraggingExcel(false); };
+  const handleDragOverExcel = (e: React.DragEvent) => { 
+    e.preventDefault(); 
+    setIsDraggingExcel(true); 
+  };
+  
+  const handleDragLeaveExcel = (e: React.DragEvent) => { 
+    e.preventDefault(); 
+    setIsDraggingExcel(false); 
+  };
+  
   const handleExcelDrop = (e: React.DragEvent) => {
     e.preventDefault(); 
     setIsDraggingExcel(false);
-    if (e.dataTransfer.files?.[0]) processExcelFile(e.dataTransfer.files[0]);
+    if (e.dataTransfer.files?.[0]) {
+      processExcelFile(e.dataTransfer.files[0]);
+    }
   };
+  
   const handleExcelUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files?.[0]) { 
       processExcelFile(e.target.files[0]); 
@@ -465,13 +576,24 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     }
   };
 
-  // --- QUẢN LÝ MẢNG ---
+  // ==========================================
+  // QUẢN LÝ MẢNG
+  // ==========================================
   const addPart = () => {
     const newData = { ...testData }; 
     if (!newData.parts) newData.parts = [];
-    newData.parts.push({ id: Date.now().toString(), title: `Part ${newData.parts.length + 1}`, content: '', tags: '', audioUrl: '', explanation: '', sections: [] });
+    newData.parts.push({ 
+      id: Date.now().toString(), 
+      title: `Part ${newData.parts.length + 1}`, 
+      content: '', 
+      tags: '', 
+      audioUrl: '', 
+      explanation: '', 
+      sections: [] 
+    });
     setTestData(newData);
   };
+  
   const removePart = (pIdx: number) => { 
     const newData = { ...testData }; 
     newData.parts.splice(pIdx, 1); 
@@ -481,9 +603,19 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const addSection = (pIdx: number) => {
     const newData = { ...testData }; 
     if (!newData.parts[pIdx].sections) newData.parts[pIdx].sections = [];
-    newData.parts[pIdx].sections.push({ id: Date.now().toString(), title: `Section ${newData.parts[pIdx].sections.length + 1}`, content: '', tags: '', questionType: 'Trắc nghiệm', audioUrl: '', explanation: '', questions: [] });
+    newData.parts[pIdx].sections.push({ 
+      id: Date.now().toString(), 
+      title: `Section ${newData.parts[pIdx].sections.length + 1}`, 
+      content: '', 
+      tags: '', 
+      questionType: 'Trắc nghiệm', 
+      audioUrl: '', 
+      explanation: '', 
+      questions: [] 
+    });
     setTestData(newData);
   };
+  
   const removeSection = (pIdx: number, sIdx: number) => { 
     const newData = { ...testData }; 
     newData.parts[pIdx].sections.splice(sIdx, 1); 
@@ -492,15 +624,29 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
   const addQuestion = (pIdx: number, sIdx: number) => {
     const newData = { ...testData }; 
-    if (!newData.parts[pIdx].sections[sIdx].questions) newData.parts[pIdx].sections[sIdx].questions = [];
-    // Không fix cứng 4 đáp án nữa, để trống hoặc 4 tùy loại câu hỏi
+    if (!newData.parts[pIdx].sections[sIdx].questions) {
+      newData.parts[pIdx].sections[sIdx].questions = [];
+    }
+    
+    // KHÔNG FIX CỨNG DỮ LIỆU OPTION NỮA, LINH HOẠT THEO DẠNG
     const qType = newData.parts[pIdx].sections[sIdx].questionType;
     let initialOptions = ['A', 'B', 'C', 'D'];
-    if (qType === 'Điền từ') initialOptions = [];
+    if (["Điền từ", "Kéo thả", "Droplist"].includes(qType)) {
+      initialOptions = [];
+    }
     
-    newData.parts[pIdx].sections[sIdx].questions.push({ id: Date.now().toString(), content: '', tags: '', audioUrl: '', explanation: '', options: initialOptions, correctAnswer: '' });
+    newData.parts[pIdx].sections[sIdx].questions.push({ 
+      id: Date.now().toString(), 
+      content: '', 
+      tags: '', 
+      audioUrl: '', 
+      explanation: '', 
+      options: initialOptions, 
+      correctAnswer: '' 
+    });
     setTestData(newData);
   };
+  
   const removeQuestion = (pIdx: number, sIdx: number, qIdx: number) => { 
     const newData = { ...testData }; 
     newData.parts[pIdx].sections[sIdx].questions.splice(qIdx, 1); 
@@ -515,6 +661,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     newData.parts[pIdx].sections[sIdx].questions[qIdx].options.push(''); 
     setTestData(newData);
   };
+  
   const removeOption = (pIdx: number, sIdx: number, qIdx: number, oIdx: number) => {
     const newData = { ...testData }; 
     newData.parts[pIdx].sections[sIdx].questions[qIdx].options.splice(oIdx, 1); 
@@ -523,9 +670,13 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
   const updateField = (path: number[], field: string, value: any) => {
     const newData = { ...testData };
-    if (path.length === 1) newData.parts[path[0]][field] = value;
-    else if (path.length === 2) newData.parts[path[0]].sections[path[1]][field] = value;
-    else if (path.length === 3) newData.parts[path[0]].sections[path[1]].questions[path[2]][field] = value;
+    if (path.length === 1) {
+      newData.parts[path[0]][field] = value;
+    } else if (path.length === 2) {
+      newData.parts[path[0]].sections[path[1]][field] = value;
+    } else if (path.length === 3) {
+      newData.parts[path[0]].sections[path[1]].questions[path[2]][field] = value;
+    }
     setTestData(newData);
   };
   
@@ -545,12 +696,16 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       <div className="bg-white px-6 py-3 flex justify-between items-center shrink-0 border-b border-slate-200 shadow-sm relative z-20">
         <div className="flex items-center gap-3">
           <button onClick={onClose} className="text-slate-500 hover:text-slate-800 font-bold text-xl transition">←</button>
-          <h2 className="font-black text-[15px] text-slate-800 uppercase tracking-tight">{isImportMode ? 'Import Đề Thi Bằng Excel/CSV' : 'Soạn Thảo Đề Thi'}</h2>
+          <h2 className="font-black text-[15px] text-slate-800 uppercase tracking-tight">
+            {isImportMode ? 'Import Đề Thi Bằng Excel/CSV' : 'Soạn Thảo Đề Thi'}
+          </h2>
         </div>
       </div>
 
       <div className="flex-1 overflow-y-auto relative custom-scrollbar">
         <div className="max-w-[1200px] mx-auto w-full p-4 md:p-8 space-y-8 pb-20"> 
+          
+          {/* TABS NAvigation */}
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <button 
               onClick={() => setActiveTab('basic')} 
@@ -566,6 +721,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
             </button>
           </div>
 
+          {/* TAB: BASIC INFO */}
           {activeTab === 'basic' && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start animate-in slide-in-from-left-4">
               <div className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm p-6 space-y-5">
@@ -668,6 +824,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
             </div>
           )}
 
+          {/* TAB: CONTENT & QUESTIONS */}
           {activeTab === 'content' && (
             <div className="animate-in slide-in-from-right-4 space-y-6">
               
@@ -695,6 +852,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                 </div>
               )}
 
+              {/* RENDER CÁC PARTS */}
               {testData.parts?.map((part: any, pIdx: number) => (
                 <div key={part.id} className="border-2 border-[#00a651] rounded-2xl bg-white overflow-hidden shadow-sm">
                     <div className="bg-[#e6f4ea] px-6 py-4 border-b border-[#00a651]/20 flex justify-between items-center group">
@@ -729,6 +887,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                     </div>
 
                     <div className="p-6 md:p-8 space-y-8">
+                      {/* RENDER CÁC SECTIONS BÊN TRONG PART */}
                       {part.sections?.map((sec: any, sIdx: number) => (
                         <div key={sec.id} className="border-2 border-[#3b82f6] rounded-xl bg-white overflow-hidden shadow-sm">
                           <div className="bg-[#3b82f6] px-6 py-3 flex justify-between items-center group">
@@ -779,6 +938,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                           </div>
 
                           <div className="p-6 space-y-6">
+                            {/* RENDER CÁC QUESTIONS BÊN TRONG SECTION */}
                             {sec.questions?.map((q: any, qIdx: number) => {
                               const rawText = String(q.content || '').replace(/<[^>]*>/g, '').trim();
                               const hasContent = rawText !== '' || String(q.content || '').includes('<img') || String(q.content || '').includes('<audio');
@@ -803,14 +963,17 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                           {isComboChild && (
                                               <div className="bg-amber-50 text-amber-800 p-3 rounded-lg text-[13px] font-bold border border-amber-200 flex items-start gap-3">
                                                   <span className="text-xl leading-none">🔗</span>
-                                                  <p className="m-0 leading-relaxed">Câu này đang được hệ thống <b>tự động gộp vào cụm Combo Checkbox phía trên</b> do rỗng Nội dung câu hỏi gốc.<br/>Anh chỉ cần thiết lập Đáp án đúng cho nó. Nếu muốn tách nó thành nhóm mới, hãy điền nội dung vào ô bên dưới.</p>
+                                                  <p className="m-0 leading-relaxed">
+                                                    Câu này đang được hệ thống <b>tự động gộp vào cụm Combo Checkbox phía trên</b> do rỗng Nội dung câu hỏi gốc.<br/>
+                                                    Anh chỉ cần thiết lập Đáp án đúng cho nó. Nếu muốn tách nó thành nhóm mới, hãy điền nội dung vào ô bên dưới.
+                                                  </p>
                                               </div>
                                           )}
 
                                           <div className="flex flex-col md:flex-row gap-4">
                                             <div className="flex-1">
                                               <RichFieldRow 
-                                                label={isComboChild ? "Nội dung câu hỏi (Nhập để tách thành Combo mới)" : "Nội dung câu hỏi"}
+                                                label={isComboChild ? "Nội dung câu hỏi (Nhập nội dung nếu muốn tách thành Combo mới)" : "Nội dung câu hỏi"}
                                                 value={q.content} 
                                                 onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} 
                                               />
@@ -826,7 +989,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                             </div>
                                           </div>
                                           
-                                          {/* KHỐI OPTIONS */}
+                                          {/* KHỐI OPTIONS CỦA CÂU HỎI */}
                                           <div className={`bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 ${isComboChild && (!q.options || q.options.length === 0) ? 'hidden' : ''}`}>
                                             <div className="flex justify-between items-center border-b border-slate-200 pb-2">
                                                 <label className="text-[12px] font-bold text-slate-600">Các lựa chọn đáp án (Options)</label>
@@ -878,21 +1041,25 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                 </div>
                               );
                             })}
+                            
                             <button 
                               onClick={() => addQuestion(pIdx, sIdx)} 
                               className="w-full border-2 border-dashed border-slate-300 text-slate-500 hover:border-[#00a651] hover:text-[#00a651] hover:bg-[#e6f4ea] py-4 rounded-xl font-bold transition flex justify-center items-center gap-2"
                             >
                               <span className="text-xl">+</span> Thêm Câu Hỏi Mới
                             </button>
+                            
                           </div>
                         </div>
                       ))}
+                      
                       <button 
                         onClick={() => addSection(pIdx)} 
                         className="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md"
                       >
                         + Thêm Section Mới
                       </button>
+                      
                     </div>
                 </div>
               ))}

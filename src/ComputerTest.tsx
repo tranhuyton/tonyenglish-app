@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react'
 import { supabase } from './supabase';
 import './tailwind.css';
 
+// ==============================================================================
+// ICONS
+// ==============================================================================
 const UserIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
     <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
@@ -14,16 +17,17 @@ const SettingsIcon = () => (
   </svg>
 );
 
+// ==============================================================================
+// HELPERS
+// ==============================================================================
 const stripHtmlRegex = /[<][^>]*[>]/g;
 
-// HELPER: Nhận diện nội dung thực sự (bỏ thẻ rỗng, khoảng trắng)
 const isRealContent = (htmlContent: any) => {
   const str = String(htmlContent || '');
   const rawText = str.replace(stripHtmlRegex, '').replace(/&nbsp;/gi, '').replace(/\s+/g, '');
   return rawText !== '' || str.includes('<img') || str.includes('<audio');
 };
 
-// HELPER: Phân cụm Checkbox cho dạng Listening & Reading
 const buildCheckboxCombos = (questions: any[]) => {
   const combos: any[][] = [];
   (Array.isArray(questions) ? questions : []).forEach((q: any) => {
@@ -55,7 +59,6 @@ const buildCheckboxCombos = (questions: any[]) => {
   return combos;
 };
 
-// HELPER: Dịch Style Inline thành Object React
 const parseStyle = (styleStr: string) => {
     const style: any = {};
     if (!styleStr) return style;
@@ -70,6 +73,9 @@ const parseStyle = (styleStr: string) => {
     return style;
 };
 
+// ==============================================================================
+// MAIN COMPONENT
+// ==============================================================================
 export default function ComputerTest({ onBack, testData, onFinish }: { onBack: () => void, testData?: any, onFinish?: (res: any) => void }) {
   let safeTestData = testData;
   if (typeof safeTestData === 'string') {
@@ -271,11 +277,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 }
              });
           }
-          if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
-            const matches = String(s?.content || s?.questions?.[0]?.content || '').match(/\[(\d+)\]/g);
+          if (["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(s?.questionType)) {
+            const matches = String(s?.content || s?.questions?.[0]?.content || '').match(/\[\s*\d+\s*\]/g);
             if (matches) {
               matches.forEach((m: string) => { 
-                 const num = m.replace(/\D/g, ''); 
+                 const num = m.replace(/\D/g, '').trim(); 
                  if (!ids.includes(num)) {
                     ids.push(num); 
                     partMap[num] = pIndex;
@@ -467,8 +473,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     handleAnswer(qId, '');
   };
 
-  // --- RENDER ĐIỀN TỪ & DROPLIST INLINE (DOMParser) ---
-  const renderInlineQuestion = (htmlStr: any) => {
+  // ==============================================================================
+  // RENDER HTML CHỨA ĐỤC LỖ (HOLES) CHUNG CHO ĐIỀN TỪ, DROPLIST VÀ KÉO THẢ
+  // Khắc phục triệt để lỗi thẻ HTML bao quanh [1]
+  // ==============================================================================
+  const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
     if (!htmlStr) return null;
     const safeText = String(htmlStr);
 
@@ -476,30 +485,41 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         return <span dangerouslySetInnerHTML={{ __html: safeText }} />;
     }
 
+    // Tiền xử lý: Ép biến [1] thành thẻ <hole> để DOMParser hiểu là một thành phần riêng biệt
+    const processedHtml = safeText.replace(/\[\s*(\d+)\s*\]/g, '<hole data-id="$1"></hole>');
+    
     const parser = new DOMParser();
-    const doc = parser.parseFromString(safeText, 'text/html');
+    const doc = parser.parseFromString(processedHtml, 'text/html');
+
+    // Tính toán dữ liệu phục vụ Exclusion (Loại trừ) của Droplist
+    const sectionQIds = (sec?.questions || []).map((q:any) => String(q.id));
+    const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
 
     const renderNode = (node: ChildNode, pathKey: string): React.ReactNode => {
       if (node.nodeType === Node.TEXT_NODE) {
-        const text = node.textContent || '';
-        const partsSplit = text.split(/(\[\d+\])/g);
-        if (partsSplit.length === 1) return text;
+          return node.textContent;
+      }
 
-        return partsSplit.map((part, index) => {
-          const match = part.match(/\[(\d+)\]/);
-          if (match) {
-            const qNum = match[1];
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        const el = node as HTMLElement;
+        const tagName = el.tagName.toLowerCase();
+        
+        if (tagName === 'hole') {
+            const qNum = el.getAttribute('data-id');
+            if (!qNum) return null;
+
             const userAns = String(answers[qNum] || '');
             const displayIndex = questionIndexMap[qNum] || qNum;
-            const qInfo = questionDataMap[qNum] || { qType: 'Điền từ', options: [] };
+            const qInfo = questionDataMap[qNum] || { qType: sec?.questionType || 'Điền từ', options: [] };
             
+            // TRẠNG THÁI REVIEW
             if (isReviewMode) {
               const qData = parts.flatMap((p: any) => Array.isArray(p?.sections) ? p.sections.flatMap((s: any) => s?.questions) : []).find((q: any) => String(q?.id) === String(qNum));
               const correctAns = String(qData?.correctAnswer || '');
               const isCorrect = userAns.trim().toUpperCase() === correctAns.trim().toUpperCase();
               
               return (
-                <span key={`${pathKey}-${index}`} className="relative inline-flex items-center align-middle mx-1 -translate-y-[4px] whitespace-nowrap">
+                <span key={pathKey} className="relative inline-flex items-center align-middle mx-1 -translate-y-[4px] whitespace-nowrap">
                   <span className={`inline-flex items-center justify-center px-3 py-0.5 text-[14px] font-bold text-white rounded-sm shadow-sm border h-[28px] ${isCorrect ? 'bg-emerald-500 border-emerald-600' : 'bg-red-500 border-red-600'}`}>
                     {displayIndex}. {userAns || '(trống)'}
                   </span>
@@ -512,11 +532,35 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               );
             }
 
-            // GIAO DIỆN DROPLIST
-            if (qInfo.qType === 'Droplist') {
-               const validOptions = (qInfo.options || []).filter(Boolean);
+            // GIAO DIỆN KÉO THẢ INLINE
+            if (["Kéo thả", "Kéo thả vào Part", "Matching"].includes(sec.questionType)) {
+                return (
+                    <span 
+                      key={pathKey} 
+                      id={`q-${qNum}`} 
+                      onDragOver={(e) => e.preventDefault()} 
+                      onDrop={() => onDrop(qNum)} 
+                      onClick={(e) => { e.stopPropagation(); setActiveQuestionId(String(qNum)); }} 
+                      className={`inline-flex items-center justify-center align-middle mx-1 min-w-[120px] h-[32px] border-2 border-dashed rounded transition-all px-2 cursor-pointer ${activeQuestionId === String(qNum) ? 'border-[#1ea1db] bg-blue-50' : 'border-slate-300 bg-white hover:bg-slate-50'}`}
+                    >
+                        <span className="font-bold text-slate-400 mr-2 text-[13px]">{displayIndex}</span>
+                        {userAns ? (
+                            <div className="flex items-center justify-between w-full bg-[#323639] text-white text-[13px] font-bold px-2 py-0.5 rounded shadow-sm">
+                                <span className="truncate">{userAns}</span>
+                                <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(qNum); }} className="ml-2 hover:text-red-400 text-[10px]">✕</button>
+                            </div>
+                        ) : ( <span className="text-slate-300 text-[12px] italic w-full text-center">Thả vào đây</span> )}
+                    </span>
+                );
+            }
+
+            // GIAO DIỆN DROPLIST INLINE (CÓ LOẠI TRỪ ĐÁP ÁN)
+            if (qInfo.qType === 'Droplist' || sec.questionType === "Droplist") {
+               const rawOptions = (qInfo.options && qInfo.options.length > 0) ? qInfo.options : (sec.questions?.[0]?.options || []);
+               const validOptions = rawOptions.filter(Boolean);
+               
                return (
-                 <span key={`${pathKey}-${index}`} id={`q-${qNum}`} className="inline-flex items-center align-middle mx-1 -translate-y-[4px] whitespace-nowrap">
+                 <span key={pathKey} id={`q-${qNum}`} className="inline-flex items-center align-middle mx-1 -translate-y-[4px] whitespace-nowrap">
                     <span className={`inline-flex items-center justify-center text-white font-bold px-2 min-w-[28px] h-[28px] text-[13px] rounded-l-sm shadow-sm ${activeQuestionId === qNum ? 'bg-[#1ea1db]' : 'bg-[#323639]'}`}>
                       {displayIndex}
                     </span>
@@ -524,21 +568,26 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       value={userAns}
                       onFocus={() => setActiveQuestionId(qNum)}
                       onChange={(e) => handleAnswer(qNum, e.target.value)}
-                      className="bg-white border border-slate-400 border-l-0 text-slate-800 font-bold text-[14px] h-[28px] px-1 rounded-r-sm outline-none focus:border-[#323639] cursor-pointer"
+                      className="bg-white border border-slate-400 border-l-0 text-slate-800 font-bold text-[14px] h-[28px] px-1 rounded-r-sm outline-none focus:border-[#323639] cursor-pointer max-w-[200px] truncate"
                     >
                       <option value="">-</option>
-                      {validOptions.map((opt, oIdx) => {
+                      {validOptions.map((opt:string, oIdx:number) => {
                          const val = opt.replace(stripHtmlRegex, '').trim();
-                         return <option key={oIdx} value={val}>{val}</option>
+                         const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                         return (
+                           <option key={oIdx} value={val} disabled={isSelectedElsewhere}>
+                             {val} {isSelectedElsewhere ? '(Đã dùng)' : ''}
+                           </option>
+                         );
                       })}
                     </select>
                  </span>
                );
             }
 
-            // GIAO DIỆN ĐIỀN TỪ
+            // GIAO DIỆN ĐIỀN TỪ INLINE
             return (
-              <span key={`${pathKey}-${index}`} id={`q-${qNum}`} onClick={(e) => { e.stopPropagation(); setActiveQuestionId(String(qNum)); }} className="inline-flex items-center align-middle mx-1 -translate-y-[4px] whitespace-nowrap">
+              <span key={pathKey} id={`q-${qNum}`} onClick={(e) => { e.stopPropagation(); setActiveQuestionId(String(qNum)); }} className="inline-flex items-center align-middle mx-1 -translate-y-[4px] whitespace-nowrap">
                 <span className={`inline-flex items-center justify-center text-white font-bold px-2 min-w-[28px] h-[28px] text-[13px] rounded-sm shadow-sm ${activeQuestionId === String(qNum) ? 'bg-[#1ea1db]' : 'bg-[#323639]'}`}>
                   {displayIndex}
                 </span>
@@ -553,14 +602,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 />
               </span>
             );
-          }
-          return <React.Fragment key={`${pathKey}-${index}`}>{part}</React.Fragment>;
-        });
-      }
+        }
 
-      if (node.nodeType === Node.ELEMENT_NODE) {
-        const el = node as HTMLElement;
-        const tagName = el.tagName.toLowerCase();
         const props: any = { key: pathKey };
         
         Array.from(el.attributes).forEach(attr => {
@@ -589,95 +632,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     return Array.from(doc.body.childNodes).map((node, i) => renderNode(node, `root-${i}`));
   };
 
-  // --- RENDER KÉO THẢ INLINE (DOMParser) ---
-  const renderDragDropContent = (htmlStr: any, sectionQuestions: any[]) => {
-    if (!htmlStr) return null;
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlStr, 'text/html');
-
-    const renderNode = (node: ChildNode, pathKey: string): React.ReactNode => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        const text = node.textContent || '';
-        const partsSplit = text.split(/(\[\d+\])/g);
-        if (partsSplit.length === 1) return text;
-
-        return partsSplit.map((part, index) => {
-          const match = part.match(/\[(\d+)\]/);
-          if (match) {
-            const qNum = match[1];
-            const userAns = String(answers[qNum] || '');
-            const displayIndex = questionIndexMap[qNum] || qNum;
-            const qData = sectionQuestions.find(q => String(q.id) === String(qNum));
-            const correctAns = String(qData?.correctAnswer || '');
-            const isCorrect = userAns.trim().toUpperCase() === correctAns.trim().toUpperCase();
-
-            if (isReviewMode) {
-              return (
-                <span key={`${pathKey}-${index}`} className="relative inline-flex items-center align-middle mx-1 -translate-y-[2px]">
-                  <span className={`inline-flex items-center px-3 py-1 text-[14px] font-bold text-white rounded border ${isCorrect ? 'bg-emerald-500 border-emerald-600' : 'bg-red-500 border-red-600'}`}>
-                    {displayIndex}. {userAns || '(trống)'}
-                  </span>
-                  {!isCorrect && (
-                    <span className="absolute top-full left-0 mt-1 text-[12px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded shadow-sm z-10 whitespace-nowrap">
-                      ĐA: {correctAns}
-                    </span>
-                  )}
-                </span>
-              );
-            }
-
-            return (
-              <span 
-                key={`${pathKey}-${index}`}
-                onDragOver={(e) => e.preventDefault()}
-                onDrop={() => onDrop(qNum)}
-                onClick={(e) => { e.stopPropagation(); setActiveQuestionId(String(qNum)); }}
-                className={`inline-flex items-center justify-center align-middle mx-1 min-w-[120px] h-[32px] border-2 border-dashed rounded transition-all px-2 cursor-pointer ${activeQuestionId === qNum ? 'border-[#1ea1db] bg-blue-50' : 'border-slate-300 bg-white hover:bg-slate-50'}`}
-              >
-                <span className="font-bold text-slate-400 mr-2 text-[13px]">{displayIndex}</span>
-                {userAns ? (
-                  <div className="flex items-center justify-between w-full bg-[#323639] text-white text-[13px] font-bold px-2 py-0.5 rounded shadow-sm transition-all duration-200">
-                    <span className="truncate">{userAns}</span>
-                    <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(qNum); }} className="ml-2 hover:text-red-400 text-[10px]">✕</button>
-                  </div>
-                ) : (
-                  <span className="text-slate-300 text-[12px] italic w-full text-center">Thả vào đây</span>
-                )}
-              </span>
-            );
-          }
-          return <React.Fragment key={`${pathKey}-${index}`}>{part}</React.Fragment>;
-        });
-      }
-      
-      if (node.nodeType === Node.ELEMENT_NODE) {
-        const el = node as HTMLElement;
-        const tagName = el.tagName.toLowerCase();
-        const props: any = { key: pathKey };
-        
-        Array.from(el.attributes).forEach(attr => {
-          if (attr.name === 'class') props.className = attr.value;
-          else if (attr.name === 'style') props.style = parseStyle(attr.value);
-          else if (attr.name === 'for') props.htmlFor = attr.value;
-          else if (attr.name.startsWith('data-') || attr.name.startsWith('aria-')) props[attr.name] = attr.value;
-          else {
-            const camelCaseAttr = attr.name.replace(/-([a-z])/g, g => g[1].toUpperCase());
-            const reactProp = attr.name === 'colspan' ? 'colSpan' : attr.name === 'rowspan' ? 'rowSpan' : attr.name === 'cellpadding' ? 'cellPadding' : attr.name === 'cellspacing' ? 'cellSpacing' : attr.name === 'tabindex' ? 'tabIndex' : camelCaseAttr;
-            props[reactProp] = attr.value;
-          }
-        });
-
-        const children = Array.from(el.childNodes).map((child, i) => renderNode(child, `${pathKey}-${i}`));
-        const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
-        if (voidElements.includes(tagName)) return React.createElement(tagName, props);
-        return React.createElement(tagName, props, children.length > 0 ? children : null);
-      }
-      return null;
-    };
-
-    return Array.from(doc.body.childNodes).map((node, i) => renderNode(node, `drag-${i}`));
-  };
-
+  // ==============================================================================
+  // XỬ LÝ NÚT BẮT ĐẦU
+  // ==============================================================================
   const handleStartTest = () => {
     setTestStarted(true);
     let currentEndTime = getSavedEndTime();
@@ -864,25 +821,41 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 
                 {(Array.isArray(currentPart?.sections) ? currentPart.sections : []).map((sec: any, index: number) => {
                   
-                  // Phân tách Logic cho Droplist Inline vs Droplist Block
-                  const hasInlineBrackets = String(sec.content || '').includes('[') || String(sec.questions?.[0]?.content || '').includes('[');
+                  // Logic phân biệt Block / Inline cho Droplist và Kéo thả
+                  let rawContentText = '';
+                  if (String(sec.content || '').match(/\[\s*\d+\s*\]/)) {
+                      rawContentText = sec.content;
+                  } else if (String(sec.questions?.[0]?.content || '').match(/\[\s*\d+\s*\]/)) {
+                      rawContentText = sec.questions[0].content;
+                  } else {
+                      rawContentText = sec.questions?.[0]?.content || '';
+                  }
+
+                  const hasInlineBrackets = /\[\s*\d+\s*\]/.test(rawContentText);
                   const isInlineDroplist = sec.questionType === "Droplist" && hasInlineBrackets;
                   const isBlockDroplist = sec.questionType === "Droplist" && !hasInlineBrackets;
+                  const isInlineDragDrop = ["Kéo thả", "Matching", "Kéo thả vào Part"].includes(sec.questionType) && hasInlineBrackets;
+                  const isBlockDragDrop = ["Kéo thả", "Matching", "Kéo thả vào Part"].includes(sec.questionType) && !hasInlineBrackets;
+                  
+                  // Chỉ hiển thị Content ở trên đầu nếu nó KHÔNG phải là đoạn văn đục lỗ
+                  const secContentHasHoles = /\[\s*\d+\s*\]/.test(String(sec.content || ''));
+                  const shouldRenderGlobalSecContent = sec.content && !secContentHasHoles;
 
                   return (
                     <div key={index} className="mb-12">
                       
                       {sec.title && <h3 className="font-bold text-[17px] mb-3 text-slate-900">{sec.title}</h3>}
                       
+                      {/* HIỂN THỊ HƯỚNG DẪN SECTION (GLOBAL) */}
+                      {shouldRenderGlobalSecContent && (
+                          <div className="mb-6 text-[15px] font-semibold text-slate-700 leading-relaxed bg-slate-100/50 p-4 rounded-lg border border-slate-200" dangerouslySetInnerHTML={{ __html: sec.content }} />
+                      )}
+                      
                       {/* DẠNG ĐIỀN TỪ & DROPLIST INLINE */}
                       {(sec.questionType === "Điền từ" || isInlineDroplist) && (
                         <div className={`p-8 shadow-sm rounded-sm ${isReviewMode ? 'bg-white border border-slate-300' : 'bg-white border border-slate-300'}`}>
-                          {sec.content && (
-                             <div className="mb-6 text-[15px] font-semibold text-slate-700 leading-relaxed bg-slate-100/50 p-4 rounded-lg border border-slate-200" dangerouslySetInnerHTML={{ __html: sec.content }} />
-                          )}
                           {(() => {
-                              const rawContent = (Array.isArray(sec.questions) ? sec.questions : [])[0]?.content || '';
-                              let mainContent = rawContent;
+                              let mainContent = rawContentText;
                               let wordBankItems: string[] = [];
                               
                               const splitKeywords = ['<br><br>Options:<br>', '<br>Options:<br>', 'Options:<br>', 'Options:'];
@@ -898,7 +871,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                               return (
                                   <>
                                       <div className="format-passage leading-[2.6] text-[16px] text-slate-800 break-words">
-                                          {renderInlineQuestion(mainContent)}
+                                          {renderHtmlWithHoles(mainContent, sec)}
                                       </div>
                                       {wordBankItems.length > 0 && (
                                           <div className="mt-8 p-5 bg-[#f8f9fa] border-2 border-dashed border-slate-300 rounded-xl">
@@ -1007,69 +980,73 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                          </div>
                       )}
 
-                      {/* DẠNG DROPLIST BLOCK (XUẤT HIỆN TRONG BÀI LISTENING NẾU CHỌN DROPLIST) */}
+                      {/* DẠNG DROPLIST BLOCK CÓ EXCLUSION LOGIC */}
                       {isBlockDroplist && (
                          <div className="space-y-4 bg-white p-8 rounded shadow-sm border border-slate-200">
-                           {sec.content && (
-                              <div className="mb-6 text-[15px] font-semibold text-slate-700 leading-relaxed bg-slate-100/50 p-4 rounded-lg border border-slate-200" dangerouslySetInnerHTML={{ __html: sec.content }} />
-                           )}
-                           {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
-                              if (!q?.id) return null;
-                              const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
-                              const userAns = String(answers[String(q.id)] || '').trim().toUpperCase(); 
-                              const isCorrect = userAns === correctAns;
-                              const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                           {(() => {
+                              const sectionQIds = (sec.questions || []).map((q:any) => String(q.id));
+                              const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
                               
-                              // Lấy mảng Option từ câu hỏi hiện tại, hoặc mượn từ câu đầu tiên
-                              let rawOptions = (q.options && q.options.length > 0) ? q.options : (sec.questions[0]?.options || []);
-                              const validOptions = rawOptions.filter(Boolean);
-                              
-                              return (
-                               <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-4 rounded-sm border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-300' : 'bg-red-50/50 border-red-300') : (activeQuestionId === String(q.id) ? 'bg-white border-[#323639] shadow-md' : 'bg-white border-slate-300 shadow-sm hover:border-slate-400')} transition-all`}>
-                                 <div className="flex items-center gap-4 flex-1">
-                                   <span className={`inline-flex items-center justify-center font-bold min-w-[30px] h-[30px] text-[14px] rounded-sm shrink-0 ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white' : 'bg-red-600 text-white') : (activeQuestionId === String(q.id) ? 'bg-[#1ea1db] text-white' : 'bg-[#323639] text-white')}`}>
-                                     {displayIdx}
-                                   </span>
-                                   <div className="text-[15px] font-medium text-slate-800 leading-relaxed" dangerouslySetInnerHTML={{ __html: q.content }} />
-                                 </div>
-                                 <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0">
-                                     {isReviewMode ? (
-                                        <div className="flex items-center gap-2">
-                                            <div className={`px-4 py-1.5 rounded-sm font-bold text-[14px] border ${isCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-400' : 'bg-red-100 text-red-800 border-red-300'}`}>
-                                               {userAns || '(trống)'}
+                              return (Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
+                                  if (!q?.id) return null;
+                                  const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
+                                  const userAns = String(answers[String(q.id)] || '').trim(); 
+                                  const isCorrect = userAns.toUpperCase() === correctAns;
+                                  const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                                  
+                                  let rawOptions = (q.options && q.options.length > 0) ? q.options : (sec.questions[0]?.options || []);
+                                  const validOptions = rawOptions.filter(Boolean);
+                                  
+                                  return (
+                                   <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-4 rounded-sm border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-300' : 'bg-red-50/50 border-red-300') : (activeQuestionId === String(q.id) ? 'bg-white border-[#323639] shadow-md' : 'bg-white border-slate-300 shadow-sm hover:border-slate-400')} transition-all`}>
+                                     <div className="flex items-center gap-4 flex-1">
+                                       <span className={`inline-flex items-center justify-center font-bold min-w-[30px] h-[30px] text-[14px] rounded-sm shrink-0 ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white' : 'bg-red-600 text-white') : (activeQuestionId === String(q.id) ? 'bg-[#1ea1db] text-white' : 'bg-[#323639] text-white')}`}>
+                                         {displayIdx}
+                                       </span>
+                                       <div className="text-[15px] font-medium text-slate-800 leading-relaxed" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                     </div>
+                                     <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0">
+                                         {isReviewMode ? (
+                                            <div className="flex items-center gap-2">
+                                                <div className={`px-4 py-1.5 rounded-sm font-bold text-[14px] border ${isCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-400' : 'bg-red-100 text-red-800 border-red-300'}`}>
+                                                   {userAns || '(trống)'}
+                                                </div>
+                                                {!isCorrect && <div className="text-[12px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 border border-emerald-200 rounded-sm shadow-sm">ĐA: {correctAns}</div>}
                                             </div>
-                                            {!isCorrect && <div className="text-[12px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 border border-emerald-200 rounded-sm shadow-sm">ĐA: {correctAns}</div>}
-                                        </div>
-                                     ) : (
-                                        <select 
-                                          value={userAns}
-                                          onChange={(e) => handleAnswer(String(q.id), e.target.value)}
-                                          className="bg-white border border-slate-400 text-slate-800 font-bold text-[14px] h-[36px] px-2 rounded-sm outline-none focus:border-[#323639] cursor-pointer w-auto min-w-[100px]"
-                                        >
-                                          <option value="">-- Chọn --</option>
-                                          {validOptions.map((opt: string, oIdx: number) => {
-                                             const val = opt.replace(stripHtmlRegex, '').trim();
-                                             return <option key={oIdx} value={val}>{val}</option>
-                                          })}
-                                        </select>
-                                     )}
-                                 </div>
-                               </div>
-                              )
-                           })}
+                                         ) : (
+                                            <select 
+                                              value={userAns}
+                                              onChange={(e) => handleAnswer(String(q.id), e.target.value)}
+                                              className="bg-white border border-slate-400 text-slate-800 font-bold text-[14px] h-[36px] px-2 rounded-sm outline-none focus:border-[#323639] cursor-pointer w-auto min-w-[100px]"
+                                            >
+                                              <option value="">-- Chọn --</option>
+                                              {validOptions.map((opt: string, oIdx: number) => {
+                                                 const val = opt.replace(stripHtmlRegex, '').trim();
+                                                 const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                                                 return (
+                                                   <option key={oIdx} value={val} disabled={isSelectedElsewhere}>
+                                                     {val} {isSelectedElsewhere ? '(Đã dùng)' : ''}
+                                                   </option>
+                                                 );
+                                              })}
+                                            </select>
+                                         )}
+                                     </div>
+                                   </div>
+                                  )
+                               })
+                           })()}
                          </div>
                       )}
 
                       {/* DẠNG KÉO THẢ & MATCHING */}
-                      {(sec.questionType === "Kéo thả" || sec.questionType === "Matching" || sec.questionType === "Kéo thả vào Part") && (
+                      {(isInlineDragDrop || isBlockDragDrop) && (
                         <div className="bg-white p-8 rounded shadow-sm border border-slate-200">
-                          {sec.content && sec.content.includes('[') ? (
-                            // INLINE DRAG AND DROP
+                          {isInlineDragDrop ? (
                             <div className="format-passage leading-[2.8] text-[16px] text-slate-800">
-                              {renderDragDropContent(sec.content, sec.questions)}
+                              {renderHtmlWithHoles(rawContentText, sec)}
                             </div>
                           ) : (
-                            // BLOCK DRAG AND DROP
                             <div className="space-y-4">
                               {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
                                 if (!q?.id) return null;
@@ -1117,7 +1094,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                             </div>
                           )}
 
-                          {/* OPTIONS BANK CHO KÉO THẢ */}
+                          {/* KHO TỪ KÉO THẢ */}
                           {!isReviewMode && (
                             <div className="mt-10 p-6 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl">
                               <p className="text-[12px] font-black text-slate-500 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
@@ -1134,10 +1111,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                           });
                                       }
                                   });
-                                  const usedOptions = Object.values(answers).map(v => v.trim().toUpperCase());
+                                  
+                                  const sectionQIds = (sec?.questions || []).map((q:any) => String(q.id));
+                                  const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
 
                                   return allOptions.map((opt: string, oIdx: number) => {
-                                    const isUsed = usedOptions.includes(opt.trim().toUpperCase());
+                                    const isUsed = selectedInSec.includes(opt.trim().toUpperCase());
                                     return (
                                       <div
                                         key={oIdx}
@@ -1224,7 +1203,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                     ? (isPerfect ? 'bg-emerald-600 text-white' : isPartial ? 'bg-amber-500 text-white' : 'bg-red-600 text-white')
                                                     : (activeQuestionId === String(q.id) ? 'bg-[#1ea1db] text-white' : 'bg-[#323639] text-white');
                                                 return (
-                                                    <span key={q.id} onClick={() => setActiveQuestionId(String(q.id))} className={`cursor-pointer inline-flex items-center justify-center font-bold px-2 min-w-[30px] h-[30px] text-[14px] rounded-sm shadow-sm ${boxClass}`}>
+                                                    <span 
+                                                      key={q.id} 
+                                                      id={`q-${q.id}`} 
+                                                      onClick={() => setActiveQuestionId(String(q.id))} 
+                                                      className={`cursor-pointer inline-flex items-center justify-center font-bold px-2 min-w-[30px] h-[30px] text-[14px] rounded-sm shadow-sm ${boxClass}`}
+                                                    >
                                                       {displayIdx}
                                                     </span>
                                                 );
@@ -1313,7 +1297,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 const section = parts.reduce((acc: any[], p: any) => acc.concat(Array.isArray(p?.sections) ? p.sections : []), []).find((s:any) => {
                     if ((Array.isArray(s?.questions) ? s.questions : []).some((sq:any)=>String(sq?.id)===id)) return true;
                     if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
-                        const matches = String(s?.content || (Array.isArray(s?.questions) ? s.questions : [])[0]?.content || '').match(/\[(\d+)\]/g);
+                        const matches = String(s?.content || (Array.isArray(s?.questions) ? s.questions : [])[0]?.content || '').match(/\[\s*\d+\s*\]/g);
                         if (matches && matches.some((m:string) => m.replace(/\D/g, '') === id)) return true;
                     }
                     return false;
