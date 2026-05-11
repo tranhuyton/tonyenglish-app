@@ -352,7 +352,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const handleMouseUp = () => {
     if (isReviewMode) return;
-    if (highlightMenu.isClear || stickyNote.show) return;
 
     const selection = window.getSelection();
     if (selection && selection.toString().trim().length > 0) {
@@ -364,10 +363,25 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           return;
       }
     } 
-    if (!highlightMenu.isClear) {
-        setHighlightMenu({ ...highlightMenu, show: false }); 
-    }
+    setHighlightMenu(prev => ({ ...prev, show: false })); 
     setCurrentRange(null);
+  };
+
+  const handleContentClick = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+
+    // Click on Note
+    if (target.tagName === 'SPAN' && target.dataset.noteId) { 
+        const rect = target.getBoundingClientRect(); 
+        setStickyNote({ show: true, id: target.dataset.noteId, text: target.dataset.noteText || '', x: rect.left, y: rect.bottom + 10 }); 
+        setHighlightMenu(prev => ({ ...prev, show: false }));
+    }
+    // Click on Highlight (to clear)
+    else if (target.tagName === 'SPAN' && target.classList.contains('bg-yellow-300') && !target.dataset.noteId) {
+        const rect = target.getBoundingClientRect();
+        setHighlightMenu({ x: rect.left + rect.width / 2, y: rect.top - 10, show: true, isClear: true, targetNode: target });
+        setStickyNote(prev => ({ ...prev, show: false }));
+    }
   };
 
   const handleCopy = async () => { 
@@ -414,24 +428,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       } catch (e) { alert("Chỉ bôi đen gọn trong 1 đoạn văn!"); }
       setHighlightMenu({ ...highlightMenu, show: false }); 
       window.getSelection()?.removeAllRanges();
-    }
-  };
-
-  const handleContentClick = (e: React.MouseEvent) => {
-    const target = e.target as HTMLElement;
-    // Click on Note
-    if (target.tagName === 'SPAN' && target.dataset.noteId) { 
-        const rect = target.getBoundingClientRect(); 
-        setStickyNote({ show: true, id: target.dataset.noteId, text: target.dataset.noteText || '', x: rect.left, y: rect.bottom + 10 }); 
-        setHighlightMenu(prev => ({ ...prev, show: false }));
-    }
-    // Click on Highlight (to clear)
-    else if (target.tagName === 'SPAN' && target.classList.contains('bg-yellow-300') && !target.dataset.noteId) {
-        const rect = target.getBoundingClientRect();
-        setHighlightMenu({ x: rect.left + rect.width / 2, y: rect.top - 10, show: true, isClear: true, targetNode: target });
-        setStickyNote(prev => ({ ...prev, show: false }));
-    } else {
-        setHighlightMenu(prev => ({ ...prev, show: false }));
     }
   };
 
@@ -804,12 +800,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             })}
           </div>
 
-          <main className="flex flex-1 overflow-hidden relative" ref={containerRef} onMouseUp={handleMouseUp}>
+          <main className="flex flex-1 overflow-hidden relative" ref={containerRef} onMouseUp={handleMouseUp} onClick={handleContentClick}>
             
             {/* CỘT TRÁI (BÀI ĐỌC) */}
             {showLeftColumn && (
               <>
-                <section className="p-8 md:p-10 overflow-y-auto custom-scrollbar relative bg-white" ref={leftPaneRef as any} style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }} onClick={handleContentClick}>
+                <section className="p-8 md:p-10 overflow-y-auto custom-scrollbar relative bg-white" ref={leftPaneRef as any} style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
                   {currentPart?.content ? (
                     <div className="format-passage max-w-none text-[16px] leading-[1.8] text-black break-words font-serif selection:bg-yellow-200">
                       {isReviewMode && isListening && <div className="bg-slate-200 text-black p-4 rounded-none font-bold text-[14px] mb-6 border border-slate-400">🎙️ TAPESCRIPT CHỮA BÀI NẰM Ở ĐÂY ➔</div>}
