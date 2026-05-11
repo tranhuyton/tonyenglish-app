@@ -387,11 +387,15 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     }
   };
 
+  // 🛠️ ĐÃ CẬP NHẬT: Không đóng Modal gán đề thi
   const handleAssignTest = async (testId: string) => {
     if (!currentFolderId) return;
     await supabase.from('tests').update({ folder_id: currentFolderId }).eq('id', testId);
-    fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); setShowAssignModal(false);
+    fetchLibraryTests(); 
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
+    // setShowAssignModal(false); // <--- Đã bỏ dòng này để giữ cửa sổ mở
   };
+
   const handleUnassignTest = async (testId: string) => {
     if (window.confirm("Gỡ đề thi khỏi thư mục này? Đề sẽ trở về Kho Tổng.")) {
       await supabase.from('tests').update({ folder_id: null }).eq('id', testId);
@@ -676,7 +680,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                                            </div>
                                            <div className="flex items-center gap-1 bg-white px-2 py-1 rounded border border-slate-200 shrink-0"><span className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase">TT:</span><input type="number" defaultValue={mod.order_index || 0} onBlur={e => handleUpdateModuleOrder(mod.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 text-center text-[11px] md:text-xs font-bold outline-none" /></div>
                                         </>
-                                     )}
+                                      )}
                                    </div>
                                    <div className="flex flex-wrap gap-2 w-full lg:w-auto">
                                       <button onClick={() => setShowAssignLectureModal({show: true, moduleId: mod.id})} className="flex-1 lg:flex-none bg-white border border-slate-300 text-blue-600 px-2 md:px-4 py-1.5 rounded-lg text-[10px] md:text-xs font-bold hover:border-blue-400 transition whitespace-nowrap">+ Nhặt Từ Kho</button>
@@ -936,8 +940,8 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[10px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded transition-colors ${test.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-right space-x-1 md:space-x-2 whitespace-nowrap">
-                                <button onClick={() => setEditingTest(test)} className="text-[#2bd6eb] bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition">Sửa</button>
-                                <button onClick={() => handleDeleteTest(test.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100">Xóa</button>
+                                 <button onClick={() => setEditingTest(test)} className="text-[#2bd6eb] bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition">Sửa</button>
+                                 <button onClick={() => handleDeleteTest(test.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100">Xóa</button>
                             </td>
                           </tr>
                         ))
