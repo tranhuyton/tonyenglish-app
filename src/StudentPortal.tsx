@@ -11,7 +11,8 @@ const FOLDER_IMAGES = [
   'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800'
 ];
 
-const ITEMS_PER_PAGE = 12;
+// 1. Cập nhật số lượng item mỗi trang thành 16 (4x4)
+const ITEMS_PER_PAGE = 16;
 const HISTORY_PER_PAGE = 10;
 
 const formatDate = (isoString: string) => {
@@ -36,34 +37,39 @@ const checkTestHasAudio = (test: any) => {
   return false;
 };
 
-const getTestIcon = (test: any) => {
-  const type = test.test_type || '';
-  if (type.includes('Listening')) return test._hasAudio ? '🎧' : '📄';
-  if (type.includes('Speaking')) return '🎙️';
-  if (type.includes('Writing')) return '✍️';
-  if (type.includes('Case-Study')) return '📊';
-  return '📝';
+// 2. Hàm lấy cấu hình icon và màu sắc cho từng kỹ năng
+const getTestSkillConfig = (test: any) => {
+  const type = String(test.test_type || '').toLowerCase();
+  const title = String(test.title || '').toLowerCase();
+
+  if (type.includes('listening') || title.includes('listening')) 
+      return { icon: '🎧', bg: 'bg-amber-50', text: 'text-amber-600', border: 'border-amber-200' };
+  if (type.includes('speaking') || title.includes('speaking')) 
+      return { icon: '🎙️', bg: 'bg-purple-50', text: 'text-purple-600', border: 'border-purple-200' };
+  if (type.includes('reading') || title.includes('reading')) 
+      return { icon: '📖', bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200' };
+  if (type.includes('writing') || title.includes('writing')) 
+      return { icon: '✍️', bg: 'bg-emerald-50', text: 'text-emerald-600', border: 'border-emerald-200' };
+  if (type.includes('case-study') || title.includes('case-study')) 
+      return { icon: '📊', bg: 'bg-indigo-50', text: 'text-indigo-600', border: 'border-indigo-200' };
+      
+  return { icon: '📝', bg: 'bg-slate-50', text: 'text-slate-600', border: 'border-slate-200' };
 };
 
 const getCourseCover = (course: any) => {
   const t = (course.title || '').toLowerCase();
-  
   if (t.includes('biology')) return { image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80&w=800', badge: 'Biology', color: 'text-emerald-600' };
   if (t.includes('chemistry')) return { image: 'https://images.unsplash.com/photo-1603126857599-f6e15782afa5?auto=format&fit=crop&q=80&w=800', badge: 'Chemistry', color: 'text-cyan-600' };
   if (t.includes('physics')) return { image: 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?auto=format&fit=crop&q=80&w=800', badge: 'Physics', color: 'text-indigo-600' };
   if (t.includes('science')) return { image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800', badge: 'Science', color: 'text-teal-600' };
-
   if (t.includes('math')) return { image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800', badge: 'Mathematics', color: 'text-purple-600' };
   if (t.includes('econ')) return { image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800', badge: 'Economics', color: 'text-amber-600' };
   if (t.includes('business')) return { image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800', badge: 'Business', color: 'text-blue-600' };
-
   if (t.includes('pronunciation') || t.includes('phát âm')) return { image: 'https://images.unsplash.com/photo-1590402494587-44b71d7772f6?auto=format&fit=crop&q=80&w=800', badge: 'Pronunciation', color: 'text-rose-500' };
   if (t.includes('reflex') || t.includes('phản ứng') || t.includes('phản xạ')) return { image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800', badge: 'Comm. Reflex', color: 'text-orange-500' };
   if (t.includes('communication') || t.includes('giao tiếp')) return { image: 'https://images.unsplash.com/photo-1577563908411-50cb989766a3?auto=format&fit=crop&q=80&w=800', badge: 'Communication', color: 'text-pink-600' };
   if (t.includes('esl') || t.includes('english')) return { image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=800', badge: 'ESL Program', color: 'text-rose-600' };
-
   if (t.includes('ielts') || course.type === 'IELTS') return { image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800', badge: 'IELTS Mastery', color: 'text-blue-600' };
-
   return { image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800', badge: course.type || 'Khóa học', color: 'text-slate-600' };
 };
 
@@ -102,9 +108,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [historyData, setHistoryData] = useState<any[]>([]);
   const [lectureProgressData, setLectureProgressData] = useState<any[]>([]);
   
-  // 🚀 LƯU VÀO STATE THAY VÌ ĐỌC LẠI Ổ CỨNG LIÊN TỤC
   const [inProgressIds, setInProgressIds] = useState<Set<string>>(new Set());
-  
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [userProfile, setUserProfile] = useState<any>(null);
   
@@ -140,12 +144,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
 
-  // 🚀 CHỈ GỌI API 1 LẦN DUY NHẤT LÚC VÀO TRANG, CHỐNG SPAM KHI ĐỔI TAB
   useEffect(() => { 
     checkUserAndFetchData(); 
-  }, []); // <-- Dấu ngoặc vuông rỗng đảm bảo không gọi lại
+  }, []);
 
-  // Quét LocalStorage gom dữ liệu bài làm dở
   useEffect(() => {
     const computeInProgress = () => {
       const inProg = new Set<string>();
@@ -156,14 +158,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           
           let match = key.match(/^(?:ielts_ans_|ielts_paper_ans_|std_ans_|case_study_ans_)(.+)$/);
           if (match) {
-             const data = localStorage.getItem(key);
-             if (data && Object.keys(JSON.parse(data)).length > 0) inProg.add(match[1]);
+              const data = localStorage.getItem(key);
+              if (data && Object.keys(JSON.parse(data)).length > 0) inProg.add(match[1]);
           } else {
-             match = key.match(/^(?:ielts_endtime_|standard_endtime_|case_study_endtime_|ielts_paper_endtime_)(.+)$/);
-             if (match) {
-                const endTime = parseInt(localStorage.getItem(key) || '0');
-                if (endTime > Date.now()) inProg.add(match[1]);
-             }
+              match = key.match(/^(?:ielts_endtime_|standard_endtime_|case_study_endtime_|ielts_paper_endtime_)(.+)$/);
+              if (match) {
+                 const endTime = parseInt(localStorage.getItem(key) || '0');
+                 if (endTime > Date.now()) inProg.add(match[1]);
+              }
           }
         }
       } catch(e) {}
@@ -185,7 +187,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     }
 
     const { data: allT } = await supabase.from('tests').select('*').eq('is_published', true);
-    // 🚀 TỐI ƯU HIỆU SUẤT: Parse JSON toàn bộ đề thi ngay từ lúc lấy về (Pre-parse)
     const parsedTests = (allT || []).map((t: any) => {
         let content = t.content_json;
         if (typeof content === 'string') {
@@ -258,15 +259,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const handleStartTestClick = (test: any) => {
     if (!onStartTest) return;
-    
     const category = test.content_json?.basicInfo?.category;
-    
     if (category === 'game') {
       const theme = test.content_json?.basicInfo?.gameTheme || 'siege-game';
       onStartTest(theme, test);
       return; 
     }
-
     const type = String(test.test_type || '').toLowerCase();
     if (type.includes('standard')) onStartTest('standard', test);
     else if (type.includes('case-study') || type.includes('business')) onStartTest('case-study', test);
@@ -297,7 +295,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     else { if (document.exitFullscreen) document.exitFullscreen(); } 
   };
 
-  // ================= 🚀 USE_MEMO: TỐI ƯU CỰC ĐỘ VIỆC TÍNH TOÁN ARRAY =================
   const nameParts = (userProfile?.full_name || currentUser?.email?.split('@')[0] || 'User').trim().split(/\s+/);
   const displayUserName = nameParts[nameParts.length - 1]; 
   const displayUserInitial = displayUserName.charAt(0).toUpperCase();
@@ -457,7 +454,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
       <main className="max-w-[1200px] w-full mx-auto p-4 md:p-8">
         
-        {/* ================= THƯ VIỆN KHÓA HỌC ================= */}
         {activeTab === 'library' && activeView === 'dashboard' && (
           <div className="animate-in fade-in duration-300">
             <div className={`relative bg-gradient-to-r ${bannerConfig.gradient} rounded-2xl p-6 md:p-10 mb-8 md:mb-10 overflow-hidden shadow-md`}>
@@ -521,7 +517,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   return (
                     <div key={course.id} className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:border-[#1e88e5] transition-colors flex flex-col md:flex-row mx-2 md:mx-0 group">
                       <div className="w-full md:w-[320px] h-[180px] shrink-0 bg-slate-50 p-4 border-r border-slate-100">
-                         {/* Bỏ hiệu ứng phóng to ngốn GPU, chỉ làm mờ đi 1 chút khi hover */}
                          <div className="w-full h-full rounded-lg overflow-hidden relative border border-slate-200 shadow-sm bg-black">
                            <img src={cover.image} loading="lazy" alt={course.title} className="w-full h-full object-cover group-hover:opacity-85 transition-opacity duration-300" />
                            <div className={`absolute top-2 left-2 bg-white px-3 py-1.5 rounded text-[10px] font-black uppercase tracking-widest ${cover.color} shadow-sm border border-slate-100`}>{cover.badge}</div>
@@ -550,26 +545,28 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         )}
 
-        {/* MÀN HÌNH BÊN TRONG KHÓA HỌC (THƯ MỤC / KHO ĐỀ) */}
         {activeView === 'course' && selectedCourse && (
           <div className="animate-in fade-in slide-in-from-right-4 duration-300">
-            <div className="flex flex-wrap items-center gap-2 text-[13px] md:text-[14px] font-bold text-slate-500 mb-6 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm mx-2 md:mx-0">
-                <button onClick={() => { 
-                    setActiveView('dashboard'); 
-                    setSelectedCourseId(null); 
-                }} className="hover:text-[#1e88e5] transition-colors">Khóa học</button>
-                <span className="text-slate-300">/</span>
-                <button onClick={() => { 
-                    setCurrentFolderId(null); 
-                    setFolderPage(1); 
-                    setTestPage(1); 
-                }} className={`hover:text-[#1e88e5] transition-colors ${!currentFolderId ? 'text-[#1e88e5]' : ''}`}>{selectedCourse.title}</button>
-                {breadcrumbs.map((b, i) => (
-                  <React.Fragment key={b.id}>
+            {/* 3. Đã thêm khối tiêu đề bọc Breadcrumbs và nút Bài giảng nhanh */}
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm mx-2 md:mx-0">
+                <div className="flex flex-wrap items-center gap-2 text-[13px] md:text-[14px] font-bold text-slate-500">
+                    <button onClick={() => { setActiveView('dashboard'); setSelectedCourseId(null); }} className="hover:text-[#1e88e5] transition-colors">Khóa học</button>
                     <span className="text-slate-300">/</span>
-                    <button onClick={() => handleFolderClick(b.id)} className={`hover:text-[#1e88e5] transition-colors ${i === breadcrumbs.length - 1 ? 'text-[#1e88e5]' : ''}`}>{b.title}</button>
-                  </React.Fragment>
-                ))}
+                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); }} className={`hover:text-[#1e88e5] transition-colors ${!currentFolderId ? 'text-[#1e88e5]' : ''}`}>{selectedCourse.title}</button>
+                    {breadcrumbs.map((b, i) => (
+                      <React.Fragment key={b.id}>
+                        <span className="text-slate-300">/</span>
+                        <button onClick={() => handleFolderClick(b.id)} className={`hover:text-[#1e88e5] transition-colors ${i === breadcrumbs.length - 1 ? 'text-[#1e88e5]' : ''}`}>{b.title}</button>
+                      </React.Fragment>
+                    ))}
+                </div>
+                
+                <button 
+                  onClick={() => onOpenLecture && selectedCourse && onOpenLecture(selectedCourse.id)} 
+                  className="bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-emerald-500 hover:text-white font-bold text-[12px] px-5 py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm uppercase tracking-wide w-full sm:w-auto shrink-0"
+                >
+                  📖 Mở Bài Giảng
+                </button>
             </div>
 
             <div className="space-y-6 md:space-y-8 px-2 md:px-0">
@@ -631,6 +628,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       {paginatedTests.map(test => {
                         const inProgress = inProgressIds.has(String(test.id));
                         const isCompleted = historyData.some(h => String(h.testId) === String(test.id) || String(h.details?.test_id) === String(test.id));
+                        
+                        // 2. Lấy cấu hình màu sắc biểu tượng kỹ năng
+                        const skillConfig = getTestSkillConfig(test);
 
                         let statusConfig = { progress: 0, badge: "Chưa làm", badgeClass: "text-slate-500 bg-white border border-slate-200", btnText: "Làm bài ngay", btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white" };
                         if (isCompleted) statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-700 bg-emerald-50 border border-emerald-200", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-600 hover:text-white" };
@@ -643,8 +643,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             </div>
                             <div>
                               <div className="flex justify-between items-center mb-4 md:mb-5 mt-1 md:mt-2">
-                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center text-xl md:text-2xl text-slate-500 group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-200 transition-colors shadow-sm">
-                                    {getTestIcon(test)}
+                                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-lg ${skillConfig.bg} border ${skillConfig.border} flex items-center justify-center text-xl md:text-2xl ${skillConfig.text} transition-colors shadow-sm`}>
+                                    {skillConfig.icon}
                                 </div>
                                 <span className={`text-[9px] md:text-[10px] font-black px-2 md:px-3 py-1 md:py-1.5 rounded-md uppercase tracking-widest ${statusConfig.badgeClass}`}>{statusConfig.badge}</span>
                               </div>
@@ -682,53 +682,51 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         )}
 
-        {/* ================= TAB 2: MINI GAMES HUB ================= */}
         {activeTab === 'games' && (
-           <div className="animate-in fade-in duration-300">
-               <div className="bg-white rounded-xl border border-slate-200 p-8 md:p-12 mb-8 shadow-sm">
-                   <div className="text-center max-w-2xl mx-auto">
-                       <span className="text-5xl mb-4 block grayscale opacity-80">🎮</span>
-                       <h2 className="text-2xl md:text-3xl font-black text-slate-800 mb-4 uppercase tracking-tight">Góc Mini Games</h2>
-                       <p className="text-slate-500 font-medium text-[15px] md:text-[16px] leading-relaxed">
-                           Đổi gió với các trò chơi nhỏ được thiết kế lồng ghép kiến thức. Trả lời trắc nghiệm thật nhanh để qua ải!
-                       </p>
-                   </div>
-               </div>
+            <div className="animate-in fade-in duration-300">
+                <div className="bg-white rounded-xl border border-slate-200 p-8 md:p-12 mb-8 shadow-sm">
+                    <div className="text-center max-w-2xl mx-auto">
+                        <span className="text-5xl mb-4 block grayscale opacity-80">🎮</span>
+                        <h2 className="text-2xl md:text-3xl font-black text-slate-800 mb-4 uppercase tracking-tight">Góc Mini Games</h2>
+                        <p className="text-slate-500 font-medium text-[15px] md:text-[16px] leading-relaxed">
+                            Đổi gió với các trò chơi nhỏ được thiết kế lồng ghép kiến thức. Trả lời trắc nghiệm thật nhanh để qua ải!
+                        </p>
+                    </div>
+                </div>
 
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                   {allTests.filter(t => {
-                       let content = t.content_json;
-                       if (typeof content === 'string') { try { content = JSON.parse(content); } catch(e){ return false; } }
-                       return content?.basicInfo?.category === 'game';
-                   }).map(game => {
-                       let content = game.content_json;
-                       if (typeof content === 'string') { try { content = JSON.parse(content); } catch(e){ content = {}; } }
-                       const theme = content?.basicInfo?.gameTheme || 'siege-game';
-                       
-                       let icon = '🏰'; let themeName = 'Grammar Siege'; let colorClass = 'text-rose-600 border-rose-200 hover:border-rose-500'; let btnClass = 'text-rose-700 bg-rose-50 border-rose-200 group-hover:bg-rose-600 group-hover:text-white';
-                       if (theme === 'ninja-survival') { icon = '🥷'; themeName = 'Ninja Survival'; colorClass = 'text-slate-800 border-slate-300 hover:border-slate-800'; btnClass = 'text-slate-800 bg-slate-100 border-slate-300 group-hover:bg-slate-800 group-hover:text-white';}
-                       if (theme === 'vocab-racing') { icon = '🏎️'; themeName = 'Vocab Racing'; colorClass = 'text-blue-600 border-blue-200 hover:border-blue-600'; btnClass = 'text-blue-700 bg-blue-50 border-blue-200 group-hover:bg-blue-600 group-hover:text-white';}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {allTests.filter(t => {
+                        let content = t.content_json;
+                        if (typeof content === 'string') { try { content = JSON.parse(content); } catch(e){ return false; } }
+                        return content?.basicInfo?.category === 'game';
+                    }).map(game => {
+                        let content = game.content_json;
+                        if (typeof content === 'string') { try { content = JSON.parse(content); } catch(e){ content = {}; } }
+                        const theme = content?.basicInfo?.gameTheme || 'siege-game';
+                        
+                        let icon = '🏰'; let themeName = 'Grammar Siege'; let colorClass = 'text-rose-600 border-rose-200 hover:border-rose-500'; let btnClass = 'text-rose-700 bg-rose-50 border-rose-200 group-hover:bg-rose-600 group-hover:text-white';
+                        if (theme === 'ninja-survival') { icon = '🥷'; themeName = 'Ninja Survival'; colorClass = 'text-slate-800 border-slate-300 hover:border-slate-800'; btnClass = 'text-slate-800 bg-slate-100 border-slate-300 group-hover:bg-slate-800 group-hover:text-white';}
+                        if (theme === 'vocab-racing') { icon = '🏎️'; themeName = 'Vocab Racing'; colorClass = 'text-blue-600 border-blue-200 hover:border-blue-600'; btnClass = 'text-blue-700 bg-blue-50 border-blue-200 group-hover:bg-blue-600 group-hover:text-white';}
 
-                       return (
-                          <div key={game.id} onClick={() => handleStartTestClick(game)} className={`bg-white rounded-xl border border-slate-200 p-8 shadow-sm transition-colors cursor-pointer flex flex-col group ${colorClass}`}>
-                              <div className={`w-14 h-14 rounded-lg flex items-center justify-center text-3xl mb-6 border transition-colors ${colorClass}`}>
-                                {icon}
-                              </div>
-                              <h3 className={`font-black text-xl text-slate-800 mb-2 transition-colors ${colorClass.split(' ')[0].replace('text-', 'group-hover:text-')}`}>
-                                {game.title || themeName}
-                              </h3>
-                              <p className="text-slate-500 text-[14px] font-medium leading-relaxed mb-8 flex-1">Tham gia thử thách ngôn ngữ, rèn luyện tốc độ phản xạ ngay!</p>
-                              <button className={`w-full font-bold py-3 rounded-lg border transition-colors shadow-sm uppercase tracking-wider text-[13px] ${btnClass}`}>
-                                Chơi Ngay
-                              </button>
-                          </div>
-                       )
-                   })}
-               </div>
-           </div>
+                        return (
+                           <div key={game.id} onClick={() => handleStartTestClick(game)} className={`bg-white rounded-xl border border-slate-200 p-8 shadow-sm transition-colors cursor-pointer flex flex-col group ${colorClass}`}>
+                               <div className={`w-14 h-14 rounded-lg flex items-center justify-center text-3xl mb-6 border transition-colors ${colorClass}`}>
+                                 {icon}
+                               </div>
+                               <h3 className={`font-black text-xl text-slate-800 mb-2 transition-colors ${colorClass.split(' ')[0].replace('text-', 'group-hover:text-')}`}>
+                                 {game.title || themeName}
+                               </h3>
+                               <p className="text-slate-500 text-[14px] font-medium leading-relaxed mb-8 flex-1">Tham gia thử thách ngôn ngữ, rèn luyện tốc độ phản xạ ngay!</p>
+                               <button className={`w-full font-bold py-3 rounded-lg border transition-colors shadow-sm uppercase tracking-wider text-[13px] ${btnClass}`}>
+                                 Chơi Ngay
+                               </button>
+                           </div>
+                        )
+                    })}
+                </div>
+            </div>
         )}
 
-        {/* ================= TAB 3: BÁO CÁO (PHÂN TÍCH & LỊCH SỬ) ================= */}
         {activeTab === 'analytics' && (
           <div className="space-y-6 md:space-y-8 animate-in fade-in duration-300">
             
@@ -862,7 +860,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         )}
 
-        {/* ================= TAB 4: PROFILE ================= */}
         {activeTab === 'profile' && (
           <div className="max-w-xl mx-auto mt-8 animate-in fade-in duration-300">
             <div className="bg-white p-8 md:p-10 rounded-xl border border-slate-200 shadow-sm text-center mx-2 md:mx-0">
@@ -898,7 +895,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
       </main>
 
-      {/* POPUP CHI TIẾT LỊCH SỬ (Xóa nền mờ kính gây lag, Thiết kế phẳng học thuật) */}
       {viewingHistoryDetail && (
         <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4 animate-in fade-in duration-200">
           <div className="bg-white rounded-xl w-full max-w-lg shadow-xl overflow-hidden border border-slate-200">
@@ -934,7 +930,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       )}
 
-      {/* POPUP CHỌN HÌNH THỨC THI IELTS (Vuông vức, Mượt mà, SVG nhẹ) */}
       {showModeSelection && testToStart && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 p-4 animate-in fade-in duration-200">
           <div className="bg-white w-full max-w-[450px] p-8 md:p-10 rounded-xl shadow-xl border border-slate-200">
@@ -947,7 +942,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             </div>
 
             <div className="space-y-4">
-              {/* LỰA CHỌN 1: MÁY TÍNH */}
               <button 
                 onClick={() => handleConfirmMode('computer')}
                 className="w-full flex items-center p-4 md:p-5 bg-white border border-slate-200 hover:border-blue-500 hover:bg-blue-50 rounded-lg transition-colors duration-200 text-left group shadow-sm cursor-pointer"
@@ -963,7 +957,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
               </button>
 
-              {/* LỰA CHỌN 2: TRÊN GIẤY */}
               <button 
                 onClick={() => handleConfirmMode('paper')}
                 className="w-full flex items-center p-4 md:p-5 bg-white border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 rounded-lg transition-colors duration-200 text-left group shadow-sm cursor-pointer"

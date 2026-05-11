@@ -283,24 +283,25 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
     }
   };
 
-  if (!testData || allQuestions.length === 0) return <div className="h-screen flex items-center justify-center bg-[#f4f5f7] font-bold text-slate-500">Loading test data...</div>;
+  if (!testData || allQuestions.length === 0) return <div className="h-screen flex items-center justify-center bg-[#eeeeee] font-bold text-slate-500">Loading test data...</div>;
 
   return (
-    <div className="h-screen flex flex-col bg-[#f0f2f5] font-sans text-slate-800 overflow-hidden">
+    <div className="h-screen flex flex-col bg-[#eeeeee] font-sans text-black overflow-hidden">
       
-      <header className="h-[46px] bg-[#323639] text-white flex justify-between items-center px-4 shrink-0 select-none z-20 shadow-sm relative">
+      {/* 🚀 ĐÃ BỔ SUNG: SỬA LỖI MÃ HTML (BRUTALIST STYLE: NỀN ĐEN, CHỮ TRẮNG, KHÔNG BO GÓC) */}
+      <header className="h-[46px] bg-[#222222] text-white flex justify-between items-center px-4 shrink-0 select-none z-20 border-b border-slate-700 relative">
         <div className="flex items-center gap-2">
           <UserIcon />
-          <span className="font-bold text-[14px] truncate max-w-[200px] md:max-w-xs text-slate-200">{basicInfo.title}</span>
+          <span className="font-bold text-[14px] truncate max-w-[200px] md:max-w-xs text-white">{basicInfo.title}</span>
         </div>
         
-        <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[14px] tracking-wide ${timeLeft <= 300 ? 'text-red-400 animate-pulse' : 'text-white'}`}>
+        <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[15px] tracking-widest ${timeLeft <= 300 ? 'text-red-500' : 'text-white'}`}>
            {isSubmitted ? 'TEST FINISHED' : formatTotalTime(timeLeft)}
         </div>
 
         <div className="flex items-center gap-4">
            {isSubmitted ? (
-              <button onClick={onBack} className="text-[13px] font-bold border border-white/40 px-3 py-1.5 rounded hover:bg-white/10 transition text-white">Return to Home</button>
+              <button onClick={onBack} className="text-[13px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white">Return to Home</button>
            ) : (
               <div className="flex items-center gap-5">
                  <button onClick={onBack} className="hover:text-white text-slate-300 transition text-[13px] font-bold tracking-wide">Exit</button>
@@ -315,49 +316,50 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
       {isGrading && (
         <div className="flex-1 flex flex-col items-center justify-center bg-white/95 z-50 absolute inset-0 pt-10">
           <div className="relative flex items-center justify-center w-32 h-32 mb-6">
-             <svg className="absolute inset-0 w-full h-full animate-spin text-[#323639]" viewBox="0 0 100 100">
+             <svg className="absolute inset-0 w-full h-full animate-spin text-black" viewBox="0 0 100 100">
                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="200" strokeLinecap="round" />
              </svg>
-             <span className="font-bold text-xl text-slate-800">AI</span>
+             <span className="font-bold text-xl text-black">AI</span>
           </div>
-          <h2 className="text-xl font-bold text-slate-800 mb-2">Grading in Progress</h2>
-          <p className="text-slate-500 text-sm">Please wait while the AI examiner analyzes your responses...</p>
+          <h2 className="text-xl font-bold text-black mb-2">Grading in Progress</h2>
+          <p className="text-slate-600 font-medium text-sm">Please wait while the AI examiner analyzes your responses...</p>
         </div>
       )}
 
       {!isSubmitted && !isGrading && currentQ && (
-        <div className="flex-1 flex flex-col overflow-hidden bg-[#f4f5f7]">
+        <div className="flex-1 flex flex-col overflow-hidden bg-[#eeeeee]">
           
-          <div className="h-[54px] bg-white border-b border-slate-300 flex items-center px-8 shrink-0 shadow-sm z-10">
-            <h2 className="font-bold text-[18px] text-slate-900">{currentQ.partTitle}:</h2>
+          <div className="h-[54px] bg-white border-b border-slate-400 flex items-center px-8 shrink-0">
+            <h2 className="font-bold text-[18px] text-black">{currentQ.partTitle}:</h2>
           </div>
 
           <main className="flex-1 flex flex-col md:flex-row overflow-hidden relative">
             
-            <section className="w-full md:w-1/2 p-8 md:p-10 overflow-y-auto custom-scrollbar border-r border-slate-300 flex flex-col">
-              <div className="max-w-2xl text-[16px] leading-[1.8] text-slate-800">
+            <section className="w-full md:w-1/2 p-8 md:p-10 overflow-y-auto custom-scrollbar border-r border-slate-400 flex flex-col bg-white">
+              <div className="max-w-2xl text-[16px] leading-[1.8] text-black font-serif break-words">
                 {currentQ.partContent && (
-                  <div className="mb-6 text-[15px] font-normal" dangerouslySetInnerHTML={{__html: currentQ.partContent}} />
+                  <div className="mb-6 text-[15px] font-medium" dangerouslySetInnerHTML={{__html: currentQ.partContent}} />
                 )}
+                {/* ĐÃ FIX: SỬA LỖI MÃ <P> VÀ HIỂN THỊ CHUẨN HTML */}
                 {currentQ.content && (
-                  <div className={`font-bold mb-6 whitespace-pre-wrap text-black text-[16px] tracking-tight leading-[1.8] ${currentQ.isPart2 ? 'bg-[#fffae6] p-6 border border-amber-200 rounded shadow-sm' : ''}`}>
+                  <div className={`mb-6 text-black text-[16px] tracking-tight leading-[1.8] ${currentQ.isPart2 ? 'bg-[#f4f4f4] p-6 border border-slate-400 rounded-none' : ''}`}>
                     {currentQ.secTitle && currentQ.secTitle.toLowerCase() !== 'section 1' && <div className="font-bold mb-3">{currentQ.secTitle}</div>}
-                    {currentQ.content}
+                    <div dangerouslySetInnerHTML={{__html: currentQ.content}} />
                   </div>
                 )}
               </div>
             </section>
 
-            <section className="w-full md:w-1/2 bg-[#f4f5f7] flex flex-col overflow-hidden relative">
+            <section className="w-full md:w-1/2 bg-[#f4f4f4] flex flex-col overflow-hidden relative">
               
               <div className="flex-1 p-8 md:p-10 pb-0 flex flex-col overflow-hidden">
-                  <div className="flex-1 bg-white border border-slate-300 rounded shadow-sm flex flex-col overflow-hidden">
-                    <div className="h-12 border-b border-slate-200 flex items-center px-4 gap-2 shrink-0 bg-[#fbfbfb]">
+                  <div className="flex-1 bg-white border border-slate-400 rounded-none flex flex-col overflow-hidden">
+                    <div className="h-12 border-b border-slate-300 flex items-center px-4 gap-2 shrink-0 bg-[#e0e0e0]">
                        <NoteIcon />
-                       <span className="text-[13px] font-bold text-slate-700">Notes</span>
+                       <span className="text-[13px] font-bold text-slate-800 uppercase tracking-widest">Notes</span>
                     </div>
                     <textarea 
-                      className="flex-1 w-full p-6 outline-none resize-none text-[15px] text-black font-sans custom-scrollbar leading-[1.8]"
+                      className="flex-1 w-full p-6 outline-none resize-none text-[15px] text-black font-serif custom-scrollbar leading-[1.8]"
                       placeholder="You can make some notes here..."
                       value={notes[currentQ.id] || ''}
                       onChange={(e) => setNotes(prev => ({...prev, [currentQ.id]: e.target.value}))}
@@ -367,40 +369,40 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
               </div>
 
               <div className="p-8 md:p-10 shrink-0">
-                  <div className="h-[90px] bg-white border border-slate-300 rounded shadow-sm flex items-center justify-between px-6">
+                  <div className="h-[90px] bg-white border border-slate-400 rounded-none flex items-center justify-between px-6">
                       
                       {audioUrls[currentQ.id] ? (
                          <div className="flex items-center gap-4 w-full">
-                            <button onClick={() => { const audio = new Audio(audioUrls[currentQ.id]); audio.play(); }} className="w-10 h-10 bg-slate-100 border border-slate-300 rounded flex items-center justify-center hover:bg-slate-200 text-[#323639] transition">
+                            <button onClick={() => { const audio = new Audio(audioUrls[currentQ.id]); audio.play(); }} className="w-10 h-10 bg-slate-200 border border-slate-400 rounded-none flex items-center justify-center hover:bg-slate-300 text-black transition">
                                <PlayIcon />
                             </button>
-                            <div className="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden">
-                               <div className="h-full bg-[#323639] w-full rounded-full"></div>
+                            <div className="flex-1 h-2 bg-slate-300 rounded-none overflow-hidden border border-slate-400">
+                               <div className="h-full bg-black w-full rounded-none"></div>
                             </div>
-                            <span className="text-[13px] font-bold text-slate-500 hidden sm:block">Recorded</span>
-                            <button onClick={deleteRecording} className="w-10 h-10 rounded text-slate-500 hover:text-red-500 hover:bg-red-50 transition flex items-center justify-center ml-2 border border-slate-200" title="Delete & Retake">
+                            <span className="text-[13px] font-bold text-black hidden sm:block">Recorded</span>
+                            <button onClick={deleteRecording} className="w-10 h-10 rounded-none text-black hover:text-white hover:bg-red-600 transition flex items-center justify-center ml-2 border border-slate-400" title="Delete & Retake">
                                <TrashIcon />
                             </button>
                          </div>
                       ) : (
                          <div className="flex items-center gap-6 w-full">
                             {isRecording ? (
-                               <button onClick={stopRecording} className="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded flex items-center gap-2 transition shadow-sm active:scale-95 text-[14px]">
+                               <button onClick={stopRecording} className="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-none flex items-center gap-2 transition active:scale-95 text-[14px]">
                                  <StopIcon /> Stop
                                </button>
                             ) : (
-                               <button onClick={startRecording} className="px-6 py-2.5 bg-[#323639] hover:bg-[#1a1c1e] text-white font-bold rounded flex items-center gap-2 transition shadow-sm active:scale-95 text-[14px]">
+                               <button onClick={startRecording} className="px-6 py-2.5 bg-slate-900 hover:bg-black text-white font-bold rounded-none flex items-center gap-2 transition active:scale-95 text-[14px]">
                                  <MicIcon /> Record
                                </button>
                             )}
                             
                             {isRecording ? (
                                <div className="font-mono text-[16px] text-red-600 font-bold tracking-widest tabular-nums flex items-center gap-2">
-                                 <span className="w-2.5 h-2.5 bg-red-600 rounded-full animate-pulse"></span>
-                                 {formatTime(recordingTime)} <span className="text-slate-400">/ {formatTime(currentQ.maxTime)}</span>
+                                 <span className="w-2.5 h-2.5 bg-red-600 rounded-none animate-pulse"></span>
+                                 {formatTime(recordingTime)} <span className="text-black">/ {formatTime(currentQ.maxTime)}</span>
                                </div>
                             ) : (
-                               <div className="text-[13px] text-slate-500 font-medium">Max time: {formatTime(currentQ.maxTime)}</div>
+                               <div className="text-[13px] text-slate-800 font-bold tracking-widest uppercase">Max time: {formatTime(currentQ.maxTime)}</div>
                             )}
                          </div>
                       )}
@@ -411,17 +413,17 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
             </section>
           </main>
 
-          <footer className="h-[60px] bg-[#f8f9fa] border-t border-slate-300 flex justify-between items-center px-6 shrink-0 select-none overflow-x-auto custom-scrollbar">
+          <footer className="h-[60px] bg-white border-t border-slate-400 flex justify-between items-center px-6 shrink-0 select-none overflow-x-auto custom-scrollbar">
              
              <div className="flex items-center h-full shrink-0">
-                <label className="flex items-center gap-2 cursor-pointer h-full pr-6 border-r border-[#e0e6ed]">
+                <label className="flex items-center gap-2 cursor-pointer h-full pr-6 border-r border-slate-400">
                    <input 
                      type="checkbox" 
-                     className="w-4 h-4 cursor-pointer accent-[#323639]" 
+                     className="w-4 h-4 cursor-pointer accent-black" 
                      checked={!!reviewFlags[currentQIndex]}
                      onChange={handleReviewToggle}
                    />
-                   <span className="text-[15px] font-bold text-[#2c3e50] mt-0.5">Review</span>
+                   <span className="text-[14px] font-bold text-black mt-0.5 whitespace-nowrap">Review</span>
                 </label>
                 
                 <div className="flex items-center gap-3 h-full pl-6">
@@ -430,11 +432,11 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
                       const isReview = reviewFlags[idx];
                       const isAnswered = !!recordedBlobs[q.id];
                       
-                      const shapeClass = isReview ? 'rounded-full' : 'rounded-sm';
+                      const shapeClass = isReview ? 'rounded-full' : 'rounded-none';
                       
-                      let bgClass = 'bg-white text-[#2c3e50] border-slate-300 hover:bg-slate-100';
-                      if (isActive) bgClass = 'bg-[#323639] text-white border-[#323639]';
-                      else if (isAnswered) bgClass = 'bg-[#e0e6ed] text-slate-700 border-[#d2dce5] underline decoration-2 underline-offset-2';
+                      let bgClass = 'bg-white text-black border-slate-400 hover:bg-slate-200';
+                      if (isActive) bgClass = 'bg-slate-900 text-white border-black shadow-inner';
+                      else if (isAnswered) bgClass = 'bg-slate-300 text-black border-slate-500 underline decoration-2 underline-offset-2';
 
                       return (
                         <button 
@@ -452,13 +454,13 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
 
              <div className="flex items-center gap-6 shrink-0 pl-6">
                 <div className="flex items-center gap-3">
-                   <button onClick={goToPrev} disabled={currentQIndex === 0} className="w-9 h-9 flex items-center justify-center text-slate-500 hover:text-[#2c3e50] border border-slate-300 bg-white rounded-sm transition disabled:opacity-30">←</button>
-                   <button onClick={goToNext} disabled={currentQIndex === totalQuestions - 1} className="w-9 h-9 flex items-center justify-center text-slate-500 hover:text-[#2c3e50] border border-slate-300 bg-white rounded-sm transition disabled:opacity-30">→</button>
+                   <button onClick={goToPrev} disabled={currentQIndex === 0} className="w-9 h-9 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition disabled:opacity-30">←</button>
+                   <button onClick={goToNext} disabled={currentQIndex === totalQuestions - 1} className="w-9 h-9 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition disabled:opacity-30">→</button>
                 </div>
                 
                 <button 
                   onClick={handleFinalSubmit}
-                  className="bg-[#323639] hover:bg-[#1a1c1e] text-white px-8 py-2.5 rounded-sm text-[14px] font-bold shadow-sm transition active:scale-95"
+                  className="bg-slate-900 hover:bg-black text-white px-8 py-2.5 rounded-none text-[14px] font-bold transition active:scale-95 uppercase tracking-wide"
                 >
                   Nộp bài
                 </button>
@@ -470,59 +472,59 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
       )}
 
       {isSubmitted && aiResult && (
-        <main className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-[#f8f9fa]">
+        <main className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-[#f4f4f4]">
           <div className="max-w-6xl mx-auto space-y-8">
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col md:flex-row gap-8 items-center justify-center">
+            <div className="bg-white p-8 rounded-none border border-slate-400 flex flex-col md:flex-row gap-8 items-center justify-center">
               <div className="text-center">
-                <span className="text-sm font-bold text-slate-500 uppercase tracking-widest block mb-2">Overall Band Score</span>
-                <span className="text-6xl font-black text-[#323639] bg-slate-100 px-8 py-4 rounded-3xl border-4 border-slate-200 shadow-inner block">{aiResult.overall}</span>
+                <span className="text-sm font-bold text-slate-600 uppercase tracking-widest block mb-2">Overall Band Score</span>
+                <span className="text-6xl font-black text-black border-4 border-black px-8 py-4 rounded-none block">{aiResult.overall}</span>
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                <h3 className="font-black text-xl text-slate-800 mb-4 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
-                <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800">
+            <div className="bg-white p-8 rounded-none border border-slate-400">
+                <h3 className="font-black text-xl text-black mb-4 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
+                <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-bold text-black font-serif">
                   {aiResult.generalFeedback || 'Hệ thống đã ghi nhận bài thi Speaking của bạn.'}
                 </div>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-100">
-                  <h3 className="font-black text-2xl text-slate-800">Chi tiết các tiêu chí</h3>
+            <div className="bg-white p-8 rounded-none border border-slate-400">
+                <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-400">
+                  <h3 className="font-black text-2xl text-black">Chi tiết các tiêu chí</h3>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                   <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 text-center">
-                      <div className="text-[12px] text-slate-500 font-bold uppercase mb-2">Pronunciation</div>
-                      <div className="text-3xl font-black text-[#323639]">{aiResult.criteria?.pronunciation || 0.0}</div>
+                   <div className="bg-[#f4f4f4] p-5 rounded-none border border-slate-400 text-center">
+                      <div className="text-[12px] text-slate-800 font-bold uppercase mb-2">Pronunciation</div>
+                      <div className="text-3xl font-black text-black">{aiResult.criteria?.pronunciation || 0.0}</div>
                    </div>
-                   <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 text-center">
-                      <div className="text-[12px] text-slate-500 font-bold uppercase mb-2">Grammar</div>
-                      <div className="text-3xl font-black text-[#323639]">{aiResult.criteria?.grammar || 0.0}</div>
+                   <div className="bg-[#f4f4f4] p-5 rounded-none border border-slate-400 text-center">
+                      <div className="text-[12px] text-slate-800 font-bold uppercase mb-2">Grammar</div>
+                      <div className="text-3xl font-black text-black">{aiResult.criteria?.grammar || 0.0}</div>
                    </div>
-                   <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 text-center">
-                      <div className="text-[12px] text-slate-500 font-bold uppercase mb-2">Lexical Resource</div>
-                      <div className="text-3xl font-black text-[#323639]">{aiResult.criteria?.lexicalResource || 0.0}</div>
+                   <div className="bg-[#f4f4f4] p-5 rounded-none border border-slate-400 text-center">
+                      <div className="text-[12px] text-slate-800 font-bold uppercase mb-2">Lexical Resource</div>
+                      <div className="text-3xl font-black text-black">{aiResult.criteria?.lexicalResource || 0.0}</div>
                    </div>
-                   <div className="bg-slate-50 p-5 rounded-xl border border-slate-200 text-center">
-                      <div className="text-[12px] text-slate-500 font-bold uppercase mb-2">Fluency</div>
-                      <div className="text-3xl font-black text-[#323639]">{aiResult.criteria?.fluency || 0.0}</div>
+                   <div className="bg-[#f4f4f4] p-5 rounded-none border border-slate-400 text-center">
+                      <div className="text-[12px] text-slate-800 font-bold uppercase mb-2">Fluency</div>
+                      <div className="text-3xl font-black text-black">{aiResult.criteria?.fluency || 0.0}</div>
                    </div>
                 </div>
 
                 <div className="space-y-6 mt-8">
                    <div>
-                      <h4 className="font-bold text-slate-700 mb-3 uppercase tracking-widest text-[13px]">🎧 Bóc băng (Transcript)</h4>
-                      <div className="p-5 bg-[#f4f5f7] border border-slate-200 rounded-lg text-[15px] leading-[1.8] font-serif text-slate-600 italic whitespace-pre-wrap">
+                      <h4 className="font-black text-black mb-3 uppercase tracking-widest text-[13px]">🎧 Bóc băng (Transcript)</h4>
+                      <div className="p-5 bg-white border border-slate-400 rounded-none text-[15px] leading-[1.8] font-serif text-black italic whitespace-pre-wrap">
                          "{aiResult.transcript}"
                       </div>
                    </div>
                    
                    {aiResult.detailedFeedback && (
                    <div>
-                      <h4 className="font-bold text-slate-700 mb-3 uppercase tracking-widest text-[13px]">💡 Gợi ý sửa lỗi</h4>
-                      <div className="p-5 bg-blue-50 border border-blue-100 rounded-lg text-[15px] leading-[1.8] font-medium text-blue-900 whitespace-pre-wrap">
+                      <h4 className="font-black text-black mb-3 uppercase tracking-widest text-[13px]">💡 Gợi ý sửa lỗi</h4>
+                      <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-medium text-black whitespace-pre-wrap">
                          {aiResult.detailedFeedback}
                       </div>
                    </div>

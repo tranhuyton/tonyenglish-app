@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import './tailwind.css';
 
@@ -69,6 +69,39 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
 
   const parseTime = (t: any) => parseInt(t) || 60;
   const [timeLeft, setTimeLeft] = useState(() => parseTime(basicInfo.timeLimit) * 60);
+
+  // Resize Left/Right Column logic
+  const [leftWidth, setLeftWidth] = useState(50);
+  const containerRef = useRef<HTMLElement>(null);
+  const isDragging = useRef(false);
+
+  const startDrag = () => { 
+      isDragging.current = true; 
+      document.body.style.cursor = 'col-resize'; 
+      document.body.style.userSelect = 'none'; 
+  };
+  
+  const stopDrag = () => { 
+      isDragging.current = false; 
+      document.body.style.cursor = 'default'; 
+      document.body.style.userSelect = 'auto'; 
+  };
+  
+  const onDrag = (e: MouseEvent) => {
+    if (!isDragging.current || !containerRef.current) return;
+    const containerRect = containerRef.current.getBoundingClientRect(); 
+    const newLeftWidth = ((e.clientX - containerRect.left) / containerRect.width) * 100;
+    if (newLeftWidth > 20 && newLeftWidth < 80) setLeftWidth(newLeftWidth);
+  };
+
+  useEffect(() => { 
+      window.addEventListener('mousemove', onDrag); 
+      window.addEventListener('mouseup', stopDrag); 
+      return () => { 
+          window.removeEventListener('mousemove', onDrag); 
+          window.removeEventListener('mouseup', stopDrag); 
+      }; 
+  }, []);
 
   useEffect(() => {
     if (isSubmitted || isGrading) return;
@@ -153,7 +186,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
       const { data, error } = await supabase.functions.invoke('ai-grader', {
         body: { 
            prompt: prompt,
-           model: 'gemini-2.5-flash' // Anh có thể đổi thành 'gemini-2.5-pro' tại đây
+           model: 'gemini-2.5-flash'
         }
       });
 
@@ -189,25 +222,32 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
   };
 
   if (!testData || allQuestions.length === 0) {
-    return <div className="h-screen w-full flex items-center justify-center bg-[#f4f5f7] font-bold text-slate-500">Loading test data...</div>;
+    return <div className="h-screen w-full flex items-center justify-center bg-[#eeeeee] font-bold text-slate-900">Loading test data...</div>;
   }
 
   return (
-    <div className="h-screen flex flex-col bg-[#f0f2f5] font-sans text-slate-800 overflow-hidden">
+    <div className="h-screen flex flex-col bg-[#eeeeee] font-sans text-slate-900 overflow-hidden">
       
-      <header className="h-[46px] bg-[#323639] text-white flex justify-between items-center px-4 shrink-0 select-none z-20 shadow-sm relative">
+      <style>{`
+          .format-passage p { margin-bottom: 1.25rem !important; }
+          .format-passage p:last-child { margin-bottom: 0 !important; }
+          .format-passage br { display: block; content: ""; margin-bottom: 0.5rem; }
+      `}</style>
+
+      {/* HEADER MÀU ĐEN BRUTALIST */}
+      <header className="h-[46px] bg-[#222222] text-white flex justify-between items-center px-4 shrink-0 select-none z-20 border-b border-slate-700 relative">
         <div className="flex items-center gap-2">
           <UserIcon />
-          <span className="font-bold text-[14px] truncate max-w-[200px] md:max-w-xs text-slate-200">{basicInfo.title}</span>
+          <span className="font-bold text-[14px] truncate max-w-[200px] md:max-w-xs text-white">{basicInfo.title}</span>
         </div>
         
-        <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[14px] tracking-wide ${timeLeft <= 300 ? 'text-red-400 animate-pulse' : 'text-white'}`}>
+        <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[15px] tracking-widest ${timeLeft <= 300 ? 'text-red-500' : 'text-white'}`}>
            {isSubmitted ? 'TEST FINISHED' : formatTime(timeLeft)}
         </div>
 
         <div className="flex items-center gap-4">
            {isSubmitted ? (
-              <button onClick={onBack} className="text-[13px] font-bold border border-white/40 px-3 py-1.5 rounded hover:bg-white/10 transition text-white">Return to Home</button>
+              <button onClick={onBack} className="text-[13px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white">Return to Home</button>
            ) : (
               <div className="flex items-center gap-5">
                  <button onClick={onBack} className="hover:text-white text-slate-300 transition text-[13px] font-bold tracking-wide">Exit</button>
@@ -222,60 +262,76 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
       {isGrading && (
         <div className="flex-1 flex flex-col items-center justify-center bg-white/95 z-50 absolute inset-0 pt-10">
           <div className="relative flex items-center justify-center w-32 h-32 mb-6">
-             <svg className="absolute inset-0 w-full h-full animate-spin text-[#323639]" viewBox="0 0 100 100">
+             <svg className="absolute inset-0 w-full h-full animate-spin text-black" viewBox="0 0 100 100">
                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="200" strokeLinecap="round" />
              </svg>
-             <span className="font-bold text-xl text-slate-800">AI</span>
+             <span className="font-bold text-xl text-black">AI</span>
           </div>
-          <h2 className="text-xl font-bold text-slate-800 mb-2">Grading in Progress</h2>
-          <p className="text-slate-500 text-sm">Please wait while the AI examiner analyzes your essay...</p>
+          <h2 className="text-xl font-bold text-black mb-2">Grading in Progress</h2>
+          <p className="text-slate-600 text-sm font-medium">Please wait while the AI examiner analyzes your essay...</p>
         </div>
       )}
 
       {!isSubmitted && !isGrading && currentTask && (
-        <div className="flex-1 flex flex-col overflow-hidden bg-[#f4f5f7]">
+        <div className="flex-1 flex flex-col overflow-hidden bg-[#eeeeee]">
           
-          <div className="h-[54px] bg-white border-b border-slate-300 flex items-center px-8 shrink-0 shadow-sm z-10">
-            <h2 className="font-bold text-[18px] text-slate-900">{currentTask.partTitle}:</h2>
+          {/* TIÊU ĐỀ PHẦN THI TRẮNG NỀN, BO VUÔNG */}
+          <div className="h-[54px] bg-white border-b border-slate-400 flex items-center px-8 shrink-0">
+            <h2 className="font-bold text-[18px] text-black">{currentTask.partTitle}:</h2>
           </div>
 
-          <main className="flex-1 flex flex-col md:flex-row overflow-hidden relative">
+          <main className="flex-1 flex flex-col md:flex-row overflow-hidden relative" ref={containerRef as any}>
             
-            <section className="w-full md:w-1/2 p-8 md:p-10 overflow-y-auto custom-scrollbar border-r border-slate-300 flex flex-col">
-              <div className="max-w-2xl text-[16px] leading-[1.8] text-slate-800">
+            {/* CỘT TRÁI - ĐỀ BÀI */}
+            <section className="p-8 md:p-10 overflow-y-auto custom-scrollbar border-r border-slate-400 flex flex-col bg-white" style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
+              <div className="format-passage max-w-none text-[16px] leading-[1.8] text-black font-serif break-words">
                 {currentTask.partContent && (
-                  <div className="mb-6 text-[15px] font-normal" dangerouslySetInnerHTML={{__html: currentTask.partContent}} />
+                  <div className="mb-6 text-[15px] font-medium" dangerouslySetInnerHTML={{__html: currentTask.partContent}} />
                 )}
+                {/* ĐÃ FIX: THÊM DANGEROUSLYSETINNERHTML VÀO CÂU HỎI */}
                 {currentTask.content && (
-                  <div className="font-bold mb-6 whitespace-pre-wrap text-black text-[16px] tracking-tight leading-[1.8]">{currentTask.content}</div>
+                  <div className="font-bold mb-6 whitespace-pre-wrap text-black text-[16px] tracking-tight leading-[1.8]" dangerouslySetInnerHTML={{__html: currentTask.content}} />
                 )}
                 {currentTask.secContent && (
-                  <div className="mb-6 text-[15px] font-normal whitespace-pre-wrap" dangerouslySetInnerHTML={{__html: currentTask.secContent}} />
+                  <div className="mb-6 text-[15px] font-medium whitespace-pre-wrap" dangerouslySetInnerHTML={{__html: currentTask.secContent}} />
                 )}
                 {currentTask.imageUrl && (
-                  <img src={currentTask.imageUrl} alt="Diagram" className="max-w-full rounded border border-slate-300 mt-4 shadow-sm" />
+                  <img src={currentTask.imageUrl} alt="Diagram" className="max-w-full rounded-none border border-slate-400 mt-4" />
                 )}
               </div>
+              <div className="h-[100px]" />
             </section>
 
-            <section className="w-full md:w-1/2 p-8 md:p-10 flex flex-col overflow-hidden relative">
+            {/* THANH KÉO DÃN Ở GIỮA */}
+            <div className="w-4 bg-[#e8e8e8] hover:bg-[#d4d4d4] cursor-col-resize flex flex-col justify-center items-center z-10 border-x border-slate-400 transition-colors shrink-0" onMouseDown={startDrag}>
+               <div className="flex flex-col gap-1.5 opacity-40">
+                  <div className="w-1 h-1 bg-black"></div>
+                  <div className="w-1 h-1 bg-black"></div>
+                  <div className="w-1 h-1 bg-black"></div>
+                  <div className="w-1 h-1 bg-black"></div>
+               </div>
+            </div>
+
+            {/* CỘT PHẢI - BÀI VIẾT CỦA HỌC SINH */}
+            <section className="p-8 md:p-10 flex flex-col overflow-hidden relative bg-[#f4f4f4]" style={{ width: `${100 - leftWidth}%`, flex: 'none' }}>
               
-              <div className="flex-1 bg-white border border-slate-300 rounded shadow-sm flex flex-col overflow-hidden">
-                <div className="h-12 border-b border-slate-200 flex items-center px-4 gap-6 shrink-0 bg-[#fbfbfb]">
-                   <div className="flex gap-4 border-r border-slate-300 pr-6 text-slate-400">
-                      <button className="hover:text-slate-700 transition" title="Undo"><UndoIcon /></button>
-                      <button className="hover:text-slate-700 transition" title="Redo"><RedoIcon /></button>
+              <div className="flex-1 bg-white border border-slate-400 rounded-none flex flex-col overflow-hidden">
+                {/* THANH TOOLBAR CỦA TEXTAREA */}
+                <div className="h-12 border-b border-slate-300 flex items-center px-4 gap-6 shrink-0 bg-[#e0e0e0]">
+                   <div className="flex gap-4 border-r border-slate-400 pr-6 text-slate-700">
+                      <button className="hover:text-black transition" title="Undo"><UndoIcon /></button>
+                      <button className="hover:text-black transition" title="Redo"><RedoIcon /></button>
                    </div>
-                   <div className="flex items-center gap-4 text-slate-600">
-                      <span className="font-serif font-bold text-[14px] cursor-pointer hover:text-black">A <span className="text-[10px] text-slate-400">▼</span></span>
-                      <button className="w-7 h-7 hover:bg-slate-200 flex items-center justify-center rounded transition"><BoldIcon /></button>
-                      <button className="w-7 h-7 hover:bg-slate-200 flex items-center justify-center rounded transition"><ItalicIcon /></button>
-                      <button className="w-7 h-7 hover:bg-slate-200 flex items-center justify-center rounded transition"><UnderlineIcon /></button>
+                   <div className="flex items-center gap-4 text-slate-700">
+                      <span className="font-serif font-bold text-[14px] cursor-pointer hover:text-black">A <span className="text-[10px] text-slate-500">▼</span></span>
+                      <button className="w-7 h-7 hover:bg-slate-300 flex items-center justify-center rounded-none transition"><BoldIcon /></button>
+                      <button className="w-7 h-7 hover:bg-slate-300 flex items-center justify-center rounded-none transition"><ItalicIcon /></button>
+                      <button className="w-7 h-7 hover:bg-slate-300 flex items-center justify-center rounded-none transition"><UnderlineIcon /></button>
                    </div>
                 </div>
                 
                 <textarea 
-                  className="flex-1 w-full p-8 outline-none resize-none text-[16px] text-black font-sans custom-scrollbar leading-[1.8]"
+                  className="flex-1 w-full p-8 outline-none resize-none text-[16px] text-black font-serif custom-scrollbar leading-[1.8] bg-white"
                   placeholder=""
                   value={answers[currentTask.id] || ''}
                   onChange={(e) => handleAnswerChange(currentTask.id, e.target.value)}
@@ -283,40 +339,42 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                 />
               </div>
               
-              <div className="mt-3 text-[14px] text-slate-600 font-medium">
+              <div className="mt-3 text-[14px] text-slate-700 font-bold tracking-wide">
                 Word Count: {getWordCount(answers[currentTask.id])}
               </div>
 
             </section>
           </main>
 
-          <footer className="h-[60px] bg-[#f8f9fa] border-t border-slate-200 flex justify-between items-center px-8 shrink-0 select-none">
+          {/* THANH FOOTER BRUTALIST */}
+          <footer className="h-[60px] bg-white border-t border-slate-400 flex justify-between items-center px-6 shrink-0 select-none">
              
              <div className="flex items-center h-full">
-                <label className="flex items-center gap-2 cursor-pointer h-full pr-8 border-r border-[#e0e6ed]">
-                   <input 
-                     type="checkbox" 
-                     className="w-4 h-4 cursor-pointer accent-[#323639]" 
-                     checked={!!reviewFlags[currentTaskIndex]}
-                     onChange={handleReviewToggle}
-                   />
-                   <span className="text-[15px] font-bold text-[#2c3e50] mt-0.5">Review</span>
-                </label>
+                <div className="flex items-center gap-2 h-full pr-6 border-r border-slate-400 shrink-0 min-w-max">
+                  <input 
+                    type="checkbox" 
+                    id="review" 
+                    className="w-4 h-4 cursor-pointer accent-black" 
+                    checked={!!reviewFlags[currentTaskIndex]}
+                    onChange={handleReviewToggle}
+                  />
+                  <label htmlFor="review" className="text-[14px] font-bold text-black cursor-pointer mt-0.5 whitespace-nowrap">Review</label>
+                </div>
                 
-                <div className="flex items-center gap-6 h-full pl-8">
+                <div className="flex-1 flex justify-start sm:justify-center items-center gap-1.5 overflow-x-auto px-6 py-1 custom-scrollbar min-w-0">
                    {allQuestions.map((q, idx) => {
                       const isActive = idx === currentTaskIndex;
                       const isReview = reviewFlags[idx];
                       
-                      const shapeClass = isReview ? 'rounded-full' : 'rounded-sm';
-                      const bgClass = isActive ? 'bg-[#323639] text-white border-[#323639]' : 'bg-white text-[#2c3e50] border-[#d2dce5] hover:bg-slate-50';
+                      const shapeClass = isReview ? 'rounded-full' : 'rounded-none';
+                      const bgClass = isActive ? 'bg-slate-900 text-white border-black shadow-inner' : 'bg-white text-black border-slate-400 hover:bg-slate-200 cursor-pointer';
 
                       return (
                         <div key={q.id} className="flex items-center gap-3 h-full">
-                           <span className="text-[14px] font-medium text-[#2c3e50] hidden sm:block">Part {idx + 1}:</span>
+                           <span className="text-[14px] font-bold text-black hidden sm:block">Part {idx + 1}:</span>
                            <button 
                              onClick={() => setCurrentTaskIndex(idx)}
-                             className={`w-9 h-10 flex items-center justify-center font-bold text-[14px] border transition-all ${shapeClass} ${bgClass}`}
+                             className={`w-9 h-9 flex items-center justify-center font-bold text-[14px] border transition-all ${shapeClass} ${bgClass}`}
                            >
                              {idx + 1}
                            </button>
@@ -326,17 +384,17 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                 </div>
              </div>
 
-             <div className="flex items-center gap-6">
-                <button className="text-slate-400 hover:text-black transition text-lg px-2 hidden md:block" title="Minimize/Maximize">↙</button>
+             <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-400">
+                <button className="text-slate-500 hover:text-black transition text-lg px-2 hidden md:block" title="Minimize/Maximize">↙</button>
                 
-                <div className="flex items-center gap-3 ml-2">
-                   <button onClick={() => setCurrentTaskIndex(prev => Math.max(0, prev - 1))} disabled={currentTaskIndex === 0} className="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-[#2c3e50] border border-[#d2dce5] bg-white rounded-sm transition disabled:opacity-30">←</button>
-                   <button onClick={() => setCurrentTaskIndex(prev => Math.min(allQuestions.length - 1, prev + 1))} disabled={currentTaskIndex === allQuestions.length - 1} className="w-10 h-10 flex items-center justify-center text-slate-400 hover:text-[#2c3e50] border border-[#d2dce5] bg-white rounded-sm transition disabled:opacity-30">→</button>
+                <div className="flex items-center gap-2 hidden sm:flex ml-2">
+                   <button onClick={() => setCurrentTaskIndex(prev => Math.max(0, prev - 1))} disabled={currentTaskIndex === 0} className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition disabled:opacity-30">←</button>
+                   <button onClick={() => setCurrentTaskIndex(prev => Math.min(allQuestions.length - 1, prev + 1))} disabled={currentTaskIndex === allQuestions.length - 1} className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition disabled:opacity-30">→</button>
                 </div>
                 
                 <button 
                   onClick={handleSubmit}
-                  className="bg-[#323639] hover:bg-[#1a1c1e] text-white px-10 py-2.5 rounded-sm text-[15px] font-bold shadow-sm transition active:scale-95 ml-4"
+                  className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide"
                 >
                   Nộp bài
                 </button>
@@ -348,45 +406,45 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
       )}
 
       {isSubmitted && aiResult && (
-        <main className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-[#f8f9fa]">
+        <main className="flex-1 overflow-y-auto p-4 md:p-8 custom-scrollbar bg-[#f4f4f4]">
           <div className="max-w-6xl mx-auto space-y-8">
             
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col md:flex-row gap-8 items-center justify-center">
+            <div className="bg-white p-8 rounded-none border border-slate-400 flex flex-col md:flex-row gap-8 items-center justify-center">
               <div className="text-center">
-                <span className="text-sm font-bold text-slate-500 uppercase tracking-widest block mb-2">Overall Band Score</span>
-                <span className="text-6xl font-black text-[#1ea1db] bg-blue-50 px-8 py-4 rounded-3xl border-4 border-blue-100 shadow-inner block">{aiResult.overall}</span>
+                <span className="text-sm font-bold text-slate-600 uppercase tracking-widest block mb-2">Overall Band Score</span>
+                <span className="text-6xl font-black text-black border-4 border-black px-8 py-4 rounded-none block">{aiResult.overall}</span>
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                <h3 className="font-black text-xl text-slate-800 mb-4 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
-                <div className="p-5 bg-slate-50 border border-slate-200 rounded-xl text-[15px] leading-[1.8] font-medium text-slate-800">
+            <div className="bg-white p-8 rounded-none border border-slate-400">
+                <h3 className="font-black text-xl text-black mb-4 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
+                <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-bold text-black font-serif">
                   {aiResult.generalFeedback}
                 </div>
             </div>
 
             {Array.isArray(aiResult.tasks) && aiResult.tasks.map((task: any, idx: number) => (
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200" key={idx}>
-                <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-100">
-                  <h3 className="font-black text-2xl text-slate-800">{task.task_name}</h3>
-                  <span className="font-black text-xl text-white bg-[#1ea1db] px-4 py-1.5 rounded-xl shadow-sm">Band {task.score}</span>
+              <div className="bg-white p-8 rounded-none border border-slate-400" key={idx}>
+                <div className="flex justify-between items-center mb-6 pb-4 border-b border-slate-400">
+                  <h3 className="font-black text-2xl text-black">{task.task_name}</h3>
+                  <span className="font-black text-xl text-white bg-black px-4 py-1.5 rounded-none">Band {task.score}</span>
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   {Array.isArray(task.criteria) && task.criteria.map((c: any, i: number) => (
-                    <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <div key={i} className="bg-[#f4f4f4] p-4 rounded-none border border-slate-400">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="font-bold text-slate-700">{c.name}</span>
-                        <span className="font-black text-[#1ea1db] text-lg">{c.score}</span>
+                        <span className="font-bold text-black">{c.name}</span>
+                        <span className="font-black text-black text-lg">{c.score}</span>
                       </div>
-                      <p className="text-sm text-slate-600 font-medium leading-relaxed">{c.comment}</p>
+                      <p className="text-sm text-slate-800 font-medium leading-relaxed font-serif">{c.comment}</p>
                     </div>
                   ))}
                 </div>
 
                 <div>
-                  <h4 className="font-black text-lg text-slate-700 mb-4">✍️ Bài làm & Gợi ý sửa lỗi</h4>
-                  <div className="p-6 bg-[#f4f5f7] border border-slate-200 rounded-xl text-[16px] leading-[1.8] font-serif text-slate-800" dangerouslySetInnerHTML={{__html: task.feedback}} />
+                  <h4 className="font-black text-lg text-black mb-4">✍️ Bài làm & Gợi ý sửa lỗi</h4>
+                  <div className="p-6 bg-[#e0e0e0] border border-slate-400 rounded-none text-[16px] leading-[1.8] font-serif text-black" dangerouslySetInnerHTML={{__html: task.feedback}} />
                 </div>
               </div>
             ))}
