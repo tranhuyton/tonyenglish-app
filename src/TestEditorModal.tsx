@@ -1,7 +1,6 @@
 import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
 import * as XLSX from 'xlsx';
-// 🚀 Đã thay thế ReactQuill bằng JoditEditor
 import JoditEditor from 'jodit-react';
 
 // ==========================================
@@ -18,7 +17,7 @@ const uploadToSupabase = async (file: File) => {
   return supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
 };
 
-// 🚀 COMPONENT EDITOR MỚI SỬ DỤNG JODIT
+// COMPONENT EDITOR DÀNH CHO CÁC Ô NHẬP NỘI DUNG
 const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
   const editorRef = useRef(null);
 
@@ -30,7 +29,6 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
     toolbarSticky: false, 
     placeholder: placeholder || "Nhập nội dung vào đây...",
     
-    // Cấu hình thanh công cụ: Đưa nút table (bảng) ra mặt tiền
     buttons: [
       'bold', 'italic', 'underline', 'strikethrough', '|',
       'superscript', 'subscript', '|',
@@ -41,11 +39,10 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
       'eraser', 'source'
     ],
     
-    // Tối ưu cho việc Paste từ Word/Excel
     defaultActionOnPaste: 'insert_as_html', 
     askBeforePasteHTML: false,
     askBeforePasteFromWord: false,
-    uploader: { insertImageAsBase64URI: true }, // Ảnh chèn trực tiếp bằng Base64 cho gọn
+    uploader: { insertImageAsBase64URI: true }, 
     safeMode: false, 
     htmlParseBrowser: false,
     disablePlugins: ['clean-html', 'sanitize'], 
@@ -66,7 +63,6 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
             ref={editorRef}
             value={value || ''}
             config={editorConfig}
-            // Dùng onBlur để tối ưu hiệu suất, tránh giật lag khi gõ
             onBlur={(newContent) => onChange({ target: { value: newContent } })}
          />
       </div>
@@ -74,7 +70,7 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
   );
 };
 
-// --- COMPONENT MEDIA ROW (Giữ nguyên) ---
+// --- COMPONENT MEDIA ROW ---
 const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", uploadingId, setUploadingId }: any) => {
   const [isDrag, setIsDrag] = useState(false);
   const [showLink, setShowLink] = useState(false);
@@ -255,7 +251,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const [isSaving, setIsSaving] = useState(false);
 
   // ==========================================
-  // THUẬT TOÁN ĐỌC EXCEL (Xử lý Kế thừa & Ép rỗng Option)
+  // THUẬT TOÁN ĐỌC EXCEL 
   // ==========================================
   const processExcelFile = async (file: File) => {
     setUploadingId('excel');
@@ -921,8 +917,9 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                   
                                   <div className="p-5">
                                       <div className="flex gap-4 items-start">
-                                        <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 font-black rounded-full flex items-center justify-center border border-amber-200">
-                                          {q.id || qIdx + 1}
+                                        <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 text-sm font-black rounded-full flex items-center justify-center border border-amber-200">
+                                          {/* 🚀 BẢN SỬA LỖI TRÀN SỐ ID KHI TẠO CÂU HỎI MỚI Ở ĐÂY */}
+                                          { (q.id && String(q.id).length <= 5) ? q.id : (qIdx + 1) }
                                         </div>
                                         <div className="flex-1 space-y-4 min-w-0">
                                           
