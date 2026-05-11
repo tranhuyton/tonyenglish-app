@@ -1,9 +1,8 @@
 import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { supabase } from './supabase';
 import * as XLSX from 'xlsx';
-// @ts-ignore
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+// 🚀 Đã thay thế ReactQuill bằng JoditEditor
+import JoditEditor from 'jodit-react';
 
 // ==========================================
 // 1. CÁC HÀM VÀ COMPONENT CON
@@ -19,77 +18,63 @@ const uploadToSupabase = async (file: File) => {
   return supabase.storage.from('test_assets').getPublicUrl(`uploads/${fileName}`).data.publicUrl;
 };
 
-// COMPONENT EDITOR DÀNH CHO CÁC Ô NHẬP NỘI DUNG
-const RichFieldRow = ({ label, value, onChange, placeholder = "" }: any) => {
-  const quillRef = useRef<any>(null);
-  const [isUploading, setIsUploading] = useState(false);
+// 🚀 COMPONENT EDITOR MỚI SỬ DỤNG JODIT
+const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
+  const editorRef = useRef(null);
 
-  const imageHandler = () => {
-    const input = document.createElement('input');
-    input.setAttribute('type', 'file');
-    input.setAttribute('accept', 'image/*');
-    input.click();
+  const editorConfig = useMemo(() => ({
+    readonly: false,
+    height: 250, 
+    allowResizeY: true, 
+    statusbar: false, 
+    toolbarSticky: false, 
+    placeholder: placeholder || "Nhập nội dung vào đây...",
     
-    input.onchange = async () => {
-      const file = input.files ? input.files[0] : null;
-      if (file) {
-        setIsUploading(true);
-        try {
-          const url = await uploadToSupabase(file);
-          const quill = quillRef.current?.getEditor();
-          if (quill) {
-            const range = quill.getSelection(true);
-            quill.insertEmbed(range?.index || 0, 'image', url);
-          }
-        } catch (err) {
-          alert("Lỗi tải ảnh lên hệ thống!");
-        } finally {
-          setIsUploading(false);
-        }
-      }
-    };
-  };
-
-  const modules = useMemo(() => ({
-    toolbar: {
-      container: [
-        [{ 'header': [1, 2, 3, false] }],
-        ['bold', 'italic', 'underline', 'strike'],
-        [{ 'color': [] }, { 'background': [] }],
-        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-        ['link', 'image'],
-        ['clean']
-      ],
-      handlers: { image: imageHandler }
-    }
-  }), []);
+    // Cấu hình thanh công cụ: Đưa nút table (bảng) ra mặt tiền
+    buttons: [
+      'bold', 'italic', 'underline', 'strikethrough', '|',
+      'superscript', 'subscript', '|',
+      'ul', 'ol', '|',
+      'font', 'fontsize', 'brush', '|',
+      'image', 'table', 'link', '|',
+      'align', 'undo', 'redo', '|',
+      'eraser', 'source'
+    ],
+    
+    // Tối ưu cho việc Paste từ Word/Excel
+    defaultActionOnPaste: 'insert_as_html', 
+    askBeforePasteHTML: false,
+    askBeforePasteFromWord: false,
+    uploader: { insertImageAsBase64URI: true }, // Ảnh chèn trực tiếp bằng Base64 cho gọn
+    safeMode: false, 
+    htmlParseBrowser: false,
+    disablePlugins: ['clean-html', 'sanitize'], 
+    cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false }
+  }), [placeholder]);
 
   return (
     <div className="flex flex-col py-3 border-b border-slate-100 last:border-0 gap-2">
       <div className="flex justify-between items-center">
         <label className="text-[13px] font-bold text-slate-600">{label}</label>
-        {isUploading && (
-          <span className="text-[11px] font-bold text-amber-500 bg-amber-50 px-2 py-1 rounded">
-            ⏳ Đang tải ảnh lên Cloud...
-          </span>
-        )}
       </div>
-      <div className="bg-white rounded-lg border border-slate-200 shadow-sm flex flex-col resize-y overflow-hidden h-[250px] min-h-[150px]">
-         <ReactQuill 
-            ref={quillRef} 
-            theme="snow" 
-            value={value || ''} 
-            onChange={(content: string) => onChange({ target: { value: content } })} 
-            modules={modules} 
-            placeholder={placeholder || "Nhập nội dung vào đây..."} 
-            className="flex-1 flex flex-col min-h-0 [&_.ql-container]:flex-1 [&_.ql-container]:!overflow-y-auto [&_.ql-editor]:min-h-full [&_.ql-editor]:text-[14px] [&_.ql-editor]:font-sans [&_.ql-toolbar]:bg-slate-50"
+      <div className="bg-white rounded-lg border border-slate-200 shadow-sm relative z-0">
+         <style>{`
+            .jodit-toolbar__box { flex-wrap: wrap !important; }
+            .jodit-workplace { min-height: 150px !important; }
+         `}</style>
+         <JoditEditor
+            ref={editorRef}
+            value={value || ''}
+            config={editorConfig}
+            // Dùng onBlur để tối ưu hiệu suất, tránh giật lag khi gõ
+            onBlur={(newContent) => onChange({ target: { value: newContent } })}
          />
       </div>
     </div>
   );
 };
 
-// --- COMPONENT MEDIA ROW ---
+// --- COMPONENT MEDIA ROW (Giữ nguyên) ---
 const MediaRow = ({ label, value, onUpload, id, accept = "audio/*, image/*", uploadingId, setUploadingId }: any) => {
   const [isDrag, setIsDrag] = useState(false);
   const [showLink, setShowLink] = useState(false);
@@ -270,7 +255,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const [isSaving, setIsSaving] = useState(false);
 
   // ==========================================
-  // 🚀 THUẬT TOÁN ĐỌC EXCEL (Xử lý Kế thừa & Ép rỗng Option)
+  // THUẬT TOÁN ĐỌC EXCEL (Xử lý Kế thừa & Ép rỗng Option)
   // ==========================================
   const processExcelFile = async (file: File) => {
     setUploadingId('excel');
@@ -302,23 +287,14 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
         const getCol = (row: any, exactKeywords: string[], partialKeywords: string[] = []) => {
           const keys = Object.keys(row);
-          
-          // 1. Tìm chính xác tuyệt đối trước
           for (let key of keys) {
             const cleanKey = key.toLowerCase().replace(/[\s_.,|()[\]-]/g, '');
-            if (exactKeywords.includes(cleanKey)) {
-              return row[key];
-            }
+            if (exactKeywords.includes(cleanKey)) return row[key];
           }
-          
-          // 2. Tìm tương đối
           for (let key of keys) {
             const cleanKey = key.toLowerCase().replace(/[\s_.,|()[\]-]/g, '');
-            if (partialKeywords.some(k => cleanKey.includes(k))) {
-              return row[key];
-            }
+            if (partialKeywords.some(k => cleanKey.includes(k))) return row[key];
           }
-          
           return "";
         };
 
@@ -333,7 +309,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
         };
 
         jsonData.forEach((row: any) => {
-          // Bỏ qua các dòng phân cách (----)
           if (Object.values(row).some(val => String(val).includes('---'))) return;
 
           const rawPartTitle = getCol(row, ['parttitle'], ['part']);
@@ -365,7 +340,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           } else if (qTypeRaw) {
              qType = qTypeRaw;
           } else if (!qTypeRaw && currentSection && (!secTitle || currentSection.title === secTitle)) {
-             // 🚀 Tự động kế thừa dạng câu hỏi nếu dòng 21 bị bỏ trống
              qType = currentSection.questionType;
           }
 
@@ -388,11 +362,9 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           let optK = cleanText(getCol(row, ['optionk', 'k'], ['đápánk', 'lựachọnk']));
           let optL = cleanText(getCol(row, ['optionl', 'l'], ['đápánl', 'lựachọnl']));
           
-          // MÁY HÚT BỤI TỐI THƯỢNG: Tránh bắt nhầm Option E vào cột Answer. Từ khóa cực nghiêm ngặt!
           const answer = cleanText(getCol(row, ['answer', 'correctanswer', 'đápánđúng', 'đápánchínhxác'], []));
           const exp = cleanText(getCol(row, ['explanation'], ['giảithích']));
 
-          // Nếu AI nhét cả rổ Options vào phần Câu hỏi (Thường gặp ở Trắc nghiệm/Checkbox)
           if ((qType === 'Checkbox' || qType === 'Trắc nghiệm') && qContent.includes('A.')) {
               const lines = qContent.split(/<br\s*\/?>/i);
               const newLines: string[] = [];
@@ -421,7 +393,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           const isRealQuestion = (qId !== "" && !isNaN(parseInt(qId))) || (answer !== "");
           if (!partTitle && !secTitle && !partContent && !secContent && !isRealQuestion) return;
 
-          // Xử lý tạo Part mới
           if (partTitle && (!currentPart || currentPart.title !== partTitle)) {
             currentPart = { 
               id: Date.now().toString() + Math.random(), 
@@ -446,7 +417,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           if (optI) options.push(optI); if (optJ) options.push(optJ);
           if (optK) options.push(optK); if (optL) options.push(optL);
 
-          // 🚀 Ép buộc các câu nối tiếp của Checkbox phải bám vào Section phía trên
           let isNewSection = false;
           if (secTitle && (!currentSection || currentSection.title !== secTitle)) {
               isNewSection = true;
@@ -455,7 +425,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           if (qType === 'Checkbox' && currentSection && currentSection.questionType === 'Checkbox') {
               const isFollowUp = (!qContent && options.length === 0);
               if (isFollowUp) {
-                  isNewSection = false; // Mặc kệ secTitle có bị rác, ép nó gộp vào Section liền trước!
+                  isNewSection = false; 
               }
           }
 
@@ -478,26 +448,22 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           if (isRealQuestion && currentSection) {
             let finalOptions = options;
             
-            // XỬ LÝ KHÔNG CHO ĐẺ RÁC A,B,C,D VỚI CÁC CÂU THEO SAU NẾU KHÔNG NHẬP
             if (options.length === 0) {
                if (qType === 'TFNG') {
                  finalOptions = ['TRUE', 'FALSE', 'NOT GIVEN'];
                } else if (qType === 'Trắc nghiệm') {
                  finalOptions = ['A', 'B', 'C', 'D'];
                } else if (qType === 'Droplist') {
-                 // ĐỐI VỚI DROPLIST, CÂU SAU KẾ THỪA OPTIONS CỦA CÂU ĐẦU TIÊN CÙNG SECTION
                  if (currentSection.questions.length > 0) {
                     finalOptions = [...currentSection.questions[0].options];
                  } else {
                     finalOptions = []; 
                  }
                } else {
-                 // Các dạng Kéo thả, Điền từ, Checkbox (câu phụ): Ép rỗng hoàn toàn []
                  finalOptions = []; 
                }
             }
 
-            // MÁY PHÂN BÀO: Tự động đẻ câu nếu AI lười gộp ID trên 1 dòng
             if (qType === 'Checkbox' && answer.includes(',')) {
                 const ansArr = answer.split(',').map(x => x.trim()).filter(Boolean);
                 let baseIdMatch = qId.match(/\d+/);
@@ -628,7 +594,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       section.questions = [];
     }
     
-    // LINH HOẠT TẠO OPTIONS KHI BẤM NÚT "+" 
     const qType = section.questionType;
     let initialOptions = ['A', 'B', 'C', 'D'];
     
@@ -712,7 +677,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       <div className="flex-1 overflow-y-auto relative custom-scrollbar">
         <div className="max-w-[1200px] mx-auto w-full p-4 md:p-8 space-y-8 pb-20"> 
           
-          {/* TABS NAvigation */}
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <button 
               onClick={() => setActiveTab('basic')} 
@@ -728,7 +692,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
             </button>
           </div>
 
-          {/* TAB: BASIC INFO */}
           {activeTab === 'basic' && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start animate-in slide-in-from-left-4">
               <div className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm p-6 space-y-5">
@@ -831,7 +794,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
             </div>
           )}
 
-          {/* TAB: CONTENT & QUESTIONS */}
           {activeTab === 'content' && (
             <div className="animate-in slide-in-from-right-4 space-y-6">
               
@@ -859,7 +821,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                 </div>
               )}
 
-              {/* RENDER CÁC PARTS */}
               {testData.parts?.map((part: any, pIdx: number) => (
                 <div key={part.id} className="border-2 border-[#00a651] rounded-2xl bg-white overflow-hidden shadow-sm">
                     <div className="bg-[#e6f4ea] px-6 py-4 border-b border-[#00a651]/20 flex justify-between items-center group">
@@ -878,7 +839,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                     </div>
                     
                     <div className="p-6 md:p-8 space-y-4 bg-slate-50 border-b border-slate-200">
-                      <RichFieldRow 
+                      <JoditEditorRow 
                         label="Nội dung Part (Bài đọc/Giới thiệu)" 
                         value={part.content} 
                         onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} 
@@ -894,7 +855,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                     </div>
 
                     <div className="p-6 md:p-8 space-y-8">
-                      {/* RENDER CÁC SECTIONS BÊN TRONG PART */}
                       {part.sections?.map((sec: any, sIdx: number) => (
                         <div key={sec.id} className="border-2 border-[#3b82f6] rounded-xl bg-white overflow-hidden shadow-sm">
                           <div className="bg-[#3b82f6] px-6 py-3 flex justify-between items-center group">
@@ -913,7 +873,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                           </div>
                           
                           <div className="p-6 bg-blue-50/30 border-b border-blue-100 space-y-4">
-                            <RichFieldRow 
+                            <JoditEditorRow 
                               label="Nội dung Section (Đoạn văn/Hướng dẫn)" 
                               value={sec.content} 
                               onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} 
@@ -945,7 +905,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                           </div>
 
                           <div className="p-6 space-y-6">
-                            {/* RENDER CÁC QUESTIONS BÊN TRONG SECTION */}
                             {sec.questions?.map((q: any, qIdx: number) => {
                               const rawText = String(q.content || '').replace(/<[^>]*>/g, '').trim();
                               const hasContent = rawText !== '' || String(q.content || '').includes('<img') || String(q.content || '').includes('<audio');
@@ -962,11 +921,8 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                   
                                   <div className="p-5">
                                       <div className="flex gap-4 items-start">
-                                        <div 
-                                          className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 font-black text-[13px] rounded-full flex items-center justify-center border border-amber-200 shadow-sm overflow-hidden" 
-                                          title={`ID: ${q.id}`}
-                                        >
-                                          {(q.id && String(q.id).length < 10) ? q.id : qIdx + 1}
+                                        <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 font-black rounded-full flex items-center justify-center border border-amber-200">
+                                          {q.id || qIdx + 1}
                                         </div>
                                         <div className="flex-1 space-y-4 min-w-0">
                                           
@@ -982,7 +938,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
                                           <div className="flex flex-col md:flex-row gap-4">
                                             <div className="flex-1">
-                                              <RichFieldRow 
+                                              <JoditEditorRow 
                                                 label={isComboChild ? "Nội dung câu hỏi (Nhập nội dung nếu muốn tách thành Combo mới)" : "Nội dung câu hỏi"}
                                                 value={q.content} 
                                                 onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} 
@@ -999,7 +955,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                             </div>
                                           </div>
                                           
-                                          {/* KHỐI OPTIONS CỦA CÂU HỎI */}
                                           <div className={`bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 ${isComboChild && (!q.options || q.options.length === 0) ? 'hidden' : ''}`}>
                                             <div className="flex justify-between items-center border-b border-slate-200 pb-2">
                                                 <label className="text-[12px] font-bold text-slate-600">Các lựa chọn đáp án (Options)</label>
@@ -1038,7 +993,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                           </div>
 
                                           <div className="w-full">
-                                            <RichFieldRow 
+                                            <JoditEditorRow 
                                               label="Lời giải thích (Tùy chọn)" 
                                               value={q.explanation} 
                                               onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} 
