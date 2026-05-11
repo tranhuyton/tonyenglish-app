@@ -962,8 +962,11 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                   
                                   <div className="p-5">
                                       <div className="flex gap-4 items-start">
-                                        <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 font-black rounded-full flex items-center justify-center border border-amber-200">
-                                          {q.id || qIdx + 1}
+                                        <div 
+                                          className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 font-black text-[13px] rounded-full flex items-center justify-center border border-amber-200 shadow-sm overflow-hidden" 
+                                          title={`ID: ${q.id}`}
+                                        >
+                                          {(q.id && String(q.id).length < 10) ? q.id : qIdx + 1}
                                         </div>
                                         <div className="flex-1 space-y-4 min-w-0">
                                           
