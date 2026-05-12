@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { supabase } from './supabase';
-import AITutorSidebar from './AITutorSidebar';
 
 // =========================================================================================
-// 🚀 COMPONENT RENDER BÀI GIẢNG TRONG IFRAME (ĐÃ FIX TỪ ĐIỂN VÀ NÚT BẤM BẤT TỬ)
+// 🚀 COMPONENT RENDER BÀI GIẢNG TRONG IFRAME
 // =========================================================================================
-const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict, onOpenAI }: any) => {
+const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(100);
 
@@ -24,18 +23,22 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
          if (iframeRef.current) {
             const rect = iframeRef.current.getBoundingClientRect();
-            // Truyền tọa độ gốc ra ngoài để App vẽ bảng từ điển
             onOpenDict(e.data.word, rect.left + e.data.x, rect.top + e.data.y, rect.top + e.data.rectTop);
          }
        } else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
          onCloseDict();
        } else if (e.data?.type === 'OPEN_IELTS_AI') {
-         onOpenAI('ielts', e.data.topic); // 🚀 CHUYỂN TÍN HIỆU TRỰC TIẾP RA CỬA SỔ AI
+         const fakeBtn = document.createElement('button');
+         fakeBtn.className = 'btn-ielts-trigger hidden';
+         fakeBtn.setAttribute('data-topic', e.data.topic);
+         document.body.appendChild(fakeBtn);
+         fakeBtn.click();
+         setTimeout(() => { fakeBtn.remove(); }, 100); 
        }
      };
      window.addEventListener('message', handleMessage);
      return () => window.removeEventListener('message', handleMessage);
-   }, [onOpenPopup, onOpenDict, onCloseDict, onOpenAI]);
+   }, [onOpenPopup, onOpenDict, onCloseDict]);
 
    const iframeContent = `
      <!DOCTYPE html>
@@ -59,48 +62,71 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          ::selection { background: #bae6fd; color: #0369a1; }
          #content-wrapper { display: flow-root; width: 100%; padding-bottom: 20px; font-size: 16px; }
          p { margin-top: 0; margin-bottom: 1rem; }
+         table { border-collapse: collapse; width: 100%; margin-bottom: 1rem; }
+         table th, table td { border: 1px solid #cbd5e1; padding: 0.75rem; vertical-align: top; }
+         table th { background-color: #f1f5f9; font-weight: 700; text-align: left; }
        </style>
      </head>
      <body>
        <div id="content-wrapper">${html ? html.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
        <script>
-         // 🚀 THUẬT TOÁN ĐỌC TRỘM NÚT BẤM "BẤT TỬ" XUYÊN TƯỜNG LỬA
          document.addEventListener('click', function(e) {
-           var btn = e.target.closest('button');
-           if (btn) {
-               var btnText = btn.textContent || btn.innerText || '';
-               // Nhận diện nút IELTS Assessor (Chặn luôn các lệnh onClick lỗi cũ)
-               if (btnText.includes('Phân tích') || btnText.includes('Copy Lệnh') || btnText.includes('MỞ GEM')) {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  e.stopImmediatePropagation();
-
-                  var container = btn.parentElement;
-                  if (container && container.tagName !== 'DIV' && container.parentElement && container.parentElement.tagName === 'DIV') {
-                      container = container.parentElement;
-                  }
-                  
-                  var span = container ? container.querySelector('span') : null;
-                  var topic = span ? (span.textContent || span.innerText) : 'Không tìm thấy đề bài. Vui lòng dán trực tiếp vào khung chat.';
-                  topic = topic.replace(/^(Đề|Topic|Bài)\\s*\\d+\\s*[:\\-]?\\s*/i, '').trim();
-                  
-                  // Hiệu ứng Visual: Nút đổi chữ báo hiệu đang chạy AI
-                  var originalText = btn.innerHTML;
-                  btn.innerHTML = "✨ Đang mở AI...";
-                  btn.style.opacity = "0.7";
-                  setTimeout(function() {
-                      btn.innerHTML = originalText;
-                      btn.style.opacity = "1";
-                  }, 1500);
-
-                  window.parent.postMessage({ type: 'OPEN_IELTS_AI', topic: topic }, '*');
-                  return false;
-               }
-           }
+           var target = e.target;
            
-           var anchor = e.target.closest('a');
-           if (anchor) { e.preventDefault(); window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: anchor.href }, '*'); return; }
-         }, true); // Bắt capture phase để chạy trước các onclick bị lỗi khác
+           // 1. ƯU TIÊN XỬ LÝ HYPERLINK (Bỏ block nhầm Link của anh)
+           var anchor = target.closest('a');
+           if (anchor && anchor.href && !anchor.outerHTML.includes('openIELTSAssessor') && !anchor.classList.contains('btn-ielts-trigger')) {
+               e.preventDefault(); 
+               window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: anchor.href }, '*'); 
+               return; 
+           }
+
+           // 2. TÌM NÚT GỌI AI GIÁM KHẢO
+           var btn = target.closest('.btn-ielts-trigger');
+           var topic = '';
+           
+           if (!btn) {
+               // Chuyển sang chỉ lùng sục các thẻ <button> để tránh bắt nhầm <a>
+               var fallbackBtn = target.closest('button'); 
+               if (fallbackBtn) {
+                   var text = fallbackBtn.innerText || fallbackBtn.textContent || '';
+                   var btnHtml = fallbackBtn.outerHTML || '';
+                   if (text.includes('Mở Giám Khảo') || text.includes('Copy Lệnh') || text.includes('Phân tích') || btnHtml.includes('openIELTSAssessor')) {
+                       btn = fallbackBtn;
+                       var match = btnHtml.match(/openIELTSAssessor\\(['"](.*?)['"]\\)/);
+                       if (match && match[1]) {
+                           topic = match[1];
+                       } else {
+                           var container = btn.parentElement;
+                           if (container && container.tagName !== 'DIV' && container.parentElement && container.parentElement.tagName === 'DIV') container = container.parentElement;
+                           var span = container ? container.querySelector('span') : null;
+                           topic = span ? (span.textContent || span.innerText) : '';
+                           topic = topic.replace(/^(Đề|Topic|Bài)\\s*\\d+\\s*[:\\-]?\\s*/i, '').trim();
+                       }
+                   }
+               }
+           } else {
+               topic = btn.getAttribute('data-topic') || '';
+           }
+
+           // NẾU TÌM THẤY NÚT GỌI AI THÌ MỚI BẮT ĐẦU CHẶN LẠI VÀ CHẠY
+           if (btn) {
+               e.preventDefault();
+               e.stopPropagation();
+               e.stopImmediatePropagation();
+               
+               var originalText = btn.innerHTML;
+               btn.innerHTML = "✨ Đang mở Giám Khảo...";
+               btn.style.opacity = "0.7";
+               setTimeout(function() {
+                   btn.innerHTML = originalText;
+                   btn.style.opacity = "1";
+               }, 1500);
+
+               window.parent.postMessage({ type: 'OPEN_IELTS_AI', topic: topic }, '*');
+               return false;
+           }
+         }, true);
          
          var selectionTimer = null;
          document.addEventListener('mouseup', function(e) {
@@ -156,7 +182,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
 // =========================================================================================
 // MAIN COMPONENT: LECTURE VIEWER
 // =========================================================================================
-export default function LectureViewer({ courseId, onBack, onStartTest }: { courseId: string, onBack: () => void, onStartTest?: (type: string, data: any) => void }) {
+export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI }: { courseId: string, onBack: () => void, onStartTest?: (type: string, data: any) => void, onOpenAI?: () => void }) {
   const [course, setCourse] = useState<any>(null);
   const [modules, setModules] = useState<any[]>([]);
   const [lectures, setLectures] = useState<any[]>([]);
@@ -173,17 +199,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
   const [isTaskMenuOpen, setIsTaskMenuOpen] = useState(false);
   const taskMenuRef = useRef<HTMLDivElement>(null);
   
-  // 🚀 QUẢN LÝ BỘ NÃO AI NGAY TẠI ĐÂY
-  const [aiConfig, setAiConfig] = useState<{isOpen: boolean, mode: 'tutor'|'ielts', topicTitle: string}>({
-    isOpen: false,
-    mode: 'tutor',
-    topicTitle: ''
-  });
-
-  const handleOpenAI = useCallback((mode: 'tutor'|'ielts', topic: string = '') => {
-    setAiConfig({ isOpen: true, mode, topicTitle: topic });
-  }, []);
-
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -192,6 +207,21 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
   const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
   
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const activeLecture = useMemo(() => lectures.find(l => l.id === activeLectureId), [lectures, activeLectureId]);
+  const totalPages = pages.length;
+  const currentHtmlContent = useMemo(() => { const page = pages.find(p => p.page_number === currentPage); return page ? page.content_html : ''; }, [pages, currentPage]);
+
+  useEffect(() => {
+    if (activeLecture && currentHtmlContent) {
+      window.dispatchEvent(new CustomEvent('tony-update-lecture-context', {
+        detail: {
+          title: activeLecture.title, 
+          html: currentHtmlContent 
+        }
+      }));
+    }
+  }, [activeLecture, currentHtmlContent]);
 
   useEffect(() => {
     if (containerRef.current) containerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
@@ -311,7 +341,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
          setAllLectureProgress(allPrev => ({ ...allPrev, [activeLectureId]: newCompleted }));
          return newCompleted;
       });
-  }, [currentUser, activeLectureId, lectures]);
+  }, [currentUser, activeLectureId, lectures, activeLecture]);
 
   const handleStartTaskExercise = async (task: any) => {
       if (!onStartTest || !task.test_id) return;
@@ -400,12 +430,9 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
     return url;
   };
 
-  const activeLecture = useMemo(() => lectures.find(l => l.id === activeLectureId), [lectures, activeLectureId]);
-  const totalPages = pages.length;
   const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
   const safeCompletedTasks = Array.isArray(completedTasks) ? completedTasks : [];
   const isLastLectureAndPage = currentPage === totalPages && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
-  const currentHtmlContent = useMemo(() => { const page = pages.find(p => p.page_number === currentPage); return page ? page.content_html : ''; }, [pages, currentPage]);
 
   if (isLoading) return <div className="min-h-[100dvh] flex items-center justify-center bg-[#f1f5f9]"><div className="animate-spin text-4xl text-[#0ea5e9]">⏳</div></div>;
   if (errorMessage) return (
@@ -477,9 +504,8 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
          </div>
 
          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2 sm:ml-4">
-             {/* 🚀 ĐÃ SỬA: NÚT NÀY KÍCH HOẠT HÀM MỞ GIA SƯ AI TRỰC TIẾP */}
              <button 
-                onClick={() => handleOpenAI('tutor')} 
+                onClick={onOpenAI} 
                 className="flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-lg text-[13px] md:text-[14px] font-bold transition-all bg-amber-400 hover:bg-amber-500 text-amber-950 shadow-md border border-amber-300" 
                 title="Hỏi AI"
              >
@@ -585,7 +611,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
                           onOpenPopup={setPopupUrl} 
                           onOpenDict={triggerDictionary}
                           onCloseDict={() => setDictPopup(null)}
-                          onOpenAI={handleOpenAI}
                        />
                     </div>
                   )}
@@ -609,11 +634,10 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
          </main>
       </div>
 
-      {/* 🚀 ĐÃ SỬA LỖI TỌA ĐỘ TỪ ĐIỂN: LUÔN NẰM CHÍNH GIỮA CHỮ BÔI ĐEN VÀ LUÔN NỔI BẬT LÊN TRÊN */}
       {dictPopup && dictPopup.show && (
          <div id="dict-popup" className="fixed bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-slate-200 w-[90vw] max-w-[320px] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200"
            style={{ 
-             zIndex: 99999, // Ép cứng z-index cao nhất
+             zIndex: 99999, 
              left: Math.max(10, Math.min(dictPopup.x - 160, window.innerWidth - 330)), 
              ...(window.innerHeight - dictPopup.y < 300 ? { bottom: window.innerHeight - dictPopup.rectTop + 10 } : { top: dictPopup.y + 10 }), 
              maxHeight: '380px' 
@@ -642,17 +666,13 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
          </div>
       )}
 
-      {/* POPUP HIỂN THỊ VIDEO/IFRAME BÀI GIẢNG */}
       {popupUrl && (
         <div className="fixed inset-0 bg-slate-900/90 backdrop-blur-sm flex flex-col items-center justify-center p-4 md:p-8 animate-in fade-in duration-200" style={{ zIndex: 99999 }}>
           <div className="w-full max-w-6xl flex justify-end mb-4">
              <button 
                 onClick={() => setPopupUrl(null)} 
                 className="w-12 h-12 rounded-full bg-white/10 border border-white/20 hover:bg-red-500 flex items-center justify-center text-white text-2xl font-black transition-colors"
-                title="Đóng cửa sổ"
-             >
-                ✕
-             </button>
+             >✕</button>
           </div>
           <div className="w-full max-w-6xl h-[85vh] bg-black rounded-2xl overflow-hidden shadow-2xl relative border border-slate-700">
              <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-0">
@@ -661,25 +681,10 @@ export default function LectureViewer({ courseId, onBack, onStartTest }: { cours
                    <span className="font-bold text-slate-400 uppercase tracking-widest text-sm">Đang tải tài liệu...</span>
                 </div>
              </div>
-             <iframe 
-                src={getEmbedUrl(popupUrl)} 
-                className="absolute inset-0 w-full h-full border-0 z-10 bg-white" 
-                allowFullScreen
-             ></iframe>
+             <iframe src={getEmbedUrl(popupUrl)} className="absolute inset-0 w-full h-full border-0 z-10 bg-white" allowFullScreen></iframe>
           </div>
         </div>
       )}
-
-      {/* 🚀 TÍCH HỢP AI NGAY BÊN TRONG LECTURE ĐỂ TRÁNH XUNG ĐỘT */}
-      <AITutorSidebar 
-         isOpen={aiConfig.isOpen}
-         onClose={() => setAiConfig(prev => ({...prev, isOpen: false}))}
-         mode={aiConfig.mode}
-         topicTitle={aiConfig.topicTitle}
-         courseTitle={course?.title || ''}
-         lectureTitle={activeLecture?.title || ''}
-         htmlContent={currentHtmlContent || ''} 
-      />
     </div>
   );
 }

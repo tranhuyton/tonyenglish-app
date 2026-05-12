@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 import Home from './Home';
 import StudentPortal from './StudentPortal';
@@ -12,26 +12,75 @@ import IeltsSpeaking from './IeltsSpeaking';
 import SplitScreenTest from './SplitScreenTest';
 import LectureViewer from './LectureViewer'; 
 import SiegeGame from './SiegeGame'; 
+import NinjaSurvival from './NinjaSurvival';
+import VocabRacing from './VocabRacing';
+import AITutorSidebar from './AITutorSidebar';
 
 export default function App() {
   const getInitialView = () => {
     const path = window.location.pathname;
     if (path === '/admin' || path === '/admin/') return 'admin-login'; 
-    return sessionStorage.getItem('lms_current_view') || 'home'; 
+    try { return sessionStorage.getItem('lms_current_view') || 'home'; } catch(e) { return 'home'; }
   };
 
   const [currentView, setCurrentView] = useState(getInitialView()); 
+  const timerRef = useRef<any>(null); 
+  
+  // --- 🤖 AI SIDEBAR STATE ---
+  const [isAISidebarOpen, setIsAISidebarOpen] = useState(false);
+  const [aiMode, setAiMode] = useState<'tutor' | 'ielts'>('tutor');
+  const [ieltsTopic, setIeltsTopic] = useState("");
+  // 📸 STATE MỚI: LƯU ẢNH ĐỀ BÀI
+  const [ieltsImage, setIeltsImage] = useState("");
+
+  const [currentLectureTitle, setCurrentLectureTitle] = useState("");
+  const [currentHtmlContent, setCurrentHtmlContent] = useState("");
+
+  useEffect(() => {
+    // 🚀 RADAR NGHE LÉN: Bắt cả Topic chữ và Topic ảnh
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const triggerBtn = target.closest('.btn-ielts-trigger');
+      if (triggerBtn) {
+        const topicText = triggerBtn.getAttribute('data-topic');
+        const topicImg = triggerBtn.getAttribute('data-image'); // Chộp lấy link ảnh
+        
+        if (topicText || topicImg) {
+          setIeltsTopic(topicText || "");
+          setIeltsImage(topicImg || ""); // Đưa ảnh vào kho
+          setAiMode('ielts');       
+          setIsAISidebarOpen(true); 
+        }
+      }
+    };
+
+    const handleUpdateContext = (e: any) => {
+      setCurrentLectureTitle(e.detail.title || "");
+      setCurrentHtmlContent(e.detail.html || "");
+    };
+
+    document.addEventListener('click', handleGlobalClick);
+    window.addEventListener('tony-update-lecture-context', handleUpdateContext);
+    return () => {
+      document.removeEventListener('click', handleGlobalClick);
+      window.removeEventListener('tony-update-lecture-context', handleUpdateContext);
+    };
+  }, []);
+
+  // --- AUTH & TIMER LOGIC (GIỮ NGUYÊN) ---
   const [currentTestData, setCurrentTestData] = useState<any>(() => {
-    const savedTest = sessionStorage.getItem('lms_current_test');
-    return savedTest ? JSON.parse(savedTest) : null;
+    try {
+      const savedTest = sessionStorage.getItem('lms_current_test');
+      return savedTest ? JSON.parse(savedTest) : null;
+    } catch (e) { return null; }
   });
 
   const [activeCourseId, setActiveCourseId] = useState<string | null>(() => {
-    return sessionStorage.getItem('lms_active_course_id') || null;
+    try { return sessionStorage.getItem('lms_active_course_id') || null; } catch(e) { return null; }
   });
 
   const [returnView, setReturnView] = useState<string>(() => {
-    return sessionStorage.getItem('lms_return_view') || 'portal';
+    try { return sessionStorage.getItem('lms_return_view') || 'portal'; } catch(e) { return 'portal'; }
   });
 
   useEffect(() => {
@@ -40,70 +89,91 @@ export default function App() {
   }, [currentView]);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) setCurrentView(prev => prev === 'home' ? 'portal' : prev);
-    });
-
+    const startGlobalTimer = () => {
+      if (!timerRef.current) {
+        timerRef.current = setInterval(() => {
+          try {
+            const currentSecs = parseInt(localStorage.getItem('tony_global_time') || '0');
+            const newSecs = currentSecs + 1;
+            localStorage.setItem('tony_global_time', newSecs.toString());
+            if (newSecs > 0 && newSecs % 300 === 0) {
+              supabase.auth.getUser().then(({ data: { user } }) => {
+                if (user) supabase.from('profiles').update({ study_time_seconds: newSecs }).eq('id', user.id).then();
+              });
+            }
+          } catch(e) {}
+        }, 1000);
+      }
+    };
+    const stopGlobalTimer = () => { if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; } };
+    supabase.auth.getSession().then(({ data: { session } }) => { if (session) { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); } });
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
-      if (event === 'SIGNED_IN') {
-        setCurrentView(prev => prev === 'home' ? 'portal' : prev); 
-      } else if (event === 'SIGNED_OUT') {
+      if (event === 'SIGNED_IN') { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); }
+      else if (event === 'SIGNED_OUT') {
         setCurrentView(prev => (prev !== 'admin' && prev !== 'admin-login') ? 'home' : prev); 
-        sessionStorage.removeItem('lms_current_view');
-        sessionStorage.removeItem('lms_current_test');
-        sessionStorage.removeItem('lms_active_course_id');
-        sessionStorage.removeItem('lms_return_view'); 
+        try { sessionStorage.removeItem('lms_current_view'); sessionStorage.removeItem('lms_current_test'); sessionStorage.removeItem('lms_active_course_id'); sessionStorage.removeItem('lms_return_view'); } catch(e) {}
+        stopGlobalTimer(); 
       }
     });
-    return () => subscription.unsubscribe();
+    return () => { subscription.unsubscribe(); stopGlobalTimer(); };
   }, []); 
 
-  const handleNavigate = (view: string) => {
-    setCurrentView(view);
-    sessionStorage.setItem('lms_current_view', view);
-  };
-
+  const handleNavigate = (view: string) => { setCurrentView(view); try { sessionStorage.setItem('lms_current_view', view); } catch(e) {} };
   const handleStartTest = (type: string, data: any) => {
-    setCurrentTestData(data);
-    setReturnView(currentView);
-    sessionStorage.setItem('lms_return_view', currentView);
-
-    let targetView = type.toLowerCase();
-    if (targetView.includes('standard')) targetView = 'standard';
-    else if (targetView.includes('case-study') || targetView.includes('business')) targetView = 'case-study';
-
-    handleNavigate(targetView);
-    sessionStorage.setItem('lms_current_test', JSON.stringify(data));
+    try {
+      setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
+      let targetView = type.toLowerCase();
+      if (targetView.includes('standard')) targetView = 'standard'; else if (targetView.includes('case-study') || targetView.includes('business')) targetView = 'case-study';
+      handleNavigate(targetView); sessionStorage.setItem('lms_current_test', JSON.stringify(data));
+    } catch (error) {}
   };
-
-  const handleOpenLecture = (courseId: string) => {
-    setActiveCourseId(courseId);
-    sessionStorage.setItem('lms_active_course_id', courseId);
-    handleNavigate('lecture');
-  };
-
+  const handleOpenLecture = (courseId: string) => { setActiveCourseId(courseId); try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {} handleNavigate('lecture'); };
   const handleReturnFromTest = () => handleNavigate(returnView);
+
+  const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
 
   return (
     <React.Fragment>
       {currentView === 'admin-login' && <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />}
       {currentView === 'home' && <Home onNavigate={handleNavigate} onStartTest={handleStartTest} />}
-      {currentView === 'portal' && <StudentPortal onNavigate={handleNavigate} onStartTest={handleStartTest} onOpenLecture={handleOpenLecture}/>}
+      {currentView === 'portal' && <StudentPortal onNavigate={handleNavigate} onStartTest={handleStartTest} onOpenLecture={handleOpenLecture} />}
       {currentView === 'admin' && <AdminPanel onNavigate={handleNavigate} />}
+      
       {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
       {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
       {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
       {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
       {currentView === 'standard' && <StandardTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
       {currentView === 'case-study' && <SplitScreenTest onBack={handleReturnFromTest} testData={currentTestData} />}
-      {currentView === 'siege-game' && <SiegeGame onBack={handleReturnFromTest} />}
+      {currentView === 'siege-game' && <SiegeGame onBack={handleReturnFromTest} testData={currentTestData} />}
+      {currentView === 'ninja-survival' && <NinjaSurvival onBack={handleReturnFromTest} testData={currentTestData} />}
+      {currentView === 'vocab-racing' && <VocabRacing onBack={handleReturnFromTest} testData={currentTestData} />}
       
       {currentView === 'lecture' && activeCourseId && (
         <LectureViewer 
-          courseId={activeCourseId}
+          courseId={activeCourseId} 
           onBack={() => handleNavigate('portal')} 
           onStartTest={handleStartTest}
+          onOpenAI={() => { setAiMode('tutor'); setIsAISidebarOpen(true); }}
         />
+      )}
+
+      {/* 🚀 AI SIDEBAR TỔNG - ĐÃ TRUYỀN THÊM ieltsImage */}
+      <AITutorSidebar 
+        isOpen={isAISidebarOpen}
+        onClose={() => setIsAISidebarOpen(false)}
+        mode={aiMode}
+        topicTitle={ieltsTopic}
+        topicImage={ieltsImage} 
+        lectureTitle={currentLectureTitle}
+        htmlContent={currentHtmlContent}
+      />
+
+      {!validViews.includes(currentView) && (
+        <div className="h-screen bg-red-50 flex flex-col items-center justify-center p-8 text-center font-sans">
+          <h1 className="text-4xl font-black text-red-600 mb-4">⚠️ LỖI ĐỊNH TUYẾN</h1>
+          <button onClick={() => { sessionStorage.clear(); window.location.reload(); }} className="bg-red-600 text-white font-bold px-8 py-3 rounded-xl shadow-lg">Khôi phục hệ thống</button>
+        </div>
       )}
     </React.Fragment>
   );
