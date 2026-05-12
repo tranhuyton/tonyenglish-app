@@ -107,7 +107,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   // Resize Cột Trái/Phải (Thanh Kéo)
   const [leftWidth, setLeftWidth] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
-  const leftPaneRef = useRef<HTMLDivElement>(null); // Ref để bắt sự kiện copy ở cột trái
+  const leftPaneRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
 
   const startDrag = () => { 
@@ -375,7 +375,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     if (isReviewMode) return;
     const selection = window.getSelection();
     if (selection && selection.toString().trim().length > 0) {
-      // Chỉ hiện highlight khi bôi đen nội dung trong Cột Trái (Bài đọc)
+      // FIX LỖI: Chỉ hiện highlight khi bôi đen nội dung trong Cột Trái (Bài đọc)
       if (leftPaneRef.current && leftPaneRef.current.contains(selection.anchorNode)) {
           const range = selection.getRangeAt(0);
           const rect = range.getBoundingClientRect();
@@ -506,7 +506,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     handleAnswer(qId, '');
   };
 
-  // RENDER HTML CHỨA ĐỤC LỖ
+  // RENDER HTML CHỨA ĐỤC LỖ - STYLE CỦA PAPER TEST
   const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
     if (!htmlStr) return null;
     const safeText = String(htmlStr);
@@ -702,7 +702,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   return (
     <div className="flex flex-col h-screen bg-[#f3f4f6] font-serif text-gray-900 relative">
       
-      {/* CSS fix giao diện vỡ bảng & Padding Bullet Point */}
+      {/* CSS fix giao diện vỡ bảng & Padding */}
       <style>{`
           .format-passage p { margin-bottom: 1.25rem !important; }
           .format-passage p:last-child { margin-bottom: 0 !important; }
@@ -711,16 +711,13 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           .format-passage { overflow-x: auto; }
           .format-passage table { 
               width: 100% !important; 
-              min-width: 600px;
-              border-collapse: collapse; 
-              margin-top: 1.5rem; 
-              margin-bottom: 1.5rem;
+              border-collapse: collapse !important; 
+              margin: 1.5rem 0 !important; 
           }
           .format-passage th, .format-passage td { 
-              border: 1px solid #cbd5e1; 
-              padding: 18px 16px; /* Tăng padding trên dưới cho đỡ bị sát viền */
-              vertical-align: top; 
-              text-align: left;
+              border: 1px solid #cbd5e1 !important; 
+              padding: 20px 16px !important; /* Mở rộng biên trên dưới */
+              vertical-align: top !important; 
           }
           .format-passage th { 
               background-color: #f1f5f9; 
@@ -730,9 +727,17 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           .format-passage td span { text-indent: 0 !important; }
           .format-passage td input, .format-passage td select { max-width: 100%; }
           
-          /* Chỉnh lại độ thụt đầu dòng của bullet points trong table */
+          /* Lùi bullet point sang trái tiết kiệm diện tích */
           .format-passage td ul, .format-passage td ol {
-              padding-left: 20px !important;
+              padding-left: 16px !important;
+              margin-top: 0 !important;
+              margin-bottom: 0 !important;
+          }
+          .format-passage td li {
+              margin-bottom: 8px !important;
+          }
+          .format-passage td li:last-child {
+              margin-bottom: 0 !important;
           }
       `}</style>
 
@@ -794,7 +799,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
         </div>
       </header>
 
-      {/* MAIN CONTENT VỚI THANH KÉO (SPLIT-PANE) TÍCH HỢP */}
+      {/* MAIN CONTENT */}
       <main className="flex-1 overflow-y-auto p-8 relative" onMouseUp={handleMouseUp} ref={mainScrollRef as any}>
         <div className="max-w-7xl mx-auto space-y-12" onClick={handleContentClick} ref={containerRef as any}>
           
@@ -813,7 +818,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                   
                   {showTwoColumns && (
                     <>
-                      {/* Dùng ref ở đây để bắt sự kiện copy/highlight chỉ cho phần text bài đọc */}
                       <div className="format-passage text-justify leading-[1.8] text-[16px] pr-8" style={{ width: window.innerWidth > 1024 ? `${leftWidth}%` : '100%', flex: 'none' }} ref={leftPaneRef as any}>
                         {isReviewMode && isListening && <div className="bg-amber-100 text-amber-800 p-2 rounded font-bold text-xs mb-4 border border-amber-300 inline-block font-sans shadow-sm">🎙️ TAPESCRIPT</div>}
                         <div dangerouslySetInnerHTML={{ __html: part.content }} className="space-y-4" />
@@ -906,7 +910,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                             </div>
                           )}
 
-                          {/* DẠNG TRẮC NGHIỆM & TFNG VỚI NÉT BÚT TÍCH XANH CẬP NHẬT */}
+                          {/* DẠNG TRẮC NGHIỆM & TFNG */}
                           {(sec.questionType === "Trắc nghiệm" || sec.questionType === "TFNG") && (
                             <div className="space-y-6">
                               {sec.questions?.map((q: any) => {
@@ -919,6 +923,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                 const validOptions = (Array.isArray(q.options) ? q.options : []).filter((opt: any) => String(opt || '').trim() !== '');
                                 const isTFNG = sec.questionType === "TFNG" || validOptions.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
 
+                                // TFNG (Dàn hàng ngang)
                                 if (isTFNG) {
                                    return (
                                       <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 rounded-xl border shadow-sm transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : (activeQuestionId === String(q.id) ? 'border-blue-400 bg-blue-50/30' : 'border-gray-200 bg-white hover:border-gray-300')}`}>
@@ -961,8 +966,9 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                       <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
                                                       <div className={boxClass}>
                                                         {isSelected && (
-                                                          <svg viewBox="0 0 24 24" overflow="visible" className={`w-5 h-5 absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.15))', transform: 'translate(1px, 0px)' }}>
-                                                            <path d="M4 13 L8 17 C12 11 16 6 22 4" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                                          // Đã cập nhật nét bút chữ V mềm mại và thon dài hơn
+                                                          <svg viewBox="0 0 24 24" overflow="visible" className={`w-[22px] h-[22px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.2))', transform: 'translate(1px, -3px)' }}>
+                                                            <path d="M5 14 C7 14, 9 17, 10 19 C13 11, 17 5, 23 3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                                           </svg>
                                                         )}
                                                       </div>
@@ -979,6 +985,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                    );
                                 }
 
+                                // Trắc nghiệm (Layout dọc)
                                 return (
                                   <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 rounded-xl border shadow-sm transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : (activeQuestionId === String(q.id) ? 'border-blue-400 bg-blue-50/30' : 'border-gray-200 bg-white hover:border-gray-300')}`}>
                                     <div className="flex gap-4 mb-4">
@@ -1020,8 +1027,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                   <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
                                                   <div className={boxClass}>
                                                     {isSelected && (
-                                                      <svg viewBox="0 0 24 24" overflow="visible" className={`w-5 h-5 absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.15))', transform: 'translate(1px, 0px)' }}>
-                                                        <path d="M4 13 L8 17 C12 11 16 6 22 4" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                                      <svg viewBox="0 0 24 24" overflow="visible" className={`w-[22px] h-[22px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.2))', transform: 'translate(1px, -3px)' }}>
+                                                        <path d="M5 14 C7 14, 9 17, 10 19 C13 11, 17 5, 23 3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                                       </svg>
                                                     )}
                                                   </div>
@@ -1325,8 +1332,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                      <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
                                                      <div className={boxClass}>
                                                        {isSelected && (
-                                                         <svg viewBox="0 0 24 24" overflow="visible" className={`w-5 h-5 absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.15))', transform: 'translate(1px, 0px)' }}>
-                                                           <path d="M4 13 L8 17 C12 11 16 6 22 4" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                                         <svg viewBox="0 0 24 24" overflow="visible" className={`w-[22px] h-[22px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.2))', transform: 'translate(1px, -3px)' }}>
+                                                           <path d="M5 14 C7 14, 9 17, 10 19 C13 11, 17 5, 23 3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                                          </svg>
                                                        )}
                                                      </div>
@@ -1385,7 +1392,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           <label htmlFor="review" className="text-[14px] font-bold text-gray-700 cursor-pointer mt-0.5 whitespace-nowrap">Đánh dấu</label>
         </div>
 
-        <div className="flex-1 flex gap-2 overflow-x-auto px-4 pb-1 custom-scrollbar justify-center">
+        <div className="flex-1 flex gap-2 overflow-x-auto px-4 py-1 custom-scrollbar justify-start items-center min-h-[44px]">
           {allQuestionIds.map(id => {
             let isAnswered = answers[id] && answers[id].trim() !== '';
             const isReview = reviewFlags[id];
