@@ -4,7 +4,6 @@ import './tailwind.css';
 
 const UserIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" /></svg>;
 const SettingsIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 00-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 00-2.282.819l-.922 1.597a1.875 1.875 0 00.432 2.385l.84.692c.097.078.15.222.15.399v.111c0 .177-.053.321-.15.399l-.84.692a1.875 1.875 0 00-.432 2.385l.922 1.597a1.875 1.875 0 002.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 002.28-.819l.923-1.597a1.875 1.875 0 00-.432-2.385l-.84-.692c-.098-.078-.15-.222-.15-.399v-.111c0-.177.052-.321.15-.399l.84-.692a1.875 1.875 0 00.432-2.385l-.923-1.597a1.875 1.875 0 00-2.28-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 00-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 00-1.85-1.567h-1.843zM12 15.75a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5z" clipRule="evenodd" /></svg>;
-
 const stripHtmlRegex = /[<][^>]*[>]/g;
 
 const isRealContent = (htmlContent: any) => {
@@ -37,10 +36,12 @@ const buildCheckboxCombos = (questions: any[]) => {
   return combos;
 };
 
+// ĐÃ SỬA VÀ BỔ SUNG LOGIC CHẤM ĐIỂM CÓ NGOẶC ĐƠN TẠI ĐÂY
 const isAnswerCorrect = (userAns: string, correctAns: string) => {
   if (!userAns || !correctAns) return false;
-  const u = String(userAns).trim().toUpperCase();
-  const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase());
+  // Chuẩn hóa khoảng trắng để tránh lỗi nhập thừa dấu cách
+  const u = String(userAns).trim().toUpperCase().replace(/\s+/g, ' ');
+  const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '));
   
   for (const c of cArr) {
     if (u === c) return true;
@@ -48,6 +49,17 @@ const isAnswerCorrect = (userAns: string, correctAns: string) => {
     if (uMatch && uMatch[1] === c) return true;
     const cMatch = c.match(/^([A-Z])[\.\):]/);
     if (cMatch && u === cMatch[1]) return true;
+
+    // Xử lý đáp án có chứa ngoặc đơn ()
+    if (c.includes('(') && c.includes(')')) {
+      // TH1: Bỏ đi hoàn toàn cụm trong ngoặc
+      const withoutParens = c.replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
+      // TH2: Giữ nguyên từ trong ngoặc nhưng bỏ dấu ()
+      const withParensContent = c.replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim();
+      if (u === withoutParens || u === withParensContent) {
+        return true;
+      }
+    }
   }
   return false;
 };
@@ -69,7 +81,8 @@ const parseStyle = (styleStr: string) => {
 export default function ComputerTest({ onBack, testData, onFinish }: { onBack: () => void, testData?: any, onFinish?: (res: any) => void }) {
   let safeTestData = testData;
   if (typeof safeTestData === 'string') {
-    try { safeTestData = JSON.parse(safeTestData); } catch (e) { }
+    try { safeTestData = JSON.parse(safeTestData);
+    } catch (e) { }
   }
 
   const contentJSON = safeTestData?.content_json || safeTestData || {};
@@ -78,21 +91,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   
   const isListening = basicInfo.skill?.toLowerCase().includes('listening') || String(safeTestData?.test_type || '').toLowerCase().includes('listening');
   const globalAudio = basicInfo.audioUrl || parts?.[0]?.audioUrl;
-
   const [testStarted, setTestStarted] = useState(false);
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [scoreResult, setScoreResult] = useState({ score: 0, total: 0, band: "0.0" });
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
-
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
     try {
       const saved = localStorage.getItem(`ielts_ans_${safeTestData?.id}`);
       return saved ? JSON.parse(saved) : {};
     } catch (error) { return {}; }
   });
-
   const [reviewFlags, setReviewFlags] = useState<Record<string, boolean>>({});
   const [activeQuestionId, setActiveQuestionId] = useState<string>('');
   const [draggedOption, setDraggedOption] = useState<string | null>(null);
@@ -105,7 +115,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const handleAnswer = (qNum: string, value: string) => { 
     if (!isReviewMode) {
-      setAnswers(prev => ({ ...prev, [String(qNum)]: String(value) })); 
+      setAnswers(prev => ({ ...prev, [String(qNum)]: String(value) }));
       setActiveQuestionId(String(qNum)); 
     }
   };
@@ -127,7 +137,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const clearDraft = () => {
     if(window.confirm('Xóa bản nháp và làm lại từ đầu?')) { 
       if (safeTestData?.id) {
-        localStorage.removeItem(`ielts_ans_${safeTestData.id}`); 
+        localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
         localStorage.removeItem(`ielts_endtime_${safeTestData.id}`);
       }
       setAnswers({}); 
@@ -142,7 +152,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const handleFinish = async () => {
     if (!isReviewMode) {
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
-      
       isFinishingRef.current = true;
       if (safeTestData?.id) {
         localStorage.removeItem(`ielts_ans_${safeTestData.id}`);
@@ -162,11 +171,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
           if (qType === 'Checkbox') {
             const combos = buildCheckboxCombos(s.questions);
+ 
             combos.forEach(combo => {
               const comboIds = combo.map((q: any) => String(q.id));
               const userAnsComboSet = new Set(comboIds.map(id => answers[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
               const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
               
+   
               let comboPoints = 0;
               userAnsComboSet.forEach(ans => {
                 let isMatched = false;
@@ -199,10 +210,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       });
 
       let band = "0.0";
-      if (score >= 39) band = "9.0"; else if (score >= 37) band = "8.5"; else if (score >= 35) band = "8.0"; else if (score >= 33) band = "7.5";
-      else if (score >= 30) band = "7.0"; else if (score >= 27) band = "6.5"; else if (score >= 23) band = "6.0"; else if (score >= 19) band = "5.5";
-      else if (score >= 15) band = "5.0"; else if (score >= 13) band = "4.5"; else if (score >= 10) band = "4.0"; else if (score >= 8) band = "3.5";
-      else if (score >= 6) band = "3.0"; else if (score >= 4) band = "2.5"; else if (score >= 2) band = "2.0"; else if (score >= 1) band = "1.0";
+      if (score >= 39) band = "9.0"; else if (score >= 37) band = "8.5";
+      else if (score >= 35) band = "8.0"; else if (score >= 33) band = "7.5";
+      else if (score >= 30) band = "7.0"; else if (score >= 27) band = "6.5";
+      else if (score >= 23) band = "6.0"; else if (score >= 19) band = "5.5";
+      else if (score >= 15) band = "5.0"; else if (score >= 13) band = "4.5";
+      else if (score >= 10) band = "4.0"; else if (score >= 8) band = "3.5";
+      else if (score >= 6) band = "3.0"; else if (score >= 4) band = "2.5";
+      else if (score >= 2) band = "2.0"; else if (score >= 1) band = "1.0";
 
       setScoreResult({ score, total, band }); 
       setIsReviewMode(true); 
@@ -219,16 +234,17 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             test_type: safeTestData?.test_type || 'IELTS Computer',
             score: score, 
             total_score: total, 
+     
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
             details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, questionTypeStats: questionTypeStats }
           }]);
         }
       } catch (error) { 
-        console.error("Lỗi lưu kết quả thi:", error); 
+        console.error("Lỗi lưu kết quả thi:", error);
       }
     } else {
       if (onFinish) {
-        onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title, bandScore: scoreResult.band }); 
+        onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title, bandScore: scoreResult.band });
       } else {
         onBack();
       }
@@ -248,7 +264,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const [currentPartIndex, setCurrentPartIndex] = useState(0);
   const currentPart = parts[currentPartIndex] || {};
-  
+
   const { allQuestionIds, questionIndexMap, questionToPartMap, questionDataMap } = useMemo(() => {
     const ids: string[] = [];
     const partMap: Record<string, number> = {};
@@ -275,6 +291,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                  const num = m.replace(/\D/g, '').trim(); 
                  if (!ids.includes(num)) {
                     ids.push(num); 
+             
                     partMap[num] = pIndex;
                     const qInSec = (s.questions || []).find((qq:any) => String(qq.id) === num);
                     dataMap[num] = { qType: s.questionType, options: qInSec?.options || s.questions?.[0]?.options || [] };
@@ -293,8 +310,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const scrollToQuestion = (qNum: number | string) => {
     const targetPartIndex = questionToPartMap[String(qNum)];
-    setActiveQuestionId(String(qNum)); 
-
+    setActiveQuestionId(String(qNum));
     if (targetPartIndex !== undefined && targetPartIndex !== currentPartIndex) {
       setCurrentPartIndex(targetPartIndex);
       setTimeout(() => {
@@ -308,7 +324,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     } else {
       const el = document.getElementById(`q-${qNum}`);
       if (el) { 
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
           el.classList.add('bg-slate-200', 'transition-colors', 'duration-500'); 
           setTimeout(() => el.classList.remove('bg-slate-200'), 1500); 
       }
@@ -329,7 +345,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
             setTimeLeft(remaining);
             if (remaining <= 0) {
-                clearInterval(timer);
+           
+              clearInterval(timer);
                 alert("⏰ Hết giờ!");
                 handleFinish();
             }
@@ -338,10 +355,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         }
     }, 1000);
     return () => clearInterval(timer);
+ 
   }, [testStarted, isReviewMode]);
 
   const formatTime = (seconds: number) => { 
-      return `${Math.floor(seconds / 60).toString().padStart(2, '0')}:${(seconds % 60).toString().padStart(2, '0')}`; 
+      return `${Math.floor(seconds / 60).toString().padStart(2, '0')}:${(seconds % 60).toString().padStart(2, '0')}`;
   };
 
   // Tools: Copy, Highlight, Notes, Clear Highlight
@@ -357,9 +375,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     const selection = window.getSelection();
     if (selection && selection.toString().trim().length > 0) {
       if (leftPaneRef.current && leftPaneRef.current.contains(selection.anchorNode)) {
-          const range = selection.getRangeAt(0); 
+          const range = selection.getRangeAt(0);
           const rect = range.getBoundingClientRect();
-          setHighlightMenu({ x: rect.left + rect.width / 2, y: rect.top - 10, show: true, isClear: false, targetNode: null }); 
+          setHighlightMenu({ x: rect.left + rect.width / 2, y: rect.top - 10, show: true, isClear: false, targetNode: null });
           setCurrentRange(range);
           return;
       }
@@ -370,11 +388,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const handleContentClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
-
     // Click on Note
     if (target.tagName === 'SPAN' && target.dataset.noteId) { 
-        const rect = target.getBoundingClientRect(); 
-        setStickyNote({ show: true, id: target.dataset.noteId, text: target.dataset.noteText || '', x: rect.left, y: rect.bottom + 10 }); 
+        const rect = target.getBoundingClientRect();
+        setStickyNote({ show: true, id: target.dataset.noteId, text: target.dataset.noteText || '', x: rect.left, y: rect.bottom + 10 });
         setHighlightMenu(prev => ({ ...prev, show: false }));
     }
     // Click on Highlight (to clear)
@@ -387,7 +404,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const handleCopy = async () => { 
       if (currentRange) { 
-          await navigator.clipboard.writeText(currentRange.toString()); 
+          await navigator.clipboard.writeText(currentRange.toString());
           setHighlightMenu({ ...highlightMenu, show: false }); 
           window.getSelection()?.removeAllRanges(); 
       } 
@@ -395,10 +412,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const applyHighlight = () => { 
       if (currentRange) { 
-          const span = document.createElement('span'); 
+          const span = document.createElement('span');
           span.className = 'bg-yellow-300 cursor-pointer rounded-none'; 
           try { currentRange.surroundContents(span); } catch (e) {} 
-          setHighlightMenu({ ...highlightMenu, show: false }); 
+          setHighlightMenu({ ...highlightMenu, show: false });
           window.getSelection()?.removeAllRanges(); 
       } 
   };
@@ -410,23 +427,25 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               parent.insertBefore(highlightMenu.targetNode.firstChild, highlightMenu.targetNode);
           }
           parent.removeChild(highlightMenu.targetNode);
-          parent.normalize(); // Merge text nodes back together
+          parent.normalize();
+          // Merge text nodes back together
       }
       setHighlightMenu({ ...highlightMenu, show: false, isClear: false, targetNode: null });
   };
 
   const initNote = () => {
     if (currentRange) {
-      const noteId = 'note_' + new Date().getTime(); 
+      const noteId = 'note_' + new Date().getTime();
       const span = document.createElement('span'); 
       span.className = 'bg-yellow-300 cursor-pointer rounded-none border-b-2 border-slate-800'; 
       span.dataset.noteId = noteId; 
       span.dataset.noteText = '';
       try { 
           currentRange.surroundContents(span); 
-          const rect = span.getBoundingClientRect(); 
-          setStickyNote({ show: true, id: noteId, text: '', x: rect.left, y: rect.bottom + 10 }); 
-      } catch (e) { alert("Chỉ bôi đen gọn trong 1 đoạn văn!"); }
+          const rect = span.getBoundingClientRect();
+          setStickyNote({ show: true, id: noteId, text: '', x: rect.left, y: rect.bottom + 10 });
+      } catch (e) { alert("Chỉ bôi đen gọn trong 1 đoạn văn!");
+      }
       setHighlightMenu({ ...highlightMenu, show: false }); 
       window.getSelection()?.removeAllRanges();
     }
@@ -439,12 +458,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const startDrag = () => { 
       isDragging.current = true; 
-      document.body.style.cursor = 'col-resize'; 
+      document.body.style.cursor = 'col-resize';
       document.body.style.userSelect = 'none'; 
   };
   
   const stopDrag = () => { 
-      isDragging.current = false; 
+      isDragging.current = false;
       document.body.style.cursor = 'default'; 
       document.body.style.userSelect = 'auto'; 
   };
@@ -473,7 +492,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const autoScrollSpeed = useRef<number>(0);
 
   const startAutoScroll = () => {
-    if (scrollRafRef.current) return; 
+    if (scrollRafRef.current) return;
     const scrollStep = () => {
       if (rightPaneRef.current && autoScrollSpeed.current !== 0) {
         rightPaneRef.current.scrollTop += autoScrollSpeed.current;
@@ -534,7 +553,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     return () => {
       window.removeEventListener('dragover', handleGlobalDragOver);
       stopAutoScroll();
-    };
+    }
   }, [draggedOption]);
 
   const onDragStart = (option: string) => {
@@ -543,7 +562,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   };
 
   const onDrop = (qId: string) => {
-    stopAutoScroll(); // Chốt lại dừng cuộn ngay khi người dùng thả rơi đáp án
+    stopAutoScroll();
+    // Chốt lại dừng cuộn ngay khi người dùng thả rơi đáp án
     if (isReviewMode || !draggedOption) return;
     handleAnswer(qId, draggedOption);
     setDraggedOption(null);
@@ -582,13 +602,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     const processedHtml = safeText.replace(/\[\s*(\d+)\s*\]/g, '<hole data-id="$1"></hole>');
     const parser = new DOMParser();
     const doc = parser.parseFromString(processedHtml, 'text/html');
-
     const sectionQIds = (sec?.questions || []).map((q:any) => String(q.id));
     const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
 
     const renderNode = (node: ChildNode, pathKey: string): React.ReactNode => {
       if (node.nodeType === Node.TEXT_NODE) return node.textContent;
-
       if (node.nodeType === Node.ELEMENT_NODE) {
         const el = node as HTMLElement;
         const tagName = el.tagName.toLowerCase();
@@ -606,7 +624,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               const qData = parts.flatMap((p: any) => Array.isArray(p?.sections) ? p.sections.flatMap((s: any) => s?.questions) : []).find((q: any) => String(q?.id) === String(qNum));
               const correctAns = String(qData?.correctAnswer || '');
               const isCorrect = isAnswerCorrect(userAns, correctAns);
-              
               return (
                 <span key={pathKey} className="relative inline-flex items-center align-middle mx-1 -translate-y-[2px] whitespace-nowrap" style={{ textIndent: 0 }}>
                   <span className={`shrink-0 inline-flex items-center justify-center leading-none px-3 py-1 text-[14px] font-bold text-white rounded-none border border-black ${isCorrect ? 'bg-emerald-600' : 'bg-red-600'}`} style={{ color: '#ffffff', textIndent: 0 }}>
@@ -742,7 +759,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         globalAudioRef.current.play().catch(e => { 
             console.error("Autoplay blocked:", e); 
             alert("Trình duyệt không cho phép tự động phát âm thanh. Vui lòng kiểm tra lại loa và tải lại trang."); 
-        }); 
+        });
     }
   };
   
@@ -774,7 +791,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           }
           .format-passage th { 
               background-color: #e5e5e5; 
-              font-weight: 900; 
+              font-weight: 900;
               color: #000; 
           }
           /* Fix triệt để lỗi mất số do dính text-indent âm từ Word copy vào Table */
@@ -797,11 +814,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             <div className="text-6xl mb-6">{isListening ? '🎧' : '💻'}</div>
             <h1 className="text-2xl font-black text-slate-900 mb-2">{basicInfo.title || "IELTS Test"}</h1>
             <p className="text-slate-600 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
+            
             {isListening && (
               <div className="bg-slate-100 border border-slate-300 p-5 text-slate-800 text-[13px] font-bold mb-8 text-left leading-[1.8] rounded-none">
                 <p className="mb-3">LƯU Ý THI LISTENING: Hệ thống sẽ tự động phát âm thanh ngay khi bắt đầu. Bạn hãy kiểm tra và chỉnh âm lượng trước tại đây nhé.</p>
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-white p-3 border border-slate-400">
-                   <button onClick={handleSoundCheck} className="bg-slate-800 hover:bg-black text-white px-4 py-1.5 rounded-none font-bold transition text-[13px]">Test Loa 🔊</button>
+                  <button onClick={handleSoundCheck} className="bg-slate-800 hover:bg-black text-white px-4 py-1.5 rounded-none font-bold transition text-[13px]">Test Loa 🔊</button>
                    <div className="flex items-center gap-2 w-full flex-1">
                      <span className="text-sm">🔈</span>
                      <input type="range" min="0" max="1" step="0.05" defaultValue="1" onChange={(e) => { if(globalAudioRef.current) globalAudioRef.current.volume = parseFloat(e.target.value) }} className="w-full accent-black cursor-pointer" />
@@ -844,8 +862,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 <textarea autoFocus value={stickyNote.text} onChange={(e) => setStickyNote({ ...stickyNote, text: e.target.value })} className="w-full h-32 bg-transparent outline-none resize-none text-[14px] text-slate-900 font-medium custom-scrollbar" placeholder="Nhập ghi chú..." disabled={isReviewMode} />
                 {!isReviewMode && (
                   <div className="flex justify-between items-center mt-2 border-t border-amber-200 pt-2">
-                    <button onClick={() => { const span = document.querySelector(`span[data-note-id="${stickyNote.id}"]`) as HTMLElement; if (span && span.parentNode) span.parentNode.replaceChild(document.createTextNode(span.textContent || ''), span); setStickyNote({ ...stickyNote, show: false }); }} className="text-red-600 text-[12px] font-bold hover:underline">Xóa Note</button>
-                    <button onClick={() => { const span = document.querySelector(`span[data-note-id="${stickyNote.id}"]`) as HTMLElement; if (span) span.dataset.noteText = stickyNote.text; setStickyNote({ ...stickyNote, show: false }); }} className="bg-slate-800 hover:bg-black text-white text-[12px] font-bold px-4 py-1.5 rounded-none transition">Lưu lại</button>
+                    <button onClick={() => { const span = document.querySelector(`span[data-note-id="${stickyNote.id}"]`) as HTMLElement;
+                        if (span && span.parentNode) span.parentNode.replaceChild(document.createTextNode(span.textContent || ''), span); setStickyNote({ ...stickyNote, show: false });
+                    }} className="text-red-600 text-[12px] font-bold hover:underline">Xóa Note</button>
+                    <button onClick={() => { const span = document.querySelector(`span[data-note-id="${stickyNote.id}"]`) as HTMLElement;
+                        if (span) span.dataset.noteText = stickyNote.text; setStickyNote({ ...stickyNote, show: false });
+                    }} className="bg-slate-800 hover:bg-black text-white text-[12px] font-bold px-4 py-1.5 rounded-none transition">Lưu lại</button>
                   </div>
                 )}
               </div>
@@ -879,14 +901,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                ) : (
                   <div className="flex items-center gap-4">
                      {isListening && globalAudio && (
-                       <div className="flex items-center gap-2 mr-2 bg-black/40 px-2 py-1 rounded-none border border-slate-500 hidden sm:flex" title="Chỉnh âm lượng">
+                        <div className="flex items-center gap-2 mr-2 bg-black/40 px-2 py-1 rounded-none border border-slate-500 hidden sm:flex" title="Chỉnh âm lượng">
                          <span className="text-sm">🔈</span>
                          <input type="range" min="0" max="1" step="0.05" defaultValue="1" onChange={(e) => { if(globalAudioRef.current) globalAudioRef.current.volume = parseFloat(e.target.value) }} className="w-20 h-1 accent-white cursor-pointer" />
                        </div>
                      )}
                      <button onClick={onBack} className="hover:text-white text-slate-300 transition text-[13px] font-bold tracking-wide">Exit</button>
                      <button className="hover:text-white text-slate-300 transition" title="Settings">
-                       <SettingsIcon />
+                        <SettingsIcon />
                      </button>
                   </div>
                )}
@@ -989,7 +1011,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       {/* DẠNG ĐIỀN TỪ & DROPLIST INLINE */}
                       {(sec.questionType === "Điền từ" || isInlineDroplist) && (
                         <div className={`p-8 bg-white border border-slate-400 rounded-none`}>
-                          {(() => {
+                           {(() => {
                               let mainContent = rawContentText;
                               let wordBankItems: string[] = [];
                               
@@ -1023,7 +1045,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                       )}
                                   </>
                               );
-                          })()}
+                           })()}
                         </div>
                       )}
                       
@@ -1039,7 +1061,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                               
                               const validOptions = (Array.isArray(q.options) ? q.options : []).filter((opt: any) => String(opt || '').trim() !== '');
                               const isTFNG = sec.questionType === "TFNG" || validOptions.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
-
                               if (isTFNG) {
                                   return (
                                    <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 bg-white border rounded-none relative group transition-all ${isReviewMode ? (isCorrect ? 'border-emerald-600 bg-emerald-50' : 'border-red-600 bg-red-50') : (activeQuestionId === String(q.id) ? 'border-black' : 'border-slate-400 hover:border-slate-600')}`}>
@@ -1055,14 +1076,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                          const optionValue = safeOpt.replace(stripHtmlRegex, '').trim().toUpperCase(); 
                                          const isSelected = userAns === optionValue; 
                                          const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
-                                         
                                          let labelClass = "flex items-center gap-2 p-2 rounded-none transition border border-transparent";
                                          if (isReviewMode) { 
-                                            if (isCorrectOpt) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900"; 
+                                            if (isCorrectOpt) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
                                             else if (isSelected) labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70"; 
-                                            else labelClass += " opacity-50"; 
+                                            else labelClass += " opacity-50";
                                          } else { 
-                                            labelClass += " cursor-pointer hover:bg-slate-100"; 
+                                            labelClass += " cursor-pointer hover:bg-slate-100";
                                          }
                                          return (
                                            <label key={i} className={labelClass}>
@@ -1094,11 +1114,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                      
                                      let labelClass = "flex items-start gap-3 p-2.5 rounded-none transition border border-transparent";
                                      if (isReviewMode) { 
-                                        if (isCorrectOpt) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900"; 
+                                        if (isCorrectOpt) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
                                         else if (isSelected) labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70"; 
-                                        else labelClass += " opacity-50"; 
+                                        else labelClass += " opacity-50";
                                      } else { 
-                                        labelClass += " cursor-pointer hover:bg-slate-100 hover:border-slate-400"; 
+                                        labelClass += " cursor-pointer hover:bg-slate-100 hover:border-slate-400";
                                      }
                                      return (
                                        <label key={i} className={labelClass}>
@@ -1159,17 +1179,17 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                  const val = opt.replace(stripHtmlRegex, '').trim();
                                                  const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
                                                  return (
-                                                   <option key={oIdx} value={val} disabled={isSelectedElsewhere}>
+                                                   <option key={oIdx} value={val}>
                                                      {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
                                                    </option>
                                                  );
                                               })}
                                             </select>
                                          )}
-                                     </div>
+                                      </div>
                                    </div>
                                   )
-                               })
+                                })
                            })()}
                          </div>
                       )}
@@ -1191,7 +1211,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                 const displayIdx = questionIndexMap[String(q.id)] || q.id;
                                 
                                 const displayUserAns = userAns ? userAns.replace(/^[A-Z][\.\):]\s*/i, '') : '';
-
                                 return (
                                   <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-5 rounded-none border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}>
                                     <div className="flex items-center gap-4 flex-1">
@@ -1234,7 +1253,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                           {/* KHO TỪ KÉO THẢ */}
                           {!isReviewMode && (
                             <div className="mt-10 p-6 bg-[#f4f4f4] border border-slate-400 rounded-none">
-                              <p className="text-[13px] font-black text-black uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
+                               <p className="text-[13px] font-black text-black uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
                               <div className="flex flex-wrap gap-3">
                                 {(() => {
                                   let allOptions: string[] = [];
@@ -1251,13 +1270,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                   
                                   const sectionQIds = (sec?.questions || []).map((q:any) => String(q.id));
                                   const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
-
                                   return allOptions.map((opt: string, oIdx: number) => {
                                     const prefix = `${String.fromCharCode(65 + oIdx)}. `;
                                     const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
                                     
                                     const isUsed = selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
-                                    
                                     return (
                                       <div
                                         key={oIdx}
@@ -1306,10 +1323,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                       });
                                       if (isMatched) comboPoints++;
                                   });
-                                  
                                   const isPerfect = comboPoints === maxAllowed;
                                   const isPartial = comboPoints > 0 && comboPoints < maxAllowed;
-
                                   let containerClass = "p-6 bg-white border rounded-none relative group transition-all ";
                                   if (isReviewMode) {
                                       if (isPerfect) containerClass += "border-emerald-600 bg-emerald-50";
@@ -1337,14 +1352,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                           const next = { ...prev };
                                           comboIds.forEach((id, idx) => {
                                               next[id] = currentSelected[idx] || ''; 
-                                          }); 
+                                          });
                                           return next;
                                       });
                                       setActiveQuestionId(comboIds[0]);
                                   };
 
                                   const qText = combo[0]?.content.replace(/^<p>|<\/p>$/gi, '').replace(/^\d+[\.\)]\s*/, '') || '';
-
                                   return (
                                      <div key={`combo-${comboIndex}`} className={containerClass}>
                                        <div className="flex items-start gap-4 mb-5">
@@ -1352,8 +1366,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                             {combo.map((q: any) => {
                                                 const displayIdx = questionIndexMap[String(q.id)] || q.id;
                                                 const boxClass = isReviewMode 
-                                                    ? (isPerfect ? 'bg-emerald-600 text-white border-emerald-600' : isPartial ? 'bg-amber-600 text-white border-amber-600' : 'bg-red-600 text-white border-red-600')
-                                                    : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800');
+                                                  ? (isPerfect ? 'bg-emerald-600 text-white border-emerald-600' : isPartial ? 'bg-amber-600 text-white border-amber-600' : 'bg-red-600 text-white border-red-600')
+                                                  : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800');
                                                 return (
                                                     <span 
                                                       key={q.id} 
@@ -1379,15 +1393,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                            correctAnsComboSet.forEach(c => {
                                                if (isAnswerCorrect(optionValue, c)) isCorrectOpt = true;
                                            });
-                                           
                                            let labelClass = "flex items-start gap-3 p-2.5 rounded-none transition border border-transparent";
                                            if (isReviewMode) { 
-                                               if (isCorrectOpt && isSelected) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900"; 
-                                               else if (isCorrectOpt && !isSelected) labelClass += " bg-amber-200 border-amber-600 font-bold text-amber-900"; 
+                                               if (isCorrectOpt && isSelected) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
+                                               else if (isCorrectOpt && !isSelected) labelClass += " bg-amber-200 border-amber-600 font-bold text-amber-900";
                                                else if (isSelected && !isCorrectOpt) labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70";
-                                               else labelClass += " opacity-50"; 
+                                               else labelClass += " opacity-50";
                                            } else { 
-                                               labelClass += " cursor-pointer hover:bg-slate-100 hover:border-slate-400"; 
+                                               labelClass += " cursor-pointer hover:bg-slate-100 hover:border-slate-400";
                                            }
                                            return (
                                              <label key={i} className={labelClass}>
@@ -1414,7 +1427,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                        )}
                                      </div>
                                   )
-                              });
+                               });
                            })()}
                          </div>
                       )}
@@ -1449,7 +1462,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 
                 const shapeClass = isReview ? 'rounded-full' : 'rounded-none';
                 let btnClass = `w-8 h-8 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 ${shapeClass} `;
-                
                 const section = parts.reduce((acc: any[], p: any) => acc.concat(Array.isArray(p?.sections) ? p.sections : []), []).find((s:any) => {
                     if ((Array.isArray(s?.questions) ? s.questions : []).some((sq:any)=>String(sq?.id)===id)) return true;
                     if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
@@ -1460,10 +1472,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 });
                 
                 const qType = section?.questionType;
-
                 if (!isReviewMode && qType === 'Checkbox') {
                     const combos = buildCheckboxCombos(section?.questions);
-                    
                     const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id));
                     if (myCombo) {
                         const comboIds = myCombo.map((q:any) => String(q.id));
@@ -1484,7 +1494,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                              }
                          });
                      });
-                     
                      const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id)) || [];
                      if (myCombo.length > 0) {
                          const comboIds = myCombo.map((q:any) => String(q.id));
@@ -1498,7 +1507,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                              });
                              if (isMatched) pts++; 
                          });
-                         
                          const idxInCombo = comboIds.indexOf(id);
                          if (idxInCombo < pts) {
                              btnClass += 'bg-emerald-200 border border-emerald-600 text-emerald-900';
@@ -1523,7 +1531,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   if (isActive) {
                      btnClass += 'bg-slate-900 text-white border border-black shadow-inner';
                   } else if (isAnswered) {
-                     btnClass += 'bg-white border-b-[4px] border-b-slate-900 border-t border-x border-slate-400 text-black cursor-pointer'; 
+                     btnClass += 'bg-white border-b-[4px] border-b-slate-900 border-t border-x border-slate-400 text-black cursor-pointer';
                   } else {
                      btnClass += 'bg-white border border-slate-400 text-black cursor-pointer hover:bg-slate-200';
                   }
@@ -1549,7 +1557,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                ) : (
                  <button onClick={handleFinish} className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">Nộp bài</button>
                )}
-            </div>
+             </div>
 
           </footer>
         </div>

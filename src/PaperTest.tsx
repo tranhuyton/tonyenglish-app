@@ -35,16 +35,24 @@ const buildCheckboxCombos = (questions: any[]) => {
   return combos;
 };
 
+// LOGIC CHẤM ĐIỂM (HỖ TRỢ NGOẶC ĐƠN)
 const isAnswerCorrect = (userAns: string, correctAns: string) => {
   if (!userAns || !correctAns) return false;
-  const u = String(userAns).trim().toUpperCase();
-  const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase());
+  const u = String(userAns).trim().toUpperCase().replace(/\s+/g, ' ');
+  const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '));
+  
   for (const c of cArr) {
     if (u === c) return true;
     const uMatch = u.match(/^([A-Z])[\.\):]/);
     if (uMatch && uMatch[1] === c) return true;
     const cMatch = c.match(/^([A-Z])[\.\):]/);
     if (cMatch && u === cMatch[1]) return true;
+
+    if (c.includes('(') && c.includes(')')) {
+      const withoutParens = c.replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
+      const withParensContent = c.replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim();
+      if (u === withoutParens || u === withParensContent) return true;
+    }
   }
   return false;
 };
@@ -96,6 +104,40 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   const [activeQuestionId, setActiveQuestionId] = useState<string>('');
   const [draggedOption, setDraggedOption] = useState<string | null>(null);
 
+  // Resize Cột Trái/Phải (Thanh Kéo)
+  const [leftWidth, setLeftWidth] = useState(50);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const leftPaneRef = useRef<HTMLDivElement>(null); // Ref để bắt sự kiện copy ở cột trái
+  const isDragging = useRef(false);
+
+  const startDrag = () => { 
+      isDragging.current = true; 
+      document.body.style.cursor = 'col-resize'; 
+      document.body.style.userSelect = 'none'; 
+  };
+  
+  const stopDrag = () => { 
+      isDragging.current = false; 
+      document.body.style.cursor = 'default'; 
+      document.body.style.userSelect = 'auto'; 
+  };
+  
+  const onDrag = (e: MouseEvent) => {
+    if (!isDragging.current || !containerRef.current) return;
+    const containerRect = containerRef.current.getBoundingClientRect(); 
+    const newLeftWidth = ((e.clientX - containerRect.left) / containerRect.width) * 100;
+    if (newLeftWidth > 20 && newLeftWidth < 80) setLeftWidth(newLeftWidth);
+  };
+
+  useEffect(() => { 
+      window.addEventListener('mousemove', onDrag); 
+      window.addEventListener('mouseup', stopDrag); 
+      return () => { 
+          window.removeEventListener('mousemove', onDrag); 
+          window.removeEventListener('mouseup', stopDrag); 
+      }; 
+  }, []);
+
   // Lưu bản nháp
   useEffect(() => {
     if (!isReviewMode && !isFinishingRef.current && safeTestData?.id) {
@@ -139,7 +181,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     }
   };
 
-  // NỘP BÀI VÀ TÍNH ĐIỂM (Full Logic từ ComputerTest)
+  // NỘP BÀI VÀ TÍNH ĐIỂM
   const handleFinish = async () => {
     if (!isReviewMode) {
       if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
@@ -268,7 +310,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
              });
           }
           if (["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(s?.questionType)) {
-            const matches = String(s?.content || s?.questions?.[0]?.content || '').match(/\[\s*\d+\s*\]/g);
+            const combinedContent = String(s?.content || '') + ' ' + String(s?.questions?.[0]?.content || '');
+            const matches = combinedContent.match(/\[\s*\d+\s*\]/g);
             if (matches) {
               matches.forEach((m: string) => { 
                  const num = m.replace(/\D/g, '').trim(); 
@@ -332,14 +375,17 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     if (isReviewMode) return;
     const selection = window.getSelection();
     if (selection && selection.toString().trim().length > 0) {
-      const range = selection.getRangeAt(0);
-      const rect = range.getBoundingClientRect();
-      setHighlightMenu({ x: rect.left + rect.width / 2, y: rect.top - 10, show: true }); 
-      setCurrentRange(range);
-    } else {
-      setHighlightMenu({ ...highlightMenu, show: false }); 
-      setCurrentRange(null);
+      // Chỉ hiện highlight khi bôi đen nội dung trong Cột Trái (Bài đọc)
+      if (leftPaneRef.current && leftPaneRef.current.contains(selection.anchorNode)) {
+          const range = selection.getRangeAt(0);
+          const rect = range.getBoundingClientRect();
+          setHighlightMenu({ x: rect.left + rect.width / 2, y: rect.top - 10, show: true }); 
+          setCurrentRange(range);
+          return;
+      }
     }
+    setHighlightMenu({ ...highlightMenu, show: false }); 
+    setCurrentRange(null);
   };
 
   const handleCopy = async () => { 
@@ -385,13 +431,71 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     }
   };
 
-  // Drag and Drop Logic
+  // Drag and Drop & Auto Scroll Logic
+  const mainScrollRef = useRef<HTMLElement>(null);
+  const scrollRafRef = useRef<number | null>(null);
+  const autoScrollSpeed = useRef<number>(0);
+
+  const startAutoScroll = () => {
+    if (scrollRafRef.current) return; 
+    const scrollStep = () => {
+      if (mainScrollRef.current && autoScrollSpeed.current !== 0) {
+        mainScrollRef.current.scrollTop += autoScrollSpeed.current;
+        scrollRafRef.current = requestAnimationFrame(scrollStep);
+      } else {
+        scrollRafRef.current = null;
+      }
+    };
+    scrollRafRef.current = requestAnimationFrame(scrollStep);
+  };
+
+  const stopAutoScroll = () => {
+    autoScrollSpeed.current = 0;
+    if (scrollRafRef.current) {
+      cancelAnimationFrame(scrollRafRef.current);
+      scrollRafRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    const handleGlobalDragOver = (e: DragEvent) => {
+      if (!draggedOption || !mainScrollRef.current) return;
+      const container = mainScrollRef.current;
+      const rect = container.getBoundingClientRect();
+      const threshold = 120;
+      
+      const y = e.clientY;
+      const x = e.clientX;
+
+      if (x < rect.left || x > rect.right || y < rect.top || y > rect.bottom) {
+        stopAutoScroll(); return;
+      }
+
+      if (y >= rect.top && y < rect.top + threshold) {
+        autoScrollSpeed.current = -25 * (1 - (y - rect.top) / threshold) - 2;
+        startAutoScroll();
+      } else if (y <= rect.bottom && y > rect.bottom - threshold) {
+        autoScrollSpeed.current = 25 * (1 - (rect.bottom - y) / threshold) + 2;
+        startAutoScroll();
+      } else { stopAutoScroll(); }
+    };
+
+    if (draggedOption) window.addEventListener('dragover', handleGlobalDragOver);
+    else stopAutoScroll();
+
+    return () => {
+      window.removeEventListener('dragover', handleGlobalDragOver);
+      stopAutoScroll();
+    }
+  }, [draggedOption]);
+
   const onDragStart = (option: string) => {
     if (isReviewMode) return;
     setDraggedOption(option);
   };
 
   const onDrop = (qId: string) => {
+    stopAutoScroll();
     if (isReviewMode || !draggedOption) return;
     handleAnswer(qId, draggedOption);
     setDraggedOption(null);
@@ -402,7 +506,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     handleAnswer(qId, '');
   };
 
-  // RENDER HTML CHỨA ĐỤC LỖ - STYLE CỦA PAPER TEST
+  // RENDER HTML CHỨA ĐỤC LỖ
   const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
     if (!htmlStr) return null;
     const safeText = String(htmlStr);
@@ -475,7 +579,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                 );
             }
 
-            // DROPLIST INLINE (Paper Style)
+            // DROPLIST INLINE
             if (qInfo.qType === 'Droplist' || sec.questionType === "Droplist") {
                const rawOptions = (qInfo.options && qInfo.options.length > 0) ? qInfo.options : (sec.questions?.[0]?.options || []);
                const validOptions = rawOptions.filter(Boolean);
@@ -494,7 +598,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                          const val = opt.replace(stripHtmlRegex, '').trim();
                          const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
                          return (
-                           <option key={oIdx} value={val} disabled={isSelectedElsewhere}>
+                           <option key={oIdx} value={val}>
                              {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
                            </option>
                          );
@@ -504,7 +608,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                );
             }
 
-            // ĐIỀN TỪ INLINE (Paper Style)
+            // ĐIỀN TỪ INLINE
             return (
               <span key={pathKey} id={`q-${qNum}`} onClick={(e) => { e.stopPropagation(); setActiveQuestionId(String(qNum)); }} className="inline-flex items-baseline mx-1">
                 <span className="font-bold text-[15px] mr-1 text-slate-700">{displayIndex}.</span>
@@ -597,10 +701,39 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   // MÀN HÌNH LÀM BÀI CHÍNH THỨC
   return (
     <div className="flex flex-col h-screen bg-[#f3f4f6] font-serif text-gray-900 relative">
+      
+      {/* CSS fix giao diện vỡ bảng & Padding Bullet Point */}
       <style>{`
           .format-passage p { margin-bottom: 1.25rem !important; }
           .format-passage p:last-child { margin-bottom: 0 !important; }
           .format-passage br { display: block; content: ""; margin-bottom: 0.5rem; }
+          
+          .format-passage { overflow-x: auto; }
+          .format-passage table { 
+              width: 100% !important; 
+              min-width: 600px;
+              border-collapse: collapse; 
+              margin-top: 1.5rem; 
+              margin-bottom: 1.5rem;
+          }
+          .format-passage th, .format-passage td { 
+              border: 1px solid #cbd5e1; 
+              padding: 18px 16px; /* Tăng padding trên dưới cho đỡ bị sát viền */
+              vertical-align: top; 
+              text-align: left;
+          }
+          .format-passage th { 
+              background-color: #f1f5f9; 
+              font-weight: 900; 
+              color: #1e293b; 
+          }
+          .format-passage td span { text-indent: 0 !important; }
+          .format-passage td input, .format-passage td select { max-width: 100%; }
+          
+          /* Chỉnh lại độ thụt đầu dòng của bullet points trong table */
+          .format-passage td ul, .format-passage td ol {
+              padding-left: 20px !important;
+          }
       `}</style>
 
       {isListening && globalAudio && !isReviewMode && ( <audio ref={globalAudioRef} src={globalAudio} preload="auto" className="hidden" /> )}
@@ -661,9 +794,9 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
         </div>
       </header>
 
-      {/* MAIN CONTENT */}
-      <main className="flex-1 overflow-y-auto p-8 relative" onMouseUp={handleMouseUp}>
-        <div className="max-w-7xl mx-auto space-y-12" onClick={handleContentClick}>
+      {/* MAIN CONTENT VỚI THANH KÉO (SPLIT-PANE) TÍCH HỢP */}
+      <main className="flex-1 overflow-y-auto p-8 relative" onMouseUp={handleMouseUp} ref={mainScrollRef as any}>
+        <div className="max-w-7xl mx-auto space-y-12" onClick={handleContentClick} ref={containerRef as any}>
           
           {parts.map((part: any, pIndex: number) => {
             const hasPassage = part.content && part.content.trim().length > 0;
@@ -676,16 +809,31 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                   <h2 className="font-bold text-2xl uppercase tracking-widest text-gray-800 font-sans">{part.title}</h2>
                 </div>
 
-                <div className={`grid ${showTwoColumns ? 'lg:grid-cols-2 gap-12' : 'grid-cols-1 max-w-3xl mx-auto'}`}>
+                <div className={`flex flex-col lg:flex-row items-stretch gap-0`}>
                   
                   {showTwoColumns && (
-                    <div className="format-passage text-justify leading-[1.8] text-[16px] border-r border-gray-200 pr-8">
-                      {isReviewMode && isListening && <div className="bg-amber-100 text-amber-800 p-2 rounded font-bold text-xs mb-4 border border-amber-300 inline-block font-sans shadow-sm">🎙️ TAPESCRIPT</div>}
-                      <div dangerouslySetInnerHTML={{ __html: part.content }} className="space-y-4" />
-                    </div>
+                    <>
+                      {/* Dùng ref ở đây để bắt sự kiện copy/highlight chỉ cho phần text bài đọc */}
+                      <div className="format-passage text-justify leading-[1.8] text-[16px] pr-8" style={{ width: window.innerWidth > 1024 ? `${leftWidth}%` : '100%', flex: 'none' }} ref={leftPaneRef as any}>
+                        {isReviewMode && isListening && <div className="bg-amber-100 text-amber-800 p-2 rounded font-bold text-xs mb-4 border border-amber-300 inline-block font-sans shadow-sm">🎙️ TAPESCRIPT</div>}
+                        <div dangerouslySetInnerHTML={{ __html: part.content }} className="space-y-4" />
+                      </div>
+                      
+                      {/* Thanh kéo Split-pane */}
+                      {window.innerWidth > 1024 && (
+                        <div className="w-4 bg-gray-50 border-x border-gray-200 hover:bg-gray-200 cursor-col-resize flex flex-col justify-center items-center shrink-0 transition-colors mx-4 rounded-full" onMouseDown={startDrag}>
+                           <div className="flex flex-col gap-1.5 opacity-30">
+                              <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
+                              <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
+                              <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
+                              <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
+                           </div>
+                        </div>
+                      )}
+                    </>
                   )}
 
-                  <div className={`${showTwoColumns ? 'pl-4' : ''}`}>
+                  <div className={`${showTwoColumns ? 'pl-4' : ''}`} style={{ width: showTwoColumns && window.innerWidth > 1024 ? `calc(${100 - leftWidth}% - 2rem)` : '100%', flex: 'none' }}>
                     {part.sections?.map((sec: any, sIndex: number) => {
                       
                       let rawContentText = '';
@@ -758,7 +906,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                             </div>
                           )}
 
-                          {/* DẠNG TRẮC NGHIỆM & TFNG */}
+                          {/* DẠNG TRẮC NGHIỆM & TFNG VỚI NÉT BÚT TÍCH XANH CẬP NHẬT */}
                           {(sec.questionType === "Trắc nghiệm" || sec.questionType === "TFNG") && (
                             <div className="space-y-6">
                               {sec.questions?.map((q: any) => {
@@ -771,7 +919,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                 const validOptions = (Array.isArray(q.options) ? q.options : []).filter((opt: any) => String(opt || '').trim() !== '');
                                 const isTFNG = sec.questionType === "TFNG" || validOptions.some((opt: string) => ['TRUE', 'FALSE', 'NOT GIVEN', 'YES', 'NO'].includes(opt?.trim()?.toUpperCase()));
 
-                                // TFNG (Dàn hàng ngang)
                                 if (isTFNG) {
                                    return (
                                       <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 rounded-xl border shadow-sm transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : (activeQuestionId === String(q.id) ? 'border-blue-400 bg-blue-50/30' : 'border-gray-200 bg-white hover:border-gray-300')}`}>
@@ -786,17 +933,40 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                 const optionValue = safeOpt.replace(stripHtmlRegex, '').trim().toUpperCase(); 
                                                 const isSelected = userAns === optionValue; 
                                                 const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
-                                                let labelClass = "flex items-center gap-2 p-1.5 transition";
+                                                
+                                                let labelClass = "flex items-center gap-2 p-1.5 transition ";
+                                                let boxClass = "w-full h-full border flex items-center justify-center rounded-[3px] transition-colors ";
                                                 
                                                 if (isReviewMode) { 
-                                                  if (isCorrectOpt) labelClass += " font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded";
-                                                  else if (isSelected) labelClass += " text-red-500 line-through opacity-70 bg-red-50 rounded"; 
-                                                  else labelClass += " opacity-50";
-                                                } else { labelClass += " cursor-pointer group hover:text-blue-600"; }
+                                                  if (isCorrectOpt) {
+                                                     labelClass += "font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded ";
+                                                     boxClass += "border-emerald-500 bg-emerald-100";
+                                                  }
+                                                  else if (isSelected) {
+                                                     labelClass += "text-red-500 line-through opacity-70 bg-red-50 rounded ";
+                                                     boxClass += "border-red-500 bg-red-100";
+                                                  }
+                                                  else {
+                                                     labelClass += "opacity-50 ";
+                                                     boxClass += "border-gray-300 bg-white";
+                                                  }
+                                                } else { 
+                                                  labelClass += "cursor-pointer group hover:text-blue-600 ";
+                                                  boxClass += isSelected ? "border-blue-600 bg-blue-50" : "border-gray-400 bg-white group-hover:border-blue-400";
+                                                }
                                                 
                                                 return (
                                                   <label key={i} className={labelClass}>
-                                                    <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="w-4 h-4 accent-blue-600 cursor-pointer" disabled={isReviewMode} />
+                                                    <div className="relative inline-flex items-center justify-center w-[18px] h-[18px] shrink-0 mt-0.5">
+                                                      <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
+                                                      <div className={boxClass}>
+                                                        {isSelected && (
+                                                          <svg viewBox="0 0 24 24" overflow="visible" className={`w-5 h-5 absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.15))', transform: 'translate(1px, 0px)' }}>
+                                                            <path d="M4 13 L8 17 C12 11 16 6 22 4" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                                          </svg>
+                                                        )}
+                                                      </div>
+                                                    </div>
                                                     <span className="text-[15px] font-serif leading-relaxed font-semibold" dangerouslySetInnerHTML={{ __html: safeOpt }} />
                                                   </label>
                                                 );
@@ -809,7 +979,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                    );
                                 }
 
-                                // Trắc nghiệm (Layout dọc)
                                 return (
                                   <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 rounded-xl border shadow-sm transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : (activeQuestionId === String(q.id) ? 'border-blue-400 bg-blue-50/30' : 'border-gray-200 bg-white hover:border-gray-300')}`}>
                                     <div className="flex gap-4 mb-4">
@@ -823,16 +992,40 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                             const optionValue = String.fromCharCode(65+i); 
                                             const isSelected = userAns === optionValue; 
                                             const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
-                                            let labelClass = "flex items-start gap-3 p-1.5 transition";
+                                            
+                                            let labelClass = "flex items-start gap-3 p-1.5 transition ";
+                                            let boxClass = "w-full h-full border flex items-center justify-center rounded-[3px] transition-colors ";
                                             
                                             if (isReviewMode) { 
-                                              if (isCorrectOpt) labelClass += " font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded";
-                                              else if (isSelected) labelClass += " text-red-500 line-through opacity-70 bg-red-50 rounded"; 
-                                              else labelClass += " opacity-50";
-                                            } else { labelClass += " cursor-pointer group hover:text-blue-600"; }
+                                              if (isCorrectOpt) {
+                                                 labelClass += "font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded ";
+                                                 boxClass += "border-emerald-500 bg-emerald-100";
+                                              }
+                                              else if (isSelected) {
+                                                 labelClass += "text-red-500 line-through opacity-70 bg-red-50 rounded ";
+                                                 boxClass += "border-red-500 bg-red-100";
+                                              }
+                                              else {
+                                                 labelClass += "opacity-50 ";
+                                                 boxClass += "border-gray-300 bg-white";
+                                              }
+                                            } else { 
+                                              labelClass += "cursor-pointer group hover:text-blue-600 ";
+                                              boxClass += isSelected ? "border-blue-600 bg-blue-50" : "border-gray-400 bg-white group-hover:border-blue-400";
+                                            }
+
                                             return (
                                               <label key={i} className={labelClass}>
-                                                <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="mt-1 accent-blue-600 cursor-pointer" disabled={isReviewMode} />
+                                                <div className="relative inline-flex items-center justify-center w-[18px] h-[18px] shrink-0 mt-0.5">
+                                                  <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
+                                                  <div className={boxClass}>
+                                                    {isSelected && (
+                                                      <svg viewBox="0 0 24 24" overflow="visible" className={`w-5 h-5 absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.15))', transform: 'translate(1px, 0px)' }}>
+                                                        <path d="M4 13 L8 17 C12 11 16 6 22 4" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                                      </svg>
+                                                    )}
+                                                  </div>
+                                                </div>
                                                 <span className="text-[15px] font-serif leading-relaxed"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
                                               </label>
                                             );
@@ -879,24 +1072,24 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                     {!isCorrect && <div className="text-[12px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded whitespace-nowrap">Đúng: {correctAns}</div>}
                                                 </div>
                                              ) : (
-                                               <select 
+                                                <select 
                                                   value={userAns}
                                                   onChange={(e) => handleAnswer(String(q.id), e.target.value)}
                                                   className="bg-transparent border-0 border-b-2 border-gray-400 text-blue-800 font-bold text-center text-[15px] h-[36px] px-2 outline-none focus:border-blue-600 cursor-pointer w-auto min-w-[100px] max-w-[200px]"
-                                               >
+                                                >
                                                   <option value="">---</option>
                                                   {validOptions.map((opt: string, oIdx: number) => {
                                                      const val = opt.replace(stripHtmlRegex, '').trim();
                                                      const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
                                                      return (
-                                                       <option key={oIdx} value={val} disabled={isSelectedElsewhere}>
+                                                       <option key={oIdx} value={val}>
                                                          {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
                                                        </option>
                                                      );
                                                   })}
                                                 </select>
                                              )}
-                                          </div>
+                                         </div>
                                        </div>
                                       )
                                    })
@@ -904,7 +1097,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                              </div>
                           )}
 
-                          {/* DẠNG KÉO THẢ & MATCHING (CÓ DRAG/DROP) */}
+                          {/* DẠNG KÉO THẢ & MATCHING */}
                           {(isInlineDragDrop || isBlockDragDrop) && (
                             <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
                               {isInlineDragDrop ? (
@@ -989,6 +1182,10 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                             key={oIdx}
                                             draggable={!isUsed}
                                             onDragStart={() => onDragStart(displayOpt)}
+                                            onDragEnd={() => {
+                                              setDraggedOption(null);
+                                              stopAutoScroll(); 
+                                            }}
                                             className={`px-4 py-2 font-bold text-[14px] border rounded transition-all select-none shadow-sm
                                               ${isUsed 
                                                 ? 'bg-gray-200 border-gray-300 text-gray-400 opacity-60 cursor-not-allowed' 
@@ -1074,8 +1271,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                 {combo.map((q: any) => {
                                                     const displayIdx = questionIndexMap[String(q.id)] || q.id;
                                                     const boxClass = isReviewMode 
-                                                      ? (isPerfect ? 'bg-emerald-600 text-white border-emerald-600' : isPartial ? 'bg-amber-500 text-white border-amber-500' : 'bg-red-500 text-white border-red-500')
-                                                      : (activeQuestionId === String(q.id) ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-gray-100 text-gray-700 border-gray-300');
+                                                        ? (isPerfect ? 'bg-emerald-600 text-white border-emerald-600' : isPartial ? 'bg-amber-500 text-white border-amber-500' : 'bg-red-500 text-white border-red-500')
+                                                        : (activeQuestionId === String(q.id) ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-gray-100 text-gray-700 border-gray-300');
                                                     return (
                                                         <span key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`cursor-pointer inline-flex items-center justify-center font-bold px-2 min-w-[28px] h-[28px] text-[13px] rounded shadow-sm border ${boxClass}`}>
                                                           {displayIdx}
@@ -1097,18 +1294,43 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                   if (isAnswerCorrect(optionValue, c)) isCorrectOpt = true;
                                                });
                                                
-                                               let labelClass = "flex items-start gap-3 p-1.5 transition";
+                                               let labelClass = "flex items-start gap-3 p-1.5 transition ";
+                                               let boxClass = "w-full h-full border flex items-center justify-center rounded-[3px] transition-colors ";
+                                               
                                                if (isReviewMode) { 
-                                                   if (isCorrectOpt && isSelected) labelClass += " font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded";
-                                                   else if (isCorrectOpt && !isSelected) labelClass += " font-bold text-amber-600 bg-amber-50 border border-amber-200 rounded";
-                                                   else if (isSelected && !isCorrectOpt) labelClass += " text-red-500 line-through opacity-70 bg-red-50 rounded";
-                                                   else labelClass += " opacity-50";
+                                                 if (isCorrectOpt && isSelected) {
+                                                    labelClass += "font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded ";
+                                                    boxClass += "border-emerald-500 bg-emerald-100";
+                                                 }
+                                                 else if (isCorrectOpt && !isSelected) {
+                                                    labelClass += "font-bold text-amber-600 bg-amber-50 border border-amber-200 rounded ";
+                                                    boxClass += "border-amber-500 bg-amber-100";
+                                                 }
+                                                 else if (isSelected && !isCorrectOpt) {
+                                                    labelClass += "text-red-500 line-through opacity-70 bg-red-50 rounded ";
+                                                    boxClass += "border-red-500 bg-red-100";
+                                                 }
+                                                 else {
+                                                    labelClass += "opacity-50 ";
+                                                    boxClass += "border-gray-300 bg-white";
+                                                 }
                                                } else { 
-                                                   labelClass += " cursor-pointer group hover:text-blue-600";
+                                                 labelClass += "cursor-pointer group hover:text-blue-600 ";
+                                                 boxClass += isSelected ? "border-blue-600 bg-blue-50" : "border-gray-400 bg-white group-hover:border-blue-400";
                                                }
+
                                                return (
                                                  <label key={i} className={labelClass}>
-                                                   <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="mt-1 w-4 h-4 accent-blue-600 cursor-pointer rounded-sm" disabled={isReviewMode} />
+                                                   <div className="relative inline-flex items-center justify-center w-[18px] h-[18px] shrink-0 mt-0.5">
+                                                     <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
+                                                     <div className={boxClass}>
+                                                       {isSelected && (
+                                                         <svg viewBox="0 0 24 24" overflow="visible" className={`w-5 h-5 absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.15))', transform: 'translate(1px, 0px)' }}>
+                                                           <path d="M4 13 L8 17 C12 11 16 6 22 4" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                                         </svg>
+                                                       )}
+                                                     </div>
+                                                   </div>
                                                    <span className="text-[15px] leading-[1.8] font-serif"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
                                                  </label>
                                                )
@@ -1150,7 +1372,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
       {/* FOOTER (Câu hỏi) */}
       <footer className="bg-white border-t border-gray-300 px-4 py-3 flex items-center shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-20 shrink-0 font-sans">
         
-        {/* Review Toggle (Thêm từ bản Computer) */}
+        {/* Review Toggle */}
         <div className="flex items-center gap-2 h-full pr-6 border-r border-gray-300 shrink-0 min-w-max">
           <input 
             type="checkbox" 
@@ -1169,13 +1391,14 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
             const isReview = reviewFlags[id];
             const isActive = activeQuestionId === id;
             
-            const shapeClass = isReview ? 'rounded-full' : 'rounded'; // Tròn xoe nếu đã đánh dấu review
+            const shapeClass = isReview ? 'rounded-full' : 'rounded'; 
             let btnClass = `w-9 h-9 shrink-0 flex items-center justify-center font-bold text-[14px] transition-all ${shapeClass} `;
             
             const section = parts.reduce((acc: any[], p: any) => acc.concat(Array.isArray(p?.sections) ? p.sections : []), []).find((s:any) => {
                 if ((Array.isArray(s?.questions) ? s.questions : []).some((sq:any)=>String(sq?.id)===id)) return true;
                 if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
-                    const matches = String(s?.content || (Array.isArray(s?.questions) ? s.questions : [])[0]?.content || '').match(/\[\s*\d+\s*\]/g);
+                    const combined = String(s?.content || '') + ' ' + String((Array.isArray(s?.questions) ? s.questions : [])[0]?.content || '');
+                    const matches = combined.match(/\[\s*\d+\s*\]/g);
                     if (matches && matches.some((m:string) => m.replace(/\D/g, '') === id)) return true;
                 }
                 return false;
@@ -1183,7 +1406,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
             
             const qType = section?.questionType;
 
-            // Xử lý isAnswered cho dạng Checkbox (Nhóm)
             if (!isReviewMode && qType === 'Checkbox') {
                 const combos = buildCheckboxCombos(section?.questions);
                 const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id));
