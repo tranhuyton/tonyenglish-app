@@ -1076,7 +1076,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                          const optionValue = safeOpt.replace(stripHtmlRegex, '').trim().toUpperCase(); 
                                          const isSelected = userAns === optionValue; 
                                          const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
-                                         let labelClass = "flex items-center gap-2 p-2 rounded-none transition border border-transparent";
+                                         let labelClass = "flex items-center gap-2 py-1.5 px-2 rounded-none transition border border-transparent";
                                          if (isReviewMode) { 
                                             if (isCorrectOpt) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
                                             else if (isSelected) labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70"; 
@@ -1105,14 +1105,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                    </span>
                                    <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif" dangerouslySetInnerHTML={{ __html: q.content }} />
                                  </div>
-                                 <div className={`flex flex-col gap-3 ml-11`}>
+                                 <div className={`flex flex-col gap-4 ml-11`}>
                                    {validOptions.map((opt: any, i: number) => {
                                      const safeOpt = String(opt || '');
                                      const optionValue = String.fromCharCode(65+i); 
                                      const isSelected = userAns === optionValue; 
                                      const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
                                      
-                                     let labelClass = "flex items-start gap-3 p-2.5 rounded-none transition border border-transparent";
+                                     let labelClass = "flex items-start gap-3 py-1.5 px-2 rounded-none transition border border-transparent";
                                      if (isReviewMode) { 
                                         if (isCorrectOpt) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
                                         else if (isSelected) labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70"; 
@@ -1137,7 +1137,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                       {/* DẠNG DROPLIST BLOCK CÓ EXCLUSION LOGIC */}
                       {isBlockDroplist && (
-                         <div className="space-y-4 bg-white p-8 border border-slate-400 rounded-none">
+                         <div className="space-y-3 bg-white p-6 sm:p-8 border border-slate-400 rounded-none">
                            {(() => {
                               const sectionQIds = (sec.questions || []).map((q:any) => String(q.id));
                               const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
@@ -1153,7 +1153,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                   const validOptions = rawOptions.filter(Boolean);
                                   
                                   return (
-                                   <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-4 rounded-none border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}>
+                                   <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`py-3 px-4 rounded-none border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}>
                                      <div className="flex items-center gap-4 flex-1">
                                        <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                          {displayIdx}
@@ -1384,7 +1384,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                          <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif" dangerouslySetInnerHTML={{ __html: qText }} />
                                        </div>
 
-                                       <div className={`flex flex-col gap-3 ml-[3.5rem]`}>
+                                       <div className={`flex flex-col gap-4 ml-[3.5rem]`}>
                                          {validOptions.map((opt: any, i: number) => {
                                            const safeOpt = String(opt || '').replace(/^<p>|<\/p>$/gi, '');
                                            const optionValue = String.fromCharCode(65+i); 
@@ -1393,7 +1393,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                            correctAnsComboSet.forEach(c => {
                                                if (isAnswerCorrect(optionValue, c)) isCorrectOpt = true;
                                            });
-                                           let labelClass = "flex items-start gap-3 p-2.5 rounded-none transition border border-transparent";
+                                           let labelClass = "flex items-start gap-3 py-1.5 px-2 rounded-none transition border border-transparent";
                                            if (isReviewMode) { 
                                                if (isCorrectOpt && isSelected) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
                                                else if (isCorrectOpt && !isSelected) labelClass += " bg-amber-200 border-amber-600 font-bold text-amber-900";
