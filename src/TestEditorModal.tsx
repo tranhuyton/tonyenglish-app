@@ -29,12 +29,15 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
     toolbarSticky: false, 
     placeholder: placeholder || "Nhập nội dung vào đây...",
     
-    // Nút 'source' giúp xem mã HTML (HTML Mode)
+    // FIX PHÍM TAB: Ép thực hiện lệnh thụt lề (indent) thay vì chuyển focus sang ô khác
+    tabAction: 'indent',
+    tabIndex: -1,
+
     buttons: [
       'source', 'fullsize', '|', 
       'bold', 'italic', 'underline', 'strikethrough', '|',
       'superscript', 'subscript', '|',
-      'ul', 'ol', '|',
+      'ul', 'ol', 'outdent', 'indent', '|', // Thêm nút thụt lề
       'font', 'fontsize', 'brush', '|',
       'image', 'table', 'link', '|',
       'align', 'undo', 'redo', '|',
@@ -62,24 +65,29 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
             .jodit-toolbar__box { flex-wrap: wrap !important; }
             .jodit-workplace { min-height: 150px !important; }
             
-            /* FIX LỖI TAILWIND ẨN BULLET POINT */
+            /* --- CĂN CHỈNH LẠI BULLET POINT GỌN GÀNG HƠN --- */
             .jodit-wysiwyg ul {
-                list-style-type: disc !important;
-                padding-left: 2.5rem !important;
-                margin-top: 0.5rem !important;
-                margin-bottom: 0.5rem !important;
+                list-style: disc outside !important;
+                padding-left: 1.5rem !important;
+                margin: 0.5rem 0 !important;
+            }
+            .jodit-wysiwyg ul ul {
+                list-style-type: circle !important;
+                padding-left: 1.5rem !important;
             }
             .jodit-wysiwyg ol {
-                list-style-type: decimal !important;
-                padding-left: 2.5rem !important;
-                margin-top: 0.5rem !important;
-                margin-bottom: 0.5rem !important;
+                list-style: decimal outside !important;
+                padding-left: 1.5rem !important;
+                margin: 0.5rem 0 !important;
             }
-            .jodit-wysiwyg ul[style*="circle"] { list-style-type: circle !important; }
-            .jodit-wysiwyg ul[style*="square"] { list-style-type: square !important; }
             .jodit-wysiwyg li {
-                list-style-position: outside !important;
                 margin-bottom: 0.25rem !important;
+            }
+            /* FIX LỖI RỚT DÒNG: Ép thẻ p bên trong li nằm trên cùng 1 hàng */
+            .jodit-wysiwyg li > p, 
+            .jodit-wysiwyg li > div {
+                display: inline !important; 
+                margin: 0 !important;
             }
          `}</style>
          <JoditEditor
@@ -274,7 +282,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const [isSaving, setIsSaving] = useState(false);
 
   // ==========================================
-  // THUẬT TOÁN ĐỌC EXCEL 
+  // THUẬT TOÁN ĐỌC EXCEL (ĐÃ CÓ CLEAN FORMAT ẨN)
   // ==========================================
   const processExcelFile = async (file: File) => {
     setUploadingId('excel');
@@ -317,13 +325,21 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           return "";
         };
 
-        // Xóa format ẩn Excel, chỉ giữ raw text
+        // YÊU CẦU: XÓA FORMAT ẨN EXCEL
         const cleanText = (val: any) => {
           if (val === undefined || val === null) return "";
           let str = String(val).trim();
+          
+          // 1. Xóa các ký tự ẩn (zero-width spaces) làm bể layout
           str = str.replace(/[\u200B-\u200D\uFEFF\u2028\u2029]/g, '');
+          
+          // 2. Chuẩn hóa thẻ <p> sang <br>
           str = str.replace(/<\/?p[^>]*>/gi, '<br><br>'); 
+          
+          // 3. XÓA TẤT CẢ THẺ HTML và STYLE RÁC (Ngoại trừ br, img, audio)
           str = str.replace(/<(?!\/?(br|img|audio)(?=>|\s.*>))\/?.*?>/gi, '');
+
+          // 4. Dọn dẹp khoảng trắng và xuống dòng
           str = str.replace(/\n/g, '<br>');
           str = str.replace(/(<br\s*\/?>\s*){3,}/gi, '<br><br>'); 
           str = str.replace(/^(<br\s*\/?>\s*)+|(<br\s*\/?>\s*)+$/gi, ''); 
@@ -337,13 +353,13 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           const partTitle = rawPartTitle !== undefined && rawPartTitle !== null ? String(rawPartTitle).trim() : '';
           
           const rawPartContent = getCol(row, ['partcontent'], ['bàiđọc', 'content']);
-          const partContent = rawPartContent !== undefined && rawPartContent !== null ? String(rawPartContent).trim() : '';
+          const partContent = cleanText(rawPartContent);
           
           const rawSecTitle = getCol(row, ['sectiontitle'], ['section', 'nhóm']);
           const secTitle = rawSecTitle !== undefined && rawSecTitle !== null ? String(rawSecTitle).trim() : '';
           
           const rawSecContent = getCol(row, ['sectioncontent'], ['hướngdẫn', 'instruction']);
-          const secContent = rawSecContent !== undefined && rawSecContent !== null ? String(rawSecContent).trim() : '';
+          const secContent = cleanText(rawSecContent);
           
           const qTypeRaw = String(getCol(row, ['questiontype'], ['dạng', 'loạicâu'])).trim();
           let qType = 'Trắc nghiệm';
@@ -524,13 +540,13 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
         if (newParts.length > 0) {
           setTestData((prev: any) => ({ ...prev, parts: isReplace ? newParts : [...prev.parts, ...newParts] }));
-          alert(`🎉 Bóc tách thành công chính xác ${importCount} câu hỏi!`);
+          alert(`🎉 Bóc tách thành công chính xác ${importCount} câu hỏi! Tự động cấu hình chuẩn Kéo Thả và Droplist.`);
         } else {
-          alert("⚠️ Không tìm thấy câu hỏi nào hợp lệ.");
+          alert("⚠️ Không tìm thấy câu hỏi nào hợp lệ. Anh kiểm tra lại tên các cột trong file.");
         }
       } catch (err) {
         console.error("Error parsing Excel:", err);
-        alert("❌ Lỗi hệ thống khi đọc file.");
+        alert("❌ Lỗi hệ thống khi đọc file. Hãy chắc chắn file không bị lỗi định dạng.");
       } finally {
         setUploadingId(null);
       }
@@ -564,7 +580,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   };
 
   // ==========================================
-  // QUẢN LÝ MẢNG
+  // CÁC HÀM QUẢN LÝ MẢNG
   // ==========================================
   const addPart = () => {
     const newData = { ...testData }; 
@@ -680,6 +696,9 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     setTestData(newData);
   };
 
+  // ==========================================
+  // HÀM LƯU ĐỀ - CHECK TRÙNG TÊN TRƯỚC KHI LƯU
+  // ==========================================
   const handleSave = async () => { 
     const title = testData.basicInfo.title?.trim();
     if (!title) {
@@ -688,25 +707,33 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     }
 
     setIsSaving(true); 
+    
     try {
+       // Quét Supabase check trùng tên
        let query = supabase.from('tests').select('id').eq('title', title);
+       
+       // Nếu đang edit đề cũ thì không check bản thân nó
        if (testRecord.id && testRecord.mode !== 'import') {
            query = query.neq('id', testRecord.id);
        }
+
        const { data, error } = await query;
+
        if (!error && data && data.length > 0) {
-           alert(`⚠️ Tên đề "${title}" đã tồn tại!`);
+           alert(`⚠️ Tên đề "${title}" đã tồn tại trên hệ thống!\nAnh vui lòng đổi sang tên khác để tránh trùng lặp dữ liệu nhé.`);
            setIsSaving(false);
            return;
        }
     } catch (err) {
-       console.error(err);
+       console.error("Lỗi kiểm tra trùng tên:", err);
     }
+
     onSave(testData); 
   };
 
   return (
     <div className="fixed inset-0 bg-[#f0f2f5] z-[60] flex flex-col animate-in fade-in">
+      {/* Header */}
       <div className="bg-white px-6 py-3 flex justify-between items-center shrink-0 border-b border-slate-200 shadow-sm relative z-20">
         <div className="flex items-center gap-3">
           <button onClick={onClose} className="text-slate-500 hover:text-slate-800 font-bold text-xl transition">←</button>
@@ -719,6 +746,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       <div className="flex-1 overflow-y-auto relative custom-scrollbar">
         <div className="max-w-[1200px] mx-auto w-full p-4 md:p-8 space-y-8 pb-20"> 
           
+          {/* Tabs */}
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <button 
               onClick={() => setActiveTab('basic')} 
@@ -734,6 +762,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
             </button>
           </div>
 
+          {/* TAB THÔNG TIN CHÍNH */}
           {activeTab === 'basic' && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start animate-in slide-in-from-left-4">
               <div className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm p-6 space-y-5">
@@ -791,6 +820,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                       <option value="Standard-Reading">Reading (Standard)</option>
                       <option value="IELTS-Writing">Writing (IELTS)</option>
                       <option value="IELTS-Speaking">Speaking (IELTS)</option>
+                      <option value="Case-Study">Case Study / Business</option>
                     </select>
                   </div>
                   <div>
@@ -807,122 +837,269 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
             </div>
           )}
 
+          {/* TAB NỘI DUNG ĐỀ */}
           {activeTab === 'content' && (
             <div className="animate-in slide-in-from-right-4 space-y-6">
               
               {isImportMode && (
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                  <div className="flex justify-between items-center border-b border-slate-100 pb-3 mb-4">
+                     <h3 className="font-black text-[#0a5482] uppercase text-sm">📥 Nhập dữ liệu từ Excel/CSV</h3>
+                  </div>
+
                   <div 
-                    className={`w-full border-2 border-dashed rounded-xl p-8 flex flex-col items-center justify-center transition-colors ${isDraggingExcel ? 'border-[#0a5482] bg-blue-50' : 'border-slate-300 bg-slate-50 hover:bg-slate-100'}`}
+                    className={`w-full mt-2 border-2 border-dashed rounded-xl p-8 flex flex-col items-center justify-center transition-colors ${isDraggingExcel ? 'border-[#0a5482] bg-blue-50' : 'border-slate-300 bg-slate-50 hover:bg-slate-100'}`}
                     onDragOver={handleDragOverExcel}
                     onDragLeave={handleDragLeaveExcel}
                     onDrop={handleExcelDrop}
                   >
-                    <p className="text-[15px] font-bold text-slate-700 mb-4">Kéo thả file Excel vào đây hoặc</p>
-                    <label className="bg-[#00a651] hover:bg-[#008f45] text-white px-8 py-3 rounded-xl text-[14px] font-bold cursor-pointer transition active:scale-95">
+                    <span className="text-5xl mb-3 opacity-50">📊</span>
+                    <p className="text-[15px] font-bold text-slate-700 mb-1">Kéo thả file Excel/CSV vào đây</p>
+                    <p className="text-[13px] font-medium text-slate-400 mb-4">hoặc</p>
+                    
+                    <label className="bg-[#00a651] hover:bg-[#008f45] text-white px-8 py-3 rounded-xl text-[14px] font-bold cursor-pointer shadow-md transition active:scale-95">
                       <input type="file" className="hidden" accept=".xlsx, .xls, .csv" onChange={handleExcelUpload} /> 
-                      {uploadingId === 'excel' ? '⏳ Đang phân tích...' : 'Duyệt tệp'}
+                      {uploadingId === 'excel' ? '⏳ Đang phân tích...' : 'Duyệt tệp trong máy'}
                     </label>
                   </div>
                 </div>
               )}
 
+              {/* Vòng lặp Part */}
               {testData.parts?.map((part: any, pIdx: number) => (
                 <div key={part.id} className="border-2 border-[#00a651] rounded-2xl bg-white overflow-hidden shadow-sm">
                     <div className="bg-[#e6f4ea] px-6 py-4 border-b border-[#00a651]/20 flex justify-between items-center group">
                       <input 
                         value={part.title} 
                         onChange={(e) => updateField([pIdx], 'title', e.target.value)} 
-                        className="font-black text-[#00a651] text-xl bg-transparent outline-none w-64" 
+                        className="font-black text-[#00a651] text-xl bg-transparent outline-none border-b border-dashed border-[#00a651]/50 focus:border-[#00a651] w-64" 
                         placeholder="Part Title..." 
                       />
-                      <button onClick={() => removePart(pIdx)} className="text-red-500 font-bold px-3 py-1 bg-red-50 rounded-lg opacity-0 group-hover:opacity-100 transition">Xóa Part ✖</button>
+                      <button 
+                        onClick={() => removePart(pIdx)} 
+                        className="text-red-500 font-bold px-3 py-1 bg-red-50 rounded-lg opacity-0 group-hover:opacity-100 transition hover:bg-red-500 hover:text-white"
+                      >
+                        Xóa Part ✖
+                      </button>
                     </div>
                     
                     <div className="p-6 md:p-8 space-y-4 bg-slate-50 border-b border-slate-200">
-                      <JoditEditorRow label="Nội dung Part" value={part.content} onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} />
-                      <MediaRow label="File Âm thanh Part" value={part.audioUrl} id={`part-${part.id}`} uploadingId={uploadingId} setUploadingId={setUploadingId} onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} />
+                      <JoditEditorRow 
+                        label="Nội dung Part (Bài đọc/Giới thiệu)" 
+                        value={part.content} 
+                        onChange={(e:any) => updateField([pIdx], 'content', e.target.value)} 
+                      />
+                      <MediaRow 
+                        label="File Âm thanh Part" 
+                        value={part.audioUrl} 
+                        id={`part-${part.id}`} 
+                        uploadingId={uploadingId} 
+                        setUploadingId={setUploadingId} 
+                        onUpload={(url: string) => updateField([pIdx], 'audioUrl', url)} 
+                      />
                     </div>
 
                     <div className="p-6 md:p-8 space-y-8">
+                      {/* Vòng lặp Section */}
                       {part.sections?.map((sec: any, sIdx: number) => (
                         <div key={sec.id} className="border-2 border-[#3b82f6] rounded-xl bg-white overflow-hidden shadow-sm">
                           <div className="bg-[#3b82f6] px-6 py-3 flex justify-between items-center group">
-                            <input value={sec.title} onChange={(e) => updateField([pIdx, sIdx], 'title', e.target.value)} className="font-black text-white bg-transparent outline-none w-64" placeholder="Section Title..." />
-                            <button onClick={() => removeSection(pIdx, sIdx)} className="text-white font-bold opacity-0 group-hover:opacity-100 transition">✖</button>
+                            <input 
+                              value={sec.title} 
+                              onChange={(e) => updateField([pIdx, sIdx], 'title', e.target.value)} 
+                              className="font-black text-white text-base bg-transparent outline-none border-b border-dashed border-white/50 focus:border-white w-64 placeholder:text-white/60" 
+                              placeholder="Section Title..." 
+                            />
+                            <button 
+                              onClick={() => removeSection(pIdx, sIdx)} 
+                              className="text-white hover:text-red-200 font-bold opacity-0 group-hover:opacity-100 transition"
+                            >
+                              ✖
+                            </button>
                           </div>
                           
                           <div className="p-6 bg-blue-50/30 border-b border-blue-100 space-y-4">
-                            <JoditEditorRow label="Nội dung Section" value={sec.content} onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} />
-                            <div className="flex gap-2 items-center">
-                              <label className="w-32 text-[13px] font-bold text-slate-600">Kiểu làm</label>
-                              <select value={sec.questionType} onChange={(e) => updateField([pIdx, sIdx], 'questionType', e.target.value)} className="flex-1 bg-white border border-slate-200 rounded-lg p-2.5 text-[14px]">
-                                <option value="Trắc nghiệm">Trắc nghiệm</option>
-                                <option value="TFNG">True / False / Not Given</option>
-                                <option value="Checkbox">Checkbox</option>
-                                <option value="Droplist">Droplist</option>
-                                <option value="Kéo thả">Kéo thả</option>
-                                <option value="Điền từ">Điền từ</option>
+                            <JoditEditorRow 
+                              label="Nội dung Section (Đoạn văn/Hướng dẫn)" 
+                              value={sec.content} 
+                              onChange={(e:any) => updateField([pIdx, sIdx], 'content', e.target.value)} 
+                            />
+                            <div className="flex flex-col md:flex-row items-start md:items-center py-3 border-b border-slate-100 gap-2">
+                              <label className="w-32 shrink-0 text-[13px] font-bold text-slate-600">Kiểu làm</label>
+                              <select 
+                                value={sec.questionType} 
+                                onChange={(e) => updateField([pIdx, sIdx], 'questionType', e.target.value)} 
+                                className="flex-1 w-full bg-white border border-slate-200 rounded-lg p-2.5 text-[14px] text-slate-700 outline-none focus:border-[#3b82f6] transition"
+                              >
+                                <option value="Kéo thả vào Part">Kéo thả vào Part</option>
+                                <option value="Trắc nghiệm">Trắc nghiệm (4 đáp án dài)</option>
+                                <option value="TFNG">True / False / Not Given (TFNG)</option>
+                                <option value="Checkbox">Checkbox (Nhiều đáp án/ Combo)</option>
+                                <option value="Droplist">Droplist (Sổ chọn)</option>
+                                <option value="Kéo thả">Kéo thả (Matching / Kéo hộp từ)</option>
+                                <option value="Điền từ">Điền từ (Gõ tay)</option>
                               </select>
                             </div>
-                            <MediaRow label="Âm thanh Section" value={sec.audioUrl} id={`sec-${sec.id}`} uploadingId={uploadingId} setUploadingId={setUploadingId} onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} />
+                            <MediaRow 
+                              label="File Âm thanh Section" 
+                              value={sec.audioUrl} 
+                              id={`sec-${sec.id}`} 
+                              uploadingId={uploadingId} 
+                              setUploadingId={setUploadingId} 
+                              onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} 
+                            />
                           </div>
 
                           <div className="p-6 space-y-6">
-                            {sec.questions?.map((q: any, qIdx: number) => (
-                              <div key={q.id} className="border rounded-xl bg-white p-5 relative group border-slate-200">
-                                <button onClick={() => removeQuestion(pIdx, sIdx, qIdx)} className="absolute -top-3 -right-3 bg-red-500 text-white w-7 h-7 rounded-full opacity-0 group-hover:opacity-100 transition shadow-lg z-10">✖</button>
-                                <div className="flex gap-4">
-                                  <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 font-black rounded-full flex items-center justify-center border border-amber-200">
-                                    { (q.id && String(q.id).length <= 5) ? q.id : (qIdx + 1) }
-                                  </div>
-                                  <div className="flex-1 space-y-4">
-                                    <div className="flex flex-col md:flex-row gap-4">
-                                      <div className="flex-1">
-                                        <JoditEditorRow label="Nội dung câu hỏi" value={q.content} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} />
-                                      </div>
-                                      <div className="w-full md:w-32">
-                                        <label className="text-[12px] font-bold block mb-1 text-slate-600">Đáp án</label>
-                                        <input value={q.correctAnswer || ''} onChange={(e) => updateField([pIdx, sIdx, qIdx], 'correctAnswer', e.target.value)} className="w-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-center rounded-lg p-3" placeholder="A" />
-                                      </div>
-                                    </div>
-                                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
-                                      <label className="text-[12px] font-bold text-slate-600 block border-b pb-2">Lựa chọn (Options)</label>
-                                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                        {q.options?.map((opt: string, oIdx: number) => (
-                                          <div key={oIdx} className="flex items-center gap-2">
-                                            <div className="w-8 h-8 rounded-full bg-white border text-slate-600 font-black text-[12px] flex items-center justify-center shrink-0">{String.fromCharCode(65+oIdx)}</div>
-                                            <input value={opt || ''} onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} className="flex-1 bg-white border border-slate-200 rounded-lg p-2 text-[14px]" />
-                                            <button onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} className="text-slate-300 hover:text-red-500 font-bold px-1.5">×</button>
+                            {/* Vòng lặp Question */}
+                            {sec.questions?.map((q: any, qIdx: number) => {
+                              const rawText = String(q.content || '').replace(/<[^>]*>/g, '').trim();
+                              const hasContent = rawText !== '' || String(q.content || '').includes('<img') || String(q.content || '').includes('<audio');
+                              const isComboChild = sec.questionType === "Checkbox" && qIdx > 0 && !hasContent;
+
+                              return (
+                                <div key={q.id} className={`border rounded-xl bg-white shadow-sm transition group relative ${isComboChild ? 'border-amber-300 bg-amber-50/20 ml-8 border-l-[6px]' : 'border-slate-200 hover:border-amber-300'}`}>
+                                  <button 
+                                    onClick={() => removeQuestion(pIdx, sIdx, qIdx)} 
+                                    className="absolute -top-3 -right-3 bg-red-500 text-white w-7 h-7 rounded-full opacity-0 group-hover:opacity-100 transition shadow-lg z-10"
+                                  >
+                                    ✖
+                                  </button>
+                                  
+                                  <div className="p-5">
+                                      <div className="flex gap-4 items-start">
+                                        <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 text-sm font-black rounded-full flex items-center justify-center border border-amber-200">
+                                          { (q.id && String(q.id).length <= 5) ? q.id : (qIdx + 1) }
+                                        </div>
+                                        <div className="flex-1 space-y-4 min-w-0">
+                                          
+                                          {isComboChild && (
+                                              <div className="bg-amber-50 text-amber-800 p-3 rounded-lg text-[13px] font-bold border border-amber-200 flex items-start gap-3">
+                                                  <span className="text-xl leading-none">🔗</span>
+                                                  <p className="m-0 leading-relaxed">
+                                                    Câu này đang được hệ thống <b>tự động gộp vào cụm Combo Checkbox phía trên</b> do rỗng Nội dung câu hỏi gốc.<br/>
+                                                    Anh chỉ cần thiết lập Đáp án đúng cho nó.
+                                                  </p>
+                                              </div>
+                                          )}
+
+                                          <div className="flex flex-col md:flex-row gap-4">
+                                            <div className="flex-1">
+                                              <JoditEditorRow 
+                                                label={isComboChild ? "Nội dung câu hỏi (Nhập nội dung nếu muốn tách thành Combo mới)" : "Nội dung câu hỏi"}
+                                                value={q.content} 
+                                                onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'content', e.target.value)} 
+                                              />
+                                            </div>
+                                            <div className="shrink-0 w-full md:w-32">
+                                              <label className="text-[12px] font-bold text-slate-600 block mb-1">Đáp án đúng</label>
+                                              <input 
+                                                value={q.correctAnswer || ''} 
+                                                onChange={(e) => updateField([pIdx, sIdx, qIdx], 'correctAnswer', e.target.value)} 
+                                                className="w-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-center rounded-lg p-3 outline-none focus:ring-2 focus:ring-emerald-400" 
+                                                placeholder="VD: A hoặc A,C" 
+                                              />
+                                            </div>
                                           </div>
-                                        ))}
+                                          
+                                          {/* Vòng lặp Options */}
+                                          <div className={`bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 ${isComboChild && (!q.options || q.options.length === 0) ? 'hidden' : ''}`}>
+                                            <div className="flex justify-between items-center border-b border-slate-200 pb-2">
+                                                <label className="text-[12px] font-bold text-slate-600">Các lựa chọn đáp án (Options)</label>
+                                                <span className="text-[11px] text-slate-400 font-medium italic">
+                                                   Dùng cho Trắc nghiệm, Droplist, Kéo thả...
+                                                </span>
+                                            </div>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                              {q.options?.map((opt: string, oIdx: number) => (
+                                                <div key={oIdx} className="flex items-center gap-2">
+                                                  <div className="w-8 h-8 rounded-full bg-white border border-slate-300 text-slate-600 font-black text-[12px] flex items-center justify-center shrink-0 shadow-sm">
+                                                    {String.fromCharCode(65+oIdx)}
+                                                  </div>
+                                                  <input 
+                                                    value={opt || ''} 
+                                                    onChange={(e) => updateOption(pIdx, sIdx, qIdx, oIdx, e.target.value)} 
+                                                    placeholder="Nhập nội dung lựa chọn..." 
+                                                    className="flex-1 bg-white border border-slate-200 rounded-lg p-2 text-[14px] outline-none focus:border-[#0a5482] transition min-w-0" 
+                                                  />
+                                                  <button 
+                                                    onClick={() => removeOption(pIdx, sIdx, qIdx, oIdx)} 
+                                                    className="text-slate-300 hover:text-red-500 font-bold px-1.5 py-1 text-lg shrink-0"
+                                                    title="Xóa lựa chọn này"
+                                                  >
+                                                    ×
+                                                  </button>
+                                                </div>
+                                              ))}
+                                            </div>
+                                            <button 
+                                              onClick={() => addOption(pIdx, sIdx, qIdx)} 
+                                              className="w-full mt-2 py-2 border-2 border-dashed border-slate-300 text-[#0a5482] rounded-lg text-[12px] font-bold hover:bg-slate-100 hover:border-[#0a5482] transition"
+                                            >
+                                              + Thêm lựa chọn (Option {String.fromCharCode(65 + (q.options?.length || 0))})
+                                            </button>
+                                          </div>
+
+                                          <div className="w-full">
+                                            <JoditEditorRow 
+                                              label="Lời giải thích (Tùy chọn)" 
+                                              value={q.explanation} 
+                                              onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} 
+                                              placeholder="Giải thích vì sao đúng..." 
+                                            />
+                                          </div>
+                                        </div>
                                       </div>
-                                      <button onClick={() => addOption(pIdx, sIdx, qIdx)} className="w-full py-2 border-2 border-dashed border-slate-300 text-slate-500 rounded-lg text-[12px] font-bold hover:bg-slate-100 transition">+ Thêm lựa chọn</button>
-                                    </div>
-                                    <JoditEditorRow label="Giải thích" value={q.explanation} onChange={(e:any) => updateField([pIdx, sIdx, qIdx], 'explanation', e.target.value)} />
                                   </div>
                                 </div>
-                              </div>
-                            ))}
-                            <button onClick={() => addQuestion(pIdx, sIdx)} className="w-full border-2 border-dashed border-slate-300 text-slate-500 hover:border-[#00a651] hover:text-[#00a651] py-4 rounded-xl font-bold transition">+ Thêm Câu Hỏi</button>
+                              );
+                            })}
+                            
+                            <button 
+                              onClick={() => addQuestion(pIdx, sIdx)} 
+                              className="w-full border-2 border-dashed border-slate-300 text-slate-500 hover:border-[#00a651] hover:text-[#00a651] hover:bg-[#e6f4ea] py-4 rounded-xl font-bold transition flex justify-center items-center gap-2"
+                            >
+                              <span className="text-xl">+</span> Thêm Câu Hỏi Mới
+                            </button>
+                            
                           </div>
                         </div>
                       ))}
-                      <button onClick={() => addSection(pIdx)} className="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md">+ Thêm Section</button>
+                      
+                      <button 
+                        onClick={() => addSection(pIdx)} 
+                        className="bg-[#3b82f6] hover:bg-[#2563eb] text-white px-6 py-2.5 rounded-full text-[13px] font-bold shadow-md"
+                      >
+                        + Thêm Section Mới
+                      </button>
+                      
                     </div>
                 </div>
               ))}
-              <div className="flex justify-center pt-8 border-t-2 border-dashed border-slate-200 pb-10">
-                <button onClick={addPart} className="bg-[#00a651] hover:bg-[#008f45] text-white px-10 py-4 rounded-full text-[15px] font-black shadow-lg hover:scale-105 transition-transform">+ THÊM PART MỚI</button>
-              </div>
+              
+              {(!isImportMode || testData.parts?.length > 0) && (
+                <div className="flex justify-center pt-8 border-t-2 border-dashed border-slate-200 pb-10">
+                    <button 
+                      onClick={addPart} 
+                      className="bg-[#00a651] hover:bg-[#008f45] text-white px-10 py-4 rounded-full text-[15px] font-black shadow-lg hover:scale-105 transition-transform"
+                    >
+                      + THÊM PART MỚI
+                    </button>
+                </div>
+              )}
             </div>
           )}
         </div>
       </div>
 
-      <button onClick={handleSave} disabled={isSaving} className="fixed bottom-10 right-10 w-20 h-20 bg-[#2bd6eb] hover:bg-[#1bc1d6] text-white rounded-full shadow-lg flex flex-col items-center justify-center z-[100] transition-all hover:scale-110 active:scale-95 disabled:opacity-50">
+      {/* Nút lưu đề - Cố định */}
+      <button 
+        onClick={handleSave} 
+        disabled={isSaving} 
+        className="fixed bottom-10 right-10 w-20 h-20 bg-[#2bd6eb] hover:bg-[#1bc1d6] text-white rounded-full shadow-[0_10px_25px_rgba(43,214,235,0.4)] flex flex-col items-center justify-center z-[100] transition-all hover:scale-110 active:scale-95 disabled:opacity-50 disabled:hover:scale-100"
+      >
         <span className="text-[26px] mb-0.5">{isSaving ? '⏳' : '💾'}</span>
-        <span className="text-[10px] font-black uppercase">{isSaving ? 'Đang lưu' : 'Lưu Đề'}</span>
+        <span className="text-[10px] font-black uppercase tracking-wider">{isSaving ? 'Đang lưu' : 'Lưu Đề'}</span>
       </button>
     </div>
   );
