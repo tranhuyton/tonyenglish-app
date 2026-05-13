@@ -39,6 +39,7 @@ const buildCheckboxCombos = (questions: any[]) => {
 // ĐÃ SỬA VÀ BỔ SUNG LOGIC CHẤM ĐIỂM CÓ NGOẶC ĐƠN TẠI ĐÂY
 const isAnswerCorrect = (userAns: string, correctAns: string) => {
   if (!userAns || !correctAns) return false;
+  // Chuẩn hóa khoảng trắng để tránh lỗi nhập thừa dấu cách
   const u = String(userAns).trim().toUpperCase().replace(/\s+/g, ' ');
   const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '));
   
@@ -49,8 +50,11 @@ const isAnswerCorrect = (userAns: string, correctAns: string) => {
     const cMatch = c.match(/^([A-Z])[\.\):]/);
     if (cMatch && u === cMatch[1]) return true;
 
+    // Xử lý đáp án có chứa ngoặc đơn ()
     if (c.includes('(') && c.includes(')')) {
+      // TH1: Bỏ đi hoàn toàn cụm trong ngoặc
       const withoutParens = c.replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
+      // TH2: Giữ nguyên từ trong ngoặc nhưng bỏ dấu ()
       const withParensContent = c.replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim();
       if (u === withoutParens || u === withParensContent) {
         return true;
@@ -77,7 +81,8 @@ const parseStyle = (styleStr: string) => {
 export default function ComputerTest({ onBack, testData, onFinish }: { onBack: () => void, testData?: any, onFinish?: (res: any) => void }) {
   let safeTestData = testData;
   if (typeof safeTestData === 'string') {
-    try { safeTestData = JSON.parse(safeTestData); } catch (e) { }
+    try { safeTestData = JSON.parse(safeTestData);
+    } catch (e) { }
   }
 
   const contentJSON = safeTestData?.content_json || safeTestData || {};
@@ -166,11 +171,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
           if (qType === 'Checkbox') {
             const combos = buildCheckboxCombos(s.questions);
+ 
             combos.forEach(combo => {
               const comboIds = combo.map((q: any) => String(q.id));
               const userAnsComboSet = new Set(comboIds.map(id => answers[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
               const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
               
+   
               let comboPoints = 0;
               userAnsComboSet.forEach(ans => {
                 let isMatched = false;
@@ -227,6 +234,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             test_type: safeTestData?.test_type || 'IELTS Computer',
             score: score, 
             total_score: total, 
+     
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
             details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, questionTypeStats: questionTypeStats }
           }]);
@@ -283,6 +291,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                  const num = m.replace(/\D/g, '').trim(); 
                  if (!ids.includes(num)) {
                     ids.push(num); 
+             
                     partMap[num] = pIndex;
                     const qInSec = (s.questions || []).find((qq:any) => String(qq.id) === num);
                     dataMap[num] = { qType: s.questionType, options: qInSec?.options || s.questions?.[0]?.options || [] };
@@ -336,15 +345,17 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
             setTimeLeft(remaining);
             if (remaining <= 0) {
+           
               clearInterval(timer);
-              alert("⏰ Hết giờ!");
-              handleFinish();
+                alert("⏰ Hết giờ!");
+                handleFinish();
             }
         } else { 
             setTimeLeft(prev => prev - 1); 
         }
     }, 1000);
     return () => clearInterval(timer);
+ 
   }, [testStarted, isReviewMode]);
 
   const formatTime = (seconds: number) => { 
@@ -417,6 +428,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           }
           parent.removeChild(highlightMenu.targetNode);
           parent.normalize();
+          // Merge text nodes back together
       }
       setHighlightMenu({ ...highlightMenu, show: false, isClear: false, targetNode: null });
   };
@@ -432,7 +444,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           currentRange.surroundContents(span); 
           const rect = span.getBoundingClientRect();
           setStickyNote({ show: true, id: noteId, text: '', x: rect.left, y: rect.bottom + 10 });
-      } catch (e) { alert("Chỉ bôi đen gọn trong 1 đoạn văn!"); }
+      } catch (e) { alert("Chỉ bôi đen gọn trong 1 đoạn văn!");
+      }
       setHighlightMenu({ ...highlightMenu, show: false }); 
       window.getSelection()?.removeAllRanges();
     }
@@ -550,6 +563,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const onDrop = (qId: string) => {
     stopAutoScroll();
+    // Chốt lại dừng cuộn ngay khi người dùng thả rơi đáp án
     if (isReviewMode || !draggedOption) return;
     handleAnswer(qId, draggedOption);
     setDraggedOption(null);
@@ -761,54 +775,21 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           .format-passage p:last-child { margin-bottom: 0 !important; }
           .format-passage br { display: block; content: ""; margin-bottom: 0.5rem; }
           
-          /* --- BỔ SUNG CSS TRỊ LIST VÀ KHOẢNG CÁCH DÃN DÒNG --- */
-          .format-passage ul {
-              list-style-type: disc;
-              padding-left: 1.5rem;
-              margin-bottom: 1.25rem;
-          }
-          .format-passage ul ul {
-              list-style-type: circle; /* Level 2 là hình tròn rỗng */
-              margin-top: 0.5rem;
-              margin-bottom: 0;
-              padding-left: 1.5rem;
-          }
-          .format-passage ul ul ul {
-              list-style-type: square; /* Level 3 là hình vuông */
-          }
-          .format-passage ol {
-              list-style-type: decimal;
-              padding-left: 1.5rem;
-              margin-bottom: 1.25rem;
-          }
-          .format-passage li {
-              margin-bottom: 0.5rem;
-              /* Khoảng cách giữa các dòng bullet vừa phải */
-          }
-          
-          /* Ép thẻ <p> nằm trong <li> không được tạo margin to tướng */
-          .format-passage li > p {
-              margin-bottom: 0 !important;
-              display: inline; 
-          }
-
           /* --- CSS ĐỊNH DẠNG BẢNG (TABLE) CHUẨN IDP --- */
           .format-passage table, .html-content-renderer table { 
-              width: 100% !important;
-              min-width: 600px; 
+              width: 100% !important; 
               border-collapse: collapse !important; 
-              margin-top: 1.5rem !important; 
-              margin-bottom: 1.5rem !important;
+              margin: 1.5rem auto !important; 
           }
           .format-passage th, .format-passage td,
           .html-content-renderer th, .html-content-renderer td { 
-              border: 1px solid #444 !important;
+              border: 1px solid #444 !important; 
               padding: 12px 16px !important; 
               vertical-align: middle !important; 
               text-align: left !important;
           }
           .format-passage th, .html-content-renderer th { 
-              background-color: #e5e5e5 !important;
+              background-color: #e5e5e5 !important; 
               font-weight: 900 !important;
               color: #000 !important; 
           }
@@ -833,7 +814,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               max-width: 100%;
           }
 
-          /* --- FIX LỖI BULLET POINT BỊ ẨN VÀ RỚT DÒNG BÊN TRONG CÂU HỎI --- */
+          /* --- FIX LỖI BULLET POINT BỊ ẨN VÀ RỚT DÒNG --- */
           .html-content-renderer ul {
               list-style: disc outside !important;
               padding-left: 1.5rem !important;
@@ -1090,7 +1071,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                               return (
                                   <>
-                                      <div className="format-passage leading-[2.0] text-[16px] text-black break-words font-serif html-content-renderer">
+                                      <div className="format-passage html-content-renderer leading-[2.6] text-[16px] text-black break-words font-serif">
                                           {renderHtmlWithHoles(mainContent, sec)}
                                       </div>
                                       {wordBankItems.length > 0 && (
@@ -1261,7 +1242,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       {(isInlineDragDrop || isBlockDragDrop) && (
                         <div className="bg-white p-8 rounded-none border border-slate-400">
                           {isInlineDragDrop ? (
-                            <div className="format-passage leading-[2.0] text-[16px] text-black font-serif html-content-renderer">
+                            <div className="format-passage html-content-renderer leading-[2.8] text-[16px] text-black font-serif">
                               {renderHtmlWithHoles(rawContentText, sec)}
                             </div>
                           ) : (
@@ -1345,7 +1326,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                         onDragStart={() => onDragStart(displayOpt)}
                                         onDragEnd={() => {
                                           setDraggedOption(null);
-                                          stopAutoScroll(); // Chốt chặn: Bất kể thả ở đâu đều phải tắt cuộn
+                                          stopAutoScroll(); 
                                         }}
                                         className={`px-4 py-2 font-bold text-[14px] border border-black rounded-none transition-all select-none
                                           ${isUsed 
