@@ -89,6 +89,29 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
                 display: inline !important; 
                 margin: 0 !important;
             }
+
+            /* --- FIX NÚT UPDATE/SAVE TRONG BẢNG CHỈNH ẢNH --- */
+            .jodit-dialog__footer {
+                display: flex !important;
+                justify-content: flex-end !important;
+                gap: 8px !important;
+                padding: 12px !important;
+                border-top: 1px solid #eee !important;
+                background: #f9f9f9 !important;
+            }
+            .jodit-dialog__footer .jodit-button_primary, 
+            .jodit-dialog__footer button[type="submit"] {
+                background-color: #00a651 !important; 
+                color: #fff !important;
+                padding: 6px 20px !important;
+                border-radius: 4px !important;
+                font-weight: bold !important;
+                border: none !important;
+            }
+            .jodit-dialog__box {
+                max-height: 80vh !important;
+                overflow-y: auto !important;
+            }
          `}</style>
          <JoditEditor
             ref={editorRef}
@@ -282,7 +305,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const [isSaving, setIsSaving] = useState(false);
 
   // ==========================================
-  // THUẬT TOÁN ĐỌC EXCEL (ĐÃ CÓ CLEAN FORMAT ẨN)
+  // THUẬT TOÁN ĐỌC EXCEL 
   // ==========================================
   const processExcelFile = async (file: File) => {
     setUploadingId('excel');
@@ -325,21 +348,12 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
           return "";
         };
 
-        // YÊU CẦU: XÓA FORMAT ẨN EXCEL
         const cleanText = (val: any) => {
           if (val === undefined || val === null) return "";
           let str = String(val).trim();
-          
-          // 1. Xóa các ký tự ẩn (zero-width spaces) làm bể layout
           str = str.replace(/[\u200B-\u200D\uFEFF\u2028\u2029]/g, '');
-          
-          // 2. Chuẩn hóa thẻ <p> sang <br>
           str = str.replace(/<\/?p[^>]*>/gi, '<br><br>'); 
-          
-          // 3. XÓA TẤT CẢ THẺ HTML và STYLE RÁC (Ngoại trừ br, img, audio)
           str = str.replace(/<(?!\/?(br|img|audio)(?=>|\s.*>))\/?.*?>/gi, '');
-
-          // 4. Dọn dẹp khoảng trắng và xuống dòng
           str = str.replace(/\n/g, '<br>');
           str = str.replace(/(<br\s*\/?>\s*){3,}/gi, '<br><br>'); 
           str = str.replace(/^(<br\s*\/?>\s*)+|(<br\s*\/?>\s*)+$/gi, ''); 
@@ -580,7 +594,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   };
 
   // ==========================================
-  // CÁC HÀM QUẢN LÝ MẢNG
+  // QUẢN LÝ MẢNG
   // ==========================================
   const addPart = () => {
     const newData = { ...testData }; 
@@ -696,9 +710,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     setTestData(newData);
   };
 
-  // ==========================================
-  // HÀM LƯU ĐỀ - CHECK TRÙNG TÊN TRƯỚC KHI LƯU
-  // ==========================================
   const handleSave = async () => { 
     const title = testData.basicInfo.title?.trim();
     if (!title) {
@@ -709,10 +720,8 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     setIsSaving(true); 
     
     try {
-       // Quét Supabase check trùng tên
        let query = supabase.from('tests').select('id').eq('title', title);
        
-       // Nếu đang edit đề cũ thì không check bản thân nó
        if (testRecord.id && testRecord.mode !== 'import') {
            query = query.neq('id', testRecord.id);
        }
@@ -733,7 +742,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
 
   return (
     <div className="fixed inset-0 bg-[#f0f2f5] z-[60] flex flex-col animate-in fade-in">
-      {/* Header */}
       <div className="bg-white px-6 py-3 flex justify-between items-center shrink-0 border-b border-slate-200 shadow-sm relative z-20">
         <div className="flex items-center gap-3">
           <button onClick={onClose} className="text-slate-500 hover:text-slate-800 font-bold text-xl transition">←</button>
@@ -746,7 +754,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       <div className="flex-1 overflow-y-auto relative custom-scrollbar">
         <div className="max-w-[1200px] mx-auto w-full p-4 md:p-8 space-y-8 pb-20"> 
           
-          {/* Tabs */}
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <button 
               onClick={() => setActiveTab('basic')} 
@@ -762,7 +769,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
             </button>
           </div>
 
-          {/* TAB THÔNG TIN CHÍNH */}
           {activeTab === 'basic' && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start animate-in slide-in-from-left-4">
               <div className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm p-6 space-y-5">
@@ -837,7 +843,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
             </div>
           )}
 
-          {/* TAB NỘI DUNG ĐỀ */}
           {activeTab === 'content' && (
             <div className="animate-in slide-in-from-right-4 space-y-6">
               
@@ -865,7 +870,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                 </div>
               )}
 
-              {/* Vòng lặp Part */}
               {testData.parts?.map((part: any, pIdx: number) => (
                 <div key={part.id} className="border-2 border-[#00a651] rounded-2xl bg-white overflow-hidden shadow-sm">
                     <div className="bg-[#e6f4ea] px-6 py-4 border-b border-[#00a651]/20 flex justify-between items-center group">
@@ -900,7 +904,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                     </div>
 
                     <div className="p-6 md:p-8 space-y-8">
-                      {/* Vòng lặp Section */}
                       {part.sections?.map((sec: any, sIdx: number) => (
                         <div key={sec.id} className="border-2 border-[#3b82f6] rounded-xl bg-white overflow-hidden shadow-sm">
                           <div className="bg-[#3b82f6] px-6 py-3 flex justify-between items-center group">
@@ -951,7 +954,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                           </div>
 
                           <div className="p-6 space-y-6">
-                            {/* Vòng lặp Question */}
                             {sec.questions?.map((q: any, qIdx: number) => {
                               const rawText = String(q.content || '').replace(/<[^>]*>/g, '').trim();
                               const hasContent = rawText !== '' || String(q.content || '').includes('<img') || String(q.content || '').includes('<audio');
@@ -978,7 +980,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                                   <span className="text-xl leading-none">🔗</span>
                                                   <p className="m-0 leading-relaxed">
                                                     Câu này đang được hệ thống <b>tự động gộp vào cụm Combo Checkbox phía trên</b> do rỗng Nội dung câu hỏi gốc.<br/>
-                                                    Anh chỉ cần thiết lập Đáp án đúng cho nó.
+                                                    Anh chỉ cần thiết lập Đáp án đúng cho nó. Nếu muốn tách nó thành nhóm mới, hãy điền nội dung vào ô bên dưới.
                                                   </p>
                                               </div>
                                           )}
@@ -1002,7 +1004,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                             </div>
                                           </div>
                                           
-                                          {/* Vòng lặp Options */}
                                           <div className={`bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 ${isComboChild && (!q.options || q.options.length === 0) ? 'hidden' : ''}`}>
                                             <div className="flex justify-between items-center border-b border-slate-200 pb-2">
                                                 <label className="text-[12px] font-bold text-slate-600">Các lựa chọn đáp án (Options)</label>
@@ -1092,7 +1093,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
         </div>
       </div>
 
-      {/* Nút lưu đề - Cố định */}
       <button 
         onClick={handleSave} 
         disabled={isSaving} 

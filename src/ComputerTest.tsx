@@ -596,7 +596,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     const safeText = String(htmlStr);
 
     if (typeof window === 'undefined') {
-        return <span className="html-content-renderer" dangerouslySetInnerHTML={{ __html: safeText }} />;
+        return <span dangerouslySetInnerHTML={{ __html: safeText }} />;
     }
 
     const processedHtml = safeText.replace(/\[\s*(\d+)\s*\]/g, '<hole data-id="$1"></hole>');
@@ -775,10 +775,40 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           .format-passage p:last-child { margin-bottom: 0 !important; }
           .format-passage br { display: block; content: ""; margin-bottom: 0.5rem; }
           
+          /* --- BỔ SUNG CSS TRỊ LIST VÀ KHOẢNG CÁCH DÃN DÒNG --- */
+          .format-passage ul {
+              list-style-type: disc;
+              padding-left: 1.5rem;
+              margin-bottom: 1.25rem;
+          }
+          .format-passage ul ul {
+              list-style-type: circle; /* Level 2 là hình tròn rỗng */
+              margin-top: 0.5rem;
+              margin-bottom: 0;
+              padding-left: 1.5rem;
+          }
+          .format-passage ul ul ul {
+              list-style-type: square; /* Level 3 là hình vuông */
+          }
+          .format-passage ol {
+              list-style-type: decimal;
+              padding-left: 1.5rem;
+              margin-bottom: 1.25rem;
+          }
+          .format-passage li {
+              margin-bottom: 0.5rem; /* Khoảng cách giữa các dòng bullet vừa phải */
+          }
+          
+          /* Ép thẻ <p> nằm trong <li> không được tạo margin to tướng */
+          .format-passage li > p {
+              margin-bottom: 0 !important;
+              display: inline; 
+          }
+
           /* --- CSS ĐỊNH DẠNG BẢNG (TABLE) CHUẨN IDP --- */
           .format-passage table { 
               width: 100% !important; 
-              min-width: 600px; /* Cứu tinh chống vỡ bảng khi kéo hẹp */
+              min-width: 600px; 
               border-collapse: collapse; 
               margin-top: 1.5rem; 
               margin-bottom: 1.5rem;
@@ -794,33 +824,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               font-weight: 900;
               color: #000; 
           }
-          /* Fix triệt để lỗi mất số do dính text-indent âm từ Word copy vào Table */
           .format-passage td span {
               text-indent: 0 !important;
           }
-          /* Ngăn ô input làm phình to cột bảng */
           .format-passage td input, .format-passage td select {
               max-width: 100%;
-          }
-
-          /* --- FIX LỖI TAILWIND ẨN BULLET POINT BÊN NGOÀI GIAO DIỆN THI --- */
-          .html-content-renderer ul {
-              list-style-type: disc !important;
-              padding-left: 2.5rem !important;
-              margin-top: 0.5rem !important;
-              margin-bottom: 0.5rem !important;
-          }
-          .html-content-renderer ol {
-              list-style-type: decimal !important;
-              padding-left: 2.5rem !important;
-              margin-top: 0.5rem !important;
-              margin-bottom: 0.5rem !important;
-          }
-          .html-content-renderer ul[style*="circle"] { list-style-type: circle !important; }
-          .html-content-renderer ul[style*="square"] { list-style-type: square !important; }
-          .html-content-renderer li {
-              list-style-position: outside !important;
-              margin-bottom: 0.25rem !important;
           }
       `}</style>
 
@@ -957,7 +965,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               <>
                 <section className="p-8 md:p-10 overflow-y-auto custom-scrollbar relative bg-white" ref={leftPaneRef as any} style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
                   {currentPart?.content ? (
-                    <div className="format-passage html-content-renderer max-w-none text-[16px] leading-[1.8] text-black break-words font-serif selection:bg-yellow-200">
+                    <div className="format-passage max-w-none text-[16px] leading-[1.8] text-black break-words font-serif selection:bg-yellow-200">
                       {isReviewMode && isListening && <div className="bg-slate-200 text-black p-4 rounded-none font-bold text-[14px] mb-6 border border-slate-400">🎙️ TAPESCRIPT CHỮA BÀI NẰM Ở ĐÂY ➔</div>}
                       <div dangerouslySetInnerHTML={{ __html: currentPart?.content || "" }} />
                     </div>
@@ -1025,7 +1033,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       {sec.title && <h3 className="font-bold text-[17px] mb-3 text-black">{sec.title}</h3>}
                       
                       {shouldRenderGlobalSecContent && (
-                          <div className="mb-6 text-[15px] font-bold text-black bg-white p-4 rounded-none border border-slate-400 html-content-renderer" dangerouslySetInnerHTML={{ __html: sec.content }} />
+                          <div className="mb-6 text-[15px] font-bold text-black bg-white p-4 rounded-none border border-slate-400" dangerouslySetInnerHTML={{ __html: sec.content }} />
                       )}
                       
                       {/* DẠNG ĐIỀN TỪ & DROPLIST INLINE */}
@@ -1047,7 +1055,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                               return (
                                   <>
-                                      <div className="format-passage html-content-renderer leading-[2.6] text-[16px] text-black break-words font-serif">
+                                      <div className="format-passage leading-[2.0] text-[16px] text-black break-words font-serif">
                                           {renderHtmlWithHoles(mainContent, sec)}
                                       </div>
                                       {wordBankItems.length > 0 && (
@@ -1057,7 +1065,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                   {wordBankItems.map((item, idx) => {
                                                       const text = item.replace(stripHtmlRegex, '').trim();
                                                       return text ? (
-                                                          <div key={idx} className="px-4 py-2 bg-white border border-slate-400 rounded-none font-bold text-black min-w-[100px] flex items-center html-content-renderer" dangerouslySetInnerHTML={{ __html: text }} />
+                                                          <div key={idx} className="px-4 py-2 bg-white border border-slate-400 rounded-none font-bold text-black min-w-[100px] flex items-center" dangerouslySetInnerHTML={{ __html: text }} />
                                                       ) : null;
                                                   })}
                                               </div>
@@ -1088,7 +1096,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                        <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                          {displayIdx}
                                        </span>
-                                       <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                       <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif" dangerouslySetInnerHTML={{ __html: q.content }} />
                                      </div>
                                      <div className={`flex flex-row flex-wrap gap-4 sm:gap-6 ml-11`}>
                                        {validOptions.map((opt: any, i: number) => {
@@ -1107,12 +1115,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                          return (
                                            <label key={i} className={labelClass}>
                                              <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="w-[18px] h-[18px] accent-black cursor-pointer" disabled={isReviewMode} />
-                                             <span className="text-[15px] font-bold text-black html-content-renderer" dangerouslySetInnerHTML={{ __html: safeOpt }} />
+                                             <span className="text-[15px] font-bold text-black" dangerouslySetInnerHTML={{ __html: safeOpt }} />
                                            </label>
                                          )
                                        })}
                                      </div>
-                                     {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.explanation || 'Không có lời giải thích.' }} /></div>)}
+                                     {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-serif" dangerouslySetInnerHTML={{ __html: q.explanation || 'Không có lời giải thích.' }} /></div>)}
                                    </div>
                                   )
                               }
@@ -1123,7 +1131,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                    <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                      {displayIdx}
                                    </span>
-                                   <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                   <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif" dangerouslySetInnerHTML={{ __html: q.content }} />
                                  </div>
                                  <div className={`flex flex-col gap-4 ml-11`}>
                                    {validOptions.map((opt: any, i: number) => {
@@ -1143,12 +1151,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                      return (
                                        <label key={i} className={labelClass}>
                                          <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="mt-1 w-[18px] h-[18px] accent-black shrink-0 cursor-pointer" disabled={isReviewMode} />
-                                         <span className="text-[15px] leading-[1.8] text-black font-serif html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
+                                         <span className="text-[15px] leading-[1.8] text-black font-serif"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
                                        </label>
                                      )
                                    })}
                                  </div>
-                                 {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.explanation || 'Không có lời giải thích.' }} /></div>)}
+                                 {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-serif" dangerouslySetInnerHTML={{ __html: q.explanation || 'Không có lời giải thích.' }} /></div>)}
                                </div>
                               )
                            })}
@@ -1178,7 +1186,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                        <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                          {displayIdx}
                                        </span>
-                                       <div className="text-[15px] font-bold text-black leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                       <div className="text-[15px] font-bold text-black leading-relaxed font-serif" dangerouslySetInnerHTML={{ __html: q.content }} />
                                      </div>
                                      <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0">
                                          {isReviewMode ? (
@@ -1218,7 +1226,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       {(isInlineDragDrop || isBlockDragDrop) && (
                         <div className="bg-white p-8 rounded-none border border-slate-400">
                           {isInlineDragDrop ? (
-                            <div className="format-passage html-content-renderer leading-[2.8] text-[16px] text-black font-serif">
+                            <div className="format-passage leading-[2.0] text-[16px] text-black font-serif">
                               {renderHtmlWithHoles(rawContentText, sec)}
                             </div>
                           ) : (
@@ -1237,7 +1245,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                       <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                         {displayIdx}
                                       </span>
-                                      <div className="text-[15px] font-bold text-black leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                      <div className="text-[15px] font-bold text-black leading-relaxed font-serif" dangerouslySetInnerHTML={{ __html: q.content }} />
                                     </div>
                                     <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0 sm:ml-4">
                                       {isReviewMode ? (
@@ -1401,7 +1409,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                 );
                                             })}
                                          </div>
-                                         <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: qText }} />
+                                         <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif" dangerouslySetInnerHTML={{ __html: qText }} />
                                        </div>
 
                                        <div className={`flex flex-col gap-4 ml-[3.5rem]`}>
@@ -1425,7 +1433,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                            return (
                                              <label key={i} className={labelClass}>
                                                <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="mt-1 w-[18px] h-[18px] accent-black cursor-pointer rounded-none" disabled={isReviewMode} />
-                                               <span className="text-[15px] leading-[1.8] text-black font-serif html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
+                                               <span className="text-[15px] leading-[1.8] text-black font-serif"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
                                              </label>
                                            )
                                          })}
@@ -1437,7 +1445,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                             {combo.map((q:any) => {
                                                 if (!q.explanation || String(q.explanation).trim() === '') return null;
                                                 return (
-                                                    <div key={q.id} className="text-[15px] text-slate-800 font-medium leading-relaxed mb-3 last:mb-0 font-serif html-content-renderer">
+                                                    <div key={q.id} className="text-[15px] text-slate-800 font-medium leading-relaxed mb-3 last:mb-0 font-serif">
                                                         <span className="font-bold text-white px-2 py-0.5 bg-slate-800 rounded-none text-[13px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
                                                         <span dangerouslySetInnerHTML={{ __html: q.explanation }} />
                                                     </div>
