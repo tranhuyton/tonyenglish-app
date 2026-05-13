@@ -511,7 +511,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     const safeText = String(htmlStr);
 
     if (typeof window === 'undefined') {
-        return <span className="html-content-renderer" dangerouslySetInnerHTML={{ __html: safeText }} />;
+        return <span dangerouslySetInnerHTML={{ __html: safeText }} />;
     }
 
     const processedHtml = safeText.replace(/\[\s*(\d+)\s*\]/g, '<hole data-id="$1"></hole>');
@@ -703,36 +703,51 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
       
       {/* CSS fix giao diện vỡ bảng, Bullet Point & Excel */}
       <style>{`
-          .format-passage p { margin-bottom: 1.25rem !important; }
+          .format-passage { 
+              color: #1f2937 !important;
+          }
+
+          /* --- KHOẢNG CÁCH PARAGRAPH --- */
+          .format-passage p { 
+              margin-bottom: 1.25rem !important; 
+              margin-top: 0 !important;
+          }
           .format-passage p:last-child { margin-bottom: 0 !important; }
-          .format-passage br { display: block; content: ""; margin-bottom: 0.5rem; }
-          
-          .format-passage { overflow-x: auto; }
+          .format-passage br { display: block !important; content: ""; margin-bottom: 0.5rem !important; }
 
           /* CHỮ ĐẬM, IN NGHIÊNG BỊ TAILWIND TẨY THÌ CHUẨN HÓA LẠI ĐÂY */
           .format-passage strong, .format-passage b,
-          .html-content-renderer strong, .html-content-renderer b {
+          .html-content-renderer strong, .html-content-renderer b,
+          strong, b {
               font-weight: bold !important;
           }
           .format-passage em, .format-passage i,
-          .html-content-renderer em, .html-content-renderer i {
+          .html-content-renderer em, .html-content-renderer i,
+          em, i {
               font-style: italic !important;
           }
-          .format-passage u, .html-content-renderer u {
+          .format-passage u, .html-content-renderer u, u {
               text-decoration: underline !important;
           }
 
-          /* CHỈNH CĂN LỀ GIỮA (Tuyệt đối không dùng display: block ở đây làm vỡ bảng) */
+          /* CHỈNH CĂN LỀ */
           .format-passage [style*="text-align: center"],
           .format-passage [style*="text-align:center"],
           .html-content-renderer [style*="text-align: center"],
-          .html-content-renderer [style*="text-align:center"] {
+          .html-content-renderer [style*="text-align:center"],
+          [style*="text-align: center"],
+          [style*="text-align:center"],
+          [align="center"] {
               text-align: center !important;
           }
+          
           .format-passage [style*="text-align: right"],
           .format-passage [style*="text-align:right"],
           .html-content-renderer [style*="text-align: right"],
-          .html-content-renderer [style*="text-align:right"] {
+          .html-content-renderer [style*="text-align:right"],
+          [style*="text-align: right"],
+          [style*="text-align:right"],
+          [align="right"] {
               text-align: right !important;
           }
 
@@ -746,7 +761,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           .format-passage th, .format-passage td { 
               border: 1px solid #cbd5e1 !important; 
               padding: 16px !important; 
-              vertical-align: middle !important; 
+              vertical-align: top !important; 
               white-space: normal !important;
               word-break: break-word !important;
           }
@@ -759,7 +774,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
               font-family: inherit !important;
               font-size: inherit !important;
               line-height: 1.6 !important;
-              color: inherit !important;
           }
           .format-passage table p {
               margin: 0 !important;
@@ -772,39 +786,44 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           .format-passage ul, .html-content-renderer ul {
               list-style-type: disc !important;
               padding-left: 1.8rem !important;
-              margin: 0.5rem 0 1rem 0 !important;
+              margin-top: 0.5rem !important;
+              margin-bottom: 1.25rem !important;
           }
           .format-passage ul ul, .html-content-renderer ul ul {
               list-style-type: circle !important;
               padding-left: 1.5rem !important;
-              margin-top: 0.5rem !important;
+              margin-top: 0.25rem !important;
               margin-bottom: 0 !important;
           }
           .format-passage ol, .html-content-renderer ol {
               list-style-type: decimal !important;
               padding-left: 1.8rem !important;
-              margin: 0.5rem 0 1rem 0 !important;
+              margin-top: 0.5rem !important;
+              margin-bottom: 1.25rem !important;
           }
           .format-passage li, .html-content-renderer li {
-              margin-bottom: 0.4rem !important;
+              margin-bottom: 0.5rem !important;
+              margin-top: 0 !important;
               color: #374151 !important; /* Màu xám nhẹ nhàng chuẩn thi giấy */
           }
-          .format-passage li > p, 
-          .format-passage li > div,
-          .html-content-renderer li > p,
-          .html-content-renderer li > div {
+          /* Khử khoảng cách thừa trong li do thẻ p sinh ra */
+          .format-passage li p, 
+          .format-passage li div,
+          .format-passage li span,
+          .html-content-renderer li p, 
+          .html-content-renderer li div,
+          .html-content-renderer li span {
               display: inline !important; 
               margin: 0 !important;
+              padding: 0 !important;
           }
 
-          /* Thu khoảng cách tiêu đề và bullet */
+          /* Thu hẹp khoảng cách giữa Tiêu đề (P) và List ngay dưới nó */
           .format-passage p:has(+ ul),
-          .html-content-renderer p:has(+ ul) {
+          .format-passage p:has(+ ol),
+          .html-content-renderer p:has(+ ul),
+          .html-content-renderer p:has(+ ol) {
               margin-bottom: 0.25rem !important;
-          }
-          .format-passage p + ul,
-          .html-content-renderer p + ul {
-              margin-top: 0 !important;
           }
 
           /* --- FIX IMAGE --- */
@@ -813,10 +832,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
               width: 80% !important;
               height: auto !important;
               display: block !important;
-              margin-left: auto !important;
-              margin-right: auto !important;
-              margin-top: 1.5rem !important;
-              margin-bottom: 1.5rem !important;
+              margin: 1.5rem auto !important;
           }
       `}</style>
 
@@ -887,7 +903,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
             // 1. Cột trái (Bài đọc/Tapescript) chỉ hiện khi có nội dung VÀ (đang thi Reading HOẶC đang Review Listening)
             const showPassageColumn = hasPassage && (!isListening || isReviewMode);
             // 2. Chỉ chia đôi màn hình khi hiện cột trái VÀ màn hình đủ to
-            const enableSplitPane = showPassageColumn && window.innerWidth > 1024;
+            const enableSplitPane = showPassageColumn && typeof window !== 'undefined' && window.innerWidth > 1024;
 
             return (
               <div key={pIndex} className="bg-white p-8 md:p-12 shadow-sm border border-gray-200 rounded-xl">
@@ -902,7 +918,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                     <>
                       <div className={`format-passage text-justify leading-[1.8] text-[16px] ${enableSplitPane ? 'pr-8' : 'pb-8'}`} style={{ width: enableSplitPane ? `${leftWidth}%` : '100%', flex: 'none' }} ref={leftPaneRef as any}>
                         {isReviewMode && isListening && <div className="bg-amber-100 text-amber-800 p-2 rounded font-bold text-xs mb-4 border border-amber-300 inline-block font-sans shadow-sm">🎙️ TAPESCRIPT</div>}
-                        <div dangerouslySetInnerHTML={{ __html: part.content }} className="space-y-4" />
+                        <div dangerouslySetInnerHTML={{ __html: part.content }} className="format-passage-content" />
                       </div>
                       
                       {/* Thanh kéo Split-pane */}
@@ -919,7 +935,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                     </>
                   )}
 
-                  <div className={`${enableSplitPane ? 'pl-4' : ''}`} style={{ width: enableSplitPane ? `calc(${100 - leftWidth}% - 1rem)` : '100%', flex: 'none' }}>
+                  {/* Cột Câu Hỏi: Sẽ thu hẹp 2/3 màn hình và tự căn giữa nếu đang trong chế độ thi Listening */}
+                  <div className={`${enableSplitPane ? 'pl-4' : 'mx-auto'}`} style={{ width: enableSplitPane ? `calc(${100 - leftWidth}% - 1rem)` : (typeof window !== 'undefined' && window.innerWidth > 1024 ? '66.666%' : '100%'), flex: 'none', transition: 'width 0.3s ease' }}>
                     {part.sections?.map((sec: any, sIndex: number) => {
                       
                       let rawContentText = '';
@@ -949,7 +966,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                           )}
 
                           {shouldRenderGlobalSecContent && (
-                             <div className="mb-6 text-[15px] font-bold text-slate-800 bg-gray-50 p-4 rounded-lg border border-gray-200 format-passage" dangerouslySetInnerHTML={{ __html: sec.content }} />
+                             <div className="mb-6 text-[15px] text-slate-800 bg-gray-50 p-4 rounded-lg border border-gray-200 format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: sec.content }} />
                           )}
 
                           {/* DẠNG ĐIỀN TỪ & DROPLIST INLINE */}
@@ -970,7 +987,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
 
                                 return (
                                   <>
-                                    <div className="format-passage space-y-6 leading-[2.5] text-[16px] font-serif text-slate-800 html-content-renderer">
+                                    <div className="format-passage leading-[2.5] text-[16px] font-serif text-slate-800 html-content-renderer">
                                       {renderHtmlWithHoles(mainContent, sec)}
                                     </div>
                                     {wordBankItems.length > 0 && (
