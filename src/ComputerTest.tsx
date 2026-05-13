@@ -775,21 +775,79 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           .format-passage p:last-child { margin-bottom: 0 !important; }
           .format-passage br { display: block; content: ""; margin-bottom: 0.5rem; }
           
+          /* --- BỔ SUNG CSS TRỊ LIST VÀ KHOẢNG CÁCH DÃN DÒNG --- */
+          .format-passage ul {
+              list-style-type: disc;
+              padding-left: 1.5rem;
+              margin-bottom: 1.25rem;
+          }
+          .format-passage ul ul {
+              list-style-type: circle; /* Level 2 là hình tròn rỗng */
+              margin-top: 0.5rem;
+              margin-bottom: 0;
+              padding-left: 1.5rem;
+          }
+          .format-passage ul ul ul {
+              list-style-type: square; /* Level 3 là hình vuông */
+          }
+          .format-passage ol {
+              list-style-type: decimal;
+              padding-left: 1.5rem;
+              margin-bottom: 1.25rem;
+          }
+          .format-passage li {
+              margin-bottom: 0.5rem;
+              /* Khoảng cách giữa các dòng bullet vừa phải */
+          }
+          
+          /* Ép thẻ <p> nằm trong <li> không được tạo margin to tướng */
+          .format-passage li > p {
+              margin-bottom: 0 !important;
+              display: inline; 
+          }
+
+          /* --- FIX KHOẢNG CÁCH TIÊU ĐỀ BỊ XA BULLET POINT --- */
+          /* Nếu một đoạn văn <p> nằm ngay sát trên một danh sách <ul>, ép thu nhỏ lề dưới của đoạn văn đó lại */
+          .format-passage p:has(+ ul),
+          .html-content-renderer p:has(+ ul) {
+              margin-bottom: 0.25rem !important; 
+          }
+          
+          /* Kéo danh sách lên sát tiêu đề */
+          .format-passage p + ul,
+          .html-content-renderer p + ul {
+              margin-top: 0 !important; 
+          }
+          
+          /* Dự phòng an toàn cho các trình duyệt cũ */
+          @supports not selector(:has(+ ul)) {
+              .format-passage p + ul,
+              .html-content-renderer p + ul {
+                  margin-top: -1rem !important;
+              }
+          }
+
           /* --- CSS ĐỊNH DẠNG BẢNG (TABLE) CHUẨN IDP --- */
           .format-passage table, .html-content-renderer table { 
-              width: 100% !important; 
+              width: 100% !important;
+              min-width: 600px; 
               border-collapse: collapse !important; 
-              margin: 1.5rem auto !important; 
+              margin-top: 1.5rem !important; 
+              margin-bottom: 1.5rem !important;
           }
           .format-passage th, .format-passage td,
           .html-content-renderer th, .html-content-renderer td { 
-              border: 1px solid #444 !important; 
+              border: 1px solid #444 !important;
               padding: 12px 16px !important; 
               vertical-align: middle !important; 
-              text-align: left !important;
+              
+              /* BỎ DÒNG text-align: left !important; ĐI ĐỂ TÔN TRỌNG ĐỊNH DẠNG CỦA EDITOR */
+              
+              white-space: normal !important;
+              word-break: break-word !important;
           }
           .format-passage th, .html-content-renderer th { 
-              background-color: #e5e5e5 !important; 
+              background-color: #e5e5e5 !important;
               font-weight: 900 !important;
               color: #000 !important; 
           }
@@ -814,7 +872,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               max-width: 100%;
           }
 
-          /* --- FIX LỖI BULLET POINT BỊ ẨN VÀ RỚT DÒNG --- */
+          /* --- FIX LỖI BULLET POINT BỊ ẨN VÀ RỚT DÒNG BÊN TRONG CÂU HỎI --- */
           .html-content-renderer ul {
               list-style: disc outside !important;
               padding-left: 1.5rem !important;
@@ -844,7 +902,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               width: 80% !important;
               height: auto !important;
               display: block !important;
-              margin: 1.5rem auto !important;
+              margin-left: auto !important;  /* Ép căn giữa tuyệt đối */
+              margin-right: auto !important; /* Ép căn giữa tuyệt đối */
+              margin-top: 1.5rem !important;
+              margin-bottom: 1.5rem !important;
           }
       `}</style>
 
@@ -1071,7 +1132,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                               return (
                                   <>
-                                      <div className="format-passage html-content-renderer leading-[2.6] text-[16px] text-black break-words font-serif">
+                                      <div className="format-passage leading-[2.0] text-[16px] text-black break-words font-serif html-content-renderer">
                                           {renderHtmlWithHoles(mainContent, sec)}
                                       </div>
                                       {wordBankItems.length > 0 && (
@@ -1242,7 +1303,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       {(isInlineDragDrop || isBlockDragDrop) && (
                         <div className="bg-white p-8 rounded-none border border-slate-400">
                           {isInlineDragDrop ? (
-                            <div className="format-passage html-content-renderer leading-[2.8] text-[16px] text-black font-serif">
+                            <div className="format-passage leading-[2.0] text-[16px] text-black font-serif html-content-renderer">
                               {renderHtmlWithHoles(rawContentText, sec)}
                             </div>
                           ) : (

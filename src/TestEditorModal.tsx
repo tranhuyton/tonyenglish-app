@@ -97,10 +97,13 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
                 margin: 1.5rem auto !important;
             }
             .jodit-wysiwyg th, .jodit-wysiwyg td {
-                border: 1px solid #444 !important;
-                padding: 12px 16px !important;
-                vertical-align: middle !important;
-            }
+              border: 1px solid #444 !important;
+              padding: 12px 16px !important;
+              vertical-align: middle !important;
+              /* THÊM 2 DÒNG NÀY ĐỂ CHỮ TRONG EDITOR TỰ ĐỘNG XUỐNG DÒNG */
+              white-space: normal !important;
+              word-break: break-word !important;
+          }
             .jodit-wysiwyg table * {
                 font-family: inherit !important;
                 font-size: inherit !important;
