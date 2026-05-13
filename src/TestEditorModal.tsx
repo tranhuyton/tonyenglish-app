@@ -37,7 +37,7 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
       'source', 'fullsize', '|', 
       'bold', 'italic', 'underline', 'strikethrough', '|',
       'superscript', 'subscript', '|',
-      'ul', 'ol', 'outdent', 'indent', '|', // Thêm nút thụt lề
+      'ul', 'ol', 'outdent', 'indent', '|',
       'font', 'fontsize', 'brush', '|',
       'image', 'table', 'link', '|',
       'align', 'undo', 'redo', '|',
@@ -90,29 +90,6 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
                 margin: 0 !important;
             }
 
-            /* --- FIX NÚT UPDATE/SAVE TRONG BẢNG CHỈNH ẢNH --- */
-            .jodit-dialog__footer {
-                display: flex !important;
-                justify-content: flex-end !important;
-                gap: 8px !important;
-                padding: 12px !important;
-                border-top: 1px solid #eee !important;
-                background: #f9f9f9 !important;
-            }
-            .jodit-dialog__footer .jodit-button_primary, 
-            .jodit-dialog__footer button[type="submit"] {
-                background-color: #00a651 !important; 
-                color: #fff !important;
-                padding: 6px 20px !important;
-                border-radius: 4px !important;
-                font-weight: bold !important;
-                border: none !important;
-            }
-            .jodit-dialog__box {
-                max-height: 80vh !important;
-                overflow-y: auto !important;
-            }
-
             /* --- FIX HIỂN THỊ BẢNG EXCEL TRONG EDITOR --- */
             .jodit-wysiwyg table {
                 width: 100% !important;
@@ -132,6 +109,37 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
             .jodit-wysiwyg table p {
                 margin: 0 !important;
                 display: inline-block !important;
+            }
+
+            /* --- FIX NÚT UPDATE/SAVE TRONG BẢNG CHỈNH ẢNH (BẢN MẠNH NHẤT CHO VERCEL) --- */
+            html body div.jodit-dialog__footer {
+                display: flex !important;
+                justify-content: flex-end !important;
+                gap: 8px !important;
+                padding: 12px !important;
+                border-top: 1px solid #eee !important;
+                background: #f9f9f9 !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            html body div.jodit-dialog__footer button.jodit-button_primary, 
+            html body div.jodit-dialog__footer button.jodit-ui-button_primary,
+            html body div.jodit-dialog__footer button[type="submit"] {
+                background-color: #00a651 !important; 
+                color: #ffffff !important;
+                padding: 6px 20px !important;
+                border-radius: 4px !important;
+                font-weight: bold !important;
+                border: none !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                display: inline-flex !important;
+                text-shadow: none !important;
+                box-shadow: none !important;
+            }
+            html body div.jodit-dialog__box {
+                max-height: 85vh !important;
+                overflow-y: auto !important;
             }
          `}</style>
          <JoditEditor
