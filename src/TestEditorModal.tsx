@@ -112,6 +112,27 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
                 max-height: 80vh !important;
                 overflow-y: auto !important;
             }
+
+            /* --- FIX HIỂN THỊ BẢNG EXCEL TRONG EDITOR --- */
+            .jodit-wysiwyg table {
+                width: 100% !important;
+                border-collapse: collapse !important;
+                margin: 1.5rem auto !important;
+            }
+            .jodit-wysiwyg th, .jodit-wysiwyg td {
+                border: 1px solid #444 !important;
+                padding: 12px 16px !important;
+                vertical-align: middle !important;
+            }
+            .jodit-wysiwyg table * {
+                font-family: inherit !important;
+                font-size: inherit !important;
+                line-height: 1.6 !important;
+            }
+            .jodit-wysiwyg table p {
+                margin: 0 !important;
+                display: inline-block !important;
+            }
          `}</style>
          <JoditEditor
             ref={editorRef}
