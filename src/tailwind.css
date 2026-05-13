@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* ==========================================================
+   FIX LỖI TÀNG HÌNH NÚT SAVE TRONG MODAL ẢNH CỦA JODIT EDITOR
+   ========================================================== */
+   body .jodit-dialog__footer {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    padding: 15px !important;
+    background-color: #f3f4f6 !important;
+    border-top: 1px solid #e5e7eb !important;
+}
+
+/* Định dạng cho tất cả các nút (VD: nút Cancel) */
+body .jodit-dialog__footer button,
+body .jodit-dialog__footer .jodit-ui-button,
+body .jodit-dialog__footer .jodit-button {
+    background-color: #e5e7eb !important;
+    color: #374151 !important;
+    padding: 8px 20px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    border: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ép màu XANH ĐẬM riêng cho nút chính (Apply / Update / Insert) */
+body .jodit-dialog__footer button.jodit-ui-button_variant_primary,
+body .jodit-dialog__footer button.jodit-button_primary,
+body .jodit-dialog__footer button[type="submit"] {
+    background-color: #00a651 !important;
+    color: #ffffff !important;
+}
+
+/* Giới hạn độ cao để không bị che lấp nút */
+body .jodit-dialog__box {
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+}
