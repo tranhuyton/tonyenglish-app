@@ -505,6 +505,12 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     handleAnswer(qId, '');
   };
 
+  // Tính toán có hiển thị layout Split Pane hay không (nếu có 1 Part nào đó đủ điều kiện)
+  const hasAnySplitPane = parts.some((part: any) => {
+      const hasPassage = part.content && part.content.trim().length > 0;
+      return hasPassage && (!isListening || isReviewMode) && typeof window !== 'undefined' && window.innerWidth > 1024;
+  });
+
   // RENDER HTML CHỨA ĐỤC LỖ - STYLE CỦA PAPER TEST
   const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
     if (!htmlStr) return null;
@@ -719,7 +725,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           .format-passage strong, .format-passage b,
           .html-content-renderer strong, .html-content-renderer b,
           strong, b {
-              font-weight: bold !important;
+              font-weight: 900 !important;
+              color: #000 !important; /* Đen tuyền để nổi bật trên nền xám */
           }
           .format-passage em, .format-passage i,
           .html-content-renderer em, .html-content-renderer i,
@@ -767,8 +774,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           }
           .format-passage th { 
               background-color: #f8fafc !important; 
-              font-weight: 700 !important; 
-              color: #1e293b !important; 
+              font-weight: 800 !important; 
+              color: #000 !important; 
           }
           .format-passage table * {
               font-family: inherit !important;
@@ -895,8 +902,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 overflow-y-auto p-8 relative" onMouseUp={handleMouseUp} ref={mainScrollRef as any}>
-        <div className="max-w-7xl mx-auto space-y-12" onClick={handleContentClick} ref={containerRef as any}>
+      <main className="flex-1 overflow-y-auto p-4 md:p-8 relative" onMouseUp={handleMouseUp} ref={mainScrollRef as any}>
+        <div className={`${hasAnySplitPane ? 'max-w-7xl' : 'max-w-[950px]'} mx-auto space-y-12 transition-all duration-300`} onClick={handleContentClick} ref={containerRef as any}>
           
           {parts.map((part: any, pIndex: number) => {
             const hasPassage = part.content && part.content.trim().length > 0;
@@ -906,7 +913,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
             const enableSplitPane = showPassageColumn && typeof window !== 'undefined' && window.innerWidth > 1024;
 
             return (
-              <div key={pIndex} className="bg-white p-8 md:p-12 shadow-sm border border-gray-200 rounded-xl">
+              <div key={pIndex} className="bg-white px-8 py-12 md:px-14 md:py-16 shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-gray-200 rounded-sm">
                 
                 <div className="text-center mb-8 border-b-2 border-gray-800 pb-4">
                   <h2 className="font-bold text-2xl uppercase tracking-widest text-gray-800 font-sans">{part.title}</h2>
@@ -935,8 +942,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                     </>
                   )}
 
-                  {/* Cột Câu Hỏi: Sẽ thu hẹp 2/3 màn hình và tự căn giữa nếu đang trong chế độ thi Listening */}
-                  <div className={`${enableSplitPane ? 'pl-4' : 'mx-auto'}`} style={{ width: enableSplitPane ? `calc(${100 - leftWidth}% - 1rem)` : (typeof window !== 'undefined' && window.innerWidth > 1024 ? '66.666%' : '100%'), flex: 'none', transition: 'width 0.3s ease' }}>
+                  {/* Cột Câu Hỏi */}
+                  <div className={`${enableSplitPane ? 'pl-4' : ''}`} style={{ width: enableSplitPane ? `calc(${100 - leftWidth}% - 1rem)` : '100%', flex: 'none', transition: 'width 0.3s ease' }}>
                     {part.sections?.map((sec: any, sIndex: number) => {
                       
                       let rawContentText = '';
@@ -971,7 +978,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
 
                           {/* DẠNG ĐIỀN TỪ & DROPLIST INLINE */}
                           {(sec.questionType === "Điền từ" || isInlineDroplist) && (
-                            <div className={`border p-8 rounded-xl shadow-sm ${isReviewMode ? 'border-slate-300' : 'border-gray-200 bg-white'}`}>
+                            <div className={`border p-6 md:p-8 rounded-xl shadow-sm ${isReviewMode ? 'border-slate-300' : 'border-gray-200 bg-white'}`}>
                               {(() => {
                                 let mainContent = rawContentText;
                                 let wordBankItems: string[] = [];
@@ -1065,6 +1072,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                       <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
                                                       <div className={boxClass}>
                                                         {isSelected && (
+                                                          // Đã cập nhật nét bút chữ V mềm mại và thon dài hơn
                                                           <svg viewBox="0 0 24 24" overflow="visible" className={`w-[22px] h-[22px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.2))', transform: 'translate(1px, -3px)' }}>
                                                             <path d="M5 14 C7 14, 9 17, 10 19 C13 11, 17 5, 23 3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                                           </svg>
@@ -1147,7 +1155,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
 
                           {/* DẠNG DROPLIST BLOCK CÓ EXCLUSION LOGIC */}
                           {isBlockDroplist && (
-                             <div className="space-y-4 bg-white p-8 border border-gray-200 rounded-xl shadow-sm">
+                             <div className="space-y-4 bg-white p-6 md:p-8 border border-gray-200 rounded-xl shadow-sm">
                                {(() => {
                                   const sectionQIds = (sec.questions || []).map((q:any) => String(q.id));
                                   const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
@@ -1204,7 +1212,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
 
                           {/* DẠNG KÉO THẢ & MATCHING */}
                           {(isInlineDragDrop || isBlockDragDrop) && (
-                            <div className="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+                            <div className="bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-sm">
                               {isInlineDragDrop ? (
                                 <div className="format-passage leading-[2.8] text-[16px] text-slate-800 font-serif html-content-renderer">
                                   {renderHtmlWithHoles(rawContentText, sec)}
