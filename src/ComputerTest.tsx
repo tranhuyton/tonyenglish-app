@@ -839,7 +839,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           .html-content-renderer th, .html-content-renderer td { 
               border: 1px solid #444 !important;
               padding: 12px 16px !important; 
-              vertical-align: middle !important; 
+              vertical-align: top !important; 
               
               /* BỎ DÒNG text-align: left !important; ĐI ĐỂ TÔN TRỌNG ĐỊNH DẠNG CỦA EDITOR */
               
@@ -855,7 +855,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           /* ÉP XÓA FONT RÁC TỪ EXCEL, TRẢ VỀ FONT MẶC ĐỊNH CỦA ĐỀ THI */
           .format-passage table *, .html-content-renderer table * {
               font-family: inherit !important;
-              font-size: inherit !important;
+              /* font-size: inherit !important;  <--- ANH XÓA HOẶC COMMENT DÒNG NÀY LẠI */
               line-height: 1.6 !important;
           }
           

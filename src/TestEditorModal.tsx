@@ -40,7 +40,7 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
       'ul', 'ol', 'outdent', 'indent', '|',
       'font', 'fontsize', 'brush', '|',
       'image', 'table', 'link', '|',
-      'align', 'valign', 'undo', 'redo', '|', /* ĐÃ THÊM NÚT VALIGN (CĂN DỌC) VÀO ĐÂY */
+      'align', 'undo', 'redo', '|',
       'eraser'
     ],
     extraButtons: ['source', 'fullsize'],
@@ -97,27 +97,52 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
                 margin: 1.5rem auto !important;
             }
             .jodit-wysiwyg th, .jodit-wysiwyg td {
-                border: 1px solid #cbd5e1 !important;
-                padding: 12px 16px !important;
-                white-space: normal !important;
-                word-break: break-word !important;
-            }
-            /* Thiết lập căn lề mặc định nhưng cho phép ghi đè */
-            .jodit-wysiwyg td {
-                vertical-align: top;
-            }
-            .jodit-wysiwyg [style*="vertical-align: middle"], .jodit-wysiwyg [valign="middle"] { vertical-align: middle !important; }
-            .jodit-wysiwyg [style*="vertical-align: bottom"], .jodit-wysiwyg [valign="bottom"] { vertical-align: bottom !important; }
-            .jodit-wysiwyg [style*="vertical-align: top"], .jodit-wysiwyg [valign="top"] { vertical-align: top !important; }
-
+              border: 1px solid #444 !important;
+              padding: 12px 16px !important;
+              vertical-align: middle !important;
+              /* THÊM 2 DÒNG NÀY ĐỂ CHỮ TRONG EDITOR TỰ ĐỘNG XUỐNG DÒNG */
+              white-space: normal !important;
+              word-break: break-word !important;
+          }
             .jodit-wysiwyg table * {
                 font-family: inherit !important;
-                font-size: inherit !important;
+                /* font-size: inherit !important;  <--- ANH XÓA HOẶC COMMENT DÒNG NÀY LẠI */
                 line-height: 1.6 !important;
             }
             .jodit-wysiwyg table p {
                 margin: 0 !important;
                 display: inline-block !important;
+            }
+
+            /* --- FIX NÚT UPDATE/SAVE TRONG BẢNG CHỈNH ẢNH (BẢN MẠNH NHẤT CHO VERCEL) --- */
+            html body div.jodit-dialog__footer {
+                display: flex !important;
+                justify-content: flex-end !important;
+                gap: 8px !important;
+                padding: 12px !important;
+                border-top: 1px solid #eee !important;
+                background: #f9f9f9 !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+            }
+            html body div.jodit-dialog__footer button.jodit-button_primary, 
+            html body div.jodit-dialog__footer button.jodit-ui-button_primary,
+            html body div.jodit-dialog__footer button[type="submit"] {
+                background-color: #00a651 !important; 
+                color: #ffffff !important;
+                padding: 6px 20px !important;
+                border-radius: 4px !important;
+                font-weight: bold !important;
+                border: none !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                display: inline-flex !important;
+                text-shadow: none !important;
+                box-shadow: none !important;
+            }
+            html body div.jodit-dialog__box {
+                max-height: 85vh !important;
+                overflow-y: auto !important;
             }
          `}</style>
          <JoditEditor

@@ -643,6 +643,33 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           }
         });
 
+        // 💥 BOM HẠT NHÂN: ÉP TRỰC TIẾP CÁC LỚP TAILWIND VÀO THẺ ĐỂ TRÁNH BỊ TẨY TRẮNG
+        if (tagName === 'strong' || tagName === 'b') {
+            props.className = (props.className ? props.className + ' ' : '') + 'font-black text-black';
+        }
+        if (tagName === 'em' || tagName === 'i') {
+            props.className = (props.className ? props.className + ' ' : '') + 'italic';
+        }
+        if (tagName === 'u') {
+            props.className = (props.className ? props.className + ' ' : '') + 'underline';
+        }
+        
+        // CAN THIỆP CĂN LỀ: Biến text-align: center thành class của Tailwind
+        if (props.style?.textAlign) {
+            if (props.style.textAlign === 'center') {
+                props.className = (props.className ? props.className + ' ' : '') + 'text-center';
+                if (['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(tagName)) {
+                    props.className += ' block w-full';
+                }
+            }
+            if (props.style.textAlign === 'right') {
+                props.className = (props.className ? props.className + ' ' : '') + 'text-right';
+                if (['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(tagName)) {
+                    props.className += ' block w-full';
+                }
+            }
+        }
+
         const children = Array.from(el.childNodes).map((child, i) => renderNode(child, `${pathKey}-${i}`));
         const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
         if (voidElements.includes(tagName)) return React.createElement(tagName, props);
@@ -719,63 +746,25 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
               margin-top: 0 !important;
           }
           .format-passage p:last-child { margin-bottom: 0 !important; }
-          .format-passage br { display: block !important; content: ""; margin-bottom: 0.5rem !important; }
-
-          /* CHỮ ĐẬM, IN NGHIÊNG BỊ TAILWIND TẨY THÌ CHUẨN HÓA LẠI ĐÂY */
-          .format-passage strong, .format-passage b,
-          .html-content-renderer strong, .html-content-renderer b,
-          strong, b {
-              font-weight: 900 !important;
-              color: #000 !important; /* Đen tuyền để nổi bật trên nền xám */
-          }
-          .format-passage em, .format-passage i,
-          .html-content-renderer em, .html-content-renderer i,
-          em, i {
-              font-style: italic !important;
-          }
-          .format-passage u, .html-content-renderer u, u {
-              text-decoration: underline !important;
-          }
-
-          /* CHỈNH CĂN LỀ */
-          .format-passage [style*="text-align: center"],
-          .format-passage [style*="text-align:center"],
-          .html-content-renderer [style*="text-align: center"],
-          .html-content-renderer [style*="text-align:center"],
-          [style*="text-align: center"],
-          [style*="text-align:center"],
-          [align="center"] {
-              text-align: center !important;
-          }
           
-          .format-passage [style*="text-align: right"],
-          .format-passage [style*="text-align:right"],
-          .html-content-renderer [style*="text-align: right"],
-          .html-content-renderer [style*="text-align:right"],
-          [style*="text-align: right"],
-          [style*="text-align:right"],
-          [align="right"] {
-              text-align: right !important;
-          }
-
           /* --- FIX TABLE EXCEL --- */
           .format-passage table { 
               width: 100% !important; 
               min-width: 600px !important;
               border-collapse: collapse !important; 
-              margin: 1.5rem auto !important; 
+              margin: 2rem auto !important; 
           }
           .format-passage th, .format-passage td { 
-              border: 1px solid #cbd5e1 !important; 
-              padding: 16px !important; 
+              border: 1px solid #94a3b8 !important; 
+              padding: 14px 16px !important; 
               vertical-align: top !important; 
               white-space: normal !important;
               word-break: break-word !important;
           }
           .format-passage th { 
-              background-color: #f8fafc !important; 
+              background-color: #f1f5f9 !important; 
               font-weight: 800 !important; 
-              color: #000 !important; 
+              color: #0f172a !important; 
           }
           .format-passage table * {
               font-family: inherit !important;
@@ -794,7 +783,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
               list-style-type: disc !important;
               padding-left: 1.8rem !important;
               margin-top: 0.5rem !important;
-              margin-bottom: 1.25rem !important;
+              margin-bottom: 1.5rem !important;
           }
           .format-passage ul ul, .html-content-renderer ul ul {
               list-style-type: circle !important;
@@ -806,23 +795,28 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
               list-style-type: decimal !important;
               padding-left: 1.8rem !important;
               margin-top: 0.5rem !important;
-              margin-bottom: 1.25rem !important;
+              margin-bottom: 1.5rem !important;
           }
           .format-passage li, .html-content-renderer li {
-              margin-bottom: 0.5rem !important;
+              margin-bottom: 0.75rem !important;
               margin-top: 0 !important;
-              color: #374151 !important; /* Màu xám nhẹ nhàng chuẩn thi giấy */
+              padding-top: 0 !important;
+              color: #374151 !important; 
+              line-height: 1.8 !important;
           }
-          /* Khử khoảng cách thừa trong li do thẻ p sinh ra */
-          .format-passage li p, 
-          .format-passage li div,
-          .format-passage li span,
-          .html-content-renderer li p, 
-          .html-content-renderer li div,
-          .html-content-renderer li span {
+          
+          /* Tiêu diệt các thẻ <p> rác và <br> do Editor sinh ra trong danh sách */
+          .format-passage li > p, 
+          .format-passage li > div,
+          .html-content-renderer li > p,
+          .html-content-renderer li > div {
               display: inline !important; 
               margin: 0 !important;
               padding: 0 !important;
+          }
+          .format-passage ul > br, .format-passage ol > br,
+          .html-content-renderer ul > br, .html-content-renderer ol > br {
+              display: none !important;
           }
 
           /* Thu hẹp khoảng cách giữa Tiêu đề (P) và List ngay dưới nó */
@@ -902,8 +896,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 overflow-y-auto p-4 md:p-8 relative" onMouseUp={handleMouseUp} ref={mainScrollRef as any}>
-        <div className={`${hasAnySplitPane ? 'max-w-7xl' : 'max-w-[950px]'} mx-auto space-y-12 transition-all duration-300`} onClick={handleContentClick} ref={containerRef as any}>
+      <main className="flex-1 overflow-y-auto p-4 md:p-6 relative bg-[#f3f4f6]" onMouseUp={handleMouseUp} ref={mainScrollRef as any}>
+        <div className={`${hasAnySplitPane ? 'max-w-[1400px] w-full' : 'max-w-[850px] w-full'} mx-auto space-y-10 transition-all duration-300`} onClick={handleContentClick} ref={containerRef as any}>
           
           {parts.map((part: any, pIndex: number) => {
             const hasPassage = part.content && part.content.trim().length > 0;
@@ -913,7 +907,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
             const enableSplitPane = showPassageColumn && typeof window !== 'undefined' && window.innerWidth > 1024;
 
             return (
-              <div key={pIndex} className="bg-white px-8 py-12 md:px-14 md:py-16 shadow-[0_0_15px_rgba(0,0,0,0.05)] border border-gray-200 rounded-sm">
+              <div key={pIndex} className={`bg-white shadow-[0_2px_15px_rgba(0,0,0,0.06)] border border-gray-200 rounded-sm ${enableSplitPane ? 'p-6 md:p-8' : 'px-8 py-12 md:px-14 md:py-16'}`}>
                 
                 <div className="text-center mb-8 border-b-2 border-gray-800 pb-4">
                   <h2 className="font-bold text-2xl uppercase tracking-widest text-gray-800 font-sans">{part.title}</h2>
@@ -925,7 +919,9 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                     <>
                       <div className={`format-passage text-justify leading-[1.8] text-[16px] ${enableSplitPane ? 'pr-8' : 'pb-8'}`} style={{ width: enableSplitPane ? `${leftWidth}%` : '100%', flex: 'none' }} ref={leftPaneRef as any}>
                         {isReviewMode && isListening && <div className="bg-amber-100 text-amber-800 p-2 rounded font-bold text-xs mb-4 border border-amber-300 inline-block font-sans shadow-sm">🎙️ TAPESCRIPT</div>}
-                        <div dangerouslySetInnerHTML={{ __html: part.content }} className="format-passage-content" />
+                        <div className="format-passage-content">
+                           {renderHtmlWithHoles(part.content, {})}
+                        </div>
                       </div>
                       
                       {/* Thanh kéo Split-pane */}
@@ -942,8 +938,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                     </>
                   )}
 
-                  {/* Cột Câu Hỏi */}
-                  <div className={`${enableSplitPane ? 'pl-4' : ''}`} style={{ width: enableSplitPane ? `calc(${100 - leftWidth}% - 1rem)` : '100%', flex: 'none', transition: 'width 0.3s ease' }}>
+                  {/* Cột Câu Hỏi: Sẽ thu hẹp 2/3 màn hình và tự căn giữa nếu đang trong chế độ thi Listening */}
+                  <div className={`${enableSplitPane ? 'pl-4' : 'mx-auto'}`} style={{ width: enableSplitPane ? `calc(${100 - leftWidth}% - 1rem)` : '100%', flex: 'none', transition: 'width 0.3s ease' }}>
                     {part.sections?.map((sec: any, sIndex: number) => {
                       
                       let rawContentText = '';
@@ -973,7 +969,9 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                           )}
 
                           {shouldRenderGlobalSecContent && (
-                             <div className="mb-6 text-[15px] text-slate-800 bg-gray-50 p-4 rounded-lg border border-gray-200 format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: sec.content }} />
+                             <div className="mb-6 text-[15px] text-slate-800 bg-gray-50 p-4 rounded-lg border border-gray-200 format-passage html-content-renderer">
+                               {renderHtmlWithHoles(sec.content, {})}
+                             </div>
                           )}
 
                           {/* DẠNG ĐIỀN TỪ & DROPLIST INLINE */}
@@ -1004,7 +1002,9 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                 {wordBankItems.map((item, idx) => {
                                                     const text = item.replace(stripHtmlRegex, '').trim();
                                                     return text ? (
-                                                        <div key={idx} className="px-4 py-2 bg-white border border-gray-300 rounded font-bold text-gray-800 min-w-[100px] flex items-center shadow-sm format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: text }} />
+                                                        <div key={idx} className="px-4 py-2 bg-white border border-gray-300 rounded font-bold text-gray-800 min-w-[100px] flex items-center shadow-sm format-passage html-content-renderer">
+                                                          {renderHtmlWithHoles(text, {})}
+                                                        </div>
                                                     ) : null;
                                                 })}
                                             </div>
@@ -1037,7 +1037,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                           <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
                                           <div className="flex-1">
                                             {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">✅ ĐÚNG</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">❌ SAI</span>}</div>)}
-                                            {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }}></div>}
+                                            {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
                                             <div className={`flex flex-row flex-wrap gap-4`}>
                                               {validOptions.map((opt: any, i: number) => {
                                                 const safeOpt = String(opt || '');
@@ -1072,19 +1072,19 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                       <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
                                                       <div className={boxClass}>
                                                         {isSelected && (
-                                                          // Đã cập nhật nét bút chữ V mềm mại và thon dài hơn
-                                                          <svg viewBox="0 0 24 24" overflow="visible" className={`w-[22px] h-[22px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.2))', transform: 'translate(1px, -3px)' }}>
-                                                            <path d="M5 14 C7 14, 9 17, 10 19 C13 11, 17 5, 23 3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                          // NÉT BÚT MỰC XANH COBAN CHO TFNG
+                                                          <svg viewBox="0 0 24 24" overflow="visible" className={`w-[18px] h-[18px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-700'}`} style={{ filter: 'drop-shadow(0.5px 0.5px 0px rgba(0,0,0,0.1))', transform: 'translate(1.5px, -1.5px)' }}>
+                                                            <path d="M4 12.5 Q7.5 15.5 9 18.5 Q14 8 22 3.5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                                           </svg>
                                                         )}
                                                       </div>
                                                     </div>
-                                                    <span className="text-[15px] font-serif leading-relaxed font-semibold format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: safeOpt }} />
+                                                    <span className="text-[15px] font-serif leading-relaxed font-semibold format-passage html-content-renderer">{renderHtmlWithHoles(safeOpt, {})}</span>
                                                   </label>
                                                 );
                                               })}
                                             </div>
-                                            {isReviewMode && (<div className="mt-6 pt-4 border-t border-slate-200"><p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p><div className="text-[14px] text-slate-700 italic font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: q.explanation || "Không có lời giải thích." }} /></div>)}
+                                            {isReviewMode && (<div className="mt-6 pt-4 border-t border-slate-200"><p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p><div className="text-[14px] text-slate-700 italic font-serif format-passage html-content-renderer">{renderHtmlWithHoles(q.explanation || "Không có lời giải thích.", {})}</div></div>)}
                                           </div>
                                         </div>
                                       </div>
@@ -1098,7 +1098,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                       <span className="font-bold text-gray-800 shrink-0 w-6 text-right pt-[2px]">{displayIndex}.</span>
                                       <div className="flex-1">
                                         {isReviewMode && (<div className="mb-3">{isCorrect ? <span className="text-[11px] font-bold bg-emerald-100 text-emerald-700 px-3 py-1 rounded">✅ ĐÚNG</span> : <span className="text-[11px] font-bold bg-red-100 text-red-700 px-3 py-1 rounded">❌ SAI</span>}</div>)}
-                                        {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }}></div>}
+                                        {q.content && <div className="text-[16px] mb-4 font-serif leading-relaxed format-passage html-content-renderer">{renderHtmlWithHoles(q.content, {})}</div>}
                                         <div className={`flex flex-col gap-2`}>
                                           {validOptions.map((opt: any, i: number) => {
                                             const safeOpt = String(opt || '');
@@ -1133,18 +1133,19 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                   <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
                                                   <div className={boxClass}>
                                                     {isSelected && (
-                                                      <svg viewBox="0 0 24 24" overflow="visible" className={`w-[22px] h-[22px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.2))', transform: 'translate(1px, -3px)' }}>
-                                                        <path d="M5 14 C7 14, 9 17, 10 19 C13 11, 17 5, 23 3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                      // NÉT BÚT MỰC XANH COBAN CHO TRẮC NGHIỆM
+                                                      <svg viewBox="0 0 24 24" overflow="visible" className={`w-[18px] h-[18px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-700'}`} style={{ filter: 'drop-shadow(0.5px 0.5px 0px rgba(0,0,0,0.1))', transform: 'translate(1.5px, -1.5px)' }}>
+                                                        <path d="M4 12.5 Q7.5 15.5 9 18.5 Q14 8 22 3.5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                                       </svg>
                                                     )}
                                                   </div>
                                                 </div>
-                                                <span className="text-[15px] font-serif leading-relaxed format-passage html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
+                                                <span className="text-[15px] font-serif leading-relaxed format-passage html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> {renderHtmlWithHoles(safeOpt, {})}</span>
                                               </label>
                                             );
                                           })}
                                         </div>
-                                        {isReviewMode && (<div className="mt-6 pt-4 border-t border-slate-200"><p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p><div className="text-[14px] text-slate-700 italic font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: q.explanation || "Không có lời giải thích." }} /></div>)}
+                                        {isReviewMode && (<div className="mt-6 pt-4 border-t border-slate-200"><p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p><div className="text-[14px] text-slate-700 italic font-serif format-passage html-content-renderer">{renderHtmlWithHoles(q.explanation || "Không có lời giải thích.", {})}</div></div>)}
                                       </div>
                                     </div>
                                   </div>
@@ -1174,7 +1175,9 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                        <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-4 rounded-lg border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-200' : 'bg-red-50 border-red-200') : (activeQuestionId === String(q.id) ? 'bg-blue-50/30 border-blue-300' : 'bg-white border-gray-200 hover:border-gray-300')}`}>
                                          <div className="flex items-center gap-4 flex-1">
                                            <span className="font-bold text-gray-800 w-6 text-right">{displayIdx}.</span>
-                                           <div className="text-[15px] text-gray-800 leading-relaxed font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                           <div className="text-[15px] text-gray-800 leading-relaxed font-serif format-passage html-content-renderer">
+                                             {renderHtmlWithHoles(q.content, {})}
+                                           </div>
                                          </div>
                                          <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0">
                                             {isReviewMode ? (
@@ -1231,7 +1234,9 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                       <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-5 rounded-lg border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50/50 border-emerald-200' : 'bg-red-50/50 border-red-200') : (activeQuestionId === String(q.id) ? 'bg-blue-50/30 border-blue-300' : 'bg-white border-gray-200 hover:border-gray-300')}`}>
                                         <div className="flex items-center gap-4 flex-1">
                                           <span className="font-bold text-gray-800 w-6 text-right">{displayIdx}.</span>
-                                          <div className="text-[15px] text-gray-800 leading-relaxed font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                          <div className="text-[15px] text-gray-800 leading-relaxed font-serif format-passage html-content-renderer">
+                                             {renderHtmlWithHoles(q.content, {})}
+                                          </div>
                                         </div>
                                         <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0 sm:ml-4">
                                           {isReviewMode ? (
@@ -1393,7 +1398,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                     );
                                                 })}
                                              </div>
-                                             <div className="text-[16px] leading-relaxed text-gray-800 cursor-pointer w-full font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: qText }} />
+                                             <div className="text-[16px] leading-relaxed text-gray-800 cursor-pointer w-full font-serif format-passage html-content-renderer">{renderHtmlWithHoles(qText, {})}</div>
                                            </div>
 
                                            <div className={`flex flex-col gap-3 ml-[3.5rem]`}>
@@ -1438,13 +1443,14 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                      <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="opacity-0 absolute inset-0 z-10 cursor-pointer w-full h-full m-0" disabled={isReviewMode} />
                                                      <div className={boxClass}>
                                                        {isSelected && (
-                                                         <svg viewBox="0 0 24 24" overflow="visible" className={`w-[22px] h-[22px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-600'}`} style={{ filter: 'drop-shadow(0px 1px 1px rgba(0,0,0,0.2))', transform: 'translate(1px, -3px)' }}>
-                                                           <path d="M5 14 C7 14, 9 17, 10 19 C13 11, 17 5, 23 3" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                         // NÉT BÚT MỰC XANH COBAN CHO CHECKBOX
+                                                         <svg viewBox="0 0 24 24" overflow="visible" className={`w-[18px] h-[18px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-700'}`} style={{ filter: 'drop-shadow(0.5px 0.5px 0px rgba(0,0,0,0.1))', transform: 'translate(1.5px, -1.5px)' }}>
+                                                           <path d="M4 12.5 Q7.5 15.5 9 18.5 Q14 8 22 3.5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                                          </svg>
                                                        )}
                                                      </div>
                                                    </div>
-                                                   <span className="text-[15px] leading-[1.8] font-serif format-passage html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
+                                                   <span className="text-[15px] leading-[1.8] font-serif format-passage html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> {renderHtmlWithHoles(safeOpt, {})}</span>
                                                  </label>
                                                )
                                              })}
@@ -1458,7 +1464,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                     return (
                                                         <div key={q.id} className="text-[14px] text-gray-600 italic leading-relaxed mb-3 last:mb-0 font-serif format-passage html-content-renderer">
                                                             <span className="font-bold text-white px-2 py-0.5 bg-gray-600 rounded text-[11px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
-                                                            <span dangerouslySetInnerHTML={{ __html: q.explanation }} />
+                                                            {renderHtmlWithHoles(q.explanation, {})}
                                                         </div>
                                                     )
                                                 })}
