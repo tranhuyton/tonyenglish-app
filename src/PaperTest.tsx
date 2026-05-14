@@ -768,7 +768,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           }
           .format-passage table * {
               font-family: inherit !important;
-              font-size: inherit !important;
+              /* font-size: inherit !important; <--- ANH XÓA HOẶC COMMENT DÒNG NÀY LẠI */
               line-height: 1.6 !important;
           }
           .format-passage table p {

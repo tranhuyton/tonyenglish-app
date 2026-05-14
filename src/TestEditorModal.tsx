@@ -40,7 +40,7 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
       'ul', 'ol', 'outdent', 'indent', '|',
       'font', 'fontsize', 'brush', '|',
       'image', 'table', 'link', '|',
-      'align', 'undo', 'redo', '|',
+      'align', 'valign', 'undo', 'redo', '|',
       'eraser'
     ],
     extraButtons: ['source', 'fullsize'],
@@ -97,16 +97,19 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
                 margin: 1.5rem auto !important;
             }
             .jodit-wysiwyg th, .jodit-wysiwyg td {
-              border: 1px solid #444 !important;
-              padding: 12px 16px !important;
-              vertical-align: middle !important;
-              /* THÊM 2 DÒNG NÀY ĐỂ CHỮ TRONG EDITOR TỰ ĐỘNG XUỐNG DÒNG */
-              white-space: normal !important;
-              word-break: break-word !important;
-          }
+                border: 1px solid #cbd5e1 !important;
+                padding: 12px 16px !important;
+                white-space: normal !important;
+                word-break: break-word !important;
+            }
+            /* Trả lại quyền Vertical Align cho Editor */
+            .jodit-wysiwyg td { vertical-align: top; }
+            .jodit-wysiwyg [style*="vertical-align: middle"], .jodit-wysiwyg [valign="middle"] { vertical-align: middle !important; }
+            .jodit-wysiwyg [style*="vertical-align: bottom"], .jodit-wysiwyg [valign="bottom"] { vertical-align: bottom !important; }
+            .jodit-wysiwyg [style*="vertical-align: top"], .jodit-wysiwyg [valign="top"] { vertical-align: top !important; }
+
             .jodit-wysiwyg table * {
                 font-family: inherit !important;
-                /* font-size: inherit !important;  <--- ANH XÓA HOẶC COMMENT DÒNG NÀY LẠI */
                 line-height: 1.6 !important;
             }
             .jodit-wysiwyg table p {
@@ -671,6 +674,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     setTestData(newData); 
   };
 
+  // --- HÀM THÊM CÂU HỎI THÔNG MINH (SMART GUESSER) ---
   const addQuestion = (pIdx: number, sIdx: number) => {
     const newData = { ...testData }; 
     const section = newData.parts[pIdx].sections[sIdx];
@@ -678,6 +682,33 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       section.questions = [];
     }
     
+    // Thuật toán tự động tìm số ID tiếp theo một cách thông minh
+    let nextIdStr = '';
+    
+    if (section.questions.length > 0) {
+       // Nếu trong section hiện tại đã có câu hỏi -> Lấy câu cuối + 1
+       const lastId = parseInt(section.questions[section.questions.length - 1].id);
+       if (!isNaN(lastId)) nextIdStr = String(lastId + 1);
+    } else if (sIdx > 0 && newData.parts[pIdx].sections[sIdx - 1].questions?.length > 0) {
+       // Nếu section hiện tại trống, thử nhìn sang section trước đó
+       const prevSecQs = newData.parts[pIdx].sections[sIdx - 1].questions;
+       const lastId = parseInt(prevSecQs[prevSecQs.length - 1].id);
+       if (!isNaN(lastId)) nextIdStr = String(lastId + 1);
+    } else if (pIdx > 0) {
+       // Nhìn lùi xa hơn về part trước đó nếu cần
+       const prevPart = newData.parts[pIdx - 1];
+       if (prevPart.sections && prevPart.sections.length > 0) {
+          const prevSecQs = prevPart.sections[prevPart.sections.length - 1].questions;
+          if (prevSecQs && prevSecQs.length > 0) {
+             const lastId = parseInt(prevSecQs[prevSecQs.length - 1].id);
+             if (!isNaN(lastId)) nextIdStr = String(lastId + 1);
+          }
+       }
+    }
+    
+    // Nếu thuật toán vẫn không tính ra được thì mới dùng timestamp (Nhưng cực kỳ hiếm)
+    if (!nextIdStr) nextIdStr = Date.now().toString();
+
     const qType = section.questionType;
     let initialOptions = ['A', 'B', 'C', 'D'];
     
@@ -692,7 +723,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
     }
     
     section.questions.push({ 
-      id: Date.now().toString(), 
+      id: nextIdStr, 
       content: '', 
       tags: '', 
       audioUrl: '', 
@@ -992,7 +1023,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                               const isComboChild = sec.questionType === "Checkbox" && qIdx > 0 && !hasContent;
 
                               return (
-                                <div key={q.id} className={`border rounded-xl bg-white shadow-sm transition group relative ${isComboChild ? 'border-amber-300 bg-amber-50/20 ml-8 border-l-[6px]' : 'border-slate-200 hover:border-amber-300'}`}>
+                                <div key={`q-${pIdx}-${sIdx}-${qIdx}`} className={`border rounded-xl bg-white shadow-sm transition group relative ${isComboChild ? 'border-amber-300 bg-amber-50/20 ml-8 border-l-[6px]' : 'border-slate-200 hover:border-amber-300'}`}>
                                   <button 
                                     onClick={() => removeQuestion(pIdx, sIdx, qIdx)} 
                                     className="absolute -top-3 -right-3 bg-red-500 text-white w-7 h-7 rounded-full opacity-0 group-hover:opacity-100 transition shadow-lg z-10"
@@ -1002,8 +1033,15 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                   
                                   <div className="p-5">
                                       <div className="flex gap-4 items-start">
-                                        <div className="w-10 h-10 shrink-0 bg-amber-100 text-amber-700 text-sm font-black rounded-full flex items-center justify-center border border-amber-200">
-                                          { (q.id && String(q.id).length <= 5) ? q.id : (qIdx + 1) }
+                                        <div className="flex flex-col items-center gap-1 shrink-0">
+                                          <input 
+                                            value={(q.id && String(q.id).length <= 5) ? q.id : ''}
+                                            onChange={(e) => updateField([pIdx, sIdx, qIdx], 'id', e.target.value)}
+                                            className="w-11 h-11 bg-amber-100 text-amber-700 text-[15px] font-black rounded-full flex items-center justify-center border-2 border-amber-300 text-center outline-none focus:bg-white focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all placeholder:text-amber-300 m-0 p-0"
+                                            placeholder={String(qIdx + 1)}
+                                            title="Sửa số thứ tự câu hỏi (ID)"
+                                          />
+                                          <span className="text-[10px] font-bold text-slate-400">Câu số</span>
                                         </div>
                                         <div className="flex-1 space-y-4 min-w-0">
                                           
