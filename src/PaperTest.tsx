@@ -767,7 +767,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
               color: #0f172a !important; 
           }
           .format-passage table * {
-              font-family: inherit !important;
+            /* font-family: inherit !important; */ 
               /* font-size: inherit !important; <--- ANH XÓA HOẶC COMMENT DÒNG NÀY LẠI */
               line-height: 1.6 !important;
           }
