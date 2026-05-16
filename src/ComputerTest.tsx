@@ -1174,7 +1174,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                     <section className="p-8 md:p-10 overflow-y-auto custom-scrollbar flex-1 relative" ref={leftPaneRef as any}>
                       {currentPart?.content ? (
                         <div className={`format-passage html-content-renderer max-w-none text-[16px] text-black break-words font-serif selection:bg-yellow-200 ${isReviewMode ? 'leading-[2.8]' : 'leading-[1.8]'}`}>
-                          {isReviewMode && isListening && <div className="bg-slate-200 text-black p-4 rounded-none font-bold font-sans text-[14px] mb-6 border border-slate-400">🎙️ TAPESCRIPT CHỮA BÀI NẰM Ở ĐÂY ➔</div>}
+                          {isReviewMode && isListening && <div className="bg-slate-200 text-black p-4 rounded-none font-bold font-sans text-[14px] mb-6 border border-slate-400">🎙️ TRANSCRIPT CHỮA BÀI</div>}
                           <div dangerouslySetInnerHTML={{ __html: cleanHtmlContent(currentPart?.content || "") }} />
                         </div>
                       ) : (

@@ -420,7 +420,8 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
 
             <div className="bg-white p-8 rounded-none border border-slate-400">
                 <h3 className="font-black text-xl text-black mb-4 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
-                <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-bold text-black font-serif">
+                {/* Đã sửa font-serif thành font-sans */}
+                <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-bold text-black font-sans">
                   {aiResult.generalFeedback}
                 </div>
             </div>
@@ -439,14 +440,16 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                         <span className="font-bold text-black">{c.name}</span>
                         <span className="font-black text-black text-lg">{c.score}</span>
                       </div>
-                      <p className="text-sm text-slate-800 font-medium leading-relaxed font-serif">{c.comment}</p>
+                      {/* Đã sửa font-serif thành font-sans */}
+                      <p className="text-sm text-slate-800 font-medium leading-relaxed font-sans">{c.comment}</p>
                     </div>
                   ))}
                 </div>
 
                 <div>
                   <h4 className="font-black text-lg text-black mb-4">✍️ Bài làm & Gợi ý sửa lỗi</h4>
-                  <div className="p-6 bg-[#e0e0e0] border border-slate-400 rounded-none text-[16px] leading-[1.8] font-serif text-black" dangerouslySetInnerHTML={{__html: task.feedback}} />
+                  {/* Đã sửa font-serif thành font-sans */}
+                  <div className="p-6 bg-[#e0e0e0] border border-slate-400 rounded-none text-[16px] leading-[1.8] font-sans text-black" dangerouslySetInnerHTML={{__html: task.feedback}} />
                 </div>
               </div>
             ))}

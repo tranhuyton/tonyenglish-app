@@ -336,7 +336,7 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
           <main className="flex-1 flex flex-col md:flex-row overflow-hidden relative">
             
             <section className="w-full md:w-1/2 p-8 md:p-10 overflow-y-auto custom-scrollbar border-r border-slate-400 flex flex-col bg-white">
-              <div className="max-w-2xl text-[16px] leading-[1.8] text-black font-serif break-words">
+              <div className="max-w-2xl text-[16px] leading-[1.8] text-black font-sans break-words">
                 {currentQ.partContent && (
                   <div className="mb-6 text-[15px] font-medium" dangerouslySetInnerHTML={{__html: currentQ.partContent}} />
                 )}
@@ -359,7 +359,7 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
                        <span className="text-[13px] font-bold text-slate-800 uppercase tracking-widest">Notes</span>
                     </div>
                     <textarea 
-                      className="flex-1 w-full p-6 outline-none resize-none text-[15px] text-black font-serif custom-scrollbar leading-[1.8]"
+                      className="flex-1 w-full p-6 outline-none resize-none text-[15px] text-black font-sans custom-scrollbar leading-[1.8]"
                       placeholder="You can make some notes here..."
                       value={notes[currentQ.id] || ''}
                       onChange={(e) => setNotes(prev => ({...prev, [currentQ.id]: e.target.value}))}
@@ -484,7 +484,7 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
 
             <div className="bg-white p-8 rounded-none border border-slate-400">
                 <h3 className="font-black text-xl text-black mb-4 flex items-center gap-2">💡 Nhận xét tổng quan</h3>
-                <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-bold text-black font-serif">
+                <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-bold text-black font-sans">
                   {aiResult.generalFeedback || 'Hệ thống đã ghi nhận bài thi Speaking của bạn.'}
                 </div>
             </div>
@@ -516,7 +516,7 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
                 <div className="space-y-6 mt-8">
                    <div>
                       <h4 className="font-black text-black mb-3 uppercase tracking-widest text-[13px]">🎧 Bóc băng (Transcript)</h4>
-                      <div className="p-5 bg-white border border-slate-400 rounded-none text-[15px] leading-[1.8] font-serif text-black italic whitespace-pre-wrap">
+                      <div className="p-5 bg-white border border-slate-400 rounded-none text-[15px] leading-[1.8] font-sans text-black italic whitespace-pre-wrap">
                          "{aiResult.transcript}"
                       </div>
                    </div>
@@ -524,7 +524,7 @@ export default function IeltsSpeaking({ onBack, testData: propTestData, onFinish
                    {aiResult.detailedFeedback && (
                    <div>
                       <h4 className="font-black text-black mb-3 uppercase tracking-widest text-[13px]">💡 Gợi ý sửa lỗi</h4>
-                      <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-medium text-black whitespace-pre-wrap">
+                      <div className="p-5 bg-[#e0e0e0] border border-slate-400 rounded-none text-[15px] leading-[1.8] font-medium text-black whitespace-pre-wrap font-sans">
                          {aiResult.detailedFeedback}
                       </div>
                    </div>
