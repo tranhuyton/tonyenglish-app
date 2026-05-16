@@ -83,7 +83,16 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   const parts = Array.isArray(contentJSON.parts) ? contentJSON.parts : [];
   
   const isListening = basicInfo.skill?.toLowerCase().includes('listening') || String(safeTestData?.test_type || '').toLowerCase().includes('listening');
-  const globalAudio = basicInfo.audioUrl || parts?.[0]?.audioUrl;
+  
+  // ==========================================
+  // XÂY DỰNG PLAYLIST AUDIO NỐI TIẾP CHO TỪNG PART
+  // ==========================================
+  const audioPlaylist = useMemo(() => {
+      if (basicInfo.audioUrl) return [basicInfo.audioUrl];
+      return parts.map((p: any) => p.audioUrl).filter(Boolean);
+  }, [basicInfo.audioUrl, parts]);
+  
+  const [currentAudioIndex, setCurrentAudioIndex] = useState(0);
 
   const [testStarted, setTestStarted] = useState(false);
   const [isReviewMode, setIsReviewMode] = useState(false);
@@ -137,6 +146,15 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           window.removeEventListener('mouseup', stopDrag); 
       }; 
   }, []);
+
+  // Tự động phát file tiếp theo khi Playlist chuyển bài
+  useEffect(() => {
+      if (testStarted && !isReviewMode && isListening && globalAudioRef.current && audioPlaylist[currentAudioIndex]) {
+          setTimeout(() => {
+             globalAudioRef.current?.play().catch(e => console.log("Auto-play next track blocked", e));
+          }, 100);
+      }
+  }, [currentAudioIndex, testStarted, isReviewMode, isListening, audioPlaylist]);
 
   // Lưu bản nháp
   useEffect(() => {
@@ -375,6 +393,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     if (isReviewMode) return;
     const selection = window.getSelection();
     if (selection && selection.toString().trim().length > 0) {
+      // FIX LỖI: Chỉ hiện highlight khi bôi đen nội dung trong Cột Trái (Bài đọc)
       if (leftPaneRef.current && leftPaneRef.current.contains(selection.anchorNode)) {
           const range = selection.getRangeAt(0);
           const rect = range.getBoundingClientRect();
@@ -505,12 +524,6 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     handleAnswer(qId, '');
   };
 
-  // Tính toán có hiển thị layout Split Pane hay không (nếu có 1 Part nào đó đủ điều kiện)
-  const hasAnySplitPane = parts.some((part: any) => {
-      const hasPassage = part.content && part.content.trim().length > 0;
-      return hasPassage && (!isListening || isReviewMode) && typeof window !== 'undefined' && window.innerWidth > 1024;
-  });
-
   // RENDER HTML CHỨA ĐỤC LỖ - STYLE CỦA PAPER TEST
   const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
     if (!htmlStr) return null;
@@ -596,7 +609,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                       value={userAns}
                       onFocus={() => setActiveQuestionId(qNum)}
                       onChange={(e) => handleAnswer(qNum, e.target.value)}
-                      className="border-b-2 border-slate-400 bg-transparent focus:border-blue-600 rounded-none px-1 py-0.5 outline-none text-blue-800 font-bold text-[14px] min-w-[100px] max-w-[200px] cursor-pointer"
+                      className="border-b-2 border-gray-400 bg-transparent focus:border-blue-600 rounded-none px-1 py-0.5 outline-none text-blue-800 font-bold text-[14px] min-w-[100px] max-w-[200px] cursor-pointer"
                     >
                       <option value="">-- Chọn --</option>
                       {validOptions.map((opt:string, oIdx:number) => {
@@ -619,7 +632,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                 <span className="font-bold text-[15px] mr-1 text-slate-700">{displayIndex}.</span>
                 <input 
                   type="text" 
-                  className="w-32 border-b-2 border-slate-400 focus:outline-none focus:border-blue-600 bg-transparent text-center text-blue-800 font-bold px-1 text-[15px] leading-tight pb-0.5" 
+                  className="w-32 border-b-2 border-gray-400 focus:outline-none focus:border-blue-600 bg-transparent text-center text-blue-800 font-bold px-1 text-[15px] leading-tight pb-0.5" 
                   value={userAns} 
                   onFocus={() => setActiveQuestionId(String(qNum))}
                   onChange={(e) => handleAnswer(qNum, e.target.value)} 
@@ -657,16 +670,10 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
         // CAN THIỆP CĂN LỀ: Biến text-align: center thành class của Tailwind
         if (props.style?.textAlign) {
             if (props.style.textAlign === 'center') {
-                props.className = (props.className ? props.className + ' ' : '') + 'text-center';
-                if (['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(tagName)) {
-                    props.className += ' block w-full';
-                }
+                props.className = (props.className ? props.className + ' ' : '') + 'text-center block w-full';
             }
             if (props.style.textAlign === 'right') {
-                props.className = (props.className ? props.className + ' ' : '') + 'text-right';
-                if (['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(tagName)) {
-                    props.className += ' block w-full';
-                }
+                props.className = (props.className ? props.className + ' ' : '') + 'text-right block w-full';
             }
         }
 
@@ -699,10 +706,24 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
         }
     }
     if (globalAudioRef.current && isListening) { 
-        globalAudioRef.current.play().catch(e => { 
+        // Thay vì chỉ play(), thêm sự kiện lắng nghe để chuyển bài kế tiếp
+        const audioEl = globalAudioRef.current;
+        const handleEnded = () => {
+            if (currentAudioIndex < audioPlaylist.length - 1) {
+                setCurrentAudioIndex(prev => prev + 1);
+            }
+        };
+        audioEl.addEventListener('ended', handleEnded);
+        
+        audioEl.play().catch(e => { 
             console.error("Autoplay blocked:", e); 
             alert("Trình duyệt chặn phát âm thanh. Vui lòng bấm Bắt Đầu lại."); 
         });
+
+        // Dọn dẹp sự kiện
+        return () => {
+            audioEl.removeEventListener('ended', handleEnded);
+        };
     }
   };
 
@@ -710,15 +731,15 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   if (!testStarted) {
     return (
       <div className="flex flex-col h-screen items-center justify-center bg-[#f3f4f6] font-serif">
-        {isListening && globalAudio && <audio ref={globalAudioRef} src={globalAudio} preload="auto" className="hidden" />}
+        {isListening && audioPlaylist.length > 0 && <audio ref={globalAudioRef} src={audioPlaylist[0]} preload="auto" className="hidden" />}
         <div className="bg-white p-10 rounded-2xl shadow-xl text-center max-w-lg border border-gray-200 w-full font-sans">
           <div className="text-6xl mb-6">{isListening ? '🎧' : '📝'}</div>
           <h1 className="text-2xl font-black text-slate-800 mb-2">{basicInfo.title}</h1>
           <p className="text-slate-500 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
           {isListening && (
             <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg text-amber-700 text-[13px] font-medium mb-8 text-left leading-relaxed shadow-inner">
-              <span className="font-bold">⚠️ LƯU Ý THI LISTENING:</span> File âm thanh sẽ <span className="font-bold underline">tự động phát</span> ngay khi bạn bấm nút Bắt Đầu bên dưới.
-              <br/><br/>Bạn chỉ có thể chỉnh âm lượng (Volume), KHÔNG THỂ tạm dừng hay tua lại.
+              <span className="font-bold">⚠️ LƯU Ý THI LISTENING:</span> Hệ thống sẽ <span className="font-bold underline">tự động phát liên tục</span> các Audio từ Part 1 đến Part 4.
+              <br/><br/>Bạn chỉ có thể chỉnh âm lượng (Volume), KHÔNG THỂ tạm dừng hay tua lại trong quá trình làm bài.
             </div>
           )}
           <div className="flex gap-4 justify-center">
@@ -746,29 +767,67 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
               margin-top: 0 !important;
           }
           .format-passage p:last-child { margin-bottom: 0 !important; }
+          .format-passage br { display: block !important; content: ""; margin-bottom: 0.5rem !important; }
+
+          /* CHỮ ĐẬM, IN NGHIÊNG BỊ TAILWIND TẨY THÌ CHUẨN HÓA LẠI ĐÂY */
+          .format-passage strong, .format-passage b,
+          .html-content-renderer strong, .html-content-renderer b,
+          strong, b {
+              font-weight: 900 !important;
+              color: #000 !important; /* Đen tuyền để nổi bật trên nền xám */
+          }
+          .format-passage em, .format-passage i,
+          .html-content-renderer em, .html-content-renderer i,
+          em, i {
+              font-style: italic !important;
+          }
+          .format-passage u, .html-content-renderer u, u {
+              text-decoration: underline !important;
+          }
+
+          /* CHỈNH CĂN LỀ */
+          .format-passage [style*="text-align: center"],
+          .format-passage [style*="text-align:center"],
+          .html-content-renderer [style*="text-align: center"],
+          .html-content-renderer [style*="text-align:center"],
+          [style*="text-align: center"],
+          [style*="text-align:center"],
+          [align="center"] {
+              text-align: center !important;
+          }
           
+          .format-passage [style*="text-align: right"],
+          .format-passage [style*="text-align:right"],
+          .html-content-renderer [style*="text-align: right"],
+          .html-content-renderer [style*="text-align:right"],
+          [style*="text-align: right"],
+          [style*="text-align:right"],
+          [align="right"] {
+              text-align: right !important;
+          }
+
           /* --- FIX TABLE EXCEL --- */
           .format-passage table { 
               width: 100% !important; 
               min-width: 600px !important;
               border-collapse: collapse !important; 
-              margin: 2rem auto !important; 
+              margin: 1.5rem auto !important; 
           }
           .format-passage th, .format-passage td { 
-              border: 1px solid #94a3b8 !important; 
-              padding: 14px 16px !important; 
+              border: 1px solid #cbd5e1 !important; 
+              padding: 16px !important; 
               vertical-align: top !important; 
               white-space: normal !important;
               word-break: break-word !important;
           }
           .format-passage th { 
-              background-color: #f1f5f9 !important; 
+              background-color: #f8fafc !important; 
               font-weight: 800 !important; 
-              color: #0f172a !important; 
+              color: #000 !important; 
           }
           .format-passage table * {
-            /* font-family: inherit !important; */ 
-              /* font-size: inherit !important; <--- ANH XÓA HOẶC COMMENT DÒNG NÀY LẠI */
+              font-family: inherit !important;
+              font-size: inherit !important;
               line-height: 1.6 !important;
           }
           .format-passage table p {
@@ -783,7 +842,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
               list-style-type: disc !important;
               padding-left: 1.8rem !important;
               margin-top: 0.5rem !important;
-              margin-bottom: 1.5rem !important;
+              margin-bottom: 1.25rem !important;
           }
           .format-passage ul ul, .html-content-renderer ul ul {
               list-style-type: circle !important;
@@ -795,7 +854,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
               list-style-type: decimal !important;
               padding-left: 1.8rem !important;
               margin-top: 0.5rem !important;
-              margin-bottom: 1.5rem !important;
+              margin-bottom: 1.25rem !important;
           }
           .format-passage li, .html-content-renderer li {
               margin-bottom: 0.75rem !important;
@@ -837,7 +896,10 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           }
       `}</style>
 
-      {isListening && globalAudio && !isReviewMode && ( <audio ref={globalAudioRef} src={globalAudio} preload="auto" className="hidden" /> )}
+      {/* CHỈ PHÁT AUDIO NGẦM KHI ĐANG LÀM BÀI LISTENING VÀ KHÔNG PHẢI CHẾ ĐỘ REVIEW */}
+      {isListening && !isReviewMode && audioPlaylist.length > 0 && ( 
+         <audio ref={globalAudioRef} src={audioPlaylist[currentAudioIndex]} preload="auto" className="hidden" /> 
+      )}
 
       {/* Menu Highlight */}
       {highlightMenu.show && !isReviewMode && (
@@ -873,16 +935,13 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
           <div className="font-bold text-lg text-gray-800 border-l border-gray-300 pl-4 truncate max-w-[200px] md:max-w-md">{isReviewMode ? `[CHỮA BÀI] ${basicInfo.title}` : basicInfo.title}</div>
         </div>
 
-        {isListening && globalAudio && (
+        {/* THIẾT KẾ LẠI HEADER CHO LISTENING */}
+        {isListening && !isReviewMode && (
           <div className="flex-1 max-w-lg mx-8 flex items-center justify-center">
-            {isReviewMode ? (
-              <audio controls src={globalAudio} className="h-10 w-full outline-none" />
-            ) : (
-              <div className="flex items-center gap-3 bg-gray-100 px-4 py-1.5 rounded-full border border-gray-200">
+             <div className="flex items-center gap-3 bg-gray-100 px-4 py-1.5 rounded-full border border-gray-200">
                 <span className="text-lg" title="Chỉnh âm lượng">🔊</span>
                 <input type="range" min="0" max="1" step="0.05" defaultValue="1" onChange={(e) => { if(globalAudioRef.current) globalAudioRef.current.volume = parseFloat(e.target.value) }} className="w-32 accent-blue-500 cursor-pointer" />
-              </div>
-            )}
+             </div>
           </div>
         )}
 
@@ -897,7 +956,9 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
 
       {/* MAIN CONTENT */}
       <main className="flex-1 overflow-y-auto p-4 md:p-6 relative bg-[#f3f4f6]" onMouseUp={handleMouseUp} ref={mainScrollRef as any}>
-        <div className={`${hasAnySplitPane ? 'max-w-[1400px] w-full' : 'max-w-[850px] w-full'} mx-auto space-y-10 transition-all duration-300`} onClick={handleContentClick} ref={containerRef as any}>
+        
+        {/* LOGIC THU HẸP/BUNG RỘNG MÀN HÌNH */}
+        <div className={`${hasAnySplitPane ? 'max-w-[1400px] w-full' : (isListening && !isReviewMode ? 'max-w-[850px] w-full' : 'max-w-[950px] w-full')} mx-auto space-y-10 transition-all duration-300`} onClick={handleContentClick} ref={containerRef as any}>
           
           {parts.map((part: any, pIndex: number) => {
             const hasPassage = part.content && part.content.trim().length > 0;
@@ -912,6 +973,16 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                 <div className="text-center mb-8 border-b-2 border-gray-800 pb-4">
                   <h2 className="font-bold text-2xl uppercase tracking-widest text-gray-800 font-sans">{part.title}</h2>
                 </div>
+                
+                {/* HIỂN THỊ AUDIO PLAYER THEO TỪNG PART NẾU LÀ REVIEW MODE (ĐÃ CHỮA BÀI) */}
+                {isListening && isReviewMode && part.audioUrl && (
+                  <div className="mb-8 bg-gray-50 p-4 rounded-lg border border-gray-200 flex flex-col sm:flex-row sm:items-center gap-4">
+                     <div className="flex items-center gap-2 text-blue-800 font-bold uppercase tracking-wider text-[13px] shrink-0">
+                         <span className="text-xl">🎧</span> Audio {part.title}
+                     </div>
+                     <audio controls src={part.audioUrl} className="h-10 flex-1 outline-none w-full" />
+                  </div>
+                )}
 
                 <div className={`flex flex-col ${enableSplitPane ? 'lg:flex-row' : ''} items-stretch gap-0`}>
                   
@@ -1135,7 +1206,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                     {isSelected && (
                                                       // NÉT BÚT MỰC XANH COBAN CHO TRẮC NGHIỆM
                                                       <svg viewBox="0 0 24 24" overflow="visible" className={`w-[18px] h-[18px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-700'}`} style={{ filter: 'drop-shadow(0.5px 0.5px 0px rgba(0,0,0,0.1))', transform: 'translate(1.5px, -1.5px)' }}>
-                                                        <path d="M4 12.5 Q7.5 15.5 9 18.5 Q14 8 22 3.5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                                        <path d="M5 14 C7 14, 9 17, 10 19 C13 11, 17 5, 23 3" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                                       </svg>
                                                     )}
                                                   </div>
@@ -1398,7 +1469,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                     );
                                                 })}
                                              </div>
-                                             <div className="text-[16px] leading-relaxed text-gray-800 cursor-pointer w-full font-serif format-passage html-content-renderer">{renderHtmlWithHoles(qText, {})}</div>
+                                             <div className="text-[16px] leading-relaxed text-gray-800 cursor-pointer w-full font-serif format-passage html-content-renderer" dangerouslySetInnerHTML={{ __html: qText }} />
                                            </div>
 
                                            <div className={`flex flex-col gap-3 ml-[3.5rem]`}>
@@ -1445,7 +1516,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                        {isSelected && (
                                                          // NÉT BÚT MỰC XANH COBAN CHO CHECKBOX
                                                          <svg viewBox="0 0 24 24" overflow="visible" className={`w-[18px] h-[18px] absolute pointer-events-none ${isReviewMode ? (isCorrectOpt ? 'text-emerald-600' : 'text-red-600') : 'text-blue-700'}`} style={{ filter: 'drop-shadow(0.5px 0.5px 0px rgba(0,0,0,0.1))', transform: 'translate(1.5px, -1.5px)' }}>
-                                                           <path d="M4 12.5 Q7.5 15.5 9 18.5 Q14 8 22 3.5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                                                           <path d="M5 14 C7 14, 9 17, 10 19 C13 11, 17 5, 23 3" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                                                          </svg>
                                                        )}
                                                      </div>
@@ -1464,7 +1535,7 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
                                                     return (
                                                         <div key={q.id} className="text-[14px] text-gray-600 italic leading-relaxed mb-3 last:mb-0 font-serif format-passage html-content-renderer">
                                                             <span className="font-bold text-white px-2 py-0.5 bg-gray-600 rounded text-[11px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
-                                                            {renderHtmlWithHoles(q.explanation, {})}
+                                                            <span dangerouslySetInnerHTML={{ __html: q.explanation }} />
                                                         </div>
                                                     )
                                                 })}

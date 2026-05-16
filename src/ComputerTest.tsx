@@ -4,7 +4,22 @@ import './tailwind.css';
 
 const UserIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" /></svg>;
 const SettingsIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 00-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 00-2.282.819l-.922 1.597a1.875 1.875 0 00.432 2.385l.84.692c.097.078.15.222.15.399v.111c0 .177-.053.321-.15.399l-.84.692a1.875 1.875 0 00-.432 2.385l.922 1.597a1.875 1.875 0 002.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 002.28-.819l.923-1.597a1.875 1.875 0 00-.432-2.385l-.84-.692c-.098-.078-.15-.222-.15-.399v-.111c0-.177.052-.321.15-.399l.84-.692a1.875 1.875 0 00.432-2.385l-.923-1.597a1.875 1.875 0 00-2.28-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 00-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 00-1.85-1.567h-1.843zM12 15.75a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5z" clipRule="evenodd" /></svg>;
+const FullscreenIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>;
+const ExitFullscreenIcon = () => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>;
+
 const stripHtmlRegex = /[<][^>]*[>]/g;
+
+// TỰ ĐỘNG XÓA BỎ CÁC THUỘC TÍNH HEIGHT/OVERFLOW GÂY LỖI THANH CUỘN (KHÔNG ĐỤNG TỚI THẺ KHÁC)
+const cleanHtmlContent = (html: any) => {
+  if (!html) return '';
+  return String(html).replace(/style\s*=\s*(['"])(.*?)\1/gi, (match, quote, styleContent) => {
+      let newStyle = styleContent
+          .replace(/(?:^|;)\s*(max-height|min-height|height|overflow|overflow-y|overflow-x)\s*:[^;]+/gi, '')
+          .replace(/^;+|;+$/g, '')
+          .trim();
+      return newStyle ? `style=${quote}${newStyle}${quote}` : '';
+  });
+};
 
 const isRealContent = (htmlContent: any) => {
   const str = String(htmlContent || '');
@@ -36,29 +51,33 @@ const buildCheckboxCombos = (questions: any[]) => {
   return combos;
 };
 
-// ĐÃ SỬA VÀ BỔ SUNG LOGIC CHẤM ĐIỂM CÓ NGOẶC ĐƠN TẠI ĐÂY
+// NÂNG CẤP HÀM CHẤM ĐIỂM HOÀN HẢO CHO MỌI BIẾN THỂ KÉO THẢ
 const isAnswerCorrect = (userAns: string, correctAns: string) => {
   if (!userAns || !correctAns) return false;
-  // Chuẩn hóa khoảng trắng để tránh lỗi nhập thừa dấu cách
+  // Chuẩn hóa khoảng trắng
   const u = String(userAns).trim().toUpperCase().replace(/\s+/g, ' ');
   const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '));
   
   for (const c of cArr) {
     if (u === c) return true;
-    const uMatch = u.match(/^([A-Z])[\.\):]/);
-    if (uMatch && uMatch[1] === c) return true;
-    const cMatch = c.match(/^([A-Z])[\.\):]/);
-    if (cMatch && u === cMatch[1]) return true;
+    
+    const uMatch = u.match(/^([A-Z])[\.\):]\s*(.*)$/);
+    if (uMatch) {
+      if (uMatch[1] === c) return true;
+      if (uMatch[2] === c) return true;
+    }
+    
+    const cMatch = c.match(/^([A-Z])[\.\):]\s*(.*)$/);
+    if (cMatch) {
+      if (u === cMatch[1]) return true;
+      if (u === cMatch[2]) return true;
+    }
 
-    // Xử lý đáp án có chứa ngoặc đơn ()
     if (c.includes('(') && c.includes(')')) {
-      // TH1: Bỏ đi hoàn toàn cụm trong ngoặc
       const withoutParens = c.replace(/\(.*?\)/g, '').replace(/\s+/g, ' ').trim();
-      // TH2: Giữ nguyên từ trong ngoặc nhưng bỏ dấu ()
       const withParensContent = c.replace(/[\(\)]/g, '').replace(/\s+/g, ' ').trim();
-      if (u === withoutParens || u === withParensContent) {
-        return true;
-      }
+      if (u === withoutParens || u === withParensContent) return true;
+      if (uMatch && (uMatch[2] === withoutParens || uMatch[2] === withParensContent)) return true;
     }
   }
   return false;
@@ -71,6 +90,9 @@ const parseStyle = (styleStr: string) => {
     const match = s.match(/^\s*([\w-]+)\s*:\s*(.+)\s*$/);
     if (match) {
       const [, key, val] = match;
+      const lowerKey = key.toLowerCase();
+      // Ngăn chặn parse các thuộc tính gây lỗi scrollbar từ inline HTML
+      if (['height', 'max-height', 'min-height', 'overflow', 'overflow-y', 'overflow-x'].includes(lowerKey)) return;
       const camelKey = key.replace(/-([a-z])/g, g => g[1].toUpperCase());
       style[camelKey] = val;
     }
@@ -90,7 +112,43 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const parts = Array.isArray(contentJSON.parts) ? contentJSON.parts : []; 
   
   const isListening = basicInfo.skill?.toLowerCase().includes('listening') || String(safeTestData?.test_type || '').toLowerCase().includes('listening');
-  const globalAudio = basicInfo.audioUrl || parts?.[0]?.audioUrl;
+  
+  const audioPlaylist = useMemo(() => {
+      if (basicInfo.audioUrl) return [basicInfo.audioUrl];
+      return parts.map((p: any) => p.audioUrl).filter(Boolean);
+  }, [basicInfo.audioUrl, parts]);
+  
+  const [currentAudioIndex, setCurrentAudioIndex] = useState(0);
+
+  const globalAudio = audioPlaylist[currentAudioIndex] || '';
+
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(err => console.error(err));
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  };
+
+  const handleExit = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+    onBack();
+  };
+
   const [testStarted, setTestStarted] = useState(false);
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [scoreResult, setScoreResult] = useState({ score: 0, total: 0, band: "0.0" });
@@ -106,6 +164,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   const [reviewFlags, setReviewFlags] = useState<Record<string, boolean>>({});
   const [activeQuestionId, setActiveQuestionId] = useState<string>('');
   const [draggedOption, setDraggedOption] = useState<string | null>(null);
+
+  useEffect(() => {
+      if (testStarted && !isReviewMode && isListening && globalAudioRef.current && audioPlaylist[currentAudioIndex]) {
+          setTimeout(() => {
+             globalAudioRef.current?.play().catch(e => console.log("Auto-play next track blocked", e));
+          }, 100);
+      }
+  }, [currentAudioIndex, testStarted, isReviewMode, isListening, audioPlaylist]);
 
   useEffect(() => {
     if (!isReviewMode && !isFinishingRef.current && safeTestData?.id) {
@@ -177,7 +243,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               const userAnsComboSet = new Set(comboIds.map(id => answers[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
               const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
               
-   
               let comboPoints = 0;
               userAnsComboSet.forEach(ans => {
                 let isMatched = false;
@@ -234,7 +299,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             test_type: safeTestData?.test_type || 'IELTS Computer',
             score: score, 
             total_score: total, 
-     
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
             details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, questionTypeStats: questionTypeStats }
           }]);
@@ -243,6 +307,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         console.error("Lỗi lưu kết quả thi:", error);
       }
     } else {
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+      }
       if (onFinish) {
         onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title, bandScore: scoreResult.band });
       } else {
@@ -291,7 +358,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                  const num = m.replace(/\D/g, '').trim(); 
                  if (!ids.includes(num)) {
                     ids.push(num); 
-             
                     partMap[num] = pIndex;
                     const qInSec = (s.questions || []).find((qq:any) => String(qq.id) === num);
                     dataMap[num] = { qType: s.questionType, options: qInSec?.options || s.questions?.[0]?.options || [] };
@@ -345,7 +411,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
             setTimeLeft(remaining);
             if (remaining <= 0) {
-           
               clearInterval(timer);
                 alert("⏰ Hết giờ!");
                 handleFinish();
@@ -355,14 +420,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         }
     }, 1000);
     return () => clearInterval(timer);
- 
   }, [testStarted, isReviewMode]);
 
   const formatTime = (seconds: number) => { 
       return `${Math.floor(seconds / 60).toString().padStart(2, '0')}:${(seconds % 60).toString().padStart(2, '0')}`;
   };
 
-  // Tools: Copy, Highlight, Notes, Clear Highlight
   const [highlightMenu, setHighlightMenu] = useState<{ x: number, y: number, show: boolean, isClear?: boolean, targetNode?: HTMLElement | null }>({ x: 0, y: 0, show: false, isClear: false, targetNode: null });
   const [currentRange, setCurrentRange] = useState<Range | null>(null);
   const [stickyNote, setStickyNote] = useState({ show: false, id: '', text: '', x: 0, y: 0 });
@@ -388,13 +451,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const handleContentClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
-    // Click on Note
     if (target.tagName === 'SPAN' && target.dataset.noteId) { 
         const rect = target.getBoundingClientRect();
         setStickyNote({ show: true, id: target.dataset.noteId, text: target.dataset.noteText || '', x: rect.left, y: rect.bottom + 10 });
         setHighlightMenu(prev => ({ ...prev, show: false }));
     }
-    // Click on Highlight (to clear)
     else if (target.tagName === 'SPAN' && target.classList.contains('bg-yellow-300') && !target.dataset.noteId) {
         const rect = target.getBoundingClientRect();
         setHighlightMenu({ x: rect.left + rect.width / 2, y: rect.top - 10, show: true, isClear: true, targetNode: target });
@@ -428,7 +489,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           }
           parent.removeChild(highlightMenu.targetNode);
           parent.normalize();
-          // Merge text nodes back together
       }
       setHighlightMenu({ ...highlightMenu, show: false, isClear: false, targetNode: null });
   };
@@ -451,7 +511,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
-  // Resize Left/Right Column
   const [leftWidth, setLeftWidth] = useState(50);
   const containerRef = useRef<HTMLElement>(null);
   const isDragging = useRef(false);
@@ -484,9 +543,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       }; 
   }, []);
 
-  // ==============================================================================
-  // AUTO SCROLL KHI KÉO THẢ (DRAG & DROP)
-  // ==============================================================================
   const rightPaneRef = useRef<HTMLElement>(null);
   const scrollRafRef = useRef<number | null>(null);
   const autoScrollSpeed = useRef<number>(0);
@@ -517,28 +573,24 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       if (!draggedOption || !rightPaneRef.current) return;
       const container = rightPaneRef.current;
       const rect = container.getBoundingClientRect();
-      const threshold = 120; // Kích hoạt cuộn khi chuột cách viền trên/dưới 120px
+      const threshold = 120; 
       
       const y = e.clientY;
       const x = e.clientX;
 
-      // Nếu chuột kéo ra khỏi khu vực cột phải (văng vào cột trái) -> Dừng cuộn
       if (x < rect.left || x > rect.right || y < rect.top || y > rect.bottom) {
         stopAutoScroll();
         return;
       }
 
-      // Chuột sát mép trên -> Tự động cuộn lên
       if (y >= rect.top && y < rect.top + threshold) {
         autoScrollSpeed.current = -25 * (1 - (y - rect.top) / threshold) - 2;
         startAutoScroll();
       } 
-      // Chuột sát mép dưới -> Tự động cuộn xuống
       else if (y <= rect.bottom && y > rect.bottom - threshold) {
         autoScrollSpeed.current = 25 * (1 - (rect.bottom - y) / threshold) + 2;
         startAutoScroll();
       } 
-      // Chuột lơ lửng ở giữa vùng an toàn -> Dừng cuộn
       else {
         stopAutoScroll();
       }
@@ -563,9 +615,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   const onDrop = (qId: string) => {
     stopAutoScroll();
-    // Chốt lại dừng cuộn ngay khi người dùng thả rơi đáp án
     if (isReviewMode || !draggedOption) return;
-    handleAnswer(qId, draggedOption);
+    
+    const match = draggedOption.match(/^([A-Z])[\.\):]\s/);
+    const valueToSave = match ? match[1].toUpperCase() : draggedOption;
+    
+    handleAnswer(qId, valueToSave);
     setDraggedOption(null);
   };
 
@@ -588,20 +643,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
-  // ==============================================================================
-  // RENDER HTML CHỨA ĐỤC LỖ (HOLES) CHUNG CHO ĐIỀN TỪ, DROPLIST VÀ KÉO THẢ
-  // ==============================================================================
   const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
     if (!htmlStr) return null;
     const safeText = String(htmlStr);
 
     if (typeof window === 'undefined') {
-        return <span className="html-content-renderer" dangerouslySetInnerHTML={{ __html: safeText }} />;
+        return <span className="html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeText) }} />;
     }
 
     const processedHtml = safeText.replace(/\[\s*(\d+)\s*\]/g, '<hole data-id="$1"></hole>');
+    const cleanProcessedHtml = cleanHtmlContent(processedHtml);
     const parser = new DOMParser();
-    const doc = parser.parseFromString(processedHtml, 'text/html');
+    const doc = parser.parseFromString(cleanProcessedHtml, 'text/html');
     const sectionQIds = (sec?.questions || []).map((q:any) => String(q.id));
     const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
 
@@ -619,15 +672,33 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             const displayIndex = questionIndexMap[qNum] || qNum;
             const qInfo = questionDataMap[qNum] || { qType: sec?.questionType || 'Điền từ', options: [] };
             
-            // TRẠNG THÁI REVIEW
+            // TRẠNG THÁI REVIEW PHỤC HỒI NGUYÊN GỐC (GIỮ NGUYÊN CSS)
             if (isReviewMode) {
               const qData = parts.flatMap((p: any) => Array.isArray(p?.sections) ? p.sections.flatMap((s: any) => s?.questions) : []).find((q: any) => String(q?.id) === String(qNum));
               const correctAns = String(qData?.correctAnswer || '');
               const isCorrect = isAnswerCorrect(userAns, correctAns);
+
+              let displayUserAnsForReview = userAns;
+              if (["Kéo thả", "Kéo thả vào Part", "Matching"].includes(sec.questionType)) {
+                  let allOpts: string[] = [];
+                  (sec?.questions || []).forEach((q: any) => {
+                      (q.options || []).forEach((o: any) => {
+                          const cOpt = String(o).replace(stripHtmlRegex, '').trim();
+                          if (cOpt && !allOpts.includes(cOpt)) allOpts.push(cOpt);
+                      });
+                  });
+                  if (userAns && /^[A-Z]$/i.test(userAns)) {
+                      const oIdx = userAns.toUpperCase().charCodeAt(0) - 65;
+                      if (allOpts[oIdx]) displayUserAnsForReview = allOpts[oIdx].replace(/^[A-Z][\.\):]\s*/i, '');
+                  } else if (userAns) {
+                      displayUserAnsForReview = userAns.replace(/^[A-Z][\.\):]\s*/i, '');
+                  }
+              }
+
               return (
                 <span key={pathKey} className="relative inline-flex items-center align-middle mx-1 -translate-y-[2px] whitespace-nowrap" style={{ textIndent: 0 }}>
                   <span className={`shrink-0 inline-flex items-center justify-center leading-none px-3 py-1 text-[14px] font-bold text-white rounded-none border border-black ${isCorrect ? 'bg-emerald-600' : 'bg-red-600'}`} style={{ color: '#ffffff', textIndent: 0 }}>
-                    {displayIndex}. {userAns || '(trống)'}
+                    {displayIndex}. {displayUserAnsForReview || '(trống)'}
                   </span>
                   {!isCorrect && (
                     <span className="absolute top-full left-0 mt-1 text-[12px] text-white font-bold bg-slate-800 px-2 py-1 rounded-none whitespace-nowrap z-10" style={{ color: '#ffffff', textIndent: 0 }}>
@@ -638,9 +709,23 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               );
             }
 
-            // GIAO DIỆN KÉO THẢ INLINE BRUTALIST
+            // GIAO DIỆN KÉO THẢ INLINE BRUTALIST (NGUYÊN GỐC)
             if (["Kéo thả", "Kéo thả vào Part", "Matching"].includes(sec.questionType)) {
-                const displayUserAns = userAns ? userAns.replace(/^[A-Z][\.\):]\s*/i, '') : '';
+                let allOpts: string[] = [];
+                (sec?.questions || []).forEach((q: any) => {
+                    (q.options || []).forEach((o: any) => {
+                        const cOpt = String(o).replace(stripHtmlRegex, '').trim();
+                        if (cOpt && !allOpts.includes(cOpt)) allOpts.push(cOpt);
+                    });
+                });
+                let displayUserAns = userAns;
+                if (userAns && /^[A-Z]$/i.test(userAns)) {
+                    const oIdx = userAns.toUpperCase().charCodeAt(0) - 65;
+                    if (allOpts[oIdx]) displayUserAns = allOpts[oIdx].replace(/^[A-Z][\.\):]\s*/i, '');
+                } else if (userAns) {
+                    displayUserAns = userAns.replace(/^[A-Z][\.\):]\s*/i, '');
+                }
+
                 return (
                     <span 
                       key={pathKey} 
@@ -662,7 +747,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 );
             }
 
-            // GIAO DIỆN DROPLIST INLINE
+            // GIAO DIỆN DROPLIST INLINE (NGUYÊN GỐC)
             if (qInfo.qType === 'Droplist' || sec.questionType === "Droplist") {
                const rawOptions = (qInfo.options && qInfo.options.length > 0) ? qInfo.options : (sec.questions?.[0]?.options || []);
                const validOptions = rawOptions.filter(Boolean);
@@ -694,7 +779,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                );
             }
 
-            // GIAO DIỆN ĐIỀN TỪ INLINE
+            // GIAO DIỆN ĐIỀN TỪ INLINE PHỤC HỒI NGUYÊN GỐC CỦA ANH
             return (
               <span key={pathKey} id={`q-${qNum}`} onClick={(e) => { e.stopPropagation(); setActiveQuestionId(String(qNum)); }} className="inline-flex items-center align-middle mx-1 my-1 whitespace-nowrap shadow-sm" style={{ textIndent: 0 }}>
                 <span className={`shrink-0 inline-flex items-center justify-center leading-none text-white font-bold px-2 min-w-[30px] h-[30px] text-[14px] rounded-none border border-slate-800 border-r-0 ${activeQuestionId === String(qNum) ? 'bg-slate-900' : 'bg-slate-800'}`} style={{ color: '#ffffff', textIndent: 0 }}>
@@ -717,7 +802,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
         const props: any = { key: pathKey };
         Array.from(el.attributes).forEach(attr => {
           if (attr.name === 'class') props.className = attr.value;
-          else if (attr.name === 'style') props.style = parseStyle(attr.value);
+          else if (attr.name === 'style') {
+             props.style = parseStyle(attr.value);
+          }
           else if (attr.name === 'for') props.htmlFor = attr.value;
           else if (attr.name.startsWith('data-') || attr.name.startsWith('aria-')) props[attr.name] = attr.value;
           else {
@@ -773,22 +860,34 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           }
           .format-passage p { margin-bottom: 1.25rem !important; }
           .format-passage p:last-child { margin-bottom: 0 !important; }
-          .format-passage br { display: block; content: ""; margin-bottom: 0.5rem; }
           
-          /* --- BỔ SUNG CSS TRỊ LIST VÀ KHOẢNG CÁCH DÃN DÒNG --- */
+          /* --- MÁY HÚT BỤI KHOẢNG TRẮNG --- */
+          .format-passage p:empty, .html-content-renderer p:empty {
+              display: none !important;
+          }
+          .format-passage p > br:only-child, .html-content-renderer p > br:only-child {
+              display: none !important;
+          }
+          .format-passage br, .html-content-renderer br {
+              display: inline !important; 
+              content: normal !important; 
+              margin: 0 !important; 
+          }
+          
+          /* --- LISTS --- */
           .format-passage ul {
               list-style-type: disc;
               padding-left: 1.5rem;
               margin-bottom: 1.25rem;
           }
           .format-passage ul ul {
-              list-style-type: circle; /* Level 2 là hình tròn rỗng */
+              list-style-type: circle;
               margin-top: 0.5rem;
               margin-bottom: 0;
               padding-left: 1.5rem;
           }
           .format-passage ul ul ul {
-              list-style-type: square; /* Level 3 là hình vuông */
+              list-style-type: square;
           }
           .format-passage ol {
               list-style-type: decimal;
@@ -797,7 +896,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           }
           .format-passage li {
               margin-bottom: 0.5rem;
-              /* Khoảng cách giữa các dòng bullet vừa phải */
           }
           
           /* Ép thẻ <p> nằm trong <li> không được tạo margin to tướng */
@@ -807,19 +905,16 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           }
 
           /* --- FIX KHOẢNG CÁCH TIÊU ĐỀ BỊ XA BULLET POINT --- */
-          /* Nếu một đoạn văn <p> nằm ngay sát trên một danh sách <ul>, ép thu nhỏ lề dưới của đoạn văn đó lại */
           .format-passage p:has(+ ul),
           .html-content-renderer p:has(+ ul) {
               margin-bottom: 0.25rem !important; 
           }
           
-          /* Kéo danh sách lên sát tiêu đề */
           .format-passage p + ul,
           .html-content-renderer p + ul {
               margin-top: 0 !important; 
           }
           
-          /* Dự phòng an toàn cho các trình duyệt cũ */
           @supports not selector(:has(+ ul)) {
               .format-passage p + ul,
               .html-content-renderer p + ul {
@@ -827,7 +922,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               }
           }
 
-          /* --- CSS ĐỊNH DẠNG BẢNG (TABLE) CHUẨN IDP --- */
+          /* --- TABLE CHUẨN IDP --- */
           .format-passage table, .html-content-renderer table { 
               width: 100% !important;
               min-width: 600px; 
@@ -840,9 +935,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               border: 1px solid #444 !important;
               padding: 12px 16px !important; 
               vertical-align: top !important; 
-              
-              /* BỎ DÒNG text-align: left !important; ĐI ĐỂ TÔN TRỌNG ĐỊNH DẠNG CỦA EDITOR */
-              
               white-space: normal !important;
               word-break: break-word !important;
           }
@@ -854,12 +946,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           
           /* ÉP XÓA FONT RÁC TỪ EXCEL, TRẢ VỀ FONT MẶC ĐỊNH CỦA ĐỀ THI */
           .format-passage table *, .html-content-renderer table * {
-            /* font-family: inherit !important; */ 
-              /* font-size: inherit !important;  <--- ANH XÓA HOẶC COMMENT DÒNG NÀY LẠI */
+              font-family: inherit !important;
               line-height: 1.6 !important;
           }
           
-          /* Ngăn khoảng trống thừa nếu Excel copy theo thẻ <p> */
           .format-passage table p, .html-content-renderer table p {
               margin: 0 !important;
               display: inline-block !important;
@@ -902,15 +992,25 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               width: 80% !important;
               height: auto !important;
               display: block !important;
-              margin-left: auto !important;  /* Ép căn giữa tuyệt đối */
-              margin-right: auto !important; /* Ép căn giữa tuyệt đối */
+              margin-left: auto !important;
+              margin-right: auto !important;
               margin-top: 1.5rem !important;
               margin-bottom: 1.5rem !important;
           }
       `}</style>
 
       {isListening && globalAudio && !isReviewMode && ( 
-          <audio ref={globalAudioRef} src={globalAudio} preload="auto" className="hidden" /> 
+          <audio 
+             ref={globalAudioRef} 
+             src={globalAudio} 
+             preload="auto" 
+             className="hidden" 
+             onEnded={() => {
+                if (currentAudioIndex < audioPlaylist.length - 1) {
+                   setCurrentAudioIndex(prev => prev + 1);
+                }
+             }}
+          /> 
       )}
 
       {!testStarted ? (
@@ -933,7 +1033,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               </div>
             )}
             <div className="flex gap-4 justify-center">
-              <button onClick={onBack} className="px-6 py-2.5 rounded-none font-bold text-slate-700 hover:bg-slate-200 border border-slate-400 transition text-[14px]">Quay lại</button>
+              <button onClick={handleExit} className="px-6 py-2.5 rounded-none font-bold text-slate-700 hover:bg-slate-200 border border-slate-400 transition text-[14px]">Quay lại</button>
               <button onClick={handleStartTest} className="bg-slate-800 hover:bg-black text-white font-bold px-8 py-2.5 rounded-none transition text-[14px]">Bắt Đầu Làm Bài</button>
             </div>
           </div>
@@ -941,22 +1041,20 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       ) : (
         <div className="flex flex-col h-screen bg-[#eeeeee] font-sans text-slate-900 relative">
           
-          {/* Menu Copy & Highlight / Clear Highlight */}
           {highlightMenu.show && !isReviewMode && (
             <div style={{ left: highlightMenu.x, top: highlightMenu.y, transform: 'translate(-50%, -100%)' }} className="fixed z-50 bg-white text-slate-900 rounded-none shadow-md border border-slate-400 text-[13px] flex flex-col py-1 min-w-[130px]" onMouseDown={(e) => e.preventDefault()}>
               {highlightMenu.isClear ? (
                  <button onClick={clearHighlight} className="flex items-center gap-3 px-4 py-2 hover:bg-red-50 text-left w-full text-red-600 border-b border-transparent"><span className="font-bold">Clear Highlight</span></button>
               ) : (
-                 <>
+                 <React.Fragment>
                    <button onClick={handleCopy} className="flex items-center gap-3 px-4 py-2 hover:bg-slate-200 text-left w-full"><span className="font-bold">Copy</span></button>
                    <button onClick={applyHighlight} className="flex items-center gap-3 px-4 py-2 hover:bg-slate-200 text-left w-full"><span className="font-bold">Highlight</span></button>
                    <button onClick={initNote} className="flex items-center gap-3 px-4 py-2 hover:bg-slate-200 text-left w-full"><span className="font-bold">Note</span></button>
-                 </>
+                 </React.Fragment>
               )}
             </div>
           )}
 
-          {/* Hộp Sticky Note */}
           {stickyNote.show && (
             <div style={{ left: Math.min(stickyNote.x, window.innerWidth - 300), top: stickyNote.y }} className="fixed z-50 flex flex-col shadow-md rounded-none border border-slate-500 w-72">
               <div className="bg-amber-100 h-8 flex justify-between items-center px-3 cursor-move border-b border-amber-300">
@@ -979,7 +1077,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             </div>
           )}
 
-          {/* HEADER BRUTALISM */}
           <header className={`h-[46px] ${isReviewMode ? 'bg-emerald-800' : 'bg-[#222222]'} text-white flex justify-between items-center px-4 z-20 shrink-0 border-b border-slate-700 relative`}>
             <div className="flex items-center gap-2">
               <UserIcon />
@@ -1002,7 +1099,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                {!isReviewMode && <button onClick={clearDraft} className="text-[12px] text-slate-300 hover:text-white font-bold transition mr-2 hidden sm:block">Clear Draft</button>}
                
                {isReviewMode ? (
-                  <button onClick={resetTest} className="text-[12px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white">Retake Test</button>
+                  <div className="flex items-center gap-4">
+                     <button onClick={toggleFullscreen} className="hover:text-white text-slate-300 transition" title="Toàn màn hình">
+                        {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
+                     </button>
+                     <button onClick={resetTest} className="text-[12px] font-bold border border-white px-3 py-1 rounded-none hover:bg-white/10 transition text-white">Retake Test</button>
+                  </div>
                ) : (
                   <div className="flex items-center gap-4">
                      {isListening && globalAudio && (
@@ -1011,7 +1113,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                          <input type="range" min="0" max="1" step="0.05" defaultValue="1" onChange={(e) => { if(globalAudioRef.current) globalAudioRef.current.volume = parseFloat(e.target.value) }} className="w-20 h-1 accent-white cursor-pointer" />
                        </div>
                      )}
-                     <button onClick={onBack} className="hover:text-white text-slate-300 transition text-[13px] font-bold tracking-wide">Exit</button>
+                     <button onClick={toggleFullscreen} className="hover:text-white text-slate-300 transition" title="Toàn màn hình">
+                        {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
+                     </button>
+                     <button onClick={handleExit} className="hover:text-white text-slate-300 transition text-[13px] font-bold tracking-wide">Exit</button>
                      <button className="hover:text-white text-slate-300 transition" title="Settings">
                         <SettingsIcon />
                      </button>
@@ -1037,14 +1142,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
           <main className="flex flex-1 overflow-hidden relative" ref={containerRef} onMouseUp={handleMouseUp} onClick={handleContentClick}>
             
-            {/* CỘT TRÁI (BÀI ĐỌC) */}
             {showLeftColumn && (
-              <>
+              <React.Fragment>
                 <section className="p-8 md:p-10 overflow-y-auto custom-scrollbar relative bg-white" ref={leftPaneRef as any} style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
                   {currentPart?.content ? (
-                    <div className="format-passage html-content-renderer max-w-none text-[16px] leading-[1.8] text-black break-words font-serif selection:bg-yellow-200">
+                    <div className={`format-passage html-content-renderer max-w-none text-[16px] text-black break-words font-serif selection:bg-yellow-200 ${isReviewMode ? 'leading-[2.8]' : 'leading-[1.8]'}`}>
                       {isReviewMode && isListening && <div className="bg-slate-200 text-black p-4 rounded-none font-bold text-[14px] mb-6 border border-slate-400">🎙️ TAPESCRIPT CHỮA BÀI NẰM Ở ĐÂY ➔</div>}
-                      <div dangerouslySetInnerHTML={{ __html: currentPart?.content || "" }} />
+                      <div dangerouslySetInnerHTML={{ __html: cleanHtmlContent(currentPart?.content || "") }} />
                     </div>
                   ) : (
                     <div className="flex flex-col items-center justify-center h-full text-slate-400 opacity-70">
@@ -1055,7 +1159,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   <div className="h-[200px]" />
                 </section>
                 
-                {/* Vùng kéo dãn Brutalist thân thiện */}
                 <div className="w-4 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex flex-col justify-center items-center z-10 shrink-0 transition-colors" onMouseDown={startDrag}>
                    <div className="flex flex-col gap-1.5 opacity-40">
                       <div className="w-1 h-1 bg-black"></div>
@@ -1064,10 +1167,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       <div className="w-1 h-1 bg-black"></div>
                    </div>
                 </div>
-              </>
+              </React.Fragment>
             )}
 
-            {/* CỘT PHẢI (CÂU HỎI) - NƠI GẮN REF ĐỂ AUTO-SCROLL */}
             <section 
               ref={rightPaneRef as any}
               className={`p-8 md:p-10 overflow-y-auto custom-scrollbar html-content-renderer ${isReviewMode ? 'bg-[#f4f4f4]' : 'bg-[#f4f4f4]'}`} 
@@ -1110,10 +1212,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       {sec.title && <h3 className="font-bold text-[17px] mb-3 text-black">{sec.title}</h3>}
                       
                       {shouldRenderGlobalSecContent && (
-                          <div className="mb-6 text-[15px] font-bold text-black bg-white p-4 rounded-none border border-slate-400 html-content-renderer" dangerouslySetInnerHTML={{ __html: sec.content }} />
+                          <div className="mb-6 text-[15px] font-bold text-black bg-white p-4 rounded-none border border-slate-400 html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content) }} />
                       )}
                       
-                      {/* DẠNG ĐIỀN TỪ & DROPLIST INLINE */}
                       {(sec.questionType === "Điền từ" || isInlineDroplist) && (
                         <div className={`p-8 bg-white border border-slate-400 rounded-none`}>
                            {(() => {
@@ -1131,9 +1232,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                               }
 
                               return (
-                                  <>
-                                      <div className="format-passage leading-[2.0] text-[16px] text-black break-words font-serif html-content-renderer">
-                                          {renderHtmlWithHoles(mainContent, sec)}
+                                  <React.Fragment>
+                                      {/* TĂNG GIÃN DÒNG TRONG REVIEW MODE ĐỂ KHÔNG BỊ ĐÈ CHỮ */}
+                                      <div className={`format-passage text-[16px] text-black break-words font-serif html-content-renderer ${isReviewMode ? 'leading-[3.0] pb-6' : 'leading-[2.0]'}`}>
+                                          {renderHtmlWithHoles(cleanHtmlContent(mainContent), sec)}
                                       </div>
                                       {wordBankItems.length > 0 && (
                                           <div className="mt-8 p-5 bg-[#f4f4f4] border border-slate-400 rounded-none">
@@ -1142,19 +1244,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                   {wordBankItems.map((item, idx) => {
                                                       const text = item.replace(stripHtmlRegex, '').trim();
                                                       return text ? (
-                                                          <div key={idx} className="px-4 py-2 bg-white border border-slate-400 rounded-none font-bold text-black min-w-[100px] flex items-center html-content-renderer" dangerouslySetInnerHTML={{ __html: text }} />
+                                                          <div key={idx} className="px-4 py-2 bg-white border border-slate-400 rounded-none font-bold text-black min-w-[100px] flex items-center html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(text) }} />
                                                       ) : null;
                                                   })}
                                               </div>
                                           </div>
                                       )}
-                                  </>
+                                  </React.Fragment>
                               );
                            })()}
                         </div>
                       )}
                       
-                      {/* DẠNG TRẮC NGHIỆM & TRUE/FALSE/NOT GIVEN */}
                       {(sec.questionType === "Trắc nghiệm" || sec.questionType === "TFNG") && (
                          <div className="space-y-6">
                            {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
@@ -1173,7 +1274,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                        <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                          {displayIdx}
                                        </span>
-                                       <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                       <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
                                      </div>
                                      <div className={`flex flex-row flex-wrap gap-4 sm:gap-6 ml-11`}>
                                        {validOptions.map((opt: any, i: number) => {
@@ -1192,14 +1293,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                          return (
                                            <label key={i} className={labelClass}>
                                              <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="w-[18px] h-[18px] accent-black cursor-pointer" disabled={isReviewMode} />
-                                             <span className="text-[15px] font-bold text-black html-content-renderer" dangerouslySetInnerHTML={{ __html: safeOpt }} />
+                                             <span className="text-[15px] font-bold text-black html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} />
                                            </label>
-                                         )
+                                         );
                                        })}
                                      </div>
-                                     {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.explanation || 'Không có lời giải thích.' }} /></div>)}
+                                     {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} /></div>)}
                                    </div>
-                                  )
+                                  );
                               }
                               
                               return (
@@ -1208,7 +1309,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                    <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                      {displayIdx}
                                    </span>
-                                   <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                   <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
                                  </div>
                                  <div className={`flex flex-col gap-4 ml-11`}>
                                    {validOptions.map((opt: any, i: number) => {
@@ -1228,14 +1329,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                      return (
                                        <label key={i} className={labelClass}>
                                          <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="mt-1 w-[18px] h-[18px] accent-black shrink-0 cursor-pointer" disabled={isReviewMode} />
-                                         <span className="text-[15px] leading-[1.8] text-black font-serif html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
+                                         <span className="text-[15px] leading-[1.8] text-black font-serif html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} /></span>
                                        </label>
-                                     )
+                                     );
                                    })}
                                  </div>
-                                 {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.explanation || 'Không có lời giải thích.' }} /></div>)}
+                                 {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} /></div>)}
                                </div>
-                              )
+                              );
                            })}
                          </div>
                       )}
@@ -1263,7 +1364,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                        <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                          {displayIdx}
                                        </span>
-                                       <div className="text-[15px] font-bold text-black leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
+                                       <div className="text-[15px] font-bold text-black leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
                                      </div>
                                      <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0">
                                          {isReviewMode ? (
@@ -1293,69 +1394,84 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                          )}
                                       </div>
                                    </div>
-                                  )
-                                })
+                                  );
+                                });
                            })()}
                          </div>
                       )}
 
-                      {/* DẠNG KÉO THẢ & MATCHING (CÓ DRAG/DROP) */}
                       {(isInlineDragDrop || isBlockDragDrop) && (
                         <div className="bg-white p-8 rounded-none border border-slate-400">
                           {isInlineDragDrop ? (
-                            <div className="format-passage leading-[2.0] text-[16px] text-black font-serif html-content-renderer">
-                              {renderHtmlWithHoles(rawContentText, sec)}
+                            <div className={`format-passage text-[16px] text-black font-serif html-content-renderer ${isReviewMode ? 'leading-[3.0] pb-6' : 'leading-[2.0]'}`}>
+                              {renderHtmlWithHoles(cleanHtmlContent(rawContentText), sec)}
                             </div>
                           ) : (
                             <div className="space-y-4">
-                              {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
-                                if (!q?.id) return null;
-                                const userAns = String(answers[String(q.id)] || '');
-                                const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
-                                const isCorrect = isAnswerCorrect(userAns, correctAns);
-                                const displayIdx = questionIndexMap[String(q.id)] || q.id;
-                                
-                                const displayUserAns = userAns ? userAns.replace(/^[A-Z][\.\):]\s*/i, '') : '';
-                                return (
-                                  <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-5 rounded-none border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}>
-                                    <div className="flex items-center gap-4 flex-1">
-                                      <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
-                                        {displayIdx}
-                                      </span>
-                                      <div className="text-[15px] font-bold text-black leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: q.content }} />
-                                    </div>
-                                    <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0 sm:ml-4">
-                                      {isReviewMode ? (
-                                        <div className="flex items-center gap-2">
-                                            <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] border ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
-                                               {displayUserAns || '(trống)'}
-                                            </div>
-                                            {!isCorrect && <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap">ĐA: {correctAns}</div>}
-                                        </div>
-                                      ) : (
-                                        <span 
-                                          onDragOver={(e) => e.preventDefault()}
-                                          onDrop={() => onDrop(String(q.id))}
-                                          className={`inline-flex items-center align-middle min-w-[150px] h-[36px] border border-black rounded-none transition-all px-2 ${activeQuestionId === String(q.id) ? 'bg-slate-200' : 'bg-white'}`}
-                                        >
-                                          {userAns ? (
-                                            <div className="flex items-center justify-between w-full text-black text-[14px] font-bold py-1">
-                                              <span className="truncate">{displayUserAns}</span>
-                                              <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-600 text-[12px] font-black">✕</button>
-                                            </div>
-                                          ) : (
-                                            <span className="text-slate-400 text-[13px] italic w-full text-center">Thả vào đây</span>
-                                          )}
+                              {(() => {
+                                let allOpts: string[] = [];
+                                (sec?.questions || []).forEach((q: any) => {
+                                    (q.options || []).forEach((o: any) => {
+                                        const cOpt = String(o).replace(stripHtmlRegex, '').trim();
+                                        if (cOpt && !allOpts.includes(cOpt)) allOpts.push(cOpt);
+                                    });
+                                });
+
+                                return (Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
+                                  if (!q?.id) return null;
+                                  const userAns = String(answers[String(q.id)] || '');
+                                  const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
+                                  const isCorrect = isAnswerCorrect(userAns, correctAns);
+                                  const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                                  
+                                  let displayUserAns = userAns;
+                                  if (userAns && /^[A-Z]$/i.test(userAns)) {
+                                      const oIdx = userAns.toUpperCase().charCodeAt(0) - 65;
+                                      if (allOpts[oIdx]) displayUserAns = allOpts[oIdx].replace(/^[A-Z][\.\):]\s*/i, '');
+                                  } else if (userAns) {
+                                      displayUserAns = userAns.replace(/^[A-Z][\.\):]\s*/i, '');
+                                  }
+
+                                  return (
+                                    <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-5 rounded-none border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}>
+                                      <div className="flex items-center gap-4 flex-1">
+                                        <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
+                                          {displayIdx}
                                         </span>
-                                      )}
+                                        <div className="text-[15px] font-bold text-black leading-relaxed font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
+                                      </div>
+                                      <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0 sm:ml-4">
+                                        {isReviewMode ? (
+                                          <div className="flex items-center gap-2">
+                                              <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] border ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
+                                                 {displayUserAns || '(trống)'}
+                                              </div>
+                                              {!isCorrect && <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap">ĐA: {correctAns}</div>}
+                                          </div>
+                                        ) : (
+                                          <span 
+                                            onDragOver={(e) => e.preventDefault()}
+                                            onDrop={() => onDrop(String(q.id))}
+                                            className={`inline-flex items-center align-middle min-w-[150px] h-[36px] border border-black rounded-none transition-all px-2 ${activeQuestionId === String(q.id) ? 'bg-slate-200' : 'bg-white'}`}
+                                          >
+                                            {userAns ? (
+                                              <div className="flex items-center justify-between w-full text-black text-[14px] font-bold py-1">
+                                                <span className="truncate">{displayUserAns}</span>
+                                                <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-600 text-[12px] font-black">✕</button>
+                                              </div>
+                                            ) : (
+                                              <span className="text-slate-400 text-[13px] italic w-full text-center">Thả vào đây</span>
+                                            )}
+                                          </span>
+                                        )}
+                                      </div>
                                     </div>
-                                  </div>
-                                )
-                              })}
+                                  );
+                                });
+                              })()}
                             </div>
                           )}
 
-                          {/* KHO TỪ KÉO THẢ */}
                           {!isReviewMode && (
                             <div className="mt-10 p-6 bg-[#f4f4f4] border border-slate-400 rounded-none">
                                <p className="text-[13px] font-black text-black uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
@@ -1375,11 +1491,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                   
                                   const sectionQIds = (sec?.questions || []).map((q:any) => String(q.id));
                                   const selectedInSec = sectionQIds.map((id:string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
+                                  
                                   return allOptions.map((opt: string, oIdx: number) => {
                                     const prefix = `${String.fromCharCode(65 + oIdx)}. `;
                                     const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
                                     
-                                    const isUsed = selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
+                                    const optLetter = String.fromCharCode(65 + oIdx);
+                                    const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
+                                    
                                     return (
                                       <div
                                         key={oIdx}
@@ -1406,7 +1525,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                         </div>
                       )}
                       
-                      {/* DẠNG CHECKBOX GROUP */}
                       {sec.questionType === "Checkbox" && (
                          <div className="space-y-6">
                            {(() => {
@@ -1486,7 +1604,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                 );
                                             })}
                                          </div>
-                                         <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: qText }} />
+                                         <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-serif html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(qText) }} />
                                        </div>
 
                                        <div className={`flex flex-col gap-4 ml-[3.5rem]`}>
@@ -1510,9 +1628,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                            return (
                                              <label key={i} className={labelClass}>
                                                <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="mt-1 w-[18px] h-[18px] accent-black cursor-pointer rounded-none" disabled={isReviewMode} />
-                                               <span className="text-[15px] leading-[1.8] text-black font-serif html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: safeOpt }} /></span>
+                                               <span className="text-[15px] leading-[1.8] text-black font-serif html-content-renderer"><span className="font-bold mr-1">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} /></span>
                                              </label>
-                                           )
+                                           );
                                          })}
                                        </div>
 
@@ -1524,14 +1642,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                 return (
                                                     <div key={q.id} className="text-[15px] text-slate-800 font-medium leading-relaxed mb-3 last:mb-0 font-serif html-content-renderer">
                                                         <span className="font-bold text-white px-2 py-0.5 bg-slate-800 rounded-none text-[13px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
-                                                        <span dangerouslySetInnerHTML={{ __html: q.explanation }} />
+                                                        <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
                                                     </div>
-                                                )
+                                                );
                                             })}
                                          </div>
                                        )}
                                      </div>
-                                  )
+                                  );
                                });
                            })()}
                          </div>
@@ -1658,7 +1776,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   }} className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition">→</button>
                </div>
                {isReviewMode ? (
-                 <button onClick={handleFinish} className="bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">Thoát</button>
+                 <button onClick={handleExit} className="bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">Thoát</button>
                ) : (
                  <button onClick={handleFinish} className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">Nộp bài</button>
                )}

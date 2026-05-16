@@ -109,7 +109,7 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
             .jodit-wysiwyg [style*="vertical-align: top"], .jodit-wysiwyg [valign="top"] { vertical-align: top !important; }
 
             .jodit-wysiwyg table * {
-              /* font-family: inherit !important; */
+              font-family: inherit !important;
                 line-height: 1.6 !important;
             }
             .jodit-wysiwyg table p {
