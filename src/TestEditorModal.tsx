@@ -45,14 +45,20 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
     ],
     extraButtons: ['source', 'fullsize'],
     
-    defaultActionOnPaste: 'insert_as_html', 
+    // --- FIX PASTE: Lọc rác HTML và Inline CSS từ Word/Excel/Web khác ---
+    defaultActionOnPaste: 'insert_clear_html', 
     askBeforePasteHTML: false,
     askBeforePasteFromWord: false,
     uploader: { insertImageAsBase64URI: true }, 
     safeMode: false, 
     htmlParseBrowser: false,
-    disablePlugins: ['clean-html', 'sanitize'], 
-    cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false }
+    // Đã gỡ bỏ disablePlugins để cho phép Jodit dọn dẹp
+    cleanHTML: { 
+        fillEmptyParagraph: false, 
+        cleanOnPaste: true, // Bật tính năng dọn rác
+        replaceNBSP: true,
+        removeOnError: false 
+    }
   }), [placeholder]);
 
   return (
@@ -113,9 +119,35 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
             .jodit-wysiwyg [style*="vertical-align: bottom"], .jodit-wysiwyg [valign="bottom"] { vertical-align: bottom !important; }
             .jodit-wysiwyg [style*="vertical-align: top"], .jodit-wysiwyg [valign="top"] { vertical-align: top !important; }
 
-            .jodit-wysiwyg table * {
-              font-family: inherit !important;
-                line-height: 1.6 !important;
+            /* --- BÀN TAY SẮT: ÉP ĐỒNG BỘ FONT CHỮ VÀ GIÃN DÒNG --- */
+            .jodit-wysiwyg {
+                font-family: inherit !important; /* Đồng bộ font với web */
+                line-height: 1.7 !important;     /* Giãn dòng chuẩn dễ đọc cho Reading */
+                color: #334155 !important;       /* Màu chữ xám đen cho dịu mắt */
+            }
+            
+            /* Ép tất cả các thẻ con bên trong phải kế thừa, xóa bỏ màu nền rác khi copy từ web đen/web màu */
+            .jodit-wysiwyg p,
+            .jodit-wysiwyg span,
+            .jodit-wysiwyg div,
+            .jodit-wysiwyg li,
+            .jodit-wysiwyg td,
+            .jodit-wysiwyg th,
+            .jodit-wysiwyg a,
+            .jodit-wysiwyg b,
+            .jodit-wysiwyg strong,
+            .jodit-wysiwyg i,
+            .jodit-wysiwyg em {
+                font-family: inherit !important;
+                font-size: 15px !important;          /* Khóa chết size chữ */
+                line-height: inherit !important;
+                background-color: transparent !important; /* Xóa màu highlight rác */
+            }
+            
+            /* Giữ lại màu cho thẻ link */
+            .jodit-wysiwyg a {
+                color: #00a651 !important;
+                text-decoration: underline !important;
             }
             
             /* --- FIX LỖI KHOẢNG TRẮNG DƯỚI ẢNH TRONG BẢNG --- */
