@@ -40,7 +40,8 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
           if (s && Array.isArray(s.questions)) {
             s.questions.forEach((q: any) => {
               if (q) {
-                allQuestions.push({ ...q, partTitle: p.title, partContent: p.content, secTitle: s.title, secContent: s.content });
+                // Thu gom dữ liệu mỏng nhẹ, loại bỏ partTitle, partContent
+                allQuestions.push({ ...q, secTitle: s.title, secContent: s.content });
               }
             });
           }
@@ -157,7 +158,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
         Bạn là một Giám khảo IELTS vô cùng khắt khe. Hãy chấm bài IELTS Writing sau đây.
         
         THÔNG TIN ĐỀ BÀI (Chứa các yêu cầu của Task 1 và Task 2):
-        ${JSON.stringify(allQuestions.map((q, i) => `Task ${i+1} (${q.partTitle}): ${q.content}`))}
+        ${JSON.stringify(allQuestions.map((q, i) => `Task ${i+1} (${q.secTitle}): ${q.secContent} ${q.content}`))}
 
         BÀI LÀM CỦA HỌC SINH (Map theo ID câu hỏi):
         ${JSON.stringify(answers)}
@@ -182,7 +183,6 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
         }
       `;
 
-      // GỌI QUA SUPABASE EDGE FUNCTION VỚI THAM SỐ MODEL
       const { data, error } = await supabase.functions.invoke('ai-grader', {
         body: { 
            prompt: prompt,
@@ -228,10 +228,11 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
   return (
     <div className="h-screen flex flex-col bg-[#eeeeee] font-sans text-slate-900 overflow-hidden">
       
+      {/* Đã tinh chỉnh khoảng cách dòng (leading) và margin dưới của thẻ P */}
       <style>{`
-          .format-passage p { margin-bottom: 1.25rem !important; }
+          .format-passage p { margin-bottom: 0.75rem !important; }
           .format-passage p:last-child { margin-bottom: 0 !important; }
-          .format-passage br { display: block; content: ""; margin-bottom: 0.5rem; }
+          .format-passage br { display: block; content: ""; margin-bottom: 0.25rem; }
       `}</style>
 
       {/* HEADER MÀU ĐEN BRUTALIST */}
@@ -274,30 +275,30 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
 
       {!isSubmitted && !isGrading && currentTask && (
         <div className="flex-1 flex flex-col overflow-hidden bg-[#eeeeee]">
-          
-          {/* TIÊU ĐỀ PHẦN THI TRẮNG NỀN, BO VUÔNG */}
-          <div className="h-[54px] bg-white border-b border-slate-400 flex items-center px-8 shrink-0">
-            <h2 className="font-bold text-[18px] text-black">{currentTask.partTitle}:</h2>
-          </div>
 
           <main className="flex-1 flex flex-col md:flex-row overflow-hidden relative" ref={containerRef as any}>
             
-            {/* CỘT TRÁI - ĐỀ BÀI */}
-            <section className="p-8 md:p-10 overflow-y-auto custom-scrollbar border-r border-slate-400 flex flex-col bg-white" style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
-              <div className="format-passage max-w-none text-[16px] leading-[1.8] text-black font-serif break-words">
-                {currentTask.partContent && (
-                  <div className="mb-6 text-[15px] font-medium" dangerouslySetInnerHTML={{__html: currentTask.partContent}} />
+            {/* CỘT TRÁI - ĐỀ BÀI (CHUẨN UI IDP/BC) */}
+            <section className="p-8 md:p-12 overflow-y-auto custom-scrollbar border-r border-slate-400 flex flex-col bg-white" style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
+              <div className="format-passage max-w-none text-[15px] leading-[1.6] text-black font-serif break-words">
+                
+                {/* Chỉ giữ lại Tên Section (Task) và Nội Dung */}
+                {currentTask.secTitle && (
+                    <p className="font-bold text-[16px] text-black mb-4">[{currentTask.secTitle}]</p>
                 )}
-                {/* ĐÃ FIX: THÊM DANGEROUSLYSETINNERHTML VÀO CÂU HỎI */}
-                {currentTask.content && (
-                  <div className="font-bold mb-6 whitespace-pre-wrap text-black text-[16px] tracking-tight leading-[1.8]" dangerouslySetInnerHTML={{__html: currentTask.content}} />
-                )}
+
                 {currentTask.secContent && (
-                  <div className="mb-6 text-[15px] font-medium whitespace-pre-wrap" dangerouslySetInnerHTML={{__html: currentTask.secContent}} />
+                  <div className="mb-4 whitespace-pre-wrap" dangerouslySetInnerHTML={{__html: currentTask.secContent}} />
                 )}
+                
+                {currentTask.content && (
+                  <div className="mb-4 whitespace-pre-wrap" dangerouslySetInnerHTML={{__html: currentTask.content}} />
+                )}
+
                 {currentTask.imageUrl && (
-                  <img src={currentTask.imageUrl} alt="Diagram" className="max-w-full rounded-none border border-slate-400 mt-4" />
+                  <img src={currentTask.imageUrl} alt="Diagram" className="w-full max-w-[700px] h-auto mt-6 block" />
                 )}
+
               </div>
               <div className="h-[100px]" />
             </section>
@@ -330,8 +331,9 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
                    </div>
                 </div>
                 
+                {/* Giảm line-height xuống 1.6 cho cân bằng */}
                 <textarea 
-                  className="flex-1 w-full p-8 outline-none resize-none text-[16px] text-black font-serif custom-scrollbar leading-[1.8] bg-white"
+                  className="flex-1 w-full p-8 outline-none resize-none text-[15px] text-black font-serif custom-scrollbar leading-[1.6] bg-white"
                   placeholder=""
                   value={answers[currentTask.id] || ''}
                   onChange={(e) => handleAnswerChange(currentTask.id, e.target.value)}
