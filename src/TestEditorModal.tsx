@@ -65,24 +65,29 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
             .jodit-toolbar__box { flex-wrap: wrap !important; }
             .jodit-workplace { min-height: 150px !important; }
             
-            /* --- CĂN CHỈNH LẠI BULLET POINT GỌN GÀNG HƠN --- */
+            /* --- CĂN CHỈNH LẠI BULLET POINT CHUẨN BRUTALIST IDP/BC --- */
             .jodit-wysiwyg ul {
-                list-style: disc outside !important;
                 padding-left: 1.5rem !important;
                 margin: 0.5rem 0 !important;
-            }
-            .jodit-wysiwyg ul ul {
-                list-style-type: circle !important;
-                padding-left: 1.5rem !important;
             }
             .jodit-wysiwyg ol {
                 list-style: decimal outside !important;
                 padding-left: 1.5rem !important;
                 margin: 0.5rem 0 !important;
             }
-            .jodit-wysiwyg li {
+            
+            /* Ép thẳng vào thẻ LI để trị dứt điểm inline-style của Jodit */
+            .jodit-wysiwyg ul > li {
+                list-style-type: disc !important; /* Level 1: Chấm đen */
                 margin-bottom: 0.25rem !important;
             }
+            .jodit-wysiwyg ul ul > li {
+                list-style-type: circle !important; /* Level 2: Vòng tròn trắng */
+            }
+            .jodit-wysiwyg ul ul ul > li {
+                list-style-type: square !important; /* Level 3: Hình vuông đen */
+            }
+
             /* FIX LỖI RỚT DÒNG: Ép thẻ p bên trong li nằm trên cùng 1 hàng */
             .jodit-wysiwyg li > p, 
             .jodit-wysiwyg li > div {
@@ -112,12 +117,27 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
               font-family: inherit !important;
                 line-height: 1.6 !important;
             }
+            
+            /* --- FIX LỖI KHOẢNG TRẮNG DƯỚI ẢNH TRONG BẢNG --- */
             .jodit-wysiwyg table p {
                 margin: 0 !important;
-                display: inline-block !important;
+            }
+            .jodit-wysiwyg td img {
+                display: block !important; /* Ép ảnh thành khối để không bị khoảng hở baseline */
+                max-width: 100% !important;
+                height: auto !important;
+                margin: 0 auto !important; /* Căn giữa ảnh trong ô table */
+            }
+            /* Ép ẩn hoàn toàn các thẻ P rỗng hoặc chỉ chứa thẻ BR do Editor sinh ra trong bảng */
+            .jodit-wysiwyg td > p:empty,
+            .jodit-wysiwyg td > p:has(> br:only-child) {
+                display: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                height: 0 !important;
             }
 
-            /* --- FIX NÚT UPDATE/SAVE TRONG BẢNG CHỈNH ẢNH (BẢN MẠNH NHẤT CHO VERCEL) --- */
+            /* --- FIX NÚT UPDATE/SAVE TRONG BẢNG CHỈNH ẢNH --- */
             html body div.jodit-dialog__footer {
                 display: flex !important;
                 justify-content: flex-end !important;
@@ -682,20 +702,16 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
       section.questions = [];
     }
     
-    // Thuật toán tự động tìm số ID tiếp theo một cách thông minh
     let nextIdStr = '';
     
     if (section.questions.length > 0) {
-       // Nếu trong section hiện tại đã có câu hỏi -> Lấy câu cuối + 1
        const lastId = parseInt(section.questions[section.questions.length - 1].id);
        if (!isNaN(lastId)) nextIdStr = String(lastId + 1);
     } else if (sIdx > 0 && newData.parts[pIdx].sections[sIdx - 1].questions?.length > 0) {
-       // Nếu section hiện tại trống, thử nhìn sang section trước đó
        const prevSecQs = newData.parts[pIdx].sections[sIdx - 1].questions;
        const lastId = parseInt(prevSecQs[prevSecQs.length - 1].id);
        if (!isNaN(lastId)) nextIdStr = String(lastId + 1);
     } else if (pIdx > 0) {
-       // Nhìn lùi xa hơn về part trước đó nếu cần
        const prevPart = newData.parts[pIdx - 1];
        if (prevPart.sections && prevPart.sections.length > 0) {
           const prevSecQs = prevPart.sections[prevPart.sections.length - 1].questions;
@@ -706,7 +722,6 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
        }
     }
     
-    // Nếu thuật toán vẫn không tính ra được thì mới dùng timestamp (Nhưng cực kỳ hiếm)
     if (!nextIdStr) nextIdStr = Date.now().toString();
 
     const qType = section.questionType;
