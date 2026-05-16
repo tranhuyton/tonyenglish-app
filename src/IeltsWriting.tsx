@@ -230,7 +230,7 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
       
       {/* Đã tinh chỉnh khoảng cách dòng (leading) và margin dưới của thẻ P */}
       <style>{`
-          .format-passage p { margin-bottom: 0.75rem !important; }
+          .format-passage p { margin-bottom: 0.4rem !important; }
           .format-passage p:last-child { margin-bottom: 0 !important; }
           .format-passage br { display: block; content: ""; margin-bottom: 0.25rem; }
       `}</style>
