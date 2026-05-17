@@ -137,16 +137,18 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
             .jodit-wysiwyg strong,
             .jodit-wysiwyg i,
             /* --- BÀN TAY SẮT: ÉP ĐỒNG BỘ FONT CHỮ VÀ GIÃN DÒNG --- */
+            /* --- BÀN TAY SẮT: ÉP ĐỒNG BỘ FONT CHỮ VÀ GIÃN DÒNG --- */
             .jodit-wysiwyg {
                 font-family: inherit !important; /* Đồng bộ font với web */
                 line-height: 1.7 !important;     /* Giãn dòng chuẩn dễ đọc cho Reading */
                 color: #334155 !important;       /* Màu chữ xám đen cho dịu mắt */
-                font-size: 15px;                 /* Đặt font mặc định, BỎ !important để cho phép đổi size */
+                font-size: 15px;                 /* Đặt font mặc định 15px */
             }
             
-            /* Chỉ ép font-family và line-height, KHÔNG KHÓA font-size và background-color để công cụ Size/Brush của Jodit hoạt động */
+            /* Ép tất cả các thẻ (Bao gồm cả thẻ span copy từ web khác) phải kế thừa Font và Line-height */
             .jodit-wysiwyg p,
             .jodit-wysiwyg div,
+            .jodit-wysiwyg span,
             .jodit-wysiwyg li,
             .jodit-wysiwyg td,
             .jodit-wysiwyg th,
