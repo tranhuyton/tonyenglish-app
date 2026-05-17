@@ -45,7 +45,7 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
     ],
     extraButtons: ['source', 'fullsize'],
     
-    // --- FIX PASTE: Đổi thành insert_as_html để giữ nguyên cấu trúc bảng từ Excel/Word ---
+    // --- FIX PASTE: insert_as_html để giữ nguyên cấu trúc bảng từ Excel/Word ---
     defaultActionOnPaste: 'insert_as_html', 
     askBeforePasteHTML: false,
     askBeforePasteFromWord: false,
@@ -54,9 +54,67 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
     htmlParseBrowser: false,
     cleanHTML: { 
         fillEmptyParagraph: false, 
-        cleanOnPaste: true, // Vẫn bật để dọn rác inline CSS dư thừa
+        cleanOnPaste: false, // Tắt clean mặc định của Jodit để dùng bộ lọc Custom bên dưới
         replaceNBSP: true,
         removeOnError: false 
+    },
+    
+    // --- BỘ LỌC DOM PARSER BÀN TAY SẮT: Lột sạch style rác, giữ nguyên Bảng/Đậm/Nghiêng ---
+    events: {
+      processPaste: (event: any, html: any) => {
+        if (!html || typeof html !== 'string') return html;
+        try {
+          // Bắt trình duyệt giả lập đọc đoạn HTML vừa paste
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          
+          // 1. Tiêu diệt các thẻ CSS, Script, Meta ẩn dính từ web khác
+          doc.querySelectorAll('style, meta, script, link, title').forEach(n => n.remove());
+          
+          // 2. Quét TẤT CẢ các thẻ còn lại
+          doc.querySelectorAll('*').forEach((el: any) => {
+            // Xóa tận gốc các định dạng nội tuyến (inline styles) gây lệch giao diện
+            if (el.style) {
+              el.style.removeProperty('font-family');
+              el.style.removeProperty('font-size');
+              el.style.removeProperty('line-height');
+              el.style.removeProperty('background-color');
+              el.style.removeProperty('background');
+              el.style.removeProperty('margin');
+              el.style.removeProperty('margin-top');
+              el.style.removeProperty('margin-bottom');
+              el.style.removeProperty('padding');
+              
+              // Giữ lại màu cho thẻ Link, còn lại xóa màu chữ rác
+              if (el.tagName !== 'A') {
+                el.style.removeProperty('color');
+              }
+              
+              // Nếu style rỗng thì xóa luôn thuộc tính style cho sạch code
+              if (el.getAttribute('style') === '') {
+                el.removeAttribute('style');
+              }
+            }
+            
+            // Xóa các class và ID lạ do web khác tự gen ra
+            el.removeAttribute('class');
+            el.removeAttribute('id');
+            
+            // Lột bỏ định dạng của các thẻ <font> cổ lỗ sĩ
+            if (el.tagName === 'FONT') {
+              el.removeAttribute('face');
+              el.removeAttribute('size');
+              el.removeAttribute('color');
+            }
+          });
+          
+          // Trả lại HTML sạch sẽ, chỉ còn cấu trúc nguyên thủy
+          return doc.body.innerHTML;
+        } catch(err) {
+          console.error("Lỗi parse HTML:", err);
+          return html; // Fallback nếu có lỗi
+        }
+      }
     }
   }), [placeholder]);
 
@@ -118,34 +176,15 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
             .jodit-wysiwyg [style*="vertical-align: bottom"], .jodit-wysiwyg [valign="bottom"] { vertical-align: bottom !important; }
             .jodit-wysiwyg [style*="vertical-align: top"], .jodit-wysiwyg [valign="top"] { vertical-align: top !important; }
 
-            /* --- BÀN TAY SẮT: ÉP ĐỒNG BỘ FONT CHỮ VÀ GIÃN DÒNG --- */
+            /* --- BÀN TAY SẮT: ĐỒNG BỘ FONT CHỮ & GIÃN DÒNG MẶC ĐỊNH --- */
             .jodit-wysiwyg {
-                font-family: inherit !important; /* Đồng bộ font với web */
-                line-height: 1.7 !important;     /* Giãn dòng chuẩn dễ đọc cho Reading */
-                color: #334155 !important;       /* Màu chữ xám đen cho dịu mắt */
+                font-family: inherit !important; 
+                line-height: 1.7 !important;     
+                color: #334155;                  
+                font-size: 15px;                 
             }
             
-            /* Ép tất cả các thẻ con bên trong phải kế thừa, xóa bỏ màu nền rác khi copy từ web đen/web màu */
-            .jodit-wysiwyg p,
-            .jodit-wysiwyg span,
-            .jodit-wysiwyg div,
-            .jodit-wysiwyg li,
-            .jodit-wysiwyg td,
-            .jodit-wysiwyg th,
-            .jodit-wysiwyg a,
-            .jodit-wysiwyg b,
-            .jodit-wysiwyg strong,
-            .jodit-wysiwyg i,
-            /* --- BÀN TAY SẮT: ÉP ĐỒNG BỘ FONT CHỮ VÀ GIÃN DÒNG --- */
-            /* --- BÀN TAY SẮT: ÉP ĐỒNG BỘ FONT CHỮ VÀ GIÃN DÒNG --- */
-            .jodit-wysiwyg {
-                font-family: inherit !important; /* Đồng bộ font với web */
-                line-height: 1.7 !important;     /* Giãn dòng chuẩn dễ đọc cho Reading */
-                color: #334155 !important;       /* Màu chữ xám đen cho dịu mắt */
-                font-size: 15px;                 /* Đặt font mặc định 15px */
-            }
-            
-            /* Ép tất cả các thẻ (Bao gồm cả thẻ span copy từ web khác) phải kế thừa Font và Line-height */
+            /* Ép các thẻ con kế thừa Font và Giãn dòng, KHÔNG ép chết Size và Màu */
             .jodit-wysiwyg p,
             .jodit-wysiwyg div,
             .jodit-wysiwyg span,
@@ -172,10 +211,10 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
                 margin: 0 !important;
             }
             .jodit-wysiwyg td img {
-                display: block !important; /* Ép ảnh thành khối để không bị khoảng hở baseline */
+                display: block !important; 
                 max-width: 100% !important;
                 height: auto !important;
-                margin: 0 auto !important; /* Căn giữa ảnh trong ô table */
+                margin: 0 auto !important; 
             }
             /* Ép ẩn hoàn toàn các thẻ P rỗng hoặc chỉ chứa thẻ BR do Editor sinh ra trong bảng */
             .jodit-wysiwyg td > p:empty,
