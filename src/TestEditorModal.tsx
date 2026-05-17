@@ -45,17 +45,16 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
     ],
     extraButtons: ['source', 'fullsize'],
     
-    // --- FIX PASTE: Lọc rác HTML và Inline CSS từ Word/Excel/Web khác ---
-    defaultActionOnPaste: 'insert_clear_html', 
+    // --- FIX PASTE: Đổi thành insert_as_html để giữ nguyên cấu trúc bảng từ Excel/Word ---
+    defaultActionOnPaste: 'insert_as_html', 
     askBeforePasteHTML: false,
     askBeforePasteFromWord: false,
     uploader: { insertImageAsBase64URI: true }, 
     safeMode: false, 
     htmlParseBrowser: false,
-    // Đã gỡ bỏ disablePlugins để cho phép Jodit dọn dẹp
     cleanHTML: { 
         fillEmptyParagraph: false, 
-        cleanOnPaste: true, // Bật tính năng dọn rác
+        cleanOnPaste: true, // Vẫn bật để dọn rác inline CSS dư thừa
         replaceNBSP: true,
         removeOnError: false 
     }
