@@ -451,7 +451,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
             <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="w-10 h-10 flex items-center justify-center rounded-lg text-white hover:bg-white/20 transition-colors shrink-0" title="Ẩn/Hiện Sidebar">
                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" /></svg>
             </button>
-            <h1 className="text-[17px] md:text-[20px] font-bold leading-none truncate tracking-wide ml-1">{course?.title || 'Đang tải khóa học...'}</h1>
+            <h1 className="text-[17px] md:text-[20px] leading-none truncate tracking-wide ml-1">{course?.title || 'Đang tải khóa học...'}</h1>
             
             {safeLectureTasks.length > 0 && (
                <div className="relative ml-2 shrink-0" ref={taskMenuRef}>
@@ -529,8 +529,8 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
             ${isSidebarOpen ? 'translate-x-0 w-[280px] md:w-[320px]' : '-translate-x-full w-[280px] md:w-0 md:opacity-0 md:border-r-0 md:translate-x-0'}`}>
            
            <div className="p-6 border-b border-slate-200 shrink-0 bg-slate-50 min-w-[280px] md:min-w-[320px]">
-              <div className="text-[12px] font-medium text-slate-500 uppercase tracking-widest mb-2">Khóa học của bạn</div>
-              <h3 className="font-bold text-slate-800 text-[16px] leading-snug">{course?.title || 'Đang tải...'}</h3>
+              <div className="text-[12px] text-slate-500 uppercase tracking-widest mb-2">Khóa học của bạn</div>
+              <h3 className="text-slate-800 text-[16px] leading-snug">{course?.title || 'Đang tải...'}</h3>
            </div>
            
            <div className="flex-1 overflow-y-auto custom-scrollbar bg-white" style={{ WebkitOverflowScrolling: 'touch' }}>
@@ -543,7 +543,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
                   return (
                     <div key={mod.id} className="border-b border-slate-100 last:border-0">
                       <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); toggleModule(mod.id); }} className={`w-full text-left px-5 py-4 transition-colors flex justify-between items-center ${isExpanded ? 'bg-slate-50' : 'hover:bg-slate-50'}`}>
-                        <h4 className="text-[14px] text-slate-800 font-medium pr-4 flex items-center gap-3">
+                        <h4 className="text-[14px] text-slate-800 pr-4 flex items-center gap-3">
                            <span className={`text-[10px] text-slate-400 transition-transform duration-200 ${isExpanded ? 'rotate-90 text-[#0ea5e9]' : ''}`}>▶</span>
                            {mod.title}
                         </h4>
@@ -559,7 +559,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
                                const completedCount = allLectureProgress[lec.id]?.length || 0;
 
                                return (
-                                 <button key={lec.id} onClick={() => handleSelectLecture(lec.id)} className={`w-full text-left pl-12 pr-5 py-3 text-[14px] transition-colors flex items-center justify-between gap-3 relative border-l-4 ${isActive ? 'bg-[#f0f9ff] text-[#0ea5e9] font-medium border-[#0ea5e9]' : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-100'}`}>
+                                 <button key={lec.id} onClick={() => handleSelectLecture(lec.id)} className={`w-full text-left pl-12 pr-5 py-3 text-[14px] transition-colors flex items-center justify-between gap-3 relative border-l-4 ${isActive ? 'bg-[#f0f9ff] text-[#0ea5e9] border-[#0ea5e9]' : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-100'}`}>
                                    <span className="leading-snug truncate flex-1">{lec.title}</span>
                                    <span className="shrink-0 ml-1 flex items-center">
                                        {totalTasks > 0 ? (
