@@ -10,7 +10,7 @@ interface AITutorProps {
   htmlContent?: string;
   topicTitle?: string; 
   topicImage?: string; 
-  taskType?: string; // 🚀 Cổng nhận taskType
+  taskType?: string; 
 }
 
 const TUTOR_PROMPTS = ["Tóm tắt bài học.", "Giải thích khái niệm khó.", "Cho ví dụ minh họa."];
@@ -38,7 +38,7 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
       case 'task1':
       case 'task2':
         return {
-          headerBg: 'from-[#4c1d95] to-[#7c3aed]', // 🟣 IELTS: Tím
+          headerBg: 'from-[#4c1d95] to-[#7c3aed]', 
           title: `IELTS AI Assessor (${taskType.toUpperCase()})`,
           subtitle: 'Chấm điểm & Sửa lỗi chuyên sâu', icon: '🎓',
           userBg: 'bg-[#7c3aed]', aiBorder: 'border-purple-200', typingDot: 'bg-[#8b5cf6]',
@@ -46,7 +46,7 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
         };
       case 'math':
         return {
-          headerBg: 'from-[#065f46] to-[#059669]', // 🟢 Math: Xanh Lá
+          headerBg: 'from-[#065f46] to-[#059669]', 
           title: 'Math AI Tutor (IGCSE/A-Level)',
           subtitle: 'Giải chi tiết từng bước lập luận', icon: '📐',
           userBg: 'bg-[#059669]', aiBorder: 'border-emerald-200', typingDot: 'bg-[#059669]',
@@ -54,7 +54,7 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
         };
       case 'Science':
         return {
-          headerBg: 'from-[#c2410c] to-[#ea580c]', // 🟠 Science: Cam
+          headerBg: 'from-[#c2410c] to-[#ea580c]', 
           title: 'Science AI Tutor (IGCSE/A-Level)',
           subtitle: 'Phân tích hiện tượng & Thí nghiệm', icon: '🧪',
           userBg: 'bg-[#ea580c]', aiBorder: 'border-orange-200', typingDot: 'bg-[#ea580c]',
@@ -62,7 +62,7 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
         };
       case 'ESL':
         return {
-          headerBg: 'from-[#0369a1] to-[#0284c7]', // 🔵 ESL: Xanh dương
+          headerBg: 'from-[#0369a1] to-[#0284c7]', 
           title: 'Cambridge IGCSE ESL Examiner',
           subtitle: 'Strict Cambridge Evaluation Protocol', icon: '📝',
           userBg: 'bg-[#0284c7]', aiBorder: 'border-sky-200', typingDot: 'bg-[#0284c7]',
@@ -70,11 +70,19 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
         };
       case 'speaking':
         return {
-          headerBg: 'from-[#1e3a8a] to-[#3b82f6]', // 🔵 Speaking: Xanh dương đậm
+          headerBg: 'from-[#1e3a8a] to-[#3b82f6]', 
           title: 'IELTS Speaking Assistant',
           subtitle: 'Lên ý tưởng & Bẻ lái Part 2', icon: '🎙️',
           userBg: 'bg-[#3b82f6]', aiBorder: 'border-blue-200', typingDot: 'bg-[#3b82f6]',
           btnColor: 'bg-[#3b82f6] hover:bg-[#1d4ed8]', focusRing: 'focus-within:border-[#3b82f6] focus-within:ring-blue-50', width: 'md:w-[500px]'
+        };
+      case 'reading':
+        return {
+          headerBg: 'from-[#065f46] to-[#10b981]', // 🟢 TÔNG MÀU XANH LÁ CHO READING 
+          title: 'IELTS Reading Tutor',
+          subtitle: 'Giải thích đáp án chi tiết', icon: '📖',
+          userBg: 'bg-[#10b981]', aiBorder: 'border-emerald-200', typingDot: 'bg-[#10b981]',
+          btnColor: 'bg-[#10b981] hover:bg-[#059669]', focusRing: 'focus-within:border-[#10b981] focus-within:ring-emerald-50', width: 'md:w-[500px]'
         };
       default:
         return {
@@ -101,6 +109,8 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
         return ["📝 Chấm điểm theo chuẩn Cambridge", "✍️ Sửa lỗi diễn đạt Line-by-line", "🚀 Nâng cấp lên bài mẫu Band 9"];
       case 'speaking':
         return ["💡 Tư vấn kịch bản (Lego)", "🧠 Gợi ý từ vựng Band 8+", "✍️ Viết câu Mở bài (Hook) ấn tượng"];
+      case 'reading':
+        return ["💡 Tại sao đáp án này đúng?", "🔍 Tìm dẫn chứng trong bài đọc", "🧠 Dịch đoạn văn chứa đáp án"];
       default:
         return ["💡 Hướng dẫn phương pháp làm bài", "🔍 Kiểm tra đáp án"];
     }
@@ -114,39 +124,35 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
 
   useEffect(() => { messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages, isTyping, isExpanded]);
 
-  // 🚀 ĐÃ NÂNG CẤP LỜI CHÀO MỞ ĐẦU CHUYÊN SÂU
-  useEffect(() => {
-    if (isOpen) {
-       setTimeout(() => textareaRef.current?.focus(), 300);
-       
-       let welcomeText = "";
-       if (mode === 'ielts') {
-          welcomeText = `Chào em! Thầy đã nhận được yêu cầu phân tích.\n\n`;
-          
-          if (topicTitle) {
-             welcomeText += `**📝 Đề bài:** "${topicTitle}"\n\n`;
-          }
-          if (topicImage) {
-             welcomeText += `**(📸 Đã nhận kèm hình ảnh/biểu đồ)**\n\n`;
-          }
-          
-          if (taskType === 'speaking') {
-             welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng hay viết câu mở bài (Hook) nào?`;
-          } else if (taskType === 'task1' || taskType === 'task2') {
-             welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
-          } else {
-             welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
-          }
-       } else {
-          welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em cần thầy giải đáp gì không?`;
-       }
+// 🚀 ĐÃ NÂNG CẤP LỜI CHÀO MỞ ĐẦU CHUYÊN SÂU & TINH GỌN
+useEffect(() => {
+  if (isOpen) {
+     setTimeout(() => textareaRef.current?.focus(), 300);
+     
+     let welcomeText = "";
+     if (mode === 'ielts') {
+        if (taskType === 'reading') {
+           // 🚀 Bỏ chữ "câu hỏi" bị lặp và xóa câu "đọc ngầm" vô nghĩa
+           welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n${topicTitle}\n\nEm muốn hỏi thêm thầy điều gì?`;
+        } else {
+           welcomeText = `Chào em! Thầy đã nhận được yêu cầu phân tích.\n\n`;
+           if (topicTitle) welcomeText += `**📝 Đề bài:** "${topicTitle}"\n\n`;
+           if (topicImage) welcomeText += `**(📸 Đã nhận kèm hình ảnh/biểu đồ)**\n\n`;
+           
+           if (taskType === 'speaking') welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng hay viết câu mở bài (Hook) nào?`;
+           else if (taskType === 'task1' || taskType === 'task2') welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
+           else welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
+        }
+     } else {
+        welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em cần thầy giải đáp gì không?`;
+     }
 
-       setMessages([{
-           role: 'ai',
-           text: welcomeText
-       }]);
-    }
-  }, [isOpen, mode, topicTitle, lectureTitle, topicImage, taskType]);
+     setMessages([{
+         role: 'ai',
+         text: welcomeText
+     }]);
+  }
+}, [isOpen, mode, topicTitle, lectureTitle, topicImage, taskType]);
 
   const handleSendMessage = async (suggestedText?: string) => {
     const userMsg = typeof suggestedText === 'string' ? suggestedText : input.trim();
@@ -162,11 +168,29 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
       let payload: any = {};
 
       if (mode === 'ielts') {
-         payload = { 
-            content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}`,
-            imageUrl: topicImage,
-            taskType: taskType 
-         };
+         if (taskType === 'reading') {
+            const systemPrompt = `Bạn là gia sư IELTS Reading xuất sắc.
+            Dưới đây là nội dung BÀI ĐỌC (Ẩn khỏi màn hình người dùng):
+            """
+            ${contextText}
+            """
+            
+            Dưới đây là nội dung CÂU HỎI VÀ ĐÁP ÁN:
+            """
+            ${topicTitle}
+            """
+            
+            Dựa vào 2 thông tin trên, hãy trả lời câu hỏi sau của học sinh bằng tiếng Việt một cách chi tiết, dễ hiểu, phân tích lý do đúng/sai và BẮT BUỘC trích dẫn câu văn/đoạn văn chứa bằng chứng trong BÀI ĐỌC:
+            "${userMsg}"`;
+            
+            payload = { prompt: systemPrompt, taskType: 'tutor' }; 
+         } else {
+             payload = { 
+                content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}`,
+                imageUrl: topicImage,
+                taskType: taskType 
+             };
+         }
       } else {
          const systemPrompt = `Bạn là gia sư AI. Bài giảng: "${lectureTitle}". Nội dung: """${contextText}""". Hãy trả lời: "${userMsg}"`;
          payload = { prompt: systemPrompt, taskType: 'tutor' }; 
@@ -183,8 +207,13 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
   };
 
   const handleSuggestionClick = (p: string) => {
-      if (p.includes('Chấm điểm')) { setInput("Nhờ thầy chấm giúp bài làm sau:\n\n[Dán bài vào đây]"); setTimeout(() => textareaRef.current?.focus(), 100); }
-      else handleSendMessage(p);
+      if (p.includes('Chấm điểm')) { 
+          setInput("Nhờ thầy chấm giúp bài làm sau:\n\n[Dán bài vào đây]"); 
+          setTimeout(() => textareaRef.current?.focus(), 100); 
+      }
+      else {
+          handleSendMessage(p);
+      }
   };
 
   const formatMarkdown = (text: string) => {
@@ -199,7 +228,10 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
         <div className={`h-16 bg-gradient-to-r ${theme.headerBg} text-white flex items-center justify-between px-5 shrink-0 shadow-sm z-10`}>
           <div className="flex items-center gap-3">
              <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-lg">{theme.icon}</div>
-             <div><h3 className="font-bold text-[15px]">{theme.title}</h3><p className="text-[11px] text-white/80 uppercase">{theme.subtitle}</p></div>
+             <div>
+                 <h3 className="font-bold text-[15px]">{theme.title}</h3>
+                 <p className="text-[11px] text-white/80 uppercase">{theme.subtitle}</p>
+             </div>
           </div>
           <div className="flex items-center gap-1">
              <button onClick={() => setIsExpanded(!isExpanded)} className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/20 text-white">
@@ -228,14 +260,19 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
             </div>
           ))}
           {isTyping && (
-             <div className="flex justify-start"><div className="bg-white border p-4 rounded-2xl flex items-center gap-1.5 shadow-sm"><span className="w-2 h-2 bg-slate-300 rounded-full animate-bounce"></span><span className="w-2 h-2 bg-slate-300 rounded-full animate-bounce delay-100"></span><span className="w-2 h-2 bg-slate-300 rounded-full animate-bounce delay-200"></span></div></div>
+             <div className="flex justify-start">
+                 <div className="bg-white border p-4 rounded-2xl flex items-center gap-1.5 shadow-sm">
+                     <span className="w-2 h-2 bg-slate-300 rounded-full animate-bounce"></span>
+                     <span className="w-2 h-2 bg-slate-300 rounded-full animate-bounce delay-100"></span>
+                     <span className="w-2 h-2 bg-slate-300 rounded-full animate-bounce delay-200"></span>
+                 </div>
+             </div>
           )}
           <div ref={messagesEndRef} />
         </div>
 
         <div className="p-4 bg-white border-t border-slate-200 shrink-0 z-10">
           <div className="flex flex-col gap-2 mb-4 max-w-sm mx-auto">
-             {/* 🚀 ĐÃ THAY BẰNG MẢNG GỢI Ý ĐỘNG THEO MÔN */}
              {dynamicPrompts.map((p, i) => (
                 <button key={i} onClick={() => handleSuggestionClick(p)} className="bg-white border border-slate-200 text-slate-600 text-[12px] font-bold py-2 px-4 rounded-xl text-left hover:bg-slate-50 transition-colors shadow-sm flex justify-between group">
                   <span>{p}</span><span className="text-slate-300 group-hover:text-blue-500">→</span>
@@ -243,8 +280,31 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
              ))}
           </div>
           <div className={`flex items-end gap-2 bg-slate-50 border border-slate-200 rounded-2xl p-1.5 ${theme.focusRing} transition-all`}>
-            <textarea ref={textareaRef} value={input} onChange={(e) => { setInput(e.target.value); e.target.style.height = 'auto'; e.target.style.height = `${e.target.scrollHeight}px`; }} onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSendMessage(); } }} placeholder="Hỏi về đề bài này..." className="flex-1 min-h-[40px] max-h-[150px] bg-transparent text-[14px] text-slate-700 font-medium px-3 py-2.5 outline-none resize-none" rows={1} />
-            <button onClick={() => handleSendMessage()} disabled={!input.trim() || isTyping} className={`w-10 h-10 shrink-0 rounded-xl ${theme.btnColor} text-white flex items-center justify-center transition-colors shadow-sm`}>➤</button>
+            <textarea 
+                ref={textareaRef} 
+                value={input} 
+                onChange={(e) => { 
+                    setInput(e.target.value); 
+                    e.target.style.height = 'auto'; 
+                    e.target.style.height = `${e.target.scrollHeight}px`; 
+                }} 
+                onKeyDown={(e) => { 
+                    if (e.key === 'Enter' && !e.shiftKey) { 
+                        e.preventDefault(); 
+                        handleSendMessage(); 
+                    } 
+                }} 
+                placeholder="Hỏi về đề bài này..." 
+                className="flex-1 min-h-[40px] max-h-[150px] bg-transparent text-[14px] text-slate-700 font-medium px-3 py-2.5 outline-none resize-none" 
+                rows={1} 
+            />
+            <button 
+                onClick={() => handleSendMessage()} 
+                disabled={!input.trim() || isTyping} 
+                className={`w-10 h-10 shrink-0 rounded-xl ${theme.btnColor} text-white flex items-center justify-center transition-colors shadow-sm`}
+            >
+                ➤
+            </button>
           </div>
         </div>
       </div>
