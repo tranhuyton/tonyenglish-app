@@ -29,25 +29,29 @@ export default function App() {
   // --- 🤖 AI SIDEBAR STATE ---
   const [isAISidebarOpen, setIsAISidebarOpen] = useState(false);
   const [aiMode, setAiMode] = useState<'tutor' | 'ielts'>('tutor');
+  
   const [ieltsTopic, setIeltsTopic] = useState("");
-  // 📸 STATE MỚI: LƯU ẢNH ĐỀ BÀI
   const [ieltsImage, setIeltsImage] = useState("");
+  const [ieltsTaskType, setIeltsTaskType] = useState("task2");
 
   const [currentLectureTitle, setCurrentLectureTitle] = useState("");
   const [currentHtmlContent, setCurrentHtmlContent] = useState("");
 
   useEffect(() => {
-    // 🚀 RADAR NGHE LÉN: Bắt cả Topic chữ và Topic ảnh
+    // 🚀 RADAR KÉP: Bắt cả class MỚI (.btn-ai-trigger) và CŨ (.btn-ielts-trigger)
     const handleGlobalClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const triggerBtn = target.closest('.btn-ielts-trigger');
+      const triggerBtn = target.closest('.btn-ai-trigger, .btn-ielts-trigger'); 
+      
       if (triggerBtn) {
         const topicText = triggerBtn.getAttribute('data-topic');
-        const topicImg = triggerBtn.getAttribute('data-image'); // Chộp lấy link ảnh
+        const topicImg = triggerBtn.getAttribute('data-image'); 
+        const taskLabel = triggerBtn.getAttribute('data-task') || 'task2';
         
         if (topicText || topicImg) {
           setIeltsTopic(topicText || "");
-          setIeltsImage(topicImg || ""); // Đưa ảnh vào kho
+          setIeltsImage(topicImg || ""); 
+          setIeltsTaskType(taskLabel); 
           setAiMode('ielts');       
           setIsAISidebarOpen(true); 
         }
@@ -67,7 +71,6 @@ export default function App() {
     };
   }, []);
 
-  // --- AUTH & TIMER LOGIC (GIỮ NGUYÊN) ---
   const [currentTestData, setCurrentTestData] = useState<any>(() => {
     try {
       const savedTest = sessionStorage.getItem('lms_current_test');
@@ -154,17 +157,28 @@ export default function App() {
           courseId={activeCourseId} 
           onBack={() => handleNavigate('portal')} 
           onStartTest={handleStartTest}
-          onOpenAI={() => { setAiMode('tutor'); setIsAISidebarOpen(true); }}
+          // 🚀 MỞ TOANG CỔNG NHẬN DỮ LIỆU TỪ LECTURE VIEWER XUYÊN QUA IFRAME
+          onOpenAI={(passedMode?: string, topic?: string, image?: string, task?: string) => { 
+            if (passedMode === 'ielts' || topic) {
+               setAiMode('ielts');
+               if (topic) setIeltsTopic(topic);
+               if (image) setIeltsImage(image);
+               if (task) setIeltsTaskType(task);
+            } else {
+               setAiMode('tutor'); 
+            }
+            setIsAISidebarOpen(true); 
+          }}
         />
       )}
 
-      {/* 🚀 AI SIDEBAR TỔNG - ĐÃ TRUYỀN THÊM ieltsImage */}
       <AITutorSidebar 
         isOpen={isAISidebarOpen}
         onClose={() => setIsAISidebarOpen(false)}
         mode={aiMode}
         topicTitle={ieltsTopic}
         topicImage={ieltsImage} 
+        taskType={ieltsTaskType}
         lectureTitle={currentLectureTitle}
         htmlContent={currentHtmlContent}
       />

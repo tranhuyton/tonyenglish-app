@@ -9,13 +9,13 @@ interface AITutorProps {
   lectureTitle?: string;
   htmlContent?: string;
   topicTitle?: string; 
-  topicImage?: string; // 📸 Props mới để nhận link ảnh
+  topicImage?: string; 
+  taskType?: string; // 🚀 Thêm cổng nhận taskType
 }
 
 const TUTOR_PROMPTS = ["Tóm tắt bài học.", "Giải thích khái niệm khó.", "Cho ví dụ minh họa."];
-const IELTS_PROMPTS = ["💡 Nhờ lập dàn ý", "📝 Chấm điểm bài viết", "🧠 Gợi ý từ vựng Band 8.0+"];
 
-export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', courseTitle, lectureTitle, htmlContent, topicTitle, topicImage }: AITutorProps) {
+export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', courseTitle, lectureTitle, htmlContent, topicTitle, topicImage, taskType = 'task2' }: AITutorProps) {
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; text: string; isError?: boolean }[]>([]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -23,29 +23,78 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const theme = mode === 'ielts' ? {
-    headerBg: 'from-[#4c1d95] to-[#7c3aed]', // Đổi sang màu Tím cho Task 1/Task 2
-    title: 'IELTS AI Assessor',
-    subtitle: 'Chấm điểm bằng Mắt thần Gemini',
-    icon: '🎓',
-    userBg: 'bg-[#7c3aed]',
-    aiBorder: 'border-purple-200',
-    typingDot: 'bg-[#8b5cf6]',
-    btnColor: 'bg-[#7c3aed] hover:bg-[#6d28d9]',
-    focusRing: 'focus-within:border-[#7c3aed] focus-within:ring-purple-50',
-    width: 'md:w-[500px]'
-  } : {
-    headerBg: 'from-[#0a5482] to-[#1e88e5]',
-    title: 'Trợ Lý Tony AI',
-    subtitle: 'Gia sư đồng hành 24/7',
-    icon: '🤖',
-    userBg: 'bg-[#1e88e5]',
-    aiBorder: 'border-slate-200',
-    typingDot: 'bg-[#1e88e5]',
-    btnColor: 'bg-[#1e88e5] hover:bg-[#1565c0]',
-    focusRing: 'focus-within:border-[#1e88e5] focus-within:ring-blue-50',
-    width: 'md:w-[400px]'
-  };
+  // 🎨 BỘ CHỌN THEME TỰ ĐỘNG BIẾN HÌNH THEO MÔN HỌC
+  const theme = useMemo(() => {
+    if (mode === 'tutor') {
+      return {
+        headerBg: 'from-[#0a5482] to-[#1e88e5]',
+        title: 'Trợ Lý Tony AI', subtitle: 'Gia sư đồng hành 24/7', icon: '🤖',
+        userBg: 'bg-[#1e88e5]', aiBorder: 'border-slate-200', typingDot: 'bg-[#1e88e5]',
+        btnColor: 'bg-[#1e88e5] hover:bg-[#1565c0]', focusRing: 'focus-within:border-[#1e88e5] focus-within:ring-blue-50', width: 'md:w-[400px]'
+      };
+    }
+    
+    switch (taskType) {
+      case 'task1':
+      case 'task2':
+        return {
+          headerBg: 'from-[#4c1d95] to-[#7c3aed]', // 🟣 IELTS: Tím
+          title: `IELTS AI Assessor (${taskType.toUpperCase()})`,
+          subtitle: 'Chấm điểm & Sửa lỗi chuyên sâu', icon: '🎓',
+          userBg: 'bg-[#7c3aed]', aiBorder: 'border-purple-200', typingDot: 'bg-[#8b5cf6]',
+          btnColor: 'bg-[#7c3aed] hover:bg-[#6d28d9]', focusRing: 'focus-within:border-[#7c3aed] focus-within:ring-purple-50', width: 'md:w-[500px]'
+        };
+      case 'math':
+        return {
+          headerBg: 'from-[#065f46] to-[#059669]', // 🟢 Math: Xanh Lá
+          title: 'Math AI Tutor (IGCSE/A-Level)',
+          subtitle: 'Giải chi tiết từng bước lập luận', icon: '📐',
+          userBg: 'bg-[#059669]', aiBorder: 'border-emerald-200', typingDot: 'bg-[#059669]',
+          btnColor: 'bg-[#059669] hover:bg-[#047857]', focusRing: 'focus-within:border-[#059669] focus-within:ring-emerald-50', width: 'md:w-[500px]'
+        };
+      case 'Science':
+        return {
+          headerBg: 'from-[#c2410c] to-[#ea580c]', // 🟠 Science: Cam
+          title: 'Science AI Tutor (IGCSE/A-Level)',
+          subtitle: 'Phân tích hiện tượng & Thí nghiệm', icon: '🧪',
+          userBg: 'bg-[#ea580c]', aiBorder: 'border-orange-200', typingDot: 'bg-[#ea580c]',
+          btnColor: 'bg-[#ea580c] hover:bg-[#c2410c]', focusRing: 'focus-within:border-[#ea580c] focus-within:ring-orange-50', width: 'md:w-[500px]'
+        };
+      case 'ESL':
+        return {
+          headerBg: 'from-[#0369a1] to-[#0284c7]', // 🔵 ESL: Xanh dương
+          title: 'Cambridge IGCSE ESL Examiner',
+          subtitle: 'Strict Cambridge Evaluation Protocol', icon: '📝',
+          userBg: 'bg-[#0284c7]', aiBorder: 'border-sky-200', typingDot: 'bg-[#0284c7]',
+          btnColor: 'bg-[#0284c7] hover:bg-[#0369a1]', focusRing: 'focus-within:border-[#0284c7] focus-within:ring-sky-50', width: 'md:w-[500px]'
+        };
+      default:
+        return {
+          headerBg: 'from-[#475569] to-[#64748b]',
+          title: 'Tony AI Multi-Subject Tutor', subtitle: 'Hỗ trợ học tập chuyên sâu', icon: '✨',
+          userBg: 'bg-[#64748b]', aiBorder: 'border-slate-200', typingDot: 'bg-[#64748b]',
+          btnColor: 'bg-[#64748b] hover:bg-[#475569]', focusRing: 'focus-within:border-[#64748b] focus-within:ring-slate-50', width: 'md:w-[500px]'
+        };
+    }
+  }, [mode, taskType]);
+
+  // 🧠 BỘ GỢI Ý ĐỘNG THEO MÔN HỌC
+  const dynamicPrompts = useMemo(() => {
+    if (mode === 'tutor') return TUTOR_PROMPTS;
+    switch (taskType) {
+      case 'task1':
+      case 'task2':
+        return ["💡 Nhờ lập dàn ý", "📝 Chấm điểm bài viết", "🧠 Gợi ý từ vựng Band 8.0+"];
+      case 'math':
+        return ["📐 Gợi ý bước giải tiếp theo", "🔍 Kiểm tra lỗi sai bước làm", "💡 Tìm phương pháp giải khác"];
+      case 'Science':
+        return ["🧪 Giải thích định luật/hiện tượng", "📊 Phân tích bảng số liệu thí nghiệm", "📝 Hướng dẫn viết câu trả lời tự luận"];
+      case 'ESL':
+        return ["📝 Chấm điểm theo chuẩn Cambridge", "✍️ Sửa lỗi diễn đạt Line-by-line", "🚀 Nâng cấp lên bài mẫu Band 9"];
+      default:
+        return ["💡 Hướng dẫn phương pháp làm bài", "🔍 Kiểm tra đáp án"];
+    }
+  }, [mode, taskType]);
 
   const contextText = useMemo(() => {
     if (mode === 'ielts' || !htmlContent) return '';
@@ -61,7 +110,7 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
        setMessages([{
            role: 'ai',
            text: mode === 'ielts' 
-             ? `Chào em! Thầy đã nhận được đề bài. ${topicImage ? "Thầy đã thấy hình ảnh biểu đồ/đề bài của em rồi!" : ""} Em dán bài làm vào đây để thầy chấm dựa trên các tiêu chí chấm thi nhé!` 
+             ? `Chào em! Thầy đã nhận được đề bài. ${topicImage ? "Thầy đã thấy hình ảnh/biểu đồ của em rồi!" : ""} Em gửi câu hỏi hoặc dán bài làm vào đây để thầy hỗ trợ nhé!` 
              : `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em cần thầy giải đáp gì không?`
        }]);
     }
@@ -77,18 +126,18 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
     if (textareaRef.current) textareaRef.current.style.height = 'auto';
 
     try {
-      let endpoint = 'ai-grader'; 
+      let endpoint = 'omni-ai-grader'; // 🚀 LUÔN GỌI VÀO ÔNG TỔNG QUẢN
       let payload: any = {};
 
       if (mode === 'ielts') {
-         endpoint = 'task-2-ai-grader'; // Hoặc endpoint task 1 nếu anh đã tạo
          payload = { 
-            content: `Đề bài: ${topicTitle}\n\nBài làm của học sinh: ${userMsg}`,
-            imageUrl: topicImage // 🚀 GỬI LINK ẢNH LÊN MÂY
+            content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}`,
+            imageUrl: topicImage,
+            taskType: taskType // 🚀 GỬI NHÃN MÀ WEB BẮT ĐƯỢC CHUẨN 100%
          };
       } else {
          const systemPrompt = `Bạn là gia sư AI. Bài giảng: "${lectureTitle}". Nội dung: """${contextText}""". Hãy trả lời: "${userMsg}"`;
-         payload = { prompt: systemPrompt, model: 'gemini-1.5-flash' };
+         payload = { prompt: systemPrompt, model: 'gemini-1.5-flash', taskType: 'tutor' };
       }
 
       const { data, error } = await supabase.functions.invoke(endpoint, { body: payload });
@@ -130,7 +179,6 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
 
         <div className="flex-1 overflow-y-auto p-5 space-y-5 custom-scrollbar bg-slate-50/50">
           
-          {/* 📸 KHUNG HIỂN THỊ ẢNH ĐỀ BÀI (Chỉ hiện ở mode IELTS) */}
           {mode === 'ielts' && topicImage && (
               <div className="mb-4 animate-in fade-in slide-in-from-top-2">
                   <div className="text-[11px] font-black text-slate-400 uppercase mb-2 tracking-widest">Đề bài hình ảnh:</div>
@@ -155,7 +203,8 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
 
         <div className="p-4 bg-white border-t border-slate-200 shrink-0 z-10">
           <div className="flex flex-col gap-2 mb-4 max-w-sm mx-auto">
-             {(mode === 'ielts' ? IELTS_PROMPTS : TUTOR_PROMPTS).map((p, i) => (
+             {/* 🚀 ĐÃ THAY BẰNG MẢNG GỢI Ý ĐỘNG THEO MÔN */}
+             {dynamicPrompts.map((p, i) => (
                 <button key={i} onClick={() => handleSuggestionClick(p)} className="bg-white border border-slate-200 text-slate-600 text-[12px] font-bold py-2 px-4 rounded-xl text-left hover:bg-slate-50 transition-colors shadow-sm flex justify-between group">
                   <span>{p}</span><span className="text-slate-300 group-hover:text-blue-500">→</span>
                 </button>

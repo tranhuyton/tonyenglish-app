@@ -28,11 +28,16 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        } else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
          onCloseDict();
        } else if (e.data?.type === 'OPEN_IELTS_AI') {
+         // 🚀 TẠO NÚT GIẢ ĐỂ KÍCH HOẠT RADAR CỦA APP.TSX (Đã nâng cấp để ôm trọn 3 túi dữ liệu)
          const fakeBtn = document.createElement('button');
-         fakeBtn.className = 'btn-ielts-trigger hidden';
-         fakeBtn.setAttribute('data-topic', e.data.topic);
+         fakeBtn.className = 'btn-ai-trigger hidden'; // Dùng class chuẩn mới
+         
+         if (e.data.topic) fakeBtn.setAttribute('data-topic', e.data.topic);
+         if (e.data.image) fakeBtn.setAttribute('data-image', e.data.image);
+         if (e.data.task) fakeBtn.setAttribute('data-task', e.data.task);
+         
          document.body.appendChild(fakeBtn);
-         fakeBtn.click();
+         fakeBtn.click(); // Giả vờ bấm nút để App.tsx nghe lén được
          setTimeout(() => { fakeBtn.remove(); }, 100); 
        }
      };
@@ -73,20 +78,22 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          document.addEventListener('click', function(e) {
            var target = e.target;
            
-           // 1. ƯU TIÊN XỬ LÝ HYPERLINK (Bỏ block nhầm Link của anh)
+           // 1. ƯU TIÊN XỬ LÝ HYPERLINK (Đã cập nhật để không chặn class mới)
            var anchor = target.closest('a');
-           if (anchor && anchor.href && !anchor.outerHTML.includes('openIELTSAssessor') && !anchor.classList.contains('btn-ielts-trigger')) {
+           if (anchor && anchor.href && !anchor.outerHTML.includes('openIELTSAssessor') && !anchor.classList.contains('btn-ielts-trigger') && !anchor.classList.contains('btn-ai-trigger')) {
                e.preventDefault(); 
                window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: anchor.href }, '*'); 
                return; 
            }
 
-           // 2. TÌM NÚT GỌI AI GIÁM KHẢO
-           var btn = target.closest('.btn-ielts-trigger');
+           // 2. 🚀 RADAR TÌM NÚT GỌI AI TRONG IFRAME (Bắt cả class mới lẫn cũ)
+           var btn = target.closest('.btn-ai-trigger, .btn-ielts-trigger');
            var topic = '';
+           var image = '';
+           var task = 'task2';
            
            if (!btn) {
-               // Chuyển sang chỉ lùng sục các thẻ <button> để tránh bắt nhầm <a>
+               // Thuật toán lùi tìm đề bài cho các bài giảng cũ
                var fallbackBtn = target.closest('button'); 
                if (fallbackBtn) {
                    var text = fallbackBtn.innerText || fallbackBtn.textContent || '';
@@ -105,12 +112,14 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                        }
                    }
                }
-           } else {
-               topic = btn.getAttribute('data-topic') || '';
-           }
+           } 
 
-           // NẾU TÌM THẤY NÚT GỌI AI THÌ MỚI BẮT ĐẦU CHẶN LẠI VÀ CHẠY
+           // NẾU TÌM THẤY NÚT GỌI AI THÌ CHỘP DỮ LIỆU GỬI RA NGOÀI
            if (btn) {
+               topic = btn.getAttribute('data-topic') || topic;
+               image = btn.getAttribute('data-image') || '';
+               task = btn.getAttribute('data-task') || 'task2'; // 🚀 Nhặt nhãn Task 1 / Math...
+
                e.preventDefault();
                e.stopPropagation();
                e.stopImmediatePropagation();
@@ -123,7 +132,8 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                    btn.style.opacity = "1";
                }, 1500);
 
-               window.parent.postMessage({ type: 'OPEN_IELTS_AI', topic: topic }, '*');
+               // Bắn 3 túi dữ liệu xuyên không gian Iframe ra ngoài
+               window.parent.postMessage({ type: 'OPEN_IELTS_AI', topic: topic, image: image, task: task }, '*');
                return false;
            }
          }, true);
@@ -182,7 +192,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
 // =========================================================================================
 // MAIN COMPONENT: LECTURE VIEWER
 // =========================================================================================
-export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI }: { courseId: string, onBack: () => void, onStartTest?: (type: string, data: any) => void, onOpenAI?: () => void }) {
+export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI }: { courseId: string, onBack: () => void, onStartTest?: (type: string, data: any) => void, onOpenAI?: (passedMode?: string, topic?: string, image?: string, task?: string) => void }) {
   const [course, setCourse] = useState<any>(null);
   const [modules, setModules] = useState<any[]>([]);
   const [lectures, setLectures] = useState<any[]>([]);
@@ -505,7 +515,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
 
          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2 sm:ml-4">
              <button 
-                onClick={onOpenAI} 
+                onClick={() => { if(onOpenAI) onOpenAI('tutor'); }} 
                 className="flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-lg text-[13px] md:text-[14px] font-bold transition-all bg-amber-400 hover:bg-amber-500 text-amber-950 shadow-md border border-amber-300" 
                 title="Hỏi AI"
              >
