@@ -10,7 +10,7 @@ interface AITutorProps {
   htmlContent?: string;
   topicTitle?: string; 
   topicImage?: string; 
-  taskType?: string; // 🚀 Thêm cổng nhận taskType
+  taskType?: string; // 🚀 Cổng nhận taskType
 }
 
 const TUTOR_PROMPTS = ["Tóm tắt bài học.", "Giải thích khái niệm khó.", "Cho ví dụ minh họa."];
@@ -68,6 +68,14 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
           userBg: 'bg-[#0284c7]', aiBorder: 'border-sky-200', typingDot: 'bg-[#0284c7]',
           btnColor: 'bg-[#0284c7] hover:bg-[#0369a1]', focusRing: 'focus-within:border-[#0284c7] focus-within:ring-sky-50', width: 'md:w-[500px]'
         };
+      case 'speaking':
+        return {
+          headerBg: 'from-[#1e3a8a] to-[#3b82f6]', // 🔵 Speaking: Xanh dương đậm
+          title: 'IELTS Speaking Assistant',
+          subtitle: 'Lên ý tưởng & Bẻ lái Part 2', icon: '🎙️',
+          userBg: 'bg-[#3b82f6]', aiBorder: 'border-blue-200', typingDot: 'bg-[#3b82f6]',
+          btnColor: 'bg-[#3b82f6] hover:bg-[#1d4ed8]', focusRing: 'focus-within:border-[#3b82f6] focus-within:ring-blue-50', width: 'md:w-[500px]'
+        };
       default:
         return {
           headerBg: 'from-[#475569] to-[#64748b]',
@@ -91,6 +99,8 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
         return ["🧪 Giải thích định luật/hiện tượng", "📊 Phân tích bảng số liệu thí nghiệm", "📝 Hướng dẫn viết câu trả lời tự luận"];
       case 'ESL':
         return ["📝 Chấm điểm theo chuẩn Cambridge", "✍️ Sửa lỗi diễn đạt Line-by-line", "🚀 Nâng cấp lên bài mẫu Band 9"];
+      case 'speaking':
+        return ["💡 Tư vấn kịch bản (Lego)", "🧠 Gợi ý từ vựng Band 8+", "✍️ Viết câu Mở bài (Hook) ấn tượng"];
       default:
         return ["💡 Hướng dẫn phương pháp làm bài", "🔍 Kiểm tra đáp án"];
     }
@@ -137,7 +147,7 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
          };
       } else {
          const systemPrompt = `Bạn là gia sư AI. Bài giảng: "${lectureTitle}". Nội dung: """${contextText}""". Hãy trả lời: "${userMsg}"`;
-         payload = { prompt: systemPrompt, model: 'gemini-1.5-flash', taskType: 'tutor' };
+         payload = { prompt: systemPrompt, taskType: 'tutor' }; // Không truyền model tĩnh ở đây nữa, hệ thống tự bắt ở backend
       }
 
       const { data, error } = await supabase.functions.invoke(endpoint, { body: payload });
