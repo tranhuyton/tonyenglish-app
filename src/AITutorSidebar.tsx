@@ -114,17 +114,39 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
 
   useEffect(() => { messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages, isTyping, isExpanded]);
 
+  // 🚀 ĐÃ NÂNG CẤP LỜI CHÀO MỞ ĐẦU CHUYÊN SÂU
   useEffect(() => {
     if (isOpen) {
        setTimeout(() => textareaRef.current?.focus(), 300);
+       
+       let welcomeText = "";
+       if (mode === 'ielts') {
+          welcomeText = `Chào em! Thầy đã nhận được yêu cầu phân tích.\n\n`;
+          
+          if (topicTitle) {
+             welcomeText += `**📝 Đề bài:** "${topicTitle}"\n\n`;
+          }
+          if (topicImage) {
+             welcomeText += `**(📸 Đã nhận kèm hình ảnh/biểu đồ)**\n\n`;
+          }
+          
+          if (taskType === 'speaking') {
+             welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng hay viết câu mở bài (Hook) nào?`;
+          } else if (taskType === 'task1' || taskType === 'task2') {
+             welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
+          } else {
+             welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
+          }
+       } else {
+          welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em cần thầy giải đáp gì không?`;
+       }
+
        setMessages([{
            role: 'ai',
-           text: mode === 'ielts' 
-             ? `Chào em! Thầy đã nhận được đề bài. ${topicImage ? "Thầy đã thấy hình ảnh/biểu đồ của em rồi!" : ""} Em gửi câu hỏi hoặc dán bài làm vào đây để thầy hỗ trợ nhé!` 
-             : `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em cần thầy giải đáp gì không?`
+           text: welcomeText
        }]);
     }
-  }, [isOpen, mode, topicTitle, lectureTitle, topicImage]);
+  }, [isOpen, mode, topicTitle, lectureTitle, topicImage, taskType]);
 
   const handleSendMessage = async (suggestedText?: string) => {
     const userMsg = typeof suggestedText === 'string' ? suggestedText : input.trim();
@@ -136,18 +158,18 @@ export default function AITutorSidebar({ isOpen, onClose, mode = 'tutor', course
     if (textareaRef.current) textareaRef.current.style.height = 'auto';
 
     try {
-      let endpoint = 'omni-ai-grader'; // 🚀 LUÔN GỌI VÀO ÔNG TỔNG QUẢN
+      let endpoint = 'omni-ai-grader'; 
       let payload: any = {};
 
       if (mode === 'ielts') {
          payload = { 
             content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}`,
             imageUrl: topicImage,
-            taskType: taskType // 🚀 GỬI NHÃN MÀ WEB BẮT ĐƯỢC CHUẨN 100%
+            taskType: taskType 
          };
       } else {
          const systemPrompt = `Bạn là gia sư AI. Bài giảng: "${lectureTitle}". Nội dung: """${contextText}""". Hãy trả lời: "${userMsg}"`;
-         payload = { prompt: systemPrompt, taskType: 'tutor' }; // Không truyền model tĩnh ở đây nữa, hệ thống tự bắt ở backend
+         payload = { prompt: systemPrompt, taskType: 'tutor' }; 
       }
 
       const { data, error } = await supabase.functions.invoke(endpoint, { body: payload });

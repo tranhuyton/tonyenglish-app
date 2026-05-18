@@ -514,13 +514,16 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
          </div>
 
          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2 sm:ml-4">
-             <button 
-                onClick={() => { if(onOpenAI) onOpenAI('tutor'); }} 
-                className="flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-lg text-[13px] md:text-[14px] font-bold transition-all bg-amber-400 hover:bg-amber-500 text-amber-950 shadow-md border border-amber-300" 
-                title="Hỏi AI"
-             >
-                <span className="animate-pulse">✨</span> <span className="hidden sm:inline">Hỏi AI</span>
-             </button>
+             {/* 🚀 CHỈ HIỆN NÚT HỎI AI NẾU KHÓA HỌC KHÔNG PHẢI LÀ IELTS */}
+             {!(course?.title || '').toLowerCase().includes('ielts') && (
+                 <button 
+                    onClick={() => { if(onOpenAI) onOpenAI('tutor'); }} 
+                    className="flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-lg text-[13px] md:text-[14px] font-bold transition-all bg-amber-400 hover:bg-amber-500 text-amber-950 shadow-md border border-amber-300" 
+                    title="Hỏi AI"
+                 >
+                    <span className="animate-pulse">✨</span> <span className="hidden sm:inline">Hỏi AI</span>
+                 </button>
+             )}
 
              <button onClick={toggleFullScreen} className="hidden md:flex w-10 h-10 rounded-lg items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-colors shadow-sm" title={isFullscreen ? "Thu nhỏ" : "Toàn màn hình"}>
                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
