@@ -664,6 +664,23 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
+  // 🚀 TÍNH NĂNG GỌI HỎI AI TẠI TỪNG CÂU HỎI READING / LISTENING
+  const askAIToExplain = (questionId: string, qContent: string, qExplanation: string) => {
+     let fullPassageContext = "Nội dung bài đọc/nghe:\n\n";
+     if (currentPart?.content) fullPassageContext += currentPart.content.replace(stripHtmlRegex, '') + "\n\n";
+     
+     const promptContent = `Hãy đóng vai giáo viên IELTS giải thích chi tiết câu hỏi này cho em bằng tiếng Việt.\n\n${fullPassageContext}\n---\n**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${qContent.replace(stripHtmlRegex, '')}\n\n**Đáp án & Giải thích gốc:**\n${qExplanation.replace(stripHtmlRegex, '')}\n\nHãy giải thích cặn kẽ tại sao lại chọn đáp án này, chỉ ra vị trí (dòng nào, đoạn nào) trong bài đọc chứa thông tin trả lời. Xin cảm ơn.`;
+     
+     // Phát Event để mở Sidebar Tutor AI
+     const fakeBtn = document.createElement('button');
+     fakeBtn.className = 'btn-ai-trigger hidden';
+     fakeBtn.setAttribute('data-task', 'tutor');
+     fakeBtn.setAttribute('data-topic', promptContent);
+     document.body.appendChild(fakeBtn);
+     fakeBtn.click();
+     setTimeout(() => { fakeBtn.remove(); }, 100);
+  };
+
   const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
     if (!htmlStr) return null;
     const safeText = String(htmlStr);
@@ -1359,7 +1376,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                            );
                                          })}
                                        </div>
-                                       {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} /></div>)}
+                                       {isReviewMode && (
+                                          <div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans">
+                                             <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
+                                             <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                             {/* 🚀 NÚT HỎI AI GIẢI THÍCH (Chỉ hiện trong Review Mode) */}
+                                             <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-indigo-800">✨ Hỏi AI giải thích thêm</button>
+                                          </div>
+                                       )}
                                      </div>
                                     );
                                 }
@@ -1395,7 +1419,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                        );
                                      })}
                                    </div>
-                                   {isReviewMode && (<div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans"><p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p><div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} /></div>)}
+                                   {isReviewMode && (
+                                      <div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans">
+                                         <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
+                                         <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                         {/* 🚀 NÚT HỎI AI GIẢI THÍCH (Chỉ hiện trong Review Mode) */}
+                                         <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-indigo-800">✨ Hỏi AI giải thích thêm</button>
+                                      </div>
+                                   )}
                                  </div>
                                 );
                              })}
@@ -1454,11 +1485,19 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                               </select>
                                            )}
                                        </div>
+                                       {/* 🚀 NÚT HỎI AI GIẢI THÍCH BÊN TRONG DROPLIST (Chỉ hiện trong Review Mode) */}
+                                       {isReviewMode && (
+                                          <div className="w-full mt-4 border-t border-slate-300 pt-3">
+                                             <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
+                                             <div className="text-[14px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-none text-[12px] transition shadow-sm border border-indigo-800">✨ Hỏi AI giải thích thêm</button>
+                                          </div>
+                                       )}
                                      </div>
                                     );
                                   });
-                             })()}
-                           </div>
+                                })()}
+                             </div>
                         )}
 
                         {(isInlineDragDrop || isBlockDragDrop) && (
@@ -1526,6 +1565,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                             </span>
                                           )}
                                         </div>
+                                        {/* 🚀 NÚT HỎI AI GIẢI THÍCH BÊN TRONG BLOCK KÉO THẢ (Chỉ hiện trong Review Mode) */}
+                                        {isReviewMode && (
+                                          <div className="w-full mt-4 border-t border-slate-300 pt-3">
+                                             <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
+                                             <div className="text-[14px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-none text-[12px] transition shadow-sm border border-indigo-800">✨ Hỏi AI giải thích thêm</button>
+                                          </div>
+                                        )}
                                       </div>
                                     );
                                   });
@@ -1644,74 +1691,76 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                                     const qText = combo[0]?.content.replace(/^<p>|<\/p>$/gi, '').replace(/^\d+[\.\)]\s*/, '') || '';
                                     return (
-                                       <div key={`combo-${comboIndex}`} className={containerClass}>
-                                         <div className="flex items-start gap-4 mb-5">
-                                           <div className="flex gap-2 flex-wrap shrink-0 mt-0.5">
-                                              {combo.map((q: any) => {
-                                                  const displayIdx = questionIndexMap[String(q.id)] || q.id;
-                                                  const boxClass = isReviewMode 
-                                                    ? (isPerfect ? 'bg-emerald-600 text-white border-emerald-600' : isPartial ? 'bg-amber-600 text-white border-amber-600' : 'bg-red-600 text-white border-red-600')
-                                                    : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800');
-                                                  return (
-                                                      <span 
-                                                        key={q.id} 
-                                                        id={`q-${q.id}`} 
-                                                        onClick={() => setActiveQuestionId(String(q.id))} 
-                                                        className={`cursor-pointer shrink-0 inline-flex items-center justify-center leading-none font-bold font-sans px-2 min-w-[30px] h-[30px] text-[14px] rounded-none border ${boxClass}`}
-                                                        style={{ textIndent: 0 }}
-                                                      >
-                                                        {displayIdx}
-                                                      </span>
-                                                  );
-                                              })}
-                                           </div>
-                                           <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(qText) }} />
-                                         </div>
+                                        <div key={`combo-${comboIndex}`} className={containerClass}>
+                                          <div className="flex items-start gap-4 mb-5">
+                                            <div className="flex gap-2 flex-wrap shrink-0 mt-0.5">
+                                               {combo.map((q: any) => {
+                                                   const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                                                   const boxClass = isReviewMode 
+                                                      ? (isPerfect ? 'bg-emerald-600 text-white border-emerald-600' : isPartial ? 'bg-amber-600 text-white border-amber-600' : 'bg-red-600 text-white border-red-600')
+                                                      : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800');
+                                                   return (
+                                                       <span 
+                                                         key={q.id} 
+                                                         id={`q-${q.id}`} 
+                                                         onClick={() => setActiveQuestionId(String(q.id))} 
+                                                         className={`cursor-pointer shrink-0 inline-flex items-center justify-center leading-none font-bold font-sans px-2 min-w-[30px] h-[30px] text-[14px] rounded-none border ${boxClass}`}
+                                                         style={{ textIndent: 0 }}
+                                                       >
+                                                         {displayIdx}
+                                                       </span>
+                                                   );
+                                               })}
+                                            </div>
+                                            <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(qText) }} />
+                                          </div>
 
-                                         <div className={`flex flex-col gap-4 ml-[3.5rem] font-sans`}>
-                                           {validOptions.map((opt: any, i: number) => {
-                                             const safeOpt = String(opt || '').replace(/^<p>|<\/p>$/gi, '');
-                                             const optionValue = String.fromCharCode(65+i); 
-                                             const isSelected = userAnsArr.includes(optionValue); 
-                                             let isCorrectOpt = false;
-                                             correctAnsComboSet.forEach(c => {
-                                                 if (isAnswerCorrect(optionValue, c)) isCorrectOpt = true;
-                                             });
-                                             let labelClass = "flex items-start gap-3 py-1.5 px-2 rounded-none transition border border-transparent";
-                                             if (isReviewMode) { 
+                                          <div className={`flex flex-col gap-4 ml-[3.5rem] font-sans`}>
+                                            {validOptions.map((opt: any, i: number) => {
+                                              const safeOpt = String(opt || '').replace(/^<p>|<\/p>$/gi, '');
+                                              const optionValue = String.fromCharCode(65+i); 
+                                              const isSelected = userAnsArr.includes(optionValue); 
+                                              let isCorrectOpt = false;
+                                              correctAnsComboSet.forEach(c => {
+                                                  if (isAnswerCorrect(optionValue, c)) isCorrectOpt = true;
+                                              });
+                                              let labelClass = "flex items-start gap-3 py-1.5 px-2 rounded-none transition border border-transparent";
+                                              if (isReviewMode) { 
                                                  if (isCorrectOpt && isSelected) labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
                                                  else if (isCorrectOpt && !isSelected) labelClass += " bg-amber-200 border-amber-600 font-bold text-amber-900";
                                                  else if (isSelected && !isCorrectOpt) labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70";
                                                  else labelClass += " opacity-50";
-                                             } else { 
+                                              } else { 
                                                  labelClass += " cursor-pointer hover:bg-slate-100 hover:border-slate-400";
-                                             }
-                                             return (
-                                               <label key={i} className={labelClass}>
-                                                 <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="mt-1 w-[18px] h-[18px] accent-black cursor-pointer rounded-none" disabled={isReviewMode} />
-                                                 <span className="text-[15px] leading-[1.8] text-black font-sans html-content-renderer"><span className="font-bold mr-1 font-sans">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} /></span>
-                                               </label>
-                                             );
-                                           })}
-                                         </div>
+                                              }
+                                              return (
+                                                <label key={i} className={labelClass}>
+                                                  <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="mt-1 w-[18px] h-[18px] accent-black cursor-pointer rounded-none" disabled={isReviewMode} />
+                                                  <span className="text-[15px] leading-[1.8] text-black font-sans html-content-renderer"><span className="font-bold mr-1 font-sans">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} /></span>
+                                                </label>
+                                              );
+                                            })}
+                                          </div>
 
-                                         {isReviewMode && (
-                                           <div className="mt-6 ml-[3.5rem] pt-4 border-t border-slate-300 font-sans">
-                                              <p className="text-[13px] font-black text-black uppercase mb-3">💡 Giải thích đáp án:</p>
-                                              {combo.map((q:any) => {
-                                                  if (!q.explanation || String(q.explanation).trim() === '') return null;
-                                                  return (
-                                                      <div key={q.id} className="text-[15px] text-slate-800 font-medium leading-relaxed mb-3 last:mb-0 font-sans html-content-renderer">
-                                                          <span className="font-bold font-sans text-white px-2 py-0.5 bg-slate-800 rounded-none text-[13px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
-                                                          <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
-                                                      </div>
-                                                  );
-                                              })}
-                                           </div>
-                                         )}
-                                       </div>
+                                          {isReviewMode && (
+                                            <div className="mt-6 ml-[3.5rem] pt-4 border-t border-slate-300 font-sans">
+                                               <p className="text-[13px] font-black text-black uppercase mb-3">💡 Giải thích đáp án:</p>
+                                               {combo.map((q:any) => {
+                                                   if (!q.explanation || String(q.explanation).trim() === '') return null;
+                                                   return (
+                                                       <div key={q.id} className="text-[15px] text-slate-800 font-medium leading-relaxed mb-3 last:mb-0 font-sans html-content-renderer">
+                                                           <span className="font-bold font-sans text-white px-2 py-0.5 bg-slate-800 rounded-none text-[13px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
+                                                           <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
+                                                           {/* 🚀 NÚT HỎI AI GIẢI THÍCH BÊN TRONG NHÓM CHECKBOX MULTIPLE */}
+                                                           <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="block mt-2 px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-none text-[12px] transition shadow-sm border border-indigo-800">✨ Hỏi AI giải thích chi tiết Câu {questionIndexMap[String(q.id)] || q.id}</button>
+                                                       </div>
+                                                   );
+                                               })}
+                                            </div>
+                                          )}
+                                        </div>
                                     );
-                                 });
+                                });
                              })()}
                            </div>
                         )}

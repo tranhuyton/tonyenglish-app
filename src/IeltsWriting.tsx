@@ -154,27 +154,32 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
     if (safeData?.id) localStorage.removeItem(`ielts_writing_ans_${safeData.id}`);
 
     try {
+      // 🚀 NHẶT LINK ẢNH TỪ TẤT CẢ CÁC TASK ĐỂ GỬI CHO AI CHẤM
+      const collectedImages = allQuestions.map(q => q.imageUrl).filter(url => url && typeof url === 'string');
+
       const prompt = `
-        Bạn là một Giám khảo IELTS vô cùng khắt khe. Hãy chấm bài IELTS Writing sau đây.
+        Bạn là một Giám khảo IELTS tận tâm, chấm điểm theo hướng khuyến khích học sinh. Không quá khắt khe ở các lỗi diễn đạt nhỏ nếu ý chính vẫn rõ ràng. Bài viết có sử dụng cấu trúc lập luận tốt và từ vựng phong phú thì nên cân nhắc ưu tiên mức điểm cao (từ 7.0 đến 8.5).
         
         THÔNG TIN ĐỀ BÀI (Chứa các yêu cầu của Task 1 và Task 2):
         ${JSON.stringify(allQuestions.map((q, i) => `Task ${i+1} (${q.secTitle}): ${q.secContent} ${q.content}`))}
+
+        Lưu ý: Đối với Task 1, tôi đã gửi kèm hình ảnh biểu đồ/bản đồ trong tệp đính kèm. Bạn HÃY PHÂN TÍCH ẢNH NÀY để đối chiếu xem học sinh mô tả số liệu, đặc điểm có đúng với hình hay không (để chấm tiêu chí Task Achievement).
 
         BÀI LÀM CỦA HỌC SINH (Map theo ID câu hỏi):
         ${JSON.stringify(answers)}
 
         Hãy phân tích tất cả các Task học sinh đã làm và trả về ĐÚNG định dạng JSON sau (không dùng markdown block):
         {
-          "overall": 6.5,
+          "overall": 7.5,
           "tasks": [
             {
               "task_name": "Task 1",
-              "score": 6.0,
+              "score": 7.0,
               "criteria": [
-                { "name": "Task Achievement", "score": 6.0, "comment": "Nhận xét..." },
-                { "name": "Coherence & Cohesion", "score": 6.0, "comment": "Nhận xét..." },
-                { "name": "Lexical Resource", "score": 6.0, "comment": "Nhận xét..." },
-                { "name": "Grammatical Range", "score": 6.0, "comment": "Nhận xét..." }
+                { "name": "Task Achievement", "score": 7.0, "comment": "Nhận xét dựa trên hình ảnh gốc..." },
+                { "name": "Coherence & Cohesion", "score": 7.0, "comment": "Nhận xét..." },
+                { "name": "Lexical Resource", "score": 7.5, "comment": "Nhận xét..." },
+                { "name": "Grammatical Range", "score": 7.0, "comment": "Nhận xét..." }
               ],
               "feedback": "Văn bản bài làm kèm thẻ <span class='bg-red-200 text-red-800 line-through px-1'>từ sai</span> và <span class='bg-emerald-200 text-emerald-800 font-bold px-1'>từ đúng</span>..."
             }
@@ -186,7 +191,8 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
       const { data, error } = await supabase.functions.invoke('ai-grader', {
         body: { 
            prompt: prompt,
-           model: 'gemini-2.5-flash'
+           imageUrls: collectedImages, // 🚀 BƠM MẢNG ẢNH VÀO ĐÂY NÈ!
+           model: 'gemini-2.5-pro'
         }
       });
 
