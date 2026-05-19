@@ -25,6 +25,7 @@ const ExitFullscreenIcon = () => (
 
 const stripHtmlRegex = /[<][^>]*[>]/g;
 
+// TỰ ĐỘNG XÓA BỎ CÁC THUỘC TÍNH HEIGHT/OVERFLOW GÂY LỖI THANH CUỘN
 const cleanHtmlContent = (html: any) => {
   if (!html) return '';
   return String(html).replace(/style\s*=\s*(['"])(.*?)\1/gi, (match, quote, styleContent) => {
@@ -73,9 +74,11 @@ const buildCheckboxCombos = (questions: any[]) => {
   return combos;
 };
 
+// NÂNG CẤP HÀM CHẤM ĐIỂM HOÀN HẢO CHO MỌI BIẾN THỂ KÉO THẢ
 const isAnswerCorrect = (userAns: string, correctAns: string) => {
   if (!userAns || !correctAns) return false;
   
+  // Chuẩn hóa khoảng trắng
   const u = String(userAns).trim().toUpperCase().replace(/\s+/g, ' ');
   const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '));
   
@@ -114,6 +117,7 @@ const parseStyle = (styleStr: string) => {
     if (match) {
       const [, key, val] = match;
       const lowerKey = key.toLowerCase();
+      // Ngăn chặn parse các thuộc tính gây lỗi scrollbar từ inline HTML
       if (['height', 'max-height', 'min-height', 'overflow', 'overflow-y', 'overflow-x'].includes(lowerKey)) {
           return;
       }
@@ -691,8 +695,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   }, [draggedOption]);
 
-  const onDragStart = (option: string) => {
+  // 🚀 SỬA LỖI GHOST IMAGE KÉO BÓNG MỜ BẰNG e.stopPropagation()
+  const onDragStart = (e: React.DragEvent<HTMLDivElement>, option: string) => {
     if (isReviewMode) return;
+    e.stopPropagation(); 
     setDraggedOption(option);
   };
 
@@ -724,15 +730,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
-  // 🚀 TÍNH NĂNG GỌI HỎI AI ĐÃ LÀM SẠCH VÀ IN ĐẬM
+  // 🚀 TÍNH NĂNG GỌI HỎI AI ĐÃ LÀM SẠCH VÀ IN ĐẬM TIÊU ĐỀ
   const askAIToExplain = (questionId: string, qContent: string, qExplanation: string) => {
+     // Phát event ngầm để Sidebar lấy được nội dung Bài đọc
      const passageContent = currentPart?.content ? currentPart.content.replace(stripHtmlRegex, '') : "";
      window.dispatchEvent(new CustomEvent('tony-update-lecture-context', {
        detail: { title: basicInfo.title, html: passageContent }
      }));
      
+     // Chỉ hiển thị nội dung câu hỏi và đáp án gốc (Đã IN ĐẬM)
      const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${qContent.replace(stripHtmlRegex, '')}\n\n**Đáp án & Giải thích gốc:**\n${qExplanation.replace(stripHtmlRegex, '')}`;
      
+     // Kích hoạt nút bấm tàng hình để mở Sidebar
      const fakeBtn = document.createElement('button');
      fakeBtn.className = 'btn-ai-trigger hidden';
      fakeBtn.setAttribute('data-task', 'reading');
@@ -796,6 +805,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   }
               }
 
+              // ĐẢM BẢO CÓ ID ĐỂ BẤM TỪ FOOTER DẪN LÊN ĐÚNG CÂU ĐIỀN TỪ
               return (
                 <span key={pathKey} id={`q-${qNum}`} className="relative inline-flex items-center align-middle mx-1 -translate-y-[2px] whitespace-nowrap" style={{ textIndent: 0 }}>
                   <span className={`shrink-0 inline-flex items-center justify-center leading-none px-3 py-1 text-[14px] font-bold font-sans text-white rounded-none border border-black ${isCorrect ? 'bg-emerald-600' : 'bg-red-600'}`} style={{ color: '#ffffff', textIndent: 0 }}>
@@ -965,6 +975,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   return (
     <React.Fragment>
       <style>{`
+          /* 🚀 FIX LỖI ĐẺ SCROLLBAR Ở ĐIỀN TỪ: XÓA OVERFLOW TẠI ĐÂY MÀ ÁP DỤNG TRỰC TIẾP CHO TABLE */
           .format-passage { 
               overflow: visible !important; 
           }
@@ -980,6 +991,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           }
 
           .html-content-renderer table { 
+              display: block;
+              overflow-x: auto;
               width: 100% !important; 
               min-width: 600px; 
               border-collapse: collapse !important; 
@@ -2138,9 +2151,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   if (isActive) {
                      btnClass += 'bg-slate-900 text-white border border-black shadow-inner';
                   } else if (isAnswered) {
-                     btnClass += 'bg-slate-800 text-white border border-black cursor-pointer'; 
+                     btnClass += 'bg-slate-800 text-white border border-black cursor-pointer'; // Đã chọn -> đen chữ trắng
                   } else {
-                     btnClass += 'bg-white border border-slate-400 text-black cursor-pointer hover:bg-slate-200'; 
+                     btnClass += 'bg-white border border-slate-400 text-black cursor-pointer hover:bg-slate-200'; // Chưa chọn -> trắng chữ đen
                   }
                 }
                 
