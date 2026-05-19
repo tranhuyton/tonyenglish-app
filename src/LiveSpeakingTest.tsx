@@ -63,6 +63,9 @@ export default function LiveSpeakingTest() {
       ws.onopen = async () => {
         setStatus('CONNECTED');
         
+        // 🚀 LẤY ĐỀ BÀI TỪ SESSION ĐỂ MỚM CHO AI
+        const customTopic = sessionStorage.getItem('tony_live_topic') || "Please ask me an IELTS speaking question.";
+
         const setupMsg = {
           setup: {
             model: "models/gemini-3.1-flash-live-preview",
@@ -73,7 +76,7 @@ export default function LiveSpeakingTest() {
               }
             },
             systemInstruction: {
-              parts: [{ text: "Bạn là giám khảo IELTS tên Tony đến từ Anh. Hãy bắt đầu cuộc thi Speaking Part 1 bằng cách chào hỏi và hỏi tên tôi. Trả lời cực kỳ ngắn gọn." }]
+              parts: [{ text: `Bạn là giám khảo IELTS tên Tony đến từ Anh. Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề sau đây: "${customTopic}". Trả lời cực kỳ ngắn gọn.` }]
             }
           }
         };
@@ -96,7 +99,7 @@ export default function LiveSpeakingTest() {
             const pcm16Buffer = floatTo16BitPCM(inputData);
             const base64Audio = arrayBufferToBase64(pcm16Buffer);
             
-            // 🚀 ĐÃ SỬA THEO YÊU CẦU CỦA LỖI 1007: THAY mediaChunks BẰNG audio
+            // 🚀 BẮT BUỘC DÙNG audio (KHÔNG DÙNG mediaChunks)
             ws.send(JSON.stringify({
               realtimeInput: {
                 audio: { mimeType: "audio/pcm;rate=16000", data: base64Audio }
@@ -115,6 +118,7 @@ export default function LiveSpeakingTest() {
 
       ws.onmessage = async (event) => {
         try {
+          // XỬ LÝ LỖI BLOB THÀNH TEXT
           let rawData = event.data;
           if (rawData instanceof Blob) {
             rawData = await rawData.text();
@@ -133,7 +137,7 @@ export default function LiveSpeakingTest() {
              console.log("✅ GOOGLE ĐÃ SẴN SÀNG NGHE!");
              isSetupCompleteRef.current = true;
              
-             // 🚀 GỬI LỆNH MỒI (KICKOFF) BẰNG CHUẨN MỚI CỦA 3.1
+             // GỬI LỆNH KICKOFF THEO CHUẨN 3.1 MỚI NHẤT
              const kickoffMsg = {
                 realtimeInput: {
                     text: "Hello, I am ready for the Speaking Test. Please start."
@@ -205,8 +209,17 @@ export default function LiveSpeakingTest() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-slate-900 text-white p-8 w-full">
-      <div className="bg-slate-800 p-10 rounded-3xl shadow-2xl border border-slate-700 max-w-xl w-full text-center">
-        <h2 className="text-3xl font-black mb-2 tracking-wide">Test Phòng Thi Live</h2>
+      <div className="bg-slate-800 p-10 rounded-3xl shadow-2xl border border-slate-700 max-w-xl w-full text-center relative">
+        
+        {/* Nút quay lại để thoát phòng Live */}
+        <button 
+          onClick={() => window.history.back()} 
+          className="absolute top-4 left-4 text-slate-400 hover:text-white transition flex items-center gap-2"
+        >
+          <span>←</span> Quay lại
+        </button>
+
+        <h2 className="text-3xl font-black mb-2 tracking-wide mt-4">Test Phòng Thi Live</h2>
         <p className="text-slate-400 mb-8 font-medium">Giao tiếp Real-time với Giám khảo AI</p>
 
         {status === 'IDLE' && (

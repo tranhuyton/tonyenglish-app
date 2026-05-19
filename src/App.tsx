@@ -16,7 +16,7 @@ import NinjaSurvival from './NinjaSurvival';
 import VocabRacing from './VocabRacing';
 import AITutorSidebar from './AITutorSidebar';
 
-// 🚀 IMPORT COMPONENT TEST LIVE SPEAKING MỚI
+// 🚀 IMPORT PHÒNG THI LIVE ĐỂ ĐIỀU HƯỚNG TỪ BÀI GIẢNG
 import LiveSpeakingTest from './LiveSpeakingTest';
 
 export default function App() {
@@ -41,11 +41,11 @@ export default function App() {
   const [currentHtmlContent, setCurrentHtmlContent] = useState("");
 
   useEffect(() => {
-    // 🚀 RADAR KÉP: Bắt cả class MỚI (.btn-ai-trigger) và CŨ (.btn-ielts-trigger)
     const handleGlobalClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      const triggerBtn = target.closest('.btn-ai-trigger, .btn-ielts-trigger'); 
       
+      // 1. RADAR 1: Bắt các class mở AI Sidebar (Bẻ lái cũ)
+      const triggerBtn = target.closest('.btn-ai-trigger, .btn-ielts-trigger'); 
       if (triggerBtn) {
         const topicText = triggerBtn.getAttribute('data-topic');
         const topicImg = triggerBtn.getAttribute('data-image'); 
@@ -58,6 +58,17 @@ export default function App() {
           setAiMode('ielts');       
           setIsAISidebarOpen(true); 
         }
+        return; // Thoát sớm nếu đã xử lý xong nút bẻ lái
+      }
+
+      // 2. 🚀 RADAR 2: BẮT NÚT GỌI GIÁM KHẢO LIVE MỚI TỪ BÀI GIẢNG HTML
+      const liveBtn = target.closest('.btn-live-trigger');
+      if (liveBtn) {
+          const topicText = liveBtn.getAttribute('data-topic');
+          if (topicText) {
+              sessionStorage.setItem('tony_live_topic', topicText); // Nhét đề bài vào túi quần
+              handleNavigate('live-test'); // Phóng thẳng học sinh sang view phòng nói Live
+          }
       }
     };
 
@@ -125,7 +136,6 @@ export default function App() {
   }, []); 
 
   const handleNavigate = (view: string) => { setCurrentView(view); try { sessionStorage.setItem('lms_current_view', view); } catch(e) {} };
-  
   const handleStartTest = (type: string, data: any) => {
     try {
       setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
@@ -134,18 +144,14 @@ export default function App() {
       handleNavigate(targetView); sessionStorage.setItem('lms_current_test', JSON.stringify(data));
     } catch (error) {}
   };
-  
   const handleOpenLecture = (courseId: string) => { setActiveCourseId(courseId); try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {} handleNavigate('lecture'); };
-  
   const handleReturnFromTest = () => handleNavigate(returnView);
 
-  // 🚀 ĐÃ BỔ SUNG 'live-test' VÀO DANH SÁCH VIEW HỢP LỆ
+  // 🚀 ĐÃ CẬP NHẬT 'live-test' VÀO MẢNG ĐỊNH TUYẾN HỢP LỆ
   const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture', 'live-test'];
 
   return (
     <React.Fragment>
-      
-
       {currentView === 'admin-login' && <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />}
       {currentView === 'home' && <Home onNavigate={handleNavigate} onStartTest={handleStartTest} />}
       {currentView === 'portal' && <StudentPortal onNavigate={handleNavigate} onStartTest={handleStartTest} onOpenLecture={handleOpenLecture} />}
@@ -154,7 +160,7 @@ export default function App() {
       {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
       {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
       
-      {/* 🚀 GIAO DIỆN PHÒNG TEST LIVE */}
+      {/* 🚀 ĐIỀU HƯỚNG VÀO PHÒNG NÓI REAL-TIME KHI BẤM NÚT TỪ BÀI GIẢNG */}
       {currentView === 'live-test' && <LiveSpeakingTest />}
 
       {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
