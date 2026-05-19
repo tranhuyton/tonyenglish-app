@@ -25,6 +25,7 @@ const ExitFullscreenIcon = () => (
 
 const stripHtmlRegex = /[<][^>]*[>]/g;
 
+// TỰ ĐỘNG XÓA BỎ CÁC THUỘC TÍNH HEIGHT/OVERFLOW GÂY LỖI THANH CUỘN
 const cleanHtmlContent = (html: any) => {
   if (!html) return '';
   return String(html).replace(/style\s*=\s*(['"])(.*?)\1/gi, (match, quote, styleContent) => {
@@ -73,9 +74,11 @@ const buildCheckboxCombos = (questions: any[]) => {
   return combos;
 };
 
+// NÂNG CẤP HÀM CHẤM ĐIỂM HOÀN HẢO CHO MỌI BIẾN THỂ KÉO THẢ
 const isAnswerCorrect = (userAns: string, correctAns: string) => {
   if (!userAns || !correctAns) return false;
   
+  // Chuẩn hóa khoảng trắng
   const u = String(userAns).trim().toUpperCase().replace(/\s+/g, ' ');
   const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '));
   
@@ -724,18 +727,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
-  // 🚀 TÍNH NĂNG GỌI HỎI AI (BẢN ĐÃ LÀM SẠCH VÀ IN ĐẬM TIÊU ĐỀ)
   const askAIToExplain = (questionId: string, qContent: string, qExplanation: string) => {
-     // Phát event ngầm để Sidebar lấy được nội dung Bài đọc
      const passageContent = currentPart?.content ? currentPart.content.replace(stripHtmlRegex, '') : "";
      window.dispatchEvent(new CustomEvent('tony-update-lecture-context', {
        detail: { title: basicInfo.title, html: passageContent }
      }));
      
-     // Chỉ hiển thị nội dung câu hỏi và đáp án gốc (Đã IN ĐẬM)
      const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${qContent.replace(stripHtmlRegex, '')}\n\n**Đáp án & Giải thích gốc:**\n${qExplanation.replace(stripHtmlRegex, '')}`;
      
-     // Kích hoạt nút bấm tàng hình để mở Sidebar
      const fakeBtn = document.createElement('button');
      fakeBtn.className = 'btn-ai-trigger hidden';
      fakeBtn.setAttribute('data-task', 'reading');
@@ -1364,6 +1363,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               <React.Fragment>
                 <div className="flex flex-col h-full bg-white relative" style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
                     
+                    {/* BẢNG AUDIO PLAYER STICKY Ở TRÊN CÙNG BÊN TRÁI DÀNH CHO REVIEW LISTENING */}
                     {isReviewMode && isListening && currentPart?.audioUrl && (
                       <div className="bg-[#f4f4f4] p-4 border-b border-slate-400 flex items-center gap-4 shrink-0 shadow-sm z-10 font-sans">
                         <p className="text-[12px] font-black text-slate-800 uppercase tracking-widest shrink-0">Audio Part:</p>
@@ -1418,6 +1418,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               >
                 <div className="w-full">
                   
+                  {/* ẨN AUDIO BÊN TRẢI NẾU LÀ LISTENING (DO ĐÃ ĐƯA SANG TRÁI) */}
                   {currentPart?.audioUrl && (!isListening) && (
                     <div className="mb-8 bg-white p-4 rounded-none border border-slate-400 flex items-center gap-4 font-sans">
                        <p className="text-[12px] font-bold text-slate-800 uppercase tracking-widest shrink-0">Audio Part:</p>
@@ -1474,6 +1475,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                                 return (
                                     <React.Fragment>
+                                        {/* TĂNG GIÃN DÒNG TRONG REVIEW MODE ĐỂ KHÔNG BỊ ĐÈ CHỮ */}
                                         <div className={`format-passage text-[16px] text-black break-words font-sans html-content-renderer ${isReviewMode ? 'leading-[3.0] pb-6' : 'leading-[2.0]'}`}>
                                             {renderHtmlWithHoles(cleanHtmlContent(mainContent), sec)}
                                         </div>
@@ -1511,45 +1513,49 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                 if (isTFNG) {
                                     return (
                                      <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 bg-white border rounded-none relative group transition-all flex flex-col ${isReviewMode ? (isCorrect ? 'border-emerald-600 bg-emerald-50' : 'border-red-600 bg-red-50') : (activeQuestionId === String(q.id) ? 'border-black' : 'border-slate-400 hover:border-slate-600')}`}>
-                                       <div className="flex items-start gap-4 mb-5 font-sans w-full">
-                                         <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
-                                           {displayIdx}
-                                         </span>
-                                         <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer flex-1 min-w-0 font-sans html-content-renderer [&>p]:!mb-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
-                                       </div>
-                                       <div className={`flex flex-row flex-wrap gap-4 sm:gap-6 ml-11 font-sans`}>
-                                         {validOptions.map((opt: any, i: number) => {
-                                           const safeOpt = String(opt || '');
-                                           const optionValue = safeOpt.replace(stripHtmlRegex, '').trim().toUpperCase(); 
-                                           const isSelected = userAns === optionValue; 
-                                           const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
-                                           let labelClass = "flex items-center gap-2 py-1.5 px-2 rounded-none transition border border-transparent";
+                                       
+                                       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 w-full">
+                                           <div className="flex items-start gap-4 font-sans flex-1 min-w-0">
+                                             <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
+                                               {displayIdx}
+                                             </span>
+                                             <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer flex-1 min-w-0 font-sans html-content-renderer [&>p]:!m-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
+                                           </div>
                                            
-                                           if (isReviewMode) { 
-                                              if (isCorrectOpt) {
-                                                  labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
-                                              } else if (isSelected) {
-                                                  labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70"; 
-                                              } else {
-                                                  labelClass += " opacity-50";
-                                              }
-                                           } else { 
-                                              labelClass += " cursor-pointer hover:bg-slate-100";
-                                           }
-                                           
-                                           return (
-                                             <label key={i} className={labelClass}>
-                                               <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="w-[18px] h-[18px] accent-black cursor-pointer" disabled={isReviewMode} />
-                                               <span className="text-[15px] font-bold text-black html-content-renderer font-sans" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} />
-                                             </label>
-                                           );
-                                         })}
+                                           <div className={`flex flex-row flex-wrap items-center gap-4 sm:gap-6 font-sans shrink-0 ml-[46px] lg:ml-0`}>
+                                             {validOptions.map((opt: any, i: number) => {
+                                               const safeOpt = String(opt || '');
+                                               const optionValue = safeOpt.replace(stripHtmlRegex, '').trim().toUpperCase(); 
+                                               const isSelected = userAns === optionValue; 
+                                               const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
+                                               let labelClass = "flex items-center gap-2 py-1.5 px-2 rounded-none transition border border-transparent";
+                                               
+                                               if (isReviewMode) { 
+                                                  if (isCorrectOpt) {
+                                                      labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
+                                                  } else if (isSelected) {
+                                                      labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70"; 
+                                                  } else {
+                                                      labelClass += " opacity-50";
+                                                  }
+                                               } else { 
+                                                  labelClass += " cursor-pointer hover:bg-slate-100";
+                                               }
+                                               
+                                               return (
+                                                 <label key={i} className={labelClass}>
+                                                   <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="w-[18px] h-[18px] accent-black cursor-pointer" disabled={isReviewMode} />
+                                                   <span className="text-[15px] font-bold text-black html-content-renderer font-sans [&>p]:!m-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} />
+                                                 </label>
+                                               );
+                                             })}
+                                           </div>
                                        </div>
+                                       
                                        {isReviewMode && (
-                                          <div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans">
+                                          <div className="w-full mt-5 pt-4 border-t border-slate-300 ml-0 lg:ml-[46px] font-sans">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                             
                                              <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
                                                  ✨ Hỏi AI giải thích thêm
                                              </button>
@@ -1561,46 +1567,51 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                 
                                 return (
                                  <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 bg-white border rounded-none relative group transition-all flex flex-col ${isReviewMode ? (isCorrect ? 'border-emerald-600 bg-emerald-50' : 'border-red-600 bg-red-50') : (activeQuestionId === String(q.id) ? 'border-black' : 'border-slate-400 hover:border-slate-600')}`}>
-                                   <div className="flex items-start gap-4 mb-5 font-sans w-full">
-                                     <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
-                                       {displayIdx}
-                                     </span>
-                                     <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer flex-1 min-w-0 font-sans html-content-renderer [&>p]:!mb-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
+                                   
+                                   <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 w-full">
+                                       <div className="flex items-start gap-4 font-sans flex-1 min-w-0">
+                                         <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
+                                           {displayIdx}
+                                         </span>
+                                         <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer flex-1 min-w-0 font-sans html-content-renderer [&>p]:!m-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
+                                       </div>
+                                       
+                                       <div className={`flex flex-col gap-4 font-sans shrink-0 ml-[46px] lg:ml-0`}>
+                                         {validOptions.map((opt: any, i: number) => {
+                                           const safeOpt = String(opt || '');
+                                           const optionValue = String.fromCharCode(65+i); 
+                                           const isSelected = userAns === optionValue; 
+                                           const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
+                                           
+                                           let labelClass = "flex items-start gap-3 py-1.5 px-2 rounded-none transition border border-transparent";
+                                           
+                                           if (isReviewMode) { 
+                                              if (isCorrectOpt) {
+                                                  labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
+                                              } else if (isSelected) {
+                                                  labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70"; 
+                                              } else {
+                                                  labelClass += " opacity-50";
+                                              }
+                                           } else { 
+                                              labelClass += " cursor-pointer hover:bg-slate-100 hover:border-slate-400";
+                                           }
+                                           
+                                           return (
+                                             <label key={i} className={labelClass}>
+                                               <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="mt-1 w-[18px] h-[18px] accent-black shrink-0 cursor-pointer" disabled={isReviewMode} />
+                                               <span className="text-[15px] leading-[1.8] text-black font-sans html-content-renderer [&>p]:!m-0 [&>p]:!inline">
+                                                   <span className="font-bold mr-1 font-sans">{optionValue}.</span> 
+                                                   <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} />
+                                               </span>
+                                             </label>
+                                           );
+                                         })}
+                                       </div>
                                    </div>
-                                   <div className={`flex flex-col gap-4 ml-11 font-sans`}>
-                                     {validOptions.map((opt: any, i: number) => {
-                                       const safeOpt = String(opt || '');
-                                       const optionValue = String.fromCharCode(65+i); 
-                                       const isSelected = userAns === optionValue; 
-                                       const isCorrectOpt = isAnswerCorrect(optionValue, correctAns);
-                                       
-                                       let labelClass = "flex items-start gap-3 py-1.5 px-2 rounded-none transition border border-transparent";
-                                       
-                                       if (isReviewMode) { 
-                                          if (isCorrectOpt) {
-                                              labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
-                                          } else if (isSelected) {
-                                              labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70"; 
-                                          } else {
-                                              labelClass += " opacity-50";
-                                          }
-                                       } else { 
-                                          labelClass += " cursor-pointer hover:bg-slate-100 hover:border-slate-400";
-                                       }
-                                       
-                                       return (
-                                         <label key={i} className={labelClass}>
-                                           <input type="radio" name={`q${q.id}`} value={optionValue} checked={isSelected} onChange={(e) => handleAnswer(String(q.id), e.target.value)} className="mt-1 w-[18px] h-[18px] accent-black shrink-0 cursor-pointer" disabled={isReviewMode} />
-                                           <span className="text-[15px] leading-[1.8] text-black font-sans html-content-renderer">
-                                               <span className="font-bold mr-1 font-sans">{optionValue}.</span> 
-                                               <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} />
-                                           </span>
-                                         </label>
-                                       );
-                                     })}
-                                   </div>
+
                                    {isReviewMode && (
-                                      <div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans">
+                                      <div className="w-full mt-5 pt-4 border-t border-slate-300 ml-0 lg:ml-[46px] font-sans">
                                          <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                          <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
                                          <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
@@ -1636,60 +1647,64 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                          key={q.id} 
                                          id={`q-${q.id}`} 
                                          onClick={() => setActiveQuestionId(String(q.id))} 
-                                         className={`py-4 px-5 rounded-none border flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}
+                                         className={`py-4 px-5 rounded-none border flex flex-col transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}
                                      >
-                                       {/* BÊN TRÁI: Số TT + Câu Hỏi */}
-                                       <div className="flex items-center gap-4 flex-1 min-w-0 w-full sm:w-auto">
-                                         <span 
-                                             className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border font-sans ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} 
-                                             style={{ textIndent: 0 }}
-                                         >
-                                           {displayIdx}
-                                         </span>
-                                         <div 
-                                             className="text-[16px] font-bold text-black leading-relaxed font-sans html-content-renderer flex-1 min-w-0 break-words [&>p]:!mb-0 [&>p]:!inline" 
-                                             dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} 
-                                         />
-                                       </div>
                                        
-                                       {/* BÊN PHẢI: Box Kết Quả / Dropdown */}
-                                       <div className="shrink-0 flex items-center justify-end w-full sm:w-auto mt-2 sm:mt-0 font-sans">
-                                           {isReviewMode ? (
-                                              <div className="flex items-center gap-2 justify-end w-full sm:w-auto">
-                                                  <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
-                                                     {userAns || '(trống)'}
-                                                  </div>
-                                                  {!isCorrect && (
-                                                      <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">
-                                                          ĐA: {correctAns}
+                                       <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 w-full">
+                                           {/* BÊN TRÁI: Số TT + Câu Hỏi */}
+                                           <div className="flex items-start gap-4 flex-1 min-w-0 w-full">
+                                             <span 
+                                                 className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border font-sans ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} 
+                                                 style={{ textIndent: 0 }}
+                                             >
+                                               {displayIdx}
+                                             </span>
+                                             <div 
+                                                 className="text-[16px] font-bold text-black leading-relaxed font-sans html-content-renderer flex-1 min-w-0 break-words [&>p]:!m-0 [&>p]:!inline" 
+                                                 dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} 
+                                             />
+                                           </div>
+                                           
+                                           {/* BÊN PHẢI: Box Kết Quả / Dropdown */}
+                                           <div className="shrink-0 flex items-center justify-end w-full md:w-auto mt-2 md:mt-0 ml-[46px] md:ml-0 font-sans">
+                                               {isReviewMode ? (
+                                                  <div className="flex items-center gap-2 justify-end w-full md:w-auto">
+                                                      <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
+                                                         {userAns || '(trống)'}
                                                       </div>
-                                                  )}
-                                              </div>
-                                           ) : (
-                                              <select 
-                                                value={userAns}
-                                                onChange={(e) => handleAnswer(String(q.id), e.target.value)}
-                                                className="bg-transparent border-0 border-b-2 border-slate-400 text-black font-bold font-sans text-center text-[15px] h-[36px] px-2 outline-none focus:border-black cursor-pointer min-w-[140px] max-w-[250px] w-full sm:w-auto"
-                                              >
-                                                <option value="">---</option>
-                                                {validOptions.map((opt: string, oIdx: number) => {
-                                                   const val = opt.replace(stripHtmlRegex, '').trim();
-                                                   const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
-                                                   return (
-                                                     <option key={oIdx} value={val}>
-                                                       {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
-                                                     </option>
-                                                   );
-                                                })}
-                                              </select>
-                                           )}
+                                                      {!isCorrect && (
+                                                          <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">
+                                                              ĐA: {correctAns}
+                                                          </div>
+                                                      )}
+                                                  </div>
+                                               ) : (
+                                                  <select 
+                                                    value={userAns}
+                                                    onChange={(e) => handleAnswer(String(q.id), e.target.value)}
+                                                    className="bg-transparent border-0 border-b-2 border-slate-400 text-black font-bold font-sans text-center text-[15px] h-[36px] px-2 outline-none focus:border-black cursor-pointer min-w-[140px] max-w-[250px] w-full md:w-auto"
+                                                  >
+                                                    <option value="">---</option>
+                                                    {validOptions.map((opt: string, oIdx: number) => {
+                                                       const val = opt.replace(stripHtmlRegex, '').trim();
+                                                       const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                                                       return (
+                                                         <option key={oIdx} value={val}>
+                                                           {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
+                                                         </option>
+                                                       );
+                                                    })}
+                                                  </select>
+                                               )}
+                                           </div>
                                        </div>
                                        
+                                       {/* 🚀 NÚT HỎI AI GIẢI THÍCH BÊN TRONG DROPLIST BLOCK */}
                                        {isReviewMode && (
-                                          <div className="w-full mt-2 border-t border-slate-300 pt-3 flex-none basis-full">
+                                          <div className="w-full mt-5 pt-4 border-t border-slate-300 ml-0 md:ml-[46px] font-sans">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">✨ Hỏi AI giải thích thêm</button>
+                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">✨ Hỏi AI giải thích thêm</button>
                                           </div>
                                        )}
                                      </div>
@@ -1737,46 +1752,51 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                           key={q.id} 
                                           id={`q-${q.id}`} 
                                           onClick={() => setActiveQuestionId(String(q.id))} 
-                                          className={`py-4 px-5 rounded-none border flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}
+                                          className={`py-4 px-5 rounded-none border flex flex-col transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}
                                       >
-                                        <div className="flex items-center gap-4 flex-1 min-w-0 w-full sm:w-auto">
-                                          <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold font-sans min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
-                                            {displayIdx}
-                                          </span>
-                                          <div className="text-[16px] font-bold text-black leading-relaxed font-sans html-content-renderer flex-1 min-w-0 break-words [&>p]:!mb-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
-                                        </div>
-                                        
-                                        <div className="shrink-0 flex items-center justify-end w-full sm:w-auto mt-2 sm:mt-0 font-sans">
-                                          {isReviewMode ? (
-                                            <div className="flex items-center gap-2 justify-end w-full sm:w-auto">
-                                                <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] font-sans border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
-                                                   {displayUserAns || '(trống)'}
-                                                </div>
-                                                {!isCorrect && <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">ĐA: {correctAns}</div>}
+                                        <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 w-full">
+                                            
+                                            {/* Left: Tên câu hỏi */}
+                                            <div className="flex items-start gap-4 flex-1 min-w-0 w-full">
+                                              <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold font-sans min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
+                                                {displayIdx}
+                                              </span>
+                                              <div className="text-[16px] font-bold text-black leading-relaxed font-sans html-content-renderer flex-1 min-w-0 break-words [&>p]:!m-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
                                             </div>
-                                          ) : (
-                                            <span 
-                                              onDragOver={(e) => e.preventDefault()}
-                                              onDrop={() => onDrop(String(q.id))}
-                                              className={`inline-flex items-center justify-between align-middle min-w-[140px] max-w-[250px] w-full sm:w-auto h-[36px] border border-black rounded-none transition-all px-2 ${activeQuestionId === String(q.id) ? 'bg-slate-200' : 'bg-white'}`}
-                                            >
-                                              {userAns ? (
-                                                <div className="flex items-center justify-between w-full text-black font-sans text-[14px] font-bold py-1">
-                                                  <span className="truncate">{displayUserAns}</span>
-                                                  <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-600 text-[12px] font-black font-sans">✕</button>
+                                            
+                                            {/* Right: Box kết quả */}
+                                            <div className="shrink-0 flex items-center justify-end w-full md:w-auto mt-2 md:mt-0 ml-[46px] md:ml-0 font-sans">
+                                              {isReviewMode ? (
+                                                <div className="flex items-center gap-2 justify-end w-full md:w-auto">
+                                                    <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] font-sans border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
+                                                       {displayUserAns || '(trống)'}
+                                                    </div>
+                                                    {!isCorrect && <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">ĐA: {correctAns}</div>}
                                                 </div>
                                               ) : (
-                                                <span className="text-slate-400 text-[13px] italic font-sans w-full text-center">Thả vào đây</span>
+                                                <span 
+                                                  onDragOver={(e) => e.preventDefault()}
+                                                  onDrop={() => onDrop(String(q.id))}
+                                                  className={`inline-flex items-center justify-between align-middle min-w-[140px] max-w-[250px] w-full md:w-auto h-[36px] border border-black rounded-none transition-all px-2 ${activeQuestionId === String(q.id) ? 'bg-slate-200' : 'bg-white'}`}
+                                                >
+                                                  {userAns ? (
+                                                    <div className="flex items-center justify-between w-full text-black font-sans text-[14px] font-bold py-1">
+                                                      <span className="truncate">{displayUserAns}</span>
+                                                      <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-600 text-[12px] font-black font-sans">✕</button>
+                                                    </div>
+                                                  ) : (
+                                                    <span className="text-slate-400 text-[13px] italic font-sans w-full text-center">Thả vào đây</span>
+                                                  )}
+                                                </span>
                                               )}
-                                            </span>
-                                          )}
+                                            </div>
                                         </div>
                                         
                                         {isReviewMode && (
-                                          <div className="w-full mt-2 border-t border-slate-300 pt-3 flex-none basis-full">
+                                          <div className="w-full mt-5 pt-4 border-t border-slate-300 ml-0 md:ml-[46px] font-sans">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
-                                             <div className="text-[14px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">
+                                             <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">
                                                  ✨ Hỏi AI giải thích thêm
                                              </button>
                                           </div>
@@ -1865,7 +1885,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                     const isPerfect = comboPoints === maxAllowed;
                                     const isPartial = comboPoints > 0 && comboPoints < maxAllowed;
                                     
-                                    let containerClass = "p-6 bg-white border rounded-none relative group transition-all ";
+                                    let containerClass = "p-6 bg-white border rounded-none relative group transition-all flex flex-col ";
                                     if (isReviewMode) {
                                         if (isPerfect) {
                                             containerClass += " border-emerald-600 bg-emerald-50";
@@ -1908,81 +1928,82 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                     const qText = combo[0]?.content.replace(/^<p>|<\/p>$/gi, '').replace(/^\d+[\.\)]\s*/, '') || '';
                                     return (
                                         <div key={`combo-${comboIndex}`} className={containerClass}>
-                                          <div className="flex items-start gap-4 mb-5 flex-col w-full">
-                                            <div className="flex gap-2 flex-wrap shrink-0 mt-0.5">
-                                               {combo.map((q: any, qIdxInCombo: number) => {
-                                                   const displayIdx = questionIndexMap[String(q.id)] || q.id;
-                                                   
-                                                   let boxClass = "";
-                                                   if (isReviewMode) {
-                                                       if (isPerfect) boxClass = 'bg-emerald-600 text-white border-emerald-600';
-                                                       else if (isPartial) boxClass = 'bg-amber-600 text-white border-amber-600';
-                                                       else boxClass = 'bg-red-600 text-white border-red-600';
-                                                   } else {
-                                                       const isFilled = qIdxInCombo < userAnsArr.length;
-                                                       if (activeQuestionId === String(q.id)) {
-                                                           boxClass = 'bg-slate-900 text-white border-black ring-2 ring-slate-400 ring-offset-1';
-                                                       } else if (isFilled) {
-                                                           // Ô đã điền đáp án thì nền đen chữ trắng
-                                                           boxClass = 'bg-slate-800 text-white border-black';
-                                                       } else {
-                                                           // Ô chưa điền thì nền trắng chữ đen
-                                                           boxClass = 'bg-white text-black border-slate-800';
-                                                       }
-                                                   }
+                                          <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 w-full">
+                                            
+                                            <div className="flex items-start gap-4 flex-1 min-w-0 w-full">
+                                              <div className="flex gap-2 flex-wrap shrink-0 mt-0.5">
+                                                 {combo.map((q: any, qIdxInCombo: number) => {
+                                                     const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                                                     
+                                                     let boxClass = "";
+                                                     if (isReviewMode) {
+                                                         if (isPerfect) boxClass = 'bg-emerald-600 text-white border-emerald-600';
+                                                         else if (isPartial) boxClass = 'bg-amber-600 text-white border-amber-600';
+                                                         else boxClass = 'bg-red-600 text-white border-red-600';
+                                                     } else {
+                                                         const isFilled = qIdxInCombo < userAnsArr.length;
+                                                         if (activeQuestionId === String(q.id)) {
+                                                             boxClass = 'bg-slate-900 text-white border-black ring-2 ring-slate-400 ring-offset-1';
+                                                         } else if (isFilled) {
+                                                             boxClass = 'bg-slate-800 text-white border-black';
+                                                         } else {
+                                                             boxClass = 'bg-white text-black border-slate-800';
+                                                         }
+                                                     }
 
-                                                   return (
-                                                       <span 
-                                                         key={q.id} 
-                                                         id={`q-${q.id}`} 
-                                                         onClick={() => setActiveQuestionId(String(q.id))} 
-                                                         className={`cursor-pointer shrink-0 inline-flex items-center justify-center leading-none font-bold font-sans px-2 min-w-[30px] h-[30px] text-[14px] rounded-none border transition-all ${boxClass}`}
-                                                         style={{ textIndent: 0 }}
-                                                       >
-                                                         {displayIdx}
-                                                       </span>
-                                                   );
-                                               })}
+                                                     return (
+                                                         <span 
+                                                           key={q.id} 
+                                                           id={`q-${q.id}`} 
+                                                           onClick={() => setActiveQuestionId(String(q.id))} 
+                                                           className={`cursor-pointer shrink-0 inline-flex items-center justify-center leading-none font-bold font-sans px-2 min-w-[30px] h-[30px] text-[14px] rounded-none border transition-all ${boxClass}`}
+                                                           style={{ textIndent: 0 }}
+                                                         >
+                                                           {displayIdx}
+                                                         </span>
+                                                     );
+                                                 })}
+                                              </div>
+                                              <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer flex-1 min-w-0 break-words font-sans html-content-renderer [&>p]:!m-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(qText) }} />
                                             </div>
-                                            <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full flex-1 min-w-0 break-words font-sans html-content-renderer [&>p]:!mb-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(qText) }} />
-                                          </div>
 
-                                          <div className={`flex flex-col gap-4 ml-0 font-sans`}>
-                                            {validOptions.map((opt: any, i: number) => {
-                                              const safeOpt = String(opt || '').replace(/^<p>|<\/p>$/gi, '');
-                                              const optionValue = String.fromCharCode(65+i); 
-                                              const isSelected = userAnsArr.includes(optionValue); 
-                                              let isCorrectOpt = false;
-                                              correctAnsComboSet.forEach(c => {
-                                                  if (isAnswerCorrect(optionValue, c)) isCorrectOpt = true;
-                                              });
-                                              
-                                              let labelClass = "flex items-start gap-3 py-1.5 px-2 rounded-none transition border border-transparent";
-                                              if (isReviewMode) { 
-                                                 if (isCorrectOpt && isSelected) {
-                                                     labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
-                                                 } else if (isCorrectOpt && !isSelected) {
-                                                     labelClass += " bg-amber-200 border-amber-600 font-bold text-amber-900";
-                                                 } else if (isSelected && !isCorrectOpt) {
-                                                     labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70";
-                                                 } else {
-                                                     labelClass += " opacity-50";
-                                                 }
-                                              } else { 
-                                                 labelClass += " cursor-pointer hover:bg-slate-100 hover:border-slate-400";
-                                              }
-                                              
-                                              return (
-                                                <label key={i} className={labelClass}>
-                                                  <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="mt-1 w-[18px] h-[18px] accent-black cursor-pointer rounded-none" disabled={isReviewMode} />
-                                                  <span className="text-[15px] leading-[1.8] text-black font-sans html-content-renderer"><span className="font-bold mr-1 font-sans">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} /></span>
-                                                </label>
-                                              );
-                                            })}
+                                            <div className={`flex flex-col gap-4 font-sans shrink-0 ml-[46px] lg:ml-0`}>
+                                              {validOptions.map((opt: any, i: number) => {
+                                                const safeOpt = String(opt || '').replace(/^<p>|<\/p>$/gi, '');
+                                                const optionValue = String.fromCharCode(65+i); 
+                                                const isSelected = userAnsArr.includes(optionValue); 
+                                                let isCorrectOpt = false;
+                                                correctAnsComboSet.forEach(c => {
+                                                    if (isAnswerCorrect(optionValue, c)) isCorrectOpt = true;
+                                                });
+                                                
+                                                let labelClass = "flex items-start gap-3 py-1.5 px-2 rounded-none transition border border-transparent";
+                                                if (isReviewMode) { 
+                                                   if (isCorrectOpt && isSelected) {
+                                                       labelClass += " bg-emerald-200 border-emerald-600 font-bold text-emerald-900";
+                                                   } else if (isCorrectOpt && !isSelected) {
+                                                       labelClass += " bg-amber-200 border-amber-600 font-bold text-amber-900";
+                                                   } else if (isSelected && !isCorrectOpt) {
+                                                       labelClass += " bg-red-200 border-red-600 text-red-900 line-through opacity-70";
+                                                   } else {
+                                                       labelClass += " opacity-50";
+                                                   }
+                                                } else { 
+                                                   labelClass += " cursor-pointer hover:bg-slate-100 hover:border-slate-400";
+                                                }
+                                                
+                                                return (
+                                                  <label key={i} className={labelClass}>
+                                                    <input type="checkbox" checked={isSelected} onChange={(e) => handleComboChange(optionValue, e.target.checked)} className="mt-1 w-[18px] h-[18px] accent-black cursor-pointer rounded-none" disabled={isReviewMode} />
+                                                    <span className="text-[15px] leading-[1.8] text-black font-sans html-content-renderer [&>p]:!m-0 [&>p]:!inline"><span className="font-bold mr-1 font-sans">{optionValue}.</span> <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} /></span>
+                                                  </label>
+                                                );
+                                              })}
+                                            </div>
                                           </div>
 
                                           {isReviewMode && (
-                                            <div className="mt-6 ml-0 pt-4 border-t border-slate-300 font-sans">
+                                            <div className="w-full mt-5 pt-4 border-t border-slate-300 ml-0 lg:ml-[46px] font-sans">
                                                <p className="text-[13px] font-black text-black uppercase mb-3">💡 Giải thích đáp án:</p>
                                                {combo.map((q:any) => {
                                                    if (!q.explanation || String(q.explanation).trim() === '') return null;
@@ -2128,14 +2149,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   if (isActive) {
                      btnClass += 'bg-slate-900 text-white border border-black shadow-inner';
                   } else if (isAnswered) {
-                     btnClass += 'bg-slate-800 text-white border border-black cursor-pointer'; // Đã chọn -> đen chữ trắng
+                     btnClass += 'bg-slate-800 text-white border border-black cursor-pointer'; 
                   } else {
-                     btnClass += 'bg-white border border-slate-400 text-black cursor-pointer hover:bg-slate-200'; // Chưa chọn -> trắng chữ đen
+                     btnClass += 'bg-white border border-slate-400 text-black cursor-pointer hover:bg-slate-200'; 
                   }
                 }
                 
                 return (
-                    <button key={id} onClick={() => scrollToQuestion(id)} className={btnClass}>
+                    <button key={id} id={`nav-${id}`} onClick={() => scrollToQuestion(id)} className={btnClass}>
                         {questionIndexMap[id]}
                     </button>
                 );
