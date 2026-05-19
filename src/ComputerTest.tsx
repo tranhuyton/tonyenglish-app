@@ -25,7 +25,6 @@ const ExitFullscreenIcon = () => (
 
 const stripHtmlRegex = /[<][^>]*[>]/g;
 
-// TỰ ĐỘNG XÓA BỎ CÁC THUỘC TÍNH HEIGHT/OVERFLOW GÂY LỖI THANH CUỘN
 const cleanHtmlContent = (html: any) => {
   if (!html) return '';
   return String(html).replace(/style\s*=\s*(['"])(.*?)\1/gi, (match, quote, styleContent) => {
@@ -74,11 +73,9 @@ const buildCheckboxCombos = (questions: any[]) => {
   return combos;
 };
 
-// NÂNG CẤP HÀM CHẤM ĐIỂM HOÀN HẢO CHO MỌI BIẾN THỂ KÉO THẢ
 const isAnswerCorrect = (userAns: string, correctAns: string) => {
   if (!userAns || !correctAns) return false;
   
-  // Chuẩn hóa khoảng trắng
   const u = String(userAns).trim().toUpperCase().replace(/\s+/g, ' ');
   const cArr = String(correctAns).split('/').map(x => x.trim().toUpperCase().replace(/\s+/g, ' '));
   
@@ -117,7 +114,6 @@ const parseStyle = (styleStr: string) => {
     if (match) {
       const [, key, val] = match;
       const lowerKey = key.toLowerCase();
-      // Ngăn chặn parse các thuộc tính gây lỗi scrollbar từ inline HTML
       if (['height', 'max-height', 'min-height', 'overflow', 'overflow-y', 'overflow-x'].includes(lowerKey)) {
           return;
       }
@@ -730,16 +726,16 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
   // 🚀 TÍNH NĂNG GỌI HỎI AI (BẢN ĐÃ LÀM SẠCH VÀ IN ĐẬM TIÊU ĐỀ)
   const askAIToExplain = (questionId: string, qContent: string, qExplanation: string) => {
-     // Phát event ngầm để Sidebar lấy được nội dung Bài đọc (không bị tràn màn hình chat)
+     // Phát event ngầm để Sidebar lấy được nội dung Bài đọc
      const passageContent = currentPart?.content ? currentPart.content.replace(stripHtmlRegex, '') : "";
      window.dispatchEvent(new CustomEvent('tony-update-lecture-context', {
        detail: { title: basicInfo.title, html: passageContent }
      }));
      
-     // Chỉ hiển thị nội dung câu hỏi và đáp án gốc thật ngắn gọn trên khung Chat (có in đậm)
+     // Chỉ hiển thị nội dung câu hỏi và đáp án gốc (Đã IN ĐẬM)
      const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${qContent.replace(stripHtmlRegex, '')}\n\n**Đáp án & Giải thích gốc:**\n${qExplanation.replace(stripHtmlRegex, '')}`;
      
-     // Kích hoạt nút bấm tàng hình để mở Sidebar với nhãn môn học là 'reading'
+     // Kích hoạt nút bấm tàng hình để mở Sidebar
      const fakeBtn = document.createElement('button');
      fakeBtn.className = 'btn-ai-trigger hidden';
      fakeBtn.setAttribute('data-task', 'reading');
@@ -803,7 +799,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   }
               }
 
-              // ĐẢM BẢO CÓ ID ĐỂ BẤM TỪ FOOTER DẪN LÊN ĐÚNG CÂU ĐIỀN TỪ
               return (
                 <span key={pathKey} id={`q-${qNum}`} className="relative inline-flex items-center align-middle mx-1 -translate-y-[2px] whitespace-nowrap" style={{ textIndent: 0 }}>
                   <span className={`shrink-0 inline-flex items-center justify-center leading-none px-3 py-1 text-[14px] font-bold font-sans text-white rounded-none border border-black ${isCorrect ? 'bg-emerald-600' : 'bg-red-600'}`} style={{ color: '#ffffff', textIndent: 0 }}>
@@ -875,7 +870,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                       value={userAns}
                       onFocus={() => setActiveQuestionId(qNum)}
                       onChange={(e) => handleAnswer(qNum, e.target.value)}
-                      className="shrink-0 bg-white border border-slate-800 text-slate-800 font-bold font-sans text-[14px] h-[30px] px-1 rounded-none outline-none focus:border-black cursor-pointer max-w-[200px] truncate"
+                      className="shrink-0 bg-white border border-slate-800 text-slate-800 font-bold font-sans text-[14px] h-[30px] px-1 rounded-none outline-none focus:border-black cursor-pointer min-w-[100px] max-w-[200px] truncate"
                       style={{ textIndent: 0 }}
                     >
                       <option value="">-- Chọn --</option>
@@ -1423,7 +1418,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               >
                 <div className="w-full">
                   
-                  {/* ẨN AUDIO BÊN TRẢI NẾU LÀ LISTENING (DO ĐÃ ĐƯA SANG TRÁI) */}
                   {currentPart?.audioUrl && (!isListening) && (
                     <div className="mb-8 bg-white p-4 rounded-none border border-slate-400 flex items-center gap-4 font-sans">
                        <p className="text-[12px] font-bold text-slate-800 uppercase tracking-widest shrink-0">Audio Part:</p>
@@ -1516,12 +1510,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                 
                                 if (isTFNG) {
                                     return (
-                                     <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 bg-white border rounded-none relative group transition-all ${isReviewMode ? (isCorrect ? 'border-emerald-600 bg-emerald-50' : 'border-red-600 bg-red-50') : (activeQuestionId === String(q.id) ? 'border-black' : 'border-slate-400 hover:border-slate-600')}`}>
-                                       <div className="flex items-start gap-4 mb-5 font-sans">
+                                     <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 bg-white border rounded-none relative group transition-all flex flex-col ${isReviewMode ? (isCorrect ? 'border-emerald-600 bg-emerald-50' : 'border-red-600 bg-red-50') : (activeQuestionId === String(q.id) ? 'border-black' : 'border-slate-400 hover:border-slate-600')}`}>
+                                       <div className="flex items-start gap-4 mb-5 font-sans w-full">
                                          <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                            {displayIdx}
                                          </span>
-                                         <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
+                                         <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer flex-1 min-w-0 font-sans html-content-renderer [&>p]:!mb-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
                                        </div>
                                        <div className={`flex flex-row flex-wrap gap-4 sm:gap-6 ml-11 font-sans`}>
                                          {validOptions.map((opt: any, i: number) => {
@@ -1555,7 +1549,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                           <div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                             
+                                             <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
                                                  ✨ Hỏi AI giải thích thêm
                                              </button>
                                           </div>
@@ -1565,12 +1560,12 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                 }
                                 
                                 return (
-                                 <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 bg-white border rounded-none relative group transition-all ${isReviewMode ? (isCorrect ? 'border-emerald-600 bg-emerald-50' : 'border-red-600 bg-red-50') : (activeQuestionId === String(q.id) ? 'border-black' : 'border-slate-400 hover:border-slate-600')}`}>
-                                   <div className="flex items-start gap-4 mb-5 font-sans">
+                                 <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`p-6 bg-white border rounded-none relative group transition-all flex flex-col ${isReviewMode ? (isCorrect ? 'border-emerald-600 bg-emerald-50' : 'border-red-600 bg-red-50') : (activeQuestionId === String(q.id) ? 'border-black' : 'border-slate-400 hover:border-slate-600')}`}>
+                                   <div className="flex items-start gap-4 mb-5 font-sans w-full">
                                      <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                        {displayIdx}
                                      </span>
-                                     <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
+                                     <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer flex-1 min-w-0 font-sans html-content-renderer [&>p]:!mb-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
                                    </div>
                                    <div className={`flex flex-col gap-4 ml-11 font-sans`}>
                                      {validOptions.map((opt: any, i: number) => {
@@ -1608,7 +1603,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                       <div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans">
                                          <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                          <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                         <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                         <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
                                              ✨ Hỏi AI giải thích thêm
                                          </button>
                                       </div>
@@ -1619,7 +1614,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                            </div>
                         )}
 
-                        {/* DẠNG DROPLIST BLOCK CÓ EXCLUSION LOGIC */}
+                        {/* 🚀 DẠNG BÀI DROPLIST BLOCK */}
                         {isBlockDroplist && (
                            <div className="space-y-3 bg-white p-6 sm:p-8 border border-slate-400 rounded-none font-sans">
                              {(() => {
@@ -1641,9 +1636,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                          key={q.id} 
                                          id={`q-${q.id}`} 
                                          onClick={() => setActiveQuestionId(String(q.id))} 
-                                         className={`py-4 px-5 rounded-none border flex flex-col gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}
+                                         className={`py-4 px-5 rounded-none border flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}
                                      >
-                                       <div className="flex items-start gap-4 w-full">
+                                       {/* BÊN TRÁI: Số TT + Câu Hỏi */}
+                                       <div className="flex items-center gap-4 flex-1 min-w-0 w-full sm:w-auto">
                                          <span 
                                              className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border font-sans ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} 
                                              style={{ textIndent: 0 }}
@@ -1651,14 +1647,15 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                            {displayIdx}
                                          </span>
                                          <div 
-                                             className="text-[16px] font-bold text-black leading-relaxed font-sans html-content-renderer w-full break-words" 
+                                             className="text-[16px] font-bold text-black leading-relaxed font-sans html-content-renderer flex-1 min-w-0 break-words [&>p]:!mb-0 [&>p]:!inline" 
                                              dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} 
                                          />
                                        </div>
                                        
-                                       <div className="flex items-center justify-end w-full pl-0 sm:pl-[46px]">
+                                       {/* BÊN PHẢI: Box Kết Quả / Dropdown */}
+                                       <div className="shrink-0 flex items-center justify-end w-full sm:w-auto mt-2 sm:mt-0 font-sans">
                                            {isReviewMode ? (
-                                              <div className="flex items-center gap-2">
+                                              <div className="flex items-center gap-2 justify-end w-full sm:w-auto">
                                                   <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
                                                      {userAns || '(trống)'}
                                                   </div>
@@ -1672,7 +1669,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                               <select 
                                                 value={userAns}
                                                 onChange={(e) => handleAnswer(String(q.id), e.target.value)}
-                                                className="bg-transparent border-0 border-b-2 border-slate-400 text-black font-bold font-sans text-center text-[15px] h-[36px] px-2 outline-none focus:border-black cursor-pointer min-w-[140px] max-w-[250px]"
+                                                className="bg-transparent border-0 border-b-2 border-slate-400 text-black font-bold font-sans text-center text-[15px] h-[36px] px-2 outline-none focus:border-black cursor-pointer min-w-[140px] max-w-[250px] w-full sm:w-auto"
                                               >
                                                 <option value="">---</option>
                                                 {validOptions.map((opt: string, oIdx: number) => {
@@ -1689,7 +1686,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                        </div>
                                        
                                        {isReviewMode && (
-                                          <div className="w-full mt-2 border-t border-slate-300 pt-3 pl-0 sm:pl-[46px]">
+                                          <div className="w-full mt-2 border-t border-slate-300 pt-3 flex-none basis-full">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
                                              <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">✨ Hỏi AI giải thích thêm</button>
@@ -1702,6 +1699,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                              </div>
                         )}
 
+                        {/* 🚀 DẠNG BÀI DRAG AND DROP BLOCK */}
                         {(isInlineDragDrop || isBlockDragDrop) && (
                           <div className="bg-white p-8 rounded-none border border-slate-400">
                             {isInlineDragDrop ? (
@@ -1739,18 +1737,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                           key={q.id} 
                                           id={`q-${q.id}`} 
                                           onClick={() => setActiveQuestionId(String(q.id))} 
-                                          className={`p-5 rounded-none border flex flex-col gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}
+                                          className={`py-4 px-5 rounded-none border flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}
                                       >
-                                        <div className="flex items-start gap-4 w-full">
+                                        <div className="flex items-center gap-4 flex-1 min-w-0 w-full sm:w-auto">
                                           <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold font-sans min-w-[30px] h-[30px] text-[14px] rounded-none border ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
                                             {displayIdx}
                                           </span>
-                                          <div className="text-[16px] font-bold text-black leading-relaxed font-sans html-content-renderer w-full break-words" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
+                                          <div className="text-[16px] font-bold text-black leading-relaxed font-sans html-content-renderer flex-1 min-w-0 break-words [&>p]:!mb-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
                                         </div>
                                         
-                                        <div className="flex items-center justify-end w-full pl-0 sm:pl-[46px]">
+                                        <div className="shrink-0 flex items-center justify-end w-full sm:w-auto mt-2 sm:mt-0 font-sans">
                                           {isReviewMode ? (
-                                            <div className="flex items-center gap-2">
+                                            <div className="flex items-center gap-2 justify-end w-full sm:w-auto">
                                                 <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] font-sans border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
                                                    {displayUserAns || '(trống)'}
                                                 </div>
@@ -1760,7 +1758,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                             <span 
                                               onDragOver={(e) => e.preventDefault()}
                                               onDrop={() => onDrop(String(q.id))}
-                                              className={`inline-flex items-center justify-between align-middle min-w-[140px] max-w-[250px] h-[36px] border border-black rounded-none transition-all px-2 ${activeQuestionId === String(q.id) ? 'bg-slate-200' : 'bg-white'}`}
+                                              className={`inline-flex items-center justify-between align-middle min-w-[140px] max-w-[250px] w-full sm:w-auto h-[36px] border border-black rounded-none transition-all px-2 ${activeQuestionId === String(q.id) ? 'bg-slate-200' : 'bg-white'}`}
                                             >
                                               {userAns ? (
                                                 <div className="flex items-center justify-between w-full text-black font-sans text-[14px] font-bold py-1">
@@ -1775,7 +1773,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                         </div>
                                         
                                         {isReviewMode && (
-                                          <div className="w-full mt-2 border-t border-slate-300 pt-3 pl-0 sm:pl-[46px]">
+                                          <div className="w-full mt-2 border-t border-slate-300 pt-3 flex-none basis-full">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                              <div className="text-[14px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
                                              <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">
@@ -1910,7 +1908,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                     const qText = combo[0]?.content.replace(/^<p>|<\/p>$/gi, '').replace(/^\d+[\.\)]\s*/, '') || '';
                                     return (
                                         <div key={`combo-${comboIndex}`} className={containerClass}>
-                                          <div className="flex items-start gap-4 mb-5">
+                                          <div className="flex items-start gap-4 mb-5 flex-col w-full">
                                             <div className="flex gap-2 flex-wrap shrink-0 mt-0.5">
                                                {combo.map((q: any, qIdxInCombo: number) => {
                                                    const displayIdx = questionIndexMap[String(q.id)] || q.id;
@@ -1925,8 +1923,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                        if (activeQuestionId === String(q.id)) {
                                                            boxClass = 'bg-slate-900 text-white border-black ring-2 ring-slate-400 ring-offset-1';
                                                        } else if (isFilled) {
+                                                           // Ô đã điền đáp án thì nền đen chữ trắng
                                                            boxClass = 'bg-slate-800 text-white border-black';
                                                        } else {
+                                                           // Ô chưa điền thì nền trắng chữ đen
                                                            boxClass = 'bg-white text-black border-slate-800';
                                                        }
                                                    }
@@ -1944,10 +1944,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                    );
                                                })}
                                             </div>
-                                            <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full flex-1 min-w-0 break-words font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(qText) }} />
+                                            <div className="text-[16px] leading-relaxed font-bold text-black cursor-pointer w-full flex-1 min-w-0 break-words font-sans html-content-renderer [&>p]:!mb-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(qText) }} />
                                           </div>
 
-                                          <div className={`flex flex-col gap-4 ml-[3.5rem] font-sans`}>
+                                          <div className={`flex flex-col gap-4 ml-0 font-sans`}>
                                             {validOptions.map((opt: any, i: number) => {
                                               const safeOpt = String(opt || '').replace(/^<p>|<\/p>$/gi, '');
                                               const optionValue = String.fromCharCode(65+i); 
@@ -1982,7 +1982,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                           </div>
 
                                           {isReviewMode && (
-                                            <div className="mt-6 ml-[3.5rem] pt-4 border-t border-slate-300 font-sans">
+                                            <div className="mt-6 ml-0 pt-4 border-t border-slate-300 font-sans">
                                                <p className="text-[13px] font-black text-black uppercase mb-3">💡 Giải thích đáp án:</p>
                                                {combo.map((q:any) => {
                                                    if (!q.explanation || String(q.explanation).trim() === '') return null;
@@ -1990,9 +1990,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                        <div key={q.id} className="text-[15px] text-slate-800 font-medium leading-relaxed mb-3 last:mb-0 font-sans html-content-renderer">
                                                            <span className="font-bold font-sans text-white px-2 py-0.5 bg-slate-800 rounded-none text-[13px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
                                                            <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
-                                                           <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="block mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">
-                                                               ✨ Hỏi AI giải thích chi tiết Câu {questionIndexMap[String(q.id)] || q.id}
-                                                           </button>
+                                                           <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="block mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">✨ Hỏi AI giải thích chi tiết Câu {questionIndexMap[String(q.id)] || q.id}</button>
                                                        </div>
                                                    );
                                                })}
@@ -2126,13 +2124,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                      btnClass += isCorrect ? 'bg-emerald-200 border border-emerald-600 text-emerald-900' : 'bg-red-200 border border-red-600 text-red-900';
                   }
                 } else { 
-                  // 🚀 ĐÃ BỔ SUNG ID ĐỂ SCROLL CHUẨN XÁC TRONG REVIEW MODE
+                  // Gắn định dạng nút ở dưới Footer
                   if (isActive) {
                      btnClass += 'bg-slate-900 text-white border border-black shadow-inner';
                   } else if (isAnswered) {
-                     btnClass += 'bg-white border-b-[4px] border-b-slate-900 border-t border-x border-slate-400 text-black cursor-pointer';
+                     btnClass += 'bg-slate-800 text-white border border-black cursor-pointer'; // Đã chọn -> đen chữ trắng
                   } else {
-                     btnClass += 'bg-white border border-slate-400 text-black cursor-pointer hover:bg-slate-200';
+                     btnClass += 'bg-white border border-slate-400 text-black cursor-pointer hover:bg-slate-200'; // Chưa chọn -> trắng chữ đen
                   }
                 }
                 
