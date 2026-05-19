@@ -16,6 +16,9 @@ import NinjaSurvival from './NinjaSurvival';
 import VocabRacing from './VocabRacing';
 import AITutorSidebar from './AITutorSidebar';
 
+// 🚀 IMPORT COMPONENT TEST LIVE SPEAKING MỚI
+import LiveSpeakingTest from './LiveSpeakingTest';
+
 export default function App() {
   const getInitialView = () => {
     const path = window.location.pathname;
@@ -122,6 +125,7 @@ export default function App() {
   }, []); 
 
   const handleNavigate = (view: string) => { setCurrentView(view); try { sessionStorage.setItem('lms_current_view', view); } catch(e) {} };
+  
   const handleStartTest = (type: string, data: any) => {
     try {
       setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
@@ -130,13 +134,26 @@ export default function App() {
       handleNavigate(targetView); sessionStorage.setItem('lms_current_test', JSON.stringify(data));
     } catch (error) {}
   };
+  
   const handleOpenLecture = (courseId: string) => { setActiveCourseId(courseId); try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {} handleNavigate('lecture'); };
+  
   const handleReturnFromTest = () => handleNavigate(returnView);
 
-  const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
+  // 🚀 ĐÃ BỔ SUNG 'live-test' VÀO DANH SÁCH VIEW HỢP LỆ
+  const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture', 'live-test'];
 
   return (
     <React.Fragment>
+      {/* 🚀 NÚT BẤM NHANH ĐỂ CHUYỂN SANG PHÒNG TEST (Chỉ hiện khi đã đăng nhập) */}
+      {(currentView !== 'admin-login' && currentView !== 'home' && currentView !== 'live-test') && (
+        <button 
+           onClick={() => handleNavigate('live-test')}
+           className="fixed bottom-4 left-4 z-[9999] bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg shadow-lg hover:bg-emerald-700 transition"
+        >
+           🎤 Test Live
+        </button>
+      )}
+
       {currentView === 'admin-login' && <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />}
       {currentView === 'home' && <Home onNavigate={handleNavigate} onStartTest={handleStartTest} />}
       {currentView === 'portal' && <StudentPortal onNavigate={handleNavigate} onStartTest={handleStartTest} onOpenLecture={handleOpenLecture} />}
@@ -144,6 +161,10 @@ export default function App() {
       
       {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
       {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
+      
+      {/* 🚀 GIAO DIỆN PHÒNG TEST LIVE */}
+      {currentView === 'live-test' && <LiveSpeakingTest />}
+
       {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
       {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
       {currentView === 'standard' && <StandardTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
@@ -157,7 +178,6 @@ export default function App() {
           courseId={activeCourseId} 
           onBack={() => handleNavigate('portal')} 
           onStartTest={handleStartTest}
-          // 🚀 MỞ TOANG CỔNG NHẬN DỮ LIỆU TỪ LECTURE VIEWER XUYÊN QUA IFRAME
           onOpenAI={(passedMode?: string, topic?: string, image?: string, task?: string) => { 
             if (passedMode === 'ielts' || topic) {
                setAiMode('ielts');
