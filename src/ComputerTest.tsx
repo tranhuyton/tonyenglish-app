@@ -981,6 +981,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           .format-passage table { 
               display: block;
               overflow-x: auto;
+              overflow-y: hidden !important;
               width: 100% !important; 
               min-width: 600px; 
               border-collapse: collapse !important; 
@@ -991,11 +992,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           .html-content-renderer table { 
               display: block;
               overflow-x: auto;
+              overflow-y: hidden !important;
               width: 100% !important; 
               min-width: 600px; 
               border-collapse: collapse !important; 
               margin-top: 1.5rem !important; 
               margin-bottom: 1.5rem !important; 
+          }
+
+          .format-passage table::-webkit-scrollbar:vertical,
+          .html-content-renderer table::-webkit-scrollbar:vertical {
+              display: none !important;
+              width: 0px !important;
           }
           
           .format-passage input::-webkit-scrollbar, 
