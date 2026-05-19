@@ -28,17 +28,24 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        } else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
          onCloseDict();
        } else if (e.data?.type === 'OPEN_IELTS_AI') {
-         // 🚀 TẠO NÚT GIẢ ĐỂ KÍCH HOẠT RADAR CỦA APP.TSX (Đã nâng cấp để ôm trọn 3 túi dữ liệu)
+         // Kích hoạt Radar Bẻ Lái AI
          const fakeBtn = document.createElement('button');
-         fakeBtn.className = 'btn-ai-trigger hidden'; // Dùng class chuẩn mới
-         
+         fakeBtn.className = 'btn-ai-trigger hidden'; 
          if (e.data.topic) fakeBtn.setAttribute('data-topic', e.data.topic);
          if (e.data.image) fakeBtn.setAttribute('data-image', e.data.image);
          if (e.data.task) fakeBtn.setAttribute('data-task', e.data.task);
-         
          document.body.appendChild(fakeBtn);
-         fakeBtn.click(); // Giả vờ bấm nút để App.tsx nghe lén được
+         fakeBtn.click(); 
          setTimeout(() => { fakeBtn.remove(); }, 100); 
+       } 
+       // 🚀 ĐÓN TÍN HIỆU MỞ PHÒNG LIVE TỪ IFRAME
+       else if (e.data?.type === 'OPEN_LIVE_SPEAKING') {
+         const fakeLiveBtn = document.createElement('button');
+         fakeLiveBtn.className = 'btn-live-trigger hidden';
+         if (e.data.topic) fakeLiveBtn.setAttribute('data-topic', e.data.topic);
+         document.body.appendChild(fakeLiveBtn);
+         fakeLiveBtn.click(); // Đánh lừa App.tsx để nó mở phòng
+         setTimeout(() => { fakeLiveBtn.remove(); }, 100);
        }
      };
      window.addEventListener('message', handleMessage);
@@ -78,64 +85,46 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          document.addEventListener('click', function(e) {
            var target = e.target;
            
-           // 1. ƯU TIÊN XỬ LÝ HYPERLINK (Đã cập nhật để không chặn class mới)
            var anchor = target.closest('a');
-           if (anchor && anchor.href && !anchor.outerHTML.includes('openIELTSAssessor') && !anchor.classList.contains('btn-ielts-trigger') && !anchor.classList.contains('btn-ai-trigger')) {
+           if (anchor && anchor.href && !anchor.outerHTML.includes('openIELTSAssessor') && !anchor.classList.contains('btn-ielts-trigger') && !anchor.classList.contains('btn-ai-trigger') && !anchor.classList.contains('btn-live-trigger')) {
                e.preventDefault(); 
                window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: anchor.href }, '*'); 
                return; 
            }
 
-           // 2. 🚀 RADAR TÌM NÚT GỌI AI TRONG IFRAME (Bắt cả class mới lẫn cũ)
-           var btn = target.closest('.btn-ai-trigger, .btn-ielts-trigger');
-           var topic = '';
-           var image = '';
-           var task = 'task2';
-           
-           if (!btn) {
-               // Thuật toán lùi tìm đề bài cho các bài giảng cũ
-               var fallbackBtn = target.closest('button'); 
-               if (fallbackBtn) {
-                   var text = fallbackBtn.innerText || fallbackBtn.textContent || '';
-                   var btnHtml = fallbackBtn.outerHTML || '';
-                   if (text.includes('Mở Giám Khảo') || text.includes('Copy Lệnh') || text.includes('Phân tích') || btnHtml.includes('openIELTSAssessor')) {
-                       btn = fallbackBtn;
-                       var match = btnHtml.match(/openIELTSAssessor\\(['"](.*?)['"]\\)/);
-                       if (match && match[1]) {
-                           topic = match[1];
-                       } else {
-                           var container = btn.parentElement;
-                           if (container && container.tagName !== 'DIV' && container.parentElement && container.parentElement.tagName === 'DIV') container = container.parentElement;
-                           var span = container ? container.querySelector('span') : null;
-                           topic = span ? (span.textContent || span.innerText) : '';
-                           topic = topic.replace(/^(Đề|Topic|Bài)\\s*\\d+\\s*[:\\-]?\\s*/i, '').trim();
-                       }
-                   }
-               }
-           } 
-
-           // NẾU TÌM THẤY NÚT GỌI AI THÌ CHỘP DỮ LIỆU GỬI RA NGOÀI
-           if (btn) {
-               topic = btn.getAttribute('data-topic') || topic;
-               image = btn.getAttribute('data-image') || '';
-               task = btn.getAttribute('data-task') || 'task2'; // 🚀 Nhặt nhãn Task 1 / Math...
-
-               e.preventDefault();
-               e.stopPropagation();
-               e.stopImmediatePropagation();
+           // 1. TÌM NÚT BẺ LÁI AI (CŨ)
+           var aiBtn = target.closest('.btn-ai-trigger, .btn-ielts-trigger');
+           if (aiBtn) {
+               e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+               var topic = aiBtn.getAttribute('data-topic') || '';
+               var image = aiBtn.getAttribute('data-image') || '';
+               var task = aiBtn.getAttribute('data-task') || 'task2';
                
-               var originalText = btn.innerHTML;
-               btn.innerHTML = "✨ Đang mở Giám Khảo...";
-               btn.style.opacity = "0.7";
-               setTimeout(function() {
-                   btn.innerHTML = originalText;
-                   btn.style.opacity = "1";
-               }, 1500);
+               var originalText = aiBtn.innerHTML;
+               aiBtn.innerHTML = "✨ Đang mở Giám Khảo...";
+               aiBtn.style.opacity = "0.7";
+               setTimeout(function() { aiBtn.innerHTML = originalText; aiBtn.style.opacity = "1"; }, 1500);
 
-               // Bắn 3 túi dữ liệu xuyên không gian Iframe ra ngoài
                window.parent.postMessage({ type: 'OPEN_IELTS_AI', topic: topic, image: image, task: task }, '*');
                return false;
            }
+
+           // 2. 🚀 TÌM NÚT GỌI LIVE SPEAKING (MỚI)
+           var liveBtn = target.closest('.btn-live-trigger');
+           if (liveBtn) {
+               e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+               var topic = liveBtn.getAttribute('data-topic') || '';
+               
+               var originalText = liveBtn.innerHTML;
+               liveBtn.innerHTML = "📞 Đang kết nối...";
+               liveBtn.style.opacity = "0.7";
+               setTimeout(function() { liveBtn.innerHTML = originalText; liveBtn.style.opacity = "1"; }, 1500);
+
+               // Bắn tín hiệu ra ngoài
+               window.parent.postMessage({ type: 'OPEN_LIVE_SPEAKING', topic: topic }, '*');
+               return false;
+           }
+
          }, true);
          
          var selectionTimer = null;
@@ -514,7 +503,6 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
          </div>
 
          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2 sm:ml-4">
-             {/* 🚀 CHỈ HIỆN NÚT HỎI AI NẾU KHÓA HỌC KHÔNG PHẢI LÀ IELTS */}
              {!(course?.title || '').toLowerCase().includes('ielts') && (
                  <button 
                     onClick={() => { if(onOpenAI) onOpenAI('tutor'); }} 
