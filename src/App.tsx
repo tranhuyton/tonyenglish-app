@@ -144,15 +144,7 @@ export default function App() {
 
   return (
     <React.Fragment>
-      {/* 🚀 NÚT BẤM NHANH ĐỂ CHUYỂN SANG PHÒNG TEST (Chỉ hiện khi đã đăng nhập) */}
-      {(currentView !== 'admin-login' && currentView !== 'home' && currentView !== 'live-test') && (
-        <button 
-           onClick={() => handleNavigate('live-test')}
-           className="fixed bottom-4 left-4 z-[9999] bg-emerald-600 text-white font-bold text-xs px-3 py-2 rounded-lg shadow-lg hover:bg-emerald-700 transition"
-        >
-           🎤 Test Live
-        </button>
-      )}
+      
 
       {currentView === 'admin-login' && <AdminLogin onLoginSuccess={() => handleNavigate('admin')} />}
       {currentView === 'home' && <Home onNavigate={handleNavigate} onStartTest={handleStartTest} />}
