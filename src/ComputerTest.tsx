@@ -728,27 +728,26 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
-  // 🚀 TÍNH NĂNG GỌI HỎI AI (BẢN ĐÃ LÀM SẠCH GIAO DIỆN CHAT)
-  // 🚀 TÍNH NĂNG GỌI HỎI AI (BẢN ĐÃ LÀM SẠCH VÀ IN ĐẬM)
+  // 🚀 TÍNH NĂNG GỌI HỎI AI (BẢN ĐÃ LÀM SẠCH VÀ IN ĐẬM TIÊU ĐỀ)
   const askAIToExplain = (questionId: string, qContent: string, qExplanation: string) => {
-    // Phát event ngầm để Sidebar lấy được nội dung Bài đọc
-    const passageContent = currentPart?.content ? currentPart.content.replace(stripHtmlRegex, '') : "";
-    window.dispatchEvent(new CustomEvent('tony-update-lecture-context', {
-      detail: { title: basicInfo.title, html: passageContent }
-    }));
-    
-    // 🚀 ĐÃ THÊM ** ĐỂ IN ĐẬM TIÊU ĐỀ
-    const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${qContent.replace(stripHtmlRegex, '')}\n\n**Đáp án & Giải thích gốc:**\n${qExplanation.replace(stripHtmlRegex, '')}`;
-    
-    // Kích hoạt nút bấm tàng hình để mở Sidebar
-    const fakeBtn = document.createElement('button');
-    fakeBtn.className = 'btn-ai-trigger hidden';
-    fakeBtn.setAttribute('data-task', 'reading');
-    fakeBtn.setAttribute('data-topic', displayPrompt);
-    document.body.appendChild(fakeBtn);
-    fakeBtn.click();
-    setTimeout(() => { fakeBtn.remove(); }, 100);
- };
+     // Phát event ngầm để Sidebar lấy được nội dung Bài đọc (không bị tràn màn hình chat)
+     const passageContent = currentPart?.content ? currentPart.content.replace(stripHtmlRegex, '') : "";
+     window.dispatchEvent(new CustomEvent('tony-update-lecture-context', {
+       detail: { title: basicInfo.title, html: passageContent }
+     }));
+     
+     // Chỉ hiển thị nội dung câu hỏi và đáp án gốc thật ngắn gọn trên khung Chat (có in đậm)
+     const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${qContent.replace(stripHtmlRegex, '')}\n\n**Đáp án & Giải thích gốc:**\n${qExplanation.replace(stripHtmlRegex, '')}`;
+     
+     // Kích hoạt nút bấm tàng hình để mở Sidebar với nhãn môn học là 'reading'
+     const fakeBtn = document.createElement('button');
+     fakeBtn.className = 'btn-ai-trigger hidden';
+     fakeBtn.setAttribute('data-task', 'reading');
+     fakeBtn.setAttribute('data-topic', displayPrompt);
+     document.body.appendChild(fakeBtn);
+     fakeBtn.click();
+     setTimeout(() => { fakeBtn.remove(); }, 100);
+  };
 
   const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
     if (!htmlStr) return null;
@@ -1369,6 +1368,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               <React.Fragment>
                 <div className="flex flex-col h-full bg-white relative" style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
                     
+                    {/* BẢNG AUDIO PLAYER STICKY Ở TRÊN CÙNG BÊN TRÁI DÀNH CHO REVIEW LISTENING */}
                     {isReviewMode && isListening && currentPart?.audioUrl && (
                       <div className="bg-[#f4f4f4] p-4 border-b border-slate-400 flex items-center gap-4 shrink-0 shadow-sm z-10 font-sans">
                         <p className="text-[12px] font-black text-slate-800 uppercase tracking-widest shrink-0">Audio Part:</p>
@@ -1423,6 +1423,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
               >
                 <div className="w-full">
                   
+                  {/* ẨN AUDIO BÊN TRẢI NẾU LÀ LISTENING (DO ĐÃ ĐƯA SANG TRÁI) */}
                   {currentPart?.audioUrl && (!isListening) && (
                     <div className="mb-8 bg-white p-4 rounded-none border border-slate-400 flex items-center gap-4 font-sans">
                        <p className="text-[12px] font-bold text-slate-800 uppercase tracking-widest shrink-0">Audio Part:</p>
@@ -1479,6 +1480,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
 
                                 return (
                                     <React.Fragment>
+                                        {/* TĂNG GIÃN DÒNG TRONG REVIEW MODE ĐỂ KHÔNG BỊ ĐÈ CHỮ */}
                                         <div className={`format-passage text-[16px] text-black break-words font-sans html-content-renderer ${isReviewMode ? 'leading-[3.0] pb-6' : 'leading-[2.0]'}`}>
                                             {renderHtmlWithHoles(cleanHtmlContent(mainContent), sec)}
                                         </div>
@@ -1554,6 +1556,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                           <div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                             
+                                             {/* 🚀 NÚT HỎI AI GIẢI THÍCH (BẢN SẠCH VÀ IN ĐẬM) */}
                                              <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
                                                  ✨ Hỏi AI giải thích thêm
                                              </button>
@@ -1607,6 +1611,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                       <div className="mt-6 ml-11 pt-4 border-t border-slate-300 font-sans">
                                          <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                          <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                         
+                                         {/* 🚀 NÚT HỎI AI GIẢI THÍCH (BẢN SẠCH VÀ IN ĐẬM) */}
                                          <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
                                              ✨ Hỏi AI giải thích thêm
                                          </button>
@@ -1618,6 +1624,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                            </div>
                         )}
 
+                        {/* DẠNG DROPLIST BLOCK CÓ EXCLUSION LOGIC */}
                         {isBlockDroplist && (
                            <div className="space-y-3 bg-white p-6 sm:p-8 border border-slate-400 rounded-none font-sans">
                              {(() => {
@@ -1635,26 +1642,43 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                     const validOptions = rawOptions.filter(Boolean);
                                     
                                     return (
-                                     <div key={q.id} id={`q-${q.id}`} onClick={() => setActiveQuestionId(String(q.id))} className={`py-3 px-4 rounded-none border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}>
+                                     <div 
+                                         key={q.id} 
+                                         id={`q-${q.id}`} 
+                                         onClick={() => setActiveQuestionId(String(q.id))} 
+                                         className={`py-3 px-4 rounded-none border flex flex-col sm:flex-row sm:items-center gap-4 cursor-pointer transition-all ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-600' : 'bg-red-50 border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-50 border-black' : 'bg-white border-transparent hover:border-slate-300')}`}
+                                     >
                                        <div className="flex items-center gap-4 flex-1">
-                                         <span className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border font-sans ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} style={{ textIndent: 0 }}>
+                                         <span 
+                                             className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border font-sans ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`} 
+                                             style={{ textIndent: 0 }}
+                                         >
                                            {displayIdx}
                                          </span>
-                                         <div className="text-[15px] font-bold text-black leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
+                                         <div 
+                                             className="text-[15px] font-bold text-black leading-relaxed font-sans html-content-renderer" 
+                                             dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} 
+                                         />
                                        </div>
+                                       
                                        <div className="shrink-0 flex items-center justify-end mt-1 sm:mt-0 font-sans">
                                            {isReviewMode ? (
                                               <div className="flex items-center gap-2">
-                                                  <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] border ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
+                                                  {/* 🚀 ĐÃ ÉP CỨNG ĐỘ RỘNG DROPLIST ĐỂ KHÔNG BỊ THỤT THÒ */}
+                                                  <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
                                                      {userAns || '(trống)'}
                                                   </div>
-                                                  {!isCorrect && <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">ĐA: {correctAns}</div>}
+                                                  {!isCorrect && (
+                                                      <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">
+                                                          ĐA: {correctAns}
+                                                      </div>
+                                                  )}
                                               </div>
                                            ) : (
                                               <select 
                                                 value={userAns}
                                                 onChange={(e) => handleAnswer(String(q.id), e.target.value)}
-                                                className="bg-transparent border-0 border-b-2 border-slate-400 text-black font-bold font-sans text-center text-[15px] h-[36px] px-2 outline-none focus:border-black cursor-pointer w-auto min-w-[100px] max-w-[200px]"
+                                                className="bg-transparent border-0 border-b-2 border-slate-400 text-black font-bold font-sans text-center text-[15px] h-[36px] px-2 outline-none focus:border-black cursor-pointer min-w-[140px] max-w-[250px]"
                                               >
                                                 <option value="">---</option>
                                                 {validOptions.map((opt: string, oIdx: number) => {
@@ -1669,13 +1693,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                               </select>
                                            )}
                                        </div>
+                                       
+                                       {/* 🚀 NÚT HỎI AI GIẢI THÍCH BÊN TRONG DROPLIST BLOCK */}
                                        {isReviewMode && (
                                           <div className="w-full mt-4 border-t border-slate-300 pt-3">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                              <div className="text-[14px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">
-                                                 ✨ Hỏi AI giải thích thêm
-                                             </button>
+                                             <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">✨ Hỏi AI giải thích thêm</button>
                                           </div>
                                        )}
                                      </div>
@@ -1750,6 +1774,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                             </span>
                                           )}
                                         </div>
+                                        {/* 🚀 NÚT HỎI AI GIẢI THÍCH BÊN TRONG BLOCK KÉO THẢ */}
                                         {isReviewMode && (
                                           <div className="w-full mt-4 border-t border-slate-300 pt-3">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
