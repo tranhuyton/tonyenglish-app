@@ -38,7 +38,7 @@ const base64ToArrayBuffer = (base64: string) => {
 };
 
 // =========================================================================================
-// COMPONENT PHÒNG LIVE TỐI THƯỢNG
+// COMPONENT PHÒNG LIVE TỐI THƯỢNG (ANTI-ZOMBIE CONNECTIONS & LUÔN HIỆN NÚT CHAT)
 // =========================================================================================
 export default function LiveSpeakingTest({ 
     viewState, 
@@ -76,6 +76,10 @@ export default function LiveSpeakingTest({
   const transcriptRef = useRef<string>(''); 
   const isIntendedCloseRef = useRef<boolean>(false); 
 
+  // LÍNH GÁC: QUẢN LÝ CÁC TIẾN TRÌNH GỌI/ĐỢI KHÔNG BỊ ĐÈ NHAU
+  const reconnectTimeoutRef = useRef<any>(null);
+  const pendingCallTimeoutRef = useRef<any>(null);
+
   const statusRef = useRef(status);
   
   useEffect(() => { 
@@ -85,7 +89,6 @@ export default function LiveSpeakingTest({
   const startCallRef = useRef<(isReconnect?: boolean) => void>(() => {});
   const stopCallRef = useRef<() => void>(() => {});
 
-  // Cập nhật ref để dùng trong event listener không bị out-of-date
   useEffect(() => { 
       startCallRef.current = startCall; 
       stopCallRef.current = stopCall;
@@ -96,8 +99,8 @@ export default function LiveSpeakingTest({
       const autoStart = sessionStorage.getItem('tony_auto_start') === 'true';
       if (autoStart) {
           sessionStorage.removeItem('tony_auto_start');
-          // Chờ 0.5s cho UI render mượt mà rồi bốc máy gọi luôn
-          setTimeout(() => {
+          if (pendingCallTimeoutRef.current) clearTimeout(pendingCallTimeoutRef.current);
+          pendingCallTimeoutRef.current = setTimeout(() => {
               if (startCallRef.current) {
                   startCallRef.current(false);
               }
@@ -105,7 +108,7 @@ export default function LiveSpeakingTest({
       }
   }, []);
 
-  // 🚀 RADAR THÔNG MINH: XỬ LÝ LỖI LỒNG GIỌNG NÓI 
+  // RADAR THÔNG MINH: XỬ LÝ LỖI LỒNG GIỌNG NÓI (CÃI VÃ NHAU)
   useEffect(() => {
     const handleNavigationEvent = (e: any) => {
         if (e.detail === 'live-test') {
@@ -114,25 +117,17 @@ export default function LiveSpeakingTest({
             
             if (autoStart) {
                 sessionStorage.removeItem('tony_auto_start');
+                if (pendingCallTimeoutRef.current) clearTimeout(pendingCallTimeoutRef.current);
+                if (reconnectTimeoutRef.current) clearTimeout(reconnectTimeoutRef.current);
                 
                 if (statusRef.current === 'CONNECTED' || statusRef.current === 'CONNECTING') {
-                    // ĐANG GỌI DỞ THÌ DẬP MÁY NGAY ĐỂ CẮT ĐỨT HÀNG ĐỢI ÂM THANH CŨ
-                    if (stopCallRef.current) {
-                        stopCallRef.current();
-                    }
-                    
-                    // NGHỈ 0.5 GIÂY RỒI KHỞI ĐỘNG CUỘC GỌI MỚI VỚI DỮ LIỆU BÀI GIẢNG MỚI
-                    setTimeout(() => {
-                        if (startCallRef.current) {
-                            startCallRef.current(false);
-                        }
+                    if (stopCallRef.current) stopCallRef.current();
+                    pendingCallTimeoutRef.current = setTimeout(() => {
+                        if (startCallRef.current) startCallRef.current(false);
                     }, 500);
                 } else {
-                    // CHƯA GỌI -> BỐC MÁY GỌI BÌNH THƯỜNG
-                    setTimeout(() => {
-                        if (startCallRef.current) {
-                            startCallRef.current(false);
-                        }
+                    pendingCallTimeoutRef.current = setTimeout(() => {
+                        if (startCallRef.current) startCallRef.current(false);
                     }, 300);
                 }
             }
@@ -161,7 +156,7 @@ export default function LiveSpeakingTest({
     }
   };
 
-  // 🚀 HÀM START CALL GỌI API GOOGLE GEMINI
+  // 🚀 HÀM START CALL VÀ CẤY LỆNH "CẤM LẢI NHẢI" CHO AI
   const startCall = async (isReconnect = false) => {
     try {
       setStatus('CONNECTING');
@@ -175,16 +170,21 @@ export default function LiveSpeakingTest({
       
       isIntendedCloseRef.current = false;
 
-      if (!audioCtxInputRef.current) {
-          const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-          audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
-          audioCtxOutputRef.current = new AudioContextClass({ sampleRate: 24000 });
+      // ĐẢM BẢO CHẮC CHẮN TRÌNH DUYỆT KHÔNG CÒN LƯU AUDIO CONTEXT CŨ
+      if (audioCtxInputRef.current && audioCtxInputRef.current.state !== 'closed') {
+          try { audioCtxInputRef.current.close(); } catch(e) {}
       }
+      if (audioCtxOutputRef.current && audioCtxOutputRef.current.state !== 'closed') {
+          try { audioCtxOutputRef.current.close(); } catch(e) {}
+      }
+
+      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+      audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
+      audioCtxOutputRef.current = new AudioContextClass({ sampleRate: 24000 });
       
       if (audioCtxInputRef.current.state === 'suspended') {
           await audioCtxInputRef.current.resume();
       }
-      
       if (audioCtxOutputRef.current.state === 'suspended') {
           await audioCtxOutputRef.current.resume();
       }
@@ -195,6 +195,7 @@ export default function LiveSpeakingTest({
       
       nextPlayTimeRef.current = audioCtxOutputRef.current.currentTime;
 
+      // MỞ WEBSOCKET MỚI TỚI GOOGLE
       const wsUrl = 'wss://ubkvzgwespfvrlpjuxkp.supabase.co/functions/v1/live-speaking';
       const ws = new WebSocket(wsUrl);
       wsRef.current = ws;
@@ -211,18 +212,36 @@ export default function LiveSpeakingTest({
 
         let systemPrompt = "";
         
+        // 🚀 CẬP NHẬT PROMPT: KIỂM SOÁT HÀNH VI CHÀO HỎI
         if (mode === 'TUTOR' && tutorData) {
-            systemPrompt = `Bạn là ${teacherName}, người Hà Nội. TÍNH CÁCH: Thanh lịch, chuẩn mực. 
-            NGÔN NGỮ: Văn phong Hà Nội chuẩn. Tiếng Anh chuẩn giọng British English.
-            BỐI CẢNH: ${tutorData.transcript}. 
-            NHIỆM VỤ: ${tutorData.feedback}. Hãy giảng bài ân cần bằng song ngữ Việt-Anh.`;
+            if (isReconnect && transcriptRef.current) {
+                systemPrompt = `Bạn là ${teacherName}, người Hà Nội. TÍNH CÁCH: Thanh lịch, chuẩn mực. 
+                NGÔN NGỮ: Văn phong Hà Nội chuẩn. Tiếng Anh chuẩn giọng British English.
+                BỐI CẢNH BÀI HỌC: ${tutorData.transcript}.
+                
+                [LỆNH KHẨN CẤP TỪ HỆ THỐNG]: Cuộc trò chuyện vừa bị gián đoạn do lỗi mạng. Đây là lịch sử những gì BẠN ĐÃ NÓI nãy giờ: "${transcriptRef.current}".
+                NHIỆM VỤ HIỆN TẠI: Tiếp tục cuộc đàm thoại ngay lập tức. TUYỆT ĐỐI KHÔNG chào hỏi lại, KHÔNG nhắc lại tên bài học, KHÔNG xin lỗi. Hãy đợi học sinh hỏi hoặc tiếp tục ý đang giảng dang dở một cách tự nhiên nhất.`;
+            } else {
+                systemPrompt = `Bạn là ${teacherName}, người Hà Nội. TÍNH CÁCH: Thanh lịch, chuẩn mực. 
+                NGÔN NGỮ: Văn phong Hà Nội chuẩn. Tiếng Anh chuẩn giọng British English.
+                BỐI CẢNH: ${tutorData.transcript}. 
+                NHIỆM VỤ: ${tutorData.feedback}. 
+                
+                [QUY TẮC GIAO TIẾP NGHIÊM NGẶT]: Bạn CHỈ ĐƯỢC phép chào hỏi và giới thiệu tên bài học 1 LẦN DUY NHẤT ở câu nói đầu tiên. Từ các lượt hội thoại sau đó, TUYỆT ĐỐI KHÔNG lặp lại lời chào hay giới thiệu tên bài học nữa. Hãy đi thẳng vào việc giải đáp thắc mắc của học sinh. Trả lời ngắn gọn, tương tác qua lại tự nhiên như người thật.`;
+            }
         } else {
-            systemPrompt = `Bạn là giám khảo IELTS tên ${teacherName}, người Hà Nội. Giao tiếp văn phong chuẩn miền Bắc. Phát âm tiếng Anh giọng British English.
-            BỐI CẢNH: Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề: "${currentTopic}".`;
-        }
-
-        if (isReconnect && transcriptRef.current) {
-            systemPrompt += `\n\n[HỆ THỐNG]: Mạng vừa rớt. Đây là lịch sử nãy giờ: "${transcriptRef.current}". Tiếp tục giảng bài ngay, không cần xin lỗi.`;
+            if (isReconnect && transcriptRef.current) {
+                systemPrompt = `Bạn là giám khảo IELTS tên ${teacherName}, người Hà Nội. Giao tiếp văn phong chuẩn miền Bắc. Phát âm tiếng Anh giọng British English.
+                BỐI CẢNH: Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề: "${currentTopic}".
+                
+                [LỆNH KHẨN CẤP]: Mạng vừa rớt. Đây là lịch sử bạn đã nói: "${transcriptRef.current}". 
+                TUYỆT ĐỐI KHÔNG chào lại, KHÔNG giới thiệu lại. Hãy tiếp tục phần thi ngay lập tức.`;
+            } else {
+                systemPrompt = `Bạn là giám khảo IELTS tên ${teacherName}, người Hà Nội. Giao tiếp văn phong chuẩn miền Bắc. Phát âm tiếng Anh giọng British English.
+                BỐI CẢNH: Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề: "${currentTopic}".
+                
+                [QUY TẮC]: Chỉ chào hỏi 1 lần duy nhất ở câu đầu tiên. Sau đó tương tác tự nhiên, hỏi và đợi tôi trả lời.`;
+            }
         }
 
         ws.send(JSON.stringify({
@@ -248,7 +267,9 @@ export default function LiveSpeakingTest({
         gainNodeRef.current.gain.value = 0;
 
         processorNodeRef.current.onaudioprocess = (e) => {
-          if (ws.readyState === WebSocket.OPEN && isSetupCompleteRef.current) {
+          if (ws !== wsRef.current || ws.readyState !== WebSocket.OPEN) return;
+            
+          if (isSetupCompleteRef.current) {
             const inputData = e.inputBuffer.getChannelData(0);
             const dataToSend = isMutedRef.current ? new Float32Array(inputData.length) : inputData;
             const pcm16Buffer = floatTo16BitPCM(dataToSend);
@@ -276,20 +297,20 @@ export default function LiveSpeakingTest({
       };
 
       ws.onmessage = async (event) => {
+        if (ws !== wsRef.current) return;
+
         try {
           let rawData = event.data;
-          
           if (rawData instanceof Blob) {
               rawData = await rawData.text();
           }
-          
           const msg = JSON.parse(rawData);
           
           if (msg.setupComplete) {
              isSetupCompleteRef.current = true;
              ws.send(JSON.stringify({ 
                  realtimeInput: { 
-                     text: isReconnect ? "Please continue." : "Hello, I am ready." 
+                     text: isReconnect ? "[HỆ THỐNG]: Đã kết nối lại. Bỏ qua lời chào, tiếp tục ngay." : "Hello, I am ready." 
                  } 
              }));
              return;
@@ -311,8 +332,11 @@ export default function LiveSpeakingTest({
 
       ws.onclose = () => { 
           if (!isIntendedCloseRef.current) {
-              setTimeout(() => {
-                  startCall(true);
+              if (reconnectTimeoutRef.current) clearTimeout(reconnectTimeoutRef.current);
+              reconnectTimeoutRef.current = setTimeout(() => {
+                  if (!isIntendedCloseRef.current) {
+                      startCall(true);
+                  }
               }, 1000);
           }
       };
@@ -350,34 +374,28 @@ export default function LiveSpeakingTest({
     nextPlayTimeRef.current = playTime + audioBuffer.duration;
   };
 
-  // 🚀 HÀM DẬP MÁY: XÓA SẠCH HÀNG ĐỢI ÂM THANH
   const stopCall = () => {
     isIntendedCloseRef.current = true;
     
-    if (wsRef.current) {
-        wsRef.current.close();
-    }
-    
-    if (streamRef.current) {
-        streamRef.current.getTracks().forEach(t => t.stop());
-    }
-    
-    if (sourceNodeRef.current) {
-        sourceNodeRef.current.disconnect();
-    }
-    
-    if (processorNodeRef.current) {
-        processorNodeRef.current.disconnect();
-    }
-    
-    if (audioCtxInputRef.current) {
-        audioCtxInputRef.current.close(); // Đóng thẻ này là âm thanh cũ bị xóa sạch ngay
-    }
-    
-    if (audioCtxOutputRef.current) {
-        audioCtxOutputRef.current.close();
-    }
-    
+    if (reconnectTimeoutRef.current) clearTimeout(reconnectTimeoutRef.current);
+    if (pendingCallTimeoutRef.current) clearTimeout(pendingCallTimeoutRef.current);
+
+    try { if (wsRef.current) wsRef.current.close(); } catch(e) {}
+    try { if (streamRef.current) streamRef.current.getTracks().forEach(t => t.stop()); } catch(e) {}
+    try { if (sourceNodeRef.current) sourceNodeRef.current.disconnect(); } catch(e) {}
+    try { if (processorNodeRef.current) processorNodeRef.current.disconnect(); } catch(e) {}
+    try { if (gainNodeRef.current) gainNodeRef.current.disconnect(); } catch(e) {}
+    try { if (audioCtxInputRef.current && audioCtxInputRef.current.state !== 'closed') audioCtxInputRef.current.close(); } catch(e) {}
+    try { if (audioCtxOutputRef.current && audioCtxOutputRef.current.state !== 'closed') audioCtxOutputRef.current.close(); } catch(e) {}
+
+    wsRef.current = null;
+    streamRef.current = null;
+    sourceNodeRef.current = null;
+    processorNodeRef.current = null;
+    gainNodeRef.current = null;
+    audioCtxInputRef.current = null;
+    audioCtxOutputRef.current = null;
+
     setStatus('IDLE');
     isSetupCompleteRef.current = false;
     setIsMicSending(false);
@@ -433,13 +451,26 @@ export default function LiveSpeakingTest({
   // GIAO DIỆN TOÀN MÀN HÌNH CHÍNH
   // =========================================================================================
   
-  // Lấy dữ liệu để render text trong trạng thái IDLE
   const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
   
   return (
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center min-h-[100dvh] bg-[#020617]/95 backdrop-blur-md text-slate-200 p-4 w-full font-sans overflow-hidden animate-in fade-in duration-300">
       
+      {/* 🚀 ĐÃ BỎ ĐIỀU KIỆN MODE ĐỂ NÚT CHAT AI LUÔN LUÔN XUẤT HIỆN */}
+      {onOpenAI && (
+          <button 
+             onClick={() => onOpenAI()}
+             className="absolute top-6 right-6 text-amber-400 hover:text-amber-300 transition-all flex items-center gap-2 font-bold bg-amber-950/40 px-3 py-2 md:px-5 md:py-2.5 rounded-xl border border-amber-800/60 shadow-[0_0_15px_rgba(217,119,6,0.15)] z-20 hover:scale-105 active:scale-95"
+             title="Mở khung Chat AI"
+          >
+             <span className="text-lg">💡</span> 
+             <span className="hidden sm:inline text-[13px] md:text-[14px]">
+                 {currentMode === 'TUTOR' ? 'Mở Chat AI' : 'Kịch bản AI'}
+             </span>
+          </button>
+      )}
+
       <div className="bg-[#0f172a] p-8 md:p-12 rounded-[2rem] shadow-2xl border border-slate-700 max-w-2xl w-full text-center relative z-10">
         
         <button 
@@ -451,10 +482,10 @@ export default function LiveSpeakingTest({
 
         <div className="mb-10 mt-12">
            <h2 className="text-3xl md:text-4xl font-black mb-3 text-white tracking-tight">
-               Gia Sư Giải Đáp 1-1
+               {currentMode === 'TUTOR' ? 'Gia Sư Giải Đáp 1-1' : 'Phòng Luyện Nói 1-1'}
            </h2>
            <p className="text-emerald-400 font-medium text-[15px] opacity-90">
-               Cùng thầy/cô phân tích nội dung bài học
+               {currentMode === 'TUTOR' ? 'Cùng thầy/cô phân tích nội dung bài học' : 'Đàm thoại tiếng Anh trực tiếp với Giám khảo ảo'}
            </p>
         </div>
 

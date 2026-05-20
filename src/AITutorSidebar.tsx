@@ -32,10 +32,12 @@ export default function AITutorSidebar({
   const [isTyping, setIsTyping] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   
+  // 🚀 THÊM STATE ĐỂ QUẢN LÝ THU NHỎ
+  const [isMinimized, setIsMinimized] = useState(false);
+  
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  // 🎨 BỘ CHỌN THEME TỰ ĐỘNG BIẾN HÌNH THEO MÔN HỌC
   const theme = useMemo(() => {
     if (mode === 'tutor') {
       return {
@@ -148,7 +150,6 @@ export default function AITutorSidebar({
     }
   }, [mode, taskType]);
 
-  // 🧠 BỘ GỢI Ý ĐỘNG THEO MÔN HỌC
   const dynamicPrompts = useMemo(() => {
     if (mode === 'tutor') {
         return TUTOR_PROMPTS;
@@ -182,14 +183,15 @@ export default function AITutorSidebar({
   }, [htmlContent, mode]);
 
   useEffect(() => { 
-      if (messagesEndRef.current) {
+      if (messagesEndRef.current && !isMinimized) {
           messagesEndRef.current.scrollIntoView({ behavior: 'smooth' }); 
       }
-  }, [messages, isTyping, isExpanded]);
+  }, [messages, isTyping, isExpanded, isMinimized]);
 
-  // 🚀 LỜI CHÀO MỞ ĐẦU CHUYÊN SÂU & TINH GỌN
   useEffect(() => {
     if (isOpen) {
+       setIsMinimized(false);
+       
        setTimeout(() => {
            if (textareaRef.current) {
                textareaRef.current.focus();
@@ -229,7 +231,6 @@ export default function AITutorSidebar({
     }
   }, [isOpen, mode, topicTitle, lectureTitle, topicImage, taskType]);
 
-  // 🚀 TÍNH NĂNG GỌI GIA SƯ TỪ BÀI GIẢNG
   const handleCallTutor = () => {
       const safeHtml = htmlContent ? htmlContent.replace(/<[^>]+>/g, '').slice(0, 2000) : 'Không có dữ liệu văn bản';
       const safeTitle = lectureTitle || 'Bài giảng English';
@@ -244,7 +245,8 @@ export default function AITutorSidebar({
       sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
       sessionStorage.setItem('tony_auto_start', 'true');
       
-      onClose();
+      // Khi gọi Live thì tự động thu nhỏ thanh Chat thay vì đóng hẳn, để giữ lịch sử
+      setIsMinimized(true);
       window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
   };
 
@@ -338,19 +340,37 @@ export default function AITutorSidebar({
 
   if (!isOpen) return null;
 
+  // 🚀 NẾU ĐANG THU NHỎ -> HIỂN THỊ BUBBLE NỔI GÓC DƯỚI
+  if (isMinimized) {
+      return (
+          <button 
+              onClick={() => setIsMinimized(false)}
+              className={`fixed bottom-[120px] right-6 z-[10000] w-14 h-14 rounded-full bg-gradient-to-r ${theme.headerBg} text-white shadow-2xl flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition-all duration-200 animate-in zoom-in group`}
+              title="Mở lại khung Chat AI"
+          >
+              <span className="group-hover:hidden">{theme.icon}</span>
+              <span className="hidden group-hover:block text-xl">💬</span>
+              
+              {/* Chấm đỏ báo có tin nhắn mới (chỉ để trang trí cho đẹp) */}
+              <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 border-2 border-white rounded-full"></span>
+          </button>
+      );
+  }
+
+  // GIAO DIỆN FULL THANH CHAT
   return (
     <>
-      {isOpen && (
+      {isOpen && !isMinimized && (
           <div 
               className="fixed inset-0 bg-slate-900/40 z-[90] md:hidden" 
               onClick={() => { 
-                  onClose(); 
+                  setIsMinimized(true); 
                   setIsExpanded(false); 
               }} 
           />
       )}
       
-      <div className={`fixed top-0 md:top-[60px] bottom-0 right-0 w-full ${isExpanded ? 'md:w-[800px]' : theme.width} bg-[#f8fafc] shadow-2xl z-[100] flex flex-col transition-all duration-300 border-l border-slate-200 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 md:top-[60px] bottom-0 right-0 w-full ${isExpanded ? 'md:w-[800px]' : theme.width} bg-[#f8fafc] shadow-2xl z-[100] flex flex-col transition-all duration-300 border-l border-slate-200 ${isOpen && !isMinimized ? 'translate-x-0' : 'translate-x-full'}`}>
         
         <div className={`h-16 bg-gradient-to-r ${theme.headerBg} text-white flex items-center justify-between px-5 shrink-0 shadow-sm z-10`}>
           <div className="flex items-center gap-3">
@@ -367,24 +387,40 @@ export default function AITutorSidebar({
              <button 
                  onClick={() => setIsExpanded(!isExpanded)} 
                  className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/20 text-white"
+                 title="Phóng to"
              >
                 {isExpanded ? "⛶" : "⬜"}
              </button>
              
-             {/* 🚀 NÚT GỌI GIA SƯ */}
+             {/* 🚀 NÚT THU NHỎ */}
+             <button 
+                 onClick={() => setIsMinimized(true)} 
+                 className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/20 text-white font-bold pb-2"
+                 title="Thu nhỏ Chat"
+             >
+                _
+             </button>
+             
              <button 
                  onClick={handleCallTutor}
                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg text-[12px] font-bold transition-all flex items-center gap-1.5 shadow-md active:scale-95 ml-2 mr-2"
+                 title="Gọi điện"
              >
                  📞 Gọi Gia Sư
              </button>
              
+             {/* Nút X: Giờ sẽ đóng hẳn, xóa chat */}
              <button 
                  onClick={() => { 
-                     onClose(); 
-                     setIsExpanded(false); 
+                     if(window.confirm('Đóng cửa sổ này sẽ xóa lịch sử trò chuyện. Bạn có muốn thu nhỏ lại thay vì đóng hẳn không?')) {
+                         onClose(); 
+                         setIsExpanded(false); 
+                     } else {
+                         setIsMinimized(true);
+                     }
                  }} 
-                 className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/20 text-white text-lg font-bold"
+                 className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-red-500 transition-colors text-white text-lg font-bold"
+                 title="Đóng hẳn"
              >
                  ✕
              </button>
