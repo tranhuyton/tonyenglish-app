@@ -7,16 +7,19 @@ const UserIcon = () => (
     <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
   </svg>
 );
+
 const SettingsIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
     <path fillRule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 00-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 00-2.282.819l-.922 1.597a1.875 1.875 0 00.432 2.385l.84.692c.097.078.15.222.15.399v.111c0 .177-.053.321-.15.399l-.84.692a1.875 1.875 0 00-.432 2.385l.922 1.597a1.875 1.875 0 002.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 002.28-.819l.923-1.597a1.875 1.875 0 00-.432-2.385l-.84-.692c-.098-.078-.15-.222-.15-.399v-.111c0-.177.052-.321.15-.399l.84-.692a1.875 1.875 0 00.432-2.385l-.923-1.597a1.875 1.875 0 00-2.28-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 00-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 00-1.85-1.567h-1.843zM12 15.75a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5z" clipRule="evenodd" />
   </svg>
 );
+
 const FullscreenIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
   </svg>
 );
+
 const ExitFullscreenIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
     <path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
@@ -194,7 +197,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   useEffect(() => {
       if (testStarted && !isReviewMode && isListening && globalAudioRef.current && audioPlaylist[currentAudioIndex]) {
           setTimeout(() => {
-             globalAudioRef.current?.play().catch(e => console.log("Auto-play next track blocked", e));
+              globalAudioRef.current?.play().catch(e => console.log("Auto-play next track blocked", e));
           }, 100);
       }
   }, [currentAudioIndex, testStarted, isReviewMode, isListening, audioPlaylist]);
@@ -729,18 +732,15 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     }
   };
 
-  // 🚀 TÍNH NĂNG GỌI HỎI AI ĐÃ TINH GỌN
+  // 🚀 TÍNH NĂNG CHAT VỚI AI ĐỂ GIẢI THÍCH (BẰNG TEXT)
   const askAIToExplain = (questionId: string, qContent: string, qExplanation: string) => {
-     // Phát event ngầm để Sidebar lấy được nội dung Bài đọc
      const passageContent = currentPart?.content ? currentPart.content.replace(stripHtmlRegex, '') : "";
      window.dispatchEvent(new CustomEvent('tony-update-lecture-context', {
        detail: { title: basicInfo.title, html: passageContent }
      }));
      
-     // Chỉ hiển thị nội dung câu hỏi và đáp án gốc (Đã IN ĐẬM)
      const displayPrompt = `**Câu hỏi số ${questionIndexMap[questionId] || questionId}:**\n${qContent.replace(stripHtmlRegex, '')}\n\n**Đáp án & Giải thích gốc:**\n${qExplanation.replace(stripHtmlRegex, '')}`;
      
-     // Kích hoạt nút bấm tàng hình để mở Sidebar
      const fakeBtn = document.createElement('button');
      fakeBtn.className = 'btn-ai-trigger hidden';
      fakeBtn.setAttribute('data-task', 'reading');
@@ -748,6 +748,24 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
      document.body.appendChild(fakeBtn);
      fakeBtn.click();
      setTimeout(() => { fakeBtn.remove(); }, 100);
+  };
+
+  // 🚀 TÍNH NĂNG GỌI GIA SƯ (VOICE) CHO TỪNG CÂU HỎI
+  const callTutorForQuestion = (q: any) => {
+      const plainContent = String(q.content || '').replace(stripHtmlRegex, '').trim();
+      const plainExplanation = String(q.explanation || 'Không có lời giải thích.').replace(stripHtmlRegex, '').trim();
+      const correctAns = String(q.correctAnswer || '');
+      const userAns = String(answers[String(q.id)] || '(trống)');
+      
+      const tutorContext = {
+          overall: scoreResult.band,
+          transcript: `Câu hỏi: "${plainContent}". \nĐáp án của học sinh: ${userAns}. \nĐáp án đúng: ${correctAns}. \nGiải thích gốc: "${plainExplanation}".`,
+          feedback: "Bạn là gia sư IELTS. Học sinh đang xem lại câu hỏi này trong phần Review. Hãy chủ động chào và giải thích chi tiết tại sao đáp án lại như vậy, phân tích từ vựng/ngữ pháp liên quan. Dùng giọng điệu tự nhiên, ân cần như đang dạy kèm 1-1."
+      };
+      
+      sessionStorage.setItem('tony_live_mode', 'TUTOR');
+      sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+      window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
   };
 
   const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
@@ -804,7 +822,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   }
               }
 
-              // ĐẢM BẢO CÓ ID ĐỂ BẤM TỪ FOOTER DẪN LÊN ĐÚNG CÂU ĐIỀN TỪ
               return (
                 <span key={pathKey} id={`q-${qNum}`} className="relative inline-flex items-center align-middle mx-1 -translate-y-[2px] whitespace-nowrap" style={{ textIndent: 0 }}>
                   <span className={`shrink-0 inline-flex items-center justify-center leading-none px-3 py-1 text-[14px] font-bold font-sans text-white rounded-none border border-black ${isCorrect ? 'bg-emerald-600' : 'bg-red-600'}`} style={{ color: '#ffffff', textIndent: 0 }}>
@@ -974,212 +991,40 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   return (
     <React.Fragment>
       <style>{`
-          .format-passage { 
-              overflow: visible !important; 
-          }
-          
-          .format-passage table { 
-              display: block;
-              overflow-x: auto;
-              overflow-y: hidden !important;
-              width: 100% !important; 
-              min-width: 600px; 
-              border-collapse: collapse !important; 
-              margin-top: 1.5rem !important; 
-              margin-bottom: 1.5rem !important; 
-          }
-
-          .html-content-renderer table { 
-              display: block;
-              overflow-x: auto;
-              overflow-y: hidden !important;
-              width: 100% !important; 
-              min-width: 600px; 
-              border-collapse: collapse !important; 
-              margin-top: 1.5rem !important; 
-              margin-bottom: 1.5rem !important; 
-          }
-
-          .format-passage table::-webkit-scrollbar:vertical,
-          .html-content-renderer table::-webkit-scrollbar:vertical {
-              display: none !important;
-              width: 0px !important;
-          }
-          
-          .format-passage input::-webkit-scrollbar, 
-          .format-passage span::-webkit-scrollbar,
-          .html-content-renderer input::-webkit-scrollbar, 
-          .html-content-renderer span::-webkit-scrollbar { 
-              display: none !important; 
-          }
-          
-          .format-passage input, 
-          .format-passage span { 
-              scrollbar-width: none !important; 
-          }
-          
-          .format-passage::-webkit-scrollbar { 
-              height: 8px; 
-          }
-          
-          .format-passage::-webkit-scrollbar-thumb { 
-              background-color: #cbd5e1; 
-              border-radius: 4px; 
-          }
-          
-          .format-passage p { 
-              margin-bottom: 1.25rem !important; 
-          }
-          
-          .format-passage p:last-child { 
-              margin-bottom: 0 !important; 
-          }
-          
-          .format-passage p:empty, 
-          .html-content-renderer p:empty { 
-              display: none !important; 
-          }
-          
-          .format-passage p > br:only-child, 
-          .html-content-renderer p > br:only-child { 
-              display: none !important; 
-          }
-          
-          .format-passage br, 
-          .html-content-renderer br { 
-              display: inline !important; 
-              content: normal !important; 
-              margin: 0 !important; 
-          }
-          
-          .format-passage ul { 
-              list-style-type: disc; 
-              padding-left: 1.5rem; 
-              margin-bottom: 1.25rem; 
-          }
-          
-          .format-passage ul ul { 
-              list-style-type: circle; 
-              margin-top: 0.5rem; 
-              margin-bottom: 0; 
-              padding-left: 1.5rem; 
-          }
-          
-          .format-passage ul ul ul { 
-              list-style-type: square; 
-          }
-          
-          .format-passage ol { 
-              list-style-type: decimal; 
-              padding-left: 1.5rem; 
-              margin-bottom: 1.25rem; 
-          }
-          
-          .format-passage li { 
-              margin-bottom: 0.5rem; 
-          }
-          
-          .format-passage li > p { 
-              margin-bottom: 0 !important; 
-              display: inline; 
-          }
-          
-          .format-passage p:has(+ ul), 
-          .html-content-renderer p:has(+ ul) { 
-              margin-bottom: 0.25rem !important; 
-          }
-          
-          .format-passage p + ul, 
-          .html-content-renderer p + ul { 
-              margin-top: 0 !important; 
-          }
-          
-          @supports not selector(:has(+ ul)) { 
-              .format-passage p + ul, 
-              .html-content-renderer p + ul { 
-                  margin-top: -1rem !important; 
-              } 
-          }
-          
-          .format-passage th, 
-          .format-passage td, 
-          .html-content-renderer th, 
-          .html-content-renderer td { 
-              border: 1px solid #444 !important; 
-              padding: 12px 16px !important; 
-              vertical-align: top !important; 
-              white-space: normal !important; 
-              word-break: break-word !important; 
-          }
-          
-          .format-passage th, 
-          .html-content-renderer th { 
-              background-color: #e5e5e5 !important; 
-              font-weight: 900 !important; 
-              color: #000 !important; 
-          }
-          
-          .format-passage table *, 
-          .html-content-renderer table * { 
-              font-family: inherit !important; 
-              line-height: 1.6 !important; 
-          }
-          
-          .format-passage table p, 
-          .html-content-renderer table p { 
-              margin: 0 !important; 
-              display: inline-block !important; 
-          }
-          
-          .format-passage td span, 
-          .html-content-renderer td span { 
-              text-indent: 0 !important; 
-          }
-          
-          .format-passage td input, 
-          .format-passage td select, 
-          .html-content-renderer td input, 
-          .html-content-renderer td select { 
-              max-width: 100%; 
-          }
-          
-          .html-content-renderer ul { 
-              list-style: disc outside !important; 
-              padding-left: 1.5rem !important; 
-              margin: 0.5rem 0 !important; 
-          }
-          
-          .html-content-renderer ul ul { 
-              list-style-type: circle !important; 
-              padding-left: 1.5rem !important; 
-          }
-          
-          .html-content-renderer ol { 
-              list-style: decimal outside !important; 
-              padding-left: 1.5rem !important; 
-              margin: 0.5rem 0 !important; 
-          }
-          
-          .html-content-renderer li { 
-              margin-bottom: 0.25rem !important; 
-          }
-          
-          .html-content-renderer li > p, 
-          .html-content-renderer li > div { 
-              display: inline !important; 
-              margin: 0 !important; 
-          }
-          
-          .html-content-renderer img { 
-              max-width: 100% !important; 
-              width: 80% !important; 
-              height: auto !important; 
-              display: block !important; 
-              margin-left: auto !important; 
-              margin-right: auto !important; 
-              margin-top: 1.5rem !important; 
-              margin-bottom: 1.5rem !important; 
-          }
+          .format-passage { overflow: visible !important; }
+          .format-passage table { display: block; overflow-x: auto; overflow-y: hidden !important; width: 100% !important; min-width: 600px; border-collapse: collapse !important; margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+          .html-content-renderer table { display: block; overflow-x: auto; overflow-y: hidden !important; width: 100% !important; min-width: 600px; border-collapse: collapse !important; margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+          .format-passage table::-webkit-scrollbar:vertical, .html-content-renderer table::-webkit-scrollbar:vertical { display: none !important; width: 0px !important; }
+          .format-passage input::-webkit-scrollbar, .format-passage span::-webkit-scrollbar, .html-content-renderer input::-webkit-scrollbar, .html-content-renderer span::-webkit-scrollbar { display: none !important; }
+          .format-passage input, .format-passage span { scrollbar-width: none !important; }
+          .format-passage::-webkit-scrollbar { height: 8px; }
+          .format-passage::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 4px; }
+          .format-passage p { margin-bottom: 1.25rem !important; }
+          .format-passage p:last-child { margin-bottom: 0 !important; }
+          .format-passage p:empty, .html-content-renderer p:empty { display: none !important; }
+          .format-passage p > br:only-child, .html-content-renderer p > br:only-child { display: none !important; }
+          .format-passage br, .html-content-renderer br { display: inline !important; content: normal !important; margin: 0 !important; }
+          .format-passage ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+          .format-passage ul ul { list-style-type: circle; margin-top: 0.5rem; margin-bottom: 0; padding-left: 1.5rem; }
+          .format-passage ul ul ul { list-style-type: square; }
+          .format-passage ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+          .format-passage li { margin-bottom: 0.5rem; }
+          .format-passage li > p { margin-bottom: 0 !important; display: inline; }
+          .format-passage p:has(+ ul), .html-content-renderer p:has(+ ul) { margin-bottom: 0.25rem !important; }
+          .format-passage p + ul, .html-content-renderer p + ul { margin-top: 0 !important; }
+          @supports not selector(:has(+ ul)) { .format-passage p + ul, .html-content-renderer p + ul { margin-top: -1rem !important; } }
+          .format-passage th, .format-passage td, .html-content-renderer th, .html-content-renderer td { border: 1px solid #444 !important; padding: 12px 16px !important; vertical-align: top !important; white-space: normal !important; word-break: break-word !important; }
+          .format-passage th, .html-content-renderer th { background-color: #e5e5e5 !important; font-weight: 900 !important; color: #000 !important; }
+          .format-passage table *, .html-content-renderer table * { font-family: inherit !important; line-height: 1.6 !important; }
+          .format-passage table p, .html-content-renderer table p { margin: 0 !important; display: inline-block !important; }
+          .format-passage td span, .html-content-renderer td span { text-indent: 0 !important; }
+          .format-passage td input, .format-passage td select, .html-content-renderer td input, .html-content-renderer td select { max-width: 100%; }
+          .html-content-renderer ul { list-style: disc outside !important; padding-left: 1.5rem !important; margin: 0.5rem 0 !important; }
+          .html-content-renderer ul ul { list-style-type: circle !important; padding-left: 1.5rem !important; }
+          .html-content-renderer ol { list-style: decimal outside !important; padding-left: 1.5rem !important; margin: 0.5rem 0 !important; }
+          .html-content-renderer li { margin-bottom: 0.25rem !important; }
+          .html-content-renderer li > p, .html-content-renderer li > div { display: inline !important; margin: 0 !important; }
+          .html-content-renderer img { max-width: 100% !important; width: 80% !important; height: auto !important; display: block !important; margin-left: auto !important; margin-right: auto !important; margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
       `}</style>
 
       {isListening && globalAudio && !isReviewMode && ( 
@@ -1311,8 +1156,10 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             </div>
             
             {isReviewMode ? (
-               <div className="absolute left-1/2 -translate-x-1/2 font-bold text-[14px] tracking-wide text-white bg-black px-4 py-1 border border-[#10b981] rounded-none">
-                  Điểm: {scoreResult.score}/{scoreResult.total} (Band {scoreResult.band})
+               <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3">
+                  <div className="font-bold text-[14px] tracking-wide text-white bg-black px-4 py-1 border border-[#10b981] rounded-none">
+                     Điểm: {scoreResult.score}/{scoreResult.total} (Band {scoreResult.band})
+                  </div>
                </div>
             ) : (
                <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[15px] tracking-widest ${timeLeft <= 300 ? 'text-red-500 animate-pulse' : 'text-white'}`}>
@@ -1517,7 +1364,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                           </div>
                         )}
                         
-                        {/* 🚀 ĐÃ CHIA RA 2 BLOCK DỌC ĐỂ KHÔNG ÉP CÂU HỎI TRẮC NGHIỆM / TFNG */}
                         {(sec.questionType === "Trắc nghiệm" || sec.questionType === "TFNG") && (
                            <div className="space-y-6">
                              {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
@@ -1568,9 +1414,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                           <div className="w-full mt-2 pt-4 border-t border-slate-300 ml-[46px] font-sans">
                                              <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                             <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
-                                                 ✨ Hỏi AI giải thích thêm
-                                             </button>
+                                             <div className="flex items-center gap-2 mt-3">
+                                                 <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                    💬 Chat với AI
+                                                 </button>
+                                                 <button onClick={() => callTutorForQuestion(q)} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
+                                                    📞 Gọi Gia sư (Voice)
+                                                 </button>
+                                             </div>
                                           </div>
                                        )}
                                      </div>
@@ -1617,9 +1468,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                       <div className="w-full mt-2 pt-4 border-t border-slate-300 ml-[46px] font-sans">
                                          <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                          <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                         <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="mt-3 px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
-                                             ✨ Hỏi AI giải thích thêm
-                                         </button>
+                                         <div className="flex items-center gap-2 mt-3">
+                                             <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                💬 Chat với AI
+                                             </button>
+                                             <button onClick={() => callTutorForQuestion(q)} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
+                                                📞 Gọi Gia sư (Voice)
+                                             </button>
+                                         </div>
                                       </div>
                                    )}
                                  </div>
@@ -1658,7 +1514,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                 className={`shrink-0 inline-flex items-center justify-center leading-none font-bold min-w-[30px] h-[30px] text-[14px] rounded-none border font-sans ${isReviewMode ? (isCorrect ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-red-600 text-white border-red-600') : (activeQuestionId === String(q.id) ? 'bg-slate-900 text-white border-black' : 'bg-white text-black border-slate-800')}`}
                                                 style={{ textIndent: 0 }}
                                             >
-                                              {displayIdx}
+                                                {displayIdx}
                                             </span>
                                             <div
                                                 className="text-[16px] font-bold text-black leading-relaxed font-sans html-content-renderer flex-1 min-w-0 break-words [&>p]:!m-0 [&>p]:!inline"
@@ -1703,7 +1559,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                            <div className="w-full mt-2 border-t border-slate-300 pt-3 flex-none basis-full font-sans">
                                               <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
                                               <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                              <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">✨ Hỏi AI giải thích thêm</button>
+                                              <div className="flex items-center gap-2 mt-3">
+                                                  <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                     💬 Chat với AI
+                                                  </button>
+                                                  <button onClick={() => callTutorForQuestion(q)} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
+                                                     📞 Gọi Gia sư (Voice)
+                                                  </button>
+                                              </div>
                                            </div>
                                         )}
                                       </div>
@@ -1762,39 +1625,44 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                           </div>
 
                                           <div className="shrink-0 flex items-center justify-start md:justify-end font-sans">
-                                            {isReviewMode ? (
-                                              <div className="flex items-center gap-2 justify-start md:justify-end w-full">
-                                                  <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] font-sans border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
-                                                     {displayUserAns || '(trống)'}
-                                                  </div>
-                                                  {!isCorrect && <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">ĐA: {correctAns}</div>}
-                                              </div>
-                                            ) : (
-                                              <span
-                                                onDragOver={(e) => e.preventDefault()}
-                                                onDrop={() => onDrop(String(q.id))}
-                                                className={`inline-flex items-center justify-between align-middle min-w-[140px] max-w-[250px] h-[36px] border border-black rounded-none transition-all px-2 ${activeQuestionId === String(q.id) ? 'bg-slate-200' : 'bg-white'}`}
-                                              >
-                                                {userAns ? (
-                                                  <div className="flex items-center justify-between w-full text-black font-sans text-[14px] font-bold py-1">
-                                                    <span className="truncate">{displayUserAns}</span>
-                                                    <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-600 text-[12px] font-black font-sans">✕</button>
-                                                  </div>
-                                                ) : (
-                                                  <span className="text-slate-400 text-[13px] italic font-sans w-full text-center">Thả vào đây</span>
-                                                )}
-                                              </span>
-                                            )}
+                                              {isReviewMode ? (
+                                                 <div className="flex items-center gap-2 justify-start md:justify-end w-full">
+                                                     <div className={`px-4 py-1.5 rounded-none font-bold text-[14px] font-sans border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-200 text-emerald-900 border-emerald-600' : 'bg-red-200 text-red-900 border-red-600'}`}>
+                                                        {displayUserAns || '(trống)'}
+                                                     </div>
+                                                     {!isCorrect && <div className="text-[12px] font-bold text-white bg-slate-800 px-2 py-0.5 rounded-none whitespace-nowrap font-sans">ĐA: {correctAns}</div>}
+                                                 </div>
+                                              ) : (
+                                                <span
+                                                  onDragOver={(e) => e.preventDefault()}
+                                                  onDrop={() => onDrop(String(q.id))}
+                                                  className={`inline-flex items-center justify-between align-middle min-w-[140px] max-w-[250px] h-[36px] border border-black rounded-none transition-all px-2 ${activeQuestionId === String(q.id) ? 'bg-slate-200' : 'bg-white'}`}
+                                                >
+                                                  {userAns ? (
+                                                    <div className="flex items-center justify-between w-full text-black font-sans text-[14px] font-bold py-1">
+                                                        <span className="truncate">{displayUserAns}</span>
+                                                        <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-600 text-[12px] font-black font-sans">✕</button>
+                                                    </div>
+                                                  ) : (
+                                                    <span className="text-slate-400 text-[13px] italic font-sans w-full text-center">Thả vào đây</span>
+                                                  )}
+                                                </span>
+                                              )}
                                           </div>
                                         </div>
 
                                         {isReviewMode && (
                                            <div className="w-full mt-2 border-t border-slate-300 pt-3 flex-none basis-full font-sans">
                                               <p className="text-[13px] font-black text-black uppercase mb-1">💡 Giải thích đáp án:</p>
-                                              <div className="text-[14px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
-                                              <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.'); }} className="mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">
-                                                  ✨ Hỏi AI giải thích thêm
-                                              </button>
+                                              <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation || 'Không có lời giải thích.') }} />
+                                              <div className="flex items-center gap-2 mt-3">
+                                                  <button onClick={() => askAIToExplain(String(q.id), q.content, q.explanation || 'Không có lời giải thích.')} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                     💬 Chat với AI
+                                                  </button>
+                                                  <button onClick={() => callTutorForQuestion(q)} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
+                                                     📞 Gọi Gia sư (Voice)
+                                                  </button>
+                                              </div>
                                            </div>
                                         )}
                                       </div>
@@ -1990,7 +1858,14 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                        <div key={q.id} className="text-[15px] text-slate-800 font-medium leading-relaxed mb-3 last:mb-0 font-sans html-content-renderer">
                                                            <span className="font-bold font-sans text-white px-2 py-0.5 bg-slate-800 rounded-none text-[13px] mr-2">Câu {questionIndexMap[String(q.id)] || q.id}</span>
                                                            <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
-                                                           <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="block mt-2 px-3 py-1 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">✨ Hỏi AI giải thích chi tiết Câu {questionIndexMap[String(q.id)] || q.id}</button>
+                                                           <div className="flex items-center gap-2 mt-3">
+                                                               <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[12px] transition shadow-sm border border-[#064e3b]">
+                                                                  💬 Chat với AI
+                                                               </button>
+                                                               <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(q); }} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
+                                                                  📞 Gọi Gia sư (Voice)
+                                                               </button>
+                                                           </div>
                                                        </div>
                                                    );
                                                })}
@@ -2124,7 +1999,6 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                      btnClass += isCorrect ? 'bg-emerald-200 border border-emerald-600 text-emerald-900' : 'bg-red-200 border border-red-600 text-red-900';
                   }
                 } else { 
-                  // Gắn định dạng nút ở dưới Footer
                   if (isActive) {
                      btnClass += 'bg-slate-900 text-white border border-black shadow-inner';
                   } else if (isAnswered) {
@@ -2165,9 +2039,26 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                </div>
                
                {isReviewMode ? (
-                 <button onClick={handleExit} className="bg-[#064e3b] hover:bg-[#047857] text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
-                     Thoát
-                 </button>
+                 <div className="flex items-center gap-2">
+                     <button 
+                        onClick={() => {
+                          const tutorContext = {
+                            overall: scoreResult.band,
+                            transcript: `Bài test: ${basicInfo.title}. Điểm số: ${scoreResult.score}/${scoreResult.total} (Band ${scoreResult.band}).`,
+                            feedback: "Bạn là gia sư IELTS. Học sinh vừa hoàn thành bài kiểm tra Reading/Listening và đang xem lại điểm. Hãy gửi lời chào chúc mừng/động viên dựa trên điểm số, sau đó gợi ý học sinh đọc câu hỏi mà họ không hiểu để bạn phân tích chi tiết và đưa ra lời giải thích chuyên sâu."
+                          };
+                          sessionStorage.setItem('tony_live_mode', 'TUTOR');
+                          sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+                          window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+                        }}
+                        className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-sm flex items-center gap-2"
+                     >
+                         📞 Gọi Gia Sư
+                     </button>
+                     <button onClick={handleExit} className="bg-[#064e3b] hover:bg-[#047857] text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide">
+                         Thoát
+                     </button>
+                 </div>
                ) : (
                  <button onClick={handleFinish} className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
                      Nộp bài
