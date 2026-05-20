@@ -27,7 +27,7 @@ const base64ToArrayBuffer = (base64: string) => {
   return bytes.buffer;
 };
 
-// 🚀 THÊM PROP onOpenAI VÀO ĐÂY
+// 🚀 TRUYỀN ĐẦY ĐỦ onBack VÀ onOpenAI
 export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => void, onOpenAI?: () => void }) {
   const [status, setStatus] = useState<'IDLE' | 'CONNECTING' | 'CONNECTED'>('IDLE');
   const [transcript, setTranscript] = useState<string>('');
@@ -43,7 +43,16 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
   
   const isSetupCompleteRef = useRef<boolean>(false);
 
+  // 🚀 LẤY THÔNG TIN CHẾ ĐỘ: GIÁM KHẢO HAY GIA SƯ
+  const mode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
+  const tutorDataRaw = sessionStorage.getItem('tony_tutor_data');
+  const tutorData = tutorDataRaw ? JSON.parse(tutorDataRaw) : null;
+  const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
+
   const handleBackClick = () => {
+    // Dọn dẹp túi dữ liệu trước khi thoát để không bị kẹt chế độ Gia sư cho lần sau
+    sessionStorage.removeItem('tony_live_mode');
+    sessionStorage.removeItem('tony_tutor_data');
     if (onBack) {
        onBack();
     } else {
@@ -75,9 +84,23 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
       ws.onopen = async () => {
         setStatus('CONNECTED');
         
-        const customTopic = sessionStorage.getItem('tony_live_topic') || "Please ask me an IELTS speaking question.";
         const voiceName = examiner === 'TONY' ? 'Puck' : 'Aoede';
-        const examinerName = examiner === 'TONY' ? 'Tony' : 'Diệp';
+        const teacherName = examiner === 'TONY' ? 'thầy Tôn' : 'cô Diệp';
+
+        // 🧠 THIẾT LẬP LỆNH MỒI DỰA THEO CHẾ ĐỘ (GIA SƯ / GIÁM KHẢO)
+        let systemPrompt = "";
+        
+        if (mode === 'TUTOR' && tutorData) {
+            systemPrompt = `Bạn là ${teacherName}, một gia sư IELTS tận tâm. 
+            Học sinh vừa làm bài nói xong với kết quả: Điểm Overall ${tutorData.overall}. 
+            Transcript bài làm: "${tutorData.transcript}". 
+            Lời phê chuyên môn: "${tutorData.feedback}".
+            NHIỆM VỤ: Hãy chào học sinh thân thiện, sau đó chủ động đề xuất giải thích các lỗi sai trong bài nói trên. 
+            Khi học sinh hỏi về từ vựng hay phát âm, hãy hướng dẫn kỹ càng. 
+            Nói chuyện tự nhiên bằng song ngữ Việt-Anh, ngắn gọn, ấm áp.`;
+        } else {
+            systemPrompt = `Bạn là giám khảo IELTS tên ${teacherName}. Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề sau đây: "${currentTopic}". Trả lời cực kỳ tự nhiên, ngắn gọn.`;
+        }
 
         const setupMsg = {
           setup: {
@@ -89,7 +112,7 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
               }
             },
             systemInstruction: {
-              parts: [{ text: `Bạn là giám khảo IELTS tên ${examinerName}. Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề sau đây: "${customTopic}". Trả lời cực kỳ tự nhiên, ngắn gọn.` }]
+              parts: [{ text: systemPrompt }]
             }
           }
         };
@@ -140,8 +163,12 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
 
           if (msg.setupComplete) {
              isSetupCompleteRef.current = true;
-             const kickoffMsg = { realtimeInput: { text: "Hello, I am ready for the Speaking Test. Please start." } };
-             ws.send(JSON.stringify(kickoffMsg));
+             // Mồi câu chào dựa theo chế độ
+             const helloMsg = mode === 'TUTOR' 
+                 ? "Chào em, thầy/cô đã xem qua bài làm của em rồi, mình cùng trao đổi nhé!" 
+                 : "Hello, I am ready for the Speaking Test. Please start.";
+                 
+             ws.send(JSON.stringify({ realtimeInput: { text: helloMsg } }));
              return;
           }
           
@@ -196,22 +223,26 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
     setStatus('IDLE');
     isSetupCompleteRef.current = false;
     setIsMicSending(false);
+    
+    // Xóa dữ liệu chế độ cũ để không bị lẫn cho lần thi tiếp theo
+    sessionStorage.removeItem('tony_live_mode');
+    sessionStorage.removeItem('tony_tutor_data');
   };
-
-  const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[100dvh] bg-[#020617] text-slate-200 p-4 sm:p-8 w-full font-sans relative overflow-hidden">
       
-      {/* 🚀 NÚT MỞ SIDEBAR NẰM Ở GÓC TRÊN BÊN PHẢI */}
-      <button 
-         onClick={() => onOpenAI && onOpenAI()}
-         className="absolute top-6 right-6 text-amber-400 hover:text-amber-300 transition-all flex items-center gap-2 font-bold bg-amber-950/40 px-3 py-2 md:px-5 md:py-2.5 rounded-xl border border-amber-800/60 shadow-[0_0_15px_rgba(217,119,6,0.15)] z-20 hover:scale-105 active:scale-95"
-         title="Xem gợi ý kịch bản của AI"
-      >
-         <span className="text-lg">💡</span> 
-         <span className="hidden sm:inline text-[13px] md:text-[14px]">Kịch bản AI</span>
-      </button>
+      {/* 🚀 NÚT MỞ SIDEBAR CHỈ HIỆN KHI Ở CHẾ ĐỘ THI THỬ (KHÔNG PHẢI CHỮA BÀI) */}
+      {mode !== 'TUTOR' && (
+          <button 
+             onClick={() => onOpenAI && onOpenAI()}
+             className="absolute top-6 right-6 text-amber-400 hover:text-amber-300 transition-all flex items-center gap-2 font-bold bg-amber-950/40 px-3 py-2 md:px-5 md:py-2.5 rounded-xl border border-amber-800/60 shadow-[0_0_15px_rgba(217,119,6,0.15)] z-20 hover:scale-105 active:scale-95"
+             title="Xem gợi ý kịch bản của AI"
+          >
+             <span className="text-lg">💡</span> 
+             <span className="hidden sm:inline text-[13px] md:text-[14px]">Kịch bản AI</span>
+          </button>
+      )}
 
       <div className="bg-[#0f172a] p-8 md:p-12 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-slate-800 max-w-2xl w-full text-center relative z-10">
         
@@ -223,18 +254,30 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
         </button>
 
         <div className="mb-10 mt-6 md:mt-2">
-           <h2 className="text-3xl md:text-4xl font-black mb-3 text-white tracking-tight">Phòng Luyện Nói 1-1</h2>
+           <h2 className="text-3xl md:text-4xl font-black mb-3 text-white tracking-tight">
+               {mode === 'TUTOR' ? 'Gia Sư Giải Đáp 1-1' : 'Phòng Luyện Nói 1-1'}
+           </h2>
            <p className="text-emerald-400 font-medium text-[15px] max-w-md mx-auto leading-relaxed opacity-90">
-             Tương tác giọng nói trực tiếp với Giám khảo ảo.
+               {mode === 'TUTOR' ? 'Cùng thầy/cô phân tích và sửa lỗi sai trong bài làm' : 'Tương tác giọng nói trực tiếp với Giám khảo ảo'}
            </p>
         </div>
 
         {status === 'IDLE' && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-             <div className="bg-slate-800/50 p-4 rounded-2xl border border-slate-700 mb-8 inline-block max-w-full">
-                <span className="block text-[12px] uppercase tracking-widest text-slate-400 font-bold mb-1">Chủ đề luyện tập:</span>
-                <span className="text-[15px] font-medium text-slate-200 line-clamp-2 px-2 max-w-sm">{currentTopic}</span>
-             </div>
+             
+             {/* GIAO DIỆN HIỂN THỊ DỮ LIỆU BÀI LÀM (CHẾ ĐỘ GIA SƯ) */}
+             {mode === 'TUTOR' && tutorData ? (
+                <div className="bg-blue-900/20 p-4 rounded-xl border border-blue-800/50 mb-8 text-left max-w-full">
+                   <div className="text-blue-400 font-bold text-[12px] uppercase mb-2 tracking-widest">Bài làm đang chữa (Band {tutorData.overall}):</div>
+                   <div className="text-[14px] italic text-slate-300 line-clamp-3">"{tutorData.transcript}"</div>
+                </div>
+             ) : (
+             /* GIAO DIỆN HIỂN THỊ CHỦ ĐỀ THI (CHẾ ĐỘ GIÁM KHẢO) */
+                <div className="bg-slate-800/50 p-4 rounded-2xl border border-slate-700 mb-8 inline-block max-w-full">
+                   <span className="block text-[12px] uppercase tracking-widest text-slate-400 font-bold mb-1">Chủ đề luyện tập:</span>
+                   <span className="text-[15px] font-medium text-slate-200 line-clamp-2 px-2 max-w-sm">{currentTopic}</span>
+                </div>
+             )}
 
              <div className="mb-8">
                 <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Lựa chọn Giám khảo</h3>
@@ -285,7 +328,7 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
             </div>
             
             <p className="text-emerald-400 font-bold mb-6 tracking-widest uppercase text-[12px] bg-emerald-950/50 px-4 py-1.5 rounded-full border border-emerald-800">
-                {isMicSending ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : "🟢 GIÁM KHẢO ĐANG NGHE/PHẢN HỒI..."}
+                {isMicSending ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : "🟢 AI ĐANG NGHE/PHẢN HỒI..."}
             </p>
             
             <div className="bg-[#020617] rounded-2xl p-6 w-full text-left h-48 overflow-y-auto mb-8 border border-slate-800 font-mono text-[14px] text-slate-300 leading-relaxed shadow-inner custom-scrollbar relative">

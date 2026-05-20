@@ -82,6 +82,19 @@ export default function App() {
     };
   }, []);
 
+  // 🚀 RADAR LẮNG NGHE TÍN HIỆU ĐIỀU HƯỚNG TỪ NÚT GỌI GIA SƯ
+  useEffect(() => {
+    const handleCustomNavigate = (e: any) => {
+      const view = e.detail;
+      if (view) {
+        setCurrentView(view);
+        try { sessionStorage.setItem('lms_current_view', view); } catch(err) {}
+      }
+    };
+    window.addEventListener('tony-navigate', handleCustomNavigate);
+    return () => window.removeEventListener('tony-navigate', handleCustomNavigate);
+  }, []);
+
   const [currentTestData, setCurrentTestData] = useState<any>(() => {
     try {
       const savedTest = sessionStorage.getItem('lms_current_test');
@@ -133,6 +146,7 @@ export default function App() {
   }, []); 
 
   const handleNavigate = (view: string) => { setCurrentView(view); try { sessionStorage.setItem('lms_current_view', view); } catch(e) {} };
+  
   const handleStartTest = (type: string, data: any) => {
     try {
       setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
@@ -141,6 +155,7 @@ export default function App() {
       handleNavigate(targetView); sessionStorage.setItem('lms_current_test', JSON.stringify(data));
     } catch (error) {}
   };
+  
   const handleOpenLecture = (courseId: string) => { setActiveCourseId(courseId); try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {} handleNavigate('lecture'); };
   const handleReturnFromTest = () => handleNavigate(returnView);
 
@@ -156,7 +171,7 @@ export default function App() {
       {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
       {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
       
-      {/* 🚀 TRUYỀN LỆNH MỞ SIDEBAR VÀO PHÒNG LIVE */}
+      {/* 🚀 PHÒNG LIVE CHUẨN XÁC KÈM ĐẦY ĐỦ QUYỀN TRUY CẬP AI SIDEBAR */}
       {currentView === 'live-test' && (
         <LiveSpeakingTest 
            onBack={() => handleNavigate('lecture')} 
