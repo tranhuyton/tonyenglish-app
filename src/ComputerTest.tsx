@@ -750,7 +750,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
      setTimeout(() => { fakeBtn.remove(); }, 100);
   };
 
-  // 🚀 TÍNH NĂNG GỌI GIA SƯ (VOICE) CHO TỪNG CÂU HỎI
+  // 🚀 TÍNH NĂNG GỌI GIA SƯ (VOICE) CHO TỪNG CÂU HỎI KÈM LỆNH AUTO_START
   const callTutorForQuestion = (q: any) => {
       const plainContent = String(q.content || '').replace(stripHtmlRegex, '').trim();
       const plainExplanation = String(q.explanation || 'Không có lời giải thích.').replace(stripHtmlRegex, '').trim();
@@ -765,6 +765,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       
       sessionStorage.setItem('tony_live_mode', 'TUTOR');
       sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+      sessionStorage.setItem('tony_auto_start', 'true'); // ÉP AI TỰ ĐỘNG BỐC MÁY
+      
       window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
   };
 
@@ -2117,6 +2119,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                           };
                           sessionStorage.setItem('tony_live_mode', 'TUTOR');
                           sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+                          sessionStorage.setItem('tony_auto_start', 'true');
                           window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
                         }}
                         className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-sm flex items-center gap-2"

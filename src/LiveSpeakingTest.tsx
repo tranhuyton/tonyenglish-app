@@ -56,7 +56,9 @@ export default function LiveSpeakingTest({
   const nextPlayTimeRef = useRef<number>(0);
   const isSetupCompleteRef = useRef<boolean>(false);
 
-  // 🚀 GHIM CHẶT BỘ XỬ LÝ ÂM THANH ĐỂ TRÌNH DUYỆT KHÔNG TỰ ĐỘNG XÓA (FIX LỖI MẤT TÍN HIỆU NGẦM)
+  // 🚀 CÁC TÚI DỮ LIỆU ĐỂ GIỮ LIÊN LẠC KHI RỚT MẠNG
+  const transcriptRef = useRef<string>(''); 
+  const isIntendedCloseRef = useRef<boolean>(false); 
   const sourceNodeRef = useRef<MediaStreamAudioSourceNode | null>(null);
   const processorNodeRef = useRef<ScriptProcessorNode | null>(null);
   const gainNodeRef = useRef<GainNode | null>(null);
@@ -66,23 +68,20 @@ export default function LiveSpeakingTest({
   const tutorData = tutorDataRaw ? JSON.parse(tutorDataRaw) : null;
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
 
-  // 🚀 ĐỒNG BỘ STATE VÀO REF ĐỂ LẤY DATA MỚI NHẤT TRONG EVENT LISTENER
   const statusRef = useRef(status);
   useEffect(() => { statusRef.current = status; }, [status]);
 
-  // 🚀 RADAR: XỬ LÝ CHUYỂN CÂU HỎI THÔNG MINH MƯỢT MÀ
-  const startCallRef = useRef<() => void>(() => {});
+  const startCallRef = useRef<(isReconnect?: boolean) => void>(() => {});
   
   useEffect(() => {
     const handleContextSwitch = (e: any) => {
         if (e.detail === 'live-test') {
-            onMaximize(); // 1. Luôn tự động phóng to cửa sổ lên khi bấm câu mới
+            onMaximize(); 
             
             const raw = sessionStorage.getItem('tony_tutor_data');
             if (raw) {
                 const data = JSON.parse(raw);
                 if (statusRef.current === 'CONNECTED' && wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-                    // 2. Nếu đang nói chuyện: Bắn lệnh ép AI chuyển câu, KHÔNG bắt chọn lại
                     const msg = {
                         realtimeInput: {
                             text: `[HỆ THỐNG]: Học sinh vừa lật sang xem câu hỏi khác. Nhiệm vụ của bạn: DỪNG nói chuyện cũ, đọc nội dung câu hỏi mới này và chủ động giảng bài ngay lập tức. Nội dung câu mới: ${data.transcript}`
@@ -90,8 +89,7 @@ export default function LiveSpeakingTest({
                     };
                     wsRef.current.send(JSON.stringify(msg));
                 } else if (statusRef.current === 'IDLE') {
-                    // 3. Nếu lỡ cúp máy rồi: TỰ ĐỘNG GỌI LẠI luôn, bỏ qua bước bắt chọn gia sư
-                    startCallRef.current();
+                    startCallRef.current(false);
                 }
             }
         }
@@ -115,22 +113,35 @@ export default function LiveSpeakingTest({
       setIsMuted(isMutedRef.current);
   };
 
-  const startCall = async () => {
+  // 🚀 HÀM GỌI ĐIỆN VỚI TÍNH NĂNG TỰ ĐỘNG KHÔI PHỤC (AUTO-RECONNECT)
+  const startCall = async (isReconnect = false) => {
     try {
       setStatus('CONNECTING');
       isSetupCompleteRef.current = false;
       setIsMicSending(false);
-      setTranscript('');
       
+      // Chỉ reset lịch sử nếu là cuộc gọi mới tinh
+      if (!isReconnect) {
+          setTranscript('');
+          transcriptRef.current = '';
+      }
+      
+      isIntendedCloseRef.current = false;
       isMutedRef.current = false;
       setIsMuted(false);
 
-      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-      audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
-      audioCtxOutputRef.current = new AudioContextClass({ sampleRate: 24000 });
+      if (!audioCtxInputRef.current) {
+          const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+          audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
+          audioCtxOutputRef.current = new AudioContextClass({ sampleRate: 24000 });
+      }
       
       if (audioCtxInputRef.current.state === 'suspended') await audioCtxInputRef.current.resume();
       if (audioCtxOutputRef.current.state === 'suspended') await audioCtxOutputRef.current.resume();
+      
+      if (!streamRef.current) {
+          streamRef.current = await navigator.mediaDevices.getUserMedia({ audio: true });
+      }
       
       nextPlayTimeRef.current = audioCtxOutputRef.current.currentTime;
 
@@ -138,48 +149,48 @@ export default function LiveSpeakingTest({
       const ws = new WebSocket(wsUrl);
       wsRef.current = ws;
 
-      ws.onopen = async () => {
+      ws.onopen = () => {
         setStatus('CONNECTED');
         const voiceName = examiner === 'TONY' ? 'Puck' : 'Aoede';
         const teacherName = examiner === 'TONY' ? 'thầy Tôn' : 'cô Diệp';
 
-        let systemPrompt = "";
-        
-        // Lấy data TƯƠI NHẤT từ sessionStorage mỗi khi gọi
         const freshMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
         const freshTutorDataRaw = sessionStorage.getItem('tony_tutor_data');
         const freshTutorData = freshTutorDataRaw ? JSON.parse(freshTutorDataRaw) : null;
-        
+
+        let systemPrompt = "";
         if (freshMode === 'TUTOR' && freshTutorData) {
             systemPrompt = `Bạn là ${teacherName}, một gia sư IELTS người Hà Nội. TÍNH CÁCH: Thanh lịch, ân cần, chuẩn mực. 
-            NGÔN NGỮ: Bắt buộc dùng văn phong và từ ngữ chuẩn miền Bắc (Hà Nội) khi nói tiếng Việt. Khi phát âm bất kỳ từ hoặc câu tiếng Anh nào, BẮT BUỘC dùng chuẩn giọng Anh-Anh (British English).
-            BỐI CẢNH: Học sinh đang xem lại bài làm với kết quả Overall: ${freshTutorData.overall}. 
-            Dữ liệu câu đang hỏi: "${freshTutorData.transcript}". 
-            NHIỆM VỤ: Chào thân thiện, sau đó phân tích các lỗi sai hoặc giải thích chuyên sâu. 
-            Nói chuyện tự nhiên bằng song ngữ Việt-Anh, ngắn gọn, ấm áp.`;
+            NGÔN NGỮ: Bắt buộc dùng văn phong và từ ngữ chuẩn miền Bắc (Hà Nội) khi nói tiếng Việt. Khi phát âm tiếng Anh, BẮT BUỘC dùng chuẩn Anh-Anh (British English).
+            BỐI CẢNH: Học sinh đang xem lại bài làm với kết quả Overall: ${freshTutorData.overall}. Dữ liệu câu đang hỏi: "${freshTutorData.transcript}". 
+            NHIỆM VỤ: Chào thân thiện, sau đó phân tích lỗi sai hoặc giải thích chuyên sâu bằng tiếng Việt xen tiếng Anh.`;
         } else {
             systemPrompt = `Bạn là giám khảo IELTS tên ${teacherName}, người Hà Nội. TÍNH CÁCH: Thanh lịch, chuyên nghiệp. 
-            NGÔN NGỮ: Bắt buộc giao tiếp bằng văn phong chuẩn miền Bắc (Hà Nội). Khi phát âm tiếng Anh, BẮT BUỘC dùng chuẩn giọng Anh-Anh (British English).
-            BỐI CẢNH: Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề: "${currentTopic}". Trả lời cực kỳ tự nhiên, ngắn gọn.`;
+            NGÔN NGỮ: Bắt buộc giao tiếp bằng văn phong chuẩn miền Bắc (Hà Nội). Phát âm tiếng Anh chuẩn Anh-Anh (British English).
+            BỐI CẢNH: Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề: "${currentTopic}". Trả lời tự nhiên, ngắn gọn.`;
+        }
+
+        // 🚀 NHỒI LẠI TRÍ NHỚ CHO AI NẾU LÀ RECONNECT
+        if (isReconnect && transcriptRef.current) {
+            systemPrompt += `\n\n[HỆ THỐNG CHÚ Ý]: Cuộc gọi vừa bị gián đoạn do lỗi mạng. Đây là lịch sử trò chuyện nãy giờ: "${transcriptRef.current}". Hãy phân tích ngữ cảnh và tiếp tục cuộc trò chuyện một cách tự nhiên nhất, TUYỆT ĐỐI không cần xin lỗi hay nhắc lại việc rớt mạng.`;
         }
 
         const setupMsg = {
           setup: {
             model: "models/gemini-3.1-flash-live-preview",
-            generationConfig: { 
-                responseModalities: ["AUDIO"], 
-                speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } 
-            },
+            generationConfig: { responseModalities: ["AUDIO"], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } },
             systemInstruction: { parts: [{ text: systemPrompt }] }
           }
         };
         ws.send(JSON.stringify(setupMsg));
 
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        streamRef.current = stream;
-        
-        // 🚀 CẬP NHẬT GÁN VÀO REF ĐỂ CHỐNG GARBAGE COLLECTION
-        sourceNodeRef.current = audioCtxInputRef.current!.createMediaStreamSource(stream);
+        if (processorNodeRef.current) {
+            processorNodeRef.current.disconnect();
+            if (sourceNodeRef.current) sourceNodeRef.current.disconnect(processorNodeRef.current);
+        }
+        if (gainNodeRef.current) gainNodeRef.current.disconnect();
+
+        sourceNodeRef.current = audioCtxInputRef.current!.createMediaStreamSource(streamRef.current!);
         processorNodeRef.current = audioCtxInputRef.current!.createScriptProcessor(4096, 1, 1);
         gainNodeRef.current = audioCtxInputRef.current!.createGain();
         gainNodeRef.current.gain.value = 0;
@@ -188,20 +199,13 @@ export default function LiveSpeakingTest({
         processorNodeRef.current.onaudioprocess = (e) => {
           if (ws.readyState === WebSocket.OPEN && isSetupCompleteRef.current) {
             const inputData = e.inputBuffer.getChannelData(0);
-            
             const dataToSend = isMutedRef.current ? new Float32Array(inputData.length) : inputData;
-            
             const pcm16Buffer = floatTo16BitPCM(dataToSend);
-            const base64Audio = arrayBufferToBase64(pcm16Buffer);
-            
-            ws.send(JSON.stringify({ realtimeInput: { audio: { mimeType: "audio/pcm;rate=16000", data: base64Audio } } }));
+            ws.send(JSON.stringify({ realtimeInput: { audio: { mimeType: "audio/pcm;rate=16000", data: arrayBufferToBase64(pcm16Buffer) } } }));
             
             chunkCounter++;
-            if (chunkCounter % 5 === 0 && !isMutedRef.current) {
-                setIsMicSending(prev => !prev);
-            } else if (isMutedRef.current) {
-                setIsMicSending(false);
-            }
+            if (chunkCounter % 5 === 0 && !isMutedRef.current) setIsMicSending(prev => !prev);
+            else if (isMutedRef.current) setIsMicSending(false);
           }
         };
 
@@ -217,46 +221,55 @@ export default function LiveSpeakingTest({
           const msg = JSON.parse(rawData);
           
           if (msg.error) {
-             console.error("🚨 LỖI:", msg.error); 
-             stopCall(); 
+             console.error("🚨 LỖI TỪ SERVER:", msg.error); 
+             if (!isIntendedCloseRef.current) {
+                 setTimeout(() => { if (!isIntendedCloseRef.current) startCall(true); }, 1000);
+             }
              return;
           }
 
           if (msg.setupComplete) {
              isSetupCompleteRef.current = true;
-             
-             const freshMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
-             const helloMsg = freshMode === 'TUTOR' 
-                 ? "Chào em, thầy/cô đang xem câu hỏi em chọn rồi, mình cùng giải quyết nhé!" 
-                 : "Hello, I am ready for the Speaking Test. Please start.";
-             ws.send(JSON.stringify({ realtimeInput: { text: helloMsg } }));
+             if (!isReconnect) {
+                 const freshMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
+                 const helloMsg = freshMode === 'TUTOR' ? "Chào em, thầy/cô đang xem câu hỏi em chọn rồi, mình cùng giải quyết nhé!" : "Hello, I am ready for the Speaking Test. Please start.";
+                 ws.send(JSON.stringify({ realtimeInput: { text: helloMsg } }));
+             } else {
+                 ws.send(JSON.stringify({ realtimeInput: { text: "(Hệ thống đã tự động kết nối lại thành công, bạn hãy tiếp tục bài giảng)" } }));
+             }
              return;
           }
           
           if (msg.serverContent?.modelTurn?.parts) {
              const parts = msg.serverContent.modelTurn.parts;
              for (let part of parts) {
-                if (part.text) setTranscript(prev => prev + " " + part.text);
+                if (part.text) {
+                    transcriptRef.current += " " + part.text;
+                    setTranscript(transcriptRef.current);
+                }
                 if (part.inlineData && part.inlineData.data) playAIAudio(part.inlineData.data);
              }
           }
         } catch (error) {}
       };
 
+      // 🚀 NẾU RỚT MẠNG ĐỘT NGỘT: TỰ ĐỘNG GỌI LẠI TRONG 1 GIÂY
       ws.onclose = () => {
-          stopCall();
+          if (!isIntendedCloseRef.current) {
+              console.log("⚠️ Máy chủ ngắt kết nối quá hạn (Timeout). Đang tự động khôi phục...");
+              setTimeout(() => {
+                  if (!isIntendedCloseRef.current) startCall(true);
+              }, 1000);
+          }
       };
 
     } catch (error) {
-      alert("Không thể truy cập Micro. Vui lòng kiểm tra quyền cài đặt của trình duyệt!");
+      alert("Lỗi truy cập Micro hoặc rớt mạng. Vui lòng tải lại trang!");
       setStatus('IDLE');
     }
   };
 
-  // Cập nhật ref ngay khi hàm startCall có thay đổi để dùng trong useEffect
-  useEffect(() => {
-      startCallRef.current = startCall;
-  }, [examiner]); // Update lại hàm khi đổi examiner
+  useEffect(() => { startCallRef.current = startCall; }, [examiner]);
 
   const playAIAudio = (base64Audio: string) => {
     if (!audioCtxOutputRef.current) return;
@@ -277,10 +290,10 @@ export default function LiveSpeakingTest({
   };
 
   const stopCall = () => {
+    isIntendedCloseRef.current = true;
     if (wsRef.current) wsRef.current.close();
     if (streamRef.current) streamRef.current.getTracks().forEach(t => t.stop());
     
-    // Ngắt kết nối các Node âm thanh
     if (sourceNodeRef.current) sourceNodeRef.current.disconnect();
     if (processorNodeRef.current) processorNodeRef.current.disconnect();
     if (gainNodeRef.current) gainNodeRef.current.disconnect();
@@ -306,7 +319,7 @@ export default function LiveSpeakingTest({
              <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2 cursor-pointer" onClick={onMaximize}>
                    <div className={`w-3 h-3 rounded-full shadow-lg ${isMicSending ? 'bg-red-500 animate-pulse shadow-red-500/50' : 'bg-emerald-500 shadow-emerald-500/50'}`}></div>
-                   <span className="text-white font-bold text-[13px]">{isMuted ? 'Đã tắt Mic' : (isMicSending ? 'Đang nghe bạn nói...' : 'Gia sư đang kết nối...')}</span>
+                   <span className="text-white font-bold text-[13px]">{status === 'CONNECTING' ? 'Đang khôi phục...' : (isMuted ? 'Đã tắt Mic' : (isMicSending ? 'Đang nghe bạn nói...' : 'Gia sư đang kết nối...'))}</span>
                 </div>
                 <button onClick={onMaximize} className="text-slate-400 hover:text-white p-1.5 bg-slate-800 hover:bg-slate-700 transition rounded-lg" title="Phóng to">
                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
@@ -318,10 +331,7 @@ export default function LiveSpeakingTest({
              </div>
              
              <div className="flex gap-2 mt-1">
-                 <button 
-                    onClick={toggleMute} 
-                    className={`flex-1 font-bold py-2 rounded-xl text-[13px] transition-all shadow-md flex items-center justify-center gap-2 ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white'}`}
-                 >
+                 <button onClick={toggleMute} className={`flex-1 font-bold py-2 rounded-xl text-[13px] transition-all shadow-md flex items-center justify-center gap-2 ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white'}`}>
                     {isMuted ? '🔇 Đã Tắt Mic' : '🎙️ Tắt Mic'}
                  </button>
                  <button onClick={handleUserHangUp} className="flex-1 bg-red-600/90 hover:bg-red-500 text-white font-bold py-2 rounded-xl text-[13px] transition-all shadow-md flex items-center justify-center gap-2">
@@ -401,7 +411,7 @@ export default function LiveSpeakingTest({
                 </div>
              </div>
 
-             <button onClick={startCall} className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-2xl text-[16px] transition-all active:scale-95 shadow-[0_10px_20px_rgba(16,185,129,0.3)] flex items-center justify-center gap-3">
+             <button onClick={() => startCall(false)} className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-2xl text-[16px] transition-all active:scale-95 shadow-[0_10px_20px_rgba(16,185,129,0.3)] flex items-center justify-center gap-3">
                <span className="text-xl">📞</span> Bắt Đầu Đàm Thoại
              </button>
           </div>
