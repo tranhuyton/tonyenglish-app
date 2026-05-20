@@ -31,13 +31,14 @@ export default function App() {
   // --- 🤖 AI SIDEBAR STATE ---
   const [isAISidebarOpen, setIsAISidebarOpen] = useState(false);
   const [aiMode, setAiMode] = useState<'tutor' | 'ielts'>('tutor');
-  
   const [ieltsTopic, setIeltsTopic] = useState("");
   const [ieltsImage, setIeltsImage] = useState("");
   const [ieltsTaskType, setIeltsTaskType] = useState("task2");
-
   const [currentLectureTitle, setCurrentLectureTitle] = useState("");
   const [currentHtmlContent, setCurrentHtmlContent] = useState("");
+
+  // 🚀 LIVE TUTOR WIDGET STATE
+  const [liveTutorState, setLiveTutorState] = useState<'CLOSED' | 'FULLSCREEN' | 'MINIMIZED'>('CLOSED');
 
   useEffect(() => {
     const handleGlobalClick = (e: MouseEvent) => {
@@ -59,12 +60,15 @@ export default function App() {
         return; 
       }
 
+      // 🚀 BẮT NÚT GỌI TỪ BÀI GIẢNG VÀ MỞ FULLSCREEN WIDGET
       const liveBtn = target.closest('.btn-live-trigger');
       if (liveBtn) {
           const topicText = liveBtn.getAttribute('data-topic');
           if (topicText) {
               sessionStorage.setItem('tony_live_topic', topicText);
-              handleNavigate('live-test'); 
+              sessionStorage.removeItem('tony_live_mode'); 
+              sessionStorage.removeItem('tony_tutor_data'); 
+              setLiveTutorState('FULLSCREEN'); 
           }
       }
     };
@@ -82,13 +86,15 @@ export default function App() {
     };
   }, []);
 
-  // 🚀 RADAR LẮNG NGHE TÍN HIỆU ĐIỀU HƯỚNG TỪ NÚT GỌI GIA SƯ
+  // 🚀 INTERCEPT ĐIỀU HƯỚNG: NẾU LÀ 'live-test', KHÔNG CHUYỂN TRANG MÀ MỞ WIDGET
   useEffect(() => {
     const handleCustomNavigate = (e: any) => {
       const view = e.detail;
-      if (view) {
-        setCurrentView(view);
-        try { sessionStorage.setItem('lms_current_view', view); } catch(err) {}
+      if (view === 'live-test') {
+         setLiveTutorState('FULLSCREEN');
+      } else if (view) {
+         setCurrentView(view);
+         try { sessionStorage.setItem('lms_current_view', view); } catch(err) {}
       }
     };
     window.addEventListener('tony-navigate', handleCustomNavigate);
@@ -146,7 +152,6 @@ export default function App() {
   }, []); 
 
   const handleNavigate = (view: string) => { setCurrentView(view); try { sessionStorage.setItem('lms_current_view', view); } catch(e) {} };
-  
   const handleStartTest = (type: string, data: any) => {
     try {
       setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
@@ -155,11 +160,10 @@ export default function App() {
       handleNavigate(targetView); sessionStorage.setItem('lms_current_test', JSON.stringify(data));
     } catch (error) {}
   };
-  
   const handleOpenLecture = (courseId: string) => { setActiveCourseId(courseId); try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {} handleNavigate('lecture'); };
   const handleReturnFromTest = () => handleNavigate(returnView);
 
-  const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture', 'live-test'];
+  const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
 
   return (
     <React.Fragment>
@@ -171,21 +175,6 @@ export default function App() {
       {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
       {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
       
-      {/* 🚀 PHÒNG LIVE CHUẨN XÁC KÈM ĐẦY ĐỦ QUYỀN TRUY CẬP AI SIDEBAR */}
-      {currentView === 'live-test' && (
-        <LiveSpeakingTest 
-           onBack={() => handleNavigate('lecture')} 
-           onOpenAI={() => {
-              const topic = sessionStorage.getItem('tony_live_topic') || '';
-              if (topic) {
-                 setAiMode('ielts');
-                 setIeltsTopic(topic);
-              }
-              setIsAISidebarOpen(true);
-           }}
-        />
-      )}
-
       {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
       {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
       {currentView === 'standard' && <StandardTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
@@ -223,6 +212,24 @@ export default function App() {
         lectureTitle={currentLectureTitle}
         htmlContent={currentHtmlContent}
       />
+
+      {/* 🚀 GLOBAL WIDGET: HIỂN THỊ ĐÈ LÊN TRÊN BÀI THI/BÀI GIẢNG */}
+      {liveTutorState !== 'CLOSED' && (
+        <LiveSpeakingTest 
+           viewState={liveTutorState}
+           onMinimize={() => setLiveTutorState('MINIMIZED')}
+           onMaximize={() => setLiveTutorState('FULLSCREEN')}
+           onClose={() => setLiveTutorState('CLOSED')}
+           onOpenAI={() => {
+              const topic = sessionStorage.getItem('tony_live_topic') || '';
+              if (topic) {
+                 setAiMode('ielts');
+                 setIeltsTopic(topic);
+              }
+              setIsAISidebarOpen(true);
+           }}
+        />
+      )}
 
       {!validViews.includes(currentView) && (
         <div className="h-screen bg-red-50 flex flex-col items-center justify-center p-8 text-center font-sans">

@@ -1358,6 +1358,39 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                                                 </div>
                                             </div>
                                         )}
+
+                                        {/* 🚀 THÊM BLOCK REVIEW & GỌI GIA SƯ CHO CÂU ĐIỀN TỪ Ở ĐÂY */}
+                                        {isReviewMode && (
+                                           <div className="w-full mt-8 border-t border-slate-300 pt-6 font-sans">
+                                              <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">💡 Giải thích chi tiết & Gia sư AI:</p>
+                                              <div className="space-y-4">
+                                                 {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
+                                                     if (!q?.id) return null;
+                                                     const qIdx = questionIndexMap[String(q.id)] || q.id;
+                                                     const explanationText = q.explanation || 'Không có lời giải thích.';
+                                                     const qContentForAI = q.content || sec.content || 'Điền từ vào chỗ trống trong đoạn văn.';
+                                                     
+                                                     return (
+                                                         <div key={`expl-${q.id}`} className="bg-[#f4f4f4] p-5 border border-slate-300 rounded-none">
+                                                             <div className="flex items-center gap-2 mb-2">
+                                                                 <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded-none">Câu {qIdx}</span>
+                                                             </div>
+                                                             <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
+                                                             
+                                                             <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-300">
+                                                                 <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), qContentForAI, explanationText); }} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                                    💬 Chat với AI
+                                                                 </button>
+                                                                 <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion({ ...q, content: qContentForAI }); }} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
+                                                                    📞 Gọi Gia sư (Voice)
+                                                                 </button>
+                                                             </div>
+                                                         </div>
+                                                     );
+                                                 })}
+                                              </div>
+                                           </div>
+                                        )}
                                     </React.Fragment>
                                 );
                              })()}
@@ -1580,9 +1613,44 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                         {(isInlineDragDrop || isBlockDragDrop) && (
                           <div className="bg-white p-8 rounded-none border border-slate-400">
                             {isInlineDragDrop ? (
-                              <div className={`format-passage text-[16px] text-black font-sans html-content-renderer ${isReviewMode ? 'leading-[3.0] pb-6' : 'leading-[2.0]'}`}>
-                                {renderHtmlWithHoles(cleanHtmlContent(rawContentText), sec)}
-                              </div>
+                              <React.Fragment>
+                                <div className={`format-passage text-[16px] text-black font-sans html-content-renderer ${isReviewMode ? 'leading-[3.0] pb-6' : 'leading-[2.0]'}`}>
+                                  {renderHtmlWithHoles(cleanHtmlContent(rawContentText), sec)}
+                                </div>
+                                
+                                {/* 🚀 THÊM BLOCK REVIEW & GỌI GIA SƯ CHO CÂU KÉO THẢ INLINE Ở ĐÂY */}
+                                {isReviewMode && (
+                                   <div className="w-full mt-8 border-t border-slate-300 pt-6 font-sans">
+                                      <p className="text-[14px] font-black text-black uppercase mb-4 tracking-widest">💡 Giải thích chi tiết & Gia sư AI:</p>
+                                      <div className="space-y-4">
+                                         {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
+                                             if (!q?.id) return null;
+                                             const qIdx = questionIndexMap[String(q.id)] || q.id;
+                                             const explanationText = q.explanation || 'Không có lời giải thích.';
+                                             const qContentForAI = q.content || sec.content || 'Điền từ vào chỗ trống trong đoạn văn.';
+                                             
+                                             return (
+                                                 <div key={`expl-${q.id}`} className="bg-[#f4f4f4] p-5 border border-slate-300 rounded-none">
+                                                     <div className="flex items-center gap-2 mb-2">
+                                                         <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded-none">Câu {qIdx}</span>
+                                                     </div>
+                                                     <div className="text-[15px] text-slate-800 font-medium leading-relaxed font-sans html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
+                                                     
+                                                     <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-300">
+                                                         <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), qContentForAI, explanationText); }} className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded-none text-[13px] transition shadow-sm border border-[#064e3b]">
+                                                            💬 Chat với AI
+                                                         </button>
+                                                         <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion({ ...q, content: qContentForAI }); }} className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-none text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
+                                                            📞 Gọi Gia sư (Voice)
+                                                         </button>
+                                                     </div>
+                                                 </div>
+                                             );
+                                         })}
+                                      </div>
+                                   </div>
+                                )}
+                              </React.Fragment>
                             ) : (
                               <div className="space-y-4">
                                 {(() => {

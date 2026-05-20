@@ -27,38 +27,92 @@ const base64ToArrayBuffer = (base64: string) => {
   return bytes.buffer;
 };
 
-// 🚀 TRUYỀN ĐẦY ĐỦ onBack VÀ onOpenAI
-export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => void, onOpenAI?: () => void }) {
+// 🚀 COMPONENT CHÍNH QUẢN LÝ PHÒNG LIVE
+export default function LiveSpeakingTest({ 
+    viewState, 
+    onMinimize, 
+    onMaximize, 
+    onClose, 
+    onOpenAI 
+}: { 
+    viewState: 'FULLSCREEN' | 'MINIMIZED', 
+    onMinimize: () => void, 
+    onMaximize: () => void, 
+    onClose: () => void, 
+    onOpenAI?: () => void 
+}) {
   const [status, setStatus] = useState<'IDLE' | 'CONNECTING' | 'CONNECTED'>('IDLE');
   const [transcript, setTranscript] = useState<string>('');
   const [isMicSending, setIsMicSending] = useState(false);
-  
   const [examiner, setExaminer] = useState<'TONY' | 'DIEP'>('TONY');
+  
+  const [isMuted, setIsMuted] = useState(false);
+  const isMutedRef = useRef(false); 
   
   const wsRef = useRef<WebSocket | null>(null);
   const audioCtxInputRef = useRef<AudioContext | null>(null);
   const audioCtxOutputRef = useRef<AudioContext | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const nextPlayTimeRef = useRef<number>(0);
-  
   const isSetupCompleteRef = useRef<boolean>(false);
 
-  // 🚀 LẤY THÔNG TIN CHẾ ĐỘ: GIÁM KHẢO HAY GIA SƯ
+  // 🚀 GHIM CHẶT BỘ XỬ LÝ ÂM THANH ĐỂ TRÌNH DUYỆT KHÔNG TỰ ĐỘNG XÓA (FIX LỖI MẤT TÍN HIỆU NGẦM)
+  const sourceNodeRef = useRef<MediaStreamAudioSourceNode | null>(null);
+  const processorNodeRef = useRef<ScriptProcessorNode | null>(null);
+  const gainNodeRef = useRef<GainNode | null>(null);
+
   const mode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
   const tutorDataRaw = sessionStorage.getItem('tony_tutor_data');
   const tutorData = tutorDataRaw ? JSON.parse(tutorDataRaw) : null;
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
 
+  // 🚀 ĐỒNG BỘ STATE VÀO REF ĐỂ LẤY DATA MỚI NHẤT TRONG EVENT LISTENER
+  const statusRef = useRef(status);
+  useEffect(() => { statusRef.current = status; }, [status]);
+
+  // 🚀 RADAR: XỬ LÝ CHUYỂN CÂU HỎI THÔNG MINH MƯỢT MÀ
+  const startCallRef = useRef<() => void>(() => {});
+  
+  useEffect(() => {
+    const handleContextSwitch = (e: any) => {
+        if (e.detail === 'live-test') {
+            onMaximize(); // 1. Luôn tự động phóng to cửa sổ lên khi bấm câu mới
+            
+            const raw = sessionStorage.getItem('tony_tutor_data');
+            if (raw) {
+                const data = JSON.parse(raw);
+                if (statusRef.current === 'CONNECTED' && wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+                    // 2. Nếu đang nói chuyện: Bắn lệnh ép AI chuyển câu, KHÔNG bắt chọn lại
+                    const msg = {
+                        realtimeInput: {
+                            text: `[HỆ THỐNG]: Học sinh vừa lật sang xem câu hỏi khác. Nhiệm vụ của bạn: DỪNG nói chuyện cũ, đọc nội dung câu hỏi mới này và chủ động giảng bài ngay lập tức. Nội dung câu mới: ${data.transcript}`
+                        }
+                    };
+                    wsRef.current.send(JSON.stringify(msg));
+                } else if (statusRef.current === 'IDLE') {
+                    // 3. Nếu lỡ cúp máy rồi: TỰ ĐỘNG GỌI LẠI luôn, bỏ qua bước bắt chọn gia sư
+                    startCallRef.current();
+                }
+            }
+        }
+    };
+    window.addEventListener('tony-navigate', handleContextSwitch);
+    return () => window.removeEventListener('tony-navigate', handleContextSwitch);
+  }, [onMaximize]);
+
   const handleBackClick = () => {
-    // Dọn dẹp túi dữ liệu trước khi thoát để không bị kẹt chế độ Gia sư cho lần sau
-    sessionStorage.removeItem('tony_live_mode');
-    sessionStorage.removeItem('tony_tutor_data');
-    if (onBack) {
-       onBack();
+    if (status !== 'IDLE') {
+        onMinimize();
     } else {
-       sessionStorage.setItem('lms_current_view', 'lecture');
-       window.location.reload();
+        sessionStorage.removeItem('tony_live_mode');
+        sessionStorage.removeItem('tony_tutor_data');
+        onClose();
     }
+  };
+
+  const toggleMute = () => {
+      isMutedRef.current = !isMutedRef.current;
+      setIsMuted(isMutedRef.current);
   };
 
   const startCall = async () => {
@@ -67,6 +121,9 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
       isSetupCompleteRef.current = false;
       setIsMicSending(false);
       setTranscript('');
+      
+      isMutedRef.current = false;
+      setIsMuted(false);
 
       const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
       audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
@@ -83,37 +140,37 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
 
       ws.onopen = async () => {
         setStatus('CONNECTED');
-        
         const voiceName = examiner === 'TONY' ? 'Puck' : 'Aoede';
         const teacherName = examiner === 'TONY' ? 'thầy Tôn' : 'cô Diệp';
 
-        // 🧠 THIẾT LẬP LỆNH MỒI DỰA THEO CHẾ ĐỘ (GIA SƯ / GIÁM KHẢO)
         let systemPrompt = "";
         
-        if (mode === 'TUTOR' && tutorData) {
-            systemPrompt = `Bạn là ${teacherName}, một gia sư IELTS tận tâm. 
-            Học sinh vừa làm bài nói xong với kết quả: Điểm Overall ${tutorData.overall}. 
-            Transcript bài làm: "${tutorData.transcript}". 
-            Lời phê chuyên môn: "${tutorData.feedback}".
-            NHIỆM VỤ: Hãy chào học sinh thân thiện, sau đó chủ động đề xuất giải thích các lỗi sai trong bài nói trên. 
-            Khi học sinh hỏi về từ vựng hay phát âm, hãy hướng dẫn kỹ càng. 
+        // Lấy data TƯƠI NHẤT từ sessionStorage mỗi khi gọi
+        const freshMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
+        const freshTutorDataRaw = sessionStorage.getItem('tony_tutor_data');
+        const freshTutorData = freshTutorDataRaw ? JSON.parse(freshTutorDataRaw) : null;
+        
+        if (freshMode === 'TUTOR' && freshTutorData) {
+            systemPrompt = `Bạn là ${teacherName}, một gia sư IELTS người Hà Nội. TÍNH CÁCH: Thanh lịch, ân cần, chuẩn mực. 
+            NGÔN NGỮ: Bắt buộc dùng văn phong và từ ngữ chuẩn miền Bắc (Hà Nội) khi nói tiếng Việt. Khi phát âm bất kỳ từ hoặc câu tiếng Anh nào, BẮT BUỘC dùng chuẩn giọng Anh-Anh (British English).
+            BỐI CẢNH: Học sinh đang xem lại bài làm với kết quả Overall: ${freshTutorData.overall}. 
+            Dữ liệu câu đang hỏi: "${freshTutorData.transcript}". 
+            NHIỆM VỤ: Chào thân thiện, sau đó phân tích các lỗi sai hoặc giải thích chuyên sâu. 
             Nói chuyện tự nhiên bằng song ngữ Việt-Anh, ngắn gọn, ấm áp.`;
         } else {
-            systemPrompt = `Bạn là giám khảo IELTS tên ${teacherName}. Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề sau đây: "${currentTopic}". Trả lời cực kỳ tự nhiên, ngắn gọn.`;
+            systemPrompt = `Bạn là giám khảo IELTS tên ${teacherName}, người Hà Nội. TÍNH CÁCH: Thanh lịch, chuyên nghiệp. 
+            NGÔN NGỮ: Bắt buộc giao tiếp bằng văn phong chuẩn miền Bắc (Hà Nội). Khi phát âm tiếng Anh, BẮT BUỘC dùng chuẩn giọng Anh-Anh (British English).
+            BỐI CẢNH: Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề: "${currentTopic}". Trả lời cực kỳ tự nhiên, ngắn gọn.`;
         }
 
         const setupMsg = {
           setup: {
             model: "models/gemini-3.1-flash-live-preview",
-            generationConfig: {
-              responseModalities: ["AUDIO"],
-              speechConfig: {
-                voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } }
-              }
+            generationConfig: { 
+                responseModalities: ["AUDIO"], 
+                speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } 
             },
-            systemInstruction: {
-              parts: [{ text: systemPrompt }]
-            }
+            systemInstruction: { parts: [{ text: systemPrompt }] }
           }
         };
         ws.send(JSON.stringify(setupMsg));
@@ -121,53 +178,57 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         streamRef.current = stream;
         
-        const source = audioCtxInputRef.current!.createMediaStreamSource(stream);
-        const processor = audioCtxInputRef.current!.createScriptProcessor(4096, 1, 1);
-        
-        const muteNode = audioCtxInputRef.current!.createGain();
-        muteNode.gain.value = 0;
+        // 🚀 CẬP NHẬT GÁN VÀO REF ĐỂ CHỐNG GARBAGE COLLECTION
+        sourceNodeRef.current = audioCtxInputRef.current!.createMediaStreamSource(stream);
+        processorNodeRef.current = audioCtxInputRef.current!.createScriptProcessor(4096, 1, 1);
+        gainNodeRef.current = audioCtxInputRef.current!.createGain();
+        gainNodeRef.current.gain.value = 0;
 
         let chunkCounter = 0;
-        
-        processor.onaudioprocess = (e) => {
+        processorNodeRef.current.onaudioprocess = (e) => {
           if (ws.readyState === WebSocket.OPEN && isSetupCompleteRef.current) {
             const inputData = e.inputBuffer.getChannelData(0);
-            const pcm16Buffer = floatTo16BitPCM(inputData);
+            
+            const dataToSend = isMutedRef.current ? new Float32Array(inputData.length) : inputData;
+            
+            const pcm16Buffer = floatTo16BitPCM(dataToSend);
             const base64Audio = arrayBufferToBase64(pcm16Buffer);
             
             ws.send(JSON.stringify({ realtimeInput: { audio: { mimeType: "audio/pcm;rate=16000", data: base64Audio } } }));
-
+            
             chunkCounter++;
-            if (chunkCounter % 5 === 0) setIsMicSending(prev => !prev);
+            if (chunkCounter % 5 === 0 && !isMutedRef.current) {
+                setIsMicSending(prev => !prev);
+            } else if (isMutedRef.current) {
+                setIsMicSending(false);
+            }
           }
         };
 
-        source.connect(processor);
-        processor.connect(muteNode);
-        muteNode.connect(audioCtxInputRef.current!.destination);
+        sourceNodeRef.current.connect(processorNodeRef.current);
+        processorNodeRef.current.connect(gainNodeRef.current);
+        gainNodeRef.current.connect(audioCtxInputRef.current!.destination);
       };
 
       ws.onmessage = async (event) => {
         try {
           let rawData = event.data;
           if (rawData instanceof Blob) rawData = await rawData.text();
-          
           const msg = JSON.parse(rawData);
           
           if (msg.error) {
-             console.error("🚨 LỖI:", msg.error);
-             alert("LỖI NGẮT KẾT NỐI:\n" + msg.error);
-             stopCall();
+             console.error("🚨 LỖI:", msg.error); 
+             stopCall(); 
              return;
           }
 
           if (msg.setupComplete) {
              isSetupCompleteRef.current = true;
-             // Mồi câu chào dựa theo chế độ
-             const helloMsg = mode === 'TUTOR' 
-                 ? "Chào em, thầy/cô đã xem qua bài làm của em rồi, mình cùng trao đổi nhé!" 
+             
+             const freshMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
+             const helloMsg = freshMode === 'TUTOR' 
+                 ? "Chào em, thầy/cô đang xem câu hỏi em chọn rồi, mình cùng giải quyết nhé!" 
                  : "Hello, I am ready for the Speaking Test. Please start.";
-                 
              ws.send(JSON.stringify({ realtimeInput: { text: helloMsg } }));
              return;
           }
@@ -179,36 +240,37 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
                 if (part.inlineData && part.inlineData.data) playAIAudio(part.inlineData.data);
              }
           }
-        } catch (error) { console.error("LỖI PARSE JSON:", error); }
+        } catch (error) {}
       };
 
-      ws.onclose = () => stopCall();
+      ws.onclose = () => {
+          stopCall();
+      };
 
     } catch (error) {
-      console.error(error);
       alert("Không thể truy cập Micro. Vui lòng kiểm tra quyền cài đặt của trình duyệt!");
       setStatus('IDLE');
     }
   };
 
+  // Cập nhật ref ngay khi hàm startCall có thay đổi để dùng trong useEffect
+  useEffect(() => {
+      startCallRef.current = startCall;
+  }, [examiner]); // Update lại hàm khi đổi examiner
+
   const playAIAudio = (base64Audio: string) => {
     if (!audioCtxOutputRef.current) return;
     const ctx = audioCtxOutputRef.current;
-    
     if (ctx.state === 'suspended') ctx.resume();
-    
     const pcmBuffer = base64ToArrayBuffer(base64Audio);
     const int16Array = new Int16Array(pcmBuffer);
     const float32Array = new Float32Array(int16Array.length);
     for (let i = 0; i < int16Array.length; i++) float32Array[i] = int16Array[i] / 32768.0;
-
     const audioBuffer = ctx.createBuffer(1, float32Array.length, 24000);
     audioBuffer.getChannelData(0).set(float32Array);
-
     const sourceNode = ctx.createBufferSource();
     sourceNode.buffer = audioBuffer;
     sourceNode.connect(ctx.destination);
-
     const playTime = Math.max(ctx.currentTime, nextPlayTimeRef.current);
     sourceNode.start(playTime);
     nextPlayTimeRef.current = playTime + audioBuffer.duration;
@@ -217,22 +279,62 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
   const stopCall = () => {
     if (wsRef.current) wsRef.current.close();
     if (streamRef.current) streamRef.current.getTracks().forEach(t => t.stop());
+    
+    // Ngắt kết nối các Node âm thanh
+    if (sourceNodeRef.current) sourceNodeRef.current.disconnect();
+    if (processorNodeRef.current) processorNodeRef.current.disconnect();
+    if (gainNodeRef.current) gainNodeRef.current.disconnect();
+
     if (audioCtxInputRef.current) audioCtxInputRef.current.close();
     if (audioCtxOutputRef.current) audioCtxOutputRef.current.close();
     
     setStatus('IDLE');
     isSetupCompleteRef.current = false;
     setIsMicSending(false);
-    
-    // Xóa dữ liệu chế độ cũ để không bị lẫn cho lần thi tiếp theo
-    sessionStorage.removeItem('tony_live_mode');
-    sessionStorage.removeItem('tony_tutor_data');
   };
 
+  const handleUserHangUp = () => {
+      stopCall();
+      sessionStorage.removeItem('tony_live_mode');
+      sessionStorage.removeItem('tony_tutor_data');
+      onClose(); 
+  };
+
+  if (viewState === 'MINIMIZED') {
+      return (
+          <div className="fixed bottom-6 right-6 z-[99999] bg-[#0f172a] border border-slate-700 shadow-2xl rounded-2xl p-4 flex flex-col gap-3 w-72 sm:w-80 animate-in slide-in-from-bottom-5 font-sans">
+             <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2 cursor-pointer" onClick={onMaximize}>
+                   <div className={`w-3 h-3 rounded-full shadow-lg ${isMicSending ? 'bg-red-500 animate-pulse shadow-red-500/50' : 'bg-emerald-500 shadow-emerald-500/50'}`}></div>
+                   <span className="text-white font-bold text-[13px]">{isMuted ? 'Đã tắt Mic' : (isMicSending ? 'Đang nghe bạn nói...' : 'Gia sư đang kết nối...')}</span>
+                </div>
+                <button onClick={onMaximize} className="text-slate-400 hover:text-white p-1.5 bg-slate-800 hover:bg-slate-700 transition rounded-lg" title="Phóng to">
+                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+                </button>
+             </div>
+             
+             <div className="text-[12px] text-slate-400 truncate italic bg-slate-900/50 px-3 py-2 rounded-lg border border-slate-800">
+                 {transcript ? `"...${transcript.slice(-35)}"` : "Đang chờ tín hiệu..."}
+             </div>
+             
+             <div className="flex gap-2 mt-1">
+                 <button 
+                    onClick={toggleMute} 
+                    className={`flex-1 font-bold py-2 rounded-xl text-[13px] transition-all shadow-md flex items-center justify-center gap-2 ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white'}`}
+                 >
+                    {isMuted ? '🔇 Đã Tắt Mic' : '🎙️ Tắt Mic'}
+                 </button>
+                 <button onClick={handleUserHangUp} className="flex-1 bg-red-600/90 hover:bg-red-500 text-white font-bold py-2 rounded-xl text-[13px] transition-all shadow-md flex items-center justify-center gap-2">
+                    🛑 Dập máy
+                 </button>
+             </div>
+          </div>
+      );
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-[100dvh] bg-[#020617] text-slate-200 p-4 sm:p-8 w-full font-sans relative overflow-hidden">
+    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center min-h-[100dvh] bg-[#020617]/95 backdrop-blur-md text-slate-200 p-4 sm:p-8 w-full font-sans overflow-hidden animate-in fade-in duration-300">
       
-      {/* 🚀 NÚT MỞ SIDEBAR CHỈ HIỆN KHI Ở CHẾ ĐỘ THI THỬ (KHÔNG PHẢI CHỮA BÀI) */}
       {mode !== 'TUTOR' && (
           <button 
              onClick={() => onOpenAI && onOpenAI()}
@@ -244,16 +346,16 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
           </button>
       )}
 
-      <div className="bg-[#0f172a] p-8 md:p-12 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-slate-800 max-w-2xl w-full text-center relative z-10">
+      <div className="bg-[#0f172a] p-8 md:p-12 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.8)] border border-slate-700 max-w-2xl w-full text-center relative z-10">
         
         <button 
           onClick={handleBackClick} 
-          className="absolute top-6 left-6 text-slate-400 hover:text-white transition-colors flex items-center gap-2 font-medium"
+          className="absolute top-6 left-6 text-slate-400 hover:text-white transition-colors flex items-center gap-2 font-medium bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-xl"
         >
-          <span className="text-xl">←</span> Quay lại
+          {status !== 'IDLE' ? '👇 Thu nhỏ (Nghe nền)' : '← Thoát'}
         </button>
 
-        <div className="mb-10 mt-6 md:mt-2">
+        <div className="mb-10 mt-12 md:mt-6">
            <h2 className="text-3xl md:text-4xl font-black mb-3 text-white tracking-tight">
                {mode === 'TUTOR' ? 'Gia Sư Giải Đáp 1-1' : 'Phòng Luyện Nói 1-1'}
            </h2>
@@ -264,15 +366,12 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
 
         {status === 'IDLE' && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-             
-             {/* GIAO DIỆN HIỂN THỊ DỮ LIỆU BÀI LÀM (CHẾ ĐỘ GIA SƯ) */}
              {mode === 'TUTOR' && tutorData ? (
                 <div className="bg-blue-900/20 p-4 rounded-xl border border-blue-800/50 mb-8 text-left max-w-full">
-                   <div className="text-blue-400 font-bold text-[12px] uppercase mb-2 tracking-widest">Bài làm đang chữa (Band {tutorData.overall}):</div>
+                   <div className="text-blue-400 font-bold text-[12px] uppercase mb-2 tracking-widest">Nội dung đang chữa (Band {tutorData.overall}):</div>
                    <div className="text-[14px] italic text-slate-300 line-clamp-3">"{tutorData.transcript}"</div>
                 </div>
              ) : (
-             /* GIAO DIỆN HIỂN THỊ CHỦ ĐỀ THI (CHẾ ĐỘ GIÁM KHẢO) */
                 <div className="bg-slate-800/50 p-4 rounded-2xl border border-slate-700 mb-8 inline-block max-w-full">
                    <span className="block text-[12px] uppercase tracking-widest text-slate-400 font-bold mb-1">Chủ đề luyện tập:</span>
                    <span className="text-[15px] font-medium text-slate-200 line-clamp-2 px-2 max-w-sm">{currentTopic}</span>
@@ -287,7 +386,7 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
                        className={`relative w-28 py-3 rounded-2xl flex flex-col items-center gap-2 transition-all duration-200 border-2 ${examiner === 'TONY' ? 'bg-slate-800 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-slate-900 border-transparent hover:border-slate-700 opacity-60'}`}
                     >
                        <div className="text-3xl">👨‍🏫</div>
-                       <span className={`text-[13px] font-bold ${examiner === 'TONY' ? 'text-emerald-400' : 'text-slate-400'}`}>Mr. Tôn</span>
+                       <span className={`text-[13px] font-bold ${examiner === 'TONY' ? 'text-emerald-400' : 'text-slate-400'}`}>Thầy Tôn</span>
                        {examiner === 'TONY' && <div className="absolute -top-2 -right-2 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white text-[10px]">✓</div>}
                     </button>
 
@@ -296,7 +395,7 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
                        className={`relative w-28 py-3 rounded-2xl flex flex-col items-center gap-2 transition-all duration-200 border-2 ${examiner === 'DIEP' ? 'bg-slate-800 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-slate-900 border-transparent hover:border-slate-700 opacity-60'}`}
                     >
                        <div className="text-3xl">👩‍🏫</div>
-                       <span className={`text-[13px] font-bold ${examiner === 'DIEP' ? 'text-emerald-400' : 'text-slate-400'}`}>Ms. Diệp</span>
+                       <span className={`text-[13px] font-bold ${examiner === 'DIEP' ? 'text-emerald-400' : 'text-slate-400'}`}>Cô Diệp</span>
                        {examiner === 'DIEP' && <div className="absolute -top-2 -right-2 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white text-[10px]">✓</div>}
                     </button>
                 </div>
@@ -311,33 +410,38 @@ export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => 
         {status === 'CONNECTING' && (
            <div className="py-12 flex flex-col items-center justify-center animate-in zoom-in-95 duration-300">
                <div className="w-12 h-12 border-4 border-emerald-500/30 border-t-emerald-500 rounded-full animate-spin mb-6"></div>
-               <div className="text-emerald-400 font-bold tracking-widest uppercase text-sm animate-pulse">
-                  Đang thiết lập kết nối mã hóa...
-               </div>
+               <div className="text-emerald-400 font-bold tracking-widest uppercase text-sm animate-pulse">Đang thiết lập kết nối mã hóa...</div>
            </div>
         )}
 
         {status === 'CONNECTED' && (
           <div className="flex flex-col items-center animate-in zoom-in-95 duration-500">
-            
             <div className="relative mb-6">
-                <div className={`absolute inset-0 bg-emerald-500 rounded-full transition-all duration-200 opacity-20 ${isMicSending ? 'scale-[1.3] animate-pulse' : 'scale-100'}`}></div>
+                <div className={`absolute inset-0 rounded-full transition-all duration-200 opacity-20 ${!isMuted && isMicSending ? 'bg-red-500 scale-[1.3] animate-pulse' : 'bg-emerald-500 scale-100'}`}></div>
                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl relative z-10 bg-slate-800 flex items-center justify-center text-5xl">
                     {examiner === 'TONY' ? '👨‍🏫' : '👩‍🏫'}
                 </div>
             </div>
             
-            <p className="text-emerald-400 font-bold mb-6 tracking-widest uppercase text-[12px] bg-emerald-950/50 px-4 py-1.5 rounded-full border border-emerald-800">
-                {isMicSending ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : "🟢 AI ĐANG NGHE/PHẢN HỒI..."}
+            <p className={`font-bold mb-6 tracking-widest uppercase text-[12px] px-4 py-1.5 rounded-full border ${isMuted ? 'bg-amber-950/50 text-amber-400 border-amber-800' : (isMicSending ? 'bg-red-950/50 text-red-400 border-red-800' : 'bg-emerald-950/50 text-emerald-400 border-emerald-800')}`}>
+                {isMuted ? "🔇 ĐÃ TẮT MIC (CHỈ NGHE)" : (isMicSending ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : "🟢 AI ĐANG NGHE/PHẢN HỒI...")}
             </p>
             
             <div className="bg-[#020617] rounded-2xl p-6 w-full text-left h-48 overflow-y-auto mb-8 border border-slate-800 font-mono text-[14px] text-slate-300 leading-relaxed shadow-inner custom-scrollbar relative">
                {transcript || <span className="opacity-40 italic">Đang chờ tín hiệu âm thanh...</span>}
             </div>
 
-            <button onClick={stopCall} className="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-4 rounded-2xl text-[16px] transition-all active:scale-95 shadow-[0_10px_20px_rgba(220,38,38,0.3)] flex items-center justify-center gap-3">
-               <span className="text-xl">🛑</span> Kết Thúc (Cúp Máy)
-            </button>
+            <div className="flex gap-3 w-full">
+                <button 
+                   onClick={toggleMute} 
+                   className={`flex-1 font-bold py-4 rounded-2xl text-[16px] transition-all active:scale-95 shadow-lg flex items-center justify-center gap-3 ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white'}`}
+                >
+                   <span className="text-xl">{isMuted ? '🔇' : '🎙️'}</span> {isMuted ? 'Đã Tắt Mic' : 'Tắt Mic Tạm Thời'}
+                </button>
+                <button onClick={handleUserHangUp} className="flex-1 bg-red-600 hover:bg-red-500 text-white font-bold py-4 rounded-2xl text-[16px] transition-all active:scale-95 shadow-[0_10px_20px_rgba(220,38,38,0.3)] flex items-center justify-center gap-3">
+                   <span className="text-xl">🛑</span> Dập Máy
+                </button>
+            </div>
           </div>
         )}
       </div>
