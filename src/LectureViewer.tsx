@@ -8,7 +8,9 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(100);
 
-   useEffect(() => { setIframeHeight(10); }, [html]);
+   useEffect(() => { 
+       setIframeHeight(10); 
+   }, [html]);
 
    useEffect(() => {
      const handleMessage = (e: MessageEvent) => {
@@ -16,10 +18,14 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          const href = e.data.href;
          if (href.includes('tonyenglish.vn/uploads') || href.includes('youtube.com') || href.includes('youtu.be')) {
            onOpenPopup(href);
-         } else { window.open(href, '_blank', 'noopener,noreferrer'); }
+         } else { 
+             window.open(href, '_blank', 'noopener,noreferrer'); 
+         }
        } else if (e.data?.type === 'LECTURE_RESIZE') {
          const h = e.data.height;
-         if (h) setIframeHeight(Math.max(100, h + 20)); 
+         if (h) {
+             setIframeHeight(Math.max(100, h + 20)); 
+         }
        } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
          if (iframeRef.current) {
             const rect = iframeRef.current.getBoundingClientRect();
@@ -28,7 +34,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        } else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
          onCloseDict();
        } else if (e.data?.type === 'OPEN_IELTS_AI') {
-         // Kích hoạt Radar Bẻ Lái AI
+         // Kích hoạt Radar Bẻ Lái AI (Dạng Text)
          const fakeBtn = document.createElement('button');
          fakeBtn.className = 'btn-ai-trigger hidden'; 
          if (e.data.topic) fakeBtn.setAttribute('data-topic', e.data.topic);
@@ -38,16 +44,17 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          fakeBtn.click(); 
          setTimeout(() => { fakeBtn.remove(); }, 100); 
        } 
-       // 🚀 ĐÓN TÍN HIỆU MỞ PHÒNG LIVE TỪ IFRAME
+       // 🚀 ĐÓN TÍN HIỆU MỞ PHÒNG LIVE TỪ IFRAME BÀI GIẢNG HTML
        else if (e.data?.type === 'OPEN_LIVE_SPEAKING') {
          const fakeLiveBtn = document.createElement('button');
          fakeLiveBtn.className = 'btn-live-trigger hidden';
          if (e.data.topic) fakeLiveBtn.setAttribute('data-topic', e.data.topic);
          document.body.appendChild(fakeLiveBtn);
-         fakeLiveBtn.click(); // Đánh lừa App.tsx để nó mở phòng
+         fakeLiveBtn.click(); 
          setTimeout(() => { fakeLiveBtn.remove(); }, 100);
        }
      };
+     
      window.addEventListener('message', handleMessage);
      return () => window.removeEventListener('message', handleMessage);
    }, [onOpenPopup, onOpenDict, onCloseDict]);
@@ -92,10 +99,13 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                return; 
            }
 
-           // 1. TÌM NÚT BẺ LÁI AI (CŨ)
+           // 1. TÌM NÚT BẺ LÁI AI (CHAT TEXT)
            var aiBtn = target.closest('.btn-ai-trigger, .btn-ielts-trigger');
            if (aiBtn) {
-               e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+               e.preventDefault(); 
+               e.stopPropagation(); 
+               e.stopImmediatePropagation();
+               
                var topic = aiBtn.getAttribute('data-topic') || '';
                var image = aiBtn.getAttribute('data-image') || '';
                var task = aiBtn.getAttribute('data-task') || 'task2';
@@ -103,24 +113,32 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                var originalText = aiBtn.innerHTML;
                aiBtn.innerHTML = "✨ Đang mở Giám Khảo...";
                aiBtn.style.opacity = "0.7";
-               setTimeout(function() { aiBtn.innerHTML = originalText; aiBtn.style.opacity = "1"; }, 1500);
+               setTimeout(function() { 
+                   aiBtn.innerHTML = originalText; 
+                   aiBtn.style.opacity = "1"; 
+               }, 1500);
 
                window.parent.postMessage({ type: 'OPEN_IELTS_AI', topic: topic, image: image, task: task }, '*');
                return false;
            }
 
-           // 2. 🚀 TÌM NÚT GỌI LIVE SPEAKING (MỚI)
+           // 2. TÌM NÚT GỌI LIVE SPEAKING
            var liveBtn = target.closest('.btn-live-trigger');
            if (liveBtn) {
-               e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+               e.preventDefault(); 
+               e.stopPropagation(); 
+               e.stopImmediatePropagation();
+               
                var topic = liveBtn.getAttribute('data-topic') || '';
                
                var originalText = liveBtn.innerHTML;
                liveBtn.innerHTML = "📞 Đang kết nối...";
                liveBtn.style.opacity = "0.7";
-               setTimeout(function() { liveBtn.innerHTML = originalText; liveBtn.style.opacity = "1"; }, 1500);
+               setTimeout(function() { 
+                   liveBtn.innerHTML = originalText; 
+                   liveBtn.style.opacity = "1"; 
+               }, 1500);
 
-               // Bắn tín hiệu ra ngoài
                window.parent.postMessage({ type: 'OPEN_LIVE_SPEAKING', topic: topic }, '*');
                return false;
            }
@@ -143,22 +161,29 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
 
          document.addEventListener('mousedown', function(e) {
            var sel = window.getSelection();
-           if (!sel.toString().trim()) { window.parent.postMessage({ type: 'LECTURE_CLOSE_DICT' }, '*'); }
+           if (!sel.toString().trim()) { 
+               window.parent.postMessage({ type: 'LECTURE_CLOSE_DICT' }, '*'); 
+           }
          });
 
          function reportHeight() {
             var wrapper = document.getElementById('content-wrapper');
             if (wrapper) {
                 var h = wrapper.getBoundingClientRect().height;
-                if (h > 0) window.parent.postMessage({ type: 'LECTURE_RESIZE', height: h }, '*');
+                if (h > 0) {
+                    window.parent.postMessage({ type: 'LECTURE_RESIZE', height: h }, '*');
+                }
             }
          }
+         
          window.addEventListener('load', reportHeight);
          if (window.ResizeObserver) {
             var ro = new ResizeObserver(reportHeight);
             ro.observe(document.body);
             ro.observe(document.getElementById('content-wrapper'));
-         } else { setInterval(reportHeight, 500); }
+         } else { 
+            setInterval(reportHeight, 500); 
+         }
        </script>
      </body>
      </html>
@@ -181,7 +206,17 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
 // =========================================================================================
 // MAIN COMPONENT: LECTURE VIEWER
 // =========================================================================================
-export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI }: { courseId: string, onBack: () => void, onStartTest?: (type: string, data: any) => void, onOpenAI?: (passedMode?: string, topic?: string, image?: string, task?: string) => void }) {
+export default function LectureViewer({ 
+    courseId, 
+    onBack, 
+    onStartTest, 
+    onOpenAI 
+}: { 
+    courseId: string, 
+    onBack: () => void, 
+    onStartTest?: (type: string, data: any) => void, 
+    onOpenAI?: (passedMode?: string, topic?: string, image?: string, task?: string) => void 
+}) {
   const [course, setCourse] = useState<any>(null);
   const [modules, setModules] = useState<any[]>([]);
   const [lectures, setLectures] = useState<any[]>([]);
@@ -209,7 +244,10 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
 
   const activeLecture = useMemo(() => lectures.find(l => l.id === activeLectureId), [lectures, activeLectureId]);
   const totalPages = pages.length;
-  const currentHtmlContent = useMemo(() => { const page = pages.find(p => p.page_number === currentPage); return page ? page.content_html : ''; }, [pages, currentPage]);
+  const currentHtmlContent = useMemo(() => { 
+      const page = pages.find(p => p.page_number === currentPage); 
+      return page ? page.content_html : ''; 
+  }, [pages, currentPage]);
 
   useEffect(() => {
     if (activeLecture && currentHtmlContent) {
@@ -223,39 +261,60 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
   }, [activeLecture, currentHtmlContent]);
 
   useEffect(() => {
-    if (containerRef.current) containerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    if (containerRef.current) {
+        containerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }, [activeLectureId, currentPage]);
 
   useEffect(() => {
-    if (courseId && courseId !== '') fetchCourseData();
-    else { setErrorMessage("Không tìm thấy mã Khóa học."); setIsLoading(false); }
+    if (courseId && courseId !== '') {
+        fetchCourseData();
+    } else { 
+        setErrorMessage("Không tìm thấy mã Khóa học."); 
+        setIsLoading(false); 
+    }
   }, [courseId]);
 
   useEffect(() => {
-    const handleFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
+    const handleFullscreenChange = () => {
+        setIsFullscreen(!!document.fullscreenElement);
+    };
     document.addEventListener('fullscreenchange', handleFullscreenChange);
-    if (window.innerWidth >= 768) setIsSidebarOpen(true);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    
+    if (window.innerWidth >= 768) {
+        setIsSidebarOpen(true);
+    }
+    
+    return () => {
+        document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
   }, []);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
        const dictPop = document.getElementById('dict-popup');
-       if (dictPop && !dictPop.contains(e.target as Node)) setDictPopup(null);
-       if (taskMenuRef.current && !taskMenuRef.current.contains(e.target as Node)) setIsTaskMenuOpen(false);
+       if (dictPop && !dictPop.contains(e.target as Node)) {
+           setDictPopup(null);
+       }
+       if (taskMenuRef.current && !taskMenuRef.current.contains(e.target as Node)) {
+           setIsTaskMenuOpen(false);
+       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const fetchCourseData = async () => {
-    setIsLoading(true); setErrorMessage(null);
+    setIsLoading(true); 
+    setErrorMessage(null);
     try {
       const { data: { user } } = await supabase.auth.getUser();
       setCurrentUser(user);
 
       const { data: courseData, error: courseErr } = await supabase.from('courses').select('*').eq('id', courseId).single();
-      if (courseErr || !courseData) throw new Error("Không tìm thấy dữ liệu Khóa học trên hệ thống.");
+      if (courseErr || !courseData) {
+          throw new Error("Không tìm thấy dữ liệu Khóa học trên hệ thống.");
+      }
       setCourse(courseData);
 
       const { data: modData } = await supabase.from('lecture_modules').select('*').eq('course_id', courseId).order('order_index');
@@ -279,27 +338,46 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
          const lectureIds = validLectures.map(l => l.id);
          const { data: allProg } = await supabase.from('lecture_progress').select('lecture_id, completed_tasks').eq('user_id', user.id).in('lecture_id', lectureIds);
          const pMap: Record<string, string[]> = {};
-         if (allProg) { allProg.forEach(p => { pMap[p.lecture_id] = p.completed_tasks || []; }); }
+         if (allProg) { 
+             allProg.forEach(p => { pMap[p.lecture_id] = p.completed_tasks || []; }); 
+         }
          setAllLectureProgress(pMap);
       }
 
       if (validLectures && validLectures.length > 0) {
          const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${courseId}`);
          const targetLecture = validLectures.find(l => l.id === savedLectureId) || validLectures[0];
-         if (targetLecture.module_id) setExpandedModules([targetLecture.module_id]);
+         if (targetLecture.module_id) {
+             setExpandedModules([targetLecture.module_id]);
+         }
          handleSelectLecture(targetLecture.id, user?.id);
       } else {
-         if (safeModData.length > 0) setExpandedModules([safeModData[0].id]);
+         if (safeModData.length > 0) {
+             setExpandedModules([safeModData[0].id]);
+         }
       }
-    } catch (error: any) { setErrorMessage(error.message); } finally { setIsLoading(false); }
+    } catch (error: any) { 
+        setErrorMessage(error.message); 
+    } finally { 
+        setIsLoading(false); 
+    }
   };
 
   const handleSelectLecture = async (lectureId: string, userIdOverride?: string) => {
     try {
-        setActiveLectureId(lectureId); setCurrentPage(1); setPages([]); setCompletedTasks([]);
-        if (window.innerWidth < 768) setIsSidebarOpen(false);
+        setActiveLectureId(lectureId); 
+        setCurrentPage(1); 
+        setPages([]); 
+        setCompletedTasks([]);
+        
+        if (window.innerWidth < 768) {
+            setIsSidebarOpen(false);
+        }
+        
         const targetUserId = userIdOverride || currentUser?.id;
-        if (targetUserId) localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
+        if (targetUserId) {
+            localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
+        }
 
         const { data: pageData } = await supabase.from('lecture_pages').select('*').eq('lecture_id', lectureId).order('page_number');
         setPages(pageData || []);
@@ -312,7 +390,9 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
                    setCompletedTasks(pData.completed_tasks);
                    setAllLectureProgress(prev => ({...prev, [lectureId]: pData.completed_tasks}));
                }
-           } else { setCompletedTasks([]); }
+           } else { 
+               setCompletedTasks([]); 
+           }
         }
     } catch (err) {}
   };
@@ -323,7 +403,9 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
 
   const handleToggleTask = useCallback(async (taskId: string) => {
       if (!currentUser || !activeLectureId) return;
+      
       const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
+      
       setCompletedTasks(prev => {
          const newCompleted = prev.includes(taskId) ? prev.filter(id => id !== taskId) : [...prev, taskId];
          const isCompleted = safeLectureTasks.length > 0 && newCompleted.length === safeLectureTasks.length;
@@ -344,10 +426,18 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
 
   const handleStartTaskExercise = async (task: any) => {
       if (!onStartTest || !task.test_id) return;
+      
       try {
          const { data: testData, error } = await supabase.from('tests').select('*').eq('id', task.test_id).single();
-         if (error || !testData) { alert("Bài tập này hiện không khả dụng. Vui lòng liên hệ Admin."); return; }
-         if (!completedTasks.includes(task.id)) handleToggleTask(task.id);
+         if (error || !testData) { 
+             alert("Bài tập này hiện không khả dụng. Vui lòng liên hệ Admin."); 
+             return; 
+         }
+         
+         if (!completedTasks.includes(task.id)) {
+             handleToggleTask(task.id);
+         }
+         
          const type = String(testData.test_type || '').toLowerCase();
          if (type.includes('standard')) onStartTest('standard', testData);
          else if (type.includes('case-study') || type.includes('business')) onStartTest('case-study', testData);
@@ -359,24 +449,30 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
   };
 
   const handleNextPage = () => {
-    if (currentPage < pages.length) setCurrentPage(prev => prev + 1);
-    else {
+    if (currentPage < pages.length) {
+        setCurrentPage(prev => prev + 1);
+    } else {
       const currentIndex = lectures.findIndex(l => l.id === activeLectureId);
       if (currentIndex !== -1 && currentIndex < lectures.length - 1) {
          const nextLecture = lectures[currentIndex + 1];
-         if (nextLecture.module_id && !expandedModules.includes(nextLecture.module_id)) setExpandedModules(prev => [...prev, nextLecture.module_id]);
+         if (nextLecture.module_id && !expandedModules.includes(nextLecture.module_id)) {
+             setExpandedModules(prev => [...prev, nextLecture.module_id]);
+         }
          handleSelectLecture(nextLecture.id);
       }
     }
   };
 
   const handlePrevPage = () => {
-    if (currentPage > 1) setCurrentPage(prev => prev - 1);
-    else {
+    if (currentPage > 1) {
+        setCurrentPage(prev => prev - 1);
+    } else {
        const currentIndex = lectures.findIndex(l => l.id === activeLectureId);
        if (currentIndex > 0) {
           const prevLecture = lectures[currentIndex - 1];
-          if (prevLecture.module_id && !expandedModules.includes(prevLecture.module_id)) setExpandedModules(prev => [...prev, prevLecture.module_id]);
+          if (prevLecture.module_id && !expandedModules.includes(prevLecture.module_id)) {
+              setExpandedModules(prev => [...prev, prevLecture.module_id]);
+          }
           handleSelectLecture(prevLecture.id);
        }
     }
@@ -389,14 +485,19 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
         fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`).then(r => r.ok ? r.json() : Promise.reject()),
         fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|vi`).then(r => r.json())
     ]).then(([enRes, viRes]) => {
-        let phonetics = '', audio = '', translation = 'Không tìm thấy bản dịch.';
+        let phonetics = '';
+        let audio = '';
+        let translation = 'Không tìm thấy bản dịch.';
+        
         if (enRes.status === 'fulfilled' && enRes.value[0]) {
             phonetics = enRes.value[0].phonetics?.find((p:any) => p.text)?.text || '';
             audio = enRes.value[0].phonetics?.find((p:any) => p.audio)?.audio || '';
         }
+        
         if (viRes.status === 'fulfilled' && viRes.value?.responseData?.translatedText) {
             translation = viRes.value.responseData.translatedText;
         }
+        
         setDictPopup(prev => prev ? { ...prev, data: { phonetics, audio, translation }, isLoading: false } : null);
     });
   }, []);
@@ -405,8 +506,10 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
      setTimeout(() => {
         const selection = window.getSelection();
         if (!selection || selection.rangeCount === 0) return;
+        
         const text = selection.toString().trim();
         if (!text) return;
+        
         if (text.length > 0 && text.length < 40 && text.split(' ').length <= 4) {
            const range = selection.getRangeAt(0);
            const rect = range.getBoundingClientRect();
@@ -415,11 +518,17 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
      }, 100);
   }, [triggerDictionary]);
 
-  const playAudio = (url: string) => { if (!url) return; new Audio(url).play(); };
+  const playAudio = (url: string) => { 
+      if (!url) return; 
+      new Audio(url).play(); 
+  };
   
   const toggleFullScreen = () => {
-    if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(e => console.log(e));
-    else if (document.exitFullscreen) document.exitFullscreen();
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(e => console.log(e));
+    } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
   };
 
   const getEmbedUrl = (url: string) => {
@@ -433,10 +542,26 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
   const safeCompletedTasks = Array.isArray(completedTasks) ? completedTasks : [];
   const isLastLectureAndPage = currentPage === totalPages && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
 
-  if (isLoading) return <div className="min-h-[100dvh] flex items-center justify-center bg-[#f1f5f9]"><div className="animate-spin text-4xl text-[#0ea5e9]">⏳</div></div>;
-  if (errorMessage) return (
-      <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-[#f1f5f9]"><div className="text-5xl mb-4">⚠️</div><h2 className="text-xl font-black text-slate-800 mb-2">Lỗi tải bài giảng</h2><p className="text-slate-500 mb-6">{errorMessage}</p><button onClick={onBack} className="bg-[#0ea5e9] text-white px-6 py-2.5 rounded-xl font-bold shadow-md hover:bg-[#0284c7]">Quay lại trang chủ</button></div>
-  );
+  if (isLoading) {
+      return (
+          <div className="min-h-[100dvh] flex items-center justify-center bg-[#f1f5f9]">
+              <div className="animate-spin text-4xl text-[#0ea5e9]">⏳</div>
+          </div>
+      );
+  }
+  
+  if (errorMessage) {
+      return (
+          <div className="min-h-[100dvh] flex flex-col items-center justify-center bg-[#f1f5f9]">
+              <div className="text-5xl mb-4">⚠️</div>
+              <h2 className="text-xl font-black text-slate-800 mb-2">Lỗi tải bài giảng</h2>
+              <p className="text-slate-500 mb-6">{errorMessage}</p>
+              <button onClick={onBack} className="bg-[#0ea5e9] text-white px-6 py-2.5 rounded-xl font-bold shadow-md hover:bg-[#0284c7]">
+                  Quay lại trang chủ
+              </button>
+          </div>
+      );
+  }
 
   return (
     <div className="flex flex-col h-[100dvh] w-full bg-[#f1f5f9] font-sans text-slate-800 overflow-hidden relative overscroll-none">
@@ -468,7 +593,9 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
                     <div className="fixed top-[75px] left-1/2 -translate-x-1/2 w-[92vw] max-w-[380px] md:absolute md:top-full md:left-auto md:right-0 md:translate-x-0 md:mt-3 bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-slate-200 overflow-hidden z-[100] animate-in zoom-in-95 duration-200">
                        <div className="bg-slate-50 px-5 py-4 border-b border-slate-100 flex justify-between items-center">
                           <h4 className="font-black text-slate-700 text-[13px] uppercase tracking-widest">Nhiệm vụ bài học</h4>
-                          <span className="text-[#0ea5e9] font-bold text-[14px] bg-blue-50 px-2 py-0.5 rounded-md">{Math.round((safeCompletedTasks.length / safeLectureTasks.length) * 100)}%</span>
+                          <span className="text-[#0ea5e9] font-bold text-[14px] bg-blue-50 px-2 py-0.5 rounded-md">
+                              {Math.round((safeCompletedTasks.length / safeLectureTasks.length) * 100)}%
+                          </span>
                        </div>
                        
                        <div className="max-h-[60vh] overflow-y-auto p-3 custom-scrollbar space-y-2">
@@ -635,6 +762,7 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
          </main>
       </div>
 
+      {/* TỪ ĐIỂN CLICK POPUP */}
       {dictPopup && dictPopup.show && (
          <div id="dict-popup" className="fixed bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-slate-200 w-[90vw] max-w-[320px] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200"
            style={{ 
@@ -667,13 +795,16 @@ export default function LectureViewer({ courseId, onBack, onStartTest, onOpenAI 
          </div>
       )}
 
+      {/* POPUP PHÓNG TO HÌNH ẢNH/VIDEO */}
       {popupUrl && (
         <div className="fixed inset-0 bg-slate-900/90 backdrop-blur-sm flex flex-col items-center justify-center p-4 md:p-8 animate-in fade-in duration-200" style={{ zIndex: 99999 }}>
           <div className="w-full max-w-6xl flex justify-end mb-4">
              <button 
                 onClick={() => setPopupUrl(null)} 
                 className="w-12 h-12 rounded-full bg-white/10 border border-white/20 hover:bg-red-500 flex items-center justify-center text-white text-2xl font-black transition-colors"
-             >✕</button>
+             >
+                ✕
+             </button>
           </div>
           <div className="w-full max-w-6xl h-[85vh] bg-black rounded-2xl overflow-hidden shadow-2xl relative border border-slate-700">
              <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-0">
