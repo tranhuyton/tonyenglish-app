@@ -16,7 +16,6 @@ import NinjaSurvival from './NinjaSurvival';
 import VocabRacing from './VocabRacing';
 import AITutorSidebar from './AITutorSidebar';
 
-// 🚀 IMPORT PHÒNG THI LIVE ĐỂ ĐIỀU HƯỚNG TỪ BÀI GIẢNG
 import LiveSpeakingTest from './LiveSpeakingTest';
 
 export default function App() {
@@ -44,7 +43,6 @@ export default function App() {
     const handleGlobalClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       
-      // 1. RADAR 1: Bắt các class mở AI Sidebar (Bẻ lái cũ)
       const triggerBtn = target.closest('.btn-ai-trigger, .btn-ielts-trigger'); 
       if (triggerBtn) {
         const topicText = triggerBtn.getAttribute('data-topic');
@@ -58,16 +56,15 @@ export default function App() {
           setAiMode('ielts');       
           setIsAISidebarOpen(true); 
         }
-        return; // Thoát sớm nếu đã xử lý xong nút bẻ lái
+        return; 
       }
 
-      // 2. 🚀 RADAR 2: BẮT NÚT GỌI GIÁM KHẢO LIVE TỪ BÀI GIẢNG HTML
       const liveBtn = target.closest('.btn-live-trigger');
       if (liveBtn) {
           const topicText = liveBtn.getAttribute('data-topic');
           if (topicText) {
-              sessionStorage.setItem('tony_live_topic', topicText); // Nhét đề bài vào túi quần
-              handleNavigate('live-test'); // Phóng thẳng học sinh sang view phòng nói Live
+              sessionStorage.setItem('tony_live_topic', topicText);
+              handleNavigate('live-test'); 
           }
       }
     };
@@ -147,7 +144,6 @@ export default function App() {
   const handleOpenLecture = (courseId: string) => { setActiveCourseId(courseId); try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {} handleNavigate('lecture'); };
   const handleReturnFromTest = () => handleNavigate(returnView);
 
-  // 🚀 ĐÃ CẬP NHẬT 'live-test' VÀO MẢNG ĐỊNH TUYẾN HỢP LỆ
   const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture', 'live-test'];
 
   return (
@@ -160,8 +156,20 @@ export default function App() {
       {currentView === 'ielts-writing' && <IeltsWriting onBack={handleReturnFromTest} />}
       {currentView === 'ielts-speaking' && <IeltsSpeaking onBack={handleReturnFromTest} />}
       
-      {/* 🚀 ĐIỀU HƯỚNG VÀO PHÒNG NÓI REAL-TIME KHI BẤM NÚT TỪ BÀI GIẢNG KÈM NÚT QUAY LẠI VỀ LECTURE */}
-      {currentView === 'live-test' && <LiveSpeakingTest onBack={() => handleNavigate('lecture')} />}
+      {/* 🚀 TRUYỀN LỆNH MỞ SIDEBAR VÀO PHÒNG LIVE */}
+      {currentView === 'live-test' && (
+        <LiveSpeakingTest 
+           onBack={() => handleNavigate('lecture')} 
+           onOpenAI={() => {
+              const topic = sessionStorage.getItem('tony_live_topic') || '';
+              if (topic) {
+                 setAiMode('ielts');
+                 setIeltsTopic(topic);
+              }
+              setIsAISidebarOpen(true);
+           }}
+        />
+      )}
 
       {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
       {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}

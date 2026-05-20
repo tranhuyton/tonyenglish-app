@@ -27,13 +27,12 @@ const base64ToArrayBuffer = (base64: string) => {
   return bytes.buffer;
 };
 
-// 🚀 THÊM PROP onBack ĐỂ XỬ LÝ NÚT QUAY LẠI
-export default function LiveSpeakingTest({ onBack }: { onBack?: () => void }) {
+// 🚀 THÊM PROP onOpenAI VÀO ĐÂY
+export default function LiveSpeakingTest({ onBack, onOpenAI }: { onBack?: () => void, onOpenAI?: () => void }) {
   const [status, setStatus] = useState<'IDLE' | 'CONNECTING' | 'CONNECTED'>('IDLE');
   const [transcript, setTranscript] = useState<string>('');
   const [isMicSending, setIsMicSending] = useState(false);
   
-  // 🚀 STATE CHỌN GIÁM KHẢO
   const [examiner, setExaminer] = useState<'TONY' | 'DIEP'>('TONY');
   
   const wsRef = useRef<WebSocket | null>(null);
@@ -44,7 +43,6 @@ export default function LiveSpeakingTest({ onBack }: { onBack?: () => void }) {
   
   const isSetupCompleteRef = useRef<boolean>(false);
 
-  // Xử lý nút quay lại an toàn
   const handleBackClick = () => {
     if (onBack) {
        onBack();
@@ -78,8 +76,6 @@ export default function LiveSpeakingTest({ onBack }: { onBack?: () => void }) {
         setStatus('CONNECTED');
         
         const customTopic = sessionStorage.getItem('tony_live_topic') || "Please ask me an IELTS speaking question.";
-        
-        // 🚀 ĐỔI GIỌNG NAM/NỮ DỰA VÀO LỰA CHỌN (Puck = Giọng Nam, Aoede = Giọng Nữ)
         const voiceName = examiner === 'TONY' ? 'Puck' : 'Aoede';
         const examinerName = examiner === 'TONY' ? 'Tony' : 'Diệp';
 
@@ -202,12 +198,22 @@ export default function LiveSpeakingTest({ onBack }: { onBack?: () => void }) {
     setIsMicSending(false);
   };
 
-  // Lấy chủ đề hiện tại để hiển thị cho học sinh biết
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[100dvh] bg-[#020617] text-slate-200 p-4 sm:p-8 w-full font-sans">
-      <div className="bg-[#0f172a] p-8 md:p-12 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-slate-800 max-w-2xl w-full text-center relative">
+    <div className="flex flex-col items-center justify-center min-h-[100dvh] bg-[#020617] text-slate-200 p-4 sm:p-8 w-full font-sans relative overflow-hidden">
+      
+      {/* 🚀 NÚT MỞ SIDEBAR NẰM Ở GÓC TRÊN BÊN PHẢI */}
+      <button 
+         onClick={() => onOpenAI && onOpenAI()}
+         className="absolute top-6 right-6 text-amber-400 hover:text-amber-300 transition-all flex items-center gap-2 font-bold bg-amber-950/40 px-3 py-2 md:px-5 md:py-2.5 rounded-xl border border-amber-800/60 shadow-[0_0_15px_rgba(217,119,6,0.15)] z-20 hover:scale-105 active:scale-95"
+         title="Xem gợi ý kịch bản của AI"
+      >
+         <span className="text-lg">💡</span> 
+         <span className="hidden sm:inline text-[13px] md:text-[14px]">Kịch bản AI</span>
+      </button>
+
+      <div className="bg-[#0f172a] p-8 md:p-12 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-slate-800 max-w-2xl w-full text-center relative z-10">
         
         <button 
           onClick={handleBackClick} 
@@ -216,7 +222,7 @@ export default function LiveSpeakingTest({ onBack }: { onBack?: () => void }) {
           <span className="text-xl">←</span> Quay lại
         </button>
 
-        <div className="mb-10 mt-6">
+        <div className="mb-10 mt-6 md:mt-2">
            <h2 className="text-3xl md:text-4xl font-black mb-3 text-white tracking-tight">Phòng Luyện Nói 1-1</h2>
            <p className="text-emerald-400 font-medium text-[15px] max-w-md mx-auto leading-relaxed opacity-90">
              Tương tác giọng nói trực tiếp với Giám khảo ảo.
@@ -225,7 +231,7 @@ export default function LiveSpeakingTest({ onBack }: { onBack?: () => void }) {
 
         {status === 'IDLE' && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-             <div className="bg-slate-800/50 p-4 rounded-2xl border border-slate-700 mb-8 inline-block">
+             <div className="bg-slate-800/50 p-4 rounded-2xl border border-slate-700 mb-8 inline-block max-w-full">
                 <span className="block text-[12px] uppercase tracking-widest text-slate-400 font-bold mb-1">Chủ đề luyện tập:</span>
                 <span className="text-[15px] font-medium text-slate-200 line-clamp-2 px-2 max-w-sm">{currentTopic}</span>
              </div>
@@ -233,7 +239,6 @@ export default function LiveSpeakingTest({ onBack }: { onBack?: () => void }) {
              <div className="mb-8">
                 <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Lựa chọn Giám khảo</h3>
                 <div className="flex justify-center gap-4">
-                    {/* NÚT CHỌN GIÁM KHẢO TÔN */}
                     <button 
                        onClick={() => setExaminer('TONY')}
                        className={`relative w-28 py-3 rounded-2xl flex flex-col items-center gap-2 transition-all duration-200 border-2 ${examiner === 'TONY' ? 'bg-slate-800 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-slate-900 border-transparent hover:border-slate-700 opacity-60'}`}
@@ -243,7 +248,6 @@ export default function LiveSpeakingTest({ onBack }: { onBack?: () => void }) {
                        {examiner === 'TONY' && <div className="absolute -top-2 -right-2 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white text-[10px]">✓</div>}
                     </button>
 
-                    {/* NÚT CHỌN GIÁM KHẢO DIỆP */}
                     <button 
                        onClick={() => setExaminer('DIEP')}
                        className={`relative w-28 py-3 rounded-2xl flex flex-col items-center gap-2 transition-all duration-200 border-2 ${examiner === 'DIEP' ? 'bg-slate-800 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-slate-900 border-transparent hover:border-slate-700 opacity-60'}`}
@@ -273,11 +277,9 @@ export default function LiveSpeakingTest({ onBack }: { onBack?: () => void }) {
         {status === 'CONNECTED' && (
           <div className="flex flex-col items-center animate-in zoom-in-95 duration-500">
             
-            {/* KHU VỰC AVATAR (Chờ chèn Video Loop sau này) */}
             <div className="relative mb-6">
                 <div className={`absolute inset-0 bg-emerald-500 rounded-full transition-all duration-200 opacity-20 ${isMicSending ? 'scale-[1.3] animate-pulse' : 'scale-100'}`}></div>
                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl relative z-10 bg-slate-800 flex items-center justify-center text-5xl">
-                    {/* Tạm thời dùng icon, sau này ốp thẻ <video> vào đây */}
                     {examiner === 'TONY' ? '👨‍🏫' : '👩‍🏫'}
                 </div>
             </div>
