@@ -419,11 +419,11 @@ export default function LiveSpeakingTest({
   };
 
   // =========================================================================================
-  // GIAO DIỆN WIDGET THU NHỎ
+  // GIAO DIỆN WIDGET THU NHỎ (🚀 DỜI SANG RIGHT-6 CHỐNG LỖI ĐÈ GIAO DIỆN LECTURE)
   // =========================================================================================
   if (viewState === 'MINIMIZED') {
       return (
-          <div className="fixed bottom-6 left-6 z-[99998] bg-[#0f172a] border border-slate-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-2xl p-4 flex flex-col gap-3 w-[260px] md:w-72 animate-in slide-in-from-bottom-5 slide-in-from-left-5 font-sans">
+          <div className="fixed bottom-6 right-6 z-[99998] bg-[#0f172a] border border-slate-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-2xl p-4 flex flex-col gap-3 w-[260px] md:w-72 animate-in slide-in-from-bottom-5 font-sans">
              
              <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2 cursor-pointer flex-1 min-w-0" onClick={onMaximize}>
@@ -464,17 +464,14 @@ export default function LiveSpeakingTest({
   const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
   
+  // 🚀 ĐÃ FIX: KHÔNG THU NHỎ CUỘC GỌI, BẬT OVERLAY CHAT LÊN TRỰC TIẾP
   const handleYellowButtonClick = () => {
-      onMinimize();
-      setTimeout(() => {
-          if (onOpenAI) {
-              onOpenAI(currentMode === 'TUTOR' ? 'tutor' : 'ielts');
-          }
-      }, 300);
+      if (onOpenAI) {
+          onOpenAI(currentMode === 'TUTOR' ? 'tutor' : 'ielts');
+      }
   };
   
   return (
-    // 🚀 FIX: Thay overflow-hidden thành overflow-y-auto để màn hình ngoài cùng luôn cuộn được
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center min-h-[100dvh] bg-[#020617]/95 backdrop-blur-md text-slate-200 p-4 md:p-8 w-full font-sans overflow-y-auto custom-scrollbar animate-in fade-in duration-300">
       
       {onOpenAI && (
@@ -490,7 +487,6 @@ export default function LiveSpeakingTest({
           </button>
       )}
 
-      {/* 🚀 FIX: Thêm max-h-[95dvh] và overflow-y-auto để bản thân khung Popup cũng có thể tự cuộn */}
       <div className="bg-[#0f172a] p-6 md:p-12 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.8)] border border-slate-700 max-w-2xl w-full text-center relative z-10 max-h-[95dvh] overflow-y-auto custom-scrollbar my-auto">
         
         <button 
@@ -512,7 +508,6 @@ export default function LiveSpeakingTest({
         {status === 'IDLE' && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
              
-             {/* 🚀 FIX: Giới hạn chiều cao max-h-[120px] cho phần nội dung Text, ép nó phải cuộn nếu chữ quá nhiều */}
              <div className="bg-slate-800/50 p-4 md:p-5 rounded-2xl border border-slate-700 mb-6 md:mb-8 text-left shadow-inner flex flex-col">
                 <span className="block text-[11px] uppercase tracking-widest text-slate-400 font-bold mb-2 shrink-0">
                     Đang hỗ trợ nội dung:
