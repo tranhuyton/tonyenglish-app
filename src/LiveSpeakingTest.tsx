@@ -207,7 +207,8 @@ export default function LiveSpeakingTest({
       
       nextPlayTimeRef.current = audioCtxOutputRef.current.currentTime;
 
-      const wsUrl = 'wss://ubkvzgwespfvrlpjuxkp.supabase.co/functions/v1/live-speaking';
+      // Đã cập nhật kết nối tới máy chủ riêng của hệ thống
+      const wsUrl = 'wss://voice.tonyenglish.vn';
       const ws = new WebSocket(wsUrl);
       wsRef.current = ws;
 
