@@ -38,7 +38,7 @@ const base64ToArrayBuffer = (base64: string) => {
 };
 
 // =========================================================================================
-// COMPONENT PHÒNG LIVE TỐI THƯỢNG (ANTI-ZOMBIE CONNECTIONS & LUÔN HIỆN NÚT CHAT)
+// COMPONENT PHÒNG LIVE TỐI THƯỢNG
 // =========================================================================================
 export default function LiveSpeakingTest({ 
     viewState, 
@@ -51,7 +51,7 @@ export default function LiveSpeakingTest({
     onMinimize: () => void, 
     onMaximize: () => void, 
     onClose: () => void, 
-    onOpenAI?: () => void 
+    onOpenAI?: (passedMode?: string) => void 
 }) {
   const [status, setStatus] = useState<'IDLE' | 'CONNECTING' | 'CONNECTED'>('IDLE');
   const [transcript, setTranscript] = useState<string>('');
@@ -68,7 +68,6 @@ export default function LiveSpeakingTest({
   const nextPlayTimeRef = useRef<number>(0);
   const isSetupCompleteRef = useRef<boolean>(false);
 
-  // GHIM BỘ NHỚ CHỐNG TRÌNH DUYỆT TỰ TẮT MIC
   const sourceNodeRef = useRef<MediaStreamAudioSourceNode | null>(null);
   const processorNodeRef = useRef<ScriptProcessorNode | null>(null);
   const gainNodeRef = useRef<GainNode | null>(null);
@@ -76,7 +75,6 @@ export default function LiveSpeakingTest({
   const transcriptRef = useRef<string>(''); 
   const isIntendedCloseRef = useRef<boolean>(false); 
 
-  // LÍNH GÁC: QUẢN LÝ CÁC TIẾN TRÌNH GỌI/ĐỢI KHÔNG BỊ ĐÈ NHAU
   const reconnectTimeoutRef = useRef<any>(null);
   const pendingCallTimeoutRef = useRef<any>(null);
 
@@ -94,11 +92,20 @@ export default function LiveSpeakingTest({
       stopCallRef.current = stopCall;
   }, [examiner]);
 
-  // KIỂM TRA LỆNH GỌI TỰ ĐỘNG NGAY KHI VỪA MỞ CỬA SỔ LÊN
+  // 🚀 KIỂM TRA LỆNH GỌI TỰ ĐỘNG NGAY KHI VỪA MỞ CỬA SỔ LÊN
   useEffect(() => {
       const autoStart = sessionStorage.getItem('tony_auto_start') === 'true';
+      
       if (autoStart) {
           sessionStorage.removeItem('tony_auto_start');
+          
+          // NHẬN DIỆN THIẾT BỊ DI ĐỘNG (CHỐNG LỖI SAFARI/CHROME MOBILE)
+          const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if (isMobile) {
+              // Hủy auto-start, để học sinh bấm tay cấp quyền Mic hợp lệ
+              return; 
+          }
+          
           if (pendingCallTimeoutRef.current) clearTimeout(pendingCallTimeoutRef.current);
           pendingCallTimeoutRef.current = setTimeout(() => {
               if (startCallRef.current) {
@@ -108,7 +115,7 @@ export default function LiveSpeakingTest({
       }
   }, []);
 
-  // RADAR THÔNG MINH: XỬ LÝ LỖI LỒNG GIỌNG NÓI (CÃI VÃ NHAU)
+  // 🚀 RADAR THÔNG MINH BẮT TÍN HIỆU (CÓ XỬ LÝ MOBILE)
   useEffect(() => {
     const handleNavigationEvent = (e: any) => {
         if (e.detail === 'live-test') {
@@ -117,6 +124,17 @@ export default function LiveSpeakingTest({
             
             if (autoStart) {
                 sessionStorage.removeItem('tony_auto_start');
+                
+                // NHẬN DIỆN THIẾT BỊ DI ĐỘNG (CHỐNG LỖI SAFARI/CHROME MOBILE)
+                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                if (isMobile) {
+                    // Dập máy cũ nếu đang gọi dở và đứng đợi bấm nút
+                    if (statusRef.current === 'CONNECTED' || statusRef.current === 'CONNECTING') {
+                        if (stopCallRef.current) stopCallRef.current();
+                    }
+                    return; 
+                }
+
                 if (pendingCallTimeoutRef.current) clearTimeout(pendingCallTimeoutRef.current);
                 if (reconnectTimeoutRef.current) clearTimeout(reconnectTimeoutRef.current);
                 
@@ -156,7 +174,6 @@ export default function LiveSpeakingTest({
     }
   };
 
-  // 🚀 HÀM START CALL VÀ CẤY LỆNH "CẤM LẢI NHẢI" CHO AI
   const startCall = async (isReconnect = false) => {
     try {
       setStatus('CONNECTING');
@@ -170,7 +187,6 @@ export default function LiveSpeakingTest({
       
       isIntendedCloseRef.current = false;
 
-      // ĐẢM BẢO CHẮC CHẮN TRÌNH DUYỆT KHÔNG CÒN LƯU AUDIO CONTEXT CŨ
       if (audioCtxInputRef.current && audioCtxInputRef.current.state !== 'closed') {
           try { audioCtxInputRef.current.close(); } catch(e) {}
       }
@@ -195,7 +211,6 @@ export default function LiveSpeakingTest({
       
       nextPlayTimeRef.current = audioCtxOutputRef.current.currentTime;
 
-      // MỞ WEBSOCKET MỚI TỚI GOOGLE
       const wsUrl = 'wss://ubkvzgwespfvrlpjuxkp.supabase.co/functions/v1/live-speaking';
       const ws = new WebSocket(wsUrl);
       wsRef.current = ws;
@@ -212,7 +227,6 @@ export default function LiveSpeakingTest({
 
         let systemPrompt = "";
         
-        // 🚀 CẬP NHẬT PROMPT: KIỂM SOÁT HÀNH VI CHÀO HỎI
         if (mode === 'TUTOR' && tutorData) {
             if (isReconnect && transcriptRef.current) {
                 systemPrompt = `Bạn là ${teacherName}, người Hà Nội. TÍNH CÁCH: Thanh lịch, chuẩn mực. 
@@ -413,31 +427,31 @@ export default function LiveSpeakingTest({
   // =========================================================================================
   if (viewState === 'MINIMIZED') {
       return (
-          <div className="fixed bottom-6 right-6 z-[99999] bg-[#0f172a] border border-slate-700 shadow-2xl rounded-2xl p-4 flex flex-col gap-3 w-72 animate-in slide-in-from-bottom-5 font-sans">
+          <div className="fixed bottom-6 left-6 z-[99998] bg-[#0f172a] border border-slate-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-2xl p-4 flex flex-col gap-3 w-[260px] md:w-72 animate-in slide-in-from-bottom-5 slide-in-from-left-5 font-sans">
              
              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-2 cursor-pointer" onClick={onMaximize}>
-                   <div className={`w-3 h-3 rounded-full ${isMicSending ? 'bg-red-500 animate-pulse' : 'bg-emerald-500'}`}></div>
-                   <span className="text-white font-bold text-[13px]">
+                <div className="flex items-center gap-2 cursor-pointer flex-1 min-w-0" onClick={onMaximize}>
+                   <div className={`w-3 h-3 shrink-0 rounded-full ${isMicSending ? 'bg-red-500 animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]'}`}></div>
+                   <span className="text-white font-bold text-[12px] md:text-[13px] truncate">
                        {isMuted ? 'Đã tắt Mic' : (isMicSending ? 'Đang nghe...' : 'Gia sư đang đợi...')}
                    </span>
                 </div>
-                <button onClick={onMaximize} className="text-slate-400 hover:text-white p-1.5 bg-slate-800 rounded-lg">
-                    Phóng to
+                <button onClick={onMaximize} className="text-slate-400 hover:text-white p-1.5 bg-slate-800 rounded-lg shrink-0 ml-2 border border-slate-600 shadow-sm" title="Phóng to">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
                 </button>
              </div>
              
              <div className="flex gap-2 mt-1">
                  <button 
                     onClick={toggleMute} 
-                    className={`flex-1 font-bold py-2 rounded-xl text-[13px] transition-all shadow-md flex items-center justify-center gap-2 ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white'}`}
+                    className={`flex-1 font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all shadow-md flex items-center justify-center gap-2 ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white border border-slate-600'}`}
                  >
                     {isMuted ? '🔇 Đã Tắt Mic' : '🎙️ Tắt Mic'}
                  </button>
                  
                  <button 
                      onClick={handleUserHangUp} 
-                     className="flex-1 bg-red-600 hover:bg-red-500 text-white font-bold py-2 rounded-xl text-[13px] transition-all shadow-md flex items-center justify-center gap-2"
+                     className="flex-1 bg-red-600/90 hover:bg-red-500 text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all shadow-md flex items-center justify-center gap-2 border border-red-500"
                  >
                     🛑 Dập máy
                  </button>
@@ -454,28 +468,36 @@ export default function LiveSpeakingTest({
   const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
   
+  const handleYellowButtonClick = () => {
+      onMinimize();
+      setTimeout(() => {
+          if (onOpenAI) {
+              onOpenAI(currentMode === 'TUTOR' ? 'tutor' : 'ielts');
+          }
+      }, 300);
+  };
+  
   return (
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center min-h-[100dvh] bg-[#020617]/95 backdrop-blur-md text-slate-200 p-4 w-full font-sans overflow-hidden animate-in fade-in duration-300">
       
-      {/* 🚀 ĐÃ BỎ ĐIỀU KIỆN MODE ĐỂ NÚT CHAT AI LUÔN LUÔN XUẤT HIỆN */}
       {onOpenAI && (
           <button 
-             onClick={() => onOpenAI()}
+             onClick={handleYellowButtonClick}
              className="absolute top-6 right-6 text-amber-400 hover:text-amber-300 transition-all flex items-center gap-2 font-bold bg-amber-950/40 px-3 py-2 md:px-5 md:py-2.5 rounded-xl border border-amber-800/60 shadow-[0_0_15px_rgba(217,119,6,0.15)] z-20 hover:scale-105 active:scale-95"
-             title="Mở khung Chat AI"
+             title={currentMode === 'TUTOR' ? 'Mở lại khung Chat Text' : 'Xem gợi ý kịch bản IELTS'}
           >
-             <span className="text-lg">💡</span> 
+             <span className="text-lg">💬</span> 
              <span className="hidden sm:inline text-[13px] md:text-[14px]">
-                 {currentMode === 'TUTOR' ? 'Mở Chat AI' : 'Kịch bản AI'}
+                 {currentMode === 'TUTOR' ? 'Mở khung chat' : 'Kịch bản AI'}
              </span>
           </button>
       )}
 
-      <div className="bg-[#0f172a] p-8 md:p-12 rounded-[2rem] shadow-2xl border border-slate-700 max-w-2xl w-full text-center relative z-10">
+      <div className="bg-[#0f172a] p-8 md:p-12 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.8)] border border-slate-700 max-w-2xl w-full text-center relative z-10">
         
         <button 
             onClick={handleBackClick} 
-            className="absolute top-6 left-6 text-slate-400 hover:text-white bg-slate-800 px-4 py-2 rounded-xl text-sm font-medium transition-all"
+            className="absolute top-6 left-6 text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-xl text-sm font-medium transition-all shadow-sm border border-slate-600"
         >
           {status !== 'IDLE' ? '👇 Thu nhỏ (Nghe nền)' : '← Thoát'}
         </button>
@@ -492,7 +514,7 @@ export default function LiveSpeakingTest({
         {status === 'IDLE' && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
              
-             <div className="bg-slate-800/50 p-5 rounded-2xl border border-slate-700 mb-8 text-left">
+             <div className="bg-slate-800/50 p-5 rounded-2xl border border-slate-700 mb-8 text-left shadow-inner">
                 <span className="block text-[11px] uppercase tracking-widest text-slate-400 font-bold mb-2">
                     Đang hỗ trợ nội dung:
                 </span>
@@ -506,35 +528,37 @@ export default function LiveSpeakingTest({
                 <div className="flex justify-center gap-4">
                     <button 
                         onClick={() => setExaminer('TONY')} 
-                        className={`relative w-28 py-3 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all ${examiner === 'TONY' ? 'bg-slate-800 border-emerald-500' : 'bg-slate-900 border-transparent opacity-60'}`}
+                        className={`relative w-28 py-3 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all ${examiner === 'TONY' ? 'bg-slate-800 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-slate-900 border-transparent opacity-60 hover:bg-slate-800'}`}
                     >
-                       <div className="text-3xl">👨‍🏫</div>
-                       <span className="text-[13px] font-bold">Thầy Tôn</span>
+                       <div className="text-3xl drop-shadow-md">👨‍🏫</div>
+                       <span className={`text-[13px] font-bold ${examiner === 'TONY' ? 'text-emerald-400' : 'text-slate-400'}`}>Thầy Tôn</span>
+                       {examiner === 'TONY' && <div className="absolute -top-2 -right-2 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white text-[10px] shadow-sm">✓</div>}
                     </button>
                     
                     <button 
                         onClick={() => setExaminer('DIEP')} 
-                        className={`relative w-28 py-3 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all ${examiner === 'DIEP' ? 'bg-slate-800 border-emerald-500' : 'bg-slate-900 border-transparent opacity-60'}`}
+                        className={`relative w-28 py-3 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all ${examiner === 'DIEP' ? 'bg-slate-800 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-slate-900 border-transparent opacity-60 hover:bg-slate-800'}`}
                     >
-                       <div className="text-3xl">👩‍🏫</div>
-                       <span className="text-[13px] font-bold">Cô Diệp</span>
+                       <div className="text-3xl drop-shadow-md">👩‍🏫</div>
+                       <span className={`text-[13px] font-bold ${examiner === 'DIEP' ? 'text-emerald-400' : 'text-slate-400'}`}>Cô Diệp</span>
+                       {examiner === 'DIEP' && <div className="absolute -top-2 -right-2 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white text-[10px] shadow-sm">✓</div>}
                     </button>
                 </div>
              </div>
              
              <button 
                  onClick={() => startCall(false)} 
-                 className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-2xl text-[16px] shadow-lg flex items-center justify-center gap-3 active:scale-95 transition-all"
+                 className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-2xl text-[16px] shadow-[0_10px_20px_rgba(16,185,129,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all border border-emerald-500"
              >
-                 📞 Bắt Đầu Đàm Thoại
+                 <span className="text-xl">📞</span> Bắt Đầu Đàm Thoại
              </button>
           </div>
         )}
 
         {status === 'CONNECTING' && (
-            <div className="py-12 flex flex-col items-center">
-                <div className="w-12 h-12 border-4 border-emerald-500/30 border-t-emerald-500 rounded-full animate-spin mb-6"></div>
-                <div className="text-emerald-400 font-bold animate-pulse">ĐANG THIẾT LẬP KẾT NỐI...</div>
+            <div className="py-12 flex flex-col items-center animate-in zoom-in-95 duration-300">
+                <div className="w-12 h-12 border-4 border-emerald-500/30 border-t-emerald-500 rounded-full animate-spin mb-6 shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
+                <div className="text-emerald-400 font-bold tracking-widest uppercase text-sm animate-pulse">ĐANG THIẾT LẬP KẾT NỐI...</div>
             </div>
         )}
 
@@ -542,13 +566,13 @@ export default function LiveSpeakingTest({
           <div className="flex flex-col items-center animate-in zoom-in-95 duration-500 w-full">
             
             <div className="relative mb-8">
-                <div className={`absolute inset-0 rounded-full transition-all duration-300 opacity-20 ${!isMuted && isMicSending ? 'bg-red-500 scale-[1.3] animate-pulse' : 'bg-emerald-500 scale-100'}`}></div>
+                <div className={`absolute inset-0 rounded-full transition-all duration-300 opacity-20 ${!isMuted && isMicSending ? 'bg-red-500 scale-[1.3] animate-pulse shadow-[0_0_30px_rgba(239,68,68,0.5)]' : 'bg-emerald-500 scale-100 shadow-[0_0_30px_rgba(16,185,129,0.5)]'}`}></div>
                 <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-slate-700 shadow-2xl relative z-10 bg-slate-800 flex items-center justify-center text-6xl">
                     {examiner === 'TONY' ? '👨‍🏫' : '👩‍🏫'}
                 </div>
             </div>
             
-            <p className={`font-bold mb-6 tracking-widest uppercase text-[12px] px-4 py-1.5 rounded-full border ${isMuted ? 'bg-amber-950/50 text-amber-400 border-amber-800' : (isMicSending ? 'bg-red-950/50 text-red-400 border-red-800' : 'bg-emerald-950/50 text-emerald-400 border-emerald-800')}`}>
+            <p className={`font-bold mb-6 tracking-widest uppercase text-[12px] px-5 py-2 rounded-full border shadow-sm transition-colors ${isMuted ? 'bg-amber-950/50 text-amber-400 border-amber-800' : (isMicSending ? 'bg-red-950/50 text-red-400 border-red-800' : 'bg-emerald-950/50 text-emerald-400 border-emerald-800')}`}>
                 {isMuted ? "🔇 ĐÃ TẮT MIC (CHỈ NGHE)" : (isMicSending ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : "🟢 AI ĐANG NGHE/PHẢN HỒI...")}
             </p>
             
@@ -559,13 +583,13 @@ export default function LiveSpeakingTest({
             <div className="flex gap-3 w-full">
                 <button 
                     onClick={toggleMute} 
-                    className={`flex-1 font-bold py-4 rounded-2xl flex items-center justify-center gap-3 transition-all ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white'}`}
+                    className={`flex-1 font-bold py-4 rounded-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-lg border ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white border-amber-500' : 'bg-slate-700 hover:bg-slate-600 text-white border-slate-600'}`}
                 >
                    <span className="text-xl">{isMuted ? '🔇' : '🎙️'}</span> {isMuted ? 'Đã Tắt Mic' : 'Tắt Mic Tạm Thời'}
                 </button>
                 <button 
                     onClick={handleUserHangUp} 
-                    className="flex-1 bg-red-600 hover:bg-red-500 text-white font-bold py-4 rounded-2xl shadow-lg flex items-center justify-center gap-3 active:scale-95 transition-all"
+                    className="flex-1 bg-red-600 hover:bg-red-500 text-white font-bold py-4 rounded-2xl shadow-[0_10px_20px_rgba(220,38,38,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all border border-red-500"
                 >
                     <span className="text-xl">🛑</span> Dập Máy
                 </button>

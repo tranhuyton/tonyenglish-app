@@ -31,12 +31,21 @@ export default function AITutorSidebar({
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  
-  // 🚀 THÊM STATE ĐỂ QUẢN LÝ THU NHỎ
   const [isMinimized, setIsMinimized] = useState(false);
   
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // 🚀 ĐÓN LỆNH QUÉT SẠCH LỊCH SỬ CHAT TỪ CÁC BÀI GIẢNG
+  useEffect(() => {
+    const handleClearChat = () => {
+        setMessages([]);
+    };
+    window.addEventListener('tony-clear-chat', handleClearChat);
+    return () => {
+        window.removeEventListener('tony-clear-chat', handleClearChat);
+    };
+  }, []);
 
   const theme = useMemo(() => {
     if (mode === 'tutor') {
@@ -198,36 +207,39 @@ export default function AITutorSidebar({
            }
        }, 300);
        
-       let welcomeText = "";
-       
-       if (mode === 'ielts') {
-          if (taskType === 'reading') {
-             welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n${topicTitle}\n\nEm muốn hỏi thêm thầy điều gì?`;
-          } else {
-             welcomeText = `Chào em! Thầy đã nhận được yêu cầu phân tích.\n\n`;
-             if (topicTitle) {
-                 welcomeText += `**📝 Đề bài:** "${topicTitle}"\n\n`;
-             }
-             if (topicImage) {
-                 welcomeText += `**(📸 Đã nhận kèm hình ảnh/biểu đồ)**\n\n`;
-             }
-             
-             if (taskType === 'speaking') {
-                 welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng hay viết câu mở bài (Hook) nào?`;
-             } else if (taskType === 'task1' || taskType === 'task2') {
-                 welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
-             } else {
-                 welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
-             }
-          }
-       } else {
-          welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em cần thầy giải đáp gì không?`;
-       }
+       // Chỉ tạo lời chào mới nếu chưa có lịch sử chat
+       if (messages.length === 0) {
+           let welcomeText = "";
+           
+           if (mode === 'ielts') {
+              if (taskType === 'reading') {
+                 welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n${topicTitle}\n\nEm muốn hỏi thêm thầy điều gì?`;
+              } else {
+                 welcomeText = `Chào em! Thầy đã nhận được yêu cầu phân tích.\n\n`;
+                 if (topicTitle) {
+                     welcomeText += `**📝 Đề bài:** "${topicTitle}"\n\n`;
+                 }
+                 if (topicImage) {
+                     welcomeText += `**(📸 Đã nhận kèm hình ảnh/biểu đồ)**\n\n`;
+                 }
+                 
+                 if (taskType === 'speaking') {
+                     welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng hay viết câu mở bài (Hook) nào?`;
+                 } else if (taskType === 'task1' || taskType === 'task2') {
+                     welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
+                 } else {
+                     welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
+                 }
+              }
+           } else {
+              welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em cần thầy giải đáp gì không?`;
+           }
 
-       setMessages([{
-           role: 'ai',
-           text: welcomeText
-       }]);
+           setMessages([{
+               role: 'ai',
+               text: welcomeText
+           }]);
+       }
     }
   }, [isOpen, mode, topicTitle, lectureTitle, topicImage, taskType]);
 
@@ -245,7 +257,6 @@ export default function AITutorSidebar({
       sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
       sessionStorage.setItem('tony_auto_start', 'true');
       
-      // Khi gọi Live thì tự động thu nhỏ thanh Chat thay vì đóng hẳn, để giữ lịch sử
       setIsMinimized(true);
       window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
   };
@@ -340,24 +351,21 @@ export default function AITutorSidebar({
 
   if (!isOpen) return null;
 
-  // 🚀 NẾU ĐANG THU NHỎ -> HIỂN THỊ BUBBLE NỔI GÓC DƯỚI
   if (isMinimized) {
       return (
           <button 
               onClick={() => setIsMinimized(false)}
-              className={`fixed bottom-[120px] right-6 z-[10000] w-14 h-14 rounded-full bg-gradient-to-r ${theme.headerBg} text-white shadow-2xl flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition-all duration-200 animate-in zoom-in group`}
+              className={`fixed bottom-[120px] right-6 z-[10000] w-14 h-14 rounded-full bg-gradient-to-r ${theme.headerBg} text-white shadow-2xl flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition-all duration-200 animate-in zoom-in group border-2 border-white`}
               title="Mở lại khung Chat AI"
           >
               <span className="group-hover:hidden">{theme.icon}</span>
               <span className="hidden group-hover:block text-xl">💬</span>
               
-              {/* Chấm đỏ báo có tin nhắn mới (chỉ để trang trí cho đẹp) */}
-              <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 border-2 border-white rounded-full"></span>
+              <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-red-500 border-2 border-white rounded-full animate-pulse"></span>
           </button>
       );
   }
 
-  // GIAO DIỆN FULL THANH CHAT
   return (
     <>
       {isOpen && !isMinimized && (
@@ -392,7 +400,6 @@ export default function AITutorSidebar({
                 {isExpanded ? "⛶" : "⬜"}
              </button>
              
-             {/* 🚀 NÚT THU NHỎ */}
              <button 
                  onClick={() => setIsMinimized(true)} 
                  className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/20 text-white font-bold pb-2"
@@ -404,15 +411,15 @@ export default function AITutorSidebar({
              <button 
                  onClick={handleCallTutor}
                  className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg text-[12px] font-bold transition-all flex items-center gap-1.5 shadow-md active:scale-95 ml-2 mr-2"
-                 title="Gọi điện"
+                 title="Gọi điện trực tiếp"
              >
                  📞 Gọi Gia Sư
              </button>
              
-             {/* Nút X: Giờ sẽ đóng hẳn, xóa chat */}
              <button 
                  onClick={() => { 
                      if(window.confirm('Đóng cửa sổ này sẽ xóa lịch sử trò chuyện. Bạn có muốn thu nhỏ lại thay vì đóng hẳn không?')) {
+                         setMessages([]); // Xóa lịch sử khi đóng hẳn
                          onClose(); 
                          setIsExpanded(false); 
                      } else {
