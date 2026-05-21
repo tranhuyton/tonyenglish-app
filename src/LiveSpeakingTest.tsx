@@ -207,7 +207,6 @@ export default function LiveSpeakingTest({
       
       nextPlayTimeRef.current = audioCtxOutputRef.current.currentTime;
 
-      // Đã cập nhật kết nối tới máy chủ riêng của hệ thống
       const wsUrl = 'wss://voice.tonyenglish.vn';
       const ws = new WebSocket(wsUrl);
       wsRef.current = ws;
@@ -224,6 +223,9 @@ export default function LiveSpeakingTest({
 
         let systemPrompt = "";
         
+        // Cấu hình kiểm soát khoảng lặng, tối ưu cho phản hồi Realtime qua VPS riêng
+        const promptKienNhan = `[KỶ LUẬT THÉP]: Người dùng đang luyện nói tiếng Anh nên tốc độ sẽ chậm, hay ngập ngừng và thường xuyên dừng lại để suy nghĩ từ vựng. BẠN PHẢI TUYỆT ĐỐI KIÊN NHẪN. Không bao giờ được cướp lời hoặc ngắt lời. Dù có khoảng lặng 2-3 giây, hãy kiên nhẫn đợi đến khi chắc chắn người dùng đã nói xong hoàn toàn ý của họ mới được phản hồi. Tốc độ nói của bạn cũng phải chậm rãi, điềm đạm và từ tốn.`;
+        
         if (mode === 'TUTOR' && tutorData) {
             if (isReconnect && transcriptRef.current) {
                 systemPrompt = `Bạn là ${teacherName}, người Hà Nội. TÍNH CÁCH: Thanh lịch, chuẩn mực. 
@@ -231,14 +233,18 @@ export default function LiveSpeakingTest({
                 BỐI CẢNH BÀI HỌC: ${tutorData.transcript}.
                 
                 [LỆNH KHẨN CẤP TỪ HỆ THỐNG]: Cuộc trò chuyện vừa bị gián đoạn do lỗi mạng. Đây là lịch sử những gì BẠN ĐÃ NÓI nãy giờ: "${transcriptRef.current}".
-                NHIỆM VỤ HIỆN TẠI: Tiếp tục cuộc đàm thoại ngay lập tức. TUYỆT ĐỐI KHÔNG chào hỏi lại, KHÔNG nhắc lại tên bài học, KHÔNG xin lỗi. Hãy đợi học sinh hỏi hoặc tiếp tục ý đang giảng dang dở một cách tự nhiên nhất.`;
+                NHIỆM VỤ HIỆN TẠI: Tiếp tục cuộc đàm thoại ngay lập tức. TUYỆT ĐỐI KHÔNG chào hỏi lại, KHÔNG nhắc lại tên bài học, KHÔNG xin lỗi. Hãy đợi học sinh hỏi hoặc tiếp tục ý đang giảng dang dở một cách tự nhiên nhất.
+                
+                ${promptKienNhan}`;
             } else {
                 systemPrompt = `Bạn là ${teacherName}, người Hà Nội. TÍNH CÁCH: Thanh lịch, chuẩn mực. 
                 NGÔN NGỮ: Văn phong Hà Nội chuẩn. Tiếng Anh chuẩn giọng British English.
                 BỐI CẢNH: ${tutorData.transcript}. 
                 NHIỆM VỤ: ${tutorData.feedback}. 
                 
-                [QUY TẮC GIAO TIẾP NGHIÊM NGẶT]: Bạn CHỈ ĐƯỢC phép chào hỏi và giới thiệu tên bài học 1 LẦN DUY NHẤT ở câu nói đầu tiên. Từ các lượt hội thoại sau đó, TUYỆT ĐỐI KHÔNG lặp lại lời chào hay giới thiệu tên bài học nữa. Hãy đi thẳng vào việc giải đáp thắc mắc của học sinh. Trả lời ngắn gọn, tương tác qua lại tự nhiên như người thật.`;
+                [QUY TẮC GIAO TIẾP NGHIÊM NGẶT]: Bạn CHỈ ĐƯỢC phép chào hỏi và giới thiệu tên bài học 1 LẦN DUY NHẤT ở câu nói đầu tiên. Từ các lượt hội thoại sau đó, TUYỆT ĐỐI KHÔNG lặp lại lời chào hay giới thiệu tên bài học nữa. Hãy đi thẳng vào việc giải đáp thắc mắc của học sinh. Trả lời ngắn gọn, tương tác qua lại tự nhiên như người thật.
+                
+                ${promptKienNhan}`;
             }
         } else {
             if (isReconnect && transcriptRef.current) {
@@ -246,12 +252,16 @@ export default function LiveSpeakingTest({
                 BỐI CẢNH: Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề: "${currentTopic}".
                 
                 [LỆNH KHẨN CẤP]: Mạng vừa rớt. Đây là lịch sử bạn đã nói: "${transcriptRef.current}". 
-                TUYỆT ĐỐI KHÔNG chào lại, KHÔNG giới thiệu lại. Hãy tiếp tục phần thi ngay lập tức.`;
+                TUYỆT ĐỐI KHÔNG chào lại, KHÔNG giới thiệu lại. Hãy tiếp tục phần thi ngay lập tức.
+                
+                ${promptKienNhan}`;
             } else {
                 systemPrompt = `Bạn là giám khảo IELTS tên ${teacherName}, người Hà Nội. Giao tiếp văn phong chuẩn miền Bắc. Phát âm tiếng Anh giọng British English.
                 BỐI CẢNH: Hãy đóng vai giám khảo và yêu cầu tôi nói về chủ đề: "${currentTopic}".
                 
-                [QUY TẮC]: Chỉ chào hỏi 1 lần duy nhất ở câu đầu tiên. Sau đó tương tác tự nhiên, hỏi và đợi tôi trả lời.`;
+                [QUY TẮC]: Chỉ chào hỏi 1 lần duy nhất ở câu đầu tiên. Sau đó tương tác tự nhiên, hỏi và đợi tôi trả lời.
+                
+                ${promptKienNhan}`;
             }
         }
 
@@ -465,7 +475,6 @@ export default function LiveSpeakingTest({
   const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
   
-  // 🚀 ĐÃ FIX: KHÔNG THU NHỎ CUỘC GỌI, BẬT OVERLAY CHAT LÊN TRỰC TIẾP
   const handleYellowButtonClick = () => {
       if (onOpenAI) {
           onOpenAI(currentMode === 'TUTOR' ? 'tutor' : 'ielts');
