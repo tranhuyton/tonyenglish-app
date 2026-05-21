@@ -11,7 +11,6 @@ const FOLDER_IMAGES = [
   'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800'
 ];
 
-// 1. Cập nhật số lượng item mỗi trang thành 16 (4x4)
 const ITEMS_PER_PAGE = 16;
 const HISTORY_PER_PAGE = 10;
 
@@ -31,13 +30,14 @@ const checkTestHasAudio = (test: any) => {
       for (const s of sections) {
           if (s?.audioUrl) return true;
           const questions = Array.isArray(s?.questions) ? s.questions : [];
-          for (const q of questions) { if (q?.audioUrl) return true; }
+          for (const q of questions) { 
+              if (q?.audioUrl) return true; 
+          }
       }
   }
   return false;
 };
 
-// 2. Hàm lấy cấu hình icon và màu sắc cho từng kỹ năng
 const getTestSkillConfig = (test: any) => {
   const type = String(test.test_type || '').toLowerCase();
   const title = String(test.title || '').toLowerCase();
@@ -132,7 +132,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) setIsDropdownOpen(false);
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+          setIsDropdownOpen(false);
+      }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -159,12 +161,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           let match = key.match(/^(?:ielts_ans_|ielts_paper_ans_|std_ans_|case_study_ans_)(.+)$/);
           if (match) {
               const data = localStorage.getItem(key);
-              if (data && Object.keys(JSON.parse(data)).length > 0) inProg.add(match[1]);
+              if (data && Object.keys(JSON.parse(data)).length > 0) {
+                  inProg.add(match[1]);
+              }
           } else {
               match = key.match(/^(?:ielts_endtime_|standard_endtime_|case_study_endtime_|ielts_paper_endtime_)(.+)$/);
               if (match) {
                  const endTime = parseInt(localStorage.getItem(key) || '0');
-                 if (endTime > Date.now()) inProg.add(match[1]);
+                 if (endTime > Date.now()) {
+                     inProg.add(match[1]);
+                 }
               }
           }
         }
@@ -178,10 +184,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     setIsLoading(true);
     const { data: { user } } = await supabase.auth.getUser();
     setCurrentUser(user);
+    
     if (user) {
       const { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).single();
       setUserProfile(profile);
-      if (profile && !newFullName) setNewFullName(profile.full_name || '');
+      if (profile && !newFullName) {
+          setNewFullName(profile.full_name || '');
+      }
       const { data: lp } = await supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id);
       setLectureProgressData(lp || []);
     }
@@ -190,30 +199,49 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     const parsedTests = (allT || []).map((t: any) => {
         let content = t.content_json;
         if (typeof content === 'string') {
-            try { content = JSON.parse(content); } catch(e) { content = {}; }
+            try { 
+                content = JSON.parse(content); 
+            } catch(e) { 
+                content = {}; 
+            }
         }
-        return { ...t, content_json: content, _hasAudio: checkTestHasAudio({ content_json: content }) };
+        return { 
+            ...t, 
+            content_json: content, 
+            _hasAudio: checkTestHasAudio({ content_json: content }) 
+        };
     });
     setAllTests(parsedTests);
 
     const { data: allL } = await supabase.from('lectures').select('id, course_id').eq('is_published', true);
     setAllLectures(allL || []);
+    
     const { data: allF } = await supabase.from('folders').select('*');
     setAllFolders(allF || []);
 
     if (user) {
       const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', user.id);
       const courseIds = enrolls?.map(e => e.course_id) || [];
+      
       if (courseIds.length > 0) {
         const { data: cData } = await supabase.from('courses').select('*').in('id', courseIds);
         setCourses((cData || []).sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999)));
       }
+      
       const { data: hData } = await supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false });
       if (hData) {
         setHistoryData(hData.map((item: any) => ({
-          id: item.id, testId: item.test_id, name: item.test_title || 'Bài thi không tên', courseId: item.course_id,
-          scoreObj: { value: item.score || 0, display: `${item.score || 0} / ${item.total_score || 0}` },
-          timeSpent: Math.round((item.time_spent || 0) / 60), date: item.created_at, details: item.details || {}
+          id: item.id, 
+          testId: item.test_id, 
+          name: item.test_title || 'Bài thi không tên', 
+          courseId: item.course_id,
+          scoreObj: { 
+              value: item.score || 0, 
+              display: `${item.score || 0} / ${item.total_score || 0}` 
+          },
+          timeSpent: Math.round((item.time_spent || 0) / 60), 
+          date: item.created_at, 
+          details: item.details || {}
         })));
       }
     }
@@ -223,28 +251,55 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const handleUpdateProfile = async () => {
     setIsUpdatingProfile(true);
     try {
-      if (newFullName && currentUser?.id) await supabase.from('profiles').update({ full_name: newFullName }).eq('id', currentUser.id);
+      if (newFullName && currentUser?.id) {
+          await supabase.from('profiles').update({ full_name: newFullName }).eq('id', currentUser.id);
+      }
       if (newPassword && newPassword.length >= 6) {
         const { error } = await supabase.auth.updateUser({ password: newPassword });
-        if (error) throw error; setNewPassword('');
+        if (error) throw error; 
+        setNewPassword('');
       } else if (newPassword && newPassword.length < 6) {
-        alert("Mật khẩu mới phải có ít nhất 6 ký tự!"); setIsUpdatingProfile(false); return;
+        alert("Mật khẩu mới phải có ít nhất 6 ký tự!"); 
+        setIsUpdatingProfile(false); 
+        return;
       }
       alert("Cập nhật tài khoản thành công!");
-    } catch (error: any) { alert("Lỗi cập nhật: " + error.message); } 
-    finally { setIsUpdatingProfile(false); }
+    } catch (error: any) { 
+        alert("Lỗi cập nhật: " + error.message); 
+    } finally { 
+        setIsUpdatingProfile(false); 
+    }
   };
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    localStorage.clear(); sessionStorage.clear(); onNavigate?.('home'); setTimeout(() => window.location.reload(), 100);
+    localStorage.clear(); 
+    sessionStorage.clear(); 
+    
+    // 🚀 DỌN RÁC: XÓA CHAT KHI ĐĂNG XUẤT
+    window.dispatchEvent(new CustomEvent('tony-clear-chat'));
+    window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
+    
+    onNavigate?.('home'); 
+    setTimeout(() => window.location.reload(), 100);
+  };
+
+  // 🚀 DỌN RÁC: XÓA LỊCH SỬ CHAT VÀ ĐÓNG BONG BÓNG KHI NHẢY KHÓA HỌC / DASHBOARD
+  const resetWorkspaceAndChat = () => {
+      window.dispatchEvent(new CustomEvent('tony-clear-chat'));
+      window.dispatchEvent(new CustomEvent('tony-close-sidebar'));
   };
 
   const handleOpenCourse = (course: any) => {
+    resetWorkspaceAndChat();
+    
     setSelectedCourseId(String(course.id)); 
     setCurrentFolderId(null); 
-    setSearchTest(''); setFolderPage(1); setTestPage(1);
+    setSearchTest(''); 
+    setFolderPage(1); 
+    setTestPage(1);
     setActiveView('course');
+    
     sessionStorage.setItem('portal_selected_course_id', String(course.id));
     sessionStorage.setItem('portal_active_view', 'course');
     sessionStorage.removeItem('portal_current_folder_id');
@@ -259,12 +314,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const handleStartTestClick = (test: any) => {
     if (!onStartTest) return;
+    
     const category = test.content_json?.basicInfo?.category;
     if (category === 'game') {
       const theme = test.content_json?.basicInfo?.gameTheme || 'siege-game';
       onStartTest(theme, test);
       return; 
     }
+    
     const type = String(test.test_type || '').toLowerCase();
     if (type.includes('standard')) onStartTest('standard', test);
     else if (type.includes('case-study') || type.includes('business')) onStartTest('case-study', test);
@@ -273,26 +330,42 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     else if (type.includes('ielts')) { 
       setTestToStart(test); 
       setShowModeSelection(true); 
+    } else {
+        onStartTest('standard', test);
     }
-    else onStartTest('standard', test);
   };
 
   const handleConfirmMode = (mode: 'computer' | 'paper') => { 
     setShowModeSelection(false); 
-    if (onStartTest && testToStart) onStartTest(mode, testToStart); 
+    if (onStartTest && testToStart) {
+        onStartTest(mode, testToStart); 
+    }
   };
 
   const handleRetakeFromHistory = (historyItem: any) => {
     const testId = historyItem.testId || historyItem.details?.test_id;
     let foundTest = allTests.find(t => String(t.id) === String(testId));
-    if (!foundTest) foundTest = allTests.find(t => t.title.trim() === historyItem.name.trim());
-    if (foundTest) { setViewingHistoryDetail(null); handleStartTestClick(foundTest); } 
-    else alert("Đề thi này không còn tồn tại hoặc đã bị ẩn khỏi hệ thống.");
+    
+    if (!foundTest) {
+        foundTest = allTests.find(t => t.title.trim() === historyItem.name.trim());
+    }
+    
+    if (foundTest) { 
+        setViewingHistoryDetail(null); 
+        handleStartTestClick(foundTest); 
+    } else {
+        alert("Đề thi này không còn tồn tại hoặc đã bị ẩn khỏi hệ thống.");
+    }
   };
 
   const toggleFullScreen = () => { 
-    if (!document.fullscreenElement) { document.documentElement.requestFullscreen().catch(); } 
-    else { if (document.exitFullscreen) document.exitFullscreen(); } 
+    if (!document.fullscreenElement) { 
+        document.documentElement.requestFullscreen().catch(); 
+    } else { 
+        if (document.exitFullscreen) {
+            document.exitFullscreen(); 
+        }
+    } 
   };
 
   const nameParts = (userProfile?.full_name || currentUser?.email?.split('@')[0] || 'User').trim().split(/\s+/);
@@ -353,11 +426,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       const ieltsHistory = historyData.filter(h => h.details?.bandScore).slice(0, 4);
       const ielts = ieltsHistory.length > 0 ? (ieltsHistory.reduce((acc, curr) => acc + parseFloat(curr.details?.bandScore), 0) / ieltsHistory.length).toFixed(1) : '0.0';
       return {
-          analyticsTotalTestsDone: total, analyticsTotalTimeHours: hours, avgScore: score, avgIelts: ielts,
-          sparklineScoreArr: processedHistory.map(h => ({v: h.scoreObj.value})).reverse(),
-          sparklineCompletedArr: processedHistory.map((_, i) => ({v: i + 1})),
-          sparklineAttemptsArr: processedHistory.map((_, i) => ({v: i + 1})),
-          sparklineTimeArr: processedHistory.map(h => ({v: h.timeSpent})).reverse()
+         analyticsTotalTestsDone: total, 
+         analyticsTotalTimeHours: hours, 
+         avgScore: score, 
+         avgIelts: ielts,
+         sparklineScoreArr: processedHistory.map(h => ({v: h.scoreObj.value})).reverse(),
+         sparklineCompletedArr: processedHistory.map((_, i) => ({v: i + 1})),
+         sparklineAttemptsArr: processedHistory.map((_, i) => ({v: i + 1})),
+         sparklineTimeArr: processedHistory.map(h => ({v: h.timeSpent})).reverse()
       };
   }, [processedHistory, historyData]);
 
@@ -372,6 +448,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const hour = new Date().getHours();
   let bannerConfig = { greeting: '', gradient: '', icon: '', subtitle: '' };
+  
   if (hour >= 5 && hour < 12) {
       bannerConfig = { greeting: 'Chào buổi sáng', gradient: 'from-[#0f172a] to-[#334155]', icon: '🌅', subtitle: 'Bắt đầu ngày mới tràn đầy năng lượng! Một chút nỗ lực hôm nay sẽ mang lại kết quả lớn ngày mai.' };
   } else if (hour >= 12 && hour < 18) {
@@ -383,7 +460,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const breadcrumbs = useMemo(() => {
       const b: any[] = [];
       let curr = courseFolders.find(f => f.id === currentFolderId);
-      while (curr) { b.unshift(curr); curr = courseFolders.find(f => f.id === curr.parent_id); }
+      while (curr) { 
+          b.unshift(curr); 
+          curr = courseFolders.find(f => f.id === curr.parent_id); 
+      }
       return b;
   }, [currentFolderId, courseFolders]);
 
@@ -402,25 +482,60 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     <div className="min-h-[100dvh] bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full">
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
         <div className="max-w-[1200px] w-full mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate?.('home')}>
+          
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => {
+              resetWorkspaceAndChat(); // 🚀 XÓA CHAT KHI BẤM NÚT HOME
+              onNavigate?.('home');
+          }}>
             <div className="flex flex-col items-end">
               <h1 className="font-black text-2xl text-[#0a5482] leading-none">TONY<span className="text-slate-800">ENGLISH</span></h1>
             </div>
-            <div className="w-10 h-10 flex items-center justify-center overflow-hidden"><img src="/logo-shield.png" alt="Logo" className="w-auto h-full object-contain" /></div>
+            <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
+                <img src="/logo-shield.png" alt="Logo" className="w-auto h-full object-contain" />
+            </div>
           </div>
 
           <div className="hidden md:flex items-center gap-2 bg-slate-50 rounded-xl p-1 border border-slate-200">
-            <button onClick={() => { 
-                setActiveTab('library'); setActiveView('dashboard'); setSelectedCourseId(null); setCurrentFolderId(null);
-            }} className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'library' ? 'bg-white shadow-sm text-[#1e88e5] border border-slate-200' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}>📚 Không gian học tập</button>
-            <button onClick={() => setActiveTab('analytics')} className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'analytics' ? 'bg-white shadow-sm text-[#1e88e5] border border-slate-200' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}>📊 Báo cáo</button>
-            <button onClick={() => setActiveTab('games')} className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'games' ? 'bg-white shadow-sm text-amber-600 border border-slate-200' : 'text-slate-500 hover:text-amber-600 hover:bg-slate-200/50'}`}>🎮 Mini Games</button>
+            <button 
+                onClick={() => { 
+                    resetWorkspaceAndChat(); // 🚀 XÓA CHAT KHI BẤM NÚT DASHBOARD
+                    setActiveTab('library'); 
+                    setActiveView('dashboard'); 
+                    setSelectedCourseId(null); 
+                    setCurrentFolderId(null);
+                }} 
+                className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'library' ? 'bg-white shadow-sm text-[#1e88e5] border border-slate-200' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
+            >
+                📚 Không gian học tập
+            </button>
+            <button 
+                onClick={() => {
+                    resetWorkspaceAndChat(); // 🚀 XÓA CHAT KHI ĐI XEM BÁO CÁO
+                    setActiveTab('analytics');
+                }} 
+                className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'analytics' ? 'bg-white shadow-sm text-[#1e88e5] border border-slate-200' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
+            >
+                📊 Báo cáo
+            </button>
+            <button 
+                onClick={() => {
+                    resetWorkspaceAndChat(); // 🚀 XÓA CHAT KHI ĐI CHƠI GAME
+                    setActiveTab('games');
+                }} 
+                className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'games' ? 'bg-white shadow-sm text-amber-600 border border-slate-200' : 'text-slate-500 hover:text-amber-600 hover:bg-slate-200/50'}`}
+            >
+                🎮 Mini Games
+            </button>
           </div>
 
           <div className="flex items-center gap-3 md:gap-5">
             <div className="hidden lg:flex items-center gap-3">
-               <div className="flex items-center gap-1.5 bg-white text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 font-bold text-[12px] shadow-sm uppercase tracking-wide">🔥 {globalTotalTestsDone} Bài</div>
-               <div className="flex items-center gap-1.5 bg-white text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 font-bold text-[12px] shadow-sm uppercase tracking-wide">⏱️ {globalTotalTimeHours}h</div>
+               <div className="flex items-center gap-1.5 bg-white text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 font-bold text-[12px] shadow-sm uppercase tracking-wide">
+                   🔥 {globalTotalTestsDone} Bài
+               </div>
+               <div className="flex items-center gap-1.5 bg-white text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 font-bold text-[12px] shadow-sm uppercase tracking-wide">
+                   ⏱️ {globalTotalTimeHours}h
+               </div>
                <div className="h-6 w-px bg-slate-200 mx-1"></div>
                <button onClick={toggleFullScreen} className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#1e88e5] transition-colors">
                  {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
@@ -431,20 +546,60 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="flex items-center gap-3 bg-white pr-2 pl-4 py-1.5 rounded-full border border-slate-200 shadow-sm hover:border-[#1e88e5] transition-colors focus:outline-none">
                  <div className="text-right hidden sm:block">
                    <div className="font-black text-[13px] text-slate-800">{displayUserName}</div>
-                   <div className="text-[10px] font-medium text-slate-500 uppercase tracking-wider">{userProfile?.role === 'admin' ? 'Quản trị' : 'Học viên'}</div>
+                   <div className="text-[10px] font-medium text-slate-500 uppercase tracking-wider">
+                       {userProfile?.role === 'admin' ? 'Quản trị' : 'Học viên'}
+                   </div>
                  </div>
-                 <div className="w-9 h-9 rounded-full bg-[#1e88e5] text-white flex items-center justify-center font-black shadow-inner text-[13px]">{displayUserInitial}</div>
+                 <div className="w-9 h-9 rounded-full bg-[#1e88e5] text-white flex items-center justify-center font-black shadow-inner text-[13px]">
+                     {displayUserInitial}
+                 </div>
                </button>
 
                {isDropdownOpen && (
                   <div className="absolute right-0 mt-3 w-56 bg-white rounded-xl shadow-xl border border-slate-200 py-2 z-50 animate-in fade-in zoom-in-95 duration-200">
-                     <button onClick={() => { setActiveTab('library'); setActiveView('dashboard'); setSelectedCourseId(null); setCurrentFolderId(null); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">📚 Học tập</button>
-                     <button onClick={() => { setActiveTab('analytics'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">📊 Báo cáo</button>
-                     <button onClick={() => { setActiveTab('games'); setIsDropdownOpen(false); }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-amber-600 hover:bg-amber-50">🎮 Mini Games</button>
-                     <button onClick={() => { setActiveTab('profile'); setIsDropdownOpen(false); }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5] transition-colors">👤 Cấu hình tài khoản</button>
-                     {userProfile?.role === 'admin' && (<button onClick={() => onNavigate?.('admin')} className="w-full text-left px-5 py-3 text-sm font-black text-[#8b5cf6] hover:bg-purple-50 transition-colors">⚙️ Trang Quản Trị</button>)}
+                     <button onClick={() => { 
+                         resetWorkspaceAndChat(); // 🚀 XÓA CHAT TỪ MENU MOBILE
+                         setActiveTab('library'); 
+                         setActiveView('dashboard'); 
+                         setSelectedCourseId(null); 
+                         setCurrentFolderId(null); 
+                         setIsDropdownOpen(false); 
+                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">
+                         📚 Học tập
+                     </button>
+                     <button onClick={() => { 
+                         resetWorkspaceAndChat(); 
+                         setActiveTab('analytics'); 
+                         setIsDropdownOpen(false); 
+                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">
+                         📊 Báo cáo
+                     </button>
+                     <button onClick={() => { 
+                         resetWorkspaceAndChat(); 
+                         setActiveTab('games'); 
+                         setIsDropdownOpen(false); 
+                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-amber-600 hover:bg-amber-50">
+                         🎮 Mini Games
+                     </button>
+                     <button onClick={() => { 
+                         resetWorkspaceAndChat(); 
+                         setActiveTab('profile'); 
+                         setIsDropdownOpen(false); 
+                     }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5] transition-colors">
+                         👤 Cấu hình tài khoản
+                     </button>
+                     {userProfile?.role === 'admin' && (
+                         <button onClick={() => {
+                             resetWorkspaceAndChat();
+                             if(onNavigate) onNavigate('admin');
+                         }} className="w-full text-left px-5 py-3 text-sm font-black text-[#8b5cf6] hover:bg-purple-50 transition-colors">
+                             ⚙️ Trang Quản Trị
+                         </button>
+                     )}
                      <div className="h-px bg-slate-100 my-1"></div>
-                     <button onClick={handleLogout} className="w-full text-left px-5 py-3 text-sm font-bold text-red-600 hover:bg-red-50 transition-colors">🚪 Đăng xuất</button>
+                     <button onClick={handleLogout} className="w-full text-left px-5 py-3 text-sm font-bold text-red-600 hover:bg-red-50 transition-colors">
+                         🚪 Đăng xuất
+                     </button>
                   </div>
                )}
             </div>
@@ -461,8 +616,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               
               <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
                 <div className="text-white flex-1 text-center md:text-left">
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-2 md:mb-3 drop-shadow-sm">{bannerConfig.greeting}, {displayUserName}! {bannerConfig.icon}</h2>
-                  <p className="text-white/80 text-[14px] md:text-[16px] lg:text-lg font-medium leading-relaxed max-w-xl">{bannerConfig.subtitle}</p>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-2 md:mb-3 drop-shadow-sm">
+                      {bannerConfig.greeting}, {displayUserName}! {bannerConfig.icon}
+                  </h2>
+                  <p className="text-white/80 text-[14px] md:text-[16px] lg:text-lg font-medium leading-relaxed max-w-xl">
+                      {bannerConfig.subtitle}
+                  </p>
                 </div>
 
                 {inProgressTest ? (
@@ -472,29 +631,41 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                          <span className="text-[11px] font-black uppercase tracking-widest text-amber-300">Đang làm dở</span>
                       </div>
                       <h3 className="font-bold text-base md:text-lg mb-4 line-clamp-2 leading-tight">{inProgressTest.title}</h3>
-                      <button className="w-full bg-white text-slate-800 hover:bg-slate-100 font-black py-2.5 rounded-lg text-[13px] transition-colors uppercase tracking-wide">Tiếp tục ngay</button>
+                      <button className="w-full bg-white text-slate-800 hover:bg-slate-100 font-black py-2.5 rounded-lg text-[13px] transition-colors uppercase tracking-wide">
+                          Tiếp tục ngay
+                      </button>
                    </div>
                 ) : courses.length > 0 && (
-                  <div className="bg-black/20 border border-white/10 p-5 md:p-6 rounded-xl w-full md:w-80 shadow-sm text-white hover:bg-black/30 transition-colors cursor-pointer" onClick={() => onOpenLecture && onOpenLecture(courses[0].id)}>
+                  <div className="bg-black/20 border border-white/10 p-5 md:p-6 rounded-xl w-full md:w-80 shadow-sm text-white hover:bg-black/30 transition-colors cursor-pointer" onClick={() => {
+                      resetWorkspaceAndChat(); // 🚀 XÓA CHAT KHI BẤM VÀO HỌC NHANH TỪ BANNER
+                      if(onOpenLecture) onOpenLecture(courses[0].id);
+                  }}>
                     <div className="flex items-center gap-2 mb-3">
                        <span className="text-[11px] font-black uppercase tracking-widest text-white/70">Gợi ý học tập</span>
                     </div>
                     <h3 className="font-bold text-base md:text-lg mb-4 line-clamp-2 leading-tight">Khóa học {courses[0].title}</h3>
-                    <button className="w-full bg-white text-slate-800 hover:bg-slate-100 font-black py-2.5 rounded-lg text-[13px] transition-colors uppercase tracking-wide">Vào học ngay</button>
+                    <button className="w-full bg-white text-slate-800 hover:bg-slate-100 font-black py-2.5 rounded-lg text-[13px] transition-colors uppercase tracking-wide">
+                        Vào học ngay
+                    </button>
                   </div>
                 )}
               </div>
             </div>
 
             <h2 className="font-black text-2xl text-slate-800 mb-6 px-2">Khóa học của tôi</h2>
+            
             {isLoading ? (
               <div className="flex flex-col gap-6">
-                  {[1,2].map(i => (
+                 {[1,2].map(i => (
                    <div key={i} className="bg-white rounded-xl h-[180px] w-full border border-slate-200 flex p-6 animate-pulse">
                       <div className="w-[300px] h-full bg-slate-100 rounded-lg"></div>
-                      <div className="flex-1 px-8 py-2 flex flex-col justify-between"><div className="h-6 w-1/2 bg-slate-100 rounded-md"></div><div className="h-4 w-1/3 bg-slate-100 rounded-md mt-4"></div><div className="mt-auto h-2 w-full bg-slate-100 rounded-full"></div></div>
+                      <div className="flex-1 px-8 py-2 flex flex-col justify-between">
+                          <div className="h-6 w-1/2 bg-slate-100 rounded-md"></div>
+                          <div className="h-4 w-1/3 bg-slate-100 rounded-md mt-4"></div>
+                          <div className="mt-auto h-2 w-full bg-slate-100 rounded-full"></div>
+                      </div>
                    </div>
-                  ))}
+                 ))}
               </div>
             ) : courses.length === 0 ? (
               <div className="bg-white border border-slate-200 rounded-xl py-24 text-center shadow-sm mx-2">
@@ -519,7 +690,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <div className="w-full md:w-[320px] h-[180px] shrink-0 bg-slate-50 p-4 border-r border-slate-100">
                          <div className="w-full h-full rounded-lg overflow-hidden relative border border-slate-200 shadow-sm bg-black">
                            <img src={cover.image} loading="lazy" alt={course.title} className="w-full h-full object-cover group-hover:opacity-85 transition-opacity duration-300" />
-                           <div className={`absolute top-2 left-2 bg-white px-3 py-1.5 rounded text-[10px] font-black uppercase tracking-widest ${cover.color} shadow-sm border border-slate-100`}>{cover.badge}</div>
+                           <div className={`absolute top-2 left-2 bg-white px-3 py-1.5 rounded text-[10px] font-black uppercase tracking-widest ${cover.color} shadow-sm border border-slate-100`}>
+                               {cover.badge}
+                           </div>
                          </div>
                       </div>
                       <div className="flex-1 p-6 lg:p-8 flex flex-col justify-center border-r border-slate-100">
@@ -529,13 +702,36 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           <span className="flex items-center gap-1.5"><span className="text-blue-500 text-lg">📝</span> {testCount} Đề & Bài tập</span>
                         </div>
                         <div className="w-full mt-auto flex gap-6">
-                          <div className="flex-1"><div className="flex justify-between mb-2"><span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ bài giảng</span><span className="text-[12px] font-black text-emerald-600">{lecProgress}%</span></div><div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50"><div className="h-full bg-emerald-500 rounded-full" style={{ width: `${lecProgress}%` }}></div></div></div>
-                          <div className="flex-1"><div className="flex justify-between mb-2"><span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ làm bài</span><span className="text-[12px] font-black text-blue-600">{testProgress}%</span></div><div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50"><div className="h-full bg-blue-500 rounded-full" style={{ width: `${testProgress}%` }}></div></div></div>
+                          <div className="flex-1">
+                              <div className="flex justify-between mb-2">
+                                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ bài giảng</span>
+                                  <span className="text-[12px] font-black text-emerald-600">{lecProgress}%</span>
+                              </div>
+                              <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50">
+                                  <div className="h-full bg-emerald-500 rounded-full" style={{ width: `${lecProgress}%` }}></div>
+                              </div>
+                          </div>
+                          <div className="flex-1">
+                              <div className="flex justify-between mb-2">
+                                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Tiến độ làm bài</span>
+                                  <span className="text-[12px] font-black text-blue-600">{testProgress}%</span>
+                              </div>
+                              <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden border border-slate-200/50">
+                                  <div className="h-full bg-blue-500 rounded-full" style={{ width: `${testProgress}%` }}></div>
+                              </div>
+                          </div>
                         </div>
                       </div>
                       <div className="w-full md:w-[260px] p-6 flex flex-col justify-center gap-3 bg-slate-50/50 shrink-0">
-                         <button onClick={() => onOpenLecture && onOpenLecture(course.id)} className="w-full bg-white border border-emerald-200 hover:border-emerald-500 hover:bg-emerald-50 text-emerald-600 font-bold text-[12px] py-3 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm uppercase tracking-wide">📖 Bài giảng</button>
-                         <button onClick={() => handleOpenCourse(course)} className="w-full bg-[#1e88e5] hover:bg-[#1565c0] text-white font-bold text-[12px] py-3 rounded-lg transition-colors shadow-sm flex items-center justify-center gap-2 uppercase tracking-wide">📝 Đề & Bài tập</button>
+                         <button onClick={() => {
+                             resetWorkspaceAndChat(); // 🚀 XÓA CHAT KHI BẤM VÀO BÀI GIẢNG KHÓA MỚI
+                             if(onOpenLecture) onOpenLecture(course.id);
+                         }} className="w-full bg-white border border-emerald-200 hover:border-emerald-500 hover:bg-emerald-50 text-emerald-600 font-bold text-[12px] py-3 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm uppercase tracking-wide">
+                             📖 Bài giảng
+                         </button>
+                         <button onClick={() => handleOpenCourse(course)} className="w-full bg-[#1e88e5] hover:bg-[#1565c0] text-white font-bold text-[12px] py-3 rounded-lg transition-colors shadow-sm flex items-center justify-center gap-2 uppercase tracking-wide">
+                             📝 Đề & Bài tập
+                         </button>
                       </div>
                     </div>
                   )
@@ -547,22 +743,30 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
         {activeView === 'course' && selectedCourse && (
           <div className="animate-in fade-in slide-in-from-right-4 duration-300">
-            {/* 3. Đã thêm khối tiêu đề bọc Breadcrumbs và nút Bài giảng nhanh */}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm mx-2 md:mx-0">
                 <div className="flex flex-wrap items-center gap-2 text-[13px] md:text-[14px] font-bold text-slate-500">
-                    <button onClick={() => { setActiveView('dashboard'); setSelectedCourseId(null); }} className="hover:text-[#1e88e5] transition-colors">Khóa học</button>
+                    <button onClick={() => { setActiveView('dashboard'); setSelectedCourseId(null); }} className="hover:text-[#1e88e5] transition-colors">
+                        Khóa học
+                    </button>
                     <span className="text-slate-300">/</span>
-                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); }} className={`hover:text-[#1e88e5] transition-colors ${!currentFolderId ? 'text-[#1e88e5]' : ''}`}>{selectedCourse.title}</button>
+                    <button onClick={() => { setCurrentFolderId(null); setFolderPage(1); setTestPage(1); }} className={`hover:text-[#1e88e5] transition-colors ${!currentFolderId ? 'text-[#1e88e5]' : ''}`}>
+                        {selectedCourse.title}
+                    </button>
                     {breadcrumbs.map((b, i) => (
                       <React.Fragment key={b.id}>
                         <span className="text-slate-300">/</span>
-                        <button onClick={() => handleFolderClick(b.id)} className={`hover:text-[#1e88e5] transition-colors ${i === breadcrumbs.length - 1 ? 'text-[#1e88e5]' : ''}`}>{b.title}</button>
+                        <button onClick={() => handleFolderClick(b.id)} className={`hover:text-[#1e88e5] transition-colors ${i === breadcrumbs.length - 1 ? 'text-[#1e88e5]' : ''}`}>
+                            {b.title}
+                        </button>
                       </React.Fragment>
                     ))}
                 </div>
                 
                 <button 
-                  onClick={() => onOpenLecture && selectedCourse && onOpenLecture(selectedCourse.id)} 
+                  onClick={() => {
+                      resetWorkspaceAndChat(); // 🚀 XÓA CHAT TRƯỚC KHI MỞ BÀI GIẢNG TỪ BÊN TRONG DASHBOARD
+                      if(onOpenLecture && selectedCourse) onOpenLecture(selectedCourse.id);
+                  }} 
                   className="bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-emerald-500 hover:text-white font-bold text-[12px] px-5 py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm uppercase tracking-wide w-full sm:w-auto shrink-0"
                 >
                   📖 Mở Bài Giảng
@@ -591,8 +795,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           </div>
                           <div className="flex-1 bg-white p-4 md:p-5 flex flex-col justify-center relative">
                             <div className="flex justify-between items-center text-slate-500">
-                              <p className="text-[11px] md:text-[12px] font-bold bg-slate-50 px-3 py-1 rounded-md border border-slate-200 uppercase tracking-wide">{childCount > 0 ? `${childCount} mục con` : `${testCount} bài`}</p>
-                              <span className="text-[#1e88e5] font-black bg-blue-50 w-7 h-7 rounded flex items-center justify-center group-hover:bg-[#1e88e5] group-hover:text-white transition-colors">→</span>
+                              <p className="text-[11px] md:text-[12px] font-bold bg-slate-50 px-3 py-1 rounded-md border border-slate-200 uppercase tracking-wide">
+                                  {childCount > 0 ? `${childCount} mục con` : `${testCount} bài`}
+                              </p>
+                              <span className="text-[#1e88e5] font-black bg-blue-50 w-7 h-7 rounded flex items-center justify-center group-hover:bg-[#1e88e5] group-hover:text-white transition-colors">
+                                  →
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -617,8 +825,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           <option value="exercise">Chỉ xem Bài tập</option>
                        </select>
                        <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="w-full sm:w-auto bg-white border border-slate-200 shadow-sm rounded-lg px-4 py-2.5 font-bold text-[12px] md:text-[13px] text-slate-600 outline-none cursor-pointer focus:border-[#1e88e5]">
-                         <option value="name-asc">A-Z (Tên bài)</option><option value="name-desc">Z-A (Tên bài)</option>
-                         <option value="date-desc">Mới nhất trước</option><option value="date-asc">Cũ nhất trước</option>
+                         <option value="name-asc">A-Z (Tên bài)</option>
+                         <option value="name-desc">Z-A (Tên bài)</option>
+                         <option value="date-desc">Mới nhất trước</option>
+                         <option value="date-asc">Cũ nhất trước</option>
                        </select>
                     </div>
                   </div>
@@ -629,7 +839,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         const inProgress = inProgressIds.has(String(test.id));
                         const isCompleted = historyData.some(h => String(h.testId) === String(test.id) || String(h.details?.test_id) === String(test.id));
                         
-                        // 2. Lấy cấu hình màu sắc biểu tượng kỹ năng
                         const skillConfig = getTestSkillConfig(test);
 
                         let statusConfig = { progress: 0, badge: "Chưa làm", badgeClass: "text-slate-500 bg-white border border-slate-200", btnText: "Làm bài ngay", btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white" };
@@ -655,7 +864,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   </span>
                               </div>
                             </div>
-                            <button className={`mt-4 md:mt-6 w-full font-bold text-[12px] md:text-[13px] uppercase tracking-wide py-2.5 rounded-lg transition-colors shadow-sm ${statusConfig.btnClass}`}>{statusConfig.btnText}</button>
+                            <button className={`mt-4 md:mt-6 w-full font-bold text-[12px] md:text-[13px] uppercase tracking-wide py-2.5 rounded-lg transition-colors shadow-sm ${statusConfig.btnClass}`}>
+                                {statusConfig.btnText}
+                            </button>
                           </div>
                         );
                       })}
@@ -704,9 +915,23 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         if (typeof content === 'string') { try { content = JSON.parse(content); } catch(e){ content = {}; } }
                         const theme = content?.basicInfo?.gameTheme || 'siege-game';
                         
-                        let icon = '🏰'; let themeName = 'Grammar Siege'; let colorClass = 'text-rose-600 border-rose-200 hover:border-rose-500'; let btnClass = 'text-rose-700 bg-rose-50 border-rose-200 group-hover:bg-rose-600 group-hover:text-white';
-                        if (theme === 'ninja-survival') { icon = '🥷'; themeName = 'Ninja Survival'; colorClass = 'text-slate-800 border-slate-300 hover:border-slate-800'; btnClass = 'text-slate-800 bg-slate-100 border-slate-300 group-hover:bg-slate-800 group-hover:text-white';}
-                        if (theme === 'vocab-racing') { icon = '🏎️'; themeName = 'Vocab Racing'; colorClass = 'text-blue-600 border-blue-200 hover:border-blue-600'; btnClass = 'text-blue-700 bg-blue-50 border-blue-200 group-hover:bg-blue-600 group-hover:text-white';}
+                        let icon = '🏰'; 
+                        let themeName = 'Grammar Siege'; 
+                        let colorClass = 'text-rose-600 border-rose-200 hover:border-rose-500'; 
+                        let btnClass = 'text-rose-700 bg-rose-50 border-rose-200 group-hover:bg-rose-600 group-hover:text-white';
+                        
+                        if (theme === 'ninja-survival') { 
+                            icon = '🥷'; 
+                            themeName = 'Ninja Survival'; 
+                            colorClass = 'text-slate-800 border-slate-300 hover:border-slate-800'; 
+                            btnClass = 'text-slate-800 bg-slate-100 border-slate-300 group-hover:bg-slate-800 group-hover:text-white';
+                        }
+                        if (theme === 'vocab-racing') { 
+                            icon = '🏎️'; 
+                            themeName = 'Vocab Racing'; 
+                            colorClass = 'text-blue-600 border-blue-200 hover:border-blue-600'; 
+                            btnClass = 'text-blue-700 bg-blue-50 border-blue-200 group-hover:bg-blue-600 group-hover:text-white';
+                        }
 
                         return (
                            <div key={game.id} onClick={() => handleStartTestClick(game)} className={`bg-white rounded-xl border border-slate-200 p-8 shadow-sm transition-colors cursor-pointer flex flex-col group ${colorClass}`}>

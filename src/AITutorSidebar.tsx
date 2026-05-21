@@ -36,7 +36,6 @@ export default function AITutorSidebar({
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  // 🚀 ĐÓN LỆNH QUÉT SẠCH LỊCH SỬ CHAT TỪ CÁC BÀI GIẢNG
   useEffect(() => {
     const handleClearChat = () => {
         setMessages([]);
@@ -207,7 +206,6 @@ export default function AITutorSidebar({
            }
        }, 300);
        
-       // Chỉ tạo lời chào mới nếu chưa có lịch sử chat
        if (messages.length === 0) {
            let welcomeText = "";
            
@@ -233,7 +231,7 @@ export default function AITutorSidebar({
               }
            } else {
               welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em cần thầy giải đáp gì không?`;
-           }
+       }
 
            setMessages([{
                role: 'ai',
@@ -351,11 +349,12 @@ export default function AITutorSidebar({
 
   if (!isOpen) return null;
 
+  // 🚀 Z-INDEX CỦA BONG BÓNG CHAT ĐƯỢC ĐẨY LÊN 100,000 ĐỂ ĐÈ MỌI THỨ
   if (isMinimized) {
       return (
           <button 
               onClick={() => setIsMinimized(false)}
-              className={`fixed bottom-[120px] right-6 z-[10000] w-14 h-14 rounded-full bg-gradient-to-r ${theme.headerBg} text-white shadow-2xl flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition-all duration-200 animate-in zoom-in group border-2 border-white`}
+              className={`fixed bottom-[120px] right-6 z-[100000] w-14 h-14 rounded-full bg-gradient-to-r ${theme.headerBg} text-white shadow-2xl flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition-all duration-200 animate-in zoom-in group border-2 border-white`}
               title="Mở lại khung Chat AI"
           >
               <span className="group-hover:hidden">{theme.icon}</span>
@@ -366,11 +365,12 @@ export default function AITutorSidebar({
       );
   }
 
+  // 🚀 Z-INDEX CỦA KHUNG CHAT ĐƯỢC ĐẨY LÊN 100,000
   return (
     <>
       {isOpen && !isMinimized && (
           <div 
-              className="fixed inset-0 bg-slate-900/40 z-[90] md:hidden" 
+              className="fixed inset-0 bg-slate-900/40 z-[99999] md:hidden" 
               onClick={() => { 
                   setIsMinimized(true); 
                   setIsExpanded(false); 
@@ -378,7 +378,7 @@ export default function AITutorSidebar({
           />
       )}
       
-      <div className={`fixed top-0 md:top-[60px] bottom-0 right-0 w-full ${isExpanded ? 'md:w-[800px]' : theme.width} bg-[#f8fafc] shadow-2xl z-[100] flex flex-col transition-all duration-300 border-l border-slate-200 ${isOpen && !isMinimized ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 md:top-[60px] bottom-0 right-0 w-full ${isExpanded ? 'md:w-[800px]' : theme.width} bg-[#f8fafc] shadow-2xl z-[100000] flex flex-col transition-all duration-300 border-l border-slate-200 ${isOpen && !isMinimized ? 'translate-x-0' : 'translate-x-full'}`}>
         
         <div className={`h-16 bg-gradient-to-r ${theme.headerBg} text-white flex items-center justify-between px-5 shrink-0 shadow-sm z-10`}>
           <div className="flex items-center gap-3">
@@ -419,7 +419,7 @@ export default function AITutorSidebar({
              <button 
                  onClick={() => { 
                      if(window.confirm('Đóng cửa sổ này sẽ xóa lịch sử trò chuyện. Bạn có muốn thu nhỏ lại thay vì đóng hẳn không?')) {
-                         setMessages([]); // Xóa lịch sử khi đóng hẳn
+                         setMessages([]);
                          onClose(); 
                          setIsExpanded(false); 
                      } else {
