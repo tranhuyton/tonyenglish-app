@@ -44,3 +44,15 @@ div[class*="jodit-dialog__footer"] button:first-child,
 div[class*="jodit-ui-dialog__footer"] button:first-child {
     background-color: #9ca3af !important; /* Màu xám */
 }
+/* Khóa chết hiệu ứng kéo nảy (rubber-band) trên iOS/iPadOS */
+html, body {
+    overscroll-behavior: none;
+    /* Ngăn chặn các thao tác vuốt hệ thống vô tình làm văng Fullscreen */
+    touch-action: pan-x pan-y; 
+  }
+  
+  /* Đảm bảo các thanh cuộn bên trong vẫn mượt mà */
+  .custom-scrollbar {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain; 
+  }
