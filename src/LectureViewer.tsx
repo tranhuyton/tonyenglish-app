@@ -2,7 +2,61 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { supabase } from './supabase';
 
 // =========================================================================================
-// 🚀 COMPONENT RENDER BÀI GIẢNG TRONG IFRAME
+// THƯ VIỆN ĐỌC PDF VÀ CHỤP ẢNH MÀN HÌNH (DÀNH RIÊNG CHO TÀI LIỆU .PDF)
+// =========================================================================================
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
+
+// Cài đặt worker đọc PDF
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+const PdfVisionViewer = ({ url }: { url: string }) => {
+  const [numPages, setNumPages] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handlePageRenderSuccess = () => {
+    setIsLoading(false);
+    const canvas = document.querySelector('.react-pdf__Page__canvas') as HTMLCanvasElement;
+    if (canvas) {
+      // Ép chất lượng 0.7 để đường truyền đàm thoại không bị lag
+      const base64Image = canvas.toDataURL('image/jpeg', 0.7); 
+      // Bắn thẳng bức ảnh sang file LiveSpeakingTest
+      window.dispatchEvent(new CustomEvent('tony-send-page-image', { detail: base64Image }));
+    }
+  };
+
+  return (
+    <div className="w-full h-full flex flex-col bg-[#0f172a] relative z-20">
+      <div className="flex justify-between items-center bg-slate-800 p-3 shrink-0 border-b border-slate-700">
+         <div className="flex items-center gap-2">
+             <span className="text-xl">📖</span>
+             <div className="text-emerald-400 text-[11px] md:text-xs font-bold animate-pulse">👁️ AI Tutor đang xem trang này</div>
+         </div>
+         <div className="flex items-center gap-3">
+           <button onClick={() => { setIsLoading(true); setCurrentPage(p => Math.max(p - 1, 1)); }} className="text-white px-3 py-1 bg-slate-700 rounded hover:bg-slate-600 font-bold text-sm">⬅️ Trước</button>
+           <span className="text-slate-300 text-sm font-mono bg-slate-900 px-3 py-1 rounded">Trang {currentPage}/{numPages || '--'}</span>
+           <button onClick={() => { setIsLoading(true); setCurrentPage(p => Math.min(p + 1, numPages || 1)); }} className="text-white px-3 py-1 bg-slate-700 rounded hover:bg-slate-600 font-bold text-sm">Sau ➡️</button>
+         </div>
+      </div>
+      <div className="flex-1 overflow-auto flex justify-center p-4 bg-[#020617] relative custom-scrollbar">
+         {isLoading && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#020617]/50 z-10">
+               <div className="w-8 h-8 border-4 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin"></div>
+            </div>
+         )}
+         <Document file={url} onLoadSuccess={({ numPages }) => setNumPages(numPages)} loading={null}>
+           <Page pageNumber={currentPage} renderTextLayer={false} renderAnnotationLayer={false} onRenderSuccess={handlePageRenderSuccess} className="shadow-2xl border border-slate-800 rounded max-w-full" loading={null} />
+         </Document>
+      </div>
+    </div>
+  );
+};
+
+
+// =========================================================================================
+// 🚀 COMPONENT RENDER BÀI GIẢNG TRONG IFRAME (GIỮ NGUYÊN BẢN GỐC CỦA ANH)
 // =========================================================================================
 const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -34,7 +88,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        } else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
          onCloseDict();
        } else if (e.data?.type === 'OPEN_IELTS_AI') {
-         // Kích hoạt Radar Bẻ Lái AI (Dạng Text)
          const fakeBtn = document.createElement('button');
          fakeBtn.className = 'btn-ai-trigger hidden'; 
          if (e.data.topic) fakeBtn.setAttribute('data-topic', e.data.topic);
@@ -44,7 +97,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          fakeBtn.click(); 
          setTimeout(() => { fakeBtn.remove(); }, 100); 
        } 
-       // 🚀 ĐÓN TÍN HIỆU MỞ PHÒNG LIVE TỪ IFRAME BÀI GIẢNG HTML
        else if (e.data?.type === 'OPEN_LIVE_SPEAKING') {
          const fakeLiveBtn = document.createElement('button');
          fakeLiveBtn.className = 'btn-live-trigger hidden';
@@ -99,7 +151,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                return; 
            }
 
-           // 1. TÌM NÚT BẺ LÁI AI (CHAT TEXT)
            var aiBtn = target.closest('.btn-ai-trigger, .btn-ielts-trigger');
            if (aiBtn) {
                e.preventDefault(); 
@@ -122,7 +173,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                return false;
            }
 
-           // 2. TÌM NÚT GỌI LIVE SPEAKING
            var liveBtn = target.closest('.btn-live-trigger');
            if (liveBtn) {
                e.preventDefault(); 
@@ -641,7 +691,7 @@ export default function LectureViewer({
              )}
 
              <button onClick={toggleFullScreen} className="hidden md:flex w-10 h-10 rounded-lg items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-colors shadow-sm" title={isFullscreen ? "Thu nhỏ" : "Toàn màn hình"}>
-                {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
+                {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>}
              </button>
           </div>
       </header>
@@ -795,7 +845,9 @@ export default function LectureViewer({
          </div>
       )}
 
-      {/* POPUP PHÓNG TO HÌNH ẢNH/VIDEO */}
+      {/* =========================================================================================
+          POPUP THÔNG MINH HIỂN THỊ HÌNH ẢNH / VIDEO / BỘ CHỤP LÉN PDF CHO AI
+          ========================================================================================= */}
       {popupUrl && (
         <div className="fixed inset-0 bg-slate-900/90 backdrop-blur-sm flex flex-col items-center justify-center p-4 md:p-8 animate-in fade-in duration-200" style={{ zIndex: 99999 }}>
           <div className="w-full max-w-6xl flex justify-end mb-4">
@@ -806,14 +858,23 @@ export default function LectureViewer({
                 ✕
              </button>
           </div>
+          
           <div className="w-full max-w-6xl h-[85vh] bg-black rounded-2xl overflow-hidden shadow-2xl relative border border-slate-700">
-             <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-0">
-                <div className="flex flex-col items-center gap-4">
-                   <div className="w-10 h-10 border-4 border-[#0ea5e9] border-t-transparent rounded-full animate-spin"></div>
-                   <span className="font-bold text-slate-400 uppercase tracking-widest text-sm">Đang tải tài liệu...</span>
-                </div>
-             </div>
-             <iframe src={getEmbedUrl(popupUrl)} className="absolute inset-0 w-full h-full border-0 z-10 bg-white" allowFullScreen></iframe>
+             {/* NẾU LÀ PDF: Mở bằng Máy ảnh chụp lén */}
+             {popupUrl.toLowerCase().includes('.pdf') ? (
+                 <PdfVisionViewer url={popupUrl} />
+             ) : (
+                 /* NẾU LÀ YOUTUBE HOẶC NỘI DUNG KHÁC: Giữ nguyên Iframe gốc */
+                 <>
+                   <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-0">
+                      <div className="flex flex-col items-center gap-4">
+                         <div className="w-10 h-10 border-4 border-[#0ea5e9] border-t-transparent rounded-full animate-spin"></div>
+                         <span className="font-bold text-slate-400 uppercase tracking-widest text-sm">Đang tải tài liệu...</span>
+                      </div>
+                   </div>
+                   <iframe src={getEmbedUrl(popupUrl)} className="absolute inset-0 w-full h-full border-0 z-10 bg-white" allowFullScreen></iframe>
+                 </>
+             )}
           </div>
         </div>
       )}
