@@ -2,6 +2,64 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { supabase } from './supabase';
 
 // =========================================================================================
+// THƯ VIỆN ĐỌC PDF VÀ CHỤP ẢNH MÀN HÌNH
+// =========================================================================================
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
+
+// Cài đặt worker tương thích chuẩn nhất cho các phiên bản React-PDF mới
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
+const PdfVisionViewer = ({ url }: { url: string }) => {
+  const [numPages, setNumPages] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handlePageRenderSuccess = () => {
+    setIsLoading(false);
+    const canvas = document.querySelector('.react-pdf__Page__canvas') as HTMLCanvasElement;
+    if (canvas) {
+      // Ép chất lượng 0.7 để đường truyền đàm thoại không bị lag
+      const base64Image = canvas.toDataURL('image/jpeg', 0.7); 
+      
+      // BÁO CÁO RA CONSOLE ĐỂ ANH NGHIỆM THU:
+      console.log(`📸 TÁCH! Đã chụp màn hình trang ${currentPage} thành công! Kích thước ảnh: ${Math.round(base64Image.length / 1024)} KB`);
+      
+      // Bắn thẳng bức ảnh sang file LiveSpeakingTest
+      window.dispatchEvent(new CustomEvent('tony-send-page-image', { detail: base64Image }));
+    }
+  };
+
+  return (
+    <div className="w-full h-full flex flex-col bg-[#0f172a] relative z-20">
+      <div className="flex justify-between items-center bg-slate-800 p-3 shrink-0 border-b border-slate-700">
+         <div className="flex items-center gap-2">
+             <span className="text-xl">📖</span>
+             <div className="text-emerald-400 text-[11px] md:text-xs font-bold animate-pulse">👁️ AI Tutor đang xem trang này</div>
+         </div>
+         <div className="flex items-center gap-3">
+           <button onClick={() => { setIsLoading(true); setCurrentPage(p => Math.max(p - 1, 1)); }} className="text-white px-3 py-1 bg-slate-700 rounded hover:bg-slate-600 font-bold text-sm">⬅️ Trước</button>
+           <span className="text-slate-300 text-sm font-mono bg-slate-900 px-3 py-1 rounded">Trang {currentPage}/{numPages || '--'}</span>
+           <button onClick={() => { setIsLoading(true); setCurrentPage(p => Math.min(p + 1, numPages || 1)); }} className="text-white px-3 py-1 bg-slate-700 rounded hover:bg-slate-600 font-bold text-sm">Sau ➡️</button>
+         </div>
+      </div>
+      <div className="flex-1 overflow-auto flex justify-center p-4 bg-[#020617] relative custom-scrollbar">
+         {isLoading && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#020617]/50 z-10">
+               <div className="w-8 h-8 border-4 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin"></div>
+            </div>
+         )}
+         <Document file={url} onLoadSuccess={({ numPages }) => setNumPages(numPages)} loading={null}>
+           <Page pageNumber={currentPage} renderTextLayer={false} renderAnnotationLayer={false} onRenderSuccess={handlePageRenderSuccess} className="shadow-2xl border border-slate-800 rounded max-w-full" loading={null} />
+         </Document>
+      </div>
+    </div>
+  );
+};
+
+
+// =========================================================================================
 // 🚀 COMPONENT RENDER BÀI GIẢNG TRONG IFRAME
 // =========================================================================================
 const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict }: any) => {
@@ -15,8 +73,14 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
    useEffect(() => {
      const handleMessage = (e: MessageEvent) => {
        if (e.data?.type === 'LECTURE_LINK_CLICK') {
-         const href = e.data.href;
-         if (href.includes('tonyenglish.vn/uploads') || href.includes('youtube.com') || href.includes('youtu.be')) {
+         let href = e.data.href;
+         
+         // Fix lỗi sập nguồn about:srcdoc của iframe khi đọc file nội bộ
+         if (href.startsWith('/')) {
+             href = window.location.origin + href;
+         }
+
+         if (href.includes('tonyenglish.vn/uploads') || href.includes('youtube.com') || href.includes('youtu.be') || href.toLowerCase().includes('.pdf')) {
            onOpenPopup(href);
          } else { 
              window.open(href, '_blank', 'noopener,noreferrer'); 
@@ -34,7 +98,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        } else if (e.data?.type === 'LECTURE_CLOSE_DICT') {
          onCloseDict();
        } else if (e.data?.type === 'OPEN_IELTS_AI') {
-         // Kích hoạt Radar Bẻ Lái AI (Dạng Text)
          const fakeBtn = document.createElement('button');
          fakeBtn.className = 'btn-ai-trigger hidden'; 
          if (e.data.topic) fakeBtn.setAttribute('data-topic', e.data.topic);
@@ -44,7 +107,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          fakeBtn.click(); 
          setTimeout(() => { fakeBtn.remove(); }, 100); 
        } 
-       // 🚀 ĐÓN TÍN HIỆU MỞ PHÒNG LIVE TỪ IFRAME BÀI GIẢNG HTML
        else if (e.data?.type === 'OPEN_LIVE_SPEAKING') {
          const fakeLiveBtn = document.createElement('button');
          fakeLiveBtn.className = 'btn-live-trigger hidden';
@@ -93,13 +155,14 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            var target = e.target;
            
            var anchor = target.closest('a');
-           if (anchor && anchor.href && !anchor.outerHTML.includes('openIELTSAssessor') && !anchor.classList.contains('btn-ielts-trigger') && !anchor.classList.contains('btn-ai-trigger') && !anchor.classList.contains('btn-live-trigger')) {
+           if (anchor && anchor.hasAttribute('href') && !anchor.outerHTML.includes('openIELTSAssessor') && !anchor.classList.contains('btn-ielts-trigger') && !anchor.classList.contains('btn-ai-trigger') && !anchor.classList.contains('btn-live-trigger')) {
                e.preventDefault(); 
-               window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: anchor.href }, '*'); 
+               // Thay vì dùng anchor.href, ta phải lấy đúng thuộc tính thô để không bị dính chữ about:srcdoc
+               var rawHref = anchor.getAttribute('href');
+               window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: rawHref }, '*'); 
                return; 
            }
 
-           // 1. TÌM NÚT BẺ LÁI AI (CHAT TEXT)
            var aiBtn = target.closest('.btn-ai-trigger, .btn-ielts-trigger');
            if (aiBtn) {
                e.preventDefault(); 
@@ -122,7 +185,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                return false;
            }
 
-           // 2. TÌM NÚT GỌI LIVE SPEAKING
            var liveBtn = target.closest('.btn-live-trigger');
            if (liveBtn) {
                e.preventDefault(); 
@@ -795,7 +857,9 @@ export default function LectureViewer({
          </div>
       )}
 
-      {/* POPUP PHÓNG TO HÌNH ẢNH/VIDEO */}
+      {/* =========================================================================================
+          POPUP THÔNG MINH HIỂN THỊ HÌNH ẢNH / VIDEO / BỘ CHỤP LÉN PDF CHO AI
+          ========================================================================================= */}
       {popupUrl && (
         <div className="fixed inset-0 bg-slate-900/90 backdrop-blur-sm flex flex-col items-center justify-center p-4 md:p-8 animate-in fade-in duration-200" style={{ zIndex: 99999 }}>
           <div className="w-full max-w-6xl flex justify-end mb-4">
@@ -806,14 +870,23 @@ export default function LectureViewer({
                 ✕
              </button>
           </div>
+          
           <div className="w-full max-w-6xl h-[85vh] bg-black rounded-2xl overflow-hidden shadow-2xl relative border border-slate-700">
-             <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-0">
-                <div className="flex flex-col items-center gap-4">
-                   <div className="w-10 h-10 border-4 border-[#0ea5e9] border-t-transparent rounded-full animate-spin"></div>
-                   <span className="font-bold text-slate-400 uppercase tracking-widest text-sm">Đang tải tài liệu...</span>
-                </div>
-             </div>
-             <iframe src={getEmbedUrl(popupUrl)} className="absolute inset-0 w-full h-full border-0 z-10 bg-white" allowFullScreen></iframe>
+             {/* NẾU LÀ PDF: Mở bằng Máy ảnh chụp lén */}
+             {popupUrl.toLowerCase().includes('.pdf') ? (
+                 <PdfVisionViewer url={popupUrl} />
+             ) : (
+                 /* NẾU LÀ YOUTUBE HOẶC NỘI DUNG KHÁC: Giữ nguyên Iframe gốc */
+                 <>
+                   <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-0">
+                      <div className="flex flex-col items-center gap-4">
+                         <div className="w-10 h-10 border-4 border-[#0ea5e9] border-t-transparent rounded-full animate-spin"></div>
+                         <span className="font-bold text-slate-400 uppercase tracking-widest text-sm">Đang tải tài liệu...</span>
+                      </div>
+                   </div>
+                   <iframe src={getEmbedUrl(popupUrl)} className="absolute inset-0 w-full h-full border-0 z-10 bg-white" allowFullScreen></iframe>
+                 </>
+             )}
           </div>
         </div>
       )}
