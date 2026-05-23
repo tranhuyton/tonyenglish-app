@@ -2,62 +2,234 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { supabase } from './supabase';
 
 // =========================================================================================
-// THƯ VIỆN ĐỌC PDF VÀ CHỤP ẢNH MÀN HÌNH
+// THƯ VIỆN ĐỌC PDF - TÍCH HỢP JUMP TO PAGE (GÕ SỐ CHUYỂN TRANG)
 // =========================================================================================
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-// Cài đặt worker tương thích chuẩn nhất cho các phiên bản React-PDF mới
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-const PdfVisionViewer = ({ url }: { url: string }) => {
+const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void }) => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [pageInput, setPageInput] = useState<string>('1'); 
   const [isLoading, setIsLoading] = useState(true);
+  const [isTwoPageMode, setIsTwoPageMode] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState<number>(1.2);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  
+  const viewerRef = useRef<HTMLDivElement>(null);
 
-  const handlePageRenderSuccess = () => {
-    setIsLoading(false);
-    const canvas = document.querySelector('.react-pdf__Page__canvas') as HTMLCanvasElement;
-    if (canvas) {
-      // Ép chất lượng 0.7 để đường truyền đàm thoại không bị lag
-      const base64Image = canvas.toDataURL('image/jpeg', 0.7); 
-      
-      // BÁO CÁO RA CONSOLE ĐỂ ANH NGHIỆM THU:
-      console.log(`📸 TÁCH! Đã chụp màn hình trang ${currentPage} thành công! Kích thước ảnh: ${Math.round(base64Image.length / 1024)} KB`);
-      
-      // Bắn thẳng bức ảnh sang file LiveSpeakingTest
-      window.dispatchEvent(new CustomEvent('tony-send-page-image', { detail: base64Image }));
-    }
+  useEffect(() => {
+      setPageInput(currentPage.toString());
+  }, [currentPage]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (['INPUT', 'TEXTAREA'].includes((e.target as HTMLElement).tagName)) return;
+      if (e.key === 'ArrowRight') handleNext();
+      else if (e.key === 'ArrowLeft') handlePrev();
+      else if (e.key === '=' || e.key === '+') handleZoomIn();
+      else if (e.key === '-' || e.key === '_') handleZoomOut();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [numPages, currentPage, isTwoPageMode]);
+
+  useEffect(() => {
+    const onFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', onFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
+  }, []);
+
+  const toggleFullscreen = () => {
+      if (!document.fullscreenElement) {
+          viewerRef.current?.requestFullscreen().catch(err => console.log(err));
+      } else {
+          document.exitFullscreen();
+      }
   };
 
+  const handlePageRenderSuccess = () => {
+    clearTimeout((window as any).pdfCaptureTimeout);
+    (window as any).pdfCaptureTimeout = setTimeout(() => {
+      setIsLoading(false);
+      const canvases = document.querySelectorAll('.react-pdf__Page__canvas');
+      
+      if (canvases.length > 0) {
+        const combinedCanvas = document.createElement('canvas');
+        const ctx = combinedCanvas.getContext('2d');
+        
+        let totalW = 0, maxH = 0;
+        canvases.forEach(c => {
+            totalW += (c as HTMLCanvasElement).width;
+            maxH = Math.max(maxH, (c as HTMLCanvasElement).height);
+        });
+
+        // =========================================================
+        // 🚀 THUẬT TOÁN ÉP CÂN HÌNH ẢNH (GIẢM 80-90% DUNG LƯỢNG)
+        // =========================================================
+        const MAX_WIDTH = 800; // Khóa cứng chiều ngang tối đa 800px
+        const scaleFactor = totalW > MAX_WIDTH ? MAX_WIDTH / totalW : 1;
+
+        combinedCanvas.width = totalW * scaleFactor;
+        combinedCanvas.height = maxH * scaleFactor;
+        
+        let curX = 0;
+        canvases.forEach(c => {
+            if (ctx) {
+                // Resize tỷ lệ thuận từng trang khi vẽ vào Canvas tổng
+                const drawWidth = (c as HTMLCanvasElement).width * scaleFactor;
+                const drawHeight = (c as HTMLCanvasElement).height * scaleFactor;
+                ctx.drawImage(c as HTMLCanvasElement, curX, 0, drawWidth, drawHeight);
+                curX += drawWidth;
+            }
+        });
+        
+        // Nén chất lượng JPEG xuống 45% (Đủ nét cho AI OCR mà siêu nhẹ)
+        const base64Image = combinedCanvas.toDataURL('image/jpeg', 0.45); 
+        
+        console.log(`📸 TÁCH! Đã chụp và ÉP CÂN thành công! Chiều ngang mới: ${combinedCanvas.width}px`);
+        window.dispatchEvent(new CustomEvent('tony-send-page-image', { detail: base64Image }));
+      }
+    }, 500);
+  };
+
+  const handleNext = () => {
+      if (numPages && currentPage < numPages) {
+          setIsLoading(true);
+          setCurrentPage(p => Math.min(p + (isTwoPageMode ? 2 : 1), numPages || 1));
+      }
+  };
+
+  const handlePrev = () => {
+      if (currentPage > 1) {
+          setIsLoading(true);
+          setCurrentPage(p => Math.max(p - (isTwoPageMode ? 2 : 1), 1));
+      }
+  };
+
+  const handlePageInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setPageInput(e.target.value);
+  };
+
+  const handlePageInputSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === 'Enter') {
+          let p = parseInt(pageInput);
+          if (!isNaN(p)) {
+              p = Math.max(1, Math.min(p, numPages || 1));
+              setIsLoading(true);
+              setCurrentPage(p);
+              setPageInput(p.toString());
+          } else {
+              setPageInput(currentPage.toString());
+          }
+      }
+  };
+
+  const handleZoomIn = () => setZoomLevel(prev => Math.min(prev + 0.2, 3.0));
+  const handleZoomOut = () => setZoomLevel(prev => Math.max(prev - 0.2, 0.5));
+
   return (
-    <div className="w-full h-full flex flex-col bg-[#0f172a] relative z-20">
-      <div className="flex justify-between items-center bg-slate-800 p-3 shrink-0 border-b border-slate-700">
+    <div ref={viewerRef} className="w-full h-full flex flex-col bg-[#0f172a] relative z-20">
+      <div className="flex flex-wrap items-center justify-between bg-slate-800/95 p-2 md:p-3 shrink-0 border-b border-slate-700 shadow-md gap-2">
+         
+         <div className="flex items-center gap-2 md:gap-4">
+             <div className="hidden sm:flex items-center gap-2 text-emerald-400 bg-emerald-900/20 px-3 py-1.5 rounded-lg border border-emerald-800/50">
+                <span className="text-sm">👁️</span>
+                <span className="text-[11px] md:text-xs font-bold animate-pulse whitespace-nowrap">AI đang soi trang này</span>
+             </div>
+             
+             <div className="flex items-center bg-slate-900 rounded-lg border border-slate-700 overflow-hidden">
+                <button onClick={handleZoomOut} className="w-8 h-8 flex items-center justify-center text-slate-300 hover:bg-slate-700 hover:text-white transition-colors" title="Thu nhỏ (-)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM13.5 10.5h-6" /></svg>
+                </button>
+                <span className="text-slate-400 text-xs font-mono w-10 text-center select-none">{Math.round(zoomLevel * 100)}%</span>
+                <button onClick={handleZoomIn} className="w-8 h-8 flex items-center justify-center text-slate-300 hover:bg-slate-700 hover:text-white transition-colors" title="Phóng to (+)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" /></svg>
+                </button>
+             </div>
+         </div>
+
+         <div className="flex items-center gap-2 flex-1 justify-center min-w-[250px]">
+             <button 
+                 onClick={() => { setIsTwoPageMode(!isTwoPageMode); setIsLoading(true); }}
+                 className={`hidden md:block px-3 py-1.5 rounded-lg text-xs font-bold transition-all border whitespace-nowrap ${isTwoPageMode ? 'bg-[#0ea5e9] text-white border-transparent' : 'bg-slate-700 text-slate-300 border-slate-600 hover:bg-slate-600'}`}
+             >
+                 {isTwoPageMode ? '📖 2 trang' : '📄 1 trang'}
+             </button>
+
+             <div className="flex items-center gap-1.5 bg-slate-900 rounded-lg p-1 border border-slate-700">
+                <button onClick={handlePrev} disabled={currentPage === 1} className="text-white px-3 py-1 bg-slate-700 rounded hover:bg-[#0ea5e9] font-bold text-xs md:text-sm disabled:opacity-30 transition-all">←</button>
+                
+                <div className="flex items-center text-slate-400 text-xs md:text-sm font-mono px-1">
+                    Trang
+                    <input 
+                        type="text" 
+                        value={pageInput}
+                        onChange={handlePageInputChange}
+                        onKeyDown={handlePageInputSubmit}
+                        onBlur={() => setPageInput(currentPage.toString())}
+                        title="Gõ số trang và ấn Enter"
+                        className="w-10 text-center bg-slate-800 text-white font-bold mx-1.5 py-0.5 rounded border border-slate-600 focus:outline-none focus:border-[#0ea5e9] transition-colors"
+                    />
+                    / {numPages || '--'}
+                </div>
+
+                <button onClick={handleNext} disabled={numPages !== null && currentPage >= numPages} className="text-white px-3 py-1 bg-slate-700 rounded hover:bg-[#0ea5e9] font-bold text-xs md:text-sm disabled:opacity-30 transition-all">→</button>
+             </div>
+         </div>
+
          <div className="flex items-center gap-2">
-             <span className="text-xl">📖</span>
-             <div className="text-emerald-400 text-[11px] md:text-xs font-bold animate-pulse">👁️ AI Tutor đang xem trang này</div>
+             <button onClick={toggleFullscreen} className="w-9 h-9 rounded-lg bg-slate-700 border border-slate-600 hover:bg-slate-600 flex items-center justify-center text-white transition-colors" title="Toàn màn hình">
+                 {isFullscreen ? (
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>
+                 ) : (
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>
+                 )}
+             </button>
+             <button onClick={onClose} className="w-9 h-9 rounded-lg bg-red-500/20 border border-red-500/50 hover:bg-red-500 flex items-center justify-center text-red-100 hover:text-white transition-colors" title="Đóng tài liệu">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+             </button>
          </div>
-         <div className="flex items-center gap-3">
-           <button onClick={() => { setIsLoading(true); setCurrentPage(p => Math.max(p - 1, 1)); }} className="text-white px-3 py-1 bg-slate-700 rounded hover:bg-slate-600 font-bold text-sm">⬅️ Trước</button>
-           <span className="text-slate-300 text-sm font-mono bg-slate-900 px-3 py-1 rounded">Trang {currentPage}/{numPages || '--'}</span>
-           <button onClick={() => { setIsLoading(true); setCurrentPage(p => Math.min(p + 1, numPages || 1)); }} className="text-white px-3 py-1 bg-slate-700 rounded hover:bg-slate-600 font-bold text-sm">Sau ➡️</button>
-         </div>
+
       </div>
-      <div className="flex-1 overflow-auto flex justify-center p-4 bg-[#020617] relative custom-scrollbar">
+      
+      <div className="flex-1 overflow-auto flex justify-center items-start p-4 md:p-8 bg-[#020617] relative custom-scrollbar">
          {isLoading && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#020617]/50 z-10">
-               <div className="w-8 h-8 border-4 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin"></div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#020617]/70 backdrop-blur-sm z-10">
+               <div className="w-10 h-10 border-4 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin"></div>
             </div>
          )}
          <Document file={url} onLoadSuccess={({ numPages }) => setNumPages(numPages)} loading={null}>
-           <Page pageNumber={currentPage} renderTextLayer={false} renderAnnotationLayer={false} onRenderSuccess={handlePageRenderSuccess} className="shadow-2xl border border-slate-800 rounded max-w-full" loading={null} />
+           <div className={`flex justify-center transition-all duration-300 ${isTwoPageMode ? 'gap-1 md:gap-4 flex-col lg:flex-row' : ''}`}>
+               {/* TRANG BÊN TRÁI */}
+               <Page 
+                   pageNumber={currentPage} 
+                   scale={zoomLevel} 
+                   renderTextLayer={false} renderAnnotationLayer={false} 
+                   onRenderSuccess={handlePageRenderSuccess} 
+                   className="shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-slate-700 rounded-md overflow-hidden max-w-full bg-white transition-transform origin-top" 
+                   loading={null} 
+               />
+               {/* TRANG BÊN PHẢI */}
+               {isTwoPageMode && numPages && currentPage + 1 <= numPages && (
+                   <Page 
+                       pageNumber={currentPage + 1} 
+                       scale={zoomLevel} 
+                       renderTextLayer={false} renderAnnotationLayer={false} 
+                       onRenderSuccess={handlePageRenderSuccess} 
+                       className="shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-slate-700 rounded-md overflow-hidden max-w-full bg-white hidden lg:block transition-transform origin-top" 
+                       loading={null} 
+                   />
+               )}
+           </div>
          </Document>
       </div>
     </div>
   );
 };
-
 
 // =========================================================================================
 // 🚀 COMPONENT RENDER BÀI GIẢNG TRONG IFRAME
@@ -75,7 +247,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        if (e.data?.type === 'LECTURE_LINK_CLICK') {
          let href = e.data.href;
          
-         // Fix lỗi sập nguồn about:srcdoc của iframe khi đọc file nội bộ
          if (href.startsWith('/')) {
              href = window.location.origin + href;
          }
@@ -157,7 +328,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            var anchor = target.closest('a');
            if (anchor && anchor.hasAttribute('href') && !anchor.outerHTML.includes('openIELTSAssessor') && !anchor.classList.contains('btn-ielts-trigger') && !anchor.classList.contains('btn-ai-trigger') && !anchor.classList.contains('btn-live-trigger')) {
                e.preventDefault(); 
-               // Thay vì dùng anchor.href, ta phải lấy đúng thuộc tính thô để không bị dính chữ about:srcdoc
                var rawHref = anchor.getAttribute('href');
                window.parent.postMessage({ type: 'LECTURE_LINK_CLICK', href: rawHref }, '*'); 
                return; 
@@ -266,7 +436,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
 
 
 // =========================================================================================
-// MAIN COMPONENT: LECTURE VIEWER
+// MAIN COMPONENT: LECTURE VIEWER (BẢN FULL ĐẦY ĐỦ CỦA ANH TÔN)
 // =========================================================================================
 export default function LectureViewer({ 
     courseId, 
@@ -301,6 +471,51 @@ export default function LectureViewer({
 
   const [popupUrl, setPopupUrl] = useState<string | null>(null);
   const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
+  
+  // 🚀 STATE MỚI ĐỂ ĐIỀU KHIỂN BÓP LAYOUT SPLIT SCREEN CHO BẢNG ĐEN
+  const [isTeacherBoardOpen, setIsTeacherBoardOpen] = useState(false);
+  
+  // 1. Lắng nghe sự kiện bật bảng từ file LiveSpeakingTest
+  useEffect(() => {
+    const handleToggleBoard = (e: any) => {
+        setIsTeacherBoardOpen(e.detail === true || e.detail === 'open');
+    };
+    window.addEventListener('tony-teacher-board-state', handleToggleBoard);
+    return () => window.removeEventListener('tony-teacher-board-state', handleToggleBoard);
+  }, []);
+
+  // 2. 🚀 TỰ ĐỘNG BẬT BẢNG ĐEN KHI MỞ FILE PDF (CHUẨN FLOW 1-CLICK DÙNG ONOPENAI)
+  useEffect(() => {
+    if (popupUrl && popupUrl.toLowerCase().includes('.pdf')) {
+        // Đánh dấu là đang mở PDF để file Live biết mà bật giao diện bảng
+        sessionStorage.setItem('tony_pdf_mode', 'true');
+        window.dispatchEvent(new CustomEvent('tony-pdf-mode-change', { detail: true }));
+
+        setTimeout(() => {
+            if (onOpenAI) {
+                onOpenAI('tutor'); // Gọi trực tiếp prop từ cha để 100% ăn lệnh mở phòng
+            } else {
+                window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+            }
+        }, 500); 
+    } else {
+        sessionStorage.removeItem('tony_pdf_mode');
+        window.dispatchEvent(new CustomEvent('tony-pdf-mode-change', { detail: false }));
+    }
+  }, [popupUrl, onOpenAI]);
+
+  // 3. CƠ CHẾ BẢO HIỂM: Tự động dãn PDF ra 100% khi người dùng Dập Máy
+  useEffect(() => {
+      if (isTeacherBoardOpen) {
+          const interval = setInterval(() => {
+              const liveMode = sessionStorage.getItem('tony_live_mode');
+              if (!liveMode) {
+                  setIsTeacherBoardOpen(false); 
+              }
+          }, 500);
+          return () => clearInterval(interval);
+      }
+  }, [isTeacherBoardOpen]);
   
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -703,7 +918,7 @@ export default function LectureViewer({
              )}
 
              <button onClick={toggleFullScreen} className="hidden md:flex w-10 h-10 rounded-lg items-center justify-center bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-colors shadow-sm" title={isFullscreen ? "Thu nhỏ" : "Toàn màn hình"}>
-                {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
+                {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>}
              </button>
           </div>
       </header>
@@ -714,9 +929,9 @@ export default function LectureViewer({
             <div className="fixed inset-0 bg-slate-900/40 z-40 md:hidden transition-opacity" onClick={() => setIsSidebarOpen(false)} />
          )}
 
-         {/* CỘT MỤC LỤC TRÁI */}
+         {/* CỘT MỤC LỤC TRÁI (SẼ BỊ ĐẨY LÙI LẠI HOẶC ẨN KHI KHUNG SPLIT MỞ TRONG CHẾ ĐỘ THƯỜNG) */}
          <aside className={`fixed md:relative inset-y-0 left-0 z-50 md:z-20 h-[100dvh] md:h-full bg-white border-r border-slate-200 flex flex-col shrink-0 transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none
-            ${isSidebarOpen ? 'translate-x-0 w-[280px] md:w-[320px]' : '-translate-x-full w-[280px] md:w-0 md:opacity-0 md:border-r-0 md:translate-x-0'}`}>
+            ${isSidebarOpen && !isTeacherBoardOpen ? 'translate-x-0 w-[280px] md:w-[320px]' : '-translate-x-full w-[280px] md:w-0 md:opacity-0 md:border-r-0 md:translate-x-0'}`}>
            
            <div className="p-6 border-b border-slate-200 shrink-0 bg-slate-50 min-w-[280px] md:min-w-[320px]">
               <div className="text-[12px] text-slate-500 uppercase tracking-widest mb-2">Khóa học của bạn</div>
@@ -779,13 +994,13 @@ export default function LectureViewer({
 
          {/* CỘT NỘI DUNG CHÍNH */}
          <main 
-            className="flex-1 overflow-y-auto bg-[#f1f5f9] custom-scrollbar relative lecture-content"
+            className={`flex-1 overflow-y-auto bg-[#f1f5f9] custom-scrollbar relative lecture-content transition-all duration-500 ease-in-out ${isTeacherBoardOpen ? 'md:pr-[50vw]' : ''}`}
             style={{ WebkitOverflowScrolling: 'touch' }}
             ref={containerRef}
             onMouseUp={handleTextSelection}
          >
              <div className="min-h-full flex flex-col items-center py-6 md:py-10 px-0 sm:px-4 md:px-8">
-               <div className="max-w-[1000px] w-full bg-white shadow-sm border border-slate-200 flex-none rounded-none sm:rounded-2xl p-8 md:p-14 mb-8 min-h-[50vh]">
+               <div className={`max-w-[1000px] w-full bg-white shadow-sm border border-slate-200 flex-none rounded-none sm:rounded-2xl p-8 md:p-14 mb-8 min-h-[50vh] transition-all ${isTeacherBoardOpen ? 'max-w-none' : ''}`}>
                   {!activeLectureId ? (
                     <div className="text-center py-24 text-slate-400 font-medium text-lg">Vui lòng chọn bài giảng ở danh mục bên trái.</div>
                   ) : !currentHtmlContent ? (
@@ -808,7 +1023,7 @@ export default function LectureViewer({
                
                {/* THANH ĐIỀU HƯỚNG TRANG */}
                {activeLectureId && (
-                  <div className="max-w-[1000px] w-full flex justify-between items-center px-6 pb-12">
+                  <div className={`max-w-[1000px] w-full flex justify-between items-center px-6 pb-12 transition-all ${isTeacherBoardOpen ? 'max-w-none flex-col gap-4 md:flex-row' : ''}`}>
                       <button onClick={handlePrevPage} disabled={currentPage === 1 && lectures.findIndex(l => l.id === activeLectureId) === 0} className="text-[#0ea5e9] font-bold text-[13px] md:text-[14px] hover:text-[#0284c7] disabled:opacity-30 transition-colors uppercase tracking-widest bg-white px-5 py-2.5 rounded-lg border border-slate-200 shadow-sm disabled:shadow-none">&lt; Trang trước</button>
                       {totalPages > 0 && (
                          <div className="flex gap-2 md:gap-3 flex-wrap justify-center px-4">
@@ -858,26 +1073,25 @@ export default function LectureViewer({
       )}
 
       {/* =========================================================================================
-          POPUP THÔNG MINH HIỂN THỊ HÌNH ẢNH / VIDEO / BỘ CHỤP LÉN PDF CHO AI
+          🚀 LỚP PHỦ POPUP FILE PDF (SẼ TỰ ĐỘNG BÓP NỬA MÀN HÌNH NẾU BẢNG ĐEN ĐƯỢC MỞ)
           ========================================================================================= */}
       {popupUrl && (
-        <div className="fixed inset-0 bg-slate-900/90 backdrop-blur-sm flex flex-col items-center justify-center p-4 md:p-8 animate-in fade-in duration-200" style={{ zIndex: 99999 }}>
-          <div className="w-full max-w-6xl flex justify-end mb-4">
-             <button 
-                onClick={() => setPopupUrl(null)} 
-                className="w-12 h-12 rounded-full bg-white/10 border border-white/20 hover:bg-red-500 flex items-center justify-center text-white text-2xl font-black transition-colors"
-             >
-                ✕
-             </button>
-          </div>
+        <div className="fixed inset-0 flex flex-col animate-in fade-in duration-200 pointer-events-none" style={{ zIndex: 99998 }}>
           
-          <div className="w-full max-w-6xl h-[85vh] bg-black rounded-2xl overflow-hidden shadow-2xl relative border border-slate-700">
-             {/* NẾU LÀ PDF: Mở bằng Máy ảnh chụp lén */}
+          <div className="absolute inset-0 bg-black/90 pointer-events-auto" onClick={() => setPopupUrl(null)}></div>
+          
+          <div className={`w-full h-full relative pointer-events-auto transition-all duration-500 ease-in-out ${isTeacherBoardOpen && popupUrl.toLowerCase().includes('.pdf') ? 'md:w-[50vw]' : 'w-full'}`}>
+             
              {popupUrl.toLowerCase().includes('.pdf') ? (
-                 <PdfVisionViewer url={popupUrl} />
+                 <PdfVisionViewer url={popupUrl} onClose={() => setPopupUrl(null)} />
              ) : (
-                 /* NẾU LÀ YOUTUBE HOẶC NỘI DUNG KHÁC: Giữ nguyên Iframe gốc */
                  <>
+                   <div className="absolute top-4 right-4 z-[100000]">
+                       <button 
+                          onClick={() => setPopupUrl(null)} 
+                          className="w-12 h-12 rounded-full bg-slate-800/80 border border-slate-600 hover:bg-red-500 flex items-center justify-center text-white text-2xl font-black transition-colors shadow-lg"
+                       >✕</button>
+                   </div>
                    <div className="absolute inset-0 flex items-center justify-center bg-slate-900 z-0">
                       <div className="flex flex-col items-center gap-4">
                          <div className="w-10 h-10 border-4 border-[#0ea5e9] border-t-transparent rounded-full animate-spin"></div>
@@ -887,6 +1101,7 @@ export default function LectureViewer({
                    <iframe src={getEmbedUrl(popupUrl)} className="absolute inset-0 w-full h-full border-0 z-10 bg-white" allowFullScreen></iframe>
                  </>
              )}
+             
           </div>
         </div>
       )}

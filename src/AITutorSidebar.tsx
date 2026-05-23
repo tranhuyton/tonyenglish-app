@@ -36,6 +36,18 @@ export default function AITutorSidebar({
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
+  // 🚀 ĐỘC CHIÊU MỚI: Báo hiệu trạng thái bong bóng chat cho LiveSpeakingTest
+  useEffect(() => {
+    // Bong bóng chat tồn tại khi sidebar đang mở (isOpen) và ở trạng thái thu nhỏ (isMinimized)
+    const isBubbleShowing = isOpen && isMinimized;
+    window.dispatchEvent(new CustomEvent('tony-chat-bubble-state', { detail: isBubbleShowing }));
+    
+    // Dọn dẹp sự kiện khi component bị huỷ
+    return () => {
+        window.dispatchEvent(new CustomEvent('tony-chat-bubble-state', { detail: false }));
+    };
+  }, [isOpen, isMinimized]);
+
   useEffect(() => {
     const handleClearChat = () => {
         setMessages([]);
@@ -231,7 +243,7 @@ export default function AITutorSidebar({
               }
            } else {
               welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em cần thầy giải đáp gì không?`;
-       }
+           }
 
            setMessages([{
                role: 'ai',

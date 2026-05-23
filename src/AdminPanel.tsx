@@ -30,7 +30,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [courseViewMode, setCourseViewMode] = useState<'tests' | 'modules' | 'classes'>('classes'); 
   const [filterLectureCourse, setFilterLectureCourse] = useState('all'); 
   
-  // 🚀 ĐÃ BỔ SUNG: State hỗ trợ thao tác hàng loạt & Phân trang cho KHO BÀI GIẢNG
   const [selectedLectures, setSelectedLectures] = useState<string[]>([]);
   const [lectureCurrentPage, setLectureCurrentPage] = useState(1);
   const lectureItemsPerPage = 20;
@@ -47,6 +46,20 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [classStudentsList, setClassStudentsList] = useState<any[]>([]); 
   const [showAssignStudentModal, setShowAssignStudentModal] = useState(false); 
   
+  // --- STORAGE & PDF MANAGEMENT STATES ---
+  const [pdfFiles, setPdfFiles] = useState<any[]>([]);
+  const [isUploadingPdf, setIsUploadingPdf] = useState(false);
+  const [pdfSearchQuery, setPdfSearchQuery] = useState('');
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // 🚀 VIRTUAL FOLDERS SYSTEM FOR PDF (Để giữ nguyên link gốc)
+  const [pdfFolders, setPdfFolders] = useState<{id: string, name: string, parentId: string|null}[]>([]);
+  const [pdfFileMapping, setPdfFileMapping] = useState<Record<string, string>>({}); // filename -> folderId
+  const [currentPdfFolderId, setCurrentPdfFolderId] = useState<string | null>(null);
+  const [showPdfFolderModal, setShowPdfFolderModal] = useState(false);
+  const [editingPdfFolderId, setEditingPdfFolderId] = useState<string | null>(null);
+  const [showMoveFileModal, setShowMoveFileModal] = useState<string | null>(null);
+
   // Modals
   const [showModuleModal, setShowModuleModal] = useState(false);
   const [showClassModal, setShowClassModal] = useState(false);
@@ -75,6 +88,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     fetchLibraryTests();
     fetchAllFolders(); 
     fetchGlobalLectures();
+    fetchPdfFiles(); // Sẽ fetch luôn cả cấu trúc folder ảo
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) setShowCreateDropdown(false);
     };
@@ -82,7 +96,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // 🚀 ĐÃ BỔ SUNG: Tự động lùi về trang 1 khi gõ tìm kiếm hoặc lọc
   useEffect(() => {
     setLectureCurrentPage(1);
   }, [searchQuery, filterLectureCourse]);
@@ -92,6 +105,163 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     const d = new Date(iso);
     return `${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')} - ${d.getDate().toString().padStart(2, '0')}/${(d.getMonth()+1).toString().padStart(2, '0')}/${d.getFullYear()}`;
   }
+
+  // =========================================================================================
+  // SUPABASE STORAGE LOGIC (QUẢN LÝ FILE PDF & FOLDER ẢO)
+  // =========================================================================================
+  
+  const BUCKET_NAME = 'documents'; 
+
+  // Hệ thống lưu trữ Folder ảo dạng JSON ẩn trong Bucket
+  const fetchVirtualFolders = async () => {
+      try {
+          const { data } = await supabase.storage.from(BUCKET_NAME).download('_virtual_folders.json');
+          if (data) {
+              const text = await data.text();
+              const json = JSON.parse(text);
+              setPdfFolders(json.folders || []);
+              setPdfFileMapping(json.mapping || {});
+          }
+      } catch (e) {
+          console.log("Chưa có cấu trúc thư mục ảo, hệ thống sẽ tự tạo khi có thay đổi.");
+      }
+  };
+
+  const saveVirtualFolders = async (newFolders: any[], newMapping: any) => {
+      const jsonStr = JSON.stringify({ folders: newFolders, mapping: newMapping });
+      const blob = new Blob([jsonStr], { type: 'application/json' });
+      await supabase.storage.from(BUCKET_NAME).upload('_virtual_folders.json', blob, { upsert: true });
+      setPdfFolders(newFolders);
+      setPdfFileMapping(newMapping);
+  };
+
+  const fetchPdfFiles = async () => {
+      try {
+          fetchVirtualFolders(); // Tải folder ảo
+          const { data, error } = await supabase.storage.from(BUCKET_NAME).list('', {
+              limit: 1000,
+              offset: 0,
+              sortBy: { column: 'created_at', order: 'desc' },
+          });
+
+          if (error) return;
+
+          const filesOnly = data?.filter(f => f.id !== null && f.name !== '_virtual_folders.json') || [];
+          const filesWithUrl = filesOnly.map(f => {
+              const { data: publicUrlData } = supabase.storage.from(BUCKET_NAME).getPublicUrl(f.name);
+              return { ...f, publicUrl: publicUrlData.publicUrl };
+          });
+
+          setPdfFiles(filesWithUrl);
+      } catch (err) {}
+  };
+
+  const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      if (!file) return;
+
+      if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
+          alert('Vui lòng chỉ tải lên file PDF!');
+          return;
+      }
+      if (file.size > 50 * 1024 * 1024) {
+          alert('File quá lớn! Dung lượng tối đa là 50MB.');
+          return;
+      }
+
+      setIsUploadingPdf(true);
+
+      try {
+          const fileName = file.name.replace(/\s+/g, '_');
+          const { error } = await supabase.storage.from(BUCKET_NAME).upload(fileName, file, { cacheControl: '3600', upsert: false });
+          if (error) throw error;
+          
+          // Tự động map file mới vào thư mục hiện tại nếu đang ở trong 1 thư mục
+          if (currentPdfFolderId) {
+             const newMapping = { ...pdfFileMapping, [fileName]: currentPdfFolderId };
+             await saveVirtualFolders(pdfFolders, newMapping);
+          }
+          
+          alert('Tải file thành công!');
+          fetchPdfFiles(); 
+      } catch (error: any) {
+          alert(`Lỗi khi tải file: ${error.message}`);
+      } finally {
+          setIsUploadingPdf(false);
+          if (fileInputRef.current) fileInputRef.current.value = ''; 
+      }
+  };
+
+  const handleDeleteFile = async (fileName: string) => {
+      if (!window.confirm(`Xác nhận xóa file "${fileName}" vĩnh viễn?`)) return;
+
+      try {
+          const { error } = await supabase.storage.from(BUCKET_NAME).remove([fileName]);
+          if (error) throw error;
+          
+          // Gỡ mapping của file khỏi hệ thống thư mục ảo
+          const newMapping = { ...pdfFileMapping };
+          if (newMapping[fileName]) {
+              delete newMapping[fileName];
+              saveVirtualFolders(pdfFolders, newMapping);
+          }
+          fetchPdfFiles();
+      } catch (error: any) {
+          alert(`Lỗi khi xóa file: ${error.message}`);
+      }
+  };
+
+  // --- CHỨC NĂNG QUẢN LÝ FOLDER TÀI LIỆU ---
+  const handleCreatePdfFolder = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      const name = new FormData(e.currentTarget).get('name') as string;
+      const newFolder = { id: 'f_' + Date.now(), name, parentId: currentPdfFolderId };
+      await saveVirtualFolders([...pdfFolders, newFolder], pdfFileMapping);
+      setShowPdfFolderModal(false);
+  };
+
+  const handleUpdatePdfFolderName = async (folderId: string, newName: string) => {
+      if (!newName.trim()) { setEditingPdfFolderId(null); return; }
+      const newFolders = pdfFolders.map(f => f.id === folderId ? { ...f, name: newName } : f);
+      await saveVirtualFolders(newFolders, pdfFileMapping);
+      setEditingPdfFolderId(null);
+  };
+
+  const handleDeletePdfFolder = async (folderId: string) => {
+      if (window.confirm("Xóa thư mục này? Các file bên trong sẽ được giữ nguyên và tự động chuyển về Thư mục gốc.")) {
+          const newFolders = pdfFolders.filter(f => f.id !== folderId && f.parentId !== folderId);
+          const newMapping = { ...pdfFileMapping };
+          Object.keys(newMapping).forEach(key => {
+              if (newMapping[key] === folderId) delete newMapping[key];
+          });
+          await saveVirtualFolders(newFolders, newMapping);
+      }
+  };
+
+  const handleMovePdfFile = async (fileName: string, targetFolderId: string | null) => {
+      const newMapping = { ...pdfFileMapping };
+      if (targetFolderId) newMapping[fileName] = targetFolderId;
+      else delete newMapping[fileName];
+      
+      await saveVirtualFolders(pdfFolders, newMapping);
+      setShowMoveFileModal(null);
+  };
+
+  const copyToClipboard = (text: string) => {
+      navigator.clipboard.writeText(text).then(() => {
+          alert('Đã copy đường dẫn (URL) thành công!');
+      });
+  };
+
+  const formatFileSize = (bytes: number) => {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
+  // =========================================================================================
 
   const fetchCourses = async () => {
     setIsLoadingCourses(true); 
@@ -331,7 +501,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
 
   const handleInitiateTest = (mode: 'manual' | 'import' | 'case-study') => {
     setShowCreateDropdown(false);
-    // 🛠️ ĐÃ SỬA: Lấy currentFolderId gán ngay nếu đang mở 1 thư mục
     setEditingTest({ id: 'new', title: '', folder_id: currentFolderId || '', test_type: mode === 'case-study' ? 'Case-Study' : 'IELTS-Listening', content_json: null, mode });
   };
   
@@ -348,7 +517,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
        test_type: finalData.basicInfo?.skill || 'IELTS-Listening', 
        content_json: finalData, 
        json_config: parsedJsonConfig, 
-       // 🛠️ ĐÃ SỬA: Bảo lưu folder_id cũ nếu có (tránh bị chèn null làm văng khỏi folder)
        folder_id: finalData.folder_id !== undefined ? finalData.folder_id : (editingTest?.folder_id || currentFolderId || null), 
        course_id: assignedCourseId, 
        is_published: true, 
@@ -387,13 +555,11 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     }
   };
 
-  // 🛠️ ĐÃ CẬP NHẬT: Không đóng Modal gán đề thi
   const handleAssignTest = async (testId: string) => {
     if (!currentFolderId) return;
     await supabase.from('tests').update({ folder_id: currentFolderId }).eq('id', testId);
     fetchLibraryTests(); 
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
-    // setShowAssignModal(false); // <--- Đã bỏ dòng này để giữ cửa sổ mở
   };
 
   const handleUnassignTest = async (testId: string) => {
@@ -439,11 +605,28 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
      return courses.find(c => c.id === courseId)?.title || '-- Trống --';
   }
 
+  // Course Test Folders
   const breadcrumbs = []; let curr = folders.find(f => f.id === currentFolderId);
   while (curr) { breadcrumbs.unshift(curr); curr = folders.find(f => f.id === curr.parent_id); }
   const currentSubFolders = useMemo(() => folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === '')).sort((a,b) => (a.display_order||0) - (b.display_order||0)), [folders, currentFolderId]);
-  
   const currentTests = useMemo(() => assignedTests.filter(t => t.folder_id === currentFolderId), [assignedTests, currentFolderId]);
+
+  // PDF Folders Breadcrumbs
+  const pdfBreadcrumbs = [];
+  let pCurr = pdfFolders.find(f => f.id === currentPdfFolderId);
+  while (pCurr) { pdfBreadcrumbs.unshift(pCurr); pCurr = pdfFolders.find(f => f.id === pCurr.parentId); }
+  
+  const currentPdfSubFolders = pdfFolders.filter(f => currentPdfFolderId ? f.parentId === currentPdfFolderId : !f.parentId);
+  
+  // 🚀 TỐI ƯU SEARCH TÀI LIỆU: Nếu đang gõ search thì show toàn bộ file khớp, bất chấp thư mục
+  const isSearchingPdf = pdfSearchQuery.trim().length > 0;
+  const filteredPdfFiles = useMemo(() => {
+      return pdfFiles.filter(f => f.name.toLowerCase().includes(pdfSearchQuery.toLowerCase()));
+  }, [pdfFiles, pdfSearchQuery]);
+
+  const currentPdfFiles = filteredPdfFiles.filter(f => 
+      isSearchingPdf ? true : ((pdfFileMapping[f.name] || null) === currentPdfFolderId)
+  );
 
   const filteredLibraryTests = useMemo(() => libraryTests.filter(test => {
       const matchesSearch = test.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -459,7 +642,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       return matchesSearch && lec.course_id === filterLectureCourse;
   }), [globalLectures, searchQuery, filterLectureCourse]);
 
-  // 🚀 ĐÃ BỔ SUNG: Tính toán phân trang cho danh sách BÀI GIẢNG
   const totalLecturePages = Math.ceil(filteredGlobalLectures.length / lectureItemsPerPage);
   const paginatedLectures = filteredGlobalLectures.slice((lectureCurrentPage - 1) * lectureItemsPerPage, lectureCurrentPage * lectureItemsPerPage);
 
@@ -480,6 +662,9 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           <button onClick={() => {setActiveTab('courses'); setSelectedCourse(null); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'courses' || activeTab === 'course-detail' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📁 Khóa học & Lớp</button>
           <button onClick={() => {setActiveTab('library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📚 Kho Đề thi & Bài tập</button>
           <button onClick={() => {setActiveTab('lectures-library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'lectures-library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📖 Kho Bài giảng</button>
+          
+          <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>☁️ Quản lý Tài Liệu (PDF)</button>
+          
           <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>👨‍🎓 Quản lý học viên</button>
         </div>
       </aside>
@@ -492,13 +677,27 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
              </button>
              <h1 className="text-[16px] md:text-xl font-black text-slate-800 uppercase tracking-tight truncate">
-               {activeTab === 'courses' ? 'Khóa học' : activeTab === 'course-detail' ? 'Chi tiết' : activeTab === 'lectures-library' ? 'Kho Bài Giảng' : activeTab === 'library' ? 'Kho Đề & Bài tập' : 'Học viên'}
+               {activeTab === 'courses' ? 'Khóa học' : activeTab === 'course-detail' ? 'Chi tiết' : activeTab === 'lectures-library' ? 'Kho Bài Giảng' : activeTab === 'library' ? 'Kho Đề & Bài tập' : activeTab === 'documents' ? 'Tài Liệu Cloud' : 'Học viên'}
              </h1>
           </div>
           
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
             {activeTab === 'courses' && <button onClick={() => setShowCreateCourseModal(true)} className="bg-[#0a5482] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#084266] whitespace-nowrap">+ THÊM</button>}
             {activeTab === 'lectures-library' && <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: null })} className="bg-[#00a651] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#008f45] whitespace-nowrap">+ BÀI GIẢNG</button>}
+            
+            {activeTab === 'documents' && (
+                <div>
+                   <input type="file" accept="application/pdf" className="hidden" ref={fileInputRef} onChange={handleFileUpload} />
+                   <button 
+                      onClick={() => fileInputRef.current?.click()} 
+                      disabled={isUploadingPdf}
+                      className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap disabled:opacity-50"
+                   >
+                      {isUploadingPdf ? '⏳ ĐANG TẢI...' : '+ UPLOAD PDF'}
+                   </button>
+                </div>
+            )}
+
             {activeTab === 'library' && (
               <div className="relative shrink-0" ref={dropdownRef}>
                 <button onClick={() => setShowCreateDropdown(!showCreateDropdown)} className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md flex items-center gap-1.5 md:gap-2 text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap">+ TẠO MỚI <span className={`text-[9px] md:text-[10px] transition-transform ${showCreateDropdown ? 'rotate-180' : ''}`}>▼</span></button>
@@ -550,6 +749,122 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                 ))
               )}
             </div>
+          )}
+
+          {/* ========================================================= */}
+          {/* VIEW: QUẢN LÝ TÀI LIỆU PDF (STORAGE VỚI FOLDER ẢO) */}
+          {activeTab === 'documents' && (
+             <div className="space-y-4 md:space-y-6 animate-in fade-in">
+                <div className="bg-white rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col h-[calc(100vh-140px)]">
+                    
+                    <div className="p-4 md:p-6 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shrink-0">
+                        <div className="flex items-center gap-2 md:gap-3">
+                            {!isSearchingPdf && currentPdfFolderId && (
+                                <button onClick={() => setCurrentPdfFolderId(null)} className="text-slate-400 hover:text-[#0a5482] font-bold mr-1 transition text-[11px] md:text-[13px] bg-white border border-slate-200 px-2 py-1 rounded-lg">← Trở về</button>
+                            )}
+                            <div>
+                                <h2 className="font-black text-slate-700 text-[13px] md:text-lg uppercase tracking-tight">
+                                    {isSearchingPdf ? 'Kết quả tìm kiếm' : (currentPdfFolderId ? `Mục: ${pdfBreadcrumbs[pdfBreadcrumbs.length-1]?.name}` : 'KHO TÀI LIỆU ĐÁM MÂY')}
+                                </h2>
+                                <p className="text-slate-500 text-[10px] md:text-xs mt-1">Dung lượng tối đa 50MB. (Cấu trúc Folder ảo, link gốc không đổi).</p>
+                            </div>
+                        </div>
+                        <div className="flex gap-2 w-full sm:w-auto">
+                            {!isSearchingPdf && (
+                                <button onClick={() => setShowPdfFolderModal(true)} className="bg-[#00a651] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl font-black text-[10px] md:text-xs shadow-sm hover:bg-[#008f45] whitespace-nowrap">+ THƯ MỤC</button>
+                            )}
+                            <input 
+                               type="text" 
+                               placeholder="Tìm tên file..." 
+                               value={pdfSearchQuery}
+                               onChange={(e) => setPdfSearchQuery(e.target.value)}
+                               className="w-full sm:w-56 px-4 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-xs shadow-sm font-medium"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="flex-1 overflow-y-auto p-4 md:p-6 custom-scrollbar bg-slate-50/50 relative">
+                        {/* THƯ MỤC ẢO (Ẩn đi nếu đang tìm kiếm file) */}
+                        {!isSearchingPdf && currentPdfSubFolders.length > 0 && (
+                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
+                               {currentPdfSubFolders.map(sf => (
+                                  <div key={sf.id} className="relative group h-[100px] md:h-[120px]">
+                                     {editingPdfFolderId === sf.id ? (
+                                         <div className="bg-white border-2 border-[#2bd6eb] p-2 md:p-3 rounded-xl md:rounded-2xl shadow-sm h-full flex flex-col items-center justify-center">
+                                            <form className="w-full flex flex-col items-center" onSubmit={(e) => handleUpdatePdfFolderName(sf.id, new FormData(e.currentTarget).get('name') as string)}>
+                                               <input name="name" autoFocus defaultValue={sf.name} className="w-full border border-slate-300 rounded px-2 py-1 text-[11px] md:text-xs font-bold mb-2 text-center outline-none focus:border-[#0a5482]" />
+                                               <div className="flex gap-2">
+                                                  <button type="submit" className="bg-emerald-500 text-white px-2 py-1 rounded text-[10px] font-bold">Lưu</button>
+                                                  <button type="button" onClick={() => setEditingPdfFolderId(null)} className="bg-slate-200 text-slate-600 px-2 py-1 rounded text-[10px] font-bold">Hủy</button>
+                                               </div>
+                                            </form>
+                                         </div>
+                                     ) : (
+                                         <div onClick={() => setCurrentPdfFolderId(sf.id)} className="bg-white border-2 border-slate-100 hover:border-[#2bd6eb] p-3 md:p-4 rounded-xl md:rounded-2xl shadow-sm cursor-pointer h-full flex flex-col items-center justify-center text-center relative overflow-hidden transition-all">
+                                             <div className="text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform">📁</div>
+                                             <h4 className="font-black text-slate-700 text-[11px] md:text-[13px] line-clamp-2 px-1">{sf.name}</h4>
+                                             <button onClick={(e) => { e.stopPropagation(); setEditingPdfFolderId(sf.id); }} className="absolute top-2 right-2 text-blue-400 opacity-0 group-hover:opacity-100 bg-blue-50 p-1 md:p-1.5 rounded text-[10px] md:text-xs transition-opacity">✏️</button>
+                                         </div>
+                                     )}
+                                     {editingPdfFolderId !== sf.id && (
+                                         <button onClick={(e) => { e.stopPropagation(); handleDeletePdfFolder(sf.id); }} className="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 transition-colors text-white w-6 h-6 md:w-7 md:h-7 rounded-full opacity-0 group-hover:opacity-100 flex items-center justify-center text-[10px] md:text-xs font-bold shadow-lg z-10">✕</button>
+                                     )}
+                                  </div>
+                               ))}
+                            </div>
+                        )}
+
+                        {/* LINE PHÂN CÁCH NẾU CÓ CẢ FOLDER LẪN FILE */}
+                        {!isSearchingPdf && currentPdfSubFolders.length > 0 && currentPdfFiles.length > 0 && (
+                            <div className="w-full h-px bg-transparent mb-6 border-t-2 border-dashed border-slate-200"></div>
+                        )}
+
+                        {/* FILE DANH SÁCH */}
+                        {currentPdfFiles.length === 0 ? (
+                            <div className="h-[200px] flex flex-col items-center justify-center text-slate-400">
+                                <span className="text-4xl md:text-5xl mb-3 opacity-50">{isSearchingPdf ? '🔍' : '☁️'}</span>
+                                <p className="font-medium text-sm md:text-base">{isSearchingPdf ? 'Không tìm thấy tài liệu phù hợp.' : 'Không có tài liệu nào trong mục này.'}</p>
+                            </div>
+                        ) : (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                {currentPdfFiles.map(file => (
+                                    <div key={file.id} className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+                                        <div className="flex items-start gap-3 mb-3">
+                                            <div className="w-10 h-10 rounded-lg bg-red-50 text-red-500 flex items-center justify-center text-xl shrink-0 border border-red-100">📄</div>
+                                            <div className="flex-1 min-w-0">
+                                                <h4 className="font-bold text-slate-700 text-[13px] md:text-sm truncate" title={file.name}>{file.name}</h4>
+                                                <p className="text-[11px] text-slate-400 mt-0.5">{formatFileSize(file.metadata?.size || 0)} • {formatDateTime(file.created_at)}</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="mt-auto flex gap-2 pt-3 border-t border-slate-100">
+                                            <button 
+                                                onClick={() => setShowMoveFileModal(file.name)} 
+                                                className="w-9 flex items-center justify-center bg-blue-50 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors border border-blue-100 rounded-lg text-sm"
+                                                title="Chuyển thư mục"
+                                            >📂</button>
+                                            <button 
+                                                onClick={() => copyToClipboard(file.publicUrl)}
+                                                className="flex-1 bg-[#f0f9ff] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white transition-colors border border-[#bae6fd] font-bold py-1.5 rounded-lg text-xs flex items-center justify-center gap-1"
+                                            ><span>🔗</span> Copy Link</button>
+                                            <a 
+                                                href={file.publicUrl} target="_blank" rel="noopener noreferrer" 
+                                                className="w-9 flex items-center justify-center bg-slate-50 hover:bg-slate-200 transition-colors border border-slate-200 rounded-lg text-slate-600 text-sm"
+                                                title="Mở xem thử"
+                                            >👁️</a>
+                                            <button 
+                                                onClick={() => handleDeleteFile(file.name)}
+                                                className="w-9 flex items-center justify-center bg-red-50 hover:bg-red-500 hover:text-white transition-colors border border-red-100 rounded-lg text-red-400 opacity-0 group-hover:opacity-100 text-sm"
+                                                title="Xóa file"
+                                            >🗑️</button>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+             </div>
           )}
 
           {/* ========================================================= */}
@@ -797,10 +1112,8 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           {activeTab === 'lectures-library' && (
             <div className="space-y-4 md:space-y-6">
               
-              {/* 🚀 TOOLBAR BÀI GIẢNG ĐƯỢC THIẾT KẾ LẠI */}
               <div className="flex flex-col xl:flex-row justify-between gap-3 md:gap-4 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm relative z-20">
                  
-                 {/* Nhóm thao tác hàng loạt & Chuyển danh mục */}
                  <div className="flex flex-wrap items-center gap-3">
                     <div className="flex bg-slate-100 rounded-lg p-1 border border-slate-200 shadow-sm shrink-0">
                        <button onClick={() => handleBulkLectureVisibility(true)} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-emerald-600 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">👁️ Hiện</button>
@@ -819,7 +1132,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                     </div>
                  </div>
 
-                 {/* Nhóm Tìm kiếm & Lọc */}
                  <div className="flex flex-col sm:flex-row gap-3 flex-1 justify-end w-full xl:w-auto">
                    <input type="text" placeholder="Tìm kiếm tên bài giảng..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-[250px] pl-3 pr-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] text-[13px] md:text-sm transition-colors" />
                    <select value={filterLectureCourse} onChange={e => setFilterLectureCourse(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
@@ -869,7 +1181,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                   </table>
                 </div>
 
-                {/* 🚀 THANH PHÂN TRANG BÀI GIẢNG */}
                 {totalLecturePages > 1 && (
                   <div className="p-4 border-t border-slate-200 bg-slate-50 flex justify-center items-center gap-4 shrink-0">
                      <button disabled={lectureCurrentPage === 1} onClick={() => setLectureCurrentPage(p => p - 1)} className="px-4 py-2 bg-white border border-slate-200 text-slate-600 hover:text-[#0a5482] hover:border-[#0a5482] rounded-lg disabled:opacity-50 disabled:hover:border-slate-200 disabled:hover:text-slate-600 font-bold text-[13px] transition-colors shadow-sm">
@@ -959,6 +1270,43 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
         {/* ========================================================================================= */}
         {/* CÁC MODALS */}
         {/* ========================================================================================= */}
+
+        {/* Modal TẠO FOLDER PDF MỚI */}
+        {showPdfFolderModal && (
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <form onSubmit={handleCreatePdfFolder} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 shadow-2xl animate-in zoom-in-95">
+                    <h2 className="text-base md:text-lg font-black uppercase text-emerald-600">Thêm Thư Mục Tài Liệu</h2>
+                    <input name="name" required autoFocus placeholder="VD: Sách Reading, Ngữ pháp..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-emerald-500 text-[14px]" />
+                    <div className="flex gap-3 md:gap-4">
+                        <button type="button" onClick={() => setShowPdfFolderModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button>
+                        <button type="submit" className="flex-1 bg-[#00a651] hover:bg-[#008f45] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO</button>
+                    </div>
+                </form>
+            </div>
+        )}
+
+        {/* Modal DI CHUYỂN FILE PDF */}
+        {showMoveFileModal && (
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 shadow-2xl animate-in zoom-in-95">
+                    <h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">Chuyển Thư Mục</h2>
+                    <p className="text-[13px] md:text-sm text-slate-600 truncate font-medium bg-slate-50 p-2 rounded-lg border border-slate-200">
+                       📄 {showMoveFileModal}
+                    </p>
+                    <div className="max-h-[40vh] overflow-y-auto border border-slate-200 rounded-xl p-2 space-y-1 custom-scrollbar">
+                        <button onClick={() => handleMovePdfFile(showMoveFileModal, null)} className={`w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg text-[13px] md:text-sm font-bold flex items-center gap-2 ${!pdfFileMapping[showMoveFileModal] ? 'bg-[#2bd6eb] text-white' : 'hover:bg-slate-100 text-slate-700'}`}>
+                            📁 Thư mục gốc (Mặc định)
+                        </button>
+                        {pdfFolders.map(f => (
+                            <button key={f.id} onClick={() => handleMovePdfFile(showMoveFileModal, f.id)} className={`w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg text-[13px] md:text-sm font-bold flex items-center gap-2 ${pdfFileMapping[showMoveFileModal] === f.id ? 'bg-[#2bd6eb] text-white' : 'hover:bg-slate-100 text-slate-700'}`}>
+                                📁 {f.name}
+                            </button>
+                        ))}
+                    </div>
+                    <button onClick={() => setShowMoveFileModal(null)} className="w-full font-bold py-2.5 md:py-3 bg-slate-100 hover:bg-slate-200 rounded-lg md:rounded-xl transition text-[13px] md:text-base text-slate-600">Đóng</button>
+                </div>
+            </div>
+        )}
         
         {/* Modal Class */}
         {showClassModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in"><form onSubmit={handleCreateClass} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl"><h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">Thêm Lớp Mới</h2><input name="name" required autoFocus placeholder="VD: Lớp IELTS K20" className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" /><div className="flex gap-3 md:gap-4"><button type="button" onClick={() => setShowClassModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-[13px] md:text-base text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition">Hủy</button><button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO LỚP</button></div></form></div> )}
