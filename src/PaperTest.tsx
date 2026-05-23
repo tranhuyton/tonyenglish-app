@@ -111,15 +111,24 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   
   const [currentAudioIndex, setCurrentAudioIndex] = useState(0);
 
-  const [testStarted, setTestStarted] = useState(false);
-  const [isReviewMode, setIsReviewMode] = useState(false);
-  const [scoreResult, setScoreResult] = useState({ score: 0, total: 0, band: "0.0" });
+  // 🚀 TỰ ĐỘNG KÍCH HOẠT REVIEW MODE NẾU NHẬN ĐƯỢC TÍN HIỆU TỪ STUDENT PORTAL
+  const initIsReview = !!safeTestData?.isReview;
+  const [testStarted, setTestStarted] = useState(initIsReview);
+  const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+  const [scoreResult, setScoreResult] = useState({ 
+      score: parseInt(safeTestData?.past_score || 0), 
+      total: parseInt(safeTestData?.past_total || 0), 
+      band: safeTestData?.past_band || "0.0" 
+  });
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
 
-  // States cơ bản
+  // 🚀 NẾU LÀ REVIEW, ĐỔ BÊ TÔNG ĐÁP ÁN CŨ VÀO LUÔN
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
+    if (initIsReview && safeTestData?.past_answers) {
+        return safeTestData.past_answers;
+    }
     try {
       const saved = localStorage.getItem(`ielts_paper_ans_${safeTestData?.id}`);
       return saved ? JSON.parse(saved) : {};
@@ -216,105 +225,106 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
     }
   };
 
-  // NỘP BÀI VÀ TÍNH ĐIỂM
-  const handleFinish = async () => {
-    if (!isReviewMode) {
-      if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
-      isFinishingRef.current = true;
-      if (safeTestData?.id) {
-        localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
-        localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
-      }
-
-      let score = 0; 
-      let total = 0;
-      let questionTypeStats: Record<string, { correct: number, total: number }> = {};
-
-      parts.forEach((p: any) => {
-        if (!Array.isArray(p.sections)) return;
-        p.sections.forEach((s: any) => {
-          const qType = s.questionType || 'Khác';
-          if (!questionTypeStats[qType]) questionTypeStats[qType] = { correct: 0, total: 0 };
-          if (!Array.isArray(s.questions)) return;
-
-          if (qType === 'Checkbox') {
-            const combos = buildCheckboxCombos(s.questions);
-            combos.forEach(combo => {
-              const comboIds = combo.map((q: any) => String(q.id));
-              const userAnsComboSet = new Set(comboIds.map(id => answers[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
-              const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
-              
-              let comboPoints = 0;
-              userAnsComboSet.forEach(ans => {
-                let isMatched = false;
-                correctAnsComboSet.forEach(c => {
-                  if (isAnswerCorrect(ans, c)) isMatched = true;
-                });
-                if (isMatched) comboPoints++;
-              });
-              comboPoints = Math.min(comboPoints, combo.length); 
-              
-              score += comboPoints;
-              total += combo.length;
-              questionTypeStats[qType].correct += comboPoints;
-              questionTypeStats[qType].total += combo.length;
-            });
-          } else {
-            s.questions.forEach((q: any) => {
-              if (!q?.id) return;
-              total++;
-              questionTypeStats[qType].total++;
-              const userAns = String(answers[String(q.id)] || "");
-              const correctAns = String(q.correctAnswer || "");
-              
-              if (isAnswerCorrect(userAns, correctAns) && correctAns.trim() !== "") {
-                 score++; questionTypeStats[qType].correct++;
-              }
-            });
-          }
-        });
-      });
-
-      let band = "0.0";
-      if (score >= 39) band = "9.0"; else if (score >= 37) band = "8.5";
-      else if (score >= 35) band = "8.0"; else if (score >= 33) band = "7.5";
-      else if (score >= 30) band = "7.0"; else if (score >= 27) band = "6.5";
-      else if (score >= 23) band = "6.0"; else if (score >= 19) band = "5.5";
-      else if (score >= 15) band = "5.0"; else if (score >= 13) band = "4.5";
-      else if (score >= 10) band = "4.0"; else if (score >= 8) band = "3.5";
-      else if (score >= 6) band = "3.0"; else if (score >= 4) band = "2.5";
-      else if (score >= 2) band = "2.0"; else if (score >= 1) band = "1.0";
-      
-      setScoreResult({ score, total, band }); 
-      setIsReviewMode(true); 
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      try {
-        const { data: { user } } = await supabase.auth.getUser();
-        if (user) {
-          const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
-          await supabase.from('test_results').insert([{
-            user_id: user.id, 
-            course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
-            test_title: basicInfo.title || safeTestData?.title || "IELTS Test", 
-            test_type: safeTestData?.test_type || 'IELTS Paper',
-            score: score, 
-            total_score: total, 
-            time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
-            details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, questionTypeStats: questionTypeStats }
-          }]);
-        }
-      } catch (error) { 
-        console.error("Lỗi lưu kết quả thi:", error);
-      }
-    } else {
-      if (onFinish) {
-        onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title, bandScore: scoreResult.band });
-      } else {
-        onBack();
-      }
+// NỘP BÀI VÀ TÍNH ĐIỂM
+const handleFinish = async () => {
+  if (!isReviewMode) {
+    if (!window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) return;
+    isFinishingRef.current = true;
+    if (safeTestData?.id) {
+      localStorage.removeItem(`ielts_paper_ans_${safeTestData.id}`);
+      localStorage.removeItem(`ielts_paper_endtime_${safeTestData.id}`);
     }
-  };
+
+    let score = 0; 
+    let total = 0;
+    let questionTypeStats: Record<string, { correct: number, total: number }> = {};
+
+    parts.forEach((p: any) => {
+      if (!Array.isArray(p.sections)) return;
+      p.sections.forEach((s: any) => {
+        const qType = s.questionType || 'Khác';
+        if (!questionTypeStats[qType]) questionTypeStats[qType] = { correct: 0, total: 0 };
+        if (!Array.isArray(s.questions)) return;
+
+        if (qType === 'Checkbox') {
+          const combos = buildCheckboxCombos(s.questions);
+          combos.forEach(combo => {
+            const comboIds = combo.map((q: any) => String(q.id));
+            const userAnsComboSet = new Set(comboIds.map(id => answers[id]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
+            const correctAnsComboSet = new Set(combo.flatMap((q:any) => String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
+            
+            let comboPoints = 0;
+            userAnsComboSet.forEach(ans => {
+              let isMatched = false;
+              correctAnsComboSet.forEach(c => {
+                if (isAnswerCorrect(ans, c)) isMatched = true;
+              });
+              if (isMatched) comboPoints++;
+            });
+            comboPoints = Math.min(comboPoints, combo.length); 
+            
+            score += comboPoints;
+            total += combo.length;
+            questionTypeStats[qType].correct += comboPoints;
+            questionTypeStats[qType].total += combo.length;
+          });
+        } else {
+          s.questions.forEach((q: any) => {
+            if (!q?.id) return;
+            total++;
+            questionTypeStats[qType].total++;
+            const userAns = String(answers[String(q.id)] || "");
+            const correctAns = String(q.correctAnswer || "");
+            
+            if (isAnswerCorrect(userAns, correctAns) && correctAns.trim() !== "") {
+               score++; questionTypeStats[qType].correct++;
+            }
+          });
+        }
+      });
+    });
+
+    let band = "0.0";
+    if (score >= 39) band = "9.0"; else if (score >= 37) band = "8.5";
+    else if (score >= 35) band = "8.0"; else if (score >= 33) band = "7.5";
+    else if (score >= 30) band = "7.0"; else if (score >= 27) band = "6.5";
+    else if (score >= 23) band = "6.0"; else if (score >= 19) band = "5.5";
+    else if (score >= 15) band = "5.0"; else if (score >= 13) band = "4.5";
+    else if (score >= 10) band = "4.0"; else if (score >= 8) band = "3.5";
+    else if (score >= 6) band = "3.0"; else if (score >= 4) band = "2.5";
+    else if (score >= 2) band = "2.0"; else if (score >= 1) band = "1.0";
+    
+    setScoreResult({ score, total, band }); 
+    setIsReviewMode(true); 
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
+        await supabase.from('test_results').insert([{
+          user_id: user.id, 
+          course_id: safeTestData?.course_id || safeTestData?.content_json?.basicInfo?.courseId || null,
+          test_title: basicInfo.title || safeTestData?.title || "IELTS Test", 
+          test_type: safeTestData?.test_type || 'IELTS Paper',
+          score: score, 
+          total_score: total, 
+          time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
+          // 🚀 LƯU TRỮ TOÀN BỘ PHÂN TÍCH DẠNG BÀI VÀO DETAILS
+          details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, type_stats: questionTypeStats }
+        }]);
+      }
+    } catch (error) { 
+      console.error("Lỗi lưu kết quả thi:", error);
+    }
+  } else {
+    if (onFinish) {
+      onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title, bandScore: scoreResult.band });
+    } else {
+      onBack();
+    }
+  }
+};
 
   const resetTest = () => {
     if (window.confirm("Làm lại từ đầu? Mọi đáp án sẽ bị xóa.")) { 

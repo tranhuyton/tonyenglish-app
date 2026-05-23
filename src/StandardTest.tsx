@@ -194,9 +194,15 @@ export default function StandardTest({
     return flag;
   }, [parts, globalAudio]);
 
-  const [testStarted, setTestStarted] = useState(false);
-  const [isReviewMode, setIsReviewMode] = useState(false);
-  const [scoreResult, setScoreResult] = useState({ score: 0, total: 0 });
+  // 🚀 TỰ ĐỘNG KÍCH HOẠT REVIEW MODE NẾU NHẬN ĐƯỢC TÍN HIỆU TỪ STUDENT PORTAL
+  const initIsReview = !!safeData?.isReview;
+  const [testStarted, setTestStarted] = useState(initIsReview);
+  const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+  const [scoreResult, setScoreResult] = useState({ 
+      score: parseInt(safeData?.past_score || 0), 
+      total: parseInt(safeData?.past_total || 0) 
+  });
+  
   const [showPalette, setShowPalette] = useState(false); 
   const [isFullscreen, setIsFullscreen] = useState(false);
   
@@ -275,8 +281,11 @@ export default function StandardTest({
     document.addEventListener('mouseup', handleMouseUp);
   };
 
-  // State đáp án và đánh dấu
+  // 🚀 NẾU LÀ REVIEW, ĐỔ BÊ TÔNG ĐÁP ÁN CŨ VÀO LUÔN
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
+    if (initIsReview && safeData?.past_answers) {
+        return safeData.past_answers;
+    }
     try {
       const saved = localStorage.getItem(`std_ans_${safeData?.id}`);
       return saved ? JSON.parse(saved) : {};
@@ -314,127 +323,128 @@ export default function StandardTest({
     }
   };
 
-  // NỘP BÀI VÀ TÍNH ĐIỂM
-  const handleFinish = async () => {
-    if (!isReviewMode) {
-      if (!window.confirm("Bạn có chắc chắn muốn nộp bài?")) {
-          return;
-      }
-      
-      isFinishingRef.current = true;
-      if (safeData?.id) {
-        localStorage.removeItem(`std_ans_${safeData.id}`);
-        localStorage.removeItem(`standard_mark_${safeData.id}`);
-        localStorage.removeItem(`standard_endtime_${safeData.id}`);
-      }
-
-      let score = 0; 
-      let total = 0;
-      let questionTypeStats: Record<string, { correct: number, total: number }> = {};
-
-      parts?.forEach((p: any) => {
-        p?.sections?.forEach((s: any) => {
-          const qType = s.questionType || 'Khác';
-          if (!questionTypeStats[qType]) {
-              questionTypeStats[qType] = { correct: 0, total: 0 };
-          }
-
-          if (qType === 'Checkbox') {
-             const combos: any[][] = [];
-             
-             s.questions?.forEach((q: any) => {
-                 const rawText = String(q.content || '').replace(/<[^>]*>/g, '').trim();
-                 const hasRealContent = rawText !== '' || String(q.content || '').includes('<img') || String(q.content || '').includes('<audio');
-                 if (combos.length === 0 || hasRealContent) {
-                     combos.push([q]);
-                 } else {
-                     combos[combos.length - 1].push(q);
-                 }
-             });
-
-             combos.forEach(combo => {
-                 const comboIds = combo.map((q: any) => String(q.id));
-                 const userAnsComboSet = new Set(
-                     comboIds.map(id => answers[id])
-                             .filter(v => v && v.trim() !== '')
-                             .flatMap(x => x.split(',').map(v => v.trim().toUpperCase()))
-                 );
-                 
-                 const correctAnsComboSet = new Set(
-                     combo.flatMap((q:any) => String(q.correctAnswer).split(',').map((x:string) => x.trim().toUpperCase()).filter(Boolean))
-                 );
-                 
-                 let comboPoints = 0;
-                 userAnsComboSet.forEach(ans => { 
-                     if (correctAnsComboSet.has(ans)) {
-                         comboPoints++; 
-                     }
-                 });
-                 comboPoints = Math.min(comboPoints, combo.length); 
-                 
-                 score += comboPoints;
-                 total += combo.length;
-                 questionTypeStats[qType].correct += comboPoints;
-                 questionTypeStats[qType].total += combo.length;
-             });
-
-          } else {
-             s?.questions?.forEach((q: any) => {
-               if (!q?.id) return;
-               total++; 
-               questionTypeStats[qType].total++;
-               
-               const uAns = String(answers[String(q.id)] || '').trim().toUpperCase();
-               const cAns = String(q.correctAnswer || '').trim().toUpperCase();
-               
-               if (uAns === cAns && cAns !== '') { 
-                   score++; 
-                   questionTypeStats[qType].correct++; 
-               }
-             });
-          }
-        });
-      });
-
-      setScoreResult({ score, total });
-      setIsReviewMode(true);
-      setShowPalette(false);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-
-      try {
-        const { data: { user } } = await supabase.auth.getUser();
-        if (user) {
-          const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
-          await supabase.from('test_results').insert([{
-            user_id: user.id,
-            course_id: safeData?.course_id || safeData?.content_json?.basicInfo?.courseId || null,
-            test_title: basicInfo.title || safeData?.title || "Standard Test",
-            test_type: safeData?.test_type || 'Standard',
-            score: score, 
-            total_score: total,
-            time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
-            details: { 
-                test_id: safeData?.id, 
-                userAnswers: answers, 
-                questionTypeStats: questionTypeStats 
-            }
-          }]);
-        }
-      } catch (error) { 
-          console.error("Lỗi lưu kết quả thi:", error); 
-      }
-
-    } else {
-      if (document.fullscreenElement) {
-          document.exitFullscreen().catch(() => {});
-      }
-      if (onFinish) {
-          onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title });
-      } else {
-          onBack();
-      }
+// NỘP BÀI VÀ TÍNH ĐIỂM
+const handleFinish = async () => {
+  if (!isReviewMode) {
+    if (!window.confirm("Bạn có chắc chắn muốn nộp bài?")) {
+        return;
     }
-  };
+    
+    isFinishingRef.current = true;
+    if (safeData?.id) {
+      localStorage.removeItem(`std_ans_${safeData.id}`);
+      localStorage.removeItem(`standard_mark_${safeData.id}`);
+      localStorage.removeItem(`standard_endtime_${safeData.id}`);
+    }
+
+    let score = 0; 
+    let total = 0;
+    let questionTypeStats: Record<string, { correct: number, total: number }> = {};
+
+    parts?.forEach((p: any) => {
+      p?.sections?.forEach((s: any) => {
+        const qType = s.questionType || 'Khác';
+        if (!questionTypeStats[qType]) {
+            questionTypeStats[qType] = { correct: 0, total: 0 };
+        }
+
+        if (qType === 'Checkbox') {
+           const combos: any[][] = [];
+           
+           s.questions?.forEach((q: any) => {
+               const rawText = String(q.content || '').replace(/<[^>]*>/g, '').trim();
+               const hasRealContent = rawText !== '' || String(q.content || '').includes('<img') || String(q.content || '').includes('<audio');
+               if (combos.length === 0 || hasRealContent) {
+                   combos.push([q]);
+               } else {
+                   combos[combos.length - 1].push(q);
+               }
+           });
+
+           combos.forEach(combo => {
+               const comboIds = combo.map((q: any) => String(q.id));
+               const userAnsComboSet = new Set(
+                   comboIds.map(id => answers[id])
+                           .filter(v => v && v.trim() !== '')
+                           .flatMap(x => x.split(',').map(v => v.trim().toUpperCase()))
+               );
+               
+               const correctAnsComboSet = new Set(
+                   combo.flatMap((q:any) => String(q.correctAnswer).split(',').map((x:string) => x.trim().toUpperCase()).filter(Boolean))
+               );
+               
+               let comboPoints = 0;
+               userAnsComboSet.forEach(ans => { 
+                   if (correctAnsComboSet.has(ans)) {
+                       comboPoints++; 
+                   }
+               });
+               comboPoints = Math.min(comboPoints, combo.length); 
+               
+               score += comboPoints;
+               total += combo.length;
+               questionTypeStats[qType].correct += comboPoints;
+               questionTypeStats[qType].total += combo.length;
+           });
+
+        } else {
+           s?.questions?.forEach((q: any) => {
+             if (!q?.id) return;
+             total++; 
+             questionTypeStats[qType].total++;
+             
+             const uAns = String(answers[String(q.id)] || '').trim().toUpperCase();
+             const cAns = String(q.correctAnswer || '').trim().toUpperCase();
+             
+             if (uAns === cAns && cAns !== '') { 
+                 score++; 
+                 questionTypeStats[qType].correct++; 
+             }
+           });
+        }
+      });
+    });
+
+    setScoreResult({ score, total });
+    setIsReviewMode(true);
+    setShowPalette(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
+        await supabase.from('test_results').insert([{
+          user_id: user.id,
+          course_id: safeData?.course_id || safeData?.content_json?.basicInfo?.courseId || null,
+          test_title: basicInfo.title || safeData?.title || "Standard Test",
+          test_type: safeData?.test_type || 'Standard',
+          score: score, 
+          total_score: total,
+          time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
+          // 🚀 ĐÃ SỬA: ĐẨY TOÀN BỘ questionTypeStats VÀO ĐỂ BẢNG ANALYTICS HOẠT ĐỘNG
+          details: { 
+              test_id: safeData?.id, 
+              userAnswers: answers, 
+              type_stats: questionTypeStats 
+          }
+        }]);
+      }
+    } catch (error) { 
+        console.error("Lỗi lưu kết quả thi:", error); 
+    }
+
+  } else {
+    if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+    }
+    if (onFinish) {
+        onFinish({ score: scoreResult.score, total: scoreResult.total, testTitle: basicInfo.title });
+    } else {
+        onBack();
+    }
+  }
+};
 
   const parseInitialTime = (val: any) => {
     if (!val) return 3600;

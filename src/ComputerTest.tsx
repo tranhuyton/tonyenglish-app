@@ -175,13 +175,24 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
     onBack();
   };
 
-  const [testStarted, setTestStarted] = useState(false);
-  const [isReviewMode, setIsReviewMode] = useState(false);
-  const [scoreResult, setScoreResult] = useState({ score: 0, total: 0, band: "0.0" });
+  // 🚀 TỰ ĐỘNG KÍCH HOẠT REVIEW MODE NẾU NHẬN ĐƯỢC TÍN HIỆU TỪ STUDENT PORTAL
+  const initIsReview = !!safeTestData?.isReview;
+  const [testStarted, setTestStarted] = useState(initIsReview);
+  const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+  const [scoreResult, setScoreResult] = useState({ 
+      score: parseInt(safeTestData?.past_score || 0), 
+      total: parseInt(safeTestData?.past_total || 0), 
+      band: safeTestData?.past_band || "0.0" 
+  });
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
+
+  // 🚀 NẾU LÀ REVIEW, ĐỔ BÊ TÔNG ĐÁP ÁN CŨ VÀO LUÔN
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
+    if (initIsReview && safeTestData?.past_answers) {
+        return safeTestData.past_answers;
+    }
     try {
       const saved = localStorage.getItem(`ielts_ans_${safeTestData?.id}`);
       return saved ? JSON.parse(saved) : {};
@@ -361,7 +372,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             score: score, 
             total_score: total, 
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
-            details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, questionTypeStats: questionTypeStats }
+            // 🚀 ĐÃ SỬA: ĐẨY TOÀN BỘ questionTypeStats VÀO DETAILS ĐỂ SUPABASE GHI NHẬN LẠI DẠNG BÀI
+            details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, type_stats: questionTypeStats }
           }]);
         }
       } catch (error) { 
