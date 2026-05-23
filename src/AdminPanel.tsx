@@ -50,10 +50,10 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [pdfFiles, setPdfFiles] = useState<any[]>([]);
   const [isUploadingPdf, setIsUploadingPdf] = useState(false);
   const [pdfSearchQuery, setPdfSearchQuery] = useState('');
-  const [pdfSortOrder, setPdfSortOrder] = useState('date-desc'); 
+  const [pdfSortOrder, setPdfSortOrder] = useState('date-desc'); // 🚀 State lưu trạng thái sắp xếp PDF
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // 🚀 VIRTUAL FOLDERS SYSTEM FOR PDF (Để giữ nguyên link gốc)
+  // 🚀 VIRTUAL FOLDERS SYSTEM FOR PDF
   const [pdfFolders, setPdfFolders] = useState<{id: string, name: string, parentId: string|null}[]>([]);
   const [pdfFileMapping, setPdfFileMapping] = useState<Record<string, string>>({}); // filename -> folderId
   const [currentPdfFolderId, setCurrentPdfFolderId] = useState<string | null>(null);
@@ -113,13 +113,17 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   
   const BUCKET_NAME = 'documents'; 
 
-  // Hệ thống lưu trữ Folder ảo dạng JSON ẩn trong Bucket
+  // Hệ thống lưu trữ Folder ảo dạng JSON ẩn trong Bucket (ĐÃ FIX LỖI CACHE BẢN LIVE)
   const fetchVirtualFolders = async () => {
       try {
-          const { data } = await supabase.storage.from(BUCKET_NAME).download('_virtual_folders.json');
-          if (data) {
-              const text = await data.text();
-              const json = JSON.parse(text);
+          // Lấy link public và gắn thêm query ?t=... (thời gian thực) để ép trình duyệt luôn tải bản mới nhất, bỏ qua Cache
+          const { data } = supabase.storage.from(BUCKET_NAME).getPublicUrl('_virtual_folders.json');
+          const response = await fetch(`${data.publicUrl}?t=${new Date().getTime()}`, {
+              cache: 'no-store' // Ép thêm header không lưu cache
+          });
+          
+          if (response.ok) {
+              const json = await response.json();
               setPdfFolders(json.folders || []);
               setPdfFileMapping(json.mapping || {});
           }
@@ -131,14 +135,20 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const saveVirtualFolders = async (newFolders: any[], newMapping: any) => {
       const jsonStr = JSON.stringify({ folders: newFolders, mapping: newMapping });
       const blob = new Blob([jsonStr], { type: 'application/json' });
-      await supabase.storage.from(BUCKET_NAME).upload('_virtual_folders.json', blob, { upsert: true });
+      
+      // Thêm cacheControl: '0' để dặn dò Supabase CDN KHÔNG được lưu đệm file này
+      await supabase.storage.from(BUCKET_NAME).upload('_virtual_folders.json', blob, { 
+          upsert: true,
+          cacheControl: '0' 
+      });
+      
       setPdfFolders(newFolders);
       setPdfFileMapping(newMapping);
   };
 
   const fetchPdfFiles = async () => {
       try {
-          fetchVirtualFolders(); // Tải folder ảo
+          await fetchVirtualFolders(); // Tải folder ảo
           const { data, error } = await supabase.storage.from(BUCKET_NAME).list('', {
               limit: 1000,
               offset: 0,
@@ -157,7 +167,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       } catch (err) {}
   };
 
-  // 🚀 ĐÃ CẬP NHẬT: Xử lý Upload nhiều file cùng lúc
+  // Xử lý Upload nhiều file cùng lúc
   const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
       const files = event.target.files;
       if (!files || files.length === 0) return;
@@ -194,7 +204,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           const newMapping = { ...pdfFileMapping };
           let uploadedCount = 0;
 
-          // Sử dụng Promise.all để tải lên song song các file giúp tiết kiệm thời gian
+          // Sử dụng Promise.all để tải lên song song các file
           await Promise.all(validFiles.map(async (file) => {
               const fileName = file.name.replace(/\s+/g, '_');
               const { error } = await supabase.storage.from(BUCKET_NAME).upload(fileName, file, { cacheControl: '3600', upsert: false });
