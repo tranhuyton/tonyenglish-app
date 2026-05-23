@@ -50,6 +50,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [pdfFiles, setPdfFiles] = useState<any[]>([]);
   const [isUploadingPdf, setIsUploadingPdf] = useState(false);
   const [pdfSearchQuery, setPdfSearchQuery] = useState('');
+  const [pdfSortOrder, setPdfSortOrder] = useState('date-desc'); 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // 🚀 VIRTUAL FOLDERS SYSTEM FOR PDF (Để giữ nguyên link gốc)
@@ -156,33 +157,62 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       } catch (err) {}
   };
 
+  // 🚀 ĐÃ CẬP NHẬT: Xử lý Upload nhiều file cùng lúc
   const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
-      const file = event.target.files?.[0];
-      if (!file) return;
+      const files = event.target.files;
+      if (!files || files.length === 0) return;
 
-      if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
-          alert('Vui lòng chỉ tải lên file PDF!');
+      const validFiles: File[] = [];
+      const invalidFiles: string[] = [];
+
+      // Kiểm tra tính hợp lệ của từng file
+      for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          if ((file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) || file.size > 50 * 1024 * 1024) {
+              invalidFiles.push(file.name);
+          } else {
+              validFiles.push(file);
+          }
+      }
+
+      if (validFiles.length === 0) {
+          alert('Tất cả file đã chọn đều không hợp lệ (Chỉ nhận PDF và dung lượng < 50MB)!');
+          if (fileInputRef.current) fileInputRef.current.value = ''; 
           return;
       }
-      if (file.size > 50 * 1024 * 1024) {
-          alert('File quá lớn! Dung lượng tối đa là 50MB.');
-          return;
+
+      if (invalidFiles.length > 0) {
+          if (!window.confirm(`Có ${invalidFiles.length} file không hợp lệ sẽ bị bỏ qua. Tiếp tục tải lên ${validFiles.length} file hợp lệ?`)) {
+              if (fileInputRef.current) fileInputRef.current.value = '';
+              return;
+          }
       }
 
       setIsUploadingPdf(true);
 
       try {
-          const fileName = file.name.replace(/\s+/g, '_');
-          const { error } = await supabase.storage.from(BUCKET_NAME).upload(fileName, file, { cacheControl: '3600', upsert: false });
-          if (error) throw error;
+          const newMapping = { ...pdfFileMapping };
+          let uploadedCount = 0;
+
+          // Sử dụng Promise.all để tải lên song song các file giúp tiết kiệm thời gian
+          await Promise.all(validFiles.map(async (file) => {
+              const fileName = file.name.replace(/\s+/g, '_');
+              const { error } = await supabase.storage.from(BUCKET_NAME).upload(fileName, file, { cacheControl: '3600', upsert: false });
+              
+              if (!error) {
+                  uploadedCount++;
+                  // Gắn vào folder ảo nếu đang đứng trong folder
+                  if (currentPdfFolderId) {
+                      newMapping[fileName] = currentPdfFolderId;
+                  }
+              }
+          }));
           
-          // Tự động map file mới vào thư mục hiện tại nếu đang ở trong 1 thư mục
-          if (currentPdfFolderId) {
-             const newMapping = { ...pdfFileMapping, [fileName]: currentPdfFolderId };
-             await saveVirtualFolders(pdfFolders, newMapping);
+          if (currentPdfFolderId && uploadedCount > 0) {
+              await saveVirtualFolders(pdfFolders, newMapping);
           }
           
-          alert('Tải file thành công!');
+          alert(`Tải lên thành công ${uploadedCount} file!`);
           fetchPdfFiles(); 
       } catch (error: any) {
           alert(`Lỗi khi tải file: ${error.message}`);
@@ -618,11 +648,24 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   
   const currentPdfSubFolders = pdfFolders.filter(f => currentPdfFolderId ? f.parentId === currentPdfFolderId : !f.parentId);
   
-  // 🚀 TỐI ƯU SEARCH TÀI LIỆU: Nếu đang gõ search thì show toàn bộ file khớp, bất chấp thư mục
+  // 🚀 TỐI ƯU SEARCH TÀI LIỆU VÀ SẮP XẾP BỘ LỌC TÀI LIỆU PDF
   const isSearchingPdf = pdfSearchQuery.trim().length > 0;
   const filteredPdfFiles = useMemo(() => {
-      return pdfFiles.filter(f => f.name.toLowerCase().includes(pdfSearchQuery.toLowerCase()));
-  }, [pdfFiles, pdfSearchQuery]);
+      let result = pdfFiles.filter(f => f.name.toLowerCase().includes(pdfSearchQuery.toLowerCase()));
+      
+      // Áp dụng Logic Sắp Xếp
+      result = result.sort((a, b) => {
+          if (pdfSortOrder === 'name-asc') return a.name.localeCompare(b.name);
+          if (pdfSortOrder === 'name-desc') return b.name.localeCompare(a.name);
+          if (pdfSortOrder === 'date-desc') return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
+          if (pdfSortOrder === 'date-asc') return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
+          if (pdfSortOrder === 'size-desc') return (b.metadata?.size || 0) - (a.metadata?.size || 0);
+          if (pdfSortOrder === 'size-asc') return (a.metadata?.size || 0) - (b.metadata?.size || 0);
+          return 0;
+      });
+
+      return result;
+  }, [pdfFiles, pdfSearchQuery, pdfSortOrder]);
 
   const currentPdfFiles = filteredPdfFiles.filter(f => 
       isSearchingPdf ? true : ((pdfFileMapping[f.name] || null) === currentPdfFolderId)
@@ -687,7 +730,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
             
             {activeTab === 'documents' && (
                 <div>
-                   <input type="file" accept="application/pdf" className="hidden" ref={fileInputRef} onChange={handleFileUpload} />
+                   <input type="file" accept="application/pdf" multiple className="hidden" ref={fileInputRef} onChange={handleFileUpload} />
                    <button 
                       onClick={() => fileInputRef.current?.click()} 
                       disabled={isUploadingPdf}
@@ -769,16 +812,31 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                                 <p className="text-slate-500 text-[10px] md:text-xs mt-1">Dung lượng tối đa 50MB. (Cấu trúc Folder ảo, link gốc không đổi).</p>
                             </div>
                         </div>
-                        <div className="flex gap-2 w-full sm:w-auto">
+                        <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                             {!isSearchingPdf && (
                                 <button onClick={() => setShowPdfFolderModal(true)} className="bg-[#00a651] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl font-black text-[10px] md:text-xs shadow-sm hover:bg-[#008f45] whitespace-nowrap">+ THƯ MỤC</button>
                             )}
+                            
+                            {/* 🚀 DROP-DOWN LỰA CHỌN SẮP XẾP */}
+                            <select 
+                                value={pdfSortOrder} 
+                                onChange={(e) => setPdfSortOrder(e.target.value)} 
+                                className="w-full sm:w-32 px-2 md:px-3 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-[11px] md:text-xs font-bold text-slate-600 shadow-sm bg-white cursor-pointer"
+                            >
+                                <option value="date-desc">Mới nhất trước</option>
+                                <option value="date-asc">Cũ nhất trước</option>
+                                <option value="name-asc">Tên (A-Z)</option>
+                                <option value="name-desc">Tên (Z-A)</option>
+                                <option value="size-desc">Size (Lớn nhất)</option>
+                                <option value="size-asc">Size (Nhỏ nhất)</option>
+                            </select>
+
                             <input 
                                type="text" 
                                placeholder="Tìm tên file..." 
                                value={pdfSearchQuery}
                                onChange={(e) => setPdfSearchQuery(e.target.value)}
-                               className="w-full sm:w-56 px-4 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-xs shadow-sm font-medium"
+                               className="w-full sm:w-48 px-4 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-xs shadow-sm font-medium"
                             />
                         </div>
                     </div>
