@@ -9,14 +9,23 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
     try {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
       
-      if (typeof onClose === 'function') onClose(); 
+      // 🚀 BẮT ĐẦU GHI LOG ĐĂNG NHẬP
+      if (data.user) {
+          await supabase.from('activity_logs').insert([{
+              user_id: data.user.id,
+              action_type: 'login',
+              details: { message: 'Đăng nhập vào hệ thống LMS' }
+          }]);
+      }
+      // 🚀 KẾT THÚC GHI LOG
+      
+      if (typeof onClose === 'function') onClose();
       if (typeof onNavigate === 'function') {
-        onNavigate('student'); 
+        onNavigate('student');
       } else {
         window.location.href = '/';
       }

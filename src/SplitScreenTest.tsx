@@ -1,16 +1,23 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 
-export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
-  // LẤY ĐÚNG ĐỀ THI TỪ THƯ VIỆN TRUYỀN VÀO (Không tải lung tung từ bảng cũ nữa)
+export default function SplitScreenTest({ onBack, onStartTest }: { onBack?: () => void, onStartTest?: any }) {
+  // LẤY ĐÚNG ĐỀ THI TỪ THƯ VIỆN TRUYỀN VÀO
   const [testData, setTestData] = useState<any>(() => {
      const saved = sessionStorage.getItem('lms_current_test');
      return saved ? JSON.parse(saved) : null;
   });
   const [isLoading, setIsLoading] = useState(!testData);
 
-  // KHÔI PHỤC BẢN NHÁP TỪ TRƯỚC (NẾU CÓ) ĐỂ CHỐNG F5 MẤT CHỮ
+  // 🚀 NHẬN TÍN HIỆU TỪ STUDENT PORTAL XEM CÓ PHẢI LÀ CHẾ ĐỘ XEM LẠI LỊCH SỬ KHÔNG
+  const initIsReview = !!testData?.isReview;
+  const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+
+  // KHÔI PHỤC BẢN NHÁP HOẶC ĐÁP ÁN LỊCH SỬ
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
+     if (initIsReview && testData?.past_answers) {
+         return testData.past_answers;
+     }
      if (!testData?.id) return {};
      try {
         const saved = localStorage.getItem(`case_study_ans_${testData.id}`);
@@ -18,12 +25,18 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
      } catch(e) { return {}; }
   });
   
-  // Dùng Ref để đồng hồ khi hết giờ không bị nộp bài trắng
   const answersRef = useRef(answers);
   useEffect(() => { answersRef.current = answers; }, [answers]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [gradeResult, setGradeResult] = useState<any>(null);
+  
+  // 🚀 NẾU LÀ REVIEW MODE, ĐỔ LUÔN DỮ LIỆU CHẤM CŨ TỪ DATABASE VÀO MÀN HÌNH KẾT QUẢ
+  const [gradeResult, setGradeResult] = useState<any>(() => {
+      if (initIsReview && testData?.aiFeedback) {
+          return testData.aiFeedback;
+      }
+      return null;
+  });
 
   const [leftWidth, setLeftWidth] = useState(50); 
   const [isDragging, setIsDragging] = useState(false);
@@ -39,16 +52,16 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     return saved ? parseInt(saved, 10) : null;
   };
 
-  // TỰ ĐỘNG LƯU NHÁP TỪNG CHỮ VÀO BỘ NHỚ TRÌNH DUYỆT
+  // TỰ ĐỘNG LƯU NHÁP
   useEffect(() => {
-    if (testData?.id && !isFinishingRef.current && !gradeResult) {
+    if (testData?.id && !isFinishingRef.current && !gradeResult && !isReviewMode) {
       localStorage.setItem(`case_study_ans_${testData.id}`, JSON.stringify(answers));
     }
-  }, [answers, testData?.id, gradeResult]);
+  }, [answers, testData?.id, gradeResult, isReviewMode]);
 
   // Khởi tạo thời gian thực cho bài thi
   useEffect(() => {
-    if (testData) {
+    if (testData && !isReviewMode) {
        const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
        const configuredTime = parseInt(rawTime) || 90;
        const initialSeconds = configuredTime * 60;
@@ -63,8 +76,10 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
            setTimeLeft(remaining);
        }
        setIsLoading(false);
+    } else if (isReviewMode) {
+       setIsLoading(false);
     }
-  }, [testData]);
+  }, [testData, isReviewMode]);
 
   const formatTime = (totalSeconds: number) => {
     const hours = Math.floor(totalSeconds / 3600);
@@ -76,11 +91,12 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
   };
 
   const handleAnswerChange = (inputId: string, value: string) => {
+    if (isReviewMode) return;
     setAnswers(prev => ({ ...prev, [inputId]: value }));
   };
 
   const handleSubmit = async () => {
-    const currentAnswers = answersRef.current; // Lấy đáp án mới nhất kể cả khi bị timer ép nộp
+    const currentAnswers = answersRef.current;
     if (Object.keys(currentAnswers).length === 0 && timeLeft > 0) {
       alert("⚠️ Bạn chưa điền câu trả lời nào cả!");
       return;
@@ -93,7 +109,6 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     setIsSubmitting(true);
     isFinishingRef.current = true;
     
-    // BỔ SUNG: Xóa sạch bộ nhớ nháp khi nộp bài
     if (testData?.id) {
        localStorage.removeItem(`case_study_endtime_${testData.id}`);
        localStorage.removeItem(`case_study_ans_${testData.id}`);
@@ -134,11 +149,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
 
       // GỌI QUA SUPABASE EDGE FUNCTION
       const { data, error } = await supabase.functions.invoke('ai-grader', {
-        body: { 
-          prompt: prompt,
-          // Đề xuất dùng model Pro cho dạng Case Study IGCSE để chấm chuẩn Marking Scheme hơn
-          model: 'gemini-2.5-flash' 
-        }
+        body: { prompt: prompt, model: 'gemini-2.5-flash' }
       });
 
       if (error) throw new Error("Lỗi gọi Server: " + error.message);
@@ -149,8 +160,9 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
       const gradedData = JSON.parse(aiResponseText);
 
       setGradeResult(gradedData);
+      setIsReviewMode(true);
 
-      // Lưu kết quả vào Database
+      // 🚀 LƯU DB & BẮN PHÁO HIỆU CHO ADMIN
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
@@ -168,6 +180,13 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
             time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
             details: { test_id: testData.id, userAnswers: currentAnswers, aiFeedback: gradedData }
           }]);
+
+          // Bắn thông báo Activity
+          await supabase.from('activity_logs').insert([{
+            user_id: user.id,
+            action_type: 'finish_test',
+            details: { test_title: testData.title || "Case Study Test", score: gradedData.total_student_score, total: gradedData.total_max_score }
+          }]);
         }
       } catch (dbError) {
         console.error("Lỗi lưu DB:", dbError);
@@ -183,7 +202,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
 
   // Đồng hồ chạy liên tục
   useEffect(() => {
-    if (isLoading || !testData || gradeResult || isFinishingRef.current) return;
+    if (isLoading || !testData || gradeResult || isFinishingRef.current || isReviewMode) return;
     
     const timer = setInterval(() => {
         const currentEndTime = getSavedEndTime(testData.id);
@@ -201,7 +220,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     }, 1000);
     
     return () => clearInterval(timer);
-  }, [isLoading, testData, gradeResult]);
+  }, [isLoading, testData, gradeResult, isReviewMode]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -230,7 +249,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
     );
   }
 
-  if (!testData || !testData.json_config || !testData.json_config.questions) {
+  if (!testData || (!isReviewMode && (!testData.json_config || !testData.json_config.questions))) {
     return (
       <div className="h-screen w-screen flex flex-col items-center justify-center bg-[#525659] text-white font-bold gap-4">
         <p>⚠️ Chưa có đề thi nào trong hệ thống hoặc dữ liệu bị lỗi.</p>
@@ -248,11 +267,13 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
           <button onClick={onBack} className="text-slate-600 hover:text-black font-bold text-sm transition-colors whitespace-nowrap">← Quay lại</button>
           <div className="h-5 w-px bg-slate-300 hidden sm:block"></div>
           <div className="truncate flex items-baseline gap-2">
-            <h1 className="font-bold text-black text-[15px] leading-tight truncate">{testData.title || 'Bài thi Case Study'}</h1>
+            <h1 className="font-bold text-black text-[15px] leading-tight truncate">
+              {isReviewMode ? `[REVIEW] ${testData.title || 'Bài thi Case Study'}` : testData.title || 'Bài thi Case Study'}
+            </h1>
             <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider hidden md:block">Phân loại: {testData.test_type || 'Case-Study'}</p>
           </div>
         </div>
-        {!gradeResult && (
+        {!gradeResult && !isReviewMode && (
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
              <div className={`font-bold flex items-center gap-2 px-3 py-1 rounded ${timeLeft <= 300 ? 'text-red-600 bg-red-50 animate-pulse' : 'text-slate-600'}`}>
                <span>⏱️</span> <span className="hidden sm:inline font-mono tracking-widest">{formatTime(timeLeft)}</span>
@@ -307,11 +328,11 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
 
           <div className={`flex-1 overflow-y-auto p-4 sm:p-5 ${isDragging ? 'pointer-events-none' : ''}`}>
             
-            {/* 1. NẾU ĐÃ CHẤM XONG -> HIỂN THỊ KẾT QUẢ */}
+            {/* 1. NẾU ĐÃ CHẤM XONG HOẶC LÀ REVIEW MODE -> HIỂN THỊ KẾT QUẢ */}
             {gradeResult ? (
               <div className="w-full bg-white shadow-xl mb-5 px-6 py-12 sm:px-16 sm:py-16 min-h-[85vh]">
                 <div className="border-b-4 border-black pb-8 mb-10 text-center">
-                  <h2 className="text-3xl font-black text-black mb-3">Kết Quả Chấm Điểm (Gemini)</h2>
+                  <h2 className="text-3xl font-black text-black mb-3">Kết Quả Chấm Điểm (AI)</h2>
                   <div className="text-6xl font-black text-[#1e88e5] mb-6">
                     {gradeResult.total_student_score} <span className="text-3xl text-slate-400">/ {gradeResult.total_max_score}</span>
                   </div>
@@ -333,7 +354,7 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
                       
                       <div className="mb-4">
                          <span className="font-bold text-slate-500 uppercase text-[11px] tracking-widest block mb-2">Bài làm của bạn:</span>
-                         <div className="bg-slate-50 p-4 border border-slate-200 text-[14px] text-slate-600 italic">
+                         <div className="bg-slate-50 p-4 border border-slate-200 text-[14px] text-slate-600 italic whitespace-pre-wrap">
                             {answers[`${item.question_number}_input_0`] || "Không có câu trả lời..."}
                          </div>
                       </div>
@@ -348,33 +369,36 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
                   ))}
                 </div>
                 
-                <div className="mt-12 flex justify-center">
-                  <button onClick={() => {
-                      setGradeResult(null);
-                      if (testData?.id) {
-                         localStorage.removeItem(`case_study_ans_${testData.id}`);
-                         const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
-                         const initialSeconds = (parseInt(rawTime) || 90) * 60;
-                         const newEndTime = Date.now() + initialSeconds * 1000;
-                         localStorage.setItem(`case_study_endtime_${testData.id}`, newEndTime.toString());
-                         setTimeLeft(initialSeconds);
-                      }
-                      setAnswers({});
-                      isFinishingRef.current = false; // Reset lại cờ nộp bài
-                  }} className="border-2 border-black hover:bg-slate-100 text-black font-bold px-10 py-3 transition-colors">
-                    Làm lại bài thi
-                  </button>
-                </div>
+                {!initIsReview && (
+                  <div className="mt-12 flex justify-center">
+                    <button onClick={() => {
+                        setGradeResult(null);
+                        setIsReviewMode(false);
+                        if (testData?.id) {
+                           localStorage.removeItem(`case_study_ans_${testData.id}`);
+                           const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
+                           const initialSeconds = (parseInt(rawTime) || 90) * 60;
+                           const newEndTime = Date.now() + initialSeconds * 1000;
+                           localStorage.setItem(`case_study_endtime_${testData.id}`, newEndTime.toString());
+                           setTimeLeft(initialSeconds);
+                        }
+                        setAnswers({});
+                        isFinishingRef.current = false;
+                    }} className="border-2 border-black hover:bg-slate-100 text-black font-bold px-10 py-3 transition-colors">
+                      Làm lại bài thi
+                    </button>
+                  </div>
+                )}
               </div>
             ) : (
               /* 2. NẾU CHƯA CHẤM -> HIỂN THỊ KHUNG LÀM BÀI */
               <>
-                {testData.json_config.questions.map((q: any, index: number) => (
+                {testData.json_config?.questions?.map((q: any, index: number) => (
                   <div key={index} className="w-full bg-white shadow-xl mb-5 px-6 py-12 sm:px-16 sm:py-20 min-h-[85vh]">
                     <div className="flex gap-3 mb-8 items-baseline">
                       <div className="font-bold text-black text-[16px] sm:text-[18px] min-w-[30px]">{q.question_number}</div>
                       <div className="flex-1">
-                        <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline">{q.question_text}</h3>
+                        <h3 className="font-medium text-black text-[15px] sm:text-[16px] leading-relaxed inline whitespace-pre-wrap">{q.question_text}</h3>
                         <span className="inline-block text-slate-500 text-[12px] font-bold ml-2 uppercase tracking-wider">[{q.total_marks} marks]</span>
                       </div>
                     </div>
@@ -387,7 +411,8 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
                             <textarea
                               value={answers[inputId] || ''}
                               onChange={(e) => handleAnswerChange(inputId, e.target.value)}
-                              className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5] transition-all resize-y bg-transparent"
+                              disabled={isReviewMode}
+                              className="w-full border border-slate-400 rounded-none p-4 min-h-[120px] text-[15px] text-black leading-relaxed outline-none focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5] transition-all resize-y bg-transparent disabled:bg-slate-50"
                             />
                           </div>
                         )
@@ -396,15 +421,17 @@ export default function SplitScreenTest({ onBack }: { onBack?: () => void }) {
                   </div>
                 ))}
                 
-                <div className="w-full bg-white shadow-xl px-8 py-8 sm:px-16 flex justify-end mb-12 border-t border-slate-100">
-                   <button 
-                     onClick={handleSubmit} 
-                     disabled={isSubmitting}
-                     className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 shadow-md disabled:opacity-50"
-                   >
-                     {isSubmitting ? 'AI đang chấm bài...' : 'Hoàn tất & Nộp bài thi'}
-                   </button>
-                </div>
+                {!isReviewMode && (
+                  <div className="w-full bg-white shadow-xl px-8 py-8 sm:px-16 flex justify-end mb-12 border-t border-slate-100">
+                     <button 
+                       onClick={handleSubmit} 
+                       disabled={isSubmitting}
+                       className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold px-10 py-3 rounded-none transition-transform active:scale-95 flex items-center gap-2 shadow-md disabled:opacity-50"
+                     >
+                       {isSubmitting ? 'AI đang chấm bài...' : 'Hoàn tất & Nộp bài thi'}
+                     </button>
+                  </div>
+                )}
               </>
             )}
 

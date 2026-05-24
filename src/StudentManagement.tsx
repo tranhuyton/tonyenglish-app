@@ -10,7 +10,7 @@ const authSupabase = createClient(
 
 let studentSearchTimer: any;
 
-export default function StudentManagement() {
+export default function StudentManagement({ onStartTest }: { onStartTest?: any }) {
   const [students, setStudents] = useState<any[]>([]);
   const [courses, setCourses] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -23,7 +23,8 @@ export default function StudentManagement() {
   const [studentHistory, setStudentHistory] = useState<any[]>([]);
   const [studentEnrollments, setStudentEnrollments] = useState<any[]>([]);
   const [isLoadingDetails, setIsLoadingDetails] = useState(false);
-  const [activeDetailTab, setActiveDetailTab] = useState<'courses' | 'history'>('courses');
+  const [activeDetailTab, setActiveDetailTab] = useState<'courses' | 'history' | 'activity'>('courses');
+  const [studentActivities, setStudentActivities] = useState<any[]>([]);
 
   const [showAssignModal, setShowAssignModal] = useState(false);
   const [isAssigning, setIsAssigning] = useState(false);
@@ -35,9 +36,13 @@ export default function StudentManagement() {
   const [editingUser, setEditingUser] = useState<any>(null);
   const [isUpdatingUser, setIsUpdatingUser] = useState(false);
 
+  // 🚀 KHO ĐỀ THI ĐỂ MỞ TÍNH NĂNG XEM LẠI BÀI
+  const [allTests, setAllTests] = useState<any[]>([]);
+
   useEffect(() => {
     fetchStudents();
     fetchCourses();
+    supabase.from('tests').select('*').then(({data}) => setAllTests(data || []));
   }, []);
 
   useEffect(() => {
@@ -64,7 +69,7 @@ export default function StudentManagement() {
 
   const handleSelectStudent = async (student: any) => {
     setSelectedStudent(student);
-    setEditingUser(null); // Đảm bảo clear form cũ nếu có
+    setEditingUser(null);
     setIsLoadingDetails(true);
     setActiveDetailTab('courses');
     
@@ -74,6 +79,11 @@ export default function StudentManagement() {
 
       const { data: historyData } = await supabase.from('test_results').select('*').eq('user_id', student.id).order('created_at', { ascending: false });
       setStudentHistory(historyData || []);
+
+      // 🚀 FETCH NHẬT KÝ HOẠT ĐỘNG
+      const { data: actData } = await supabase.from('activity_logs').select('*').eq('user_id', student.id).order('created_at', { ascending: false });
+      setStudentActivities(actData || []);
+      
     } catch (err: any) {
       console.error("Lỗi tải chi tiết:", err.message);
     } finally {
@@ -207,6 +217,37 @@ export default function StudentManagement() {
     }
   };
 
+  // 🚀 HÀM MỞ BÀI THI CHI TIẾT TỪ ADMIN
+  const handleReviewTest = (h: any) => {
+    const testId = h.details?.test_id || h.test_id;
+    let foundTest = allTests.find(t => String(t.id) === String(testId));
+    if (!foundTest) foundTest = allTests.find(t => t.title.trim() === h.test_title?.trim());
+    
+    if (foundTest && onStartTest) {
+        const type = String(foundTest.test_type || '').toLowerCase();
+        let targetMode = 'standard';
+        if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
+        else if (type === 'ielts-writing') targetMode = 'ielts-writing';
+        else if (type === 'ielts-speaking') targetMode = 'ielts-speaking';
+        else if (type.includes('ielts')) targetMode = 'computer';
+        
+        sessionStorage.setItem('lms_current_view', 'admin'); 
+        
+        onStartTest(targetMode, { 
+            ...foundTest, 
+            history_id: h.id, 
+            isReview: true,
+            past_answers: h.details?.userAnswers || h.details?.answers || {},
+            past_score: h.score,
+            past_total: h.total_score,
+            past_band: h.details?.bandScore || '0.0',
+            aiFeedback: h.details?.aiFeedback || null
+        });
+    } else {
+        alert("Đề thi này không còn tồn tại trên hệ thống.");
+    }
+  };
+
   const formatDate = (isoString: string) => {
     if (!isoString) return '';
     const d = new Date(isoString);
@@ -225,7 +266,7 @@ export default function StudentManagement() {
   const availableCourses = courses.filter(c => !studentEnrollments.some(e => e.course_id === c.id));
 
   // ==========================================
-  // VIEW 2: CHI TIẾT HỌC VIÊN
+  // VIEW CHI TIẾT HỌC VIÊN
   // ==========================================
   if (selectedStudent) {
     const totalTests = studentHistory.length;
@@ -233,7 +274,6 @@ export default function StudentManagement() {
     const totalTime = studentHistory.reduce((acc, curr) => acc + Math.round((curr.time_spent || 0) / 60), 0);
 
     return (
-      // 🚀 BỌC LẠI BẰNG GÓI <></> ĐỂ FORM POPUP KHÔNG BỊ "NHỐT" BÊN TRONG DIV
       <>
         <div className="animate-in slide-in-from-right-4 duration-300">
           <button onClick={() => setSelectedStudent(null)} className="mb-6 flex items-center gap-2 text-slate-500 hover:text-[#0a5482] font-bold transition-colors bg-white px-4 py-2 rounded-lg border border-slate-200 shadow-sm w-fit">
@@ -280,9 +320,10 @@ export default function StudentManagement() {
           </div>
 
           <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col min-h-[400px]">
-            <div className="bg-slate-50 px-2 pt-2 border-b border-slate-200 flex gap-2">
-              <button onClick={() => setActiveDetailTab('courses')} className={`px-6 py-3 font-bold text-sm rounded-t-xl transition-colors ${activeDetailTab === 'courses' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📚 Khóa học ghi danh</button>
-              <button onClick={() => setActiveDetailTab('history')} className={`px-6 py-3 font-bold text-sm rounded-t-xl transition-colors ${activeDetailTab === 'history' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📊 Lịch sử & Tiến độ</button>
+            <div className="bg-slate-50 px-2 pt-2 border-b border-slate-200 flex gap-2 overflow-x-auto custom-scrollbar">
+              <button onClick={() => setActiveDetailTab('courses')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'courses' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📚 Khóa học</button>
+              <button onClick={() => setActiveDetailTab('history')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'history' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>📊 Lịch sử Điểm</button>
+              <button onClick={() => setActiveDetailTab('activity')} className={`px-4 md:px-6 py-3 font-bold text-[13px] md:text-sm rounded-t-xl transition-colors whitespace-nowrap ${activeDetailTab === 'activity' ? 'bg-white text-[#0a5482] border-t border-x border-slate-200' : 'text-slate-500 hover:bg-slate-100'}`}>👀 Nhật ký Truy cập</button>
             </div>
             
             <div className="p-6 flex-1 bg-white">
@@ -310,7 +351,8 @@ export default function StudentManagement() {
                     </div>
                   )}
                 </div>
-              ) : (
+
+              ) : activeDetailTab === 'history' ? (
                 <div>
                   <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest mb-6">Lịch sử nộp bài ({studentHistory.length} bài)</h3>
                   {studentHistory.length === 0 ? (
@@ -320,8 +362,11 @@ export default function StudentManagement() {
                       <table className="w-full text-left border-collapse">
                         <thead className="bg-[#f8fafc] text-[11px] font-black uppercase tracking-wider text-slate-500 border-b border-slate-200">
                           <tr>
-                            <th className="px-5 py-3">Tên bài thi</th><th className="px-5 py-3 text-center">Dạng</th>
-                            <th className="px-5 py-3 text-center">Điểm</th><th className="px-5 py-3 text-center">Thời gian</th><th className="px-5 py-3 text-right">Ngày nộp</th>
+                            <th className="px-5 py-3">Tên bài thi</th>
+                            <th className="px-5 py-3 text-center">Dạng</th>
+                            <th className="px-5 py-3 text-center">Điểm</th>
+                            <th className="px-5 py-3 text-center">Ngày nộp</th>
+                            <th className="px-5 py-3 text-right">Thao tác</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-100">
@@ -330,8 +375,12 @@ export default function StudentManagement() {
                               <td className="px-5 py-3 font-bold text-[13px] text-slate-800">{h.test_title}</td>
                               <td className="px-5 py-3 text-center"><span className="bg-slate-100 text-slate-600 px-2 py-1 rounded text-[10px] font-bold border border-slate-200">{h.test_type}</span></td>
                               <td className="px-5 py-3 text-center font-black text-[14px] text-emerald-600">{h.score} / {h.total_score}</td>
-                              <td className="px-5 py-3 text-center text-slate-600 text-[12px]">{Math.round((h.time_spent||0)/60)}p</td>
-                              <td className="px-5 py-3 text-right text-slate-500 text-[12px]">{formatDate(h.created_at)}</td>
+                              <td className="px-5 py-3 text-center text-slate-500 text-[12px]">{formatDate(h.created_at)}</td>
+                              <td className="px-5 py-3 text-right">
+                                 <button onClick={() => handleReviewTest(h)} className="text-[#0a5482] bg-blue-50 hover:bg-blue-100 border border-blue-200 shadow-sm px-4 py-2 rounded-lg font-bold transition-colors text-[11px] uppercase tracking-wide">
+                                    👁️ Xem bài làm
+                                 </button>
+                              </td>
                             </tr>
                           ))}
                         </tbody>
@@ -339,14 +388,96 @@ export default function StudentManagement() {
                     </div>
                   )}
                 </div>
-              )}
+
+              ) : activeDetailTab === 'activity' ? (
+                <div className="animate-in fade-in pb-10">
+                  <h3 className="font-black text-slate-700 text-[15px] uppercase tracking-widest mb-8">Nhật ký truy cập & hành vi</h3>
+                  {studentActivities.length === 0 ? (
+                    <div className="py-16 text-center border-2 border-dashed border-slate-200 rounded-xl text-slate-400 font-medium">Chưa có hoạt động nào được ghi nhận.</div>
+                  ) : (
+                    <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
+                      {studentActivities.map((act) => (
+                         <div key={act.id} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-[#0a5482] text-white font-bold shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-sm z-10 text-[14px]">
+                               {act.action_type === 'login' ? '🔑' : act.action_type === 'finish_test' ? '📝' : act.action_type === 'call_tutor' ? '📞' : '📖'}
+                            </div>
+                            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-[#2bd6eb] transition-colors">
+                               <div className="flex justify-between items-start mb-2">
+                                  <h4 className="font-black text-[#0a5482] text-[13px] md:text-[15px] uppercase tracking-tight">
+                                     {act.action_type === 'login' && 'Đăng nhập hệ thống'}
+                                     {act.action_type === 'finish_test' && 'Nộp bài kiểm tra'}
+                                     {act.action_type === 'call_tutor' && 'Hỏi đáp AI / Voice'}
+                                     {act.action_type === 'finish_lecture' && 'Hoàn thành bài giảng'}
+                                  </h4>
+                                  <span className="text-[11px] font-bold text-slate-400 whitespace-nowrap ml-2 bg-slate-50 px-2 py-1 rounded border border-slate-100">{formatDate(act.created_at)}</span>
+                               </div>
+                               <p className="text-[13px] text-slate-600 font-medium leading-relaxed">
+                                  {act.action_type === 'login' && 'Học sinh đăng nhập thành công vào LMS.'}
+                                  {act.action_type === 'finish_test' && `Đã nộp bài: "${act.details?.test_title || 'IELTS'}" với số điểm: ${act.details?.score || 0}`}
+                                  {act.action_type === 'call_tutor' && `Thời lượng đàm thoại / hỏi AI: ${act.details?.duration || 0} giây.`}
+                                  {act.action_type === 'finish_lecture' && `Học xong bài giảng: "${act.details?.lecture_title || 'Lecture'}"`}
+                               </p>
+                            </div>
+                         </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : null}
+
             </div>
           </div>
         </div>
 
-        {/* 🚀 ĐẶT MODALS RA BÊN NGOÀI ĐỂ KHÔNG BỊ "NHỐT" NỮA */}
-        {renderEditUserModal()}
+        {/* MODAL EDIT TÀI KHOẢN KHI ĐANG XEM CHI TIẾT */}
+        {editingUser && (
+          <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4">
+            <form onSubmit={handleUpdateUser} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
+              <h2 className="text-xl font-black text-slate-800 mb-6 uppercase tracking-tight border-b pb-4 text-center">Sửa Thông Tin</h2>
+              
+              <div className="space-y-4 mb-8">
+                <div>
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Họ và tên</label>
+                  <input name="fullName" required type="text" defaultValue={editingUser.full_name || ''} autoComplete="off" placeholder="VD: Trần Huy Tôn" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
+                </div>
+                
+                <div>
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Số điện thoại</label>
+                  <input name="phone" type="text" defaultValue={editingUser.phone || ''} autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
+                </div>
 
+                <div>
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Email đăng nhập</label>
+                  <input type="email" defaultValue={editingUser.email} disabled className="w-full border border-slate-200 bg-slate-50 rounded-xl px-4 py-3 outline-none text-slate-400 text-sm cursor-not-allowed" />
+                  <p className="text-[10px] text-slate-400 mt-1 italic">* Không thể sửa email từ Admin Panel.</p>
+                </div>
+
+                <div>
+                  <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Phân quyền</label>
+                  <div className="grid grid-cols-2 gap-3 mt-2">
+                    <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${editingUser.role === 'student' || !editingUser.role ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
+                      <input type="radio" name="role" value="student" defaultChecked={editingUser.role === 'student' || !editingUser.role} onChange={(e) => setEditingUser({...editingUser, role: 'student'})} className="hidden" />
+                      👨‍🎓 Học viên
+                    </label>
+                    <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${editingUser.role === 'admin' ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
+                      <input type="radio" name="role" value="admin" defaultChecked={editingUser.role === 'admin'} onChange={(e) => setEditingUser({...editingUser, role: 'admin'})} className="hidden" />
+                      👑 Quản trị
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <button type="button" onClick={() => setEditingUser(null)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button>
+                <button type="submit" disabled={isUpdatingUser} className="flex-1 bg-[#0a5482] text-white font-black py-3 rounded-xl shadow-lg transition hover:bg-[#084266] disabled:opacity-50">
+                  {isUpdatingUser ? 'ĐANG LƯU...' : 'LƯU THAY ĐỔI'}
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
+
+        {/* MODAL GÁN KHÓA HỌC */}
         {showAssignModal && (
           <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4">
             <form onSubmit={handleAssignCourse} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
@@ -374,61 +505,9 @@ export default function StudentManagement() {
   }
 
   // ==========================================
-  // VIEW 1: DANH SÁCH HỌC VIÊN TỔNG
+  // VIEW DANH SÁCH HỌC VIÊN TỔNG
   // ==========================================
-  
-  function renderEditUserModal() {
-    if (!editingUser) return null;
-    return (
-      <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4">
-        <form onSubmit={handleUpdateUser} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
-          <h2 className="text-xl font-black text-slate-800 mb-6 uppercase tracking-tight border-b pb-4 text-center">Sửa Thông Tin</h2>
-          
-          <div className="space-y-4 mb-8">
-            <div>
-              <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Họ và tên</label>
-              <input name="fullName" required type="text" defaultValue={editingUser.full_name || ''} autoComplete="off" placeholder="VD: Trần Huy Tôn" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
-            </div>
-            
-            <div>
-              <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Số điện thoại</label>
-              <input name="phone" type="text" defaultValue={editingUser.phone || ''} autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
-            </div>
-
-            <div>
-              <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Email đăng nhập</label>
-              <input type="email" defaultValue={editingUser.email} disabled className="w-full border border-slate-200 bg-slate-50 rounded-xl px-4 py-3 outline-none text-slate-400 text-sm cursor-not-allowed" />
-              <p className="text-[10px] text-slate-400 mt-1 italic">* Không thể sửa email từ Admin Panel.</p>
-            </div>
-
-            <div>
-              <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Phân quyền</label>
-              <div className="grid grid-cols-2 gap-3 mt-2">
-                <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${editingUser.role === 'student' || !editingUser.role ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
-                  <input type="radio" name="role" value="student" defaultChecked={editingUser.role === 'student' || !editingUser.role} onChange={(e) => setEditingUser({...editingUser, role: 'student'})} className="hidden" />
-                  👨‍🎓 Học viên
-                </label>
-                <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${editingUser.role === 'admin' ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
-                  <input type="radio" name="role" value="admin" defaultChecked={editingUser.role === 'admin'} onChange={(e) => setEditingUser({...editingUser, role: 'admin'})} className="hidden" />
-                  👑 Quản trị
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex gap-4">
-            <button type="button" onClick={() => setEditingUser(null)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button>
-            <button type="submit" disabled={isUpdatingUser} className="flex-1 bg-[#0a5482] text-white font-black py-3 rounded-xl shadow-lg transition hover:bg-[#084266] disabled:opacity-50">
-              {isUpdatingUser ? 'ĐANG LƯU...' : 'LƯU THAY ĐỔI'}
-            </button>
-          </div>
-        </form>
-      </div>
-    );
-  }
-
   return (
-    // 🚀 BỌC LẠI BẰNG GÓI <></> ĐỂ FORM KHÔNG BỊ "NHỐT" TRONG DIV CLASS OVERFLOW-HIDDEN
     <>
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden animate-in fade-in duration-300 flex flex-col h-[calc(100vh-120px)]">
         <div className="bg-slate-50 px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 shrink-0">
@@ -536,9 +615,7 @@ export default function StudentManagement() {
         </div>
       </div>
 
-      {/* 🚀 ĐẶT MODALS RA BÊN NGOÀI ĐỂ KHÔNG BỊ "NHỐT" NỮA */}
-      {renderEditUserModal()}
-
+      {/* MODAL TẠO TÀI KHOẢN MỚI */}
       {showCreateUserModal && (
         <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4">
           <form onSubmit={handleCreateUser} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
@@ -584,6 +661,54 @@ export default function StudentManagement() {
               <button type="button" onClick={() => setShowCreateUserModal(false)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button>
               <button type="submit" disabled={isCreatingUser} className="flex-1 bg-[#0a5482] text-white font-black py-3 rounded-xl shadow-lg transition hover:bg-[#084266] disabled:opacity-50">
                 {isCreatingUser ? 'ĐANG TẠO...' : 'TẠO TÀI KHOẢN'}
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
+      
+      {/* MODAL EDIT TÀI KHOẢN NGOÀI DANH SÁCH TỔNG */}
+      {editingUser && !selectedStudent && (
+        <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4">
+          <form onSubmit={handleUpdateUser} className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95">
+            <h2 className="text-xl font-black text-slate-800 mb-6 uppercase tracking-tight border-b pb-4 text-center">Sửa Thông Tin</h2>
+            
+            <div className="space-y-4 mb-8">
+              <div>
+                <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Họ và tên</label>
+                <input name="fullName" required type="text" defaultValue={editingUser.full_name || ''} autoComplete="off" placeholder="VD: Trần Huy Tôn" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
+              </div>
+              
+              <div>
+                <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Số điện thoại</label>
+                <input name="phone" type="text" defaultValue={editingUser.phone || ''} autoComplete="off" placeholder="VD: 0987654321" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-[#0a5482] text-sm font-bold" />
+              </div>
+
+              <div>
+                <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Email đăng nhập</label>
+                <input type="email" defaultValue={editingUser.email} disabled className="w-full border border-slate-200 bg-slate-50 rounded-xl px-4 py-3 outline-none text-slate-400 text-sm cursor-not-allowed" />
+                <p className="text-[10px] text-slate-400 mt-1 italic">* Không thể sửa email từ Admin Panel.</p>
+              </div>
+
+              <div>
+                <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Phân quyền</label>
+                <div className="grid grid-cols-2 gap-3 mt-2">
+                  <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${editingUser.role === 'student' || !editingUser.role ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
+                    <input type="radio" name="role" value="student" defaultChecked={editingUser.role === 'student' || !editingUser.role} onChange={(e) => setEditingUser({...editingUser, role: 'student'})} className="hidden" />
+                    👨‍🎓 Học viên
+                  </label>
+                  <label className={`border-2 rounded-xl p-3 flex items-center justify-center cursor-pointer transition-all font-bold text-sm ${editingUser.role === 'admin' ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 text-slate-500 hover:bg-slate-50'}`}>
+                    <input type="radio" name="role" value="admin" defaultChecked={editingUser.role === 'admin'} onChange={(e) => setEditingUser({...editingUser, role: 'admin'})} className="hidden" />
+                    👑 Quản trị
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <button type="button" onClick={() => setEditingUser(null)} className="flex-1 font-bold py-3 text-slate-400 hover:bg-slate-50 rounded-xl transition">Hủy</button>
+              <button type="submit" disabled={isUpdatingUser} className="flex-1 bg-[#0a5482] text-white font-black py-3 rounded-xl shadow-lg transition hover:bg-[#084266] disabled:opacity-50">
+                {isUpdatingUser ? 'ĐANG LƯU...' : 'LƯU THAY ĐỔI'}
               </button>
             </div>
           </form>

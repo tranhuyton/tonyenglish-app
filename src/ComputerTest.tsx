@@ -375,6 +375,16 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
             // 🚀 ĐÃ SỬA: ĐẨY TOÀN BỘ questionTypeStats VÀO DETAILS ĐỂ SUPABASE GHI NHẬN LẠI DẠNG BÀI
             details: { test_id: safeTestData?.id, bandScore: band, userAnswers: answers, type_stats: questionTypeStats }
           }]);
+        // 🚀 ANH DÁN ĐOẠN CODE BẮN PHÁO HIỆU VÀO ĐÂY NHÉ:
+        await supabase.from('activity_logs').insert([{
+          user_id: user.id, 
+          action_type: 'finish_test',
+          details: { 
+              test_title: basicInfo.title || "Bài kiểm tra", 
+              score: score,
+              total: total
+          }
+        }]);
         }
       } catch (error) { 
           console.error("Lỗi lưu kết quả thi:", error); 

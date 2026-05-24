@@ -436,7 +436,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
 
 
 // =========================================================================================
-// MAIN COMPONENT: LECTURE VIEWER (BẢN FULL ĐẦY ĐỦ CỦA ANH TÔN)
+// MAIN COMPONENT: LECTURE VIEWER
 // =========================================================================================
 export default function LectureViewer({ 
     courseId, 
@@ -472,7 +472,7 @@ export default function LectureViewer({
   const [popupUrl, setPopupUrl] = useState<string | null>(null);
   const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
   
-  // 🚀 STATE MỚI ĐỂ ĐIỀU KHIỂN BÓP LAYOUT SPLIT SCREEN CHO BẢNG ĐEN
+  // 🚀 STATE ĐIỀU KHIỂN BÓP LAYOUT SPLIT SCREEN CHO BẢNG ĐEN
   const [isTeacherBoardOpen, setIsTeacherBoardOpen] = useState(false);
   
   // 1. Lắng nghe sự kiện bật bảng từ file LiveSpeakingTest
@@ -484,16 +484,15 @@ export default function LectureViewer({
     return () => window.removeEventListener('tony-teacher-board-state', handleToggleBoard);
   }, []);
 
-  // 2. 🚀 TỰ ĐỘNG BẬT BẢNG ĐEN KHI MỞ FILE PDF (CHUẨN FLOW 1-CLICK DÙNG ONOPENAI)
+  // 2. TỰ ĐỘNG BẬT BẢNG ĐEN KHI MỞ FILE PDF
   useEffect(() => {
     if (popupUrl && popupUrl.toLowerCase().includes('.pdf')) {
-        // Đánh dấu là đang mở PDF để file Live biết mà bật giao diện bảng
         sessionStorage.setItem('tony_pdf_mode', 'true');
         window.dispatchEvent(new CustomEvent('tony-pdf-mode-change', { detail: true }));
 
         setTimeout(() => {
             if (onOpenAI) {
-                onOpenAI('tutor'); // Gọi trực tiếp prop từ cha để 100% ăn lệnh mở phòng
+                onOpenAI('tutor'); 
             } else {
                 window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
             }
@@ -697,6 +696,16 @@ export default function LectureViewer({
          }).catch();
 
          setAllLectureProgress(allPrev => ({ ...allPrev, [activeLectureId]: newCompleted }));
+         
+         // 🚀 BẮN PHÁO HIỆU BÁO ADMIN KHI BÀI GIẢNG CHUYỂN SANG TRẠNG THÁI HOÀN THÀNH
+         if (isCompleted) {
+             supabase.from('activity_logs').insert([{
+                 user_id: currentUser.id,
+                 action_type: 'finish_lecture',
+                 details: { lecture_title: activeLecture?.title || "Bài giảng" }
+             }]).then();
+         }
+         
          return newCompleted;
       });
   }, [currentUser, activeLectureId, lectures, activeLecture]);

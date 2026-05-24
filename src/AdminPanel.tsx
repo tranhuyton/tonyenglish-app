@@ -8,7 +8,7 @@ import './tailwind.css';
 
 let adminSearchTimer: any;
 
-export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string) => void }) {
+export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (view: string) => void, onStartTest?: any }) {
   const [activeTab, setActiveTab] = useState('courses'); 
   const [showCreateDropdown, setShowCreateDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -50,7 +50,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [pdfFiles, setPdfFiles] = useState<any[]>([]);
   const [isUploadingPdf, setIsUploadingPdf] = useState(false);
   const [pdfSearchQuery, setPdfSearchQuery] = useState('');
-  const [pdfSortOrder, setPdfSortOrder] = useState('date-desc'); // 🚀 State lưu trạng thái sắp xếp PDF
+  const [pdfSortOrder, setPdfSortOrder] = useState('date-desc'); 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // 🚀 VIRTUAL FOLDERS SYSTEM FOR PDF
@@ -84,17 +84,78 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const [editingModuleId, setEditingModuleId] = useState<string | null>(null);
   const [editingFolderId, setEditingFolderId] = useState<string | null>(null);
 
+  // 🚀 STATE MỚI: QUẢN LÝ CHUÔNG THÔNG BÁO TỪ HỌC VIÊN
+  const [notifications, setNotifications] = useState<any[]>([]);
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const notifRef = useRef<HTMLDivElement>(null);
+  const [viewingNotif, setViewingNotif] = useState<any>(null); // 🚀 QUẢN LÝ POPUP CHI TIẾT THÔNG BÁO
+
+  const fetchNotifications = async () => {
+    try {
+        const { data: logs } = await supabase
+            .from('activity_logs')
+            .select('*')
+            .order('created_at', { ascending: false })
+            .limit(30);
+            
+        if (!logs) return;
+        
+        // Kéo thêm tên học viên
+        const userIds = [...new Set(logs.map(l => l.user_id))];
+        const { data: profiles } = await supabase
+            .from('profiles')
+            .select('id, full_name, email')
+            .in('id', userIds);
+            
+        const profileMap = (profiles || []).reduce((acc:any, p:any) => { 
+            acc[p.id] = p; 
+            return acc; 
+        }, {});
+        
+        const enrichedLogs = logs.map(l => ({ ...l, user: profileMap[l.user_id] || {} }));
+        setNotifications(enrichedLogs);
+        setUnreadCount(enrichedLogs.filter(l => !l.is_read).length);
+    } catch (e) {
+        console.error("Lỗi lấy thông báo:", e);
+    }
+  };
+
+  const markNotificationsAsRead = async () => {
+    const unreadIds = notifications.filter(n => !n.is_read).map(n => n.id);
+    if (unreadIds.length === 0) return;
+    
+    await supabase.from('activity_logs').update({ is_read: true }).in('id', unreadIds);
+    setUnreadCount(0);
+    setNotifications(prev => prev.map(n => ({...n, is_read: true})));
+  };
+  
   useEffect(() => {
     fetchCourses();
     fetchLibraryTests();
     fetchAllFolders(); 
     fetchGlobalLectures();
-    fetchPdfFiles(); // Sẽ fetch luôn cả cấu trúc folder ảo
+    fetchPdfFiles(); 
+    fetchNotifications();
+
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) setShowCreateDropdown(false);
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+          setShowCreateDropdown(false);
+      }
+      if (notifRef.current && !notifRef.current.contains(event.target as Node)) {
+          setShowNotifications(false); 
+      }
     };
+    
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    
+    // Tự động quét thông báo mới mỗi 10 giây
+    const interval = setInterval(fetchNotifications, 10000); 
+    
+    return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+        clearInterval(interval);
+    }
   }, []);
 
   useEffect(() => {
@@ -113,13 +174,12 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   
   const BUCKET_NAME = 'documents'; 
 
-  // Hệ thống lưu trữ Folder ảo dạng JSON ẩn trong Bucket (ĐÃ FIX LỖI CACHE BẢN LIVE)
+  // Hệ thống lưu trữ Folder ảo dạng JSON ẩn trong Bucket
   const fetchVirtualFolders = async () => {
       try {
-          // Lấy link public và gắn thêm query ?t=... (thời gian thực) để ép trình duyệt luôn tải bản mới nhất, bỏ qua Cache
           const { data } = supabase.storage.from(BUCKET_NAME).getPublicUrl('_virtual_folders.json');
           const response = await fetch(`${data.publicUrl}?t=${new Date().getTime()}`, {
-              cache: 'no-store' // Ép thêm header không lưu cache
+              cache: 'no-store'
           });
           
           if (response.ok) {
@@ -136,7 +196,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       const jsonStr = JSON.stringify({ folders: newFolders, mapping: newMapping });
       const blob = new Blob([jsonStr], { type: 'application/json' });
       
-      // Thêm cacheControl: '0' để dặn dò Supabase CDN KHÔNG được lưu đệm file này
       await supabase.storage.from(BUCKET_NAME).upload('_virtual_folders.json', blob, { 
           upsert: true,
           cacheControl: '0' 
@@ -148,7 +207,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
 
   const fetchPdfFiles = async () => {
       try {
-          await fetchVirtualFolders(); // Tải folder ảo
+          await fetchVirtualFolders(); 
           const { data, error } = await supabase.storage.from(BUCKET_NAME).list('', {
               limit: 1000,
               offset: 0,
@@ -164,10 +223,11 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           });
 
           setPdfFiles(filesWithUrl);
-      } catch (err) {}
+      } catch (err) {
+          console.error("Lỗi lấy PDF:", err);
+      }
   };
 
-  // Xử lý Upload nhiều file cùng lúc
   const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
       const files = event.target.files;
       if (!files || files.length === 0) return;
@@ -175,7 +235,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       const validFiles: File[] = [];
       const invalidFiles: string[] = [];
 
-      // Kiểm tra tính hợp lệ của từng file
       for (let i = 0; i < files.length; i++) {
           const file = files[i];
           if ((file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) || file.size > 50 * 1024 * 1024) {
@@ -204,14 +263,15 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           const newMapping = { ...pdfFileMapping };
           let uploadedCount = 0;
 
-          // Sử dụng Promise.all để tải lên song song các file
           await Promise.all(validFiles.map(async (file) => {
               const fileName = file.name.replace(/\s+/g, '_');
-              const { error } = await supabase.storage.from(BUCKET_NAME).upload(fileName, file, { cacheControl: '3600', upsert: false });
+              const { error } = await supabase.storage.from(BUCKET_NAME).upload(fileName, file, { 
+                  cacheControl: '3600', 
+                  upsert: false 
+              });
               
               if (!error) {
                   uploadedCount++;
-                  // Gắn vào folder ảo nếu đang đứng trong folder
                   if (currentPdfFolderId) {
                       newMapping[fileName] = currentPdfFolderId;
                   }
@@ -239,7 +299,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           const { error } = await supabase.storage.from(BUCKET_NAME).remove([fileName]);
           if (error) throw error;
           
-          // Gỡ mapping của file khỏi hệ thống thư mục ảo
           const newMapping = { ...pdfFileMapping };
           if (newMapping[fileName]) {
               delete newMapping[fileName];
@@ -251,7 +310,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
       }
   };
 
-  // --- CHỨC NĂNG QUẢN LÝ FOLDER TÀI LIỆU ---
   const handleCreatePdfFolder = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       const name = new FormData(e.currentTarget).get('name') as string;
@@ -261,7 +319,10 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   };
 
   const handleUpdatePdfFolderName = async (folderId: string, newName: string) => {
-      if (!newName.trim()) { setEditingPdfFolderId(null); return; }
+      if (!newName.trim()) { 
+          setEditingPdfFolderId(null); 
+          return; 
+      }
       const newFolders = pdfFolders.map(f => f.id === folderId ? { ...f, name: newName } : f);
       await saveVirtualFolders(newFolders, pdfFileMapping);
       setEditingPdfFolderId(null);
@@ -272,7 +333,9 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           const newFolders = pdfFolders.filter(f => f.id !== folderId && f.parentId !== folderId);
           const newMapping = { ...pdfFileMapping };
           Object.keys(newMapping).forEach(key => {
-              if (newMapping[key] === folderId) delete newMapping[key];
+              if (newMapping[key] === folderId) {
+                  delete newMapping[key];
+              }
           });
           await saveVirtualFolders(newFolders, newMapping);
       }
@@ -280,8 +343,11 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
 
   const handleMovePdfFile = async (fileName: string, targetFolderId: string | null) => {
       const newMapping = { ...pdfFileMapping };
-      if (targetFolderId) newMapping[fileName] = targetFolderId;
-      else delete newMapping[fileName];
+      if (targetFolderId) {
+          newMapping[fileName] = targetFolderId;
+      } else {
+          delete newMapping[fileName];
+      }
       
       await saveVirtualFolders(pdfFolders, newMapping);
       setShowMoveFileModal(null);
@@ -305,89 +371,179 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
 
   const fetchCourses = async () => {
     setIsLoadingCourses(true); 
-    const { data } = await supabase.from('courses').select('*').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await supabase
+        .from('courses')
+        .select('*')
+        .order('order_index', { ascending: true })
+        .order('created_at', { ascending: false });
+        
     setCourses(data || []);
     setIsLoadingCourses(false); 
   };
 
   const fetchLibraryTests = async () => {
-    const { data } = await supabase.from('tests').select('*').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await supabase
+        .from('tests')
+        .select('*')
+        .order('order_index', { ascending: true })
+        .order('created_at', { ascending: false });
+        
     setLibraryTests(data || []);
   };
 
   const fetchAllFolders = async () => {
-    const { data } = await supabase.from('folders').select('*').order('display_order', { ascending: true });
+    const { data } = await supabase
+        .from('folders')
+        .select('*')
+        .order('display_order', { ascending: true });
+        
     setAllFolders(data || []);
   };
 
   const fetchGlobalLectures = async () => {
-    const { data } = await supabase.from('lectures').select('*, courses(title)').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await supabase
+        .from('lectures')
+        .select('*, courses(title)')
+        .order('order_index', { ascending: true })
+        .order('created_at', { ascending: false });
+        
     setGlobalLectures(data || []);
   };
 
   const fetchCourseDetailsData = async (courseId: string) => {
-    const { data: mods } = await supabase.from('lecture_modules').select('*').eq('course_id', courseId).order('order_index', { ascending: true });
+    const { data: mods } = await supabase
+        .from('lecture_modules')
+        .select('*')
+        .eq('course_id', courseId)
+        .order('order_index', { ascending: true });
+        
     setLectureModules(mods || []);
+    
     if (mods && mods.length > 0) {
-      const { data: lecs } = await supabase.from('lectures').select('*').in('module_id', mods.map(m => m.id)).order('order_index', { ascending: true });
+      const { data: lecs } = await supabase
+          .from('lectures')
+          .select('*')
+          .in('module_id', mods.map(m => m.id))
+          .order('order_index', { ascending: true });
       setLectures(lecs || []);
-    } else setLectures([]);
+    } else {
+      setLectures([]);
+    }
 
-    const { data: cls } = await supabase.from('classes').select('*').eq('course_id', courseId).order('created_at', { ascending: false });
+    const { data: cls } = await supabase
+        .from('classes')
+        .select('*')
+        .eq('course_id', courseId)
+        .order('created_at', { ascending: false });
     setClasses(cls || []);
     
-    const { data: flds } = await supabase.from('folders').select('*').eq('course_id', courseId).order('display_order', { ascending: true });
+    const { data: flds } = await supabase
+        .from('folders')
+        .select('*')
+        .eq('course_id', courseId)
+        .order('display_order', { ascending: true });
     setFolders(flds || []);
-    const { data: ast } = await supabase.from('tests').select('*').eq('course_id', courseId).order('order_index', { ascending: true });
+    
+    const { data: ast } = await supabase
+        .from('tests')
+        .select('*')
+        .eq('course_id', courseId)
+        .order('order_index', { ascending: true });
     setAssignedTests(ast || []);
 
-    const { data: enrolls } = await supabase.from('enrollments').select('user_id').eq('course_id', courseId);
+    const { data: enrolls } = await supabase
+        .from('enrollments')
+        .select('user_id')
+        .eq('course_id', courseId);
+        
     if (enrolls && enrolls.length > 0) {
        const userIds = enrolls.map(e => e.user_id);
-       const { data: profiles } = await supabase.from('profiles').select('id, full_name, email').in('id', userIds);
-       if (profiles) setCourseStudentsList(profiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
-    } else setCourseStudentsList([]);
+       const { data: profiles } = await supabase
+           .from('profiles')
+           .select('id, full_name, email')
+           .in('id', userIds);
+           
+       if (profiles) {
+           setCourseStudentsList(profiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
+       }
+    } else {
+       setCourseStudentsList([]);
+    }
   };
 
   const fetchClassDetails = async (classId: string) => {
-    const { data: modData } = await supabase.from('class_modules').select('module_id').eq('class_id', classId);
+    const { data: modData } = await supabase
+        .from('class_modules')
+        .select('module_id')
+        .eq('class_id', classId);
+        
     if (modData) setClassModules(modData.map(d => d.module_id));
 
-    const { data: stuData } = await supabase.from('class_students').select('user_id').eq('class_id', classId);
+    const { data: stuData } = await supabase
+        .from('class_students')
+        .select('user_id')
+        .eq('class_id', classId);
+        
     if (stuData && stuData.length > 0) {
        const userIds = stuData.map(e => e.user_id);
-       const { data: profiles } = await supabase.from('profiles').select('id, full_name, email').in('id', userIds);
-       if (profiles) setClassStudentsList(profiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
-    } else setClassStudentsList([]);
+       const { data: profiles } = await supabase
+           .from('profiles')
+           .select('id, full_name, email')
+           .in('id', userIds);
+           
+       if (profiles) {
+           setClassStudentsList(profiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
+       }
+    } else {
+       setClassStudentsList([]);
+    }
   };
 
   const handleUpdateCourseOrder = async (id: string, newOrder: number) => {
-    await supabase.from('courses').update({ order_index: newOrder }).eq('id', id); fetchCourses();
+    await supabase.from('courses').update({ order_index: newOrder }).eq('id', id); 
+    fetchCourses();
   };
+
   const handleUpdateModuleOrder = async (id: string, newOrder: number) => {
-    await supabase.from('lecture_modules').update({ order_index: newOrder }).eq('id', id); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    await supabase.from('lecture_modules').update({ order_index: newOrder }).eq('id', id); 
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
+
   const handleUpdateLectureOrder = async (id: string, newOrder: number) => {
-    await supabase.from('lectures').update({ order_index: newOrder }).eq('id', id); fetchGlobalLectures(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    await supabase.from('lectures').update({ order_index: newOrder }).eq('id', id); 
+    fetchGlobalLectures(); 
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
+
   const handleUpdateTestOrder = async (id: string, newOrder: number) => {
-    await supabase.from('tests').update({ order_index: newOrder }).eq('id', id); fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    await supabase.from('tests').update({ order_index: newOrder }).eq('id', id); 
+    fetchLibraryTests(); 
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
+
   const handleUpdateFolderOrder = async (id: string, newOrder: number) => {
-    await supabase.from('folders').update({ display_order: newOrder }).eq('id', id); fetchAllFolders(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    await supabase.from('folders').update({ display_order: newOrder }).eq('id', id); 
+    fetchAllFolders(); 
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
+
   const handleToggleLectureStatus = async (id: string, currentStatus: boolean) => {
-    await supabase.from('lectures').update({ is_published: !currentStatus }).eq('id', id); fetchGlobalLectures(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    await supabase.from('lectures').update({ is_published: !currentStatus }).eq('id', id); 
+    fetchGlobalLectures(); 
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
 
   const handleAssignStudentToClass = async (userId: string) => {
      if (!selectedClass) return;
-     await supabase.from('class_students').insert([{ class_id: selectedClass.id, user_id: userId }]); fetchClassDetails(selectedClass.id);
+     await supabase.from('class_students').insert([{ class_id: selectedClass.id, user_id: userId }]); 
+     fetchClassDetails(selectedClass.id);
   };
+
   const handleUnassignStudentFromClass = async (userId: string) => {
      if (!selectedClass) return;
      if (window.confirm("Gỡ học sinh này khỏi lớp?")) {
-        await supabase.from('class_students').delete().match({ class_id: selectedClass.id, user_id: userId }); fetchClassDetails(selectedClass.id);
+        await supabase.from('class_students').delete().match({ class_id: selectedClass.id, user_id: userId }); 
+        fetchClassDetails(selectedClass.id);
      }
   };
 
@@ -396,11 +552,18 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
     const title = new FormData(e.currentTarget).get('title') as string;
     const type = new FormData(e.currentTarget).get('type') as string;
     const { data, error } = await supabase.from('courses').insert([{ title, type, order_index: courses.length + 1 }]).select();
-    if (!error && data) { fetchCourses(); setShowCreateCourseModal(false); }
+    
+    if (!error && data) { 
+        fetchCourses(); 
+        setShowCreateCourseModal(false); 
+    }
   };
   
   const handleUpdateCourseInfo = async (courseId: string, newTitle: string, newType: string) => {
-    if (!newTitle.trim()) { setEditingCourseId(null); return; }
+    if (!newTitle.trim()) { 
+        setEditingCourseId(null); 
+        return; 
+    }
     await supabase.from('courses').update({ title: newTitle, type: newType }).eq('id', courseId);
     fetchCourses();
     setEditingCourseId(null);
@@ -408,25 +571,39 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
 
   const handleDeleteCourse = async () => {
     if (window.confirm("Xác nhận xóa khóa học? Mọi dữ liệu (lớp, học phần, đề thi) bên trong sẽ bị xóa.") && selectedCourse) {
-      await supabase.from('courses').delete().eq('id', selectedCourse.id); fetchCourses(); setActiveTab('courses');
+      await supabase.from('courses').delete().eq('id', selectedCourse.id); 
+      fetchCourses(); 
+      setActiveTab('courses');
     }
   };
 
   const handleUpdateModuleName = async (moduleId: string, newTitle: string) => {
-    if (!newTitle.trim()) { setEditingModuleId(null); return; }
+    if (!newTitle.trim()) { 
+        setEditingModuleId(null); 
+        return; 
+    }
     await supabase.from('lecture_modules').update({ title: newTitle }).eq('id', moduleId);
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
     setEditingModuleId(null);
   };
+
   const handleCreateLectureModule = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); if (!selectedCourse) return;
+    e.preventDefault(); 
+    if (!selectedCourse) return;
     const title = (new FormData(e.currentTarget).get('title') as string);
     const { data } = await supabase.from('lecture_modules').insert([{ course_id: selectedCourse.id, title, order_index: lectureModules.length + 1 }]).select();
-    if (data) { fetchCourseDetailsData(selectedCourse.id); setShowModuleModal(false); }
+    
+    if (data) { 
+        fetchCourseDetailsData(selectedCourse.id); 
+        setShowModuleModal(false); 
+    }
   };
+
   const handleDeleteLectureModule = async (id: string) => {
     if (window.confirm("Xóa học phần này? Các bài giảng bên trong sẽ tự động trả về Kho tổng.")) {
-      await supabase.from('lecture_modules').delete().eq('id', id); fetchCourseDetailsData(selectedCourse.id); fetchGlobalLectures();
+      await supabase.from('lecture_modules').delete().eq('id', id); 
+      fetchCourseDetailsData(selectedCourse.id); 
+      fetchGlobalLectures();
     }
   };
   
@@ -446,25 +623,40 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const handleUnassignLecture = async (lectureId: string) => {
     if (window.confirm("Gỡ bài giảng này về Kho Tổng?")) {
       await supabase.from('lectures').update({ module_id: null }).eq('id', lectureId);
-      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); fetchGlobalLectures();
+      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
+      fetchGlobalLectures();
     }
   };
+
   const handlePermanentDeleteLecture = async (id: string) => {
     if (window.confirm("XÓA VĨNH VIỄN bài giảng khỏi hệ thống? Sẽ không thể khôi phục!")) {
-      await supabase.from('lectures').delete().eq('id', id); fetchGlobalLectures(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+      await supabase.from('lectures').delete().eq('id', id); 
+      fetchGlobalLectures(); 
+      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
     }
   };
+
   const handleDuplicateLecture = async (lectureData: any) => {
     const { data: newLecture, error: lecErr } = await supabase.from('lectures').insert([{ 
-       title: lectureData.title + ' (Bản sao)', course_id: lectureData.course_id, module_id: null, order_index: globalLectures.length + 1 
+       title: lectureData.title + ' (Bản sao)', 
+       course_id: lectureData.course_id, 
+       module_id: null, 
+       order_index: globalLectures.length + 1 
     }]).select().single();
+
     if (lecErr) return alert("Lỗi nhân bản bài giảng!");
+
     const { data: pages } = await supabase.from('lecture_pages').select('*').eq('lecture_id', lectureData.id);
     if (pages && pages.length > 0) {
-       const newPages = pages.map(p => ({ lecture_id: newLecture.id, page_number: p.page_number, content_html: p.content_html }));
+       const newPages = pages.map(p => ({ 
+           lecture_id: newLecture.id, 
+           page_number: p.page_number, 
+           content_html: p.content_html 
+       }));
        await supabase.from('lecture_pages').insert(newPages);
     }
-    fetchGlobalLectures(); alert("✅ Đã nhân bản bài giảng thành công! Bản sao đã được lưu vào Kho.");
+    fetchGlobalLectures(); 
+    alert("✅ Đã nhân bản bài giảng thành công! Bản sao đã được lưu vào Kho.");
   };
 
   const handleSelectAllLectures = (e: React.ChangeEvent<HTMLInputElement>, currentList: any[]) => {
@@ -473,8 +665,11 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   };
 
   const handleSelectOneLecture = (id: string) => {
-    if (selectedLectures.includes(id)) setSelectedLectures(selectedLectures.filter(l => l !== id));
-    else setSelectedLectures([...selectedLectures, id]);
+    if (selectedLectures.includes(id)) {
+        setSelectedLectures(selectedLectures.filter(l => l !== id));
+    } else {
+        setSelectedLectures([...selectedLectures, id]);
+    }
   };
 
   const handleBulkLectureVisibility = async (status: boolean) => {
@@ -513,41 +708,72 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   };
 
   const handleUpdateClassName = async (classId: string, newName: string) => {
-    if (!newName.trim()) { setEditingClassId(null); return; }
+    if (!newName.trim()) { 
+        setEditingClassId(null); 
+        return; 
+    }
     await supabase.from('classes').update({ name: newName }).eq('id', classId);
     setClasses(classes.map(c => c.id === classId ? { ...c, name: newName } : c));
-    if (selectedClass?.id === classId) setSelectedClass({ ...selectedClass, name: newName });
+    if (selectedClass?.id === classId) {
+        setSelectedClass({ ...selectedClass, name: newName });
+    }
     setEditingClassId(null);
   };
+
   const handleCreateClass = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); if (!selectedCourse) return;
+    e.preventDefault(); 
+    if (!selectedCourse) return;
     const name = (new FormData(e.currentTarget).get('name') as string);
     const { data } = await supabase.from('classes').insert([{ course_id: selectedCourse.id, name }]).select();
-    if (data) { setClasses([data[0], ...classes]); setShowClassModal(false); }
-  };
-  const handleDeleteClass = async (id: string) => {
-    if (window.confirm("Xóa lớp học này? (Dữ liệu học viên trong lớp sẽ bị ảnh hưởng)")) {
-      await supabase.from('classes').delete().eq('id', id); setClasses(classes.filter(c => c.id !== id)); if (selectedClass?.id === id) setSelectedClass(null);
+    
+    if (data) { 
+        setClasses([data[0], ...classes]); 
+        setShowClassModal(false); 
     }
   };
+
+  const handleDeleteClass = async (id: string) => {
+    if (window.confirm("Xóa lớp học này? (Dữ liệu học viên trong lớp sẽ bị ảnh hưởng)")) {
+      await supabase.from('classes').delete().eq('id', id); 
+      setClasses(classes.filter(c => c.id !== id)); 
+      if (selectedClass?.id === id) {
+          setSelectedClass(null);
+      }
+    }
+  };
+
   const handleAssignModuleToClass = async (moduleId: string) => {
     if (!selectedClass) return;
-    await supabase.from('class_modules').insert([{ class_id: selectedClass.id, module_id: moduleId }]); fetchClassDetails(selectedClass.id);
+    await supabase.from('class_modules').insert([{ class_id: selectedClass.id, module_id: moduleId }]); 
+    fetchClassDetails(selectedClass.id);
   };
+
   const handleUnassignModuleFromClass = async (moduleId: string) => {
     if (!selectedClass) return;
-    await supabase.from('class_modules').delete().match({ class_id: selectedClass.id, module_id: moduleId }); fetchClassDetails(selectedClass.id);
+    await supabase.from('class_modules').delete().match({ class_id: selectedClass.id, module_id: moduleId }); 
+    fetchClassDetails(selectedClass.id);
   };
 
   const handleInitiateTest = (mode: 'manual' | 'import' | 'case-study') => {
     setShowCreateDropdown(false);
-    setEditingTest({ id: 'new', title: '', folder_id: currentFolderId || '', test_type: mode === 'case-study' ? 'Case-Study' : 'IELTS-Listening', content_json: null, mode });
+    setEditingTest({ 
+        id: 'new', 
+        title: '', 
+        folder_id: currentFolderId || '', 
+        test_type: mode === 'case-study' ? 'Case-Study' : 'IELTS-Listening', 
+        content_json: null, 
+        mode 
+    });
   };
   
   const handleSaveTestContent = async (testId: string, finalData: any) => {
     let parsedJsonConfig = null;
     if (finalData.basicInfo?.skill === 'Case-Study' && finalData.json_config_string) {
-      try { parsedJsonConfig = JSON.parse(finalData.json_config_string); } catch(e) { return alert("⚠️ Lỗi cú pháp JSON."); }
+      try { 
+          parsedJsonConfig = JSON.parse(finalData.json_config_string); 
+      } catch(e) { 
+          return alert("⚠️ Lỗi cú pháp JSON."); 
+      }
     }
 
     const assignedCourseId = finalData.basicInfo?.courseId === 'all' ? null : finalData.basicInfo.courseId;
@@ -570,11 +796,16 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
        await supabase.from('tests').update(payload).eq('id', testId);
     }
     
-    setEditingTest(null); fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    setEditingTest(null); 
+    fetchLibraryTests(); 
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
 
   const handleUpdateFolderName = async (folderId: string, newTitle: string) => {
-    if (!newTitle.trim()) { setEditingFolderId(null); return; }
+    if (!newTitle.trim()) { 
+        setEditingFolderId(null); 
+        return; 
+    }
     await supabase.from('folders').update({ title: newTitle }).eq('id', folderId);
     setFolders(folders.map(f => f.id === folderId ? { ...f, title: newTitle } : f));
     fetchAllFolders();
@@ -582,16 +813,30 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   };
 
   const handleCreateFolder = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); if (!selectedCourse) return;
+    e.preventDefault(); 
+    if (!selectedCourse) return;
     const title = new FormData(e.currentTarget).get('title') as string;
-    const { data } = await supabase.from('folders').insert([{ course_id: selectedCourse.id, title: title, parent_id: currentFolderId, display_order: folders.length + 1 }]).select();
-    if (data) { setFolders([...folders, data[0]]); fetchAllFolders(); setShowFolderModal(false); }
+    const { data } = await supabase.from('folders').insert([{ 
+        course_id: selectedCourse.id, 
+        title: title, 
+        parent_id: currentFolderId, 
+        display_order: folders.length + 1 
+    }]).select();
+    
+    if (data) { 
+        setFolders([...folders, data[0]]); 
+        fetchAllFolders(); 
+        setShowFolderModal(false); 
+    }
   };
   
   const handleDeleteFolder = async (id: string) => {
     if (window.confirm("Xóa thư mục này? Các đề thi bên trong sẽ TỰ ĐỘNG CHUYỂN VỀ Kho đề của Khóa học.")) {
-      await supabase.from('folders').delete().eq('id', id); setFolders(folders.filter(f => f.id !== id && f.parent_id !== id)); fetchAllFolders();
-      fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+      await supabase.from('folders').delete().eq('id', id); 
+      setFolders(folders.filter(f => f.id !== id && f.parent_id !== id)); 
+      fetchAllFolders();
+      fetchLibraryTests(); 
+      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
     }
   };
 
@@ -605,39 +850,59 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   const handleUnassignTest = async (testId: string) => {
     if (window.confirm("Gỡ đề thi khỏi thư mục này? Đề sẽ trở về Kho Tổng.")) {
       await supabase.from('tests').update({ folder_id: null }).eq('id', testId);
-      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); fetchLibraryTests();
+      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
+      fetchLibraryTests();
     }
   };
+
   const handleDeleteTest = async (id: string) => {
-    if (window.confirm("Xóa vĩnh viễn đề thi khỏi kho?")) { await supabase.from('tests').delete().eq('id', id); fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);}
+    if (window.confirm("Xóa vĩnh viễn đề thi khỏi kho?")) { 
+        await supabase.from('tests').delete().eq('id', id); 
+        fetchLibraryTests(); 
+        if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    }
   };
+
   const handleToggleTestVisibility = async (test: any) => {
     const newStatus = !test.is_published;
     await supabase.from('tests').update({ is_published: newStatus }).eq('id', test.id);
     setLibraryTests(libraryTests.map(t => t.id === test.id ? { ...t, is_published: newStatus } : t));
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
+
   const handleBulkVisibility = async (status: boolean) => {
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
     await supabase.from('tests').update({ is_published: status }).in('id', selectedTests);
-    fetchLibraryTests(); setSelectedTests([]); 
+    fetchLibraryTests(); 
+    setSelectedTests([]); 
   };
+
   const handleBulkDelete = async () => {
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 mục!");
     if (window.confirm(`Xác nhận xóa vĩnh viễn ${selectedTests.length} mục đã chọn?`)) {
-      await supabase.from('tests').delete().in('id', selectedTests); fetchLibraryTests(); setSelectedTests([]);
+      await supabase.from('tests').delete().in('id', selectedTests); 
+      fetchLibraryTests(); 
+      setSelectedTests([]);
     }
   };
+
   const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>, filteredList: any[]) => {
-    if (e.target.checked) setSelectedTests(filteredList.map(t => t.id)); else setSelectedTests([]);
+    if (e.target.checked) setSelectedTests(filteredList.map(t => t.id)); 
+    else setSelectedTests([]);
   };
+
   const handleSelectOne = (id: string) => {
-    if (selectedTests.includes(id)) setSelectedTests(selectedTests.filter(t => t !== id)); else setSelectedTests([...selectedTests, id]);
+    if (selectedTests.includes(id)) setSelectedTests(selectedTests.filter(t => t !== id)); 
+    else setSelectedTests([...selectedTests, id]);
   };
 
   const handleViewCourseDetail = (course: any) => {
-    setSelectedCourse(course); setCurrentFolderId(null); setSelectedClass(null); setCourseViewMode('classes');
-    fetchCourseDetailsData(course.id); setActiveTab('course-detail');
+    setSelectedCourse(course); 
+    setCurrentFolderId(null); 
+    setSelectedClass(null); 
+    setCourseViewMode('classes');
+    fetchCourseDetailsData(course.id); 
+    setActiveTab('course-detail');
   };
 
   const getCourseNameForTest = (courseId: string | null) => {
@@ -646,15 +911,29 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
   }
 
   // Course Test Folders
-  const breadcrumbs = []; let curr = folders.find(f => f.id === currentFolderId);
-  while (curr) { breadcrumbs.unshift(curr); curr = folders.find(f => f.id === curr.parent_id); }
-  const currentSubFolders = useMemo(() => folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === '')).sort((a,b) => (a.display_order||0) - (b.display_order||0)), [folders, currentFolderId]);
-  const currentTests = useMemo(() => assignedTests.filter(t => t.folder_id === currentFolderId), [assignedTests, currentFolderId]);
+  const breadcrumbs = []; 
+  let curr = folders.find(f => f.id === currentFolderId);
+  while (curr) { 
+      breadcrumbs.unshift(curr); 
+      curr = folders.find(f => f.id === curr.parent_id); 
+  }
+  
+  const currentSubFolders = useMemo(() => {
+      return folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === ''))
+                    .sort((a,b) => (a.display_order||0) - (b.display_order||0));
+  }, [folders, currentFolderId]);
+  
+  const currentTests = useMemo(() => {
+      return assignedTests.filter(t => t.folder_id === currentFolderId);
+  }, [assignedTests, currentFolderId]);
 
   // PDF Folders Breadcrumbs
   const pdfBreadcrumbs = [];
   let pCurr = pdfFolders.find(f => f.id === currentPdfFolderId);
-  while (pCurr) { pdfBreadcrumbs.unshift(pCurr); pCurr = pdfFolders.find(f => f.id === pCurr.parentId); }
+  while (pCurr) { 
+      pdfBreadcrumbs.unshift(pCurr); 
+      pCurr = pdfFolders.find(f => f.id === pCurr.parentId); 
+  }
   
   const currentPdfSubFolders = pdfFolders.filter(f => currentPdfFolderId ? f.parentId === currentPdfFolderId : !f.parentId);
   
@@ -712,13 +991,26 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
         </div>
         <div className="p-4 space-y-1 flex-1 overflow-y-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
           <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest ml-3 mb-2 mt-4">Hệ thống LMS</p>
-          <button onClick={() => {setActiveTab('courses'); setSelectedCourse(null); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'courses' || activeTab === 'course-detail' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📁 Khóa học & Lớp</button>
-          <button onClick={() => {setActiveTab('library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📚 Kho Đề thi & Bài tập</button>
-          <button onClick={() => {setActiveTab('lectures-library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'lectures-library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📖 Kho Bài giảng</button>
           
-          <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>☁️ Quản lý Tài Liệu (PDF)</button>
+          <button onClick={() => {setActiveTab('courses'); setSelectedCourse(null); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'courses' || activeTab === 'course-detail' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
+              📁 Khóa học & Lớp
+          </button>
           
-          <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>👨‍🎓 Quản lý học viên</button>
+          <button onClick={() => {setActiveTab('library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
+              📚 Kho Đề thi & Bài tập
+          </button>
+          
+          <button onClick={() => {setActiveTab('lectures-library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'lectures-library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
+              📖 Kho Bài giảng
+          </button>
+          
+          <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
+              ☁️ Quản lý Tài Liệu (PDF)
+          </button>
+          
+          <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
+              👨‍🎓 Quản lý học viên
+          </button>
         </div>
       </aside>
 
@@ -735,8 +1027,61 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
           </div>
           
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
-            {activeTab === 'courses' && <button onClick={() => setShowCreateCourseModal(true)} className="bg-[#0a5482] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#084266] whitespace-nowrap">+ THÊM</button>}
-            {activeTab === 'lectures-library' && <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: null })} className="bg-[#00a651] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#008f45] whitespace-nowrap">+ BÀI GIẢNG</button>}
+            
+            {/* 🚀 CHUÔNG THÔNG BÁO REALTIME VÀ POPUP */}
+            <div className="relative shrink-0 mr-2" ref={notifRef}>
+                <button 
+                    onClick={() => { 
+                        setShowNotifications(!showNotifications); 
+                        if(!showNotifications) markNotificationsAsRead(); 
+                    }} 
+                    className="relative p-2 text-slate-400 hover:text-[#2bd6eb] transition-colors"
+                >
+                    <span className="text-xl md:text-2xl">🔔</span>
+                    {unreadCount > 0 && <span className="absolute top-1 right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center animate-pulse">{unreadCount}</span>}
+                </button>
+                {showNotifications && (
+                    <div className="absolute right-0 mt-2 w-[320px] bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 py-2 animate-in fade-in zoom-in-95 overflow-hidden">
+                        <div className="px-4 py-3 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                            <h3 className="font-black text-slate-800 text-[13px] uppercase tracking-widest">Thông báo hoạt động</h3>
+                        </div>
+                        <div className="max-h-[60vh] overflow-y-auto custom-scrollbar">
+                            {notifications.length === 0 ? (
+                                <div className="p-6 text-center text-slate-400 text-sm font-medium">Chưa có thông báo nào.</div>
+                            ) : (
+                                notifications.map(notif => (
+                                    <div 
+                                        key={notif.id} 
+                                        onClick={() => { setViewingNotif(notif); setShowNotifications(false); }}
+                                        className={`p-4 border-b border-slate-50 hover:bg-slate-100 transition-colors cursor-pointer ${!notif.is_read ? 'bg-blue-50/30' : ''}`}
+                                    >
+                                        <p className="text-[13px] text-slate-700 leading-snug">
+                                            <span className="font-bold text-[#0a5482]">{notif.user?.full_name || notif.user?.email || 'Học viên'}</span>
+                                            {notif.action_type === 'login' && ' vừa đăng nhập vào hệ thống.'}
+                                            {notif.action_type === 'finish_test' && ` vừa nộp bài: "${notif.details?.test_title}"`}
+                                            {notif.action_type === 'call_tutor' && ` vừa gọi Gia Sư AI (${notif.details?.duration || 0} giây).`}
+                                            {notif.action_type === 'finish_lecture' && ` vừa hoàn thành bài giảng: "${notif.details?.lecture_title}"`}
+                                        </p>
+                                        <span className="text-[10px] text-slate-400 mt-1 block font-bold">{formatDateTime(notif.created_at)}</span>
+                                    </div>
+                                ))
+                            )}
+                        </div>
+                    </div>
+                )}
+            </div>
+
+            {activeTab === 'courses' && (
+                <button onClick={() => setShowCreateCourseModal(true)} className="bg-[#0a5482] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#084266] whitespace-nowrap">
+                    + THÊM
+                </button>
+            )}
+            
+            {activeTab === 'lectures-library' && (
+                <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: null })} className="bg-[#00a651] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#008f45] whitespace-nowrap">
+                    + BÀI GIẢNG
+                </button>
+            )}
             
             {activeTab === 'documents' && (
                 <div>
@@ -753,7 +1098,9 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
 
             {activeTab === 'library' && (
               <div className="relative shrink-0" ref={dropdownRef}>
-                <button onClick={() => setShowCreateDropdown(!showCreateDropdown)} className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md flex items-center gap-1.5 md:gap-2 text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap">+ TẠO MỚI <span className={`text-[9px] md:text-[10px] transition-transform ${showCreateDropdown ? 'rotate-180' : ''}`}>▼</span></button>
+                <button onClick={() => setShowCreateDropdown(!showCreateDropdown)} className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md flex items-center gap-1.5 md:gap-2 text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap">
+                    + TẠO MỚI <span className={`text-[9px] md:text-[10px] transition-transform ${showCreateDropdown ? 'rotate-180' : ''}`}>▼</span>
+                </button>
                 {showCreateDropdown && (
                   <div className="absolute right-0 mt-2 w-56 md:w-64 max-w-[calc(100vw-2rem)] bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 py-2 animate-in fade-in zoom-in-95">
                     <button onClick={() => handleInitiateTest('manual')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-slate-50 font-bold text-[12px] md:text-[13px] border-b border-slate-100">✍️ Tạo thủ công (Standard)</button>
@@ -793,9 +1140,14 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                                <option value="IELTS">Hệ IELTS</option>
                                <option value="Standard">Hệ Standard (IGCSE/TOEIC)</option>
                             </select>
-                            <div className="flex gap-2"><button type="submit" className="text-[10px] md:text-xs font-bold text-white bg-emerald-500 px-2 md:px-3 py-1 rounded">Lưu</button><button type="button" onClick={() => setEditingCourseId(null)} className="text-[10px] md:text-xs font-bold bg-slate-100 px-2 md:px-3 py-1 rounded border border-slate-200 text-slate-600">Hủy</button></div>
+                            <div className="flex gap-2">
+                                <button type="submit" className="text-[10px] md:text-xs font-bold text-white bg-emerald-500 px-2 md:px-3 py-1 rounded">Lưu</button>
+                                <button type="button" onClick={() => setEditingCourseId(null)} className="text-[10px] md:text-xs font-bold bg-slate-100 px-2 md:px-3 py-1 rounded border border-slate-200 text-slate-600">Hủy</button>
+                            </div>
                          </form>
-                       ) : ( <h3 className="font-black text-[16px] md:text-lg text-slate-800 line-clamp-2 leading-snug">{course.title}</h3> )}
+                       ) : ( 
+                         <h3 className="font-black text-[16px] md:text-lg text-slate-800 line-clamp-2 leading-snug">{course.title}</h3> 
+                       )}
                     </div>
                     <button onClick={() => handleViewCourseDetail(course)} className="w-full bg-[#f8fafc] hover:bg-[#2bd6eb] hover:text-white text-slate-600 border border-slate-200 font-bold py-2 md:py-2.5 rounded-xl transition shadow-sm text-[12px] md:text-sm">Quản lý Lớp & Nội dung ➜</button>
                   </div>
@@ -827,7 +1179,6 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                                 <button onClick={() => setShowPdfFolderModal(true)} className="bg-[#00a651] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl font-black text-[10px] md:text-xs shadow-sm hover:bg-[#008f45] whitespace-nowrap">+ THƯ MỤC</button>
                             )}
                             
-                            {/* 🚀 DROP-DOWN LỰA CHỌN SẮP XẾP */}
                             <select 
                                 value={pdfSortOrder} 
                                 onChange={(e) => setPdfSortOrder(e.target.value)} 
@@ -971,7 +1322,10 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                                      {editingClassId === cls.id ? (
                                         <form onClick={(e) => e.stopPropagation()} onSubmit={(e) => { e.preventDefault(); e.stopPropagation(); handleUpdateClassName(cls.id, new FormData(e.currentTarget).get('name') as string); }}>
                                            <input name="name" autoFocus defaultValue={cls.name} className="w-full border border-slate-300 rounded px-2 py-1 font-black text-[12px] md:text-sm outline-none mb-1 focus:border-[#0a5482]" />
-                                           <div className="flex gap-2"><button type="submit" className="text-[10px] font-bold text-white bg-emerald-500 px-2 py-0.5 rounded">Lưu</button><button type="button" onClick={() => setEditingClassId(null)} className="text-[10px] font-bold bg-slate-200 px-2 py-0.5 rounded text-slate-600">Hủy</button></div>
+                                           <div className="flex gap-2">
+                                               <button type="submit" className="text-[10px] font-bold text-white bg-emerald-500 px-2 py-0.5 rounded">Lưu</button>
+                                               <button type="button" onClick={() => setEditingClassId(null)} className="text-[10px] font-bold bg-slate-200 px-2 py-0.5 rounded text-slate-600">Hủy</button>
+                                           </div>
                                         </form>
                                      ) : ( <p className={`font-black text-[13px] md:text-sm truncate ${selectedClass?.id === cls.id ? 'text-blue-800' : 'text-slate-700'}`}>{cls.name}</p> )}
                                   </div>
@@ -1020,7 +1374,10 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                                      {classStudentsList.length === 0 ? <p className="text-[11px] md:text-xs text-slate-400 italic text-center mt-4">Chưa có học sinh nào.</p> : (
                                         classStudentsList.map(st => (
                                            <div key={st.user_id} className="p-2.5 md:p-3 bg-white border border-slate-200 rounded-lg flex justify-between items-center shadow-sm">
-                                              <div className="min-w-0 pr-2"><p className="font-bold text-[12px] md:text-sm text-slate-700 truncate">{st.full_name || 'Học viên'}</p><p className="text-[9px] md:text-[10px] text-slate-400 truncate">{st.email}</p></div>
+                                              <div className="min-w-0 pr-2">
+                                                  <p className="font-bold text-[12px] md:text-sm text-slate-700 truncate">{st.full_name || 'Học viên'}</p>
+                                                  <p className="text-[9px] md:text-[10px] text-slate-400 truncate">{st.email}</p>
+                                              </div>
                                               <button onClick={() => handleUnassignStudentFromClass(st.user_id)} className="text-red-500 text-[11px] md:text-xs font-bold hover:underline shrink-0">Gỡ</button>
                                            </div>
                                         ))
@@ -1155,7 +1512,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                                    <div className="flex flex-col min-w-0">
                                       <span className="font-bold text-[13px] md:text-[14px] text-slate-700 truncate">{t.title}</span>
                                       <span className={`text-[8px] md:text-[9px] w-fit px-1 md:px-1.5 py-0.5 rounded uppercase font-black mt-1 ${t.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
-                                         {t.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
+                                          {t.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
                                       </span>
                                    </div>
                                  </div>
@@ -1296,7 +1653,17 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                 <div className="overflow-x-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
                   <table className="w-full text-left border-collapse min-w-[900px] md:min-w-[1000px]">
                     <thead className="bg-[#f8fafc] text-[10px] md:text-[11px] font-black uppercase text-slate-400 tracking-widest border-b border-slate-200">
-                      <tr><th className="px-3 md:px-4 py-3 md:py-4 w-10 text-center">#</th><th className="px-2 py-3 md:py-4 w-10"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedTests.length > 0 && selectedTests.length === filteredLibraryTests.length} onChange={(e) => handleSelectAll(e, filteredLibraryTests)} /></th><th className="px-4 md:px-6 py-3 md:py-4">TÊN MỤC</th><th className="px-4 md:px-6 py-3 md:py-4">KHÓA HỌC</th><th className="px-4 md:px-6 py-3 md:py-4">KỸ NĂNG</th><th className="px-4 md:px-6 py-3 md:py-4">CẬP NHẬT</th><th className="px-4 md:px-6 py-3 md:py-4 text-center">TRẠNG THÁI</th><th className="px-4 md:px-6 py-3 md:py-4 text-center">THỨ TỰ</th><th className="px-4 md:px-6 py-3 md:py-4 text-right">THAO TÁC</th></tr>
+                      <tr>
+                        <th className="px-3 md:px-4 py-3 md:py-4 w-10 text-center">#</th>
+                        <th className="px-2 py-3 md:py-4 w-10"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedTests.length > 0 && selectedTests.length === filteredLibraryTests.length} onChange={(e) => handleSelectAll(e, filteredLibraryTests)} /></th>
+                        <th className="px-4 md:px-6 py-3 md:py-4">TÊN MỤC</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4">KHÓA HỌC</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4">KỸ NĂNG</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4">CẬP NHẬT</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4 text-center">TRẠNG THÁI</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4 text-center">THỨ TỰ</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4 text-right">THAO TÁC</th>
+                      </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
                       {filteredLibraryTests.length === 0 ? <tr><td colSpan={9} className="text-center py-8 md:py-10 text-[13px] md:text-sm text-slate-400 font-medium">Không tìm thấy mục nào phù hợp.</td></tr> : (
@@ -1332,7 +1699,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
             </div>
           )}
 
-          {activeTab === 'students' && <StudentManagement />}
+          {activeTab === 'students' && <StudentManagement onStartTest={onStartTest} />}
         </div>
 
         {/* ========================================================================================= */}
@@ -1359,7 +1726,7 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
                 <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 shadow-2xl animate-in zoom-in-95">
                     <h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">Chuyển Thư Mục</h2>
                     <p className="text-[13px] md:text-sm text-slate-600 truncate font-medium bg-slate-50 p-2 rounded-lg border border-slate-200">
-                       📄 {showMoveFileModal}
+                        📄 {showMoveFileModal}
                     </p>
                     <div className="max-h-[40vh] overflow-y-auto border border-slate-200 rounded-xl p-2 space-y-1 custom-scrollbar">
                         <button onClick={() => handleMovePdfFile(showMoveFileModal, null)} className={`w-full text-left px-3 md:px-4 py-2 md:py-3 rounded-lg text-[13px] md:text-sm font-bold flex items-center gap-2 ${!pdfFileMapping[showMoveFileModal] ? 'bg-[#2bd6eb] text-white' : 'hover:bg-slate-100 text-slate-700'}`}>
@@ -1377,28 +1744,158 @@ export default function AdminPanel({ onNavigate }: { onNavigate?: (view: string)
         )}
         
         {/* Modal Class */}
-        {showClassModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in"><form onSubmit={handleCreateClass} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl"><h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">Thêm Lớp Mới</h2><input name="name" required autoFocus placeholder="VD: Lớp IELTS K20" className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" /><div className="flex gap-3 md:gap-4"><button type="button" onClick={() => setShowClassModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-[13px] md:text-base text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition">Hủy</button><button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO LỚP</button></div></form></div> )}
+        {showClassModal && ( 
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <form onSubmit={handleCreateClass} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl">
+                    <h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">Thêm Lớp Mới</h2>
+                    <input name="name" required autoFocus placeholder="VD: Lớp IELTS K20" className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" />
+                    <div className="flex gap-3 md:gap-4">
+                        <button type="button" onClick={() => setShowClassModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-[13px] md:text-base text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition">Hủy</button>
+                        <button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO LỚP</button>
+                    </div>
+                </form>
+            </div> 
+        )}
         
         {/* Modal Gán Học phần */}
-        {showAssignClassModuleModal && selectedClass && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in"><div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-lg shadow-2xl overflow-hidden animate-in fade-in"><div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center"><h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Chọn học phần mở cho lớp</h2><button onClick={() => setShowAssignClassModuleModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button></div><div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">{lectureModules.filter(m => !classModules.includes(m.id)).map(mod => (<div key={mod.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-200 rounded-xl bg-slate-50 hover:border-emerald-400 transition-colors"><p className="font-black text-slate-700 text-[13px] md:text-sm truncate pr-2">{mod.title}</p><button onClick={() => handleAssignModuleToClass(mod.id)} className="bg-emerald-500 hover:bg-emerald-600 transition text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs shadow-sm shrink-0 whitespace-nowrap">MỞ ➜</button></div>))}{lectureModules.filter(m => !classModules.includes(m.id)).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm">Đã mở tất cả học phần.</p>}</div></div></div> )}
+        {showAssignClassModuleModal && selectedClass && ( 
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-lg shadow-2xl overflow-hidden animate-in fade-in">
+                    <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center">
+                        <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Chọn học phần mở cho lớp</h2>
+                        <button onClick={() => setShowAssignClassModuleModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
+                    </div>
+                    <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
+                        {lectureModules.filter(m => !classModules.includes(m.id)).map(mod => (
+                            <div key={mod.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-200 rounded-xl bg-slate-50 hover:border-emerald-400 transition-colors">
+                                <p className="font-black text-slate-700 text-[13px] md:text-sm truncate pr-2">{mod.title}</p>
+                                <button onClick={() => handleAssignModuleToClass(mod.id)} className="bg-emerald-500 hover:bg-emerald-600 transition text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs shadow-sm shrink-0 whitespace-nowrap">MỞ ➜</button>
+                            </div>
+                        ))}
+                        {lectureModules.filter(m => !classModules.includes(m.id)).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm">Đã mở tất cả học phần.</p>}
+                    </div>
+                </div>
+            </div> 
+        )}
         
         {/* Modal Gán Học Sinh */}
-        {showAssignStudentModal && selectedClass && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in"><div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-lg shadow-2xl overflow-hidden animate-in fade-in"><div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center"><h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Thêm Học Sinh</h2><button onClick={() => setShowAssignStudentModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button></div><div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">{courseStudentsList.filter(cs => !classStudentsList.some(cls => cls.user_id === cs.user_id)).map(st => (<div key={st.user_id} className="flex justify-between items-center p-3 md:p-4 border border-slate-200 rounded-xl bg-slate-50 hover:border-blue-400 transition-colors"><div className="min-w-0 pr-2"><p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{st.full_name || 'Học viên'}</p><p className="text-[10px] md:text-[11px] text-slate-500 truncate">{st.email}</p></div><button onClick={() => handleAssignStudentToClass(st.user_id)} className="bg-blue-500 hover:bg-blue-600 transition text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs shadow-sm shrink-0 whitespace-nowrap">THÊM ➜</button></div>))}{courseStudentsList.filter(cs => !classStudentsList.some(cls => cls.user_id === cs.user_id)).length === 0 && (<p className="text-center text-slate-400 text-[13px] md:text-sm">Không còn học sinh nào để thêm.</p>)}</div></div></div> )}
+        {showAssignStudentModal && selectedClass && ( 
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-lg shadow-2xl overflow-hidden animate-in fade-in">
+                    <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center">
+                        <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Thêm Học Sinh</h2>
+                        <button onClick={() => setShowAssignStudentModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
+                    </div>
+                    <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
+                        {courseStudentsList.filter(cs => !classStudentsList.some(cls => cls.user_id === cs.user_id)).map(st => (
+                            <div key={st.user_id} className="flex justify-between items-center p-3 md:p-4 border border-slate-200 rounded-xl bg-slate-50 hover:border-blue-400 transition-colors">
+                                <div className="min-w-0 pr-2">
+                                    <p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{st.full_name || 'Học viên'}</p>
+                                    <p className="text-[10px] md:text-[11px] text-slate-500 truncate">{st.email}</p>
+                                </div>
+                                <button onClick={() => handleAssignStudentToClass(st.user_id)} className="bg-blue-500 hover:bg-blue-600 transition text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs shadow-sm shrink-0 whitespace-nowrap">THÊM ➜</button>
+                            </div>
+                        ))}
+                        {courseStudentsList.filter(cs => !classStudentsList.some(cls => cls.user_id === cs.user_id)).length === 0 && (
+                            <p className="text-center text-slate-400 text-[13px] md:text-sm">Không còn học sinh nào để thêm.</p>
+                        )}
+                    </div>
+                </div>
+            </div> 
+        )}
         
         {/* Modal Gán Bài Giảng */}
-        {showAssignLectureModal.show && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in"><div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-xl shadow-2xl overflow-hidden animate-in fade-in"><div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center"><h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Chọn bài giảng từ Kho</h2><button onClick={() => setShowAssignLectureModal({show: false, moduleId: null})} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button></div><div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">{globalLectures.filter(l => !l.module_id && l.course_id === selectedCourse.id).map(lec => (<div key={lec.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-100 rounded-xl md:rounded-2xl hover:border-blue-400 transition bg-slate-50"><p className="font-black text-slate-700 text-[13px] md:text-sm truncate pr-2">{lec.title}</p><button onClick={() => handleAssignLecture(lec.id, showAssignLectureModal.moduleId!)} className="bg-blue-600 hover:bg-blue-700 transition text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs shadow-sm shrink-0 whitespace-nowrap">GÁN ➜</button></div>))}{globalLectures.filter(l => !l.module_id && l.course_id === selectedCourse.id).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm italic">Không có bài giảng nào chờ gán.</p>}</div></div></div> )}
+        {showAssignLectureModal.show && ( 
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-xl shadow-2xl overflow-hidden animate-in fade-in">
+                    <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center">
+                        <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Chọn bài giảng từ Kho</h2>
+                        <button onClick={() => setShowAssignLectureModal({show: false, moduleId: null})} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
+                    </div>
+                    <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
+                        {globalLectures.filter(l => !l.module_id && l.course_id === selectedCourse.id).map(lec => (
+                            <div key={lec.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-100 rounded-xl md:rounded-2xl hover:border-blue-400 transition bg-slate-50">
+                                <p className="font-black text-slate-700 text-[13px] md:text-sm truncate pr-2">{lec.title}</p>
+                                <button onClick={() => handleAssignLecture(lec.id, showAssignLectureModal.moduleId!)} className="bg-blue-600 hover:bg-blue-700 transition text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs shadow-sm shrink-0 whitespace-nowrap">GÁN ➜</button>
+                            </div>
+                        ))}
+                        {globalLectures.filter(l => !l.module_id && l.course_id === selectedCourse.id).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm italic">Không có bài giảng nào chờ gán.</p>}
+                    </div>
+                </div>
+            </div> 
+        )}
         
         {/* Modal Khóa Học */}
-        {showCreateCourseModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in"><form onSubmit={handleCreateCourse} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl"><h2 className="text-lg md:text-xl font-black text-slate-800 uppercase tracking-tight">Thêm Khóa Học</h2><div className="space-y-3 md:space-y-4"><input name="title" required autoFocus placeholder="Tên khóa học..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" /><select name="type" className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 bg-white outline-none text-[14px]"><option value="IELTS">Hệ IELTS</option><option value="Standard">Hệ Standard (IGCSE/TOEIC)</option></select></div><div className="flex gap-3 md:gap-4"><button type="button" onClick={() => setShowCreateCourseModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button><button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">LƯU</button></div></form></div> )}
+        {showCreateCourseModal && ( 
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <form onSubmit={handleCreateCourse} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl">
+                    <h2 className="text-lg md:text-xl font-black text-slate-800 uppercase tracking-tight">Thêm Khóa Học</h2>
+                    <div className="space-y-3 md:space-y-4">
+                        <input name="title" required autoFocus placeholder="Tên khóa học..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" />
+                        <select name="type" className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 bg-white outline-none text-[14px]">
+                            <option value="IELTS">Hệ IELTS</option>
+                            <option value="Standard">Hệ Standard (IGCSE/TOEIC)</option>
+                        </select>
+                    </div>
+                    <div className="flex gap-3 md:gap-4">
+                        <button type="button" onClick={() => setShowCreateCourseModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button>
+                        <button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">LƯU</button>
+                    </div>
+                </form>
+            </div> 
+        )}
         
         {/* Modal Module */}
-        {showModuleModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in"><form onSubmit={handleCreateLectureModule} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl"><h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">Thêm Học Phần Mới</h2><input name="title" required autoFocus placeholder="VD: Lesson 1: Grammar..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" /><div className="flex gap-3 md:gap-4"><button type="button" onClick={() => setShowModuleModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button><button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO MỚI</button></div></form></div> )}
+        {showModuleModal && ( 
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <form onSubmit={handleCreateLectureModule} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl">
+                    <h2 className="text-base md:text-lg font-black uppercase text-[#0a5482]">Thêm Học Phần Mới</h2>
+                    <input name="title" required autoFocus placeholder="VD: Lesson 1: Grammar..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-[#0a5482] transition-colors text-[14px]" />
+                    <div className="flex gap-3 md:gap-4">
+                        <button type="button" onClick={() => setShowModuleModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button>
+                        <button type="submit" className="flex-1 bg-[#0a5482] hover:bg-[#084266] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO MỚI</button>
+                    </div>
+                </form>
+            </div> 
+        )}
         
         {/* Modal Thư mục */}
-        {showFolderModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in"><form onSubmit={handleCreateFolder} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl"><h2 className="text-base md:text-lg font-black uppercase text-emerald-600">{currentFolderId ? 'Thêm Mục Con' : 'Thêm Mục Mới'}</h2><input name="title" required autoFocus placeholder="Tên thư mục..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-emerald-500 transition-colors text-[14px]" /><div className="flex gap-3 md:gap-4"><button type="button" onClick={() => setShowFolderModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button><button type="submit" className="flex-1 bg-[#00a651] hover:bg-[#008f45] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO MỚI</button></div></form></div> )}
+        {showFolderModal && ( 
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <form onSubmit={handleCreateFolder} className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-md p-6 md:p-8 space-y-4 md:space-y-6 animate-in zoom-in-95 shadow-2xl">
+                    <h2 className="text-base md:text-lg font-black uppercase text-emerald-600">{currentFolderId ? 'Thêm Mục Con' : 'Thêm Mục Mới'}</h2>
+                    <input name="title" required autoFocus placeholder="Tên thư mục..." className="w-full border border-slate-200 rounded-lg md:rounded-xl px-3 md:px-4 py-2.5 md:py-3 outline-none focus:border-emerald-500 transition-colors text-[14px]" />
+                    <div className="flex gap-3 md:gap-4">
+                        <button type="button" onClick={() => setShowFolderModal(false)} className="flex-1 font-bold py-2.5 md:py-3 text-slate-400 hover:bg-slate-50 rounded-lg md:rounded-xl transition text-[13px] md:text-base">Hủy</button>
+                        <button type="submit" className="flex-1 bg-[#00a651] hover:bg-[#008f45] transition text-white font-black py-2.5 md:py-3 rounded-lg md:rounded-xl shadow-lg text-[13px] md:text-base">TẠO MỚI</button>
+                    </div>
+                </form>
+            </div> 
+        )}
         
         {/* Modal Gán Đề Thi */}
-        {showAssignModal && ( <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in"><div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-xl shadow-2xl overflow-hidden animate-in fade-in"><div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center"><h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Gán từ Kho chung</h2><button onClick={() => setShowAssignModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button></div><div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">{libraryTests.filter(t => !t.folder_id && t.course_id === selectedCourse.id).map(test => (<div key={test.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-100 rounded-xl md:rounded-2xl hover:border-[#2bd6eb] transition bg-slate-50 group"><div className="min-w-0 pr-2"><p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{test.title}</p><p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-tighter mt-1">{test.test_type}</p></div><button onClick={() => handleAssignTest(test.id)} className="bg-white md:group-hover:bg-[#2bd6eb] md:group-hover:text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs transition border border-slate-200 shadow-sm shrink-0 whitespace-nowrap">GÁN ➜</button></div>))}{libraryTests.filter(t => !t.folder_id && t.course_id === selectedCourse.id).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm italic">Không có đề thi chờ gán.</p>}</div></div></div> )}
+        {showAssignModal && ( 
+            <div className="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 animate-in fade-in">
+                <div className="bg-white rounded-2xl md:rounded-3xl w-full max-w-[95vw] md:max-w-xl shadow-2xl overflow-hidden animate-in fade-in">
+                    <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center">
+                        <h2 className="font-black uppercase text-[11px] md:text-sm tracking-widest">Gán từ Kho chung</h2>
+                        <button onClick={() => setShowAssignModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
+                    </div>
+                    <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
+                        {libraryTests.filter(t => !t.folder_id && t.course_id === selectedCourse.id).map(test => (
+                            <div key={test.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-100 rounded-xl md:rounded-2xl hover:border-[#2bd6eb] transition bg-slate-50 group">
+                                <div className="min-w-0 pr-2">
+                                    <p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{test.title}</p>
+                                    <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-tighter mt-1">{test.test_type}</p>
+                                </div>
+                                <button onClick={() => handleAssignTest(test.id)} className="bg-white md:group-hover:bg-[#2bd6eb] md:group-hover:text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs transition border border-slate-200 shadow-sm shrink-0 whitespace-nowrap">GÁN ➜</button>
+                            </div>
+                        ))}
+                        {libraryTests.filter(t => !t.folder_id && t.course_id === selectedCourse.id).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm italic">Không có đề thi chờ gán.</p>}
+                    </div>
+                </div>
+            </div> 
+        )}
         
         {/* ========================================================================================= */}
         {/* CÁC MODAL EDITORS CHÍNH - QUAN TRỌNG NHẤT */}

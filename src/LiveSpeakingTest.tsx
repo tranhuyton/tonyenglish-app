@@ -2,6 +2,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import React, { useState, useRef, useEffect } from 'react';
+import { supabase } from './supabase';
 
 // =========================================================================================
 // 🚀 CSS: STYLE CHỮ PHẤN VIẾT TAY CHO CHẾ ĐỘ BẢNG ĐEN (ĐÃ CẬP NHẬT PHẤN VÀNG)
@@ -148,6 +149,9 @@ export default function LiveSpeakingTest({
 
   const transcriptRef = useRef<string>(''); 
   const isIntendedCloseRef = useRef<boolean>(false); 
+  
+  // 🚀 ĐỒNG HỒ BẤM GIỜ GỌI GIA SƯ
+  const callStartTimeRef = useRef<number>(0);
 
   const reconnectTimeoutRef = useRef<any>(null);
   const pendingCallTimeoutRef = useRef<any>(null);
@@ -336,6 +340,9 @@ export default function LiveSpeakingTest({
 
       ws.onopen = () => {
         setStatus('CONNECTED');
+        
+        // 🚀 BẮT ĐẦU TÍNH GIỜ
+        callStartTimeRef.current = Date.now();
         
         // 🚀 AUTO-MINIMIZE: Nhanh gọn lẹ, nếu ở giao diện thường, kết nối xong tự cụp xuống luôn!
         if (!isBlackboardMode) {
@@ -636,6 +643,35 @@ export default function LiveSpeakingTest({
 
   const stopCall = () => {
     isIntendedCloseRef.current = true;
+    
+    // 🚀 CHỐT SỔ VÀ GỬI BÁO CÁO THỜI LƯỢNG GỌI CHO ADMIN
+    if (callStartTimeRef.current > 0) {
+        const durationSecs = Math.round((Date.now() - callStartTimeRef.current) / 1000);
+        callStartTimeRef.current = 0; // Reset
+        if (durationSecs > 5) { // Tránh báo cáo rác nếu học sinh vừa gọi đã tắt
+            supabase.auth.getUser().then(({ data: { user } }) => {
+                if (user) {
+                    // 🚀 LẤY BỐI CẢNH ĐỂ BIẾT HỌC SINH VỪA HỎI CÂU NÀO
+                    let contextStr = "Luyện nói tự do";
+                    const tutorDataRaw = sessionStorage.getItem('tony_tutor_data');
+                    if (tutorDataRaw) {
+                        try {
+                            const parsed = JSON.parse(tutorDataRaw);
+                            contextStr = parsed.transcript ? parsed.transcript.substring(0, 150) + '...' : "Hỏi bài tập chuyên sâu";
+                        } catch(e){}
+                    } else {
+                        contextStr = sessionStorage.getItem('tony_live_topic') || "Luyện nói tự do";
+                    }
+
+                    supabase.from('activity_logs').insert([{
+                        user_id: user.id,
+                        action_type: 'call_tutor',
+                        details: { duration: durationSecs, topic: contextStr }
+                    }]).then();
+                }
+            });
+        }
+    }
     
     if (reconnectTimeoutRef.current) {
         clearTimeout(reconnectTimeoutRef.current);
