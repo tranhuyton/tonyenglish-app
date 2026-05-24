@@ -112,6 +112,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [userProfile, setUserProfile] = useState<any>(null);
   
+  const [targetIelts, setTargetIelts] = useState<string>('6.5');
+  
   const [searchTest, setSearchTest] = useState('');
   const [sortTest, setSortTest] = useState('name-asc');
   const [filterType, setFilterType] = useState('all');
@@ -128,7 +130,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const [newPassword, setNewPassword] = useState('');
   const [newFullName, setNewFullName] = useState('');
-  const [newIeltsTarget, setNewIeltsTarget] = useState(''); // 🚀 Mới: State IELTS Target
   const [isUpdatingProfile, setIsUpdatingProfile] = useState(false);
 
   useEffect(() => {
@@ -191,7 +192,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       setUserProfile(profile);
       if (profile) {
           if (!newFullName) setNewFullName(profile.full_name || '');
-          if (!newIeltsTarget) setNewIeltsTarget(profile.ielts_target || '');
+          if (profile.target_ielts) setTargetIelts(profile.target_ielts.toString());
       }
       const { data: lp } = await supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id);
       setLectureProgressData(lp || []);
@@ -228,7 +229,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       
       const { data: hData } = await supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false });
       if (hData) {
-        setHistoryData(hData.map((item: any) => ({
+        const validHistory = hData.filter((item: any) => {
+            const type = String(item.test_type || '').toLowerCase();
+            const title = String(item.test_title || '').toLowerCase();
+            const isIelts = type.includes('ielts') || title.includes('ielts');
+            
+            if (isIelts) {
+                const band = parseFloat(item.details?.bandScore || item.score || 0);
+                return band >= 3.5;
+            } else {
+                const ans = item.details?.answers || item.details?.student_answers || item.details?.responses || item.details?.userAnswers || {};
+                const ansCount = Object.keys(ans).length;
+                return ansCount >= 10 || (item.score || 0) >= 10;
+            }
+        });
+
+        setHistoryData(validHistory.map((item: any) => ({
           id: item.id, 
           testId: item.test_id, 
           name: item.test_title || 'Bài thi không tên', 
@@ -249,12 +265,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const handleUpdateProfile = async () => {
     setIsUpdatingProfile(true);
     try {
-      if (currentUser?.id) {
-          // 🚀 Mới: Cập nhật thêm ielts_target
-          await supabase.from('profiles').update({ 
-              full_name: newFullName,
-              ielts_target: newIeltsTarget 
-          }).eq('id', currentUser.id);
+      if (newFullName && currentUser?.id) {
+          await supabase.from('profiles').update({ full_name: newFullName }).eq('id', currentUser.id);
       }
       if (newPassword && newPassword.length >= 6) {
         const { error } = await supabase.auth.updateUser({ password: newPassword });
@@ -265,15 +277,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         setIsUpdatingProfile(false); 
         return;
       }
-      
-      // Update lại Local state để render kịp thời
-      setUserProfile((prev: any) => ({ ...prev, full_name: newFullName, ielts_target: newIeltsTarget }));
       alert("Cập nhật tài khoản thành công!");
     } catch (error: any) { 
         alert("Lỗi cập nhật: " + error.message); 
     } finally { 
         setIsUpdatingProfile(false); 
     }
+  };
+
+  const handleUpdateTarget = async (newVal: string) => {
+      setTargetIelts(newVal);
+      if (currentUser?.id) {
+          await supabase.from('profiles').update({ target_ielts: newVal }).eq('id', currentUser.id);
+      }
   };
 
   const handleLogout = async () => {
@@ -299,7 +315,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     setFolderPage(1); 
     setTestPage(1);
     setActiveView('course');
-    
     sessionStorage.setItem('portal_selected_course_id', String(course.id));
     sessionStorage.setItem('portal_active_view', 'course');
     sessionStorage.removeItem('portal_current_folder_id');
@@ -345,10 +360,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const handleRetakeFromHistory = (historyItem: any) => {
     const testId = historyItem.testId || historyItem.details?.test_id;
     let foundTest = allTests.find(t => String(t.id) === String(testId));
-    
-    if (!foundTest) {
-        foundTest = allTests.find(t => t.title.trim() === historyItem.name.trim());
-    }
+    if (!foundTest) foundTest = allTests.find(t => t.title.trim() === historyItem.name.trim());
     
     if (foundTest) { 
         setViewingHistoryDetail(null); 
@@ -362,9 +374,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     if (!document.fullscreenElement) { 
         document.documentElement.requestFullscreen().catch(); 
     } else { 
-        if (document.exitFullscreen) {
-            document.exitFullscreen(); 
-        }
+        if (document.exitFullscreen) document.exitFullscreen(); 
     } 
   };
 
@@ -411,28 +421,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const totalTestPages = Math.ceil(processedTests.length / ITEMS_PER_PAGE);
   const paginatedTests = useMemo(() => processedTests.slice((testPage - 1) * ITEMS_PER_PAGE, testPage * ITEMS_PER_PAGE), [processedTests, testPage]);
 
-  // 🚀 Mới: Thuật toán lọc History thông minh (IELTS >= 3.5, Standard >= 10 câu)
   const processedHistory = useMemo(() => {
-      return historyData.filter(h => {
-         // Lọc theo Khóa học
-         if (analyticsCourse !== 'all' && String(h.courseId) !== String(analyticsCourse)) return false;
-         
-         // Lọc theo Phân loại (Đề thi / Bài tập)
-         if (analyticsCategory !== 'all') {
-             const ft = allTests.find(t => String(t.id) === String(h.testId));
-             if ((ft?.content_json?.basicInfo?.category || 'test') !== analyticsCategory) return false;
-         }
-
-         // Bộ lọc Chất lượng làm bài (Loại bỏ các bài làm thử / vô tình click)
-         if (h.details?.bandScore) {
-             return parseFloat(h.details.bandScore) >= 3.5;
-         } else {
-             const answersCount = h.details?.answers ? Object.keys(h.details.answers).length : 0;
-             const attempted = h.details?.totalAttempted || answersCount;
-             if (attempted > 0) return attempted >= 10;
-             if (h.scoreObj?.value !== undefined && h.scoreObj.value > 0) return h.scoreObj.value >= 10;
-             return false;
-         }
+      return historyData.filter(h => analyticsCourse === 'all' || String(h.courseId) === String(analyticsCourse)).filter(h => {
+         if (analyticsCategory === 'all') return true;
+         const ft = allTests.find(t => String(t.id) === String(h.testId));
+         return (ft?.content_json?.basicInfo?.category || 'test') === analyticsCategory;
       }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }, [historyData, analyticsCourse, analyticsCategory, allTests]);
 
@@ -440,10 +433,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       const total = processedHistory.length;
       const hours = (processedHistory.reduce((acc, curr) => acc + curr.timeSpent, 0) / 60).toFixed(1);
       const score = total > 0 ? (processedHistory.reduce((acc, curr) => acc + curr.scoreObj.value, 0) / total).toFixed(1) : '0';
-      
-      const ieltsHistory = processedHistory.filter(h => h.details?.bandScore).slice(0, 4);
+      const ieltsHistory = historyData.filter(h => h.details?.bandScore).slice(0, 4);
       const ielts = ieltsHistory.length > 0 ? (ieltsHistory.reduce((acc, curr) => acc + parseFloat(curr.details?.bandScore), 0) / ieltsHistory.length).toFixed(1) : '0.0';
-      
       return {
          analyticsTotalTestsDone: total, 
          analyticsTotalTimeHours: hours, 
@@ -454,34 +445,33 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
          sparklineAttemptsArr: processedHistory.map((_, i) => ({v: i + 1})),
          sparklineTimeArr: processedHistory.map(h => ({v: h.timeSpent})).reverse()
       };
-  }, [processedHistory]);
+  }, [processedHistory, historyData]);
 
-  // 🚀 Mới: Theo dõi tỷ lệ tiến độ dạng bài (Cho Hệ IELTS)
+  // 🚀 TÍNH TOÁN DỮ LIỆU TỶ LỆ DẠNG BÀI IELTS (CHUẨN XÁC)
   const ieltsTypeStats = useMemo(() => {
       const stats: Record<string, {correct: number, total: number}> = {
-          'True / False / NG': { correct: 0, total: 0 },
-          'Fill in the blanks': { correct: 0, total: 0 },
-          'Multiple Choice': { correct: 0, total: 0 },
-          'Matching': { correct: 0, total: 0 }
+          'Điền từ (Completion)': { correct: 0, total: 0 },
+          'T/F/NG (Nhận định)': { correct: 0, total: 0 },
+          'Trắc nghiệm (MCQ)': { correct: 0, total: 0 },
+          'Matching (Nối đáp án)': { correct: 0, total: 0 }
       };
       
       processedHistory.forEach(h => {
-          if (h.details?.typeStats) {
-              Object.keys(h.details.typeStats).forEach(k => {
-                  const kLow = k.toLowerCase();
-                  let mappedKey = '';
-                  
-                  if (kLow.includes('fill') || kLow.includes('completion')) mappedKey = 'Fill in the blanks';
-                  else if (kLow.includes('true') || kLow.includes('false') || kLow.includes('yes')) mappedKey = 'True / False / NG';
-                  else if (kLow.includes('multiple') || kLow.includes('choice')) mappedKey = 'Multiple Choice';
-                  else if (kLow.includes('matching')) mappedKey = 'Matching';
-                  
-                  if (mappedKey && stats[mappedKey]) {
-                      stats[mappedKey].correct += h.details.typeStats[k].correct || 0;
-                      stats[mappedKey].total += h.details.typeStats[k].total || 0;
-                  }
-              });
-          }
+          const types = h.details?.type_stats || h.details?.questionTypeStats || h.details?.typeStats || {};
+          Object.keys(types).forEach(k => {
+              const kLow = k.toLowerCase();
+              let mappedKey = '';
+              
+              if (kLow.includes('fill') || kLow.includes('completion') || kLow.includes('điền từ') || kLow.includes('blank')) mappedKey = 'Điền từ (Completion)';
+              else if (kLow.includes('true') || kLow.includes('false') || kLow.includes('yes') || kLow.includes('ng') || kLow.includes('tfng')) mappedKey = 'T/F/NG (Nhận định)';
+              else if (kLow.includes('multiple') || kLow.includes('choice') || kLow.includes('trắc nghiệm')) mappedKey = 'Trắc nghiệm (MCQ)';
+              else if (kLow.includes('matching') || kLow.includes('kéo thả')) mappedKey = 'Matching (Nối đáp án)';
+              
+              if (mappedKey && stats[mappedKey]) {
+                  stats[mappedKey].correct += types[k].correct || 0;
+                  stats[mappedKey].total += types[k].total || 0;
+              }
+          });
       });
       return stats;
   }, [processedHistory]);
@@ -495,8 +485,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const inProgressTestId = Array.from(inProgressIds)[0];
   const inProgressTest = useMemo(() => allTests.find(t => String(t.id) === inProgressTestId), [allTests, inProgressTestId]);
 
-  // Kiểm tra Context IELTS (Hiển thị các box điểm riêng)
-  const isIeltsContext = analyticsCourse === 'all' || courses.find(c => String(c.id) === String(analyticsCourse))?.type === 'IELTS';
+  // 🚀 ĐÃ SỬA: ĐIỀU KIỆN HIỂN THỊ IELTS WIDGETS CHUẨN XÁC
+  const isIeltsContext = analyticsCourse === 'all' 
+      ? courses.some(c => (c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')
+      : courses.find(c => String(c.id) === String(analyticsCourse))?.title.toLowerCase().includes('ielts');
 
   const hour = new Date().getHours();
   let bannerConfig = { greeting: '', gradient: '', icon: '', subtitle: '' };
@@ -536,7 +528,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         <div className="max-w-[1200px] w-full mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
           
           <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => {
-              resetWorkspaceAndChat();
+              resetWorkspaceAndChat(); 
               onNavigate?.('home');
           }}>
             <div className="flex flex-col items-end">
@@ -550,7 +542,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           <div className="hidden md:flex items-center gap-2 bg-slate-50 rounded-xl p-1 border border-slate-200">
             <button 
                 onClick={() => { 
-                    resetWorkspaceAndChat();
+                    resetWorkspaceAndChat(); 
                     setActiveTab('library'); 
                     setActiveView('dashboard'); 
                     setSelectedCourseId(null); 
@@ -562,7 +554,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             </button>
             <button 
                 onClick={() => {
-                    resetWorkspaceAndChat();
+                    resetWorkspaceAndChat(); 
                     setActiveTab('analytics');
                 }} 
                 className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'analytics' ? 'bg-white shadow-sm text-[#1e88e5] border border-slate-200' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
@@ -571,7 +563,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             </button>
             <button 
                 onClick={() => {
-                    resetWorkspaceAndChat();
+                    resetWorkspaceAndChat(); 
                     setActiveTab('games');
                 }} 
                 className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'games' ? 'bg-white shadow-sm text-amber-600 border border-slate-200' : 'text-slate-500 hover:text-amber-600 hover:bg-slate-200/50'}`}
@@ -590,7 +582,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                </div>
                <div className="h-6 w-px bg-slate-200 mx-1"></div>
                <button onClick={toggleFullScreen} className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#1e88e5] transition-colors">
-                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>}
+                 {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>}
                </button>
             </div>
 
@@ -610,7 +602,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                {isDropdownOpen && (
                   <div className="absolute right-0 mt-3 w-56 bg-white rounded-xl shadow-xl border border-slate-200 py-2 z-50 animate-in fade-in zoom-in-95 duration-200">
                      <button onClick={() => { 
-                         resetWorkspaceAndChat();
+                         resetWorkspaceAndChat(); 
                          setActiveTab('library'); 
                          setActiveView('dashboard'); 
                          setSelectedCourseId(null); 
@@ -689,7 +681,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                    </div>
                 ) : courses.length > 0 && (
                   <div className="bg-black/20 border border-white/10 p-5 md:p-6 rounded-xl w-full md:w-80 shadow-sm text-white hover:bg-black/30 transition-colors cursor-pointer" onClick={() => {
-                      resetWorkspaceAndChat();
+                      resetWorkspaceAndChat(); 
                       if(onOpenLecture) onOpenLecture(courses[0].id);
                   }}>
                     <div className="flex items-center gap-2 mb-3">
@@ -793,7 +785,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         )}
 
-        {/* 🚀 ĐÃ SỬA LỖI 1: Khóa chặt activeView === 'course' vào activeTab === 'library' */}
         {activeTab === 'library' && activeView === 'course' && selectedCourse && (
           <div className="animate-in fade-in slide-in-from-right-4 duration-300">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm mx-2 md:mx-0">
@@ -817,7 +808,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 
                 <button 
                   onClick={() => {
-                      resetWorkspaceAndChat();
+                      resetWorkspaceAndChat(); 
                       if(onOpenLecture && selectedCourse) onOpenLecture(selectedCourse.id);
                   }} 
                   className="bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-emerald-500 hover:text-white font-bold text-[12px] px-5 py-2.5 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm uppercase tracking-wide w-full sm:w-auto shrink-0"
@@ -843,7 +834,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             <img src={displayImage} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300" alt="folder" />
                             <div className={`absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent`}></div>
                             <h3 className={`relative z-10 text-[16px] md:text-[18px] font-black leading-tight line-clamp-2 w-full text-white`}>
-                               {subFolder.title}
+                                {subFolder.title}
                             </h3>
                           </div>
                           <div className="flex-1 bg-white p-4 md:p-5 flex flex-col justify-center relative">
@@ -1034,8 +1025,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             {analyticsTotalTestsDone === 0 ? (
               <div className="bg-white rounded-xl border border-slate-200 py-16 md:py-24 text-center shadow-sm flex flex-col items-center justify-center mx-2 md:mx-0">
                 <div className="text-5xl mb-4 opacity-50 grayscale block">📊</div>
-                <h3 className="text-lg md:text-xl font-black text-slate-700 mb-2 px-4">Chưa có dữ liệu làm bài</h3>
-                <p className="text-slate-500 font-medium text-[13px] md:text-[15px] max-w-sm px-4">Anh/chị hãy đổi bộ lọc hoặc làm thử một bài để hệ thống phân tích nhé!</p>
+                <h3 className="text-lg md:text-xl font-black text-slate-700 mb-2 px-4">Chưa có dữ liệu làm bài hợp lệ</h3>
+                <p className="text-slate-500 font-medium text-[13px] md:text-[15px] max-w-sm px-4">Hệ thống chỉ tính điểm những bài IELTS đạt Band {'>='} 3.5, hoặc những đề thi làm từ 10 câu trở lên để đảm bảo độ chính xác!</p>
               </div>
             ) : (
               <>
@@ -1072,7 +1063,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <div className="h-12 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineTimeArr}><Line type="monotone" dataKey="v" stroke="#f97316" strokeWidth={2} dot={{r: 3, fill: '#f97316', strokeWidth: 1, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
                   </div>
 
-                  {/* 🚀 Mới: Logic tự động hiện box IELTS và Mục tiêu cá nhân */}
                   {isIeltsContext && (
                     <>
                       <div className="bg-slate-800 rounded-xl border border-slate-700 shadow-sm p-5 flex flex-col justify-center text-center">
@@ -1081,37 +1071,43 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         <p className="text-[10px] text-slate-500 mt-2 font-medium">(4 bài gần nhất)</p>
                       </div>
                       
-                      <div className="bg-slate-800 rounded-xl border border-amber-500 shadow-md p-5 flex flex-col justify-center text-center relative overflow-hidden">
-                        <div className="absolute -right-4 -bottom-4 text-6xl opacity-10">🎯</div>
+                      <div className="bg-slate-800 rounded-xl border border-amber-500 shadow-md p-5 flex flex-col justify-center text-center relative overflow-hidden group hover:border-amber-400 transition-colors">
+                        <div className="absolute -right-4 -bottom-4 text-6xl opacity-10 pointer-events-none">🎯</div>
                         <h4 className="font-bold text-amber-200 text-[11px] uppercase tracking-widest mb-1 relative z-10">Mục tiêu IELTS</h4>
-                        <span className="font-black text-amber-400 text-3xl md:text-4xl relative z-10">{userProfile?.ielts_target || 'N/A'}</span>
-                        <p className="text-[10px] text-amber-200/60 mt-2 font-medium relative z-10">Cố gắng lên nhé!</p>
+                        <input 
+                            type="number" step="0.5" min="3.5" max="9.0" 
+                            value={targetIelts || ''} 
+                            onChange={(e) => handleUpdateTarget(e.target.value)}
+                            placeholder="N/A"
+                            className="font-black text-amber-400 text-3xl md:text-4xl bg-transparent w-full text-center outline-none cursor-pointer placeholder:text-amber-400/50 relative z-10"
+                            title="Click thẳng vào đây để sửa mục tiêu (VD: 7.5)"
+                        />
+                        <p className="text-[10px] text-amber-200/60 mt-2 font-medium relative z-10 group-hover:text-amber-200 transition-colors">Cố gắng lên nhé!</p>
                       </div>
                     </>
                   )}
                 </div>
 
-                {/* 🚀 Mới: Bảng Phân Tích Kỹ Năng IELTS */}
                 {isIeltsContext && (
-                  <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 mx-2 md:mx-0">
-                    <h3 className="font-black text-lg text-slate-800 mb-6 uppercase tracking-tight">Tỷ lệ làm đúng theo dạng bài (IELTS)</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                      {Object.entries(ieltsTypeStats).map(([key, data]) => {
-                         const percent = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
-                         return (
-                           <div key={key} className="bg-slate-50 border border-slate-200 rounded-lg p-4">
-                               <div className="flex justify-between items-center mb-2">
-                                   <span className="font-bold text-slate-700 text-[13px]">{key}</span>
-                                   <span className="font-black text-[#1e88e5] text-[14px]">{percent}%</span>
-                               </div>
-                               <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden mb-2">
-                                   <div className="h-full bg-[#1e88e5] rounded-full" style={{width: `${percent}%`}}></div>
-                               </div>
-                               <p className="text-[10px] text-slate-500 font-bold text-right tracking-widest">{data.correct} / {data.total} câu</p>
-                           </div>
-                         );
-                      })}
-                    </div>
+                  <div className="mt-8 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mx-2 md:mx-0 p-6 md:p-8">
+                     <h3 className="font-black text-[15px] md:text-lg text-slate-800 uppercase tracking-tight mb-6">Phân Tích Tỷ Lệ Dạng Bài (IELTS)</h3>
+                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                       {Object.entries(ieltsTypeStats).map(([key, data]) => {
+                          const percent = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
+                          return (
+                            <div key={key} className="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="font-bold text-slate-700 text-[13px]">{key}</span>
+                                    <span className="font-black text-[#1e88e5] text-[14px]">{percent}%</span>
+                                </div>
+                                <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden mb-2">
+                                    <div className="h-full bg-[#1e88e5] rounded-full" style={{width: `${percent}%`}}></div>
+                                </div>
+                                <p className="text-[10px] text-slate-500 font-bold text-right tracking-widest">{data.correct} / {data.total} câu</p>
+                            </div>
+                          );
+                       })}
+                     </div>
                   </div>
                 )}
 
@@ -1154,7 +1150,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             </td>
                             <td className="px-5 md:px-6 py-4 text-center">
                               <span className={`inline-flex items-center justify-center px-3 py-1.5 rounded-md text-[12px] md:text-[13px] font-bold border ${isHigh ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-slate-50 text-slate-700 border-slate-200'}`}>
-                                {history.details?.bandScore ? `Band ${history.details.bandScore}` : `${history.scoreObj.display} điểm`}
+                                {history.details?.bandScore ? `Band ${history.details.bandScore}` : `${history.scoreObj.value} điểm`}
                               </span>
                             </td>
                             <td className="px-5 md:px-6 py-4 text-right">
@@ -1191,13 +1187,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   <label className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Họ và tên</label>
                   <input type="text" value={newFullName} onChange={e => setNewFullName(e.target.value)} className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 font-medium focus:border-[#1e88e5] outline-none transition-colors text-[13px] shadow-sm" placeholder="Nhập họ và tên..." />
                 </div>
-                
-                {/* 🚀 Mới: Nhập IELTS Target */}
                 <div className="space-y-1.5">
                   <label className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Mục tiêu IELTS</label>
                   <input type="text" value={newIeltsTarget} onChange={e => setNewIeltsTarget(e.target.value)} className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 font-medium focus:border-amber-500 outline-none transition-colors text-[13px] shadow-sm" placeholder="Ví dụ: 7.0" />
                 </div>
-
                 <div className="space-y-1.5">
                   <label className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Email đăng nhập</label>
                   <input type="email" defaultValue={currentUser?.email || ""} disabled className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 font-medium text-slate-500 outline-none cursor-not-allowed text-[13px]" />
@@ -1216,7 +1209,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
       </main>
 
-      {/* 🚀 Mới: Giao diện Modal Lịch Sử Thi */}
       {viewingHistoryDetail && (
         <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4 animate-in fade-in duration-200">
           <div className="bg-white rounded-xl w-full max-w-lg shadow-xl overflow-hidden border border-slate-200">
@@ -1244,9 +1236,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                    </div>
                 </div>
 
-                {/* 🚀 Đã Thêm Nút Review */}
-                <div className="flex gap-3">
-                <button onClick={() => {
+                <div className="flex flex-col gap-3">
+                    <button onClick={() => {
                         const testId = viewingHistoryDetail.testId || viewingHistoryDetail.details?.test_id;
                         let foundTest = allTests.find(t => String(t.id) === String(testId));
                         if (!foundTest) foundTest = allTests.find(t => t.title.trim() === viewingHistoryDetail.name.trim());
@@ -1259,7 +1250,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             else if (type === 'ielts-speaking') targetMode = 'ielts-speaking';
                             else if (type.includes('ielts')) targetMode = 'computer';
                             
-                            // 🚀 TRUYỀN TOÀN BỘ ĐÁP ÁN CŨ VÀ CỜ REVIEW SANG COMPUTER TEST
                             const totalStr = String(viewingHistoryDetail.scoreObj.display).split('/')[1];
                             onStartTest(targetMode, { 
                                 ...foundTest, 
@@ -1276,6 +1266,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         }
                     }} className="w-full bg-[#1e88e5] hover:bg-blue-600 text-white font-bold py-3.5 rounded-lg transition-colors uppercase tracking-widest text-[12px] shadow-sm">
                         Xem chi tiết chữa bài
+                    </button>
+                    
+                    <button onClick={() => handleRetakeFromHistory(viewingHistoryDetail)} className="w-full bg-slate-800 hover:bg-black text-white font-bold py-3.5 rounded-lg transition-colors uppercase tracking-widest text-[12px] shadow-sm">
+                       Làm lại bài này ngay
                     </button>
                 </div>
              </div>
