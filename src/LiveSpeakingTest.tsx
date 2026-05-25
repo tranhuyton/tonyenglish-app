@@ -439,7 +439,7 @@ export default function LiveSpeakingTest({
               
               if (isMutedRef.current) {
                   setIsMicSending(false);
-                  return; // Đã tắt mic thì block hoàn toàn tín hiệu
+                  return; 
               }
   
               const pcm16Buffer = floatTo16BitPCM(inputData);
@@ -688,7 +688,7 @@ export default function LiveSpeakingTest({
           return (
               <button 
                   onClick={onMaximize}
-                  className={`fixed bottom-8 right-8 z-[100000] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(0,0,0,0.5)] transition-all hover:scale-110 active:scale-95 border-2 ${status === 'CONNECTED' ? (isMicSending && !isMuted ? 'bg-red-500 border-red-300 animate-pulse' : 'bg-emerald-500 border-emerald-300') : 'bg-indigo-600 border-indigo-400'}`}
+                  className={`fixed bottom-8 right-8 z-[100000] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:scale-110 active:scale-95 border-2 ${status === 'CONNECTED' ? (isMicSending && !isMuted ? 'bg-red-500 border-red-300 animate-pulse' : 'bg-emerald-500 border-emerald-300') : 'bg-indigo-600 border-indigo-400'}`}
                   title="Mở Bảng Giáo Viên"
               >
                   <span className="text-2xl">{status === 'CONNECTED' ? '🎙️' : '👨‍🏫'}</span>
@@ -696,28 +696,28 @@ export default function LiveSpeakingTest({
           );
       } else {
           return (
-              <div className="fixed bottom-6 right-6 z-[99998] bg-[#0f172a] border border-slate-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-2xl p-4 flex flex-col gap-3 w-[260px] md:w-72 animate-in slide-in-from-bottom-5 font-sans">
+              <div className="fixed bottom-6 right-6 z-[99998] bg-slate-900/95 backdrop-blur-md border border-slate-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-[1.5rem] p-4 flex flex-col gap-3 w-[280px] md:w-80 animate-in slide-in-from-bottom-5 font-sans transition-all">
                  <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2 cursor-pointer flex-1 min-w-0" onClick={onMaximize}>
-                       <div className={`w-3 h-3 shrink-0 rounded-full ${!isMuted && isMicSending ? 'bg-red-500 animate-pulse shadow-[0_0_8px_rgba(239,68,68,0.8)]' : 'bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]'}`}></div>
-                       <span className="text-white font-bold text-[12px] md:text-[13px] truncate">
+                    <div className="flex items-center gap-2.5 cursor-pointer flex-1 min-w-0" onClick={onMaximize}>
+                       <div className={`w-3 h-3 shrink-0 rounded-full ${!isMuted && isMicSending ? 'bg-red-500 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.8)]' : 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]'}`}></div>
+                       <span className="text-white font-semibold text-[13px] truncate">
                            {isMuted ? 'Đã tắt Mic' : (isMicSending ? 'Đang gửi âm thanh...' : 'Gia sư đang đợi...')}
                        </span>
                     </div>
-                    <button onClick={onMaximize} className="text-slate-400 hover:text-white p-1.5 bg-slate-800 rounded-lg shrink-0 ml-2 border border-slate-600 shadow-sm" title="Phóng to">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+                    <button onClick={onMaximize} className="text-slate-400 hover:text-white w-8 h-8 flex items-center justify-center bg-slate-800 rounded-full shrink-0 ml-2 border border-slate-600 shadow-sm transition-colors" title="Phóng to">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>
                     </button>
                  </div>
                  <div className="flex gap-2 mt-1">
                      <button 
                         onClick={toggleMute} 
-                        className={`flex-1 font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all shadow-md flex items-center justify-center gap-2 ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-slate-700 hover:bg-slate-600 text-white border border-slate-600'}`}
+                        className={`flex-1 font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white shadow-md shadow-amber-900/50' : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-600'}`}
                      >
                         {isMuted ? '🔇 Đã Tắt Mic' : '🎙️ Tắt Mic'}
                      </button>
                      <button 
                          onClick={handleUserHangUp} 
-                         className="flex-1 bg-red-600/90 hover:bg-red-500 text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all shadow-md flex items-center justify-center gap-2 border border-red-500"
+                         className="flex-1 bg-red-500/10 hover:bg-red-500 text-red-500 hover:text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 border border-red-500/50 hover:border-red-500"
                      >
                         🛑 Dập máy
                      </button>
@@ -748,25 +748,27 @@ export default function LiveSpeakingTest({
           <style>{chalkboardStyleTag}</style>
     
           {status === 'IDLE' && (
-              <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[99998]" onClick={onMinimize} />
+              <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[99998]" onClick={onMinimize} />
           )}
     
-          <div className="fixed top-0 right-0 h-[100dvh] w-full md:w-[50vw] bg-[#1e2024] shadow-[-20px_0_60px_rgba(0,0,0,0.7)] z-[100000] flex flex-col border-l border-slate-800 animate-in slide-in-from-right duration-500">
+          <div className="fixed top-0 right-0 h-[100dvh] w-full md:w-[50vw] bg-[#1a1c21] shadow-[-30px_0_60px_rgba(0,0,0,0.8)] z-[100000] flex flex-col border-l-[6px] border-[#2c1808]/80 animate-in slide-in-from-right duration-500">
             
-            <div className="h-16 bg-[#141619] border-b border-slate-800 flex items-center justify-between px-6 shrink-0">
+            {/* Header Bảng Đen (Nhỏ gọn, Tinh tế) */}
+            <div className="h-14 bg-black/40 border-b border-white/5 flex items-center justify-between px-5 shrink-0 backdrop-blur-md">
               <div className="flex items-center gap-3">
-                 <div className="text-xl">✏️</div>
-                 <div>
-                     <h3 className="font-bold text-[14px] text-slate-200 tracking-wider uppercase">Virtual Blackboard</h3>
-                     <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Bảng Phấn Giáo Viên Tony</p>
+                 <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm border border-white/20">
+                     ✏️
+                 </div>
+                 <div className="flex flex-col">
+                     <h3 className="font-bold text-[13px] text-slate-300 uppercase tracking-widest leading-none">Tony Blackboard</h3>
                  </div>
               </div>
               
-              <div className="flex items-center gap-2 md:gap-3">
+              <div className="flex items-center gap-1">
                  {status === 'CONNECTED' && (
                      <button 
                          onClick={handleClearBoard} 
-                         className="text-[11px] text-slate-400 hover:text-white border border-slate-700 hover:border-slate-500 px-3 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                         className="text-[11px] text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg font-bold uppercase tracking-wide transition-colors mr-2 border border-white/10"
                      >
                          Xóa Bảng
                      </button>
@@ -789,54 +791,54 @@ export default function LiveSpeakingTest({
                      className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 text-slate-400 transition-colors"
                      title="Thu nhỏ về góc màn hình"
                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                  </button>
               </div>
             </div>
     
-            <div className="flex-1 overflow-y-auto p-6 md:p-10 custom-scrollbar flex flex-col relative bg-[#1e2024]">
+            <div className="flex-1 overflow-y-auto p-6 md:p-10 custom-scrollbar flex flex-col relative bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')]">
               
               {status === 'IDLE' && (
-                  <div className="m-auto text-center animate-in zoom-in-95 max-w-sm">
-                     <div className="w-20 h-20 bg-slate-800 rounded-full flex items-center justify-center text-4xl shadow-inner border border-slate-700 mx-auto mb-5">👨‍🏫</div>
-                     <h3 className="text-lg font-bold text-slate-200 mb-1">Học Phần Gia Sư Live</h3>
-                     <p className="text-xs text-slate-400 mb-6">Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại giảng bài phối hợp viết bảng phấn.</p>
+                  <div className="m-auto text-center animate-in zoom-in-95 max-w-sm w-full bg-slate-900/80 p-8 rounded-[2rem] border border-slate-700/50 backdrop-blur-md shadow-2xl">
+                     <div className="w-20 h-20 bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 rounded-full flex items-center justify-center text-4xl shadow-lg border border-white/20 mx-auto mb-6">👨‍🏫</div>
+                     <h3 className="text-xl font-black text-white mb-2 tracking-tight">Học Phần Gia Sư Live</h3>
+                     <p className="text-[13px] text-slate-400 mb-8 font-medium">Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại giảng bài phối hợp viết bảng phấn.</p>
                      
-                     <div className="flex justify-center gap-4 mb-6">
+                     <div className="flex justify-center gap-4 mb-8">
                         <button 
                             onClick={() => setExaminer('TONY')} 
-                            className={`w-24 py-2.5 rounded-xl border-2 flex flex-col items-center gap-1 transition-all ${examiner === 'TONY' ? 'bg-emerald-500/10 border-emerald-500 shadow-md' : 'bg-slate-800/40 border-transparent opacity-60 hover:opacity-100'}`}
+                            className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}
                         >
-                           <span className="text-2xl">👨‍🏫</span>
-                           <span className={`text-[11px] font-bold ${examiner === 'TONY' ? 'text-emerald-400' : 'text-slate-400'}`}>Thầy Tôn</span>
+                           <span className="text-3xl drop-shadow-md">👨‍🏫</span>
+                           <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Thầy Tôn</span>
                         </button>
                         <button 
                             onClick={() => setExaminer('DIEP')} 
-                            className={`w-24 py-2.5 rounded-xl border-2 flex flex-col items-center gap-1 transition-all ${examiner === 'DIEP' ? 'bg-emerald-500/10 border-emerald-500 shadow-md' : 'bg-slate-800/40 border-transparent opacity-60 hover:opacity-100'}`}
+                            className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}
                         >
-                           <span className="text-2xl">👩‍🏫</span>
-                           <span className={`text-[11px] font-bold ${examiner === 'DIEP' ? 'text-emerald-400' : 'text-slate-400'}`}>Cô Diệp</span>
+                           <span className="text-3xl drop-shadow-md">👩‍🏫</span>
+                           <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'DIEP' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Cô Diệp</span>
                         </button>
                      </div>
     
                      <button 
                          onClick={() => startCall(false)} 
-                         className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm border border-blue-500 active:scale-95"
+                         className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl shadow-[0_10px_20px_rgba(14,165,233,0.3)] transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wide active:scale-95"
                      >
-                         📞 Bắt Đầu Đàm Thoại Với Giáo Viên
+                         📞 Bắt Đầu Đàm Thoại
                      </button>
                   </div>
               )}
     
               {status === 'CONNECTING' && (
-                  <div className="m-auto flex flex-col items-center opacity-60">
-                      <div className="w-10 h-10 border-4 border-slate-700 border-t-slate-300 rounded-full animate-spin mb-4" />
-                      <div className="text-slate-400 font-bold tracking-widest text-xs uppercase animate-pulse">Đang mời giáo viên vào lớp học...</div>
+                  <div className="m-auto flex flex-col items-center opacity-70">
+                      <div className="w-12 h-12 border-4 border-slate-700 border-t-[#0ea5e9] rounded-full animate-spin mb-4" />
+                      <div className="text-slate-400 font-bold tracking-widest text-xs uppercase animate-pulse">Đang mời giáo viên vào lớp...</div>
                   </div>
               )}
     
               {status === 'CONNECTED' && (
-                  <div className="tony-chalkboard-content flex-1 w-full text-left">
+                  <div className="tony-chalkboard-content flex-1 w-full text-left pb-24">
                       {transcript ? (
                           <>
                              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
@@ -845,36 +847,38 @@ export default function LiveSpeakingTest({
                              <div ref={(el) => { if (el) el.scrollIntoView({ behavior: 'smooth' }); }} />
                           </>
                       ) : (
-                          <div className="h-full flex items-center justify-center text-center opacity-30 italic text-sm text-slate-400" style={{fontFamily: 'sans-serif'}}>
-                              Bảng đen trống.<br/>Thầy cô đang lắng nghe câu hỏi từ mic của em để viết bảng giải nghĩa...
+                          <div className="h-full flex flex-col items-center justify-center text-center opacity-30 italic text-slate-400" style={{fontFamily: 'sans-serif'}}>
+                              <span className="text-4xl mb-4 grayscale">🎙️</span>
+                              <span className="text-[15px] font-medium">Bảng đen trống.<br/>Thầy cô đang lắng nghe câu hỏi từ mic của em để viết bảng giải nghĩa...</span>
                           </div>
                       )}
                   </div>
               )}
     
             </div>
-    
+            
+            {/* Thanh Control Bar nổi bồng bềnh */}
             {status === 'CONNECTED' && (
-                <div className="p-6 bg-gradient-to-t from-[#141619] to-transparent shrink-0">
-                    <div className="bg-[#24292f] border border-slate-700 rounded-full py-2.5 px-4 flex items-center justify-between gap-4 shadow-2xl max-w-md mx-auto">
-                        <div className="text-xs text-slate-400 pl-3 italic truncate flex-1 font-mono">
-                            {!isMuted && isMicSending ? '🎙️ Đang ghi âm (Bạn đang nói)...' : '🔊 Thầy cô đang viết bảng giảng bài...'}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-full max-w-sm px-4 z-50">
+                    <div className="bg-slate-900/95 backdrop-blur-md border border-slate-700/80 rounded-full py-2 px-3 flex items-center justify-between gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
+                        <div className="text-[11px] text-slate-400 pl-3 italic truncate flex-1 font-mono font-medium">
+                            {!isMuted && isMicSending ? '🎙️ Đang ghi âm (Bạn nói)...' : '🔊 Thầy cô đang giảng bài...'}
                         </div>
                         
-                        <div className="flex items-center gap-2 shrink-0">
+                        <div className="flex items-center gap-1.5 shrink-0">
                             <button 
                                 onClick={toggleMute} 
-                                className={`w-9 h-9 rounded-full flex items-center justify-center transition-all shadow-md ${isMuted ? 'bg-amber-600 text-white border border-amber-500' : 'bg-slate-700 text-slate-300 hover:bg-slate-600 border border-slate-600'}`}
+                                className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${isMuted ? 'bg-amber-500 text-white shadow-[0_0_15px_rgba(245,158,11,0.4)]' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}
                                 title="Tắt/Mở Mic Con"
                             >
-                                <span className="text-md">{isMuted ? '🔇' : '🎙️'}</span>
+                                <span className="text-lg">{isMuted ? '🔇' : '🎙️'}</span>
                             </button>
                             <button 
                                 onClick={handleUserHangUp} 
-                                className="w-9 h-9 bg-red-600 hover:bg-red-500 text-white rounded-full flex items-center justify-center transition-all active:scale-95 shadow-md shadow-red-900/50 border border-red-500"
+                                className="w-10 h-10 bg-red-500/20 hover:bg-red-500 text-red-500 hover:text-white rounded-full flex items-center justify-center transition-all active:scale-95 border border-red-500/50 hover:border-red-500"
                                 title="Kết thúc đàm thoại"
                             >
-                                <span className="text-md">🛑</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                             </button>
                         </div>
                     </div>
@@ -887,80 +891,84 @@ export default function LiveSpeakingTest({
   }
 
   // -------------------------------------------------------------------------
-  // 2️⃣ NHÂN CÁCH 2: GIAO DIỆN BÌNH THƯỜNG
+  // 2️⃣ NHÂN CÁCH 2: GIAO DIỆN BÌNH THƯỜNG (EDTECH STYLE)
   // -------------------------------------------------------------------------
   return (
-    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center min-h-[100dvh] bg-[#020617]/95 backdrop-blur-md text-slate-200 p-4 md:p-8 w-full font-sans animate-in fade-in duration-300">
+    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center min-h-[100dvh] bg-slate-900/90 backdrop-blur-md text-slate-200 p-4 md:p-8 w-full font-sans animate-in fade-in duration-300">
       
       {onOpenAI && !isChatBubbleVisible && (
           <button 
              onClick={handleYellowButtonClick}
-             className="absolute top-4 right-4 md:top-6 md:right-6 text-amber-400 hover:text-amber-300 transition-all flex items-center gap-2 font-bold bg-amber-950/40 px-3 py-2 md:px-5 md:py-2.5 rounded-xl border border-amber-800/60 shadow-[0_0_15px_rgba(217,119,6,0.15)] z-20 hover:scale-105 active:scale-95"
+             className="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-white transition-all flex items-center gap-2 font-bold bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2.5 md:px-5 md:py-3 rounded-2xl shadow-[0_10px_25px_rgba(245,158,11,0.3)] z-20 hover:scale-105 active:scale-95 hover:shadow-[0_15px_35px_rgba(245,158,11,0.4)]"
              title={currentMode === 'TUTOR' ? 'Mở lại khung Chat Text' : 'Xem gợi ý kịch bản IELTS'}
           >
-             <span className="text-lg">💬</span> 
-             <span className="hidden sm:inline text-[13px] md:text-[14px]">
+             <span className="text-xl drop-shadow-sm">💬</span> 
+             <span className="hidden sm:inline text-[13px] md:text-[14px] drop-shadow-sm uppercase tracking-wider">
                  {currentMode === 'TUTOR' ? 'Mở khung chat' : 'Kịch bản AI'}
              </span>
           </button>
       )}
 
-      <div className="bg-[#0f172a] p-6 md:p-8 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.8)] border border-slate-700 max-w-2xl w-full text-center relative z-10 max-h-[95dvh] flex flex-col my-auto overflow-hidden">
+      <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_30px_80px_rgba(0,0,0,0.5)] max-w-[600px] w-full text-center relative z-10 max-h-[90dvh] flex flex-col my-auto overflow-hidden ring-1 ring-slate-900/5">
         
         <button 
             onClick={handleBackClick} 
-            className="absolute top-4 left-4 md:top-6 md:left-6 text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-xl text-sm font-medium transition-all shadow-sm border border-slate-600 z-20"
+            className="absolute top-6 left-6 text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 px-4 py-2.5 rounded-xl text-[13px] font-bold transition-all shadow-sm border border-slate-200 z-20 flex items-center gap-2 uppercase tracking-wide"
         >
-          {status !== 'IDLE' ? '👇 Thu nhỏ (Nghe nền)' : '← Thoát'}
+          {status !== 'IDLE' ? (
+              <><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg> Thu nhỏ</>
+          ) : (
+              <><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg> Thoát</>
+          )}
         </button>
 
-        <div className="mb-6 mt-12 md:mt-8 shrink-0">
-           <h2 className="text-2xl md:text-3xl font-black mb-2 text-white tracking-tight">
+        <div className="mb-8 mt-12 md:mt-10 shrink-0">
+           <h2 className="text-2xl md:text-[32px] font-black mb-2 text-slate-800 tracking-tight leading-tight">
                {currentMode === 'TUTOR' ? 'Gia Sư Giải Đáp 1-1' : 'Phòng Luyện Nói 1-1'}
            </h2>
-           <p className="text-emerald-400 font-medium text-[13px] md:text-[14px] opacity-90">
-               {currentMode === 'TUTOR' ? 'Cùng thầy/cô phân tích nội dung bài học' : 'Đàm thoại tiếng Anh trực tiếp với Giám khảo ảo'}
+           <p className="text-[#0ea5e9] font-bold text-[13px] md:text-[15px] uppercase tracking-widest">
+               {currentMode === 'TUTOR' ? 'Phân tích nội dung bài học cùng chuyên gia' : 'Đàm thoại trực tiếp với Giám khảo IELTS'}
            </p>
         </div>
 
         {status === 'IDLE' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 overflow-y-auto custom-scrollbar flex-1 pb-2">
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 overflow-y-auto custom-scrollbar flex-1 pb-2 px-2">
              
-             <div className="bg-slate-800/50 p-4 rounded-2xl border border-slate-700 mb-6 text-left shadow-inner flex flex-col">
-                <span className="block text-[11px] uppercase tracking-widest text-slate-400 font-bold mb-2 shrink-0">
-                    Đang hỗ trợ nội dung:
+             <div className="bg-slate-50 p-5 md:p-6 rounded-2xl border border-slate-200 mb-8 text-left shadow-sm flex flex-col">
+                <span className="block text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-2 shrink-0">
+                    Chủ đề đàm thoại:
                 </span>
-                <div className="text-[14px] font-medium text-slate-200 whitespace-pre-wrap">
+                <div className="text-[15px] font-semibold text-slate-800 whitespace-pre-wrap leading-relaxed">
                     {currentMode === 'TUTOR' ? "Chữa bài & Giải đáp thắc mắc chuyên sâu" : `"${currentTopic}"`}
                 </div>
              </div>
              
-             <div className="mb-6 shrink-0">
-                <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Lựa chọn Giám khảo</h3>
-                <div className="flex justify-center gap-3 md:gap-4">
+             <div className="mb-8 shrink-0">
+                <h3 className="text-[12px] font-black text-slate-400 uppercase tracking-widest mb-4">Lựa chọn Giám khảo</h3>
+                <div className="flex justify-center gap-4">
                     <button 
                         onClick={() => setExaminer('TONY')} 
-                        className={`relative w-24 md:w-28 py-3 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all ${examiner === 'TONY' ? 'bg-slate-800 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-slate-900 border-transparent opacity-60 hover:bg-slate-800'}`}
+                        className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/10 border-[#0ea5e9] shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-[#0ea5e9]/50'}`}
                     >
-                       <div className="text-3xl drop-shadow-md">👨‍🏫</div>
-                       <span className={`text-[12px] md:text-[13px] font-bold ${examiner === 'TONY' ? 'text-emerald-400' : 'text-slate-400'}`}>Thầy Tôn</span>
-                       {examiner === 'TONY' && <div className="absolute -top-2 -right-2 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white text-[10px] shadow-sm">✓</div>}
+                       <div className="text-4xl drop-shadow-sm mb-1">👨‍🏫</div>
+                       <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-500'}`}>Thầy Tôn</span>
+                       {examiner === 'TONY' && <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#0ea5e9] rounded-full flex items-center justify-center text-white text-[12px] shadow-md border-2 border-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg></div>}
                     </button>
                     
                     <button 
                         onClick={() => setExaminer('DIEP')} 
-                        className={`relative w-24 md:w-28 py-3 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all ${examiner === 'DIEP' ? 'bg-slate-800 border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.2)]' : 'bg-slate-900 border-transparent opacity-60 hover:bg-slate-800'}`}
+                        className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-purple-500/10 border-purple-500 shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-purple-500/50'}`}
                     >
-                       <div className="text-3xl drop-shadow-md">👩‍🏫</div>
-                       <span className={`text-[12px] md:text-[13px] font-bold ${examiner === 'DIEP' ? 'text-emerald-400' : 'text-slate-400'}`}>Cô Diệp</span>
-                       {examiner === 'DIEP' && <div className="absolute -top-2 -right-2 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white text-[10px] shadow-sm">✓</div>}
+                       <div className="text-4xl drop-shadow-sm mb-1">👩‍🏫</div>
+                       <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'DIEP' ? 'text-purple-600' : 'text-slate-500'}`}>Cô Diệp</span>
+                       {examiner === 'DIEP' && <div className="absolute -top-2 -right-2 w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center text-white text-[12px] shadow-md border-2 border-white"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg></div>}
                     </button>
                 </div>
              </div>
              
              <button 
                  onClick={() => startCall(false)} 
-                 className="w-full shrink-0 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-2xl text-[15px] md:text-[16px] shadow-[0_10px_20px_rgba(16,185,129,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all border border-emerald-500"
+                 className="w-full shrink-0 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 md:py-5 rounded-2xl text-[15px] md:text-[16px] shadow-[0_10px_30px_rgba(14,165,233,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all uppercase tracking-wide"
              >
                  <span className="text-xl">📞</span> Bắt Đầu Đàm Thoại
              </button>
@@ -968,52 +976,60 @@ export default function LiveSpeakingTest({
         )}
 
         {status === 'CONNECTING' && (
-            <div className="py-12 flex flex-col items-center animate-in zoom-in-95 duration-300 flex-1 justify-center">
-                <div className="w-12 h-12 border-4 border-emerald-500/30 border-t-emerald-500 rounded-full animate-spin mb-6 shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
-                <div className="text-emerald-400 font-bold tracking-widest uppercase text-sm animate-pulse">ĐANG THIẾT LẬP KẾT NỐI...</div>
+            <div className="py-16 flex flex-col items-center animate-in zoom-in-95 duration-300 flex-1 justify-center">
+                <div className="relative w-16 h-16 mb-8">
+                    <div className="absolute inset-0 border-4 border-[#0ea5e9]/20 rounded-full"></div>
+                    <div className="absolute inset-0 border-4 border-[#0ea5e9] border-t-transparent rounded-full animate-spin"></div>
+                </div>
+                <div className="text-slate-500 font-black tracking-widest uppercase text-sm animate-pulse">Đang thiết lập kết nối...</div>
             </div>
         )}
 
         {status === 'CONNECTED' && (
-          <div className="flex flex-col items-center animate-in zoom-in-95 duration-500 w-full h-full flex-1 overflow-hidden">
+          <div className="flex flex-col items-center animate-in zoom-in-95 duration-500 w-full h-full flex-1 overflow-hidden px-2">
             
-            <div className="relative mb-4 shrink-0">
-                <div className={`absolute inset-0 rounded-full transition-all duration-300 opacity-20 ${!isMuted && isMicSending ? 'bg-red-500 scale-[1.3] animate-pulse shadow-[0_0_30px_rgba(239,68,68,0.5)]' : 'bg-emerald-500 scale-100 shadow-[0_0_30px_rgba(16,185,129,0.5)]'}`}></div>
-                <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-slate-700 shadow-xl relative z-10 bg-slate-800 flex items-center justify-center text-4xl">
+            <div className="relative mb-6 shrink-0 mt-4">
+                {/* Hiệu ứng sóng âm Pulse Ring */}
+                <div className={`absolute inset-0 rounded-full transition-all duration-300 opacity-20 ${!isMuted && isMicSending ? 'bg-red-500 scale-[1.5] animate-pulse shadow-[0_0_40px_rgba(239,68,68,0.5)]' : 'bg-[#0ea5e9] scale-100 shadow-[0_0_40px_rgba(14,165,233,0.5)]'}`}></div>
+                <div className={`absolute inset-0 rounded-full transition-all duration-500 opacity-10 ${!isMuted && isMicSending ? 'bg-red-500 scale-[2] animate-pulse delay-75' : 'bg-[#0ea5e9] scale-[1.3]'}`}></div>
+                
+                <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-xl relative z-10 bg-slate-100 flex items-center justify-center text-5xl">
                     {examiner === 'TONY' ? '👨‍🏫' : '👩‍🏫'}
                 </div>
             </div>
             
-            <p className={`shrink-0 font-bold mb-4 tracking-widest uppercase text-[10px] md:text-[11px] px-4 py-1.5 rounded-full border shadow-sm transition-colors ${isMuted ? 'bg-amber-950/50 text-amber-400 border-amber-800' : (isMicSending ? 'bg-red-950/50 text-red-400 border-red-800' : 'bg-emerald-950/50 text-emerald-400 border-emerald-800')}`}>
+            <p className={`shrink-0 font-black mb-6 tracking-widest uppercase text-[10px] md:text-[11px] px-4 py-1.5 rounded-full border shadow-sm transition-colors ${isMuted ? 'bg-amber-50 text-amber-600 border-amber-200' : (isMicSending ? 'bg-red-50 text-red-600 border-red-200' : 'bg-sky-50 text-[#0ea5e9] border-sky-200')}`}>
                 {isMuted ? "🔇 ĐÃ TẮT MIC (CHỈ NGHE)" : (isMicSending ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : "🟢 AI ĐANG NGHE/PHẢN HỒI...")}
             </p>
             
-            <div className="bg-[#020617] rounded-2xl p-4 md:p-6 w-full text-left h-32 md:h-40 overflow-y-auto mb-6 border border-slate-800 font-mono text-[13px] md:text-[14px] text-slate-300 leading-relaxed shadow-inner custom-scrollbar flex-1 min-h-[120px] prose prose-invert max-w-none">
+            <div className="bg-slate-50 rounded-2xl p-5 md:p-6 w-full text-left h-32 md:h-48 overflow-y-auto mb-8 border border-slate-200 shadow-inner custom-scrollbar flex-1 min-h-[140px]">
                {transcript ? (
-                  <ReactMarkdown 
-                     remarkPlugins={[remarkMath]} 
-                     rehypePlugins={[rehypeKatex]}
-                  >
-                     {transcript}
-                  </ReactMarkdown>
+                  <div className="prose prose-slate prose-sm max-w-none font-medium text-slate-700 leading-relaxed">
+                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                         {transcript}
+                      </ReactMarkdown>
+                  </div>
                ) : (
-                  <span className="opacity-40 italic">Đang chờ tín hiệu âm thanh...</span>
+                  <div className="flex flex-col items-center justify-center h-full opacity-40">
+                      <span className="text-3xl mb-2 grayscale">🎙️</span>
+                      <span className="italic text-sm font-medium">Đang chờ tín hiệu âm thanh...</span>
+                  </div>
                )}
                <div ref={(el) => { if (el) el.scrollIntoView({ behavior: 'smooth' }); }} />
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-3 w-full shrink-0">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full shrink-0">
                 <button 
                     onClick={toggleMute} 
-                    className={`flex-1 font-bold py-3 md:py-4 rounded-2xl flex items-center justify-center gap-2 md:gap-3 transition-all active:scale-95 shadow-lg border ${isMuted ? 'bg-amber-600 hover:bg-amber-500 text-white border-amber-500' : 'bg-slate-700 hover:bg-slate-600 text-white border-slate-600'}`}
+                    className={`flex-1 font-black py-4 rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-sm border-2 text-[14px] uppercase tracking-wide ${isMuted ? 'bg-amber-500 text-white border-amber-500 shadow-amber-500/30' : 'bg-white text-slate-600 hover:text-slate-800 border-slate-200 hover:border-slate-300 hover:bg-slate-50'}`}
                 >
-                   <span className="text-lg md:text-xl">{isMuted ? '🔇' : '🎙️'}</span> {isMuted ? 'Đã Tắt Mic' : 'Tắt Mic Tạm Thời'}
+                   <span className="text-xl">{isMuted ? '🔇' : '🎙️'}</span> {isMuted ? 'Đã Tắt Mic' : 'Tắt Mic Tạm Thời'}
                 </button>
                 <button 
                     onClick={handleUserHangUp} 
-                    className="flex-1 bg-red-600 hover:bg-red-500 text-white font-bold py-3 md:py-4 rounded-2xl shadow-[0_10px_20px_rgba(220,38,38,0.3)] flex items-center justify-center gap-2 md:gap-3 active:scale-95 transition-all border border-red-500"
+                    className="flex-1 bg-red-50/50 hover:bg-red-500 text-red-500 hover:text-white font-black py-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all border-2 border-red-200 hover:border-red-500 text-[14px] uppercase tracking-wide shadow-sm"
                 >
-                    <span className="text-lg md:text-xl">🛑</span> Dập Máy
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Dập Máy
                 </button>
             </div>
             
