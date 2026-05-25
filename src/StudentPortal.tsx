@@ -76,7 +76,6 @@ const getCourseCover = (course: any) => {
 export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: any) {
   const [isLoading, setIsLoading] = useState(true);
   
-  // Đã ẨN mục mini games
   const [activeTab, setActiveTab] = useState<'library'|'analytics'|'profile'>(() => {
     const saved = sessionStorage.getItem('lms_portal_tab');
     if (saved === 'library' || saved === 'analytics' || saved === 'profile') {
@@ -185,9 +184,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     computeInProgress();
   }, [activeTab, activeView]);
 
-  // =========================================================================================
-  // 🚀 TỐI ƯU HÓA SIÊU TỐC: DÙNG PROMISE.ALL TẢI SONG SONG MỌI BẢNG DỮ LIỆU CÙNG 1 LÚC
-  // =========================================================================================
   const checkUserAndFetchData = async () => {
     setIsLoading(true);
     const { data: { user } } = await supabase.auth.getUser();
@@ -205,14 +201,20 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             { data: cStudents },
             { data: enrolls },
             { data: allF },
-            { data: allL }
+            { data: allL },
+            { data: allT },
+            { data: hData },
+            { data: allC }
         ] = await Promise.all([
             supabase.from('profiles').select('*').eq('id', user.id).single(),
-            supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id),
-            supabase.from('class_students').select('class_id').eq('user_id', user.id),
-            supabase.from('enrollments').select('course_id').eq('user_id', user.id),
+            supabase.from('lecture_progress').select('*').eq('user_id', user.id),
+            supabase.from('class_students').select('*').eq('user_id', user.id),
+            supabase.from('enrollments').select('*').eq('user_id', user.id),
             supabase.from('folders').select('*'),
-            supabase.from('lectures').select('id, course_id').eq('is_published', true)
+            supabase.from('lectures').select('*').eq('is_published', true),
+            supabase.from('tests').select('*').eq('is_published', true),
+            supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false }),
+            supabase.from('courses').select('*')
         ]);
 
         setUserProfile(profile);
@@ -229,17 +231,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         const courseIds = enrolls?.map(e => e.course_id) || [];
         
         if (courseIds.length > 0) {
-            const [
-                { data: cData },
-                { data: hData },
-                { data: allT }
-            ] = await Promise.all([
-                supabase.from('courses').select('*').in('id', courseIds),
-                supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false }),
-                supabase.from('tests').select('id, title, test_type, course_id, folder_id, is_published, created_at, content_json').eq('is_published', true)
-            ]);
-
-            setCourses((cData || []).sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999)));
+            const userCourses = (allC || []).filter(c => courseIds.includes(c.id));
+            setCourses(userCourses.sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999)));
 
             const parsedTests = (allT || []).map((t: any) => {
                 let content = t.content_json;
@@ -251,34 +244,50 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             setAllTests(parsedTests);
 
             if (hData) {
-                // 🚀 BỘ LỌC BÀN TAY SẮT: LỌC BỎ CÁC BÀI ĐIỂM QUÁ THẤP (< 3 điểm hoặc < Band 3.0)
+                // 🚀 BỘ LỌC BÀN TAY SẮT: CHỈ GIỮ BÀI LÀM NGHIÊM TÚC (> 3.0 ĐIỂM HOẶC BAND)
                 const validHistory = hData.filter((item: any) => {
+                    let detailsObj = item.details || {};
+                    if (typeof detailsObj === 'string') {
+                        try { detailsObj = JSON.parse(detailsObj); } catch(e) { detailsObj = {}; }
+                    }
+                    
                     const type = String(item.test_type || '').toLowerCase();
                     const title = String(item.test_title || '').toLowerCase();
-                    const isIelts = type.includes('ielts') || title.includes('ielts');
+                    const isIelts = type.includes('ielts') || title.includes('ielts') || detailsObj.bandScore !== undefined;
                     
                     if (isIelts) {
-                        const band = parseFloat(item.details?.bandScore || item.score || 0);
-                        return band >= 3.0; // IELTS >= 3.0 mới tính
+                        const band = parseFloat(detailsObj.bandScore);
+                        if (!isNaN(band)) {
+                            return band > 3.0; // IELTS phải lớn hơn Band 3.0
+                        }
+                        const fallbackScore = parseFloat(item.score || 0);
+                        return fallbackScore > 3.0; 
                     } else {
                         const score = parseFloat(item.score || 0);
-                        return score >= 3; // Các bài khác phải đúng >= 3 câu mới tính
+                        return score > 3.0; // Điểm Standard/Game phải lớn hơn 3.0
                     }
                 });
 
-                setHistoryData(validHistory.map((item: any) => ({
-                    id: item.id, 
-                    testId: item.test_id, 
-                    name: item.test_title || 'Bài thi không tên', 
-                    courseId: item.course_id,
-                    scoreObj: { 
-                        value: item.score || 0, 
-                        display: `${item.score || 0} / ${item.total_score || 0}` 
-                    },
-                    timeSpent: Math.round((item.time_spent || 0) / 60), 
-                    date: item.created_at, 
-                    details: item.details || {}
-                })));
+                setHistoryData(validHistory.map((item: any) => {
+                    let detailsObj = item.details || {};
+                    if (typeof detailsObj === 'string') {
+                        try { detailsObj = JSON.parse(detailsObj); } catch(e) { detailsObj = {}; }
+                    }
+                    
+                    return {
+                        id: item.id, 
+                        testId: item.test_id, 
+                        name: item.test_title || 'Bài thi không tên', 
+                        courseId: item.course_id,
+                        scoreObj: { 
+                            value: parseFloat(item.score || 0), 
+                            display: `${item.score || 0} / ${item.total_score || 0}` 
+                        },
+                        timeSpent: Math.round((item.time_spent || 0) / 60), 
+                        date: item.created_at, 
+                        details: detailsObj
+                    };
+                }));
             }
         } else {
             setCourses([]);
@@ -419,7 +428,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       return allFolders.filter(f => f.course_id === selectedCourse.id).sort((a,b) => (a.display_order||0) - (b.display_order||0));
   }, [selectedCourse, allFolders]);
 
-  // 🚀 TỐI ƯU CƠ CHẾ MAP VÀ SET ĐỂ GIẢM THỜI GIAN HIỂN THỊ DANH SÁCH BÀI TẬP O(N)
   const completedTestIdsSet = useMemo(() => {
       return new Set(historyData.map(h => String(h.testId || h.details?.test_id)));
   }, [historyData]);
@@ -533,7 +541,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }, [historyData, analyticsCourse, analyticsCategory, allTests]);
 
-  // 🚀 TÍNH TOÁN DỮ LIỆU CHO 4 AREA CHART TỔNG QUAN THEO NGÀY (CÓ XỬ LÝ GÃY KHÚC BIỂU ĐỒ TRỐNG)
+  // 🚀 TÍNH TOÁN DỮ LIỆU CHO 4 AREA CHART TỔNG QUAN THEO NGÀY
   const aggregatedByDate = useMemo(() => {
       const map = new Map();
       const reversed = [...processedHistory].reverse(); 
@@ -550,7 +558,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           entry.timeSum += h.timeSpent;
           
           const type = String(h.details?.test_type || h.name).toLowerCase();
-          const isIelts = type.includes('ielts');
+          const title = String(h.name).toLowerCase();
+          const isIelts = type.includes('ielts') || title.includes('ielts') || h.details?.bandScore !== undefined;
           
           if (isIelts) {
               const band = parseFloat(h.details?.bandScore);
@@ -592,7 +601,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
       processedHistory.forEach(h => {
           const type = String(h.details?.test_type || h.name).toLowerCase();
-          const isIeltsTest = type.includes('ielts');
+          const title = String(h.name).toLowerCase();
+          const isIeltsTest = type.includes('ielts') || title.includes('ielts') || h.details?.bandScore !== undefined;
           
           if (isIeltsTest) {
               const band = parseFloat(h.details?.bandScore);
@@ -725,9 +735,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const totalHistoryPages = Math.ceil(processedHistory.length / HISTORY_PER_PAGE);
   const paginatedHistory = useMemo(() => processedHistory.slice((historyPage - 1) * HISTORY_PER_PAGE, historyPage * HISTORY_PER_PAGE), [processedHistory, historyPage]);
 
-  const globalTotalTestsDone = historyData.length;
-  const globalTotalTimeHours = useMemo(() => (historyData.reduce((acc, curr) => acc + curr.timeSpent, 0) / 60).toFixed(1), [historyData]);
-  
   const inProgressTestId = Array.from(inProgressIds)[0];
   const inProgressTest = useMemo(() => allTests.find(t => String(t.id) === inProgressTestId), [allTests, inProgressTestId]);
 
@@ -764,7 +771,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   };
 
   return (
-    <div className="min-h-[100dvh] bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full">
+    <div className="min-h-[100dvh] bg-[#f8fafc] font-sans text-slate-800 overscroll-none w-full flex flex-col">
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
         <div className="max-w-[1200px] w-full mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
           
@@ -772,48 +779,44 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               resetWorkspaceAndChat(); 
               onNavigate?.('home');
           }}>
-            <div className="flex flex-col items-end">
-              <h1 className="font-black text-2xl text-[#0a5482] leading-none">TONY<span className="text-slate-800">ENGLISH</span></h1>
-            </div>
-            <div className="w-10 h-10 flex items-center justify-center overflow-hidden">
+            <div className="w-10 h-10 flex items-center justify-center overflow-hidden shrink-0">
                 <img src="/logo-shield.png" alt="Logo" className="w-auto h-full object-contain" />
             </div>
+            <div className="flex flex-col items-start mt-1">
+              <h1 className="font-black text-2xl text-[#0a5482] leading-none tracking-tight">TONY<span className="text-slate-800">ENGLISH</span></h1>
+            </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-2 bg-slate-50 rounded-xl p-1 border border-slate-200">
-            <button 
-                onClick={() => { 
-                    resetWorkspaceAndChat(); 
-                    setActiveTab('library'); 
-                    setActiveView('dashboard'); 
-                    setSelectedCourseId(null); 
-                    setCurrentFolderId(null);
-                }} 
-                className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'library' ? 'bg-white shadow-sm text-[#1e88e5] border border-slate-200' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
-            >
-                📚 Không gian học tập
-            </button>
-            <button 
-                onClick={() => {
-                    resetWorkspaceAndChat(); 
-                    setActiveTab('analytics');
-                }} 
-                className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'analytics' ? 'bg-white shadow-sm text-[#1e88e5] border border-slate-200' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
-            >
-                📊 Báo cáo
-            </button>
-          </div>
+          <div className="flex items-center gap-3 md:gap-4 ml-auto">
+            
+            <div className="hidden md:flex items-center bg-slate-100/80 rounded-full p-1 border border-slate-200/60 shadow-sm">
+              <button 
+                  onClick={() => { 
+                      resetWorkspaceAndChat(); 
+                      setActiveTab('library'); 
+                      setActiveView('dashboard'); 
+                      setSelectedCourseId(null); 
+                      setCurrentFolderId(null);
+                  }} 
+                  className={`flex items-center gap-2 px-5 py-2 rounded-full font-bold text-[13px] transition-all duration-200 ${activeTab === 'library' ? 'bg-white shadow-sm text-[#0a5482]' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
+              >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                  Học tập
+              </button>
+              <button 
+                  onClick={() => {
+                      resetWorkspaceAndChat(); 
+                      setActiveTab('analytics');
+                  }} 
+                  className={`flex items-center gap-2 px-5 py-2 rounded-full font-bold text-[13px] transition-all duration-200 ${activeTab === 'analytics' ? 'bg-white shadow-sm text-[#0a5482]' : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/50'}`}
+              >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                  Báo cáo
+              </button>
+            </div>
 
-          <div className="flex items-center gap-3 md:gap-5">
-            <div className="hidden lg:flex items-center gap-3">
-               <div className="flex items-center gap-1.5 bg-white text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 font-bold text-[12px] shadow-sm uppercase tracking-wide">
-                   🔥 {globalTotalTestsDone} Bài
-               </div>
-               <div className="flex items-center gap-1.5 bg-white text-slate-700 px-3 py-1.5 rounded-lg border border-slate-200 font-bold text-[12px] shadow-sm uppercase tracking-wide">
-                   ⏱️ {globalTotalTimeHours}h
-               </div>
-               <div className="h-6 w-px bg-slate-200 mx-1"></div>
-               <button onClick={toggleFullScreen} className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#1e88e5] transition-colors">
+            <div className="hidden lg:flex items-center">
+               <button onClick={toggleFullScreen} className="w-9 h-9 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 border border-transparent hover:border-slate-200 hover:text-[#0a5482] transition-colors">
                  {isFullscreen ? <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>}
                </button>
             </div>
@@ -840,21 +843,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                          setSelectedCourseId(null); 
                          setCurrentFolderId(null); 
                          setIsDropdownOpen(false); 
-                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">
-                         📚 Học tập
+                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-2">
+                         <svg className="w-4 h-4 text-[#0a5482]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg> Học tập
                      </button>
                      <button onClick={() => { 
                          resetWorkspaceAndChat(); 
                          setActiveTab('analytics'); 
                          setIsDropdownOpen(false); 
-                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">
-                         📊 Báo cáo
+                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 flex items-center gap-2">
+                         <svg className="w-4 h-4 text-[#0a5482]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg> Báo cáo
                      </button>
                      <button onClick={() => { 
                          resetWorkspaceAndChat(); 
                          setActiveTab('profile'); 
                          setIsDropdownOpen(false); 
-                     }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#1e88e5] transition-colors">
+                     }} className="w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-[#0a5482] transition-colors flex items-center gap-2 border-t border-slate-100">
                          👤 Cấu hình tài khoản
                      </button>
                      {userProfile?.role === 'admin' && (
@@ -876,7 +879,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         </div>
       </header>
 
-      <main className="max-w-[1200px] w-full mx-auto p-4 md:p-8">
+      <main className="flex-1 w-full max-w-[1200px] mx-auto p-4 md:p-8 overflow-y-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
         
         {activeTab === 'library' && activeView === 'dashboard' && (
           <div className="animate-in fade-in duration-300">
@@ -1135,6 +1138,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         
                         const skillConfig = getTestSkillConfig(test);
 
+                        // KIỂM TRA DEADLINE
                         let isOverdue = false;
                         let deadlineLabel = '';
                         
@@ -1248,7 +1252,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <div className="bg-white rounded-xl border border-slate-200 py-16 md:py-24 text-center shadow-sm flex flex-col items-center justify-center mx-2 md:mx-0">
                 <div className="text-5xl mb-4 opacity-50 grayscale block">📊</div>
                 <h3 className="text-lg md:text-xl font-black text-slate-700 mb-2 px-4">Chưa có dữ liệu làm bài hợp lệ</h3>
-                <p className="text-slate-500 font-medium text-[13px] md:text-[15px] max-w-sm px-4">Hệ thống chỉ tính những bài đạt trên 3.0 điểm (hoặc IELTS Band &gt;= 3.0) để đảm bảo phân tích chính xác.</p>
+                <p className="text-slate-500 font-medium text-[13px] md:text-[15px] max-w-sm px-4">Hệ thống chỉ tính những bài đạt trên 3.0 điểm (hoặc IELTS Band &gt; 3.0) để đảm bảo phân tích chính xác.</p>
               </div>
             ) : (
               <>
@@ -1261,7 +1265,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <span className="font-black text-emerald-600 text-xl md:text-2xl">{analyticsTotalTestsDone}</span>
                     </div>
                     <div className="h-16 w-full -mx-2 -mb-2">
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ResponsiveContainer width="99%" height="100%">
                             <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
                                 <defs>
                                     <linearGradient id="colorDone" x1="0" y1="0" x2="0" y2="1">
@@ -1290,7 +1294,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <span className="font-black text-fuchsia-600 text-xl md:text-2xl">{analyticsTotalTestsDone}</span>
                     </div>
                     <div className="h-16 w-full -mx-2 -mb-2">
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ResponsiveContainer width="99%" height="100%">
                             <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
                                 <defs>
                                     <linearGradient id="colorAttempts" x1="0" y1="0" x2="0" y2="1">
@@ -1319,7 +1323,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <span className="font-black text-orange-600 text-xl md:text-2xl">{analyticsTotalTimeHours}h</span>
                     </div>
                     <div className="h-16 w-full -mx-2 -mb-2">
-                        <ResponsiveContainer width="100%" height="100%">
+                        <ResponsiveContainer width="99%" height="100%">
                             <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
                                 <defs>
                                     <linearGradient id="colorTime" x1="0" y1="0" x2="0" y2="1">
@@ -1381,7 +1385,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         <div className="flex-1 w-full">
                            <h3 className="font-black text-[15px] md:text-lg text-slate-800 uppercase tracking-tight mb-4">Phân Tích Kỹ Năng</h3>
                            <div className="w-full h-[280px]">
-                              <ResponsiveContainer width="100%" height="100%">
+                              <ResponsiveContainer width="99%" height="100%">
                                   <LineChart data={ieltsSkillChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                       <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                                       <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b' }} dy={10} />
@@ -1402,7 +1406,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         <div className="flex-1 w-full">
                            <h3 className="font-black text-[15px] md:text-lg text-slate-800 uppercase tracking-tight mb-4">Tỷ Lệ Dạng Bài (%)</h3>
                            <div className="w-full h-[280px]">
-                              <ResponsiveContainer width="100%" height="100%">
+                              <ResponsiveContainer width="99%" height="100%">
                                   <LineChart data={ieltsTypeChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                                       <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                                       <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b' }} dy={10} />
