@@ -75,10 +75,12 @@ const getCourseCover = (course: any) => {
 
 export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }: any) {
   const [isLoading, setIsLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'library'|'analytics'|'games'|'profile'>(() => {
+  
+  // Đã ẨN mục mini games
+  const [activeTab, setActiveTab] = useState<'library'|'analytics'|'profile'>(() => {
     const saved = sessionStorage.getItem('lms_portal_tab');
-    if (saved === 'library' || saved === 'analytics' || saved === 'games' || saved === 'profile') {
-      return saved as 'library'|'analytics'|'games'|'profile';
+    if (saved === 'library' || saved === 'analytics' || saved === 'profile') {
+      return saved as 'library'|'analytics'|'profile';
     }
     return 'library';
   });
@@ -183,91 +185,111 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     computeInProgress();
   }, [activeTab, activeView]);
 
+  // =========================================================================================
+  // 🚀 TỐI ƯU HÓA SIÊU TỐC: DÙNG PROMISE.ALL TẢI SONG SONG MỌI BẢNG DỮ LIỆU CÙNG 1 LÚC
+  // =========================================================================================
   const checkUserAndFetchData = async () => {
     setIsLoading(true);
     const { data: { user } } = await supabase.auth.getUser();
     setCurrentUser(user);
     
-    if (user) {
-      const { data: profile } = await supabase.from('profiles').select('*').eq('id', user.id).single();
-      setUserProfile(profile);
-      if (profile) {
-          if (!newFullName) setNewFullName(profile.full_name || '');
-          if (profile.target_ielts) setTargetIelts(profile.target_ielts.toString());
-      }
-      
-      const { data: lp } = await supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id);
-      setLectureProgressData(lp || []);
-
-      const { data: cStudents } = await supabase.from('class_students').select('class_id').eq('user_id', user.id);
-      if (cStudents) {
-          setUserClassIds(cStudents.map(c => c.class_id));
-      }
+    if (!user) {
+        setIsLoading(false);
+        return;
     }
 
-    const { data: allT } = await supabase.from('tests').select('*').eq('is_published', true);
-    const parsedTests = (allT || []).map((t: any) => {
-        let content = t.content_json;
-        if (typeof content === 'string') {
-            try { content = JSON.parse(content); } catch(e) { content = {}; }
+    try {
+        const [
+            { data: profile },
+            { data: lp },
+            { data: cStudents },
+            { data: enrolls },
+            { data: allF },
+            { data: allL }
+        ] = await Promise.all([
+            supabase.from('profiles').select('*').eq('id', user.id).single(),
+            supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id),
+            supabase.from('class_students').select('class_id').eq('user_id', user.id),
+            supabase.from('enrollments').select('course_id').eq('user_id', user.id),
+            supabase.from('folders').select('*'),
+            supabase.from('lectures').select('id, course_id').eq('is_published', true)
+        ]);
+
+        setUserProfile(profile);
+        if (profile) {
+            if (!newFullName) setNewFullName(profile.full_name || '');
+            if (profile.target_ielts) setTargetIelts(profile.target_ielts.toString());
         }
-        return { 
-            ...t, 
-            content_json: content, 
-            _hasAudio: checkTestHasAudio({ content_json: content }) 
-        };
-    });
-    setAllTests(parsedTests);
-
-    const { data: allL } = await supabase.from('lectures').select('id, course_id').eq('is_published', true);
-    setAllLectures(allL || []);
-    
-    const { data: allF } = await supabase.from('folders').select('*');
-    setAllFolders(allF || []);
-
-    if (user) {
-      const { data: enrolls } = await supabase.from('enrollments').select('course_id').eq('user_id', user.id);
-      const courseIds = enrolls?.map(e => e.course_id) || [];
-      
-      if (courseIds.length > 0) {
-        const { data: cData } = await supabase.from('courses').select('*').in('id', courseIds);
-        setCourses((cData || []).sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999)));
-      }
-      
-      const { data: hData } = await supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false });
-      if (hData) {
         
-        // 🚀 BỘ LỌC BÀN TAY SẮT: LỌC BỎ CÁC BÀI ĐIỂM QUÁ THẤP (< 3 điểm hoặc < Band 3.0)
-        const validHistory = hData.filter((item: any) => {
-            const type = String(item.test_type || '').toLowerCase();
-            const title = String(item.test_title || '').toLowerCase();
-            const isIelts = type.includes('ielts') || title.includes('ielts');
-            
-            if (isIelts) {
-                const band = parseFloat(item.details?.bandScore || item.score || 0);
-                return band >= 3.0; // IELTS >= 3.0 mới tính
-            } else {
-                const score = parseFloat(item.score || 0);
-                return score >= 3; // Các bài khác phải đúng >= 3 câu mới tính
-            }
-        });
+        setLectureProgressData(lp || []);
+        if (cStudents) setUserClassIds(cStudents.map(c => c.class_id));
+        setAllFolders(allF || []);
+        setAllLectures(allL || []);
 
-        setHistoryData(validHistory.map((item: any) => ({
-          id: item.id, 
-          testId: item.test_id, 
-          name: item.test_title || 'Bài thi không tên', 
-          courseId: item.course_id,
-          scoreObj: { 
-              value: item.score || 0, 
-              display: `${item.score || 0} / ${item.total_score || 0}` 
-          },
-          timeSpent: Math.round((item.time_spent || 0) / 60), 
-          date: item.created_at, 
-          details: item.details || {}
-        })));
-      }
+        const courseIds = enrolls?.map(e => e.course_id) || [];
+        
+        if (courseIds.length > 0) {
+            const [
+                { data: cData },
+                { data: hData },
+                { data: allT }
+            ] = await Promise.all([
+                supabase.from('courses').select('*').in('id', courseIds),
+                supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false }),
+                supabase.from('tests').select('id, title, test_type, course_id, folder_id, is_published, created_at, content_json').eq('is_published', true)
+            ]);
+
+            setCourses((cData || []).sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999)));
+
+            const parsedTests = (allT || []).map((t: any) => {
+                let content = t.content_json;
+                if (typeof content === 'string') {
+                    try { content = JSON.parse(content); } catch(e) { content = {}; }
+                }
+                return { ...t, content_json: content }; 
+            });
+            setAllTests(parsedTests);
+
+            if (hData) {
+                // 🚀 BỘ LỌC BÀN TAY SẮT: LỌC BỎ CÁC BÀI ĐIỂM QUÁ THẤP (< 3 điểm hoặc < Band 3.0)
+                const validHistory = hData.filter((item: any) => {
+                    const type = String(item.test_type || '').toLowerCase();
+                    const title = String(item.test_title || '').toLowerCase();
+                    const isIelts = type.includes('ielts') || title.includes('ielts');
+                    
+                    if (isIelts) {
+                        const band = parseFloat(item.details?.bandScore || item.score || 0);
+                        return band >= 3.0; // IELTS >= 3.0 mới tính
+                    } else {
+                        const score = parseFloat(item.score || 0);
+                        return score >= 3; // Các bài khác phải đúng >= 3 câu mới tính
+                    }
+                });
+
+                setHistoryData(validHistory.map((item: any) => ({
+                    id: item.id, 
+                    testId: item.test_id, 
+                    name: item.test_title || 'Bài thi không tên', 
+                    courseId: item.course_id,
+                    scoreObj: { 
+                        value: item.score || 0, 
+                        display: `${item.score || 0} / ${item.total_score || 0}` 
+                    },
+                    timeSpent: Math.round((item.time_spent || 0) / 60), 
+                    date: item.created_at, 
+                    details: item.details || {}
+                })));
+            }
+        } else {
+            setCourses([]);
+            setAllTests([]);
+            setHistoryData([]);
+        }
+    } catch (err) {
+        console.error("Lỗi khi load dữ liệu Portal:", err);
+    } finally {
+        setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   const handleUpdateProfile = async () => {
@@ -397,9 +419,64 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       return allFolders.filter(f => f.course_id === selectedCourse.id).sort((a,b) => (a.display_order||0) - (b.display_order||0));
   }, [selectedCourse, allFolders]);
 
+  // 🚀 TỐI ƯU CƠ CHẾ MAP VÀ SET ĐỂ GIẢM THỜI GIAN HIỂN THỊ DANH SÁCH BÀI TẬP O(N)
+  const completedTestIdsSet = useMemo(() => {
+      return new Set(historyData.map(h => String(h.testId || h.details?.test_id)));
+  }, [historyData]);
+
+  const courseStats = useMemo(() => {
+    const stats: Record<string, { testCount: number, lecCount: number, completedTestIds: Set<string>, completedLecIds: Set<string> }> = {};
+    
+    courses.forEach(c => {
+        stats[c.id] = { testCount: 0, lecCount: 0, completedTestIds: new Set(), completedLecIds: new Set() };
+    });
+
+    const folderCourseMap: Record<string, string> = {};
+    allFolders.forEach(f => {
+        if (f.course_id) folderCourseMap[f.id] = f.course_id;
+    });
+
+    const testCourseMap: Record<string, string> = {};
+    allTests.forEach(t => {
+        let cId = t.course_id || t.content_json?.basicInfo?.courseId || folderCourseMap[t.folder_id];
+        if (cId && stats[cId]) {
+            stats[cId].testCount++;
+            testCourseMap[t.id] = cId;
+        }
+    });
+
+    const lecCourseMap: Record<string, string> = {};
+    allLectures.forEach(l => {
+        if (l.course_id && stats[l.course_id]) {
+            stats[l.course_id].lecCount++;
+            lecCourseMap[l.id] = l.course_id;
+        }
+    });
+
+    historyData.forEach(h => {
+        const tId = String(h.testId || h.details?.test_id);
+        const cId = testCourseMap[tId] || String(h.courseId);
+        if (cId && stats[cId]) {
+            stats[cId].completedTestIds.add(tId);
+        }
+    });
+
+    lectureProgressData.forEach(lp => {
+        if (lp.is_completed) {
+            const cId = lecCourseMap[String(lp.lecture_id)];
+            if (cId && stats[cId]) {
+                stats[cId].completedLecIds.add(String(lp.lecture_id));
+            }
+        }
+    });
+
+    return stats;
+  }, [courses, allFolders, allTests, allLectures, historyData, lectureProgressData]);
+
   const courseTests = useMemo(() => {
       if (!selectedCourse) return [];
-      return allTests.filter(t => courseFolders.some(f => f.id === t.folder_id) || t.content_json?.basicInfo?.courseId === selectedCourse.id);
+      const folderIdsSet = new Set(courseFolders.map(f => f.id));
+      return allTests.filter(t => folderIdsSet.has(t.folder_id) || t.content_json?.basicInfo?.courseId === selectedCourse.id);
   }, [selectedCourse, allTests, courseFolders]);
 
   const currentSubFolders = useMemo(() => {
@@ -424,22 +501,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   }, [currentTests, searchTest, filterType, sortTest]);
 
   const upcomingDeadlines = useMemo(() => {
-    const enrolledCourseIds = courses.map(c => c.id);
-    const validTests = allTests.filter(t => t.course_id && enrolledCourseIds.includes(t.course_id) || enrolledCourseIds.includes(t.content_json?.basicInfo?.courseId));
+    const enrolledCourseIds = new Set(courses.map(c => c.id));
+    const validTests = allTests.filter(t => enrolledCourseIds.has(t.course_id) || enrolledCourseIds.has(t.content_json?.basicInfo?.courseId));
     
     return validTests.filter(t => {
-        const classDeadlines = t.content_json?.basicInfo?.classDeadlines || {};
-        const matchedClassId = userClassIds.find(id => classDeadlines[id]);
+        const classDeadlines = t.content_json?.basicInfo?.classDeadlines;
+        if (!classDeadlines) return false;
         
+        const matchedClassId = userClassIds.find(id => classDeadlines[id]);
         if (!matchedClassId) return false;
         
-        const isCompleted = historyData.some(h => String(h.testId) === String(t.id) || String(h.details?.test_id) === String(t.id));
-        if (isCompleted) return false;
+        if (completedTestIdsSet.has(String(t.id))) return false;
         
         t._deadlineStr = classDeadlines[matchedClassId];
         return true; 
     }).sort((a, b) => new Date(a._deadlineStr).getTime() - new Date(b._deadlineStr).getTime());
-  }, [allTests, courses, historyData, userClassIds]);
+  }, [allTests, courses, completedTestIdsSet, userClassIds]);
 
   const totalFolderPages = Math.ceil(currentSubFolders.length / ITEMS_PER_PAGE);
   const paginatedFolders = useMemo(() => currentSubFolders.slice((folderPage - 1) * ITEMS_PER_PAGE, folderPage * ITEMS_PER_PAGE), [currentSubFolders, folderPage]);
@@ -447,7 +524,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const totalTestPages = Math.ceil(processedTests.length / ITEMS_PER_PAGE);
   const paginatedTests = useMemo(() => processedTests.slice((testPage - 1) * ITEMS_PER_PAGE, testPage * ITEMS_PER_PAGE), [processedTests, testPage]);
 
-  // CHUẨN BỊ DỮ LIỆU BÁO CÁO TỪ HISTORY ĐÃ LỌC CÁC BÀI ĐIỂM < 3
+  // CHUẨN BỊ DỮ LIỆU BÁO CÁO TỪ HISTORY ĐÃ LỌC
   const processedHistory = useMemo(() => {
       return historyData.filter(h => analyticsCourse === 'all' || String(h.courseId) === String(analyticsCourse)).filter(h => {
          if (analyticsCategory === 'all') return true;
@@ -612,7 +689,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       })).filter(e => e["Điền từ"] !== null || e["Nhận định"] !== null || e["Trắc nghiệm"] !== null || e["Matching"] !== null).slice(-14);
   }, [processedHistory]);
 
-  // 🚀 TÍNH DỮ LIỆU THANH PROGRESS CHO TỶ LỆ DẠNG BÀI
   const ieltsTypeStats = useMemo(() => {
       const stats: Record<string, {correct: number, total: number}> = {
           'Điền từ (Completion)': { correct: 0, total: 0 },
@@ -726,15 +802,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             >
                 📊 Báo cáo
             </button>
-            <button 
-                onClick={() => {
-                    resetWorkspaceAndChat(); 
-                    setActiveTab('games');
-                }} 
-                className={`px-6 py-2 rounded-lg font-bold text-[13px] transition-colors duration-200 ${activeTab === 'games' ? 'bg-white shadow-sm text-amber-600 border border-slate-200' : 'text-slate-500 hover:text-amber-600 hover:bg-slate-200/50'}`}
-            >
-                🎮 Mini Games
-            </button>
           </div>
 
           <div className="flex items-center gap-3 md:gap-5">
@@ -782,13 +849,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                          setIsDropdownOpen(false); 
                      }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50">
                          📊 Báo cáo
-                     </button>
-                     <button onClick={() => { 
-                         resetWorkspaceAndChat(); 
-                         setActiveTab('games'); 
-                         setIsDropdownOpen(false); 
-                     }} className="md:hidden w-full text-left px-5 py-3 text-sm font-bold text-amber-600 hover:bg-amber-50">
-                         🎮 Mini Games
                      </button>
                      <button onClick={() => { 
                          resetWorkspaceAndChat(); 
@@ -914,27 +974,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 {courses.map(course => {
                   const cover = getCourseCover(course);
                   
-                  const courseFolderIds = allFolders.filter(f => f.course_id === course.id).map(f => f.id);
-                  const courseTestsForCount = allTests.filter(t => 
-                      courseFolderIds.includes(t.folder_id) || 
-                      t.course_id === course.id || 
-                      t.content_json?.basicInfo?.courseId === course.id
-                  );
-                  const testCount = courseTestsForCount.length;
-                  const validTestIds = courseTestsForCount.map(t => String(t.id));
-
-                  const uniqueCompletedTests = new Set(
-                      historyData
-                      .filter(h => validTestIds.includes(String(h.testId)) || validTestIds.includes(String(h.details?.test_id)))
-                      .map(h => String(h.testId || h.details?.test_id))
-                  ).size;
-                  const testProgress = testCount > 0 ? Math.min(100, Math.round((uniqueCompletedTests / testCount) * 100)) : 0;
-
-                  const courseLectures = allLectures.filter(l => l.course_id === course.id);
-                  const lectureCount = courseLectures.length;
-                  const courseLectureIds = courseLectures.map(l => l.id);
-                  const completedLecs = lectureProgressData.filter(lp => lp.is_completed && courseLectureIds.includes(lp.lecture_id)).length;
-                  const lecProgress = lectureCount > 0 ? Math.min(100, Math.round((completedLecs / lectureCount) * 100)) : 0;
+                  const stats = courseStats[course.id] || { testCount: 0, lecCount: 0, completedTestIds: new Set(), completedLecIds: new Set() };
+                  
+                  const testProgress = stats.testCount > 0 ? Math.min(100, Math.round((stats.completedTestIds.size / stats.testCount) * 100)) : 0;
+                  const lecProgress = stats.lecCount > 0 ? Math.min(100, Math.round((stats.completedLecIds.size / stats.lecCount) * 100)) : 0;
 
                   return (
                     <div key={course.id} className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:border-[#1e88e5] transition-colors flex flex-col md:flex-row mx-2 md:mx-0 group">
@@ -949,8 +992,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <div className="flex-1 p-6 lg:p-8 flex flex-col justify-center border-r border-slate-100">
                         <h4 className="font-black text-xl text-slate-800 mb-3 group-hover:text-[#1e88e5] transition-colors">{course.title}</h4>
                         <div className="flex items-center gap-4 mb-6 text-[13px] font-bold text-slate-500">
-                          <span className="flex items-center gap-1.5"><span className="text-emerald-500 text-lg">📚</span> {lectureCount} Bài giảng</span>
-                          <span className="flex items-center gap-1.5"><span className="text-blue-500 text-lg">📝</span> {testCount} Đề & Bài tập</span>
+                          <span className="flex items-center gap-1.5"><span className="text-emerald-500 text-lg">📚</span> {stats.lecCount} Bài giảng</span>
+                          <span className="flex items-center gap-1.5"><span className="text-blue-500 text-lg">📝</span> {stats.testCount} Đề & Bài tập</span>
                         </div>
                         <div className="w-full mt-auto flex gap-6">
                           <div className="flex-1">
@@ -1088,11 +1131,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                       {paginatedTests.map(test => {
                         const inProgress = inProgressIds.has(String(test.id));
-                        const isCompleted = historyData.some(h => String(h.testId) === String(test.id) || String(h.details?.test_id) === String(test.id));
+                        const isCompleted = completedTestIdsSet.has(String(test.id));
                         
                         const skillConfig = getTestSkillConfig(test);
 
-                        // 🚀 KIỂM TRA DEADLINE NẾU ĐƯỢC GIAO TỪ LỚP
                         let isOverdue = false;
                         let deadlineLabel = '';
                         
@@ -1137,7 +1179,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                   <span className={`text-[9px] px-1.5 py-0.5 rounded-sm uppercase font-black tracking-wider border ${test.content_json?.basicInfo?.category === 'exercise' ? 'bg-slate-50 text-slate-600 border-slate-200' : 'bg-slate-800 text-white border-slate-800'}`}>
                                       {test.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
                                   </span>
-                                  {/* 🚀 HIỂN THỊ CHỮ DEADLINE */}
                                   {matchedClassId && !isCompleted && (
                                       <span className={`text-[9px] px-1.5 py-0.5 rounded-sm uppercase font-black tracking-wider border ${isOverdue ? 'bg-red-100 text-red-600 border-red-200' : 'bg-orange-100 text-orange-600 border-orange-200'}`}>
                                           {isOverdue ? 'QUÁ HẠN' : '⏳ ' + deadlineLabel}
@@ -1382,6 +1423,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                      <div className="h-px w-full bg-slate-200 mb-8 border-t-2 border-dashed border-slate-200"></div>
 
+                     {/* THANH TRẠNG THÁI HIỆN TẠI NẰM DƯỚI CÙNG (DẠNG BAR PROGRESS) */}
                      <h3 className="font-black text-[15px] md:text-lg text-slate-800 uppercase tracking-tight mb-6">Tỷ lệ đúng hiện tại</h3>
                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                        {Object.entries(ieltsTypeStats).map(([key, data]) => {
@@ -1400,6 +1442,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                           );
                        })}
                      </div>
+
                   </div>
                 )}
 
