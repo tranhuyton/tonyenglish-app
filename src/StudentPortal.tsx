@@ -111,6 +111,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [inProgressIds, setInProgressIds] = useState<Set<string>>(new Set());
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [userProfile, setUserProfile] = useState<any>(null);
+  const [userClassIds, setUserClassIds] = useState<string[]>([]);
   
   const [targetIelts, setTargetIelts] = useState<string>('6.5');
   
@@ -194,8 +195,15 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           if (!newFullName) setNewFullName(profile.full_name || '');
           if (profile.target_ielts) setTargetIelts(profile.target_ielts.toString());
       }
+      
       const { data: lp } = await supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id);
       setLectureProgressData(lp || []);
+
+      // LẤY DANH SÁCH LỚP HỌC CỦA HỌC SINH ĐỂ ĐỌC DEADLINE
+      const { data: cStudents } = await supabase.from('class_students').select('class_id').eq('user_id', user.id);
+      if (cStudents) {
+          setUserClassIds(cStudents.map(c => c.class_id));
+      }
     }
 
     const { data: allT } = await supabase.from('tests').select('*').eq('is_published', true);
@@ -415,6 +423,27 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                          });
   }, [currentTests, searchTest, filterType, sortTest]);
 
+  // 🚀 TÍNH TOÁN DEADLINE SẮP TỚI THEO LỚP
+  const upcomingDeadlines = useMemo(() => {
+    const enrolledCourseIds = courses.map(c => c.id);
+    const validTests = allTests.filter(t => t.course_id && enrolledCourseIds.includes(t.course_id) || enrolledCourseIds.includes(t.content_json?.basicInfo?.courseId));
+    
+    return validTests.filter(t => {
+        // Kiểm tra xem Đề thi này có Deadline nào dành cho các Lớp mà học sinh đang tham gia không
+        const classDeadlines = t.content_json?.basicInfo?.classDeadlines || {};
+        const matchedClassId = userClassIds.find(id => classDeadlines[id]);
+        
+        if (!matchedClassId) return false;
+        
+        const isCompleted = historyData.some(h => String(h.testId) === String(t.id) || String(h.details?.test_id) === String(t.id));
+        if (isCompleted) return false;
+        
+        // Gắn thêm field ảo deadlineStr để lát ra ngoài dễ lấy
+        t._deadlineStr = classDeadlines[matchedClassId];
+        return true; 
+    }).sort((a, b) => new Date(a._deadlineStr).getTime() - new Date(b._deadlineStr).getTime());
+  }, [allTests, courses, historyData, userClassIds]);
+
   const totalFolderPages = Math.ceil(currentSubFolders.length / ITEMS_PER_PAGE);
   const paginatedFolders = useMemo(() => currentSubFolders.slice((folderPage - 1) * ITEMS_PER_PAGE, folderPage * ITEMS_PER_PAGE), [currentSubFolders, folderPage]);
   
@@ -447,7 +476,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       };
   }, [processedHistory, historyData]);
 
-  // 🚀 TÍNH TOÁN DỮ LIỆU TỶ LỆ DẠNG BÀI IELTS (CHUẨN XÁC)
+  // 🚀 TÍNH TOÁN DỮ LIỆU TỶ LỆ DẠNG BÀI IELTS CHUẨN XÁC MỚI NHẤT
   const ieltsTypeStats = useMemo(() => {
       const stats: Record<string, {correct: number, total: number}> = {
           'Điền từ (Completion)': { correct: 0, total: 0 },
@@ -462,14 +491,19 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               const kLow = k.toLowerCase();
               let mappedKey = '';
               
-              if (kLow.includes('fill') || kLow.includes('completion') || kLow.includes('điền từ') || kLow.includes('blank')) mappedKey = 'Điền từ (Completion)';
-              else if (kLow.includes('true') || kLow.includes('false') || kLow.includes('yes') || kLow.includes('ng') || kLow.includes('tfng')) mappedKey = 'T/F/NG (Nhận định)';
-              else if (kLow.includes('multiple') || kLow.includes('choice') || kLow.includes('trắc nghiệm')) mappedKey = 'Trắc nghiệm (MCQ)';
-              else if (kLow.includes('matching') || kLow.includes('kéo thả')) mappedKey = 'Matching (Nối đáp án)';
+              if (kLow.includes('điền từ') || kLow.includes('fill') || kLow.includes('completion') || kLow.includes('blank')) {
+                  mappedKey = 'Điền từ (Completion)';
+              } else if (kLow.includes('tfng') || kLow.includes('true') || kLow.includes('false') || kLow.includes('yes') || kLow.includes('ng') || kLow.includes('nhận định')) {
+                  mappedKey = 'T/F/NG (Nhận định)';
+              } else if (kLow.includes('trắc nghiệm') || kLow.includes('multiple') || kLow.includes('choice') || kLow.includes('checkbox') || kLow.includes('combo') || kLow.includes('mcq')) {
+                  mappedKey = 'Trắc nghiệm (MCQ)';
+              } else if (kLow.includes('kéo thả') || kLow.includes('matching') || kLow.includes('droplist') || kLow.includes('nối') || kLow.includes('drag')) {
+                  mappedKey = 'Matching (Nối đáp án)';
+              }
               
               if (mappedKey && stats[mappedKey]) {
-                  stats[mappedKey].correct += types[k].correct || 0;
-                  stats[mappedKey].total += types[k].total || 0;
+                  stats[mappedKey].correct += (types[k].correct || 0);
+                  stats[mappedKey].total += (types[k].total || 0);
               }
           });
       });
@@ -485,7 +519,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const inProgressTestId = Array.from(inProgressIds)[0];
   const inProgressTest = useMemo(() => allTests.find(t => String(t.id) === inProgressTestId), [allTests, inProgressTestId]);
 
-  // 🚀 ĐÃ SỬA: ĐIỀU KIỆN HIỂN THỊ IELTS WIDGETS CHUẨN XÁC
   const isIeltsContext = analyticsCourse === 'all' 
       ? courses.some(c => (c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')
       : courses.find(c => String(c.id) === String(analyticsCourse))?.title.toLowerCase().includes('ielts');
@@ -696,6 +729,33 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
             </div>
 
+            {/* 🚀 BẢNG CẢNH BÁO DEADLINE (SẼ HIỆN NẾU CÓ BÀI CHƯA LÀM MÀ CÓ DEADLINE) */}
+            {upcomingDeadlines.length > 0 && (
+                <div className="bg-orange-50 border border-orange-200 rounded-2xl p-5 md:p-6 mb-8 md:mb-10 shadow-sm flex items-start gap-4 animate-in slide-in-from-top-4">
+                    <div className="text-3xl md:text-4xl animate-bounce">⏰</div>
+                    <div className="flex-1 min-w-0">
+                        <h3 className="font-black text-orange-800 text-[15px] md:text-lg mb-2 uppercase tracking-tight">Nhiệm vụ cần hoàn thành ({upcomingDeadlines.length})</h3>
+                        <div className="flex flex-col gap-2">
+                            {upcomingDeadlines.slice(0, 3).map(t => {
+                                const dDate = new Date(t._deadlineStr);
+                                const isOverdue = dDate < new Date();
+                                return (
+                                    <div key={t.id} onClick={() => handleStartTestClick(t)} className="flex justify-between items-center bg-white p-3 rounded-xl border border-orange-100 hover:border-orange-300 cursor-pointer transition-colors shadow-sm group">
+                                        <span className="font-bold text-slate-700 text-[13px] md:text-sm truncate pr-2 group-hover:text-orange-700">{t.title}</span>
+                                        <span className={`text-[10px] md:text-xs font-black px-2.5 py-1 rounded-md whitespace-nowrap border ${isOverdue ? 'bg-red-50 text-red-600 border-red-200' : 'bg-orange-50 text-orange-600 border-orange-200'}`}>
+                                            {isOverdue ? '⚠️ QUÁ HẠN' : '⏳ ' + formatDate(t._deadlineStr)}
+                                        </span>
+                                    </div>
+                                )
+                            })}
+                            {upcomingDeadlines.length > 3 && (
+                                <div className="text-[12px] font-bold text-orange-600 pl-1 mt-1">+ {upcomingDeadlines.length - 3} bài tập khác...</div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            )}
+
             <h2 className="font-black text-2xl text-slate-800 mb-6 px-2">Khóa học của tôi</h2>
             
             {isLoading ? (
@@ -885,9 +945,32 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         
                         const skillConfig = getTestSkillConfig(test);
 
+                        // 🚀 KIỂM TRA DEADLINE NẾU ĐƯỢC GIAO TỪ LỚP
+                        let isOverdue = false;
+                        let deadlineLabel = '';
+                        
+                        const classDeadlines = test.content_json?.basicInfo?.classDeadlines || {};
+                        const matchedClassId = userClassIds.find(id => classDeadlines[id]);
+                        
+                        if (matchedClassId) {
+                            const deadlineStr = classDeadlines[matchedClassId];
+                            const dDate = new Date(deadlineStr);
+                            isOverdue = dDate < new Date();
+                            deadlineLabel = `${dDate.getDate().toString().padStart(2, '0')}/${(dDate.getMonth() + 1).toString().padStart(2, '0')} ${dDate.getHours().toString().padStart(2, '0')}:${dDate.getMinutes().toString().padStart(2, '0')}`;
+                        }
+
                         let statusConfig = { progress: 0, badge: "Chưa làm", badgeClass: "text-slate-500 bg-white border border-slate-200", btnText: "Làm bài ngay", btnClass: "bg-white text-[#1e88e5] border border-blue-200 hover:bg-[#1e88e5] hover:text-white" };
-                        if (isCompleted) statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-700 bg-emerald-50 border border-emerald-200", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-600 hover:text-white" };
-                        else if (inProgress) statusConfig = { progress: 50, badge: "Đang làm dở", badgeClass: "text-amber-700 bg-amber-50 border border-amber-200", btnText: "Tiếp tục làm", btnClass: "bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-500 hover:text-white" };
+                        
+                        if (isCompleted) {
+                            statusConfig = { progress: 100, badge: "Hoàn thành", badgeClass: "text-emerald-700 bg-emerald-50 border border-emerald-200", btnText: "Làm lại bài", btnClass: "bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-600 hover:text-white" };
+                        }
+                        else if (inProgress) {
+                            statusConfig = { progress: 50, badge: "Đang làm dở", badgeClass: "text-amber-700 bg-amber-50 border border-amber-200", btnText: "Tiếp tục làm", btnClass: "bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-500 hover:text-white" };
+                        }
+                        else if (isOverdue) {
+                            statusConfig.btnText = "Nộp muộn";
+                            statusConfig.btnClass = "bg-red-50 text-red-600 border border-red-200 hover:bg-red-600 hover:text-white";
+                        }
 
                         return (
                           <div key={test.id} onClick={() => handleStartTestClick(test)} className="bg-white border border-slate-200 p-5 md:p-6 rounded-xl shadow-sm hover:border-[#1e88e5] transition-colors cursor-pointer flex flex-col justify-between group relative overflow-hidden">
@@ -902,10 +985,17 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 <span className={`text-[9px] md:text-[10px] font-black px-2 md:px-3 py-1 md:py-1.5 rounded-md uppercase tracking-widest ${statusConfig.badgeClass}`}>{statusConfig.badge}</span>
                               </div>
                               <h3 className="font-bold text-slate-800 text-[15px] md:text-[16px] group-hover:text-[#1e88e5] transition-colors mb-2 line-clamp-2 leading-snug">{test.title}</h3>
-                              <div className="flex flex-wrap items-center gap-2 mb-2 md:mb-3">
+                              
+                              <div className="flex flex-wrap items-center gap-2 mb-2 md:mb-3 mt-3">
                                   <span className={`text-[9px] px-1.5 py-0.5 rounded-sm uppercase font-black tracking-wider border ${test.content_json?.basicInfo?.category === 'exercise' ? 'bg-slate-50 text-slate-600 border-slate-200' : 'bg-slate-800 text-white border-slate-800'}`}>
                                       {test.content_json?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI'}
                                   </span>
+                                  {/* 🚀 HIỂN THỊ CHỮ DEADLINE */}
+                                  {matchedClassId && !isCompleted && (
+                                      <span className={`text-[9px] px-1.5 py-0.5 rounded-sm uppercase font-black tracking-wider border ${isOverdue ? 'bg-red-100 text-red-600 border-red-200' : 'bg-orange-100 text-orange-600 border-orange-200'}`}>
+                                          {isOverdue ? 'QUÁ HẠN' : '⏳ ' + deadlineLabel}
+                                      </span>
+                                  )}
                               </div>
                             </div>
                             <button className={`mt-4 md:mt-6 w-full font-bold text-[12px] md:text-[13px] uppercase tracking-wide py-2.5 rounded-lg transition-colors shadow-sm ${statusConfig.btnClass}`}>
@@ -929,7 +1019,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
               {currentSubFolders.length === 0 && currentTests.length === 0 && (
                 <div className="text-center py-16 md:py-20 bg-white rounded-xl border border-slate-200 text-slate-400 font-medium text-base shadow-sm mx-2 md:mx-0 flex flex-col items-center justify-center">
-                   <svg className="w-16 h-16 text-slate-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                   <svg className="w-16 h-16 text-slate-300 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 7v10a2 2 0 002 2h14a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
                    Thư mục này hiện đang trống.
                 </div>
               )}
@@ -1189,7 +1279,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Mục tiêu IELTS</label>
-                  <input type="text" value={newIeltsTarget} onChange={e => setNewIeltsTarget(e.target.value)} className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 font-medium focus:border-amber-500 outline-none transition-colors text-[13px] shadow-sm" placeholder="Ví dụ: 7.0" />
+                  <input type="text" value={targetIelts} onChange={e => handleUpdateTarget(e.target.value)} className="w-full bg-white border border-slate-300 rounded-lg px-4 py-3 font-medium focus:border-amber-500 outline-none transition-colors text-[13px] shadow-sm" placeholder="Ví dụ: 7.0" />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Email đăng nhập</label>

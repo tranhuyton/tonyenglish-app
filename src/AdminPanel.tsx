@@ -84,12 +84,20 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [editingModuleId, setEditingModuleId] = useState<string | null>(null);
   const [editingFolderId, setEditingFolderId] = useState<string | null>(null);
 
-  // 🚀 STATE MỚI: QUẢN LÝ CHUÔNG THÔNG BÁO TỪ HỌC VIÊN
+  // 🚀 QUẢN LÝ DEADLINE CHO BÀI TẬP/ĐỀ THI
+  const [deadlineModal, setDeadlineModal] = useState<{show: boolean, test: any}>({show: false, test: null});
+  const [showAssignDeadlineModal, setShowAssignDeadlineModal] = useState(false);
+  const [assignTestSearch, setAssignTestSearch] = useState('');
+  const [assignTestSort, setAssignTestSort] = useState('date-desc');
+  const [selectedDeadlineTests, setSelectedDeadlineTests] = useState<string[]>([]);
+  const [deadlineInput, setDeadlineInput] = useState('');
+
+  // 🚀 QUẢN LÝ CHUÔNG THÔNG BÁO TỪ HỌC VIÊN
   const [notifications, setNotifications] = useState<any[]>([]);
   const [showNotifications, setShowNotifications] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
   const notifRef = useRef<HTMLDivElement>(null);
-  const [viewingNotif, setViewingNotif] = useState<any>(null); // 🚀 QUẢN LÝ POPUP CHI TIẾT THÔNG BÁO
+  const [viewingNotif, setViewingNotif] = useState<any>(null);
 
   const fetchNotifications = async () => {
     try {
@@ -101,7 +109,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             
         if (!logs) return;
         
-        // Kéo thêm tên học viên
         const userIds = [...new Set(logs.map(l => l.user_id))];
         const { data: profiles } = await supabase
             .from('profiles')
@@ -148,8 +155,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     };
     
     document.addEventListener('mousedown', handleClickOutside);
-    
-    // Tự động quét thông báo mới mỗi 10 giây
     const interval = setInterval(fetchNotifications, 10000); 
     
     return () => {
@@ -168,39 +173,35 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     return `${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')} - ${d.getDate().toString().padStart(2, '0')}/${(d.getMonth()+1).toString().padStart(2, '0')}/${d.getFullYear()}`;
   }
 
+  const getDefaultDateTime = (isoString: string) => {
+      if (!isoString) return '';
+      const date = new Date(isoString);
+      return new Date(date.getTime() - date.getTimezoneOffset() * 60000).toISOString().slice(0,16);
+  };
+
   // =========================================================================================
   // SUPABASE STORAGE LOGIC (QUẢN LÝ FILE PDF & FOLDER ẢO)
   // =========================================================================================
-  
   const BUCKET_NAME = 'documents'; 
 
-  // Hệ thống lưu trữ Folder ảo dạng JSON ẩn trong Bucket
   const fetchVirtualFolders = async () => {
       try {
           const { data } = supabase.storage.from(BUCKET_NAME).getPublicUrl('_virtual_folders.json');
-          const response = await fetch(`${data.publicUrl}?t=${new Date().getTime()}`, {
-              cache: 'no-store'
-          });
-          
+          const response = await fetch(`${data.publicUrl}?t=${new Date().getTime()}`, { cache: 'no-store' });
           if (response.ok) {
               const json = await response.json();
               setPdfFolders(json.folders || []);
               setPdfFileMapping(json.mapping || {});
           }
       } catch (e) {
-          console.log("Chưa có cấu trúc thư mục ảo, hệ thống sẽ tự tạo khi có thay đổi.");
+          console.log("Chưa có cấu trúc thư mục ảo.");
       }
   };
 
   const saveVirtualFolders = async (newFolders: any[], newMapping: any) => {
       const jsonStr = JSON.stringify({ folders: newFolders, mapping: newMapping });
       const blob = new Blob([jsonStr], { type: 'application/json' });
-      
-      await supabase.storage.from(BUCKET_NAME).upload('_virtual_folders.json', blob, { 
-          upsert: true,
-          cacheControl: '0' 
-      });
-      
+      await supabase.storage.from(BUCKET_NAME).upload('_virtual_folders.json', blob, { upsert: true, cacheControl: '0' });
       setPdfFolders(newFolders);
       setPdfFileMapping(newMapping);
   };
@@ -208,20 +209,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const fetchPdfFiles = async () => {
       try {
           await fetchVirtualFolders(); 
-          const { data, error } = await supabase.storage.from(BUCKET_NAME).list('', {
-              limit: 1000,
-              offset: 0,
-              sortBy: { column: 'created_at', order: 'desc' },
-          });
-
+          const { data, error } = await supabase.storage.from(BUCKET_NAME).list('', { limit: 1000, offset: 0, sortBy: { column: 'created_at', order: 'desc' } });
           if (error) return;
-
           const filesOnly = data?.filter(f => f.id !== null && f.name !== '_virtual_folders.json') || [];
           const filesWithUrl = filesOnly.map(f => {
               const { data: publicUrlData } = supabase.storage.from(BUCKET_NAME).getPublicUrl(f.name);
               return { ...f, publicUrl: publicUrlData.publicUrl };
           });
-
           setPdfFiles(filesWithUrl);
       } catch (err) {
           console.error("Lỗi lấy PDF:", err);
@@ -245,43 +239,35 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       }
 
       if (validFiles.length === 0) {
-          alert('Tất cả file đã chọn đều không hợp lệ (Chỉ nhận PDF và dung lượng < 50MB)!');
+          alert('Tất cả file đã chọn đều không hợp lệ!');
           if (fileInputRef.current) fileInputRef.current.value = ''; 
           return;
       }
 
       if (invalidFiles.length > 0) {
-          if (!window.confirm(`Có ${invalidFiles.length} file không hợp lệ sẽ bị bỏ qua. Tiếp tục tải lên ${validFiles.length} file hợp lệ?`)) {
+          if (!window.confirm(`Có ${invalidFiles.length} file không hợp lệ sẽ bị bỏ qua. Tiếp tục tải lên?`)) {
               if (fileInputRef.current) fileInputRef.current.value = '';
               return;
           }
       }
 
       setIsUploadingPdf(true);
-
       try {
           const newMapping = { ...pdfFileMapping };
           let uploadedCount = 0;
 
           await Promise.all(validFiles.map(async (file) => {
               const fileName = file.name.replace(/\s+/g, '_');
-              const { error } = await supabase.storage.from(BUCKET_NAME).upload(fileName, file, { 
-                  cacheControl: '3600', 
-                  upsert: false 
-              });
-              
+              const { error } = await supabase.storage.from(BUCKET_NAME).upload(fileName, file, { cacheControl: '3600', upsert: false });
               if (!error) {
                   uploadedCount++;
-                  if (currentPdfFolderId) {
-                      newMapping[fileName] = currentPdfFolderId;
-                  }
+                  if (currentPdfFolderId) newMapping[fileName] = currentPdfFolderId;
               }
           }));
           
           if (currentPdfFolderId && uploadedCount > 0) {
               await saveVirtualFolders(pdfFolders, newMapping);
           }
-          
           alert(`Tải lên thành công ${uploadedCount} file!`);
           fetchPdfFiles(); 
       } catch (error: any) {
@@ -294,7 +280,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const handleDeleteFile = async (fileName: string) => {
       if (!window.confirm(`Xác nhận xóa file "${fileName}" vĩnh viễn?`)) return;
-
       try {
           const { error } = await supabase.storage.from(BUCKET_NAME).remove([fileName]);
           if (error) throw error;
@@ -319,10 +304,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleUpdatePdfFolderName = async (folderId: string, newName: string) => {
-      if (!newName.trim()) { 
-          setEditingPdfFolderId(null); 
-          return; 
-      }
+      if (!newName.trim()) { setEditingPdfFolderId(null); return; }
       const newFolders = pdfFolders.map(f => f.id === folderId ? { ...f, name: newName } : f);
       await saveVirtualFolders(newFolders, pdfFileMapping);
       setEditingPdfFolderId(null);
@@ -333,9 +315,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           const newFolders = pdfFolders.filter(f => f.id !== folderId && f.parentId !== folderId);
           const newMapping = { ...pdfFileMapping };
           Object.keys(newMapping).forEach(key => {
-              if (newMapping[key] === folderId) {
-                  delete newMapping[key];
-              }
+              if (newMapping[key] === folderId) delete newMapping[key];
           });
           await saveVirtualFolders(newFolders, newMapping);
       }
@@ -343,11 +323,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const handleMovePdfFile = async (fileName: string, targetFolderId: string | null) => {
       const newMapping = { ...pdfFileMapping };
-      if (targetFolderId) {
-          newMapping[fileName] = targetFolderId;
-      } else {
-          delete newMapping[fileName];
-      }
+      if (targetFolderId) newMapping[fileName] = targetFolderId;
+      else delete newMapping[fileName];
       
       await saveVirtualFolders(pdfFolders, newMapping);
       setShowMoveFileModal(null);
@@ -361,8 +338,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const formatFileSize = (bytes: number) => {
       if (bytes === 0) return '0 Bytes';
-      const k = 1024;
-      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const k = 1024; const sizes = ['Bytes', 'KB', 'MB', 'GB'];
       const i = Math.floor(Math.log(bytes) / Math.log(k));
       return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
@@ -371,129 +347,65 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const fetchCourses = async () => {
     setIsLoadingCourses(true); 
-    const { data } = await supabase
-        .from('courses')
-        .select('*')
-        .order('order_index', { ascending: true })
-        .order('created_at', { ascending: false });
-        
+    const { data } = await supabase.from('courses').select('*').order('order_index', { ascending: true }).order('created_at', { ascending: false });
     setCourses(data || []);
     setIsLoadingCourses(false); 
   };
 
   const fetchLibraryTests = async () => {
-    const { data } = await supabase
-        .from('tests')
-        .select('*')
-        .order('order_index', { ascending: true })
-        .order('created_at', { ascending: false });
-        
+    const { data } = await supabase.from('tests').select('*').order('order_index', { ascending: true }).order('created_at', { ascending: false });
     setLibraryTests(data || []);
   };
 
   const fetchAllFolders = async () => {
-    const { data } = await supabase
-        .from('folders')
-        .select('*')
-        .order('display_order', { ascending: true });
-        
+    const { data } = await supabase.from('folders').select('*').order('display_order', { ascending: true });
     setAllFolders(data || []);
   };
 
   const fetchGlobalLectures = async () => {
-    const { data } = await supabase
-        .from('lectures')
-        .select('*, courses(title)')
-        .order('order_index', { ascending: true })
-        .order('created_at', { ascending: false });
-        
+    const { data } = await supabase.from('lectures').select('*, courses(title)').order('order_index', { ascending: true }).order('created_at', { ascending: false });
     setGlobalLectures(data || []);
   };
 
   const fetchCourseDetailsData = async (courseId: string) => {
-    const { data: mods } = await supabase
-        .from('lecture_modules')
-        .select('*')
-        .eq('course_id', courseId)
-        .order('order_index', { ascending: true });
-        
+    const { data: mods } = await supabase.from('lecture_modules').select('*').eq('course_id', courseId).order('order_index', { ascending: true });
     setLectureModules(mods || []);
     
     if (mods && mods.length > 0) {
-      const { data: lecs } = await supabase
-          .from('lectures')
-          .select('*')
-          .in('module_id', mods.map(m => m.id))
-          .order('order_index', { ascending: true });
+      const { data: lecs } = await supabase.from('lectures').select('*').in('module_id', mods.map(m => m.id)).order('order_index', { ascending: true });
       setLectures(lecs || []);
     } else {
       setLectures([]);
     }
 
-    const { data: cls } = await supabase
-        .from('classes')
-        .select('*')
-        .eq('course_id', courseId)
-        .order('created_at', { ascending: false });
+    const { data: cls } = await supabase.from('classes').select('*').eq('course_id', courseId).order('created_at', { ascending: false });
     setClasses(cls || []);
     
-    const { data: flds } = await supabase
-        .from('folders')
-        .select('*')
-        .eq('course_id', courseId)
-        .order('display_order', { ascending: true });
+    const { data: flds } = await supabase.from('folders').select('*').eq('course_id', courseId).order('display_order', { ascending: true });
     setFolders(flds || []);
     
-    const { data: ast } = await supabase
-        .from('tests')
-        .select('*')
-        .eq('course_id', courseId)
-        .order('order_index', { ascending: true });
+    const { data: ast } = await supabase.from('tests').select('*').eq('course_id', courseId).order('order_index', { ascending: true });
     setAssignedTests(ast || []);
 
-    const { data: enrolls } = await supabase
-        .from('enrollments')
-        .select('user_id')
-        .eq('course_id', courseId);
-        
+    const { data: enrolls } = await supabase.from('enrollments').select('user_id').eq('course_id', courseId);
     if (enrolls && enrolls.length > 0) {
        const userIds = enrolls.map(e => e.user_id);
-       const { data: profiles } = await supabase
-           .from('profiles')
-           .select('id, full_name, email')
-           .in('id', userIds);
-           
-       if (profiles) {
-           setCourseStudentsList(profiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
-       }
+       const { data: profiles } = await supabase.from('profiles').select('id, full_name, email').in('id', userIds);
+       if (profiles) setCourseStudentsList(profiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
     } else {
        setCourseStudentsList([]);
     }
   };
 
   const fetchClassDetails = async (classId: string) => {
-    const { data: modData } = await supabase
-        .from('class_modules')
-        .select('module_id')
-        .eq('class_id', classId);
-        
+    const { data: modData } = await supabase.from('class_modules').select('module_id').eq('class_id', classId);
     if (modData) setClassModules(modData.map(d => d.module_id));
 
-    const { data: stuData } = await supabase
-        .from('class_students')
-        .select('user_id')
-        .eq('class_id', classId);
-        
+    const { data: stuData } = await supabase.from('class_students').select('user_id').eq('class_id', classId);
     if (stuData && stuData.length > 0) {
        const userIds = stuData.map(e => e.user_id);
-       const { data: profiles } = await supabase
-           .from('profiles')
-           .select('id, full_name, email')
-           .in('id', userIds);
-           
-       if (profiles) {
-           setClassStudentsList(profiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
-       }
+       const { data: profiles } = await supabase.from('profiles').select('id, full_name, email').in('id', userIds);
+       if (profiles) setClassStudentsList(profiles.map(p => ({ user_id: p.id, full_name: p.full_name, email: p.email })));
     } else {
        setClassStudentsList([]);
     }
@@ -552,7 +464,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     const title = new FormData(e.currentTarget).get('title') as string;
     const type = new FormData(e.currentTarget).get('type') as string;
     const { data, error } = await supabase.from('courses').insert([{ title, type, order_index: courses.length + 1 }]).select();
-    
     if (!error && data) { 
         fetchCourses(); 
         setShowCreateCourseModal(false); 
@@ -560,10 +471,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
   
   const handleUpdateCourseInfo = async (courseId: string, newTitle: string, newType: string) => {
-    if (!newTitle.trim()) { 
-        setEditingCourseId(null); 
-        return; 
-    }
+    if (!newTitle.trim()) { setEditingCourseId(null); return; }
     await supabase.from('courses').update({ title: newTitle, type: newType }).eq('id', courseId);
     fetchCourses();
     setEditingCourseId(null);
@@ -578,10 +486,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleUpdateModuleName = async (moduleId: string, newTitle: string) => {
-    if (!newTitle.trim()) { 
-        setEditingModuleId(null); 
-        return; 
-    }
+    if (!newTitle.trim()) { setEditingModuleId(null); return; }
     await supabase.from('lecture_modules').update({ title: newTitle }).eq('id', moduleId);
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
     setEditingModuleId(null);
@@ -592,7 +497,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (!selectedCourse) return;
     const title = (new FormData(e.currentTarget).get('title') as string);
     const { data } = await supabase.from('lecture_modules').insert([{ course_id: selectedCourse.id, title, order_index: lectureModules.length + 1 }]).select();
-    
     if (data) { 
         fetchCourseDetailsData(selectedCourse.id); 
         setShowModuleModal(false); 
@@ -613,9 +517,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (existingLecs && existingLecs.length > 0) {
         maxOrder = Math.max(...existingLecs.map(l => l.order_index || 0));
     }
-    
     await supabase.from('lectures').update({ module_id: moduleId, order_index: maxOrder + 1 }).eq('id', lectureId);
-    
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
     fetchGlobalLectures(); 
   };
@@ -665,11 +567,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleSelectOneLecture = (id: string) => {
-    if (selectedLectures.includes(id)) {
-        setSelectedLectures(selectedLectures.filter(l => l !== id));
-    } else {
-        setSelectedLectures([...selectedLectures, id]);
-    }
+    if (selectedLectures.includes(id)) setSelectedLectures(selectedLectures.filter(l => l !== id));
+    else setSelectedLectures([...selectedLectures, id]);
   };
 
   const handleBulkLectureVisibility = async (status: boolean) => {
@@ -708,15 +607,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleUpdateClassName = async (classId: string, newName: string) => {
-    if (!newName.trim()) { 
-        setEditingClassId(null); 
-        return; 
-    }
+    if (!newName.trim()) { setEditingClassId(null); return; }
     await supabase.from('classes').update({ name: newName }).eq('id', classId);
     setClasses(classes.map(c => c.id === classId ? { ...c, name: newName } : c));
-    if (selectedClass?.id === classId) {
-        setSelectedClass({ ...selectedClass, name: newName });
-    }
+    if (selectedClass?.id === classId) setSelectedClass({ ...selectedClass, name: newName });
     setEditingClassId(null);
   };
 
@@ -725,20 +619,14 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (!selectedCourse) return;
     const name = (new FormData(e.currentTarget).get('name') as string);
     const { data } = await supabase.from('classes').insert([{ course_id: selectedCourse.id, name }]).select();
-    
-    if (data) { 
-        setClasses([data[0], ...classes]); 
-        setShowClassModal(false); 
-    }
+    if (data) { setClasses([data[0], ...classes]); setShowClassModal(false); }
   };
 
   const handleDeleteClass = async (id: string) => {
     if (window.confirm("Xóa lớp học này? (Dữ liệu học viên trong lớp sẽ bị ảnh hưởng)")) {
       await supabase.from('classes').delete().eq('id', id); 
       setClasses(classes.filter(c => c.id !== id)); 
-      if (selectedClass?.id === id) {
-          setSelectedClass(null);
-      }
+      if (selectedClass?.id === id) setSelectedClass(null);
     }
   };
 
@@ -769,11 +657,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const handleSaveTestContent = async (testId: string, finalData: any) => {
     let parsedJsonConfig = null;
     if (finalData.basicInfo?.skill === 'Case-Study' && finalData.json_config_string) {
-      try { 
-          parsedJsonConfig = JSON.parse(finalData.json_config_string); 
-      } catch(e) { 
-          return alert("⚠️ Lỗi cú pháp JSON."); 
-      }
+      try { parsedJsonConfig = JSON.parse(finalData.json_config_string); } catch(e) { return alert("⚠️ Lỗi cú pháp JSON."); }
     }
 
     const assignedCourseId = finalData.basicInfo?.courseId === 'all' ? null : finalData.basicInfo.courseId;
@@ -801,66 +685,110 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
 
-  const handleUpdateFolderName = async (folderId: string, newTitle: string) => {
-    if (!newTitle.trim()) { 
-        setEditingFolderId(null); 
-        return; 
+  // 🚀 LƯU DEADLINE CHỈNH SỬA NHANH CHO 1 BÀI TẬP
+  const handleSaveDeadline = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const datetime = new FormData(e.currentTarget).get('datetime') as string;
+    const test = deadlineModal.test;
+    if (!test || !selectedClass) return;
+
+    const newContent = { ...(test.content_json || {}) };
+    if (!newContent.basicInfo) newContent.basicInfo = {};
+    if (!newContent.basicInfo.classDeadlines) newContent.basicInfo.classDeadlines = {};
+    
+    if (datetime) {
+        newContent.basicInfo.classDeadlines[selectedClass.id] = new Date(datetime).toISOString();
+    } else {
+        delete newContent.basicInfo.classDeadlines[selectedClass.id];
     }
+    
+    await supabase.from('tests').update({ content_json: newContent }).eq('id', test.id);
+    
+    setAssignedTests(prev => prev.map(t => t.id === test.id ? { ...t, content_json: newContent } : t));
+    setDeadlineModal({show: false, test: null});
+    alert("✅ Đã cập nhật hạn nộp bài thành công!");
+  };
+
+  // 🚀 LƯU HÀNG LOẠT DEADLINE CÁC ĐỀ TỪ POPUP
+  const handleSaveBulkDeadline = async () => {
+    if (selectedDeadlineTests.length === 0) return alert("Vui lòng chọn ít nhất 1 bài tập/đề thi!");
+    if (!selectedClass) return;
+
+    const isRemoving = !deadlineInput;
+    const updatedTests = assignedTests.map(t => {
+        if (selectedDeadlineTests.includes(t.id)) {
+            const newContent = { ...(t.content_json || {}) };
+            if (!newContent.basicInfo) newContent.basicInfo = {};
+            if (!newContent.basicInfo.classDeadlines) newContent.basicInfo.classDeadlines = {};
+            
+            if (!isRemoving) {
+                newContent.basicInfo.classDeadlines[selectedClass.id] = new Date(deadlineInput).toISOString();
+            } else {
+                delete newContent.basicInfo.classDeadlines[selectedClass.id];
+            }
+            return { ...t, content_json: newContent };
+        }
+        return t;
+    });
+
+    setAssignedTests(updatedTests);
+    
+    try {
+        for (const t of updatedTests.filter(testItem => selectedDeadlineTests.includes(testItem.id))) {
+            await supabase.from('tests').update({ content_json: t.content_json }).eq('id', t.id);
+        }
+        alert(isRemoving ? "✅ Đã gỡ hạn nộp bài thành công!" : "✅ Đã cài đặt hạn nộp bài thành công!");
+        setSelectedDeadlineTests([]); 
+    } catch (err: any) {
+        alert("❌ Có lỗi xảy ra: " + err.message);
+    }
+  };
+
+  const handleSelectAllDeadlineTests = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.checked) setSelectedDeadlineTests(filteredAssignTests.map(t => t.id));
+    else setSelectedDeadlineTests([]);
+  };
+
+  const handleSelectOneDeadlineTest = (id: string) => {
+    if (selectedDeadlineTests.includes(id)) setSelectedDeadlineTests(selectedDeadlineTests.filter(t => t !== id));
+    else setSelectedDeadlineTests([...selectedDeadlineTests, id]);
+  };
+
+  const handleUpdateFolderName = async (folderId: string, newTitle: string) => {
+    if (!newTitle.trim()) { setEditingFolderId(null); return; }
     await supabase.from('folders').update({ title: newTitle }).eq('id', folderId);
-    setFolders(folders.map(f => f.id === folderId ? { ...f, title: newTitle } : f));
-    fetchAllFolders();
-    setEditingFolderId(null);
+    setFolders(folders.map(f => f.id === folderId ? { ...f, title: newTitle } : f)); fetchAllFolders(); setEditingFolderId(null);
   };
 
   const handleCreateFolder = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); 
-    if (!selectedCourse) return;
+    e.preventDefault(); if (!selectedCourse) return;
     const title = new FormData(e.currentTarget).get('title') as string;
-    const { data } = await supabase.from('folders').insert([{ 
-        course_id: selectedCourse.id, 
-        title: title, 
-        parent_id: currentFolderId, 
-        display_order: folders.length + 1 
-    }]).select();
-    
-    if (data) { 
-        setFolders([...folders, data[0]]); 
-        fetchAllFolders(); 
-        setShowFolderModal(false); 
-    }
+    const { data } = await supabase.from('folders').insert([{ course_id: selectedCourse.id, title: title, parent_id: currentFolderId, display_order: folders.length + 1 }]).select();
+    if (data) { setFolders([...folders, data[0]]); fetchAllFolders(); setShowFolderModal(false); }
   };
   
   const handleDeleteFolder = async (id: string) => {
     if (window.confirm("Xóa thư mục này? Các đề thi bên trong sẽ TỰ ĐỘNG CHUYỂN VỀ Kho đề của Khóa học.")) {
-      await supabase.from('folders').delete().eq('id', id); 
-      setFolders(folders.filter(f => f.id !== id && f.parent_id !== id)); 
-      fetchAllFolders();
-      fetchLibraryTests(); 
-      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+      await supabase.from('folders').delete().eq('id', id); setFolders(folders.filter(f => f.id !== id && f.parent_id !== id)); fetchAllFolders();
+      fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
     }
   };
 
   const handleAssignTest = async (testId: string) => {
     if (!currentFolderId) return;
     await supabase.from('tests').update({ folder_id: currentFolderId }).eq('id', testId);
-    fetchLibraryTests(); 
-    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
+    fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
   };
 
   const handleUnassignTest = async (testId: string) => {
     if (window.confirm("Gỡ đề thi khỏi thư mục này? Đề sẽ trở về Kho Tổng.")) {
       await supabase.from('tests').update({ folder_id: null }).eq('id', testId);
-      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
-      fetchLibraryTests();
+      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); fetchLibraryTests();
     }
   };
 
   const handleDeleteTest = async (id: string) => {
-    if (window.confirm("Xóa vĩnh viễn đề thi khỏi kho?")) { 
-        await supabase.from('tests').delete().eq('id', id); 
-        fetchLibraryTests(); 
-        if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
-    }
+    if (window.confirm("Xóa vĩnh viễn đề thi khỏi kho?")) { await supabase.from('tests').delete().eq('id', id); fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);}
   };
 
   const handleToggleTestVisibility = async (test: any) => {
@@ -873,36 +801,27 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const handleBulkVisibility = async (status: boolean) => {
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
     await supabase.from('tests').update({ is_published: status }).in('id', selectedTests);
-    fetchLibraryTests(); 
-    setSelectedTests([]); 
+    fetchLibraryTests(); setSelectedTests([]); 
   };
 
   const handleBulkDelete = async () => {
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 mục!");
     if (window.confirm(`Xác nhận xóa vĩnh viễn ${selectedTests.length} mục đã chọn?`)) {
-      await supabase.from('tests').delete().in('id', selectedTests); 
-      fetchLibraryTests(); 
-      setSelectedTests([]);
+      await supabase.from('tests').delete().in('id', selectedTests); fetchLibraryTests(); setSelectedTests([]);
     }
   };
 
   const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>, filteredList: any[]) => {
-    if (e.target.checked) setSelectedTests(filteredList.map(t => t.id)); 
-    else setSelectedTests([]);
+    if (e.target.checked) setSelectedTests(filteredList.map(t => t.id)); else setSelectedTests([]);
   };
 
   const handleSelectOne = (id: string) => {
-    if (selectedTests.includes(id)) setSelectedTests(selectedTests.filter(t => t !== id)); 
-    else setSelectedTests([...selectedTests, id]);
+    if (selectedTests.includes(id)) setSelectedTests(selectedTests.filter(t => t !== id)); else setSelectedTests([...selectedTests, id]);
   };
 
   const handleViewCourseDetail = (course: any) => {
-    setSelectedCourse(course); 
-    setCurrentFolderId(null); 
-    setSelectedClass(null); 
-    setCourseViewMode('classes');
-    fetchCourseDetailsData(course.id); 
-    setActiveTab('course-detail');
+    setSelectedCourse(course); setCurrentFolderId(null); setSelectedClass(null); setCourseViewMode('classes');
+    fetchCourseDetailsData(course.id); setActiveTab('course-detail');
   };
 
   const getCourseNameForTest = (courseId: string | null) => {
@@ -911,38 +830,31 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   }
 
   // Course Test Folders
-  const breadcrumbs = []; 
-  let curr = folders.find(f => f.id === currentFolderId);
-  while (curr) { 
-      breadcrumbs.unshift(curr); 
-      curr = folders.find(f => f.id === curr.parent_id); 
-  }
+  const breadcrumbs = []; let curr = folders.find(f => f.id === currentFolderId);
+  while (curr) { breadcrumbs.unshift(curr); curr = folders.find(f => f.id === curr.parent_id); }
   
   const currentSubFolders = useMemo(() => {
-      return folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === ''))
-                    .sort((a,b) => (a.display_order||0) - (b.display_order||0));
+      return folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === '')).sort((a,b) => (a.display_order||0) - (b.display_order||0));
   }, [folders, currentFolderId]);
   
-  const currentTests = useMemo(() => {
-      return assignedTests.filter(t => t.folder_id === currentFolderId);
-  }, [assignedTests, currentFolderId]);
+  const currentTests = useMemo(() => { return assignedTests.filter(t => t.folder_id === currentFolderId); }, [assignedTests, currentFolderId]);
+
+  // LỌC CÁC BÀI TẬP ĐƯỢC GIAO CÓ DEADLINE CHO LỚP HIỆN TẠI
+  const classAssignedTests = useMemo(() => {
+      if (!selectedClass) return [];
+      return assignedTests.filter(t => t.content_json?.basicInfo?.classDeadlines?.[selectedClass.id]);
+  }, [assignedTests, selectedClass]);
 
   // PDF Folders Breadcrumbs
   const pdfBreadcrumbs = [];
   let pCurr = pdfFolders.find(f => f.id === currentPdfFolderId);
-  while (pCurr) { 
-      pdfBreadcrumbs.unshift(pCurr); 
-      pCurr = pdfFolders.find(f => f.id === pCurr.parentId); 
-  }
-  
+  while (pCurr) { pdfBreadcrumbs.unshift(pCurr); pCurr = pdfFolders.find(f => f.id === pCurr.parentId); }
   const currentPdfSubFolders = pdfFolders.filter(f => currentPdfFolderId ? f.parentId === currentPdfFolderId : !f.parentId);
   
-  // 🚀 TỐI ƯU SEARCH TÀI LIỆU VÀ SẮP XẾP BỘ LỌC TÀI LIỆU PDF
+  // TỐI ƯU SEARCH TÀI LIỆU VÀ SẮP XẾP BỘ LỌC TÀI LIỆU PDF
   const isSearchingPdf = pdfSearchQuery.trim().length > 0;
   const filteredPdfFiles = useMemo(() => {
       let result = pdfFiles.filter(f => f.name.toLowerCase().includes(pdfSearchQuery.toLowerCase()));
-      
-      // Áp dụng Logic Sắp Xếp
       result = result.sort((a, b) => {
           if (pdfSortOrder === 'name-asc') return a.name.localeCompare(b.name);
           if (pdfSortOrder === 'name-desc') return b.name.localeCompare(a.name);
@@ -952,13 +864,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           if (pdfSortOrder === 'size-asc') return (a.metadata?.size || 0) - (b.metadata?.size || 0);
           return 0;
       });
-
       return result;
   }, [pdfFiles, pdfSearchQuery, pdfSortOrder]);
 
-  const currentPdfFiles = filteredPdfFiles.filter(f => 
-      isSearchingPdf ? true : ((pdfFileMapping[f.name] || null) === currentPdfFolderId)
-  );
+  const currentPdfFiles = filteredPdfFiles.filter(f => isSearchingPdf ? true : ((pdfFileMapping[f.name] || null) === currentPdfFolderId));
 
   const filteredLibraryTests = useMemo(() => libraryTests.filter(test => {
       const matchesSearch = test.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -977,6 +886,19 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const totalLecturePages = Math.ceil(filteredGlobalLectures.length / lectureItemsPerPage);
   const paginatedLectures = filteredGlobalLectures.slice((lectureCurrentPage - 1) * lectureItemsPerPage, lectureCurrentPage * lectureItemsPerPage);
 
+  // 🚀 TỐI ƯU SEARCH VÀ SORT CHO BẢNG GIAO DEADLINE POPUP
+  const filteredAssignTests = useMemo(() => {
+      let result = assignedTests.filter(t => (t.title || '').toLowerCase().includes(assignTestSearch.toLowerCase()));
+      result = result.sort((a, b) => {
+          if (assignTestSort === 'name-asc') return (a.title || '').localeCompare(b.title || '');
+          if (assignTestSort === 'name-desc') return (b.title || '').localeCompare(a.title || '');
+          if (assignTestSort === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
+          if (assignTestSort === 'date-asc') return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
+          return 0;
+      });
+      return result;
+  }, [assignedTests, assignTestSearch, assignTestSort]);
+
   return (
     <div className="h-[100dvh] bg-[#f8fafc] flex font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
@@ -991,26 +913,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
         </div>
         <div className="p-4 space-y-1 flex-1 overflow-y-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
           <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest ml-3 mb-2 mt-4">Hệ thống LMS</p>
-          
-          <button onClick={() => {setActiveTab('courses'); setSelectedCourse(null); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'courses' || activeTab === 'course-detail' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
-              📁 Khóa học & Lớp
-          </button>
-          
-          <button onClick={() => {setActiveTab('library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
-              📚 Kho Đề thi & Bài tập
-          </button>
-          
-          <button onClick={() => {setActiveTab('lectures-library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'lectures-library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
-              📖 Kho Bài giảng
-          </button>
-          
-          <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
-              ☁️ Quản lý Tài Liệu (PDF)
-          </button>
-          
-          <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>
-              👨‍🎓 Quản lý học viên
-          </button>
+          <button onClick={() => {setActiveTab('courses'); setSelectedCourse(null); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'courses' || activeTab === 'course-detail' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📁 Khóa học & Lớp</button>
+          <button onClick={() => {setActiveTab('library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📚 Kho Đề thi & Bài tập</button>
+          <button onClick={() => {setActiveTab('lectures-library'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'lectures-library' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>📖 Kho Bài giảng</button>
+          <button onClick={() => {setActiveTab('documents'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'documents' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>☁️ Quản lý Tài Liệu (PDF)</button>
+          <button onClick={() => {setActiveTab('students'); setIsSidebarOpen(false);}} className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-[14px] transition-all ${activeTab === 'students' ? 'bg-[#2bd6eb]/10 text-[#2bd6eb]' : 'hover:bg-slate-800 hover:text-white'}`}>👨‍🎓 Quản lý học viên</button>
         </div>
       </aside>
 
@@ -1027,16 +934,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           </div>
           
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
-            
-            {/* 🚀 CHUÔNG THÔNG BÁO REALTIME VÀ POPUP */}
             <div className="relative shrink-0 mr-2" ref={notifRef}>
-                <button 
-                    onClick={() => { 
-                        setShowNotifications(!showNotifications); 
-                        if(!showNotifications) markNotificationsAsRead(); 
-                    }} 
-                    className="relative p-2 text-slate-400 hover:text-[#2bd6eb] transition-colors"
-                >
+                <button onClick={() => { setShowNotifications(!showNotifications); if(!showNotifications) markNotificationsAsRead(); }} className="relative p-2 text-slate-400 hover:text-[#2bd6eb] transition-colors">
                     <span className="text-xl md:text-2xl">🔔</span>
                     {unreadCount > 0 && <span className="absolute top-1 right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center animate-pulse">{unreadCount}</span>}
                 </button>
@@ -1050,11 +949,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                 <div className="p-6 text-center text-slate-400 text-sm font-medium">Chưa có thông báo nào.</div>
                             ) : (
                                 notifications.map(notif => (
-                                    <div 
-                                        key={notif.id} 
-                                        onClick={() => { setViewingNotif(notif); setShowNotifications(false); }}
-                                        className={`p-4 border-b border-slate-50 hover:bg-slate-100 transition-colors cursor-pointer ${!notif.is_read ? 'bg-blue-50/30' : ''}`}
-                                    >
+                                    <div key={notif.id} onClick={() => { setViewingNotif(notif); setShowNotifications(false); }} className={`p-4 border-b border-slate-50 hover:bg-slate-100 transition-colors cursor-pointer ${!notif.is_read ? 'bg-blue-50/30' : ''}`}>
                                         <p className="text-[13px] text-slate-700 leading-snug">
                                             <span className="font-bold text-[#0a5482]">{notif.user?.full_name || notif.user?.email || 'Học viên'}</span>
                                             {notif.action_type === 'login' && ' vừa đăng nhập vào hệ thống.'}
@@ -1071,26 +966,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 )}
             </div>
 
-            {activeTab === 'courses' && (
-                <button onClick={() => setShowCreateCourseModal(true)} className="bg-[#0a5482] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#084266] whitespace-nowrap">
-                    + THÊM
-                </button>
-            )}
-            
-            {activeTab === 'lectures-library' && (
-                <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: null })} className="bg-[#00a651] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#008f45] whitespace-nowrap">
-                    + BÀI GIẢNG
-                </button>
-            )}
+            {activeTab === 'courses' && <button onClick={() => setShowCreateCourseModal(true)} className="bg-[#0a5482] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#084266] whitespace-nowrap">+ THÊM</button>}
+            {activeTab === 'lectures-library' && <button onClick={() => setEditingLecture({ id: 'new', title: '', course_id: null })} className="bg-[#00a651] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#008f45] whitespace-nowrap">+ BÀI GIẢNG</button>}
             
             {activeTab === 'documents' && (
                 <div>
                    <input type="file" accept="application/pdf" multiple className="hidden" ref={fileInputRef} onChange={handleFileUpload} />
-                   <button 
-                      onClick={() => fileInputRef.current?.click()} 
-                      disabled={isUploadingPdf}
-                      className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap disabled:opacity-50"
-                   >
+                   <button disabled={isUploadingPdf} onClick={() => fileInputRef.current?.click()} className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap disabled:opacity-50">
                       {isUploadingPdf ? '⏳ ĐANG TẢI...' : '+ UPLOAD PDF'}
                    </button>
                 </div>
@@ -1098,9 +980,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
             {activeTab === 'library' && (
               <div className="relative shrink-0" ref={dropdownRef}>
-                <button onClick={() => setShowCreateDropdown(!showCreateDropdown)} className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md flex items-center gap-1.5 md:gap-2 text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap">
-                    + TẠO MỚI <span className={`text-[9px] md:text-[10px] transition-transform ${showCreateDropdown ? 'rotate-180' : ''}`}>▼</span>
-                </button>
+                <button onClick={() => setShowCreateDropdown(!showCreateDropdown)} className="bg-[#2bd6eb] text-white font-black px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl shadow-md flex items-center gap-1.5 md:gap-2 text-[11px] md:text-sm transition hover:bg-[#1bc1d6] whitespace-nowrap">+ TẠO MỚI <span className={`text-[9px] md:text-[10px] transition-transform ${showCreateDropdown ? 'rotate-180' : ''}`}>▼</span></button>
                 {showCreateDropdown && (
                   <div className="absolute right-0 mt-2 w-56 md:w-64 max-w-[calc(100vw-2rem)] bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 py-2 animate-in fade-in zoom-in-95">
                     <button onClick={() => handleInitiateTest('manual')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-slate-50 font-bold text-[12px] md:text-[13px] border-b border-slate-100">✍️ Tạo thủ công (Standard)</button>
@@ -1115,7 +995,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
         <div className="flex-1 p-4 md:p-8 overflow-y-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
           
-          {/* ========================================================= */}
           {/* VIEW: DANH SÁCH KHÓA HỌC */}
           {activeTab === 'courses' && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
@@ -1156,12 +1035,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             </div>
           )}
 
-          {/* ========================================================= */}
-          {/* VIEW: QUẢN LÝ TÀI LIỆU PDF (STORAGE VỚI FOLDER ẢO) */}
+          {/* VIEW: QUẢN LÝ TÀI LIỆU PDF */}
           {activeTab === 'documents' && (
              <div className="space-y-4 md:space-y-6 animate-in fade-in">
                 <div className="bg-white rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col h-[calc(100vh-140px)]">
-                    
                     <div className="p-4 md:p-6 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shrink-0">
                         <div className="flex items-center gap-2 md:gap-3">
                             {!isSearchingPdf && currentPdfFolderId && (
@@ -1178,12 +1055,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             {!isSearchingPdf && (
                                 <button onClick={() => setShowPdfFolderModal(true)} className="bg-[#00a651] text-white px-3 py-1.5 md:px-4 md:py-2 rounded-xl font-black text-[10px] md:text-xs shadow-sm hover:bg-[#008f45] whitespace-nowrap">+ THƯ MỤC</button>
                             )}
-                            
-                            <select 
-                                value={pdfSortOrder} 
-                                onChange={(e) => setPdfSortOrder(e.target.value)} 
-                                className="w-full sm:w-32 px-2 md:px-3 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-[11px] md:text-xs font-bold text-slate-600 shadow-sm bg-white cursor-pointer"
-                            >
+                            <select value={pdfSortOrder} onChange={(e) => setPdfSortOrder(e.target.value)} className="w-full sm:w-32 px-2 md:px-3 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-[11px] md:text-xs font-bold text-slate-600 shadow-sm bg-white cursor-pointer">
                                 <option value="date-desc">Mới nhất trước</option>
                                 <option value="date-asc">Cũ nhất trước</option>
                                 <option value="name-asc">Tên (A-Z)</option>
@@ -1191,19 +1063,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                 <option value="size-desc">Size (Lớn nhất)</option>
                                 <option value="size-asc">Size (Nhỏ nhất)</option>
                             </select>
-
-                            <input 
-                               type="text" 
-                               placeholder="Tìm tên file..." 
-                               value={pdfSearchQuery}
-                               onChange={(e) => setPdfSearchQuery(e.target.value)}
-                               className="w-full sm:w-48 px-4 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-xs shadow-sm font-medium"
-                            />
+                            <input type="text" placeholder="Tìm tên file..." value={pdfSearchQuery} onChange={(e) => setPdfSearchQuery(e.target.value)} className="w-full sm:w-48 px-4 py-2 rounded-xl border border-slate-200 outline-none focus:border-[#2bd6eb] text-xs shadow-sm font-medium" />
                         </div>
                     </div>
 
                     <div className="flex-1 overflow-y-auto p-4 md:p-6 custom-scrollbar bg-slate-50/50 relative">
-                        {/* THƯ MỤC ẢO (Ẩn đi nếu đang tìm kiếm file) */}
                         {!isSearchingPdf && currentPdfSubFolders.length > 0 && (
                             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
                                {currentPdfSubFolders.map(sf => (
@@ -1233,12 +1097,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             </div>
                         )}
 
-                        {/* LINE PHÂN CÁCH NẾU CÓ CẢ FOLDER LẪN FILE */}
                         {!isSearchingPdf && currentPdfSubFolders.length > 0 && currentPdfFiles.length > 0 && (
                             <div className="w-full h-px bg-transparent mb-6 border-t-2 border-dashed border-slate-200"></div>
                         )}
 
-                        {/* FILE DANH SÁCH */}
                         {currentPdfFiles.length === 0 ? (
                             <div className="h-[200px] flex flex-col items-center justify-center text-slate-400">
                                 <span className="text-4xl md:text-5xl mb-3 opacity-50">{isSearchingPdf ? '🔍' : '☁️'}</span>
@@ -1255,27 +1117,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                                 <p className="text-[11px] text-slate-400 mt-0.5">{formatFileSize(file.metadata?.size || 0)} • {formatDateTime(file.created_at)}</p>
                                             </div>
                                         </div>
-                                        
                                         <div className="mt-auto flex gap-2 pt-3 border-t border-slate-100">
-                                            <button 
-                                                onClick={() => setShowMoveFileModal(file.name)} 
-                                                className="w-9 flex items-center justify-center bg-blue-50 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors border border-blue-100 rounded-lg text-sm"
-                                                title="Chuyển thư mục"
-                                            >📂</button>
-                                            <button 
-                                                onClick={() => copyToClipboard(file.publicUrl)}
-                                                className="flex-1 bg-[#f0f9ff] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white transition-colors border border-[#bae6fd] font-bold py-1.5 rounded-lg text-xs flex items-center justify-center gap-1"
-                                            ><span>🔗</span> Copy Link</button>
-                                            <a 
-                                                href={file.publicUrl} target="_blank" rel="noopener noreferrer" 
-                                                className="w-9 flex items-center justify-center bg-slate-50 hover:bg-slate-200 transition-colors border border-slate-200 rounded-lg text-slate-600 text-sm"
-                                                title="Mở xem thử"
-                                            >👁️</a>
-                                            <button 
-                                                onClick={() => handleDeleteFile(file.name)}
-                                                className="w-9 flex items-center justify-center bg-red-50 hover:bg-red-500 hover:text-white transition-colors border border-red-100 rounded-lg text-red-400 opacity-0 group-hover:opacity-100 text-sm"
-                                                title="Xóa file"
-                                            >🗑️</button>
+                                            <button onClick={() => setShowMoveFileModal(file.name)} className="w-9 flex items-center justify-center bg-blue-50 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors border border-blue-100 rounded-lg text-sm" title="Chuyển thư mục">📂</button>
+                                            <button onClick={() => copyToClipboard(file.publicUrl)} className="flex-1 bg-[#f0f9ff] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white transition-colors border border-[#bae6fd] font-bold py-1.5 rounded-lg text-xs flex items-center justify-center gap-1"><span>🔗</span> Copy Link</button>
+                                            <a href={file.publicUrl} target="_blank" rel="noopener noreferrer" className="w-9 flex items-center justify-center bg-slate-50 hover:bg-slate-200 transition-colors border border-slate-200 rounded-lg text-slate-600 text-sm" title="Mở xem thử">👁️</a>
+                                            <button onClick={() => handleDeleteFile(file.name)} className="w-9 flex items-center justify-center bg-red-50 hover:bg-red-500 hover:text-white transition-colors border border-red-100 rounded-lg text-red-400 opacity-0 group-hover:opacity-100 text-sm" title="Xóa file">🗑️</button>
                                         </div>
                                     </div>
                                 ))}
@@ -1286,7 +1132,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
              </div>
           )}
 
-          {/* ========================================================= */}
           {/* VIEW: CHI TIẾT KHÓA HỌC */}
           {activeTab === 'course-detail' && selectedCourse && (
             <div className="space-y-4 md:space-y-6">
@@ -1308,7 +1153,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
               {courseViewMode === 'classes' && (
                 <div className="flex flex-col lg:flex-row gap-4 md:gap-6 h-auto lg:h-[600px] animate-in fade-in">
-                   
                    <div className="w-full lg:w-1/3 bg-white rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm flex flex-col overflow-hidden h-[300px] lg:h-auto shrink-0">
                       <div className="p-4 md:p-5 bg-slate-50 border-b border-slate-200 flex justify-between items-center shrink-0">
                          <h3 className="font-black text-slate-700 uppercase text-[11px] md:text-xs tracking-widest">Danh sách Lớp</h3>
@@ -1347,11 +1191,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <div className="p-4 md:p-6 bg-blue-50/50 border-b border-blue-100 shrink-0"><h2 className="text-[15px] md:text-lg font-black text-[#0a5482] uppercase tracking-wide truncate">LỚP: {selectedClass.name}</h2></div>
                             
                             <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
-                               
-                               <div className="w-full md:w-1/2 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col h-[250px] md:h-auto shrink-0 md:shrink">
+                               <div className="w-full md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col h-[250px] md:h-auto shrink-0 md:shrink">
                                   <div className="p-3 md:p-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center shrink-0">
                                      <h3 className="font-bold text-[12px] md:text-sm text-slate-700">Học phần của lớp</h3>
-                                     <button onClick={() => setShowAssignClassModuleModal(true)} className="text-[10px] md:text-xs bg-emerald-500 hover:bg-emerald-600 transition text-white font-bold px-2 md:px-3 py-1.5 rounded-lg shadow-sm whitespace-nowrap">+ Gán Học phần</button>
+                                     <button onClick={() => setShowAssignClassModuleModal(true)} className="text-[10px] md:text-xs bg-emerald-500 hover:bg-emerald-600 transition text-white font-bold px-2 md:px-3 py-1.5 rounded-lg shadow-sm whitespace-nowrap">+ Gán</button>
                                   </div>
                                   <div className="flex-1 overflow-y-auto p-3 md:p-4 space-y-2 custom-scrollbar">
                                      {lectureModules.filter(m => classModules.includes(m.id)).length === 0 ? <p className="text-[11px] md:text-xs text-slate-400 italic text-center mt-4">Chưa có học phần nào.</p> : (
@@ -1365,10 +1208,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                   </div>
                                </div>
 
-                               <div className="w-full md:w-1/2 flex flex-col bg-[#f8fafc] h-[250px] md:h-auto shrink-0 md:shrink">
+                               <div className="w-full md:w-1/3 border-b md:border-b-0 md:border-r border-slate-200 flex flex-col bg-[#f8fafc] h-[250px] md:h-auto shrink-0 md:shrink">
                                   <div className="p-3 md:p-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center shrink-0">
                                      <h3 className="font-bold text-[12px] md:text-sm text-slate-700">Học sinh trong lớp</h3>
-                                     <button onClick={() => setShowAssignStudentModal(true)} className="text-[10px] md:text-xs bg-blue-500 hover:bg-blue-600 transition text-white font-bold px-2 md:px-3 py-1.5 rounded-lg shadow-sm whitespace-nowrap">+ Thêm Học sinh</button>
+                                     <button onClick={() => setShowAssignStudentModal(true)} className="text-[10px] md:text-xs bg-blue-500 hover:bg-blue-600 transition text-white font-bold px-2 md:px-3 py-1.5 rounded-lg shadow-sm whitespace-nowrap">+ Thêm</button>
                                   </div>
                                   <div className="flex-1 overflow-y-auto p-3 md:p-4 space-y-2 custom-scrollbar">
                                      {classStudentsList.length === 0 ? <p className="text-[11px] md:text-xs text-slate-400 italic text-center mt-4">Chưa có học sinh nào.</p> : (
@@ -1381,6 +1224,50 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                               <button onClick={() => handleUnassignStudentFromClass(st.user_id)} className="text-red-500 text-[11px] md:text-xs font-bold hover:underline shrink-0">Gỡ</button>
                                            </div>
                                         ))
+                                     )}
+                                  </div>
+                               </div>
+
+                               {/* CỘT 3: BÀI TẬP VÀ DEADLINE CỦA LỚP */}
+                               <div className="w-full md:w-1/3 flex flex-col bg-orange-50/20 h-[250px] md:h-auto shrink-0 md:shrink">
+                                  <div className="p-3 md:p-4 bg-orange-50 border-b border-orange-100 flex justify-between items-center shrink-0">
+                                     <h3 className="font-bold text-[12px] md:text-sm text-orange-800">Bài tập & Deadline</h3>
+                                     
+                                     {/* 🚀 NÚT MỞ POPUP GIAO NHIỀU BÀI */}
+                                     <button 
+                                        onClick={() => {
+                                            setSelectedDeadlineTests([]);
+                                            setDeadlineInput('');
+                                            setShowAssignDeadlineModal(true);
+                                        }} 
+                                        className="text-[10px] md:text-xs bg-orange-500 hover:bg-orange-600 transition text-white font-bold px-2 md:px-3 py-1.5 rounded-lg shadow-sm whitespace-nowrap"
+                                     >
+                                         + Giao bài
+                                     </button>
+                                  </div>
+                                  <div className="flex-1 overflow-y-auto p-3 md:p-4 space-y-2 custom-scrollbar">
+                                     {classAssignedTests.length === 0 ? <p className="text-[11px] md:text-xs text-slate-400 italic text-center mt-4">Chưa giao bài nào.</p> : (
+                                        classAssignedTests.map(t => {
+                                            const dl = t.content_json?.basicInfo?.classDeadlines?.[selectedClass.id];
+                                            return (
+                                                <div key={t.id} className="p-2.5 md:p-3 bg-white border border-slate-200 rounded-lg flex flex-col justify-between items-start shadow-sm group hover:border-orange-300 transition-colors">
+                                                    <span className="font-bold text-[12px] md:text-sm text-slate-700 truncate w-full mb-1">{t.title}</span>
+                                                    <div className="flex justify-between items-center w-full">
+                                                        <span className="text-[10px] font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-100">
+                                                            ⏳ {dl ? formatDateTime(dl) : ''}
+                                                        </span>
+                                                        <button 
+                                                            onClick={() => {
+                                                                setDeadlineModal({show: true, test: t});
+                                                            }} 
+                                                            className="text-[#0a5482] text-[10px] font-bold hover:underline transition md:opacity-0 group-hover:opacity-100"
+                                                        >
+                                                            Sửa
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            )
+                                        })
                                      )}
                                   </div>
                                </div>
@@ -1686,8 +1573,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[10px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded transition-colors ${test.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-right space-x-1 md:space-x-2 whitespace-nowrap">
-                                 <button onClick={() => setEditingTest(test)} className="text-[#2bd6eb] bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition">Sửa</button>
-                                 <button onClick={() => handleDeleteTest(test.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100">Xóa</button>
+                                 <button onClick={() => setEditingTest(test)} className="text-[#2bd6eb] bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition shadow-sm">Sửa</button>
+                                 <button onClick={() => handleDeleteTest(test.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100 shadow-sm">Xóa</button>
                             </td>
                           </tr>
                         ))
@@ -1705,6 +1592,196 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
         {/* ========================================================================================= */}
         {/* CÁC MODALS */}
         {/* ========================================================================================= */}
+
+        {/* 🚀 MODAL CÀI ĐẶT DEADLINE NỘP BÀI (SỬA NHANH CHO 1 BÀI) */}
+        {deadlineModal.show && deadlineModal.test && (
+            <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4 animate-in fade-in">
+                <form onSubmit={handleSaveDeadline} className="bg-white rounded-3xl w-full max-w-sm p-6 md:p-8 shadow-2xl animate-in zoom-in-95">
+                    <h2 className="text-lg font-black text-slate-800 mb-2 uppercase tracking-tight">Cài đặt Deadline</h2>
+                    <p className="text-[13px] text-slate-500 mb-6 truncate font-medium bg-slate-50 p-2 rounded border border-slate-100">📝 {deadlineModal.test.title}</p>
+                    
+                    <div className="space-y-4 mb-6">
+                        <label className="text-[12px] font-bold text-slate-500 uppercase tracking-wider block">Hạn chót nộp bài</label>
+                        <input 
+                            name="datetime" 
+                            type="datetime-local" 
+                            defaultValue={getDefaultDateTime(deadlineModal.test.content_json?.basicInfo?.classDeadlines?.[selectedClass?.id])}
+                            className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-orange-500 text-sm font-bold text-slate-700 bg-slate-50" 
+                        />
+                        <p className="text-[10px] text-slate-400 italic">* Để trống và bấm Lưu nếu muốn gỡ bỏ deadline.</p>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                        <button type="button" onClick={() => setDeadlineModal({show: false, test: null})} className="flex-1 font-bold py-3 text-slate-500 bg-slate-100 hover:bg-slate-200 rounded-xl transition text-[13px]">Hủy</button>
+                        <button type="submit" className="flex-1 bg-orange-500 text-white font-black py-3 rounded-xl shadow-md hover:bg-orange-600 transition text-[13px]">LƯU HẠN NỘP</button>
+                    </div>
+                </form>
+            </div>
+        )}
+
+        {/* 🚀 MODAL GIAO NHIỀU BÀI & ĐẶT DEADLINE CHO LỚP (BẢN CHUYÊN NGHIỆP) */}
+        {showAssignDeadlineModal && selectedClass && (
+            <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4 animate-in fade-in">
+                <div className="bg-white rounded-3xl w-full max-w-3xl shadow-2xl flex flex-col max-h-[90vh] overflow-hidden animate-in zoom-in-95">
+                    
+                    <div className="bg-[#0f172a] p-4 md:p-6 text-white flex justify-between items-center shrink-0">
+                        <div>
+                            <h2 className="font-black uppercase text-[12px] md:text-[15px] tracking-widest text-orange-400">Giao Bài & Đặt Deadline</h2>
+                            <p className="text-[11px] md:text-[12px] text-slate-400 mt-1">Lớp: {selectedClass.name}</p>
+                        </div>
+                        <button onClick={() => setShowAssignDeadlineModal(false)} className="text-xl md:text-2xl hover:text-red-400 transition-colors">&times;</button>
+                    </div>
+
+                    <div className="p-4 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row gap-3 shrink-0">
+                        <div className="relative flex-1">
+                            <input 
+                                type="text" 
+                                placeholder="Tìm kiếm tên bài..." 
+                                value={assignTestSearch}
+                                onChange={(e) => setAssignTestSearch(e.target.value)}
+                                className="w-full border border-slate-300 rounded-xl px-4 py-2 text-sm outline-none focus:border-orange-500 transition-colors"
+                            />
+                        </div>
+                        <select 
+                            value={assignTestSort} 
+                            onChange={(e) => setAssignTestSort(e.target.value)}
+                            className="w-full sm:w-40 border border-slate-300 rounded-xl px-3 py-2 text-sm font-bold text-slate-600 outline-none focus:border-orange-500 bg-white"
+                        >
+                            <option value="date-desc">Mới nhất trước</option>
+                            <option value="date-asc">Cũ nhất trước</option>
+                            <option value="name-asc">Tên (A-Z)</option>
+                            <option value="name-desc">Tên (Z-A)</option>
+                        </select>
+                    </div>
+
+                    <div className="flex-1 overflow-y-auto p-4 custom-scrollbar bg-slate-50/50">
+                        <table className="w-full text-left border-collapse">
+                            <thead className="sticky top-0 bg-white shadow-sm z-10 rounded-lg overflow-hidden">
+                                <tr>
+                                    <th className="px-4 py-3 w-12 text-center bg-slate-100">
+                                        <input 
+                                            type="checkbox" 
+                                            checked={selectedDeadlineTests.length > 0 && selectedDeadlineTests.length === filteredAssignTests.length} 
+                                            onChange={handleSelectAllDeadlineTests} 
+                                            className="rounded cursor-pointer w-4 h-4" 
+                                        />
+                                    </th>
+                                    <th className="px-4 py-3 text-[11px] font-black text-slate-500 uppercase tracking-widest bg-slate-100">Tên Bài Tập / Đề Thi</th>
+                                    <th className="px-4 py-3 text-[11px] font-black text-slate-500 uppercase tracking-widest text-right bg-slate-100">Hạn Nộp Hiện Tại</th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-100">
+                                {filteredAssignTests.length === 0 ? (
+                                    <tr><td colSpan={3} className="text-center py-10 text-sm text-slate-400 font-medium">Không tìm thấy bài tập nào.</td></tr>
+                                ) : (
+                                    filteredAssignTests.map(t => {
+                                        const dl = t.content_json?.basicInfo?.classDeadlines?.[selectedClass.id];
+                                        const isSelected = selectedDeadlineTests.includes(t.id);
+                                        return (
+                                            <tr key={t.id} className={`hover:bg-orange-50/50 transition-colors cursor-pointer ${isSelected ? 'bg-orange-50/30' : 'bg-white'}`} onClick={() => handleSelectOneDeadlineTest(t.id)}>
+                                                <td className="px-4 py-4 text-center">
+                                                    <input type="checkbox" checked={isSelected} readOnly className="rounded cursor-pointer pointer-events-none w-4 h-4 accent-orange-500" />
+                                                </td>
+                                                <td className="px-4 py-4">
+                                                    <p className="font-bold text-[13px] text-slate-700 leading-snug">{t.title}</p>
+                                                    <p className="text-[10px] text-slate-400 mt-1 uppercase font-black">{t.test_type}</p>
+                                                </td>
+                                                <td className="px-4 py-4 text-right">
+                                                    {dl ? (
+                                                        <span className="text-[11px] font-bold text-orange-600 bg-orange-100 border border-orange-200 px-2.5 py-1 rounded-md whitespace-nowrap">
+                                                            ⏳ {formatDateTime(dl)}
+                                                        </span>
+                                                    ) : (
+                                                        <span className="text-[11px] text-slate-400 italic">-- Chưa có --</span>
+                                                    )}
+                                                </td>
+                                            </tr>
+                                        )
+                                    })
+                                )}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div className="p-4 md:p-6 bg-white border-t border-slate-200 shrink-0">
+                        <div className="flex flex-col sm:flex-row gap-4 items-end sm:items-center">
+                            <div className="flex-1 w-full">
+                                <label className="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Hạn chót nộp bài (Để trống để Gỡ Hạn)</label>
+                                <input 
+                                    type="datetime-local" 
+                                    value={deadlineInput}
+                                    onChange={(e) => setDeadlineInput(e.target.value)}
+                                    className="w-full border border-slate-300 rounded-xl px-4 py-2.5 outline-none focus:ring-2 focus:ring-orange-500 text-sm font-bold text-slate-700 bg-slate-50" 
+                                />
+                            </div>
+                            <div className="flex gap-2 w-full sm:w-auto shrink-0">
+                                <button onClick={handleSaveBulkDeadline} className={`flex-1 sm:flex-none text-white font-black py-2.5 px-6 rounded-xl shadow-md transition-colors text-[13px] uppercase tracking-widest whitespace-nowrap ${deadlineInput ? 'bg-orange-500 hover:bg-orange-600' : 'bg-red-500 hover:bg-red-600'}`}>
+                                    {deadlineInput ? 'LƯU HẠN NỘP' : 'GỠ HẠN NỘP'} ({selectedDeadlineTests.length})
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        )}
+
+        {/* 🚀 POPUP CHI TIẾT THÔNG BÁO TỪ CHUÔNG */}
+        {viewingNotif && (
+            <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4 animate-in fade-in">
+                <div className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95 relative">
+                    <button onClick={() => setViewingNotif(null)} className="absolute top-6 right-6 text-slate-400 hover:text-red-500 font-black text-xl transition-colors">&times;</button>
+                    
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-inner text-2xl bg-[#0a5482] border-4 border-slate-100">
+                        {viewingNotif.action_type === 'login' ? '🔑' : viewingNotif.action_type === 'finish_test' ? '📝' : viewingNotif.action_type === 'call_tutor' ? '🎙️' : '📖'}
+                    </div>
+                    
+                    <h2 className="text-lg font-black text-center text-slate-800 uppercase tracking-tight mb-2">
+                        {viewingNotif.user?.full_name || 'Học viên'}
+                    </h2>
+                    <p className="text-center text-slate-500 text-[12px] font-bold mb-6">{formatDateTime(viewingNotif.created_at)}</p>
+
+                    <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-6">
+                        {viewingNotif.action_type === 'login' && (
+                            <p className="text-center text-[14px] text-slate-700 font-medium">Học viên vừa truy cập vào không gian học tập LMS.</p>
+                        )}
+                        
+                        {viewingNotif.action_type === 'finish_test' && (
+                            <div className="text-center">
+                                <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-1">Nộp bài kiểm tra</p>
+                                <p className="font-black text-slate-800 text-[15px] mb-4">{viewingNotif.details?.test_title}</p>
+                                <div className="inline-block bg-white border border-emerald-200 rounded-lg px-6 py-3 shadow-sm">
+                                    <span className="text-[10px] block font-bold text-emerald-600 uppercase tracking-widest mb-1">Kết quả</span>
+                                    <span className="text-2xl font-black text-emerald-600">{viewingNotif.details?.score} <span className="text-lg text-emerald-400">/ {viewingNotif.details?.total}</span></span>
+                                </div>
+                            </div>
+                        )}
+
+                        {viewingNotif.action_type === 'call_tutor' && (
+                            <div>
+                                <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-1 text-center">Cuộc gọi Gia Sư AI</p>
+                                <p className="text-center text-blue-600 font-black text-xl mb-4">{viewingNotif.details?.duration} giây</p>
+                                <div className="bg-white border border-slate-200 p-4 rounded-lg">
+                                    <span className="text-[10px] block font-bold text-slate-400 uppercase tracking-widest mb-2">Nội dung / Câu hỏi:</span>
+                                    <p className="text-[13px] text-slate-700 italic leading-relaxed font-serif">"{viewingNotif.details?.topic}"</p>
+                                </div>
+                            </div>
+                        )}
+
+                        {viewingNotif.action_type === 'finish_lecture' && (
+                            <div className="text-center">
+                                <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-1">Hoàn thành bài giảng</p>
+                                <p className="font-black text-[#0a5482] text-[15px]">{viewingNotif.details?.lecture_title}</p>
+                            </div>
+                        )}
+                    </div>
+
+                    <button onClick={() => { setViewingNotif(null); setActiveTab('students'); }} className="w-full bg-[#0a5482] hover:bg-[#084266] text-white font-black py-3.5 rounded-xl shadow-md transition-colors text-[13px] uppercase tracking-widest">
+                        Tới Quản lý Học viên
+                    </button>
+                </div>
+            </div>
+        )}
 
         {/* Modal TẠO FOLDER PDF MỚI */}
         {showPdfFolderModal && (
