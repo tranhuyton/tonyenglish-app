@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { supabase } from './supabase';
-import { LineChart, Line, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const FOLDER_IMAGES = [
   'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800', 
@@ -199,7 +199,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       const { data: lp } = await supabase.from('lecture_progress').select('lecture_id, is_completed').eq('user_id', user.id);
       setLectureProgressData(lp || []);
 
-      // LẤY DANH SÁCH LỚP HỌC CỦA HỌC SINH ĐỂ ĐỌC DEADLINE
       const { data: cStudents } = await supabase.from('class_students').select('class_id').eq('user_id', user.id);
       if (cStudents) {
           setUserClassIds(cStudents.map(c => c.class_id));
@@ -237,6 +236,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       
       const { data: hData } = await supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false });
       if (hData) {
+        
+        // 🚀 BỘ LỌC BÀN TAY SẮT: LỌC BỎ CÁC BÀI ĐIỂM QUÁ THẤP (< 3 điểm hoặc < Band 3.0)
         const validHistory = hData.filter((item: any) => {
             const type = String(item.test_type || '').toLowerCase();
             const title = String(item.test_title || '').toLowerCase();
@@ -244,11 +245,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             
             if (isIelts) {
                 const band = parseFloat(item.details?.bandScore || item.score || 0);
-                return band >= 3.5;
+                return band >= 3.0; // IELTS >= 3.0 mới tính
             } else {
-                const ans = item.details?.answers || item.details?.student_answers || item.details?.responses || item.details?.userAnswers || {};
-                const ansCount = Object.keys(ans).length;
-                return ansCount >= 10 || (item.score || 0) >= 10;
+                const score = parseFloat(item.score || 0);
+                return score >= 3; // Các bài khác phải đúng >= 3 câu mới tính
             }
         });
 
@@ -423,13 +423,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                          });
   }, [currentTests, searchTest, filterType, sortTest]);
 
-  // 🚀 TÍNH TOÁN DEADLINE SẮP TỚI THEO LỚP
   const upcomingDeadlines = useMemo(() => {
     const enrolledCourseIds = courses.map(c => c.id);
     const validTests = allTests.filter(t => t.course_id && enrolledCourseIds.includes(t.course_id) || enrolledCourseIds.includes(t.content_json?.basicInfo?.courseId));
     
     return validTests.filter(t => {
-        // Kiểm tra xem Đề thi này có Deadline nào dành cho các Lớp mà học sinh đang tham gia không
         const classDeadlines = t.content_json?.basicInfo?.classDeadlines || {};
         const matchedClassId = userClassIds.find(id => classDeadlines[id]);
         
@@ -438,7 +436,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         const isCompleted = historyData.some(h => String(h.testId) === String(t.id) || String(h.details?.test_id) === String(t.id));
         if (isCompleted) return false;
         
-        // Gắn thêm field ảo deadlineStr để lát ra ngoài dễ lấy
         t._deadlineStr = classDeadlines[matchedClassId];
         return true; 
     }).sort((a, b) => new Date(a._deadlineStr).getTime() - new Date(b._deadlineStr).getTime());
@@ -450,6 +447,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const totalTestPages = Math.ceil(processedTests.length / ITEMS_PER_PAGE);
   const paginatedTests = useMemo(() => processedTests.slice((testPage - 1) * ITEMS_PER_PAGE, testPage * ITEMS_PER_PAGE), [processedTests, testPage]);
 
+  // CHUẨN BỊ DỮ LIỆU BÁO CÁO TỪ HISTORY ĐÃ LỌC CÁC BÀI ĐIỂM < 3
   const processedHistory = useMemo(() => {
       return historyData.filter(h => analyticsCourse === 'all' || String(h.courseId) === String(analyticsCourse)).filter(h => {
          if (analyticsCategory === 'all') return true;
@@ -458,25 +456,163 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }, [historyData, analyticsCourse, analyticsCategory, allTests]);
 
-  const { analyticsTotalTestsDone, analyticsTotalTimeHours, avgScore, avgIelts, sparklineScoreArr, sparklineCompletedArr, sparklineAttemptsArr, sparklineTimeArr } = useMemo(() => {
+  // 🚀 TÍNH TOÁN DỮ LIỆU CHO 4 AREA CHART TỔNG QUAN THEO NGÀY (CÓ XỬ LÝ GÃY KHÚC BIỂU ĐỒ TRỐNG)
+  const aggregatedByDate = useMemo(() => {
+      const map = new Map();
+      const reversed = [...processedHistory].reverse(); 
+      
+      reversed.forEach(h => {
+          const d = new Date(h.date);
+          const dateStr = `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth()+1).toString().padStart(2, '0')}`;
+          
+          if (!map.has(dateStr)) {
+              map.set(dateStr, { name: dateStr, stdScoreSum: 0, stdCount: 0, timeSum: 0, bandSum: 0, bandCount: 0, totalAttempts: 0 });
+          }
+          const entry = map.get(dateStr);
+          entry.totalAttempts += 1;
+          entry.timeSum += h.timeSpent;
+          
+          const type = String(h.details?.test_type || h.name).toLowerCase();
+          const isIelts = type.includes('ielts');
+          
+          if (isIelts) {
+              const band = parseFloat(h.details?.bandScore);
+              if (!isNaN(band) && band > 0) {
+                  entry.bandSum += band;
+                  entry.bandCount += 1;
+              }
+          } else {
+              entry.stdScoreSum += (h.scoreObj.value || 0);
+              entry.stdCount += 1;
+          }
+      });
+      
+      let cumulativeDone = 0;
+
+      return Array.from(map.values()).map(entry => {
+          cumulativeDone += entry.totalAttempts;
+          return {
+              name: entry.name,
+              attempts: entry.totalAttempts,
+              cumulativeDone: cumulativeDone,
+              time: parseFloat((entry.timeSum / 60).toFixed(1)), 
+              avgScore: entry.stdCount > 0 ? parseFloat((entry.stdScoreSum / entry.stdCount).toFixed(1)) : null,
+              avgBand: entry.bandCount > 0 ? parseFloat((entry.bandSum / entry.bandCount).toFixed(1)) : null
+          };
+      }).slice(-14); 
+  }, [processedHistory]);
+
+  const isIeltsContext = analyticsCourse === 'all' 
+      ? courses.some(c => (c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')
+      : courses.find(c => String(c.id) === String(analyticsCourse))?.title.toLowerCase().includes('ielts');
+
+  const { analyticsTotalTestsDone, analyticsTotalTimeHours, avgScore, avgIelts } = useMemo(() => {
       const total = processedHistory.length;
       const hours = (processedHistory.reduce((acc, curr) => acc + curr.timeSpent, 0) / 60).toFixed(1);
-      const score = total > 0 ? (processedHistory.reduce((acc, curr) => acc + curr.scoreObj.value, 0) / total).toFixed(1) : '0';
-      const ieltsHistory = historyData.filter(h => h.details?.bandScore).slice(0, 4);
-      const ielts = ieltsHistory.length > 0 ? (ieltsHistory.reduce((acc, curr) => acc + parseFloat(curr.details?.bandScore), 0) / ieltsHistory.length).toFixed(1) : '0.0';
-      return {
-         analyticsTotalTestsDone: total, 
-         analyticsTotalTimeHours: hours, 
-         avgScore: score, 
-         avgIelts: ielts,
-         sparklineScoreArr: processedHistory.map(h => ({v: h.scoreObj.value})).reverse(),
-         sparklineCompletedArr: processedHistory.map((_, i) => ({v: i + 1})),
-         sparklineAttemptsArr: processedHistory.map((_, i) => ({v: i + 1})),
-         sparklineTimeArr: processedHistory.map(h => ({v: h.timeSpent})).reverse()
-      };
+      
+      let stdSum = 0, stdCount = 0;
+      let bandSum = 0, bandCount = 0;
+
+      processedHistory.forEach(h => {
+          const type = String(h.details?.test_type || h.name).toLowerCase();
+          const isIeltsTest = type.includes('ielts');
+          
+          if (isIeltsTest) {
+              const band = parseFloat(h.details?.bandScore);
+              if (!isNaN(band) && band > 0) {
+                  bandSum += band;
+                  bandCount++;
+              }
+          } else {
+              stdSum += (h.scoreObj.value || 0);
+              stdCount++;
+          }
+      });
+
+      const score = stdCount > 0 ? (stdSum / stdCount).toFixed(1) : '0';
+      const ielts = bandCount > 0 ? (bandSum / bandCount).toFixed(1) : '0.0';
+      
+      return { analyticsTotalTestsDone: total, analyticsTotalTimeHours: hours, avgScore: score, avgIelts: ielts };
   }, [processedHistory, historyData]);
 
-  // 🚀 TÍNH TOÁN DỮ LIỆU TỶ LỆ DẠNG BÀI IELTS CHUẨN XÁC MỚI NHẤT
+  // 🚀 TÍNH TOÁN DỮ LIỆU CHO LINE CHART: 4 KỸ NĂNG IELTS
+  const ieltsSkillChartData = useMemo(() => {
+      const map = new Map();
+      const reversed = [...processedHistory].reverse();
+      
+      reversed.forEach(h => {
+          const d = new Date(h.date);
+          const dateStr = `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth()+1).toString().padStart(2, '0')}`;
+          
+          if (!map.has(dateStr)) {
+              map.set(dateStr, { name: dateStr, Nghe: [], Nói: [], Đọc: [], Viết: [] });
+          }
+          const entry = map.get(dateStr);
+          
+          const type = String(h.details?.test_type || h.name).toLowerCase();
+          const band = parseFloat(h.details?.bandScore);
+          
+          if (!isNaN(band) && band > 0) {
+              if (type.includes('listen')) entry.Nghe.push(band);
+              else if (type.includes('speak')) entry.Nói.push(band);
+              else if (type.includes('read')) entry.Đọc.push(band);
+              else if (type.includes('writ')) entry.Viết.push(band);
+          }
+      });
+      
+      return Array.from(map.values()).map(entry => ({
+          name: entry.name,
+          Nghe: entry.Nghe.length > 0 ? parseFloat((entry.Nghe.reduce((a:any,b:any)=>a+b,0)/entry.Nghe.length).toFixed(1)) : null,
+          Nói: entry.Nói.length > 0 ? parseFloat((entry.Nói.reduce((a:any,b:any)=>a+b,0)/entry.Nói.length).toFixed(1)) : null,
+          Đọc: entry.Đọc.length > 0 ? parseFloat((entry.Đọc.reduce((a:any,b:any)=>a+b,0)/entry.Đọc.length).toFixed(1)) : null,
+          Viết: entry.Viết.length > 0 ? parseFloat((entry.Viết.reduce((a:any,b:any)=>a+b,0)/entry.Viết.length).toFixed(1)) : null,
+      })).slice(-14);
+  }, [processedHistory]);
+
+  // 🚀 TÍNH TOÁN DỮ LIỆU CHO LINE CHART: TỶ LỆ THEO TỪNG DẠNG BÀI THEO NGÀY
+  const ieltsTypeChartData = useMemo(() => {
+      const map = new Map();
+      const reversed = [...processedHistory].reverse();
+      
+      reversed.forEach(h => {
+          const d = new Date(h.date);
+          const dateStr = `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth()+1).toString().padStart(2, '0')}`;
+          
+          if (!map.has(dateStr)) {
+              map.set(dateStr, { name: dateStr, fill: {c:0,t:0}, tfng: {c:0,t:0}, mcq: {c:0,t:0}, match: {c:0,t:0} });
+          }
+          const entry = map.get(dateStr);
+          const types = h.details?.type_stats || h.details?.questionTypeStats || h.details?.typeStats || {};
+          
+          Object.keys(types).forEach(k => {
+              const kLow = k.toLowerCase();
+              const c = types[k].correct || 0;
+              const t = types[k].total || 0;
+              
+              if (t > 0) {
+                  if (kLow.includes('điền từ') || kLow.includes('fill') || kLow.includes('completion') || kLow.includes('blank')) {
+                      entry.fill.c += c; entry.fill.t += t;
+                  } else if (kLow.includes('tfng') || kLow.includes('true') || kLow.includes('false') || kLow.includes('yes') || kLow.includes('ng') || kLow.includes('nhận định')) {
+                      entry.tfng.c += c; entry.tfng.t += t;
+                  } else if (kLow.includes('trắc nghiệm') || kLow.includes('multiple') || kLow.includes('choice') || kLow.includes('checkbox') || kLow.includes('combo') || kLow.includes('mcq')) {
+                      entry.mcq.c += c; entry.mcq.t += t;
+                  } else if (kLow.includes('kéo thả') || kLow.includes('matching') || kLow.includes('droplist') || kLow.includes('nối') || kLow.includes('drag')) {
+                      entry.match.c += c; entry.match.t += t;
+                  }
+              }
+          });
+      });
+      
+      return Array.from(map.values()).map(entry => ({
+          name: entry.name,
+          "Điền từ": entry.fill.t > 0 ? Math.round((entry.fill.c / entry.fill.t)*100) : null,
+          "Nhận định": entry.tfng.t > 0 ? Math.round((entry.tfng.c / entry.tfng.t)*100) : null,
+          "Trắc nghiệm": entry.mcq.t > 0 ? Math.round((entry.mcq.c / entry.mcq.t)*100) : null,
+          "Matching": entry.match.t > 0 ? Math.round((entry.match.c / entry.match.t)*100) : null,
+      })).filter(e => e["Điền từ"] !== null || e["Nhận định"] !== null || e["Trắc nghiệm"] !== null || e["Matching"] !== null).slice(-14);
+  }, [processedHistory]);
+
+  // 🚀 TÍNH DỮ LIỆU THANH PROGRESS CHO TỶ LỆ DẠNG BÀI
   const ieltsTypeStats = useMemo(() => {
       const stats: Record<string, {correct: number, total: number}> = {
           'Điền từ (Completion)': { correct: 0, total: 0 },
@@ -518,10 +654,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   
   const inProgressTestId = Array.from(inProgressIds)[0];
   const inProgressTest = useMemo(() => allTests.find(t => String(t.id) === inProgressTestId), [allTests, inProgressTestId]);
-
-  const isIeltsContext = analyticsCourse === 'all' 
-      ? courses.some(c => (c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')
-      : courses.find(c => String(c.id) === String(analyticsCourse))?.title.toLowerCase().includes('ielts');
 
   const hour = new Date().getHours();
   let bannerConfig = { greeting: '', gradient: '', icon: '', subtitle: '' };
@@ -729,7 +861,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               </div>
             </div>
 
-            {/* 🚀 BẢNG CẢNH BÁO DEADLINE (SẼ HIỆN NẾU CÓ BÀI CHƯA LÀM MÀ CÓ DEADLINE) */}
+            {/* BẢNG CẢNH BÁO DEADLINE */}
             {upcomingDeadlines.length > 0 && (
                 <div className="bg-orange-50 border border-orange-200 rounded-2xl p-5 md:p-6 mb-8 md:mb-10 shadow-sm flex items-start gap-4 animate-in slide-in-from-top-4">
                     <div className="text-3xl md:text-4xl animate-bounce">⏰</div>
@@ -781,13 +913,28 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <div className="flex flex-col gap-6">
                 {courses.map(course => {
                   const cover = getCourseCover(course);
+                  
                   const courseFolderIds = allFolders.filter(f => f.course_id === course.id).map(f => f.id);
-                  const testCount = allTests.filter(t => courseFolderIds.includes(t.folder_id)).length;
-                  const lectureCount = allLectures.filter(l => l.course_id === course.id).length;
-                  const completedLecs = lectureProgressData.filter(lp => lp.is_completed && allLectures.find(l => l.id === lp.lecture_id && l.course_id === course.id)).length;
-                  const lecProgress = lectureCount > 0 ? Math.min(100, Math.round((completedLecs / lectureCount) * 100)) : 0;
-                  const uniqueCompletedTests = new Set(historyData.filter(h => h.courseId === course.id && h.testId).map(h => h.testId)).size;
+                  const courseTestsForCount = allTests.filter(t => 
+                      courseFolderIds.includes(t.folder_id) || 
+                      t.course_id === course.id || 
+                      t.content_json?.basicInfo?.courseId === course.id
+                  );
+                  const testCount = courseTestsForCount.length;
+                  const validTestIds = courseTestsForCount.map(t => String(t.id));
+
+                  const uniqueCompletedTests = new Set(
+                      historyData
+                      .filter(h => validTestIds.includes(String(h.testId)) || validTestIds.includes(String(h.details?.test_id)))
+                      .map(h => String(h.testId || h.details?.test_id))
+                  ).size;
                   const testProgress = testCount > 0 ? Math.min(100, Math.round((uniqueCompletedTests / testCount) * 100)) : 0;
+
+                  const courseLectures = allLectures.filter(l => l.course_id === course.id);
+                  const lectureCount = courseLectures.length;
+                  const courseLectureIds = courseLectures.map(l => l.id);
+                  const completedLecs = lectureProgressData.filter(lp => lp.is_completed && courseLectureIds.includes(lp.lecture_id)).length;
+                  const lecProgress = lectureCount > 0 ? Math.min(100, Math.round((completedLecs / lectureCount) * 100)) : 0;
 
                   return (
                     <div key={course.id} className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:border-[#1e88e5] transition-colors flex flex-col md:flex-row mx-2 md:mx-0 group">
@@ -1027,65 +1174,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           </div>
         )}
 
-        {activeTab === 'games' && (
-            <div className="animate-in fade-in duration-300">
-                <div className="bg-white rounded-xl border border-slate-200 p-8 md:p-12 mb-8 shadow-sm">
-                    <div className="text-center max-w-2xl mx-auto">
-                        <span className="text-5xl mb-4 block grayscale opacity-80">🎮</span>
-                        <h2 className="text-2xl md:text-3xl font-black text-slate-800 mb-4 uppercase tracking-tight">Góc Mini Games</h2>
-                        <p className="text-slate-500 font-medium text-[15px] md:text-[16px] leading-relaxed">
-                            Đổi gió với các trò chơi nhỏ được thiết kế lồng ghép kiến thức. Trả lời trắc nghiệm thật nhanh để qua ải!
-                        </p>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {allTests.filter(t => {
-                        let content = t.content_json;
-                        if (typeof content === 'string') { try { content = JSON.parse(content); } catch(e){ return false; } }
-                        return content?.basicInfo?.category === 'game';
-                    }).map(game => {
-                        let content = game.content_json;
-                        if (typeof content === 'string') { try { content = JSON.parse(content); } catch(e){ content = {}; } }
-                        const theme = content?.basicInfo?.gameTheme || 'siege-game';
-                        
-                        let icon = '🏰'; 
-                        let themeName = 'Grammar Siege'; 
-                        let colorClass = 'text-rose-600 border-rose-200 hover:border-rose-500'; 
-                        let btnClass = 'text-rose-700 bg-rose-50 border-rose-200 group-hover:bg-rose-600 group-hover:text-white';
-                        
-                        if (theme === 'ninja-survival') { 
-                            icon = '🥷'; 
-                            themeName = 'Ninja Survival'; 
-                            colorClass = 'text-slate-800 border-slate-300 hover:border-slate-800'; 
-                            btnClass = 'text-slate-800 bg-slate-100 border-slate-300 group-hover:bg-slate-800 group-hover:text-white';
-                        }
-                        if (theme === 'vocab-racing') { 
-                            icon = '🏎️'; 
-                            themeName = 'Vocab Racing'; 
-                            colorClass = 'text-blue-600 border-blue-200 hover:border-blue-600'; 
-                            btnClass = 'text-blue-700 bg-blue-50 border-blue-200 group-hover:bg-blue-600 group-hover:text-white';
-                        }
-
-                        return (
-                           <div key={game.id} onClick={() => handleStartTestClick(game)} className={`bg-white rounded-xl border border-slate-200 p-8 shadow-sm transition-colors cursor-pointer flex flex-col group ${colorClass}`}>
-                               <div className={`w-14 h-14 rounded-lg flex items-center justify-center text-3xl mb-6 border transition-colors ${colorClass}`}>
-                                 {icon}
-                               </div>
-                               <h3 className={`font-black text-xl text-slate-800 mb-2 transition-colors ${colorClass.split(' ')[0].replace('text-', 'group-hover:text-')}`}>
-                                 {game.title || themeName}
-                               </h3>
-                               <p className="text-slate-500 text-[14px] font-medium leading-relaxed mb-8 flex-1">Tham gia thử thách ngôn ngữ, rèn luyện tốc độ phản xạ ngay!</p>
-                               <button className={`w-full font-bold py-3 rounded-lg border transition-colors shadow-sm uppercase tracking-wider text-[13px] ${btnClass}`}>
-                                 Chơi Ngay
-                               </button>
-                           </div>
-                        )
-                    })}
-                </div>
-            </div>
-        )}
-
+        {/* =====================================================================
+            🚀 TRANG BÁO CÁO (ANALYTICS) VỚI CÁC AREA CHART TUYỆT ĐẸP VÀ CHUẨN XÁC
+            ===================================================================== */}
         {activeTab === 'analytics' && (
           <div className="space-y-6 md:space-y-8 animate-in fade-in duration-300">
             
@@ -1116,82 +1207,193 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <div className="bg-white rounded-xl border border-slate-200 py-16 md:py-24 text-center shadow-sm flex flex-col items-center justify-center mx-2 md:mx-0">
                 <div className="text-5xl mb-4 opacity-50 grayscale block">📊</div>
                 <h3 className="text-lg md:text-xl font-black text-slate-700 mb-2 px-4">Chưa có dữ liệu làm bài hợp lệ</h3>
-                <p className="text-slate-500 font-medium text-[13px] md:text-[15px] max-w-sm px-4">Hệ thống chỉ tính điểm những bài IELTS đạt Band {'>='} 3.5, hoặc những đề thi làm từ 10 câu trở lên để đảm bảo độ chính xác!</p>
+                <p className="text-slate-500 font-medium text-[13px] md:text-[15px] max-w-sm px-4">Hệ thống chỉ tính những bài đạt trên 3.0 điểm (hoặc IELTS Band &gt;= 3.0) để đảm bảo phân tích chính xác.</p>
               </div>
             ) : (
               <>
-                <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ${isIeltsContext ? 'xl:grid-cols-6' : 'xl:grid-cols-4'} gap-4 md:gap-6 mx-2 md:mx-0`}>
-                  <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between hover:border-blue-300 transition-colors">
-                    <div className="flex justify-between items-center mb-3">
-                      <div className="flex items-center gap-2"><span className="font-bold text-slate-500 text-[11px] uppercase tracking-widest">Điểm TB</span></div>
-                      <span className="font-black text-blue-600 text-xl md:text-2xl">{avgScore}</span>
-                    </div>
-                    <div className="h-12 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineScoreArr}><Line type="monotone" dataKey="v" stroke="#3b82f6" strokeWidth={2} dot={{r: 3, fill: '#3b82f6', strokeWidth: 1, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
-                  </div>
-
-                  <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between hover:border-emerald-300 transition-colors">
-                    <div className="flex justify-between items-center mb-3">
-                      <div className="flex items-center gap-2"><span className="font-bold text-slate-500 text-[11px] uppercase tracking-widest">Đã làm</span></div>
+                <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mx-2 md:mx-0`}>
+                  
+                  {/* CARD 1: BÀI HOÀN THÀNH (CUMULATIVE AREA CHART) */}
+                  <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between hover:border-emerald-300 transition-colors group">
+                    <div className="flex justify-between items-center mb-3 relative z-10">
+                      <div className="flex items-center gap-2"><span className="font-bold text-slate-500 text-[11px] uppercase tracking-widest group-hover:text-emerald-600 transition-colors">Đã làm</span></div>
                       <span className="font-black text-emerald-600 text-xl md:text-2xl">{analyticsTotalTestsDone}</span>
                     </div>
-                    <div className="h-12 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineCompletedArr}><Line type="monotone" dataKey="v" stroke="#10b981" strokeWidth={2} dot={{r: 3, fill: '#10b981', strokeWidth: 1, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
+                    <div className="h-16 w-full -mx-2 -mb-2">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
+                                <defs>
+                                    <linearGradient id="colorDone" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#10b981" stopOpacity={0.3}/>
+                                        <stop offset="95%" stopColor="#10b981" stopOpacity={0}/>
+                                    </linearGradient>
+                                </defs>
+                                <XAxis dataKey="name" hide />
+                                <Tooltip 
+                                   labelFormatter={(label) => `Ngày ${label}`}
+                                   formatter={(value: any, name: string) => [`${value} bài`, 'Tổng số bài đã làm']}
+                                   contentStyle={{ borderRadius: '8px', fontSize: '12px', fontWeight: 'bold', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} 
+                                   labelStyle={{ color: '#64748b', marginBottom: '4px' }} 
+                                   cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} 
+                                />
+                                <Area type="monotone" dataKey="cumulativeDone" name="Tổng bài" stroke="#10b981" strokeWidth={3} fillOpacity={1} fill="url(#colorDone)" activeDot={{ r: 5, fill: '#10b981', stroke: '#fff', strokeWidth: 2 }} />
+                            </AreaChart>
+                        </ResponsiveContainer>
+                    </div>
                   </div>
 
-                  <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between hover:border-fuchsia-300 transition-colors">
-                    <div className="flex justify-between items-center mb-3">
-                      <div className="flex items-center gap-2"><span className="font-bold text-slate-500 text-[11px] uppercase tracking-widest">Lượt làm</span></div>
+                  {/* CARD 2: LƯỢT LÀM BÀI (DAILY AREA CHART) */}
+                  <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between hover:border-fuchsia-300 transition-colors group">
+                    <div className="flex justify-between items-center mb-3 relative z-10">
+                      <div className="flex items-center gap-2"><span className="font-bold text-slate-500 text-[11px] uppercase tracking-widest group-hover:text-fuchsia-600 transition-colors">Lượt làm</span></div>
                       <span className="font-black text-fuchsia-600 text-xl md:text-2xl">{analyticsTotalTestsDone}</span>
                     </div>
-                    <div className="h-12 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineAttemptsArr}><Line type="monotone" dataKey="v" stroke="#d946ef" strokeWidth={2} dot={{r: 3, fill: '#d946ef', strokeWidth: 1, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
+                    <div className="h-16 w-full -mx-2 -mb-2">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
+                                <defs>
+                                    <linearGradient id="colorAttempts" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#d946ef" stopOpacity={0.3}/>
+                                        <stop offset="95%" stopColor="#d946ef" stopOpacity={0}/>
+                                    </linearGradient>
+                                </defs>
+                                <XAxis dataKey="name" hide />
+                                <Tooltip 
+                                   labelFormatter={(label) => `Ngày ${label}`}
+                                   formatter={(value: any, name: string) => [`${value} lượt`, 'Số bài làm trong ngày']}
+                                   contentStyle={{ borderRadius: '8px', fontSize: '12px', fontWeight: 'bold', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} 
+                                   labelStyle={{ color: '#64748b', marginBottom: '4px' }} 
+                                   cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} 
+                                />
+                                <Area type="monotone" dataKey="attempts" name="Lượt" stroke="#d946ef" strokeWidth={3} fillOpacity={1} fill="url(#colorAttempts)" activeDot={{ r: 5, fill: '#d946ef', stroke: '#fff', strokeWidth: 2 }} />
+                            </AreaChart>
+                        </ResponsiveContainer>
+                    </div>
                   </div>
 
-                  <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between hover:border-orange-300 transition-colors">
-                    <div className="flex justify-between items-center mb-3">
-                      <div className="flex items-center gap-2"><span className="font-bold text-slate-500 text-[11px] uppercase tracking-widest">Giờ học</span></div>
+                  {/* CARD 3: GIỜ HỌC (DAILY AREA CHART) */}
+                  <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between hover:border-orange-300 transition-colors group">
+                    <div className="flex justify-between items-center mb-3 relative z-10">
+                      <div className="flex items-center gap-2"><span className="font-bold text-slate-500 text-[11px] uppercase tracking-widest group-hover:text-orange-600 transition-colors">Giờ học</span></div>
                       <span className="font-black text-orange-600 text-xl md:text-2xl">{analyticsTotalTimeHours}h</span>
                     </div>
-                    <div className="h-12 w-full -mx-1"><ResponsiveContainer width="100%" height="100%"><LineChart data={sparklineTimeArr}><Line type="monotone" dataKey="v" stroke="#f97316" strokeWidth={2} dot={{r: 3, fill: '#f97316', strokeWidth: 1, stroke: '#fff'}} isAnimationActive={false} /></LineChart></ResponsiveContainer></div>
+                    <div className="h-16 w-full -mx-2 -mb-2">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <AreaChart data={aggregatedByDate} margin={{ top: 5, right: 0, left: 0, bottom: 0 }}>
+                                <defs>
+                                    <linearGradient id="colorTime" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#f97316" stopOpacity={0.3}/>
+                                        <stop offset="95%" stopColor="#f97316" stopOpacity={0}/>
+                                    </linearGradient>
+                                </defs>
+                                <XAxis dataKey="name" hide />
+                                <Tooltip 
+                                   labelFormatter={(label) => `Ngày ${label}`}
+                                   formatter={(value: any, name: string) => [`${value} giờ`, 'Thời gian học']}
+                                   contentStyle={{ borderRadius: '8px', fontSize: '12px', fontWeight: 'bold', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} 
+                                   labelStyle={{ color: '#64748b', marginBottom: '4px' }} 
+                                   cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} 
+                                />
+                                <Area type="monotone" dataKey="time" name="Giờ" stroke="#f97316" strokeWidth={3} fillOpacity={1} fill="url(#colorTime)" activeDot={{ r: 5, fill: '#f97316', stroke: '#fff', strokeWidth: 2 }} />
+                            </AreaChart>
+                        </ResponsiveContainer>
+                    </div>
                   </div>
 
-                  {isIeltsContext && (
-                    <>
-                      <div className="bg-slate-800 rounded-xl border border-slate-700 shadow-sm p-5 flex flex-col justify-center text-center">
-                        <h4 className="font-bold text-slate-400 text-[11px] uppercase tracking-widest mb-1">IELTS Average</h4>
-                        <span className="font-black text-white text-3xl md:text-4xl">{avgIelts}</span>
-                        <p className="text-[10px] text-slate-500 mt-2 font-medium">(4 bài gần nhất)</p>
-                      </div>
-                      
-                      <div className="bg-slate-800 rounded-xl border border-amber-500 shadow-md p-5 flex flex-col justify-center text-center relative overflow-hidden group hover:border-amber-400 transition-colors">
-                        <div className="absolute -right-4 -bottom-4 text-6xl opacity-10 pointer-events-none">🎯</div>
-                        <h4 className="font-bold text-amber-200 text-[11px] uppercase tracking-widest mb-1 relative z-10">Mục tiêu IELTS</h4>
-                        <input 
-                            type="number" step="0.5" min="3.5" max="9.0" 
-                            value={targetIelts || ''} 
-                            onChange={(e) => handleUpdateTarget(e.target.value)}
-                            placeholder="N/A"
-                            className="font-black text-amber-400 text-3xl md:text-4xl bg-transparent w-full text-center outline-none cursor-pointer placeholder:text-amber-400/50 relative z-10"
-                            title="Click thẳng vào đây để sửa mục tiêu (VD: 7.5)"
-                        />
-                        <p className="text-[10px] text-amber-200/60 mt-2 font-medium relative z-10 group-hover:text-amber-200 transition-colors">Cố gắng lên nhé!</p>
-                      </div>
-                    </>
-                  )}
+                  {/* CARD 4: DARK CARD (AVERAGE) */}
+                  <div className="bg-slate-800 rounded-xl border border-slate-700 shadow-sm p-5 flex flex-col justify-center text-center">
+                    <h4 className="font-bold text-slate-400 text-[11px] uppercase tracking-widest mb-1">
+                        {isIeltsContext ? 'IELTS Average' : 'ĐIỂM TRUNG BÌNH'}
+                    </h4>
+                    <span className="font-black text-white text-3xl md:text-4xl">
+                        {isIeltsContext ? avgIelts : avgScore}
+                    </span>
+                    <p className="text-[10px] text-slate-500 mt-2 font-medium">
+                        {isIeltsContext ? '(4 bài gần nhất)' : '(Toàn bộ hệ thống)'}
+                    </p>
+                  </div>
+                  
+                  {/* CARD 5: DARK CARD (TARGET) */}
+                  <div className="bg-slate-800 rounded-xl border border-amber-500 shadow-md p-5 flex flex-col justify-center text-center relative overflow-hidden group hover:border-amber-400 transition-colors">
+                    <div className="absolute -right-4 -bottom-4 text-6xl opacity-10 pointer-events-none">🎯</div>
+                    <h4 className="font-bold text-amber-200 text-[11px] uppercase tracking-widest mb-1 relative z-10">
+                        {isIeltsContext ? 'Mục tiêu IELTS' : 'Mục tiêu Điểm'}
+                    </h4>
+                    <input 
+                        type="number" step="0.5" min="0" max={isIeltsContext ? "9.0" : "100"} 
+                        value={targetIelts || ''} 
+                        onChange={(e) => handleUpdateTarget(e.target.value)}
+                        placeholder="N/A"
+                        className="font-black text-amber-400 text-3xl md:text-4xl bg-transparent w-full text-center outline-none cursor-pointer placeholder:text-amber-400/50 relative z-10"
+                        title={isIeltsContext ? "Click để sửa (VD: 7.5)" : "Click để sửa (VD: 85)"}
+                    />
+                    <p className="text-[10px] text-amber-200/60 mt-2 font-medium relative z-10 group-hover:text-amber-200 transition-colors">Cố gắng lên nhé!</p>
+                  </div>
+
                 </div>
 
                 {isIeltsContext && (
                   <div className="mt-8 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mx-2 md:mx-0 p-6 md:p-8">
-                     <h3 className="font-black text-[15px] md:text-lg text-slate-800 uppercase tracking-tight mb-6">Phân Tích Tỷ Lệ Dạng Bài (IELTS)</h3>
+                     <div className="flex flex-col md:flex-row gap-8 lg:gap-12 mb-10">
+                        
+                        {/* CHART 1: BIỂU ĐỒ 4 KỸ NĂNG IELTS */}
+                        <div className="flex-1 w-full">
+                           <h3 className="font-black text-[15px] md:text-lg text-slate-800 uppercase tracking-tight mb-4">Phân Tích Kỹ Năng</h3>
+                           <div className="w-full h-[280px]">
+                              <ResponsiveContainer width="100%" height="100%">
+                                  <LineChart data={ieltsSkillChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                                      <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                                      <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b' }} dy={10} />
+                                      <YAxis domain={[0, 9]} ticks={[0, 3, 5, 7, 9]} axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b' }} />
+                                      <Tooltip labelFormatter={(label) => `Ngày ${label}`} contentStyle={{ borderRadius: '8px', fontSize: '12px', fontWeight: 'bold', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                                      <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', fontWeight: 'bold', paddingTop: '10px' }} />
+                                      
+                                      <Line type="monotone" dataKey="Nghe" name="Listening" stroke="#10b981" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                      <Line type="monotone" dataKey="Nói" name="Speaking" stroke="#f97316" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                      <Line type="monotone" dataKey="Đọc" name="Reading" stroke="#3b82f6" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                      <Line type="monotone" dataKey="Viết" name="Writing" stroke="#d946ef" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                  </LineChart>
+                              </ResponsiveContainer>
+                           </div>
+                        </div>
+                        
+                        {/* CHART 2: BIỂU ĐỒ TỶ LỆ THEO DẠNG BÀI */}
+                        <div className="flex-1 w-full">
+                           <h3 className="font-black text-[15px] md:text-lg text-slate-800 uppercase tracking-tight mb-4">Tỷ Lệ Dạng Bài (%)</h3>
+                           <div className="w-full h-[280px]">
+                              <ResponsiveContainer width="100%" height="100%">
+                                  <LineChart data={ieltsTypeChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                                      <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                                      <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b' }} dy={10} />
+                                      <YAxis domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#64748b' }} />
+                                      <Tooltip labelFormatter={(label) => `Ngày ${label}`} formatter={(value: any, name: string) => [`${value}%`, name]} contentStyle={{ borderRadius: '8px', fontSize: '12px', fontWeight: 'bold', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }} cursor={{ stroke: '#cbd5e1', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                                      <Legend iconType="circle" wrapperStyle={{ fontSize: '12px', fontWeight: 'bold', paddingTop: '10px' }} />
+                                      
+                                      <Line type="monotone" dataKey="Điền từ" name="Điền từ" stroke="#10b981" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                      <Line type="monotone" dataKey="Nhận định" name="T/F/NG" stroke="#f97316" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                      <Line type="monotone" dataKey="Trắc nghiệm" name="MCQ/Checkbox" stroke="#3b82f6" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                      <Line type="monotone" dataKey="Matching" name="Matching" stroke="#d946ef" strokeWidth={3} dot={{ r: 4, strokeWidth: 2, fill: '#fff' }} activeDot={{ r: 6 }} connectNulls={true} />
+                                  </LineChart>
+                              </ResponsiveContainer>
+                           </div>
+                        </div>
+
+                     </div>
+
+                     <div className="h-px w-full bg-slate-200 mb-8 border-t-2 border-dashed border-slate-200"></div>
+
+                     <h3 className="font-black text-[15px] md:text-lg text-slate-800 uppercase tracking-tight mb-6">Tỷ lệ đúng hiện tại</h3>
                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                        {Object.entries(ieltsTypeStats).map(([key, data]) => {
                           const percent = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0;
                           return (
-                            <div key={key} className="bg-slate-50 border border-slate-200 rounded-lg p-4">
+                            <div key={key} className="bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
                                 <div className="flex justify-between items-center mb-2">
                                     <span className="font-bold text-slate-700 text-[13px]">{key}</span>
                                     <span className="font-black text-[#1e88e5] text-[14px]">{percent}%</span>
                                 </div>
                                 <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden mb-2">
-                                    <div className="h-full bg-[#1e88e5] rounded-full" style={{width: `${percent}%`}}></div>
+                                    <div className="h-full bg-[#1e88e5] rounded-full transition-all duration-1000" style={{width: `${percent}%`}}></div>
                                 </div>
                                 <p className="text-[10px] text-slate-500 font-bold text-right tracking-widest">{data.correct} / {data.total} câu</p>
                             </div>
@@ -1203,7 +1405,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                 <div className="mt-8 md:mt-10 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mx-2 md:mx-0">
                   <div className="px-5 md:px-6 py-4 md:py-5 border-b border-slate-200 flex justify-between items-center bg-slate-50">
-                     <h3 className="font-black text-[16px] md:text-lg text-slate-800 uppercase tracking-tight">Lịch sử làm bài</h3>
+                     <h3 className="font-black text-[16px] md:text-lg text-slate-800 uppercase tracking-tight">Lịch sử làm bài hợp lệ</h3>
                   </div>
                   <div className="overflow-x-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
                     <table className="w-full text-left border-collapse min-w-[700px] md:min-w-[800px]">

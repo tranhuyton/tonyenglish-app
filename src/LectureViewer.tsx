@@ -67,10 +67,7 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
             maxH = Math.max(maxH, (c as HTMLCanvasElement).height);
         });
 
-        // =========================================================
-        // 🚀 THUẬT TOÁN ÉP CÂN HÌNH ẢNH (GIẢM 80-90% DUNG LƯỢNG)
-        // =========================================================
-        const MAX_WIDTH = 800; // Khóa cứng chiều ngang tối đa 800px
+        const MAX_WIDTH = 800;
         const scaleFactor = totalW > MAX_WIDTH ? MAX_WIDTH / totalW : 1;
 
         combinedCanvas.width = totalW * scaleFactor;
@@ -79,7 +76,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
         let curX = 0;
         canvases.forEach(c => {
             if (ctx) {
-                // Resize tỷ lệ thuận từng trang khi vẽ vào Canvas tổng
                 const drawWidth = (c as HTMLCanvasElement).width * scaleFactor;
                 const drawHeight = (c as HTMLCanvasElement).height * scaleFactor;
                 ctx.drawImage(c as HTMLCanvasElement, curX, 0, drawWidth, drawHeight);
@@ -87,10 +83,7 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
             }
         });
         
-        // Nén chất lượng JPEG xuống 45% (Đủ nét cho AI OCR mà siêu nhẹ)
         const base64Image = combinedCanvas.toDataURL('image/jpeg', 0.45); 
-        
-        console.log(`📸 TÁCH! Đã chụp và ÉP CÂN thành công! Chiều ngang mới: ${combinedCanvas.width}px`);
         window.dispatchEvent(new CustomEvent('tony-send-page-image', { detail: base64Image }));
       }
     }, 500);
@@ -204,7 +197,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
          )}
          <Document file={url} onLoadSuccess={({ numPages }) => setNumPages(numPages)} loading={null}>
            <div className={`flex justify-center transition-all duration-300 ${isTwoPageMode ? 'gap-1 md:gap-4 flex-col lg:flex-row' : ''}`}>
-               {/* TRANG BÊN TRÁI */}
                <Page 
                    pageNumber={currentPage} 
                    scale={zoomLevel} 
@@ -213,7 +205,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
                    className="shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-slate-700 rounded-md overflow-hidden max-w-full bg-white transition-transform origin-top" 
                    loading={null} 
                />
-               {/* TRANG BÊN PHẢI */}
                {isTwoPageMode && numPages && currentPage + 1 <= numPages && (
                    <Page 
                        pageNumber={currentPage + 1} 
@@ -459,6 +450,9 @@ export default function LectureViewer({
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [completedTasks, setCompletedTasks] = useState<string[]>([]);
   const [allLectureProgress, setAllLectureProgress] = useState<Record<string, string[]>>({});
+  
+  // 🚀 STATE ĐÁNH DẤU LECTURE HOÀN THÀNH (HỖ TRỢ TRACKING BỊ ĐỘNG LÝ THUYẾT)
+  const [completedLectures, setCompletedLectures] = useState<Set<string>>(new Set());
 
   const [expandedModules, setExpandedModules] = useState<string[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
@@ -472,10 +466,8 @@ export default function LectureViewer({
   const [popupUrl, setPopupUrl] = useState<string | null>(null);
   const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
   
-  // 🚀 STATE ĐIỀU KHIỂN BÓP LAYOUT SPLIT SCREEN CHO BẢNG ĐEN
   const [isTeacherBoardOpen, setIsTeacherBoardOpen] = useState(false);
   
-  // 1. Lắng nghe sự kiện bật bảng từ file LiveSpeakingTest
   useEffect(() => {
     const handleToggleBoard = (e: any) => {
         setIsTeacherBoardOpen(e.detail === true || e.detail === 'open');
@@ -484,7 +476,6 @@ export default function LectureViewer({
     return () => window.removeEventListener('tony-teacher-board-state', handleToggleBoard);
   }, []);
 
-  // 2. TỰ ĐỘNG BẬT BẢNG ĐEN KHI MỞ FILE PDF
   useEffect(() => {
     if (popupUrl && popupUrl.toLowerCase().includes('.pdf')) {
         sessionStorage.setItem('tony_pdf_mode', 'true');
@@ -503,7 +494,6 @@ export default function LectureViewer({
     }
   }, [popupUrl, onOpenAI]);
 
-  // 3. CƠ CHẾ BẢO HIỂM: Tự động dãn PDF ra 100% khi người dùng Dập Máy
   useEffect(() => {
       if (isTeacherBoardOpen) {
           const interval = setInterval(() => {
@@ -524,6 +514,33 @@ export default function LectureViewer({
       const page = pages.find(p => p.page_number === currentPage); 
       return page ? page.content_html : ''; 
   }, [pages, currentPage]);
+
+  // 🚀 PASSIVE TRACKING LÝ THUYẾT: THEO DÕI TỰ ĐỘNG ĐÁNH DẤU HOÀN THÀNH KHI ĐẾN TRANG CUỐI
+  useEffect(() => {
+      if (!currentUser || !activeLectureId || pages.length === 0) return;
+      
+      const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
+      if (safeLectureTasks.length > 0) return; // Chỉ theo dõi bị động với bài không có Task
+
+      if (currentPage === pages.length && !completedLectures.has(activeLectureId)) {
+          setCompletedLectures(prev => new Set(prev).add(activeLectureId));
+          
+          supabase.from('lecture_progress').select('id').eq('user_id', currentUser.id).eq('lecture_id', activeLectureId)
+          .then(({ data: existingArray }) => {
+              if (existingArray && existingArray.length > 0) {
+                  supabase.from('lecture_progress').update({ completed_tasks: [], is_completed: true }).eq('id', existingArray[0].id).then();
+              } else {
+                  supabase.from('lecture_progress').insert({ user_id: currentUser.id, lecture_id: activeLectureId, completed_tasks: [], is_completed: true }).then();
+              }
+          });
+          
+          supabase.from('activity_logs').insert([{
+              user_id: currentUser.id,
+              action_type: 'finish_lecture',
+              details: { lecture_title: activeLecture?.title || "Bài giảng" }
+          }]).then();
+      }
+  }, [currentPage, pages.length, activeLectureId, currentUser, activeLecture, completedLectures]);
 
   useEffect(() => {
     if (activeLecture && currentHtmlContent) {
@@ -612,12 +629,19 @@ export default function LectureViewer({
 
       if (user && validLectures.length > 0) {
          const lectureIds = validLectures.map(l => l.id);
-         const { data: allProg } = await supabase.from('lecture_progress').select('lecture_id, completed_tasks').eq('user_id', user.id).in('lecture_id', lectureIds);
+         const { data: allProg } = await supabase.from('lecture_progress').select('lecture_id, completed_tasks, is_completed').eq('user_id', user.id).in('lecture_id', lectureIds);
+         
          const pMap: Record<string, string[]> = {};
+         const compSet = new Set<string>();
+         
          if (allProg) { 
-             allProg.forEach(p => { pMap[p.lecture_id] = p.completed_tasks || []; }); 
+             allProg.forEach(p => { 
+                 pMap[p.lecture_id] = p.completed_tasks || []; 
+                 if (p.is_completed) compSet.add(p.lecture_id);
+             }); 
          }
          setAllLectureProgress(pMap);
+         setCompletedLectures(compSet);
       }
 
       if (validLectures && validLectures.length > 0) {
@@ -666,8 +690,16 @@ export default function LectureViewer({
                    setCompletedTasks(pData.completed_tasks);
                    setAllLectureProgress(prev => ({...prev, [lectureId]: pData.completed_tasks}));
                }
+               if (pData.is_completed) {
+                   setCompletedLectures(prev => new Set(prev).add(lectureId));
+               }
            } else { 
                setCompletedTasks([]); 
+               setCompletedLectures(prev => {
+                   const newSet = new Set(prev);
+                   newSet.delete(lectureId);
+                   return newSet;
+               });
            }
         }
     } catch (err) {}
@@ -697,13 +729,19 @@ export default function LectureViewer({
 
          setAllLectureProgress(allPrev => ({ ...allPrev, [activeLectureId]: newCompleted }));
          
-         // 🚀 BẮN PHÁO HIỆU BÁO ADMIN KHI BÀI GIẢNG CHUYỂN SANG TRẠNG THÁI HOÀN THÀNH
          if (isCompleted) {
+             setCompletedLectures(prevSet => new Set(prevSet).add(activeLectureId));
              supabase.from('activity_logs').insert([{
                  user_id: currentUser.id,
                  action_type: 'finish_lecture',
                  details: { lecture_title: activeLecture?.title || "Bài giảng" }
              }]).then();
+         } else {
+             setCompletedLectures(prevSet => {
+                 const newSet = new Set(prevSet);
+                 newSet.delete(activeLectureId);
+                 return newSet;
+             });
          }
          
          return newCompleted;
@@ -938,7 +976,7 @@ export default function LectureViewer({
             <div className="fixed inset-0 bg-slate-900/40 z-40 md:hidden transition-opacity" onClick={() => setIsSidebarOpen(false)} />
          )}
 
-         {/* CỘT MỤC LỤC TRÁI (SẼ BỊ ĐẨY LÙI LẠI HOẶC ẨN KHI KHUNG SPLIT MỞ TRONG CHẾ ĐỘ THƯỜNG) */}
+         {/* CỘT MỤC LỤC TRÁI */}
          <aside className={`fixed md:relative inset-y-0 left-0 z-50 md:z-20 h-[100dvh] md:h-full bg-white border-r border-slate-200 flex flex-col shrink-0 transition-transform duration-300 ease-in-out shadow-2xl md:shadow-none
             ${isSidebarOpen && !isTeacherBoardOpen ? 'translate-x-0 w-[280px] md:w-[320px]' : '-translate-x-full w-[280px] md:w-0 md:opacity-0 md:border-r-0 md:translate-x-0'}`}>
            
@@ -971,13 +1009,14 @@ export default function LectureViewer({
                                const isActive = activeLectureId === lec.id;
                                const totalTasks = Array.isArray(lec.task_list) ? lec.task_list.length : 0;
                                const completedCount = allLectureProgress[lec.id]?.length || 0;
+                               const isLecCompleted = completedLectures.has(lec.id);
 
                                return (
                                  <button key={lec.id} onClick={() => handleSelectLecture(lec.id)} className={`w-full text-left pl-12 pr-5 py-3 text-[14px] transition-colors flex items-center justify-between gap-3 relative border-l-4 ${isActive ? 'bg-[#f0f9ff] text-[#0ea5e9] border-[#0ea5e9]' : 'border-transparent text-slate-600 hover:text-slate-900 hover:bg-slate-100'}`}>
                                    <span className="leading-snug truncate flex-1">{lec.title}</span>
                                    <span className="shrink-0 ml-1 flex items-center">
                                        {totalTasks > 0 ? (
-                                           completedCount === totalTasks ? (
+                                           isLecCompleted ? (
                                                <span className="bg-emerald-100 text-emerald-700 text-[10px] font-black px-2 py-0.5 rounded shadow-sm">✓ {completedCount}/{totalTasks}</span>
                                            ) : completedCount > 0 ? (
                                                <span className="bg-blue-100 text-[#0ea5e9] text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">{completedCount}/{totalTasks}</span>
@@ -985,7 +1024,11 @@ export default function LectureViewer({
                                                <span className="bg-white text-slate-500 text-[10px] font-bold px-2 py-0.5 rounded border border-slate-200">0/{totalTasks}</span>
                                            )
                                        ) : (
-                                           <span className="bg-slate-100 text-slate-500 text-[9px] uppercase tracking-wider font-bold px-2 py-0.5 rounded border border-slate-200">Lý thuyết</span>
+                                           isLecCompleted ? (
+                                               <span className="bg-emerald-100 text-emerald-700 text-[10px] font-black px-2 py-0.5 rounded shadow-sm">✓ Hoàn thành</span>
+                                           ) : (
+                                               <span className="bg-slate-100 text-slate-500 text-[9px] uppercase tracking-wider font-bold px-2 py-0.5 rounded border border-slate-200">Lý thuyết</span>
+                                           )
                                        )}
                                    </span>
                                  </button>
