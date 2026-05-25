@@ -597,6 +597,7 @@ export default function LectureViewer({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // 🚀 TỐI ƯU HÓA SIÊU TỐC: DÙNG PROMISE.ALL GỌI SONG SONG DỮ LIỆU CHỈ TRONG 2 BƯỚC THAY VÌ WATERFALL
   const fetchCourseData = async () => {
     setIsLoading(true); 
     setErrorMessage(null);
@@ -604,18 +605,26 @@ export default function LectureViewer({
       const { data: { user } } = await supabase.auth.getUser();
       setCurrentUser(user);
 
-      const { data: courseData, error: courseErr } = await supabase.from('courses').select('*').eq('id', courseId).single();
+      // Bước 1: Gọi song song 3 bảng cốt lõi của môn học
+      const [
+          { data: courseData, error: courseErr },
+          { data: modData },
+          { data: lecData }
+      ] = await Promise.all([
+          supabase.from('courses').select('*').eq('id', courseId).single(),
+          supabase.from('lecture_modules').select('*').eq('course_id', courseId).order('order_index'),
+          supabase.from('lectures').select('*').eq('course_id', courseId).eq('is_published', true)
+      ]);
+
       if (courseErr || !courseData) {
           throw new Error("Không tìm thấy dữ liệu Khóa học trên hệ thống.");
       }
+      
       setCourse(courseData);
-
-      const { data: modData } = await supabase.from('lecture_modules').select('*').eq('course_id', courseId).order('order_index');
+      
       const safeModData = modData || [];
       setModules(safeModData);
 
-      const { data: lecData } = await supabase.from('lectures').select('*').eq('course_id', courseId).eq('is_published', true);
-      
       let validLectures = (lecData || []).filter(lec => lec.module_id && safeModData.some(mod => mod.id === lec.module_id));
       validLectures.sort((a, b) => {
           const modA = safeModData.find(m => m.id === a.module_id);
@@ -627,6 +636,7 @@ export default function LectureViewer({
       
       setLectures(validLectures);
 
+      // Bước 2: Chỉ khi nào tìm thấy User mới đi gọi bảng Progress (Tiến độ)
       if (user && validLectures.length > 0) {
          const lectureIds = validLectures.map(l => l.id);
          const { data: allProg } = await supabase.from('lecture_progress').select('lecture_id, completed_tasks, is_completed').eq('user_id', user.id).in('lecture_id', lectureIds);
@@ -679,28 +689,35 @@ export default function LectureViewer({
             localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
         }
 
-        const { data: pageData } = await supabase.from('lecture_pages').select('*').eq('lecture_id', lectureId).order('page_number');
+        // Tải song song cả 2 bảng Pages và Progress của Lecture đó
+        const [
+            { data: pageData },
+            progressRes
+        ] = await Promise.all([
+            supabase.from('lecture_pages').select('*').eq('lecture_id', lectureId).order('page_number'),
+            targetUserId 
+                ? supabase.from('lecture_progress').select('*').eq('lecture_id', lectureId).eq('user_id', targetUserId) 
+                : Promise.resolve({ data: null })
+        ]);
+
         setPages(pageData || []);
         
-        if (targetUserId) {
-           const { data: progressDataArray } = await supabase.from('lecture_progress').select('*').eq('lecture_id', lectureId).eq('user_id', targetUserId);
-           if (progressDataArray && progressDataArray.length > 0) {
-               const pData = progressDataArray[0];
-               if (pData && Array.isArray(pData.completed_tasks)) {
-                   setCompletedTasks(pData.completed_tasks);
-                   setAllLectureProgress(prev => ({...prev, [lectureId]: pData.completed_tasks}));
-               }
-               if (pData.is_completed) {
-                   setCompletedLectures(prev => new Set(prev).add(lectureId));
-               }
-           } else { 
-               setCompletedTasks([]); 
-               setCompletedLectures(prev => {
-                   const newSet = new Set(prev);
-                   newSet.delete(lectureId);
-                   return newSet;
-               });
+        if (targetUserId && progressRes.data && progressRes.data.length > 0) {
+           const pData = progressRes.data[0];
+           if (pData && Array.isArray(pData.completed_tasks)) {
+               setCompletedTasks(pData.completed_tasks);
+               setAllLectureProgress(prev => ({...prev, [lectureId]: pData.completed_tasks}));
            }
+           if (pData.is_completed) {
+               setCompletedLectures(prev => new Set(prev).add(lectureId));
+           }
+        } else if (targetUserId) { 
+           setCompletedTasks([]); 
+           setCompletedLectures(prev => {
+               const newSet = new Set(prev);
+               newSet.delete(lectureId);
+               return newSet;
+           });
         }
     } catch (err) {}
   };
