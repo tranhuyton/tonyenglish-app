@@ -3,6 +3,9 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import React, { useState, useRef, useEffect } from 'react';
 
+// =========================================================================================
+// 🚀 CSS: STYLE CHỮ PHẤN VIẾT TAY CHO CHẾ ĐỘ BẢNG ĐEN
+// =========================================================================================
 const chalkboardStyleTag = `
   @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
   .tony-chalkboard-content, .tony-chalkboard-content p, .tony-chalkboard-content span, .tony-chalkboard-content div, .tony-chalkboard-content li { font-family: 'Kalam', cursive !important; color: #f8fafc !important; font-size: 1.5rem !important; line-height: 1.8 !important; letter-spacing: 0.04em !important; text-shadow: 0px 1px 3px rgba(0,0,0,0.8) !important; }
@@ -13,6 +16,27 @@ const chalkboardStyleTag = `
 `;
 
 type ChatMessage = { role: 'user' | 'model'; text: string; };
+
+// === HÀM HỖ TRỢ XỬ LÝ ÂM THANH PCM CHUẨN GỐC ===
+const floatTo16BitPCM = (float32Array: Float32Array) => {
+    const buffer = new ArrayBuffer(float32Array.length * 2);
+    const view = new DataView(buffer);
+    let offset = 0;
+    for (let i = 0; i < float32Array.length; i++, offset += 2) {
+        let s = Math.max(-1, Math.min(1, float32Array[i]));
+        view.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+    }
+    return buffer;
+};
+
+const arrayBufferToBase64 = (buffer: ArrayBuffer) => {
+    let binary = '';
+    const bytes = new Uint8Array(buffer);
+    for (let i = 0; i < bytes.byteLength; i++) {
+        binary += String.fromCharCode(bytes[i]);
+    }
+    return window.btoa(binary);
+};
 
 const base64ToArrayBuffer = (base64: string) => {
     const binary_string = window.atob(base64);
@@ -31,18 +55,31 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
   const [isSpeaking, setIsSpeaking] = useState(false);
   
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [currentDraft, setCurrentDraft] = useState<string>('');
   const [liveTranscript, setLiveTranscript] = useState<string>('');
-  const transcriptRef = useRef<string>('');
+  const [currentDraft, setCurrentDraft] = useState<string>('');
   
   const [isBlackboardMode, setIsBlackboardMode] = useState(false);
   const [isChatBubbleVisible, setIsChatBubbleVisible] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const recognitionRef = useRef<any>(null);
+  // REFS QUAN TRỌNG
   const wsRef = useRef<WebSocket | null>(null);
+  const isSetupCompleteRef = useRef<boolean>(false);
+  const isMicOpenRef = useRef<boolean>(false); // VAN BỘ ĐÀM
+  const transcriptRef = useRef<string>('');
+  const callStartTimeRef = useRef<number>(0);
+  
+  // Audio Input (Mic)
+  const streamRef = useRef<MediaStream | null>(null);
+  const audioCtxInputRef = useRef<AudioContext | null>(null);
+  const sourceNodeRef = useRef<MediaStreamAudioSourceNode | null>(null);
+  const processorNodeRef = useRef<ScriptProcessorNode | null>(null);
+  const recognitionRef = useRef<any>(null); // Để hiển thị Text nháp
+  
+  // Audio Output (Loa)
   const audioCtxOutputRef = useRef<AudioContext | null>(null);
   const nextPlayTimeRef = useRef<number>(0);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const pendingImageRef = useRef<string | null>(null);
 
@@ -77,23 +114,15 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
 
   useEffect(() => {
       if (messagesEndRef.current) messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, currentDraft, liveTranscript, isProcessing]);
+  }, [messages, liveTranscript, currentDraft, isProcessing, isRecording]);
 
-  // Bộ giám sát thông minh: Tự động tắt nháy đèn khi AI phát xong Audio
   useEffect(() => {
-      const timer = setInterval(() => {
-          if (audioCtxOutputRef.current && nextPlayTimeRef.current > 0) {
-              if (audioCtxOutputRef.current.currentTime >= nextPlayTimeRef.current) {
-                  setIsSpeaking(false);
-                  nextPlayTimeRef.current = 0;
-              } else {
-                  setIsSpeaking(true);
-              }
-          }
-      }, 200);
-      return () => clearInterval(timer);
+    const handleNewPageImage = (e: any) => { pendingImageRef.current = e.detail.split(',')[1]; };
+    window.addEventListener('tony-send-page-image', handleNewPageImage);
+    return () => window.removeEventListener('tony-send-page-image', handleNewPageImage);
   }, []);
 
+  // KHỞI TẠO BỘ NGHE NHÁP (Chỉ để hiện UI, không gửi lên Google)
   useEffect(() => {
       const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
       if (SpeechRecognition) {
@@ -111,20 +140,12 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
               else setCurrentDraft(event.results[event.results.length - 1][0].transcript);
           };
 
-          recognition.onerror = (e: any) => { console.warn("Mic error", e.error); setIsRecording(false); };
-          recognition.onend = () => setIsRecording(false);
+          recognition.onerror = () => {};
           recognitionRef.current = recognition;
       }
       return () => {
           if (recognitionRef.current) recognitionRef.current.stop();
-          if (audioCtxOutputRef.current) audioCtxOutputRef.current.close();
       };
-  }, []);
-
-  useEffect(() => {
-    const handleNewPageImage = (e: any) => { pendingImageRef.current = e.detail.split(',')[1]; };
-    window.addEventListener('tony-send-page-image', handleNewPageImage);
-    return () => window.removeEventListener('tony-send-page-image', handleNewPageImage);
   }, []);
 
   const handleBackClick = () => {
@@ -145,94 +166,154 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
 
         let promptKienNhan = isBlackboardMode 
         ? `[KỶ LUẬT THÉP VÀ CÁCH TRÌNH BÀY BẢNG]: Bạn bắt buộc dùng văn phong chuẩn giọng miền Bắc (Hà Nội). Lời nói đang được phát lại cho học sinh nghe. Đồng thời lời nói cũng đang được viết lên bảng đen. Dùng ký hiệu LaTeX ($...$ và $$...$$) để viết mọi công thức toán học.`
-        : `[KỶ LUẬT THÉP]: Bạn bắt buộc dùng văn phong chuẩn giọng miền Bắc (Hà Nội). Lời nói đang được phát lại. Dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán.`;
+        : `[KỶ LUẬT THÉP]: Bạn bắt buộc dùng văn phong chuẩn giọng miền Bắc (Hà Nội). Trả lời ngắn gọn, tự nhiên. Dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán.`;
         
         if (mode === 'TUTOR' && tutorData) {
             return `Bạn là ${teacherName}, người Hà Nội. BỐI CẢNH BÀI HỌC: ${tutorData.transcript}. NHIỆM VỤ: ${tutorData.feedback}. ${promptKienNhan} ${contextInstruction}`;
         } else {
-            return `Bạn là giám khảo IELTS tên ${teacherName}, người Hà Nội. Hãy yêu cầu tôi nói về chủ đề: "${currentTopic}". ${promptKienNhan} ${contextInstruction}`;
+            return `Bạn là giám khảo IELTS tên ${teacherName}, người Hà Nội. Hãy yêu cầu thí sinh nói về chủ đề: "${currentTopic}". Lắng nghe và đánh giá tự nhiên. ${promptKienNhan} ${contextInstruction}`;
         }
   };
 
   // =========================================================================================
-  // 🚀 LÕI WEBSOCKET 3.1 LIVE SIÊU ĐỈNH (QUAY LẠI BẢN XỊN NHẤT NHƯNG CHỈ GỬI TEXT)
+  // 🚀 KẾT NỐI WEBSOCKET VOICE.TONYENGLISH.VN VÀ MỞ LUỒNG MIC
   // =========================================================================================
   const startSession = async () => {
       setStatus('CONNECTING');
       setMessages([]);
-      setCurrentDraft('');
       transcriptRef.current = '';
       setLiveTranscript('');
+      isMicOpenRef.current = false;
+      isSetupCompleteRef.current = false;
+      callStartTimeRef.current = Date.now();
+      
       if (!isBlackboardMode) onMinimize();
 
-      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-      audioCtxOutputRef.current = new AudioContextClass({ sampleRate: 24000 });
-      if (audioCtxOutputRef.current.state === 'suspended') await audioCtxOutputRef.current.resume();
-      nextPlayTimeRef.current = audioCtxOutputRef.current.currentTime;
-
-      const wsUrl = 'wss://voice.tonyenglish.vn';
-      const ws = new WebSocket(wsUrl);
-      wsRef.current = ws;
-
-      ws.onopen = () => {
-          setStatus('CONNECTED');
-          const voiceName = examiner === 'TONY' ? 'Charon' : 'Kore';
-          const sysPrompt = buildSystemPrompt();
+      try {
+          // 1. CHUẨN BỊ MIC & AUDIO CONTEXT
+          streamRef.current = await navigator.mediaDevices.getUserMedia({ audio: true });
+          const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+          audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
+          audioCtxOutputRef.current = new AudioContextClass({ sampleRate: 24000 });
           
-          ws.send(JSON.stringify({
-              setup: {
-                  model: "models/gemini-3.1-flash-live-preview",
-                  generationConfig: { 
-                      responseModalities: ["AUDIO"], 
-                      speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } 
-                  },
-                  systemInstruction: { parts: [{ text: sysPrompt }] }
-              }
-          }));
-      };
+          if (audioCtxInputRef.current.state === 'suspended') await audioCtxInputRef.current.resume();
+          if (audioCtxOutputRef.current.state === 'suspended') await audioCtxOutputRef.current.resume();
+          nextPlayTimeRef.current = audioCtxOutputRef.current.currentTime;
 
-      ws.onmessage = async (event) => {
-          try {
-              let rawData = event.data;
-              if (rawData instanceof Blob) rawData = await rawData.text();
-              const msg = JSON.parse(rawData);
+          // 2. KẾT NỐI WEBSOCKET
+          const wsUrl = 'wss://voice.tonyenglish.vn';
+          const ws = new WebSocket(wsUrl);
+          wsRef.current = ws;
+
+          ws.onopen = () => {
+              setStatus('CONNECTED');
+              const voiceName = examiner === 'TONY' ? 'Charon' : 'Kore';
+              const sysPrompt = buildSystemPrompt();
               
-              if (msg.setupComplete) {
-                  ws.send(JSON.stringify({ 
-                      clientContent: { 
-                          turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa bước vào lớp. Hãy cất tiếng chào và giới thiệu bản thân." }] }], 
-                          turnComplete: true 
-                      } 
-                  }));
-                  return;
-              }
-              
-              if (msg.serverContent?.modelTurn?.parts) {
-                  for (let part of msg.serverContent.modelTurn.parts) {
-                      if (part.text) {
-                          transcriptRef.current += part.text;
+              ws.send(JSON.stringify({
+                  setup: {
+                      model: "models/gemini-3.1-flash-live-preview",
+                      generationConfig: { 
+                          responseModalities: ["AUDIO"], 
+                          speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } 
+                      },
+                      systemInstruction: { parts: [{ text: sysPrompt }] }
+                  }
+              }));
+
+              // 3. THIẾT LẬP BỘ LỌC ÂM THANH (VAN BỘ ĐÀM)
+              sourceNodeRef.current = audioCtxInputRef.current!.createMediaStreamSource(streamRef.current!);
+              processorNodeRef.current = audioCtxInputRef.current!.createScriptProcessor(4096, 1, 1);
+
+              processorNodeRef.current.onaudioprocess = (e) => {
+                  // 🚨 KHÔI PHỤC KEY "audio" THEO CHUẨN GỐC CỦA ANH
+                  if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN && isSetupCompleteRef.current && isMicOpenRef.current) {
+                      const inputData = e.inputBuffer.getChannelData(0);
+                      const pcm16Buffer = floatTo16BitPCM(inputData);
+                      wsRef.current.send(JSON.stringify({
+                          realtimeInput: {
+                              audio: { // Chìa khóa ở đây ạ!
+                                  mimeType: "audio/pcm;rate=16000",
+                                  data: arrayBufferToBase64(pcm16Buffer)
+                              }
+                          }
+                      }));
+                  }
+              };
+
+              sourceNodeRef.current.connect(processorNodeRef.current);
+              processorNodeRef.current.connect(audioCtxInputRef.current!.destination);
+          };
+
+          ws.onmessage = async (event) => {
+              try {
+                  let rawData = event.data;
+                  if (rawData instanceof Blob) rawData = await rawData.text();
+                  const msg = JSON.parse(rawData);
+                  
+                  if (msg.setupComplete) {
+                      isSetupCompleteRef.current = true;
+                      ws.send(JSON.stringify({ 
+                          clientContent: { 
+                              turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa bước vào lớp. Hãy cất tiếng chào, giới thiệu bản thân." }] }], 
+                              turnComplete: true 
+                          } 
+                      }));
+                      return;
+                  }
+                  
+                  // 🚨 KHÔI PHỤC HÀM "BÓC CHỮ" THẦN THÁNH BẢN GỐC
+                  if (msg.serverContent || msg.response) {
+                      const extractText = (obj: any): string => {
+                          let res = "";
+                          if (!obj) return res;
+                          if (Array.isArray(obj)) {
+                              obj.forEach(item => res += extractText(item));
+                          } else if (typeof obj === 'object') {
+                              if (obj.type === 'response.audio.delta' || obj.type === 'audio') return res;
+                              for (const [key, value] of Object.entries(obj)) {
+                                  if ((key === 'text' || key === 'transcript' || (key === 'delta' && obj.type === 'response.audio_transcript.delta')) && typeof value === 'string') {
+                                      res += value;
+                                  } else if (key !== 'inlineData' && key !== 'audio' && key !== 'mediaChunks' && key !== 'pcm') {
+                                      res += extractText(value);
+                                  }
+                              }
+                          }
+                          return res;
+                      };
+                      
+                      const foundText = extractText(msg);
+                      if (foundText) {
+                          transcriptRef.current += foundText;
                           setLiveTranscript(transcriptRef.current);
                       }
-                      if (part.inlineData?.data) {
-                          playAIAudio(part.inlineData.data);
+
+                      if (msg.serverContent?.modelTurn?.parts) {
+                          for (let part of msg.serverContent.modelTurn.parts) {
+                              if (part.inlineData?.data) {
+                                  playAIAudio(part.inlineData.data);
+                              }
+                          }
                       }
                   }
-              }
 
-              if (msg.serverContent?.turnComplete) {
-                  if (transcriptRef.current) {
-                      setMessages(prev => [...prev, { role: 'model', text: transcriptRef.current }]);
-                      transcriptRef.current = '';
-                      setLiveTranscript('');
+                  if (msg.serverContent?.turnComplete) {
+                      if (transcriptRef.current) {
+                          setMessages(prev => [...prev, { role: 'model', text: transcriptRef.current }]);
+                          transcriptRef.current = '';
+                          setLiveTranscript('');
+                      }
+                      setIsProcessing(false);
+                      setIsSpeaking(false);
                   }
-                  setIsProcessing(false);
-              }
-          } catch (e) {}
-      };
+              } catch (e) {}
+          };
 
-      ws.onclose = () => {
+          ws.onclose = () => { setStatus('IDLE'); };
+      } catch (e) {
+          alert("Lỗi: Không thể truy cập Micro. Vui lòng cấp quyền cho trình duyệt.");
           setStatus('IDLE');
-      };
+      }
   };
 
   const playAIAudio = (base64Audio: string) => {
@@ -267,55 +348,61 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
       setIsSpeaking(false);
   };
 
+  // =========================================================================================
+  // 🎙️ ĐIỀU KHIỂN VAN BỘ ĐÀM (PUSH-TO-TALK LÊN WEBSOCKET)
+  // =========================================================================================
   const handleToggleRecording = () => {
       if (isSpeaking) stopAIAudio(); 
+      
       if (isRecording) {
-          recognitionRef.current?.stop();
+          // BẤM NÚT "XONG": ĐÓNG VAN & GỬI LỆNH CHỐT
+          isMicOpenRef.current = false;
           setIsRecording(false);
-          if (currentDraft.trim()) {
-              sendTextToAI(currentDraft.trim());
+          setIsProcessing(true);
+          
+          try { recognitionRef.current?.stop(); } catch(e) {}
+
+          if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+              const userTextHistory = currentDraft.trim() || "(Đã gửi đoạn hội thoại âm thanh)";
+              setMessages(prev => [...prev, { role: 'user', text: userTextHistory }]);
               setCurrentDraft('');
+
+              let finalParts: any[] = [];
+              if (pendingImageRef.current) {
+                  finalParts.push({ inlineData: { mimeType: "image/jpeg", data: pendingImageRef.current } });
+                  finalParts.push({ text: "[HỆ THỐNG]: Học sinh vừa nói xong và có lật sách. Hãy phân tích ảnh đính kèm và phản hồi đoạn âm thanh trên." });
+                  pendingImageRef.current = null;
+              } else {
+                  finalParts.push({ text: "[HỆ THỐNG]: Học sinh vừa nói xong. Hãy phản hồi." });
+              }
+
+              wsRef.current.send(JSON.stringify({
+                  clientContent: { turns: [{ role: "user", parts: finalParts }], turnComplete: true }
+              }));
           }
       } else {
-          setCurrentDraft('');
-          try {
-              recognitionRef.current?.start();
+          // BẤM NÚT "NHẤN NÓI": MỞ VAN CHO ÂM THANH CHẢY LÊN WEBSOCKET
+          if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+              setCurrentDraft('');
+              isMicOpenRef.current = true;
               setIsRecording(true);
-          } catch (e) { alert("Không thể khởi động Micro. Vui lòng cấp quyền cho trình duyệt."); }
-      }
-  };
-
-  const sendTextToAI = (userText: string) => {
-      setIsProcessing(true);
-      const newHistory = [...messages];
-      if (!userText.includes("[HỆ THỐNG]")) {
-          newHistory.push({ role: 'user', text: userText });
-          setMessages(newHistory);
-      }
-
-      if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-          let finalPrompt = userText;
-          const parts: any[] = [];
-          if (pendingImageRef.current) {
-              parts.push({ inlineData: { mimeType: "image/jpeg", data: pendingImageRef.current } });
-              finalPrompt += "\n[HỆ THỐNG]: Học sinh vừa lật sách. Hãy mở mắt phân tích ảnh tôi đính kèm.";
-              pendingImageRef.current = null;
+              try { recognitionRef.current?.start(); } catch(e) {}
+          } else {
+              alert("Kết nối đang bị gián đoạn, vui lòng chờ...");
           }
-          parts.push({ text: finalPrompt });
-
-          wsRef.current.send(JSON.stringify({
-              clientContent: { turns: [{ role: "user", parts: parts }], turnComplete: true }
-          }));
-      } else {
-          setMessages(prev => [...prev, { role: 'model', text: "Lỗi kết nối mạng, đang thử lại..." }]);
-          setIsProcessing(false);
       }
   };
 
   const stopCall = () => {
-    stopAIAudio();
-    if (recognitionRef.current) recognitionRef.current.stop();
+    isMicOpenRef.current = false;
+    if (processorNodeRef.current) processorNodeRef.current.disconnect();
+    if (sourceNodeRef.current) sourceNodeRef.current.disconnect();
+    if (streamRef.current) streamRef.current.getTracks().forEach(t => t.stop());
     if (wsRef.current) wsRef.current.close();
+    
+    if (audioCtxInputRef.current && audioCtxInputRef.current.state !== 'closed') audioCtxInputRef.current.close();
+    if (audioCtxOutputRef.current && audioCtxOutputRef.current.state !== 'closed') audioCtxOutputRef.current.close();
+    
     setStatus('IDLE'); setIsRecording(false);
   };
 
@@ -337,7 +424,7 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
                  <div className="flex justify-between items-center">
                     <div className="flex items-center gap-2.5 cursor-pointer flex-1 min-w-0" onClick={onMaximize}>
                        <div className={`w-3 h-3 shrink-0 rounded-full ${isRecording ? 'bg-red-500 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.8)]' : (isSpeaking ? 'bg-sky-500 animate-pulse shadow-[0_0_10px_rgba(14,165,233,0.8)]' : (isProcessing ? 'bg-amber-500 animate-pulse' : 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]'))}`}></div>
-                       <span className="text-white font-semibold text-[13px] truncate">{isRecording ? 'Đang thu âm...' : (isProcessing ? 'AI đang nghĩ...' : (isSpeaking ? 'Thầy cô đang nói...' : 'Sẵn sàng...'))}</span>
+                       <span className="text-white font-semibold text-[13px] truncate">{isRecording ? 'Đang truyền trực tiếp...' : (isProcessing ? 'AI đang phân tích...' : (isSpeaking ? 'Thầy cô đang nói...' : 'Sẵn sàng...'))}</span>
                     </div>
                     <button onClick={onMaximize} className="text-slate-400 hover:text-white w-8 h-8 flex items-center justify-center bg-slate-800 rounded-full shrink-0 ml-2 border border-slate-600 shadow-sm transition-colors" title="Phóng to">↗️</button>
                  </div>
@@ -379,7 +466,7 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
                   <div className="m-auto text-center animate-in zoom-in-95 max-w-sm w-full bg-slate-900/80 p-8 rounded-[2rem] border border-slate-700/50 backdrop-blur-md shadow-2xl">
                      <div className="w-20 h-20 bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 rounded-full flex items-center justify-center text-4xl shadow-lg border border-white/20 mx-auto mb-6">👨‍🏫</div>
                      <h3 className="text-xl font-black text-white mb-2 tracking-tight">Học Phần Gia Sư</h3>
-                     <p className="text-[13px] text-slate-400 mb-8 font-medium">Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại (Chế độ Bộ đàm tiết kiệm).</p>
+                     <p className="text-[13px] text-slate-400 mb-8 font-medium">Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại (Truyền âm qua WebSocket).</p>
                      <div className="flex justify-center gap-4 mb-8">
                         <button onClick={() => setExaminer('TONY')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100'}`}><span className="text-3xl drop-shadow-md">👨‍🏫</span><span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Thầy Tôn</span></button>
                         <button onClick={() => setExaminer('DIEP')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100'}`}><span className="text-3xl drop-shadow-md">👩‍🏫</span><span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'DIEP' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Cô Diệp</span></button>
@@ -397,7 +484,7 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
 
               {status === 'CONNECTED' && (
                   <div className="tony-chalkboard-content flex-1 w-full text-left pb-32">
-                      {messages.length === 0 && !currentDraft && !liveTranscript ? (
+                      {messages.length === 0 && !isRecording && !liveTranscript ? (
                           <div className="h-full flex flex-col items-center justify-center text-center opacity-30 italic text-slate-400" style={{fontFamily: 'sans-serif'}}>
                               <span className="text-4xl mb-4 grayscale">🎙️</span><span className="text-[15px] font-medium">Bảng đen trống.<br/>Nhấn nút bên dưới để bắt đầu nói.</span>
                           </div>
@@ -405,7 +492,7 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
                           <>
                              {messages.map((m, i) => (
                                  <div key={i} className={`mb-6 p-4 rounded-xl ${m.role === 'user' ? 'bg-white/5 border border-white/10 text-sky-200' : 'text-white'}`}>
-                                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">{m.role === 'user' ? 'Em hỏi:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')}</strong>
+                                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">{m.role === 'user' ? 'Em nói:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')}</strong>
                                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
                                  </div>
                              ))}
@@ -415,12 +502,12 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
                                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
                                  </div>
                              )}
-                             {currentDraft && (
+                             {isRecording && currentDraft && (
                                  <div className="mb-6 p-4 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
                                      <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">Đang ghi âm...</strong>{currentDraft}
                                  </div>
                              )}
-                             {isProcessing && !liveTranscript && <div className="text-amber-300 italic animate-pulse">Thầy cô đang phân tích và viết bảng...</div>}
+                             {isProcessing && !liveTranscript && <div className="text-amber-300 italic animate-pulse font-sans">Thầy cô đang phân tích giọng và viết bảng...</div>}
                              <div ref={messagesEndRef} />
                           </>
                       )}
@@ -433,7 +520,7 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
                     <div className="bg-slate-900/95 backdrop-blur-md border border-slate-700/80 rounded-full py-2 px-3 flex items-center justify-between gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
                         <div className="flex-1">
                             <button onClick={handleToggleRecording} disabled={isProcessing} className={`w-full py-2.5 rounded-full font-bold text-xs uppercase tracking-widest transition-all disabled:opacity-50 shadow-md ${isRecording ? 'bg-red-500 text-white shadow-red-500/50' : (isSpeaking ? 'bg-sky-500 text-white' : 'bg-[#0ea5e9] text-white hover:bg-sky-500')}`}>
-                                {isRecording ? '⏹️ Xong. Gửi câu hỏi' : (isSpeaking ? '⏹️ Ngắt lời Thầy/Cô' : '🎙️ Nhấn để hỏi bài')}
+                                {isRecording ? '⏹️ Xong. Phân tích đi' : (isSpeaking ? '⏹️ Ngắt lời Thầy/Cô' : '🎙️ Nhấn để hỏi bài')}
                             </button>
                         </div>
                         <button onClick={handleUserHangUp} className="w-10 h-10 bg-red-500/20 hover:bg-red-500 text-red-500 hover:text-white rounded-full flex items-center justify-center transition-all active:scale-95 border border-red-500/50" title="Kết thúc đàm thoại">❌</button>
@@ -508,15 +595,15 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
             </div>
             
             <p className={`shrink-0 font-black mb-6 tracking-widest uppercase text-[10px] md:text-[11px] px-4 py-1.5 rounded-full border shadow-sm transition-colors ${isRecording ? 'bg-red-50 text-red-600 border-red-200' : (isSpeaking ? 'bg-sky-50 text-[#0ea5e9] border-sky-200 animate-pulse' : 'bg-slate-50 text-slate-500 border-slate-200')}`}>
-                {isRecording ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : (isProcessing && !liveTranscript ? "🧠 AI ĐANG SUY NGHĨ..." : (isSpeaking || liveTranscript ? "🟢 THẦY CÔ ĐANG NÓI..." : "⏳ SẴN SÀNG LƯỢT TIẾP THEO"))}
+                {isRecording ? "🔴 ĐANG THU ÂM TRỰC TIẾP" : (isProcessing && !liveTranscript ? "🧠 AI ĐANG SUY NGHĨ..." : (isSpeaking || liveTranscript ? "🟢 THẦY CÔ ĐANG NÓI..." : "⏳ SẴN SÀNG LƯỢT TIẾP THEO"))}
             </p>
             
             <div className="bg-slate-50 rounded-2xl p-5 md:p-6 w-full text-left h-32 md:h-48 overflow-y-auto mb-8 border border-slate-200 shadow-inner custom-scrollbar flex-1 min-h-[140px]">
-               {messages.length > 0 || currentDraft || liveTranscript ? (
+               {messages.length > 0 || isRecording || liveTranscript ? (
                   <div className="prose prose-slate prose-sm max-w-none font-medium text-slate-700 leading-relaxed space-y-4">
                       {messages.map((m, i) => (
                           <div key={i} className={`p-3 rounded-lg ${m.role === 'user' ? 'bg-blue-50 text-blue-900 border border-blue-100' : 'bg-white border border-slate-200'}`}>
-                              <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">{m.role === 'user' ? 'Em nói:' : 'Giám khảo:'}</strong>
+                              <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">{m.role === 'user' ? 'Ghi âm của em:' : 'Giám khảo:'}</strong>
                               <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
                           </div>
                       ))}
@@ -526,7 +613,7 @@ export default function LiveSpeakingTest({ viewState, onMinimize, onMaximize, on
                               <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
                           </div>
                       )}
-                      {currentDraft && (
+                      {isRecording && currentDraft && (
                           <div className="p-3 rounded-lg bg-blue-50/50 text-blue-900 border border-blue-100/50 border-dashed animate-pulse">
                               <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">Đang ghi âm...</strong>{currentDraft}
                           </div>
