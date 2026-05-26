@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { supabase } from './supabase';
 import './tailwind.css';
+import ReactMarkdown from 'react-markdown';
 
 // =========================================================================================
 // BỘ ICON CHUẨN IDP
@@ -35,31 +36,9 @@ const TrashIcon = () => (
   </svg>
 );
 
-// === HÀM HỖ TRỢ XỬ LÝ ÂM THANH LIVE ===
-const floatTo16BitPCM = (float32Array: Float32Array) => {
-  const buffer = new ArrayBuffer(float32Array.length * 2);
-  const view = new DataView(buffer);
-  let offset = 0;
-  for (let i = 0; i < float32Array.length; i++, offset += 2) {
-    let s = Math.max(-1, Math.min(1, float32Array[i]));
-    view.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
-  }
-  return buffer;
-};
-
-const arrayBufferToBase64 = (buffer: ArrayBuffer) => {
-  let binary = '';
-  const bytes = new Uint8Array(buffer);
-  for (let i = 0; i < bytes.byteLength; i++) binary += String.fromCharCode(bytes[i]);
-  return window.btoa(binary);
-};
-
-const base64ToArrayBuffer = (base64: string) => {
-  const binary_string = window.atob(base64);
-  const len = binary_string.length;
-  const bytes = new Uint8Array(len);
-  for (let i = 0; i < len; i++) bytes[i] = binary_string.charCodeAt(i);
-  return bytes.buffer;
+type ChatMessage = {
+    role: 'user' | 'model';
+    text: string;
 };
 
 // =========================================================================================
@@ -77,37 +56,23 @@ export default function IeltsSpeaking({
   
   // 1. Tải dữ liệu bài test
   const [testData, setTestData] = useState<any>(() => {
-     if (propTestData) {
-         return propTestData;
-     }
+     if (propTestData) return propTestData;
      try {
        const saved = sessionStorage.getItem('lms_current_test');
-       if (saved) {
-           return JSON.parse(saved);
-       }
+       if (saved) return JSON.parse(saved);
        return null;
-     } catch (e) { 
-         return null; 
-     }
+     } catch (e) { return null; }
   });
 
   // 2. Xử lý an toàn dữ liệu JSON
   let safeData = testData || {};
   if (typeof safeData === 'string') {
-    try { 
-        safeData = JSON.parse(safeData); 
-    } catch (e) { 
-        safeData = {}; 
-    }
+    try { safeData = JSON.parse(safeData); } catch (e) { safeData = {}; }
   }
 
   let contentJSON = safeData?.content_json || safeData || {};
   if (typeof contentJSON === 'string') {
-    try { 
-        contentJSON = JSON.parse(contentJSON); 
-    } catch (e) { 
-        contentJSON = {}; 
-    }
+    try { contentJSON = JSON.parse(contentJSON); } catch (e) { contentJSON = {}; }
   }
 
   const basicInfo = contentJSON?.basicInfo || { title: "IELTS Speaking", timeLimit: "15" };
@@ -124,7 +89,6 @@ export default function IeltsSpeaking({
             s.questions.forEach((q: any, qIdx: number) => {
               if (q) {
                 let maxTime = 60; // Mặc định Part 1 / Part 3 là 60s
-                
                 const titleToCheck = ((p.title || '') + ' ' + (s.title || '')).toLowerCase();
                 
                 if (titleToCheck.includes('part 2') || titleToCheck.includes('cue card')) {
@@ -162,27 +126,22 @@ export default function IeltsSpeaking({
   const [audioUrls, setAudioUrls] = useState<Record<string, string>>({}); 
   const [reviewFlags, setReviewFlags] = useState<Record<number, boolean>>({});
 
-  // 🚀 TRẠNG THÁI GỌI ĐIỆN LIVE VỚI AI
-  const [liveStatus, setLiveStatus] = useState<'IDLE' | 'CONNECTING' | 'CONNECTED'>('IDLE');
-  const [liveTranscript, setLiveTranscript] = useState<string>('');
-  const [isMicSending, setIsMicSending] = useState(false);
+  // 🚀 TRẠNG THÁI GỌI ĐIỆN BỘ ĐÀM (TURN-BY-TURN)
+  const [liveStatus, setLiveStatus] = useState<'IDLE' | 'CONNECTED'>('IDLE');
+  const [isRecording, setIsRecording] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [currentDraft, setCurrentDraft] = useState<string>('');
   const [recordingTime, setRecordingTime] = useState(0);
 
-  const wsRef = useRef<WebSocket | null>(null);
-  const audioCtxInputRef = useRef<AudioContext | null>(null);
-  const audioCtxOutputRef = useRef<AudioContext | null>(null);
-  const streamRef = useRef<MediaStream | null>(null);
-  const nextPlayTimeRef = useRef<number>(0);
-  const isSetupCompleteRef = useRef<boolean>(false);
-  
-  // 🚀 GHIM BỘ NHỚ CHỐNG GARBAGE COLLECTION CHO AUDIO NODE
-  const sourceNodeRef = useRef<MediaStreamAudioSourceNode | null>(null);
-  const processorNodeRef = useRef<ScriptProcessorNode | null>(null);
-  const gainNodeRef = useRef<GainNode | null>(null);
-
+  const recognitionRef = useRef<any>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
+  const streamRef = useRef<MediaStream | null>(null);
   const timerRef = useRef<any>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   
   const [isGrading, setIsGrading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -208,6 +167,44 @@ export default function IeltsSpeaking({
     return () => stopLiveCall();
   }, []);
 
+  // Cuộn xuống cuối khi có tin nhắn mới trong khung Transcript
+  useEffect(() => {
+    if (messagesEndRef.current) messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, currentDraft]);
+
+  // Khởi tạo Web Speech API & TTS
+  useEffect(() => {
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      if (SpeechRecognition) {
+          const recognition = new SpeechRecognition();
+          recognition.continuous = true;
+          recognition.interimResults = true;
+          recognition.lang = 'en-GB'; // Chuẩn IELTS
+          
+          recognition.onresult = (event: any) => {
+              let final = '';
+              for (let i = event.resultIndex; i < event.results.length; ++i) {
+                  if (event.results[i].isFinal) final += event.results[i][0].transcript;
+              }
+              if (final) setCurrentDraft(prev => prev + final + ' ');
+              else setCurrentDraft(event.results[event.results.length - 1][0].transcript);
+          };
+
+          recognition.onerror = (event: any) => { console.warn("Mic error", event.error); setIsRecording(false); };
+          recognition.onend = () => setIsRecording(false);
+          recognitionRef.current = recognition;
+      }
+
+      const loadVoices = () => { window.speechSynthesis.getVoices(); };
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+
+      return () => {
+          if (recognitionRef.current) recognitionRef.current.stop();
+          window.speechSynthesis.cancel();
+      };
+  }, []);
+
   const formatTime = (secs: number) => {
     if (isNaN(secs)) return '00:00';
     const m = Math.floor(secs / 60).toString().padStart(2, '0');
@@ -222,185 +219,144 @@ export default function IeltsSpeaking({
   };
 
   // =========================================================================================
-  // LOGIC LIVE CALL VÀ THU ÂM KÉP (MEDIA RECORDER + GEMINI WEBSOCKET)
+  // LOGIC BỘ ĐÀM (TURN-BY-TURN PUSH TO TALK) KẾT HỢP LƯU BÀI
   // =========================================================================================
   const startLiveCall = async () => {
     if (!currentQ?.id) return;
-    
-    try {
-      setLiveStatus('CONNECTING');
-      isSetupCompleteRef.current = false;
-      setIsMicSending(false);
-      setLiveTranscript('');
-      setRecordingTime(0);
+    setLiveStatus('CONNECTED');
+    setMessages([]);
+    setCurrentDraft('');
+    setRecordingTime(0);
 
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      streamRef.current = stream;
-
-      // 1. CHẠY THU ÂM NGẦM BẰNG MEDIA RECORDER
-      const mediaRecorder = new MediaRecorder(stream);
-      mediaRecorderRef.current = mediaRecorder;
-      audioChunksRef.current = [];
-
-      mediaRecorder.ondataavailable = (event) => {
-        if (event.data.size > 0) audioChunksRef.current.push(event.data);
-      };
-
-      mediaRecorder.onstop = () => {
-        const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
-        const audioUrl = URL.createObjectURL(audioBlob);
-        setRecordedBlobs(prev => ({ ...prev, [currentQ.id]: [audioBlob] }));
-        setAudioUrls(prev => ({ ...prev, [currentQ.id]: audioUrl }));
-      };
-
-      mediaRecorder.start();
-
-      timerRef.current = setInterval(() => {
-        setRecordingTime(prev => {
-           if (prev >= currentQ.maxTime - 1) {
-              stopLiveCall(); // Hết giờ thì ngắt
-              return currentQ.maxTime;
-           }
-           return prev + 1;
-        });
-      }, 1000);
-
-      // 2. MỞ LUỒNG TRỰC TIẾP VỚI GEMINI AI
-      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-      audioCtxInputRef.current = new AudioContextClass({ sampleRate: 16000 });
-      audioCtxOutputRef.current = new AudioContextClass({ sampleRate: 24000 });
-      
-      if (audioCtxInputRef.current.state === 'suspended') await audioCtxInputRef.current.resume();
-      if (audioCtxOutputRef.current.state === 'suspended') await audioCtxOutputRef.current.resume();
-      
-      nextPlayTimeRef.current = audioCtxOutputRef.current.currentTime;
-
-      const wsUrl = 'wss://ubkvzgwespfvrlpjuxkp.supabase.co/functions/v1/live-speaking';
-      const ws = new WebSocket(wsUrl);
-      wsRef.current = ws;
-
-      ws.onopen = async () => {
-        setLiveStatus('CONNECTED');
-        
-        const plainQuestion = currentQ.content ? currentQ.content.replace(/<[^>]+>/g, '') : "Please ask me an IELTS speaking question.";
-        const setupMsg = {
-          setup: {
-            model: "models/gemini-3.1-flash-live-preview",
-            generationConfig: {
-              responseModalities: ["AUDIO"],
-              speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: "Puck" } } }
-            },
-            systemInstruction: {
-              parts: [{ text: `Bạn là giám khảo IELTS tên Tony đến từ nước Anh. Hãy đóng vai giám khảo và hỏi tôi câu hỏi sau đây. Trả lời cực kỳ ngắn gọn và tự nhiên như đang giao tiếp. Câu hỏi: ${plainQuestion}` }]
-            }
-          }
-        };
-        ws.send(JSON.stringify(setupMsg));
-        
-        // Gán vào Ref để chống Garbage Collection
-        sourceNodeRef.current = audioCtxInputRef.current!.createMediaStreamSource(stream);
-        processorNodeRef.current = audioCtxInputRef.current!.createScriptProcessor(4096, 1, 1);
-        gainNodeRef.current = audioCtxInputRef.current!.createGain();
-        gainNodeRef.current.gain.value = 0;
-
-        let chunkCounter = 0;
-        processorNodeRef.current.onaudioprocess = (e) => {
-          if (ws.readyState === WebSocket.OPEN && isSetupCompleteRef.current) {
-            const inputData = e.inputBuffer.getChannelData(0);
-            const pcm16Buffer = floatTo16BitPCM(inputData);
-            const base64Audio = arrayBufferToBase64(pcm16Buffer);
-            
-            ws.send(JSON.stringify({
-              realtimeInput: { audio: { mimeType: "audio/pcm;rate=16000", data: base64Audio } }
-            }));
-
-            chunkCounter++;
-            if (chunkCounter % 5 === 0) setIsMicSending(prev => !prev);
-          }
-        };
-
-        sourceNodeRef.current.connect(processorNodeRef.current);
-        processorNodeRef.current.connect(gainNodeRef.current);
-        gainNodeRef.current.connect(audioCtxInputRef.current!.destination);
-      };
-
-      ws.onmessage = async (event) => {
-        try {
-          let rawData = event.data;
-          if (rawData instanceof Blob) rawData = await rawData.text();
-          const msg = JSON.parse(rawData);
-          
-          if (msg.error) {
-             console.error("🚨 LỖI:", msg.error);
-             stopLiveCall();
-             return;
-          }
-
-          if (msg.setupComplete) {
-             isSetupCompleteRef.current = true;
-             const kickoffMsg = { realtimeInput: { text: "Hello, I am ready. Please ask me the question." } };
-             ws.send(JSON.stringify(kickoffMsg));
-             return;
-          }
-          
-          if (msg.serverContent?.modelTurn?.parts) {
-             const parts = msg.serverContent.modelTurn.parts;
-             for (let part of parts) {
-                if (part.text) setLiveTranscript(prev => prev + " " + part.text);
-                if (part.inlineData && part.inlineData.data) playAIAudio(part.inlineData.data);
-             }
-          }
-        } catch (error) {}
-      };
-
-      ws.onclose = () => stopLiveCall();
-
-    } catch (err) {
-      alert("System Error: Unable to access microphone. Please check your browser permissions.");
-      setLiveStatus('IDLE');
-    }
+    const plainQuestion = currentQ.content ? currentQ.content.replace(/<[^>]+>/g, '') : "Please ask me an IELTS speaking question.";
+    await sendTextToAI(`[HỆ THỐNG]: Đóng vai giám khảo IELTS (tên Tony, người Anh). Hãy bắt đầu bằng cách hỏi thí sinh câu sau một cách tự nhiên (KHÔNG dịch sang tiếng Việt): "${plainQuestion}"`);
   };
 
-  const playAIAudio = (base64Audio: string) => {
-    if (!audioCtxOutputRef.current) return;
-    const ctx = audioCtxOutputRef.current;
-    if (ctx.state === 'suspended') ctx.resume();
-    
-    const pcmBuffer = base64ToArrayBuffer(base64Audio);
-    const int16Array = new Int16Array(pcmBuffer);
-    const float32Array = new Float32Array(int16Array.length);
-    for (let i = 0; i < int16Array.length; i++) float32Array[i] = int16Array[i] / 32768.0;
+  const handleToggleRecording = async () => {
+      if (isSpeaking) {
+          window.speechSynthesis.cancel();
+          setIsSpeaking(false);
+      }
 
-    const audioBuffer = ctx.createBuffer(1, float32Array.length, 24000);
-    audioBuffer.getChannelData(0).set(float32Array);
+      if (isRecording) {
+          // 🛑 TẮT THU ÂM
+          recognitionRef.current?.stop();
+          if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+              mediaRecorderRef.current.stop();
+          }
+          setIsRecording(false);
+          clearInterval(timerRef.current);
+          
+          if (currentDraft.trim()) {
+              sendTextToAI(currentDraft.trim());
+              setCurrentDraft('');
+          }
+      } else {
+          // 🎙️ BẬT THU ÂM
+          setCurrentDraft('');
+          setRecordingTime(0);
+          try {
+              const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+              streamRef.current = stream;
+              
+              const mediaRecorder = new MediaRecorder(stream);
+              mediaRecorderRef.current = mediaRecorder;
+              audioChunksRef.current = [];
+              
+              mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunksRef.current.push(e.data); };
+              mediaRecorder.onstop = () => {
+                  const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/webm' });
+                  const audioUrl = URL.createObjectURL(audioBlob);
+                  // Lưu đè bài thu âm cuối cùng cho câu hỏi này
+                  setRecordedBlobs(prev => ({ ...prev, [currentQ.id]: [audioBlob] }));
+                  setAudioUrls(prev => ({ ...prev, [currentQ.id]: audioUrl }));
+              };
+              
+              mediaRecorder.start();
+              recognitionRef.current?.start();
+              setIsRecording(true);
+              
+              timerRef.current = setInterval(() => {
+                  setRecordingTime(prev => {
+                      if (prev >= currentQ.maxTime - 1) {
+                          handleToggleRecording();
+                          return currentQ.maxTime;
+                      }
+                      return prev + 1;
+                  });
+              }, 1000);
+          } catch (e) {
+              alert("Không thể khởi động Micro. Vui lòng cấp quyền sử dụng Micro cho trình duyệt.");
+          }
+      }
+  };
 
-    const sourceNode = ctx.createBufferSource();
-    sourceNode.buffer = audioBuffer;
-    sourceNode.connect(ctx.destination);
+  const sendTextToAI = async (userText: string) => {
+      setIsProcessing(true);
+      const newHistory = [...messages];
+      if (!userText.includes("[HỆ THỐNG]")) {
+          newHistory.push({ role: 'user', text: userText });
+          setMessages(newHistory);
+      }
 
-    const playTime = Math.max(ctx.currentTime, nextPlayTimeRef.current);
-    sourceNode.start(playTime);
-    nextPlayTimeRef.current = playTime + audioBuffer.duration;
+      try {
+          const sysPrompt = `Bạn là giám khảo IELTS tên Tony đến từ Anh. Giao tiếp cực kỳ ngắn gọn, tự nhiên như đang thi thật. Chỉ hỏi 1 câu mỗi lượt. Đợi thí sinh trả lời xong mới đánh giá ngắn và hỏi câu tiếp. BẮT BUỘC dùng tiếng Anh 100%. Phần thi hiện tại: ${currentQ.partTitle}.`;
+          
+          const { data, error } = await supabase.functions.invoke('omni-ai-grader', {
+              body: {
+                  prompt: userText,
+                  systemInstruction: sysPrompt,
+                  history: newHistory.filter(m => !m.text.includes("[HỆ THỐNG]"))
+              }
+          });
+
+          let aiResponseText = "I'm sorry, my connection is unstable. Could you repeat that?";
+          if (!error && data) {
+              aiResponseText = data.text || data.reply || data.response || aiResponseText;
+          }
+
+          setMessages(prev => [...prev, { role: 'model', text: aiResponseText }]);
+          playTTS(aiResponseText);
+      } catch (err) {
+          const fallback = "System error, please try again.";
+          setMessages(prev => [...prev, { role: 'model', text: fallback }]);
+          playTTS(fallback);
+      } finally {
+          setIsProcessing(false);
+      }
+  };
+
+  const playTTS = (text: string) => {
+      if (!window.speechSynthesis) return;
+      window.speechSynthesis.cancel();
+      const cleanText = text.replace(/(\*\*|__|\*|_|`|#|>|~|-|\$)/g, '');
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.lang = 'en-GB'; 
+      utterance.rate = 1.0; 
+      
+      const voices = window.speechSynthesis.getVoices();
+      const ukVoices = voices.filter(v => v.lang.includes('en-GB'));
+      const maleVoice = ukVoices.find(v => v.name.toLowerCase().includes('male') || v.name.toLowerCase().includes('guy') || v.name.toLowerCase().includes('george') || v.name.toLowerCase().includes('arthur'));
+      utterance.voice = maleVoice || ukVoices[0] || voices[0];
+
+      utterance.onstart = () => setIsSpeaking(true);
+      utterance.onend = () => setIsSpeaking(false);
+      utterance.onerror = () => setIsSpeaking(false);
+      window.speechSynthesis.speak(utterance);
   };
 
   const stopLiveCall = () => {
+    window.speechSynthesis.cancel();
+    if (recognitionRef.current) recognitionRef.current.stop();
     if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
-      mediaRecorderRef.current.stop();
+        mediaRecorderRef.current.stop();
     }
-    if (wsRef.current) wsRef.current.close();
     if (streamRef.current) streamRef.current.getTracks().forEach(t => t.stop());
-    
-    if (sourceNodeRef.current) sourceNodeRef.current.disconnect();
-    if (processorNodeRef.current) processorNodeRef.current.disconnect();
-    if (gainNodeRef.current) gainNodeRef.current.disconnect();
-
-    if (audioCtxInputRef.current) audioCtxInputRef.current.close();
-    if (audioCtxOutputRef.current) audioCtxOutputRef.current.close();
+    clearInterval(timerRef.current);
     
     setLiveStatus('IDLE');
-    isSetupCompleteRef.current = false;
-    setIsMicSending(false);
-    clearInterval(timerRef.current);
+    setIsRecording(false);
+    setIsSpeaking(false);
   };
 
   const deleteRecording = () => {
@@ -417,7 +373,7 @@ export default function IeltsSpeaking({
     setRecordedBlobs(newBlobs);
     setAudioUrls(newUrls);
     setRecordingTime(0);
-    setLiveTranscript('');
+    setMessages([]);
   };
 
   // =========================================================================================
@@ -464,9 +420,7 @@ export default function IeltsSpeaking({
   // LOGIC NỘP BÀI CHẤM ĐIỂM (AI GRADER)
   // =========================================================================================
   const handleFinalSubmit = async () => {
-    if (liveStatus !== 'IDLE') {
-        stopLiveCall();
-    }
+    if (liveStatus !== 'IDLE') stopLiveCall();
     
     const answeredQuestions = Object.keys(recordedBlobs).length;
     if (answeredQuestions === 0) {
@@ -482,7 +436,6 @@ export default function IeltsSpeaking({
 
     try {
       const allChunks: Blob[] = [];
-      
       allQuestions.forEach(q => { 
           if (recordedBlobs[q.id]) {
               allChunks.push(...recordedBlobs[q.id]); 
@@ -531,12 +484,8 @@ export default function IeltsSpeaking({
         }
       });
 
-      if (error) {
-          throw new Error("Lỗi gọi Server: " + error.message);
-      }
-      if (data?.error) {
-          throw new Error("Lỗi chấm điểm AI: " + data.error);
-      }
+      if (error) throw new Error("Lỗi gọi Server: " + error.message);
+      if (data?.error) throw new Error("Lỗi chấm điểm AI: " + data.error);
 
       const textResponse = data.result.replace(/\u0060{3}(json)?/gi, "").trim();
       const parsedResult = JSON.parse(textResponse);
@@ -663,23 +612,41 @@ export default function IeltsSpeaking({
               
               <div className="flex-1 p-8 md:p-10 pb-0 flex flex-col gap-6 overflow-hidden">
                   
-                  {/* 🚀 KHUNG TRANSCRIPT LIVE: HIỆN LÊN KHI ĐANG GỌI */}
-                  {(liveStatus !== 'IDLE' || liveTranscript) && (
+                  {/* 🚀 KHUNG TRANSCRIPT LIVE BỘ ĐÀM */}
+                  {(liveStatus !== 'IDLE' || messages.length > 0) && (
                      <div className="flex-1 bg-slate-900 border border-slate-400 rounded-none flex flex-col overflow-hidden shadow-inner">
                         <div className="h-12 border-b border-slate-700 flex items-center px-4 gap-3 shrink-0 bg-slate-800">
-                           <div className={`w-2.5 h-2.5 rounded-full ${isMicSending ? 'bg-emerald-500 animate-pulse' : 'bg-slate-500'}`}></div>
+                           <div className={`w-2.5 h-2.5 rounded-full ${isRecording ? 'bg-red-500 animate-pulse' : (isSpeaking ? 'bg-emerald-500 animate-pulse' : 'bg-slate-500')}`}></div>
                            <span className="text-[12px] font-bold text-emerald-400 uppercase tracking-widest">
-                               {liveStatus === 'CONNECTING' ? 'Connecting...' : 'Live Interview Transcript'}
+                               {isRecording ? 'Recording...' : (isSpeaking ? 'AI is speaking...' : (isProcessing ? 'AI is thinking...' : 'Live Interview Transcript'))}
                            </span>
                         </div>
                         <div className="flex-1 p-6 overflow-y-auto custom-scrollbar text-[15px] text-slate-300 font-mono leading-[1.8]">
-                           {liveTranscript || <span className="opacity-50 italic">AI Examiner is listening...</span>}
+                           {messages.length === 0 && !currentDraft ? (
+                               <span className="opacity-50 italic">AI Examiner is listening...</span>
+                           ) : (
+                               <div className="space-y-4">
+                                  {messages.map((m, i) => (
+                                      <div key={i} className={`p-3 rounded-md ${m.role === 'user' ? 'bg-slate-800 text-sky-300' : 'bg-slate-700 text-white'}`}>
+                                         <strong className="block text-[10px] uppercase opacity-50 mb-1">{m.role === 'user' ? 'You:' : 'Examiner:'}</strong>
+                                         <ReactMarkdown>{m.text}</ReactMarkdown>
+                                      </div>
+                                  ))}
+                                  {currentDraft && (
+                                      <div className="p-3 rounded-md bg-slate-800 text-sky-300 border border-slate-600 animate-pulse">
+                                         <strong className="block text-[10px] uppercase opacity-50 mb-1">Recording...</strong>
+                                         {currentDraft}
+                                      </div>
+                                  )}
+                                  <div ref={messagesEndRef} />
+                               </div>
+                           )}
                         </div>
                      </div>
                   )}
 
-                  {/* KHUNG NOTES: TỰ THU GỌN KHI CÓ LIVE TRANSCRIPT */}
-                  <div className={`bg-white border border-slate-400 rounded-none flex flex-col overflow-hidden transition-all duration-300 ${liveStatus === 'IDLE' && !liveTranscript ? 'flex-1' : 'h-40 shrink-0'}`}>
+                  {/* KHUNG NOTES */}
+                  <div className={`bg-white border border-slate-400 rounded-none flex flex-col overflow-hidden transition-all duration-300 ${liveStatus === 'IDLE' && messages.length === 0 ? 'flex-1' : 'h-40 shrink-0'}`}>
                     <div className="h-12 border-b border-slate-300 flex items-center px-4 gap-2 shrink-0 bg-[#e0e0e0]">
                        <NoteIcon />
                        <span className="text-[13px] font-bold text-slate-800 uppercase tracking-widest">Notes</span>
@@ -694,10 +661,11 @@ export default function IeltsSpeaking({
                   </div>
               </div>
 
+              {/* BẢNG ĐIỀU KHIỂN GỌI/THU ÂM */}
               <div className="p-8 md:p-10 shrink-0">
                   <div className="h-[90px] bg-white border border-slate-400 rounded-none flex items-center justify-between px-6">
                       
-                      {audioUrls[currentQ.id] ? (
+                      {audioUrls[currentQ.id] && liveStatus === 'IDLE' ? (
                          <div className="flex items-center gap-4 w-full">
                             <button onClick={() => { const audio = new Audio(audioUrls[currentQ.id]); audio.play(); }} className="w-10 h-10 bg-slate-200 border border-slate-400 rounded-none flex items-center justify-center hover:bg-slate-300 text-black transition">
                                <PlayIcon />
@@ -711,24 +679,32 @@ export default function IeltsSpeaking({
                             </button>
                          </div>
                       ) : (
-                         <div className="flex items-center gap-6 w-full">
+                         <div className="flex items-center gap-4 w-full">
                             {liveStatus === 'IDLE' ? (
                                <button onClick={startLiveCall} className="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-none flex items-center gap-3 transition active:scale-95 text-[15px] shadow-lg shadow-emerald-500/20">
                                  📞 Bắt đầu gọi Giám khảo
                                </button>
-                            ) : liveStatus === 'CONNECTING' ? (
-                               <div className="text-emerald-600 font-bold animate-pulse flex items-center gap-2 text-[15px] px-4">
-                                  Đang kết nối...
-                               </div>
                             ) : (
-                               <button onClick={stopLiveCall} className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-none flex items-center gap-3 transition active:scale-95 text-[15px] shadow-lg shadow-red-500/20">
-                                 🛑 Kết thúc cuộc gọi
-                               </button>
+                               <>
+                                 <button 
+                                     onClick={handleToggleRecording} 
+                                     disabled={isProcessing}
+                                     className={`px-6 py-3 font-bold rounded-none flex items-center gap-2 transition active:scale-95 text-[14px] disabled:opacity-50 ${isRecording ? 'bg-red-600 hover:bg-red-700 text-white' : (isSpeaking ? 'bg-sky-600 hover:bg-sky-700 text-white' : 'bg-emerald-600 hover:bg-emerald-700 text-white')}`}
+                                 >
+                                    {isRecording ? '⏹️ Gửi câu trả lời' : (isSpeaking ? '⏹️ Ngắt lời' : '🎙️ Nhấn để trả lời')}
+                                 </button>
+                                 <button 
+                                     onClick={stopLiveCall} 
+                                     className="px-4 py-3 bg-slate-200 hover:bg-red-600 hover:text-white text-slate-800 font-bold rounded-none flex items-center gap-2 transition active:scale-95 text-[14px] border border-slate-400"
+                                 >
+                                    🛑 Kết thúc
+                                 </button>
+                               </>
                             )}
                             
                             {liveStatus === 'CONNECTED' ? (
                                <div className="font-mono text-[16px] text-emerald-600 font-bold tracking-widest tabular-nums flex items-center gap-2 ml-auto">
-                                 <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping"></span>
+                                 {isRecording && <span className="w-2.5 h-2.5 bg-red-500 rounded-full animate-ping"></span>}
                                  {formatTime(recordingTime)} <span className="text-black">/ {formatTime(currentQ.maxTime)}</span>
                                </div>
                             ) : liveStatus === 'IDLE' && (

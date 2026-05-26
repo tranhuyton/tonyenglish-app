@@ -4,7 +4,7 @@ import { supabase } from './supabase';
 interface AITutorProps {
   isOpen: boolean;
   onClose: () => void;
-  mode?: 'tutor' | 'ielts'; 
+  mode?: 'tutor' | 'ielts' | 'parent_mode'; 
   courseTitle?: string;
   lectureTitle?: string;
   htmlContent?: string;
@@ -57,8 +57,23 @@ export default function AITutorSidebar({
     };
   }, []);
 
-  // 🎨 Bộ Theme EdTech cao cấp
+  // 🎨 Bộ Theme EdTech cao cấp (Thêm Parent Mode)
   const theme = useMemo(() => {
+    if (mode === 'parent_mode') {
+      return {
+        headerBg: 'from-[#f59e0b] to-[#ea580c]', // Tone Vàng Cam ấm áp
+        title: 'Trợ lý Phụ huynh', 
+        subtitle: 'Báo cáo học tập AI', 
+        icon: '👨‍👩‍👧‍👦',
+        userBg: 'bg-gradient-to-br from-[#f59e0b] to-[#ea580c]', 
+        aiBorder: 'border-orange-100', 
+        aiBg: 'bg-white',
+        btnColor: 'bg-[#f59e0b] hover:bg-[#ea580c]', 
+        focusRing: 'focus-within:border-[#f59e0b] focus-within:ring-4 focus-within:ring-[#f59e0b]/10', 
+        width: 'md:w-[450px]'
+      };
+    }
+
     if (mode === 'tutor') {
       return {
         headerBg: 'from-[#0ea5e9] to-[#0284c7]',
@@ -171,6 +186,10 @@ export default function AITutorSidebar({
   }, [mode, taskType]);
 
   const dynamicPrompts = useMemo(() => {
+    if (mode === 'parent_mode') {
+        return ["📊 Tình hình học tập tuần qua", "📈 Cháu có tiến bộ không?", "💡 Có cần nhắc nhở cháu môn gì?"];
+    }
+
     if (mode === 'tutor') {
         return TUTOR_PROMPTS;
     }
@@ -195,7 +214,7 @@ export default function AITutorSidebar({
   }, [mode, taskType]);
 
   const contextText = useMemo(() => {
-    if (mode === 'ielts' || !htmlContent) {
+    if (mode === 'ielts' || mode === 'parent_mode' || !htmlContent) {
         return '';
     }
     const doc = new DOMParser().parseFromString(htmlContent, 'text/html');
@@ -221,7 +240,10 @@ export default function AITutorSidebar({
        if (messages.length === 0) {
            let welcomeText = "";
            
-           if (mode === 'ielts') {
+           if (mode === 'parent_mode') {
+              const studentName = sessionStorage.getItem('tony_parent_target_student') || 'học sinh';
+              welcomeText = `Dạ chào anh/chị! Tôi là Trợ lý AI chủ nhiệm của bé **${studentName}**.\n\nHệ thống đã tổng hợp xong dữ liệu học tập của cháu trong 14 ngày qua. Anh/chị cần xem báo cáo tổng quan hay có câu hỏi cụ thể nào về tình hình của cháu không ạ?`;
+           } else if (mode === 'ielts') {
               if (taskType === 'reading') {
                  welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n**${topicTitle}**\n\nEm muốn hỏi thêm thầy điều gì?`;
               } else {
@@ -290,7 +312,32 @@ export default function AITutorSidebar({
       let endpoint = 'omni-ai-grader'; 
       let payload: any = {};
 
-      if (mode === 'ielts') {
+      if (mode === 'parent_mode') {
+         const parentContext = sessionStorage.getItem('tony_parent_ai_context') || 'Không có dữ liệu học tập gần đây.';
+         const studentName = sessionStorage.getItem('tony_parent_target_student') || 'học sinh';
+         
+         const systemPrompt = `Bạn là "Trợ lý Chủ nhiệm Tony AI". Nhiệm vụ của bạn là báo cáo tình hình học tập của học sinh ${studentName} cho phụ huynh.
+
+         DƯỚI ĐÂY LÀ DỮ LIỆU HỌC TẬP THỰC TẾ TRONG 14 NGÀY QUA CỦA CHÁU:
+         """
+         ${parentContext}
+         """
+
+         QUY TẮC TRẢ LỜI ĐẶC BIỆT CẦN TUÂN THỦ:
+         1. Bạn ĐANG TRỰC TIẾP CHAT VỚI PHỤ HUYNH. Hãy trả lời vô cùng lễ phép, lịch sự, ân cần. BẮT BUỘC xưng hô là "Dạ, thưa anh/chị" và xưng mình là "Trợ lý AI / Hệ thống".
+         2. KHI PHỤ HUYNH HỎI: Chỉ dựa CHÍNH XÁC vào dữ liệu cung cấp ở trên để trả lời.
+         3. ĐÁNH GIÁ TIẾN BỘ: Nếu thấy điểm tăng, hãy chúc mừng gia đình. Nếu điểm thấp, hãy động viên và khuyên phụ huynh nhắc nhở cháu thêm. Trình bày dạng bullet point cho dễ đọc.
+         4. TUYỆT ĐỐI KHÔNG bịa đặt dữ liệu (hallucinate). NẾU KHÔNG CÓ DỮ LIỆU trả lời: "Dạ hệ thống ghi nhận dạo gần đây cháu chưa có hoạt động làm bài kiểm tra mới trên nền tảng ạ."
+         
+         CÂU HỎI TỪ PHỤ HUYNH: "${userMsg}"
+         HÃY TRẢ LỜI LỊCH SỰ BẰNG TIẾNG VIỆT:`;
+
+         payload = { 
+             prompt: systemPrompt, 
+             taskType: 'tutor' 
+         };
+
+      } else if (mode === 'ielts') {
          if (taskType === 'reading') {
             const systemPrompt = `Bạn là gia sư IELTS Reading xuất sắc.
             Dưới đây là nội dung BÀI ĐỌC (Ẩn khỏi màn hình người dùng):
@@ -328,7 +375,7 @@ export default function AITutorSidebar({
       const { data, error } = await supabase.functions.invoke(endpoint, { body: payload });
       
       if (error || data?.error) {
-          throw new Error("AI đang bận, em thử lại sau nhé!");
+          throw new Error("AI đang bận, hệ thống không thể kết nối ngay lúc này.");
       }
 
       let finalResponse = data.result || data.text || data.response;
@@ -398,9 +445,8 @@ export default function AITutorSidebar({
       
       <div className={`fixed top-0 md:top-[64px] bottom-0 right-0 w-full ${isExpanded ? 'md:w-[800px]' : theme.width} bg-[#f8fafc] shadow-[-10px_0_40px_rgba(0,0,0,0.1)] z-[100000] flex flex-col transition-all duration-400 ease-out border-l border-slate-200 ${isOpen && !isMinimized ? 'translate-x-0' : 'translate-x-full'}`}>
         
-        {/* HEADER: Fix lỗi xộc xệch và hiển thị nút Call */}
+        {/* HEADER */}
         <div className={`h-[68px] md:h-[72px] bg-gradient-to-r ${theme.headerBg} text-white flex items-center justify-between px-3 md:px-5 shrink-0 shadow-md z-20 relative overflow-hidden`}>
-          {/* Subtle background pattern/glow */}
           <div className="absolute inset-0 bg-white/5 mix-blend-overlay pointer-events-none"></div>
           
           <div className="flex items-center gap-2 md:gap-3 relative z-10 flex-1 min-w-0">
@@ -417,15 +463,19 @@ export default function AITutorSidebar({
           </div>
           
           <div className="flex items-center gap-1.5 md:gap-2 relative z-10 shrink-0 pl-2">
-             <button 
-                 onClick={handleCallTutor}
-                 className="flex bg-white/10 hover:bg-white text-white hover:text-slate-900 border border-white/20 px-2 py-1.5 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[12px] font-bold transition-all items-center gap-1 shadow-sm active:scale-95"
-                 title="Gọi điện trực tiếp với Gia Sư AI"
-             >
-                 <span className="animate-pulse">📞</span>
-                 <span className="hidden sm:inline">Live Call</span>
-                 <span className="sm:hidden">Gọi</span>
-             </button>
+             
+             {/* Ẩn nút Gọi điện nếu đang ở chế độ Phụ Huynh */}
+             {mode !== 'parent_mode' && (
+                 <button 
+                     onClick={handleCallTutor}
+                     className="flex bg-white/10 hover:bg-white text-white hover:text-slate-900 border border-white/20 px-2 py-1.5 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[12px] font-bold transition-all items-center gap-1 shadow-sm active:scale-95"
+                     title="Gọi điện trực tiếp với Gia Sư AI"
+                 >
+                     <span className="animate-pulse">📞</span>
+                     <span className="hidden sm:inline">Live Call</span>
+                     <span className="sm:hidden">Gọi</span>
+                 </button>
+             )}
 
              <button 
                  onClick={() => setIsExpanded(!isExpanded)} 
@@ -519,7 +569,7 @@ export default function AITutorSidebar({
 
         {/* INPUT AREA */}
         <div className="p-3 md:p-4 bg-white border-t border-slate-200 shrink-0 z-10 pb-5 md:pb-4">
-          {/* Starter Prompts (Pill style, horizontal scroll) */}
+          {/* Starter Prompts */}
           <div className="flex items-center gap-2 mb-3 overflow-x-auto custom-scrollbar pb-2 hide-scroll-bar">
              {dynamicPrompts.map((p, i) => (
                 <button 
@@ -547,7 +597,7 @@ export default function AITutorSidebar({
                         handleSendMessage(); 
                     } 
                 }} 
-                placeholder="Hỏi AI bất kỳ điều gì..." 
+                placeholder={mode === 'parent_mode' ? "Hỏi AI về tình hình của bé..." : "Hỏi AI bất kỳ điều gì..."}
                 className="flex-1 min-h-[44px] max-h-[120px] bg-transparent text-[14px] md:text-[15px] text-slate-700 font-medium px-3 py-3 outline-none resize-none custom-scrollbar leading-relaxed" 
                 rows={1} 
             />
