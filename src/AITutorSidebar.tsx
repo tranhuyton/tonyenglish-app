@@ -364,19 +364,19 @@ export default function AITutorSidebar({
 
   if (!isOpen) return null;
 
-  // 🚀 TRẠNG THÁI BONG BÓNG (MINIMIZED) ĐƯỢC REDESIGN
+  // 🚀 TRẠNG THÁI BONG BÓNG (MINIMIZED) ĐƯỢC REDESIGN: NHỎ HƠN TRÊN MOBILE
   if (isMinimized) {
       return (
           <button 
               onClick={() => setIsMinimized(false)}
-              className={`fixed bottom-[100px] md:bottom-[120px] right-4 md:right-8 z-[100000] w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-tr ${theme.headerBg} text-white shadow-[0_8px_30px_rgba(0,0,0,0.25)] flex items-center justify-center text-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-in zoom-in group border-[3px] border-white/50 backdrop-blur-sm`}
+              className={`fixed bottom-[90px] md:bottom-[120px] right-3 md:right-8 z-[100000] w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-tr ${theme.headerBg} text-white shadow-[0_8px_30px_rgba(0,0,0,0.25)] flex items-center justify-center text-xl md:text-2xl hover:scale-105 active:scale-95 transition-all duration-300 animate-in zoom-in group border-2 md:border-[3px] border-white/50 backdrop-blur-sm`}
               title="Mở lại khung Chat AI"
           >
               <span className="group-hover:hidden drop-shadow-md">{theme.icon}</span>
-              <span className="hidden group-hover:block text-2xl drop-shadow-md">💬</span>
+              <span className="hidden group-hover:block drop-shadow-md">💬</span>
               
               {/* Chấm đỏ thông báo */}
-              <span className="absolute top-0 right-0 w-4 h-4 bg-red-500 border-2 border-white rounded-full flex items-center justify-center">
+              <span className="absolute top-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-red-500 border-2 border-white rounded-full flex items-center justify-center">
                   <span className="absolute w-full h-full bg-red-500 rounded-full animate-ping opacity-75"></span>
               </span>
           </button>
@@ -398,51 +398,53 @@ export default function AITutorSidebar({
       
       <div className={`fixed top-0 md:top-[64px] bottom-0 right-0 w-full ${isExpanded ? 'md:w-[800px]' : theme.width} bg-[#f8fafc] shadow-[-10px_0_40px_rgba(0,0,0,0.1)] z-[100000] flex flex-col transition-all duration-400 ease-out border-l border-slate-200 ${isOpen && !isMinimized ? 'translate-x-0' : 'translate-x-full'}`}>
         
-        {/* HEADER */}
-        <div className={`h-[72px] bg-gradient-to-r ${theme.headerBg} text-white flex items-center justify-between px-5 shrink-0 shadow-md z-20 relative overflow-hidden`}>
+        {/* HEADER: Fix lỗi xộc xệch và hiển thị nút Call */}
+        <div className={`h-[68px] md:h-[72px] bg-gradient-to-r ${theme.headerBg} text-white flex items-center justify-between px-3 md:px-5 shrink-0 shadow-md z-20 relative overflow-hidden`}>
           {/* Subtle background pattern/glow */}
-          <div className="absolute inset-0 bg-white/5 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-white/5 mix-blend-overlay pointer-events-none"></div>
           
-          <div className="flex items-center gap-3 relative z-10">
-             <div className="w-11 h-11 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-xl shadow-inner border border-white/10">
+          <div className="flex items-center gap-2 md:gap-3 relative z-10 flex-1 min-w-0">
+             <div className="w-10 h-10 md:w-11 md:h-11 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-lg md:text-xl shadow-inner border border-white/10 shrink-0">
                  {theme.icon}
              </div>
-             <div className="flex flex-col">
-                 <h3 className="font-bold text-[16px] leading-tight tracking-wide">{theme.title}</h3>
+             <div className="flex flex-col min-w-0">
+                 <h3 className="font-bold text-[14px] md:text-[16px] leading-tight tracking-wide truncate">{theme.title}</h3>
                  <div className="flex items-center gap-1.5 mt-0.5">
-                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                     <p className="text-[11px] text-white/90 font-medium uppercase tracking-wider">{theme.subtitle}</p>
+                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shrink-0"></span>
+                     <p className="text-[10px] md:text-[11px] text-white/90 font-medium uppercase tracking-wider truncate">{theme.subtitle}</p>
                  </div>
              </div>
           </div>
           
-          <div className="flex items-center gap-1 relative z-10">
+          <div className="flex items-center gap-1.5 md:gap-2 relative z-10 shrink-0 pl-2">
              <button 
                  onClick={handleCallTutor}
-                 className="hidden sm:flex bg-white text-slate-900 hover:bg-emerald-50 px-3 py-1.5 rounded-full text-[12px] font-bold transition-all items-center gap-1.5 shadow-[0_2px_10px_rgba(0,0,0,0.1)] active:scale-95 mr-1 group"
-                 title="Gọi điện trực tiếp"
+                 className="flex bg-white/10 hover:bg-white text-white hover:text-slate-900 border border-white/20 px-2 py-1.5 md:px-3 md:py-1.5 rounded-full text-[11px] md:text-[12px] font-bold transition-all items-center gap-1 shadow-sm active:scale-95"
+                 title="Gọi điện trực tiếp với Gia Sư AI"
              >
-                 <span className="group-hover:animate-bounce">📞</span> Live Call
+                 <span className="animate-pulse">📞</span>
+                 <span className="hidden sm:inline">Live Call</span>
+                 <span className="sm:hidden">Gọi</span>
              </button>
 
              <button 
                  onClick={() => setIsExpanded(!isExpanded)} 
-                 className="hidden md:flex w-9 h-9 items-center justify-center rounded-full hover:bg-white/20 text-white transition-colors"
+                 className="hidden md:flex w-8 h-8 md:w-9 md:h-9 items-center justify-center rounded-full hover:bg-white/20 text-white transition-colors"
                  title="Phóng to"
              >
                 {isExpanded ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>
                 ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>
                 )}
              </button>
              
              <button 
                  onClick={() => setIsMinimized(true)} 
-                 className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-white/20 text-white transition-colors"
+                 className="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center rounded-full hover:bg-white/20 text-white transition-colors"
                  title="Thu nhỏ Chat"
              >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>
              </button>
              
              <button 
@@ -455,10 +457,10 @@ export default function AITutorSidebar({
                          setIsMinimized(true);
                      }
                  }} 
-                 className="w-9 h-9 flex items-center justify-center rounded-full hover:bg-red-500/80 transition-colors text-white text-lg font-bold ml-1"
+                 className="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center rounded-full hover:bg-red-500/80 transition-colors text-white text-lg font-bold ml-0.5"
                  title="Đóng hẳn"
              >
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 md:w-5 md:h-5"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
              </button>
           </div>
         </div>
@@ -481,12 +483,12 @@ export default function AITutorSidebar({
           {messages.map((msg, idx) => (
             <div key={idx} className={`flex w-full ${msg.role === 'user' ? 'justify-end' : 'justify-start'} animate-in fade-in slide-in-from-bottom-2`}>
                {msg.role === 'ai' && (
-                   <div className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 mr-2 mt-1 shadow-sm text-sm">
+                   <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 mr-2 mt-1 shadow-sm text-xs md:text-sm">
                        {theme.icon}
                    </div>
                )}
                
-               <div className={`max-w-[85%] p-4 text-[15px] leading-relaxed shadow-sm ${
+               <div className={`max-w-[85%] p-3.5 md:p-4 text-[14px] md:text-[15px] leading-relaxed shadow-sm ${
                    msg.role === 'user' 
                    ? `${theme.userBg} text-white rounded-2xl rounded-tr-sm` 
                    : `${theme.aiBg} border ${theme.aiBorder} text-slate-700 rounded-2xl rounded-tl-sm`
@@ -502,7 +504,7 @@ export default function AITutorSidebar({
           
           {isTyping && (
              <div className="flex justify-start w-full animate-in fade-in">
-                 <div className="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 mr-2 mt-1 shadow-sm text-sm opacity-70">
+                 <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 mr-2 mt-1 shadow-sm text-xs md:text-sm opacity-70">
                      {theme.icon}
                  </div>
                  <div className="bg-white border border-slate-100 px-4 py-3 rounded-2xl rounded-tl-sm flex items-center gap-1.5 shadow-sm">
@@ -516,14 +518,14 @@ export default function AITutorSidebar({
         </div>
 
         {/* INPUT AREA */}
-        <div className="p-4 bg-white border-t border-slate-200 shrink-0 z-10">
+        <div className="p-3 md:p-4 bg-white border-t border-slate-200 shrink-0 z-10 pb-5 md:pb-4">
           {/* Starter Prompts (Pill style, horizontal scroll) */}
           <div className="flex items-center gap-2 mb-3 overflow-x-auto custom-scrollbar pb-2 hide-scroll-bar">
              {dynamicPrompts.map((p, i) => (
                 <button 
                     key={i} 
                     onClick={() => handleSuggestionClick(p)} 
-                    className="shrink-0 bg-slate-50 border border-slate-200 text-slate-600 hover:text-slate-900 text-[13px] font-semibold py-1.5 px-4 rounded-full hover:bg-slate-100 transition-colors shadow-sm"
+                    className="shrink-0 bg-slate-50 border border-slate-200 text-slate-600 hover:text-slate-900 text-[12px] md:text-[13px] font-semibold py-1.5 px-4 rounded-full hover:bg-slate-100 transition-colors shadow-sm whitespace-nowrap"
                 >
                   {p}
                 </button>
@@ -546,13 +548,13 @@ export default function AITutorSidebar({
                     } 
                 }} 
                 placeholder="Hỏi AI bất kỳ điều gì..." 
-                className="flex-1 min-h-[44px] max-h-[150px] bg-transparent text-[15px] text-slate-700 font-medium px-3 py-3 outline-none resize-none custom-scrollbar leading-relaxed" 
+                className="flex-1 min-h-[44px] max-h-[120px] bg-transparent text-[14px] md:text-[15px] text-slate-700 font-medium px-3 py-3 outline-none resize-none custom-scrollbar leading-relaxed" 
                 rows={1} 
             />
             <button 
                 onClick={() => handleSendMessage()} 
                 disabled={!input.trim() || isTyping} 
-                className={`absolute right-2 bottom-2 w-10 h-10 shrink-0 rounded-xl ${theme.btnColor} text-white flex items-center justify-center transition-all shadow-md disabled:opacity-50 disabled:shadow-none disabled:hover:scale-100 active:scale-95`}
+                className={`absolute right-2 bottom-2 w-9 h-9 md:w-10 md:h-10 shrink-0 rounded-xl ${theme.btnColor} text-white flex items-center justify-center transition-all shadow-md disabled:opacity-50 disabled:shadow-none disabled:hover:scale-100 active:scale-95`}
             >
                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 -translate-y-[1px] translate-x-[1px]" viewBox="0 0 20 20" fill="currentColor">
                    <path d="M3.105 2.289a.75.75 0 00-.826.95l1.414 4.925A1.5 1.5 0 005.135 9.25h6.115a.75.75 0 010 1.5H5.135a1.5 1.5 0 00-1.442 1.086l-1.414 4.926a.75.75 0 00.826.95 28.896 28.896 0 0015.293-7.154.75.75 0 000-1.115A28.897 28.897 0 003.105 2.289z" />
@@ -560,7 +562,7 @@ export default function AITutorSidebar({
             </button>
           </div>
           <div className="text-center mt-2">
-              <span className="text-[10px] text-slate-400 font-medium">Tony AI có thể mắc lỗi. Vui lòng kiểm tra lại thông tin.</span>
+              <span className="text-[9px] md:text-[10px] text-slate-400 font-medium">Tony AI có thể mắc lỗi. Vui lòng kiểm tra lại thông tin.</span>
           </div>
         </div>
         

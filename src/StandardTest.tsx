@@ -29,6 +29,12 @@ const ExitFullscreenIcon = () => (
   </svg>
 );
 
+const BookmarkIcon = ({ filled }: { filled?: boolean }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill={filled ? "currentColor" : "none"} viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+  </svg>
+);
+
 // =========================================================================================
 // CÁC HÀM TIỆN ÍCH (UTILITIES)
 // =========================================================================================
@@ -242,8 +248,9 @@ export default function StandardTest({
     onBack();
   };
 
-  // Kéo thả phân trang (Resizer)
+  // Kéo thả phân trang (Resizer - Chỉ dùng cho Reading)
   const handleMouseDown = (e: React.MouseEvent) => {
+    if (isListening) return; // Không kéo thả ở giao diện Listening 1 cột
     e.preventDefault();
     document.body.style.cursor = 'col-resize';
     document.body.style.userSelect = 'none'; 
@@ -281,7 +288,7 @@ export default function StandardTest({
     document.addEventListener('mouseup', handleMouseUp);
   };
 
-  // 🚀 NẾU LÀ REVIEW, ĐỔ BÊ TÔNG ĐÁP ÁN CŨ VÀO LUÔN
+  // ĐỔ BÊ TÔNG ĐÁP ÁN
   const [answers, setAnswers] = useState<Record<string, string>>(() => {
     if (initIsReview && safeData?.past_answers) {
         return safeData.past_answers;
@@ -422,14 +429,12 @@ const handleFinish = async () => {
           score: score, 
           total_score: total,
           time_spent: timeSpentSecs > 0 ? timeSpentSecs : 0,
-          // 🚀 ĐÃ SỬA: ĐẨY TOÀN BỘ questionTypeStats VÀO ĐỂ BẢNG ANALYTICS HOẠT ĐỘNG
           details: { 
               test_id: safeData?.id, 
               userAnswers: answers, 
               type_stats: questionTypeStats 
           }
         }]);
-      // 🚀 ANH DÁN ĐOẠN CODE BẮN PHÁO HIỆU VÀO ĐÂY NHÉ:
       await supabase.from('activity_logs').insert([{
         user_id: user.id, 
         action_type: 'finish_test',
@@ -693,26 +698,17 @@ const handleFinish = async () => {
   };
 
   // =========================================================================================
-  // GIAO DIỆN LISTENING (PLACEHOLDER)
+  // GIAO DIỆN CHUNG (GỘP CHO CẢ ĐỌC VÀ NGHE)
   // =========================================================================================
-  const renderListeningLayout = () => {
-    return (
-      <div className="flex flex-col h-[100dvh] items-center justify-center bg-[#f8fafc] text-slate-800">
-        <p className="font-bold text-lg">Giao diện Listening đang được cập nhật...</p>
-      </div>
-    );
-  };
-
-  // =========================================================================================
-  // GIAO DIỆN READING (SPLIT-SCREEN NGANG)
-  // =========================================================================================
-  const renderReadingLayout = () => {
+  const renderTestLayout = () => {
     return (
       <div className="flex flex-col h-[100dvh] font-sans bg-[#f1f5f9] overflow-hidden text-slate-800">
         
         <header className={`h-[60px] border-b border-slate-200 flex justify-between items-center px-6 shrink-0 shadow-sm z-20 ${isReviewMode ? 'bg-emerald-700 text-white border-none' : 'bg-white text-slate-800'}`}>
           <div className="font-black text-[16px] flex items-center gap-3 uppercase tracking-tight">
-            <span className={`text-xl ${isReviewMode ? 'opacity-100' : 'opacity-70'}`}>📖</span>
+            <span className={`text-xl ${isReviewMode ? 'opacity-100' : 'opacity-70'}`}>
+                {isListening ? '🎧' : '📖'}
+            </span>
             <span className="truncate max-w-[200px] md:max-w-xl">
                 {isReviewMode ? `[CHỮA BÀI] ${basicInfo?.title}` : basicInfo?.title}
             </span>
@@ -758,135 +754,160 @@ const handleFinish = async () => {
 
         <div className="flex-1 flex overflow-hidden relative flex-col md:flex-row" ref={containerRef}>
           
-          {/* PANEL TRÁI (BÀI ĐỌC) */}
-          <div 
-              className="bg-white overflow-y-auto custom-scrollbar w-full md:w-auto" 
-              ref={leftPaneRef} 
-              style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%' }}
-          >
-            <div className="p-6 md:p-10">
-              {isReviewMode && (
-                <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
-                   <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
-                   <div className="text-5xl font-black text-emerald-600">
-                       {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
-                   </div>
-                   
-                   <div className="mt-4 md:hidden">
-                      <button 
-                          onClick={() => {
-                            const tutorContext = {
-                              overall: scoreResult.score + '/' + scoreResult.total,
-                              transcript: `Bài test: ${basicInfo.title}. Điểm số của em là: ${scoreResult.score}/${scoreResult.total}.`,
-                              feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
-                            };
-                            sessionStorage.setItem('tony_live_mode', 'TUTOR');
-                            sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
-                            sessionStorage.setItem('tony_auto_start', 'true');
-                            window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-                          }}
-                          className="bg-emerald-600 text-white px-5 py-2 rounded-full text-[13px] font-bold shadow flex items-center justify-center gap-2 mx-auto"
-                      >
-                          📞 Gọi Gia Sư AI
-                      </button>
-                   </div>
-                </div>
-              )}
+          {/* PANEL TRÁI (BÀI ĐỌC) - ẨN ĐI NẾU LÀ BÀI LISTENING */}
+          {!isListening && (
+              <div 
+                  className="bg-white overflow-y-auto custom-scrollbar w-full md:w-auto" 
+                  ref={leftPaneRef} 
+                  style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%' }}
+              >
+                <div className="p-6 md:p-10">
+                  {isReviewMode && (
+                    <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
+                       <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
+                       <div className="text-5xl font-black text-emerald-600">
+                           {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
+                       </div>
+                       
+                       <div className="mt-4 md:hidden">
+                          <button 
+                              onClick={() => {
+                                const tutorContext = {
+                                  overall: scoreResult.score + '/' + scoreResult.total,
+                                  transcript: `Bài test: ${basicInfo.title}. Điểm số của em là: ${scoreResult.score}/${scoreResult.total}.`,
+                                  feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
+                                };
+                                sessionStorage.setItem('tony_live_mode', 'TUTOR');
+                                sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+                                sessionStorage.setItem('tony_auto_start', 'true');
+                                window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+                              }}
+                              className="bg-emerald-600 text-white px-5 py-2 rounded-full text-[13px] font-bold shadow flex items-center justify-center gap-2 mx-auto"
+                          >
+                              📞 Gọi Gia Sư AI
+                          </button>
+                       </div>
+                    </div>
+                  )}
 
-              {parts?.map((part: any, pIdx: number) => {
-                return (
-                  <div key={part?.id || pIdx} className="mb-12">
-                    {part?.title && (
-                        <h3 className="font-black text-xl text-slate-800 mb-6 uppercase tracking-tight border-b-2 border-slate-800 pb-3">
-                            {part.title}
-                        </h3>
-                    )}
-                    
-                    {part?.imageUrl && (
-                        <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />
-                    )}
-                    
-                    {part?.content && (
-                      <div 
-                          className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-8 text-justify bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm" 
-                          dangerouslySetInnerHTML={{ __html: part.content || '' }} 
-                      />
-                    )}
-                    
-                    {part?.sections?.map((sec: any, sIdx: number) => {
-                      let displaySecTitle = sec.title;
-                      
-                      if (displaySecTitle && /Questions?\s+\d+/i.test(displaySecTitle)) {
-                          let firstIdx = null;
-                          let lastIdx = null;
+                  {parts?.map((part: any, pIdx: number) => {
+                    return (
+                      <div key={part?.id || pIdx} className="mb-12">
+                        {part?.title && (
+                            <h3 className="font-black text-xl text-slate-800 mb-6 uppercase tracking-tight border-b-2 border-slate-800 pb-3">
+                                {part.title}
+                            </h3>
+                        )}
+                        
+                        {part?.imageUrl && (
+                            <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />
+                        )}
+                        
+                        {part?.content && (
+                          <div 
+                              className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-8 text-justify bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm" 
+                              dangerouslySetInnerHTML={{ __html: part.content || '' }} 
+                          />
+                        )}
+                        
+                        {part?.sections?.map((sec: any, sIdx: number) => {
+                          let displaySecTitle = sec.title;
                           
-                          if (sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") {
-                              const matches = Array.from(String(sec.content || sec.questions?.[0]?.content || '').matchAll(/\[(\d+)\]/g));
-                              if (matches.length > 0) {
-                                  firstIdx = questionIndexMap[matches[0][1]];
-                                  lastIdx = questionIndexMap[matches[matches.length - 1][1]];
+                          if (displaySecTitle && /Questions?\s+\d+/i.test(displaySecTitle)) {
+                              let firstIdx = null;
+                              let lastIdx = null;
+                              
+                              if (sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") {
+                                  const matches = Array.from(String(sec.content || sec.questions?.[0]?.content || '').matchAll(/\[(\d+)\]/g));
+                                  if (matches.length > 0) {
+                                      firstIdx = questionIndexMap[matches[0][1]];
+                                      lastIdx = questionIndexMap[matches[matches.length - 1][1]];
+                                  }
+                              } else if (sec.questions?.length > 0) {
+                                  firstIdx = questionIndexMap[sec.questions[0].id];
+                                  lastIdx = questionIndexMap[sec.questions[sec.questions.length - 1].id];
                               }
-                          } else if (sec.questions?.length > 0) {
-                              firstIdx = questionIndexMap[sec.questions[0].id];
-                              lastIdx = questionIndexMap[sec.questions[sec.questions.length - 1].id];
+                              
+                              if (firstIdx && lastIdx) {
+                                  displaySecTitle = displaySecTitle.replace(/Questions?\s+\d+(-\d+)?/i, firstIdx === lastIdx ? `Question ${firstIdx}` : `Questions ${firstIdx}-${lastIdx}`);
+                              }
                           }
-                          
-                          if (firstIdx && lastIdx) {
-                              displaySecTitle = displaySecTitle.replace(/Questions?\s+\d+(-\d+)?/i, firstIdx === lastIdx ? `Question ${firstIdx}` : `Questions ${firstIdx}-${lastIdx}`);
-                          }
-                      }
 
-                      return (
-                        <div key={sec?.id || sIdx} className="mb-8">
-                          {displaySecTitle && (
-                              <h4 className="font-bold text-[15px] text-slate-800 bg-slate-100 border border-slate-200 inline-block px-4 py-1.5 rounded-lg mb-4">
-                                  {displaySecTitle}
-                              </h4>
-                          )}
-                          
-                          {sec?.imageUrl && (
-                              <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />
-                          )}
-                          
-                          {sec?.content && sec?.questionType !== "Điền từ" && sec?.questionType !== "Kéo thả vào Part" && (
-                            <div 
-                                className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed bg-white p-5 rounded-xl border border-slate-200 shadow-sm" 
-                                dangerouslySetInnerHTML={{ __html: sec.content || '' }} 
-                            />
-                          )}
-                        </div>
-                      )
-                    })}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+                          return (
+                            <div key={sec?.id || sIdx} className="mb-8">
+                              {displaySecTitle && (
+                                  <h4 className="font-bold text-[15px] text-slate-800 bg-slate-100 border border-slate-200 inline-block px-4 py-1.5 rounded-lg mb-4">
+                                      {displaySecTitle}
+                                  </h4>
+                              )}
+                              
+                              {sec?.imageUrl && (
+                                  <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />
+                              )}
+                              
+                              {sec?.content && sec?.questionType !== "Điền từ" && sec?.questionType !== "Kéo thả vào Part" && (
+                                <div 
+                                    className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed bg-white p-5 rounded-xl border border-slate-200 shadow-sm" 
+                                    dangerouslySetInnerHTML={{ __html: sec.content || '' }} 
+                                />
+                              )}
+                            </div>
+                          )
+                        })}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+          )}
 
-          {/* THANH KÉO THẢ RESIZER */}
+          {/* THANH KÉO THẢ RESIZER - ẨN ĐI NẾU LÀ BÀI LISTENING */}
+          {!isListening && (
+              <div 
+                onMouseDown={handleMouseDown}
+                className="hidden md:flex w-2.5 bg-slate-100 hover:bg-[#0ea5e9] cursor-col-resize flex-col justify-center items-center transition-colors shrink-0 z-10 border-x border-slate-200 group shadow-sm active:bg-blue-600"
+                title="Kéo để điều chỉnh độ rộng"
+              >
+                <div className="flex flex-col gap-1.5 opacity-40 group-hover:opacity-100 transition-opacity">
+                  <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-white"></div>
+                  <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-white"></div>
+                  <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-white"></div>
+                </div>
+              </div>
+          )}
+
+          {/* PANEL PHẢI (CÂU HỎI VÀ NỘI DUNG LISTENING) */}
           <div 
-            onMouseDown={handleMouseDown}
-            className="hidden md:flex w-2.5 bg-slate-100 hover:bg-[#0ea5e9] cursor-col-resize flex-col justify-center items-center transition-colors shrink-0 z-10 border-x border-slate-200 group shadow-sm active:bg-blue-600"
-            title="Kéo để điều chỉnh độ rộng"
-          >
-            <div className="flex flex-col gap-1.5 opacity-40 group-hover:opacity-100 transition-opacity">
-              <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-white"></div>
-              <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-white"></div>
-              <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-white"></div>
-            </div>
-          </div>
-
-          {/* PANEL PHẢI (CÂU HỎI) */}
-          <div 
-              className="bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto" 
+              className="bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1" 
               id="questions-container" 
               ref={rightPaneRef} 
-              style={{ width: window.innerWidth > 768 ? `${100 - leftWidth}%` : '100%' }}
+              style={!isListening && window.innerWidth > 768 ? { width: `${100 - leftWidth}%`, flex: 'none' } : { flex: 1 }}
           >
              <div className="p-6 md:p-10 max-w-3xl mx-auto">
+               
+               {/* NẾU LÀ BÀI LISTENING CÓ CHẾ ĐỘ XEM LẠI, HIỂN THỊ ĐIỂM Ở ĐÂY CHO ĐẸP */}
+               {isListening && isReviewMode && (
+                   <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
+                      <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
+                      <div className="text-5xl font-black text-emerald-600">
+                          {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
+                      </div>
+                   </div>
+               )}
+
                {parts?.map((part: any, pIdx: number) => {
                   return (
                     <div key={`qpane-${part?.id || pIdx}`}>
+                       
+                       {/* NỘI DUNG PART SANG BÊN PHẢI NẾU LÀ LISTENING */}
+                       {isListening && (
+                           <div className="mb-8 bg-transparent">
+                               {part?.title && <h3 className="font-black text-xl text-slate-800 mb-2">{part.title}</h3>}
+                               {part?.content && <div className="text-[15px] text-slate-600 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: part.content || '' }} />}
+                               {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />}
+                           </div>
+                       )}
+
                        {part?.sections?.map((sec: any, sIdx: number) => {
                           
                           let displaySecTitle = sec.title;
@@ -913,15 +934,26 @@ const handleFinish = async () => {
                           return (
                           <div key={`qsec-${sec?.id || sIdx}`} className="mb-12">
                               
-                             {displaySecTitle && (
+                             {displaySecTitle && !isListening && (
                                  <div className="bg-slate-200/60 border border-slate-300 px-4 py-2 mb-4 rounded-lg inline-block">
                                      <h4 className="font-bold text-[14px] text-slate-800">{displaySecTitle}</h4>
+                                 </div>
+                             )}
+
+                             {/* NỘI DUNG SECTION SANG BÊN PHẢI NẾU LÀ LISTENING */}
+                             {isListening && (
+                                 <div className="mb-6">
+                                    {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
+                                    {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
+                                    {sec?.content && sec?.questionType !== "Điền từ" && sec?.questionType !== "Kéo thả vào Part" && (
+                                       <div className="text-slate-600 text-[15px] leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: sec.content || '' }} />
+                                    )}
                                  </div>
                              )}
                              
                              {(sec?.questionType === "Điền từ" || sec?.questionType === "Kéo thả vào Part") && (
                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
-                                 {sec?.imageUrl && (
+                                 {sec?.imageUrl && !isListening && (
                                      <img src={sec.imageUrl} className="max-w-full mb-6 rounded-lg border border-slate-200" alt="Fill Image" />
                                  )}
                                  
@@ -995,9 +1027,7 @@ const handleFinish = async () => {
                                               onClick={() => toggleMark(String(q.id))} 
                                               className={`absolute top-5 right-5 transition-colors ${marked[String(q.id)] ? 'text-amber-500' : 'text-slate-200 hover:text-slate-400'}`}
                                           >
-                                             <svg className="w-6 h-6" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
-                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 2 : 1.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                                             </svg>
+                                             <BookmarkIcon filled={!!marked[String(q.id)]} />
                                           </button>
                                         )}
                                         
@@ -1096,9 +1126,7 @@ const handleFinish = async () => {
                                             onClick={() => toggleMark(String(q.id))} 
                                             className={`absolute top-6 right-6 transition-colors ${marked[String(q.id)] ? 'text-amber-500' : 'text-slate-300 hover:text-slate-400'}`}
                                         >
-                                           <svg className="w-7 h-7" fill={marked[String(q.id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
-                                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(q.id)] ? 2 : 1.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                                           </svg>
+                                           <BookmarkIcon filled={!!marked[String(q.id)]} />
                                         </button>
                                      )}
                                      
@@ -1108,10 +1136,18 @@ const handleFinish = async () => {
                                         </div>
                                      )}
 
+                                     {isListening && (
+                                        <div className="flex justify-between items-center mb-5 border-b border-slate-100 pb-3 pr-8">
+                                            <h3 className="font-bold text-lg text-slate-800">Question {displayIdx}:</h3>
+                                        </div>
+                                     )}
+
                                      <div className="flex gap-4 mb-5 pr-10 items-start">
-                                        <span className="font-bold text-white bg-slate-800 px-2 py-0.5 rounded text-[13px] mt-0.5">{displayIdx}</span>
+                                        {!isListening && (
+                                           <span className="font-bold text-white bg-slate-800 px-2 py-0.5 rounded text-[13px] mt-0.5">{displayIdx}</span>
+                                        )}
                                         <div className="flex-1 w-full">
-                                           {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded-xl border border-slate-200 shadow-sm" alt="Question Image" />}
+                                           {q.imageUrl && <img src={q.imageUrl} className={`mb-4 rounded-xl border border-slate-200 shadow-sm ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
                                            {cleanQText && <div className="text-[16px] text-slate-800 leading-relaxed font-medium mb-3 whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: cleanQText }} />}
                                         </div>
                                      </div>
@@ -1366,9 +1402,7 @@ const handleFinish = async () => {
                                                       onClick={() => toggleMark(String(combo[0].id))} 
                                                       className={`absolute top-6 right-6 transition-colors ${marked[String(combo[0].id)] ? 'text-amber-500' : 'text-slate-300 hover:text-slate-400'}`}
                                                   >
-                                                     <svg className="w-6 h-6" fill={marked[String(combo[0].id)] ? "currentColor" : "none"} stroke="currentColor" viewBox="0 0 24 24">
-                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={marked[String(combo[0].id)] ? 2 : 1.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                                                     </svg>
+                                                     <BookmarkIcon filled={!!marked[String(combo[0].id)]} />
                                                   </button>
                                                )}
                                                
@@ -1486,28 +1520,17 @@ const handleFinish = async () => {
              </div>
           </div>
 
-          <div 
-              className="hidden md:flex w-2.5 bg-slate-100 hover:bg-[#0ea5e9] cursor-col-resize flex-col justify-center items-center transition-colors shrink-0 z-10 border-x border-slate-200 group shadow-sm active:bg-blue-600" 
-              onMouseDown={handleMouseDown}
-          >
-            <div className="flex flex-col gap-1.5 opacity-40 group-hover:opacity-100 transition-opacity">
-              <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-white"></div>
-              <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-white"></div>
-              <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-white"></div>
-            </div>
-          </div>
-
           {/* BẢNG PALETTE ĐIỀU HƯỚNG CÂU HỎI */}
-          <aside className="w-full lg:w-[320px] shrink-0 lg:sticky top-4 h-auto lg:h-[calc(100vh-140px)] flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20">
-            <div className="p-6 border-b border-slate-200 flex flex-col items-center bg-slate-50/50">
+          <aside className="w-full lg:w-[320px] shrink-0 lg:sticky top-4 h-auto lg:h-[calc(100vh-80px)] flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20 m-4 lg:m-6 lg:ml-0">
+            <div className="p-5 border-b border-slate-200 flex flex-col items-center">
               {isReviewMode ? (
-                <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm">
+                <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm mb-4">
                   <p className="text-[12px] font-bold uppercase tracking-widest mb-2">Kết quả của bạn</p>
                   <p className="text-5xl font-black mb-4">
                       {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
                   </p>
                   
-                  {/* 🚀 NÚT GỌI GIA SƯ TỔNG QUAN TRÊN BẢNG ĐIỂM LISTENING */}
+                  {/* 🚀 NÚT GỌI GIA SƯ TỔNG QUAN */}
                   <button 
                       onClick={() => {
                         const tutorContext = {
@@ -1526,45 +1549,37 @@ const handleFinish = async () => {
                   </button>
                 </div>
               ) : (
-                <div className="bg-white text-slate-800 px-6 py-4 rounded-xl font-black text-[22px] mb-6 border border-slate-200 flex items-center justify-center gap-3 w-full shadow-sm tracking-wider">
-                  <span className="text-[#0ea5e9]">⏱</span> {formatTime(timeLeft)}
+                <div className="bg-red-50 text-red-500 px-6 py-2.5 rounded-lg font-bold text-[18px] mb-4 border border-red-100 flex items-center justify-center gap-2 w-full shadow-sm tracking-wider">
+                  <span className="text-red-400">⏱</span> {formatTime(timeLeft)} phút
                 </div>
               )}
               
-              <div className="w-full text-[14px] font-bold text-slate-800 mb-5 mt-2 uppercase tracking-wide">
-                  Trạng thái câu hỏi
+              <div className="w-full text-[14px] font-bold text-slate-800 mb-3 text-left">
+                  Danh sách câu hỏi
               </div>
               
-              <div className="w-full flex flex-col gap-3 text-[13px] font-medium text-slate-600 mb-2">
-                <div className="flex items-center justify-between bg-white p-2.5 rounded-lg border border-slate-200">
-                   <div className="flex items-center gap-2.5">
-                       <div className="w-4 h-4 rounded-md bg-white border border-slate-300 shadow-sm"></div> Chưa làm
+              <div className="w-full flex flex-wrap gap-x-4 gap-y-2 text-[12px] font-medium text-slate-600 mb-2">
+                 <div className="flex items-center gap-1.5">
+                     <div className="w-3 h-3 rounded-full bg-slate-200"></div> Chưa trả lời ({totalCount - answeredCount})
+                 </div>
+                 <div className="flex items-center gap-1.5">
+                     <div className="w-3 h-3 rounded-full bg-[#0ea5e9]"></div> Đã trả lời ({answeredCount})
+                 </div>
+                 {!isReviewMode && (
+                   <div className="flex items-center gap-1.5 w-full mt-1">
+                       <div className="w-3 h-3 rounded-full border-2 border-amber-500 bg-amber-50"></div> Đánh dấu ({markedCount})
                    </div>
-                   <span className="font-bold">{totalCount - answeredCount}</span>
-                </div>
-                <div className="flex items-center justify-between bg-white p-2.5 rounded-lg border border-slate-200">
-                   <div className="flex items-center gap-2.5">
-                       <div className="w-4 h-4 rounded-md bg-[#0ea5e9] shadow-sm"></div> Đã làm
-                   </div>
-                   <span className="font-bold text-[#0ea5e9]">{answeredCount}</span>
-                </div>
-                {!isReviewMode && (
-                  <div className="flex items-center justify-between bg-white p-2.5 rounded-lg border border-slate-200">
-                     <div className="flex items-center gap-2.5">
-                         <div className="w-4 h-4 rounded-md border-[3px] border-amber-500 bg-transparent"></div> Đánh dấu
-                     </div>
-                     <span className="font-bold text-amber-600">{markedCount}</span>
-                  </div>
-                )}
+                 )}
               </div>
             </div>
             
-            <div className="flex-1 overflow-y-auto p-6 custom-scrollbar bg-slate-50/50">
-              <div className="grid grid-cols-5 lg:grid-cols-4 sm:grid-cols-6 gap-2.5">
+            <div className="flex-1 overflow-y-auto p-5 custom-scrollbar bg-white">
+              <p className="text-[12px] text-slate-400 mb-4">Bấm vào ô để đến câu hỏi</p>
+              <div className="grid grid-cols-5 gap-2">
                 {allQuestionIds.map(id => {
                   let isAns = answers[id] && answers[id].trim() !== '';
                   const isMarked = marked[id];
-                  let btnStyle = 'bg-white border-slate-200 text-slate-600 hover:border-[#0ea5e9] hover:text-[#0ea5e9] shadow-sm'; 
+                  let btnStyle = 'bg-slate-100 text-slate-600 hover:bg-slate-200'; 
                   
                   const section = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id));
                   const qType = section?.questionType;
@@ -1626,16 +1641,16 @@ const handleFinish = async () => {
                         const q = section?.questions.find((q:any) => String(q.id) === id);
                         isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase();
                     }
-                    btnStyle = isCorrect ? 'bg-emerald-100 border-emerald-400 text-emerald-800' : 'bg-red-100 border-red-400 text-red-800';
+                    btnStyle = isCorrect ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700';
                   } else if (isAns) { 
-                    btnStyle = 'bg-[#0ea5e9] border-[#0ea5e9] text-white'; 
+                    btnStyle = 'bg-[#0ea5e9] text-white shadow-sm'; 
                   }
                   
                   return (
                     <button 
                         key={id} 
                         onClick={() => scrollToQuestion(id)} 
-                        className={`relative h-11 flex items-center justify-center rounded-xl text-[14px] font-bold transition-all border ${btnStyle} ${!isReviewMode && isMarked ? 'ring-2 ring-amber-400 ring-offset-1' : ''}`}
+                        className={`relative h-9 w-9 mx-auto flex items-center justify-center rounded-full text-[13px] font-medium transition-all ${btnStyle} ${!isReviewMode && isMarked ? 'ring-2 ring-amber-400 ring-offset-1 bg-amber-50' : ''}`}
                     >
                       {questionIndexMap[id]}
                     </button>
@@ -1644,12 +1659,12 @@ const handleFinish = async () => {
               </div>
             </div>
 
-            <div className="p-6 border-t border-slate-200 bg-white shrink-0">
+            <div className="p-5 border-t border-slate-200 bg-white shrink-0">
               <button 
                   onClick={handleFinish} 
-                  className={`w-full text-white font-black py-4 rounded-xl transition-colors shadow-md text-[15px] uppercase tracking-wider ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-[#0ea5e9] hover:bg-[#0284c7]'}`}
+                  className={`w-full text-white font-bold py-3 rounded-xl transition-colors shadow-sm text-[14px] ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-[#2b85c4] hover:bg-[#1d6b9e]'}`}
               >
-                {isReviewMode ? 'Thoát Xem Lại' : 'Nộp Bài Thi'}
+                {isReviewMode ? 'Thoát Xem Lại' : 'Nộp bài'}
               </button>
             </div>
           </aside>
@@ -1661,6 +1676,7 @@ const handleFinish = async () => {
 
   return (
     <React.Fragment>
+      {/* GIỮ NGUYÊN thẻ Audio Ẩn theo yêu cầu để tự động phát */}
       {isListening && globalAudio && !isReviewMode && (
         <audio ref={globalAudioRef} src={globalAudio} preload="auto" className="hidden" />
       )}
@@ -1707,7 +1723,7 @@ const handleFinish = async () => {
           </div>
         </div>
       ) : (
-        isListening ? renderListeningLayout() : renderReadingLayout()
+        renderTestLayout()
       )}
     </React.Fragment>
   );
