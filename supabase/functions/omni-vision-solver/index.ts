@@ -30,28 +30,32 @@ serve(async (req) => {
 
     // Cấu trúc gói tin chứa Ảnh và Text cho câu hỏi hiện tại
     let currentParts = [];
-    if (prompt) {
-        currentParts.push({ text: prompt });
-    }
 
     if (imageUrl) {
         const mimeType = imageUrl.startsWith('data:image/png') ? 'image/png' : 'image/jpeg';
         const base64Data = imageUrl.includes(',') ? imageUrl.split(',')[1] : imageUrl;
         currentParts.push({
-            inlineData: { mimeType: mimeType, data: base64Data } // <--- ĐÃ SỬA: inline_data -> inlineData, mime_type -> mimeType
+            inlineData: { mimeType: mimeType, data: base64Data }
         });
     }
     
     currentParts.push({ text: content || "Hãy giải chi tiết bức ảnh bài tập này giúp em." });
     contents.push({ role: "user", parts: currentParts });
 
+    const payload: any = { contents: contents };
+    if (prompt) {
+        payload.systemInstruction = {
+            parts: [{ text: prompt }]
+        };
+    }
+
     // Gọi Gemini 2.5 Flash
-    console.log("Calling Gemini API with payload:", JSON.stringify({ contents }));
+    console.log("Calling Gemini API with payload:", JSON.stringify(payload));
     
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents: contents })
+        body: JSON.stringify(payload)
     });
 
     const data = await response.json();

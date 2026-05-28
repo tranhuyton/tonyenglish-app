@@ -99,13 +99,15 @@ export default function LiveSpeakingTest({
     onMinimize, 
     onMaximize, 
     onClose, 
-    onOpenAI 
+    onOpenAI,
+    courseTitle
 }: { 
     viewState: 'FULLSCREEN' | 'MINIMIZED', 
     onMinimize: () => void, 
     onMaximize: () => void, 
     onClose: () => void, 
-    onOpenAI?: (passedMode?: string) => void 
+    onOpenAI?: (passedMode?: string) => void,
+    courseTitle?: string
 }) {
   const [status, setStatus] = useState<'IDLE' | 'CONNECTING' | 'CONNECTED'>('IDLE');
   const [examiner, setExaminer] = useState<'TONY' | 'DIEP'>('TONY');
@@ -158,7 +160,8 @@ export default function LiveSpeakingTest({
   // =========================================================================================
   // 🚀 KHỞI TẠO NÃO MẮT THẦN (VISION AI QUA EDGE FUNCTION - KHÔNG DÙNG WEBSOCKET)
   // =========================================================================================
-  const startVisionSession = async (image: string, query: string, courseTitle: string) => {
+  const startVisionSession = async (image: string, query: string, courseTitleOverride?: string) => {
+      const finalCourseTitle = courseTitleOverride || courseTitle || sessionStorage.getItem('tony_live_topic') || "Tổng hợp";
       setIsVisionMode(true);
       setIsTextOnlyMode(true);
       setStatus('CONNECTED');
@@ -172,11 +175,11 @@ export default function LiveSpeakingTest({
               body: {
                   imageUrl: image,
                   content: query,
-                  courseTitle: courseTitle,
-                  prompt: `[KỶ LUẬT CHUYÊN MÔN]: Bạn là gia sư giảng dạy môn "${courseTitle}". Hãy phân tích ảnh đề bài học sinh gửi.
+                  courseTitle: finalCourseTitle,
+                  prompt: `[KỶ LUẬT CHUYÊN MÔN]: Bạn là gia sư giảng dạy môn "${finalCourseTitle}". Hãy phân tích ảnh đề bài học sinh gửi.
 QUY TẮC BẮT BUỘC:
-1. Nếu nội dung đề bài trong ảnh KHÔNG liên quan tới môn "${courseTitle}", bạn PHẢI từ chối giải thích ngay lập tức và khuyên học sinh gửi đề bài đúng môn học.
-2. Nếu đề bài đúng môn "${courseTitle}", hãy đi thẳng vào giải chi tiết từng bước mà TUYỆT ĐỐI KHÔNG giải thích dông dài lý do tại sao nhận giải (ví dụ: không được nói 'Vì đề này thuộc môn...' hay 'Chào con, đây là đề toán nên thầy giải...'). Trả lời trực tiếp vào câu hỏi.
+1. Nếu nội dung đề bài trong ảnh KHÔNG liên quan tới môn "${finalCourseTitle}", bạn PHẢI từ chối giải thích ngay lập tức và khuyên học sinh gửi đề bài đúng môn học.
+2. Nếu đề bài đúng môn "${finalCourseTitle}", hãy đi thẳng vào giải chi tiết từng bước mà TUYỆT ĐỐI KHÔNG giải thích dông dài lý do tại sao nhận giải (ví dụ: không được nói 'Vì đề này thuộc môn...' hay 'Chào con, đây là đề toán nên thầy giải...'). Trả lời trực tiếp vào câu hỏi.
 3. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán học.`
               }
           });
@@ -604,11 +607,17 @@ QUY TẮC BẮT BUỘC:
           setMessages(prev => [...prev, { role: 'user', text: text }]);
           
           try {
+              const finalCourseTitle = courseTitle || sessionStorage.getItem('tony_live_topic') || "Tổng hợp";
               const { data, error } = await supabase.functions.invoke('omni-vision-solver', {
                   body: {
                       content: text,
                       history: messages,
-                      courseTitle: sessionStorage.getItem('tony_live_topic') || ""
+                      courseTitle: finalCourseTitle,
+                      prompt: `[KỶ LUẬT CHUYÊN MÔN]: Bạn là gia sư giảng dạy môn "${finalCourseTitle}". Hãy phân tích ảnh đề bài học sinh gửi.
+QUY TẮC BẮT BUỘC:
+1. Nếu nội dung đề bài trong ảnh KHÔNG liên quan tới môn "${finalCourseTitle}", bạn PHẢI từ chối giải thích ngay lập tức và khuyên học sinh gửi đề bài đúng môn học.
+2. Nếu đề bài đúng môn "${finalCourseTitle}", hãy đi thẳng vào giải chi tiết từng bước mà TUYỆT ĐỐI KHÔNG giải thích dông dài lý do tại sao nhận giải (ví dụ: không được nói 'Vì đề này thuộc môn...' hay 'Chào con, đây là đề toán nên thầy giải...'). Trả lời trực tiếp vào câu hỏi.
+3. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán học.`
                   }
               });
 

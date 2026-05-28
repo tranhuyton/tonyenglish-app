@@ -112,6 +112,24 @@ export default function App() {
     try { return sessionStorage.getItem('lms_active_course_id') || null; } catch(e) { return null; }
   });
 
+  const [activeCourseTitle, setActiveCourseTitle] = useState<string>("");
+
+  useEffect(() => {
+    if (!activeCourseId) {
+      setActiveCourseTitle("");
+      return;
+    }
+    supabase.from('courses')
+      .select('title')
+      .eq('id', activeCourseId)
+      .single()
+      .then(({ data }) => {
+        if (data) {
+          setActiveCourseTitle(data.title);
+        }
+      });
+  }, [activeCourseId]);
+
   const [returnView, setReturnView] = useState<string>(() => {
     try { return sessionStorage.getItem('lms_return_view') || 'portal'; } catch(e) { return 'portal'; }
   });
@@ -213,6 +231,7 @@ export default function App() {
         taskType={ieltsTaskType}
         lectureTitle={currentLectureTitle}
         htmlContent={currentHtmlContent}
+        courseTitle={activeCourseTitle}
       />
 
       {/* 🚀 GLOBAL WIDGET: HIỂN THỊ ĐÈ LÊN TRÊN BÀI THI/BÀI GIẢNG */}
@@ -222,6 +241,7 @@ export default function App() {
            onMinimize={() => setLiveTutorState('MINIMIZED')}
            onMaximize={() => setLiveTutorState('FULLSCREEN')}
            onClose={() => setLiveTutorState('CLOSED')}
+           courseTitle={activeCourseTitle}
            onOpenAI={() => {
               const topic = sessionStorage.getItem('tony_live_topic') || '';
               if (topic) {
