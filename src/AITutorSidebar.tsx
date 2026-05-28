@@ -11,6 +11,7 @@ interface AITutorProps {
   topicTitle?: string; 
   topicImage?: string; 
   taskType?: string; 
+  isCallActive?: boolean;
 }
 
 const TUTOR_PROMPTS = [
@@ -28,7 +29,8 @@ export default function AITutorSidebar({
   htmlContent, 
   topicTitle, 
   topicImage, 
-  taskType = 'task2' 
+  taskType = 'task2',
+  isCallActive = false
 }: AITutorProps) {
   
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; text: string; isError?: boolean }[]>([]);
@@ -519,6 +521,9 @@ export default function AITutorSidebar({
   }
 
   if (isMinimized) {
+      if (isCallActive) {
+          return null; // 🚀 Ẩn bong bóng AI chat khi đang gọi đàm thoại 1-1 / mở bảng đen
+      }
       return (
           <button 
               onClick={() => { setIsMinimized(false); }}

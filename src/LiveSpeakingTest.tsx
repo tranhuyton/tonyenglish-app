@@ -120,6 +120,85 @@ export default function LiveSpeakingTest({
   const [isPendingVision, setIsPendingVision] = useState(() => {
       return typeof window !== 'undefined' && !!(window as any).tonyPendingImage;
   });
+
+  // Drag-and-drop state for minimized widget
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const isDraggingRef = useRef(false);
+  const dragStartRef = useRef({ x: 0, y: 0 });
+  const positionRef = useRef({ x: 0, y: 0 });
+  const hasDraggedRef = useRef(false);
+
+  useEffect(() => {
+      positionRef.current = position;
+  }, [position]);
+
+  useEffect(() => {
+      const handleMouseMove = (e: MouseEvent | TouchEvent) => {
+          if (!isDraggingRef.current) return;
+          const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+          const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+          
+          const dx = clientX - dragStartRef.current.x;
+          const dy = clientY - dragStartRef.current.y;
+          
+          const screenW = window.innerWidth;
+          const screenH = window.innerHeight;
+          
+          const limitX = Math.max(-screenW + 100, Math.min(50, dx));
+          const limitY = Math.max(-screenH + 100, Math.min(50, dy));
+          
+          setPosition({ x: limitX, y: limitY });
+          
+          if (Math.abs(dx - positionRef.current.x) > 5 || Math.abs(dy - positionRef.current.y) > 5) {
+              hasDraggedRef.current = true;
+          }
+      };
+
+      const handleMouseUp = () => {
+          isDraggingRef.current = false;
+          setIsDragging(false);
+      };
+
+      window.addEventListener('mousemove', handleMouseMove, { passive: false });
+      window.addEventListener('mouseup', handleMouseUp);
+      window.addEventListener('touchmove', handleMouseMove, { passive: false });
+      window.addEventListener('touchend', handleMouseUp);
+
+      return () => {
+          window.removeEventListener('mousemove', handleMouseMove);
+          window.removeEventListener('mouseup', handleMouseUp);
+          window.removeEventListener('touchmove', handleMouseMove);
+          window.removeEventListener('touchend', handleMouseUp);
+      };
+  }, []);
+
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('button') || target.closest('input') || target.closest('a') || target.closest('svg') || target.closest('path')) {
+          return;
+      }
+      
+      isDraggingRef.current = true;
+      setIsDragging(true);
+      hasDraggedRef.current = false;
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+      dragStartRef.current = {
+          x: clientX - positionRef.current.x,
+          y: clientY - positionRef.current.y
+      };
+  };
+
+  const handleWidgetClick = (e: React.MouseEvent) => {
+      if (hasDraggedRef.current) {
+          e.stopPropagation();
+          e.preventDefault();
+          hasDraggedRef.current = false;
+          return;
+      }
+      onMaximize();
+  };
   
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [liveTranscript, setLiveTranscript] = useState<string>('');
@@ -858,8 +937,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       if (isBlackboardMode) {
           return (
               <button 
-                  onClick={onMaximize} 
-                  className={`fixed bottom-8 right-8 z-[100000] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:scale-110 active:scale-95 border-2 ${status === 'CONNECTED' ? (isRecording ? 'bg-red-500 border-red-300 animate-pulse' : (isSpeaking || isProcessing ? 'bg-sky-500 border-sky-300 animate-pulse' : 'bg-emerald-500 border-emerald-300')) : 'bg-indigo-600 border-indigo-400'}`} 
+                  onClick={handleWidgetClick} 
+                  onMouseDown={handleDragStart}
+                  onTouchStart={handleDragStart}
+                  style={{ transform: `translate3d(${position.x}px, ${position.y}px, 0)` }}
+                  className={`fixed bottom-8 right-8 z-[100000] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-2 ${isDragging ? '' : 'transition-all duration-300 hover:scale-110 active:scale-95'} ${status === 'CONNECTED' ? (isRecording ? 'bg-red-500 border-red-300 animate-pulse' : (isSpeaking || isProcessing ? 'bg-sky-500 border-sky-300 animate-pulse' : 'bg-emerald-500 border-emerald-300')) : 'bg-indigo-600 border-indigo-400'}`} 
                   title="Mở Bảng Giáo Viên"
               >
                   <span className="text-2xl">{status === 'CONNECTED' ? (isTextOnlyMode ? '💬' : '🎙️') : '👨‍🏫'}</span>
@@ -867,9 +949,14 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           );
       } else {
           return (
-              <div className="fixed bottom-6 right-6 z-[99998] bg-slate-900/95 backdrop-blur-md border border-slate-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-[1.5rem] p-4 flex flex-col gap-3 w-[280px] md:w-80 animate-in slide-in-from-bottom-5 font-sans transition-all">
+              <div 
+                  onMouseDown={handleDragStart}
+                  onTouchStart={handleDragStart}
+                  style={{ transform: `translate3d(${position.x}px, ${position.y}px, 0)` }}
+                  className={`fixed bottom-6 right-6 z-[99998] bg-slate-900/95 backdrop-blur-md border border-slate-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-[1.5rem] p-4 flex flex-col gap-3 w-[280px] md:w-80 font-sans cursor-move select-none ${isDragging ? '' : 'transition-all duration-300 animate-in slide-in-from-bottom-5'}`}
+              >
                  <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2.5 cursor-pointer flex-1 min-w-0" onClick={onMaximize}>
+                    <div className="flex items-center gap-2.5 cursor-pointer flex-1 min-w-0" onClick={handleWidgetClick}>
                        <div className={`w-3 h-3 shrink-0 rounded-full ${isRecording ? 'bg-red-500 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.8)]' : (isSpeaking ? 'bg-sky-500 animate-pulse shadow-[0_0_10px_rgba(14,165,233,0.8)]' : (isProcessing ? 'bg-amber-500 animate-pulse' : 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]'))}`}></div>
                        <span className="text-white font-semibold text-[13px] truncate">
                            {isRecording ? 'Đang truyền trực tiếp...' : (isProcessing ? 'AI đang phân tích...' : (isSpeaking || liveTranscript ? 'Thầy cô đang nói...' : 'Sẵn sàng...'))}

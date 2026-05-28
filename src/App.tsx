@@ -232,6 +232,7 @@ export default function App() {
         lectureTitle={currentLectureTitle}
         htmlContent={currentHtmlContent}
         courseTitle={activeCourseTitle}
+        isCallActive={liveTutorState !== 'CLOSED'}
       />
 
       {/* 🚀 GLOBAL WIDGET: HIỂN THỊ ĐÈ LÊN TRÊN BÀI THI/BÀI GIẢNG */}
