@@ -1512,6 +1512,7 @@ export default function LectureViewer({
                   setPopupUrl(null);
                   setUploadedBoardImage(null);
                   window.dispatchEvent(new CustomEvent('tony-teacher-board-state', { detail: false }));
+                  window.dispatchEvent(new CustomEvent('tony-force-close'));
               }}
           ></div>
 
@@ -1519,7 +1520,13 @@ export default function LectureViewer({
              
              {/* Render PDF */}
              {popupUrl && popupUrl.toLowerCase().includes('.pdf') && (
-                 <PdfVisionViewer url={popupUrl} onClose={() => setPopupUrl(null)} />
+                 <PdfVisionViewer 
+                    url={popupUrl} 
+                    onClose={() => {
+                        setPopupUrl(null);
+                        window.dispatchEvent(new CustomEvent('tony-force-close'));
+                    }} 
+                 />
              )}
              
              {/* Render Youtube Video */}
@@ -1527,7 +1534,10 @@ export default function LectureViewer({
                  <>
                    <div className="absolute top-4 right-4 z-[100000]">
                        <button 
-                           onClick={() => setPopupUrl(null)} 
+                           onClick={() => {
+                               setPopupUrl(null);
+                               window.dispatchEvent(new CustomEvent('tony-force-close'));
+                           }} 
                            className="w-12 h-12 rounded-full bg-white/10 hover:bg-red-500 flex items-center justify-center text-white transition-colors backdrop-blur-md"
                        >
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -1557,6 +1567,7 @@ export default function LectureViewer({
                                  onClick={() => {
                                      setUploadedBoardImage(null);
                                      window.dispatchEvent(new CustomEvent('tony-teacher-board-state', { detail: false }));
+                                     window.dispatchEvent(new CustomEvent('tony-force-close'));
                                  }} 
                                  className="text-slate-400 hover:text-white bg-slate-700/50 hover:bg-red-500 rounded-full w-8 h-8 flex items-center justify-center transition-all"
                              >

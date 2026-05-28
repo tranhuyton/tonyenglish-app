@@ -273,6 +273,20 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       return () => window.removeEventListener('tony-force-start', handleForceStart);
   }, [status]);
 
+  // 🚀 LẮNG NGHE LỆNH ÉP ĐÓNG CUỘC GỌI & DỌN DẸP SẠCH SẼ (VÍ DỤ KHI ĐÓNG BẢNG/PDF)
+  useEffect(() => {
+      const handleForceClose = () => {
+          if (stopCallRef.current) {
+              stopCallRef.current();
+          }
+          sessionStorage.removeItem('tony_live_mode');
+          sessionStorage.removeItem('tony_tutor_data');
+          onClose();
+      };
+      window.addEventListener('tony-force-close', handleForceClose);
+      return () => window.removeEventListener('tony-force-close', handleForceClose);
+  }, [onClose]);
+
   useEffect(() => {
     const handleNavigationEvent = (e: any) => {
         if (e.detail === 'live-test') {
