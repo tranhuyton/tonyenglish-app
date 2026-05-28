@@ -1143,11 +1143,20 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                          </div>
     
                          <div className="flex flex-col gap-3">
-                             <button onClick={() => startSession(false)} className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl shadow-[0_10px_20px_rgba(14,165,233,0.3)] transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wide active:scale-95">
-                                 📞 Vào Lớp (Đàm Thoại Voice)
+                             <button 
+                                 onClick={() => startSession(true)} 
+                                 className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-black py-4 rounded-xl shadow-[0_10px_25px_rgba(16,185,129,0.35)] relative overflow-hidden flex items-center justify-center gap-2 text-sm uppercase tracking-wide active:scale-95 transition-all border border-emerald-400/20"
+                             >
+                                 💬 Vào Lớp (Chỉ Chat Nhắn Tin)
+                                 <span className="absolute top-0 right-0 bg-yellow-400 text-slate-900 text-[8px] font-extrabold px-2.5 py-0.5 rounded-bl-lg uppercase tracking-wider shadow-sm">
+                                     Hiệu quả & Tiết kiệm ⭐
+                                 </span>
                              </button>
-                             <button onClick={() => startSession(true)} className="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wide border border-slate-500">
-                                 📝 Vào Lớp (Chỉ Chat Nhắn Tin)
+                             <button 
+                                 onClick={() => startSession(false)} 
+                                 className="w-full bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-slate-300 font-bold py-3 rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wide active:scale-95"
+                             >
+                                 📞 Vào Lớp (Đàm Thoại Voice)
                              </button>
                          </div>
                       </div>
