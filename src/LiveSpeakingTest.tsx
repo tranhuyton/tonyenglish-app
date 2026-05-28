@@ -114,11 +114,11 @@ export default function LiveSpeakingTest({
   const [isProcessing, setIsProcessing] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isTextOnlyMode, setIsTextOnlyMode] = useState(false); 
+  const [isVisionMode, setIsVisionMode] = useState(false); // 🚀 Cờ đánh dấu não Mắt Thần
   
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [liveTranscript, setLiveTranscript] = useState<string>('');
   const [currentDraft, setCurrentDraft] = useState<string>('');
-  
   const [chatInput, setChatInput] = useState<string>('');
   
   const [isBlackboardMode, setIsBlackboardMode] = useState(false);
@@ -134,21 +134,119 @@ export default function LiveSpeakingTest({
   const callStartTimeRef = useRef<number>(0);
   const isTextOnlyModeRef = useRef<boolean>(false); 
   
-  // Audio Input (Mic)
+  // Audio Input/Output
   const streamRef = useRef<MediaStream | null>(null);
   const audioCtxInputRef = useRef<AudioContext | null>(null);
   const sourceNodeRef = useRef<MediaStreamAudioSourceNode | null>(null);
   const processorNodeRef = useRef<ScriptProcessorNode | null>(null);
   const recognitionRef = useRef<any>(null); 
-  
-  // Audio Output (Loa)
   const audioCtxOutputRef = useRef<AudioContext | null>(null);
   const nextPlayTimeRef = useRef<number>(0);
-
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const pendingImageRef = useRef<string | null>(null);
 
-  // FULLSCREEN CONTROL
+  // 🚀 QUẢN LÝ REF HÀM ĐỂ TỰ CHẠY
+  const startSessionRef = useRef<any>(null);
+  const startVisionSessionRef = useRef<any>(null);
+  const stopCallRef = useRef<any>(null);
+
+  useEffect(() => {
+      startSessionRef.current = startSession;
+      startVisionSessionRef.current = startVisionSession;
+      stopCallRef.current = stopCall;
+  });
+
+  // =========================================================================================
+  // 🚀 KHỞI TẠO NÃO MẮT THẦN (VISION AI QUA EDGE FUNCTION - KHÔNG DÙNG WEBSOCKET)
+  // =========================================================================================
+  const startVisionSession = async (image: string, query: string, courseTitle: string) => {
+      setIsVisionMode(true);
+      setIsTextOnlyMode(true);
+      setStatus('CONNECTED');
+      setMessages([{ role: 'user', text: `*(📸 Đã gửi ảnh bài tập)*\n\n${query}` }]);
+      setIsProcessing(true);
+      setLiveTranscript('');
+
+      try {
+          // Gọi API chuyên giải ảnh tĩnh
+          const { data, error } = await supabase.functions.invoke('omni-vision-solver', {
+              body: {
+                  imageUrl: image,
+                  content: query,
+                  courseTitle: courseTitle,
+                  prompt: `[KỶ LUẬT CHUYÊN MÔN]: Đây là lớp học môn: "${courseTitle}". NẾU ẢNH KHÔNG LIÊN QUAN TỚI MÔN NÀY, BẠN PHẢI TỪ CHỐI GIẢI THÍCH NGAY LẬP TỨC. Hãy quét ảnh và giải chi tiết từng bước, BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán học.`
+              }
+          });
+
+          if (error || !data) {
+              throw new Error("Lỗi kết nối bộ não Mắt Thần.");
+          }
+
+          const resultText = data.result || "Thầy đang bị mờ mắt một chút, con chụp lại đề bài gửi lại cho thầy nhé.";
+          
+          setIsProcessing(false);
+          
+          // 🚀 HIỆU ỨNG VIẾT PHẤN LÊN BẢNG (TYPING EFFECT)
+          let currentIndex = 0;
+          setLiveTranscript('');
+          
+          const typingInterval = setInterval(() => {
+              setLiveTranscript(prev => prev + resultText.charAt(currentIndex));
+              currentIndex++;
+              
+              if (currentIndex >= resultText.length) {
+                  clearInterval(typingInterval);
+                  setMessages(prev => [...prev, { role: 'model', text: resultText }]);
+                  setLiveTranscript('');
+              }
+          }, 15); // Tốc độ gõ 15 mili-giây/ký tự (Cực mượt)
+
+      } catch (err) {
+          setIsProcessing(false);
+          setMessages(prev => [...prev, { role: 'model', text: "Hệ thống Mắt Thần đang quá tải, con vui lòng thử lại sau nhé!" }]);
+      }
+  };
+
+  // 🚀 LẮNG NGHE LỆNH ÉP KHỞI ĐỘNG (TỪ SIDEBAR BẮN QUA)
+  useEffect(() => {
+      const handleForceStart = (e: any) => {
+          const { mode, image, query, courseTitle } = e.detail;
+
+          const runSession = () => {
+              // 🧠 CHIA NÃO: NẾU LÀ CHẾ ĐỘ VISION (Có ảnh đính kèm)
+              if (mode === 'vision_mode' && image) {
+                  if (startVisionSessionRef.current) {
+                      startVisionSessionRef.current(image, query, courseTitle);
+                  }
+              } 
+              // 🧠 CHIA NÃO: NẾU LÀ CHẾ ĐỘ TEXT/VOICE BÌNH THƯỜNG
+              else if (startSessionRef.current) {
+                  startSessionRef.current(mode === 'text_mode');
+              }
+          };
+
+          if (status !== 'IDLE') {
+              if (stopCallRef.current) stopCallRef.current();
+              setTimeout(runSession, 500);
+          } else {
+              runSession();
+          }
+      };
+      
+      window.addEventListener('tony-force-start', handleForceStart);
+      return () => window.removeEventListener('tony-force-start', handleForceStart);
+  }, [status]);
+
+  useEffect(() => {
+    const handleNavigationEvent = (e: any) => {
+        if (e.detail === 'live-test') {
+            onMaximize();
+        }
+    };
+    window.addEventListener('tony-navigate', handleNavigationEvent);
+    return () => window.removeEventListener('tony-navigate', handleNavigationEvent);
+  }, [onMaximize]);
+
+  // 🚀 KHÔI PHỤC HÀM FULLSCREEN CHỐNG TRẮNG MÀN HÌNH
   useEffect(() => {
     const onFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
     document.addEventListener('fullscreenchange', onFullscreenChange);
@@ -159,21 +257,18 @@ export default function LiveSpeakingTest({
     if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen().catch(e => console.log(e));
     } else {
-        document.exitFullscreen();
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
     }
   };
 
-  // UI STATE CONTROL
   useEffect(() => {
-      const handleBubbleState = (e: any) => {
-          setIsChatBubbleVisible(e.detail);
-      };
+      const handleBubbleState = (e: any) => setIsChatBubbleVisible(e.detail);
       window.addEventListener('tony-chat-bubble-state', handleBubbleState);
       const bubbleExists = !!document.querySelector('button[title="Mở lại khung Chat AI"]');
       setIsChatBubbleVisible(bubbleExists);
-      return () => {
-          window.removeEventListener('tony-chat-bubble-state', handleBubbleState);
-      };
+      return () => window.removeEventListener('tony-chat-bubble-state', handleBubbleState);
   }, []);
 
   useEffect(() => {
@@ -187,7 +282,10 @@ export default function LiveSpeakingTest({
           }
       };
       checkMode();
+      
+      const interval = setInterval(checkMode, 500);
       return () => {
+          clearInterval(interval);
           window.dispatchEvent(new CustomEvent('tony-teacher-board-state', { detail: false }));
       };
   }, [viewState]);
@@ -198,15 +296,6 @@ export default function LiveSpeakingTest({
       }
   }, [messages, liveTranscript, currentDraft, isProcessing, isRecording]);
 
-  useEffect(() => {
-    const handleNewPageImage = (e: any) => { 
-        pendingImageRef.current = e.detail.split(',')[1]; 
-    };
-    window.addEventListener('tony-send-page-image', handleNewPageImage);
-    return () => window.removeEventListener('tony-send-page-image', handleNewPageImage);
-  }, []);
-
-  // 🚀 KHỞI TẠO WEB SPEECH API ĐỂ CHẠY CHỮ NHÁP
   useEffect(() => {
       const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
       if (SpeechRecognition) {
@@ -284,9 +373,10 @@ export default function LiveSpeakingTest({
   };
 
   // =========================================================================================
-  // 🚀 KẾT NỐI WEBSOCKET VOICE.TONYENGLISH.VN
+  // 🚀 KHỞI TẠO NÃO MỒM (WEBSOCKET AI CHO ĐÀM THOẠI/CHAT TEXT BÌNH THƯỜNG)
   // =========================================================================================
   const startSession = async (isTextMode = false) => {
+      setIsVisionMode(false); 
       setIsTextOnlyMode(isTextMode);
       isTextOnlyModeRef.current = isTextMode; 
       
@@ -311,7 +401,6 @@ export default function LiveSpeakingTest({
           }
           nextPlayTimeRef.current = audioCtxOutputRef.current.currentTime;
 
-          // Chỉ lấy Micro nếu KHÔNG phải chế độ Chat Text
           if (!isTextMode) {
               if (!streamRef.current) {
                   streamRef.current = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -331,7 +420,6 @@ export default function LiveSpeakingTest({
               const voiceName = examiner === 'TONY' ? 'Charon' : 'Kore';
               const sysPrompt = buildSystemPrompt();
               
-              // 🔥 SỬA LỖI Ở ĐÂY: LUÔN GỬI "AUDIO" ĐỂ MÁY CHỦ KHÔNG ĐÁ VĂNG
               ws.send(JSON.stringify({
                   setup: {
                       model: "models/gemini-3.1-flash-live-preview",
@@ -378,6 +466,7 @@ export default function LiveSpeakingTest({
                   
                   if (msg.setupComplete) {
                       isSetupCompleteRef.current = true;
+                      
                       ws.send(JSON.stringify({ 
                           clientContent: { 
                               turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa bước vào lớp. Hãy cất tiếng chào, giới thiệu bản thân." }] }], 
@@ -430,7 +519,6 @@ export default function LiveSpeakingTest({
                           setLiveTranscript(transcriptRef.current);
                       }
 
-                      // CHỈ PHÁT AUDIO NẾU KHÔNG PHẢI CHẾ ĐỘ TEXT-ONLY
                       if (!isTextOnlyModeRef.current && msg.serverContent?.modelTurn?.parts) {
                           for (let part of msg.serverContent.modelTurn.parts) {
                               if (part.inlineData?.data) {
@@ -458,7 +546,7 @@ export default function LiveSpeakingTest({
               setStatus('IDLE');
           };
       } catch (e) {
-          alert("Lỗi: Không thể khởi tạo. Nếu dùng Voice, hãy cấp quyền Micro.");
+          alert("Lỗi: Không thể khởi tạo kết nối.");
           setStatus('IDLE');
       }
   };
@@ -498,29 +586,61 @@ export default function LiveSpeakingTest({
   };
 
   // =========================================================================================
-  // 💬 XỬ LÝ CHAT TEXT TRONG BẢNG ĐEN
+  // 💬 XỬ LÝ CHAT TEXT TRONG BẢNG ĐEN (ĐIỀU HƯỚNG TỚI NÃO TƯƠNG ỨNG)
   // =========================================================================================
-  const sendTextMessage = () => {
+  const sendTextMessage = async () => {
       const text = chatInput.trim();
       if (!text) return;
       
+      setChatInput('');
+      
+      // 🚀 NẾU ĐANG Ở NÃO MẮT THẦN (VISION MODE) -> Gọi lại API Edge Function
+      if (isVisionMode) {
+          setIsProcessing(true);
+          setMessages(prev => [...prev, { role: 'user', text: text }]);
+          
+          try {
+              const { data, error } = await supabase.functions.invoke('omni-vision-solver', {
+                  body: {
+                      content: text,
+                      history: messages,
+                      courseTitle: sessionStorage.getItem('tony_live_topic') || ""
+                  }
+              });
+
+              if (error || !data) throw new Error("Lỗi API Vision");
+
+              const resultText = data.result || "Dạ hệ thống vừa gặp trục trặc một xíu, con gõ lại câu hỏi nha.";
+              setIsProcessing(false);
+              
+              // 🚀 Lại kích hoạt hiệu ứng viết phấn
+              let currentIndex = 0;
+              setLiveTranscript('');
+              const typingInterval = setInterval(() => {
+                  setLiveTranscript(prev => prev + resultText.charAt(currentIndex));
+                  currentIndex++;
+                  if (currentIndex >= resultText.length) {
+                      clearInterval(typingInterval);
+                      setMessages(prev => [...prev, { role: 'model', text: resultText }]);
+                      setLiveTranscript('');
+                  }
+              }, 15);
+
+          } catch (err) {
+              setIsProcessing(false);
+              setMessages(prev => [...prev, { role: 'model', text: "Hệ thống đang quá tải, con vui lòng thử lại sau nhé!" }]);
+          }
+          return;
+      }
+
+      // 🚀 NẾU LÀ NÃO MỒM BÌNH THƯỜNG -> Gửi qua WebSocket
       if (isSpeaking) stopAIAudio(); 
       setIsProcessing(true);
       setMessages(prev => [...prev, { role: 'user', text: text }]);
-      setChatInput('');
 
       if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-          let finalParts: any[] = [];
-          if (pendingImageRef.current) {
-              finalParts.push({ inlineData: { mimeType: "image/jpeg", data: pendingImageRef.current } });
-              finalParts.push({ text: `[HỆ THỐNG]: Học sinh vừa lật sách và có nhắn tin như sau: "${text}". Hãy phân tích ảnh đính kèm và giải đáp nội dung tin nhắn.` });
-              pendingImageRef.current = null;
-          } else {
-              finalParts.push({ text: text });
-          }
-
           wsRef.current.send(JSON.stringify({
-              clientContent: { turns: [{ role: "user", parts: finalParts }], turnComplete: true }
+              clientContent: { turns: [{ role: "user", parts: [{ text: text }] }], turnComplete: true }
           }));
       } else {
           alert("Kết nối đang bị gián đoạn, vui lòng chờ...");
@@ -528,13 +648,8 @@ export default function LiveSpeakingTest({
       }
   };
 
-  // =========================================================================================
-  // 🎙️ ĐIỀU KHIỂN VAN BỘ ĐÀM (PUSH-TO-TALK LÊN WEBSOCKET)
-  // =========================================================================================
   const handleToggleRecording = () => {
-      if (isSpeaking) {
-          stopAIAudio(); 
-      }
+      if (isSpeaking) stopAIAudio(); 
       
       if (isRecording) {
           isMicOpenRef.current = false;
@@ -542,26 +657,15 @@ export default function LiveSpeakingTest({
           setIsRecording(false);
           setIsProcessing(true);
           
-          try { 
-              if (recognitionRef.current) recognitionRef.current.stop(); 
-          } catch(e) {}
+          try { if (recognitionRef.current) recognitionRef.current.stop(); } catch(e) {}
 
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
               const userTextHistory = currentDraft.trim() || "(Đã gửi đoạn hội thoại âm thanh)";
               setMessages(prev => [...prev, { role: 'user', text: userTextHistory }]);
               setCurrentDraft('');
 
-              let finalParts: any[] = [];
-              if (pendingImageRef.current) {
-                  finalParts.push({ inlineData: { mimeType: "image/jpeg", data: pendingImageRef.current } });
-                  finalParts.push({ text: "[HỆ THỐNG]: Học sinh vừa nói xong và có lật sách. Hãy phân tích ảnh đính kèm và phản hồi đoạn âm thanh trên." });
-                  pendingImageRef.current = null;
-              } else {
-                  finalParts.push({ text: "[HỆ THỐNG]: Học sinh vừa nói xong. Hãy phản hồi." });
-              }
-
               wsRef.current.send(JSON.stringify({
-                  clientContent: { turns: [{ role: "user", parts: finalParts }], turnComplete: true }
+                  clientContent: { turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa nói xong. Hãy phản hồi." }] }], turnComplete: true }
               }));
           }
       } else {
@@ -570,9 +674,7 @@ export default function LiveSpeakingTest({
               isMicOpenRef.current = true;
               isRecordingRef.current = true;
               setIsRecording(true);
-              try { 
-                  if (recognitionRef.current) recognitionRef.current.start(); 
-              } catch(e) {}
+              try { if (recognitionRef.current) recognitionRef.current.start(); } catch(e) {}
           } else {
               alert("Kết nối đang bị gián đoạn, vui lòng chờ...");
           }
@@ -583,6 +685,7 @@ export default function LiveSpeakingTest({
     isMicOpenRef.current = false;
     isRecordingRef.current = false;
     setIsTextOnlyMode(false); 
+    setIsVisionMode(false); 
     stopAIAudio();
     
     if (processorNodeRef.current) processorNodeRef.current.disconnect();
@@ -627,7 +730,7 @@ export default function LiveSpeakingTest({
           return (
               <button 
                   onClick={onMaximize} 
-                  className={`fixed bottom-8 right-8 z-[100000] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:scale-110 active:scale-95 border-2 ${status === 'CONNECTED' ? (isRecording ? 'bg-red-500 border-red-300 animate-pulse' : (isSpeaking ? 'bg-sky-500 border-sky-300 animate-pulse' : 'bg-emerald-500 border-emerald-300')) : 'bg-indigo-600 border-indigo-400'}`} 
+                  className={`fixed bottom-8 right-8 z-[100000] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 hover:scale-110 active:scale-95 border-2 ${status === 'CONNECTED' ? (isRecording ? 'bg-red-500 border-red-300 animate-pulse' : (isSpeaking || isProcessing ? 'bg-sky-500 border-sky-300 animate-pulse' : 'bg-emerald-500 border-emerald-300')) : 'bg-indigo-600 border-indigo-400'}`} 
                   title="Mở Bảng Giáo Viên"
               >
                   <span className="text-2xl">{status === 'CONNECTED' ? (isTextOnlyMode ? '💬' : '🎙️') : '👨‍🏫'}</span>
@@ -640,13 +743,15 @@ export default function LiveSpeakingTest({
                     <div className="flex items-center gap-2.5 cursor-pointer flex-1 min-w-0" onClick={onMaximize}>
                        <div className={`w-3 h-3 shrink-0 rounded-full ${isRecording ? 'bg-red-500 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.8)]' : (isSpeaking ? 'bg-sky-500 animate-pulse shadow-[0_0_10px_rgba(14,165,233,0.8)]' : (isProcessing ? 'bg-amber-500 animate-pulse' : 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]'))}`}></div>
                        <span className="text-white font-semibold text-[13px] truncate">
-                           {isRecording ? 'Đang truyền trực tiếp...' : (isProcessing ? 'AI đang phân tích...' : (isSpeaking ? 'Thầy cô đang nói...' : 'Sẵn sàng...'))}
+                           {isRecording ? 'Đang truyền trực tiếp...' : (isProcessing ? 'AI đang phân tích...' : (isSpeaking || liveTranscript ? 'Thầy cô đang nói...' : 'Sẵn sàng...'))}
                        </span>
                     </div>
-                    <button onClick={onMaximize} className="text-slate-400 hover:text-white w-8 h-8 flex items-center justify-center bg-slate-800 rounded-full shrink-0 ml-2 border border-slate-600 shadow-sm transition-colors" title="Phóng to">↗️</button>
+                    <button onClick={onMaximize} className="text-slate-400 hover:text-white w-8 h-8 flex items-center justify-center bg-slate-800 rounded-full shrink-0 ml-2 border border-slate-600 shadow-sm transition-colors" title="Phóng to">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
+                    </button>
                  </div>
                  <div className="flex gap-2 mt-1">
-                     {!isTextOnlyMode && (
+                     {!isTextOnlyMode && !isVisionMode && (
                          <button 
                              onClick={handleToggleRecording} 
                              disabled={isProcessing && !isSpeaking} 
@@ -657,7 +762,7 @@ export default function LiveSpeakingTest({
                      )}
                      <button 
                          onClick={handleUserHangUp} 
-                         className="flex-1 bg-slate-800 hover:bg-red-500 text-slate-300 hover:text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 border border-slate-600 hover:border-red-500"
+                         className="flex-1 bg-slate-800 hover:bg-red-50 text-slate-300 hover:text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 border border-slate-600 hover:border-red-500"
                      >
                          🛑 Dập máy
                      </button>
@@ -673,8 +778,14 @@ export default function LiveSpeakingTest({
   const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
   
+  const handleYellowButtonClick = () => { 
+      if (onOpenAI) {
+          onOpenAI(currentMode === 'TUTOR' ? 'tutor' : 'ielts'); 
+      }
+  };
+
   // -------------------------------------------------------------------------
-  // 1️⃣ GIAO DIỆN BẢNG ĐEN (KHI MỞ SÁCH PDF)
+  // 1️⃣ GIAO DIỆN BẢNG ĐEN (KHI MỞ SÁCH PDF HOẶC GIẢI ẢNH SIDEBAR)
   // -------------------------------------------------------------------------
   if (isBlackboardMode) {
       return (
@@ -683,26 +794,32 @@ export default function LiveSpeakingTest({
           {status === 'IDLE' && <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[99998]" onClick={onMinimize} />}
           <div className="fixed top-0 right-0 h-[100dvh] w-full md:w-[50vw] bg-[#1a1c21] shadow-[-30px_0_60px_rgba(0,0,0,0.8)] z-[100000] flex flex-col border-l-[6px] border-[#2c1808]/80 animate-in slide-in-from-right duration-500">
             
-            {/* Header */}
             <div className="h-14 bg-black/40 border-b border-white/5 flex items-center justify-between px-5 shrink-0 backdrop-blur-md">
               <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm border border-white/20">✏️</div>
                   <div className="flex flex-col">
-                      <h3 className="font-bold text-[13px] text-slate-300 uppercase tracking-widest leading-none">Tony Blackboard</h3>
+                      <h3 className="font-bold text-[13px] text-slate-300 uppercase tracking-widest leading-none">Tony Blackboard {isVisionMode && "(Vision)"}</h3>
                   </div>
               </div>
               <div className="flex items-center gap-1">
                  {status === 'CONNECTED' && (
                      <button onClick={() => {setMessages([]); setCurrentDraft('');}} className="text-[11px] text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-lg font-bold uppercase tracking-wide transition-colors mr-2 border border-white/10">Xóa Bảng</button>
                  )}
-                 <button onClick={toggleFullscreen} className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 text-slate-400 transition-colors">🔲</button>
-                 <button onClick={onMinimize} className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 text-slate-400 transition-colors">❌</button>
+                 <button onClick={toggleFullscreen} className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 text-slate-400 transition-colors">
+                     {isFullscreen ? (
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" /></svg>
+                     ) : (
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0-4.5L15 15" /></svg>
+                     )}
+                 </button>
+                 <button onClick={onMinimize} className="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 text-slate-400 transition-colors">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                 </button>
               </div>
             </div>
     
             <div className="flex-1 overflow-y-auto p-6 md:p-10 custom-scrollbar flex flex-col relative bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')] pb-32">
               
-              {/* MÀN HÌNH CHỜ (IDLE) - NÚT VÀO LỚP */}
               {status === 'IDLE' && (
                   <div className="m-auto text-center animate-in zoom-in-95 max-w-sm w-full bg-slate-900/80 p-8 rounded-[2rem] border border-slate-700/50 backdrop-blur-md shadow-2xl">
                      <div className="w-20 h-20 bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 rounded-full flex items-center justify-center text-4xl shadow-lg border border-white/20 mx-auto mb-6">👨‍🏫</div>
@@ -710,11 +827,11 @@ export default function LiveSpeakingTest({
                      <p className="text-[13px] text-slate-400 mb-8 font-medium">Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại giảng bài trực tiếp.</p>
                      
                      <div className="flex justify-center gap-4 mb-8">
-                        <button onClick={() => setExaminer('TONY')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100'}`}>
+                        <button onClick={() => setExaminer('TONY')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
                             <span className="text-3xl drop-shadow-md">👨‍🏫</span>
                             <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Thầy Tôn</span>
                         </button>
-                        <button onClick={() => setExaminer('DIEP')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100'}`}>
+                        <button onClick={() => setExaminer('DIEP')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
                             <span className="text-3xl drop-shadow-md">👩‍🏫</span>
                             <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'DIEP' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Cô Diệp</span>
                         </button>
@@ -770,7 +887,7 @@ export default function LiveSpeakingTest({
                              
                              {isProcessing && !liveTranscript && (
                                  <div className="text-amber-300 italic animate-pulse font-sans">
-                                     Thầy cô đang đọc câu hỏi và viết bảng...
+                                     Thầy cô đang đọc đề bài và viết bảng...
                                  </div>
                              )}
                              <div ref={messagesEndRef} />
@@ -780,23 +897,21 @@ export default function LiveSpeakingTest({
               )}
             </div>
             
-            {/* THANH CONTROL BAR Ở DƯỚI BẢNG ĐEN */}
             {status === 'CONNECTED' && (
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4 z-50">
                     {isTextOnlyMode && (
                         <p className="text-center text-[10px] uppercase tracking-widest text-sky-400 mb-2 font-bold animate-pulse">
-                            💬 ĐANG Ở CHẾ ĐỘ CHAT VĂN BẢN (KHÔNG VOICE)
+                            💬 ĐANG Ở CHẾ ĐỘ {isVisionMode ? "GIẢI BÀI TẬP BẰNG ẢNH" : "CHAT VĂN BẢN (KHÔNG VOICE)"}
                         </p>
                     )}
                     {!isTextOnlyMode && (
                         <p className={`text-center text-[10px] uppercase tracking-widest mb-2 font-bold transition-colors ${isRecording ? 'text-red-400 animate-pulse' : 'text-slate-400'}`}>
-                            {isRecording ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : (isProcessing ? "🧠 AI ĐANG SUY NGHĨ..." : (isSpeaking ? "🟢 THẦY CÔ ĐANG NÓI..." : "⏳ SẴN SÀNG LƯỢT TIẾP THEO"))}
+                            {isRecording ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : (isProcessing ? "🧠 AI ĐANG SUY NGHĨ..." : (isSpeaking || liveTranscript ? "🟢 THẦY CÔ ĐANG NÓI..." : "⏳ SẴN SÀNG LƯỢT TIẾP THEO"))}
                         </p>
                     )}
                     
                     <div className="bg-slate-900/95 backdrop-blur-md border border-slate-700/80 rounded-full p-2 flex items-center justify-between gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
                         
-                        {/* Ô NHẬP TEXT CHAT TRỰC TIẾP TRONG BẢNG ĐEN */}
                         <div className="flex-1 px-2">
                            <input 
                                type="text"
@@ -814,7 +929,7 @@ export default function LiveSpeakingTest({
                         </div>
                         
                         <div className="flex items-center gap-2 shrink-0 pr-1">
-                            {!isTextOnlyMode ? (
+                            {!isTextOnlyMode && !isVisionMode ? (
                                 <button 
                                     onClick={handleToggleRecording} 
                                     disabled={isProcessing && !isSpeaking}
@@ -850,12 +965,11 @@ export default function LiveSpeakingTest({
   }
 
   // -------------------------------------------------------------------------
-  // 2️⃣ NHÂN CÁCH 2: GIAO DIỆN BÌNH THƯỜNG (EDTECH STYLE)
+  // 2️⃣ CHẾ ĐỘ THOẠI TRUYỀN THỐNG (FULLSCREEN KHÔNG CHIA ĐÔI)
   // -------------------------------------------------------------------------
   return (
     <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center min-h-[100dvh] bg-slate-900/90 backdrop-blur-md text-slate-200 p-4 md:p-8 w-full font-sans animate-in fade-in duration-300">
       
-      {/* Cái nút mở Khung Chat Text (Sidebar) vẫn để dành cho giao diện thường */}
       {onOpenAI && !isChatBubbleVisible && (
           <button 
              onClick={() => {

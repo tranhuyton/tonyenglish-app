@@ -64,7 +64,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
 
   const handlePageRenderSuccess = () => {
     clearTimeout((window as any).pdfCaptureTimeout);
-    
     (window as any).pdfCaptureTimeout = setTimeout(() => {
       setIsLoading(false);
       const canvases = document.querySelectorAll('.react-pdf__Page__canvas');
@@ -96,7 +95,7 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
                 curX += drawWidth;
             }
         });
-        
+
         const base64Image = combinedCanvas.toDataURL('image/jpeg', 0.45); 
         window.dispatchEvent(new CustomEvent('tony-send-page-image', { detail: base64Image }));
       }
@@ -145,17 +144,12 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
 
   return (
     <div ref={viewerRef} className="w-full h-full flex flex-col bg-[#0f172a] relative z-20 font-sans">
-      {/* TOOLBAR KIỂU APP HIỆN ĐẠI */}
       <div className="flex flex-wrap items-center justify-between bg-slate-900/90 backdrop-blur-md p-2 md:p-3 shrink-0 border-b border-slate-700/50 shadow-lg gap-2 z-10">
-         
          <div className="flex items-center gap-2 md:gap-4">
-             {/* AI Badge */}
              <div className="hidden sm:flex items-center gap-2 text-emerald-400 bg-emerald-950/40 px-3 py-1.5 rounded-full border border-emerald-800/50 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
                 <span className="text-sm">🤖</span>
                 <span className="text-[11px] md:text-xs font-semibold animate-pulse tracking-wide">AI đang hỗ trợ</span>
              </div>
-             
-             {/* Zoom Controls */}
              <div className="flex items-center bg-slate-800/80 rounded-lg border border-slate-700/50 p-0.5">
                 <button onClick={handleZoomOut} className="w-8 h-8 flex items-center justify-center text-slate-400 hover:bg-slate-700 hover:text-white rounded-md transition-all" title="Thu nhỏ (-)">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM13.5 10.5h-6" /></svg>
@@ -168,12 +162,10 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
                 </button>
              </div>
          </div>
-
-         {/* Pagination Controls */}
          <div className="flex items-center gap-3 flex-1 justify-center min-w-[250px]">
              <button 
                  onClick={() => { 
-                     setIsTwoPageMode(!isTwoPageMode); 
+                     setIsTwoPageMode(!isTwoPageMode);
                      setIsLoading(true); 
                  }}
                  className={`hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all border ${isTwoPageMode ? 'bg-[#0ea5e9]/20 text-[#0ea5e9] border-[#0ea5e9]/30' : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200'}`}
@@ -184,7 +176,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
                      <><span className="text-sm">📄</span> 1 Trang</>
                  )}
              </button>
-
              <div className="flex items-center gap-1 bg-slate-800/80 rounded-lg p-1 border border-slate-700/50">
                 <button 
                     onClick={handlePrev} 
@@ -193,7 +184,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
                 >
                     ←
                 </button>
-                
                 <div className="flex items-center text-slate-400 text-xs font-medium px-2">
                     <input 
                         type="text" 
@@ -205,7 +195,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
                     />
                     <span className="opacity-70 mx-1">/</span> {numPages || '--'}
                 </div>
-
                 <button 
                     onClick={handleNext} 
                     disabled={numPages !== null && currentPage >= numPages} 
@@ -215,8 +204,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
                 </button>
              </div>
          </div>
-
-         {/* Window Controls */}
          <div className="flex items-center gap-2">
              <button 
                 onClick={toggleFullscreen} 
@@ -238,8 +225,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
              </button>
          </div>
       </div>
-      
-      {/* DOCUMENT RENDER AREA */}
       <div className="flex-1 overflow-auto flex justify-center items-start p-4 md:p-8 bg-[#020617] relative custom-scrollbar scroll-smooth">
          {isLoading && (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#020617]/80 backdrop-blur-sm z-10">
@@ -252,7 +237,7 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
             onLoadSuccess={({ numPages }) => setNumPages(numPages)} 
             loading={null}
          >
-           <div className={`flex justify-center transition-all duration-300 ${isTwoPageMode ? 'gap-1 md:gap-4 flex-col lg:flex-row' : ''}`}>
+            <div className={`flex justify-center transition-all duration-300 ${isTwoPageMode ? 'gap-1 md:gap-4 flex-col lg:flex-row' : ''}`}>
                <Page 
                    pageNumber={currentPage} 
                    scale={zoomLevel} 
@@ -280,7 +265,6 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
   );
 };
 
-
 // =========================================================================================
 // 🚀 COMPONENT RENDER BÀI GIẢNG (EDTECH IFRAME STYLE)
 // =========================================================================================
@@ -296,7 +280,6 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
      const handleMessage = (e: MessageEvent) => {
        if (e.data?.type === 'LECTURE_LINK_CLICK') {
          let href = e.data.href;
-         
          if (href.startsWith('/')) {
              href = window.location.origin + href;
          }
@@ -305,14 +288,14 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
              href.includes('youtube.com') || 
              href.includes('youtu.be') || 
              href.toLowerCase().includes('.pdf')) {
-           onOpenPopup(href);
+             onOpenPopup(href);
          } else { 
-             window.open(href, '_blank', 'noopener,noreferrer'); 
+             window.open(href, '_blank', 'noopener,noreferrer');
          }
        } else if (e.data?.type === 'LECTURE_RESIZE') {
          const h = e.data.height;
          if (h) {
-             setIframeHeight(Math.max(100, h + 40)); 
+             setIframeHeight(Math.max(100, h + 40));
          }
        } else if (e.data?.type === 'LECTURE_OPEN_DICT') {
          if (iframeRef.current) {
@@ -336,11 +319,10 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          }
          
          document.body.appendChild(fakeBtn);
-         fakeBtn.click(); 
-         
+         fakeBtn.click();
          setTimeout(() => { 
              fakeBtn.remove(); 
-         }, 100); 
+         }, 100);
        } 
        else if (e.data?.type === 'OPEN_LIVE_SPEAKING') {
          const fakeLiveBtn = document.createElement('button');
@@ -351,8 +333,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          }
          
          document.body.appendChild(fakeLiveBtn);
-         fakeLiveBtn.click(); 
-         
+         fakeLiveBtn.click();
          setTimeout(() => { 
              fakeLiveBtn.remove(); 
          }, 100);
@@ -377,10 +358,11 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
             --bg-light: #f8fafc;
          }
          html, body { 
-             height: max-content !important; min-height: 0 !important;
+             height: max-content !important;
+             min-height: 0 !important;
              margin: 0; padding: 0; 
              font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-             color: var(--text-main); 
+             color: var(--text-main);
              background: transparent; overflow: hidden; 
              line-height: 1.75;
              font-size: 17px;
@@ -390,14 +372,14 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          
          /* Typography Styling cho Học thuật */
          h1, h2, h3, h4 { 
-             color: #0f172a; 
+             color: #0f172a;
              font-weight: 700; 
              margin-top: 1.5em; 
              margin-bottom: 0.5em; 
              line-height: 1.3; 
          }
          h1 { 
-             font-size: 1.75rem; 
+             font-size: 1.75rem;
              border-bottom: 2px solid #e2e8f0; 
              padding-bottom: 0.3em; 
          }
@@ -407,26 +389,26 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          
          /* Media & Elements */
          img, video, iframe { 
-             max-width: 100%; 
+             max-width: 100%;
              height: auto; 
              display: block; 
              border-radius: 12px; 
              margin: 1.5rem auto; 
-             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
          }
          svg { max-width: 100%; height: auto; pointer-events: all !important; }
          
          /* Links */
          a { 
-             cursor: pointer; 
+             cursor: pointer;
              color: var(--brand-color); 
              text-decoration: none; 
              font-weight: 600; 
              border-bottom: 1px transparent; 
-             transition: all 0.2s; 
+             transition: all 0.2s;
          }
          a:hover { 
-             color: #0284c7; 
+             color: #0284c7;
              text-decoration: underline; 
              text-underline-offset: 4px; 
          }
@@ -434,7 +416,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          
          /* EdTech Specifics */
          blockquote { 
-            border-left: 4px solid var(--brand-color); 
+            border-left: 4px solid var(--brand-color);
             background: var(--bg-light); 
             margin: 1.5rem 0; 
             padding: 1rem 1.5rem; 
@@ -443,42 +425,42 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
             color: #475569;
          }
          table { 
-             border-collapse: collapse; 
+             border-collapse: collapse;
              width: 100%; 
              margin-bottom: 1.5rem; 
              border-radius: 8px; 
              overflow: hidden; 
-             box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
          }
          table th, table td { 
-             border: 1px solid #e2e8f0; 
+             border: 1px solid #e2e8f0;
              padding: 0.875rem 1rem; 
              vertical-align: top; 
          }
          table th { 
-             background-color: var(--bg-light); 
+             background-color: var(--bg-light);
              font-weight: 600; 
              text-align: left; 
              color: #0f172a; 
          }
          table tr:nth-child(even) { background-color: #fcfcfc; }
          code { 
-             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; 
+             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
              font-size: 0.9em; 
              background: #f1f5f9; 
              padding: 0.2em 0.4em; 
              border-radius: 4px; 
-             color: #db2777; 
+             color: #db2777;
          }
          pre code { background: transparent; padding: 0; color: inherit; }
          pre { 
-             background: #1e293b; 
+             background: #1e293b;
              color: #f8fafc; 
              padding: 1.25rem; 
              border-radius: 12px; 
              overflow-x: auto; 
              margin-bottom: 1.5rem; 
-             font-size: 0.9rem; 
+             font-size: 0.9rem;
          }
          
          #content-wrapper { display: flow-root; width: 100%; padding-bottom: 2rem; }
@@ -507,7 +489,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
            var btn = target.closest('.btn-ai-trigger, .btn-ielts-trigger, .btn-live-trigger');
            if (btn) {
                e.preventDefault(); 
-               e.stopPropagation(); 
+               e.stopPropagation();
                e.stopImmediatePropagation();
                
                var isLive = btn.classList.contains('btn-live-trigger');
@@ -515,12 +497,10 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                var originalText = btn.innerHTML;
                btn.innerHTML = isLive ? "📞 Đang kết nối..." : "✨ Đang mở AI...";
                btn.style.opacity = "0.7";
-               
                setTimeout(function() { 
                    btn.innerHTML = originalText; 
                    btn.style.opacity = "1"; 
                }, 1500);
-
                if(isLive) {
                   window.parent.postMessage({ 
                       type: 'OPEN_LIVE_SPEAKING', 
@@ -560,14 +540,12 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
                }
            }, 150);
          });
-
          document.addEventListener('mousedown', function(e) {
            var sel = window.getSelection();
            if (!sel.toString().trim()) { 
                window.parent.postMessage({ type: 'LECTURE_CLOSE_DICT' }, '*'); 
            }
          });
-
          function reportHeight() {
             var wrapper = document.getElementById('content-wrapper');
             if (wrapper) {
@@ -584,13 +562,12 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
             ro.observe(document.body);
             ro.observe(document.getElementById('content-wrapper'));
          } else { 
-            setInterval(reportHeight, 500); 
+            setInterval(reportHeight, 500);
          }
        </script>
      </body>
      </html>
    `;
-
    return (
      <div className="w-full animate-in fade-in duration-700 relative">
        <iframe
@@ -602,7 +579,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
        />
      </div>
    );
- }, (prevProps, nextProps) => prevProps.html === nextProps.html);
+}, (prevProps, nextProps) => prevProps.html === nextProps.html);
 
 
 // =========================================================================================
@@ -630,25 +607,23 @@ export default function LectureViewer({
   const [completedTasks, setCompletedTasks] = useState<string[]>([]);
   const [allLectureProgress, setAllLectureProgress] = useState<Record<string, string[]>>({});
   
-  // 🚀 STATE ĐÁNH DẤU LECTURE HOÀN THÀNH
   const [completedLectures, setCompletedLectures] = useState<Set<string>>(new Set());
-
   const [expandedModules, setExpandedModules] = useState<string[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
   const [isTaskMenuOpen, setIsTaskMenuOpen] = useState(false);
   const taskMenuRef = useRef<HTMLDivElement>(null);
-  
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-
   const [popupUrl, setPopupUrl] = useState<string | null>(null);
-  const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
   
+  // 🚀 MỚI: HỨNG ẢNH ĐƯỢC UP TỪ SIDEBAR ĐỂ HIỂN THỊ NỬA TRÁI MÀN HÌNH
+  const [uploadedBoardImage, setUploadedBoardImage] = useState<string | null>(null);
+
+  const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
   const [isTeacherBoardOpen, setIsTeacherBoardOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Tính toán Tiến độ khóa học
   const courseProgress = useMemo(() => {
       if (lectures.length === 0) return 0;
       return Math.round((completedLectures.size / lectures.length) * 100);
@@ -671,6 +646,16 @@ export default function LectureViewer({
     };
     window.addEventListener('tony-teacher-board-state', handleToggleBoard);
     return () => window.removeEventListener('tony-teacher-board-state', handleToggleBoard);
+  }, []);
+
+  // 🚀 LẮNG NGHE LỆNH MỞ ẢNH ĐỀ BÀI TỪ SIDEBAR BẮN QUA
+  useEffect(() => {
+      const handleOpenImageBoard = (e: any) => {
+          setUploadedBoardImage(e.detail);
+          setIsTeacherBoardOpen(true);
+      };
+      window.addEventListener('tony-open-image-board', handleOpenImageBoard);
+      return () => window.removeEventListener('tony-open-image-board', handleOpenImageBoard);
   }, []);
 
   useEffect(() => {
@@ -703,12 +688,11 @@ export default function LectureViewer({
       }
   }, [isTeacherBoardOpen]);
 
-  // 🚀 PASSIVE TRACKING LÝ THUYẾT: THEO DÕI TỰ ĐỘNG ĐÁNH DẤU HOÀN THÀNH KHI ĐẾN TRANG CUỐI
   useEffect(() => {
       if (!currentUser || !activeLectureId || pages.length === 0) return;
       
       const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
-      if (safeLectureTasks.length > 0) return; // Chỉ theo dõi bị động với bài không có Task
+      if (safeLectureTasks.length > 0) return; 
 
       if (currentPage === pages.length && !completedLectures.has(activeLectureId)) {
           setCompletedLectures(prev => new Set(prev).add(activeLectureId));
@@ -729,7 +713,6 @@ export default function LectureViewer({
                           .then();
                   }
               });
-          
           supabase.from('activity_logs').insert([{
               user_id: currentUser.id,
               action_type: 'finish_lecture',
@@ -794,15 +777,13 @@ export default function LectureViewer({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // 🚀 TỐI ƯU HÓA SIÊU TỐC: DÙNG PROMISE.ALL GỌI SONG SONG DỮ LIỆU CHỈ TRONG 2 BƯỚC THAY VÌ WATERFALL
   const fetchCourseData = async () => {
-    setIsLoading(true); 
+    setIsLoading(true);
     setErrorMessage(null);
     try {
       const { data: { user } } = await supabase.auth.getUser();
       setCurrentUser(user);
 
-      // Bước 1: Gọi song song 3 bảng cốt lõi của môn học
       const [
           { data: courseData, error: courseErr },
           { data: modData },
@@ -825,7 +806,7 @@ export default function LectureViewer({
       let validLectures = (lecData || []).filter(lec => 
           lec.module_id && safeModData.some(mod => mod.id === lec.module_id)
       );
-      
+
       validLectures.sort((a, b) => {
           const modA = safeModData.find(m => m.id === a.module_id);
           const modB = safeModData.find(m => m.id === b.module_id);
@@ -836,27 +817,26 @@ export default function LectureViewer({
           }
           return (a.order_index || 0) - (b.order_index || 0);
       });
-      
+
       setLectures(validLectures);
 
-      // Bước 2: Chỉ khi nào tìm thấy User mới đi gọi bảng Progress (Tiến độ)
       if (user && validLectures.length > 0) {
          const lectureIds = validLectures.map(l => l.id);
          const { data: allProg } = await supabase.from('lecture_progress')
              .select('lecture_id, completed_tasks, is_completed')
              .eq('user_id', user.id)
              .in('lecture_id', lectureIds);
-         
+
          const pMap: Record<string, string[]> = {};
          const compSet = new Set<string>();
-         
+
          if (allProg) { 
              allProg.forEach(p => { 
                  pMap[p.lecture_id] = p.completed_tasks || []; 
                  if (p.is_completed) {
                      compSet.add(p.lecture_id);
                  }
-             }); 
+             });
          }
          
          setAllLectureProgress(pMap);
@@ -866,7 +846,6 @@ export default function LectureViewer({
       if (validLectures && validLectures.length > 0) {
          const savedLectureId = localStorage.getItem(`tony_last_lec_${user?.id}_${courseId}`);
          const targetLecture = validLectures.find(l => l.id === savedLectureId) || validLectures[0];
-         
          if (targetLecture.module_id) {
              setExpandedModules([targetLecture.module_id]);
          }
@@ -877,7 +856,7 @@ export default function LectureViewer({
          }
       }
     } catch (error: any) { 
-        setErrorMessage(error.message); 
+        setErrorMessage(error.message);
     } finally { 
         setIsLoading(false); 
     }
@@ -885,7 +864,7 @@ export default function LectureViewer({
 
   const handleSelectLecture = async (lectureId: string, userIdOverride?: string) => {
     try {
-        setActiveLectureId(lectureId); 
+        setActiveLectureId(lectureId);
         setCurrentPage(1); 
         setPages([]); 
         setCompletedTasks([]);
@@ -899,7 +878,6 @@ export default function LectureViewer({
             localStorage.setItem(`tony_last_lec_${targetUserId}_${courseId}`, lectureId);
         }
 
-        // Tải song song cả 2 bảng Pages và Progress của Lecture đó
         const [
             { data: pageData },
             progressRes
@@ -914,7 +892,6 @@ export default function LectureViewer({
         
         if (targetUserId && progressRes.data && progressRes.data.length > 0) {
            const pData = progressRes.data[0];
-           
            if (pData && Array.isArray(pData.completed_tasks)) {
                setCompletedTasks(pData.completed_tasks);
                setAllLectureProgress(prev => ({
@@ -928,7 +905,7 @@ export default function LectureViewer({
            }
            
         } else if (targetUserId) { 
-           setCompletedTasks([]); 
+           setCompletedTasks([]);
            setCompletedLectures(prev => {
                const newSet = new Set(prev);
                newSet.delete(lectureId);
@@ -978,7 +955,7 @@ export default function LectureViewer({
              ...allPrev, 
              [activeLectureId]: newCompleted 
          }));
-         
+
          if (isCompleted) {
              setCompletedLectures(prevSet => new Set(prevSet).add(activeLectureId));
              supabase.from('activity_logs').insert([{
@@ -1005,8 +982,9 @@ export default function LectureViewer({
       
       try {
          const { data: testData, error } = await supabase.from('tests').select('*').eq('id', task.test_id).single();
+
          if (error || !testData) { 
-             alert("Bài tập này hiện không khả dụng. Vui lòng liên hệ Admin."); 
+             alert("Bài tập này hiện không khả dụng. Vui lòng liên hệ Admin.");
              return; 
          }
          
@@ -1015,6 +993,7 @@ export default function LectureViewer({
          }
          
          const type = String(testData.test_type || '').toLowerCase();
+
          if (type.includes('standard')) {
              onStartTest('standard', testData);
          } else if (type.includes('case-study') || type.includes('business')) {
@@ -1024,7 +1003,7 @@ export default function LectureViewer({
          } else if (type === 'ielts-speaking') {
              onStartTest('ielts-speaking', testData);
          } else if (type.includes('ielts')) {
-             onStartTest('computer', testData); 
+             onStartTest('computer', testData);
          } else {
              onStartTest('standard', testData);
          }
@@ -1038,10 +1017,10 @@ export default function LectureViewer({
         setCurrentPage(prev => prev + 1);
     } else {
       const currentIndex = lectures.findIndex(l => l.id === activeLectureId);
-      
+
       if (currentIndex !== -1 && currentIndex < lectures.length - 1) {
          const nextLecture = lectures[currentIndex + 1];
-         
+
          if (nextLecture.module_id && !expandedModules.includes(nextLecture.module_id)) {
              setExpandedModules(prev => [...prev, nextLecture.module_id]);
          }
@@ -1056,10 +1035,10 @@ export default function LectureViewer({
         setCurrentPage(prev => prev - 1);
     } else {
        const currentIndex = lectures.findIndex(l => l.id === activeLectureId);
-       
+
        if (currentIndex > 0) {
           const prevLecture = lectures[currentIndex - 1];
-          
+
           if (prevLecture.module_id && !expandedModules.includes(prevLecture.module_id)) {
               setExpandedModules(prev => [...prev, prevLecture.module_id]);
           }
@@ -1078,24 +1057,24 @@ export default function LectureViewer({
         fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|vi`)
             .then(r => r.json())
     ]).then(([enRes, viRes]) => {
-        let phonetics = '';
-        let audio = '';
-        let translation = 'Không tìm thấy bản dịch.';
+         let phonetics = '';
+         let audio = '';
+         let translation = 'Không tìm thấy bản dịch.';
         
-        if (enRes.status === 'fulfilled' && enRes.value[0]) {
+         if (enRes.status === 'fulfilled' && enRes.value[0]) {
             phonetics = enRes.value[0].phonetics?.find((p:any) => p.text)?.text || '';
             audio = enRes.value[0].phonetics?.find((p:any) => p.audio)?.audio || '';
-        }
+         }
         
-        if (viRes.status === 'fulfilled' && viRes.value?.responseData?.translatedText) {
+         if (viRes.status === 'fulfilled' && viRes.value?.responseData?.translatedText) {
             translation = viRes.value.responseData.translatedText;
-        }
+         }
         
-        setDictPopup(prev => prev ? { 
+         setDictPopup(prev => prev ? { 
             ...prev, 
             data: { phonetics, audio, translation }, 
             isLoading: false 
-        } : null);
+         } : null);
     });
   }, []);
 
@@ -1139,6 +1118,7 @@ export default function LectureViewer({
   const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
   const safeCompletedTasks = Array.isArray(completedTasks) ? completedTasks : [];
   const isLastLectureAndPage = currentPage === totalPages && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
+
   const isAllTasksDone = safeLectureTasks.length > 0 && safeCompletedTasks.length === safeLectureTasks.length;
 
   if (isLoading) {
@@ -1169,7 +1149,6 @@ export default function LectureViewer({
   return (
     <div className="flex flex-col h-[100dvh] w-full bg-[#f8fafc] font-sans text-slate-800 overflow-hidden relative overscroll-none">
       
-      {/* 🚀 HEADER MỚI: Glassmorphism & UI mượt mà */}
       <header className="h-[64px] bg-[#0ea5e9]/95 backdrop-blur-md text-white flex items-center px-4 md:px-6 shrink-0 z-30 shadow-md justify-between border-b border-[#0284c7]/50 transition-all">
          <div className="flex items-center gap-2 md:gap-4 min-w-0 flex-1">
             <button 
@@ -1187,7 +1166,6 @@ export default function LectureViewer({
                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h7" /></svg>
             </button>
             
-            {/* Tên khóa học + Progress ngắn gọn */}
             <div className="flex flex-col min-w-0 ml-1">
                <h1 className="text-[15px] md:text-[17px] font-semibold leading-tight truncate tracking-tight">{course?.title}</h1>
                <div className="hidden sm:flex items-center gap-2 mt-0.5">
@@ -1198,7 +1176,6 @@ export default function LectureViewer({
                </div>
             </div>
             
-            {/* Nút Nhiệm Vụ (Gamified) */}
             {safeLectureTasks.length > 0 && (
                <div className="relative ml-2 shrink-0" ref={taskMenuRef}>
                  <button 
@@ -1295,7 +1272,6 @@ export default function LectureViewer({
              />
          )}
 
-         {/* 🚀 SIDEBAR MỚI: UX hiện đại */}
          <aside className={`fixed md:relative inset-y-0 left-0 z-50 md:z-20 h-[100dvh] md:h-full bg-white border-r border-slate-200 flex flex-col shrink-0 transition-transform duration-300 ease-in-out shadow-[4px_0_24px_rgba(0,0,0,0.05)] md:shadow-none
             ${isSidebarOpen && !isTeacherBoardOpen ? 'translate-x-0 w-[300px] md:w-[340px]' : '-translate-x-full w-[300px] md:w-0 md:opacity-0 md:border-r-0 md:translate-x-0'}`}>
            
@@ -1391,7 +1367,6 @@ export default function LectureViewer({
            </div>
          </aside>
 
-         {/* 🚀 MAIN CONTENT: Đọc thoải mái như Medium/Notion */}
          <main 
              className={`flex-1 overflow-y-auto bg-slate-50 custom-scrollbar relative lecture-content transition-all duration-500 ease-in-out ${isTeacherBoardOpen ? 'md:pr-[50vw]' : ''}`} 
              ref={containerRef} 
@@ -1424,7 +1399,6 @@ export default function LectureViewer({
                   )}
                </div>
                
-               {/* THANH ĐIỀU HƯỚNG TRANG */}
                {activeLectureId && (
                   <div className={`max-w-[850px] w-full flex justify-between items-center px-4 sm:px-0 pb-16 transition-all ${isTeacherBoardOpen ? 'max-w-none flex-col gap-6 md:flex-row' : ''}`}>
                       <button 
@@ -1437,7 +1411,7 @@ export default function LectureViewer({
                       
                       {totalPages > 1 && (
                          <div className="flex gap-2 bg-white px-2 py-2 rounded-xl shadow-sm border border-slate-200">
-                           {Array.from({ length: totalPages }).map((_, i) => (
+                             {Array.from({ length: totalPages }).map((_, i) => (
                                  <button 
                                      key={i+1} 
                                      onClick={() => setCurrentPage(i+1)} 
@@ -1462,7 +1436,6 @@ export default function LectureViewer({
          </main>
       </div>
 
-      {/* 🚀 TỪ ĐIỂN POPUP HIỆN ĐẠI (TOOLTIP STYLE) */}
       {dictPopup && dictPopup.show && (
          <div id="dict-popup" className="fixed bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] ring-1 ring-slate-900/5 w-[90vw] max-w-[340px] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200"
            style={{ 
@@ -1509,27 +1482,36 @@ export default function LectureViewer({
                      <span className="w-6 h-6 border-2 border-[#0ea5e9] border-t-transparent rounded-full animate-spin mb-2"></span>
                      <span className="text-[13px] font-medium">Đang dịch...</span>
                  </div>
-              ) : (
+               ) : (
                  <div className="text-slate-700 leading-relaxed font-medium">
                      {dictPopup.data?.translation}
                  </div>
               )}
             </div>
-         </div>
+          </div>
       )}
 
-      {/* LỚP PHỦ MEDIA (PDF/YOUTUBE) */}
-      {popupUrl && (
+      {/* LỚP PHỦ MEDIA (PDF/YOUTUBE) VÀ ẢNH UPLOAD */}
+      {(popupUrl || uploadedBoardImage) && (
         <div className="fixed inset-0 flex flex-col animate-in fade-in duration-200 pointer-events-none" style={{ zIndex: 99998 }}>
           <div 
               className="absolute inset-0 bg-slate-900/95 backdrop-blur-sm pointer-events-auto" 
-              onClick={() => setPopupUrl(null)}
+              onClick={() => {
+                  setPopupUrl(null);
+                  setUploadedBoardImage(null);
+                  window.dispatchEvent(new CustomEvent('tony-teacher-board-state', { detail: false }));
+              }}
           ></div>
-          <div className={`w-full h-full relative pointer-events-auto transition-all duration-500 ease-in-out ${isTeacherBoardOpen && popupUrl.toLowerCase().includes('.pdf') ? 'md:w-[50vw]' : 'w-full'}`}>
+
+          <div className={`w-full h-full relative pointer-events-auto transition-all duration-500 ease-in-out ${isTeacherBoardOpen ? 'md:w-[50vw]' : 'w-full'}`}>
              
-             {popupUrl.toLowerCase().includes('.pdf') ? (
+             {/* Render PDF */}
+             {popupUrl && popupUrl.toLowerCase().includes('.pdf') && (
                  <PdfVisionViewer url={popupUrl} onClose={() => setPopupUrl(null)} />
-             ) : (
+             )}
+             
+             {/* Render Youtube Video */}
+             {popupUrl && !popupUrl.toLowerCase().includes('.pdf') && (
                  <>
                    <div className="absolute top-4 right-4 z-[100000]">
                        <button 
@@ -1549,6 +1531,31 @@ export default function LectureViewer({
                    ></iframe>
                  </>
              )}
+
+             {/* 🚀 CLASS react-pdf__Document ĐỂ ĐÁNH LỪA BẢNG ĐEN MỞ CÙNG LÚC VỚI ẢNH ĐỀ BÀI MỚI UPLOAD */}
+             {uploadedBoardImage && (
+                 <div className="react-pdf__Document absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-4 md:p-8 z-10 pointer-events-none">
+                     <div className="bg-slate-800/80 p-3 rounded-2xl shadow-2xl relative max-h-[90%] max-w-full flex flex-col pointer-events-auto border border-slate-700/50">
+                         <div className="flex justify-between items-center mb-3 px-2">
+                             <span className="text-emerald-400 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
+                                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]"></span>
+                                 ĐỀ BÀI ĐÍNH KÈM TỪ HỌC SINH
+                             </span>
+                             <button 
+                                 onClick={() => {
+                                     setUploadedBoardImage(null);
+                                     window.dispatchEvent(new CustomEvent('tony-teacher-board-state', { detail: false }));
+                                 }} 
+                                 className="text-slate-400 hover:text-white bg-slate-700/50 hover:bg-red-500 rounded-full w-8 h-8 flex items-center justify-center transition-all"
+                             >
+                                 ✕
+                             </button>
+                         </div>
+                         <img src={uploadedBoardImage} className="max-w-full flex-1 object-contain rounded-xl bg-white/5" />
+                     </div>
+                 </div>
+             )}
+             
           </div>
         </div>
       )}
