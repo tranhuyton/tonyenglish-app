@@ -866,7 +866,7 @@ export default function AITutorSidebar({
                 }} 
                 onPaste={handlePaste} 
                 placeholder={mode === 'parent_mode' ? "Hỏi AI về tình hình của bé..." : "Ctrl+V để dán ảnh hoặc gõ câu hỏi..."}
-                className="flex-1 min-h-[44px] max-h-[120px] bg-transparent text-[14px] md:text-[15px] text-slate-700 font-medium px-3 py-3 outline-none resize-none custom-scrollbar leading-relaxed" 
+                className="flex-1 min-h-[44px] max-h-[120px] bg-transparent text-[16px] md:text-[15px] text-slate-700 font-medium px-3 py-3 outline-none resize-none custom-scrollbar leading-relaxed" 
                 rows={1} 
             />
             

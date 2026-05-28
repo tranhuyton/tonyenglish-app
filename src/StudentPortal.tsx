@@ -188,50 +188,68 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const checkUserAndFetchData = async () => {
     setIsLoading(true);
-    const { data: { user } } = await supabase.auth.getUser();
-    setCurrentUser(user);
-    
-    if (!user) {
-        setIsLoading(false);
-        return;
-    }
-
     try {
+        const { data: { user } } = await supabase.auth.getUser();
+        setCurrentUser(user);
+        
+        if (!user) {
+            setIsLoading(false);
+            return;
+        }
+
+        // Step 1: Fetch user-specific records (profile, progress, enrollments, history)
         const [
             { data: profile },
             { data: lp },
             { data: cStudents },
             { data: enrolls },
-            { data: allF },
-            { data: allL },
-            { data: allT },
-            { data: hData },
-            { data: allC }
+            { data: hData }
         ] = await Promise.all([
             supabase.from('profiles').select('*').eq('id', user.id).single(),
             supabase.from('lecture_progress').select('*').eq('user_id', user.id),
             supabase.from('class_students').select('*').eq('user_id', user.id),
             supabase.from('enrollments').select('*').eq('user_id', user.id),
-            supabase.from('folders').select('*'),
-            supabase.from('lectures').select('*').eq('is_published', true),
-            supabase.from('tests').select('*').eq('is_published', true),
-            supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false }),
-            supabase.from('courses').select('*')
+            supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false })
         ]);
 
         setUserProfile(profile);
         if (profile) {
             if (!newFullName) setNewFullName(profile.full_name || '');
-            if (profile.target_ielts) setTargetIelts(profile.target_ielts.toString());
+            if (profile.avatar_url) setTargetIelts(profile.avatar_url.toString());
         }
         
         setLectureProgressData(lp || []);
         if (cStudents) setUserClassIds(cStudents.map(c => c.class_id));
-        setAllFolders(allF || []);
-        setAllLectures(allL || []);
 
         const courseIds = enrolls?.map(e => e.course_id) || [];
         
+        let allF: any[] = [];
+        let allL: any[] = [];
+        let allT: any[] = [];
+        let allC: any[] = [];
+
+        // Step 2: Only fetch catalog tables (folders, lectures, tests, courses) filtered by the enrolled courses
+        if (courseIds.length > 0) {
+            const [
+                { data: fData },
+                { data: lData },
+                { data: tData },
+                { data: cData }
+            ] = await Promise.all([
+                supabase.from('folders').select('*').in('course_id', courseIds),
+                supabase.from('lectures').select('*').eq('is_published', true).in('course_id', courseIds),
+                supabase.from('tests').select('*').eq('is_published', true).or(`course_id.in.(${courseIds.map(id => `"${id}"`).join(',')}),course_id.is.null`),
+                supabase.from('courses').select('*').in('id', courseIds)
+            ]);
+            allF = fData || [];
+            allL = lData || [];
+            allT = tData || [];
+            allC = cData || [];
+        }
+
+        setAllFolders(allF);
+        setAllLectures(allL);
+
         if (courseIds.length > 0) {
             const userCourses = (allC || []).filter(c => courseIds.includes(c.id));
             setCourses(userCourses.sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999)));
@@ -328,8 +346,11 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const handleUpdateTarget = async (newVal: string) => {
       setTargetIelts(newVal);
+      if (userProfile) {
+          setUserProfile({ ...userProfile, avatar_url: newVal });
+      }
       if (currentUser?.id) {
-          await supabase.from('profiles').update({ target_ielts: newVal }).eq('id', currentUser.id);
+          await supabase.from('profiles').update({ avatar_url: newVal }).eq('id', currentUser.id);
       }
   };
 

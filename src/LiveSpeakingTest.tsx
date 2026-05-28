@@ -991,6 +991,88 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
   // =========================================================================================
   // 🟢 GIAO DIỆN CHÍNH (FULLSCREEN)
   // =========================================================================================
+  // 🚀 TỐI ƯU HÓA MEMOIZE: CHỈ RENDER LẠI DANH SÁCH TIN NHẮN KHI CẦN THIẾT
+  // Tránh bị giật lag khi gõ văn bản vào ô input (vì khi gõ input, component re-render nhưng không cần chạy lại ReactMarkdown/KaTeX)
+  const renderedBlackboardMessages = useMemo(() => {
+      if (messages.length === 0 && !isRecording && !liveTranscript && !currentDraft) {
+          return (
+              <div className="h-full flex flex-col items-center justify-center text-center opacity-30 italic text-slate-400" style={{fontFamily: 'sans-serif'}}>
+                  <span className="text-4xl mb-4 grayscale">{isTextOnlyMode ? '💬' : '🎙️'}</span>
+                  <span className="text-[15px] font-medium">Bảng đen trống.<br/>Gõ câu hỏi vào thanh công cụ bên dưới để hỏi bài.</span>
+              </div>
+          );
+      }
+      return (
+          <>
+             {messages.map((m, i) => (
+                 <div key={i} className={`mb-6 p-4 rounded-xl ${m.role === 'user' ? 'bg-white/5 border border-white/10 text-sky-200' : 'text-white'}`}>
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">{m.role === 'user' ? 'Câu hỏi của em:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')}</strong>
+                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
+                 </div>
+             ))}
+             
+             {liveTranscript && (
+                 <div className="mb-6 p-4 rounded-xl text-white">
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">{examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'}</strong>
+                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
+                 </div>
+             )}
+             
+             {isRecording && currentDraft && (
+                 <div className="mb-6 p-4 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">Đang ghi âm...</strong>
+                     {currentDraft}
+                 </div>
+             )}
+             
+             {isProcessing && !liveTranscript && (
+                 <div className="text-amber-300 italic animate-pulse font-sans">
+                     Thầy cô đang đọc đề bài và viết bảng...
+                 </div>
+             )}
+             <div ref={messagesEndRef} />
+          </>
+      );
+  }, [messages, liveTranscript, currentDraft, isRecording, isProcessing, isTextOnlyMode, examiner]);
+
+  const renderedTraditionalMessages = useMemo(() => {
+      if (messages.length === 0 && !isRecording && !liveTranscript && !currentDraft) {
+          return (
+              <div className="flex flex-col items-center justify-center h-full opacity-40">
+                  <span className="text-3xl mb-2 grayscale">🎙️</span>
+                  <span className="italic text-sm font-medium">Lịch sử trống.<br/>Nhấn nút bên dưới để bắt đầu nói.</span>
+              </div>
+          );
+      }
+      return (
+          <div className="prose prose-slate prose-sm max-w-none font-medium text-slate-700 leading-relaxed space-y-4">
+              {messages.map((m, i) => (
+                  <div key={i} className={`p-3 rounded-lg ${m.role === 'user' ? 'bg-blue-50 text-blue-900 border border-blue-100' : 'bg-white border border-slate-200'}`}>
+                      <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">
+                          {m.role === 'user' ? 'Em nói:' : 'Giám khảo:'}
+                      </strong>
+                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
+                  </div>
+              ))}
+              
+              {liveTranscript && (
+                  <div className={`p-3 rounded-lg bg-white border border-slate-200`}>
+                      <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">Giám khảo:</strong>
+                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
+                  </div>
+              )}
+              
+              {isRecording && currentDraft && (
+                  <div className="p-3 rounded-lg bg-blue-50/50 text-blue-900 border border-blue-100/50 border-dashed animate-pulse">
+                      <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">Đang ghi âm...</strong>
+                      {currentDraft}
+                  </div>
+              )}
+              <div ref={messagesEndRef} />
+          </div>
+      );
+  }, [messages, isRecording, liveTranscript, currentDraft]);
+
   const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
   
@@ -1080,42 +1162,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
               {status === 'CONNECTED' && (
                   <div className="tony-chalkboard-content flex-1 w-full text-left">
-                      {messages.length === 0 && !isRecording && !liveTranscript && !currentDraft ? (
-                          <div className="h-full flex flex-col items-center justify-center text-center opacity-30 italic text-slate-400" style={{fontFamily: 'sans-serif'}}>
-                              <span className="text-4xl mb-4 grayscale">{isTextOnlyMode ? '💬' : '🎙️'}</span>
-                              <span className="text-[15px] font-medium">Bảng đen trống.<br/>Gõ câu hỏi vào thanh công cụ bên dưới để hỏi bài.</span>
-                          </div>
-                      ) : (
-                          <>
-                             {messages.map((m, i) => (
-                                 <div key={i} className={`mb-6 p-4 rounded-xl ${m.role === 'user' ? 'bg-white/5 border border-white/10 text-sky-200' : 'text-white'}`}>
-                                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">{m.role === 'user' ? 'Câu hỏi của em:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')}</strong>
-                                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
-                                 </div>
-                             ))}
-                             
-                             {liveTranscript && (
-                                 <div className="mb-6 p-4 rounded-xl text-white">
-                                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">{examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'}</strong>
-                                     <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
-                                 </div>
-                             )}
-                             
-                             {isRecording && currentDraft && (
-                                 <div className="mb-6 p-4 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
-                                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">Đang ghi âm...</strong>
-                                     {currentDraft}
-                                 </div>
-                             )}
-                             
-                             {isProcessing && !liveTranscript && (
-                                 <div className="text-amber-300 italic animate-pulse font-sans">
-                                     Thầy cô đang đọc đề bài và viết bảng...
-                                 </div>
-                             )}
-                             <div ref={messagesEndRef} />
-                          </>
-                      )}
+                      {renderedBlackboardMessages}
                   </div>
               )}
             </div>
@@ -1147,7 +1194,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                                }}
                                placeholder={isRecording ? "Đang thu âm qua mic..." : "💬 Gõ câu hỏi vào đây (Enter để gửi)..."}
                                disabled={isRecording || isProcessing}
-                               className="w-full bg-slate-800/80 text-white placeholder-slate-400 text-[14px] rounded-full px-4 py-2.5 border border-slate-600 focus:outline-none focus:border-[#0ea5e9] transition-colors"
+                               className="w-full bg-slate-800/80 text-white placeholder-slate-400 text-[16px] md:text-[14px] rounded-full px-4 py-2.5 border border-slate-600 focus:outline-none focus:border-[#0ea5e9] transition-colors"
                            />
                         </div>
                         
@@ -1291,38 +1338,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
             </p>
             
             <div className="bg-slate-50 rounded-2xl p-5 md:p-6 w-full text-left h-32 md:h-48 overflow-y-auto mb-8 border border-slate-200 shadow-inner custom-scrollbar flex-1 min-h-[140px]">
-               {messages.length > 0 || isRecording || liveTranscript || currentDraft ? (
-                  <div className="prose prose-slate prose-sm max-w-none font-medium text-slate-700 leading-relaxed space-y-4">
-                      {messages.map((m, i) => (
-                          <div key={i} className={`p-3 rounded-lg ${m.role === 'user' ? 'bg-blue-50 text-blue-900 border border-blue-100' : 'bg-white border border-slate-200'}`}>
-                              <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">
-                                  {m.role === 'user' ? 'Em nói:' : 'Giám khảo:'}
-                              </strong>
-                              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
-                          </div>
-                      ))}
-                      
-                      {liveTranscript && (
-                          <div className={`p-3 rounded-lg bg-white border border-slate-200`}>
-                              <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">Giám khảo:</strong>
-                              <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
-                          </div>
-                      )}
-                      
-                      {isRecording && currentDraft && (
-                          <div className="p-3 rounded-lg bg-blue-50/50 text-blue-900 border border-blue-100/50 border-dashed animate-pulse">
-                              <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">Đang ghi âm...</strong>
-                              {currentDraft}
-                          </div>
-                      )}
-                      <div ref={messagesEndRef} />
-                  </div>
-               ) : (
-                  <div className="flex flex-col items-center justify-center h-full opacity-40">
-                      <span className="text-3xl mb-2 grayscale">🎙️</span>
-                      <span className="italic text-sm font-medium">Lịch sử trống.<br/>Nhấn nút bên dưới để bắt đầu nói.</span>
-                  </div>
-               )}
+               {renderedTraditionalMessages}
             </div>
             
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full shrink-0">
