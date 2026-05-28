@@ -173,7 +173,11 @@ export default function LiveSpeakingTest({
                   imageUrl: image,
                   content: query,
                   courseTitle: courseTitle,
-                  prompt: `[KỶ LUẬT CHUYÊN MÔN]: Đây là lớp học môn: "${courseTitle}". NẾU ẢNH KHÔNG LIÊN QUAN TỚI MÔN NÀY, BẠN PHẢI TỪ CHỐI GIẢI THÍCH NGAY LẬP TỨC. Hãy quét ảnh và giải chi tiết từng bước, BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán học.`
+                  prompt: `[KỶ LUẬT CHUYÊN MÔN]: Bạn là gia sư giảng dạy môn "${courseTitle}". Hãy phân tích ảnh đề bài học sinh gửi.
+QUY TẮC BẮT BUỘC:
+1. Nếu nội dung đề bài trong ảnh KHÔNG liên quan tới môn "${courseTitle}", bạn PHẢI từ chối giải thích ngay lập tức và khuyên học sinh gửi đề bài đúng môn học.
+2. Nếu đề bài đúng môn "${courseTitle}", hãy đi thẳng vào giải chi tiết từng bước mà TUYỆT ĐỐI KHÔNG giải thích dông dài lý do tại sao nhận giải (ví dụ: không được nói 'Vì đề này thuộc môn...' hay 'Chào con, đây là đề toán nên thầy giải...'). Trả lời trực tiếp vào câu hỏi.
+3. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán học.`
               }
           });
 
@@ -362,13 +366,13 @@ export default function LiveSpeakingTest({
             : '';
 
         let promptKienNhan = isBlackboardMode 
-        ? `[KỶ LUẬT THÉP VÀ CÁCH TRÌNH BÀY BẢNG]: Bạn bắt buộc dùng văn phong chuẩn giọng miền Bắc (Hà Nội). Lời nói đang được chép lên bảng đen dạng Markdown. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) để viết MỌI công thức toán học, và LUÔN LUÔN IN ĐẬM (**từ khóa**) các đáp án, danh từ riêng hoặc kết quả quan trọng để hệ thống tự vẽ bằng phấn vàng nổi bật.`
-        : `[KỶ LUẬT THÉP]: Bạn bắt buộc dùng văn phong chuẩn giọng miền Bắc (Hà Nội). Trả lời ngắn gọn, tự nhiên. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán, và IN ĐẬM (**từ khóa**) các đáp án quan trọng để hệ thống tự vẽ bằng phấn vàng nổi bật.`;
+        ? `[KỶ LUẬT THÉP VÀ CÁCH TRÌNH BÀY BẢNG]: Bạn bắt buộc dùng văn phong và từ vựng chuẩn miền Bắc (Hà Nội). Lời nói đang được chép lên bảng đen dạng Markdown. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) để viết MỌI công thức toán học, và LUÔN LUÔN IN ĐẬM (**từ khóa**) các đáp án, danh từ riêng hoặc kết quả quan trọng để hệ thống tự vẽ bằng phấn vàng nổi bật. Tuyệt đối không tự giới thiệu mình là người Hà Nội hoặc nhắc đến xuất thân của mình với học sinh.`
+        : `[KỶ LUẬT THÉP]: Bạn bắt buộc dùng văn phong và từ vựng chuẩn miền Bắc (Hà Nội). Trả lời ngắn gọn, tự nhiên. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán, và IN ĐẬM (**từ khóa**) các đáp án quan trọng để hệ thống tự vẽ bằng phấn vàng nổi bật. Tuyệt đối không tự giới thiệu mình là người Hà Nội hoặc nhắc đến xuất thân của mình với học sinh.`;
         
         if (mode === 'TUTOR' && tutorData) {
-            return `Bạn là ${teacherName}, người Hà Nội. BỐI CẢNH BÀI HỌC: ${tutorData.transcript}. NHIỆM VỤ: ${tutorData.feedback}. ${promptKienNhan} ${contextInstruction}`;
+            return `Bạn là ${teacherName}. BỐI CẢNH BÀI HỌC: ${tutorData.transcript}. NHIỆM VỤ: ${tutorData.feedback}. ${promptKienNhan} ${contextInstruction}`;
         } else {
-            return `Bạn là giám khảo IELTS tên ${teacherName}, người Hà Nội. Hãy yêu cầu tôi nói về chủ đề: "${currentTopic}". Luôn lắng nghe và phản hồi trực tiếp dựa trên nội dung của thí sinh. ${promptKienNhan} ${contextInstruction}`;
+            return `Bạn là giám khảo IELTS tên ${teacherName}. Hãy yêu cầu tôi nói về chủ đề: "${currentTopic}". Luôn lắng nghe và phản hồi trực tiếp dựa trên nội dung của thí sinh. ${promptKienNhan} ${contextInstruction}`;
         }
   };
 

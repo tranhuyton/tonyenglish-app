@@ -294,10 +294,6 @@ export default function AITutorSidebar({
       
       setIsMinimized(true);
       window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-      
-      setTimeout(() => {
-          window.dispatchEvent(new CustomEvent('tony-force-start', { detail: { mode: 'voice_mode' } }));
-      }, 600);
   };
 
   const handlePaste = (e: React.ClipboardEvent) => {
@@ -388,6 +384,8 @@ export default function AITutorSidebar({
 
     try {
       if (currentImage && mode === 'tutor') {
+          sessionStorage.setItem('tony_live_mode', 'TUTOR');
+          
           // Bắn ảnh sang nửa trái hiển thị
           window.dispatchEvent(new CustomEvent('tony-open-image-board', { detail: currentImage }));
           

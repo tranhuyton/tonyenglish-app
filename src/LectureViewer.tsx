@@ -680,13 +680,13 @@ export default function LectureViewer({
       if (isTeacherBoardOpen) {
           const interval = setInterval(() => {
               const liveMode = sessionStorage.getItem('tony_live_mode');
-              if (!liveMode) {
+              if (!liveMode && !uploadedBoardImage) {
                   setIsTeacherBoardOpen(false); 
               }
           }, 500);
           return () => clearInterval(interval);
       }
-  }, [isTeacherBoardOpen]);
+  }, [isTeacherBoardOpen, uploadedBoardImage]);
 
   useEffect(() => {
       if (!currentUser || !activeLectureId || pages.length === 0) return;
@@ -888,7 +888,13 @@ export default function LectureViewer({
                 : Promise.resolve({ data: null })
         ]);
 
-        setPages(pageData || []);
+        const visiblePages = (pageData || [])
+            .filter((p: any) => !String(p.content_html || '').startsWith('<!-- hidden -->'))
+            .map((p: any, idx: number) => ({
+                ...p,
+                page_number: idx + 1
+            }));
+        setPages(visiblePages);
         
         if (targetUserId && progressRes.data && progressRes.data.length > 0) {
            const pData = progressRes.data[0];
@@ -1117,7 +1123,7 @@ export default function LectureViewer({
 
   const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
   const safeCompletedTasks = Array.isArray(completedTasks) ? completedTasks : [];
-  const isLastLectureAndPage = currentPage === totalPages && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
+  const isLastLectureAndPage = (totalPages === 0 || currentPage === totalPages) && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
 
   const isAllTasksDone = safeLectureTasks.length > 0 && safeCompletedTasks.length === safeLectureTasks.length;
 
@@ -1373,11 +1379,17 @@ export default function LectureViewer({
              onMouseUp={handleTextSelection}
          >
              <div className="min-h-full flex flex-col items-center py-6 md:py-12 px-0 sm:px-6 lg:px-8">
-               <div className={`max-w-[850px] w-full bg-white shadow-sm border border-slate-200 flex-none rounded-none sm:rounded-2xl p-6 sm:p-10 md:p-16 mb-8 min-h-[60vh] transition-all ${isTeacherBoardOpen ? 'max-w-none' : ''}`}>
+               <div className={`max-w-[1050px] w-full bg-white shadow-sm border border-slate-200 flex-none rounded-none sm:rounded-2xl p-5 sm:p-8 md:p-10 mb-8 min-h-[60vh] transition-all ${isTeacherBoardOpen ? 'max-w-none' : ''}`}>
                   {!activeLectureId ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-16 h-16 mb-4 opacity-50"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
                         <span className="font-medium text-lg">Chọn bài học ở danh sách bên trái để bắt đầu</span>
+                    </div>
+                  ) : pages.length === 0 ? (
+                    <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400 text-center">
+                       <span className="text-4xl mb-3 opacity-50">📖</span>
+                       <span className="font-bold text-slate-600">Nội dung bài học hiện đang được cập nhật.</span>
+                       <span className="text-sm mt-1">Vui lòng quay lại sau nhé!</span>
                     </div>
                   ) : !currentHtmlContent ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
@@ -1400,7 +1412,7 @@ export default function LectureViewer({
                </div>
                
                {activeLectureId && (
-                  <div className={`max-w-[850px] w-full flex justify-between items-center px-4 sm:px-0 pb-16 transition-all ${isTeacherBoardOpen ? 'max-w-none flex-col gap-6 md:flex-row' : ''}`}>
+                   <div className={`max-w-[1050px] w-full flex justify-between items-center px-4 sm:px-0 pb-16 transition-all ${isTeacherBoardOpen ? 'max-w-none flex-col gap-6 md:flex-row' : ''}`}>
                       <button 
                           onClick={handlePrevPage} 
                           disabled={currentPage === 1 && lectures.findIndex(l => l.id === activeLectureId) === 0} 
@@ -1535,7 +1547,7 @@ export default function LectureViewer({
              {/* 🚀 CLASS react-pdf__Document ĐỂ ĐÁNH LỪA BẢNG ĐEN MỞ CÙNG LÚC VỚI ẢNH ĐỀ BÀI MỚI UPLOAD */}
              {uploadedBoardImage && (
                  <div className="react-pdf__Document absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-4 md:p-8 z-10 pointer-events-none">
-                     <div className="bg-slate-800/80 p-3 rounded-2xl shadow-2xl relative max-h-[90%] max-w-full flex flex-col pointer-events-auto border border-slate-700/50">
+                     <div className="bg-slate-800/80 p-3 rounded-2xl shadow-2xl relative max-h-[90%] max-w-full flex flex-col pointer-events-auto border border-slate-700/50 overflow-hidden">
                          <div className="flex justify-between items-center mb-3 px-2">
                              <span className="text-emerald-400 font-bold text-xs tracking-widest uppercase flex items-center gap-2">
                                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]"></span>
@@ -1551,7 +1563,7 @@ export default function LectureViewer({
                                  ✕
                              </button>
                          </div>
-                         <img src={uploadedBoardImage} className="max-w-full flex-1 object-contain rounded-xl bg-white/5" />
+                         <img src={uploadedBoardImage} className="max-w-full max-h-full object-contain rounded-xl bg-white/5 min-h-0" />
                      </div>
                  </div>
              )}

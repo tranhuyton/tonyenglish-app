@@ -206,9 +206,17 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
       .order('page_number', { ascending: true });
       
     if (data && data.length > 0) {
-        setPages(data);
+        const parsedPages = data.map((p: any) => {
+            const isHidden = String(p.content_html || '').startsWith('<!-- hidden -->');
+            return {
+                ...p,
+                is_hidden: isHidden,
+                content_html: isHidden ? p.content_html.substring('<!-- hidden -->'.length) : p.content_html
+            };
+        });
+        setPages(parsedPages);
     } else {
-        setPages([{ id: 'temp_1', page_number: 1, content_html: '' }]);
+        setPages([{ id: 'temp_1', page_number: 1, content_html: '', is_hidden: false }]);
     }
   };
 
@@ -227,7 +235,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
   const handleAddPage = () => {
     setPages([
         ...pages, 
-        { id: `temp_${Date.now()}`, page_number: pages.length + 1, content_html: '' }
+        { id: `temp_${Date.now()}`, page_number: pages.length + 1, content_html: '', is_hidden: false }
     ]);
     setActivePageIndex(pages.length);
   };
@@ -260,6 +268,19 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
         .map((p, idx) => ({ ...p, page_number: idx + 1 }));
     setPages(newPages);
     setActivePageIndex(Math.max(0, indexToRemove - 1));
+  };
+
+  const toggleHidePage = (index: number) => {
+    setPages(prevPages => {
+        const updated = [...prevPages];
+        if (updated[index]) {
+            updated[index] = {
+                ...updated[index],
+                is_hidden: !updated[index].is_hidden
+            };
+        }
+        return updated;
+    });
   };
 
   const handleAddExerciseTask = useCallback((ex: any) => {
@@ -415,7 +436,7 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
       const pagesToInsert = pages.map((p, idx) => ({
         lecture_id: currentLectureId,
         page_number: idx + 1,
-        content_html: p.content_html || ''
+        content_html: p.is_hidden ? `<!-- hidden -->${p.content_html || ''}` : (p.content_html || '')
       }));
       
       const { error: err3 } = await supabase.from('lecture_pages').insert(pagesToInsert);
@@ -539,14 +560,23 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
                    </div>
                    <div className="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar">
                       {pages.map((p, idx) => (
-                         <div key={p.id} onClick={() => setActivePageIndex(idx)} className={`flex justify-between items-center p-3 rounded-xl cursor-pointer transition-all border-2 ${activePageIndex === idx ? 'bg-white border-[#2bd6eb] shadow-md' : 'bg-white border-slate-100 hover:border-slate-300'}`}>
-                            <div className="flex items-center gap-2">
+                         <div key={p.id} onClick={() => setActivePageIndex(idx)} className={`flex justify-between items-center p-3 rounded-xl cursor-pointer transition-all border-2 ${activePageIndex === idx ? 'bg-white border-[#2bd6eb] shadow-md' : 'bg-white border-slate-100 hover:border-slate-300'} ${p.is_hidden ? 'bg-slate-100/50 opacity-75' : ''}`}>
+                            <div className="flex items-center gap-2 min-w-0 flex-1">
                                <div className={`w-7 h-7 rounded-lg flex items-center justify-center text-xs font-black shrink-0 ${activePageIndex === idx ? 'bg-[#2bd6eb] text-white' : 'bg-slate-200 text-slate-500'}`}>
                                    {idx + 1}
                                </div>
-                               <span className="font-bold text-[13px] text-slate-700 truncate w-16">Trang {idx + 1}</span>
+                               <span className={`font-bold text-[13px] truncate flex-1 ${p.is_hidden ? 'text-slate-400 line-through' : 'text-slate-700'}`}>
+                                  Trang {idx + 1} {p.is_hidden && <span className="text-[10px] text-red-500 font-normal no-underline ml-1">(Ẩn)</span>}
+                               </span>
                             </div>
                             <div className="flex items-center gap-1 shrink-0">
+                               <button 
+                                   onClick={(e) => { e.stopPropagation(); toggleHidePage(idx); }} 
+                                   className={`w-6 h-6 flex items-center justify-center rounded transition text-xs hover:bg-slate-100`}
+                                   title={p.is_hidden ? "Hiện trang" : "Ẩn trang"}
+                               >
+                                   {p.is_hidden ? '🙈' : '👁️'}
+                               </button>
                                <button onClick={(e) => { e.stopPropagation(); handleMoveUp(idx); }} disabled={idx === 0} className="w-6 h-6 flex items-center justify-center bg-slate-100 hover:bg-slate-200 rounded disabled:opacity-30 disabled:hover:bg-slate-100 transition" title="Lên trên">⬆️</button>
                                <button onClick={(e) => { e.stopPropagation(); handleMoveDown(idx); }} disabled={idx === pages.length - 1} className="w-6 h-6 flex items-center justify-center bg-slate-100 hover:bg-slate-200 rounded disabled:opacity-30 disabled:hover:bg-slate-100 transition" title="Xuống dưới">⬇️</button>
                                <button onClick={(e) => { e.stopPropagation(); handleRemovePage(idx); }} className="w-6 h-6 flex items-center justify-center text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 rounded ml-1 transition" title="Xóa trang">✖</button>
