@@ -293,7 +293,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 3. NẾU ĐỀ BÀI LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
    - Hãy đi thẳng vào giải chi tiết từng bước cho học sinh.
    - TUYỆT ĐỐI KHÔNG giới thiệu dông dài lý do tại sao bạn nhận giải (ví dụ: cấm nói "Vì đề này thuộc môn ${finalCourseTitle} nên thầy giải..."). Trả lời trực tiếp vào câu hỏi.
-   - BẮT BUỘC sử dụng ký hiệu LaTeX ($...$ và $$...$$) cho mọi công thức toán học.`
+   - BẮT BUỘC sử dụng ký hiệu LaTeX ($...$ và $$...$$) để viết MỌI công thức toán học, và LUÔN LUÔN IN ĐẬM (**từ khóa**) các từ quan trọng, đáp án, danh từ riêng hoặc kết quả quan trọng để hệ thống tự vẽ bằng phấn vàng nổi bật.`
               }
           });
 
@@ -823,7 +823,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 3. NẾU ĐỀ BÀI LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
    - Hãy đi thẳng vào giải chi tiết từng bước cho học sinh.
    - TUYỆT ĐỐI KHÔNG giới thiệu dông dài lý do tại sao bạn nhận giải (ví dụ: cấm nói "Vì đề này thuộc môn ${finalCourseTitle} nên thầy giải..."). Trả lời trực tiếp vào câu hỏi.
-   - BẮT BUỘC sử dụng ký hiệu LaTeX ($...$ và $$...$$) cho mọi công thức toán học.`
+   - BẮT BUỘC sử dụng ký hiệu LaTeX ($...$ và $$...$$) để viết MỌI công thức toán học, và LUÔN LUÔN IN ĐẬM (**từ khóa**) các từ quan trọng, đáp án, danh từ riêng hoặc kết quả quan trọng để hệ thống tự vẽ bằng phấn vàng nổi bật.`
                   }
               });
 
