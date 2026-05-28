@@ -116,7 +116,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [userProfile, setUserProfile] = useState<any>(null);
   const [userClassIds, setUserClassIds] = useState<string[]>([]);
   
-  const [targetIelts, setTargetIelts] = useState<string>('6.5');
+  const [targetIelts, setTargetIelts] = useState<string>(() => {
+      try {
+          return localStorage.getItem('tony_target_ielts') || '6.5';
+      } catch (e) {
+          return '6.5';
+      }
+  });
   
   const [searchTest, setSearchTest] = useState('');
   const [sortTest, setSortTest] = useState('name-asc');
@@ -215,7 +221,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         setUserProfile(profile);
         if (profile) {
             if (!newFullName) setNewFullName(profile.full_name || '');
-            if (profile.avatar_url) setTargetIelts(profile.avatar_url.toString());
+            if (profile.avatar_url) {
+                const targetScore = profile.avatar_url.toString();
+                setTargetIelts(targetScore);
+                try {
+                    localStorage.setItem('tony_target_ielts', targetScore);
+                } catch (e) {}
+            }
         }
         
         setLectureProgressData(lp || []);
@@ -346,6 +358,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
   const handleUpdateTarget = async (newVal: string) => {
       setTargetIelts(newVal);
+      try {
+          localStorage.setItem('tony_target_ielts', newVal);
+      } catch (e) {}
       if (userProfile) {
           setUserProfile({ ...userProfile, avatar_url: newVal });
       }

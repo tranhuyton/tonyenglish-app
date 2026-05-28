@@ -930,67 +930,6 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       onClose(); 
   };
 
-  // =========================================================================================
-  // 🟢 GIAO DIỆN KHI THU NHỎ (MINIMIZED WIDGET ICON)
-  // =========================================================================================
-  if (viewState === 'MINIMIZED') {
-      if (isBlackboardMode) {
-          return (
-              <button 
-                  onClick={handleWidgetClick} 
-                  onMouseDown={handleDragStart}
-                  onTouchStart={handleDragStart}
-                  style={{ transform: `translate3d(${position.x}px, ${position.y}px, 0)` }}
-                  className={`fixed bottom-8 right-8 z-[100000] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-2 ${isDragging ? '' : 'transition-all duration-300 hover:scale-110 active:scale-95'} ${status === 'CONNECTED' ? (isRecording ? 'bg-red-500 border-red-300 animate-pulse' : (isSpeaking || isProcessing ? 'bg-sky-500 border-sky-300 animate-pulse' : 'bg-emerald-500 border-emerald-300')) : 'bg-indigo-600 border-indigo-400'}`} 
-                  title="Mở Bảng Giáo Viên"
-              >
-                  <span className="text-2xl">{status === 'CONNECTED' ? (isTextOnlyMode ? '💬' : '🎙️') : '👨‍🏫'}</span>
-              </button>
-          );
-      } else {
-          return (
-              <div 
-                  onMouseDown={handleDragStart}
-                  onTouchStart={handleDragStart}
-                  style={{ transform: `translate3d(${position.x}px, ${position.y}px, 0)` }}
-                  className={`fixed bottom-6 right-6 z-[99998] bg-slate-900/95 backdrop-blur-md border border-slate-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-[1.5rem] p-4 flex flex-col gap-3 w-[280px] md:w-80 font-sans cursor-move select-none ${isDragging ? '' : 'transition-all duration-300 animate-in slide-in-from-bottom-5'}`}
-              >
-                 <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2.5 cursor-pointer flex-1 min-w-0" onClick={handleWidgetClick}>
-                       <div className={`w-3 h-3 shrink-0 rounded-full ${isRecording ? 'bg-red-500 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.8)]' : (isSpeaking ? 'bg-sky-500 animate-pulse shadow-[0_0_10px_rgba(14,165,233,0.8)]' : (isProcessing ? 'bg-amber-500 animate-pulse' : 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]'))}`}></div>
-                       <span className="text-white font-semibold text-[13px] truncate">
-                           {isRecording ? 'Đang truyền trực tiếp...' : (isProcessing ? 'AI đang phân tích...' : (isSpeaking || liveTranscript ? 'Thầy cô đang nói...' : 'Sẵn sàng...'))}
-                       </span>
-                    </div>
-                    <button onClick={onMaximize} className="text-slate-400 hover:text-white w-8 h-8 flex items-center justify-center bg-slate-800 rounded-full shrink-0 ml-2 border border-slate-600 shadow-sm transition-colors" title="Phóng to">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
-                    </button>
-                 </div>
-                 <div className="flex gap-2 mt-1">
-                     {!isTextOnlyMode && !isVisionMode && (
-                         <button 
-                             onClick={handleToggleRecording} 
-                             disabled={isProcessing && !isSpeaking} 
-                             className={`flex-1 font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 disabled:opacity-50 ${isRecording ? 'bg-red-500 hover:bg-red-600 text-white shadow-md shadow-red-900/50' : (isSpeaking ? 'bg-sky-500 hover:bg-sky-600 text-white shadow-md shadow-sky-900/50' : 'bg-[#0ea5e9] hover:bg-sky-500 text-white shadow-md shadow-sky-900/50')}`}
-                         >
-                            {isRecording ? '⏹️ Xong' : (isSpeaking ? '⏹️ Ngắt lời' : '🎙️ Nhấn nói')}
-                         </button>
-                     )}
-                     <button 
-                         onClick={handleUserHangUp} 
-                         className="flex-1 bg-slate-800 hover:bg-red-50 text-slate-300 hover:text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 border border-slate-600 hover:border-red-500"
-                     >
-                         🛑 Dập máy
-                     </button>
-                 </div>
-              </div>
-          );
-      }
-  }
-
-  // =========================================================================================
-  // 🟢 GIAO DIỆN CHÍNH (FULLSCREEN)
-  // =========================================================================================
   // 🚀 TỐI ƯU HÓA MEMOIZE: CHỈ RENDER LẠI DANH SÁCH TIN NHẮN KHI CẦN THIẾT
   // Tránh bị giật lag khi gõ văn bản vào ô input (vì khi gõ input, component re-render nhưng không cần chạy lại ReactMarkdown/KaTeX)
   const renderedBlackboardMessages = useMemo(() => {
@@ -1082,6 +1021,68 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       }
   };
 
+  // =========================================================================================
+  // 🟢 GIAO DIỆN KHI THU NHỎ (MINIMIZED WIDGET ICON)
+  // =========================================================================================
+  if (viewState === 'MINIMIZED') {
+      if (isBlackboardMode) {
+          return (
+              <button 
+                  onClick={handleWidgetClick} 
+                  onMouseDown={handleDragStart}
+                  onTouchStart={handleDragStart}
+                  style={{ transform: `translate3d(${position.x}px, ${position.y}px, 0)` }}
+                  className={`fixed bottom-8 right-8 z-[100000] w-14 h-14 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-2 ${isDragging ? '' : 'transition-all duration-300 hover:scale-110 active:scale-95'} ${status === 'CONNECTED' ? (isRecording ? 'bg-red-500 border-red-300 animate-pulse' : (isSpeaking || isProcessing ? 'bg-sky-500 border-sky-300 animate-pulse' : 'bg-emerald-500 border-emerald-300')) : 'bg-indigo-600 border-indigo-400'}`} 
+                  title="Mở Bảng Giáo Viên"
+              >
+                  <span className="text-2xl">{status === 'CONNECTED' ? (isTextOnlyMode ? '💬' : '🎙️') : '👨‍🏫'}</span>
+              </button>
+          );
+      } else {
+          return (
+              <div 
+                  onMouseDown={handleDragStart}
+                  onTouchStart={handleDragStart}
+                  style={{ transform: `translate3d(${position.x}px, ${position.y}px, 0)` }}
+                  className={`fixed bottom-6 right-6 z-[99998] bg-slate-900/95 backdrop-blur-md border border-slate-700 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-[1.5rem] p-4 flex flex-col gap-3 w-[280px] md:w-80 font-sans cursor-move select-none ${isDragging ? '' : 'transition-all duration-300 animate-in slide-in-from-bottom-5'}`}
+              >
+                 <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-2.5 cursor-pointer flex-1 min-w-0" onClick={handleWidgetClick}>
+                       <div className={`w-3 h-3 shrink-0 rounded-full ${isRecording ? 'bg-red-500 animate-pulse shadow-[0_0_10px_rgba(239,68,68,0.8)]' : (isSpeaking ? 'bg-sky-500 animate-pulse shadow-[0_0_10px_rgba(14,165,233,0.8)]' : (isProcessing ? 'bg-amber-500 animate-pulse' : 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.8)]'))}`}></div>
+                       <span className="text-white font-semibold text-[13px] truncate">
+                           {isRecording ? 'Đang truyền trực tiếp...' : (isProcessing ? 'AI đang phân tích...' : (isSpeaking || liveTranscript ? 'Thầy cô đang nói...' : 'Sẵn sàng...'))}
+                       </span>
+                    </div>
+                    <button onClick={onMaximize} className="text-slate-400 hover:text-white w-8 h-8 flex items-center justify-center bg-slate-800 rounded-full shrink-0 ml-2 border border-slate-600 shadow-sm transition-colors" title="Phóng to">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
+                    </button>
+                 </div>
+                 <div className="flex gap-2 mt-1">
+                     {!isTextOnlyMode && !isVisionMode && (
+                         <button 
+                             onClick={handleToggleRecording} 
+                             disabled={isProcessing && !isSpeaking} 
+                             className={`flex-1 font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 disabled:opacity-50 ${isRecording ? 'bg-red-500 hover:bg-red-600 text-white shadow-md shadow-red-900/50' : (isSpeaking ? 'bg-sky-500 hover:bg-sky-600 text-white shadow-md shadow-sky-900/50' : 'bg-[#0ea5e9] hover:bg-sky-500 text-white shadow-md shadow-sky-900/50')}`}
+                         >
+                            {isRecording ? '⏹️ Xong' : (isSpeaking ? '⏹️ Ngắt lời' : '🎙️ Nhấn nói')}
+                         </button>
+                     )}
+                     <button 
+                         onClick={handleUserHangUp} 
+                         className="flex-1 bg-slate-800 hover:bg-red-50 text-slate-300 hover:text-white font-bold py-2 rounded-xl text-[12px] md:text-[13px] transition-all flex items-center justify-center gap-2 border border-slate-600 hover:border-red-500"
+                     >
+                         🛑 Dập máy
+                     </button>
+                 </div>
+              </div>
+          );
+      }
+  }
+
+  // =========================================================================================
+  // 🟢 GIAO DIỆN CHÍNH (FULLSCREEN)
+  // =========================================================================================
+  
   // -------------------------------------------------------------------------
   // 1️⃣ GIAO DIỆN BẢNG ĐEN (KHI MỞ SÁCH PDF HOẶC GIẢI ẢNH SIDEBAR)
   // -------------------------------------------------------------------------
