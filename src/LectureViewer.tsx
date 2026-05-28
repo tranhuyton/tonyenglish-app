@@ -10,7 +10,7 @@ import 'react-pdf/dist/Page/TextLayer.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void }) => {
+const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: () => void, onCallTutor?: () => void }) => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pageInput, setPageInput] = useState<string>('1'); 
@@ -205,6 +205,16 @@ const PdfVisionViewer = ({ url, onClose }: { url: string, onClose: () => void })
              </div>
          </div>
          <div className="flex items-center gap-2">
+             {onCallTutor && (
+                 <button 
+                     onClick={onCallTutor}
+                     className="flex items-center gap-1.5 px-3 h-9 rounded-lg text-xs font-bold bg-emerald-500/10 border border-emerald-500/30 hover:bg-emerald-500 text-emerald-400 hover:text-white transition-all shadow-sm active:scale-95 shrink-0"
+                     title="Vào lớp Học trực tiếp với Gia Sư AI"
+                 >
+                     <span className="animate-pulse">👨‍🏫</span>
+                     <span>Lên Bảng</span>
+                 </button>
+             )}
              <button 
                 onClick={toggleFullscreen} 
                 className="w-9 h-9 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 flex items-center justify-center text-slate-300 hover:text-white transition-all" 
@@ -662,19 +672,11 @@ export default function LectureViewer({
     if (popupUrl && popupUrl.toLowerCase().includes('.pdf')) {
         sessionStorage.setItem('tony_pdf_mode', 'true');
         window.dispatchEvent(new CustomEvent('tony-pdf-mode-change', { detail: true }));
-
-        setTimeout(() => {
-            if (onOpenAI) {
-                onOpenAI('tutor'); 
-            } else {
-                window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-            }
-        }, 500); 
     } else {
         sessionStorage.removeItem('tony_pdf_mode');
         window.dispatchEvent(new CustomEvent('tony-pdf-mode-change', { detail: false }));
     }
-  }, [popupUrl, onOpenAI]);
+  }, [popupUrl]);
 
   useEffect(() => {
       if (isTeacherBoardOpen) {
@@ -1121,6 +1123,22 @@ export default function LectureViewer({
     return url;
   };
 
+  const handleCallTutor = () => {
+      const safeHtml = currentHtmlContent ? currentHtmlContent.replace(/<[^>]+>/g, '').slice(0, 2000) : 'Không có dữ liệu văn bản';
+      const safeTitle = activeLecture?.title || 'Bài giảng English';
+      
+      const tutorContext = {
+          overall: "N/A",
+          transcript: `Học sinh đang học bài: "${safeTitle}". \nNội dung bài học: "${safeHtml}".`,
+          feedback: "Bạn là gia sư đang dạy bài giảng này. Hãy chủ động chào học sinh, nhắc tên bài học và hỏi xem học sinh không hiểu phần nào trong nội dung trên để bạn giải thích bằng giọng nói ân cần."
+      };
+      
+      sessionStorage.setItem('tony_live_mode', 'TUTOR');
+      sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+      
+      window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+  };
+
   const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
   const safeCompletedTasks = Array.isArray(completedTasks) ? completedTasks : [];
   const isLastLectureAndPage = (totalPages === 0 || currentPage === totalPages) && lectures.findIndex(l => l.id === activeLectureId) === lectures.length - 1;
@@ -1526,6 +1544,7 @@ export default function LectureViewer({
                         setPopupUrl(null);
                         window.dispatchEvent(new CustomEvent('tony-force-close'));
                     }} 
+                    onCallTutor={handleCallTutor}
                  />
              )}
              
