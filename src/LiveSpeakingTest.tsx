@@ -120,6 +120,9 @@ export default function LiveSpeakingTest({
   const [isPendingVision, setIsPendingVision] = useState(() => {
       return typeof window !== 'undefined' && !!(window as any).tonyPendingImage;
   });
+  const [activeVisionImage, setActiveVisionImage] = useState<string | null>(() => {
+      return typeof window !== 'undefined' ? ((window as any).tonyLatestPdfPageImage || null) : null;
+  });
 
   // Drag-and-drop state for minimized widget
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -256,6 +259,7 @@ export default function LiveSpeakingTest({
           (window as any).tonyPendingImage = null;
       }
       setIsPendingVision(false);
+      setActiveVisionImage(image);
 
       const finalCourseTitle = courseTitleOverride || courseTitle || sessionStorage.getItem('tony_live_topic') || "Tổng hợp";
       setIsVisionMode(true);
@@ -381,6 +385,15 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
     const onFullscreenChange = () => setIsFullscreen(!!document.fullscreenElement);
     document.addEventListener('fullscreenchange', onFullscreenChange);
     return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
+  }, []);
+
+  // 🚀 LẮNG NGHE ẢNH TRANG PDF HIỆN TẠI ĐỂ UPDATE CHO NÃO MẮT THẦN
+  useEffect(() => {
+      const handleSendPageImage = (e: any) => {
+          setActiveVisionImage(e.detail);
+      };
+      window.addEventListener('tony-send-page-image', handleSendPageImage);
+      return () => window.removeEventListener('tony-send-page-image', handleSendPageImage);
   }, []);
 
   const toggleFullscreen = () => {
@@ -535,6 +548,26 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       if (streamRef.current) {
           try { streamRef.current.getTracks().forEach(t => t.stop()); } catch(e) {}
           streamRef.current = null;
+      }
+
+      // 🧠 CHIA NÃO: Nếu là chat văn bản và có trang tài liệu PDF đang mở, chuyển thẳng sang chế độ giải ảnh Vision
+      if (isTextMode && activeVisionImage) {
+          setIsVisionMode(true);
+          setIsTextOnlyMode(true);
+          isTextOnlyModeRef.current = true;
+          setStatus('CONNECTED');
+          
+          const welcomeMsg = examiner === 'TONY' 
+              ? "Chào con! Thầy đã nhìn thấy trang tài liệu PDF của con ở bên trái rồi. Con cần thầy trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!"
+              : "Chào con! Cô đã nhìn thấy trang tài liệu PDF của con ở bên trái rồi. Con cần cô trợ giúp giải câu nào hay phần nào trên trang này, hãy gõ câu hỏi xuống dưới nhé!";
+          
+          setMessages([{ role: 'model', text: welcomeMsg }]);
+          setLiveTranscript('');
+          isMicOpenRef.current = false;
+          isRecordingRef.current = false;
+          isSetupCompleteRef.current = false;
+          callStartTimeRef.current = Date.now();
+          return;
       }
 
       setIsVisionMode(false); 
@@ -769,6 +802,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               const finalCourseTitle = courseTitle || sessionStorage.getItem('tony_live_topic') || "Tổng hợp";
               const { data, error } = await supabase.functions.invoke('omni-vision-solver', {
                   body: {
+                      imageUrl: activeVisionImage || undefined,
                       content: text,
                       history: messages,
                       courseTitle: finalCourseTitle,
@@ -871,6 +905,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
         (window as any).tonyPendingImage = null;
     }
     setIsPendingVision(false);
+    setActiveVisionImage(null);
 
     isMicOpenRef.current = false;
     isRecordingRef.current = false;

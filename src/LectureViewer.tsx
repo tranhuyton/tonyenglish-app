@@ -97,6 +97,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
         });
 
         const base64Image = combinedCanvas.toDataURL('image/jpeg', 0.45); 
+        (window as any).tonyLatestPdfPageImage = base64Image;
         window.dispatchEvent(new CustomEvent('tony-send-page-image', { detail: base64Image }));
       }
     }, 500);
