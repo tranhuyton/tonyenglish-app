@@ -157,6 +157,15 @@ export default function LiveSpeakingTest({
       stopCallRef.current = stopCall;
   });
 
+  // 🚀 DỌN DẸP TOÀN BỘ KHI COMPONENT BỊ UNMOUNT (ĐÓNG HẲN WIDGET TRÁNH TRÔI LỆNH)
+  useEffect(() => {
+      return () => {
+          if (stopCallRef.current) {
+              stopCallRef.current();
+          }
+      };
+  }, []);
+
   // =========================================================================================
   // 🚀 KHỞI TẠO NÃO MẮT THẦN (VISION AI QUA EDGE FUNCTION - KHÔNG DÙNG WEBSOCKET)
   // =========================================================================================
@@ -176,11 +185,24 @@ export default function LiveSpeakingTest({
                   imageUrl: image,
                   content: query,
                   courseTitle: finalCourseTitle,
-                  prompt: `[KỶ LUẬT CHUYÊN MÔN]: Bạn là gia sư giảng dạy môn "${finalCourseTitle}". Hãy phân tích ảnh đề bài học sinh gửi.
-QUY TẮC BẮT BUỘC:
-1. Nếu nội dung đề bài trong ảnh KHÔNG liên quan tới môn "${finalCourseTitle}", bạn PHẢI từ chối giải thích ngay lập tức và khuyên học sinh gửi đề bài đúng môn học.
-2. Nếu đề bài đúng môn "${finalCourseTitle}", hãy đi thẳng vào giải chi tiết từng bước mà TUYỆT ĐỐI KHÔNG giải thích dông dài lý do tại sao nhận giải (ví dụ: không được nói 'Vì đề này thuộc môn...' hay 'Chào con, đây là đề toán nên thầy giải...'). Trả lời trực tiếp vào câu hỏi.
-3. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán học.`
+                  prompt: `[KỶ LUẬT CHUYÊN MÔN TUYỆT ĐỐI]
+Bạn là một gia sư AI nghiêm khắc chuyên dạy môn "${finalCourseTitle}".
+Bạn chỉ được phép giải quyết các câu hỏi và bài tập thuộc phạm vi môn học "${finalCourseTitle}".
+
+QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
+1. Phân tích ảnh và câu hỏi của học sinh để xác định xem đề bài này có thuộc môn "${finalCourseTitle}" hay không.
+   - Ví dụ: Nếu môn học là "Giao Tiếp Phản Xạ" hoặc các khóa tiếng Anh giao tiếp, nhưng đề bài lại là Toán học (có các biểu thức đại số, hình học, tích phân, tính toán số học, giải phương trình), Vật lý, Hóa học,... thì đề bài đó KHÔNG thuộc môn học này.
+   - Ví dụ: Nếu môn học là "Toán" hoặc "Toán học", nhưng đề bài lại là Tiếng Anh giao tiếp, Tiếng Anh thương mại, Ngữ pháp tiếng Anh,... thì đề bài đó KHÔNG thuộc môn học này.
+
+2. NẾU ĐỀ BÀI KHÔNG LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
+   - Bạn BẮT BUỘC PHẢI TỪ CHỐI GIẢI ĐÁP NGAY LẬP TỨC.
+   - Câu trả lời từ chối bắt buộc phải viết: "Thầy/Cô không thể giải bài này vì nó thuộc môn học khác, không nằm trong phạm vi của khóa học ${finalCourseTitle}. Con vui lòng gửi đề bài đúng môn học nhé!"
+   - Tuyệt đối KHÔNG giải thích thêm, KHÔNG đưa ra lời khuyên hay đáp án mẫu của đề bài đó.
+
+3. NẾU ĐỀ BÀI LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
+   - Hãy đi thẳng vào giải chi tiết từng bước cho học sinh.
+   - TUYỆT ĐỐI KHÔNG giới thiệu dông dài lý do tại sao bạn nhận giải (ví dụ: cấm nói "Vì đề này thuộc môn ${finalCourseTitle} nên thầy giải..."). Trả lời trực tiếp vào câu hỏi.
+   - BẮT BUỘC sử dụng ký hiệu LaTeX ($...$ và $$...$$) cho mọi công thức toán học.`
               }
           });
 
@@ -383,6 +405,32 @@ QUY TẮC BẮT BUỘC:
   // 🚀 KHỞI TẠO NÃO MỒM (WEBSOCKET AI CHO ĐÀM THOẠI/CHAT TEXT BÌNH THƯỜNG)
   // =========================================================================================
   const startSession = async (isTextMode = false) => {
+      // 🚀 DỌN DẸP PHIÊN CŨ (NẾU CÓ) ĐỂ TRÁNH LẶP KẾT NỐI & TIẾNG VỌNG SONG SONG
+      if (wsRef.current) {
+          try { wsRef.current.close(); } catch(e) {}
+          wsRef.current = null;
+      }
+      if (processorNodeRef.current) {
+          try { processorNodeRef.current.disconnect(); } catch(e) {}
+          processorNodeRef.current = null;
+      }
+      if (sourceNodeRef.current) {
+          try { sourceNodeRef.current.disconnect(); } catch(e) {}
+          sourceNodeRef.current = null;
+      }
+      if (audioCtxInputRef.current) {
+          try { if (audioCtxInputRef.current.state !== 'closed') audioCtxInputRef.current.close(); } catch(e) {}
+          audioCtxInputRef.current = null;
+      }
+      if (audioCtxOutputRef.current) {
+          try { if (audioCtxOutputRef.current.state !== 'closed') audioCtxOutputRef.current.close(); } catch(e) {}
+          audioCtxOutputRef.current = null;
+      }
+      if (streamRef.current) {
+          try { streamRef.current.getTracks().forEach(t => t.stop()); } catch(e) {}
+          streamRef.current = null;
+      }
+
       setIsVisionMode(false); 
       setIsTextOnlyMode(isTextMode);
       isTextOnlyModeRef.current = isTextMode; 
@@ -458,8 +506,13 @@ QUY TẮC BẮT BUỘC:
                       }
                   };
 
+                  // Tạo GainNode với gain = 0 để cản tiếng vọng mic ra loa của máy
+                  const silenceGain = audioCtxInputRef.current.createGain();
+                  silenceGain.gain.setValueAtTime(0, audioCtxInputRef.current.currentTime);
+
                   sourceNodeRef.current.connect(processorNodeRef.current);
-                  processorNodeRef.current.connect(audioCtxInputRef.current.destination);
+                  processorNodeRef.current.connect(silenceGain);
+                  silenceGain.connect(audioCtxInputRef.current.destination);
               }
           };
 
@@ -613,11 +666,24 @@ QUY TẮC BẮT BUỘC:
                       content: text,
                       history: messages,
                       courseTitle: finalCourseTitle,
-                      prompt: `[KỶ LUẬT CHUYÊN MÔN]: Bạn là gia sư giảng dạy môn "${finalCourseTitle}". Hãy phân tích ảnh đề bài học sinh gửi.
-QUY TẮC BẮT BUỘC:
-1. Nếu nội dung đề bài trong ảnh KHÔNG liên quan tới môn "${finalCourseTitle}", bạn PHẢI từ chối giải thích ngay lập tức và khuyên học sinh gửi đề bài đúng môn học.
-2. Nếu đề bài đúng môn "${finalCourseTitle}", hãy đi thẳng vào giải chi tiết từng bước mà TUYỆT ĐỐI KHÔNG giải thích dông dài lý do tại sao nhận giải (ví dụ: không được nói 'Vì đề này thuộc môn...' hay 'Chào con, đây là đề toán nên thầy giải...'). Trả lời trực tiếp vào câu hỏi.
-3. BẮT BUỘC dùng ký hiệu LaTeX ($...$ và $$...$$) cho công thức toán học.`
+                      prompt: `[KỶ LUẬT CHUYÊN MÔN TUYỆT ĐỐI]
+Bạn là một gia sư AI nghiêm khắc chuyên dạy môn "${finalCourseTitle}".
+Bạn chỉ được phép giải quyết các câu hỏi và bài tập thuộc phạm vi môn học "${finalCourseTitle}".
+
+QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
+1. Phân tích ảnh và câu hỏi của học sinh để xác định xem đề bài này có thuộc môn "${finalCourseTitle}" hay không.
+   - Ví dụ: Nếu môn học là "Giao Tiếp Phản Xạ" hoặc các khóa tiếng Anh giao tiếp, nhưng đề bài lại là Toán học (có các biểu thức đại số, hình học, tích phân, tính toán số học, giải phương trình), Vật lý, Hóa học,... thì đề bài đó KHÔNG thuộc môn học này.
+   - Ví dụ: Nếu môn học là "Toán" hoặc "Toán học", nhưng đề bài lại là Tiếng Anh giao tiếp, Tiếng Anh thương mại, Ngữ pháp tiếng Anh,... thì đề bài đó KHÔNG thuộc môn học này.
+
+2. NẾU ĐỀ BÀI KHÔNG LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
+   - Bạn BẮT BUỘC PHẢI TỪ CHỐI GIẢI ĐÁP NGAY LẬP TỨC.
+   - Câu trả lời từ chối bắt buộc phải viết: "Thầy/Cô không thể giải bài này vì nó thuộc môn học khác, không nằm trong phạm vi của khóa học ${finalCourseTitle}. Con vui lòng gửi đề bài đúng môn học nhé!"
+   - Tuyệt đối KHÔNG giải thích thêm, KHÔNG đưa ra lời khuyên hay đáp án mẫu của đề bài đó.
+
+3. NẾU ĐỀ BÀI LIÊN QUAN TỚI MÔN HỌC "${finalCourseTitle}":
+   - Hãy đi thẳng vào giải chi tiết từng bước cho học sinh.
+   - TUYỆT ĐỐI KHÔNG giới thiệu dông dài lý do tại sao bạn nhận giải (ví dụ: cấm nói "Vì đề này thuộc môn ${finalCourseTitle} nên thầy giải..."). Trả lời trực tiếp vào câu hỏi.
+   - BẮT BUỘC sử dụng ký hiệu LaTeX ($...$ và $$...$$) cho mọi công thức toán học.`
                   }
               });
 
@@ -701,12 +767,30 @@ QUY TẮC BẮT BUỘC:
     setIsVisionMode(false); 
     stopAIAudio();
     
-    if (processorNodeRef.current) processorNodeRef.current.disconnect();
-    if (sourceNodeRef.current) sourceNodeRef.current.disconnect();
-    if (streamRef.current) streamRef.current.getTracks().forEach(t => t.stop());
-    if (wsRef.current) wsRef.current.close();
-    if (audioCtxInputRef.current && audioCtxInputRef.current.state !== 'closed') audioCtxInputRef.current.close();
-    if (audioCtxOutputRef.current && audioCtxOutputRef.current.state !== 'closed') audioCtxOutputRef.current.close();
+    if (processorNodeRef.current) {
+        try { processorNodeRef.current.disconnect(); } catch(e) {}
+        processorNodeRef.current = null;
+    }
+    if (sourceNodeRef.current) {
+        try { sourceNodeRef.current.disconnect(); } catch(e) {}
+        sourceNodeRef.current = null;
+    }
+    if (streamRef.current) {
+        try { streamRef.current.getTracks().forEach(t => t.stop()); } catch(e) {}
+        streamRef.current = null;
+    }
+    if (wsRef.current) {
+        try { wsRef.current.close(); } catch(e) {}
+        wsRef.current = null;
+    }
+    if (audioCtxInputRef.current) {
+        try { if (audioCtxInputRef.current.state !== 'closed') audioCtxInputRef.current.close(); } catch(e) {}
+        audioCtxInputRef.current = null;
+    }
+    if (audioCtxOutputRef.current) {
+        try { if (audioCtxOutputRef.current.state !== 'closed') audioCtxOutputRef.current.close(); } catch(e) {}
+        audioCtxOutputRef.current = null;
+    }
     
     if (callStartTimeRef.current > 0) {
         const durationSecs = Math.round((Date.now() - callStartTimeRef.current) / 1000);
