@@ -117,6 +117,9 @@ export default function LiveSpeakingTest({
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isTextOnlyMode, setIsTextOnlyMode] = useState(false); 
   const [isVisionMode, setIsVisionMode] = useState(false); // 🚀 Cờ đánh dấu não Mắt Thần
+  const [isPendingVision, setIsPendingVision] = useState(() => {
+      return typeof window !== 'undefined' && !!(window as any).tonyPendingImage;
+  });
   
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [liveTranscript, setLiveTranscript] = useState<string>('');
@@ -170,6 +173,11 @@ export default function LiveSpeakingTest({
   // 🚀 KHỞI TẠO NÃO MẮT THẦN (VISION AI QUA EDGE FUNCTION - KHÔNG DÙNG WEBSOCKET)
   // =========================================================================================
   const startVisionSession = async (image: string, query: string, courseTitleOverride?: string) => {
+      if (typeof window !== 'undefined') {
+          (window as any).tonyPendingImage = null;
+      }
+      setIsPendingVision(false);
+
       const finalCourseTitle = courseTitleOverride || courseTitle || sessionStorage.getItem('tony_live_topic') || "Tổng hợp";
       setIsVisionMode(true);
       setIsTextOnlyMode(true);
@@ -405,6 +413,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
   // 🚀 KHỞI TẠO NÃO MỒM (WEBSOCKET AI CHO ĐÀM THOẠI/CHAT TEXT BÌNH THƯỜNG)
   // =========================================================================================
   const startSession = async (isTextMode = false) => {
+      if (typeof window !== 'undefined') {
+          (window as any).tonyPendingImage = null;
+      }
+      setIsPendingVision(false);
+
       // 🚀 DỌN DẸP PHIÊN CŨ (NẾU CÓ) ĐỂ TRÁNH LẶP KẾT NỐI & TIẾNG VỌNG SONG SONG
       if (wsRef.current) {
           try { wsRef.current.close(); } catch(e) {}
@@ -761,6 +774,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
   };
 
   const stopCall = () => {
+    if (typeof window !== 'undefined') {
+        (window as any).tonyPendingImage = null;
+    }
+    setIsPendingVision(false);
+
     isMicOpenRef.current = false;
     isRecordingRef.current = false;
     setIsTextOnlyMode(false); 
@@ -918,31 +936,38 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
             <div className="flex-1 overflow-y-auto p-6 md:p-10 custom-scrollbar flex flex-col relative bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')] pb-32">
               
               {status === 'IDLE' && (
-                  <div className="m-auto text-center animate-in zoom-in-95 max-w-sm w-full bg-slate-900/80 p-8 rounded-[2rem] border border-slate-700/50 backdrop-blur-md shadow-2xl">
-                     <div className="w-20 h-20 bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 rounded-full flex items-center justify-center text-4xl shadow-lg border border-white/20 mx-auto mb-6">👨‍🏫</div>
-                     <h3 className="text-xl font-black text-white mb-2 tracking-tight">Học Phần Gia Sư</h3>
-                     <p className="text-[13px] text-slate-400 mb-8 font-medium">Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại giảng bài trực tiếp.</p>
-                     
-                     <div className="flex justify-center gap-4 mb-8">
-                        <button onClick={() => setExaminer('TONY')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
-                            <span className="text-3xl drop-shadow-md">👨‍🏫</span>
-                            <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Thầy Tôn</span>
-                        </button>
-                        <button onClick={() => setExaminer('DIEP')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
-                            <span className="text-3xl drop-shadow-md">👩‍🏫</span>
-                            <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'DIEP' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Cô Diệp</span>
-                        </button>
-                     </div>
-
-                     <div className="flex flex-col gap-3">
-                         <button onClick={() => startSession(false)} className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl shadow-[0_10px_20px_rgba(14,165,233,0.3)] transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wide active:scale-95">
-                             📞 Vào Lớp (Đàm Thoại Voice)
-                         </button>
-                         <button onClick={() => startSession(true)} className="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wide border border-slate-500">
-                             📝 Vào Lớp (Chỉ Chat Nhắn Tin)
-                         </button>
-                     </div>
-                  </div>
+                  isPendingVision ? (
+                      <div className="m-auto flex flex-col items-center opacity-70">
+                          <div className="w-12 h-12 border-4 border-slate-700 border-t-[#0ea5e9] rounded-full animate-spin mb-4" />
+                          <div className="text-slate-400 font-bold tracking-widest text-xs uppercase animate-pulse">Đang chuẩn bị bảng đen...</div>
+                      </div>
+                  ) : (
+                      <div className="m-auto text-center animate-in zoom-in-95 max-w-sm w-full bg-slate-900/80 p-8 rounded-[2rem] border border-slate-700/50 backdrop-blur-md shadow-2xl">
+                         <div className="w-20 h-20 bg-gradient-to-tr from-[#0ea5e9] to-indigo-500 rounded-full flex items-center justify-center text-4xl shadow-lg border border-white/20 mx-auto mb-6">👨‍🏫</div>
+                         <h3 className="text-xl font-black text-white mb-2 tracking-tight">Học Phần Gia Sư</h3>
+                         <p className="text-[13px] text-slate-400 mb-8 font-medium">Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại giảng bài trực tiếp.</p>
+                         
+                         <div className="flex justify-center gap-4 mb-8">
+                            <button onClick={() => setExaminer('TONY')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
+                                <span className="text-3xl drop-shadow-md">👨‍🏫</span>
+                                <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Thầy Tôn</span>
+                            </button>
+                            <button onClick={() => setExaminer('DIEP')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
+                                <span className="text-3xl drop-shadow-md">👩‍🏫</span>
+                                <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'DIEP' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Cô Diệp</span>
+                            </button>
+                         </div>
+    
+                         <div className="flex flex-col gap-3">
+                             <button onClick={() => startSession(false)} className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl shadow-[0_10px_20px_rgba(14,165,233,0.3)] transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wide active:scale-95">
+                                 📞 Vào Lớp (Đàm Thoại Voice)
+                             </button>
+                             <button onClick={() => startSession(true)} className="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wide border border-slate-500">
+                                 📝 Vào Lớp (Chỉ Chat Nhắn Tin)
+                             </button>
+                         </div>
+                      </div>
+                  )
               )}
     
               {status === 'CONNECTING' && (
@@ -1098,32 +1123,44 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
         </div>
 
         {status === 'IDLE' && (
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 overflow-y-auto custom-scrollbar flex-1 pb-2 px-2">
-             <div className="bg-slate-50 p-5 md:p-6 rounded-2xl border border-slate-200 mb-8 text-left shadow-sm flex flex-col">
-                <span className="block text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-2 shrink-0">Chủ đề đàm thoại:</span>
-                <div className="text-[15px] font-semibold text-slate-800 whitespace-pre-wrap leading-relaxed">
-                    {currentMode === 'TUTOR' ? "Chữa bài & Giải đáp thắc mắc chuyên sâu" : `"${currentTopic}"`}
-                </div>
-             </div>
-             
-             <div className="mb-8 shrink-0">
-                <h3 className="text-[12px] font-black text-slate-400 uppercase tracking-widest mb-4">Lựa chọn Giám khảo</h3>
-                <div className="flex justify-center gap-4">
-                    <button onClick={() => setExaminer('TONY')} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/10 border-[#0ea5e9] shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-[#0ea5e9]/50'}`}>
-                       <div className="text-4xl drop-shadow-sm mb-1">👨‍🏫</div>
-                       <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-500'}`}>Thầy Tôn</span>
-                    </button>
-                    <button onClick={() => setExaminer('DIEP')} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-purple-500/10 border-purple-500 shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-purple-500/50'}`}>
-                       <div className="text-4xl drop-shadow-sm mb-1">👩‍🏫</div>
-                       <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'DIEP' ? 'text-purple-600' : 'text-slate-500'}`}>Cô Diệp</span>
-                    </button>
-                </div>
-             </div>
-             
-             <button onClick={() => startSession(false)} className="w-full shrink-0 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 md:py-5 rounded-2xl text-[15px] md:text-[16px] shadow-[0_10px_30px_rgba(14,165,233,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all uppercase tracking-wide">
-                 <span className="text-xl">📞</span> Bắt Đầu Đàm Thoại
-             </button>
-          </div>
+          isPendingVision ? (
+              <div className="py-16 flex flex-col items-center animate-in zoom-in-95 duration-300 flex-1 justify-center">
+                  <div className="relative w-16 h-16 mb-8">
+                      <div className="absolute inset-0 border-4 border-[#0ea5e9]/20 rounded-full"></div>
+                      <div className="absolute inset-0 border-4 border-[#0ea5e9] border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                  <div className="text-slate-500 font-black tracking-widest uppercase text-sm animate-pulse">
+                      Đang tải đề bài...
+                  </div>
+              </div>
+          ) : (
+              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 overflow-y-auto custom-scrollbar flex-1 pb-2 px-2">
+                 <div className="bg-slate-50 p-5 md:p-6 rounded-2xl border border-slate-200 mb-8 text-left shadow-sm flex flex-col">
+                    <span className="block text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-2 shrink-0">Chủ đề đàm thoại:</span>
+                    <div className="text-[15px] font-semibold text-slate-800 whitespace-pre-wrap leading-relaxed">
+                        {currentMode === 'TUTOR' ? "Chữa bài & Giải đáp thắc mắc chuyên sâu" : `"${currentTopic}"`}
+                    </div>
+                 </div>
+                 
+                 <div className="mb-8 shrink-0">
+                    <h3 className="text-[12px] font-black text-slate-400 uppercase tracking-widest mb-4">Lựa chọn Giám khảo</h3>
+                    <div className="flex justify-center gap-4">
+                        <button onClick={() => setExaminer('TONY')} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/10 border-[#0ea5e9] shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-[#0ea5e9]/50'}`}>
+                           <div className="text-4xl drop-shadow-sm mb-1">👨‍🏫</div>
+                           <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-500'}`}>Thầy Tôn</span>
+                        </button>
+                        <button onClick={() => setExaminer('DIEP')} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-purple-500/10 border-purple-500 shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-purple-500/50'}`}>
+                           <div className="text-4xl drop-shadow-sm mb-1">👩‍🏫</div>
+                           <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'DIEP' ? 'text-purple-600' : 'text-slate-500'}`}>Cô Diệp</span>
+                        </button>
+                    </div>
+                 </div>
+                 
+                 <button onClick={() => startSession(false)} className="w-full shrink-0 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 md:py-5 rounded-2xl text-[15px] md:text-[16px] shadow-[0_10px_30px_rgba(14,165,233,0.3)] flex items-center justify-center gap-3 active:scale-95 transition-all uppercase tracking-wide">
+                     <span className="text-xl">📞</span> Bắt Đầu Đàm Thoại
+                 </button>
+              </div>
+          )
         )}
 
         {status === 'CONNECTING' && (
