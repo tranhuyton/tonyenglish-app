@@ -226,9 +226,7 @@ export default function LiveSpeakingTest({
   const audioCtxInputRef = useRef<AudioContext | null>(null);
   const sourceNodeRef = useRef<MediaStreamAudioSourceNode | null>(null);
   const processorNodeRef = useRef<ScriptProcessorNode | null>(null);
-  const recognitionRef = useRef<any>(null); 
-  const speechFinalTranscriptRef = useRef<string>('');
-  const activeSessionFinalRef = useRef<string>('');
+  const geminiUserTranscriptRef = useRef<string>('');
   const audioCtxOutputRef = useRef<AudioContext | null>(null);
   const nextPlayTimeRef = useRef<number>(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -441,56 +439,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       }
   }, [messages, liveTranscript, currentDraft, isProcessing, isRecording]);
 
-  useEffect(() => {
-      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-      if (SpeechRecognition) {
-          const recognition = new SpeechRecognition();
-          recognition.continuous = true;
-          recognition.interimResults = true;
-          const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
-          recognition.lang = currentMode === 'TUTOR' ? 'vi-VN' : 'en-US'; 
-          
-          recognition.onresult = (event: any) => {
-              let sessionFinal = '';
-              let sessionInterim = '';
-              for (let i = 0; i < event.results.length; ++i) {
-                  const transcript = event.results[i][0].transcript;
-                  if (event.results[i].isFinal) {
-                      sessionFinal += transcript + ' ';
-                  } else {
-                      sessionInterim += transcript;
-                  }
-              }
-              
-              activeSessionFinalRef.current = sessionFinal;
-              const fullDraft = (speechFinalTranscriptRef.current + sessionFinal + sessionInterim).trim();
-              setCurrentDraft(fullDraft);
-          };
 
-          recognition.onerror = (err: any) => {
-              console.warn("SpeechRecognition error:", err);
-          };
-          
-          recognition.onend = () => {
-              // Lưu lại kết quả final của phiên vừa kết thúc trước khi khởi động phiên mới
-              speechFinalTranscriptRef.current += activeSessionFinalRef.current;
-              activeSessionFinalRef.current = '';
-              
-              if (isMicOpenRef.current) {
-                  try {
-                      recognition.start();
-                  } catch(e) {}
-              }
-          };
-          
-          recognitionRef.current = recognition;
-      }
-      return () => {
-          if (recognitionRef.current) {
-              try { recognitionRef.current.stop(); } catch(e) {}
-          }
-      };
-  }, []);
 
   const handleBackClick = () => {
     if (status !== 'IDLE') {
@@ -633,7 +582,10 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                           responseModalities: ["AUDIO"], 
                           speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } 
                       },
-                      systemInstruction: { parts: [{ text: sysPrompt }] }
+                      systemInstruction: { parts: [{ text: sysPrompt }] },
+                      inputAudioTranscription: {
+                          model: "models/gemini-3.1-flash-live-preview"
+                      }
                   }
               }));
 
@@ -687,6 +639,40 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                       return;
                   }
                   
+                  // 1. Nhận dạng giọng nói của học sinh (User input transcription) từ Gemini
+                  if (msg.serverContent) {
+                      const inputTranscription = msg.serverContent.inputTranscription;
+                      if (inputTranscription && inputTranscription.text) {
+                          const userText = inputTranscription.text.trim();
+                          if (userText) {
+                              console.log("Gemini Native User Transcript:", userText);
+                              geminiUserTranscriptRef.current = userText;
+                              setCurrentDraft(userText);
+                              
+                              // Cập nhật nội dung text của học sinh vào lịch sử tin nhắn
+                              setMessages(prev => {
+                                  const next = [...prev];
+                                  for (let i = next.length - 1; i >= 0; i--) {
+                                      if (next[i].role === 'user') {
+                                          let currentText = next[i].text;
+                                          if (currentText.startsWith('🎤 (Đang') || currentText === '(Đã gửi đoạn hội thoại âm thanh)') {
+                                              next[i] = { ...next[i], text: userText };
+                                          } else {
+                                              if (userText.startsWith(currentText)) {
+                                                  next[i] = { ...next[i], text: userText };
+                                              } else if (!currentText.includes(userText)) {
+                                                  next[i] = { ...next[i], text: currentText + " " + userText };
+                                              }
+                                          }
+                                          break;
+                                      }
+                                  }
+                                  return next;
+                              });
+                          }
+                      }
+                  }
+                  
                   const extractText = (obj: any): string => {
                       let res = "";
                       if (!obj) return res;
@@ -714,8 +700,6 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                               isMicOpenRef.current = false;
                               isRecordingRef.current = false;
                               setIsRecording(false); 
-                              
-                              try { if (recognitionRef.current) recognitionRef.current.stop(); } catch(e){}
 
                               if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
                                   wsRef.current.send(JSON.stringify({ 
@@ -888,41 +872,50 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           setIsRecording(false);
           setIsProcessing(true);
           
-          // Dừng speech recognition ngay để kích hoạt các kết quả cuối cùng
-          try { if (recognitionRef.current) recognitionRef.current.stop(); } catch(e) {}
+          if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+              // Thêm dòng tin nhắn placeholder hiển thị trạng thái đang xử lý giọng nói
+              setMessages(prev => [...prev, { role: 'user', text: "🎤 (Đang dịch giọng nói...)" }]);
+              setCurrentDraft('');
 
-          // Đợi 400ms để đảm bảo các kết quả cuối của SpeechRecognition được xử lý và ghi nhận vào các refs
-          setTimeout(() => {
-              if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-                  const finalSpeechText = (speechFinalTranscriptRef.current + activeSessionFinalRef.current).trim();
-                  const userTextHistory = finalSpeechText || "(Đã gửi đoạn hội thoại âm thanh)";
-                  
-                  setMessages(prev => [...prev, { role: 'user', text: userTextHistory }]);
-                  setCurrentDraft('');
-                  speechFinalTranscriptRef.current = '';
-                  activeSessionFinalRef.current = '';
+              // Đợi 200ms để nhận nốt các gói tin inputTranscription cuối cùng từ WebSocket của Gemini trước khi gửi lệnh phản hồi
+              setTimeout(() => {
+                  if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+                      const finalSpeechText = geminiUserTranscriptRef.current.trim();
+                      
+                      // Cập nhật lại tin nhắn placeholder cuối cùng bằng text thật nhận được từ Gemini
+                      setMessages(prev => {
+                          const next = [...prev];
+                          for (let i = next.length - 1; i >= 0; i--) {
+                              if (next[i].role === 'user') {
+                                  let currentText = next[i].text;
+                                  if (currentText.startsWith('🎤 (Đang') || currentText === '(Đã gửi đoạn hội thoại âm thanh)') {
+                                      next[i] = { ...next[i], text: finalSpeechText || "(Đã gửi đoạn hội thoại âm thanh)" };
+                                  }
+                                  break;
+                              }
+                          }
+                          return next;
+                      });
 
-                  wsRef.current.send(JSON.stringify({
-                      clientContent: { turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa nói xong. Hãy phản hồi." }] }], turnComplete: true }
-                  }));
-              } else {
-                  setIsProcessing(false);
-              }
-          }, 400);
+                      geminiUserTranscriptRef.current = '';
+
+                      wsRef.current.send(JSON.stringify({
+                          clientContent: { turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa nói xong. Hãy phản hồi." }] }], turnComplete: true }
+                      }));
+                  } else {
+                      setIsProcessing(false);
+                  }
+              }, 200);
+          } else {
+              setIsProcessing(false);
+          }
       } else {
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
               setCurrentDraft('');
-              speechFinalTranscriptRef.current = '';
-              activeSessionFinalRef.current = '';
+              geminiUserTranscriptRef.current = '';
               isMicOpenRef.current = true;
               isRecordingRef.current = true;
               setIsRecording(true);
-              
-              if (recognitionRef.current) {
-                  const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
-                  recognitionRef.current.lang = currentMode === 'TUTOR' ? 'vi-VN' : 'en-US';
-                  try { recognitionRef.current.start(); } catch(e) {}
-              }
           } else {
               alert("Kết nối đang bị gián đoạn, vui lòng chờ...");
           }
@@ -985,8 +978,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
     setStatus('IDLE'); 
     setIsRecording(false);
     setCurrentDraft('');
-    speechFinalTranscriptRef.current = '';
-    activeSessionFinalRef.current = '';
+    geminiUserTranscriptRef.current = '';
   };
 
   const handleUserHangUp = () => { 
