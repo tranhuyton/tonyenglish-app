@@ -205,6 +205,7 @@ export default function LiveSpeakingTest({
   
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [liveTranscript, setLiveTranscript] = useState<string>('');
+  const [currentDraft, setCurrentDraft] = useState<string>('');
   const [chatInput, setChatInput] = useState<string>('');
   
   const [isBlackboardMode, setIsBlackboardMode] = useState(false);
@@ -225,6 +226,7 @@ export default function LiveSpeakingTest({
   const audioCtxInputRef = useRef<AudioContext | null>(null);
   const sourceNodeRef = useRef<MediaStreamAudioSourceNode | null>(null);
   const processorNodeRef = useRef<ScriptProcessorNode | null>(null);
+  const recognitionRef = useRef<any>(null); 
   const audioCtxOutputRef = useRef<AudioContext | null>(null);
   const nextPlayTimeRef = useRef<number>(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -435,7 +437,49 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       if (messagesEndRef.current) {
           messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
       }
-  }, [messages, liveTranscript, isProcessing, isRecording]);
+  }, [messages, liveTranscript, currentDraft, isProcessing, isRecording]);
+
+  useEffect(() => {
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      if (SpeechRecognition) {
+          const recognition = new SpeechRecognition();
+          recognition.continuous = true;
+          recognition.interimResults = true;
+          const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
+          recognition.lang = currentMode === 'TUTOR' ? 'vi-VN' : 'en-US'; 
+          
+          recognition.onresult = (event: any) => {
+              let final = '';
+              for (let i = event.resultIndex; i < event.results.length; ++i) {
+                  if (event.results[i].isFinal) {
+                      final += event.results[i][0].transcript;
+                  }
+              }
+              if (final) {
+                  setCurrentDraft(prev => prev + final + ' ');
+              } else {
+                  setCurrentDraft(event.results[event.results.length - 1][0].transcript);
+              }
+          };
+
+          recognition.onerror = () => {};
+          
+          recognition.onend = () => {
+              if (isMicOpenRef.current) {
+                  try {
+                      recognition.start();
+                  } catch(e) {}
+              }
+          };
+          
+          recognitionRef.current = recognition;
+      }
+      return () => {
+          if (recognitionRef.current) {
+              try { recognitionRef.current.stop(); } catch(e) {}
+          }
+      };
+  }, []);
 
   const handleBackClick = () => {
     if (status !== 'IDLE') {
@@ -660,7 +704,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                               isRecordingRef.current = false;
                               setIsRecording(false); 
                               
-                              // local SpeechRecognition removed
+                              try { if (recognitionRef.current) recognitionRef.current.stop(); } catch(e){}
 
                               if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
                                   wsRef.current.send(JSON.stringify({ 
@@ -833,9 +877,12 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           setIsRecording(false);
           setIsProcessing(true);
           
+          try { if (recognitionRef.current) recognitionRef.current.stop(); } catch(e) {}
+
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-              const userTextHistory = "(Đã gửi đoạn hội thoại âm thanh)";
+              const userTextHistory = currentDraft.trim() || "(Đã gửi đoạn hội thoại âm thanh)";
               setMessages(prev => [...prev, { role: 'user', text: userTextHistory }]);
+              setCurrentDraft('');
 
               wsRef.current.send(JSON.stringify({
                   clientContent: { turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa nói xong. Hãy phản hồi." }] }], turnComplete: true }
@@ -843,9 +890,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           }
       } else {
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+              setCurrentDraft('');
               isMicOpenRef.current = true;
               isRecordingRef.current = true;
               setIsRecording(true);
+              try { if (recognitionRef.current) recognitionRef.current.start(); } catch(e) {}
           } else {
               alert("Kết nối đang bị gián đoạn, vui lòng chờ...");
           }
@@ -920,7 +969,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
   // 🚀 TỐI ƯU HÓA MEMOIZE: CHỈ RENDER LẠI DANH SÁCH TIN NHẮN KHI CẦN THIẾT
   // Tránh bị giật lag khi gõ văn bản vào ô input (vì khi gõ input, component re-render nhưng không cần chạy lại ReactMarkdown/KaTeX)
   const renderedBlackboardMessages = useMemo(() => {
-      if (messages.length === 0 && !isRecording && !liveTranscript) {
+      if (messages.length === 0 && !isRecording && !liveTranscript && !currentDraft) {
           return (
               <div className="h-full flex flex-col items-center justify-center text-center opacity-30 italic text-slate-400" style={{fontFamily: 'sans-serif'}}>
                   <span className="text-4xl mb-4 grayscale">{isTextOnlyMode ? '💬' : '🎙️'}</span>
@@ -946,8 +995,8 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
              
              {isRecording && (
                  <div className="mb-6 p-4 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
-                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">Học sinh đang nói...</strong>
-                     🎤 Đang thu âm giọng nói của con...
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">Đang ghi âm...</strong>
+                     {currentDraft.trim() || "🎤 Đang thu âm giọng nói của con..."}
                  </div>
              )}
              
@@ -959,10 +1008,10 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
              <div ref={messagesEndRef} />
           </>
       );
-  }, [messages, liveTranscript, isRecording, isProcessing, isTextOnlyMode, examiner]);
+  }, [messages, liveTranscript, currentDraft, isRecording, isProcessing, isTextOnlyMode, examiner]);
 
   const renderedTraditionalMessages = useMemo(() => {
-      if (messages.length === 0 && !isRecording && !liveTranscript) {
+      if (messages.length === 0 && !isRecording && !liveTranscript && !currentDraft) {
           return (
               <div className="flex flex-col items-center justify-center h-full opacity-40">
                   <span className="text-3xl mb-2 grayscale">🎙️</span>
@@ -991,13 +1040,13 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               {isRecording && (
                   <div className="p-3 rounded-lg bg-blue-50/50 text-blue-900 border border-blue-100/50 border-dashed animate-pulse">
                       <strong className="block text-[10px] uppercase tracking-widest opacity-50 mb-1">Đang ghi âm...</strong>
-                      🎤 Đang thu âm giọng nói của con...
+                      {currentDraft.trim() || "🎤 Đang thu âm giọng nói của con..."}
                   </div>
               )}
               <div ref={messagesEndRef} />
           </div>
       );
-  }, [messages, isRecording, liveTranscript]);
+  }, [messages, isRecording, liveTranscript, currentDraft]);
 
   const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
   const currentTopic = sessionStorage.getItem('tony_live_topic') || "Bài tập giao tiếp tổng hợp";
