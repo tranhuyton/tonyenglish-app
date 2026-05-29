@@ -585,7 +585,8 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                           speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } 
                       },
                       systemInstruction: { parts: [{ text: sysPrompt }] },
-                      inputAudioTranscription: {}
+                      inputAudioTranscription: {},
+                      outputAudioTranscription: {}
                   }
               }));
 
@@ -597,12 +598,13 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                       if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN && isSetupCompleteRef.current && isMicOpenRef.current) {
                           const inputData = e.inputBuffer.getChannelData(0);
                           const pcm16Buffer = floatTo16BitPCM(inputData);
+                          const base64Data = arrayBufferToBase64(pcm16Buffer);
                           
                           wsRef.current.send(JSON.stringify({
                               realtimeInput: {
                                   audio: { 
                                       mimeType: "audio/pcm;rate=16000",
-                                      data: arrayBufferToBase64(pcm16Buffer)
+                                      data: base64Data
                                   }
                               }
                           }));
@@ -639,90 +641,95 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                       return;
                   }
                   
-                  // 1. Nhận dạng giọng nói của học sinh (User input transcription) từ Gemini
-                  if (msg.serverContent) {
-                      const inputTranscription = msg.serverContent.inputTranscription;
-                      if (inputTranscription && inputTranscription.text) {
-                          const userText = inputTranscription.text.trim();
-                          if (userText) {
-                              console.log("Gemini Native User Transcript:", userText);
-                              geminiUserTranscriptRef.current = userText;
-                              setCurrentDraft(userText);
-                              
-                              // Cập nhật nội dung text của học sinh vào lịch sử tin nhắn
-                              setMessages(prev => {
-                                  const next = [...prev];
-                                  for (let i = next.length - 1; i >= 0; i--) {
-                                      if (next[i].role === 'user') {
-                                          let currentText = next[i].text;
-                                          if (currentText.startsWith('🎤 (Đang') || currentText === '(Đã gửi đoạn hội thoại âm thanh)') {
+                  // ============================================================
+                  // 🔍 DEBUG: Log tất cả message keys để xác định format từ server proxy
+                  // Anh mở DevTools (F12) → Console để xem log này
+                  // ============================================================
+                  const msgKeys = Object.keys(msg);
+                  console.log("📩 WS MSG keys:", msgKeys.join(', '), msg.serverContent ? '| serverContent keys: ' + Object.keys(msg.serverContent).join(', ') : '');
+                  
+                  // ============================================================
+                  // BƯỚC 1: Tìm inputTranscription ở MỌI VỊ TRÍ CÓ THỂ
+                  // Proxy có thể đặt nó ở top-level, trong serverContent, hoặc nơi khác
+                  // ============================================================
+                  const inputTx = msg.inputTranscription 
+                      || msg.serverContent?.inputTranscription 
+                      || msg.serverContent?.modelTurn?.inputTranscription
+                      || null;
+                  
+                  if (inputTx) {
+                      const userText = (inputTx.text || '').trim();
+                      if (userText) {
+                          console.log("✅ USER TRANSCRIPT FOUND:", userText, "| partial:", inputTx.partial);
+                          geminiUserTranscriptRef.current = userText;
+                          setCurrentDraft(userText);
+                          
+                          setMessages(prev => {
+                              const next = [...prev];
+                              for (let i = next.length - 1; i >= 0; i--) {
+                                  if (next[i].role === 'user') {
+                                      let currentText = next[i].text;
+                                      if (currentText.startsWith('🎤') || currentText === '(Đã gửi đoạn hội thoại âm thanh)') {
+                                          next[i] = { ...next[i], text: userText };
+                                      } else {
+                                          if (userText.startsWith(currentText)) {
                                               next[i] = { ...next[i], text: userText };
-                                          } else {
-                                              if (userText.startsWith(currentText)) {
-                                                  next[i] = { ...next[i], text: userText };
-                                              } else if (!currentText.includes(userText)) {
-                                                  next[i] = { ...next[i], text: currentText + " " + userText };
-                                              }
+                                          } else if (!currentText.includes(userText)) {
+                                              next[i] = { ...next[i], text: currentText + " " + userText };
                                           }
-                                          break;
                                       }
+                                      break;
                                   }
-                                  return next;
-                              });
-                          }
+                              }
+                              return next;
+                          });
                       }
                   }
                   
-                  const extractText = (obj: any): string => {
-                      let res = "";
-                      if (!obj) return res;
-                      if (Array.isArray(obj)) {
-                          obj.forEach(item => res += extractText(item));
-                      } else if (typeof obj === 'object') {
-                          if (obj.type === 'response.audio.delta' || obj.type === 'audio') return res;
-                          for (const [key, value] of Object.entries(obj)) {
-                              if ((key === 'text' || key === 'transcript' || (key === 'delta' && obj.type === 'response.audio_transcript.delta')) && typeof value === 'string') {
-                                  res += value;
-                              } else if (key !== 'inlineData' && key !== 'audio' && key !== 'mediaChunks' && key !== 'pcm') {
-                                  res += extractText(value);
-                              }
-                          }
-                      }
-                      return res;
-                  };
-
-                  if (msg.serverContent || msg.response) {
-                      const foundText = extractText(msg);
-                      const hasModelTurnStarted = !!msg.serverContent?.modelTurn; 
-
-                      if (hasModelTurnStarted || foundText) {
-                          if (isMicOpenRef.current) {
-                              isMicOpenRef.current = false;
-                              isRecordingRef.current = false;
-                              setIsRecording(false); 
-
-                              if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-                                  wsRef.current.send(JSON.stringify({ 
-                                      clientContent: { turnComplete: true } 
-                                  }));
-                              }
-                          }
-                      }
-
-                      if (foundText) {
-                          transcriptRef.current += foundText;
+                  // ============================================================
+                  // BƯỚC 1.5: Tìm outputTranscription (text lời AI nói) ở mọi vị trí
+                  // ============================================================
+                  const outputTx = msg.outputTranscription 
+                      || msg.serverContent?.outputTranscription 
+                      || null;
+                  
+                  if (outputTx) {
+                      const aiText = (outputTx.text || '').trim();
+                      if (aiText) {
+                          console.log("🤖 AI TRANSCRIPT:", aiText);
+                          transcriptRef.current += aiText;
                           setLiveTranscript(transcriptRef.current);
                       }
+                  }
 
-                      if (!isTextOnlyModeRef.current && msg.serverContent?.modelTurn?.parts) {
-                          for (let part of msg.serverContent.modelTurn.parts) {
-                              if (part.inlineData?.data) {
-                                  playAIAudio(part.inlineData.data);
-                              }
+                  // ============================================================
+                  // BƯỚC 2: Xử lý modelTurn (AI đang phản hồi — audio chunks)
+                  // ============================================================
+                  if (msg.serverContent?.modelTurn) {
+                      // Đóng mic ngay khi AI bắt đầu nói (tránh echo)
+                      if (isMicOpenRef.current) {
+                          isMicOpenRef.current = false;
+                          isRecordingRef.current = false;
+                          setIsRecording(false);
+                      }
+                      
+                      // Trích text từ modelTurn.parts (chỉ text, bỏ qua inlineData/audio)
+                      const parts = msg.serverContent.modelTurn.parts || [];
+                      for (const part of parts) {
+                          if (part.text && typeof part.text === 'string') {
+                              transcriptRef.current += part.text;
+                              setLiveTranscript(transcriptRef.current);
+                          }
+                          // Phát audio response của AI
+                          if (!isTextOnlyModeRef.current && part.inlineData?.data) {
+                              playAIAudio(part.inlineData.data);
                           }
                       }
                   }
 
+                  // ============================================================
+                  // BƯỚC 3: Xử lý turnComplete (AI nói xong — finalize)
+                  // ============================================================
                   if (msg.serverContent?.turnComplete) {
                       if (transcriptRef.current) {
                           setMessages(prev => [...prev, { role: 'model', text: transcriptRef.current }]);
@@ -872,52 +879,56 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       if (isSpeaking) stopAIAudio(); 
       
       if (isRecording) {
+          // ====== DỪNG GHI ÂM ======
           isMicOpenRef.current = false;
           isRecordingRef.current = false;
           setIsRecording(false);
           setIsProcessing(true);
           
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-              // Thêm dòng tin nhắn placeholder hiển thị trạng thái đang xử lý giọng nói
-              setMessages(prev => [...prev, { role: 'user', text: "🎤 (Đang dịch giọng nói...)" }]);
               setCurrentDraft('');
 
-              // Đợi 200ms để nhận nốt các gói tin inputTranscription cuối cùng từ WebSocket của Gemini trước khi gửi lệnh phản hồi
+              // ⚠️ CHỈ GỬI turnComplete THUẦN — KHÔNG gửi kèm text turn
+              // Gemini đã nhận audio trực tiếp qua realtimeInput, nó ĐÃ nghe được lời nói rồi
+              // Gửi text turn sẽ TẠO MỘT LƯỢT HỘI THOẠI MỚI ghi đè lên audio → AI bị rối và im lìm
+              wsRef.current.send(JSON.stringify({
+                  clientContent: { turnComplete: true }
+              }));
+
+              // Đợi 800ms để nhận nốt inputTranscription cuối rồi cập nhật UI cho đẹp
               setTimeout(() => {
-                  if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-                      const finalSpeechText = geminiUserTranscriptRef.current.trim();
-                      
-                      // Cập nhật lại tin nhắn placeholder cuối cùng bằng text thật nhận được từ Gemini
-                      setMessages(prev => {
-                          const next = [...prev];
-                          for (let i = next.length - 1; i >= 0; i--) {
-                              if (next[i].role === 'user') {
-                                  let currentText = next[i].text;
-                                  if (currentText.startsWith('🎤 (Đang') || currentText === '(Đã gửi đoạn hội thoại âm thanh)') {
-                                      next[i] = { ...next[i], text: finalSpeechText || "(Đã gửi đoạn hội thoại âm thanh)" };
-                                  }
-                                  break;
+                  const finalSpeechText = geminiUserTranscriptRef.current.trim();
+                  
+                  // Cập nhật tin nhắn placeholder bằng text thật
+                  setMessages(prev => {
+                      const next = [...prev];
+                      for (let i = next.length - 1; i >= 0; i--) {
+                          if (next[i].role === 'user') {
+                              let currentText = next[i].text;
+                              if (currentText.startsWith('🎤') || currentText === '(Đã gửi đoạn hội thoại âm thanh)') {
+                                  next[i] = { ...next[i], text: finalSpeechText || "(Đã gửi đoạn hội thoại âm thanh)" };
                               }
+                              break;
                           }
-                          return next;
-                      });
+                      }
+                      return next;
+                  });
 
-                      geminiUserTranscriptRef.current = '';
-
-                      wsRef.current.send(JSON.stringify({
-                          clientContent: { turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa nói xong. Hãy phản hồi." }] }], turnComplete: true }
-                      }));
-                  } else {
-                      setIsProcessing(false);
-                  }
-              }, 200);
+                  geminiUserTranscriptRef.current = '';
+              }, 800);
           } else {
               setIsProcessing(false);
           }
       } else {
+          // ====== BẮT ĐẦU GHI ÂM ======
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
               setCurrentDraft('');
               geminiUserTranscriptRef.current = '';
+              
+              // ⚠️ THÊM PLACEHOLDER NGAY KHI BẮT ĐẦU GHI ÂM (không đợi đến khi dừng)
+              // Để inputTranscription đến trong lúc ghi âm có message để cập nhật text vào
+              setMessages(prev => [...prev, { role: 'user', text: '🎤 Đang nghe...' }]);
+              
               isMicOpenRef.current = true;
               isRecordingRef.current = true;
               setIsRecording(true);
