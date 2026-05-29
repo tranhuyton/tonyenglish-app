@@ -100,7 +100,12 @@ export default function App() {
     const handleCustomNavigate = (e: any) => {
       const view = e.detail;
       if (view === 'live-test') {
-         setLiveTutorState('FULLSCREEN');
+         if (liveTutorState === 'FULLSCREEN') {
+           // 🚀 ĐÃ ĐANG GỌI → gửi signal restart cho LiveSpeakingTest
+           window.dispatchEvent(new CustomEvent('tony-restart-call'));
+         } else {
+           setLiveTutorState('FULLSCREEN');
+         }
       } else if (view) {
          setCurrentView(view);
          try { sessionStorage.setItem('lms_current_view', view); } catch(err) {}
@@ -108,7 +113,7 @@ export default function App() {
     };
     window.addEventListener('tony-navigate', handleCustomNavigate);
     return () => window.removeEventListener('tony-navigate', handleCustomNavigate);
-  }, []);
+  }, [liveTutorState]);
 
   const [currentTestData, setCurrentTestData] = useState<any>(() => {
     try {
@@ -144,6 +149,8 @@ export default function App() {
   });
 
   useEffect(() => {
+    // 🚀 Xóa lựa chọn giọng khi chuyển trang → hỏi lại khi vào trang mới
+    try { sessionStorage.removeItem('tony_voice_examiner'); } catch(e) {}
     if (currentView === 'admin' || currentView === 'admin-login') window.history.pushState(null, '', '/admin');
     else if (currentView === 'home') window.history.pushState(null, '', '/');
   }, [currentView]);

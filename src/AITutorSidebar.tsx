@@ -65,6 +65,15 @@ export default function AITutorSidebar({
     };
   }, []);
 
+  // 🚀 AUTO-RESET: Xóa chat cũ khi user chuyển sang câu hỏi/bài giảng khác
+  const prevTopicRef = useRef(topicTitle);
+  useEffect(() => {
+    if (isOpen && topicTitle && topicTitle !== prevTopicRef.current) {
+      setMessages([]); // Xóa chat cũ → welcome message tự tái tạo
+    }
+    prevTopicRef.current = topicTitle;
+  }, [topicTitle, isOpen]);
+
   const theme = useMemo(() => {
     if (mode === 'parent_mode') {
       return {

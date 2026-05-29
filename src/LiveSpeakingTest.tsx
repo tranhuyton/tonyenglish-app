@@ -110,7 +110,11 @@ export default function LiveSpeakingTest({
     courseTitle?: string
 }) {
   const [status, setStatus] = useState<'IDLE' | 'CONNECTING' | 'CONNECTED'>('IDLE');
-  const [examiner, setExaminer] = useState<'TONY' | 'DIEP'>('TONY');
+  // 🚀 PERSIST: Đọc giọng đã chọn từ sessionStorage (nếu có)
+  const [examiner, setExaminer] = useState<'TONY' | 'DIEP'>(() => {
+    return (sessionStorage.getItem('tony_voice_examiner') as 'TONY' | 'DIEP') || 'TONY';
+  });
+  const hasVoiceChosen = !!sessionStorage.getItem('tony_voice_examiner');
   
   const [isRecording, setIsRecording] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -253,6 +257,20 @@ export default function LiveSpeakingTest({
       };
   }, []);
 
+  // 🚀 AUTO-START: Nếu đã chọn giọng trước đó → bỏ qua prompt, vào session luôn
+  useEffect(() => {
+      if (hasVoiceChosen && status === 'IDLE' && !isPendingVision) {
+          // Đợi 1 tick để refs được gán
+          const timer = setTimeout(() => {
+              const mode = sessionStorage.getItem('tony_live_mode');
+              if (startSessionRef.current) {
+                  startSessionRef.current(mode === 'TUTOR'); // TUTOR → text mode
+              }
+          }, 100);
+          return () => clearTimeout(timer);
+      }
+  }, []); // Chỉ chạy 1 lần khi mount
+
   // =========================================================================================
   // 🚀 KHỞI TẠO NÃO MẮT THẦN (VISION AI QUA EDGE FUNCTION - KHÔNG DÙNG WEBSOCKET)
   // =========================================================================================
@@ -357,6 +375,26 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       window.addEventListener('tony-force-start', handleForceStart);
       return () => window.removeEventListener('tony-force-start', handleForceStart);
   }, [status]);
+
+  // 🚀 LẮNG NGHE LỆNH RESTART (KHI USER BẤM GỌI CÂU KHÁC KHI ĐANG GỌI)
+  useEffect(() => {
+      const handleRestart = () => {
+          console.log('🔄 Restart call: dập máy cũ, gọi lại với context mới');
+          if (stopCallRef.current) stopCallRef.current();
+          setMessages([]);
+          setLiveTranscript('');
+          // Đợi 500ms cho mọi thứ dọn sạch, rồi auto-start lại
+          setTimeout(() => {
+              if (startSessionRef.current) {
+                  const mode = sessionStorage.getItem('tony_live_mode');
+                  // Nếu là TUTOR mode (chữa bài) → tự động vào bằng text mode
+                  startSessionRef.current(mode === 'TUTOR');
+              }
+          }, 500);
+      };
+      window.addEventListener('tony-restart-call', handleRestart);
+      return () => window.removeEventListener('tony-restart-call', handleRestart);
+  }, []);
 
   // 🚀 LẮNG NGHE LỆNH ÉP ĐÓNG CUỘC GỌI & DỌN DẸP SẠCH SẼ (VÍ DỤ KHI ĐÓNG BẢNG/PDF)
   useEffect(() => {
@@ -1251,11 +1289,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                          <p className="text-[13px] text-slate-400 mb-8 font-medium">Vui lòng lựa chọn Thầy/Cô để mở kết nối đàm thoại giảng bài trực tiếp.</p>
                          
                          <div className="flex justify-center gap-4 mb-8">
-                            <button onClick={() => setExaminer('TONY')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
+                            <button onClick={() => { setExaminer('TONY'); sessionStorage.setItem('tony_voice_examiner', 'TONY'); }} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
                                 <span className="text-3xl drop-shadow-md">👨‍🏫</span>
                                 <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Thầy Tôn</span>
                             </button>
-                            <button onClick={() => setExaminer('DIEP')} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
+                            <button onClick={() => { setExaminer('DIEP'); sessionStorage.setItem('tony_voice_examiner', 'DIEP'); }} className={`flex-1 py-4 rounded-2xl border-2 flex flex-col items-center gap-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-[#0ea5e9]/20 border-[#0ea5e9] shadow-[0_0_20px_rgba(14,165,233,0.3)]' : 'bg-slate-800 border-slate-700 opacity-70 hover:opacity-100 hover:border-slate-500'}`}>
                                 <span className="text-3xl drop-shadow-md">👩‍🏫</span>
                                 <span className={`text-[12px] font-black uppercase tracking-widest ${examiner === 'DIEP' ? 'text-[#0ea5e9]' : 'text-slate-400'}`}>Cô Diệp</span>
                             </button>
@@ -1422,11 +1460,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                  <div className="mb-8 shrink-0">
                     <h3 className="text-[12px] font-black text-slate-400 uppercase tracking-widest mb-4">Lựa chọn Giám khảo</h3>
                     <div className="flex justify-center gap-4">
-                        <button onClick={() => setExaminer('TONY')} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/10 border-[#0ea5e9] shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-[#0ea5e9]/50'}`}>
+                        <button onClick={() => { setExaminer('TONY'); sessionStorage.setItem('tony_voice_examiner', 'TONY'); }} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'TONY' ? 'bg-[#0ea5e9]/10 border-[#0ea5e9] shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-[#0ea5e9]/50'}`}>
                            <div className="text-4xl drop-shadow-sm mb-1">👨‍🏫</div>
                            <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'TONY' ? 'text-[#0ea5e9]' : 'text-slate-500'}`}>Thầy Tôn</span>
                         </button>
-                        <button onClick={() => setExaminer('DIEP')} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-purple-500/10 border-purple-500 shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-purple-500/50'}`}>
+                        <button onClick={() => { setExaminer('DIEP'); sessionStorage.setItem('tony_voice_examiner', 'DIEP'); }} className={`relative flex-1 py-4 rounded-2xl flex flex-col items-center gap-2 border-2 transition-all duration-300 ${examiner === 'DIEP' ? 'bg-purple-500/10 border-purple-500 shadow-sm' : 'bg-white border-slate-200 text-slate-500 hover:border-purple-500/50'}`}>
                            <div className="text-4xl drop-shadow-sm mb-1">👩‍🏫</div>
                            <span className={`text-[13px] font-black uppercase tracking-wider ${examiner === 'DIEP' ? 'text-purple-600' : 'text-slate-500'}`}>Cô Diệp</span>
                         </button>
