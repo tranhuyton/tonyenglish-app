@@ -217,6 +217,7 @@ export default function LiveSpeakingTest({
   const isSetupCompleteRef = useRef<boolean>(false);
   const isMicOpenRef = useRef<boolean>(false); 
   const isRecordingRef = useRef<boolean>(false); 
+  const interruptedRef = useRef<boolean>(false); // Flag: đang trong trạng thái ngắt lời AI
   const transcriptRef = useRef<string>('');
   const callStartTimeRef = useRef<number>(0);
   const isTextOnlyModeRef = useRef<boolean>(false); 
@@ -709,18 +710,15 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
                   // ============================================================
                   // BƯỚC 2: Xử lý modelTurn (AI đang phản hồi — audio chunks)
-                  // ⚠️ Nếu user ĐANG GHI ÂM (isRecordingRef = true) → user đang ngắt lời AI
-                  // → bỏ qua modelTurn cũ, không phát audio, không đóng mic
+                  // ⚠️ BỎ QUA nếu: user đang ghi âm HOẶC vừa ngắt lời (response cũ)
                   // ============================================================
-                  if (msg.serverContent?.modelTurn && !isRecordingRef.current) {
-                      // Trích text từ modelTurn.parts (chỉ text, bỏ qua inlineData/audio)
+                  if (msg.serverContent?.modelTurn && !isRecordingRef.current && !interruptedRef.current) {
                       const parts = msg.serverContent.modelTurn.parts || [];
                       for (const part of parts) {
                           if (part.text && typeof part.text === 'string') {
                               transcriptRef.current += part.text;
                               setLiveTranscript(transcriptRef.current);
                           }
-                          // Phát audio response của AI
                           if (!isTextOnlyModeRef.current && part.inlineData?.data) {
                               playAIAudio(part.inlineData.data);
                           }
@@ -729,15 +727,25 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
                   // ============================================================
                   // BƯỚC 3: Xử lý turnComplete (AI nói xong — finalize)
+                  // ⚠️ Nếu interruptedRef = true → đây là turnComplete của response CŨ
+                  // → bỏ qua, không setIsProcessing(false), chờ response MỚI
                   // ============================================================
                   if (msg.serverContent?.turnComplete) {
-                      if (transcriptRef.current) {
-                          setMessages(prev => [...prev, { role: 'model', text: transcriptRef.current }]);
+                      if (interruptedRef.current) {
+                          // Response cũ kết thúc → bỏ qua, giữ interruptedRef = true
+                          // (sẽ được clear khi user thả nút)
+                          console.log('⏭️ Bỏ qua turnComplete cũ (đã ngắt lời)');
                           transcriptRef.current = '';
                           setLiveTranscript('');
+                      } else {
+                          if (transcriptRef.current) {
+                              setMessages(prev => [...prev, { role: 'model', text: transcriptRef.current }]);
+                              transcriptRef.current = '';
+                              setLiveTranscript('');
+                          }
+                          setIsProcessing(false);
+                          setIsSpeaking(false);
                       }
-                      setIsProcessing(false);
-                      setIsSpeaking(false);
                   }
               } catch (e) {
                   console.error("Lỗi parse WS message:", e);
@@ -882,6 +890,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           // ====== DỪNG GHI ÂM ======
           isMicOpenRef.current = false;
           isRecordingRef.current = false;
+          interruptedRef.current = false; // ✅ Clear flag → sẵn sàng nhận response MỚI
           setIsRecording(false);
           setIsProcessing(true);
           
@@ -889,7 +898,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               setCurrentDraft('');
 
               // 🚀 GỬI activityEnd → báo hiệu user ngừng nói
-              // Sau đó gửi turnComplete để AI bắt đầu phản hồi
+              // Sau đó gửi turnComplete để AI bắt đầu phản hồi câu hỏi MỚI
               wsRef.current.send(JSON.stringify({
                   realtimeInput: { activityEnd: {} }
               }));
@@ -927,20 +936,29 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               setCurrentDraft('');
               geminiUserTranscriptRef.current = '';
               
-              // 🚀 Nếu AI đang nói → ngắt lời: dừng audio + reset transcript AI cũ
+              // 🚀 Nếu AI đang nói → ngắt lời
               if (isSpeaking) stopAIAudio();
               if (transcriptRef.current) {
-                  // Lưu lại phần AI đã nói trước khi bị ngắt
                   setMessages(prev => [...prev, { role: 'model', text: transcriptRef.current + ' _(bị ngắt)_' }]);
                   transcriptRef.current = '';
                   setLiveTranscript('');
               }
               setIsProcessing(false);
               
+              // 🚀 NGẮT LỜI: Gửi activityEnd + turnComplete để CHẤM DỨT response cũ trên server
+              // Sau đó mới gửi activityStart cho lượt mới
+              interruptedRef.current = true; // Bật flag → bỏ qua mọi modelTurn/turnComplete cũ
+              wsRef.current.send(JSON.stringify({
+                  realtimeInput: { activityEnd: {} }
+              }));
+              wsRef.current.send(JSON.stringify({
+                  clientContent: { turnComplete: true }
+              }));
+              
               // Thêm placeholder cho lời user
               setMessages(prev => [...prev, { role: 'user', text: '🎤 Đang nghe...' }]);
               
-              // 🚀 GỬI activityStart → báo hiệu user bắt đầu nói (vì đã tắt VAD tự động)
+              // 🚀 GỬI activityStart → báo hiệu user bắt đầu nói lượt MỚI
               wsRef.current.send(JSON.stringify({
                   realtimeInput: { activityStart: {} }
               }));
