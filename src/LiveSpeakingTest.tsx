@@ -582,10 +582,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                           responseModalities: ["AUDIO"], 
                           speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } 
                       },
-                      systemInstruction: { parts: [{ text: sysPrompt }] },
-                      inputAudioTranscription: {
-                          model: "models/gemini-3.1-flash-live-preview"
-                      }
+                      inputAudioTranscription: {}
                   }
               }));
 
@@ -737,7 +734,12 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               }
           };
 
-          ws.onclose = () => {
+          ws.onerror = (err) => {
+              console.error("WebSocket error:", err);
+          };
+
+          ws.onclose = (event) => {
+              console.warn("WebSocket closed. Code:", event.code, "Reason:", event.reason);
               setStatus('IDLE');
           };
       } catch (e) {
