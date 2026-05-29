@@ -441,6 +441,8 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
 
 
+
+
   const handleBackClick = () => {
     if (status !== 'IDLE') {
         onMinimize();
@@ -582,6 +584,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                           responseModalities: ["AUDIO"], 
                           speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voiceName } } } 
                       },
+                      systemInstruction: { parts: [{ text: sysPrompt }] },
                       inputAudioTranscription: {}
                   }
               }));
