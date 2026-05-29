@@ -586,7 +586,12 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                       },
                       systemInstruction: { parts: [{ text: sysPrompt }] },
                       inputAudioTranscription: {},
-                      outputAudioTranscription: {}
+                      outputAudioTranscription: {},
+                      // 🚀 TẮT VAD: AI chỉ trả lời khi user THẢ nút "Nhấn nói"
+                      // Không tự động cắt ngang khi user ngừng nói giữa chừng
+                      realtimeInputConfig: {
+                          automaticActivityDetection: { disabled: true }
+                      }
                   }
               }));
 
@@ -888,9 +893,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
               setCurrentDraft('');
 
-              // ⚠️ CHỈ GỬI turnComplete THUẦN — KHÔNG gửi kèm text turn
-              // Gemini đã nhận audio trực tiếp qua realtimeInput, nó ĐÃ nghe được lời nói rồi
-              // Gửi text turn sẽ TẠO MỘT LƯỢT HỘI THOẠI MỚI ghi đè lên audio → AI bị rối và im lìm
+              // 🚀 GỬI activityEnd → báo hiệu user ngừng nói
+              // Sau đó gửi turnComplete để AI bắt đầu phản hồi
+              wsRef.current.send(JSON.stringify({
+                  realtimeInput: { activityEnd: {} }
+              }));
               wsRef.current.send(JSON.stringify({
                   clientContent: { turnComplete: true }
               }));
@@ -925,9 +932,13 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               setCurrentDraft('');
               geminiUserTranscriptRef.current = '';
               
-              // ⚠️ THÊM PLACEHOLDER NGAY KHI BẮT ĐẦU GHI ÂM (không đợi đến khi dừng)
-              // Để inputTranscription đến trong lúc ghi âm có message để cập nhật text vào
+              // ⚠️ THÊM PLACEHOLDER NGAY KHI BẮT ĐẦU GHI ÂM
               setMessages(prev => [...prev, { role: 'user', text: '🎤 Đang nghe...' }]);
+              
+              // 🚀 GỬI activityStart → báo hiệu user bắt đầu nói (vì đã tắt VAD tự động)
+              wsRef.current.send(JSON.stringify({
+                  realtimeInput: { activityStart: {} }
+              }));
               
               isMicOpenRef.current = true;
               isRecordingRef.current = true;
