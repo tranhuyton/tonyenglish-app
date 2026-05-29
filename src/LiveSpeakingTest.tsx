@@ -227,6 +227,8 @@ export default function LiveSpeakingTest({
   const sourceNodeRef = useRef<MediaStreamAudioSourceNode | null>(null);
   const processorNodeRef = useRef<ScriptProcessorNode | null>(null);
   const recognitionRef = useRef<any>(null); 
+  const speechFinalTranscriptRef = useRef<string>('');
+  const activeSessionFinalRef = useRef<string>('');
   const audioCtxOutputRef = useRef<AudioContext | null>(null);
   const nextPlayTimeRef = useRef<number>(0);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -449,22 +451,31 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           recognition.lang = currentMode === 'TUTOR' ? 'vi-VN' : 'en-US'; 
           
           recognition.onresult = (event: any) => {
-              let final = '';
-              for (let i = event.resultIndex; i < event.results.length; ++i) {
+              let sessionFinal = '';
+              let sessionInterim = '';
+              for (let i = 0; i < event.results.length; ++i) {
+                  const transcript = event.results[i][0].transcript;
                   if (event.results[i].isFinal) {
-                      final += event.results[i][0].transcript;
+                      sessionFinal += transcript + ' ';
+                  } else {
+                      sessionInterim += transcript;
                   }
               }
-              if (final) {
-                  setCurrentDraft(prev => prev + final + ' ');
-              } else {
-                  setCurrentDraft(event.results[event.results.length - 1][0].transcript);
-              }
+              
+              activeSessionFinalRef.current = sessionFinal;
+              const fullDraft = (speechFinalTranscriptRef.current + sessionFinal + sessionInterim).trim();
+              setCurrentDraft(fullDraft);
           };
 
-          recognition.onerror = () => {};
+          recognition.onerror = (err: any) => {
+              console.warn("SpeechRecognition error:", err);
+          };
           
           recognition.onend = () => {
+              // Lưu lại kết quả final của phiên vừa kết thúc trước khi khởi động phiên mới
+              speechFinalTranscriptRef.current += activeSessionFinalRef.current;
+              activeSessionFinalRef.current = '';
+              
               if (isMicOpenRef.current) {
                   try {
                       recognition.start();
@@ -877,24 +888,41 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           setIsRecording(false);
           setIsProcessing(true);
           
+          // Dừng speech recognition ngay để kích hoạt các kết quả cuối cùng
           try { if (recognitionRef.current) recognitionRef.current.stop(); } catch(e) {}
 
-          if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
-              const userTextHistory = currentDraft.trim() || "(Đã gửi đoạn hội thoại âm thanh)";
-              setMessages(prev => [...prev, { role: 'user', text: userTextHistory }]);
-              setCurrentDraft('');
+          // Đợi 400ms để đảm bảo các kết quả cuối của SpeechRecognition được xử lý và ghi nhận vào các refs
+          setTimeout(() => {
+              if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+                  const finalSpeechText = (speechFinalTranscriptRef.current + activeSessionFinalRef.current).trim();
+                  const userTextHistory = finalSpeechText || "(Đã gửi đoạn hội thoại âm thanh)";
+                  
+                  setMessages(prev => [...prev, { role: 'user', text: userTextHistory }]);
+                  setCurrentDraft('');
+                  speechFinalTranscriptRef.current = '';
+                  activeSessionFinalRef.current = '';
 
-              wsRef.current.send(JSON.stringify({
-                  clientContent: { turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa nói xong. Hãy phản hồi." }] }], turnComplete: true }
-              }));
-          }
+                  wsRef.current.send(JSON.stringify({
+                      clientContent: { turns: [{ role: "user", parts: [{ text: "[HỆ THỐNG]: Học sinh vừa nói xong. Hãy phản hồi." }] }], turnComplete: true }
+                  }));
+              } else {
+                  setIsProcessing(false);
+              }
+          }, 400);
       } else {
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
               setCurrentDraft('');
+              speechFinalTranscriptRef.current = '';
+              activeSessionFinalRef.current = '';
               isMicOpenRef.current = true;
               isRecordingRef.current = true;
               setIsRecording(true);
-              try { if (recognitionRef.current) recognitionRef.current.start(); } catch(e) {}
+              
+              if (recognitionRef.current) {
+                  const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
+                  recognitionRef.current.lang = currentMode === 'TUTOR' ? 'vi-VN' : 'en-US';
+                  try { recognitionRef.current.start(); } catch(e) {}
+              }
           } else {
               alert("Kết nối đang bị gián đoạn, vui lòng chờ...");
           }
@@ -954,9 +982,11 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
             });
         }
     }
-    
     setStatus('IDLE'); 
     setIsRecording(false);
+    setCurrentDraft('');
+    speechFinalTranscriptRef.current = '';
+    activeSessionFinalRef.current = '';
   };
 
   const handleUserHangUp = () => { 
