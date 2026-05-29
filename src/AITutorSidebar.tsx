@@ -65,13 +65,37 @@ export default function AITutorSidebar({
     };
   }, []);
 
+  // 🚀 HELPER: Tạo welcome message dựa trên context hiện tại
+  const generateWelcome = () => {
+    let welcomeText = "";
+    if (mode === 'parent_mode') {
+      const studentName = sessionStorage.getItem('tony_parent_target_student') || 'học sinh';
+      welcomeText = `Dạ chào anh/chị! Tôi là Trợ lý AI chủ nhiệm của bé **${studentName}**.\n\nHệ thống đã tổng hợp xong dữ liệu học tập của cháu trong 14 ngày qua. Anh/chị cần xem báo cáo tổng quan hay có câu hỏi cụ thể nào về tình hình của cháu không ạ?`;
+    } else if (mode === 'ielts') {
+      if (taskType === 'reading') {
+        welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n**${topicTitle}**\n\nEm muốn hỏi thêm thầy điều gì?`;
+      } else {
+        welcomeText = `Chào em! Thầy đã nhận được yêu cầu phân tích.\n\n`;
+        if (topicTitle) welcomeText += `**📝 Đề bài:** "${topicTitle}"\n\n`;
+        if (topicImage) welcomeText += `*(📸 Đã nhận kèm hình ảnh/biểu đồ)*\n\n`;
+        if (taskType === 'speaking') welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng hay viết câu mở bài (Hook) nào?`;
+        else if (taskType === 'task1' || taskType === 'task2') welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
+        else welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
+      }
+    } else {
+      welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em có thể chat hỏi bài hoặc **Paste (Ctrl+V) / Tải ảnh lên** để thầy giải đáp nhé!`;
+    }
+    return [{ role: 'ai' as const, text: welcomeText }];
+  };
+
   // 🚀 AUTO-RESET: Xóa chat cũ khi user chuyển sang câu hỏi/bài giảng khác
   const contextKey = `${topicTitle || ''}|${lectureTitle || ''}`;
   const prevContextRef = useRef(contextKey);
   useEffect(() => {
     const newKey = `${topicTitle || ''}|${lectureTitle || ''}`;
     if (isOpen && newKey !== prevContextRef.current && prevContextRef.current !== '|') {
-      setMessages([]); // Xóa chat cũ → welcome message tự tái tạo
+      // Đặt welcome message mới NGAY LẬP (không phụ thuộc effect khác)
+      setMessages(generateWelcome());
     }
     prevContextRef.current = newKey;
   }, [topicTitle, lectureTitle, isOpen]);
@@ -256,38 +280,7 @@ export default function AITutorSidebar({
        }, 300);
        
        if (messages.length === 0) {
-           let welcomeText = "";
-           
-           if (mode === 'parent_mode') {
-              const studentName = sessionStorage.getItem('tony_parent_target_student') || 'học sinh';
-              welcomeText = `Dạ chào anh/chị! Tôi là Trợ lý AI chủ nhiệm của bé **${studentName}**.\n\nHệ thống đã tổng hợp xong dữ liệu học tập của cháu trong 14 ngày qua. Anh/chị cần xem báo cáo tổng quan hay có câu hỏi cụ thể nào về tình hình của cháu không ạ?`;
-           } else if (mode === 'ielts') {
-              if (taskType === 'reading') {
-                 welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n**${topicTitle}**\n\nEm muốn hỏi thêm thầy điều gì?`;
-              } else {
-                 welcomeText = `Chào em! Thầy đã nhận được yêu cầu phân tích.\n\n`;
-                 if (topicTitle) {
-                     welcomeText += `**📝 Đề bài:** "${topicTitle}"\n\n`;
-                 }
-                 if (topicImage) {
-                     welcomeText += `*(📸 Đã nhận kèm hình ảnh/biểu đồ)*\n\n`;
-                 }
-                 if (taskType === 'speaking') {
-                     welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng hay viết câu mở bài (Hook) nào?`;
-                 } else if (taskType === 'task1' || taskType === 'task2') {
-                     welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
-                 } else {
-                     welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
-                 }
-              }
-           } else {
-              welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em có thể chat hỏi bài hoặc **Paste (Ctrl+V) / Tải ảnh lên** để thầy giải đáp nhé!`;
-           }
-
-           setMessages([{
-               role: 'ai',
-               text: welcomeText
-           }]);
+           setMessages(generateWelcome());
        }
     }
   }, [isOpen, mode, topicTitle, lectureTitle, topicImage, taskType]);
