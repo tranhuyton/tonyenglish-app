@@ -66,13 +66,15 @@ export default function AITutorSidebar({
   }, []);
 
   // 🚀 AUTO-RESET: Xóa chat cũ khi user chuyển sang câu hỏi/bài giảng khác
-  const prevTopicRef = useRef(topicTitle);
+  const contextKey = `${topicTitle || ''}|${lectureTitle || ''}`;
+  const prevContextRef = useRef(contextKey);
   useEffect(() => {
-    if (isOpen && topicTitle && topicTitle !== prevTopicRef.current) {
+    const newKey = `${topicTitle || ''}|${lectureTitle || ''}`;
+    if (isOpen && newKey !== prevContextRef.current && prevContextRef.current !== '|') {
       setMessages([]); // Xóa chat cũ → welcome message tự tái tạo
     }
-    prevTopicRef.current = topicTitle;
-  }, [topicTitle, isOpen]);
+    prevContextRef.current = newKey;
+  }, [topicTitle, lectureTitle, isOpen]);
 
   const theme = useMemo(() => {
     if (mode === 'parent_mode') {
