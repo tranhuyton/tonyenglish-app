@@ -445,7 +445,8 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           const recognition = new SpeechRecognition();
           recognition.continuous = true;
           recognition.interimResults = true;
-          recognition.lang = 'en-GB'; 
+          const currentMode = sessionStorage.getItem('tony_live_mode') || 'EXAMINER';
+          recognition.lang = currentMode === 'TUTOR' ? 'vi-VN' : 'en-US'; 
           
           recognition.onresult = (event: any) => {
               let final = '';
