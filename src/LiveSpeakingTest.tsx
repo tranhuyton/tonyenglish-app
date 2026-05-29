@@ -218,6 +218,7 @@ export default function LiveSpeakingTest({
   const isMicOpenRef = useRef<boolean>(false); 
   const isRecordingRef = useRef<boolean>(false); 
   const interruptedRef = useRef<boolean>(false); // Flag: đang trong trạng thái ngắt lời AI
+  const recordingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null); // Auto-stop sau 30s
   const transcriptRef = useRef<string>('');
   const callStartTimeRef = useRef<number>(0);
   const isTextOnlyModeRef = useRef<boolean>(false); 
@@ -894,6 +895,12 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           setIsRecording(false);
           setIsProcessing(true);
           
+          // Xóa auto-timeout nếu có
+          if (recordingTimeoutRef.current) {
+              clearTimeout(recordingTimeoutRef.current);
+              recordingTimeoutRef.current = null;
+          }
+          
           if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
               setCurrentDraft('');
 
@@ -945,20 +952,15 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               }
               setIsProcessing(false);
               
-              // 🚀 NGẮT LỜI: Gửi activityEnd + turnComplete để CHẤM DỨT response cũ trên server
-              // Sau đó mới gửi activityStart cho lượt mới
+              // 🚀 NGẮT LỜI: CHỈ gửi activityStart để ngắt output của AI
+              // ⚠️ KHÔNG gửi turnComplete ở đây — nó sẽ trigger AI trả lời response rác!
+              // turnComplete chỉ gửi khi user THẢ NÚT (dừng ghi âm)
               interruptedRef.current = true; // Bật flag → bỏ qua mọi modelTurn/turnComplete cũ
-              wsRef.current.send(JSON.stringify({
-                  realtimeInput: { activityEnd: {} }
-              }));
-              wsRef.current.send(JSON.stringify({
-                  clientContent: { turnComplete: true }
-              }));
               
               // Thêm placeholder cho lời user
               setMessages(prev => [...prev, { role: 'user', text: '🎤 Đang nghe...' }]);
               
-              // 🚀 GỬI activityStart → báo hiệu user bắt đầu nói lượt MỚI
+              // 🚀 GỬI activityStart → server tự hiểu user đang interrupt
               wsRef.current.send(JSON.stringify({
                   realtimeInput: { activityStart: {} }
               }));
@@ -966,6 +968,15 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               isMicOpenRef.current = true;
               isRecordingRef.current = true;
               setIsRecording(true);
+              
+              // ⏱️ AUTO-TIMEOUT 30s: tự động dừng ghi âm nếu user quên thả nút
+              // Tránh tốn token audio khi im lặng
+              recordingTimeoutRef.current = setTimeout(() => {
+                  if (isRecordingRef.current) {
+                      console.log('⏱️ Auto-stop recording sau 30s');
+                      handleToggleRecording(); // Tự động bấm "Xong"
+                  }
+              }, 30000);
           } else {
               alert("Kết nối đang bị gián đoạn, vui lòng chờ...");
           }
