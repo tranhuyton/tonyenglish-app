@@ -211,6 +211,8 @@ export default function StandardTest({
   
   const [showPalette, setShowPalette] = useState(false); 
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [fontSize, setFontSize] = useState<'S' | 'M' | 'L'>('M');
   
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
@@ -736,6 +738,60 @@ const handleFinish = async () => {
           )}
 
           <div className="flex items-center gap-4">
+            {/* ⚙ NÚT CÀI ĐẶT */}
+            <div className="relative">
+              <button 
+                  onClick={() => setShowSettings(!showSettings)} 
+                  className={`flex items-center gap-2 opacity-70 hover:opacity-100 transition text-[13px] font-bold ${showSettings ? 'opacity-100' : ''}`}
+                  title="Cài đặt"
+              >
+                 <SettingsIcon /> Cài đặt
+              </button>
+              
+              {showSettings && (
+                <div className="absolute right-0 top-full mt-2 bg-white border border-slate-200 rounded-xl shadow-xl p-5 w-[220px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="mb-5">
+                    <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-3">Cài đặt kích cỡ chữ</p>
+                    <div className="flex gap-2 justify-center">
+                      {(['S', 'M', 'L'] as const).map(size => (
+                        <button 
+                            key={size}
+                            onClick={() => setFontSize(size)}
+                            className={`w-10 h-10 rounded-full font-black text-[14px] transition-all border-2 ${
+                              fontSize === size 
+                                ? 'bg-[#0ea5e9] text-white border-[#0ea5e9] shadow-md scale-110' 
+                                : 'bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200'
+                            }`}
+                        >
+                          {size}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {(isListening && hasAnyAudio && globalAudioRef.current) && (
+                    <div>
+                      <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-3">Cài đặt âm thanh</p>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg">🔈</span>
+                        <input 
+                            type="range" 
+                            min="0" max="1" step="0.05" 
+                            defaultValue="1" 
+                            onChange={(e) => { 
+                                if(globalAudioRef.current) {
+                                    globalAudioRef.current.volume = parseFloat(e.target.value);
+                                } 
+                            }} 
+                            className="w-full accent-[#0ea5e9] cursor-pointer" 
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
             <button 
                 onClick={toggleFullscreen} 
                 className="hover:text-current opacity-70 hover:opacity-100 transition" 
@@ -752,7 +808,7 @@ const handleFinish = async () => {
           </div>
         </header>
 
-        <div className="flex-1 flex overflow-hidden relative flex-col md:flex-row" ref={containerRef}>
+        <div className="flex-1 flex overflow-hidden relative flex-col md:flex-row" ref={containerRef} onClick={() => showSettings && setShowSettings(false)}>
           
           {/* PANEL TRÁI (BÀI ĐỌC) - ẨN ĐI NẾU LÀ BÀI LISTENING */}
           {!isListening && (
@@ -761,7 +817,7 @@ const handleFinish = async () => {
                   ref={leftPaneRef} 
                   style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%' }}
               >
-                <div className="p-6 md:p-10">
+                <div className={`p-6 md:p-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
                   {isReviewMode && (
                     <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
                        <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
@@ -883,7 +939,7 @@ const handleFinish = async () => {
               ref={rightPaneRef} 
               style={!isListening && window.innerWidth > 768 ? { width: `${100 - leftWidth}%`, flex: 'none' } : { flex: 1 }}
           >
-             <div className="p-6 md:p-10 max-w-3xl mx-auto">
+             <div className={`p-6 md:p-10 max-w-3xl mx-auto ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
                
                {/* NẾU LÀ BÀI LISTENING CÓ CHẾ ĐỘ XEM LẠI, HIỂN THỊ ĐIỂM Ở ĐÂY CHO ĐẸP */}
                {isListening && isReviewMode && (
@@ -1676,9 +1732,15 @@ const handleFinish = async () => {
 
   return (
     <React.Fragment>
-      {/* GIỮ NGUYÊN thẻ Audio Ẩn theo yêu cầu để tự động phát */}
-      {isListening && globalAudio && !isReviewMode && (
-        <audio ref={globalAudioRef} src={globalAudio} preload="auto" className="hidden" />
+      {/* Audio: ẩn khi test, hiện controls khi review */}
+      {isListening && globalAudio && (
+        <audio 
+            ref={globalAudioRef} 
+            src={globalAudio} 
+            preload="auto" 
+            controls={isReviewMode}
+            className={isReviewMode ? 'fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-xl shadow-2xl rounded-full' : 'hidden'}
+        />
       )}
 
       {!testStarted ? (
