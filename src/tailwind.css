@@ -54,5 +54,4 @@ html, body {
   /* Đảm bảo các thanh cuộn bên trong vẫn mượt mà */
   .custom-scrollbar {
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain; 
   }
