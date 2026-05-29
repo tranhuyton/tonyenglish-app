@@ -709,15 +709,10 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
 
                   // ============================================================
                   // BƯỚC 2: Xử lý modelTurn (AI đang phản hồi — audio chunks)
+                  // ⚠️ Nếu user ĐANG GHI ÂM (isRecordingRef = true) → user đang ngắt lời AI
+                  // → bỏ qua modelTurn cũ, không phát audio, không đóng mic
                   // ============================================================
-                  if (msg.serverContent?.modelTurn) {
-                      // Đóng mic ngay khi AI bắt đầu nói (tránh echo)
-                      if (isMicOpenRef.current) {
-                          isMicOpenRef.current = false;
-                          isRecordingRef.current = false;
-                          setIsRecording(false);
-                      }
-                      
+                  if (msg.serverContent?.modelTurn && !isRecordingRef.current) {
                       // Trích text từ modelTurn.parts (chỉ text, bỏ qua inlineData/audio)
                       const parts = msg.serverContent.modelTurn.parts || [];
                       for (const part of parts) {
@@ -932,7 +927,17 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
               setCurrentDraft('');
               geminiUserTranscriptRef.current = '';
               
-              // ⚠️ THÊM PLACEHOLDER NGAY KHI BẮT ĐẦU GHI ÂM
+              // 🚀 Nếu AI đang nói → ngắt lời: dừng audio + reset transcript AI cũ
+              if (isSpeaking) stopAIAudio();
+              if (transcriptRef.current) {
+                  // Lưu lại phần AI đã nói trước khi bị ngắt
+                  setMessages(prev => [...prev, { role: 'model', text: transcriptRef.current + ' _(bị ngắt)_' }]);
+                  transcriptRef.current = '';
+                  setLiveTranscript('');
+              }
+              setIsProcessing(false);
+              
+              // Thêm placeholder cho lời user
               setMessages(prev => [...prev, { role: 'user', text: '🎤 Đang nghe...' }]);
               
               // 🚀 GỬI activityStart → báo hiệu user bắt đầu nói (vì đã tắt VAD tự động)
