@@ -1,4 +1,4 @@
-var Cs=Object.defineProperty,Ts=Object.defineProperties;var Ds=Object.getOwnPropertyDescriptors;var qi=Object.getOwnPropertySymbols;var Fs=Object.prototype.hasOwnProperty,Ms=Object.prototype.propertyIsEnumerable;var Hi=(e,t,r)=>t in e?Cs(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r,nt=(e,t)=>{for(var r in t||(t={}))Fs.call(t,r)&&Hi(e,r,t[r]);if(qi)for(var r of qi(t))Ms.call(t,r)&&Hi(e,r,t[r]);return e},nr=(e,t)=>Ts(e,Ds(t));import{R as Dr,r as K}from"./vendor.60da631b.js";import{s as l0,j as Q,a as O,F as $i}from"./index.7a7bff08.js";const Ui=["http","https","mailto","tel"];function zs(e){const t=(e||"").trim(),r=t.charAt(0);if(r==="#"||r==="/")return t;const n=t.indexOf(":");if(n===-1)return t;let i=-1;for(;++i<Ui.length;){const a=Ui[i];if(n===a.length&&t.slice(0,a.length).toLowerCase()===a)return t}return i=t.indexOf("?"),i!==-1&&n>i||(i=t.indexOf("#"),i!==-1&&n>i)?t:"javascript:void(0)"}/*!
+var Cs=Object.defineProperty,Ts=Object.defineProperties;var Ds=Object.getOwnPropertyDescriptors;var qi=Object.getOwnPropertySymbols;var Fs=Object.prototype.hasOwnProperty,Ms=Object.prototype.propertyIsEnumerable;var Hi=(e,t,r)=>t in e?Cs(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r,nt=(e,t)=>{for(var r in t||(t={}))Fs.call(t,r)&&Hi(e,r,t[r]);if(qi)for(var r of qi(t))Ms.call(t,r)&&Hi(e,r,t[r]);return e},nr=(e,t)=>Ts(e,Ds(t));import{R as Dr,r as K}from"./vendor.60da631b.js";import{s as l0,j as Q,a as O,F as $i}from"./index.2247da1b.js";const Ui=["http","https","mailto","tel"];function zs(e){const t=(e||"").trim(),r=t.charAt(0);if(r==="#"||r==="/")return t;const n=t.indexOf(":");if(n===-1)return t;let i=-1;for(;++i<Ui.length;){const a=Ui[i];if(n===a.length&&t.slice(0,a.length).toLowerCase()===a)return t}return i=t.indexOf("?"),i!==-1&&n>i||(i=t.indexOf("#"),i!==-1&&n>i)?t:"javascript:void(0)"}/*!
  * Determine if an object is a Buffer
  *
  * @author   Feross Aboukhadijeh <https://feross.org>
@@ -305,18 +305,27 @@ l0,-`+(r+144)+`c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
   }
   
   .tony-chalkboard-content p { 
-    margin-bottom: 0.2rem !important; 
+    margin-bottom: 0.5rem !important; 
   }
   
   .tony-chalkboard-content ul,
   .tony-chalkboard-content ol {
-    margin-top: 0.2rem !important;
-    margin-bottom: 0.3rem !important;
-    padding-left: 1.2rem !important;
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+  
+  .tony-chalkboard-content ul {
+    list-style-type: disc !important;
+  }
+  
+  .tony-chalkboard-content ol {
+    list-style-type: decimal !important;
   }
   
   .tony-chalkboard-content li {
-    margin-bottom: 0.1rem !important;
+    margin-bottom: 0.2rem !important;
+    display: list-item !important;
   }
   
   .tony-chalkboard-content li p {

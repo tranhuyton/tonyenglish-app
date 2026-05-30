@@ -26,18 +26,27 @@ const chalkboardStyleTag = `
   }
   
   .tony-chalkboard-content p { 
-    margin-bottom: 0.2rem !important; 
+    margin-bottom: 0.5rem !important; 
   }
   
   .tony-chalkboard-content ul,
   .tony-chalkboard-content ol {
-    margin-top: 0.2rem !important;
-    margin-bottom: 0.3rem !important;
-    padding-left: 1.2rem !important;
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+  
+  .tony-chalkboard-content ul {
+    list-style-type: disc !important;
+  }
+  
+  .tony-chalkboard-content ol {
+    list-style-type: decimal !important;
   }
   
   .tony-chalkboard-content li {
-    margin-bottom: 0.1rem !important;
+    margin-bottom: 0.2rem !important;
+    display: list-item !important;
   }
   
   .tony-chalkboard-content li p {
