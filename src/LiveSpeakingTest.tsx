@@ -18,16 +18,15 @@ const chalkboardStyleTag = `
     font-family: 'Patrick Hand', 'Segoe UI', sans-serif !important;
     color: #f8fafc !important; 
     font-size: 1.5rem !important;
-    line-height: 1.6 !important;
+    line-height: 1.5 !important;
     letter-spacing: 0.02em !important;
     word-spacing: 0.08em !important;
-    white-space: pre-wrap !important;
     word-break: break-word !important;
     text-shadow: 0px 1px 3px rgba(0,0,0,0.8) !important;
   }
   
   .tony-chalkboard-content p { 
-    margin-bottom: 0.3rem !important; 
+    margin-bottom: 0.1rem !important; 
   }
   
   .tony-chalkboard-content ul,
@@ -1121,21 +1120,21 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       return (
           <>
              {messages.map((m, i) => (
-                 <div key={i} className={`mb-2 p-3 rounded-xl ${m.role === 'user' ? 'bg-white/5 border border-white/10 text-sky-200' : 'text-white'}`}>
+                 <div key={i} className={`mb-1 p-2 rounded-xl ${m.role === 'user' ? 'bg-white/5 border border-white/10 text-sky-200' : 'text-white'}`}>
                      <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{m.role === 'user' ? 'Câu hỏi của em:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')}</strong>
                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
                  </div>
              ))}
              
              {liveTranscript && (
-                 <div className="mb-2 p-3 rounded-xl text-white">
+                 <div className="mb-1 p-2 rounded-xl text-white">
                      <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'}</strong>
                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
                  </div>
              )}
              
              {isRecording && (
-                 <div className="mb-2 p-3 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
+                 <div className="mb-1 p-2 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
                      <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">Đang ghi âm...</strong>
                      {currentDraft.trim() || "🎤 Đang thu âm giọng nói của con..."}
                  </div>
