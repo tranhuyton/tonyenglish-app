@@ -669,9 +669,9 @@ export default function LectureViewer({
       if (!currentHtmlContent) return false;
       try {
           const doc = new DOMParser().parseFromString(currentHtmlContent, 'text/html');
-          const text = doc.body.textContent?.replace(/\s+/g, '').trim();
-          const iframes = doc.body.querySelectorAll('iframe');
-          return (text === '' && iframes.length === 1);
+          const text = doc.body.textContent?.replace(/[\W_]+/g, '').trim();
+          const mediaNodes = doc.body.querySelectorAll('iframe, embed, object');
+          return (text === '' && mediaNodes.length === 1);
       } catch(e) {
           return false;
       }
