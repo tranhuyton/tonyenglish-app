@@ -592,11 +592,11 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
      </html>
    `;
    return (
-     <div className="w-full animate-in fade-in duration-700 relative">
+     <div className={`w-full animate-in fade-in duration-700 relative ${isIframeOnly ? 'h-[85vh]' : ''}`}>
        <iframe
          ref={iframeRef}
          srcDoc={iframeContent}
-         style={{ width: '100%', height: `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
+         style={{ width: '100%', height: isIframeOnly ? '100%' : `${iframeHeight}px`, border: 'none', overflow: 'hidden' }}
          sandbox="allow-scripts allow-same-origin allow-popups"
          scrolling="no"
        />
@@ -667,9 +667,14 @@ export default function LectureViewer({
 
   const isIframeOnly = useMemo(() => {
       if (!currentHtmlContent) return false;
-      const stripped = currentHtmlContent.trim().replace(/^<p>/i, '').replace(/<\/p>$/i, '').trim();
-      const iframeMatches = stripped.match(/<iframe/gi) || [];
-      return stripped.toLowerCase().startsWith('<iframe') && stripped.toLowerCase().endsWith('</iframe>') && iframeMatches.length === 1;
+      try {
+          const doc = new DOMParser().parseFromString(currentHtmlContent, 'text/html');
+          const text = doc.body.textContent?.replace(/\s+/g, '').trim();
+          const iframes = doc.body.querySelectorAll('iframe');
+          return (text === '' && iframes.length === 1);
+      } catch(e) {
+          return false;
+      }
   }, [currentHtmlContent]);
 
   useEffect(() => {
