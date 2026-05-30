@@ -1121,22 +1121,22 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
       return (
           <>
              {messages.map((m, i) => (
-                 <div key={i} className={`mb-6 p-4 rounded-xl ${m.role === 'user' ? 'bg-white/5 border border-white/10 text-sky-200' : 'text-white'}`}>
-                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">{m.role === 'user' ? 'Câu hỏi của em:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')}</strong>
+                 <div key={i} className={`mb-2 p-3 rounded-xl ${m.role === 'user' ? 'bg-white/5 border border-white/10 text-sky-200' : 'text-white'}`}>
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{m.role === 'user' ? 'Câu hỏi của em:' : (examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:')}</strong>
                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{m.text}</ReactMarkdown>
                  </div>
              ))}
              
              {liveTranscript && (
-                 <div className="mb-6 p-4 rounded-xl text-white">
-                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">{examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'}</strong>
+                 <div className="mb-2 p-3 rounded-xl text-white">
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">{examiner === 'TONY' ? 'Thầy Tôn:' : 'Cô Diệp:'}</strong>
                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{liveTranscript}</ReactMarkdown>
                  </div>
              )}
              
              {isRecording && (
-                 <div className="mb-6 p-4 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
-                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-2 font-sans">Đang ghi âm...</strong>
+                 <div className="mb-2 p-3 rounded-xl bg-white/10 border border-[#0ea5e9]/50 text-sky-300 animate-pulse">
+                     <strong className="text-xs uppercase tracking-widest opacity-50 block mb-1 font-sans">Đang ghi âm...</strong>
                      {currentDraft.trim() || "🎤 Đang thu âm giọng nói của con..."}
                  </div>
              )}
