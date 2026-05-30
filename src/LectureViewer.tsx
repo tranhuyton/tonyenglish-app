@@ -624,6 +624,7 @@ export default function LectureViewer({
   const [allLectureProgress, setAllLectureProgress] = useState<Record<string, string[]>>({});
   
   const [completedLectures, setCompletedLectures] = useState<Set<string>>(new Set());
+  const [viewedPages, setViewedPages] = useState<Set<number>>(new Set());
   const [expandedModules, setExpandedModules] = useState<string[]>([]);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
   const [isTaskMenuOpen, setIsTaskMenuOpen] = useState(false);
@@ -710,7 +711,8 @@ export default function LectureViewer({
       const safeLectureTasks = Array.isArray(activeLecture?.task_list) ? activeLecture.task_list : [];
       if (safeLectureTasks.length > 0) return; 
 
-      if (currentPage === pages.length && !completedLectures.has(activeLectureId)) {
+      // Chỉ hoàn thành khi ĐÃ XEM HẾT TẤT CẢ CÁC TRANG (cuộn xuống cuối mỗi trang)
+      if (viewedPages.size >= pages.length && !completedLectures.has(activeLectureId)) {
           setCompletedLectures(prev => new Set(prev).add(activeLectureId));
           
           supabase.from('lecture_progress')
@@ -735,7 +737,7 @@ export default function LectureViewer({
               details: { lecture_title: activeLecture?.title || "Bài giảng" }
           }]).then();
       }
-  }, [currentPage, pages.length, activeLectureId, currentUser, activeLecture, completedLectures]);
+  }, [viewedPages, pages.length, activeLectureId, currentUser, activeLecture, completedLectures]);
 
   useEffect(() => {
     if (activeLecture && currentHtmlContent) {
@@ -751,6 +753,17 @@ export default function LectureViewer({
   useEffect(() => {
     if (containerRef.current) {
         containerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+        // Nếu trang ngắn không cần cuộn → tự động đánh dấu đã xem
+        setTimeout(() => {
+            if (containerRef.current && containerRef.current.scrollHeight <= containerRef.current.clientHeight + 100) {
+                setViewedPages(prev => {
+                    if (prev.has(currentPage)) return prev;
+                    const next = new Set(prev);
+                    next.add(currentPage);
+                    return next;
+                });
+            }
+        }, 500);
     }
   }, [activeLectureId, currentPage]);
 
@@ -884,6 +897,7 @@ export default function LectureViewer({
         setCurrentPage(1); 
         setPages([]); 
         setCompletedTasks([]);
+        setViewedPages(new Set());
         
         if (window.innerWidth < 768) {
             setIsSidebarOpen(false);
@@ -1410,6 +1424,18 @@ export default function LectureViewer({
              style={isTeacherBoardOpen ? { paddingRight: `${boardWidthVw}vw` } : undefined}
              ref={containerRef} 
              onMouseUp={handleTextSelection}
+             onScroll={(e) => {
+                 const el = e.currentTarget;
+                 // Kiểm tra cuộn đến gần đáy (còn 100px)
+                 if (el.scrollHeight - el.scrollTop - el.clientHeight < 100) {
+                     setViewedPages(prev => {
+                         if (prev.has(currentPage)) return prev;
+                         const next = new Set(prev);
+                         next.add(currentPage);
+                         return next;
+                     });
+                 }
+             }}
          >
              <div className="min-h-full flex flex-col items-center py-6 md:py-12 px-0 sm:px-6 lg:px-8">
                <div className={`max-w-[1050px] w-full bg-white shadow-sm border border-slate-200 flex-none rounded-none sm:rounded-2xl p-5 sm:p-8 md:p-10 mb-8 min-h-[60vh] transition-all ${isTeacherBoardOpen ? 'max-w-none' : ''}`}>

@@ -18,7 +18,7 @@ const chalkboardStyleTag = `
     font-family: 'Patrick Hand', 'Segoe UI', sans-serif !important;
     color: #f8fafc !important; 
     font-size: 1.5rem !important;
-    line-height: 1.5 !important;
+    line-height: 1.55 !important;
     letter-spacing: 0.02em !important;
     word-spacing: 0.08em !important;
     word-break: break-word !important;
@@ -26,7 +26,7 @@ const chalkboardStyleTag = `
   }
   
   .tony-chalkboard-content p { 
-    margin-bottom: 0.1rem !important; 
+    margin-bottom: 0.2rem !important; 
   }
   
   .tony-chalkboard-content ul,
