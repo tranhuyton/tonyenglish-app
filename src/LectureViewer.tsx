@@ -408,9 +408,14 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
               max-width: 100%;
               height: auto; 
               display: block; 
-              border-radius: 12px; 
               margin: 0.5rem auto; 
+          }
+          img, video {
+              border-radius: 12px; 
               box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          }
+          iframe {
+              border: none;
           }
          svg { max-width: 100%; height: auto; pointer-events: all !important; }
          
