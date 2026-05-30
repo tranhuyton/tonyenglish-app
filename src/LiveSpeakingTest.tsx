@@ -27,7 +27,22 @@ const chalkboardStyleTag = `
   }
   
   .tony-chalkboard-content p { 
-    margin-bottom: 0.6rem !important; 
+    margin-bottom: 0.3rem !important; 
+  }
+  
+  .tony-chalkboard-content ul,
+  .tony-chalkboard-content ol {
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.3rem !important;
+    padding-left: 1.2rem !important;
+  }
+  
+  .tony-chalkboard-content li {
+    margin-bottom: 0.1rem !important;
+  }
+  
+  .tony-chalkboard-content li p {
+    margin-bottom: 0.1rem !important;
   }
   
   .tony-chalkboard-content strong,
@@ -41,8 +56,8 @@ const chalkboardStyleTag = `
   .tony-chalkboard-content h3 { 
     color: #67e8f9 !important; 
     font-weight: 700 !important; 
-    margin-top: 1.8rem !important; 
-    margin-bottom: 0.6rem !important; 
+    margin-top: 1rem !important; 
+    margin-bottom: 0.3rem !important; 
   }
   
   .tony-chalkboard-content .katex { 
@@ -218,6 +233,8 @@ export default function LiveSpeakingTest({
   const [isBlackboardMode, setIsBlackboardMode] = useState(false);
   const [isChatBubbleVisible, setIsChatBubbleVisible] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [splitWidthVw, setSplitWidthVw] = useState(50);
+  const isSplitDraggingRef = useRef(false);
 
   // REFS QUAN TRỌNG ĐIỀU KHIỂN LUỒNG
   const wsRef = useRef<WebSocket | null>(null);
@@ -1251,7 +1268,40 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
         <>
           <style>{chalkboardStyleTag}</style>
           {status === 'IDLE' && <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[99998]" onClick={onMinimize} />}
-          <div className="fixed top-0 right-0 h-[100dvh] w-full md:w-[50vw] bg-[#1a1c21] shadow-[-30px_0_60px_rgba(0,0,0,0.8)] z-[100000] flex flex-col border-l-[6px] border-[#2c1808]/80 animate-in slide-in-from-right duration-500">
+          <div 
+            className="fixed top-0 right-0 h-[100dvh] w-full bg-[#1a1c21] shadow-[-30px_0_60px_rgba(0,0,0,0.8)] z-[100000] flex flex-row animate-in slide-in-from-right duration-500"
+            style={{ width: `${splitWidthVw}vw` }}
+          >
+            {/* Drag handle */}
+            <div 
+              className="w-[8px] shrink-0 cursor-col-resize bg-[#2c1808]/80 hover:bg-[#0ea5e9]/60 active:bg-[#0ea5e9] transition-colors relative group hidden md:flex items-center justify-center"
+              onMouseDown={(e) => {
+                e.preventDefault();
+                isSplitDraggingRef.current = true;
+                document.body.style.cursor = 'col-resize';
+                document.body.style.userSelect = 'none';
+                const handleMouseMove = (ev: MouseEvent) => {
+                  if (!isSplitDraggingRef.current) return;
+                  const vw = ((window.innerWidth - ev.clientX) / window.innerWidth) * 100;
+                  const clamped = Math.max(25, Math.min(75, vw));
+                  setSplitWidthVw(clamped);
+                  window.dispatchEvent(new CustomEvent('tony-board-resize', { detail: clamped }));
+                };
+                const handleMouseUp = () => {
+                  isSplitDraggingRef.current = false;
+                  document.body.style.cursor = '';
+                  document.body.style.userSelect = '';
+                  window.removeEventListener('mousemove', handleMouseMove);
+                  window.removeEventListener('mouseup', handleMouseUp);
+                };
+                window.addEventListener('mousemove', handleMouseMove);
+                window.addEventListener('mouseup', handleMouseUp);
+              }}
+            >
+              <div className="w-[3px] h-10 rounded-full bg-white/20 group-hover:bg-white/50 transition-colors"></div>
+            </div>
+            {/* Main content column */}
+            <div className="flex-1 flex flex-col min-w-0">
             
             <div className="h-14 bg-black/40 border-b border-white/5 flex items-center justify-between px-5 shrink-0 backdrop-blur-md">
               <div className="flex items-center gap-3">
@@ -1396,7 +1446,8 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                     </div>
                 </div>
             )}
-          </div>
+           </div>{/* end main content column */}
+          </div>{/* end outer panel */}
         </>
       );
   }

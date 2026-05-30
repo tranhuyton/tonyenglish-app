@@ -638,6 +638,7 @@ export default function LectureViewer({
 
   const [dictPopup, setDictPopup] = useState<{show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean} | null>(null);
   const [isTeacherBoardOpen, setIsTeacherBoardOpen] = useState(false);
+  const [boardWidthVw, setBoardWidthVw] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const courseProgress = useMemo(() => {
@@ -660,8 +661,15 @@ export default function LectureViewer({
     const handleToggleBoard = (e: any) => {
         setIsTeacherBoardOpen(e.detail === true || e.detail === 'open');
     };
+    const handleBoardResize = (e: any) => {
+        setBoardWidthVw(e.detail);
+    };
     window.addEventListener('tony-teacher-board-state', handleToggleBoard);
-    return () => window.removeEventListener('tony-teacher-board-state', handleToggleBoard);
+    window.addEventListener('tony-board-resize', handleBoardResize);
+    return () => {
+        window.removeEventListener('tony-teacher-board-state', handleToggleBoard);
+        window.removeEventListener('tony-board-resize', handleBoardResize);
+    };
   }, []);
 
   // 🚀 LẮNG NGHE LỆNH MỞ ẢNH ĐỀ BÀI TỪ SIDEBAR BẮN QUA
@@ -1398,7 +1406,8 @@ export default function LectureViewer({
          </aside>
 
          <main 
-             className={`flex-1 overflow-y-auto bg-slate-50 custom-scrollbar relative lecture-content transition-all duration-500 ease-in-out ${isTeacherBoardOpen ? 'md:pr-[50vw]' : ''}`} 
+             className={`flex-1 overflow-y-auto bg-slate-50 custom-scrollbar relative lecture-content transition-all duration-500 ease-in-out`} 
+             style={isTeacherBoardOpen ? { paddingRight: `${boardWidthVw}vw` } : undefined}
              ref={containerRef} 
              onMouseUp={handleTextSelection}
          >
@@ -1540,7 +1549,10 @@ export default function LectureViewer({
               }}
           ></div>
 
-          <div className={`w-full h-full relative pointer-events-auto transition-all duration-500 ease-in-out ${isTeacherBoardOpen ? 'md:w-[50vw]' : 'w-full'}`}>
+          <div 
+            className={`w-full h-full relative pointer-events-auto transition-all duration-500 ease-in-out ${isTeacherBoardOpen ? '' : 'w-full'}`}
+            style={isTeacherBoardOpen ? { width: `${100 - boardWidthVw}vw` } : undefined}
+          >
              
              {/* Render PDF */}
              {popupUrl && popupUrl.toLowerCase().includes('.pdf') && (
