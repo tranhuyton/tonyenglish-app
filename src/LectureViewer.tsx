@@ -284,7 +284,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
 // =========================================================================================
 // 🚀 COMPONENT RENDER BÀI GIẢNG (EDTECH IFRAME STYLE)
 // =========================================================================================
-const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onCloseDict }: any) => {
+const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOpenDict, onCloseDict }: any) => {
    const iframeRef = useRef<HTMLIFrameElement>(null);
    const [iframeHeight, setIframeHeight] = useState(100);
 
@@ -412,6 +412,13 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
               margin: 1.5rem auto; 
               box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
           }
+          .iframe-only-mode iframe {
+              margin: 0 !important;
+              border-radius: 0 !important;
+              box-shadow: none !important;
+              width: 100% !important;
+              min-height: 85vh !important;
+          }
          svg { max-width: 100%; height: auto; pointer-events: all !important; }
          
          /* Links */
@@ -482,7 +489,7 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
          #content-wrapper { display: flow-root; width: 100%; padding-bottom: 2rem; }
        </style>
      </head>
-     <body>
+     <body class="${isIframeOnly ? 'iframe-only-mode' : ''}">
        <div id="content-wrapper">${html ? html.replace(/viewbox=/gi, 'viewBox=') : ''}</div>
        <script>
          document.addEventListener('click', function(e) {
@@ -657,6 +664,13 @@ export default function LectureViewer({
       const page = pages.find(p => p.page_number === currentPage); 
       return page ? page.content_html : ''; 
   }, [pages, currentPage]);
+
+  const isIframeOnly = useMemo(() => {
+      if (!currentHtmlContent) return false;
+      const stripped = currentHtmlContent.trim().replace(/^<p>/i, '').replace(/<\/p>$/i, '').trim();
+      const iframeMatches = stripped.match(/<iframe/gi) || [];
+      return stripped.toLowerCase().startsWith('<iframe') && stripped.toLowerCase().endsWith('</iframe>') && iframeMatches.length === 1;
+  }, [currentHtmlContent]);
 
   useEffect(() => {
     const handleToggleBoard = (e: any) => {
@@ -1437,8 +1451,12 @@ export default function LectureViewer({
                  }
              }}
          >
-             <div className="min-h-full flex flex-col items-center py-6 md:py-12 px-0 sm:px-6 lg:px-8">
-                <div className={`max-w-[1050px] w-full bg-white shadow-sm border border-slate-200 flex-none rounded-none sm:rounded-2xl p-5 sm:p-8 md:p-10 mb-8 min-h-[60vh] transition-all ${isTeacherBoardOpen ? 'max-w-none' : ''}`}>
+             <div className={`min-h-full flex flex-col items-center ${isIframeOnly ? '' : 'py-6 md:py-12 px-0 sm:px-6 lg:px-8'}`}>
+                <div className={`w-full flex-none transition-all ${
+                    isIframeOnly 
+                    ? 'p-0 mb-0 max-w-none' 
+                    : `bg-white shadow-sm border border-slate-200 rounded-none sm:rounded-2xl p-5 sm:p-8 md:p-10 mb-8 min-h-[60vh] max-w-[1050px] ${isTeacherBoardOpen ? 'max-w-none' : ''}`
+                }`}>
                   {!activeLectureId ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-16 h-16 mb-4 opacity-50"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
@@ -1462,6 +1480,7 @@ export default function LectureViewer({
                        </h2>
                        <StaticLectureContent 
                            html={currentHtmlContent} 
+                           isIframeOnly={isIframeOnly}
                            onOpenPopup={setPopupUrl} 
                            onOpenDict={triggerDictionary} 
                            onCloseDict={() => setDictPopup(null)} 
