@@ -16,6 +16,7 @@ const LectureViewer = React.lazy(() => import('./LectureViewer'));
 const SiegeGame = React.lazy(() => import('./SiegeGame'));
 const NinjaSurvival = React.lazy(() => import('./NinjaSurvival'));
 const VocabRacing = React.lazy(() => import('./VocabRacing'));
+const IgcsePaperTest = React.lazy(() => import('./IgcsePaperTest'));
 const AITutorSidebar = React.lazy(() => import('./AITutorSidebar'));
 const LiveSpeakingTest = React.lazy(() => import('./LiveSpeakingTest'));
 
@@ -190,14 +191,14 @@ export default function App() {
     try {
       setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
       let targetView = type.toLowerCase();
-      if (targetView.includes('standard')) targetView = 'standard'; else if (targetView.includes('case-study') || targetView.includes('business')) targetView = 'case-study';
+      if (targetView.includes('igcse')) targetView = 'igcse'; else if (targetView.includes('standard')) targetView = 'standard'; else if (targetView.includes('case-study') || targetView.includes('business')) targetView = 'case-study';
       handleNavigate(targetView); sessionStorage.setItem('lms_current_test', JSON.stringify(data));
     } catch (error) {}
   };
   const handleOpenLecture = (courseId: string) => { setActiveCourseId(courseId); try { sessionStorage.setItem('lms_active_course_id', courseId); } catch(e) {} handleNavigate('lecture'); };
   const handleReturnFromTest = () => handleNavigate(returnView);
 
-  const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
+  const validViews = ['admin-login', 'home', 'portal', 'admin', 'ielts-writing', 'ielts-speaking', 'computer', 'paper', 'standard', 'case-study', 'igcse', 'siege-game', 'ninja-survival', 'vocab-racing', 'lecture'];
 
   return (
     <React.Fragment>
@@ -219,6 +220,7 @@ export default function App() {
         {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
         {currentView === 'standard' && <StandardTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
         {currentView === 'case-study' && <SplitScreenTest onBack={handleReturnFromTest} testData={currentTestData} />}
+        {currentView === 'igcse' && <IgcsePaperTest onBack={handleReturnFromTest} onStartTest={handleStartTest} />}
         {currentView === 'siege-game' && <SiegeGame onBack={handleReturnFromTest} testData={currentTestData} />}
         {currentView === 'ninja-survival' && <NinjaSurvival onBack={handleReturnFromTest} testData={currentTestData} />}
         {currentView === 'vocab-racing' && <VocabRacing onBack={handleReturnFromTest} testData={currentTestData} />}
