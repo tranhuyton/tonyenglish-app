@@ -408,14 +408,9 @@ const StaticLectureContent = React.memo(({ html, onOpenPopup, onOpenDict, onClos
               max-width: 100%;
               height: auto; 
               display: block; 
-              margin: 0.5rem auto; 
-          }
-          img, video {
               border-radius: 12px; 
+              margin: 1.5rem auto; 
               box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-          }
-          iframe {
-              border: none;
           }
          svg { max-width: 100%; height: auto; pointer-events: all !important; }
          
@@ -1442,8 +1437,8 @@ export default function LectureViewer({
                  }
              }}
          >
-             <div className="min-h-full flex flex-col items-center">
-                <div className={`w-full flex-none mb-0 min-h-[60vh] transition-all ${isTeacherBoardOpen ? 'max-w-none' : 'max-w-[1050px]'}`}>
+             <div className="min-h-full flex flex-col items-center py-6 md:py-12 px-0 sm:px-6 lg:px-8">
+                <div className={`max-w-[1050px] w-full bg-white shadow-sm border border-slate-200 flex-none rounded-none sm:rounded-2xl p-5 sm:p-8 md:p-10 mb-8 min-h-[60vh] transition-all ${isTeacherBoardOpen ? 'max-w-none' : ''}`}>
                   {!activeLectureId ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-16 h-16 mb-4 opacity-50"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
