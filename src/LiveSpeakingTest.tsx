@@ -1411,7 +1411,7 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
           <button 
              onClick={() => {
                  if (onOpenAI) onOpenAI(currentMode === 'TUTOR' ? 'tutor' : 'ielts');
-                 onMinimize();
+                 // Không minimize → sidebar hiện cùng lúc với cuộc gọi
              }}
              className="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-white transition-all flex items-center gap-2 font-bold bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2.5 md:px-5 md:py-3 rounded-2xl shadow-[0_10px_25px_rgba(245,158,11,0.3)] z-20 hover:scale-105 active:scale-95 hover:shadow-[0_15px_35px_rgba(245,158,11,0.4)]"
              title={currentMode === 'TUTOR' ? 'Mở lại khung Chat Text' : 'Xem gợi ý kịch bản IELTS'}

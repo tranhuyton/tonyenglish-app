@@ -525,9 +525,6 @@ export default function AITutorSidebar({
   }
 
   if (isMinimized) {
-      if (isCallActive) {
-          return null; // 🚀 Ẩn bong bóng AI chat khi đang gọi đàm thoại 1-1 / mở bảng đen
-      }
       return (
           <button 
               onClick={() => { setIsMinimized(false); }}
