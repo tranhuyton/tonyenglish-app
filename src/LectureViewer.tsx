@@ -404,13 +404,21 @@ const StaticLectureContent = React.memo(({ html, isIframeOnly, onOpenPopup, onOp
          p { margin-top: 0; margin-bottom: 1.25rem; }
          
          /* Media & Elements */
-         img, video, iframe { 
+         img, video { 
               max-width: 100%;
               height: auto; 
               display: block; 
               border-radius: 12px; 
               margin: 1.5rem auto; 
               box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          }
+          iframe {
+               width: 100% !important;
+               aspect-ratio: 16 / 9;
+               border: none !important;
+               margin: 0 !important;
+               border-radius: 8px;
+               display: block;
           }
           .iframe-only-mode iframe {
               margin: 0 !important;
