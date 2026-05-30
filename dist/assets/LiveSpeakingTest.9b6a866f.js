@@ -1,4 +1,4 @@
-var ks=Object.defineProperty,Ss=Object.defineProperties;var As=Object.getOwnPropertyDescriptors;var Li=Object.getOwnPropertySymbols;var Cs=Object.prototype.hasOwnProperty,Ts=Object.prototype.propertyIsEnumerable;var Pi=(e,t,r)=>t in e?ks(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r,tt=(e,t)=>{for(var r in t||(t={}))Cs.call(t,r)&&Pi(e,r,t[r]);if(Li)for(var r of Li(t))Ts.call(t,r)&&Pi(e,r,t[r]);return e},nr=(e,t)=>Ss(e,As(t));import{R as Dr,r as K}from"./vendor.60da631b.js";import{s as i0,j as J,a as P,F as qi}from"./index.064c4d33.js";const Hi=["http","https","mailto","tel"];function Ds(e){const t=(e||"").trim(),r=t.charAt(0);if(r==="#"||r==="/")return t;const n=t.indexOf(":");if(n===-1)return t;let i=-1;for(;++i<Hi.length;){const a=Hi[i];if(n===a.length&&t.slice(0,a.length).toLowerCase()===a)return t}return i=t.indexOf("?"),i!==-1&&n>i||(i=t.indexOf("#"),i!==-1&&n>i)?t:"javascript:void(0)"}/*!
+var ks=Object.defineProperty,Ss=Object.defineProperties;var As=Object.getOwnPropertyDescriptors;var Li=Object.getOwnPropertySymbols;var Cs=Object.prototype.hasOwnProperty,Ts=Object.prototype.propertyIsEnumerable;var Pi=(e,t,r)=>t in e?ks(e,t,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[t]=r,tt=(e,t)=>{for(var r in t||(t={}))Cs.call(t,r)&&Pi(e,r,t[r]);if(Li)for(var r of Li(t))Ts.call(t,r)&&Pi(e,r,t[r]);return e},nr=(e,t)=>Ss(e,As(t));import{R as Dr,r as K}from"./vendor.60da631b.js";import{s as i0,j as J,a as P,F as qi}from"./index.446164c1.js";const Hi=["http","https","mailto","tel"];function Ds(e){const t=(e||"").trim(),r=t.charAt(0);if(r==="#"||r==="/")return t;const n=t.indexOf(":");if(n===-1)return t;let i=-1;for(;++i<Hi.length;){const a=Hi[i];if(n===a.length&&t.slice(0,a.length).toLowerCase()===a)return t}return i=t.indexOf("?"),i!==-1&&n>i||(i=t.indexOf("#"),i!==-1&&n>i)?t:"javascript:void(0)"}/*!
  * Determine if an object is a Buffer
  *
  * @author   Feross Aboukhadijeh <https://feross.org>
@@ -297,16 +297,16 @@ l0,-`+(r+144)+`c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
     font-family: 'Patrick Hand', 'Segoe UI', sans-serif !important;
     color: #f8fafc !important; 
     font-size: 1.5rem !important;
-    line-height: 1.9 !important;
+    line-height: 1.6 !important;
     letter-spacing: 0.02em !important;
-    word-spacing: 0.15em !important;
+    word-spacing: 0.08em !important;
     white-space: pre-wrap !important;
     word-break: break-word !important;
     text-shadow: 0px 1px 3px rgba(0,0,0,0.8) !important;
   }
   
   .tony-chalkboard-content p { 
-    margin-bottom: 1.2rem !important; 
+    margin-bottom: 0.6rem !important; 
   }
   
   .tony-chalkboard-content strong,
