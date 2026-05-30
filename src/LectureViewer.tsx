@@ -1442,8 +1442,8 @@ export default function LectureViewer({
                  }
              }}
          >
-             <div className="min-h-full flex flex-col items-center py-6 md:py-12 px-0 sm:px-6 lg:px-8">
-                <div className={`max-w-[1050px] w-full bg-white flex-none rounded-none p-3 sm:p-5 md:p-8 mb-8 min-h-[60vh] transition-all ${isTeacherBoardOpen ? 'max-w-none' : ''}`}>
+             <div className="min-h-full flex flex-col items-center">
+                <div className={`w-full flex-none mb-0 min-h-[60vh] transition-all ${isTeacherBoardOpen ? 'max-w-none' : 'max-w-[1050px]'}`}>
                   {!activeLectureId ? (
                     <div className="flex flex-col items-center justify-center h-full py-20 text-slate-400">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-16 h-16 mb-4 opacity-50"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
