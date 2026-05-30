@@ -18,7 +18,6 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
   const [isTwoPageMode, setIsTwoPageMode] = useState(false);
   const [zoomLevel, setZoomLevel] = useState<number>(1.2);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [flipDirection, setFlipDirection] = useState<'none' | 'next' | 'prev'>('none');
   
   const viewerRef = useRef<HTMLDivElement>(null);
 
@@ -106,23 +105,15 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
 
   const handleNext = () => {
       if (numPages && currentPage < numPages) {
-          setFlipDirection('next');
           setIsLoading(true);
-          setTimeout(() => {
-              setCurrentPage(p => Math.min(p + (isTwoPageMode ? 2 : 1), numPages || 1));
-              setFlipDirection('none');
-          }, 300);
+          setCurrentPage(p => Math.min(p + (isTwoPageMode ? 2 : 1), numPages || 1));
       }
   };
 
   const handlePrev = () => {
       if (currentPage > 1) {
-          setFlipDirection('prev');
           setIsLoading(true);
-          setTimeout(() => {
-              setCurrentPage(p => Math.max(p - (isTwoPageMode ? 2 : 1), 1));
-              setFlipDirection('none');
-          }, 300);
+          setCurrentPage(p => Math.max(p - (isTwoPageMode ? 2 : 1), 1));
       }
   };
 
@@ -246,21 +237,9 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
       </div>
       {/* 3D Book styles */}
       <style>{`
-        @keyframes flipNext { 
-          0% { transform: perspective(1200px) rotateY(0deg); } 
-          50% { transform: perspective(1200px) rotateY(-12deg); opacity: 0.7; } 
-          100% { transform: perspective(1200px) rotateY(0deg); } 
-        }
-        @keyframes flipPrev { 
-          0% { transform: perspective(1200px) rotateY(0deg); } 
-          50% { transform: perspective(1200px) rotateY(12deg); opacity: 0.7; } 
-          100% { transform: perspective(1200px) rotateY(0deg); } 
-        }
         .pdf-page-left { box-shadow: inset -20px 0 30px -15px rgba(0,0,0,0.25), -4px 4px 20px rgba(0,0,0,0.4); }
         .pdf-page-right { box-shadow: inset 20px 0 30px -15px rgba(0,0,0,0.25), 4px 4px 20px rgba(0,0,0,0.4); }
         .pdf-page-single { box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.3); }
-        .pdf-flip-next { animation: flipNext 0.5s ease-in-out; transform-origin: left center; }
-        .pdf-flip-prev { animation: flipPrev 0.5s ease-in-out; transform-origin: right center; }
       `}</style>
       <div className="flex-1 overflow-auto flex justify-center items-start p-4 md:p-8 bg-[#020617] relative custom-scrollbar scroll-smooth">
          {isLoading && (
@@ -274,10 +253,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
             onLoadSuccess={({ numPages }) => setNumPages(numPages)} 
             loading={null}
          >
-            <div 
-                className={`flex justify-center items-start ${isTwoPageMode ? 'gap-0 flex-col lg:flex-row' : ''} ${flipDirection === 'next' ? 'pdf-flip-next' : flipDirection === 'prev' ? 'pdf-flip-prev' : ''}`}
-                style={{ perspective: '1200px' }}
-            >
+            <div className={`flex justify-center items-start ${isTwoPageMode ? 'gap-0 flex-col lg:flex-row' : ''}`}>
                <Page 
                    pageNumber={currentPage} 
                    scale={zoomLevel} 

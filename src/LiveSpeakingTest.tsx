@@ -8,18 +8,21 @@ import { supabase } from './supabase';
 // 🚀 CSS: STYLE CHỮ PHẤN VIẾT TAY CHO CHẾ ĐỘ BẢNG ĐEN
 // =========================================================================================
 const chalkboardStyleTag = `
-  @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
   
   .tony-chalkboard-content, 
   .tony-chalkboard-content p,
   .tony-chalkboard-content span,
   .tony-chalkboard-content div,
   .tony-chalkboard-content li {
-    font-family: 'Kalam', cursive !important;
+    font-family: 'Patrick Hand', 'Segoe UI', sans-serif !important;
     color: #f8fafc !important; 
     font-size: 1.5rem !important;
-    line-height: 1.8 !important;
-    letter-spacing: 0.04em !important;
+    line-height: 1.9 !important;
+    letter-spacing: 0.02em !important;
+    word-spacing: 0.15em !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
     text-shadow: 0px 1px 3px rgba(0,0,0,0.8) !important;
   }
   

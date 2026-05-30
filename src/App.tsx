@@ -101,8 +101,8 @@ export default function App() {
       const view = e.detail;
       if (view === 'live-test') {
          if (liveTutorState === 'FULLSCREEN') {
-           // 🚀 ĐÃ ĐANG GỌI → gửi signal restart cho LiveSpeakingTest
-           window.dispatchEvent(new CustomEvent('tony-restart-call'));
+           // Đã đang ở bảng → không làm gì (tránh restart conversation)
+           return;
          } else {
            setLiveTutorState('FULLSCREEN');
          }
