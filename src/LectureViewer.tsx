@@ -248,7 +248,7 @@ const PdfVisionViewer = ({ url, onClose, onCallTutor }: { url: string, onClose: 
             onLoadSuccess={({ numPages }) => setNumPages(numPages)} 
             loading={null}
          >
-            <div className={`flex justify-center transition-all duration-300 ${isTwoPageMode ? 'gap-1 md:gap-4 flex-col lg:flex-row' : ''}`}>
+            <div className={`flex justify-center transition-all duration-300 ${isTwoPageMode ? 'gap-0 flex-col lg:flex-row' : ''}`}>
                <Page 
                    pageNumber={currentPage} 
                    scale={zoomLevel} 

@@ -1255,6 +1255,13 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-sm border border-white/20">✏️</div>
                   <div className="flex flex-col">
                       <h3 className="font-bold text-[13px] text-slate-300 uppercase tracking-widest leading-none">Tony Blackboard {isVisionMode && "(Vision)"}</h3>
+                      {status === 'CONNECTED' && (
+                          <span className={`text-[9px] uppercase tracking-widest font-bold mt-1 leading-none transition-colors ${isTextOnlyMode ? 'text-sky-400' : (isRecording ? 'text-red-400' : (isProcessing ? 'text-amber-400' : (isSpeaking || liveTranscript ? 'text-emerald-400' : 'text-slate-500')))}`}>
+                              {isTextOnlyMode 
+                                  ? (isVisionMode ? "💬 Giải bài tập bằng ảnh" : "💬 Chat văn bản") 
+                                  : (isRecording ? "🔴 Đang ghi âm" : (isProcessing ? "🧠 AI đang suy nghĩ..." : (isSpeaking || liveTranscript ? "🟢 Thầy cô đang nói..." : "⏳ Sẵn sàng lượt tiếp")))}
+                          </span>
+                      )}
                   </div>
               </div>
               <div className="flex items-center gap-1">
@@ -1336,16 +1343,6 @@ QUY TẮC KIỂM TRA MÔN HỌC BẮT BUỘC:
             
             {status === 'CONNECTED' && (
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4 z-50">
-                    {isTextOnlyMode && (
-                        <p className="text-center text-[10px] uppercase tracking-widest text-sky-400 mb-2 font-bold animate-pulse">
-                            💬 ĐANG Ở CHẾ ĐỘ {isVisionMode ? "GIẢI BÀI TẬP BẰNG ẢNH" : "CHAT VĂN BẢN (KHÔNG VOICE)"}
-                        </p>
-                    )}
-                    {!isTextOnlyMode && (
-                        <p className={`text-center text-[10px] uppercase tracking-widest mb-2 font-bold transition-colors ${isRecording ? 'text-red-400 animate-pulse' : 'text-slate-400'}`}>
-                            {isRecording ? "🔴 ĐANG GHI ÂM (BẠN NÓI)" : (isProcessing ? "🧠 AI ĐANG SUY NGHĨ..." : (isSpeaking || liveTranscript ? "🟢 THẦY CÔ ĐANG NÓI..." : "⏳ SẴN SÀNG LƯỢT TIẾP THEO"))}
-                        </p>
-                    )}
                     
                     <div className="bg-slate-900/95 backdrop-blur-md border border-slate-700/80 rounded-full p-2 flex items-center justify-between gap-3 shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
                         
