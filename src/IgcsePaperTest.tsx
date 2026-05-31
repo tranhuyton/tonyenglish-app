@@ -126,6 +126,45 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       reader.readAsDataURL(file);
   };
 
+  // Mini formula editor for chemistry/math
+  const [formulaMode, setFormulaMode] = useState<Record<string, boolean>>({});
+  const FormulaInput = ({ id, value, disabled }: { id: string, value: string, disabled: boolean }) => {
+      const editorRef = useRef<HTMLDivElement>(null);
+      const isInit = useRef(false);
+      useEffect(() => {
+          if (editorRef.current && !isInit.current) {
+              editorRef.current.innerHTML = value || '';
+              isInit.current = true;
+          }
+      }, []);
+      const execCmd = (cmd: string) => {
+          editorRef.current?.focus();
+          document.execCommand(cmd, false);
+          if (editorRef.current) handleAnswerChange(id, editorRef.current.innerHTML);
+      };
+      return (
+          <div className="w-full max-w-md">
+              <div className="flex items-center gap-1 mb-1.5 bg-slate-100 rounded-t-md px-2 py-1 border border-b-0 border-slate-300">
+                  <button type="button" onClick={() => execCmd('subscript')} className="px-2 py-0.5 text-[12px] font-bold rounded hover:bg-white border border-transparent hover:border-slate-300 transition" title="Subscript (chỉ số dưới)">X<sub>2</sub></button>
+                  <button type="button" onClick={() => execCmd('superscript')} className="px-2 py-0.5 text-[12px] font-bold rounded hover:bg-white border border-transparent hover:border-slate-300 transition" title="Superscript (chỉ số trên)">X<sup>2</sup></button>
+                  <div className="w-px h-4 bg-slate-300 mx-1"></div>
+                  <button type="button" onClick={() => execCmd('bold')} className="px-2 py-0.5 text-[12px] font-bold rounded hover:bg-white border border-transparent hover:border-slate-300 transition" title="Bold"><b>B</b></button>
+                  <button type="button" onClick={() => execCmd('italic')} className="px-2 py-0.5 text-[12px] rounded hover:bg-white border border-transparent hover:border-slate-300 transition italic" title="Italic"><i>I</i></button>
+                  <div className="flex-1"></div>
+                  <span className="text-[10px] text-slate-400 italic">Bôi đen chữ → bấm X₂ hoặc X²</span>
+              </div>
+              <div
+                  ref={editorRef}
+                  contentEditable={!disabled}
+                  onInput={() => { if (editorRef.current) handleAnswerChange(id, editorRef.current.innerHTML); }}
+                  className={`w-full min-h-[38px] px-4 py-2 border rounded-b-md text-[14px] outline-none transition-all bg-white ${disabled ? 'border-slate-300 opacity-70' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5] border-slate-300'}`}
+                  data-placeholder="Gõ công thức... (VD: Na₂SO₄, Cu²⁺)"
+                  style={{ minHeight: 38 }}
+              />
+          </div>
+      );
+  };
+
   // Submit and grade via edge function
   const handleSubmit = async () => {
     const currentAnswers = answersRef.current;
@@ -383,7 +422,20 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
                                         {/* Render input by question type */}
                                         {sub.type === 'short_answer' ? (
-                                            <input type="text" value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder="Điền đáp án ngắn..." className={`w-full max-w-sm px-4 py-2 border rounded-md text-[14px] outline-none transition-all ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
+                                            <div className="flex flex-col gap-1.5">
+                                                <div className="flex items-center gap-2">
+                                                    {formulaMode[sub.id] ? (
+                                                        <FormulaInput id={sub.id} value={answers[sub.id] || ''} disabled={isReviewMode} />
+                                                    ) : (
+                                                        <input type="text" value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder="Điền đáp án ngắn..." className={`w-full max-w-sm px-4 py-2 border rounded-md text-[14px] outline-none transition-all ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
+                                                    )}
+                                                    {!isReviewMode && (
+                                                        <button type="button" onClick={() => setFormulaMode(prev => ({...prev, [sub.id]: !prev[sub.id]}))} className={`shrink-0 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all ${formulaMode[sub.id] ? 'bg-[#1e88e5] text-white border-[#1e88e5]' : 'bg-white text-slate-500 border-slate-300 hover:border-[#1e88e5] hover:text-[#1e88e5]'}`} title="Bật/tắt chế độ công thức (subscript, superscript)">
+                                                            f<sub>x</sub>
+                                                        </button>
+                                                    )}
+                                                </div>
+                                            </div>
                                         ) : sub.type === 'long_answer' ? (
                                             <textarea value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder="Viết câu trả lời tự luận..." className={`w-full px-4 py-3 border rounded-md min-h-[80px] text-[14px] outline-none transition-all resize-y ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
                                         ) : (
