@@ -126,15 +126,77 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       reader.readAsDataURL(file);
   };
 
+  // LaTeX → Unicode/HTML converter for question labels
+  const renderLatex = (text: string): string => {
+    if (!text || !text.includes('\\')) return text;
+    let r = text;
+    const m: [RegExp, string][] = [
+      [/\\alpha/g,'α'],[/\\beta/g,'β'],[/\\gamma/g,'γ'],[/\\delta/g,'δ'],[/\\theta/g,'θ'],
+      [/\\lambda/g,'λ'],[/\\mu/g,'μ'],[/\\pi/g,'π'],[/\\sigma/g,'σ'],[/\\omega/g,'ω'],
+      [/\\Omega/g,'Ω'],[/\\Delta/g,'Δ'],[/\\Sigma/g,'Σ'],[/\\Gamma/g,'Γ'],[/\\phi/g,'φ'],
+      [/\\rho/g,'ρ'],[/\\tau/g,'τ'],[/\\epsilon/g,'ε'],[/\\varepsilon/g,'ε'],
+      [/\\int/g,'∫'],[/\\sum/g,'Σ'],[/\\prod/g,'∏'],[/\\partial/g,'∂'],
+      [/\\sqrt\{([^}]+)\}/g,'√($1)'],[/\\sqrt/g,'√'],
+      [/\\frac\{([^}]+)\}\{([^}]+)\}/g,'<span style="display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:0.85em;line-height:1.1"><span style="border-bottom:1px solid currentColor;padding:0 2px">$1</span><span style="padding:0 2px">$2</span></span>'],
+      [/\\pm/g,'±'],[/\\mp/g,'∓'],[/\\times/g,'×'],[/\\div/g,'÷'],[/\\cdot/g,'·'],[/\\infty/g,'∞'],
+      [/\\neq/g,'≠'],[/\\leq/g,'≤'],[/\\geq/g,'≥'],[/\\approx/g,'≈'],[/\\equiv/g,'≡'],
+      [/\\sim/g,'∼'],[/\\propto/g,'∝'],
+      [/\\angle/g,'∠'],[/\\triangle/g,'△'],[/\\perp/g,'⊥'],[/\\parallel/g,'∥'],
+      [/\\cap/g,'∩'],[/\\cup/g,'∪'],[/\\in/g,'∈'],[/\\notin/g,'∉'],
+      [/\\subset/g,'⊂'],[/\\subseteq/g,'⊆'],[/\\supset/g,'⊃'],[/\\emptyset/g,'∅'],
+      [/\\rightarrow/g,'→'],[/\\leftarrow/g,'←'],[/\\Rightarrow/g,'⇒'],[/\\Leftrightarrow/g,'⇔'],
+      [/\\vec\{([^}]+)\}/g,'$1⃗'],
+      [/\\sin/g,'sin'],[/\\cos/g,'cos'],[/\\tan/g,'tan'],[/\\sec/g,'sec'],[/\\cot/g,'cot'],[/\\csc/g,'csc'],
+      [/\\log/g,'log'],[/\\ln/g,'ln'],[/\\lim/g,'lim'],
+      [/\^\{([^}]+)\}/g,'<sup>$1</sup>'],[/_\{([^}]+)\}/g,'<sub>$1</sub>'],
+      [/\^([0-9a-zA-Zα-ωΑ-Ω])/g,'<sup>$1</sup>'],[/_([0-9a-zA-Zα-ωΑ-Ω])/g,'<sub>$1</sub>'],
+      [/\\,/g,' '],[/\\;/g,' '],[/\\!/g,''],
+    ];
+    for (const [p, s] of m) r = r.replace(p, s);
+    // Clean up any remaining backslashes before letters
+    r = r.replace(/\\([a-zA-Z]+)/g, '$1');
+    return r;
+  };
+
   // Unicode character palette for formula insertion
   const [showPalette, setShowPalette] = useState<Record<string, boolean>>({});
+  const [paletteTab, setPaletteTab] = useState<'sci'|'geo'|'alg'|'set'>('sci');
   const inputRefs = useRef<Record<string, HTMLInputElement | HTMLTextAreaElement | null>>({});
   
-  const scienceChars = [
-    { label: 'Chỉ số dưới', chars: ['₀','₁','₂','₃','₄','₅','₆','₇','₈','₉'] },
-    { label: 'Chỉ số trên', chars: ['⁰','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁺','⁻','ⁿ'] },
-    { label: 'Ký hiệu', chars: ['→','⇌','Δ','°','±','×','÷','≈','≠','≤','≥','∞','√','π','θ','α','β','γ','λ','μ','Ω'] },
-  ];
+  const charTabs = {
+    sci: {
+      label: '🧪 Science',
+      groups: [
+        { label: 'Chỉ số dưới', chars: ['₀','₁','₂','₃','₄','₅','₆','₇','₈','₉'] },
+        { label: 'Chỉ số trên', chars: ['⁰','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁺','⁻','ⁿ'] },
+        { label: 'Hóa học & Vật lý', chars: ['→','⇌','Δ','°','±','×','÷','≈','≠','≤','≥','∞','α','β','γ','θ','λ','μ','Ω','π'] },
+      ]
+    },
+    geo: {
+      label: '📐 Hình học',
+      groups: [
+        { label: 'Hình học', chars: ['∠','△','⊥','∥','∼','≡','°'] },
+        { label: 'Ký hiệu', chars: ['π','√','²','³','±','≈','≠','≤','≥','∞','→','⇒','⇔'] },
+      ]
+    },
+    alg: {
+      label: '📊 Đại số',
+      groups: [
+        { label: 'Chỉ số', chars: ['₀','₁','₂','₃','ₙ','⁰','¹','²','³','ⁿ','⁺','⁻'] },
+        { label: 'Phép toán', chars: ['±','∓','×','÷','·','√','∛','≈','≠','≡','∝','≤','≥'] },
+        { label: 'Cao cấp', chars: ['∫','Σ','∏','∂','∞','ℝ','ℤ','ℕ','|'] },
+        { label: 'Lượng giác', chars: ['θ','α','β','γ','φ','π','°'] },
+      ]
+    },
+    set: {
+      label: '{ } Tập hợp',
+      groups: [
+        { label: 'Tập hợp', chars: ['∩','∪','⊂','⊆','⊃','⊇','∈','∉','∅'] },
+        { label: 'Logic', chars: ['∀','∃','¬','∧','∨','⇒','⇔','∴','∵'] },
+        { label: 'Mũi tên', chars: ['→','←','↔','⇒','⇐','⇔','↑','↓'] },
+      ]
+    },
+  };
 
   const insertChar = (subId: string, char: string) => {
     const el = inputRefs.current[subId];
@@ -407,7 +469,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                 return (
                                     <div key={sub.id} className={`p-4 rounded-lg border ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-200' : isWrong ? 'bg-red-50 border-red-200' : 'bg-orange-50 border-orange-200') : 'bg-slate-50 border-slate-200'}`}>
                                         <div className="flex justify-between items-start mb-3">
-                                            <label className="font-semibold text-slate-800 text-[14px] leading-relaxed pr-4 whitespace-pre-wrap">{sub.label}</label>
+                                            <label className="font-semibold text-slate-800 text-[14px] leading-relaxed pr-4 whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: renderLatex(sub.label) }} />
                                             <span className="font-bold text-slate-400 text-[12px] whitespace-nowrap">[{sub.max_marks} marks]</span>
                                         </div>
 
@@ -423,17 +485,24 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                     )}
                                                 </div>
                                                 {showPalette[sub.id] && !isReviewMode && (
-                                                    <div className="absolute z-30 top-full mt-1 left-0 bg-white border border-slate-200 rounded-lg shadow-lg p-3 w-[340px]">
-                                                        {scienceChars.map((group, gi) => (
-                                                            <div key={gi} className="mb-2 last:mb-0">
-                                                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{group.label}</div>
-                                                                <div className="flex flex-wrap gap-1">
-                                                                    {group.chars.map(c => (
-                                                                        <button key={c} type="button" onClick={() => insertChar(sub.id, c)} className="w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-slate-50 hover:bg-[#1e88e5] hover:text-white hover:border-[#1e88e5] text-[14px] font-medium transition-all active:scale-90">{c}</button>
-                                                                    ))}
+                                                    <div className="absolute z-30 top-full mt-1 left-0 bg-white border border-slate-200 rounded-xl shadow-xl p-0 w-[380px] overflow-hidden">
+                                                        <div className="flex border-b border-slate-200 bg-slate-50">
+                                                            {(Object.keys(charTabs) as Array<keyof typeof charTabs>).map(k => (
+                                                                <button key={k} type="button" onClick={() => setPaletteTab(k)} className={`flex-1 px-2 py-2 text-[11px] font-bold transition-all ${paletteTab === k ? 'text-[#1e88e5] border-b-2 border-[#1e88e5] bg-white' : 'text-slate-500 hover:text-slate-700'}`}>{charTabs[k].label}</button>
+                                                            ))}
+                                                        </div>
+                                                        <div className="p-3">
+                                                            {charTabs[paletteTab].groups.map((group, gi) => (
+                                                                <div key={gi} className="mb-2 last:mb-0">
+                                                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{group.label}</div>
+                                                                    <div className="flex flex-wrap gap-1">
+                                                                        {group.chars.map(c => (
+                                                                            <button key={c} type="button" onClick={() => insertChar(sub.id, c)} className="w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-slate-50 hover:bg-[#1e88e5] hover:text-white hover:border-[#1e88e5] text-[14px] font-medium transition-all active:scale-90">{c}</button>
+                                                                        ))}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        ))}
+                                                            ))}
+                                                        </div>
                                                     </div>
                                                 )}
                                             </div>
@@ -448,17 +517,24 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                     )}
                                                 </div>
                                                 {showPalette[sub.id] && !isReviewMode && (
-                                                    <div className="absolute z-30 top-full mt-1 left-0 bg-white border border-slate-200 rounded-lg shadow-lg p-3 w-[340px]">
-                                                        {scienceChars.map((group, gi) => (
-                                                            <div key={gi} className="mb-2 last:mb-0">
-                                                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{group.label}</div>
-                                                                <div className="flex flex-wrap gap-1">
-                                                                    {group.chars.map(c => (
-                                                                        <button key={c} type="button" onClick={() => insertChar(sub.id, c)} className="w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-slate-50 hover:bg-[#1e88e5] hover:text-white hover:border-[#1e88e5] text-[14px] font-medium transition-all active:scale-90">{c}</button>
-                                                                    ))}
+                                                    <div className="absolute z-30 top-full mt-1 left-0 bg-white border border-slate-200 rounded-xl shadow-xl p-0 w-[380px] overflow-hidden">
+                                                        <div className="flex border-b border-slate-200 bg-slate-50">
+                                                            {(Object.keys(charTabs) as Array<keyof typeof charTabs>).map(k => (
+                                                                <button key={k} type="button" onClick={() => setPaletteTab(k)} className={`flex-1 px-2 py-2 text-[11px] font-bold transition-all ${paletteTab === k ? 'text-[#1e88e5] border-b-2 border-[#1e88e5] bg-white' : 'text-slate-500 hover:text-slate-700'}`}>{charTabs[k].label}</button>
+                                                            ))}
+                                                        </div>
+                                                        <div className="p-3">
+                                                            {charTabs[paletteTab].groups.map((group, gi) => (
+                                                                <div key={gi} className="mb-2 last:mb-0">
+                                                                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{group.label}</div>
+                                                                    <div className="flex flex-wrap gap-1">
+                                                                        {group.chars.map(c => (
+                                                                            <button key={c} type="button" onClick={() => insertChar(sub.id, c)} className="w-8 h-8 flex items-center justify-center rounded border border-slate-200 bg-slate-50 hover:bg-[#1e88e5] hover:text-white hover:border-[#1e88e5] text-[14px] font-medium transition-all active:scale-90">{c}</button>
+                                                                        ))}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        ))}
+                                                            ))}
+                                                        </div>
                                                     </div>
                                                 )}
                                             </div>
