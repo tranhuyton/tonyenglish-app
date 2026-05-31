@@ -174,7 +174,6 @@ export default function IgcseTestEditorModal({
             const payload: any = {
                 title, 
                 test_type: testType, 
-                time_limit: timeLimit, 
                 insert_pdf_url: pdfUrl, 
                 json_config: jsonConfig, 
                 course_id: courseId,
