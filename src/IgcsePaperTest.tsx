@@ -1,10 +1,19 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { supabase } from './supabase';
 
-export default function IgcsePaperTest({ onBack, onStartTest }: { onBack?: () => void, onStartTest?: any }) {
+export default function IgcsePaperTest({ onBack, onStartTest, testData: propTestData }: { onBack?: () => void, onStartTest?: any, testData?: any }) {
   const [testData, setTestData] = useState<any>(() => {
-      const saved = sessionStorage.getItem('lms_current_test');
-      return saved ? JSON.parse(saved) : null;
+      let raw = propTestData;
+      if (!raw) {
+          const saved = sessionStorage.getItem('lms_current_test');
+          raw = saved ? JSON.parse(saved) : null;
+      }
+      if (!raw) return null;
+      // Normalize: ensure json_config.questions exists from either json_config or content_json
+      if (!raw.json_config?.questions && raw.content_json?.questions) {
+          raw.json_config = { ...(raw.json_config || {}), questions: raw.content_json.questions, timeLimit: raw.content_json?.basicInfo?.timeLimit || raw.json_config?.timeLimit || 120 };
+      }
+      return raw;
   });
   
   const [isLoading, setIsLoading] = useState(!testData);
