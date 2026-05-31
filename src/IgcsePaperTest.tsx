@@ -388,7 +388,19 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                             <textarea value={answers[sub.id] || ''} onChange={(e) => handleAnswerChange(sub.id, e.target.value)} disabled={isReviewMode} placeholder="Viết câu trả lời tự luận..." className={`w-full px-4 py-3 border rounded-md min-h-[80px] text-[14px] outline-none transition-all resize-y ${isReviewMode ? 'bg-white border-slate-300' : 'focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5]'}`}/>
                                         ) : (
                                             /* Image Upload type */
-                                            <div className="w-full mt-2">
+                                            <div className="w-full mt-2" tabIndex={0} onPaste={(e) => {
+                                                if (isReviewMode) return;
+                                                const items = e.clipboardData?.items;
+                                                if (!items) return;
+                                                for (let i = 0; i < items.length; i++) {
+                                                    if (items[i].type.startsWith('image/')) {
+                                                        e.preventDefault();
+                                                        const file = items[i].getAsFile();
+                                                        if (file) handleImageUpload(sub.id, file);
+                                                        return;
+                                                    }
+                                                }
+                                            }}>
                                                 {answers[sub.id] ? (
                                                     <div className="relative inline-block border-2 border-slate-300 rounded-lg p-2 bg-white shadow-sm">
                                                         <img src={answers[sub.id]} alt="Bài làm" className="max-h-[250px] object-contain rounded" />
@@ -400,7 +412,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                     <label className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-slate-300 rounded-lg bg-white transition-colors ${!isReviewMode ? 'cursor-pointer hover:bg-sky-50 hover:border-sky-400' : 'opacity-50'}`}>
                                                         <div className="flex flex-col items-center justify-center pt-5 pb-6">
                                                             <span className="text-3xl mb-2">📸</span>
-                                                            <p className="text-sm text-slate-500 font-semibold">Nhấn để chụp ảnh hoặc tải bài vẽ lên</p>
+                                                            <p className="text-sm text-slate-500 font-semibold">Nhấn để chọn ảnh hoặc Ctrl+V để dán từ clipboard</p>
                                                             <p className="text-xs text-slate-400 mt-1">Ảnh sẽ tự động nén nhỏ {"<"} 1MB</p>
                                                         </div>
                                                         <input type="file" className="hidden" accept="image/*" capture="environment" onChange={(e) => {
