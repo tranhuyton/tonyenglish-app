@@ -777,7 +777,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                 {!isCorrect && (
                                                     <div className="flex items-center gap-2 mt-4">
                                                         <button onClick={() => {
-                                                            const query = `Câu hỏi: "${sub.label}"\nĐáp án học sinh: "${answers[sub.id] || 'Bỏ trống'}"\nĐáp án đúng: "${latexToText(feedbackData.correct_answer || '')}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
+                                                            const query = `Câu hỏi: "${latexToText(sub.label)}"\nĐáp án học sinh: "${answers[sub.id] || 'Bỏ trống'}"\nĐáp án đúng: "${latexToText(feedbackData.correct_answer || '')}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
                                                             const subjectTask = (testData?.test_type || testData?.skill || '').includes('Math') ? 'math' : 'Science';
                                                             // Open AI Sidebar for text chat
                                                             const btn = document.createElement('button');
@@ -790,7 +790,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                         }} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
                                                             💬 Chat Thầy AI
                                                         </button>
-                                                        <button onClick={() => callAiTutor(sub.label, answers[sub.id] || "Bỏ trống", latexToText(feedbackData.correct_answer || ''))} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
+                                                        <button onClick={() => callAiTutor(latexToText(sub.label), answers[sub.id] || "Bỏ trống", latexToText(feedbackData.correct_answer || ''))} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
                                                             📞 Gọi Gia Sư
                                                         </button>
                                                     </div>
