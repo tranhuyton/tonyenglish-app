@@ -174,9 +174,9 @@ export default function IgcseTestEditorModal({
             const payload: any = {
                 title, 
                 test_type: testType, 
-                insert_pdf_url: pdfUrl, 
+                insert_pdf_url: pdfUrl || null, 
                 json_config: jsonConfig, 
-                course_id: courseId,
+                course_id: courseId || null,
             };
             if (moduleId) payload.module_id = moduleId;
 
