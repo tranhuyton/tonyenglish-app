@@ -744,7 +744,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                     <div className="flex items-center gap-2 mt-4">
                                                         <button onClick={() => {
                                                             const query = `Câu hỏi: "${sub.label}"\nĐáp án học sinh: "${answers[sub.id] || 'Bỏ trống'}"\nĐáp án đúng: "${feedbackData.correct_answer}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
-                                                            const subjectTask = (testData?.title || '').toLowerCase().includes('math') ? 'math' : 'Science';
+                                                            const subjectTask = (testData?.test_type || testData?.skill || '').includes('Math') ? 'math' : 'Science';
                                                             // Open AI Sidebar for text chat
                                                             const btn = document.createElement('button');
                                                             btn.className = 'btn-ai-trigger';
