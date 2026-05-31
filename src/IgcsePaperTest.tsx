@@ -372,26 +372,17 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
   // Call AI Tutor for wrong answers
   const callAiTutor = (questionText: string, studentAns: string, correctAnswer: string) => {
-      let query = '';
-      if (studentAns.startsWith('data:image')) {
-          window.dispatchEvent(new CustomEvent('tony-open-image-board', { detail: studentAns }));
-          (window as any).tonyPendingImage = studentAns;
-          query = `Thầy ơi, đây là bài vẽ của em cho câu hỏi: "${questionText}". \nĐáp án đúng của Cambridge là: "${correctAnswer}". \nThầy xem ảnh em vẽ sai ở đâu và hướng dẫn lại giúp em với ạ!`;
-      } else {
-          query = `Thầy ơi, câu hỏi là: "${questionText}". \nEm điền đáp án là: "${studentAns}". \nĐáp án chuẩn là: "${correctAnswer}". \nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
-      }
+      const tutorContext = {
+          overall: 'IGCSE Review',
+          transcript: `Câu hỏi: "${questionText}". \nĐáp án của học sinh: ${studentAns}. \nĐáp án đúng Cambridge MS: "${correctAnswer}".`,
+          feedback: "Bạn là gia sư Cambridge IGCSE. Học sinh đang xem lại bài thi và không hiểu câu này. Hãy chủ động chào, đọc câu hỏi và giải thích chi tiết tại sao đáp án đúng là như vậy, phân tích từng bước lập luận. Dùng giọng điệu ân cần, dễ hiểu, nếu có công thức hãy đọc rõ ràng."
+      };
+
+      sessionStorage.setItem('tony_live_mode', 'TUTOR');
+      sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+      sessionStorage.setItem('tony_auto_start', 'true');
 
       window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-      setTimeout(() => {
-          window.dispatchEvent(new CustomEvent('tony-force-start', { 
-              detail: { 
-                  mode: studentAns.startsWith('data:image') ? 'vision_mode' : 'text_mode',
-                  image: studentAns.startsWith('data:image') ? studentAns : null,
-                  query: query,
-                  courseTitle: testData?.title || 'IGCSE Science'
-              } 
-          }));
-      }, 500);
   };
 
   // Answered count for progress
@@ -750,9 +741,24 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                 </div>
 
                                                 {!isCorrect && (
-                                                    <button onClick={() => callAiTutor(sub.label, answers[sub.id] || "Bỏ trống", feedbackData.correct_answer)} className="mt-4 flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
-                                                        ✨ Gọi Thầy AI ra bảng đen giảng lại câu này
-                                                    </button>
+                                                    <div className="flex items-center gap-2 mt-4">
+                                                        <button onClick={() => {
+                                                            const query = `Câu hỏi: "${sub.label}"\nĐáp án học sinh: "${answers[sub.id] || 'Bỏ trống'}"\nĐáp án đúng: "${feedbackData.correct_answer}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
+                                                            // Open AI Sidebar for text chat
+                                                            const btn = document.createElement('button');
+                                                            btn.className = 'btn-ai-trigger';
+                                                            btn.setAttribute('data-topic', query);
+                                                            btn.setAttribute('data-task', 'reading');
+                                                            document.body.appendChild(btn);
+                                                            btn.click();
+                                                            document.body.removeChild(btn);
+                                                        }} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
+                                                            💬 Chat Thầy AI
+                                                        </button>
+                                                        <button onClick={() => callAiTutor(sub.label, answers[sub.id] || "Bỏ trống", feedbackData.correct_answer)} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
+                                                            📞 Gọi Gia Sư
+                                                        </button>
+                                                    </div>
                                                 )}
                                             </div>
                                         )}
