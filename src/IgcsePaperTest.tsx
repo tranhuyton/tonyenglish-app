@@ -737,7 +737,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                 <p className="text-[13px] text-slate-700 mt-2 mb-3"><span className="font-bold text-slate-900">Nhận xét: </span> {feedbackData.examiner_comment}</p>
                                                 <div className="bg-white p-3 rounded border border-slate-200 text-[13px]">
                                                     <span className="font-bold text-slate-500 uppercase text-[10px] tracking-widest block mb-1">Đáp án đúng (Cambridge MS):</span>
-                                                    <span className="font-medium text-emerald-600">{feedbackData.correct_answer}</span>
+                                                    <span className="font-medium text-emerald-600" dangerouslySetInnerHTML={{ __html: renderLatex(feedbackData.correct_answer || '') }} />
                                                 </div>
 
                                                 {!isCorrect && (

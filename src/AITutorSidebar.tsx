@@ -467,8 +467,11 @@ export default function AITutorSidebar({
                 taskType: 'tutor' 
             }; 
          } else {
+             const unicodeInstruction = (taskType === 'math' || taskType === 'Science') 
+                 ? `\n\n[QUAN TRỌNG VỀ ĐỊNH DẠNG]: TUYỆT ĐỐI KHÔNG SỬ DỤNG MÃ LATEX HAY KATEX (NHƯ \\frac, \\pm, \\sqrt, v.v.). BẠN PHẢI SỬ DỤNG CÁC KÝ TỰ UNICODE THÔNG THƯỜNG NHƯ x², ½, ⅓, √, ±, ∫, π, α, β, θ... ĐỂ HỌC SINH DỄ ĐỌC. SỬ DỤNG DẤU \` ĐỂ BỌC CÔNG THỨC VÀ BIẾN SỐ.` 
+                 : '';
              payload = { 
-                content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}`,
+                content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}${unicodeInstruction}`,
                 imageUrl: topicImage,
                 taskType: taskType 
              };
@@ -517,6 +520,7 @@ export default function AITutorSidebar({
     return text
         .replace(/\*\*(.*?)\*\*/g, '<b class="font-bold text-slate-800">$1</b>')
         .replace(/\*(.*?)\*/g, '<i class="italic">$1</i>')
+        .replace(/`([^`]+)`/g, '<span class="italic text-[#0ea5e9] font-medium px-1">$1</span>')
         .replace(/\n/g, '<br/>');
   };
 
