@@ -988,6 +988,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                   <div className="absolute right-0 mt-2 w-56 md:w-64 max-w-[calc(100vw-2rem)] bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 py-2 animate-in fade-in zoom-in-95">
                     <button onClick={() => handleInitiateTest('manual')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-slate-50 font-bold text-[12px] md:text-[13px] border-b border-slate-100">✍️ Tạo thủ công (Standard)</button>
                     <button onClick={() => handleInitiateTest('case-study')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-blue-50 font-bold text-[12px] md:text-[13px] text-[#0a5482] border-b border-slate-100">📄 Tạo Case Study</button>
+                    <button onClick={() => { setShowCreateDropdown(false); setIgcseEditingTestId(null); setIgcseEditorOpen(true); }} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-emerald-50 font-bold text-[12px] md:text-[13px] text-emerald-700 border-b border-slate-100">🔬 Tạo đề IGCSE (Science/Math)</button>
                     <button onClick={() => handleInitiateTest('import')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-slate-50 font-bold text-[12px] md:text-[13px]">📥 Import Excel/CSV</button>
                   </div>
                 )}
