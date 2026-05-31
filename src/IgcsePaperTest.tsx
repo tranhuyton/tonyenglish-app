@@ -183,6 +183,40 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     return r;
   };
 
+  // LaTeX → Unicode/Plain Text converter for AI prompt and chat display
+  const latexToText = (text: string): string => {
+    if (!text) return '';
+    const hasLatex = text.includes('\\') || /[\^_]\{/.test(text) || /[\^_]\(/.test(text);
+    if (!hasLatex) return text;
+    let r = text;
+    const m: [RegExp, string][] = [
+      [/\\alpha/g,'α'],[/\\beta/g,'β'],[/\\gamma/g,'γ'],[/\\delta/g,'δ'],[/\\theta/g,'θ'],
+      [/\\lambda/g,'λ'],[/\\mu/g,'μ'],[/\\pi/g,'π'],[/\\sigma/g,'σ'],[/\\omega/g,'ω'],
+      [/\\Omega/g,'Ω'],[/\\Delta/g,'Δ'],[/\\Sigma/g,'Σ'],[/\\Gamma/g,'Γ'],[/\\phi/g,'φ'],
+      [/\\rho/g,'ρ'],[/\\tau/g,'τ'],[/\\epsilon/g,'ε'],[/\\varepsilon/g,'ε'],
+      [/\\int/g,'∫'],[/\\sum/g,'Σ'],[/\\prod/g,'∏'],[/\\partial/g,'∂'],
+      [/\\sqrt\{([^}]+)\}/g,'√($1)'],[/\\sqrt/g,'√'],
+      [/\\frac\{([^}]+)\}\{([^}]+)\}/g,'($1)/($2)'],
+      [/\\pm/g,'±'],[/\\mp/g,'∓'],[/\\times/g,'×'],[/\\div/g,'÷'],[/\\cdot/g,'·'],[/\\infty/g,'∞'],
+      [/\\neq/g,'≠'],[/\\leq/g,'≤'],[/\\geq/g,'≥'],[/\\approx/g,'≈'],[/\\equiv/g,'≡'],
+      [/\\sim/g,'∼'],[/\\propto/g,'∝'],
+      [/\\angle/g,'∠'],[/\\triangle/g,'△'],[/\\perp/g,'⊥'],[/\\parallel/g,'∥'],
+      [/\\cap/g,'∩'],[/\\cup/g,'∪'],[/\\in/g,'∈'],[/\\notin/g,'∉'],
+      [/\\subset/g,'⊂'],[/\\subseteq/g,'⊆'],[/\\supset/g,'⊃'],[/\\emptyset/g,'∅'],
+      [/\\rightarrow/g,'→'],[/\\leftarrow/g,'←'],[/\\Rightarrow/g,'⇒'],[/\\Leftrightarrow/g,'⇔'],
+      [/\\vec\{([^}]+)\}/g,'$1⃗'],
+      [/\\sin/g,'sin'],[/\\cos/g,'cos'],[/\\tan/g,'tan'],[/\\sec/g,'sec'],[/\\cot/g,'cot'],[/\\csc/g,'csc'],
+      [/\\log/g,'log'],[/\\ln/g,'ln'],[/\\lim/g,'lim'],
+      [/\^\{([^}]+)\}/g,'^($1)'],[/_\{([^}]+)\}/g,'_($1)'],
+      [/\^\(([^)]+)\)/g,'^($1)'],[/_\(([^)]+)\)/g,'_($1)'],
+      [/\^([0-9a-zA-Zα-ωΑ-Ω])/g,'^$1'],[/_([0-9a-zA-Zα-ωΑ-Ω])/g,'_$1'],
+      [/\\,/g,' '],[/\\;/g,' '],[/\\!/g,''],
+    ];
+    for (const [p, s] of m) r = r.replace(p, s);
+    r = r.replace(/\\([a-zA-Z]+)/g, '$1');
+    return r;
+  };
+
   // Unicode character palette for formula insertion
   const [showPalette, setShowPalette] = useState<Record<string, boolean>>({});
   const [paletteTab, setPaletteTab] = useState<'sci'|'geo'|'alg'|'set'>('sci');
@@ -743,7 +777,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                 {!isCorrect && (
                                                     <div className="flex items-center gap-2 mt-4">
                                                         <button onClick={() => {
-                                                            const query = `Câu hỏi: "${sub.label}"\nĐáp án học sinh: "${answers[sub.id] || 'Bỏ trống'}"\nĐáp án đúng: "${feedbackData.correct_answer}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
+                                                            const query = `Câu hỏi: "${sub.label}"\nĐáp án học sinh: "${answers[sub.id] || 'Bỏ trống'}"\nĐáp án đúng: "${latexToText(feedbackData.correct_answer || '')}"\n\nThầy giải thích chi tiết giúp em tại sao em sai ạ!`;
                                                             const subjectTask = (testData?.test_type || testData?.skill || '').includes('Math') ? 'math' : 'Science';
                                                             // Open AI Sidebar for text chat
                                                             const btn = document.createElement('button');
@@ -756,7 +790,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                         }} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
                                                             💬 Chat Thầy AI
                                                         </button>
-                                                        <button onClick={() => callAiTutor(sub.label, answers[sub.id] || "Bỏ trống", feedbackData.correct_answer)} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
+                                                        <button onClick={() => callAiTutor(sub.label, answers[sub.id] || "Bỏ trống", latexToText(feedbackData.correct_answer || ''))} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold text-[12px] rounded-lg shadow-md hover:shadow-lg transition-all active:scale-95">
                                                             📞 Gọi Gia Sư
                                                         </button>
                                                     </div>
