@@ -31,6 +31,8 @@ export default function IgcseTestEditorModal({
     const [rawJson, setRawJson] = useState('');
     const [isUploadingPdf, setIsUploadingPdf] = useState(false);
     const pdfInputRef = useRef<HTMLInputElement>(null);
+    const [courses, setCourses] = useState<any[]>([]);
+    const [selectedCourseId, setSelectedCourseId] = useState(courseId || 'all');
 
     // Upload PDF to Supabase storage and return public URL
     const uploadPdfFile = async (file: File) => {
@@ -73,10 +75,12 @@ export default function IgcseTestEditorModal({
 
     useEffect(() => {
         if (isOpen) {
+            supabase.from('courses').select('id, title').order('order_index').then(({ data }) => setCourses(data || []));
             if (existingTestId) {
                 fetchTestDetails(existingTestId);
             } else {
                 resetForm();
+                setSelectedCourseId(courseId || 'all');
             }
         }
     }, [isOpen, existingTestId]);
@@ -100,6 +104,7 @@ export default function IgcseTestEditorModal({
                 setTestType(data.test_type || 'IGCSE-Science');
                 setTimeLimit(data.time_limit || data.json_config?.timeLimit || 120);
                 setPdfUrl(data.insert_pdf_url || '');
+                setSelectedCourseId(data.course_id || data.content_json?.basicInfo?.courseId || 'all');
                 
                 const loadedQuestions = data.json_config?.questions || [];
                 setQuestions(loadedQuestions);
@@ -176,13 +181,13 @@ export default function IgcseTestEditorModal({
                     title,
                     skill: testType,
                     timeLimit: String(timeLimit),
-                    courseId: courseId || 'all',
+                    courseId: selectedCourseId || 'all',
                     insert_pdf_url: pdfUrl || '',
                     category: 'test',
                 },
                 questions: finalQuestions,
             };
-            const assignedCourseId = courseId && courseId !== 'all' ? courseId : null;
+            const assignedCourseId = selectedCourseId && selectedCourseId !== 'all' ? selectedCourseId : null;
             const payload: any = {
                 title, 
                 test_type: testType, 
@@ -244,6 +249,13 @@ export default function IgcseTestEditorModal({
                             <div>
                                 <label className="block text-sm font-bold text-slate-700 mb-1.5">Thời gian làm bài (Phút)</label>
                                 <input type="number" value={timeLimit} onChange={(e) => setTimeLimit(parseInt(e.target.value) || 0)} className="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#0ea5e9]"/>
+                            </div>
+                            <div className="col-span-1 md:col-span-2">
+                                <label className="block text-sm font-bold text-slate-700 mb-1.5">Thuộc Khóa học</label>
+                                <select value={selectedCourseId} onChange={(e) => setSelectedCourseId(e.target.value)} className="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#0ea5e9]">
+                                    <option value="all">-- Dùng chung (không gán khóa học) --</option>
+                                    {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
+                                </select>
                             </div>
                             <div className="col-span-1 md:col-span-2">
                                 <label className="block text-sm font-bold text-slate-700 mb-1.5">File PDF Đề bài (nửa trái màn hình) 📄</label>
