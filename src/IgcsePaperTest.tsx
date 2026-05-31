@@ -42,6 +42,12 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Drawing on PDF
+  const [drawMode, setDrawMode] = useState<'pen'|'eraser'|null>(null);
+  const [isDrawing, setIsDrawing] = useState(false);
+  const [penColor, setPenColor] = useState('#ff3333');
+  const drawCanvasRef = useRef<HTMLCanvasElement>(null);
+
   const [timeLeft, setTimeLeft] = useState(7200); 
   const isFinishingRef = useRef(false);
 
@@ -87,6 +93,19 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     return `${pad(minutes)}:${pad(seconds)}`;
   };
 
+  // Resize drawing canvas to match container
+  useEffect(() => {
+    const cv = drawCanvasRef.current;
+    if (!cv || !drawMode) return;
+    const parent = cv.parentElement;
+    if (!parent) return;
+    const resize = () => { cv.width = parent.clientWidth; cv.height = parent.clientHeight; };
+    resize();
+    const ro = new ResizeObserver(resize);
+    ro.observe(parent);
+    return () => ro.disconnect();
+  }, [drawMode, leftWidth]);
+
   const handleAnswerChange = (inputId: string, value: string) => {
     if (isReviewMode) return;
     setAnswers(prev => ({ ...prev, [inputId]: value }));
@@ -128,7 +147,9 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
   // LaTeX → Unicode/HTML converter for question labels
   const renderLatex = (text: string): string => {
-    if (!text || !text.includes('\\')) return text;
+    if (!text) return '';
+    const hasLatex = text.includes('\\') || /[\^_]\{/.test(text) || /[\^_]\(/.test(text);
+    if (!hasLatex) return text;
     let r = text;
     const m: [RegExp, string][] = [
       [/\\alpha/g,'α'],[/\\beta/g,'β'],[/\\gamma/g,'γ'],[/\\delta/g,'δ'],[/\\theta/g,'θ'],
@@ -149,11 +170,11 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       [/\\sin/g,'sin'],[/\\cos/g,'cos'],[/\\tan/g,'tan'],[/\\sec/g,'sec'],[/\\cot/g,'cot'],[/\\csc/g,'csc'],
       [/\\log/g,'log'],[/\\ln/g,'ln'],[/\\lim/g,'lim'],
       [/\^\{([^}]+)\}/g,'<sup>$1</sup>'],[/_\{([^}]+)\}/g,'<sub>$1</sub>'],
+      [/\^\(([^)]+)\)/g,'<sup>$1</sup>'],[/_\(([^)]+)\)/g,'<sub>$1</sub>'],
       [/\^([0-9a-zA-Zα-ωΑ-Ω])/g,'<sup>$1</sup>'],[/_([0-9a-zA-Zα-ωΑ-Ω])/g,'<sub>$1</sub>'],
       [/\\,/g,' '],[/\\;/g,' '],[/\\!/g,''],
     ];
     for (const [p, s] of m) r = r.replace(p, s);
-    // Clean up any remaining backslashes before letters
     r = r.replace(/\\([a-zA-Z]+)/g, '$1');
     return r;
   };
@@ -406,12 +427,28 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
       {/* Split Screen */}
       <div ref={containerRef} className="flex-1 flex overflow-hidden w-full select-none bg-[#525659]">
-        {/* Left: PDF Viewer */}
+        {/* Left: PDF Viewer with Drawing Canvas */}
         <div style={{ width: `${leftWidth}%` }} className="h-full flex flex-col shrink-0 bg-[#525659]">
           <div className="bg-[#323639] border-b border-[#202224] px-4 flex justify-between items-center h-10 shrink-0 shadow-sm">
             <span className="font-bold text-slate-300 text-[11px] uppercase tracking-widest">📄 Đề thi Cambridge</span>
+            {!isReviewMode && (
+              <div className="flex items-center gap-1">
+                <button onClick={() => setDrawMode(prev => prev === 'pen' ? null : 'pen')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'pen' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Bút vẽ">✏️</button>
+                <button onClick={() => setDrawMode(prev => prev === 'eraser' ? null : 'eraser')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'eraser' ? 'bg-orange-500 text-white' : 'text-slate-400 hover:text-white'}`} title="Tẩy">🧹</button>
+                {drawMode && (
+                  <>
+                    <div className="w-px h-4 bg-slate-600 mx-1"></div>
+                    {['#ff3333','#1e88e5','#22c55e','#f59e0b','#ffffff'].map(c => (
+                      <button key={c} onClick={() => setPenColor(c)} className={`w-5 h-5 rounded-full border-2 transition-transform ${penColor === c ? 'border-white scale-110' : 'border-slate-600'}`} style={{ backgroundColor: c }} />
+                    ))}
+                    <div className="w-px h-4 bg-slate-600 mx-1"></div>
+                    <button onClick={() => { const cv = drawCanvasRef.current; if (cv) { const ctx = cv.getContext('2d'); ctx?.clearRect(0,0,cv.width,cv.height); } }} className="px-2 py-1 rounded text-[11px] text-slate-400 hover:text-red-400 font-bold" title="Xóa tất cả">🗑️</button>
+                  </>
+                )}
+              </div>
+            )}
           </div>
-          <div className={`flex-1 w-full h-full ${isDragging ? 'pointer-events-none' : ''}`}>
+          <div className={`flex-1 w-full h-full relative ${isDragging ? 'pointer-events-none' : ''}`}>
              {testData.insert_pdf_url ? (
                <iframe src={`${testData.insert_pdf_url}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} className="w-full h-full border-none bg-transparent" title="PDF Paper" />
              ) : (
@@ -420,6 +457,18 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                  <p className="font-bold">Không có file PDF đề thi.</p>
                  <p className="text-sm mt-2">Admin chưa upload PDF cho đề này.</p>
                </div>
+             )}
+             {/* Drawing overlay canvas */}
+             {drawMode && (
+               <canvas
+                 ref={drawCanvasRef}
+                 className="absolute inset-0 w-full h-full"
+                 style={{ cursor: drawMode === 'pen' ? 'crosshair' : 'cell', zIndex: 10 }}
+                 onMouseDown={(e) => { setIsDrawing(true); const ctx = drawCanvasRef.current?.getContext('2d'); if (!ctx) return; const r = e.currentTarget.getBoundingClientRect(); ctx.beginPath(); ctx.moveTo(e.clientX - r.left, e.clientY - r.top); }}
+                 onMouseMove={(e) => { if (!isDrawing) return; const ctx = drawCanvasRef.current?.getContext('2d'); if (!ctx) return; const r = e.currentTarget.getBoundingClientRect(); ctx.strokeStyle = drawMode === 'eraser' ? 'rgba(0,0,0,0)' : penColor; ctx.lineWidth = drawMode === 'eraser' ? 20 : 2; ctx.lineCap = 'round'; ctx.globalCompositeOperation = drawMode === 'eraser' ? 'destination-out' : 'source-over'; ctx.lineTo(e.clientX - r.left, e.clientY - r.top); ctx.stroke(); }}
+                 onMouseUp={() => setIsDrawing(false)}
+                 onMouseLeave={() => setIsDrawing(false)}
+               />
              )}
           </div>
         </div>
