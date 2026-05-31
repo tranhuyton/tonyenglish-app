@@ -415,7 +415,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     }
     
     const type = String(test.test_type || '').toLowerCase();
-    if (type.includes('standard')) {
+    if (type.includes('igcse')) {
+        onStartTest('igcse', test);
+    } else if (type.includes('standard')) {
         onStartTest('standard', test);
     } else if (type.includes('case-study') || type.includes('business')) {
         onStartTest('case-study', test);
