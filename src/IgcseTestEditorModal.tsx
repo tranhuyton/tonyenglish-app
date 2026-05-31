@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { supabase } from './supabase';
 
 interface IgcseTestEditorProps {
@@ -29,6 +29,47 @@ export default function IgcseTestEditorModal({
     
     const [editMode, setEditMode] = useState<'visual' | 'json'>('visual');
     const [rawJson, setRawJson] = useState('');
+    const [isUploadingPdf, setIsUploadingPdf] = useState(false);
+    const pdfInputRef = useRef<HTMLInputElement>(null);
+
+    // Upload PDF to Supabase storage and return public URL
+    const uploadPdfFile = async (file: File) => {
+        if (!file.type.includes('pdf')) { alert('⚠️ Chỉ hỗ trợ file PDF!'); return; }
+        if (file.size > 50 * 1024 * 1024) { alert('⚠️ File quá lớn (tối đa 50MB)!'); return; }
+        setIsUploadingPdf(true);
+        try {
+            const fileName = `igcse_${Date.now()}_${file.name.replace(/\s+/g, '_')}`;
+            const { error } = await supabase.storage.from('test_assets').upload(fileName, file, { cacheControl: '3600', upsert: false });
+            if (error) throw error;
+            const { data: urlData } = supabase.storage.from('test_assets').getPublicUrl(fileName);
+            if (urlData?.publicUrl) {
+                setPdfUrl(urlData.publicUrl);
+            }
+        } catch (err: any) {
+            alert('❌ Lỗi upload: ' + err.message);
+        } finally {
+            setIsUploadingPdf(false);
+            if (pdfInputRef.current) pdfInputRef.current.value = '';
+        }
+    };
+
+    // Handle paste: file or text URL
+    const handlePdfPaste = (e: React.ClipboardEvent) => {
+        const items = e.clipboardData?.items;
+        if (items) {
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].type === 'application/pdf' || items[i].kind === 'file') {
+                    const file = items[i].getAsFile();
+                    if (file && file.type.includes('pdf')) {
+                        e.preventDefault();
+                        uploadPdfFile(file);
+                        return;
+                    }
+                }
+            }
+        }
+        // If no file found, let default paste behavior handle text URL
+    };
 
     useEffect(() => {
         if (isOpen) {
@@ -192,8 +233,41 @@ export default function IgcseTestEditorModal({
                                 <input type="number" value={timeLimit} onChange={(e) => setTimeLimit(parseInt(e.target.value) || 0)} className="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#0ea5e9]"/>
                             </div>
                             <div className="col-span-1 md:col-span-2">
-                                <label className="block text-sm font-bold text-slate-700 mb-1.5">Link File PDF (Đề bài nửa trái) 📄</label>
-                                <input type="text" value={pdfUrl} onChange={(e) => setPdfUrl(e.target.value)} placeholder="https://... hoặc /path/to/file.pdf" className="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#0ea5e9] font-mono text-sm"/>
+                                <label className="block text-sm font-bold text-slate-700 mb-1.5">File PDF Đề bài (nửa trái màn hình) 📄</label>
+                                <div className="flex gap-2">
+                                    <div className="flex-1 relative">
+                                        <input 
+                                            type="text" 
+                                            value={pdfUrl} 
+                                            onChange={(e) => setPdfUrl(e.target.value)} 
+                                            onPaste={handlePdfPaste}
+                                            placeholder="Paste URL hoặc Ctrl+V file PDF..." 
+                                            className="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#0ea5e9] font-mono text-sm pr-10"
+                                        />
+                                        {pdfUrl && (
+                                            <button onClick={() => setPdfUrl('')} className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-red-500 text-sm" title="Xóa link">✕</button>
+                                        )}
+                                    </div>
+                                    <input type="file" ref={pdfInputRef} accept="application/pdf" className="hidden" onChange={(e) => { if (e.target.files?.[0]) uploadPdfFile(e.target.files[0]); }} />
+                                    <button 
+                                        type="button" 
+                                        onClick={() => pdfInputRef.current?.click()} 
+                                        disabled={isUploadingPdf}
+                                        className="px-4 py-2 bg-[#0ea5e9] text-white font-bold text-sm rounded-lg hover:bg-[#0284c7] transition-colors disabled:opacity-50 whitespace-nowrap flex items-center gap-1.5"
+                                    >
+                                        {isUploadingPdf ? (
+                                            <><span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span> Đang tải...</>
+                                        ) : (
+                                            <>📤 Upload PDF</>
+                                        )}
+                                    </button>
+                                </div>
+                                {pdfUrl && (
+                                    <div className="mt-2 flex items-center gap-2">
+                                        <span className="text-emerald-600 text-xs font-bold">✅ Đã có PDF</span>
+                                        <a href={pdfUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-[#0ea5e9] hover:underline truncate max-w-[400px]">{pdfUrl}</a>
+                                    </div>
+                                )}
                             </div>
                         </div>
 
