@@ -323,6 +323,9 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
              <div className={`font-bold flex items-center gap-2 px-3 py-1 rounded ${timeLeft <= 300 ? 'text-red-600 bg-red-50 animate-pulse' : 'text-slate-600'}`}>
                <span>⏱️</span> <span className="hidden sm:inline font-mono tracking-widest">{formatTime(timeLeft)}</span>
              </div>
+             <button onClick={() => { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen(); }} className="text-slate-500 hover:text-black transition-colors text-lg px-1" title="Toàn màn hình">
+               {document.fullscreenElement ? '🔲' : '⛶'}
+             </button>
              <button onClick={handleSubmit} disabled={isSubmitting} className="bg-[#1e88e5] hover:bg-blue-700 text-white font-bold text-sm px-6 py-1.5 rounded transition-colors active:scale-95 disabled:opacity-50 whitespace-nowrap">
                {isSubmitting ? 'Đang chấm...' : 'Nộp Bài'}
              </button>
