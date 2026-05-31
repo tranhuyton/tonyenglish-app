@@ -43,10 +43,14 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Drawing on PDF
-  const [drawMode, setDrawMode] = useState<'pen'|'eraser'|null>(null);
+  const [drawMode, setDrawMode] = useState<'pen'|'eraser'|'line'|'rect'|'circle'|'triangle'|'text'|null>(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [penColor, setPenColor] = useState('#ff3333');
   const drawCanvasRef = useRef<HTMLCanvasElement>(null);
+  const [shapeStart, setShapeStart] = useState<{x:number,y:number}|null>(null);
+  const canvasSnapshot = useRef<ImageData|null>(null);
+  const [drawText, setDrawText] = useState('');
+  const [textPos, setTextPos] = useState<{x:number,y:number}|null>(null);
 
   const [timeLeft, setTimeLeft] = useState(7200); 
   const isFinishingRef = useRef(false);
@@ -234,6 +238,37 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       el.focus();
       el.setSelectionRange(start + char.length, start + char.length);
     });
+  };
+
+  // OCR: Image to text via Gemini Vision
+  const [ocrLoading, setOcrLoading] = useState<Record<string, boolean>>({});
+  const handleOcr = async (subId: string) => {
+    const input = document.createElement('input');
+    input.type = 'file'; input.accept = 'image/*'; input.capture = 'environment';
+    input.onchange = async (e: any) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      setOcrLoading(prev => ({...prev, [subId]: true}));
+      try {
+        const reader = new FileReader();
+        reader.onload = async (ev) => {
+          const base64 = (ev.target?.result as string);
+          const { data, error } = await supabase.functions.invoke('igcse-grader', {
+            body: { mode: 'ocr', image: base64 }
+          });
+          if (error) { alert('Lỗi OCR: ' + error.message); }
+          else if (data?.text) {
+            const current = answers[subId] || '';
+            handleAnswerChange(subId, current ? current + '\n' + data.text : data.text);
+          }
+          setOcrLoading(prev => ({...prev, [subId]: false}));
+        };
+        reader.readAsDataURL(file);
+      } catch(err) {
+        alert('Lỗi OCR'); setOcrLoading(prev => ({...prev, [subId]: false}));
+      }
+    };
+    input.click();
   };
 
   // Submit and grade via edge function
@@ -434,6 +469,11 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             {!isReviewMode && (
               <div className="flex items-center gap-1">
                 <button onClick={() => setDrawMode(prev => prev === 'pen' ? null : 'pen')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'pen' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Bút vẽ">✏️</button>
+                <button onClick={() => setDrawMode(prev => prev === 'line' ? null : 'line')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'line' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Đường thẳng">📏</button>
+                <button onClick={() => setDrawMode(prev => prev === 'rect' ? null : 'rect')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'rect' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Hình chữ nhật">▬</button>
+                <button onClick={() => setDrawMode(prev => prev === 'circle' ? null : 'circle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'circle' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Hình elip">⬭</button>
+                <button onClick={() => setDrawMode(prev => prev === 'triangle' ? null : 'triangle')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'triangle' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Tam giác">△</button>
+                <button onClick={() => setDrawMode(prev => prev === 'text' ? null : 'text')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'text' ? 'bg-[#1e88e5] text-white' : 'text-slate-400 hover:text-white'}`} title="Chữ">T</button>
                 <button onClick={() => setDrawMode(prev => prev === 'eraser' ? null : 'eraser')} className={`px-2 py-1 rounded text-[11px] font-bold transition-all ${drawMode === 'eraser' ? 'bg-orange-500 text-white' : 'text-slate-400 hover:text-white'}`} title="Tẩy">🧹</button>
                 {drawMode && (
                   <>
@@ -459,16 +499,77 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                </div>
              )}
              {/* Drawing overlay canvas */}
-             {drawMode && (
-               <canvas
-                 ref={drawCanvasRef}
-                 className="absolute inset-0 w-full h-full"
-                 style={{ cursor: drawMode === 'pen' ? 'crosshair' : 'cell', zIndex: 10 }}
-                 onMouseDown={(e) => { setIsDrawing(true); const ctx = drawCanvasRef.current?.getContext('2d'); if (!ctx) return; const r = e.currentTarget.getBoundingClientRect(); ctx.beginPath(); ctx.moveTo(e.clientX - r.left, e.clientY - r.top); }}
-                 onMouseMove={(e) => { if (!isDrawing) return; const ctx = drawCanvasRef.current?.getContext('2d'); if (!ctx) return; const r = e.currentTarget.getBoundingClientRect(); ctx.strokeStyle = drawMode === 'eraser' ? 'rgba(0,0,0,0)' : penColor; ctx.lineWidth = drawMode === 'eraser' ? 20 : 2; ctx.lineCap = 'round'; ctx.globalCompositeOperation = drawMode === 'eraser' ? 'destination-out' : 'source-over'; ctx.lineTo(e.clientX - r.left, e.clientY - r.top); ctx.stroke(); }}
-                 onMouseUp={() => setIsDrawing(false)}
-                 onMouseLeave={() => setIsDrawing(false)}
-               />
+             {(drawMode) && (
+               <>
+                 <canvas
+                   ref={drawCanvasRef}
+                   className="absolute inset-0 w-full h-full"
+                   style={{ cursor: drawMode === 'text' ? 'text' : drawMode === 'eraser' ? 'cell' : 'crosshair', zIndex: 10 }}
+                   onMouseDown={(e) => {
+                     const cv = drawCanvasRef.current; if (!cv) return;
+                     const ctx = cv.getContext('2d'); if (!ctx) return;
+                     const rect = e.currentTarget.getBoundingClientRect();
+                     const x = e.clientX - rect.left, y = e.clientY - rect.top;
+                     
+                     if (drawMode === 'text') {
+                       setTextPos({x, y}); setDrawText('');
+                       return;
+                     }
+                     setIsDrawing(true);
+                     if (['line','rect','circle','triangle'].includes(drawMode!)) {
+                       setShapeStart({x, y});
+                       canvasSnapshot.current = ctx.getImageData(0, 0, cv.width, cv.height);
+                     } else {
+                       ctx.beginPath(); ctx.moveTo(x, y);
+                     }
+                   }}
+                   onMouseMove={(e) => {
+                     if (!isDrawing) return;
+                     const cv = drawCanvasRef.current; if (!cv) return;
+                     const ctx = cv.getContext('2d'); if (!ctx) return;
+                     const rect = e.currentTarget.getBoundingClientRect();
+                     const x = e.clientX - rect.left, y = e.clientY - rect.top;
+                     
+                     if (['line','rect','circle','triangle'].includes(drawMode!) && shapeStart && canvasSnapshot.current) {
+                       ctx.putImageData(canvasSnapshot.current, 0, 0);
+                       ctx.strokeStyle = penColor; ctx.lineWidth = 2; ctx.lineCap = 'round';
+                       ctx.globalCompositeOperation = 'source-over';
+                       ctx.beginPath();
+                       if (drawMode === 'line') { ctx.moveTo(shapeStart.x, shapeStart.y); ctx.lineTo(x, y); }
+                       else if (drawMode === 'rect') { ctx.rect(shapeStart.x, shapeStart.y, x - shapeStart.x, y - shapeStart.y); }
+                       else if (drawMode === 'circle') { const rx = Math.abs(x-shapeStart.x)/2, ry = Math.abs(y-shapeStart.y)/2; ctx.ellipse(shapeStart.x+(x-shapeStart.x)/2, shapeStart.y+(y-shapeStart.y)/2, rx, ry, 0, 0, Math.PI*2); }
+                       else if (drawMode === 'triangle') { ctx.moveTo(shapeStart.x+(x-shapeStart.x)/2, shapeStart.y); ctx.lineTo(x, y); ctx.lineTo(shapeStart.x, y); ctx.closePath(); }
+                       ctx.stroke();
+                     } else if (drawMode === 'pen' || drawMode === 'eraser') {
+                       ctx.strokeStyle = drawMode === 'eraser' ? 'rgba(0,0,0,0)' : penColor;
+                       ctx.lineWidth = drawMode === 'eraser' ? 20 : 2;
+                       ctx.lineCap = 'round';
+                       ctx.globalCompositeOperation = drawMode === 'eraser' ? 'destination-out' : 'source-over';
+                       ctx.lineTo(x, y); ctx.stroke();
+                     }
+                   }}
+                   onMouseUp={() => { setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; }}
+                   onMouseLeave={() => { setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; }}
+                 />
+                 {/* Text input overlay */}
+                 {drawMode === 'text' && textPos && (
+                   <input
+                     autoFocus
+                     value={drawText}
+                     onChange={e => setDrawText(e.target.value)}
+                     onKeyDown={e => {
+                       if (e.key === 'Enter' && drawText) {
+                         const ctx = drawCanvasRef.current?.getContext('2d');
+                         if (ctx) { ctx.globalCompositeOperation = 'source-over'; ctx.font = 'bold 16px sans-serif'; ctx.fillStyle = penColor; ctx.fillText(drawText, textPos.x, textPos.y); }
+                         setTextPos(null); setDrawText('');
+                       } else if (e.key === 'Escape') { setTextPos(null); setDrawText(''); }
+                     }}
+                     className="absolute bg-white/90 border-2 border-[#1e88e5] rounded px-2 py-1 text-[14px] outline-none min-w-[120px]"
+                     style={{ left: textPos.x, top: textPos.y, zIndex: 20 }}
+                     placeholder="Gõ text rồi Enter..."
+                   />
+                 )}
+               </>
              )}
           </div>
         </div>
@@ -532,6 +633,11 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                             f<sub>x</sub>
                                                         </button>
                                                     )}
+                                                    {!isReviewMode && (
+                                                      <button type="button" onClick={() => handleOcr(sub.id)} disabled={ocrLoading[sub.id]} className="shrink-0 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all bg-white text-slate-500 border-slate-300 hover:border-emerald-500 hover:text-emerald-600 disabled:opacity-50" title="Chụp ảnh bài làm → AI chuyển thành text">
+                                                        {ocrLoading[sub.id] ? '⏳' : '📷'}
+                                                      </button>
+                                                    )}
                                                 </div>
                                                 {showPalette[sub.id] && !isReviewMode && (
                                                     <div className="absolute z-30 top-full mt-1 left-0 bg-white border border-slate-200 rounded-xl shadow-xl p-0 w-[380px] overflow-hidden">
@@ -563,6 +669,11 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                                                         <button type="button" onClick={() => setShowPalette(prev => ({...prev, [sub.id]: !prev[sub.id]}))} className={`shrink-0 mt-1 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all ${showPalette[sub.id] ? 'bg-[#1e88e5] text-white border-[#1e88e5]' : 'bg-white text-slate-500 border-slate-300 hover:border-[#1e88e5] hover:text-[#1e88e5]'}`} title="Bảng ký tự công thức">
                                                             f<sub>x</sub>
                                                         </button>
+                                                    )}
+                                                    {!isReviewMode && (
+                                                      <button type="button" onClick={() => handleOcr(sub.id)} disabled={ocrLoading[sub.id]} className="shrink-0 mt-1 px-2.5 py-1.5 rounded-md text-[12px] font-bold border transition-all bg-white text-slate-500 border-slate-300 hover:border-emerald-500 hover:text-emerald-600 disabled:opacity-50" title="Chụp ảnh bài làm → AI chuyển thành text">
+                                                        {ocrLoading[sub.id] ? '⏳' : '📷'}
+                                                      </button>
                                                     )}
                                                 </div>
                                                 {showPalette[sub.id] && !isReviewMode && (
