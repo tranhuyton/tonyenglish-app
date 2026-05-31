@@ -171,12 +171,26 @@ export default function IgcseTestEditorModal({
             }
 
             const jsonConfig = { timeLimit: timeLimit, questions: finalQuestions };
+            const contentJson = {
+                basicInfo: {
+                    title,
+                    skill: testType,
+                    timeLimit: String(timeLimit),
+                    courseId: courseId || 'all',
+                    insert_pdf_url: pdfUrl || '',
+                    category: 'test',
+                },
+                questions: finalQuestions,
+            };
+            const assignedCourseId = courseId && courseId !== 'all' ? courseId : null;
             const payload: any = {
                 title, 
                 test_type: testType, 
                 insert_pdf_url: pdfUrl || null, 
+                content_json: contentJson,
                 json_config: jsonConfig, 
-                course_id: courseId || null,
+                course_id: assignedCourseId,
+                is_published: true,
             };
             if (moduleId) payload.module_id = moduleId;
 
