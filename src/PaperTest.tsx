@@ -595,8 +595,9 @@ const handleFinish = async () => {
     }
   }, [draggedOption]);
 
-  const onDragStart = (option: string) => {
+  const onDragStart = (e: React.DragEvent<HTMLDivElement>, option: string) => {
     if (isReviewMode) return;
+    e.stopPropagation();
     setDraggedOption(option);
   };
 
@@ -1696,7 +1697,7 @@ const handleFinish = async () => {
                                             <div
                                               key={oIdx}
                                               draggable={!isUsed}
-                                              onDragStart={() => onDragStart(displayOpt)}
+                                              onDragStart={(e) => onDragStart(e, displayOpt)}
                                               onDragEnd={() => {
                                                 setDraggedOption(null);
                                                 stopAutoScroll(); 
