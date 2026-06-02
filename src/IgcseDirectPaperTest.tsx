@@ -329,15 +329,32 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
               const ctx = compositeCanvas.getContext('2d');
               
               if (ctx) {
+                  // Giới hạn kích thước ảnh để tránh lỗi quá tải Payload của Supabase
+                  const MAX_WIDTH = 800;
+                  let scaleFactor = 1;
+                  if (pdfCanvas.width > MAX_WIDTH) {
+                      scaleFactor = MAX_WIDTH / pdfCanvas.width;
+                  }
+
+                  const targetWidth = pdfCanvas.width * scaleFactor;
+                  const targetHeight = pdfCanvas.height * scaleFactor;
+
+                  compositeCanvas.width = targetWidth;
+                  compositeCanvas.height = targetHeight;
+                  
                   ctx.fillStyle = '#ffffff';
-                  ctx.fillRect(0, 0, compositeCanvas.width, compositeCanvas.height);
-                  ctx.drawImage(pdfCanvas, 0, 0);
+                  ctx.fillRect(0, 0, targetWidth, targetHeight);
+                  
+                  // Vẽ PDF với kích thước đã thu nhỏ
+                  ctx.drawImage(pdfCanvas, 0, 0, targetWidth, targetHeight);
+                  
+                  // Vẽ nét vẽ của học sinh với kích thước đã thu nhỏ
                   if (studentCanvas && studentCanvas.width > 0) {
-                      ctx.drawImage(studentCanvas, 0, 0, studentCanvas.width, studentCanvas.height, 0, 0, compositeCanvas.width, compositeCanvas.height);
+                      ctx.drawImage(studentCanvas, 0, 0, studentCanvas.width, studentCanvas.height, 0, 0, targetWidth, targetHeight);
                   }
                   
-                  // Optimize size: JPEG 60%
-                  const base64 = compositeCanvas.toDataURL('image/jpeg', 0.6);
+                  // Optimize size: JPEG 40% (Giảm tối đa dung lượng, Gemini Vision vẫn đọc được)
+                  const base64 = compositeCanvas.toDataURL('image/jpeg', 0.4);
                   imageAnswers.push({ questionId: `PAGE_${pageNum}`, base64 });
               }
           }
@@ -391,7 +408,11 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
       } catch (dbError) { console.error("DB save error:", dbError); }
 
     } catch (err: any) {
-      alert("❌ Có lỗi trong lúc chấm: " + err.message);
+      if (err.message && err.message.includes("Unexpected end of JSON input")) {
+          alert("❌ Không thể nộp bài do kết nối gián đoạn hoặc file ảnh quá nặng. Vui lòng thử nộp lại.");
+      } else {
+          alert("❌ Có lỗi trong lúc chấm: " + err.message);
+      }
     } finally {
       setIsSubmitting(false);
     }

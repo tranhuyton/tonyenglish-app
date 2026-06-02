@@ -322,13 +322,33 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     }
 
     try {
+      setIsSubmitting(true);
+
+      const compressImage = (base64Str: string, maxWidth = 800, quality = 0.5): Promise<string> => {
+          return new Promise((resolve) => {
+              const img = new Image();
+              img.onload = () => {
+                  const canvas = document.createElement('canvas');
+                  let scaleFactor = 1;
+                  if (img.width > maxWidth) scaleFactor = maxWidth / img.width;
+                  canvas.width = img.width * scaleFactor;
+                  canvas.height = img.height * scaleFactor;
+                  const ctx = canvas.getContext('2d');
+                  ctx?.drawImage(img, 0, 0, canvas.width, canvas.height);
+                  resolve(canvas.toDataURL('image/jpeg', quality));
+              };
+              img.src = base64Str;
+          });
+      };
+
       // Separate image answers from text answers
       const imageAnswers: { questionId: string, base64: string }[] = [];
       const textAnswers: Record<string, string> = {};
 
       for (const [key, val] of Object.entries(currentAnswers)) {
-          if (val.startsWith('data:image')) {
-              imageAnswers.push({ questionId: key, base64: val });
+          if (val && typeof val === 'string' && val.startsWith('data:image')) {
+              const compressedBase64 = await compressImage(val);
+              imageAnswers.push({ questionId: key, base64: compressedBase64 });
               textAnswers[key] = "[HỌC SINH ĐÃ CHỤP ẢNH BẢN VẼ - HÃY XEM TRONG PHẦN ĐÍNH KÈM]";
           } else {
               textAnswers[key] = val;
@@ -383,7 +403,11 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       } catch (dbError) { console.error("DB save error:", dbError); }
 
     } catch (err: any) {
-      alert("❌ Có lỗi trong lúc chấm: " + err.message);
+      if (err.message && err.message.includes("Unexpected end of JSON input")) {
+          alert("❌ Không thể nộp bài do kết nối gián đoạn hoặc file ảnh quá nặng. Vui lòng thử nộp lại.");
+      } else {
+          alert("❌ Có lỗi trong lúc chấm: " + err.message);
+      }
     } finally {
       setIsSubmitting(false);
     }
