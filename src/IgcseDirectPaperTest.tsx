@@ -355,7 +355,19 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
       if (data?.error) throw new Error("Lỗi chấm điểm: " + data.error);
       
       const cleanJson = (data.result || "").replace(/```json/gi, "").replace(/```/gi, "").trim();
-      const gradedData = JSON.parse(cleanJson);
+      let gradedData;
+      try {
+          gradedData = JSON.parse(cleanJson);
+      } catch (parseErr: any) {
+          console.error("Lỗi parse JSON từ AI:", parseErr);
+          console.log("Raw AI Output:", cleanJson);
+          gradedData = {
+              total_student_score: 0,
+              total_max_score: 0,
+              general_feedback: "⚠️ AI trả về dữ liệu bị lỗi định dạng (chứa ký tự không hợp lệ). Dưới đây là nội dung thô AI trả về:\n\n" + cleanJson,
+              details: []
+          };
+      }
 
       setGradeResult(gradedData);
       setIsReviewMode(true);
