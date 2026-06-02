@@ -18,7 +18,7 @@ serve(async (req) => {
 
     // 2. KHO TÀNG PROMPT & PHÂN LUỒNG MODEL TỰ ĐỘNG
     let systemPrompt = "";
-    let targetModel = "gemini-2.5-pro"; // Mặc định dùng Pro cho các tác vụ phân tích nặng
+    let targetModel = "gemini-2.5-flash"; // Mặc định dùng Flash cho mọi tác vụ vì bản 2.5 cực mạnh và không có bản Pro
     let finalPromptText = "";
     
     switch (taskType) {
@@ -125,7 +125,7 @@ Looking at the [loại biểu đồ 1] in more detail, [Mô tả các số liệ
 Body 2 (Chỉ phân tích Biểu đồ 2)
 Turning to the [loại biểu đồ 2], it can be seen that [Mô tả các số liệu/xu hướng chính của hình 2]. Meanwhile, [Bổ sung thêm 1-2 chi tiết quan trọng khác của hình 2].
 `;
-            targetModel = "gemini-2.5-pro";
+            targetModel = "gemini-2.5-flash";
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
             
@@ -386,19 +386,19 @@ Body 2 (Answer to Question 2)
 With regards to the second question, ... [Câu trả lời trực tiếp cho Q2 / Tên Trụ ý 2]. This is due to the fact that ... [Cause 2]. Consequently, ... [Effect 2]. For instance, ... [Example 2].
 Conclusion
 To sum up, ... [Tóm tắt ngắn gọn câu trả lời 1] and ... [Tóm tắt ngắn gọn câu trả lời 2].`;
-            targetModel = "gemini-2.5-pro";
+            targetModel = "gemini-2.5-flash";
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
             
         case 'math':
             systemPrompt = `Bạn là gia sư Toán IGCSE 0580, 0606 và Toán Alevel. Hãy nhìn vào hình vẽ hình học hoặc phương trình (nếu có) và giải thích từng bước giải cho học sinh. Nếu học sinh làm sai, hãy chỉ rõ lỗi sai. Không đưa đáp án cộc lốc.`;
-            targetModel = "gemini-2.5-pro";
+            targetModel = "gemini-2.5-flash";
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
             
         case 'Science':
             systemPrompt = `Bạn là gia sư hệ Science của IGCSE và Alevel. Hãy nhìn vào hình vẽ hình học hoặc phương trình (nếu có) và giải thích từng bước giải cho học sinh. Nếu học sinh làm sai, hãy chỉ rõ lỗi sai. Không đưa đáp án cộc lốc.`;
-            targetModel = "gemini-2.5-pro";
+            targetModel = "gemini-2.5-flash";
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
             
@@ -432,7 +432,7 @@ Provide the corrected version next to it.
 5. The "Band 9" Upgraded Version:
 Rewrite the student's entire text to meet the highest standard (Band 9 / A*). Keep their original ideas but elevate the vocabulary, grammar, and flow.
 Tone: Professional, encouraging, highly analytical, and strictly aligned with Cambridge standards.`;
-            targetModel = "gemini-2.5-pro";
+            targetModel = "gemini-2.5-flash";
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
 
