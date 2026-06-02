@@ -144,7 +144,9 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             const y = (e.clientY - rect.top) * scaleY;
             
             if (drawMode === 'text') {
-                setTextPos({x, y}); setDrawText('');
+                // Lưu tọa độ thật trên CSS để ô input hiển thị đúng vị trí click
+                setTextPos({x: e.clientX - rect.left, y: e.clientY - rect.top}); 
+                setDrawText('');
                 return;
             }
             setIsDrawing(true);
@@ -245,12 +247,19 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
                     onKeyDown={e => {
                         if (e.key === 'Enter' && drawText) {
                             const ctx = canvasRef.current?.getContext('2d');
-                            if (ctx) { ctx.globalCompositeOperation = 'source-over'; ctx.font = `bold ${16 * scale}px sans-serif`; ctx.fillStyle = penColor; ctx.fillText(drawText, textPos.x, textPos.y); }
+                            if (ctx) { 
+                                const dpr = window.devicePixelRatio || 1;
+                                ctx.globalCompositeOperation = 'source-over'; 
+                                ctx.font = `bold ${16 * scale * dpr}px sans-serif`; 
+                                ctx.fillStyle = penColor; 
+                                // Phải nhân tọa độ CSS với DPR để vẽ đúng vị trí thật trên canvas
+                                ctx.fillText(drawText, textPos.x * dpr, (textPos.y + 16 * scale) * dpr); 
+                            }
                             setTextPos(null); setDrawText('');
                         } else if (e.key === 'Escape') { setTextPos(null); setDrawText(''); }
                     }}
-                    className="absolute bg-white/90 border-2 border-[#1e88e5] rounded px-2 py-1 text-[14px] outline-none min-w-[120px]"
-                    style={{ left: textPos.x, top: textPos.y, zIndex: 20 }}
+                    className="absolute bg-white/90 border-2 border-[#1e88e5] rounded px-2 py-1 text-[14px] outline-none min-w-[120px] shadow-lg"
+                    style={{ left: textPos.x, top: textPos.y, zIndex: 20, WebkitUserSelect: 'text', WebkitTouchCallout: 'default' } as React.CSSProperties}
                     placeholder="Gõ text rồi Enter..."
                 />
             )}
@@ -501,7 +510,10 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col bg-[#e5e7eb] font-sans text-slate-900 overflow-hidden">
+    <div 
+      className="h-screen w-screen flex flex-col bg-[#e5e7eb] font-sans text-slate-900 overflow-hidden select-none"
+      style={{ WebkitUserSelect: 'none', WebkitTouchCallout: 'none' } as React.CSSProperties}
+    >
       {/* Header */}
       <header className="h-14 w-full bg-white border-b border-slate-300 flex items-center justify-between px-4 sm:px-6 shrink-0 z-20 box-border">
         <div className="flex items-center gap-3 sm:gap-4 overflow-hidden">
