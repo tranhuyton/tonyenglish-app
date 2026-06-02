@@ -1367,7 +1367,7 @@ export default function LectureViewer({
               </div>
            </div>
            
-           <div className="flex-1 overflow-y-auto custom-scrollbar bg-white" style={{ WebkitOverflowScrolling: 'touch' }}>
+           <div className="flex-1 overflow-y-auto custom-scrollbar bg-white pb-24" style={{ WebkitOverflowScrolling: 'touch' }}>
              {modules.length === 0 ? (
                 <div className="p-8 text-center text-slate-400 text-sm">Chưa có nội dung.</div>
              ) : (
