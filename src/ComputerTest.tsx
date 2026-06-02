@@ -1296,6 +1296,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 <div 
                     className="w-4 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex flex-col justify-center items-center z-10 shrink-0 transition-colors shadow-sm" 
                     onMouseDown={startDrag}
+                    onTouchStart={startDrag}
                 >
                    <div className="flex flex-col gap-1.5 opacity-40">
                       <div className="w-1 h-1 bg-black"></div>
@@ -1987,6 +1988,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   <div 
                       className="w-4 absolute right-0 top-0 bottom-0 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex flex-col justify-start items-center z-10 transition-colors shadow-sm"
                       onMouseDown={startListeningDrag}
+                      onTouchStart={startListeningDrag}
                   >
                      <div className="flex flex-col gap-1.5 opacity-40 sticky top-[50vh] -mt-6">
                         <div className="w-1 h-1 bg-black"></div>
