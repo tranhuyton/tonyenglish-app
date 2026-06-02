@@ -618,8 +618,9 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       document.body.style.userSelect = 'none'; 
   };
 
-  const startListeningDrag = (e: React.MouseEvent) => {
-      e.preventDefault();
+  const startListeningDrag = (e: React.MouseEvent | React.TouchEvent) => {
+      // Don't prevent default on touch start immediately to avoid breaking scrolling globally, 
+      // but we do want to drag.
       listeningDragRef.current = true;
       document.body.style.cursor = 'col-resize';
       document.body.style.userSelect = 'none';
@@ -632,15 +633,18 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       document.body.style.userSelect = 'auto'; 
   };
   
-  const onDrag = (e: MouseEvent) => {
+  const onDrag = (e: MouseEvent | TouchEvent) => {
+    const clientX = 'touches' in e ? e.touches[0]?.clientX : e.clientX;
+    if (clientX === undefined) return;
+    
     if (isDragging.current && containerRef.current && showLeftColumn) {
         const containerRect = containerRef.current.getBoundingClientRect(); 
-        const newLeftWidth = ((e.clientX - containerRect.left) / containerRect.width) * 100;
+        const newLeftWidth = ((clientX - containerRect.left) / containerRect.width) * 100;
         if (newLeftWidth > 20 && newLeftWidth < 80) {
             setLeftWidth(newLeftWidth);
         }
     } else if (listeningDragRef.current) {
-        const newWidth = (e.clientX - window.innerWidth / 2) * 2;
+        const newWidth = (clientX - window.innerWidth / 2) * 2;
         if (newWidth >= 600 && newWidth <= window.innerWidth - 32) {
             setListeningWidth(newWidth);
         }
@@ -650,9 +654,13 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
   useEffect(() => { 
       window.addEventListener('mousemove', onDrag); 
       window.addEventListener('mouseup', stopDrag); 
+      window.addEventListener('touchmove', onDrag, { passive: false }); 
+      window.addEventListener('touchend', stopDrag); 
       return () => { 
           window.removeEventListener('mousemove', onDrag); 
           window.removeEventListener('mouseup', stopDrag); 
+          window.removeEventListener('touchmove', onDrag); 
+          window.removeEventListener('touchend', stopDrag);
       }; 
   }, [showLeftColumn]);
 

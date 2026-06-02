@@ -429,15 +429,27 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
   // Drag resize handler
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: MouseEvent | TouchEvent) => {
       if (!isDragging || !containerRef.current) return;
+      const clientX = 'touches' in e ? e.touches[0]?.clientX : e.clientX;
+      if (clientX === undefined) return;
       const containerWidth = containerRef.current.getBoundingClientRect().width;
-      const newLeftWidth = (e.clientX / containerWidth) * 100;
+      const newLeftWidth = (clientX / containerWidth) * 100;
       if (newLeftWidth > 20 && newLeftWidth < 80) setLeftWidth(newLeftWidth);
     };
     const handleMouseUp = () => setIsDragging(false);
-    if (isDragging) { document.addEventListener('mousemove', handleMouseMove); document.addEventListener('mouseup', handleMouseUp); }
-    return () => { document.removeEventListener('mousemove', handleMouseMove); document.removeEventListener('mouseup', handleMouseUp); };
+    if (isDragging) { 
+        document.addEventListener('mousemove', handleMouseMove); 
+        document.addEventListener('mouseup', handleMouseUp); 
+        document.addEventListener('touchmove', handleMouseMove, { passive: false }); 
+        document.addEventListener('touchend', handleMouseUp); 
+    }
+    return () => { 
+        document.removeEventListener('mousemove', handleMouseMove); 
+        document.removeEventListener('mouseup', handleMouseUp); 
+        document.removeEventListener('touchmove', handleMouseMove); 
+        document.removeEventListener('touchend', handleMouseUp); 
+    };
   }, [isDragging]);
 
   // Call AI Tutor for wrong answers
@@ -642,7 +654,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
         </div>
 
         {/* Drag Handle */}
-        <div onMouseDown={() => setIsDragging(true)} className={`w-[6px] h-full bg-[#202224] hover:bg-[#1e88e5] cursor-col-resize flex items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-[#1e88e5]' : ''}`}>
+        <div onMouseDown={() => setIsDragging(true)} onTouchStart={() => setIsDragging(true)} className={`w-[6px] h-full bg-[#202224] hover:bg-[#1e88e5] cursor-col-resize flex items-center justify-center shrink-0 z-10 transition-colors ${isDragging ? 'bg-[#1e88e5]' : ''}`}>
           <div className="flex flex-col gap-1"><div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div><div className="w-[2px] h-[2px] bg-slate-500"></div></div>
         </div>
 

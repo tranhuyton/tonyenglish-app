@@ -1,3 +1,4 @@
+import 'drag-drop-touch';
 import 'katex/dist/katex.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';

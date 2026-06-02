@@ -161,8 +161,8 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
       document.body.style.userSelect = 'none'; 
   };
 
-  const startListeningDrag = (e: React.MouseEvent) => {
-      e.preventDefault();
+  const startListeningDrag = (e: React.MouseEvent | React.TouchEvent) => {
+      // Don't prevent default on touch start immediately to avoid breaking scrolling globally
       listeningDragRef.current = true;
       document.body.style.cursor = 'col-resize';
       document.body.style.userSelect = 'none';
@@ -175,14 +175,17 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
       document.body.style.userSelect = 'auto'; 
   };
   
-  const onDrag = (e: MouseEvent) => {
+  const onDrag = (e: MouseEvent | TouchEvent) => {
+    const clientX = 'touches' in e ? e.touches[0]?.clientX : e.clientX;
+    if (clientX === undefined) return;
+
     if (isDragging.current && containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect(); 
-        const newLeftWidth = ((e.clientX - containerRect.left) / containerRect.width) * 100;
+        const newLeftWidth = ((clientX - containerRect.left) / containerRect.width) * 100;
         if (newLeftWidth > 20 && newLeftWidth < 80) setLeftWidth(newLeftWidth);
     } else if (listeningDragRef.current) {
         // Resize logic cho Listening (Center Layout)
-        const newWidth = (e.clientX - window.innerWidth / 2) * 2;
+        const newWidth = (clientX - window.innerWidth / 2) * 2;
         if (newWidth >= 600 && newWidth <= window.innerWidth - 40) {
             setListeningWidth(newWidth);
         }
@@ -192,9 +195,13 @@ export default function PaperTest({ onBack, testData, onFinish }: { onBack: () =
   useEffect(() => { 
       window.addEventListener('mousemove', onDrag); 
       window.addEventListener('mouseup', stopDrag); 
+      window.addEventListener('touchmove', onDrag, { passive: false }); 
+      window.addEventListener('touchend', stopDrag); 
       return () => { 
           window.removeEventListener('mousemove', onDrag); 
           window.removeEventListener('mouseup', stopDrag); 
+          window.removeEventListener('touchmove', onDrag); 
+          window.removeEventListener('touchend', stopDrag); 
       }; 
   }, []);
 
@@ -1193,7 +1200,10 @@ const handleFinish = async () => {
                         
                         {/* Thanh kéo Split-pane */}
                         {enableSplitPane && (
-                          <div className="w-4 bg-gray-50 border-x border-gray-200 hover:bg-gray-200 cursor-col-resize flex flex-col justify-center items-center shrink-0 transition-colors mx-4 rounded-full" onMouseDown={startDrag}>
+                          <div className="w-4 bg-gray-50 border-x border-gray-200 hover:bg-gray-200 cursor-col-resize flex flex-col justify-center items-center shrink-0 transition-colors mx-4 rounded-full" 
+                               onMouseDown={startDrag}
+                               onTouchStart={startDrag}
+                          >
                              <div className="flex flex-col gap-1.5 opacity-30">
                                 <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
                                 <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
@@ -1901,6 +1911,7 @@ const handleFinish = async () => {
             <div
                 className="w-4 shrink-0 bg-gray-200 border border-gray-300 hover:bg-gray-300 cursor-col-resize flex flex-col justify-center items-center z-10 ml-4 rounded-full hidden lg:flex"
                 onMouseDown={startListeningDrag}
+                onTouchStart={startListeningDrag}
             >
                 <div className="flex flex-col gap-1.5 opacity-40 sticky top-[50vh]">
                     <div className="w-1 h-1 bg-slate-600 rounded-full"></div>
