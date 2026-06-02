@@ -201,6 +201,13 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             if (drawMode) e.preventDefault();
         };
 
+        const handleTouch = (e: TouchEvent) => {
+            if (drawMode) {
+                // Tắt triệt để mọi thao tác cuộn, zoom của iPad bằng touch
+                if (e.cancelable) e.preventDefault();
+            }
+        };
+
         // Gắn sự kiện native (thay cho React Synthetic Events) để kiểm soát Safari tốt hơn
         cv.addEventListener('pointerdown', handlePointerDown, { passive: false });
         cv.addEventListener('pointermove', handlePointerMove, { passive: false });
@@ -208,6 +215,10 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
         cv.addEventListener('pointercancel', handlePointerUp, { passive: false });
         cv.addEventListener('pointerleave', handlePointerUp, { passive: false });
         cv.addEventListener('contextmenu', handleContextMenu, { passive: false });
+        
+        // Bắt buộc phải chặn touchstart và touchmove trên Safari thì nó mới không ngắt quãng nét vẽ (chống dropped strokes)
+        cv.addEventListener('touchstart', handleTouch, { passive: false });
+        cv.addEventListener('touchmove', handleTouch, { passive: false });
 
         return () => {
             cv.removeEventListener('pointerdown', handlePointerDown);
@@ -216,6 +227,8 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             cv.removeEventListener('pointercancel', handlePointerUp);
             cv.removeEventListener('pointerleave', handlePointerUp);
             cv.removeEventListener('contextmenu', handleContextMenu);
+            cv.removeEventListener('touchstart', handleTouch);
+            cv.removeEventListener('touchmove', handleTouch);
         };
     }, [drawMode, isDrawing, penColor, scale, shapeStart, textPos]);
 
