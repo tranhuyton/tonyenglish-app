@@ -116,7 +116,22 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
         setTimeout(resizeCanvas, 200);
     }, [scale]);
 
-    const onMouseDown = (e: React.MouseEvent) => {
+    useEffect(() => {
+        const cv = canvasRef.current;
+        if (!cv) return;
+        const preventScroll = (e: TouchEvent) => {
+            if (drawMode) e.preventDefault();
+        };
+        // Cực kỳ quan trọng để chặn iOS Safari cuộn trang khi dùng Apple Pencil
+        cv.addEventListener('touchstart', preventScroll, { passive: false });
+        cv.addEventListener('touchmove', preventScroll, { passive: false });
+        return () => {
+            cv.removeEventListener('touchstart', preventScroll);
+            cv.removeEventListener('touchmove', preventScroll);
+        };
+    }, [drawMode]);
+
+    const onPointerDown = (e: React.PointerEvent) => {
         const cv = canvasRef.current; if (!cv || !drawMode) return;
         const ctx = cv.getContext('2d'); if (!ctx) return;
         const rect = cv.getBoundingClientRect();
@@ -138,7 +153,7 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
         }
     };
 
-    const onMouseMove = (e: React.MouseEvent) => {
+    const onPointerMove = (e: React.PointerEvent) => {
         if (!isDrawing) return;
         const cv = canvasRef.current; if (!cv) return;
         const ctx = cv.getContext('2d'); if (!ctx) return;
@@ -181,11 +196,12 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             <canvas
                 ref={canvasRef}
                 className={`absolute top-0 left-0 w-full h-full student-canvas ${drawMode ? (drawMode === 'eraser' ? 'cursor-cell pointer-events-auto' : drawMode === 'text' ? 'cursor-text pointer-events-auto' : 'cursor-crosshair pointer-events-auto') : 'pointer-events-none'}`}
-                style={{ zIndex: 10 }}
-                onMouseDown={onMouseDown}
-                onMouseMove={onMouseMove}
-                onMouseUp={stopDrawing}
-                onMouseLeave={stopDrawing}
+                style={{ zIndex: 10, touchAction: 'none' }}
+                onPointerDown={onPointerDown}
+                onPointerMove={onPointerMove}
+                onPointerUp={stopDrawing}
+                onPointerCancel={stopDrawing}
+                onPointerLeave={stopDrawing}
             />
             {drawMode === 'text' && textPos && (
                 <input
@@ -411,6 +427,12 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   const questions = testData.json_config.questions || [];
   const pdfUrl = testData.insert_pdf_url || testData.pdf_url;
 
+  const handleContainerScroll = (e: React.UIEvent<HTMLDivElement>) => {
+      const el = e.currentTarget;
+      if (el.scrollTop <= 0) el.scrollTop = 1;
+      else if (el.scrollTop + el.clientHeight >= el.scrollHeight) el.scrollTop -= 1;
+  };
+
   return (
     <div className="h-screen w-screen flex flex-col bg-[#e5e7eb] font-sans text-slate-900 overflow-hidden">
       {/* Header */}
@@ -496,7 +518,7 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
             )}
           </div>
           
-          <div className={`flex-1 overflow-auto bg-[#525659] p-4 md:p-8 custom-scrollbar ${drawMode ? (drawMode === 'eraser' ? 'cursor-cell' : drawMode === 'text' ? 'cursor-text' : 'cursor-crosshair') : ''}`}>
+          <div onScroll={handleContainerScroll} className={`flex-1 overflow-auto bg-[#525659] p-4 md:p-8 custom-scrollbar ${drawMode ? (drawMode === 'eraser' ? 'cursor-cell' : drawMode === 'text' ? 'cursor-text' : 'cursor-crosshair') : ''}`}>
              {!pdfUrl ? (
                 <div className="flex flex-col items-center justify-center h-full text-slate-400 p-8 text-center bg-[#525659]">
                   <span className="text-5xl mb-4">📄</span>

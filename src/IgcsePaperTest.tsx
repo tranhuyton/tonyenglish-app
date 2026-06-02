@@ -447,6 +447,12 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
 
   const questions = testData.json_config.questions || [];
 
+  const handleContainerScroll = (e: React.UIEvent<HTMLDivElement>) => {
+      const el = e.currentTarget;
+      if (el.scrollTop <= 0) el.scrollTop = 1;
+      else if (el.scrollTop + el.clientHeight >= el.scrollHeight) el.scrollTop -= 1;
+  };
+
   return (
     <div className="h-screen w-screen flex flex-col bg-white font-sans text-slate-900 overflow-hidden">
       {/* Header */}
@@ -513,7 +519,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
               </div>
             )}
           </div>
-          <div className={`flex-1 w-full h-full relative ${isDragging ? 'pointer-events-none' : ''}`}>
+          <div onScroll={handleContainerScroll} className={`flex-1 w-full h-full relative ${isDragging ? 'pointer-events-none' : ''} overflow-auto custom-scrollbar`}>
              {testData.insert_pdf_url ? (
                <iframe src={`${testData.insert_pdf_url}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} className="w-full h-full border-none bg-transparent" title="PDF Paper" />
              ) : (
@@ -612,7 +618,7 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
             </span>
           </div>
 
-          <div className={`flex-1 overflow-y-auto p-4 sm:p-8 ${isDragging ? 'pointer-events-none' : ''} custom-scrollbar`}>
+          <div onScroll={handleContainerScroll} className={`flex-1 overflow-y-auto p-4 sm:p-8 ${isDragging ? 'pointer-events-none' : ''} custom-scrollbar`}>
             {/* Score Summary */}
             {gradeResult && (
                 <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8 text-center">
