@@ -673,6 +673,10 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
             )}
           </div>
         </div>
+
+        <div className="fixed bottom-2 right-2 text-[10px] text-white/50 z-[100] font-mono pointer-events-none bg-black/20 px-1 rounded">
+          v3.0-final
+        </div>
         
       </div>
     </div>
