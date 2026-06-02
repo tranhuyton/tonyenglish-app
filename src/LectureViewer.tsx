@@ -1376,11 +1376,19 @@ export default function LectureViewer({
                   const isExpanded = expandedModules.includes(mod.id);
                   
                   return (
-                    <div key={mod.id} className="border-b border-slate-100 last:border-0">
+                    <div key={mod.id} id={`module-container-${mod.id}`} className="border-b border-slate-100 last:border-0">
                       <button 
                           onClick={(e) => { 
                               e.preventDefault(); 
                               toggleModule(mod.id); 
+                              if (!expandedModules.includes(mod.id)) {
+                                  setTimeout(() => {
+                                      const el = document.getElementById(`module-container-${mod.id}`);
+                                      if (el) {
+                                          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                      }
+                                  }, 310);
+                              }
                           }} 
                           className={`w-full text-left px-5 py-4 transition-colors flex justify-between items-center ${isExpanded ? 'bg-slate-50/50' : 'hover:bg-slate-50'}`}
                       >
