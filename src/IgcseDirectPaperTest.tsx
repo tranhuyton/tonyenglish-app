@@ -195,12 +195,17 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null;
         };
 
+        const handleContextMenu = (e: Event) => {
+            if (drawMode) e.preventDefault();
+        };
+
         // Gắn sự kiện native (thay cho React Synthetic Events) để kiểm soát Safari tốt hơn
         cv.addEventListener('pointerdown', handlePointerDown, { passive: false });
         cv.addEventListener('pointermove', handlePointerMove, { passive: false });
         cv.addEventListener('pointerup', handlePointerUp, { passive: false });
         cv.addEventListener('pointercancel', handlePointerUp, { passive: false });
         cv.addEventListener('pointerleave', handlePointerUp, { passive: false });
+        cv.addEventListener('contextmenu', handleContextMenu, { passive: false });
 
         return () => {
             cv.removeEventListener('pointerdown', handlePointerDown);
@@ -208,13 +213,18 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             cv.removeEventListener('pointerup', handlePointerUp);
             cv.removeEventListener('pointercancel', handlePointerUp);
             cv.removeEventListener('pointerleave', handlePointerUp);
+            cv.removeEventListener('contextmenu', handleContextMenu);
         };
     }, [drawMode, isDrawing, penColor, scale, shapeStart, textPos]);
 
     const stopDrawing = () => { setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; };
 
     return (
-        <div className="relative mb-6 shadow-xl w-fit mx-auto bg-white page-container" data-page={pageNum}>
+        <div 
+            className="relative mb-6 shadow-xl w-fit mx-auto bg-white page-container select-none" 
+            data-page={pageNum}
+            style={{ WebkitUserSelect: 'none', WebkitTouchCallout: 'none' } as React.CSSProperties}
+        >
             <Page 
                 pageNumber={pageNum} 
                 renderTextLayer={false} 
@@ -225,7 +235,7 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             <canvas
                 ref={canvasRef}
                 className={`absolute top-0 left-0 w-full h-full student-canvas ${drawMode ? (drawMode === 'eraser' ? 'cursor-cell pointer-events-auto' : drawMode === 'text' ? 'cursor-text pointer-events-auto' : 'cursor-crosshair pointer-events-auto') : 'pointer-events-none'}`}
-                style={{ zIndex: 10, touchAction: 'none' }}
+                style={{ zIndex: 10, touchAction: 'none', WebkitUserSelect: 'none', WebkitTouchCallout: 'none' } as React.CSSProperties}
             />
             {drawMode === 'text' && textPos && (
                 <input
