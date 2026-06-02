@@ -244,6 +244,7 @@ export default function IgcseTestEditorModal({
                                 <select value={testType} onChange={(e) => setTestType(e.target.value)} className="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#0ea5e9]">
                                     <option value="IGCSE-Science">IGCSE Science (Split Screen)</option>
                                     <option value="IGCSE-Math">IGCSE Math (Split Screen)</option>
+                                    <option value="IGCSE-Direct">IGCSE Direct (Draw on PDF)</option>
                                 </select>
                             </div>
                             <div>
