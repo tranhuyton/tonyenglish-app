@@ -119,68 +119,85 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
     useEffect(() => {
         const cv = canvasRef.current;
         if (!cv) return;
-        const preventScroll = (e: TouchEvent) => {
-            if (drawMode) e.preventDefault();
+
+        const handlePointerDown = (e: PointerEvent) => {
+            if (!drawMode) return;
+            // Dùng preventDefault để ngăn Safari cuộn trang khi dùng Apple Pencil
+            e.preventDefault();
+            
+            const ctx = cv.getContext('2d'); if (!ctx) return;
+            const rect = cv.getBoundingClientRect();
+            const scaleX = cv.width / rect.width;
+            const scaleY = cv.height / rect.height;
+            const x = (e.clientX - rect.left) * scaleX;
+            const y = (e.clientY - rect.top) * scaleY;
+            
+            if (drawMode === 'text') {
+                setTextPos({x, y}); setDrawText('');
+                return;
+            }
+            setIsDrawing(true);
+            if (['line','rect','circle','triangle'].includes(drawMode)) {
+                setShapeStart({x, y});
+                canvasSnapshot.current = ctx.getImageData(0, 0, cv.width, cv.height);
+            } else {
+                ctx.beginPath(); ctx.moveTo(x, y);
+            }
         };
-        // Cực kỳ quan trọng để chặn iOS Safari cuộn trang khi dùng Apple Pencil
-        cv.addEventListener('touchstart', preventScroll, { passive: false });
-        cv.addEventListener('touchmove', preventScroll, { passive: false });
+
+        const handlePointerMove = (e: PointerEvent) => {
+            if (!drawMode) return;
+            // Ngăn cuộn trang
+            e.preventDefault();
+            
+            if (!isDrawing) return;
+            const ctx = cv.getContext('2d'); if (!ctx) return;
+            const rect = cv.getBoundingClientRect();
+            const scaleX = cv.width / rect.width;
+            const scaleY = cv.height / rect.height;
+            const x = (e.clientX - rect.left) * scaleX;
+            const y = (e.clientY - rect.top) * scaleY;
+            
+            if (['line','rect','circle','triangle'].includes(drawMode) && shapeStart && canvasSnapshot.current) {
+                ctx.putImageData(canvasSnapshot.current, 0, 0);
+                ctx.strokeStyle = penColor; ctx.lineWidth = 2 * scale; ctx.lineCap = 'round';
+                ctx.globalCompositeOperation = 'source-over';
+                ctx.beginPath();
+                if (drawMode === 'line') { ctx.moveTo(shapeStart.x, shapeStart.y); ctx.lineTo(x, y); }
+                else if (drawMode === 'rect') { ctx.rect(shapeStart.x, shapeStart.y, x - shapeStart.x, y - shapeStart.y); }
+                else if (drawMode === 'circle') { const rx = Math.abs(x-shapeStart.x)/2, ry = Math.abs(y-shapeStart.y)/2; ctx.ellipse(shapeStart.x+(x-shapeStart.x)/2, shapeStart.y+(y-shapeStart.y)/2, rx, ry, 0, 0, Math.PI*2); }
+                else if (drawMode === 'triangle') { ctx.moveTo(shapeStart.x+(x-shapeStart.x)/2, shapeStart.y); ctx.lineTo(x, y); ctx.lineTo(shapeStart.x, y); ctx.closePath(); }
+                ctx.stroke();
+            } else if (drawMode === 'pen' || drawMode === 'eraser') {
+                ctx.strokeStyle = drawMode === 'eraser' ? 'rgba(0,0,0,1)' : penColor;
+                ctx.lineWidth = drawMode === 'eraser' ? 20 * scale : 2 * scale;
+                ctx.lineCap = 'round';
+                ctx.globalCompositeOperation = drawMode === 'eraser' ? 'destination-out' : 'source-over';
+                ctx.lineTo(x, y); ctx.stroke();
+            }
+        };
+
+        const handlePointerUp = (e: PointerEvent) => {
+            if (!drawMode) return;
+            e.preventDefault();
+            setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null;
+        };
+
+        // Gắn sự kiện native (thay cho React Synthetic Events) để kiểm soát Safari tốt hơn
+        cv.addEventListener('pointerdown', handlePointerDown, { passive: false });
+        cv.addEventListener('pointermove', handlePointerMove, { passive: false });
+        cv.addEventListener('pointerup', handlePointerUp, { passive: false });
+        cv.addEventListener('pointercancel', handlePointerUp, { passive: false });
+        cv.addEventListener('pointerleave', handlePointerUp, { passive: false });
+
         return () => {
-            cv.removeEventListener('touchstart', preventScroll);
-            cv.removeEventListener('touchmove', preventScroll);
+            cv.removeEventListener('pointerdown', handlePointerDown);
+            cv.removeEventListener('pointermove', handlePointerMove);
+            cv.removeEventListener('pointerup', handlePointerUp);
+            cv.removeEventListener('pointercancel', handlePointerUp);
+            cv.removeEventListener('pointerleave', handlePointerUp);
         };
-    }, [drawMode]);
-
-    const onPointerDown = (e: React.PointerEvent) => {
-        const cv = canvasRef.current; if (!cv || !drawMode) return;
-        const ctx = cv.getContext('2d'); if (!ctx) return;
-        const rect = cv.getBoundingClientRect();
-        const scaleX = cv.width / rect.width;
-        const scaleY = cv.height / rect.height;
-        const x = (e.clientX - rect.left) * scaleX;
-        const y = (e.clientY - rect.top) * scaleY;
-        
-        if (drawMode === 'text') {
-            setTextPos({x, y}); setDrawText('');
-            return;
-        }
-        setIsDrawing(true);
-        if (['line','rect','circle','triangle'].includes(drawMode)) {
-            setShapeStart({x, y});
-            canvasSnapshot.current = ctx.getImageData(0, 0, cv.width, cv.height);
-        } else {
-            ctx.beginPath(); ctx.moveTo(x, y);
-        }
-    };
-
-    const onPointerMove = (e: React.PointerEvent) => {
-        if (!isDrawing) return;
-        const cv = canvasRef.current; if (!cv) return;
-        const ctx = cv.getContext('2d'); if (!ctx) return;
-        const rect = cv.getBoundingClientRect();
-        const scaleX = cv.width / rect.width;
-        const scaleY = cv.height / rect.height;
-        const x = (e.clientX - rect.left) * scaleX;
-        const y = (e.clientY - rect.top) * scaleY;
-        
-        if (['line','rect','circle','triangle'].includes(drawMode) && shapeStart && canvasSnapshot.current) {
-            ctx.putImageData(canvasSnapshot.current, 0, 0);
-            ctx.strokeStyle = penColor; ctx.lineWidth = 2 * scale; ctx.lineCap = 'round';
-            ctx.globalCompositeOperation = 'source-over';
-            ctx.beginPath();
-            if (drawMode === 'line') { ctx.moveTo(shapeStart.x, shapeStart.y); ctx.lineTo(x, y); }
-            else if (drawMode === 'rect') { ctx.rect(shapeStart.x, shapeStart.y, x - shapeStart.x, y - shapeStart.y); }
-            else if (drawMode === 'circle') { const rx = Math.abs(x-shapeStart.x)/2, ry = Math.abs(y-shapeStart.y)/2; ctx.ellipse(shapeStart.x+(x-shapeStart.x)/2, shapeStart.y+(y-shapeStart.y)/2, rx, ry, 0, 0, Math.PI*2); }
-            else if (drawMode === 'triangle') { ctx.moveTo(shapeStart.x+(x-shapeStart.x)/2, shapeStart.y); ctx.lineTo(x, y); ctx.lineTo(shapeStart.x, y); ctx.closePath(); }
-            ctx.stroke();
-        } else if (drawMode === 'pen' || drawMode === 'eraser') {
-            ctx.strokeStyle = drawMode === 'eraser' ? 'rgba(0,0,0,1)' : penColor;
-            ctx.lineWidth = drawMode === 'eraser' ? 20 * scale : 2 * scale;
-            ctx.lineCap = 'round';
-            ctx.globalCompositeOperation = drawMode === 'eraser' ? 'destination-out' : 'source-over';
-            ctx.lineTo(x, y); ctx.stroke();
-        }
-    };
+    }, [drawMode, isDrawing, penColor, scale, shapeStart, textPos]);
 
     const stopDrawing = () => { setIsDrawing(false); setShapeStart(null); canvasSnapshot.current = null; };
 
@@ -197,11 +214,6 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
                 ref={canvasRef}
                 className={`absolute top-0 left-0 w-full h-full student-canvas ${drawMode ? (drawMode === 'eraser' ? 'cursor-cell pointer-events-auto' : drawMode === 'text' ? 'cursor-text pointer-events-auto' : 'cursor-crosshair pointer-events-auto') : 'pointer-events-none'}`}
                 style={{ zIndex: 10, touchAction: 'none' }}
-                onPointerDown={onPointerDown}
-                onPointerMove={onPointerMove}
-                onPointerUp={stopDrawing}
-                onPointerCancel={stopDrawing}
-                onPointerLeave={stopDrawing}
             />
             {drawMode === 'text' && textPos && (
                 <input
