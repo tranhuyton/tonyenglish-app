@@ -427,7 +427,16 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
       if (error) throw new Error("Lỗi gọi Server: " + error.message);
       if (data?.error) throw new Error("Lỗi chấm điểm: " + data.error);
       
-      const cleanJson = (data.result || "").replace(/```json/gi, "").replace(/```/gi, "").trim();
+      let cleanJson = (data.result || "").replace(/```json/gi, "").replace(/```/gi, "").trim();
+      // Loại bỏ các ký tự điều khiển/xuống dòng thực tế (literal newlines/tabs) bị dính trong chuỗi trả về
+      // vì JSON.parse sẽ crash nếu gặp literal \n bên trong một string value
+      cleanJson = cleanJson.replace(/[\n\r\t]+/g, ' ');
+      // Xóa dấu phẩy thừa (trailing commas) nếu có
+      cleanJson = cleanJson.replace(/,\s*([\}\]])/g, '$1');
+      // Thử lọc lấy phần thân JSON bằng Regex nếu AI trả về kèm theo text thừa ở đầu/cuối
+      const jsonMatch = cleanJson.match(/\{[\s\S]*\}/);
+      if (jsonMatch) cleanJson = jsonMatch[0];
+
       let gradedData;
       try {
           gradedData = JSON.parse(cleanJson);
