@@ -84,19 +84,30 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
     const resizeCanvas = () => {
         const cv = canvasRef.current;
         if (!cv) return;
-        const pageEl = cv.closest('.react-pdf__Page');
+        // canvas là sibling của .react-pdf__Page, nên phải tìm trong parentElement
+        const pageEl = cv.parentElement?.querySelector('.react-pdf__Page');
         if (pageEl) {
             const rect = pageEl.getBoundingClientRect();
-            if (cv.width !== rect.width || cv.height !== rect.height) {
+            // Nhân với devicePixelRatio để nét vẽ mịn màng trên iPad/Retina
+            const dpr = window.devicePixelRatio || 1;
+            const targetWidth = rect.width * dpr;
+            const targetHeight = rect.height * dpr;
+            
+            if (cv.width !== targetWidth || cv.height !== targetHeight) {
                 const ctx = cv.getContext('2d');
                 let backup: ImageData | null = null;
                 if (ctx && cv.width > 0 && cv.height > 0) {
                     backup = ctx.getImageData(0, 0, cv.width, cv.height);
                 }
-                cv.width = rect.width;
-                cv.height = rect.height;
+                cv.width = targetWidth;
+                cv.height = targetHeight;
                 if (ctx && backup) {
-                    ctx.putImageData(backup, 0, 0);
+                    // Phục hồi lại hình vẽ cũ bằng cách scale lại cho khớp với kích thước mới
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = backup.width;
+                    tempCanvas.height = backup.height;
+                    tempCanvas.getContext('2d')?.putImageData(backup, 0, 0);
+                    ctx.drawImage(tempCanvas, 0, 0, tempCanvas.width, tempCanvas.height, 0, 0, targetWidth, targetHeight);
                 }
             }
         }
@@ -158,9 +169,10 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
             const x = (e.clientX - rect.left) * scaleX;
             const y = (e.clientY - rect.top) * scaleY;
             
+            const dpr = window.devicePixelRatio || 1;
             if (['line','rect','circle','triangle'].includes(drawMode) && shapeStart && canvasSnapshot.current) {
                 ctx.putImageData(canvasSnapshot.current, 0, 0);
-                ctx.strokeStyle = penColor; ctx.lineWidth = 2 * scale; ctx.lineCap = 'round';
+                ctx.strokeStyle = penColor; ctx.lineWidth = 2 * scale * dpr; ctx.lineCap = 'round';
                 ctx.globalCompositeOperation = 'source-over';
                 ctx.beginPath();
                 if (drawMode === 'line') { ctx.moveTo(shapeStart.x, shapeStart.y); ctx.lineTo(x, y); }
@@ -170,7 +182,7 @@ const DrawingPage = ({ pageNum, drawMode, penColor, scale }: any) => {
                 ctx.stroke();
             } else if (drawMode === 'pen' || drawMode === 'eraser') {
                 ctx.strokeStyle = drawMode === 'eraser' ? 'rgba(0,0,0,1)' : penColor;
-                ctx.lineWidth = drawMode === 'eraser' ? 20 * scale : 2 * scale;
+                ctx.lineWidth = drawMode === 'eraser' ? 20 * scale * dpr : 2 * scale * dpr;
                 ctx.lineCap = 'round';
                 ctx.globalCompositeOperation = drawMode === 'eraser' ? 'destination-out' : 'source-over';
                 ctx.lineTo(x, y); ctx.stroke();
