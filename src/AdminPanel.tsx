@@ -356,7 +356,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const fetchLibraryTests = async () => {
-    const { data } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type, category:content_json->basicInfo->category').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').order('order_index', { ascending: true }).order('created_at', { ascending: false });
     setLibraryTests(data || []);
   };
 
