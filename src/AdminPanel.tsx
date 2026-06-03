@@ -677,10 +677,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     };
     
     if (testId === 'new') {
-       payload.order_index = libraryTests.length + 1;
-       await supabase.from('tests').insert([payload]);
+       payload.order_index = 0;
+       const { error } = await supabase.from('tests').insert([payload]);
+       if (error) { console.error(error); alert("Lỗi khi lưu: " + error.message); return; }
     } else {
-       await supabase.from('tests').update(payload).eq('id', testId);
+       const { error } = await supabase.from('tests').update(payload).eq('id', testId);
+       if (error) { console.error(error); alert("Lỗi khi cập nhật: " + error.message); return; }
     }
     
     setEditingTest(null); 
