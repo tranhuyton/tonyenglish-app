@@ -1605,6 +1605,10 @@ const handleFinish = async () => {
                       📞 Gọi Gia Sư AI
                   </button>
                 </div>
+              ) : basicInfo?.category === 'exercise' ? (
+                <div className="bg-emerald-50 text-emerald-600 px-6 py-2.5 rounded-lg font-black text-[18px] mb-4 border border-emerald-200 flex items-center justify-center gap-2 w-full shadow-sm tracking-widest uppercase">
+                    BÀI TẬP
+                </div>
               ) : (
                 <div className="bg-red-50 text-red-500 px-6 py-2.5 rounded-lg font-bold text-[18px] mb-4 border border-red-100 flex items-center justify-center gap-2 w-full shadow-sm tracking-wider">
                   <span className="text-red-400">⏱</span> {formatTime(timeLeft)} phút
@@ -1756,7 +1760,13 @@ const handleFinish = async () => {
             </h1>
             
             <div className="flex items-center justify-center gap-2 text-slate-500 mb-8 font-medium bg-slate-50 inline-flex px-5 py-2.5 rounded-xl border border-slate-100 mx-auto">
-               <span className="text-lg">⏱</span> Thời gian làm bài: <span className="font-bold text-slate-800">{formatTime(parseInitialTime(basicInfo?.timeLimit))}</span>
+               {basicInfo?.category === 'exercise' ? (
+                   <span className="text-emerald-600 font-black tracking-widest uppercase">BÀI TẬP</span>
+               ) : (
+                   <>
+                       <span className="text-lg">⏱</span> Thời gian làm bài: <span className="font-bold text-slate-800">{formatTime(parseInitialTime(basicInfo?.timeLimit))}</span>
+                   </>
+               )}
             </div>
             
             {(isListening && hasAnyAudio) && (
