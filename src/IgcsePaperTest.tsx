@@ -100,15 +100,31 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   // Resize drawing canvas to match container
   useEffect(() => {
     const cv = drawCanvasRef.current;
-    if (!cv || !drawMode) return;
+    if (!cv) return;
     const parent = cv.parentElement;
     if (!parent) return;
-    const resize = () => { cv.width = parent.clientWidth; cv.height = parent.clientHeight; };
+    const resize = () => { 
+        if (cv.width !== parent.clientWidth || cv.height !== parent.clientHeight) {
+            const ctx = cv.getContext('2d');
+            let tempCanvas: HTMLCanvasElement | null = null;
+            if (cv.width > 0 && cv.height > 0) {
+                tempCanvas = document.createElement('canvas');
+                tempCanvas.width = cv.width;
+                tempCanvas.height = cv.height;
+                tempCanvas.getContext('2d')?.drawImage(cv, 0, 0);
+            }
+            cv.width = parent.clientWidth; 
+            cv.height = parent.clientHeight;
+            if (tempCanvas && ctx) {
+                ctx.drawImage(tempCanvas, 0, 0);
+            }
+        }
+    };
     resize();
     const ro = new ResizeObserver(resize);
     ro.observe(parent);
     return () => ro.disconnect();
-  }, [drawMode, leftWidth]);
+  }, [leftWidth]);
 
   const handleAnswerChange = (inputId: string, value: string) => {
     if (isReviewMode) return;
@@ -148,6 +164,43 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
       };
       reader.readAsDataURL(file);
   };
+
+  useEffect(() => {
+    const handleGlobalPaste = (e: ClipboardEvent) => {
+      if (isReviewMode) return;
+      const items = e.clipboardData?.items;
+      if (!items) return;
+      
+      let imageFile: File | null = null;
+      for (let i = 0; i < items.length; i++) {
+          if (items[i].type.startsWith('image/')) {
+              e.preventDefault();
+              imageFile = items[i].getAsFile();
+              break;
+          }
+      }
+      if (!imageFile) return;
+
+      const imageSubIds: string[] = [];
+      const questions = testData?.json_config?.questions || [];
+      questions.forEach((q: any) => {
+          (q.sub_questions || []).forEach((sub: any) => {
+              if (sub.type !== 'short_answer' && sub.type !== 'long_answer') {
+                  imageSubIds.push(sub.id);
+              }
+          });
+      });
+
+      if (imageSubIds.length > 0) {
+          const emptyId = imageSubIds.find(id => !answers[id]);
+          const targetId = emptyId || imageSubIds[imageSubIds.length - 1];
+          handleImageUpload(targetId, imageFile);
+      }
+    };
+
+    window.addEventListener('paste', handleGlobalPaste);
+    return () => window.removeEventListener('paste', handleGlobalPaste);
+  }, [testData, answers, isReviewMode]);
 
   // LaTeX → Unicode/HTML converter for question labels
   const renderLatex = (text: string): string => {
@@ -579,12 +632,12 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
                </div>
              )}
              {/* Drawing overlay canvas */}
-             {(drawMode) && (
+             {(true) && (
                <>
                  <canvas
                    ref={drawCanvasRef}
-                   className="absolute inset-0 w-full h-full"
-                   style={{ cursor: drawMode === 'text' ? 'text' : drawMode === 'eraser' ? 'cell' : 'crosshair', zIndex: 10 }}
+                   className={`absolute inset-0 w-full h-full ${!drawMode ? 'pointer-events-none' : ''}`}
+                   style={{ cursor: drawMode === 'text' ? 'text' : drawMode === 'eraser' ? 'cell' : drawMode ? 'crosshair' : 'auto', zIndex: 10 }}
                    onMouseDown={(e) => {
                      const cv = drawCanvasRef.current; if (!cv) return;
                      const ctx = cv.getContext('2d'); if (!ctx) return;
