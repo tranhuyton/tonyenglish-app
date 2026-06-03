@@ -356,7 +356,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const fetchLibraryTests = async () => {
-    const { data } = await supabase.from('tests').select('*').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type, content_json').order('order_index', { ascending: true }).order('created_at', { ascending: false });
     setLibraryTests(data || []);
   };
 
@@ -387,7 +387,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     const { data: flds } = await supabase.from('folders').select('*').eq('course_id', courseId).order('display_order', { ascending: true });
     setFolders(flds || []);
     
-    const { data: ast } = await supabase.from('tests').select('*').eq('course_id', courseId).order('order_index', { ascending: true });
+    const { data: ast } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type, content_json').eq('course_id', courseId).order('order_index', { ascending: true });
     setAssignedTests(ast || []);
 
     const { data: enrolls } = await supabase.from('enrollments').select('user_id').eq('course_id', courseId);
@@ -797,18 +797,23 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleDuplicateTest = async (testData: any) => {
+    const { data: fullTest } = await supabase.from('tests').select('*').eq('id', testData.id).single();
+    if (!fullTest) return alert("Không tìm thấy dữ liệu gốc!");
+
     const { data: newTest, error: err } = await supabase.from('tests').insert([{ 
-       title: testData.title + ' (Bản sao)', 
-       course_id: testData.course_id, 
-       folder_id: testData.folder_id, 
-       test_type: testData.test_type,
-       content_json: testData.content_json,
+       title: fullTest.title + ' (Bản sao)', 
+       course_id: fullTest.course_id, 
+       folder_id: fullTest.folder_id, 
+       test_type: fullTest.test_type,
+       content_json: fullTest.content_json,
+       json_config: fullTest.json_config, 
        is_published: false,
-       order_index: libraryTests.length + 1 
+       order_index: (fullTest.order_index || 0) + 1
     }]).select().single();
 
     if (err) return alert("Lỗi nhân bản đề thi!");
     fetchLibraryTests();
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
     alert("✨ Đã nhân bản đề thi thành công!");
   };
 
