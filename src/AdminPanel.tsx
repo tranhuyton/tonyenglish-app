@@ -356,7 +356,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const fetchLibraryTests = async () => {
-    const { data } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await supabase.from('tests').select('*').order('order_index', { ascending: true }).order('created_at', { ascending: false });
     setLibraryTests(data || []);
   };
 
@@ -387,7 +387,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     const { data: flds } = await supabase.from('folders').select('*').eq('course_id', courseId).order('display_order', { ascending: true });
     setFolders(flds || []);
     
-    const { data: ast } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type, content_json').eq('course_id', courseId).order('order_index', { ascending: true });
+    const { data: ast } = await supabase.from('tests').select('*').eq('course_id', courseId).order('order_index', { ascending: true });
     setAssignedTests(ast || []);
 
     const { data: enrolls } = await supabase.from('enrollments').select('user_id').eq('course_id', courseId);
@@ -796,35 +796,19 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (window.confirm("Xóa vĩnh viễn đề thi khỏi kho?")) { await supabase.from('tests').delete().eq('id', id); fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);}
   };
 
-  const handleEditTest = async (test: any) => {
-    if (test.test_type === 'IGCSE-Science' || test.test_type === 'IGCSE-Math' || test.test_type === 'IGCSE-Direct') {
-        setIgcseEditingTestId(test.id);
-        setIgcseEditorOpen(true);
-    } else {
-        const { data: fullTest } = await supabase.from('tests').select('*').eq('id', test.id).single();
-        if (fullTest) setEditingTest(fullTest);
-        else alert("Lỗi tải dữ liệu đề thi!");
-    }
-  };
-
   const handleDuplicateTest = async (testData: any) => {
-    const { data: fullTest } = await supabase.from('tests').select('*').eq('id', testData.id).single();
-    if (!fullTest) return alert("Không tìm thấy dữ liệu gốc!");
-
     const { data: newTest, error: err } = await supabase.from('tests').insert([{ 
-       title: fullTest.title + ' (Bản sao)', 
-       course_id: fullTest.course_id, 
-       folder_id: fullTest.folder_id, 
-       test_type: fullTest.test_type,
-       content_json: fullTest.content_json,
-       json_config: fullTest.json_config, 
+       title: testData.title + ' (Bản sao)', 
+       course_id: testData.course_id, 
+       folder_id: testData.folder_id, 
+       test_type: testData.test_type,
+       content_json: testData.content_json,
        is_published: false,
-       order_index: (fullTest.order_index || 0) + 1
+       order_index: libraryTests.length + 1 
     }]).select().single();
 
     if (err) return alert("Lỗi nhân bản đề thi!");
     fetchLibraryTests();
-    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
     alert("✨ Đã nhân bản đề thi thành công!");
   };
 
@@ -909,7 +893,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const filteredLibraryTests = useMemo(() => libraryTests.filter(test => {
       const matchesSearch = test.title.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCourse = filterCourse === 'all' || test.course_id === filterCourse;
-      const testCategory = test.category || test.content_json?.basicInfo?.category || 'test';
+      const testCategory = test.content_json?.basicInfo?.category || 'test';
       const matchesCategory = filterCategory === 'all' || testCategory === filterCategory;
       return matchesSearch && matchesCourse && matchesCategory;
   }), [libraryTests, searchQuery, filterCourse, filterCategory]);
@@ -1442,7 +1426,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                    </div>
                                  </div>
                                  <div className="flex gap-2 md:gap-3 shrink-0">
-                                   <button onClick={() => handleEditTest(t)} className="text-[#2bd6eb] font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Sửa</button>
+                                   <button onClick={() => { if (t.test_type === 'IGCSE-Science' || t.test_type === 'IGCSE-Math' || t.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(t.id); setIgcseEditorOpen(true); } else { setEditingTest(t); } }} className="text-[#2bd6eb] font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Sửa</button>
                                    <button onClick={() => handleUnassignTest(t.id)} className="text-red-400 font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Gỡ ✖</button>
                                  </div>
                                </div>
@@ -1599,8 +1583,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 md:py-5">
                                <div className="font-bold text-[#0a5482] text-[13px] md:text-[15px] flex items-center gap-2">
                                   {test.title}
-                                  <span className={`text-[8px] md:text-[9px] px-1 md:px-1.5 py-0.5 rounded uppercase tracking-wider font-black ${(test.category || test.content_json?.basicInfo?.category) === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
-                                     {(test.category || test.content_json?.basicInfo?.category) === 'exercise' ? 'Bài tập' : 'Đề thi'}
+                                  <span className={`text-[8px] md:text-[9px] px-1 md:px-1.5 py-0.5 rounded uppercase tracking-wider font-black ${test.content_json?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>
+                                     {test.content_json?.basicInfo?.category === 'exercise' ? 'Bài tập' : 'Đề thi'}
                                   </span>
                                </div>
                                <div className="text-[10px] md:text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? 'Đã gán thư mục' : 'Chưa gán thư mục'}</div>
@@ -1611,7 +1595,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[10px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded transition-colors ${test.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-right space-x-1 md:space-x-2 whitespace-nowrap">
-                                 <button onClick={() => handleEditTest(test)} className="text-[#2bd6eb] bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition shadow-sm">Sửa</button>
+                                 <button onClick={() => { if (test.test_type === 'IGCSE-Science' || test.test_type === 'IGCSE-Math' || test.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(test.id); setIgcseEditorOpen(true); } else { setEditingTest(test); } }} className="text-[#2bd6eb] bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition shadow-sm">Sửa</button>
                                  <button onClick={() => handleDuplicateTest(test)} className="text-emerald-600 font-bold text-[10px] md:text-xs bg-white border border-emerald-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-emerald-50 transition shadow-sm">Nhân bản</button>
                                  <button onClick={() => handleDeleteTest(test.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100 shadow-sm">Xóa</button>
                             </td>
