@@ -21,6 +21,7 @@ export default function IgcseTestEditorModal({
     const [title, setTitle] = useState('');
     const [testType, setTestType] = useState('IGCSE-Science');
     const [timeLimit, setTimeLimit] = useState<number>(120);
+    const [category, setCategory] = useState('test');
     const [pdfUrl, setPdfUrl] = useState('');
     
     const [questions, setQuestions] = useState<any[]>([]);
@@ -89,6 +90,7 @@ export default function IgcseTestEditorModal({
         setTitle('');
         setTestType('IGCSE-Science');
         setTimeLimit(120);
+        setCategory('test');
         setPdfUrl('');
         setQuestions([]);
         setRawJson('[\n  {\n    "question_number": "1",\n    "sub_questions": []\n  }\n]');
@@ -103,6 +105,7 @@ export default function IgcseTestEditorModal({
                 setTitle(data.title || '');
                 setTestType(data.test_type || 'IGCSE-Science');
                 setTimeLimit(data.time_limit || data.json_config?.timeLimit || 120);
+                setCategory(data.content_json?.basicInfo?.category || 'test');
                 setPdfUrl(data.insert_pdf_url || '');
                 setSelectedCourseId(data.course_id || data.content_json?.basicInfo?.courseId || 'all');
                 
@@ -183,7 +186,7 @@ export default function IgcseTestEditorModal({
                     timeLimit: String(timeLimit),
                     courseId: selectedCourseId || 'all',
                     insert_pdf_url: pdfUrl || '',
-                    category: 'test',
+                    category: category,
                 },
                 questions: finalQuestions,
             };
@@ -245,6 +248,13 @@ export default function IgcseTestEditorModal({
                                     <option value="IGCSE-Science">IGCSE Science (Split Screen)</option>
                                     <option value="IGCSE-Math">IGCSE Math (Split Screen)</option>
                                     <option value="IGCSE-Direct">IGCSE Direct (Draw on PDF)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label className="block text-sm font-bold text-slate-700 mb-1.5">Phân loại</label>
+                                <select value={category} onChange={(e) => setCategory(e.target.value)} className="w-full px-4 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#0ea5e9]">
+                                    <option value="test">Đề thi</option>
+                                    <option value="exercise">Bài tập</option>
                                 </select>
                             </div>
                             <div>

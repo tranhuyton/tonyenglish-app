@@ -483,6 +483,7 @@ const handleFinish = async () => {
   // Countdown Timer
   useEffect(() => {
     if (!testStarted || isReviewMode) return;
+    if (basicInfo?.category === 'exercise') return;
     
     const timer = setInterval(() => { 
         const currentEndTime = getSavedEndTime();

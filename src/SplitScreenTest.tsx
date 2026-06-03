@@ -203,6 +203,7 @@ export default function SplitScreenTest({ onBack, onStartTest }: { onBack?: () =
   // Đồng hồ chạy liên tục
   useEffect(() => {
     if (isLoading || !testData || gradeResult || isFinishingRef.current || isReviewMode) return;
+    if (testData.content_json?.basicInfo?.category === 'exercise') return;
     
     const timer = setInterval(() => {
         const currentEndTime = getSavedEndTime(testData.id);
