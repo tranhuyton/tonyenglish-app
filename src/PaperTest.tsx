@@ -865,7 +865,11 @@ const handleFinish = async () => {
         <div className="bg-white p-10 rounded-2xl shadow-xl text-center max-w-lg border border-gray-200 w-full font-sans">
           <div className="text-6xl mb-6">{isListening ? '🎧' : '📝'}</div>
           <h1 className="text-2xl font-black text-slate-800 mb-2">{basicInfo.title}</h1>
-          <p className="text-slate-500 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
+          {basicInfo?.category === 'exercise' ? (
+              <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">BÀI TẬP</p>
+          ) : (
+              <p className="text-slate-500 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
+          )}
           {isListening && (
             <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg text-amber-700 text-[13px] font-medium mb-8 text-left leading-relaxed shadow-inner">
               <span className="font-bold">⚠️ LƯU Ý THI LISTENING:</span> Hệ thống sẽ <span className="font-bold underline">tự động phát liên tục</span> các Audio từ Part 1 đến Part 4.

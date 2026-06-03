@@ -1079,7 +1079,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
           <div className="bg-white p-10 rounded-none border border-slate-300 shadow-sm text-center max-w-lg w-full">
             <div className="text-6xl mb-6">{isListening ? '🎧' : '💻'}</div>
             <h1 className="text-2xl font-black text-slate-900 mb-2">{basicInfo.title || "IELTS Test"}</h1>
-            <p className="text-slate-600 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
+            {basicInfo?.category === 'exercise' ? (
+                <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">BÀI TẬP</p>
+            ) : (
+                <p className="text-slate-600 mb-8 font-medium">Thời gian: {formatTime(parseInitialTime(basicInfo.timeLimit))}</p>
+            )}
             
             {isListening && (
               <div className="bg-slate-100 border border-slate-300 p-5 text-slate-800 text-[13px] font-bold mb-8 text-left leading-[1.8] rounded-none font-sans">
