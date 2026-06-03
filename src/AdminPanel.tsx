@@ -794,6 +794,22 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (window.confirm("Xóa vĩnh viễn đề thi khỏi kho?")) { await supabase.from('tests').delete().eq('id', id); fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);}
   };
 
+  const handleDuplicateTest = async (testData: any) => {
+    const { data: newTest, error: err } = await supabase.from('tests').insert([{ 
+       title: testData.title + ' (Bản sao)', 
+       course_id: testData.course_id, 
+       folder_id: testData.folder_id, 
+       test_type: testData.test_type,
+       content_json: testData.content_json,
+       is_published: false,
+       order_index: libraryTests.length + 1 
+    }]).select().single();
+
+    if (err) return alert("Lỗi nhân bản đề thi!");
+    fetchLibraryTests();
+    alert("✨ Đã nhân bản đề thi thành công!");
+  };
+
   const handleToggleTestVisibility = async (test: any) => {
     const newStatus = !test.is_published;
     await supabase.from('tests').update({ is_published: newStatus }).eq('id', test.id);
@@ -1578,6 +1594,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-right space-x-1 md:space-x-2 whitespace-nowrap">
                                  <button onClick={() => { if (test.test_type === 'IGCSE-Science' || test.test_type === 'IGCSE-Math' || test.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(test.id); setIgcseEditorOpen(true); } else { setEditingTest(test); } }} className="text-[#2bd6eb] bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition shadow-sm">Sửa</button>
+                                 <button onClick={() => handleDuplicateTest(test)} className="text-emerald-600 font-bold text-[10px] md:text-xs bg-white border border-emerald-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-emerald-50 transition shadow-sm">Nhân bản</button>
                                  <button onClick={() => handleDeleteTest(test.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100 shadow-sm">Xóa</button>
                             </td>
                           </tr>
