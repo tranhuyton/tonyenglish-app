@@ -114,6 +114,14 @@ const JoditEditorRow = ({ label, value, onChange, placeholder = "" }: any) => {
           console.error("Lỗi parse HTML:", err);
           return html; // Fallback nếu có lỗi
         }
+      },
+      beforeInsertNode: (node: any) => {
+        if (node && node.tagName === 'IMG') {
+          node.style.width = '80%';
+          node.style.display = 'block';
+          node.style.marginLeft = 'auto';
+          node.style.marginRight = 'auto';
+        }
       }
     }
   }), [placeholder]);

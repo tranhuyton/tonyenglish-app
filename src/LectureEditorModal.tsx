@@ -173,7 +173,17 @@ export default function LectureEditorModal({ lectureData, courses, onClose, onRe
     safeMode: false, 
     htmlParseBrowser: false,
     disablePlugins: ['clean-html', 'sanitize'], 
-    cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false }
+    cleanHTML: { fillEmptyParagraph: false, cleanOnPaste: false },
+    events: {
+      beforeInsertNode: (node: any) => {
+        if (node && node.tagName === 'IMG') {
+          node.style.width = '80%';
+          node.style.display = 'block';
+          node.style.marginLeft = 'auto';
+          node.style.marginRight = 'auto';
+        }
+      }
+    }
   }), []);
 
   useEffect(() => {
