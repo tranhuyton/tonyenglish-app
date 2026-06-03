@@ -244,7 +244,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         let allT: any[] = [];
         let allC: any[] = [];
 
-        // Step 2: Only fetch catalog tables (folders, lectures, tests, courses) filtered by the enrolled courses
+        // Step 2: Fetch catalog tables — PHASE 1: metadata only (no content_json) for fast loading
         if (courseIds.length > 0) {
             const [
                 { data: fData },
@@ -254,7 +254,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             ] = await Promise.all([
                 supabase.from('folders').select('*').in('course_id', courseIds),
                 supabase.from('lectures').select('*').eq('is_published', true).in('course_id', courseIds),
-                supabase.from('tests').select('*').eq('is_published', true).or(`course_id.in.(${courseIds.map(id => `"${id}"`).join(',')}),course_id.is.null`),
+                supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('is_published', true).or(`course_id.in.(${courseIds.map(id => `"${id}"`).join(',')}),course_id.is.null`),
                 supabase.from('courses').select('*').in('id', courseIds)
             ]);
             allF = fData || [];
@@ -270,14 +270,27 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             const userCourses = (allC || []).filter(c => courseIds.includes(c.id));
             setCourses(userCourses.sort((a, b) => (a.order_index ?? 999) - (b.order_index ?? 999)));
 
-            const parsedTests = (allT || []).map((t: any) => {
-                let content = t.content_json;
-                if (typeof content === 'string') {
-                    try { content = JSON.parse(content); } catch(e) { content = {}; }
-                }
-                return { ...t, content_json: content }; 
-            });
-            setAllTests(parsedTests);
+            // PHASE 1: Set tests immediately with empty content_json for fast rendering
+            const lightTests = (allT || []).map((t: any) => ({ ...t, content_json: {} }));
+            setAllTests(lightTests);
+
+            // PHASE 2: Background fetch content_json to enrich tests with categories, deadlines, audio
+            const testIds = lightTests.map((t: any) => t.id);
+            if (testIds.length > 0) {
+                supabase.from('tests').select('id, content_json').eq('is_published', true).in('id', testIds).then(({ data: richData }) => {
+                    if (richData && richData.length > 0) {
+                        const contentMap = new Map<string, any>();
+                        richData.forEach((r: any) => {
+                            let content = r.content_json;
+                            if (typeof content === 'string') {
+                                try { content = JSON.parse(content); } catch(e) { content = {}; }
+                            }
+                            contentMap.set(r.id, content || {});
+                        });
+                        setAllTests(prev => prev.map(t => ({ ...t, content_json: contentMap.get(t.id) || t.content_json || {} })));
+                    }
+                });
+            }
 
             if (hData) {
                 // Lọc dữ liệu: Chỉ giữ bài làm nghiêm túc
@@ -408,34 +421,42 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       sessionStorage.setItem('portal_current_folder_id', id);
   };
 
-  const handleStartTestClick = (test: any) => {
+  const handleStartTestClick = async (test: any) => {
     if (!onStartTest) return;
     
-    const category = test.content_json?.basicInfo?.category;
+    // Always fetch full test data (with content_json) for the specific test being started
+    const { data: fullTest } = await supabase.from('tests').select('*').eq('id', test.id).single();
+    const testData = fullTest || test;
+    // Parse content_json if it's a string
+    if (typeof testData.content_json === 'string') {
+        try { testData.content_json = JSON.parse(testData.content_json); } catch(e) { testData.content_json = {}; }
+    }
+    
+    const category = testData.content_json?.basicInfo?.category;
     if (category === 'game') {
-      const theme = test.content_json?.basicInfo?.gameTheme || 'siege-game';
-      onStartTest(theme, test);
+      const theme = testData.content_json?.basicInfo?.gameTheme || 'siege-game';
+      onStartTest(theme, testData);
       return; 
     }
     
-    const type = String(test.test_type || '').toLowerCase();
+    const type = String(testData.test_type || '').toLowerCase();
     if (type === 'igcse-direct') {
-        onStartTest('igcse-direct', test);
+        onStartTest('igcse-direct', testData);
     } else if (type.includes('igcse')) {
-        onStartTest('igcse', test);
+        onStartTest('igcse', testData);
     } else if (type.includes('standard')) {
-        onStartTest('standard', test);
+        onStartTest('standard', testData);
     } else if (type.includes('case-study') || type.includes('business')) {
-        onStartTest('case-study', test);
+        onStartTest('case-study', testData);
     } else if (type === 'ielts-writing') {
-        onStartTest('ielts-writing', test);
+        onStartTest('ielts-writing', testData);
     } else if (type === 'ielts-speaking') {
-        onStartTest('ielts-speaking', test);
+        onStartTest('ielts-speaking', testData);
     } else if (type.includes('ielts')) { 
-      setTestToStart(test); 
+      setTestToStart(testData); 
       setShowModeSelection(true); 
     } else {
-        onStartTest('standard', test);
+        onStartTest('standard', testData);
     }
   };
 

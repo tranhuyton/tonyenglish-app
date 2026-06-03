@@ -1,0 +1,1 @@
+﻿import { supabase } from './src/supabase.ts'; async function run() { const res = await supabase.from('tests').insert([{ title: 'Test 123', test_type: 'Standard-Listening', content_json: {}, is_published: true }]); console.log(JSON.stringify(res, null, 2)); } run();
