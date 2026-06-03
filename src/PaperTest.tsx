@@ -863,7 +863,7 @@ const handleFinish = async () => {
       <div className="flex flex-col h-screen items-center justify-center bg-[#f3f4f6] font-serif">
         {isListening && audioPlaylist.length > 0 && <audio ref={globalAudioRef} src={audioPlaylist[0]} preload="auto" className="hidden" />}
         <div className="bg-white p-10 rounded-2xl shadow-xl text-center max-w-lg border border-gray-200 w-full font-sans">
-          <div className="text-6xl mb-6">{(isListening && audioPlaylist.length > 0) ? '🎧' : '📝'}</div>
+          <div className="text-6xl mb-6">{isListening ? '🎧' : '📝'}</div>
           <h1 className="text-2xl font-black text-slate-800 mb-2">{basicInfo.title}</h1>
           {basicInfo?.category === 'exercise' ? (
               <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">BÀI TẬP</p>
