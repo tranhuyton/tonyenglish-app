@@ -42,6 +42,10 @@ const getTestSkillConfig = (test: any) => {
   const type = String(test.test_type || '').toLowerCase();
   const title = String(test.title || '').toLowerCase();
 
+  if (type === 'standard-listening' && !checkTestHasAudio(test)) {
+      return { icon: '📖', bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200' };
+  }
+
   if (type.includes('listening') || title.includes('listening')) 
       return { icon: '🎧', bg: 'bg-amber-50', text: 'text-amber-600', border: 'border-amber-200' };
   if (type.includes('speaking') || title.includes('speaking')) 
