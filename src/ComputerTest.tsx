@@ -1077,7 +1077,7 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
       {!testStarted ? (
         <div className="flex flex-col h-screen items-center justify-center bg-[#eeeeee] font-sans">
           <div className="bg-white p-10 rounded-none border border-slate-300 shadow-sm text-center max-w-lg w-full">
-            <div className="text-6xl mb-6">{isListening ? '🎧' : '💻'}</div>
+            <div className="text-6xl mb-6">{(isListening && audioPlaylist.length > 0) ? '🎧' : '💻'}</div>
             <h1 className="text-2xl font-black text-slate-900 mb-2">{basicInfo.title || "IELTS Test"}</h1>
             {basicInfo?.category === 'exercise' ? (
                 <p className="text-emerald-600 font-black tracking-widest uppercase mb-8">BÀI TẬP</p>

@@ -710,7 +710,7 @@ const handleFinish = async () => {
         <header className={`h-[60px] border-b border-slate-200 flex justify-between items-center px-6 shrink-0 shadow-sm z-20 ${isReviewMode ? 'bg-emerald-700 text-white border-none' : 'bg-white text-slate-800'}`}>
           <div className="font-black text-[16px] flex items-center gap-3 uppercase tracking-tight">
             <span className={`text-xl ${isReviewMode ? 'opacity-100' : 'opacity-70'}`}>
-                {isListening ? '🎧' : '📖'}
+                {(isListening && hasAnyAudio) ? '🎧' : '📖'}
             </span>
             <span className="truncate max-w-[200px] md:max-w-xl">
                 {isReviewMode ? `[CHỮA BÀI] ${basicInfo?.title}` : basicInfo?.title}
