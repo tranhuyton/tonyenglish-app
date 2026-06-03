@@ -1195,8 +1195,8 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                   </div>
                </div>
             ) : (
-               <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[15px] tracking-widest ${timeLeft <= 300 ? 'text-red-500 animate-pulse' : 'text-white'}`}>
-                  {formatTime(timeLeft)}
+               <div className={`absolute left-1/2 -translate-x-1/2 font-bold text-[15px] tracking-widest ${basicInfo?.category === 'exercise' ? 'text-[#0ea5e9]' : (timeLeft <= 300 ? 'text-red-500 animate-pulse' : 'text-white')}`}>
+                  {basicInfo?.category === 'exercise' ? 'BÀI TẬP' : formatTime(timeLeft)}
                </div>
             )}
 

@@ -1148,8 +1148,8 @@ const handleFinish = async () => {
         <div className="flex items-center gap-4 shrink-0">
           {!isReviewMode && <button onClick={clearDraft} className="text-sm text-gray-500 hover:text-red-500 font-medium">Xóa nháp</button>}
           {isReviewMode && <button onClick={resetTest} className="text-sm bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded font-bold transition border border-gray-300">🔄 Làm Lại</button>}
-          <div className={`font-mono text-xl px-4 py-1 rounded-md shadow-inner tracking-wider font-bold ${isReviewMode ? 'bg-emerald-600 text-white' : 'bg-gray-800 text-white'}`}>
-              {isReviewMode ? `Band ${scoreResult.band}` : formatTime(timeLeft)}
+          <div className={`font-mono text-xl px-4 py-1 rounded-md shadow-inner tracking-wider font-bold ${isReviewMode ? 'bg-emerald-600 text-white' : (basicInfo?.category === 'exercise' ? 'bg-[#0ea5e9] text-white' : 'bg-gray-800 text-white')}`}>
+              {isReviewMode ? `Band ${scoreResult.band}` : (basicInfo?.category === 'exercise' ? 'BÀI TẬP' : formatTime(timeLeft))}
           </div>
         </div>
       </header>
