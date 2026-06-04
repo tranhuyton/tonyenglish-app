@@ -323,6 +323,12 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
 
   useEffect(() => {
     if (testData && !isReviewMode) {
+       const isExercise = testData.content_json?.basicInfo?.category === 'exercise';
+       if (isExercise) {
+           setTimeLeft(999999);
+           setIsLoading(false);
+           return;
+       }
        const rawTime = testData.json_config?.timeLimit || testData.timeLimit || testData.time_limit || 120;
        const initialSeconds = parseInt(rawTime) * 60;
        let currentEndTime = getSavedEndTime(testData.id);
@@ -357,7 +363,9 @@ export default function IgcseDirectPaperTest({ onBack, onStartTest, testData: pr
   const handleZoomOut = () => setZoomLevel(prev => Math.max(prev - 0.2, 0.6));
 
   const handleSubmit = async () => {
-    if (timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi? AI sẽ phân tích hình ảnh mất khoảng 10-20 giây.")) { return; }
+    const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
+    if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi? AI sẽ phân tích hình ảnh mất khoảng 10-20 giây.")) { return; }
+    if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) { return; }
 
     setIsSubmitting(true);
     isFinishingRef.current = true;

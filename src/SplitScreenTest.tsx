@@ -59,9 +59,15 @@ export default function SplitScreenTest({ onBack, onStartTest }: { onBack?: () =
     }
   }, [answers, testData?.id, gradeResult, isReviewMode]);
 
-  // Khởi tạo thời gian thực cho bài thi
+  // Khởi tạo thời gian thực cho bài thi — skip cho exercises
   useEffect(() => {
     if (testData && !isReviewMode) {
+       const isExercise = testData.content_json?.basicInfo?.category === 'exercise';
+       if (isExercise) {
+           setTimeLeft(999999);
+           setIsLoading(false);
+           return;
+       }
        const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
        const configuredTime = parseInt(rawTime) || 90;
        const initialSeconds = configuredTime * 60;
@@ -97,13 +103,17 @@ export default function SplitScreenTest({ onBack, onStartTest }: { onBack?: () =
 
   const handleSubmit = async () => {
     const currentAnswers = answersRef.current;
-    if (Object.keys(currentAnswers).length === 0 && timeLeft > 0) {
+    const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
+    if (Object.keys(currentAnswers).length === 0) {
       alert("⚠️ Bạn chưa điền câu trả lời nào cả!");
       return;
     }
 
-    if (timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) {
+    if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) {
       return; 
+    }
+    if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) {
+      return;
     }
 
     setIsSubmitting(true);

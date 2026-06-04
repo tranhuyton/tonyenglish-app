@@ -68,9 +68,16 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
     }
   }, [answers, testData?.id, gradeResult, isReviewMode]);
 
-  // Initialize timer
+  // Initialize timer — skip entirely for exercises
   useEffect(() => {
     if (testData && !isReviewMode) {
+       const isExercise = testData.content_json?.basicInfo?.category === 'exercise';
+       if (isExercise) {
+           // Exercises have no timer — just mark loading done
+           setTimeLeft(999999);
+           setIsLoading(false);
+           return;
+       }
        const rawTime = testData.json_config?.timeLimit || testData.timeLimit || testData.time_limit || 120;
        const initialSeconds = parseInt(rawTime) * 60;
        let currentEndTime = getSavedEndTime(testData.id);
@@ -361,10 +368,12 @@ export default function IgcsePaperTest({ onBack, onStartTest, testData: propTest
   // Submit and grade via edge function
   const handleSubmit = async () => {
     const currentAnswers = answersRef.current;
-    if (Object.keys(currentAnswers).length === 0 && timeLeft > 0) {
+    const isExercise = testData?.content_json?.basicInfo?.category === 'exercise';
+    if (Object.keys(currentAnswers).length === 0) {
       alert("⚠️ Bạn chưa điền câu trả lời nào cả!"); return;
     }
-    if (timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) { return; }
+    if (!isExercise && timeLeft > 0 && !window.confirm("Bạn có chắc chắn muốn nộp bài thi?")) { return; }
+    if (isExercise && !window.confirm("Bạn có chắc chắn muốn nộp bài?")) { return; }
 
     setIsSubmitting(true);
     isFinishingRef.current = true;
