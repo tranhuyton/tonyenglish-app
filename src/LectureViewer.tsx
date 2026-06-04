@@ -1317,6 +1317,20 @@ export default function LectureViewer({
          </div>
 
          <div className="flex items-center gap-2 sm:gap-3 shrink-0 ml-2">
+             <button
+                 onClick={() => {
+                     sessionStorage.setItem('portal_selected_course_id', courseId);
+                     sessionStorage.setItem('portal_active_view', 'course');
+                     sessionStorage.setItem('portal_current_folder_id', '');
+                     sessionStorage.setItem('lms_portal_tab', 'library');
+                     onBack();
+                 }}
+                 className="flex items-center gap-2 px-3 py-2 md:px-4 md:h-10 rounded-full text-[13px] md:text-[14px] font-semibold transition-all bg-white/15 hover:bg-white/25 text-white border border-white/20 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                 title="Đi đến kho đề của khóa học"
+             >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                <span className="hidden sm:inline">Kho đề</span>
+             </button>
              {!(course?.title || '').toLowerCase().includes('ielts') && (
                  <button 
                      onClick={() => { 
