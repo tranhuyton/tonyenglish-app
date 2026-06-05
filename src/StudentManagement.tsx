@@ -42,7 +42,7 @@ export default function StudentManagement({ onStartTest }: { onStartTest?: any }
   useEffect(() => {
     fetchStudents();
     fetchCourses();
-    supabase.from('tests').select('*').then(({data}) => setAllTests(data || []));
+    supabase.from('tests').select('id, title, test_type, course_id, insert_pdf_url, json_config, skill, time_limit').then(({data}) => setAllTests(data || []));
   }, []);
 
   useEffect(() => {
@@ -218,10 +218,20 @@ export default function StudentManagement({ onStartTest }: { onStartTest?: any }
   };
 
   // 🚀 HÀM MỞ BÀI THI CHI TIẾT TỪ ADMIN
-  const handleReviewTest = (h: any) => {
+  const handleReviewTest = async (h: any) => {
     const testId = h.details?.test_id || h.test_id;
     let foundTest = allTests.find(t => String(t.id) === String(testId));
-    if (!foundTest) foundTest = allTests.find(t => t.title.trim() === h.test_title?.trim());
+    if (!foundTest) foundTest = allTests.find(t => t.title?.trim() === h.test_title?.trim());
+    
+    // Fallback: fetch directly from DB if not found in cache
+    if (!foundTest && testId) {
+        const { data } = await supabase.from('tests').select('id, title, test_type, course_id, insert_pdf_url, json_config, skill, time_limit').eq('id', testId).single();
+        if (data) foundTest = data;
+    }
+    if (!foundTest && h.test_title) {
+        const { data } = await supabase.from('tests').select('id, title, test_type, course_id, insert_pdf_url, json_config, skill, time_limit').eq('title', h.test_title.trim()).limit(1).single();
+        if (data) foundTest = data;
+    }
     
     if (foundTest && onStartTest) {
         const type = String(foundTest.test_type || '').toLowerCase();
