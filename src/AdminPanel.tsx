@@ -799,19 +799,21 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleDuplicateTest = async (testData: any) => {
-    // Fetch full test data if content_json is not available (library view doesn't load it)
-    let contentJson = testData.content_json;
-    if (contentJson === undefined) {
-        const { data: fullTest } = await supabase.from('tests').select('content_json').eq('id', testData.id).single();
-        if (!fullTest) return alert("Lỗi tải dữ liệu đề thi gốc!");
-        contentJson = fullTest.content_json;
-    }
+    // Fetch full test data to ensure all fields are available
+    const { data: fullTest } = await supabase.from('tests').select('*').eq('id', testData.id).single();
+    if (!fullTest) return alert("Lỗi tải dữ liệu đề thi gốc!");
+    
     const { data: newTest, error: err } = await supabase.from('tests').insert([{ 
-       title: testData.title + ' (Bản sao)', 
-       course_id: testData.course_id, 
-       folder_id: testData.folder_id, 
-       test_type: testData.test_type,
-       content_json: contentJson,
+       title: fullTest.title + ' (Bản sao)', 
+       course_id: fullTest.course_id, 
+       folder_id: fullTest.folder_id, 
+       test_type: fullTest.test_type,
+       content_json: fullTest.content_json,
+       json_config: fullTest.json_config,
+       insert_pdf_url: fullTest.insert_pdf_url,
+       pdf_url: fullTest.pdf_url,
+       skill: fullTest.skill,
+       time_limit: fullTest.time_limit,
        is_published: false,
        order_index: libraryTests.length + 1 
     }]).select().single();
