@@ -101,6 +101,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [unreadCount, setUnreadCount] = useState(0);
   const notifRef = useRef<HTMLDivElement>(null);
   const [viewingNotif, setViewingNotif] = useState<any>(null);
+  const [notifTargetUserId, setNotifTargetUserId] = useState<string | null>(null);
+  const [notifTargetTab, setNotifTargetTab] = useState<string | null>(null);
 
   const fetchNotifications = async () => {
     try {
@@ -977,7 +979,14 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                 <div className="p-6 text-center text-slate-400 text-sm font-medium">Chưa có thông báo nào.</div>
                             ) : (
                                 notifications.map(notif => (
-                                    <div key={notif.id} onClick={() => { setViewingNotif(notif); setShowNotifications(false); }} className={`p-4 border-b border-slate-50 hover:bg-slate-100 transition-colors cursor-pointer ${!notif.is_read ? 'bg-blue-50/30' : ''}`}>
+                                    <div key={notif.id} onClick={() => {
+                                        setShowNotifications(false);
+                                        // Determine which tab to auto-open based on action type
+                                        const targetTab = notif.action_type === 'finish_test' ? 'history' : 'activity';
+                                        setNotifTargetUserId(notif.user_id);
+                                        setNotifTargetTab(targetTab);
+                                        setActiveTab('students');
+                                    }} className={`p-4 border-b border-slate-50 hover:bg-slate-100 transition-colors cursor-pointer ${!notif.is_read ? 'bg-blue-50/30' : ''}`}>
                                         <p className="text-[13px] text-slate-700 leading-snug">
                                             <span className="font-bold text-[#0a5482]">{notif.user?.full_name || notif.user?.email || 'Học viên'}</span>
                                             {notif.action_type === 'login' && ' vừa đăng nhập vào hệ thống.'}
@@ -1616,7 +1625,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             </div>
           )}
 
-          {activeTab === 'students' && <StudentManagement onStartTest={onStartTest} />}
+          {activeTab === 'students' && <StudentManagement onStartTest={onStartTest} autoSelectUserId={notifTargetUserId} autoTab={notifTargetTab as any} onAutoSelectDone={() => { setNotifTargetUserId(null); setNotifTargetTab(null); }} />}
         </div>
 
         {/* ========================================================================================= */}
@@ -1756,62 +1765,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
             </div>
         )}
 
-        {/* 🚀 POPUP CHI TIẾT THÔNG BÁO TỪ CHUÔNG */}
-        {viewingNotif && (
-            <div className="fixed inset-0 bg-slate-900/60 z-[100] flex items-center justify-center p-4 animate-in fade-in">
-                <div className="bg-white rounded-3xl w-full max-w-md p-8 shadow-2xl animate-in zoom-in-95 relative">
-                    <button onClick={() => setViewingNotif(null)} className="absolute top-6 right-6 text-slate-400 hover:text-red-500 font-black text-xl transition-colors">&times;</button>
-                    
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-inner text-2xl bg-[#0a5482] border-4 border-slate-100">
-                        {viewingNotif.action_type === 'login' ? '🔑' : viewingNotif.action_type === 'finish_test' ? '📝' : viewingNotif.action_type === 'call_tutor' ? '🎙️' : '📖'}
-                    </div>
-                    
-                    <h2 className="text-lg font-black text-center text-slate-800 uppercase tracking-tight mb-2">
-                        {viewingNotif.user?.full_name || 'Học viên'}
-                    </h2>
-                    <p className="text-center text-slate-500 text-[12px] font-bold mb-6">{formatDateTime(viewingNotif.created_at)}</p>
-
-                    <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-6">
-                        {viewingNotif.action_type === 'login' && (
-                            <p className="text-center text-[14px] text-slate-700 font-medium">Học viên vừa truy cập vào không gian học tập LMS.</p>
-                        )}
-                        
-                        {viewingNotif.action_type === 'finish_test' && (
-                            <div className="text-center">
-                                <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-1">Nộp bài kiểm tra</p>
-                                <p className="font-black text-slate-800 text-[15px] mb-4">{viewingNotif.details?.test_title}</p>
-                                <div className="inline-block bg-white border border-emerald-200 rounded-lg px-6 py-3 shadow-sm">
-                                    <span className="text-[10px] block font-bold text-emerald-600 uppercase tracking-widest mb-1">Kết quả</span>
-                                    <span className="text-2xl font-black text-emerald-600">{viewingNotif.details?.score} <span className="text-lg text-emerald-400">/ {viewingNotif.details?.total}</span></span>
-                                </div>
-                            </div>
-                        )}
-
-                        {viewingNotif.action_type === 'call_tutor' && (
-                            <div>
-                                <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-1 text-center">Cuộc gọi Gia Sư AI</p>
-                                <p className="text-center text-blue-600 font-black text-xl mb-4">{viewingNotif.details?.duration} giây</p>
-                                <div className="bg-white border border-slate-200 p-4 rounded-lg">
-                                    <span className="text-[10px] block font-bold text-slate-400 uppercase tracking-widest mb-2">Nội dung / Câu hỏi:</span>
-                                    <p className="text-[13px] text-slate-700 italic leading-relaxed font-serif">"{viewingNotif.details?.topic}"</p>
-                                </div>
-                            </div>
-                        )}
-
-                        {viewingNotif.action_type === 'finish_lecture' && (
-                            <div className="text-center">
-                                <p className="text-[12px] font-bold text-slate-500 uppercase tracking-widest mb-1">Hoàn thành bài giảng</p>
-                                <p className="font-black text-[#0a5482] text-[15px]">{viewingNotif.details?.lecture_title}</p>
-                            </div>
-                        )}
-                    </div>
-
-                    <button onClick={() => { setViewingNotif(null); setActiveTab('students'); }} className="w-full bg-[#0a5482] hover:bg-[#084266] text-white font-black py-3.5 rounded-xl shadow-md transition-colors text-[13px] uppercase tracking-widest">
-                        Tới Quản lý Học viên
-                    </button>
-                </div>
-            </div>
-        )}
 
         {/* Modal TẠO FOLDER PDF MỚI */}
         {showPdfFolderModal && (

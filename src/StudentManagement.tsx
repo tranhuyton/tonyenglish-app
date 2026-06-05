@@ -10,7 +10,7 @@ const authSupabase = createClient(
 
 let studentSearchTimer: any;
 
-export default function StudentManagement({ onStartTest }: { onStartTest?: any }) {
+export default function StudentManagement({ onStartTest, autoSelectUserId, autoTab, onAutoSelectDone }: { onStartTest?: any, autoSelectUserId?: string | null, autoTab?: 'courses' | 'history' | 'activity' | null, onAutoSelectDone?: () => void }) {
   const [students, setStudents] = useState<any[]>([]);
   const [courses, setCourses] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -48,6 +48,21 @@ export default function StudentManagement({ onStartTest }: { onStartTest?: any }
   useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery]);
+
+  // Auto-select student from notification click
+  useEffect(() => {
+    if (autoSelectUserId && students.length > 0) {
+      const target = students.find(s => s.id === autoSelectUserId);
+      if (target) {
+        handleSelectStudent(target);
+        if (autoTab) {
+          // Delay slightly to ensure state is set after handleSelectStudent
+          setTimeout(() => setActiveDetailTab(autoTab), 100);
+        }
+      }
+      onAutoSelectDone?.();
+    }
+  }, [autoSelectUserId, students]);
 
   const fetchStudents = async () => {
     setIsLoading(true);
