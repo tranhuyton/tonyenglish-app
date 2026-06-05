@@ -15,6 +15,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   const [courses, setCourses] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
+  const [statusFilter, setStatusFilter] = useState<'active' | 'inactive' | 'all'>('active');
   
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
@@ -180,7 +181,7 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
   };
 
   const handleDeleteUser = async (id: string, name: string) => {
-    if (!window.confirm(`Anh có chắc chắn muốn xóa VĨNH VIỄN tài khoản của ${name || 'học viên này'} không? Toàn bộ lịch sử làm bài sẽ bị mất!`)) return;
+    if (!window.confirm(`Anh có chắc chắn muốn xóa VĨNH VIỄN tài khoản của ${name || 'học viên này'} không? Toàn bộ lịch sử làm bài sẽ bị mất!\n\n💡 Gợi ý: Nên dùng nút "Tạm dừng" thay vì xóa để giữ lại lịch sử.`)) return;
 
     try {
       const { error } = await supabase.rpc('delete_admin_user', { target_user_id: id });
@@ -284,11 +285,43 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     return `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth() + 1).toString().padStart(2, '0')}/${d.getFullYear()} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
   };
 
-  const filteredStudents = students.filter(s => 
-    (s.email && s.email.toLowerCase().includes(searchQuery.toLowerCase())) ||
-    (s.full_name && s.full_name.toLowerCase().includes(searchQuery.toLowerCase())) ||
-    (s.phone && s.phone.includes(searchQuery))
-  );
+  // Toggle student status (active <-> inactive)
+  const handleToggleStatus = async (student: any) => {
+    const isCurrentlyActive = student.status !== 'inactive';
+    const newStatus = isCurrentlyActive ? 'inactive' : 'active';
+    const action = isCurrentlyActive ? 'TẠM DỪNG' : 'KÍCH HOẠT LẠI';
+    
+    if (!window.confirm(`${action} tài khoản của ${student.full_name || student.email}?${isCurrentlyActive ? '\n\nHọc viên sẽ không thể đăng nhập cho đến khi được kích hoạt lại. Toàn bộ lịch sử được giữ nguyên.' : ''}`)) return;
+    
+    try {
+      const { error } = await supabase.from('profiles').update({ status: newStatus }).eq('id', student.id);
+      if (error) throw error;
+      
+      alert(`✅ Đã ${action.toLowerCase()} tài khoản thành công!`);
+      
+      // Update local state
+      setStudents(prev => prev.map(s => s.id === student.id ? { ...s, status: newStatus } : s));
+      if (selectedStudent?.id === student.id) {
+        setSelectedStudent({ ...selectedStudent, status: newStatus });
+      }
+    } catch (err: any) {
+      alert('❌ Lỗi: ' + err.message);
+    }
+  };
+
+  const filteredStudents = students.filter(s => {
+    // Status filter
+    if (statusFilter === 'active' && s.status === 'inactive') return false;
+    if (statusFilter === 'inactive' && s.status !== 'inactive') return false;
+    
+    // Search filter
+    if (!searchQuery) return true;
+    return (
+      (s.email && s.email.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      (s.full_name && s.full_name.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      (s.phone && s.phone.includes(searchQuery))
+    );
+  });
 
   const totalPages = Math.ceil(filteredStudents.length / itemsPerPage);
   const paginatedStudents = filteredStudents.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
@@ -541,21 +574,36 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     <>
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden animate-in fade-in duration-300 flex flex-col h-[calc(100vh-120px)]">
         <div className="bg-slate-50 px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 shrink-0">
-          <h2 className="font-black text-xl text-[#0a5482]">Quản lý Tài Khoản</h2>
-          <div className="relative w-full sm:w-80">
-            <input 
-              type="text" 
-              placeholder="Tìm kiếm theo email, tên, SĐT..." 
-              defaultValue={searchQuery}
-              onChange={(e) => {
-                clearTimeout(studentSearchTimer);
-                studentSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350);
-              }} 
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 font-medium text-[13px] outline-none focus:border-[#0a5482] focus:ring-1 focus:ring-[#0a5482] bg-white transition-all shadow-sm" 
-            />
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+          <div className="flex items-center gap-4">
+            <h2 className="font-black text-xl text-[#0a5482]">Quản lý Tài Khoản</h2>
+            <div className="flex bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
+              <button onClick={() => { setStatusFilter('active'); setCurrentPage(1); }} className={`px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors ${statusFilter === 'active' ? 'bg-emerald-500 text-white' : 'text-slate-500 hover:bg-slate-50'}`}>
+                Đang học ({students.filter(s => s.status !== 'inactive').length})
+              </button>
+              <button onClick={() => { setStatusFilter('inactive'); setCurrentPage(1); }} className={`px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors border-l border-slate-200 ${statusFilter === 'inactive' ? 'bg-slate-500 text-white' : 'text-slate-500 hover:bg-slate-50'}`}>
+                Tạm dừng ({students.filter(s => s.status === 'inactive').length})
+              </button>
+              <button onClick={() => { setStatusFilter('all'); setCurrentPage(1); }} className={`px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors border-l border-slate-200 ${statusFilter === 'all' ? 'bg-[#0a5482] text-white' : 'text-slate-500 hover:bg-slate-50'}`}>
+                Tất cả
+              </button>
+            </div>
           </div>
-          <button onClick={() => setShowCreateUserModal(true)} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold px-6 py-2.5 rounded-xl transition shadow-md text-sm whitespace-nowrap">+ Tạo Tài Khoản</button>
+          <div className="flex items-center gap-3">
+            <div className="relative w-full sm:w-72">
+              <input 
+                type="text" 
+                placeholder="Tìm kiếm theo email, tên, SĐT..." 
+                defaultValue={searchQuery}
+                onChange={(e) => {
+                  clearTimeout(studentSearchTimer);
+                  studentSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350);
+                }} 
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 font-medium text-[13px] outline-none focus:border-[#0a5482] focus:ring-1 focus:ring-[#0a5482] bg-white transition-all shadow-sm" 
+              />
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">🔍</span>
+            </div>
+            <button onClick={() => setShowCreateUserModal(true)} className="bg-[#0a5482] hover:bg-[#084266] text-white font-bold px-6 py-2.5 rounded-xl transition shadow-md text-sm whitespace-nowrap">+ Tạo Tài Khoản</button>
+          </div>
         </div>
 
         <div className="flex-1 flex flex-col overflow-hidden">
@@ -573,20 +621,20 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                       <th className="px-6 py-4">Tài Khoản (Email)</th>
                       <th className="px-6 py-4">Số Điện Thoại</th>
                       <th className="px-6 py-4">Họ và Tên</th>
-                      <th className="px-6 py-4">Phân quyền</th>
+                      <th className="px-6 py-4">Trạng thái</th>
                       <th className="px-6 py-4 text-center">Ngày tạo</th>
                       <th className="px-6 py-4 text-right">Hành động</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">
                     {paginatedStudents.map((student, index) => (
-                      <tr key={student.id} className="hover:bg-blue-50/50 transition-colors group">
+                      <tr key={student.id} className={`hover:bg-blue-50/50 transition-colors group ${student.status === 'inactive' ? 'opacity-60' : ''}`}>
                         <td className="px-6 py-4 text-center font-bold text-slate-400 text-[13px]">
                           {(currentPage - 1) * itemsPerPage + index + 1}
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex items-center gap-3">
-                            <div className={`w-10 h-10 rounded-full text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-inner ${student.role === 'admin' ? 'bg-red-500' : 'bg-[#0a5482]'}`}>
+                            <div className={`w-10 h-10 rounded-full text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-inner ${student.status === 'inactive' ? 'bg-slate-400' : student.role === 'admin' ? 'bg-red-500' : 'bg-[#0a5482]'}`}>
                               {student.full_name ? student.full_name.trim().split(/\s+/).pop()?.charAt(0).toUpperCase() : (student.email ? student.email.charAt(0).toUpperCase() : 'U')}
                             </div>
                             <div className="text-[13px] font-bold text-slate-700">{student.email}</div>
@@ -603,12 +651,15 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                           </div>
                         </td>
                         <td className="px-6 py-4">
-                          <span className={`px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider border ${student.role === 'admin' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-emerald-50 text-emerald-600 border-emerald-200'}`}>{student.role || 'Student'}</span>
+                          <div className="flex flex-col gap-1">
+                            <span className={`px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider border w-fit ${student.role === 'admin' ? 'bg-red-50 text-red-600 border-red-200' : 'bg-emerald-50 text-emerald-600 border-emerald-200'}`}>{student.role || 'Student'}</span>
+                            {student.status === 'inactive' && <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-slate-100 text-slate-500 border border-slate-200 w-fit">⏸ Tạm dừng</span>}
+                          </div>
                         </td>
                         <td className="px-6 py-4 text-slate-600 font-medium text-[13px] text-center">
                           {formatDate(student.created_at).split(' ')[0]}
                         </td>
-                        <td className="px-6 py-4 text-right flex items-center justify-end gap-2">
+                        <td className="px-6 py-4 text-right flex items-center justify-end gap-1.5">
                           <button onClick={() => handleSelectStudent(student)} className="text-[#0a5482] font-bold text-[12px] bg-white hover:bg-[#0a5482] hover:text-white px-4 py-2 rounded-lg transition-all border border-slate-200 shadow-sm uppercase tracking-wider">
                             Cấu hình & Tiến độ
                           </button>
@@ -616,8 +667,12 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
                           <button onClick={() => setEditingUser(student)} className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-colors border border-transparent hover:border-blue-200" title="Sửa thông tin">
                             ✏️
                           </button>
+
+                          <button onClick={() => handleToggleStatus(student)} className={`p-2 rounded-lg transition-colors border border-transparent ${student.status === 'inactive' ? 'text-emerald-500 hover:text-emerald-600 hover:bg-emerald-50 hover:border-emerald-200' : 'text-amber-500 hover:text-amber-600 hover:bg-amber-50 hover:border-amber-200'}`} title={student.status === 'inactive' ? 'Kích hoạt lại' : 'Tạm dừng'}>
+                            {student.status === 'inactive' ? '▶️' : '⏸️'}
+                          </button>
     
-                          <button onClick={() => handleDeleteUser(student.id, student.full_name)} className="text-slate-400 hover:text-red-500 hover:bg-red-50 p-2 rounded-lg transition-colors border border-transparent hover:border-red-200" title="Xóa tài khoản">
+                          <button onClick={() => handleDeleteUser(student.id, student.full_name)} className="text-slate-400 hover:text-red-500 hover:bg-red-50 p-2 rounded-lg transition-colors border border-transparent hover:border-red-200" title="Xóa vĩnh viễn">
                             🗑️
                           </button>
                         </td>
