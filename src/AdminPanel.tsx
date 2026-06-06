@@ -392,13 +392,15 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     const { data: ast } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('course_id', courseId).order('order_index', { ascending: true });
     setAssignedTests(ast || []);
     
-    // Lazy-load content_json (only basicInfo needed) in background for deadline/category features
+    // Lazy-load content_json in background for deadline/category features
     if (ast && ast.length > 0) {
+      const loadedCourseId = courseId; // Closure to detect stale responses
       supabase.from('tests').select('id, content_json').eq('course_id', courseId).then(({ data: cjData }) => {
-        if (cjData) {
+        if (cjData && selectedCourse?.id === loadedCourseId) {
+          const cjMap = new Map(cjData.map(c => [c.id, c.content_json]));
           setAssignedTests(prev => prev.map(t => {
-            const match = cjData.find(c => c.id === t.id);
-            return match ? { ...t, content_json: match.content_json } : t;
+            const cj = cjMap.get(t.id);
+            return cj !== undefined ? { ...t, content_json: cj } : t;
           }));
         }
       });
@@ -795,8 +797,24 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const handleAssignTest = async (testId: string) => {
     if (!currentFolderId) return;
+    
+    // Optimistic update: immediately move test to folder in UI
+    const testToAssign = libraryTests.find(t => t.id === testId);
+    if (testToAssign) {
+      const updatedTest = { ...testToAssign, folder_id: currentFolderId };
+      setAssignedTests(prev => {
+        // Add or update the test in assigned list
+        const exists = prev.some(t => t.id === testId);
+        if (exists) return prev.map(t => t.id === testId ? updatedTest : t);
+        return [...prev, updatedTest];
+      });
+      setLibraryTests(prev => prev.map(t => t.id === testId ? updatedTest : t));
+    }
+    
+    // Persist to DB
     await supabase.from('tests').update({ folder_id: currentFolderId }).eq('id', testId);
-    fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); 
+    // Background refresh to sync
+    fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
   };
 
   const handleUnassignTest = async (testId: string) => {
