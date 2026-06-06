@@ -35,6 +35,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [lectureCurrentPage, setLectureCurrentPage] = useState(1);
   const lectureItemsPerPage = 20;
   const [targetMoveCourseId, setTargetMoveCourseId] = useState('');
+  const [targetMoveTestCourseId, setTargetMoveTestCourseId] = useState('');
 
   const [lectureModules, setLectureModules] = useState<any[]>([]);
   const [lectures, setLectures] = useState<any[]>([]);
@@ -873,6 +874,43 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     }
   };
 
+  const handleBulkDuplicateTests = async () => {
+    if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
+    if (!window.confirm(`Nhân bản ${selectedTests.length} đề thi đã chọn?`)) return;
+    let successCount = 0;
+    for (const testId of selectedTests) {
+      const { data: fullTest } = await supabase.from('tests').select('*').eq('id', testId).single();
+      if (!fullTest) continue;
+      const { id, created_at, ...rest } = fullTest;
+      const { error } = await supabase.from('tests').insert([{
+        ...rest,
+        title: fullTest.title + ' (Bản sao)',
+        folder_id: null,
+        is_published: false,
+        order_index: libraryTests.length + successCount + 1
+      }]);
+      if (!error) successCount++;
+    }
+    fetchLibraryTests(); setSelectedTests([]);
+    alert(`✅ Đã nhân bản thành công ${successCount}/${selectedTests.length} đề thi!`);
+  };
+
+  const handleBulkMoveTestCourse = async () => {
+    if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
+    if (!targetMoveTestCourseId) return alert("Vui lòng chọn khóa học đích để chuyển tới!");
+    if (window.confirm(`Chuyển ${selectedTests.length} đề thi sang khóa học đã chọn?`)) {
+      await supabase.from('tests').update({
+        course_id: targetMoveTestCourseId === 'none' ? null : targetMoveTestCourseId,
+        folder_id: null
+      }).in('id', selectedTests);
+      fetchLibraryTests();
+      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+      setSelectedTests([]);
+      setTargetMoveTestCourseId('');
+      alert("✅ Chuyển khóa học thành công!");
+    }
+  };
+
   const handleSelectAll = (e: React.ChangeEvent<HTMLInputElement>, filteredList: any[]) => {
     if (e.target.checked) setSelectedTests(filteredList.map(t => t.id)); else setSelectedTests([]);
   };
@@ -1588,11 +1626,24 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           {activeTab === 'library' && (
             <div className="space-y-4 md:space-y-6">
               <div className="flex flex-col lg:flex-row justify-between gap-3 md:gap-4 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm relative z-20">
-                <div className="flex bg-slate-100 rounded-lg p-1 border border-slate-200 shadow-sm shrink-0 w-full sm:w-auto overflow-x-auto custom-scrollbar">
+                <div className="flex flex-wrap items-center gap-3">
+                <div className="flex bg-slate-100 rounded-lg p-1 border border-slate-200 shadow-sm shrink-0 overflow-x-auto custom-scrollbar">
                   <button onClick={() => handleBulkVisibility(true)} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-emerald-600 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">👁️ Hiện</button>
                   <button onClick={() => handleBulkVisibility(false)} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-slate-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">👁️‍🗨️ Ẩn</button>
+                  <button onClick={handleBulkDuplicateTests} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-purple-600 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">📋 Nhân bản</button>
                   <button onClick={handleBulkDelete} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-red-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">🗑️ Xóa</button>
                 </div>
+
+                <div className="flex items-center gap-2 bg-blue-50 p-1.5 md:p-2 rounded-lg border border-blue-100 shadow-sm">
+                   <span className="text-[11px] font-bold text-blue-800 hidden sm:inline ml-1 uppercase tracking-tight">Chuyển:</span>
+                   <select value={targetMoveTestCourseId} onChange={e=>setTargetMoveTestCourseId(e.target.value)} className="border border-blue-200 bg-white rounded px-2 py-1 md:py-1.5 text-[11px] md:text-[13px] font-bold text-slate-700 outline-none w-[140px] md:w-[200px] truncate focus:border-[#0a5482]">
+                      <option value="">-- Chọn Khóa Học --</option>
+                      <option value="none">-- 📦 Không thuộc khóa nào --</option>
+                      {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
+                   </select>
+                   <button onClick={handleBulkMoveTestCourse} className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-3 py-1 md:py-1.5 rounded shadow-sm text-[11px] transition-colors whitespace-nowrap active:scale-95">ÁP DỤNG</button>
+                </div>
+              </div>
                 
                 <div className="flex flex-col sm:flex-row gap-3 flex-1 justify-end w-full lg:w-auto">
                   <input type="text" placeholder="Tìm kiếm tên..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-[200px] px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] text-[13px] md:text-sm transition-colors" />
