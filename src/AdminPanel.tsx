@@ -1396,7 +1396,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 <div className="bg-white rounded-2xl md:rounded-3xl border border-slate-200 overflow-hidden shadow-sm animate-in fade-in">
                   <div className="p-4 md:p-6 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
                     <div className="flex items-center gap-1 md:gap-2">
-                       {currentFolderId && <button onClick={() => setCurrentFolderId(null)} className="text-slate-400 hover:text-black font-bold mr-1 md:mr-2 transition text-[11px] md:text-[13px]">← Trở về</button>}
+                       {currentFolderId && <button onClick={() => {
+                         const currentFolder = folders.find(f => f.id === currentFolderId);
+                         setCurrentFolderId(currentFolder?.parent_id || null);
+                       }} className="text-slate-400 hover:text-black font-bold mr-1 md:mr-2 transition text-[11px] md:text-[13px]">← Trở về</button>}
                        <p className="font-black text-slate-500 text-[10px] md:text-xs uppercase tracking-widest truncate max-w-[150px] md:max-w-none">{currentFolderId ? `Mục: ${breadcrumbs[breadcrumbs.length-1]?.title}` : 'Thư mục gốc'}</p>
                     </div>
                     <button onClick={() => setShowFolderModal(true)} className="bg-[#00a651] hover:bg-[#008f45] transition text-white px-3 py-1.5 md:px-6 md:py-2.5 rounded-lg md:rounded-xl font-black text-[10px] md:text-xs shadow-md whitespace-nowrap">+ THƯ MỤC</button>
