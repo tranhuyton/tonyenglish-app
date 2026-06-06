@@ -75,6 +75,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [searchQuery, setSearchQuery] = useState('');
   const [filterCourse, setFilterCourse] = useState('all');
   const [filterCategory, setFilterCategory] = useState('all'); 
+  const [sortTest, setSortTest] = useState('date-desc');
+  const [sortLecture, setSortLecture] = useState('date-desc');
   const [selectedTests, setSelectedTests] = useState<string[]>([]);
   const [editingTest, setEditingTest] = useState<any>(null);
   const [igcseEditorOpen, setIgcseEditorOpen] = useState(false);
@@ -969,19 +971,39 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const currentPdfFiles = filteredPdfFiles.filter(f => isSearchingPdf ? true : ((pdfFileMapping[f.name] || null) === currentPdfFolderId));
 
-  const filteredLibraryTests = useMemo(() => libraryTests.filter(test => {
-      const matchesSearch = test.title.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCourse = filterCourse === 'all' || test.course_id === filterCourse;
-      // content_json is not loaded in library view for performance - category filter disabled
-      const matchesCategory = filterCategory === 'all';
-      return matchesSearch && matchesCourse && matchesCategory;
-  }), [libraryTests, searchQuery, filterCourse, filterCategory]);
+  const filteredLibraryTests = useMemo(() => {
+      let result = libraryTests.filter(test => {
+          const matchesSearch = test.title.toLowerCase().includes(searchQuery.toLowerCase());
+          const matchesCourse = filterCourse === 'all' || test.course_id === filterCourse;
+          const matchesCategory = filterCategory === 'all';
+          return matchesSearch && matchesCourse && matchesCategory;
+      });
+      result = [...result].sort((a, b) => {
+          if (sortTest === 'name-asc') return (a.title || '').localeCompare(b.title || '');
+          if (sortTest === 'name-desc') return (b.title || '').localeCompare(a.title || '');
+          if (sortTest === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
+          if (sortTest === 'date-asc') return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
+          if (sortTest === 'type') return (a.test_type || '').localeCompare(b.test_type || '');
+          return 0;
+      });
+      return result;
+  }, [libraryTests, searchQuery, filterCourse, filterCategory, sortTest]);
 
-  const filteredGlobalLectures = useMemo(() => globalLectures.filter(lec => {
-      const matchesSearch = lec.title.toLowerCase().includes(searchQuery.toLowerCase());
-      if (filterLectureCourse === 'all') return matchesSearch;
-      return matchesSearch && lec.course_id === filterLectureCourse;
-  }), [globalLectures, searchQuery, filterLectureCourse]);
+  const filteredGlobalLectures = useMemo(() => {
+      let result = globalLectures.filter(lec => {
+          const matchesSearch = lec.title.toLowerCase().includes(searchQuery.toLowerCase());
+          if (filterLectureCourse === 'all') return matchesSearch;
+          return matchesSearch && lec.course_id === filterLectureCourse;
+      });
+      result = [...result].sort((a, b) => {
+          if (sortLecture === 'name-asc') return (a.title || '').localeCompare(b.title || '');
+          if (sortLecture === 'name-desc') return (b.title || '').localeCompare(a.title || '');
+          if (sortLecture === 'date-desc') return new Date(b.updated_at || b.created_at || 0).getTime() - new Date(a.updated_at || a.created_at || 0).getTime();
+          if (sortLecture === 'date-asc') return new Date(a.updated_at || a.created_at || 0).getTime() - new Date(b.updated_at || b.created_at || 0).getTime();
+          return 0;
+      });
+      return result;
+  }, [globalLectures, searchQuery, filterLectureCourse, sortLecture]);
 
   const totalLecturePages = Math.ceil(filteredGlobalLectures.length / lectureItemsPerPage);
   const paginatedLectures = filteredGlobalLectures.slice((lectureCurrentPage - 1) * lectureItemsPerPage, lectureCurrentPage * lectureItemsPerPage);
@@ -1561,6 +1583,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       <option value="all">Tất cả khóa học</option>
                       {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                    </select>
+                   <select value={sortLecture} onChange={e => setSortLecture(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
+                      <option value="date-desc">🕐 Mới nhất</option>
+                      <option value="date-asc">🕐 Cũ nhất</option>
+                      <option value="name-asc">🔤 Tên A → Z</option>
+                      <option value="name-desc">🔤 Tên Z → A</option>
+                   </select>
                  </div>
               </div>
 
@@ -1656,6 +1684,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     <option value="all">Tất cả loại</option>
                     <option value="test">Chỉ Đề thi</option>
                     <option value="exercise">Chỉ Bài tập</option>
+                  </select>
+                  <select value={sortTest} onChange={e => setSortTest(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
+                    <option value="date-desc">🕐 Mới nhất</option>
+                    <option value="date-asc">🕐 Cũ nhất</option>
+                    <option value="name-asc">🔤 Tên A → Z</option>
+                    <option value="name-desc">🔤 Tên Z → A</option>
+                    <option value="type">📂 Theo loại đề</option>
                   </select>
                 </div>
               </div>
