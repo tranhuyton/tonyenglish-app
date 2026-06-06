@@ -13,13 +13,13 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
       const { data, error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
       
-      // 🚀 BẮT ĐẦU GHI LOG ĐĂNG NHẬP
+      // 🚀 GHI LOG ĐĂNG NHẬP (fire-and-forget, không block login flow)
       if (data.user) {
-          await supabase.from('activity_logs').insert([{
+          supabase.from('activity_logs').insert([{
               user_id: data.user.id,
               action_type: 'login',
               details: { message: 'Đăng nhập vào hệ thống LMS' }
-          }]);
+          }]).then(() => {});
       }
       // 🚀 KẾT THÚC GHI LOG
       
