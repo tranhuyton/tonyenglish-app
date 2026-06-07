@@ -597,6 +597,36 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     alert("✅ Đã nhân bản bài giảng thành công!");
   };
 
+  const handleBulkDuplicateLectures = async () => {
+    if (selectedLectures.length === 0) return alert("Vui lòng chọn ít nhất 1 bài giảng!");
+    const suffix = prompt(`Nhập hậu tố cho ${selectedLectures.length} bản sao:`, '(Bản sao)');
+    if (suffix === null) return;
+    let successCount = 0;
+    for (const lecId of selectedLectures) {
+      const { data: fullLec } = await supabase.from('lectures').select('*').eq('id', lecId).single();
+      if (!fullLec) continue;
+      const newTitle = suffix.trim() ? fullLec.title + ' ' + suffix.trim() : fullLec.title + ' (Bản sao)';
+      const { data: newLecture, error } = await supabase.from('lectures').insert([{
+        title: newTitle,
+        course_id: fullLec.course_id,
+        module_id: null,
+        order_index: globalLectures.length + successCount + 1,
+        is_published: false,
+      }]).select().single();
+      if (error || !newLecture) continue;
+      // Copy pages
+      const { data: pages } = await supabase.from('lecture_pages').select('*').eq('lecture_id', lecId);
+      if (pages && pages.length > 0) {
+        await supabase.from('lecture_pages').insert(pages.map(p => ({
+          lecture_id: newLecture.id, page_number: p.page_number, content_html: p.content_html
+        })));
+      }
+      successCount++;
+    }
+    fetchGlobalLectures(); setSelectedLectures([]);
+    alert(`✅ Đã nhân bản thành công ${successCount}/${selectedLectures.length} bài giảng!`);
+  };
+
   const handleSelectAllLectures = (e: React.ChangeEvent<HTMLInputElement>, currentList: any[]) => {
     if (e.target.checked) setSelectedLectures(currentList.map(l => l.id));
     else setSelectedLectures([]);
@@ -1613,6 +1643,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                        <button onClick={() => handleBulkLectureVisibility(true)} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-emerald-600 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">👁️ Hiện</button>
                        <button onClick={() => handleBulkLectureVisibility(false)} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-slate-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">👁️‍🗨️ Ẩn</button>
                        <button onClick={handleBulkLectureDelete} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-red-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">🗑️ Xóa</button>
+                       <button onClick={handleBulkDuplicateLectures} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-purple-600 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">📋 Nhân bản</button>
                     </div>
 
                     <div className="flex items-center gap-2 bg-blue-50 p-1.5 md:p-2 rounded-lg border border-blue-100 shadow-sm">
