@@ -435,7 +435,14 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
   const [uploadingId, setUploadingId] = useState<string | null>(null);
 
   const getInitialData = () => {
-    if (testRecord.content_json) return {...testRecord.content_json};
+    if (testRecord.content_json) {
+      const data = {...testRecord.content_json};
+      // Always use the actual course_id from the test record (not the stale one in content_json)
+      if (data.basicInfo) {
+        data.basicInfo = { ...data.basicInfo, courseId: testRecord.course_id || 'all' };
+      }
+      return data;
+    }
     
     return {
       basicInfo: {
