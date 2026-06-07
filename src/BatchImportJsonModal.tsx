@@ -395,13 +395,24 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
                         📎 {entry.pdfFile ? entry.pdfFile.name : 'Chọn file PDF'}
                       </button>
                       <span className="text-[11px] text-slate-400">hoặc</span>
-                      <input
-                        value={entry.pdfFile ? '' : entry.pdfUrl}
-                        onChange={e => updateEntry(entry.id, { pdfUrl: e.target.value, pdfFile: null })}
-                        placeholder="Paste URL PDF..."
-                        className="flex-1 px-3 py-2 border border-slate-200 rounded-lg text-[12px] text-slate-600 outline-none focus:border-[#2bd6eb]"
-                        disabled={!!entry.pdfFile}
-                      />
+                      <div className="flex-1 flex gap-1">
+                        <input
+                          value={entry.pdfFile ? '' : entry.pdfUrl}
+                          onChange={e => updateEntry(entry.id, { pdfUrl: e.target.value, pdfFile: null })}
+                          placeholder="Paste URL PDF..."
+                          className="flex-1 px-3 py-2 border border-slate-200 rounded-lg text-[12px] text-slate-600 outline-none focus:border-[#2bd6eb]"
+                          disabled={!!entry.pdfFile}
+                        />
+                        <button
+                          onClick={async () => {
+                            try {
+                              const text = await navigator.clipboard.readText();
+                              if (text.trim()) updateEntry(entry.id, { pdfUrl: text.trim(), pdfFile: null });
+                            } catch { alert('Không thể đọc clipboard. Vui lòng dùng Ctrl+V.'); }
+                          }}
+                          className="px-2.5 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-[12px] font-bold text-slate-500 transition shrink-0" title="Paste từ clipboard"
+                        >📋</button>
+                      </div>
                     </div>
                   </div>
 
