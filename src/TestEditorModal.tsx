@@ -975,7 +975,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                   <div>
                     <label className="text-[12px] font-bold text-slate-600 block mb-1">Phân loại (Mục đích)</label>
                     <select 
-                      value={testData.basicInfo.category || 'test'} 
+                      value={testData.basicInfo.category || 'exercise'} 
                       onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, category: e.target.value}})} 
                       className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#1e88e5]"
                     >
@@ -994,13 +994,12 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                       onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} 
                       className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]"
                     >
+                      <option value="Standard-Listening">MCQ (Standard)</option>
+                      <option value="Standard-Reading">SplitScreen (Standard)</option>
                       <option value="IELTS-Listening">Listening (IELTS)</option>
                       <option value="IELTS-Reading">Reading (IELTS)</option>
-                      <option value="Standard-Listening">Listening (Standard)</option>
-                      <option value="Standard-Reading">Reading (Standard)</option>
                       <option value="IELTS-Writing">Writing (IELTS)</option>
                       <option value="IELTS-Speaking">Speaking (IELTS)</option>
-                      <option value="Case-Study">Case Study / Business</option>
                     </select>
                   </div>
                   <div>
