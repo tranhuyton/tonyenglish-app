@@ -73,6 +73,7 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
   const [entries, setEntries] = useState<JsonBatchEntry[]>([createEmptyEntry()]);
   const [courseId, setCourseId] = useState('all');
   const [testType, setTestType] = useState('IGCSE-Science');
+  const [category, setCategory] = useState('exercise');
   const [isProcessing, setIsProcessing] = useState(false);
   const [isDone, setIsDone] = useState(false);
   const fileInputRefs = useRef<Record<string, HTMLInputElement | null>>({});
@@ -203,10 +204,17 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
         updatedEntries[i] = { ...entry, status: 'processing', message: '⚙️ Đang tạo đề...' };
         setEntries([...updatedEntries]);
 
-        // Parse json_config
+        // Parse json_config — normalize array format to object
         let jsonConfig: any;
         if (entry.jsonRaw.trim()) {
-          jsonConfig = JSON.parse(entry.jsonRaw);
+          const parsed = JSON.parse(entry.jsonRaw);
+          if (Array.isArray(parsed)) {
+            jsonConfig = { timeLimit: entry.timeLimit || 120, questions: parsed };
+          } else {
+            jsonConfig = parsed;
+            if (!jsonConfig.questions) jsonConfig.questions = [];
+            if (!jsonConfig.timeLimit) jsonConfig.timeLimit = entry.timeLimit || 120;
+          }
         } else {
           jsonConfig = { timeLimit: entry.timeLimit, questions: entry.questions };
         }
@@ -224,8 +232,8 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
               title: entry.title.trim(),
               courseId: courseId,
               skill: 'Case-Study',
-              category: 'test',
-              mode: 'Đề thi',
+              category: category,
+              mode: category === 'exercise' ? 'Bài tập' : 'Đề thi',
               timeLimit: String(jsonConfig.timeLimit || 90),
               scoreType: 'IGCSE Grading',
               insert_pdf_url: pdfUrl || null,
@@ -254,7 +262,7 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
               timeLimit: String(jsonConfig.timeLimit || 120),
               courseId: courseId,
               insert_pdf_url: pdfUrl || null,
-              category: 'test',
+              category: category,
             },
             questions: jsonConfig.questions || [],
           };
@@ -328,6 +336,13 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
                 <option value="IGCSE-Math">📐 IGCSE Math</option>
                 <option value="IGCSE-Direct">📝 IGCSE Direct</option>
                 <option value="Case-Study">💼 Case Study</option>
+              </select>
+            </div>
+            <div className="min-w-[140px]">
+              <label className="text-[11px] font-bold text-slate-500 block mb-1 uppercase">Phân loại</label>
+              <select value={category} onChange={e => setCategory(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-[13px] font-bold text-slate-700 outline-none bg-white focus:border-[#2bd6eb]">
+                <option value="exercise">📝 Bài tập</option>
+                <option value="test">📋 Đề thi</option>
               </select>
             </div>
           </div>
