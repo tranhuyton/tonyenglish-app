@@ -5,6 +5,7 @@ import CaseStudyEditorModal from './CaseStudyEditorModal';
 import StudentManagement from './StudentManagement'; 
 import LectureEditorModal from './LectureEditorModal';
 import IgcseTestEditorModal from './IgcseTestEditorModal';
+import BatchImportModal from './BatchImportModal';
 import './tailwind.css';
 
 let adminSearchTimer: any;
@@ -12,6 +13,7 @@ let adminSearchTimer: any;
 export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (view: string) => void, onStartTest?: any }) {
   const [activeTab, setActiveTab] = useState('courses'); 
   const [showCreateDropdown, setShowCreateDropdown] = useState(false);
+  const [showBatchImport, setShowBatchImport] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   
   // 🚀 TỐI ƯU MOBILE: State quản lý Sidebar trượt trên điện thoại
@@ -1148,7 +1150,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     <button onClick={() => handleInitiateTest('manual')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-slate-50 font-bold text-[12px] md:text-[13px] border-b border-slate-100">✍️ Tạo thủ công (Standard)</button>
                     <button onClick={() => handleInitiateTest('case-study')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-blue-50 font-bold text-[12px] md:text-[13px] text-[#0a5482] border-b border-slate-100">📄 Tạo Case Study</button>
                     <button onClick={() => { setShowCreateDropdown(false); setIgcseEditingTestId(null); setIgcseEditorOpen(true); }} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-emerald-50 font-bold text-[12px] md:text-[13px] text-emerald-700 border-b border-slate-100">🔬 Tạo đề IGCSE (Science/Math)</button>
-                    <button onClick={() => handleInitiateTest('import')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-slate-50 font-bold text-[12px] md:text-[13px]">📥 Import Excel/CSV</button>
+                    <button onClick={() => handleInitiateTest('import')} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-slate-50 font-bold text-[12px] md:text-[13px] border-b border-slate-100">📥 Import Excel/CSV</button>
+                    <button onClick={() => { setShowCreateDropdown(false); setShowBatchImport(true); }} className="w-full text-left px-4 md:px-5 py-2.5 md:py-3 hover:bg-amber-50 font-bold text-[12px] md:text-[13px] text-amber-700">⚡ Batch Import (Code Block)</button>
                   </div>
                 )}
               </div>
@@ -2149,6 +2152,15 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           existingTestId={igcseEditingTestId}
           onSaveSuccess={() => { fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); }}
         />
+
+        {showBatchImport && (
+          <BatchImportModal
+            courses={courses}
+            supabase={supabase}
+            onClose={() => setShowBatchImport(false)}
+            onSuccess={() => { fetchLibraryTests(); }}
+          />
+        )}
 
       </main>
     </div>
