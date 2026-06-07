@@ -571,8 +571,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleDuplicateLecture = async (lectureData: any) => {
+    const defaultName = lectureData.title + ' (Bản sao)';
+    const newName = prompt('Nhập tên cho bản sao:', defaultName);
+    if (newName === null) return; // user cancelled
+
     const { data: newLecture, error: lecErr } = await supabase.from('lectures').insert([{ 
-       title: lectureData.title + ' (Bản sao)', 
+       title: newName.trim() || defaultName, 
        course_id: lectureData.course_id, 
        module_id: null, 
        order_index: globalLectures.length + 1 
@@ -590,7 +594,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
        await supabase.from('lecture_pages').insert(newPages);
     }
     fetchGlobalLectures(); 
-    alert("✅ Đã nhân bản bài giảng thành công! Bản sao đã được lưu vào Kho.");
+    alert("✅ Đã nhân bản bài giảng thành công!");
   };
 
   const handleSelectAllLectures = (e: React.ChangeEvent<HTMLInputElement>, currentList: any[]) => {
