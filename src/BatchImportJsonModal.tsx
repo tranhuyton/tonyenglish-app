@@ -380,8 +380,33 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
                 <div className="p-4 space-y-4">
 
                   {/* PDF Upload */}
-                  <div>
-                    <label className="text-[11px] font-bold text-slate-500 uppercase block mb-1.5">📄 PDF đề thi</label>
+                  <div
+                    onPaste={(e) => {
+                      const items = e.clipboardData?.items;
+                      if (!items) return;
+                      for (let i = 0; i < items.length; i++) {
+                        const item = items[i];
+                        if (item.kind === 'file') {
+                          const file = item.getAsFile();
+                          if (file && (file.type === 'application/pdf' || file.name?.endsWith('.pdf'))) {
+                            e.preventDefault();
+                            handlePdfSelect(entry.id, file);
+                            return;
+                          }
+                        }
+                        // Also handle pasted text as URL
+                        if (item.kind === 'string' && item.type === 'text/plain') {
+                          item.getAsString((text) => {
+                            const trimmed = text.trim();
+                            if (trimmed.startsWith('http') && (trimmed.endsWith('.pdf') || trimmed.includes('pdf'))) {
+                              updateEntry(entry.id, { pdfUrl: trimmed, pdfFile: null });
+                            }
+                          });
+                        }
+                      }
+                    }}
+                  >
+                    <label className="text-[11px] font-bold text-slate-500 uppercase block mb-1.5">📄 PDF đề thi <span className="text-slate-400 normal-case font-medium">(Ctrl+V để paste file/URL)</span></label>
                     <div className="flex gap-2 items-center">
                       <input
                         ref={el => { fileInputRefs.current[entry.id] = el; }}
@@ -414,6 +439,12 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
                         >📋</button>
                       </div>
                     </div>
+                    {entry.pdfFile && (
+                      <div className="mt-1.5 flex items-center gap-2">
+                        <span className="text-[11px] text-emerald-500 font-bold">✅ {entry.pdfFile.name} ({(entry.pdfFile.size / 1024 / 1024).toFixed(1)} MB)</span>
+                        <button onClick={() => updateEntry(entry.id, { pdfFile: null, pdfUrl: '' })} className="text-[10px] text-red-400 hover:text-red-600 font-bold">✕ Gỡ</button>
+                      </div>
+                    )}
                   </div>
 
                   {/* View mode tabs */}
