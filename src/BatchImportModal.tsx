@@ -239,7 +239,6 @@ export default function BatchImportModal({ courses, supabase, onClose, onSuccess
           course_id: courseId === 'all' ? null : courseId,
           is_published: false,
           time_limit: parseInt(timeLimit) || 40,
-          category: category,
         };
 
         const { error } = await supabase.from('tests').insert(payload);
