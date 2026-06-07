@@ -11,6 +11,13 @@ import './tailwind.css';
 
 let adminSearchTimer: any;
 
+function displayTestType(type: string | null | undefined): string {
+  if (!type) return 'Đề thi';
+  if (type === 'Standard-Listening') return 'STANDARD-MCQ';
+  if (type === 'Standard-Reading') return 'STANDARD-SPLITSCREEN';
+  return type;
+}
+
 export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (view: string) => void, onStartTest?: any }) {
   const [activeTab, setActiveTab] = useState('courses'); 
   const [showCreateDropdown, setShowCreateDropdown] = useState(false);
@@ -1801,13 +1808,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                <div className="font-bold text-[#0a5482] text-[13px] md:text-[15px] flex items-center gap-2">
                                   {test.title}
                                   <span className="text-[8px] md:text-[9px] px-1 md:px-1.5 py-0.5 rounded uppercase tracking-wider font-black bg-sky-100 text-sky-700">
-                                     {test.test_type || 'Đề thi'}
+                                     {displayTestType(test.test_type)}
                                   </span>
                                </div>
                                <div className="text-[10px] md:text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? 'Đã gán thư mục' : 'Chưa gán thư mục'}</div>
                             </td>
                             <td className="px-4 md:px-6 py-4 md:py-5">{test.course_id ? <span className="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-[10px] md:text-[11px] font-bold text-slate-600">{getCourseNameForTest(test.course_id)}</span> : <span className="text-[10px] md:text-[11px] italic text-slate-400">-- Chung --</span>}</td>
-                            <td className="px-4 md:px-6 py-4 md:py-5 font-black text-blue-600 uppercase text-[10px] md:text-[11px] tracking-tight">{test.test_type}</td>
+                            <td className="px-4 md:px-6 py-4 md:py-5 font-black text-blue-600 uppercase text-[10px] md:text-[11px] tracking-tight">{displayTestType(test.test_type)}</td>
                             <td className="px-4 md:px-6 py-4 md:py-5"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(test.created_at)}</div></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[10px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded transition-colors ${test.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
@@ -1924,7 +1931,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                                 </td>
                                                 <td className="px-4 py-4">
                                                     <p className="font-bold text-[13px] text-slate-700 leading-snug">{t.title}</p>
-                                                    <p className="text-[10px] text-slate-400 mt-1 uppercase font-black">{t.test_type}</p>
+                                                    <p className="text-[10px] text-slate-400 mt-1 uppercase font-black">{displayTestType(t.test_type)}</p>
                                                 </td>
                                                 <td className="px-4 py-4 text-right">
                                                     {dl ? (
@@ -2147,7 +2154,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <div key={test.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-100 rounded-xl md:rounded-2xl hover:border-[#2bd6eb] transition bg-slate-50 group">
                                 <div className="min-w-0 pr-2">
                                     <p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{test.title}</p>
-                                    <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-tighter mt-1">{test.test_type}</p>
+                                    <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-tighter mt-1">{displayTestType(test.test_type)}</p>
                                 </div>
                                 <button onClick={() => handleAssignTest(test.id)} className="bg-white md:group-hover:bg-[#2bd6eb] md:group-hover:text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs transition border border-slate-200 shadow-sm shrink-0 whitespace-nowrap">GÁN ➜</button>
                             </div>
