@@ -856,12 +856,16 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleDuplicateTest = async (testData: any) => {
+    const defaultName = testData.title + ' (Bản sao)';
+    const newName = prompt('Nhập tên cho bản sao:', defaultName);
+    if (newName === null) return; // user cancelled
+    
     // Fetch full test data to ensure all fields are available
     const { data: fullTest } = await supabase.from('tests').select('*').eq('id', testData.id).single();
     if (!fullTest) return alert("Lỗi tải dữ liệu đề thi gốc!");
     
     const { data: newTest, error: err } = await supabase.from('tests').insert([{ 
-       title: fullTest.title + ' (Bản sao)', 
+       title: newName.trim() || defaultName, 
        course_id: fullTest.course_id, 
        folder_id: fullTest.folder_id, 
        test_type: fullTest.test_type,
@@ -915,15 +919,17 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const handleBulkDuplicateTests = async () => {
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
-    if (!window.confirm(`Nhân bản ${selectedTests.length} đề thi đã chọn?`)) return;
+    const suffix = prompt(`Nhập hậu tố cho ${selectedTests.length} bản sao:`, '(Bản sao)');
+    if (suffix === null) return; // user cancelled
     let successCount = 0;
     for (const testId of selectedTests) {
       const { data: fullTest } = await supabase.from('tests').select('*').eq('id', testId).single();
       if (!fullTest) continue;
       const { id, created_at, ...rest } = fullTest;
+      const newTitle = suffix.trim() ? fullTest.title + ' ' + suffix.trim() : fullTest.title + ' (Bản sao)';
       const { error } = await supabase.from('tests').insert([{
         ...rest,
-        title: fullTest.title + ' (Bản sao)',
+        title: newTitle,
         folder_id: null,
         is_published: false,
         order_index: libraryTests.length + successCount + 1
