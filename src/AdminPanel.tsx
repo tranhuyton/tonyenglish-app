@@ -419,6 +419,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     }
   };
 
+  // Lightweight refresh: only refetch assigned tests for current course (no modules/classes/enrollments)
+  const refreshAssignedTestsOnly = async (courseId: string) => {
+    const { data: ast } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('course_id', courseId).order('order_index', { ascending: true });
+    setAssignedTests(ast || []);
+  };
+
   const fetchClassDetails = async (classId: string) => {
     const { data: modData } = await supabase.from('class_modules').select('module_id').eq('class_id', classId);
     if (modData) setClassModules(modData.map(d => d.module_id));
@@ -806,7 +812,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (testToAssign) {
       const updatedTest = { ...testToAssign, folder_id: currentFolderId };
       setAssignedTests(prev => {
-        // Add or update the test in assigned list
         const exists = prev.some(t => t.id === testId);
         if (exists) return prev.map(t => t.id === testId ? updatedTest : t);
         return [...prev, updatedTest];
@@ -814,21 +819,36 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       setLibraryTests(prev => prev.map(t => t.id === testId ? updatedTest : t));
     }
     
-    // Persist to DB
-    await supabase.from('tests').update({ folder_id: currentFolderId }).eq('id', testId);
-    // Background refresh to sync
-    fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    // Persist to DB (non-blocking for UI)
+    supabase.from('tests').update({ folder_id: currentFolderId }).eq('id', testId).then(() => {
+      // Lightweight background sync
+      fetchLibraryTests();
+      if (selectedCourse) refreshAssignedTestsOnly(selectedCourse.id);
+    });
   };
 
   const handleUnassignTest = async (testId: string) => {
     if (window.confirm("Gỡ đề thi khỏi thư mục này? Đề sẽ trở về Kho Tổng.")) {
-      await supabase.from('tests').update({ folder_id: null }).eq('id', testId);
-      if (selectedCourse) fetchCourseDetailsData(selectedCourse.id); fetchLibraryTests();
+      // Optimistic update: immediately remove from folder
+      setAssignedTests(prev => prev.map(t => t.id === testId ? { ...t, folder_id: null } : t));
+      setLibraryTests(prev => prev.map(t => t.id === testId ? { ...t, folder_id: null } : t));
+      
+      // Persist to DB (non-blocking)
+      supabase.from('tests').update({ folder_id: null }).eq('id', testId).then(() => {
+        fetchLibraryTests();
+        if (selectedCourse) refreshAssignedTestsOnly(selectedCourse.id);
+      });
     }
   };
 
   const handleDeleteTest = async (id: string) => {
-    if (window.confirm("Xóa vĩnh viễn đề thi khỏi kho?")) { await supabase.from('tests').delete().eq('id', id); fetchLibraryTests(); if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);}
+    if (window.confirm("Xóa vĩnh viễn đề thi khỏi kho?")) {
+      // Optimistic update
+      setLibraryTests(prev => prev.filter(t => t.id !== id));
+      setAssignedTests(prev => prev.filter(t => t.id !== id));
+      // Persist
+      await supabase.from('tests').delete().eq('id', id);
+    }
   };
 
   const handleDuplicateTest = async (testData: any) => {
@@ -858,21 +878,34 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const handleToggleTestVisibility = async (test: any) => {
     const newStatus = !test.is_published;
-    await supabase.from('tests').update({ is_published: newStatus }).eq('id', test.id);
-    setLibraryTests(libraryTests.map(t => t.id === test.id ? { ...t, is_published: newStatus } : t));
-    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    // Optimistic update both lists
+    setLibraryTests(prev => prev.map(t => t.id === test.id ? { ...t, is_published: newStatus } : t));
+    setAssignedTests(prev => prev.map(t => t.id === test.id ? { ...t, is_published: newStatus } : t));
+    // Non-blocking persist
+    supabase.from('tests').update({ is_published: newStatus }).eq('id', test.id);
   };
 
   const handleBulkVisibility = async (status: boolean) => {
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
-    await supabase.from('tests').update({ is_published: status }).in('id', selectedTests);
-    fetchLibraryTests(); setSelectedTests([]); 
+    const ids = new Set(selectedTests);
+    // Optimistic update
+    setLibraryTests(prev => prev.map(t => ids.has(t.id) ? { ...t, is_published: status } : t));
+    setAssignedTests(prev => prev.map(t => ids.has(t.id) ? { ...t, is_published: status } : t));
+    setSelectedTests([]);
+    // Persist
+    supabase.from('tests').update({ is_published: status }).in('id', [...ids]);
   };
 
   const handleBulkDelete = async () => {
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 mục!");
     if (window.confirm(`Xác nhận xóa vĩnh viễn ${selectedTests.length} mục đã chọn?`)) {
-      await supabase.from('tests').delete().in('id', selectedTests); fetchLibraryTests(); setSelectedTests([]);
+      const ids = new Set(selectedTests);
+      // Optimistic update
+      setLibraryTests(prev => prev.filter(t => !ids.has(t.id)));
+      setAssignedTests(prev => prev.filter(t => !ids.has(t.id)));
+      setSelectedTests([]);
+      // Persist
+      await supabase.from('tests').delete().in('id', [...ids]);
     }
   };
 
