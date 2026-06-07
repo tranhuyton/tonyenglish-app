@@ -53,8 +53,10 @@ function questionsToJson(questions: Question[], timeLimit: number): string {
 
 function parseJsonToQuestions(raw: string): { questions: Question[]; timeLimit: number } {
   const obj = JSON.parse(raw);
-  const tl = obj.timeLimit || 120;
-  const qs: Question[] = (obj.questions || []).map((q: any) => ({
+  // Handle both formats: { questions: [...] } or just [...]
+  const questionsArr = Array.isArray(obj) ? obj : (obj.questions || []);
+  const tl = Array.isArray(obj) ? 120 : (obj.timeLimit || 120);
+  const qs: Question[] = questionsArr.map((q: any) => ({
     question_number: q.question_number || '1',
     sub_questions: (q.sub_questions || []).map((sq: any) => ({
       id: sq.id || '',
@@ -412,9 +414,16 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
                     <button
                       onClick={() => {
                         if (entry.viewMode === 'json' && entry.jsonRaw.trim()) {
-                          syncJsonToVisual(entry.id, entry.jsonRaw);
+                          // Combine parse + viewMode change in single update to avoid race condition
+                          try {
+                            const { questions, timeLimit } = parseJsonToQuestions(entry.jsonRaw);
+                            updateEntry(entry.id, { viewMode: 'visual', questions, timeLimit });
+                          } catch {
+                            updateEntry(entry.id, { viewMode: 'visual' });
+                          }
+                        } else {
+                          updateEntry(entry.id, { viewMode: 'visual' });
                         }
-                        updateEntry(entry.id, { viewMode: 'visual' });
                       }}
                       className={`px-4 py-1.5 rounded-md text-[12px] font-bold transition ${entry.viewMode === 'visual' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                     >🧩 Visual Builder</button>
@@ -433,8 +442,9 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
                       {entry.jsonRaw.trim() && (() => {
                         try {
                           const parsed = JSON.parse(entry.jsonRaw);
-                          const qCount = (parsed.questions || []).reduce((acc: number, q: any) => acc + (q.sub_questions?.length || 1), 0);
-                          return <p className="mt-1.5 text-[11px] text-emerald-500 font-bold">✅ JSON hợp lệ — {parsed.questions?.length || 0} câu hỏi chính, {qCount} sub-questions</p>;
+                          const questionsArr = Array.isArray(parsed) ? parsed : (parsed.questions || []);
+                          const qCount = questionsArr.reduce((acc: number, q: any) => acc + (q.sub_questions?.length || 1), 0);
+                          return <p className="mt-1.5 text-[11px] text-emerald-500 font-bold">✅ JSON hợp lệ — {questionsArr.length} câu hỏi chính, {qCount} sub-questions</p>;
                         } catch (e: any) {
                           return <p className="mt-1.5 text-[11px] text-red-500 font-bold">❌ JSON không hợp lệ: {e.message}</p>;
                         }
@@ -503,6 +513,14 @@ export default function BatchImportJsonModal({ courses, supabase, onClose, onSuc
                           </div>
                         </div>
                       ))}
+
+                      {entry.questions.length === 0 && (
+                        <div className="text-center py-8 text-slate-400">
+                          <p className="text-[32px] mb-2">📋</p>
+                          <p className="text-[13px] font-bold">Chưa có câu hỏi nào</p>
+                          <p className="text-[11px] mt-1">Paste JSON ở tab <strong>JSON Raw</strong> rồi chuyển sang đây để xem preview, hoặc bấm nút bên dưới để tạo câu hỏi mới.</p>
+                        </div>
+                      )}
 
                       <button onClick={() => addQuestion(entry.id)} className="w-full border border-dashed border-slate-300 hover:border-[#2bd6eb] py-2.5 rounded-lg text-[12px] font-bold text-slate-400 hover:text-[#0a5482] transition">+ Thêm câu hỏi</button>
 
