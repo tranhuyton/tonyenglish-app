@@ -1161,20 +1161,20 @@ const handleFinish = async () => {
       {/* MAIN CONTENT */}
       <main className="flex-1 overflow-y-auto p-4 md:p-6 relative bg-[#f3f4f6]" onMouseUp={handleMouseUp} ref={mainScrollRef as any}>
         
-        {/* LOGIC THU HẸP/BUNG RỘNG MÀN HÌNH MỚI */}
+        {/* LOGIC THU HẸP/BUNG RỘNG MÀN HÌNH MỚI - Luôn là chế độ Listening */}
         <div className="flex mx-auto relative transition-all duration-300"
              style={{ 
-                 width: hasAnySplitPane ? '100%' : (!isReviewMode ? `${listeningWidth}px` : '950px'), 
-                 maxWidth: hasAnySplitPane ? '1400px' : '100%' 
+                 width: !isReviewMode ? `${listeningWidth}px` : '950px', 
+                 maxWidth: '100%' 
              }}>
           
           <div className="flex-1 space-y-10 w-full min-w-0" onClick={handleContentClick} ref={containerRef as any}>
             {parts.map((part: any, pIndex: number) => {
               const hasPassage = part.content && part.content.trim().length > 0;
-              // 1. Cột trái (Bài đọc/Tapescript) chỉ hiện khi có nội dung VÀ (đang thi Reading HOẶC đang Review Listening)
-              const showPassageColumn = hasPassage && (!isListening || isReviewMode);
-              // 2. Chỉ chia đôi màn hình khi hiện cột trái VÀ màn hình đủ to
-              const enableSplitPane = showPassageColumn && typeof window !== 'undefined' && window.innerWidth > 1024;
+              // Theo yêu cầu mới nhất của USER: "Không có chia màn hình, Giao diện nó giống hệt dạng PaperTest mà cho Listening ấy"
+              // Do đó tắt hoàn toàn split pane.
+              const showPassageColumn = hasPassage;
+              const enableSplitPane = false;
 
               return (
                 <div key={pIndex} className={`bg-white shadow-[0_2px_15px_rgba(0,0,0,0.06)] border border-gray-200 rounded-sm ${enableSplitPane ? 'p-6 md:p-8' : 'px-8 py-12 md:px-14 md:py-16'}`}>

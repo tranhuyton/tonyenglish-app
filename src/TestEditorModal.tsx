@@ -1132,7 +1132,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                               setUploadingId={setUploadingId} 
                               onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} 
                             />
-                            {basicInfo.skill === 'Mixed-Paper' && (
+                            {testData.basicInfo?.skill === 'Mixed-Paper' && (
                               <MediaRow 
                                 label="Hình ảnh Section (Tùy chọn)" 
                                 value={sec.imageUrl} 
@@ -1203,7 +1203,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                             </div>
                                           </div>
                                           
-                                          {basicInfo.skill === 'Mixed-Paper' && (
+                                          {testData.basicInfo?.skill === 'Mixed-Paper' && (
                                             <div className="mb-2">
                                               <MediaRow 
                                                 label="Hình ảnh Câu hỏi (Tùy chọn)" 
