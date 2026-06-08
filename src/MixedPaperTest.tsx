@@ -399,7 +399,10 @@ const handleFinish = async () => {
              });
           }
           if (["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(s?.questionType)) {
-            const combinedContent = String(s?.content || '') + ' ' + String(s?.questions?.[0]?.content || '');
+            let combinedContent = String(s?.content || '');
+            if (Array.isArray(s?.questions)) {
+              s.questions.forEach((q: any) => combinedContent += ' ' + String(q.content || ''));
+            }
             const matches = combinedContent.match(/\[\s*\d+\s*\]/g);
             if (matches) {
               matches.forEach((m: string) => { 
@@ -1228,10 +1231,21 @@ const handleFinish = async () => {
                         let rawContentText = '';
                         if (String(sec.content || '').match(/\[\s*\d+\s*\]/)) {
                             rawContentText = sec.content;
-                        } else if (String(sec.questions?.[0]?.content || '').match(/\[\s*\d+\s*\]/)) {
-                            rawContentText = sec.questions[0].content;
+                            if (Array.isArray(sec.questions)) {
+                                sec.questions.forEach((q: any) => {
+                                    if (q.content && q.content !== sec.content && String(q.content).match(/\[\s*\d+\s*\]/)) {
+                                        rawContentText += '<br><br>' + q.content;
+                                    }
+                                });
+                            }
                         } else {
-                            rawContentText = sec.questions?.[0]?.content || '';
+                            if (Array.isArray(sec.questions)) {
+                                sec.questions.forEach((q: any) => {
+                                    if (String(q.content || '').trim()) {
+                                        rawContentText += (rawContentText ? '<br><br>' : '') + String(q.content || '');
+                                    }
+                                });
+                            }
                         }
 
                         const hasInlineBrackets = /\[\s*\d+\s*\]/.test(rawContentText);
@@ -1987,7 +2001,10 @@ const handleFinish = async () => {
             const section = parts.reduce((acc: any[], p: any) => acc.concat(Array.isArray(p?.sections) ? p.sections : []), []).find((s:any) => {
                 if ((Array.isArray(s?.questions) ? s.questions : []).some((sq:any)=>String(sq?.id)===id)) return true;
                 if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
-                    const combined = String(s?.content || '') + ' ' + String((Array.isArray(s?.questions) ? s.questions : [])[0]?.content || '');
+                    let combined = String(s?.content || '');
+                    if (Array.isArray(s?.questions)) {
+                        s.questions.forEach((q:any) => combined += ' ' + String(q.content || ''));
+                    }
                     const matches = combined.match(/\[\s*\d+\s*\]/g);
                     if (matches && matches.some((m:string) => m.replace(/\D/g, '') === id)) return true;
                 }
