@@ -254,7 +254,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             ] = await Promise.all([
                 supabase.from('folders').select('*').in('course_id', courseIds),
                 supabase.from('lectures').select('*').eq('is_published', true).in('course_id', courseIds),
-                supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('is_published', true).or(`course_id.in.(${courseIds.map(id => `"${id}"`).join(',')}),course_id.is.null`),
+                supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('is_published', true).or(`course_id.in.(${courseIds.join(',')}),course_id.is.null`),
                 supabase.from('courses').select('*').in('id', courseIds)
             ]);
             allF = fData || [];
