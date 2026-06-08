@@ -735,6 +735,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
     const assignedCourseId = finalData.basicInfo?.courseId === 'all' ? null : finalData.basicInfo.courseId;
 
+    if (finalData.basicInfo && !finalData.basicInfo.category) {
+       finalData.basicInfo.category = 'exercise';
+    }
+
     const payload: any = { 
        title: finalData.basicInfo?.title || 'Untitled Test', 
        test_type: finalData.basicInfo?.skill || 'Standard-Listening', 
@@ -1601,7 +1605,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                           </div>
                         ))}
                       </div>
-                    )}{currentFolderId && currentSubFolders.length === 0 && (
+                    )}
+                    
+                    {(
+
                       <div className="border-t-2 border-dashed border-slate-200 pt-6 md:pt-8 mt-2">
                          <div className="flex justify-between items-center mb-4 md:mb-6">
                             <h3 className="font-black text-slate-800 text-[14px] md:text-lg">📝 Đề thi / Bài tập</h3>
