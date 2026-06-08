@@ -1005,6 +1005,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                       <option value="Standard-Reading">SplitScreen (Standard)</option>
                       <option value="IELTS-Listening">Listening (IELTS)</option>
                       <option value="IELTS-Reading">Reading (IELTS)</option>
+                      <option value="Mixed-Paper">Mixed Paper (Có hình)</option>
                       <option value="IELTS-Writing">Writing (IELTS)</option>
                       <option value="IELTS-Speaking">Speaking (IELTS)</option>
                     </select>
@@ -1131,6 +1132,17 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                               setUploadingId={setUploadingId} 
                               onUpload={(url: string) => updateField([pIdx, sIdx], 'audioUrl', url)} 
                             />
+                            {basicInfo.skill === 'Mixed-Paper' && (
+                              <MediaRow 
+                                label="Hình ảnh Section (Tùy chọn)" 
+                                value={sec.imageUrl} 
+                                accept="image/*"
+                                id={`sec-img-${sec.id}`} 
+                                uploadingId={uploadingId} 
+                                setUploadingId={setUploadingId} 
+                                onUpload={(url: string) => updateField([pIdx, sIdx], 'imageUrl', url)} 
+                              />
+                            )}
                           </div>
 
                           <div className="p-6 space-y-6">
@@ -1191,6 +1203,20 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                                             </div>
                                           </div>
                                           
+                                          {basicInfo.skill === 'Mixed-Paper' && (
+                                            <div className="mb-2">
+                                              <MediaRow 
+                                                label="Hình ảnh Câu hỏi (Tùy chọn)" 
+                                                value={q.imageUrl} 
+                                                accept="image/*"
+                                                id={`q-img-${q.id}`} 
+                                                uploadingId={uploadingId} 
+                                                setUploadingId={setUploadingId} 
+                                                onUpload={(url: string) => updateField([pIdx, sIdx, qIdx], 'imageUrl', url)} 
+                                              />
+                                            </div>
+                                          )}
+
                                           <div className={`bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 ${isComboChild && (!q.options || q.options.length === 0) ? 'hidden' : ''}`}>
                                             <div className="flex justify-between items-center border-b border-slate-200 pb-2">
                                                 <label className="text-[12px] font-bold text-slate-600">Các lựa chọn đáp án (Options)</label>

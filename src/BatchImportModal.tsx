@@ -302,6 +302,7 @@ export default function BatchImportModal({ courses, supabase, onClose, onSuccess
                 <option value="Standard-Reading">SplitScreen (Standard)</option>
                 <option value="IELTS-Listening">Listening (IELTS)</option>
                 <option value="IELTS-Reading">Reading (IELTS)</option>
+                <option value="Mixed-Paper">🖼️ Mixed Paper (Có hình)</option>
               </select>
             </div>
             <div className="min-w-[140px]">
