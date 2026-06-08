@@ -452,6 +452,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         onStartTest('ielts-writing', testData);
     } else if (type === 'ielts-speaking') {
         onStartTest('ielts-speaking', testData);
+    } else if (type.includes('mixed-paper')) {
+        onStartTest('mixed-paper', testData);
     } else if (type.includes('ielts')) { 
       setTestToStart(testData); 
       setShowModeSelection(true); 
