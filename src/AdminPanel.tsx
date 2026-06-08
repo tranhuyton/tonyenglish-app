@@ -1630,6 +1630,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                    </div>
                                  </div>
                                  <div className="flex gap-2 md:gap-3 shrink-0">
+                                   <button onClick={() => handleToggleTestVisibility(t)} className={`${t.is_published ? 'text-emerald-500 hover:text-emerald-600' : 'text-slate-400 hover:text-slate-600'} font-bold text-[10px] md:text-xs transition-colors`}>{t.is_published ? '👁️ Hiện' : 'Ẩn'}</button>
                                    <button onClick={() => { if (t.test_type === 'IGCSE-Science' || t.test_type === 'IGCSE-Math' || t.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(t.id); setIgcseEditorOpen(true); } else { setEditingTest(t); } }} className="text-[#2bd6eb] font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Sửa</button>
                                    <button onClick={() => handleUnassignTest(t.id)} className="text-red-400 font-bold text-[10px] md:text-xs hover:underline md:opacity-0 group-hover:opacity-100 transition-opacity">Gỡ ✖</button>
                                  </div>
