@@ -646,7 +646,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   const handleBulkLectureVisibility = async (status: boolean) => {
     if (selectedLectures.length === 0) return alert("Vui lòng chọn ít nhất 1 bài giảng!");
-    await supabase.from('lectures').update({ is_published: status }).in('id', selectedLectures);
+    const idsArray = [...selectedLectures];
+    for (let i = 0; i < idsArray.length; i += 100) {
+        await supabase.from('lectures').update({ is_published: status }).in('id', idsArray.slice(i, i + 100));
+    }
     fetchGlobalLectures();
     if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
     setSelectedLectures([]);
@@ -655,7 +658,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const handleBulkLectureDelete = async () => {
     if (selectedLectures.length === 0) return alert("Vui lòng chọn ít nhất 1 bài giảng!");
     if (window.confirm(`Xác nhận xóa VĨNH VIỄN ${selectedLectures.length} bài giảng đã chọn?`)) {
-      await supabase.from('lectures').delete().in('id', selectedLectures);
+      const idsArray = [...selectedLectures];
+      for (let i = 0; i < idsArray.length; i += 100) {
+          await supabase.from('lectures').delete().in('id', idsArray.slice(i, i + 100));
+      }
       fetchGlobalLectures();
       if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
       setSelectedLectures([]);
@@ -666,10 +672,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (selectedLectures.length === 0) return alert("Vui lòng chọn ít nhất 1 bài giảng!");
     if (!targetMoveCourseId) return alert("Vui lòng chọn khóa học đích để chuyển tới!");
     if (window.confirm(`Chuyển ${selectedLectures.length} bài giảng sang khóa học đã chọn?`)) {
-      await supabase.from('lectures').update({ 
-         course_id: targetMoveCourseId === 'none' ? null : targetMoveCourseId,
-         module_id: null 
-      }).in('id', selectedLectures);
+      const idsArray = [...selectedLectures];
+      for (let i = 0; i < idsArray.length; i += 100) {
+          await supabase.from('lectures').update({ 
+             course_id: targetMoveCourseId === 'none' ? null : targetMoveCourseId,
+             module_id: null 
+          }).in('id', idsArray.slice(i, i + 100));
+      }
       
       fetchGlobalLectures();
       if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
@@ -945,8 +954,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     setLibraryTests(prev => prev.map(t => ids.has(t.id) ? { ...t, is_published: status } : t));
     setAssignedTests(prev => prev.map(t => ids.has(t.id) ? { ...t, is_published: status } : t));
     setSelectedTests([]);
-    // Persist
-    await supabase.from('tests').update({ is_published: status }).in('id', [...ids]);
+    // Persist in chunks
+    const idsArray = [...ids];
+    for (let i = 0; i < idsArray.length; i += 100) {
+        await supabase.from('tests').update({ is_published: status }).in('id', idsArray.slice(i, i + 100));
+    }
   };
 
   const handleBulkDelete = async () => {
@@ -957,8 +969,11 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       setLibraryTests(prev => prev.filter(t => !ids.has(t.id)));
       setAssignedTests(prev => prev.filter(t => !ids.has(t.id)));
       setSelectedTests([]);
-      // Persist
-      await supabase.from('tests').delete().in('id', [...ids]);
+      // Persist in chunks
+      const idsArray = [...ids];
+      for (let i = 0; i < idsArray.length; i += 100) {
+          await supabase.from('tests').delete().in('id', idsArray.slice(i, i + 100));
+      }
     }
   };
 
@@ -989,10 +1004,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
     if (!targetMoveTestCourseId) return alert("Vui lòng chọn khóa học đích để chuyển tới!");
     if (window.confirm(`Chuyển ${selectedTests.length} đề thi sang khóa học đã chọn?`)) {
-      await supabase.from('tests').update({
-        course_id: targetMoveTestCourseId === 'none' ? null : targetMoveTestCourseId,
-        folder_id: null
-      }).in('id', selectedTests);
+      const idsArray = [...selectedTests];
+      for (let i = 0; i < idsArray.length; i += 100) {
+          await supabase.from('tests').update({
+            course_id: targetMoveTestCourseId === 'none' ? null : targetMoveTestCourseId,
+            folder_id: null
+          }).in('id', idsArray.slice(i, i + 100));
+      }
       fetchLibraryTests();
       if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
       setSelectedTests([]);

@@ -277,19 +277,34 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             // PHASE 2: Background fetch content_json to enrich tests with categories, deadlines, audio
             const testIds = lightTests.map((t: any) => t.id);
             if (testIds.length > 0) {
-                supabase.from('tests').select('id, content_json').eq('is_published', true).in('id', testIds).then(({ data: richData }) => {
-                    if (richData && richData.length > 0) {
-                        const contentMap = new Map<string, any>();
-                        richData.forEach((r: any) => {
-                            let content = r.content_json;
-                            if (typeof content === 'string') {
-                                try { content = JSON.parse(content); } catch(e) { content = {}; }
-                            }
-                            contentMap.set(r.id, content || {});
-                        });
-                        setAllTests(prev => prev.map(t => ({ ...t, content_json: contentMap.get(t.id) || t.content_json || {} })));
+                const fetchRichData = async () => {
+                    try {
+                        const chunkSize = 100;
+                        const allRichData: any[] = [];
+                        for (let i = 0; i < testIds.length; i += chunkSize) {
+                            const chunk = testIds.slice(i, i + chunkSize);
+                            const { data } = await supabase.from('tests').select('id, content_json').eq('is_published', true).in('id', chunk);
+                            if (data) allRichData.push(...data);
+                        }
+                        if (allRichData.length > 0) {
+                            const contentMap = new Map<string, any>();
+                            allRichData.forEach((r: any) => {
+                                let content = r.content_json;
+                                if (typeof content === 'string') {
+                                    try { content = JSON.parse(content); } catch(e) { content = {}; }
+                                }
+                                contentMap.set(r.id, content || {});
+                            });
+                            setAllTests(prev => prev.map(t => ({
+                                ...t,
+                                content_json: contentMap.has(t.id) ? contentMap.get(t.id) : t.content_json
+                            })));
+                        }
+                    } catch (err) {
+                        console.error("Error fetching rich content for tests", err);
                     }
-                });
+                };
+                fetchRichData();
             }
 
             if (hData) {
@@ -1700,13 +1715,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 </div>
 
                 <div className="flex flex-col gap-3">
-                    <button onClick={() => {
+                    <button onClick={async () => {
                         const testId = viewingHistoryDetail.testId || viewingHistoryDetail.details?.test_id;
                         let foundTest = allTests.find(t => String(t.id) === String(testId));
                         if (!foundTest) foundTest = allTests.find(t => t.title.trim() === viewingHistoryDetail.name.trim());
                         
                         if (foundTest && onStartTest) {
-                            const type = String(foundTest.test_type || '').toLowerCase();
+                            // Fetch the FULL test data from the database to guarantee content_json is present
+                            const { data: fullTest } = await supabase.from('tests').select('*').eq('id', foundTest.id).single();
+                            let testDataToUse = fullTest || foundTest;
+                            
+                            if (typeof testDataToUse.content_json === 'string') {
+                                try { testDataToUse.content_json = JSON.parse(testDataToUse.content_json); } catch(e) { testDataToUse.content_json = {}; }
+                            }
+
+                            const type = String(testDataToUse.test_type || '').toLowerCase();
                             let targetMode = 'standard';
                             if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
                             else if (type === 'ielts-writing') targetMode = 'ielts-writing';
@@ -1715,7 +1738,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             
                             const totalStr = String(viewingHistoryDetail.scoreObj.display).split('/')[1];
                             onStartTest(targetMode, { 
-                                ...foundTest, 
+                                ...testDataToUse, 
                                 history_id: viewingHistoryDetail.id, 
                                 isReview: true,
                                 past_answers: viewingHistoryDetail.details?.userAnswers || viewingHistoryDetail.details?.answers || {},

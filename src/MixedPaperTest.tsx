@@ -1241,8 +1241,12 @@ const handleFinish = async () => {
                         } else {
                             if (Array.isArray(sec.questions)) {
                                 sec.questions.forEach((q: any) => {
-                                    if (String(q.content || '').trim()) {
-                                        rawContentText += (rawContentText ? '<br><br>' : '') + String(q.content || '');
+                                    let qContent = String(q.content || '').trim();
+                                    if (qContent) {
+                                        if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
+                                            qContent += ` [${q.id}]`;
+                                        }
+                                        rawContentText += (rawContentText ? '<br><br>' : '') + qContent;
                                     }
                                 });
                             }
@@ -2079,7 +2083,7 @@ const handleFinish = async () => {
 
         <div className="ml-4 shrink-0 flex items-center gap-3 border-l border-gray-300 pl-4">
           <button onClick={handleFinish} className={`font-bold text-sm px-8 py-2.5 rounded shadow-md transition ${isReviewMode ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-blue-600 hover:bg-blue-500 text-white'}`}>
-            {isReviewMode ? 'Thoát' : 'Nộp Bài Thi'}
+            {isReviewMode ? 'Thoát' : 'Nộp Bài'}
           </button>
         </div>
       </footer>

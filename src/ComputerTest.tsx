@@ -1338,10 +1338,25 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                     let rawContentText = '';
                     if (String(sec.content || '').match(/\[\s*\d+\s*\]/)) {
                         rawContentText = sec.content;
-                    } else if (String(sec.questions?.[0]?.content || '').match(/\[\s*\d+\s*\]/)) {
-                        rawContentText = sec.questions[0].content;
+                        if (Array.isArray(sec.questions)) {
+                            sec.questions.forEach((q: any) => {
+                                if (q.content && q.content !== sec.content && String(q.content).match(/\[\s*\d+\s*\]/)) {
+                                    rawContentText += '<br><br>' + q.content;
+                                }
+                            });
+                        }
                     } else {
-                        rawContentText = sec.questions?.[0]?.content || '';
+                        if (Array.isArray(sec.questions)) {
+                            sec.questions.forEach((q: any) => {
+                                let qContent = String(q.content || '').trim();
+                                if (qContent) {
+                                    if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
+                                        qContent += ` [${q.id}]`;
+                                    }
+                                    rawContentText += (rawContentText ? '<br><br>' : '') + qContent;
+                                }
+                            });
+                        }
                     }
 
                     const hasInlineBrackets = /\[\s*\d+\s*\]/.test(rawContentText);
@@ -2036,7 +2051,11 @@ export default function ComputerTest({ onBack, testData, onFinish }: { onBack: (
                 const section = parts.reduce((acc: any[], p: any) => acc.concat(Array.isArray(p?.sections) ? p.sections : []), []).find((s:any) => {
                     if ((Array.isArray(s?.questions) ? s.questions : []).some((sq:any)=>String(sq?.id)===id)) return true;
                     if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part" || s?.questionType === "Kéo thả" || s?.questionType === "Matching" || s?.questionType === "Droplist") {
-                        const matches = String(s?.content || (Array.isArray(s?.questions) ? s.questions : [])[0]?.content || '').match(/\[\s*\d+\s*\]/g);
+                        let combinedContent = String(s?.content || '');
+                        if (Array.isArray(s?.questions)) {
+                            s.questions.forEach((q: any) => combinedContent += ' ' + String(q.content || ''));
+                        }
+                        const matches = combinedContent.match(/\[\s*\d+\s*\]/g);
                         if (matches && matches.some((m:string) => m.replace(/\D/g, '') === id)) return true;
                     }
                     return false;
