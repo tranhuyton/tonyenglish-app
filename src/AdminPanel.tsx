@@ -372,7 +372,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const fetchLibraryTests = async () => {
-    const { data } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type, content_json').order('order_index', { ascending: true }).order('created_at', { ascending: false });
     setLibraryTests(data || []);
   };
 
@@ -432,7 +432,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   // Lightweight refresh: only refetch assigned tests for current course (no modules/classes/enrollments)
   const refreshAssignedTestsOnly = async (courseId: string) => {
-    const { data: ast } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('course_id', courseId).order('order_index', { ascending: true });
+    const { data: ast } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type, content_json').eq('course_id', courseId).order('order_index', { ascending: true });
     setAssignedTests(ast || []);
   };
 
@@ -877,13 +877,13 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const handleUnassignTest = async (testId: string) => {
-    if (window.confirm("Gỡ đề thi khỏi thư mục này? Đề sẽ trở về Kho Tổng.")) {
-      // Optimistic update: immediately remove from folder
-      setAssignedTests(prev => prev.map(t => t.id === testId ? { ...t, folder_id: null } : t));
-      setLibraryTests(prev => prev.map(t => t.id === testId ? { ...t, folder_id: null } : t));
+    if (window.confirm("Gỡ đề thi này khỏi Khóa học? Đề sẽ trở về Kho Tổng.")) {
+      // Optimistic update: immediately remove from course
+      setAssignedTests(prev => prev.filter(t => t.id !== testId));
+      setLibraryTests(prev => prev.map(t => t.id === testId ? { ...t, course_id: null, folder_id: null } : t));
       
       // Persist to DB (non-blocking)
-      supabase.from('tests').update({ folder_id: null }).eq('id', testId).then(() => {
+      supabase.from('tests').update({ course_id: null, folder_id: null }).eq('id', testId).then(() => {
         fetchLibraryTests();
         if (selectedCourse) refreshAssignedTestsOnly(selectedCourse.id);
       });
