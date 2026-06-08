@@ -935,7 +935,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     setLibraryTests(prev => prev.map(t => t.id === test.id ? { ...t, is_published: newStatus } : t));
     setAssignedTests(prev => prev.map(t => t.id === test.id ? { ...t, is_published: newStatus } : t));
     // Non-blocking persist
-    supabase.from('tests').update({ is_published: newStatus }).eq('id', test.id);
+    await supabase.from('tests').update({ is_published: newStatus }).eq('id', test.id);
   };
 
   const handleBulkVisibility = async (status: boolean) => {

@@ -1,0 +1,721 @@
+{
+  "id": "901ddfca-3211-4dbd-a0c2-77990dbb1669",
+  "folder_id": "f0af1032-2e23-417a-a40b-f919dcdc2bfc",
+  "title": "Unite 1: Age",
+  "test_type": "Mixed-Paper",
+  "content_json": {
+    "parts": [
+      {
+        "id": "17809332192460.46684758677001015",
+        "tags": "",
+        "title": "1 Age",
+        "content": "",
+        "audioUrl": "",
+        "sections": [
+          {
+            "id": "17809332192460.8009386758447447",
+            "tags": "",
+            "title": "1 Basic vocabulary",
+            "content": "Translate these words into your own language:",
+            "audioUrl": "",
+            "questions": [
+              {
+                "id": "1",
+                "tags": "",
+                "content": "baby",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Từ chỉ trẻ em ở độ tuổi sơ sinh.",
+                "correctAnswer": "em bé, trẻ sơ sinh"
+              },
+              {
+                "id": "2",
+                "tags": "",
+                "content": "generation",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Tập hợp những người sinh ra và sống cùng một khoảng thời gian.",
+                "correctAnswer": "thế hệ"
+              },
+              {
+                "id": "3",
+                "tags": "",
+                "content": "young",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Ở độ tuổi nhỏ, chưa già.",
+                "correctAnswer": "trẻ tuổi"
+              },
+              {
+                "id": "4",
+                "tags": "",
+                "content": "adult",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Người đã phát triển đầy đủ về thể chất và tâm lý.",
+                "correctAnswer": "người lớn, trưởng thành"
+              },
+              {
+                "id": "5",
+                "tags": "",
+                "content": "child",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Trẻ em (nói chung).",
+                "correctAnswer": "đứa trẻ"
+              },
+              {
+                "id": "6",
+                "tags": "",
+                "content": "middle-aged",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Ở độ tuổi khoảng từ 40 đến 60 tuổi.",
+                "correctAnswer": "trung niên"
+              },
+              {
+                "id": "7",
+                "tags": "",
+                "content": "teenager",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Độ tuổi từ 13 đến 19 tuổi.",
+                "correctAnswer": "thanh thiếu niên"
+              },
+              {
+                "id": "8",
+                "tags": "",
+                "content": "old",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Đã sống nhiều năm, có tuổi.",
+                "correctAnswer": "già, lớn tuổi"
+              }
+            ],
+            "explanation": "",
+            "questionType": "Điền từ"
+          },
+          {
+            "id": "17809332192460.9361078207688911",
+            "tags": "",
+            "title": "2 Ages",
+            "content": "Match the expressions on the left with those on the right:",
+            "audioUrl": "",
+            "questions": [
+              {
+                "id": "1",
+                "tags": "",
+                "content": "1. She's 3 days old. [1]",
+                "options": [
+                  "a. She's still a child.",
+                  "b. She's a newborn baby.",
+                  "c. She's a teenager.",
+                  "d. She's an adult.",
+                  "e. She's a toddler.",
+                  "f. He's in his early forties.",
+                  "g. He's fairly elderly.",
+                  "h. He's in his mid-thirties.",
+                  "i. He's middle-aged.",
+                  "j. He's in his late twenties."
+                ],
+                "audioUrl": "",
+                "explanation": "Cô ấy là một em bé mới sinh.",
+                "correctAnswer": "b"
+              },
+              {
+                "id": "2",
+                "tags": "",
+                "content": "2. She's 18 months. [2]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Cô ấy là trẻ mới biết đi (toddler).",
+                "correctAnswer": "e"
+              },
+              {
+                "id": "3",
+                "tags": "",
+                "content": "3. She's 8. [3]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Cô ấy vẫn còn là một đứa trẻ.",
+                "correctAnswer": "a"
+              },
+              {
+                "id": "4",
+                "tags": "",
+                "content": "4. She's 14. [4]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Cô ấy là một thiếu niên.",
+                "correctAnswer": "c"
+              },
+              {
+                "id": "5",
+                "tags": "",
+                "content": "5. She's 20. [5]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Cô ấy là một người trưởng thành.",
+                "correctAnswer": "d"
+              },
+              {
+                "id": "6",
+                "tags": "",
+                "content": "6. He's 28. [6]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Anh ấy ở độ tuổi cuối 20.",
+                "correctAnswer": "j"
+              },
+              {
+                "id": "7",
+                "tags": "",
+                "content": "7. He's 35. [7]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Anh ấy ở độ tuổi giữa 30.",
+                "correctAnswer": "h"
+              },
+              {
+                "id": "8",
+                "tags": "",
+                "content": "8. He's 48. [8]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Anh ấy ở độ tuổi trung niên.",
+                "correctAnswer": "i"
+              },
+              {
+                "id": "9",
+                "tags": "",
+                "content": "9. He's 42. [9]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Anh ấy ở độ tuổi đầu 40.",
+                "correctAnswer": "f"
+              },
+              {
+                "id": "10",
+                "tags": "",
+                "content": "10. He's 85. [10]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Anh ấy khá lớn tuổi (elderly là cách nói lịch sự của old).",
+                "correctAnswer": "g"
+              }
+            ],
+            "explanation": "",
+            "questionType": "Droplist"
+          },
+          {
+            "id": "17809332192460.5984151878661081",
+            "tags": "",
+            "title": "3 A two-year-old boy",
+            "content": "Look at this example:<br>He's two years old. > I've got a two-year-old son.<br>Re-write these examples in a similar way:",
+            "audioUrl": "",
+            "questions": [
+              {
+                "id": "1",
+                "tags": "",
+                "content": "1. My son is eleven.<br>I've got an [1]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Tính từ ghép chỉ tuổi tác (số lượng + year-old) đứng trước danh từ.",
+                "correctAnswer": "eleven-year-old son"
+              },
+              {
+                "id": "2",
+                "tags": "",
+                "content": "2. We've got a daughter of six.<br>We've got a [2]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Tính từ ghép chỉ tuổi tác đứng trước danh từ.",
+                "correctAnswer": "six-year-old daughter"
+              },
+              {
+                "id": "3",
+                "tags": "",
+                "content": "3. Their baby's only two months old.<br>They've got a [3]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Tính từ ghép (số lượng + month-old) đứng trước danh từ.",
+                "correctAnswer": "two-month-old baby"
+              },
+              {
+                "id": "4",
+                "tags": "",
+                "content": "4. I teach kids of seven and eight.<br>I teach [4]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Danh từ ghép số nhiều chỉ người ở độ tuổi đó.",
+                "correctAnswer": "seven- and eight-year-olds"
+              },
+              {
+                "id": "5",
+                "tags": "",
+                "content": "5. Most of them were only sixteen.<br>They were mostly [5]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Danh từ ghép số nhiều chỉ nhóm người cùng tuổi.",
+                "correctAnswer": "sixteen-year-olds"
+              },
+              {
+                "id": "6",
+                "tags": "",
+                "content": "6. The boy the police arrested was only nine!<br>He was only a [6]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Danh từ ghép số ít chỉ một người ở độ tuổi đó.",
+                "correctAnswer": "nine-year-old"
+              }
+            ],
+            "explanation": "",
+            "questionType": "Điền từ"
+          },
+          {
+            "id": "17809332192460.40646794508623796",
+            "tags": "",
+            "title": "4 Expressions with 'age'",
+            "content": "Use these words to complete these expressions with 'age':",
+            "audioUrl": "",
+            "questions": [
+              {
+                "id": "1",
+                "tags": "",
+                "content": "1. the [1] age as (me)",
+                "options": [
+                  "of",
+                  "look",
+                  "your",
+                  "same",
+                  "get",
+                  "at",
+                  "all",
+                  "child"
+                ],
+                "audioUrl": "",
+                "explanation": "the same age as: Cùng tuổi với (ai đó).",
+                "correctAnswer": "same"
+              },
+              {
+                "id": "2",
+                "tags": "",
+                "content": "2. when I was [2] age",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "when I was your age: Khi tôi ở độ tuổi của bạn.",
+                "correctAnswer": "your"
+              },
+              {
+                "id": "3",
+                "tags": "",
+                "content": "3. people of [3] ages",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "people of all ages: Mọi lứa tuổi.",
+                "correctAnswer": "all"
+              },
+              {
+                "id": "4",
+                "tags": "",
+                "content": "4. when you [4] to my age",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "when you get to my age: Khi bạn đến độ tuổi của tôi.",
+                "correctAnswer": "get"
+              },
+              {
+                "id": "5",
+                "tags": "",
+                "content": "5. at the age [5] 43",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "at the age of: Ở độ tuổi (nào đó).",
+                "correctAnswer": "of"
+              },
+              {
+                "id": "6",
+                "tags": "",
+                "content": "6. you don't [6] your age",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "look your age: Trông già như đúng tuổi thật (phủ định nghĩa là trông trẻ hơn).",
+                "correctAnswer": "look"
+              },
+              {
+                "id": "7",
+                "tags": "",
+                "content": "7. a [7] of his age",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "a child of his age: Một đứa trẻ ở độ tuổi đó.",
+                "correctAnswer": "child"
+              },
+              {
+                "id": "8",
+                "tags": "",
+                "content": "8. [8] your age",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "at your age: Ở độ tuổi của bạn.",
+                "correctAnswer": "at"
+              },
+              {
+                "id": "9",
+                "tags": "",
+                "content": "a. Do you think you should be smoking [9]? I mean, you're only 15.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Phù hợp với ngữ cảnh \"chỉ mới 15 tuổi\".",
+                "correctAnswer": "at your age"
+              },
+              {
+                "id": "10",
+                "tags": "",
+                "content": "b. You're lucky to have the chance to go to university. [10] I had to get a job and start earning some money.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Hồi tưởng về quá khứ khi ở cùng độ tuổi với người đang nói chuyện.",
+                "correctAnswer": "When I was your age"
+              },
+              {
+                "id": "11",
+                "tags": "",
+                "content": "c. John F. Kennedy became one of the youngest Presidents of the United States [11]",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Chỉ cột mốc tuổi tác cụ thể (43 tuổi).",
+                "correctAnswer": "at the age of 43"
+              },
+              {
+                "id": "12",
+                "tags": "",
+                "content": "d. Isn't Peter home yet? A [12] should be in bed by 10 at the latest!",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Một đứa trẻ ngang tuổi cậu ấy đáng lẽ phải đi ngủ sớm.",
+                "correctAnswer": "child of his age"
+              },
+              {
+                "id": "13",
+                "tags": "",
+                "content": "e. The great thing about roller-blading is that it appeals to young and old. [13] seem to be doing it.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Mọi lứa tuổi (người già và người trẻ đều tham gia).",
+                "correctAnswer": "People of all ages"
+              },
+              {
+                "id": "14",
+                "tags": "",
+                "content": "f. Our son is [14] the boy next door. They're in the same class.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Cùng tuổi với (học cùng lớp).",
+                "correctAnswer": "the same age as"
+              },
+              {
+                "id": "15",
+                "tags": "",
+                "content": "g. You're not really 50, are you? I don't believe it. [15].",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Lời khen trông trẻ hơn tuổi thật.",
+                "correctAnswer": "You don't look your age"
+              },
+              {
+                "id": "16",
+                "tags": "",
+                "content": "h. [16] you'll realise there's more to life than going clubbing and riding motorbikes.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Lời khuyên dựa trên kinh nghiệm khi đạt đến độ tuổi của người nói.",
+                "correctAnswer": "When you get to my age"
+              }
+            ],
+            "explanation": "",
+            "questionType": "Kéo thả"
+          },
+          {
+            "id": "17809332192460.747067965274913",
+            "tags": "",
+            "title": "5 The generation gap",
+            "content": "Use the following expressions in the sentences below:",
+            "audioUrl": "",
+            "questions": [
+              {
+                "id": "1",
+                "tags": "",
+                "content": "1. Many older people think that [1] are only interested in money.",
+                "options": [
+                  "the age difference",
+                  "the generation gap",
+                  "the younger generation",
+                  "of my generation"
+                ],
+                "audioUrl": "",
+                "explanation": "Thế hệ trẻ, lớp người trẻ tuổi.",
+                "correctAnswer": "the younger generation"
+              },
+              {
+                "id": "2",
+                "tags": "",
+                "content": "2. My wife is ten years older than me, but [2] has never been a problem.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Sự chênh lệch về tuổi tác.",
+                "correctAnswer": "the age difference"
+              },
+              {
+                "id": "3",
+                "tags": "",
+                "content": "3. You can't expect me to use the internet! People [3] grew up without telephones!",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Thuộc thế hệ của tôi (thế hệ trước).",
+                "correctAnswer": "of my generation"
+              },
+              {
+                "id": "4",
+                "tags": "",
+                "content": "4. My husband and I can't stand the music our children play or their taste in clothes. I suppose it's just [4].",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Khoảng cách thế hệ (sự khác biệt về sở thích, quan điểm).",
+                "correctAnswer": "the generation gap"
+              }
+            ],
+            "explanation": "",
+            "questionType": "Kéo thả"
+          },
+          {
+            "id": "17809332192460.7529714803372434",
+            "tags": "",
+            "title": "6 He's very mature for his age",
+            "content": "Use the following words in the dialogues below:",
+            "audioUrl": "",
+            "questions": [
+              {
+                "id": "1",
+                "tags": "",
+                "content": "1. Jane's only two years old, but she can count up to ten.<br>> Really? She sounds very [1] for her age.",
+                "options": [
+                  "great",
+                  "grown-up",
+                  "bright",
+                  "fit",
+                  "remarkable",
+                  "tall"
+                ],
+                "audioUrl": "",
+                "explanation": "Sáng dạ, thông minh vượt trội so với độ tuổi.",
+                "correctAnswer": "bright"
+              },
+              {
+                "id": "2",
+                "tags": "",
+                "content": "2. Peter's only 14, but he's nearly as tall as me.<br>> Yes, he's quite [2] for his age, isn't he?",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Cao lớn hơn so với bạn bè đồng trang lứa.",
+                "correctAnswer": "tall"
+              },
+              {
+                "id": "3",
+                "tags": "",
+                "content": "3. Grand-dad plays tennis three times a week.<br>> I know. He's very [3] for his age.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Cơ thể khỏe mạnh, sung sức bất chấp tuổi già.",
+                "correctAnswer": "fit"
+              },
+              {
+                "id": "4",
+                "tags": "",
+                "content": "4. You know, Ruth's 50, but she's still a very attractive woman.<br>> I know. She looks really [4] for her age.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Trông đẹp và rạng rỡ bất chấp tuổi tác.",
+                "correctAnswer": "great"
+              },
+              {
+                "id": "5",
+                "tags": "",
+                "content": "5. Laura's only 14, but when she puts make-up on, you'd think she was 17.<br>> Yes, she's very [5] for her age, isn't she?",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Trông chững chạc, trưởng thành như người lớn.",
+                "correctAnswer": "grown-up"
+              },
+              {
+                "id": "6",
+                "tags": "",
+                "content": "6. My grandmother's 100, but she lives alone and looks after herself. She's amazing!<br>> Yes, she's quite [6] for her age.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Phi thường, đáng kinh ngạc (100 tuổi vẫn tự chăm sóc).",
+                "correctAnswer": "remarkable"
+              }
+            ],
+            "explanation": "",
+            "questionType": "Kéo thả"
+          },
+          {
+            "id": "17809332192470.8425047571281657",
+            "tags": "",
+            "title": "7 Age idioms",
+            "content": "The following idioms are all about getting old. Complete them using these words:",
+            "audioUrl": "",
+            "questions": [
+              {
+                "id": "1",
+                "tags": "",
+                "content": "1. You can't teach an old [1] new tricks.",
+                "options": [
+                  "getting",
+                  "dog",
+                  "over",
+                  "wrong"
+                ],
+                "audioUrl": "",
+                "explanation": "Thành ngữ: Không thể thay đổi thói quen của một người lớn tuổi/đã quen việc.",
+                "correctAnswer": "dog"
+              },
+              {
+                "id": "2",
+                "tags": "",
+                "content": "2. She's the [2] side of 40.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Thành ngữ: be the wrong side of (age) - đã bước qua độ tuổi đó (VD: hơn 40 tuổi).",
+                "correctAnswer": "wrong"
+              },
+              {
+                "id": "3",
+                "tags": "",
+                "content": "3. He's [3] the hill.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Thành ngữ: over the hill - đã già, qua thời kỳ đỉnh cao.",
+                "correctAnswer": "over"
+              },
+              {
+                "id": "4",
+                "tags": "",
+                "content": "4. He's [4] on a bit now.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Thành ngữ: getting on a bit - bắt đầu có tuổi, già đi.",
+                "correctAnswer": "getting"
+              },
+              {
+                "id": "5",
+                "tags": "",
+                "content": "a. John will never change the way he does things. [5].",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Phù hợp với ngữ cảnh: không bao giờ thay đổi thói quen.",
+                "correctAnswer": "You can't teach an old dog new tricks"
+              },
+              {
+                "id": "6",
+                "tags": "",
+                "content": "b. In professional football, you're [6] at 35.",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Quá tuổi đỉnh cao đối với cầu thủ bóng đá chuyên nghiệp.",
+                "correctAnswer": "over the hill"
+              },
+              {
+                "id": "7",
+                "tags": "",
+                "content": "c. I think I'll have to start taking life a bit easier. I am [7] you know!",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Giải thích lý do phải sống chậm lại vì bắt đầu già đi.",
+                "correctAnswer": "getting on a bit"
+              },
+              {
+                "id": "8",
+                "tags": "",
+                "content": "d. Sheila looks great for her age. You'd never guess she's [8] of 50!",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Phù hợp với ngữ cảnh khen một người hơn 50 tuổi nhưng trông vẫn trẻ đẹp.",
+                "correctAnswer": "the wrong side"
+              }
+            ],
+            "explanation": "",
+            "questionType": "Kéo thả"
+          },
+          {
+            "id": "17809332192470.8483287381229169",
+            "tags": "",
+            "title": "8 Famous quotes",
+            "content": "Complete these quotes with the following words:",
+            "audioUrl": "",
+            "questions": [
+              {
+                "id": "1",
+                "tags": "",
+                "content": "1. You're only as old as you [1].",
+                "options": [
+                  "age",
+                  "feel",
+                  "income",
+                  "forty"
+                ],
+                "audioUrl": "",
+                "explanation": "Quote: Bạn chỉ già đi khi bạn cảm thấy mình già.",
+                "correctAnswer": "feel"
+              },
+              {
+                "id": "2",
+                "tags": "",
+                "content": "2. Life begins at [2].",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Quote: Cuộc sống thực sự bắt đầu ở tuổi 40.",
+                "correctAnswer": "forty"
+              },
+              {
+                "id": "3",
+                "tags": "",
+                "content": "3. Women lie about their [3]; men lie about their [4].",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Quote: Phụ nữ thường nói dối về tuổi tác (ẩn tuổi).",
+                "correctAnswer": "age"
+              },
+              {
+                "id": "4",
+                "tags": "",
+                "content": "",
+                "options": [],
+                "audioUrl": "",
+                "explanation": "Đàn ông thường nói dối về thu nhập.",
+                "correctAnswer": "income"
+              }
+            ],
+            "explanation": "",
+            "questionType": "Kéo thả"
+          }
+        ],
+        "explanation": ""
+      }
+    ],
+    "basicInfo": {
+      "skill": "Mixed-Paper",
+      "title": "Unite 1: Age",
+      "category": "exercise",
+      "courseId": "2389dc0a-53d5-4c75-a495-da7e05815dee",
+      "timeLimit": "40"
+    }
+  },
+  "is_published": true,
+  "created_at": "2026-06-08T15:40:19.32013+00:00",
+  "insert_pdf_url": null,
+  "json_config": null,
+  "course_id": "2389dc0a-53d5-4c75-a495-da7e05815dee",
+  "order_index": 0
+}
