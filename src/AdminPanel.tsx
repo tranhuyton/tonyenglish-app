@@ -946,7 +946,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     setAssignedTests(prev => prev.map(t => ids.has(t.id) ? { ...t, is_published: status } : t));
     setSelectedTests([]);
     // Persist
-    supabase.from('tests').update({ is_published: status }).in('id', [...ids]);
+    await supabase.from('tests').update({ is_published: status }).in('id', [...ids]);
   };
 
   const handleBulkDelete = async () => {
