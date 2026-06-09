@@ -155,7 +155,17 @@ export default function IeltsWriting({ onBack, testData: propTestData, onFinish 
 
     try {
       // 🚀 NHẶT LINK ẢNH TỪ TẤT CẢ CÁC TASK ĐỂ GỬI CHO AI CHẤM
-      const collectedImages = allQuestions.map(q => q.imageUrl).filter(url => url && typeof url === 'string');
+      const collectedImages: string[] = [];
+      allQuestions.forEach(q => {
+         if (q.imageUrl && typeof q.imageUrl === 'string') collectedImages.push(q.imageUrl);
+         if (q.content) {
+             const imgRegex = /<img[^>]+src="([^">]+)"/g;
+             let match;
+             while ((match = imgRegex.exec(q.content)) !== null) {
+                 collectedImages.push(match[1]);
+             }
+         }
+      });
 
       const prompt = `
         Bạn là một Giám khảo IELTS tận tâm, chấm điểm theo hướng khuyến khích học sinh. Không quá khắt khe ở các lỗi diễn đạt nhỏ nếu ý chính vẫn rõ ràng. Bài viết có sử dụng cấu trúc lập luận tốt và từ vựng phong phú thì nên cân nhắc ưu tiên mức điểm cao (từ 7.0 đến 8.5).

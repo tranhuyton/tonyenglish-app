@@ -13,7 +13,7 @@ serve(async (req) => {
 
   try {
     // 1. Nhận dữ liệu từ web gửi lên (Đã thêm biến prompt để sửa lỗi chế độ Tutor)
-    const { content, imageUrl, taskType, prompt } = await req.json();
+    const { content, imageUrl, imageUrls, taskType, prompt } = await req.json();
     const geminiApiKey = Deno.env.get('GEMINI_API_KEY');
 
     // 2. KHO TÀNG PROMPT & PHÂN LUỒNG MODEL TỰ ĐỘNG
@@ -125,8 +125,8 @@ Looking at the [loại biểu đồ 1] in more detail, [Mô tả các số liệ
 Body 2 (Chỉ phân tích Biểu đồ 2)
 Turning to the [loại biểu đồ 2], it can be seen that [Mô tả các số liệu/xu hướng chính của hình 2]. Meanwhile, [Bổ sung thêm 1-2 chi tiết quan trọng khác của hình 2].
 `;
-            targetModel = "gemini-2.5-flash";
-            finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
+            targetModel = "gemini-2.5-pro";
+            finalPromptText = `${systemPrompt}\n\n[LƯU Ý ĐẶC BIỆT]: Nếu 'Nội dung từ học sinh' chứa một đề bài hoàn toàn mới, hãy bỏ qua 'Đề bài' hiện tại và viết/chấm theo đề bài mới của học sinh.\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
             
         case 'task2':
@@ -386,19 +386,18 @@ Body 2 (Answer to Question 2)
 With regards to the second question, ... [Câu trả lời trực tiếp cho Q2 / Tên Trụ ý 2]. This is due to the fact that ... [Cause 2]. Consequently, ... [Effect 2]. For instance, ... [Example 2].
 Conclusion
 To sum up, ... [Tóm tắt ngắn gọn câu trả lời 1] and ... [Tóm tắt ngắn gọn câu trả lời 2].`;
-            targetModel = "gemini-2.5-flash";
-            finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
+            targetModel = "gemini-2.5-pro";
+            finalPromptText = `${systemPrompt}\n\n[LƯU Ý ĐẶC BIỆT]: Nếu 'Nội dung từ học sinh' chứa một đề bài hoàn toàn mới, hãy bỏ qua 'Đề bài' hiện tại và viết/chấm theo đề bài mới của học sinh.\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
-            
         case 'math':
             systemPrompt = `Bạn là gia sư Toán IGCSE 0580, 0606 và Toán Alevel. Hãy nhìn vào hình vẽ hình học hoặc phương trình (nếu có) và giải thích từng bước giải cho học sinh. Nếu học sinh làm sai, hãy chỉ rõ lỗi sai. Không đưa đáp án cộc lốc.`;
-            targetModel = "gemini-2.5-flash";
+            targetModel = "gemini-2.5-pro";
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
             
         case 'Science':
             systemPrompt = `Bạn là gia sư hệ Science của IGCSE và Alevel. Hãy nhìn vào hình vẽ hình học hoặc phương trình (nếu có) và giải thích từng bước giải cho học sinh. Nếu học sinh làm sai, hãy chỉ rõ lỗi sai. Không đưa đáp án cộc lốc.`;
-            targetModel = "gemini-2.5-flash";
+            targetModel = "gemini-2.5-pro";
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
             
@@ -432,8 +431,8 @@ Provide the corrected version next to it.
 5. The "Band 9" Upgraded Version:
 Rewrite the student's entire text to meet the highest standard (Band 9 / A*). Keep their original ideas but elevate the vocabulary, grammar, and flow.
 Tone: Professional, encouraging, highly analytical, and strictly aligned with Cambridge standards.`;
-            targetModel = "gemini-2.5-flash";
-            finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
+            targetModel = "gemini-2.5-pro";
+            finalPromptText = `${systemPrompt}\n\n[LƯU Ý ĐẶC BIỆT]: Nếu 'Nội dung từ học sinh' chứa một đề bài hoàn toàn mới, hãy bỏ qua 'Đề bài' hiện tại và viết/chấm theo đề bài mới của học sinh.\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
 
         case 'speaking':
@@ -548,14 +547,14 @@ Stage 1: I would like to talk about a happy couple that I really admire (hoặc 
 Stage 2: They tied the knot many years ago. If my memory serves me well, their wedding anniversary is in autumn. They always organize a cozy party at a modern restaurant to celebrate it. The atmosphere is always joyful and full of laughter.
 Stage 3: I think they are a perfect match because they have a lot in common. Not only do they share household chores, but they also support each other through thick and thin. They always communicate openly and respect each other's opinions.
 Stage 4: To me, they are a true role model for a successful marriage. If it hadn't been for their inspiring story, I wouldn't understand the true meaning of love and patience. I truly hope that I can have a wonderful relationship like theirs in the future.`;
-            targetModel = "gemini-2.5-flash"; // 🚀 Dùng Flash cho cực nhanh
+            targetModel = "gemini-2.5-pro"; // 🚀 Dùng Flash cho cực nhanh
             finalPromptText = `${systemPrompt}\n\n--- Dữ liệu từ học sinh ---\n${content}`;
             break;
             
         case 'tutor':
         default:
             // 🚀 Sửa lỗi cho chế độ Tutor: Nếu có biến prompt (từ frontend chứa nội dung bài giảng), ta dùng nó
-            targetModel = "gemini-2.5-flash"; // 🚀 Tutor cần tốc độ nhả chữ chớp nhoáng
+            targetModel = "gemini-2.5-pro"; // 🚀 Tutor cần tốc độ nhả chữ chớp nhoáng
             finalPromptText = prompt || `Bạn là Trợ lý AI giáo dục tại TonyEnglish.vn. Hãy hỗ trợ học sinh giải đáp các thắc mắc một cách ngắn gọn, dễ hiểu: ${content}`;
             break;
     }
@@ -564,19 +563,39 @@ Stage 4: To me, they are a true role model for a successful marriage. If it hadn
     const parts: any[] = [{ text: finalPromptText }];
 
     // 4. "Mắt thần": Xử lý hình ảnh (Nếu web có gửi link ảnh lên)
-    if (imageUrl) {
-        console.log("Đang tải và phân tích ảnh từ:", imageUrl);
-        const imgRes = await fetch(imageUrl);
+    const imagesToProcess = imageUrls || (imageUrl ? [imageUrl] : []);
+    for (const url of imagesToProcess) {
+        if (!url) continue;
         
-        if (!imgRes.ok) throw new Error("Không thể tải được ảnh từ link bài giảng.");
-        
-        const arrayBuffer = await imgRes.arrayBuffer();
-        const base64Data = encodeBase64(arrayBuffer);
-        const mimeType = imgRes.headers.get('content-type') || 'image/jpeg';
-        
-        parts.push({
-            inline_data: { mime_type: mimeType, data: base64Data }
-        });
+        let mimeType = 'image/jpeg';
+        let base64Data = '';
+
+        if (url.startsWith('data:image/')) {
+            const commaIndex = url.indexOf(',');
+            if (commaIndex !== -1) {
+                const header = url.substring(0, commaIndex);
+                const match = header.match(/data:(.*?);base64/);
+                if (match && match[1]) {
+                    mimeType = match[1];
+                }
+                base64Data = url.substring(commaIndex + 1);
+            }
+        } else {
+            console.log("Đang tải và phân tích ảnh từ:", url);
+            const imgRes = await fetch(url);
+            
+            if (imgRes.ok) {
+                const arrayBuffer = await imgRes.arrayBuffer();
+                base64Data = encodeBase64(arrayBuffer);
+                mimeType = imgRes.headers.get('content-type') || 'image/jpeg';
+            }
+        }
+
+        if (base64Data) {
+            parts.push({
+                inlineData: { mimeType: mimeType, data: base64Data }
+            });
+        }
     }
 
     // 5. Gửi lên Google Gemini API (Dùng biến targetModel để linh hoạt Pro hay Flash)

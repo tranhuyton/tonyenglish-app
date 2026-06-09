@@ -1242,11 +1242,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">🔍</span>
                     </div>
                     <div className="flex gap-3 w-full lg:w-auto">
-                       <select value={filterType} onChange={(e) => setFilterType(e.target.value)} className="flex-1 lg:flex-none bg-white border border-slate-200 shadow-sm rounded-xl px-4 py-3 font-bold text-[13px] text-slate-600 outline-none cursor-pointer focus:border-[#0ea5e9] focus:ring-4 focus:ring-[#0ea5e9]/10">
-                          <option value="all">Tất cả loại bài</option>
-                          <option value="test">Đề thi</option>
-                          <option value="exercise">Bài tập ngắn</option>
-                       </select>
+
                        <select value={sortTest} onChange={(e) => setSortTest(e.target.value)} className="flex-1 lg:flex-none bg-white border border-slate-200 shadow-sm rounded-xl px-4 py-3 font-bold text-[13px] text-slate-600 outline-none cursor-pointer focus:border-[#0ea5e9] focus:ring-4 focus:ring-[#0ea5e9]/10">
                          <option value="name-asc">A-Z</option>
                          <option value="name-desc">Z-A</option>
@@ -1307,9 +1303,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                               </h3>
                               
                               <div className="flex flex-wrap items-center gap-2 mb-2">
-                                  <span className={`text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider ${test.content_json?.basicInfo?.category === 'exercise' ? 'bg-slate-100 text-slate-500' : 'bg-slate-800 text-white'}`}>
-                                      {test.content_json?.basicInfo?.category === 'exercise' ? 'Bài tập' : 'Đề thi'}
-                                  </span>
+
                                   {matchedClassId && !isCompleted && (
                                       <span className={`text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider ${isOverdue ? 'bg-rose-100 text-rose-600' : 'bg-orange-100 text-orange-600'}`}>
                                           {isOverdue ? 'Quá hạn' : 'Hạn: ' + deadlineLabel}
@@ -1368,12 +1362,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   </select>
                   <span className="text-slate-400 text-xs">▼</span>
                 </div>
-                <div className="w-full sm:w-48 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer focus-within:border-[#0ea5e9] focus-within:ring-4 focus-within:ring-[#0ea5e9]/10 transition-all">
-                  <select value={analyticsCategory} onChange={(e) => setAnalyticsCategory(e.target.value)} className="w-full bg-transparent font-bold text-[13px] text-slate-700 outline-none cursor-pointer appearance-none">
-                    <option value="all">Tất cả bài làm</option><option value="test">Đề thi</option><option value="exercise">Bài tập</option>
-                  </select>
-                  <span className="text-slate-400 text-xs">▼</span>
-                </div>
+
               </div>
             </div>
 
@@ -1598,15 +1587,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                  {history.name}
                               </div>
                               <div className="flex items-center gap-2">
-                                 {(() => {
-                                    const foundTest = allTests.find(t => String(t.id) === String(history.testId));
-                                    const isEx = foundTest?.content_json?.basicInfo?.category === 'exercise';
-                                    return (
-                                         <span className={`text-[10px] px-2 py-0.5 rounded uppercase font-bold tracking-wider ${isEx ? 'bg-slate-100 text-slate-500' : 'bg-slate-800 text-white'}`}>
-                                             {isEx ? 'Bài tập' : 'Đề thi'}
-                                         </span>
-                                    );
-                                 })()}
+
                               </div>
                             </td>
                             <td className="px-6 md:px-8 py-5 text-center">
