@@ -472,8 +472,8 @@ export default function AITutorSidebar({
                  : '';
              payload = { 
                 content: `Đề bài: ${topicTitle}\n\nNội dung từ học sinh: ${userMsg}${unicodeInstruction}`,
-                imageUrl: topicImage,
-                imageUrls: [topicImage, currentImage].filter(Boolean),
+                imageUrl: currentImage || topicImage,
+                imageUrls: currentImage ? [currentImage] : (topicImage ? [topicImage] : []),
                 taskType: taskType 
              };
          }
