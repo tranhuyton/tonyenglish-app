@@ -77,19 +77,16 @@ export default function AITutorSidebar({
       } else {
           if (taskType === 'speaking') {
               welcomeText = `Chào em! Thầy là trợ lý Speaking.\n\n`;
-              if (topicTitle) welcomeText += `**💡 Chủ đề hiện tại:** "${topicTitle}"\n\n`;
-              welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng Band 8+ hay luyện tập trả lời câu hỏi nào?`;
+              welcomeText += `Em gửi đề bài hoặc paste câu hỏi vào đây, thầy sẽ tư vấn Kịch bản Lego, gợi ý từ vựng Band 8+ hoặc cùng em luyện tập trả lời nhé!`;
           } else if (taskType === 'task1') {
               welcomeText = `Chào em! Thầy là trợ lý Writing Task 1.\n\n`;
-              if (topicTitle) welcomeText += `**💡 Chủ đề hiện tại:** "${topicTitle}"\n\n`;
-              welcomeText += `Em cần thầy phân tích biểu đồ, lập dàn ý, hay chấm điểm bài viết của em?`;
+              welcomeText += `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ phân tích biểu đồ, lập dàn ý, hoặc chấm điểm bài viết cho em nhé!`;
           } else if (taskType === 'task2') {
               welcomeText = `Chào em! Thầy là trợ lý Writing Task 2.\n\n`;
-              if (topicTitle) welcomeText += `**💡 Chủ đề hiện tại:** "${topicTitle}"\n\n`;
-              welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
+              welcomeText += `Em gửi đề bài hoặc paste nội dung vào đây, thầy sẽ lập dàn ý, gợi ý từ vựng, hoặc chấm điểm bài làm cho em nhé!`;
           } else {
               welcomeText = `Chào em! Thầy đã sẵn sàng hỗ trợ.\n\n`;
-              if (topicTitle) welcomeText += `**💡 Đề bài:** "${topicTitle}"\n\n`;
+              if (topicTitle) welcomeText += `**💡 Chủ đề:** "${topicTitle}"\n\n`;
               welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
           }
           if (topicImage) welcomeText += `\n\n*(📷 Thầy đã nhận được hình ảnh/biểu đồ kèm theo)*`;
@@ -110,7 +107,7 @@ export default function AITutorSidebar({
       setMessages(generateWelcome());
     }
     prevContextRef.current = newKey;
-  }, [topicTitle, lectureTitle, isOpen]);
+  }, [topicTitle, lectureTitle, taskType, isOpen]);
 
   const theme = useMemo(() => {
     if (mode === 'parent_mode') {
