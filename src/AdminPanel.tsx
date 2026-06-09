@@ -47,6 +47,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const lectureItemsPerPage = 20;
   const [targetMoveCourseId, setTargetMoveCourseId] = useState('');
   const [targetMoveTestCourseId, setTargetMoveTestCourseId] = useState('');
+  const [targetMoveTestType, setTargetMoveTestType] = useState('');
 
   const [lectureModules, setLectureModules] = useState<any[]>([]);
   const [lectures, setLectures] = useState<any[]>([]);
@@ -1000,6 +1001,36 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     alert(`✅ Đã nhân bản thành công ${successCount}/${selectedTests.length} đề thi!`);
   };
 
+  const handleBulkChangeTestType = async () => {
+    if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
+    if (!targetMoveTestType) return alert("Vui lòng chọn dạng đề muốn đổi sang!");
+    
+    if (!window.confirm(`Đổi dạng ${selectedTests.length} đề thi sang ${targetMoveTestType}?\n(Lưu ý: Không đổi chéo giữa các dạng có cấu trúc đặc thù như CaseStudy, IGCSE)`)) return;
+
+    let successCount = 0;
+    for (const testId of selectedTests) {
+       const t = libraryTests.find(x => x.id === testId);
+       if (!t) continue;
+       
+       let newJson = t.content_json ? JSON.parse(JSON.stringify(t.content_json)) : {};
+       if (!newJson.basicInfo) newJson.basicInfo = {};
+       newJson.basicInfo.skill = targetMoveTestType;
+       
+       const { error } = await supabase.from('tests').update({ 
+           test_type: targetMoveTestType,
+           content_json: newJson
+       }).eq('id', testId);
+       
+       if (!error) successCount++;
+    }
+    
+    fetchLibraryTests();
+    if (selectedCourse) fetchCourseDetailsData(selectedCourse.id);
+    setSelectedTests([]);
+    setTargetMoveTestType('');
+    alert(`✅ Đã đổi dạng thành công ${successCount}/${selectedTests.length} đề thi!`);
+  };
+
   const handleBulkMoveTestCourse = async () => {
     if (selectedTests.length === 0) return alert("Vui lòng chọn ít nhất 1 đề thi/bài tập!");
     if (!targetMoveTestCourseId) return alert("Vui lòng chọn khóa học đích để chuyển tới!");
@@ -1780,6 +1811,18 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       {courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                    </select>
                    <button onClick={handleBulkMoveTestCourse} className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-3 py-1 md:py-1.5 rounded shadow-sm text-[11px] transition-colors whitespace-nowrap active:scale-95">ÁP DỤNG</button>
+                </div>
+
+                <div className="flex items-center gap-2 bg-purple-50 p-1.5 md:p-2 rounded-lg border border-purple-100 shadow-sm">
+                   <span className="text-[11px] font-bold text-purple-800 hidden sm:inline ml-1 uppercase tracking-tight">Dạng:</span>
+                   <select value={targetMoveTestType} onChange={e=>setTargetMoveTestType(e.target.value)} className="border border-purple-200 bg-white rounded px-2 py-1 md:py-1.5 text-[11px] md:text-[13px] font-bold text-slate-700 outline-none w-[140px] md:w-[160px] truncate focus:border-purple-500">
+                      <option value="">-- Chọn Dạng Đề --</option>
+                      <option value="Standard-Listening">MCQ (Standard)</option>
+                      <option value="Mixed-Paper">Mixed Paper (có hình)</option>
+                      <option value="Computer">Computer Test (IELTS)</option>
+                      <option value="Paper">Paper Test (IELTS)</option>
+                   </select>
+                   <button onClick={handleBulkChangeTestType} className="bg-purple-600 hover:bg-purple-700 text-white font-bold px-3 py-1 md:py-1.5 rounded shadow-sm text-[11px] transition-colors whitespace-nowrap active:scale-95">ĐỔI DẠNG</button>
                 </div>
               </div>
                 
