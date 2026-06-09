@@ -1343,6 +1343,31 @@ export default function LectureViewer({
                     <span className="animate-bounce">✨</span> <span className="hidden sm:inline">Hỏi AI Tutor</span>
                  </button>
              )}
+             {(course?.title || '').toLowerCase().includes('ielts') && (
+                 <>
+                 <button 
+                     onClick={() => onOpenAI?.('ielts', 'speaking', activeLecture?.title)} 
+                     className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all bg-gradient-to-br from-pink-400 to-rose-500 text-white shadow-md border border-white/20 hover:shadow-lg hover:scale-105 shrink-0"
+                     title="Tutor Speaking"
+                 >
+                     <span className="text-[10px] md:text-[11px] font-bold leading-tight">Spk</span>
+                 </button>
+                 <button 
+                     onClick={() => onOpenAI?.('ielts', 'task1', activeLecture?.title)} 
+                     className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-md border border-white/20 hover:shadow-lg hover:scale-105 shrink-0"
+                     title="Tutor Writing Task 1"
+                 >
+                     <span className="text-[10px] md:text-[11px] font-bold leading-tight">WT1</span>
+                 </button>
+                 <button 
+                     onClick={() => onOpenAI?.('ielts', 'task2', activeLecture?.title)} 
+                     className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all bg-gradient-to-br from-violet-400 to-purple-500 text-white shadow-md border border-white/20 hover:shadow-lg hover:scale-105 shrink-0"
+                     title="Tutor Writing Task 2"
+                 >
+                     <span className="text-[10px] md:text-[11px] font-bold leading-tight">WT2</span>
+                 </button>
+                 </>
+             )}
              <button 
                  onClick={toggleFullScreen} 
                  className="hidden md:flex w-10 h-10 rounded-full items-center justify-center bg-white/10 hover:bg-white/20 text-white transition-all"
