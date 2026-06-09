@@ -196,7 +196,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     computeInProgress();
   }, [activeTab, activeView]);
 
-  const checkUserAndFetchData = async () => {
+  const checkUserAndFetchData = async (retryCount = 0) => {
     setIsLoading(true);
     try {
         const { data: { user } } = await supabase.auth.getUser();
@@ -358,7 +358,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             setAllTests([]);
             setHistoryData([]);
         }
-    } catch (err) {
+    } catch (err: any) {
+        if (retryCount < 3 && (err?.name === 'AbortError' || err?.message?.includes('stole') || err?.message?.includes('Lock'))) {
+            console.warn(`Auth lock collision, retrying (${retryCount + 1}/3)...`, err);
+            setTimeout(() => checkUserAndFetchData(retryCount + 1), 500);
+            return;
+        }
         console.error("Lỗi khi load dữ liệu Portal:", err);
     } finally {
         setIsLoading(false);
