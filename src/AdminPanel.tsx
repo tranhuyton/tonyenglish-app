@@ -1827,7 +1827,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                   {test.title}
 
                                </div>
-                               <div className="text-[10px] md:text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? 'Đã gán thư mục' : 'Chưa gán thư mục'}</div>
+                               <div className="text-[10px] md:text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? `Đã gán: ${allFolders.find(f => f.id === test.folder_id)?.title || 'Thư mục khác'}` : 'Chưa gán thư mục'}</div>
                             </td>
                             <td className="px-4 md:px-6 py-4 md:py-5">{test.course_id ? <span className="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-[10px] md:text-[11px] font-bold text-slate-600">{getCourseNameForTest(test.course_id)}</span> : <span className="text-[10px] md:text-[11px] italic text-slate-400">-- Chung --</span>}</td>
 
@@ -2166,16 +2166,16 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         <button onClick={() => setShowAssignModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
                     </div>
                     <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
-                        {libraryTests.filter(t => t.course_id === selectedCourse.id && (!t.folder_id || t.folder_id === allFolders.find(f => f.id === currentFolderId)?.parent_id)).map(test => (
+                        {libraryTests.filter(t => t.course_id === selectedCourse.id && t.folder_id !== currentFolderId).map(test => (
                             <div key={test.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-100 rounded-xl md:rounded-2xl hover:border-[#2bd6eb] transition bg-slate-50 group">
                                 <div className="min-w-0 pr-2">
                                     <p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{test.title}</p>
-
+                                    {test.folder_id && <p className="text-[10px] text-slate-400 mt-0.5 truncate uppercase font-bold tracking-tight">Đang ở: {allFolders.find(f => f.id === test.folder_id)?.title || 'Thư mục khác'}</p>}
                                 </div>
                                 <button onClick={() => handleAssignTest(test.id)} className="bg-white md:group-hover:bg-[#2bd6eb] md:group-hover:text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs transition border border-slate-200 shadow-sm shrink-0 whitespace-nowrap">GÁN ➜</button>
                             </div>
                         ))}
-                        {libraryTests.filter(t => t.course_id === selectedCourse.id && (!t.folder_id || t.folder_id === allFolders.find(f => f.id === currentFolderId)?.parent_id)).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm italic">Không có đề thi chờ gán.</p>}
+                        {libraryTests.filter(t => t.course_id === selectedCourse.id && t.folder_id !== currentFolderId).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm italic">Không có đề thi chờ gán.</p>}
                     </div>
                 </div>
             </div> 
