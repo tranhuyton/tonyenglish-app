@@ -75,12 +75,24 @@ export default function AITutorSidebar({
       if (taskType === 'reading') {
         welcomeText = `Chào em! Thầy đã nhận được yêu cầu giải thích:\n\n**${topicTitle}**\n\nEm muốn hỏi thêm thầy điều gì?`;
       } else {
-        welcomeText = `Chào em! Thầy đã nhận được yêu cầu phân tích.\n\n`;
-        if (topicTitle) welcomeText += `**📝 Đề bài:** "${topicTitle}"\n\n`;
-        if (topicImage) welcomeText += `*(📸 Đã nhận kèm hình ảnh/biểu đồ)*\n\n`;
-        if (taskType === 'speaking') welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng hay viết câu mở bài (Hook) nào?`;
-        else if (taskType === 'task1' || taskType === 'task2') welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
-        else welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
+          if (taskType === 'speaking') {
+              welcomeText = `Chào em! Thầy là trợ lý Speaking.\n\n`;
+              if (topicTitle) welcomeText += `**💡 Chủ đề hiện tại:** "${topicTitle}"\n\n`;
+              welcomeText += `Em cần thầy tư vấn Kịch bản Lego, gợi ý từ vựng Band 8+ hay luyện tập trả lời câu hỏi nào?`;
+          } else if (taskType === 'task1') {
+              welcomeText = `Chào em! Thầy là trợ lý Writing Task 1.\n\n`;
+              if (topicTitle) welcomeText += `**💡 Chủ đề hiện tại:** "${topicTitle}"\n\n`;
+              welcomeText += `Em cần thầy phân tích biểu đồ, lập dàn ý, hay chấm điểm bài viết của em?`;
+          } else if (taskType === 'task2') {
+              welcomeText = `Chào em! Thầy là trợ lý Writing Task 2.\n\n`;
+              if (topicTitle) welcomeText += `**💡 Chủ đề hiện tại:** "${topicTitle}"\n\n`;
+              welcomeText += `Em cần thầy lập dàn ý, gợi ý từ vựng hay chấm điểm bài làm của em?`;
+          } else {
+              welcomeText = `Chào em! Thầy đã sẵn sàng hỗ trợ.\n\n`;
+              if (topicTitle) welcomeText += `**💡 Đề bài:** "${topicTitle}"\n\n`;
+              welcomeText += `Em gửi câu hỏi hoặc dán nội dung vào đây để thầy hỗ trợ nhé!`;
+          }
+          if (topicImage) welcomeText += `\n\n*(📷 Thầy đã nhận được hình ảnh/biểu đồ kèm theo)*`;
       }
     } else {
       welcomeText = `Chào em! Thầy AI đã sẵn sàng hỗ trợ bài học **"${lectureTitle || 'này'}"**. Em có thể chat hỏi bài hoặc **Paste (Ctrl+V) / Tải ảnh lên** để thầy giải đáp nhé!`;
@@ -133,6 +145,18 @@ export default function AITutorSidebar({
     
     switch (taskType) {
       case 'task1':
+        return {
+          headerBg: 'from-[#10b981] to-[#0d9488]', 
+          title: `IELTS Assessor (TASK 1)`,
+          subtitle: 'Chấm điểm & Sửa lỗi chuyên sâu', 
+          icon: '📝',
+          userBg: 'bg-gradient-to-br from-[#10b981] to-[#0d9488]', 
+          aiBorder: 'border-emerald-100', 
+          aiBg: 'bg-white',
+          btnColor: 'bg-[#10b981] hover:bg-[#059669]', 
+          focusRing: 'focus-within:border-[#10b981] focus-within:ring-4 focus-within:ring-[#10b981]/10', 
+          width: 'md:w-[500px]'
+        };
       case 'task2':
         return {
           headerBg: 'from-[#8b5cf6] to-[#6d28d9]', 
@@ -172,6 +196,19 @@ export default function AITutorSidebar({
           focusRing: 'focus-within:border-[#f97316] focus-within:ring-4 focus-within:ring-[#f97316]/10', 
           width: 'md:w-[500px]'
         };
+      case 'speaking':
+        return {
+          headerBg: 'from-[#f43f5e] to-[#e11d48]', 
+          title: 'Speaking Assistant',
+          subtitle: 'Lên ý tưởng & Bẻ lõi Part 2', 
+          icon: '🎙️',
+          userBg: 'bg-gradient-to-br from-[#f43f5e] to-[#e11d48]', 
+          aiBorder: 'border-rose-100', 
+          aiBg: 'bg-white',
+          btnColor: 'bg-[#f43f5e] hover:bg-[#e11d48]', 
+          focusRing: 'focus-within:border-[#f43f5e] focus-within:ring-4 focus-within:ring-[#f43f5e]/10', 
+          width: 'md:w-[500px]'
+        };
       case 'ESL':
         return {
           headerBg: 'from-[#0284c7] to-[#0369a1]', 
@@ -183,19 +220,6 @@ export default function AITutorSidebar({
           aiBg: 'bg-white',
           btnColor: 'bg-[#0284c7] hover:bg-[#0369a1]', 
           focusRing: 'focus-within:border-[#0284c7] focus-within:ring-4 focus-within:ring-[#0284c7]/10', 
-          width: 'md:w-[500px]'
-        };
-      case 'speaking':
-        return {
-          headerBg: 'from-[#3b82f6] to-[#2563eb]', 
-          title: 'Speaking Assistant',
-          subtitle: 'Lên ý tưởng & Bẻ lái Part 2', 
-          icon: '🎙️',
-          userBg: 'bg-gradient-to-br from-[#3b82f6] to-[#2563eb]', 
-          aiBorder: 'border-blue-100', 
-          aiBg: 'bg-white',
-          btnColor: 'bg-[#3b82f6] hover:bg-[#2563eb]', 
-          focusRing: 'focus-within:border-[#3b82f6] focus-within:ring-4 focus-within:ring-[#3b82f6]/10', 
           width: 'md:w-[500px]'
         };
       case 'reading':
