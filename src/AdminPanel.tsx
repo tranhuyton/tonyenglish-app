@@ -2166,7 +2166,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         <button onClick={() => setShowAssignModal(false)} className="text-xl md:text-2xl hover:text-[#2bd6eb] transition-colors">&times;</button>
                     </div>
                     <div className="p-4 md:p-6 max-h-[60vh] overflow-y-auto space-y-2 md:space-y-3 custom-scrollbar">
-                        {libraryTests.filter(t => !t.folder_id && t.course_id === selectedCourse.id).map(test => (
+                        {libraryTests.filter(t => t.course_id === selectedCourse.id && (!t.folder_id || t.folder_id === allFolders.find(f => f.id === currentFolderId)?.parent_id)).map(test => (
                             <div key={test.id} className="flex justify-between items-center p-3 md:p-4 border border-slate-100 rounded-xl md:rounded-2xl hover:border-[#2bd6eb] transition bg-slate-50 group">
                                 <div className="min-w-0 pr-2">
                                     <p className="font-black text-slate-700 text-[13px] md:text-sm truncate">{test.title}</p>
@@ -2175,7 +2175,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                 <button onClick={() => handleAssignTest(test.id)} className="bg-white md:group-hover:bg-[#2bd6eb] md:group-hover:text-white px-3 md:px-5 py-1.5 md:py-2 rounded-lg md:rounded-xl font-bold text-[10px] md:text-xs transition border border-slate-200 shadow-sm shrink-0 whitespace-nowrap">GÁN ➜</button>
                             </div>
                         ))}
-                        {libraryTests.filter(t => !t.folder_id && t.course_id === selectedCourse.id).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm italic">Không có đề thi chờ gán.</p>}
+                        {libraryTests.filter(t => t.course_id === selectedCourse.id && (!t.folder_id || t.folder_id === allFolders.find(f => f.id === currentFolderId)?.parent_id)).length === 0 && <p className="text-center text-slate-400 text-[13px] md:text-sm italic">Không có đề thi chờ gán.</p>}
                     </div>
                 </div>
             </div> 
