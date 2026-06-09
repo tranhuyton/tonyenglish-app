@@ -685,7 +685,7 @@ const handleFinish = async () => {
     } else {
         const remaining = Math.max(0, Math.floor((currentEndTime - Date.now()) / 1000));
         setTimeLeft(remaining);
-        if (remaining <= 0) {
+        if (remaining <= 0 && basicInfo?.category !== 'exercise') {
             alert("⏰ Bài thi này đã hết thời gian làm bài!");
             handleFinish();
             return;
