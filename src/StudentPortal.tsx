@@ -596,8 +596,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
       return currentTests.filter(t => (t.title || '').toLowerCase().includes(searchTest.toLowerCase()))
                          .filter(t => filterType === 'all' || t.content_json?.basicInfo?.category === filterType)
                          .sort((a, b) => {
-                             if (sortTest === 'name-asc') return (a.title || '').localeCompare(b.title || '');
-                             if (sortTest === 'name-desc') return (b.title || '').localeCompare(a.title || '');
+                             if (sortTest === 'name-asc') return (a.title || '').localeCompare(b.title || '', undefined, { numeric: true, sensitivity: 'base' });
+                             if (sortTest === 'name-desc') return (b.title || '').localeCompare(a.title || '', undefined, { numeric: true, sensitivity: 'base' });
                              if (sortTest === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
                              return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
                          });

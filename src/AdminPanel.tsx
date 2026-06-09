@@ -1008,13 +1008,27 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     if (!window.confirm(`Đổi dạng ${selectedTests.length} đề thi sang ${targetMoveTestType}?\n(Lưu ý: Không đổi chéo giữa các dạng có cấu trúc đặc thù như CaseStudy, IGCSE)`)) return;
 
     let successCount = 0;
+    
+    const { data: fullTests } = await supabase.from('tests').select('id, content_json').in('id', selectedTests);
+    if (!fullTests) return alert("Lỗi tải dữ liệu để đổi dạng!");
+
     for (const testId of selectedTests) {
-       const t = libraryTests.find(x => x.id === testId);
-       if (!t) continue;
+       const fullTest = fullTests.find(x => x.id === testId);
+       if (!fullTest) continue;
        
-       let newJson = t.content_json ? JSON.parse(JSON.stringify(t.content_json)) : {};
+       let contentJson = fullTest.content_json;
+       if (typeof contentJson === 'string') {
+          try { contentJson = JSON.parse(contentJson); } catch (e) { contentJson = {}; }
+       }
+       
+       let newJson = contentJson ? JSON.parse(JSON.stringify(contentJson)) : {};
        if (!newJson.basicInfo) newJson.basicInfo = {};
        newJson.basicInfo.skill = targetMoveTestType;
+       // Restore title from libraryTests if it was wiped
+       const t = libraryTests.find(x => x.id === testId);
+       if (t && t.title && !newJson.basicInfo.title) {
+           newJson.basicInfo.title = t.title;
+       }
        
        const { error } = await supabase.from('tests').update({ 
            test_type: targetMoveTestType,
@@ -1095,8 +1109,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const filteredPdfFiles = useMemo(() => {
       let result = pdfFiles.filter(f => f.name.toLowerCase().includes(pdfSearchQuery.toLowerCase()));
       result = result.sort((a, b) => {
-          if (pdfSortOrder === 'name-asc') return a.name.localeCompare(b.name);
-          if (pdfSortOrder === 'name-desc') return b.name.localeCompare(a.name);
+          if (pdfSortOrder === 'name-asc') return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
+          if (pdfSortOrder === 'name-desc') return b.name.localeCompare(a.name, undefined, { numeric: true, sensitivity: 'base' });
           if (pdfSortOrder === 'date-desc') return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
           if (pdfSortOrder === 'date-asc') return new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
           if (pdfSortOrder === 'size-desc') return (b.metadata?.size || 0) - (a.metadata?.size || 0);
@@ -1116,8 +1130,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           return matchesSearch && matchesCourse && matchesCategory;
       });
       result = [...result].sort((a, b) => {
-          if (sortTest === 'name-asc') return (a.title || '').localeCompare(b.title || '');
-          if (sortTest === 'name-desc') return (b.title || '').localeCompare(a.title || '');
+          if (sortTest === 'name-asc') return (a.title || '').localeCompare(b.title || '', undefined, { numeric: true, sensitivity: 'base' });
+          if (sortTest === 'name-desc') return (b.title || '').localeCompare(a.title || '', undefined, { numeric: true, sensitivity: 'base' });
           if (sortTest === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
           if (sortTest === 'date-asc') return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
           if (sortTest === 'type') return (a.test_type || '').localeCompare(b.test_type || '');
@@ -1133,8 +1147,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           return matchesSearch && lec.course_id === filterLectureCourse;
       });
       result = [...result].sort((a, b) => {
-          if (sortLecture === 'name-asc') return (a.title || '').localeCompare(b.title || '');
-          if (sortLecture === 'name-desc') return (b.title || '').localeCompare(a.title || '');
+          if (sortLecture === 'name-asc') return (a.title || '').localeCompare(b.title || '', undefined, { numeric: true, sensitivity: 'base' });
+          if (sortLecture === 'name-desc') return (b.title || '').localeCompare(a.title || '', undefined, { numeric: true, sensitivity: 'base' });
           if (sortLecture === 'date-desc') return new Date(b.updated_at || b.created_at || 0).getTime() - new Date(a.updated_at || a.created_at || 0).getTime();
           if (sortLecture === 'date-asc') return new Date(a.updated_at || a.created_at || 0).getTime() - new Date(b.updated_at || b.created_at || 0).getTime();
           return 0;
@@ -1149,8 +1163,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const filteredAssignTests = useMemo(() => {
       let result = assignedTests.filter(t => (t.title || '').toLowerCase().includes(assignTestSearch.toLowerCase()));
       result = result.sort((a, b) => {
-          if (assignTestSort === 'name-asc') return (a.title || '').localeCompare(b.title || '');
-          if (assignTestSort === 'name-desc') return (b.title || '').localeCompare(a.title || '');
+          if (assignTestSort === 'name-asc') return (a.title || '').localeCompare(b.title || '', undefined, { numeric: true, sensitivity: 'base' });
+          if (assignTestSort === 'name-desc') return (b.title || '').localeCompare(a.title || '', undefined, { numeric: true, sensitivity: 'base' });
           if (assignTestSort === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
           if (assignTestSort === 'date-asc') return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
           return 0;
