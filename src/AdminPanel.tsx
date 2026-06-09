@@ -927,9 +927,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
        content_json: fullTest.content_json,
        json_config: fullTest.json_config,
        insert_pdf_url: fullTest.insert_pdf_url,
-       pdf_url: fullTest.pdf_url,
-       skill: fullTest.skill,
-       time_limit: fullTest.time_limit,
        is_published: false,
        order_index: libraryTests.length + 1 
     }]).select().single();

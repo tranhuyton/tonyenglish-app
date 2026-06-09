@@ -1,27 +1,42 @@
-const fs = require('fs');
-const file = 'src/AITutorSidebar.tsx';
-let lines = fs.readFileSync(file, 'utf8').split('\n');
-
-let start = -1;
-let end = -1;
-let occurrences = 0;
-for (let i = 0; i < lines.length; i++) {
-  if (lines[i].includes("case 'speaking':")) {
-    occurrences++;
-    if (occurrences === 2) {
-      start = i;
-    }
-  }
-  if (start !== -1 && lines[i].includes("width: 'md:w-[500px]'") && lines[i+1] && lines[i+1].includes('};')) {
-    end = i + 1;
-    break;
-  }
+﻿const fs = require('fs');
+function getEnv(key) {
+  try {
+    const envContent = fs.readFileSync('.env', 'utf-8');
+    const match = envContent.match(new RegExp(^=(.*)$, 'm'));
+    return match ? match[1].trim() : null;
+  } catch (e) { return null; }
 }
+const SUPABASE_URL = getEnv('VITE_SUPABASE_URL');
+const SUPABASE_SERVICE_ROLE_KEY = getEnv('VITE_SUPABASE_SERVICE_ROLE_KEY');
 
-if (start !== -1 && end !== -1) {
-  lines.splice(start, end - start + 1);
-  fs.writeFileSync(file, lines.join('\n'));
-  console.log('Removed duplicate speaking theme');
-} else {
-  console.log('Duplicate not found');
+async function testDupe() {
+  const { data: fullTest } = await fetch(${SUPABASE_URL}/rest/v1/tests?limit=1&select=*, {
+    headers: { 'apikey': SUPABASE_SERVICE_ROLE_KEY, 'Authorization': Bearer  }
+  }).then(r => r.json()).then(r => ({ data: r[0] }));
+
+  console.log('Original keys:', Object.keys(fullTest));
+
+  const payload = { 
+       title: fullTest.title + ' Copy', 
+       course_id: fullTest.course_id, 
+       folder_id: fullTest.folder_id, 
+       test_type: fullTest.test_type,
+       content_json: fullTest.content_json,
+       json_config: fullTest.json_config,
+       insert_pdf_url: fullTest.insert_pdf_url,
+       pdf_url: fullTest.pdf_url,
+       skill: fullTest.skill,
+       time_limit: fullTest.time_limit,
+       is_published: false,
+       order_index: 100 
+  };
+  
+  const res = await fetch(${SUPABASE_URL}/rest/v1/tests, {
+    method: 'POST',
+    headers: { 'apikey': SUPABASE_SERVICE_ROLE_KEY, 'Authorization': Bearer , 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  console.log('Insert status:', res.status, res.statusText);
+  if (!res.ok) console.log(await res.json());
 }
+testDupe();
