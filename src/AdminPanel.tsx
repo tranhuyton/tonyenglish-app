@@ -1641,20 +1641,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                  <div className="flex items-center gap-2 md:gap-3 flex-1 min-w-0 pr-2">
                                    <input type="number" defaultValue={t.order_index || 0} onBlur={e => handleUpdateTestOrder(t.id, parseInt(e.target.value) || 0)} className="w-8 md:w-10 h-6 text-center text-[10px] md:text-[11px] font-bold border border-slate-200 rounded outline-none focus:border-[#2bd6eb] shrink-0" title="Thứ tự hiển thị" />
                                    <div className="flex flex-col min-w-0">
-                                      <span className="font-bold text-[13px] md:text-[14px] text-slate-700 truncate">{t.title}</span>
-                                      <span className={`text-[8px] md:text-[9px] w-fit px-1 md:px-1.5 py-0.5 rounded uppercase font-black mt-1 ${
-                                          (() => {
-                                              let c = t.content_json;
-                                              if (typeof c === 'string') try { c = JSON.parse(c); } catch(e) { c = {}; }
-                                              return c?.basicInfo?.category === 'exercise' ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700';
-                                          })()
-                                      }`}>
-                                          {(() => {
-                                              let c = t.content_json;
-                                              if (typeof c === 'string') try { c = JSON.parse(c); } catch(e) { c = {}; }
-                                              return c?.basicInfo?.category === 'exercise' ? 'BÀI TẬP' : 'ĐỀ THI';
-                                          })()}
-                                      </span>
                                    </div>
                                  </div>
                                  <div className="flex gap-2 md:gap-3 shrink-0">
