@@ -931,7 +931,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
        order_index: libraryTests.length + 1 
     }]).select().single();
 
-    if (err) return alert("Lỗi nhân bản đề thi!");
+    if (err) return alert("Lỗi nhân bản đề thi! " + err.message + " | Details: " + JSON.stringify(err));
     fetchLibraryTests();
     alert("✨ Đã nhân bản đề thi thành công!");
   };
