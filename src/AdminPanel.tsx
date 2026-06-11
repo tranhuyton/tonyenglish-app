@@ -1080,8 +1080,14 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   }
 
   // Course Test Folders
-  const breadcrumbs = []; let curr = folders.find(f => f.id === currentFolderId);
-  while (curr) { breadcrumbs.unshift(curr); curr = folders.find(f => f.id === curr.parent_id); }
+  const breadcrumbs = []; 
+  let curr = folders.find(f => f.id === currentFolderId);
+  const visited = new Set();
+  while (curr && !visited.has(curr.id)) { 
+      visited.add(curr.id);
+      breadcrumbs.unshift(curr); 
+      curr = folders.find(f => f.id === curr.parent_id); 
+  }
   
   const currentSubFolders = useMemo(() => {
       return folders.filter(f => currentFolderId ? f.parent_id === currentFolderId : (!f.parent_id || f.parent_id === 'null' || f.parent_id === '')).sort((a,b) => (a.display_order||0) - (b.display_order||0));
@@ -1098,7 +1104,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   // PDF Folders Breadcrumbs
   const pdfBreadcrumbs = [];
   let pCurr = pdfFolders.find(f => f.id === currentPdfFolderId);
-  while (pCurr) { pdfBreadcrumbs.unshift(pCurr); pCurr = pdfFolders.find(f => f.id === pCurr.parentId); }
+  const pVisited = new Set();
+  while (pCurr && !pVisited.has(pCurr.id)) { 
+      pVisited.add(pCurr.id);
+      pdfBreadcrumbs.unshift(pCurr); 
+      pCurr = pdfFolders.find(f => f.id === pCurr.parentId); 
+  }
   const currentPdfSubFolders = pdfFolders.filter(f => currentPdfFolderId ? f.parentId === currentPdfFolderId : !f.parentId);
   
   // TỐI ƯU SEARCH TÀI LIỆU VÀ SẮP XẾP BỘ LỌC TÀI LIỆU PDF
