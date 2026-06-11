@@ -175,7 +175,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     };
     
     document.addEventListener('mousedown', handleClickOutside);
-    const interval = setInterval(fetchNotifications, 10000); 
+    const interval = setInterval(() => {
+        if (!document.hidden) fetchNotifications();
+    }, 60000); 
     
     return () => {
         document.removeEventListener('mousedown', handleClickOutside);
