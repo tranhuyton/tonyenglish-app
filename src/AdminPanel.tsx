@@ -45,6 +45,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   const [selectedLectures, setSelectedLectures] = useState<string[]>([]);
   const [lectureCurrentPage, setLectureCurrentPage] = useState(1);
   const lectureItemsPerPage = 20;
+  const [testCurrentPage, setTestCurrentPage] = useState(1);
+  const testItemsPerPage = 30;
   const [targetMoveCourseId, setTargetMoveCourseId] = useState('');
   const [targetMoveTestCourseId, setTargetMoveTestCourseId] = useState('');
   const [targetMoveTestType, setTargetMoveTestType] = useState('');
@@ -188,6 +190,10 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   useEffect(() => {
     setLectureCurrentPage(1);
   }, [searchQuery, filterLectureCourse]);
+
+  useEffect(() => {
+    setTestCurrentPage(1);
+  }, [searchQuery, filterCourse, filterCategory, sortTest]);
 
   const formatDateTime = (iso: string) => {
     if (!iso) return '';
@@ -1150,6 +1156,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
       return result;
   }, [libraryTests, searchQuery, filterCourse, filterCategory, sortTest]);
 
+  const totalTestPages = Math.ceil(filteredLibraryTests.length / testItemsPerPage);
+  const paginatedTests = filteredLibraryTests.slice((testCurrentPage - 1) * testItemsPerPage, testCurrentPage * testItemsPerPage);
+
   const filteredGlobalLectures = useMemo(() => {
       let result = globalLectures.filter(lec => {
           const matchesSearch = lec.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -1176,7 +1185,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           if (assignTestSort === 'name-asc') return (a.title || '').localeCompare(b.title || '', undefined, { numeric: true, sensitivity: 'base' });
           if (assignTestSort === 'name-desc') return (b.title || '').localeCompare(a.title || '', undefined, { numeric: true, sensitivity: 'base' });
           if (assignTestSort === 'date-desc') return new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
-          if (assignTestSort === 'date-asc') return new Date(a.created_at || 0).getTime() - new Date(b.created_at || 0).getTime();
+          if (assignTestSort === 'date-asc') return new Date(a.created_at || 0).getTime() - new Date(a.created_at || 0).getTime();
           return 0;
       });
       return result;
@@ -1651,7 +1660,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         {currentSubFolders.map(sf => (
                           <div key={sf.id} className="relative group h-full">
                             <div className="absolute top-1 left-1 md:top-2 md:left-2 bg-white/90 backdrop-blur-sm px-1 md:px-2 py-0.5 rounded border border-slate-200 flex items-center gap-1 z-10 md:opacity-0 group-hover:opacity-100 transition-opacity">
-                               <span className="text-[9px] md:text-[10px] font-bold text-slate-400 hidden sm:inline">TT:</span>
+                               <span className="text-[9px] md:text-[10px] font-bold text-slate-400 hidden sm:inline ml-1">TT:</span>
                                <input type="number" defaultValue={sf.display_order || 0} onBlur={e => handleUpdateFolderOrder(sf.id, parseInt(e.target.value) || 0)} className="w-6 md:w-8 text-center text-[10px] md:text-xs font-bold outline-none bg-transparent" title="Thứ tự hiển thị" />
                             </div>
 
@@ -1681,7 +1690,6 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     )}
                     
                     {(
-
                       <div className="border-t-2 border-dashed border-slate-200 pt-6 md:pt-8 mt-2">
                          <div className="flex justify-between items-center mb-4 md:mb-6">
                             <h3 className="font-black text-slate-800 text-[14px] md:text-lg">📝 Đề thi / Bài tập</h3>
@@ -1884,15 +1892,14 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
-                      {filteredLibraryTests.length === 0 ? <tr><td colSpan={9} className="text-center py-8 md:py-10 text-[13px] md:text-sm text-slate-400 font-medium">Không tìm thấy mục nào phù hợp.</td></tr> : (
-                        filteredLibraryTests.map((test, index) => (
+                      {paginatedTests.length === 0 ? <tr><td colSpan={9} className="text-center py-8 md:py-10 text-[13px] md:text-sm text-slate-400 font-medium">Không tìm thấy mục nào phù hợp.</td></tr> : (
+                        paginatedTests.map((test, index) => (
                           <tr key={test.id} className={`hover:bg-slate-50 transition group bg-white ${selectedTests.includes(test.id) ? 'bg-blue-50/30' : ''}`}>
-                            <td className="px-3 md:px-4 py-4 md:py-5 text-center text-[12px] md:text-[13px] font-bold text-slate-400">{index + 1}</td>
+                            <td className="px-3 md:px-4 py-4 md:py-5 text-center text-[12px] md:text-[13px] font-bold text-slate-400">{(testCurrentPage - 1) * testItemsPerPage + index + 1}</td>
                             <td className="px-2 py-4 md:py-5"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedTests.includes(test.id)} onChange={() => handleSelectOne(test.id)} /></td>
                             <td className="px-4 md:px-6 py-4 md:py-5">
                                <div className="font-bold text-[#0a5482] text-[13px] md:text-[15px] flex items-center gap-2">
                                   {test.title}
-
                                </div>
                                <div className="text-[10px] md:text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? `Đã gán: ${allFolders.find(f => f.id === test.folder_id)?.title || 'Thư mục khác'}` : 'Chưa gán thư mục'}</div>
                             </td>
@@ -1912,6 +1919,20 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                     </tbody>
                   </table>
                 </div>
+
+                {totalTestPages > 1 && (
+                  <div className="p-4 border-t border-slate-200 bg-slate-50 flex justify-center items-center gap-4 shrink-0">
+                     <button disabled={testCurrentPage === 1} onClick={() => setTestCurrentPage(p => p - 1)} className="px-4 py-2 bg-white border border-slate-200 text-slate-600 hover:text-[#0a5482] hover:border-[#0a5482] rounded-lg disabled:opacity-50 disabled:hover:border-slate-200 disabled:hover:text-slate-600 font-bold text-[13px] transition-colors shadow-sm">
+                        ⬅ Trang trước
+                     </button>
+                     <span className="text-[13px] font-black text-slate-500">
+                        Trang {testCurrentPage} <span className="font-medium text-slate-400">/ {totalTestPages}</span>
+                     </span>
+                     <button disabled={testCurrentPage === totalTestPages} onClick={() => setTestCurrentPage(p => p + 1)} className="px-4 py-2 bg-white border border-slate-200 text-slate-600 hover:text-[#0a5482] hover:border-[#0a5482] rounded-lg disabled:opacity-50 disabled:hover:border-slate-200 disabled:hover:text-slate-600 font-bold text-[13px] transition-colors shadow-sm">
+                        Trang sau ➡
+                     </button>
+                  </div>
+                )}
               </div>
             </div>
           )}
@@ -1919,9 +1940,9 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           {activeTab === 'students' && <StudentManagement onStartTest={onStartTest} autoSelectUserId={notifTargetUserId} autoTab={notifTargetTab as any} onAutoSelectDone={() => { setNotifTargetUserId(null); setNotifTargetTab(null); }} />}
         </div>
 
-        {/* ========================================================================================= */}
+        {/* ========================================================= */}
         {/* CÁC MODALS */}
-        {/* ========================================================================================= */}
+        {/* ========================================================= */}
 
         {/* 🚀 MODAL CÀI ĐẶT DEADLINE NỘP BÀI (SỬA NHANH CHO 1 BÀI) */}
         {deadlineModal.show && deadlineModal.test && (
