@@ -61,9 +61,11 @@ const getTestSkillConfig = (test: any) => {
 };
 
 const getCourseCover = (course: any) => {
+  if (course.thumbnail) return { image: course.thumbnail, badge: course.type || 'Khóa học', color: 'text-indigo-600' };
+
   const t = (course.title || '').toLowerCase();
   if (t.includes('biology')) return { image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80&w=800', badge: 'Biology', color: 'text-emerald-600' };
-  if (t.includes('chemistry')) return { image: 'https://images.unsplash.com/photo-1603126857599-f6e15782afa5?auto=format&fit=crop&q=80&w=800', badge: 'Chemistry', color: 'text-cyan-600' };
+  if (t.includes('chemistry')) return { image: 'https://ubkvzgwespfvrlpjuxkp.supabase.co/storage/v1/object/public/documents/covers/chem_course_cover.png', badge: 'Chemistry', color: 'text-cyan-600' };
   if (t.includes('physics')) return { image: 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?auto=format&fit=crop&q=80&w=800', badge: 'Physics', color: 'text-indigo-600' };
   if (t.includes('science')) return { image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=800', badge: 'Science', color: 'text-teal-600' };
   if (t.includes('math')) return { image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800', badge: 'Mathematics', color: 'text-purple-600' };
