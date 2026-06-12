@@ -1204,24 +1204,36 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     {paginatedFolders.map((subFolder, idx) => {
                       const childCount = allFolders.filter(f => f.parent_id === subFolder.id).length;
                       const testCount = allTests.filter(t => t.folder_id === subFolder.id).length;
+                      const parentFolder = subFolder.parent_id ? allFolders.find(f => f.id === subFolder.parent_id) : null;
                       const defaultImage = FOLDER_IMAGES[idx % FOLDER_IMAGES.length];
-                      const displayImage = subFolder.thumbnail_url || defaultImage;
+                      const isInherited = !subFolder.thumbnail_url && parentFolder?.thumbnail_url;
+                      const displayImage = subFolder.thumbnail_url || (parentFolder ? parentFolder.thumbnail_url : null) || defaultImage;
+                      const hueRotate = isInherited ? `hue-rotate(${(idx * 65) % 360}deg)` : 'none';
+                      const prefixMatch = subFolder.title.match(/^([A-Z0-9]+)\s*:/i);
+                      const badgeText = prefixMatch ? prefixMatch[1].toUpperCase() : null;
+                      const displayTitle = prefixMatch ? subFolder.title.substring(prefixMatch[0].length).trim() : subFolder.title;
 
                       return (
                         <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-[#0ea5e9] transition-all duration-300 cursor-pointer flex flex-col group relative">
                           <div className={`h-[120px] relative overflow-hidden bg-slate-800`}>
-                            <img src={displayImage} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" alt="folder" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-                          </div>
-                          <div className="bg-white p-5 flex flex-col relative">
-                            {/* Nổi lên trên hình ảnh */}
-                            <div className="absolute -top-12 left-5 right-5">
-                                <h3 className="text-[17px] font-black leading-snug line-clamp-2 w-full text-white drop-shadow-md">
-                                    {subFolder.title}
+                            <img src={displayImage} style={{ filter: hueRotate }} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" alt="folder" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+                            <div className={`absolute bottom-4 right-4 ${badgeText ? 'left-20' : 'left-5'}`}>
+                                <h3 className="text-[16px] font-black leading-snug line-clamp-2 w-full text-white drop-shadow-md">
+                                    {displayTitle}
                                 </h3>
                             </div>
-                            
-                            <div className="flex justify-between items-center mt-2">
+                          </div>
+
+                          {badgeText && (
+                              <div className="absolute top-[96px] left-5 bg-gradient-to-br from-white to-slate-50 text-[#0ea5e9] font-black text-[18px] w-12 h-12 rounded-xl flex items-center justify-center shadow border-2 border-white shrink-0 z-10 ring-1 ring-black/5">
+                                  {badgeText}
+                              </div>
+                          )}
+
+                          <div className="bg-white p-5 pt-4 flex flex-col relative flex-1">
+                            {!badgeText && <div className="-mt-1"></div>}
+                            <div className="flex justify-between items-center mt-auto">
                               <span className="text-[11px] font-bold text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 uppercase tracking-widest">
                                   {childCount > 0 ? `${childCount} thư mục` : `${testCount} bài tập`}
                               </span>
