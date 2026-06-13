@@ -257,7 +257,10 @@ export default function StandardTest({
     document.body.style.cursor = 'col-resize';
     document.body.style.userSelect = 'none'; 
     
+    let isDragged = false;
+
     const handleMouseMove = (moveEvent: MouseEvent) => {
+      isDragged = true;
       if (!containerRef.current || !leftPaneRef.current || !rightPaneRef.current) return;
       
       const containerRect = containerRef.current.getBoundingClientRect();
@@ -276,7 +279,7 @@ export default function StandardTest({
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
 
-      if (!containerRef.current) return;
+      if (!isDragged || !containerRef.current) return;
       
       const containerRect = containerRef.current.getBoundingClientRect();
       let finalWidth = ((upEvent.clientX - containerRect.left) / containerRect.width) * 100;

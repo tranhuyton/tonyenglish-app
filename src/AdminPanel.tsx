@@ -757,12 +757,20 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
        finalData.basicInfo.category = 'exercise';
     }
 
+    const oldCourseId = editingTest?.course_id || null;
+    const isCourseChanged = testId !== 'new' && oldCourseId !== assignedCourseId;
+    
+    let resolvedFolderId = finalData.folder_id !== undefined ? finalData.folder_id : (editingTest?.folder_id || currentFolderId || null);
+    if (isCourseChanged) {
+        resolvedFolderId = null;
+    }
+
     const payload: any = { 
        title: finalData.basicInfo?.title || 'Untitled Test', 
        test_type: finalData.basicInfo?.skill || 'Standard-Listening', 
        content_json: finalData, 
        json_config: parsedJsonConfig, 
-       folder_id: finalData.folder_id !== undefined ? finalData.folder_id : (editingTest?.folder_id || currentFolderId || null), 
+       folder_id: resolvedFolderId, 
        course_id: assignedCourseId, 
        is_published: true, 
        insert_pdf_url: finalData.basicInfo?.insert_pdf_url || null 

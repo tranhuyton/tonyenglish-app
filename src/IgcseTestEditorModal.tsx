@@ -35,6 +35,8 @@ export default function IgcseTestEditorModal({
     const [courses, setCourses] = useState<any[]>([]);
     const [selectedCourseId, setSelectedCourseId] = useState(courseId || 'all');
 
+    const [originalCourseId, setOriginalCourseId] = useState<string | null>(null);
+
     // Upload PDF to Supabase storage and return public URL
     const uploadPdfFile = async (file: File) => {
         if (!file.type.includes('pdf')) { alert('⚠️ Chỉ hỗ trợ file PDF!'); return; }
@@ -82,6 +84,7 @@ export default function IgcseTestEditorModal({
             } else {
                 resetForm();
                 setSelectedCourseId(courseId || 'all');
+                setOriginalCourseId(courseId || 'all');
             }
         }
     }, [isOpen, existingTestId]);
@@ -94,6 +97,7 @@ export default function IgcseTestEditorModal({
         setPdfUrl('');
         setQuestions([]);
         setRawJson('[\n  {\n    "question_number": "1",\n    "sub_questions": []\n  }\n]');
+        setOriginalCourseId(null);
     };
 
     const fetchTestDetails = async (id: string) => {
@@ -107,7 +111,10 @@ export default function IgcseTestEditorModal({
                 setTimeLimit(data.time_limit || data.json_config?.timeLimit || 120);
                 setCategory(data.content_json?.basicInfo?.category || 'test');
                 setPdfUrl(data.insert_pdf_url || '');
-                setSelectedCourseId(data.course_id || data.content_json?.basicInfo?.courseId || 'all');
+                
+                const loadedCourseId = data.course_id || data.content_json?.basicInfo?.courseId || 'all';
+                setSelectedCourseId(loadedCourseId);
+                setOriginalCourseId(loadedCourseId);
                 
                 const loadedQuestions = data.json_config?.questions || [];
                 setQuestions(loadedQuestions);
@@ -200,6 +207,11 @@ export default function IgcseTestEditorModal({
                 course_id: assignedCourseId,
                 is_published: true,
             };
+            
+            if (existingTestId && selectedCourseId !== originalCourseId) {
+                payload.folder_id = null;
+            }
+
             if (moduleId) payload.module_id = moduleId;
 
             if (existingTestId) { 
