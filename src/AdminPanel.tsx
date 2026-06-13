@@ -425,11 +425,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     setAssignedTests(ast || []);
     
     // Lazy-load content_json in background for deadline/category features
+    // Chỉ giữ basicInfo để giảm tải DB
     if (ast && ast.length > 0) {
-      const loadedCourseId = courseId; // Closure to detect stale responses
+      const loadedCourseId = courseId;
       supabase.from('tests').select('id, content_json').eq('course_id', courseId).then(({ data: cjData }) => {
         if (cjData && selectedCourse?.id === loadedCourseId) {
-          const cjMap = new Map(cjData.map(c => [c.id, c.content_json]));
+          const cjMap = new Map(cjData.map(c => [c.id, { basicInfo: c.content_json?.basicInfo || {} }]));
           setAssignedTests(prev => prev.map(t => {
             const cj = cjMap.get(t.id);
             return cj !== undefined ? { ...t, content_json: cj } : t;

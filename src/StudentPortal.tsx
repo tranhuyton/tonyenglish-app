@@ -221,10 +221,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             { data: hData }
         ] = await Promise.all([
             supabase.from('profiles').select('*').eq('id', user.id).single(),
-            supabase.from('lecture_progress').select('*').eq('user_id', user.id),
-            supabase.from('class_students').select('*').eq('user_id', user.id),
-            supabase.from('enrollments').select('*').eq('user_id', user.id),
-            supabase.from('test_results').select('*').eq('user_id', user.id).order('created_at', { ascending: false })
+            supabase.from('lecture_progress').select('lecture_id, completed').eq('user_id', user.id),
+            supabase.from('class_students').select('class_id').eq('user_id', user.id),
+            supabase.from('enrollments').select('course_id').eq('user_id', user.id),
+            supabase.from('test_results').select('id, test_id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(50)
         ]);
 
         setUserProfile(profile);
@@ -257,8 +257,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 { data: tData },
                 { data: cData }
             ] = await Promise.all([
-                supabase.from('folders').select('*').in('course_id', courseIds),
-                supabase.from('lectures').select('*').eq('is_published', true).in('course_id', courseIds),
+                supabase.from('folders').select('id, title, course_id, display_order').in('course_id', courseIds),
+                supabase.from('lectures').select('id, title, course_id, module_id, order_index, is_published').eq('is_published', true).in('course_id', courseIds),
                 supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('is_published', true).or(`course_id.in.(${courseIds.join(',')}),course_id.is.null`),
                 supabase.from('courses').select('*').in('id', courseIds)
             ]);
@@ -280,11 +280,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             setAllTests(lightTests);
 
             // PHASE 2: Background fetch content_json to enrich tests with categories, deadlines, audio
+            // Chỉ fetch khi tab đang hiển thị và giới hạn chunk size nhỏ hơn
             const testIds = lightTests.map((t: any) => t.id);
-            if (testIds.length > 0) {
+            if (testIds.length > 0 && !document.hidden) {
                 const fetchRichData = async () => {
                     try {
-                        const chunkSize = 100;
+                        const chunkSize = 50; // Giảm từ 100 xuống 50 để giảm tải mỗi query
                         const allRichData: any[] = [];
                         for (let i = 0; i < testIds.length; i += chunkSize) {
                             const chunk = testIds.slice(i, i + chunkSize);
@@ -298,7 +299,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                                 if (typeof content === 'string') {
                                     try { content = JSON.parse(content); } catch(e) { content = {}; }
                                 }
-                                contentMap.set(r.id, content || {});
+                                // Chỉ giữ lại basicInfo để tiết kiệm bộ nhớ, không cần toàn bộ parts/questions
+                                contentMap.set(r.id, { basicInfo: content?.basicInfo || {} });
                             });
                             setAllTests(prev => prev.map(t => ({
                                 ...t,
