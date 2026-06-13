@@ -177,13 +177,22 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
     };
     
     document.addEventListener('mousedown', handleClickOutside);
-    const interval = setInterval(() => {
+    
+    // Polling thông báo: mỗi 5 phút, dừng hẳn khi tab bị ẩn
+    const notifInterval = setInterval(() => {
         if (!document.hidden) fetchNotifications();
-    }, 60000); 
+    }, 300000); // 5 phút thay vì 1 phút
+    
+    // Khi tab được focus lại → fetch ngay 1 lần
+    const handleVisibility = () => {
+        if (!document.hidden) fetchNotifications();
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
     
     return () => {
         document.removeEventListener('mousedown', handleClickOutside);
-        clearInterval(interval);
+        clearInterval(notifInterval);
+        document.removeEventListener('visibilitychange', handleVisibility);
     }
   }, []);
 

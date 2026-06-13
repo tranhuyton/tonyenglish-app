@@ -162,20 +162,37 @@ export default function App() {
     const startGlobalTimer = () => {
       if (!timerRef.current) {
         timerRef.current = setInterval(() => {
+          // Tạm dừng hoàn toàn khi tab bị ẩn (tiết kiệm tài nguyên Supabase)
+          if (document.hidden) return;
           try {
             const currentSecs = parseInt(localStorage.getItem('tony_global_time') || '0');
-            const newSecs = currentSecs + 1;
+            const newSecs = currentSecs + 60;
             localStorage.setItem('tony_global_time', newSecs.toString());
-            if (newSecs > 0 && newSecs % 300 === 0) {
-              supabase.auth.getUser().then(({ data: { user } }) => {
+            // Chỉ gọi Supabase mỗi 15 phút thay vì 5 phút
+            if (newSecs > 0 && newSecs % 900 === 0) {
+              supabase.auth.getSession().then(({ data: { session } }) => {
+                const user = session?.user;
                 if (user) supabase.from('profiles').update({ study_time_seconds: newSecs }).eq('id', user.id).then().catch(console.error);
               }).catch(console.warn);
             }
           } catch(e) {}
-        }, 1000);
+        }, 60000); // Chạy mỗi 60 giây thay vì mỗi giây
       }
     };
     const stopGlobalTimer = () => { if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; } };
+
+    // Tự động dừng/chạy timer khi tab bị ẩn/hiện
+    const handleVisibility = () => {
+      if (document.hidden) {
+        stopGlobalTimer();
+      } else {
+        supabase.auth.getSession().then(({ data: { session } }) => {
+          if (session) startGlobalTimer();
+        }).catch(console.warn);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibility);
+
     supabase.auth.getSession().then(({ data: { session } }) => { if (session) { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); } }).catch(console.warn);
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN') { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); }
@@ -185,7 +202,7 @@ export default function App() {
         stopGlobalTimer(); 
       }
     });
-    return () => { subscription.unsubscribe(); stopGlobalTimer(); };
+    return () => { subscription.unsubscribe(); stopGlobalTimer(); document.removeEventListener('visibilitychange', handleVisibility); };
   }, []); 
 
   const handleNavigate = (view: string) => { setCurrentView(view); try { sessionStorage.setItem('lms_current_view', view); } catch(e) {} };
