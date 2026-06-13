@@ -8,4 +8,12 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 
 // Khởi tạo Supabase Client để gọi Database ở bất kỳ đâu trong dự án
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    lock: { enabled: false },
+    storageKey: 'sb-ubkvzgwespfvrlpjuxkp-auth-token',
+    autoRefreshToken: true,
+    persistSession: true,
+    detectSessionInUrl: true,
+  }
+});
