@@ -169,6 +169,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   }, []);
 
   useEffect(() => {
+    if (!isLoading && activeView === 'course' && !selectedCourse) {
+      setActiveView('dashboard');
+    }
+  }, [isLoading, activeView, selectedCourse]);
+
+  useEffect(() => {
     const computeInProgress = () => {
       const inProg = new Set<string>();
       try {
