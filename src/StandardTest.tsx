@@ -267,8 +267,7 @@ export default function StandardTest({
       const newWidth = ((moveEvent.clientX - containerRect.left) / containerRect.width) * 100;
       
       if (newWidth >= 25 && newWidth <= 75) {
-        leftPaneRef.current.style.width = `calc(${newWidth}% - 5px)`;
-        rightPaneRef.current.style.width = `calc(${100 - newWidth}% - 5px)`;
+        setLeftWidth(newWidth);
       }
     };
 
@@ -278,15 +277,6 @@ export default function StandardTest({
       
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
-
-      if (!isDragged || !containerRef.current) return;
-      
-      const containerRect = containerRef.current.getBoundingClientRect();
-      let finalWidth = ((upEvent.clientX - containerRect.left) / containerRect.width) * 100;
-      
-      if (finalWidth < 25) finalWidth = 25;
-      if (finalWidth > 75) finalWidth = 75;
-      setLeftWidth(finalWidth);
     };
 
     document.addEventListener('mousemove', handleMouseMove);
