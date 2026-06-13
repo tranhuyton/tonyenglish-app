@@ -413,7 +413,7 @@ const handleFinish = async () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     try {
-      const { data: { user } } = await supabase.auth.getUser();
+      const { data: { user } } = await supabase.auth.getSession().then(({data}) => ({ data: { user: data.session?.user } }));
       if (user) {
         const timeSpentSecs = parseInitialTime(basicInfo.timeLimit) - timeLeft;
         await supabase.from('test_results').insert([{

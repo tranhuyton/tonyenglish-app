@@ -174,7 +174,7 @@ export default function SplitScreenTest({ onBack, onStartTest }: { onBack?: () =
 
       // 🚀 LƯU DB & BẮN PHÁO HIỆU CHO ADMIN
       try {
-        const { data: { user } } = await supabase.auth.getUser();
+        const { data: { user } } = await supabase.auth.getSession().then(({data}) => ({ data: { user: data.session?.user } }));
         if (user) {
           const rawTime = testData.content_json?.basicInfo?.timeLimit || testData.timeLimit;
           const initialSeconds = (parseInt(rawTime) || 90) * 60;

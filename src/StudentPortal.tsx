@@ -203,8 +203,9 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const checkUserAndFetchData = async (retryCount = 0) => {
     setIsLoading(true);
     try {
-        const { data: { user } } = await supabase.auth.getUser();
-        setCurrentUser(user);
+        const { data: { session } } = await supabase.auth.getSession();
+        const user = session?.user;
+        setCurrentUser(user || null);
         
         if (!user) {
             setIsLoading(false);

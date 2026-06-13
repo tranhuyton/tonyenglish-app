@@ -168,15 +168,15 @@ export default function App() {
             localStorage.setItem('tony_global_time', newSecs.toString());
             if (newSecs > 0 && newSecs % 300 === 0) {
               supabase.auth.getUser().then(({ data: { user } }) => {
-                if (user) supabase.from('profiles').update({ study_time_seconds: newSecs }).eq('id', user.id).then();
-              });
+                if (user) supabase.from('profiles').update({ study_time_seconds: newSecs }).eq('id', user.id).then().catch(console.error);
+              }).catch(console.warn);
             }
           } catch(e) {}
         }, 1000);
       }
     };
     const stopGlobalTimer = () => { if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; } };
-    supabase.auth.getSession().then(({ data: { session } }) => { if (session) { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); } });
+    supabase.auth.getSession().then(({ data: { session } }) => { if (session) { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); } }).catch(console.warn);
     const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN') { setCurrentView(prev => prev === 'home' ? 'portal' : prev); startGlobalTimer(); }
       else if (event === 'SIGNED_OUT') {
