@@ -267,8 +267,8 @@ export default function StandardTest({
       const newWidth = ((moveEvent.clientX - containerRect.left) / containerRect.width) * 100;
       
       if (newWidth >= 25 && newWidth <= 75) {
-        leftPaneRef.current.style.width = `${newWidth}%`;
-        rightPaneRef.current.style.width = `${100 - newWidth}%`;
+        leftPaneRef.current.style.width = `calc(${newWidth}% - 5px)`;
+        rightPaneRef.current.style.width = `calc(${100 - newWidth}% - 5px)`;
       }
     };
 
@@ -819,7 +819,7 @@ const handleFinish = async () => {
               <div 
                   className="bg-white overflow-y-auto custom-scrollbar w-full md:w-auto" 
                   ref={leftPaneRef} 
-                  style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%' }}
+                  style={{ width: window.innerWidth > 768 ? `calc(${leftWidth}% - 5px)` : '100%' }}
               >
                 <div className={`p-6 md:p-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
                   {isReviewMode && (
@@ -941,7 +941,7 @@ const handleFinish = async () => {
               className="bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1" 
               id="questions-container" 
               ref={rightPaneRef} 
-              style={!isListening && window.innerWidth > 768 ? { width: `${100 - leftWidth}%`, flex: 'none' } : { flex: 1 }}
+              style={!isListening && window.innerWidth > 768 ? { width: `calc(${100 - leftWidth}% - 5px)`, flex: 'none' } : { flex: 1 }}
           >
              <div className={`p-6 md:p-10 max-w-3xl mx-auto ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
                
