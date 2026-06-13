@@ -168,11 +168,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
     checkUserAndFetchData(); 
   }, []);
 
-  useEffect(() => {
-    if (!isLoading && activeView === 'course' && !selectedCourse) {
-      setActiveView('dashboard');
-    }
-  }, [isLoading, activeView, selectedCourse]);
+
 
   useEffect(() => {
     const computeInProgress = () => {
@@ -525,6 +521,12 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const selectedCourse = useMemo(() => {
       return courses.find(c => String(c.id) === selectedCourseId) || null;
   }, [courses, selectedCourseId]);
+
+  useEffect(() => {
+    if (!isLoading && activeView === 'course' && !selectedCourse) {
+      setActiveView('dashboard');
+    }
+  }, [isLoading, activeView, selectedCourse]);
   
   const courseFolders = useMemo(() => {
       if (!selectedCourse) return [];
