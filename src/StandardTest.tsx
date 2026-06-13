@@ -140,6 +140,22 @@ const isAnswerCorrect = (userAns: string, correctAns: string) => {
   return false;
 };
 
+const parseStyle = (styleStr: string) => {
+  const style: any = {};
+  if (!styleStr) return style;
+  styleStr.split(';').forEach(s => {
+    const match = s.match(/^\s*([\w-]+)\s*:\s*(.+)\s*$/);
+    if (match) {
+      const [, key, val] = match;
+      const lowerKey = key.toLowerCase();
+      if (['height', 'max-height', 'min-height', 'overflow', 'overflow-y', 'overflow-x'].includes(lowerKey)) return;
+      const camelKey = key.replace(/-([a-z])/g, g => g[1].toUpperCase());
+      style[camelKey] = val;
+    }
+  });
+  return style;
+};
+
 // =========================================================================================
 // COMPONENT CHÍNH QUẢN LÝ BÀI THI STANDARD TEST
 // =========================================================================================
@@ -304,6 +320,8 @@ export default function StandardTest({
         return {}; 
     }
   });
+
+  const [draggedOption, setDraggedOption] = useState<string | null>(null);
 
   // Tự động lưu nháp
   useEffect(() => {
@@ -515,26 +533,33 @@ const handleFinish = async () => {
   };
 
   // Quét ID câu hỏi để tạo Bảng điều hướng
-  const { allQuestionIds, questionIndexMap } = useMemo(() => {
+  const { allQuestionIds, questionIndexMap, questionDataMap } = useMemo(() => {
     const ids: string[] = [];
+    const dataMap: Record<string, { qType: string, options: string[] }> = {};
     parts?.forEach((p: any) => {
       p?.sections?.forEach((s: any) => {
-        if (s?.questionType === "Điền từ" || s?.questionType === "Kéo thả vào Part") {
-          const matches = String(s?.content || s?.questions?.[0]?.content || '').match(/\[(\d+)\]/g);
+        if (Array.isArray(s?.questions)) {
+          s.questions.forEach((q: any) => {
+            const qIdStr = String(q.id);
+            if (q?.id && !ids.includes(qIdStr)) {
+              ids.push(qIdStr);
+              dataMap[qIdStr] = { qType: s.questionType, options: q.options || [] };
+            }
+          });
+        }
+        if (["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(s?.questionType)) {
+          const combinedContent = String(s?.content || '') + ' ' + String(s?.questions?.[0]?.content || '');
+          const matches = combinedContent.match(/\[\s*\d+\s*\]/g);
           if (matches) {
             matches.forEach((m: string) => {
-              const num = m.replace(/\D/g, '');
+              const num = m.replace(/\D/g, '').trim();
               if (!ids.includes(num)) {
-                  ids.push(num);
+                ids.push(num);
+                const qInSec = (s.questions || []).find((qq: any) => String(qq.id) === num);
+                dataMap[num] = { qType: s.questionType, options: qInSec?.options || s.questions?.[0]?.options || [] };
               }
             });
           }
-        } else {
-          s?.questions?.forEach((q: any) => {
-            if (q?.id && !ids.includes(String(q.id))) {
-                ids.push(String(q.id));
-            }
-          });
         }
       });
     });
@@ -545,7 +570,7 @@ const handleFinish = async () => {
         return acc; 
     }, {});
     
-    return { allQuestionIds: ids, questionIndexMap: map };
+    return { allQuestionIds: ids, questionIndexMap: map, questionDataMap: dataMap };
   }, [parts]);
 
   const { answeredCount, markedCount, totalCount } = useMemo(() => {
@@ -611,6 +636,216 @@ const handleFinish = async () => {
       sessionStorage.setItem('tony_auto_start', 'true'); // ÉP AI TỰ ĐỘNG BỐC MÁY
       
       window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+  };
+
+  // Drag-drop handlers
+  const onDragStart = (e: React.DragEvent<HTMLDivElement>, option: string) => {
+    if (isReviewMode) return;
+    e.stopPropagation();
+    setDraggedOption(option);
+  };
+
+  const onDrop = (qId: string) => {
+    if (isReviewMode || !draggedOption) return;
+    const match = draggedOption.match(/^([A-Z])[\.\):]\s/);
+    const valueToSave = match ? match[1].toUpperCase() : draggedOption;
+    handleAnswer(qId, valueToSave);
+    setDraggedOption(null);
+  };
+
+  const clearDragAnswer = (qId: string) => {
+    if (isReviewMode) return;
+    handleAnswer(qId, '');
+  };
+
+  // =========================================================================================
+  // renderHtmlWithHoles - DOMParser-based renderer for drag-drop, inline droplist, matching
+  // =========================================================================================
+  const renderHtmlWithHoles = (htmlStr: any, sec: any) => {
+    if (!htmlStr) return null;
+    const safeText = String(htmlStr);
+
+    if (typeof window === 'undefined') {
+      return <span className="html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeText) }} />;
+    }
+
+    const processedHtml = safeText.replace(/\[\s*(\d+)\s*\]/g, '<hole data-id="$1"></hole>');
+    const cleanProcessedHtml = cleanHtmlContent(processedHtml);
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(cleanProcessedHtml, 'text/html');
+
+    const sectionQIds = (sec?.questions || []).map((q: any) => String(q.id));
+    const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
+
+    const renderNode = (node: ChildNode, pathKey: string): React.ReactNode => {
+      if (node.nodeType === Node.TEXT_NODE) return node.textContent;
+      if (node.nodeType === Node.ELEMENT_NODE) {
+        const el = node as HTMLElement;
+        const tagName = el.tagName.toLowerCase();
+
+        if (tagName === 'hole') {
+          const qNum = el.getAttribute('data-id');
+          if (!qNum) return null;
+
+          const userAns = String(answers[qNum] || '');
+          const displayIndex = questionIndexMap[qNum] || qNum;
+          const qInfo = questionDataMap[qNum] || { qType: sec?.questionType || 'Điền từ', options: [] };
+
+          if (isReviewMode) {
+            const qData = parts.flatMap((p: any) => Array.isArray(p?.sections) ? p.sections.flatMap((s: any) => s?.questions) : []).find((q: any) => String(q?.id) === String(qNum));
+            const correctAns = String(qData?.correctAnswer || '');
+            const isCorrect = isAnswerCorrect(userAns, correctAns);
+
+            let displayUserAnsForReview = userAns;
+            if (["Kéo thả", "Kéo thả vào Part", "Matching"].includes(sec.questionType)) {
+              let allOpts: string[] = [];
+              (sec?.questions || []).forEach((q: any) => {
+                (q.options || []).forEach((o: any) => {
+                  const cOpt = String(o).replace(stripHtmlRegex, '').trim();
+                  if (cOpt && !allOpts.includes(cOpt)) allOpts.push(cOpt);
+                });
+              });
+              if (userAns && /^[A-Z]$/i.test(userAns)) {
+                const oIdx = userAns.toUpperCase().charCodeAt(0) - 65;
+                if (allOpts[oIdx]) displayUserAnsForReview = allOpts[oIdx].replace(/^[A-Z][\.\):]\s*/i, '');
+              } else if (userAns) {
+                displayUserAnsForReview = userAns.replace(/^[A-Z][\.\):]\s*/i, '');
+              }
+            }
+
+            return (
+              <span key={pathKey} id={`q-${qNum}`} className="relative inline-flex flex-col items-center align-top mx-1.5 mt-1 group" style={{ textIndent: 0 }}>
+                <span className={`px-2.5 py-0.5 text-[14px] font-bold text-white rounded-md shadow-sm border ${isCorrect ? 'bg-emerald-600 border-emerald-700' : 'bg-red-500 border-red-600'}`}>
+                  {displayIndex}. {displayUserAnsForReview || '(trống)'}
+                </span>
+                {!isCorrect && (
+                  <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1.5 text-[11px] text-emerald-800 font-bold bg-emerald-100 px-2 py-0.5 border border-emerald-300 rounded text-center whitespace-nowrap z-10 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                    ĐA: {correctAns}
+                  </span>
+                )}
+              </span>
+            );
+          }
+
+          // Drag-drop / Matching: drop target
+          if (["Kéo thả", "Kéo thả vào Part", "Matching"].includes(sec.questionType)) {
+            let allOpts: string[] = [];
+            (sec?.questions || []).forEach((q: any) => {
+              (q.options || []).forEach((o: any) => {
+                const cOpt = String(o).replace(stripHtmlRegex, '').trim();
+                if (cOpt && !allOpts.includes(cOpt)) allOpts.push(cOpt);
+              });
+            });
+            let displayUserAns = userAns;
+            if (userAns && /^[A-Z]$/i.test(userAns)) {
+              const oIdx = userAns.toUpperCase().charCodeAt(0) - 65;
+              if (allOpts[oIdx]) displayUserAns = allOpts[oIdx].replace(/^[A-Z][\.\):]\s*/i, '');
+            } else if (userAns) {
+              displayUserAns = userAns.replace(/^[A-Z][\.\):]\s*/i, '');
+            }
+
+            return (
+              <span
+                key={pathKey}
+                id={`q-${qNum}`}
+                onDragOver={(e) => e.preventDefault()}
+                onDrop={() => onDrop(qNum)}
+                className={`inline-flex items-center justify-center align-middle mx-1 my-1 min-w-[120px] h-[32px] border rounded-lg transition-all px-2 cursor-pointer border-slate-300 bg-white hover:bg-slate-50 shadow-sm`}
+                style={{ textIndent: 0 }}
+              >
+                <span className="shrink-0 inline-flex items-center justify-center leading-none font-bold text-white bg-slate-800 px-1.5 min-w-[24px] h-[24px] text-[12px] mr-2 rounded" style={{ color: '#ffffff', textIndent: 0 }}>
+                  {displayIndex}
+                </span>
+                {userAns ? (
+                  <div className="flex items-center justify-between w-full text-[#0ea5e9] font-sans text-[14px] font-bold" style={{ textIndent: 0 }}>
+                    <span className="truncate">{displayUserAns}</span>
+                    <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(qNum); }} className="ml-2 hover:text-red-500 text-[14px] font-black font-sans">✕</button>
+                  </div>
+                ) : (
+                  <span className="text-slate-400 text-[13px] italic font-sans w-full text-center" style={{ textIndent: 0 }}>Thả vào đây</span>
+                )}
+              </span>
+            );
+          }
+
+          // Inline Droplist
+          if (qInfo.qType === 'Droplist' || sec.questionType === 'Droplist') {
+            const rawOptions = (qInfo.options && qInfo.options.length > 0) ? qInfo.options : (sec.questions?.[0]?.options || []);
+            const validOptions = rawOptions.filter(Boolean);
+
+            return (
+              <span key={pathKey} id={`q-${qNum}`} className="inline-flex items-center align-middle mx-1 my-1 whitespace-nowrap" style={{ textIndent: 0 }}>
+                <span className="shrink-0 inline-flex items-center justify-center leading-none text-white font-bold px-2 min-w-[28px] h-[30px] text-[13px] rounded-l-lg border border-slate-800 border-r-0 bg-slate-800" style={{ color: '#ffffff', textIndent: 0 }}>
+                  {displayIndex}
+                </span>
+                <select
+                  value={userAns}
+                  onChange={(e) => handleAnswer(qNum, e.target.value)}
+                  className="shrink-0 bg-white border border-slate-300 text-[#0ea5e9] font-bold font-sans text-[14px] h-[30px] px-1 rounded-r-lg outline-none focus:border-[#0ea5e9] cursor-pointer min-w-[100px] max-w-[200px] truncate"
+                  style={{ textIndent: 0 }}
+                >
+                  <option value="">-- Chọn --</option>
+                  {validOptions.map((opt: string, oIdx: number) => {
+                    const val = opt.replace(stripHtmlRegex, '').trim();
+                    const isSelectedElsewhere = selectedInSec.includes(val.toUpperCase()) && userAns.trim().toUpperCase() !== val.toUpperCase();
+                    return (
+                      <option key={oIdx} value={val}>
+                        {val} {isSelectedElsewhere ? '(Đã chọn)' : ''}
+                      </option>
+                    );
+                  })}
+                </select>
+              </span>
+            );
+          }
+
+          // Default: Điền từ input
+          return (
+            <span key={pathKey} id={`q-${qNum}`} className="inline-flex items-center align-middle mx-1.5 scroll-mt-24" style={{ textIndent: 0 }}>
+              <span className="font-bold text-[14px] mr-1.5 text-slate-500">{displayIndex}.</span>
+              <input
+                type="text"
+                className="w-28 border-b-[2px] border-slate-300 focus:outline-none focus:border-[#0ea5e9] bg-transparent text-center text-[#0ea5e9] font-bold px-1 text-[15px] pb-[1px] transition-colors"
+                value={userAns}
+                onChange={(e) => handleAnswer(qNum, e.target.value)}
+                autoComplete="off"
+                spellCheck="false"
+              />
+            </span>
+          );
+        }
+
+        // Generic HTML element rendering
+        const props: any = { key: pathKey };
+        Array.from(el.attributes).forEach(attr => {
+          if (attr.name === 'class') {
+            props.className = attr.value;
+          } else if (attr.name === 'style') {
+            props.style = parseStyle(attr.value);
+          } else if (attr.name === 'for') {
+            props.htmlFor = attr.value;
+          } else if (attr.name.startsWith('data-') || attr.name.startsWith('aria-')) {
+            props[attr.name] = attr.value;
+          } else {
+            const camelCaseAttr = attr.name.replace(/-([a-z])/g, g => g[1].toUpperCase());
+            const reactProp = attr.name === 'colspan' ? 'colSpan' : attr.name === 'rowspan' ? 'rowSpan' : attr.name === 'cellpadding' ? 'cellPadding' : attr.name === 'cellspacing' ? 'cellSpacing' : attr.name === 'tabindex' ? 'tabIndex' : camelCaseAttr;
+            props[reactProp] = attr.value;
+          }
+        });
+
+        const children = Array.from(el.childNodes).map((child, i) => renderNode(child, `${pathKey}-${i}`));
+        const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
+
+        if (voidElements.includes(tagName)) {
+          return React.createElement(tagName, props);
+        }
+
+        return React.createElement(tagName, props, children.length > 0 ? children : null);
+      }
+      return null;
+    };
+
+    return Array.from(doc.body.childNodes).map((node, i) => renderNode(node, `root-${i}`));
   };
 
   // Component Hiển thị Đoạn văn Đục lỗ
@@ -895,7 +1130,7 @@ const handleFinish = async () => {
                                   <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />
                               )}
                               
-                              {sec?.content && sec?.questionType !== "Điền từ" && sec?.questionType !== "Kéo thả vào Part" && (
+                              {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
                                 <div 
                                     className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed bg-white p-5 rounded-xl border border-slate-200 shadow-sm" 
                                     dangerouslySetInnerHTML={{ __html: sec.content || '' }} 
@@ -995,65 +1230,184 @@ const handleFinish = async () => {
                                  <div className="mb-6">
                                     {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
                                     {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
-                                    {sec?.content && sec?.questionType !== "Điền từ" && sec?.questionType !== "Kéo thả vào Part" && (
+                                    {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
                                        <div className="text-slate-600 text-[15px] leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: sec.content || '' }} />
                                     )}
                                  </div>
                              )}
                              
-                             {(sec?.questionType === "Điền từ" || sec?.questionType === "Kéo thả vào Part") && (
-                               <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
-                                 {sec?.imageUrl && !isListening && (
-                                     <img src={sec.imageUrl} className="max-w-full mb-6 rounded-lg border border-slate-200" alt="Fill Image" />
-                                 )}
-                                 
-                                 <div className="space-y-5 leading-[2.5] text-[16px] text-slate-800 text-justify">
-                                   {renderInlineQuestion(sec?.content || '')}
-                                 </div>
-                                 
-                                 {/* 🚀 THÊM REVIEW VÀ GỌI GIA SƯ CHO PHẦN ĐIỀN TỪ CỦA READING */}
-                                 {isReviewMode && (
-                                    <div className="mt-8 pt-6 border-t border-slate-200 space-y-4">
-                                       <p className="text-[14px] font-black text-slate-800 uppercase tracking-widest mb-4">💡 Giải thích chi tiết & Gia Sư AI:</p>
-                                       {sec.questions?.map((q: any) => {
-                                          if (!q?.id) return null;
-                                          const qIdx = questionIndexMap[String(q.id)] || q.id;
-                                          const explanationText = q.explanation || 'Không có lời giải thích.';
+                             {/* DẠNG BÀI INLINE: Điền từ, Kéo thả, Matching, Inline Droplist */}
+                             {(() => {
+                               // Build raw content text for inline types
+                               const inlineTypes = ["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"];
+                               if (!inlineTypes.includes(sec?.questionType)) return null;
+                               
+                               let rawContentText = '';
+                               if (String(sec.content || '').match(/\[\s*\d+\s*\]/)) {
+                                 rawContentText = sec.content;
+                                 if (Array.isArray(sec.questions)) {
+                                   sec.questions.forEach((q: any) => {
+                                     if (q.content && q.content !== sec.content && String(q.content).match(/\[\s*\d+\s*\]/)) {
+                                       rawContentText += '<br><br>' + q.content;
+                                     }
+                                   });
+                                 }
+                               } else {
+                                 if (Array.isArray(sec.questions)) {
+                                   sec.questions.forEach((q: any) => {
+                                     let qContent = String(q.content || '').trim();
+                                     if (qContent) {
+                                       if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
+                                         qContent += ` [${q.id}]`;
+                                       }
+                                       rawContentText += (rawContentText ? '<br><br>' : '') + qContent;
+                                     }
+                                   });
+                                 }
+                               }
+                               
+                               const hasInlineBrackets = /\[\s*\d+\s*\]/.test(rawContentText);
+                               const isInlineDroplist = sec.questionType === "Droplist" && hasInlineBrackets;
+                               const isBlockDroplist = sec.questionType === "Droplist" && !hasInlineBrackets;
+                               const isInlineDragDrop = ["Kéo thả", "Matching", "Kéo thả vào Part"].includes(sec.questionType) && hasInlineBrackets;
+                               const isBlockDragDrop = ["Kéo thả", "Matching", "Kéo thả vào Part"].includes(sec.questionType) && !hasInlineBrackets;
+                               
+                               // Skip if this will be handled by block Droplist or block DragDrop sections below
+                               if (isBlockDroplist || isBlockDragDrop) return null;
+                               // Must have inline brackets for Điền từ too
+                               if ((sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") && !hasInlineBrackets) return null;
+                               
+                               return (
+                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
+                                  {sec?.imageUrl && !isListening && (
+                                      <img src={sec.imageUrl} className="max-w-full mb-6 rounded-lg border border-slate-200" alt="Fill Image" />
+                                  )}
+                                  
+                                  {(() => {
+                                    let mainContent = rawContentText;
+                                    let wordBankItems: string[] = [];
+                                    
+                                    const splitKeywords = ['<br><br>Options:<br>', '<br>Options:<br>', 'Options:<br>', 'Options:'];
+                                    for (const keyword of splitKeywords) {
+                                      if (mainContent.includes(keyword)) {
+                                        const partsArr = mainContent.split(keyword);
+                                        mainContent = partsArr[0];
+                                        wordBankItems = partsArr[1].split(/(?:<br\s*\/?>\s*)+/).filter((x: string) => x.replace(stripHtmlRegex, '').trim() !== '');
+                                        break;
+                                      }
+                                    }
+                                    
+                                    return (
+                                      <React.Fragment>
+                                        <div className={`format-passage html-content-renderer text-[16px] text-slate-800 break-words font-sans ${isReviewMode ? 'leading-[3.0] pb-6' : 'leading-[2.0]'}`}>
+                                          {renderHtmlWithHoles(cleanHtmlContent(mainContent), sec)}
+                                        </div>
+                                        {wordBankItems.length > 0 && (
+                                          <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
+                                            <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">Danh sách từ (Word Bank)</p>
+                                            <div className="flex flex-wrap gap-3">
+                                              {wordBankItems.map((item, idx) => {
+                                                const text = item.replace(stripHtmlRegex, '').trim();
+                                                return text ? (
+                                                  <div key={idx} className="px-4 py-2 bg-white border border-slate-300 rounded-lg font-bold text-slate-800 min-w-[100px] flex items-center shadow-sm html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(text) }} />
+                                                ) : null;
+                                              })}
+                                            </div>
+                                          </div>
+                                        )}
+                                      </React.Fragment>
+                                    );
+                                  })()}
+                                  
+                                  {/* Word bank for inline drag-drop */}
+                                  {isInlineDragDrop && !isReviewMode && (
+                                    <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
+                                      <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
+                                      <div className="flex flex-wrap gap-3">
+                                        {(() => {
+                                          let allOptions: string[] = [];
+                                          (sec.questions || []).forEach((q: any) => {
+                                            if (Array.isArray(q.options)) {
+                                              q.options.forEach((o: any) => {
+                                                const cleanOpt = String(o).replace(stripHtmlRegex, '').trim();
+                                                if (cleanOpt && !allOptions.includes(cleanOpt)) allOptions.push(cleanOpt);
+                                              });
+                                            }
+                                          });
+                                          const sectionQIds = (sec?.questions || []).map((q: any) => String(q.id));
+                                          const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
                                           
-                                          return (
-                                             <div key={`expl-${q.id}`} className="bg-slate-50 p-5 rounded-xl border border-slate-200">
-                                                <div className="flex items-center gap-2 mb-2">
-                                                    <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded">Câu {qIdx}</span>
-                                                </div>
-                                                <div className="text-[14px] text-slate-700 italic leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: explanationText }} />
-                                                
-                                                <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-200">
-                                                    <button 
-                                                        onClick={(e) => { 
-                                                            e.stopPropagation(); 
-                                                            askAIToExplain(String(q.id), sec.content || '', explanationText); 
-                                                        }} 
-                                                        className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded text-[13px] transition shadow-sm border border-[#064e3b]"
-                                                    >
-                                                        💬 Chat với AI
-                                                    </button>
-                                                    <button 
-                                                        onClick={(e) => { 
-                                                            e.stopPropagation(); 
-                                                            callTutorForQuestion(String(q.id), sec.content || '', explanationText); 
-                                                        }} 
-                                                        className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
-                                                    >
-                                                        📞 Gọi Gia sư
-                                                    </button>
-                                                </div>
-                                             </div>
-                                          );
-                                       })}
+                                          return allOptions.map((opt: string, oIdx: number) => {
+                                            const prefix = `${String.fromCharCode(65 + oIdx)}. `;
+                                            const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                            const optLetter = String.fromCharCode(65 + oIdx);
+                                            const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
+                                            
+                                            return (
+                                              <div
+                                                key={oIdx}
+                                                draggable={!isUsed}
+                                                onDragStart={(e) => onDragStart(e, displayOpt)}
+                                                onDragEnd={() => setDraggedOption(null)}
+                                                className={`px-4 py-2 font-bold font-sans text-[14px] border rounded-lg transition-all select-none shadow-sm
+                                                  ${isUsed
+                                                    ? 'bg-slate-100 text-slate-400 opacity-50 cursor-not-allowed border-slate-200'
+                                                    : 'bg-white text-slate-800 cursor-grab hover:bg-[#0ea5e9]/5 hover:border-[#0ea5e9] active:cursor-grabbing border-slate-300'
+                                                  }`}
+                                              >
+                                                {displayOpt}
+                                              </div>
+                                            );
+                                          });
+                                        })()}
+                                      </div>
                                     </div>
-                                 )}
-                               </div>
-                             )}
+                                  )}
+                                  
+                                  {/* Review & Gia sư cho inline types */}
+                                  {isReviewMode && (
+                                     <div className="mt-8 pt-6 border-t border-slate-200 space-y-4">
+                                        <p className="text-[14px] font-black text-slate-800 uppercase tracking-widest mb-4">💡 Giải thích chi tiết & Gia Sư AI:</p>
+                                        {sec.questions?.map((q: any) => {
+                                           if (!q?.id) return null;
+                                           const qIdx = questionIndexMap[String(q.id)] || q.id;
+                                           const explanationText = q.explanation || 'Không có lời giải thích.';
+                                           
+                                           return (
+                                              <div key={`expl-${q.id}`} className="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                                                 <div className="flex items-center gap-2 mb-2">
+                                                     <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded">Câu {qIdx}</span>
+                                                 </div>
+                                                 <div className="text-[14px] text-slate-700 italic leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: explanationText }} />
+                                                 
+                                                 <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-200">
+                                                     <button 
+                                                         onClick={(e) => { 
+                                                             e.stopPropagation(); 
+                                                             askAIToExplain(String(q.id), sec.content || '', explanationText); 
+                                                         }} 
+                                                         className="px-4 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded text-[13px] transition shadow-sm border border-[#064e3b]"
+                                                     >
+                                                         💬 Chat với AI
+                                                     </button>
+                                                     <button 
+                                                         onClick={(e) => { 
+                                                             e.stopPropagation(); 
+                                                             callTutorForQuestion(String(q.id), sec.content || '', explanationText); 
+                                                         }} 
+                                                         className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[13px] transition shadow-sm border border-emerald-600 flex items-center gap-1"
+                                                     >
+                                                         📞 Gọi Gia sư
+                                                     </button>
+                                                 </div>
+                                              </div>
+                                           );
+                                        })}
+                                     </div>
+                                  )}
+                                </div>
+                               );
+                             })()}
 
                              {(sec?.questionType === "Trắc nghiệm" || sec?.questionType === "TFNG") && sec?.questions?.map((q: any) => {
                                 if (!q?.id) return null;
@@ -1292,8 +1646,8 @@ const handleFinish = async () => {
                                 );
                              })}
 
-                             {/* DẠNG BÀI DROPLIST KHỐI */}
-                             {sec?.questionType === "Droplist" && (
+                             {/* DẠNG BÀI DROPLIST KHỐI (chỉ khi KHÔNG CÓ [num] inline) */}
+                             {sec?.questionType === "Droplist" && !/\[\s*\d+\s*\]/.test(String(sec.content || '') + ' ' + String(sec.questions?.[0]?.content || '')) && (
                                 <div className="space-y-4 bg-white p-6 md:p-8 border border-gray-200 rounded-xl shadow-sm">
                                   {sec.questions?.map((q: any) => {
                                       if (!q?.id) return null;
@@ -1373,6 +1727,138 @@ const handleFinish = async () => {
                                   })}
                                 </div>
                              )}
+
+                             {/* DẠNG BÀI KÉO THẢ / MATCHING BLOCK (khi KHÔNG CÓ [num] inline) */}
+                             {(() => {
+                               if (!["Kéo thả", "Matching", "Kéo thả vào Part"].includes(sec?.questionType)) return null;
+                               const combinedContent = String(sec.content || '') + ' ' + String(sec.questions?.[0]?.content || '');
+                               if (/\[\s*\d+\s*\]/.test(combinedContent)) return null; // inline mode handled above
+                               
+                               let allOpts: string[] = [];
+                               (sec?.questions || []).forEach((q: any) => {
+                                 (q.options || []).forEach((o: any) => {
+                                   const cOpt = String(o).replace(stripHtmlRegex, '').trim();
+                                   if (cOpt && !allOpts.includes(cOpt)) allOpts.push(cOpt);
+                                 });
+                               });
+                               
+                               return (
+                                 <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
+                                   {/* Block questions with drop targets */}
+                                   <div className="space-y-4">
+                                     {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
+                                       if (!q?.id) return null;
+                                       const userAns = String(answers[String(q.id)] || '');
+                                       const correctAns = String(q.correctAnswer || '').trim().toUpperCase();
+                                       const isCorrect = isAnswerCorrect(userAns, correctAns);
+                                       const displayIdx = questionIndexMap[String(q.id)] || q.id;
+                                       
+                                       let displayUserAns = userAns;
+                                       if (userAns && /^[A-Z]$/i.test(userAns)) {
+                                         const oIdx = userAns.toUpperCase().charCodeAt(0) - 65;
+                                         if (allOpts[oIdx]) displayUserAns = allOpts[oIdx].replace(/^[A-Z][\.\):]\s*/i, '');
+                                       } else if (userAns) {
+                                         displayUserAns = userAns.replace(/^[A-Z][\.\):]\s*/i, '');
+                                       }
+                                       
+                                       return (
+                                         <div
+                                           key={q.id}
+                                           id={`q-${q.id}`}
+                                           className={`py-4 px-5 rounded-xl border flex flex-col gap-4 transition-all scroll-mt-20 ${isReviewMode ? (isCorrect ? 'bg-emerald-50 border-emerald-200' : 'bg-red-50 border-red-200') : 'bg-white border-slate-200 hover:border-slate-300'}`}
+                                         >
+                                           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 w-full">
+                                             <div className="flex items-center gap-4 flex-1 min-w-0">
+                                               <span className="font-bold text-white bg-slate-800 px-2 py-0.5 rounded text-[13px] shrink-0">{displayIdx}</span>
+                                               <div className="text-[15px] text-slate-800 leading-relaxed font-sans html-content-renderer flex-1 min-w-0 break-words [&>p]:!m-0 [&>p]:!inline" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content) }} />
+                                             </div>
+                                             <div className="shrink-0 flex items-center justify-start md:justify-end font-sans">
+                                               {isReviewMode ? (
+                                                 <div className="flex items-center gap-2 justify-start md:justify-end w-full">
+                                                   <div className={`px-4 py-1.5 rounded-lg font-bold text-[14px] border min-w-[140px] text-center ${isCorrect ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-red-100 text-red-800 border-red-300'}`}>
+                                                     {displayUserAns || '(trống)'}
+                                                   </div>
+                                                   {!isCorrect && (
+                                                     <div className="text-[12px] font-bold text-emerald-700 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded whitespace-nowrap">
+                                                       ĐA: {correctAns}
+                                                     </div>
+                                                   )}
+                                                 </div>
+                                               ) : (
+                                                 <span
+                                                   onDragOver={(e) => e.preventDefault()}
+                                                   onDrop={() => onDrop(String(q.id))}
+                                                   className={`inline-flex items-center justify-between align-middle min-w-[140px] max-w-[250px] h-[36px] border rounded-lg transition-all px-2 border-slate-300 bg-white shadow-sm`}
+                                                 >
+                                                   {userAns ? (
+                                                     <div className="flex items-center justify-between w-full text-[#0ea5e9] font-sans text-[14px] font-bold py-1">
+                                                       <span className="truncate">{displayUserAns}</span>
+                                                       <button onClick={(e) => { e.stopPropagation(); clearDragAnswer(String(q.id)); }} className="ml-2 hover:text-red-500 text-[12px] font-black font-sans">✕</button>
+                                                     </div>
+                                                   ) : (
+                                                     <span className="text-slate-400 text-[13px] italic font-sans w-full text-center">Thả vào đây</span>
+                                                   )}
+                                                 </span>
+                                               )}
+                                             </div>
+                                           </div>
+                                           {isReviewMode && q.explanation && (
+                                             <div className="w-full mt-2 border-t border-slate-200 pt-3 font-sans">
+                                               <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích đáp án:</p>
+                                               <div className="text-[14px] text-slate-600 italic leading-relaxed html-content-renderer mb-3" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
+                                               <div className="flex items-center gap-2">
+                                                 <button onClick={(e) => { e.stopPropagation(); askAIToExplain(String(q.id), q.content, q.explanation); }} className="px-3 py-1.5 bg-[#064e3b] hover:bg-[#047857] text-white font-bold rounded text-[12px] transition shadow-sm border border-[#064e3b]">
+                                                   💬 Chat với AI
+                                                 </button>
+                                                 <button onClick={(e) => { e.stopPropagation(); callTutorForQuestion(String(q.id), q.content, q.explanation); }} className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded text-[12px] transition shadow-sm border border-emerald-600 flex items-center gap-1">
+                                                   📞 Gọi Gia sư
+                                                 </button>
+                                               </div>
+                                             </div>
+                                           )}
+                                         </div>
+                                       );
+                                     })}
+                                   </div>
+                                   
+                                   {/* Draggable options word bank */}
+                                   {!isReviewMode && (
+                                     <div className="mt-8 p-5 bg-slate-50 border border-slate-200 rounded-xl font-sans">
+                                       <p className="text-[13px] font-black text-slate-600 uppercase tracking-widest mb-4">Danh sách lựa chọn (Kéo từ đây):</p>
+                                       <div className="flex flex-wrap gap-3">
+                                         {(() => {
+                                           const sectionQIds = (sec?.questions || []).map((q: any) => String(q.id));
+                                           const selectedInSec = sectionQIds.map((id: string) => answers[id]?.trim().toUpperCase()).filter(Boolean);
+                                           
+                                           return allOpts.map((opt: string, oIdx: number) => {
+                                             const prefix = `${String.fromCharCode(65 + oIdx)}. `;
+                                             const displayOpt = /^[A-Z][\.\):]\s/.test(opt) ? opt : prefix + opt;
+                                             const optLetter = String.fromCharCode(65 + oIdx);
+                                             const isUsed = selectedInSec.includes(optLetter) || selectedInSec.includes(displayOpt.toUpperCase()) || selectedInSec.includes(opt.trim().toUpperCase());
+                                             
+                                             return (
+                                               <div
+                                                 key={oIdx}
+                                                 draggable={!isUsed}
+                                                 onDragStart={(e) => onDragStart(e, displayOpt)}
+                                                 onDragEnd={() => setDraggedOption(null)}
+                                                 className={`px-4 py-2 font-bold font-sans text-[14px] border rounded-lg transition-all select-none shadow-sm
+                                                   ${isUsed
+                                                     ? 'bg-slate-100 text-slate-400 opacity-50 cursor-not-allowed border-slate-200'
+                                                     : 'bg-white text-slate-800 cursor-grab hover:bg-[#0ea5e9]/5 hover:border-[#0ea5e9] active:cursor-grabbing border-slate-300'
+                                                   }`}
+                                               >
+                                                 {displayOpt}
+                                               </div>
+                                             );
+                                           });
+                                         })()}
+                                       </div>
+                                     </div>
+                                   )}
+                                 </div>
+                               );
+                             })()}
 
                              {/* DẠNG CHECKBOX GROUP */}
                              {sec?.questionType === "Checkbox" && (
