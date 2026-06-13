@@ -1204,9 +1204,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     {paginatedFolders.map((subFolder, idx) => {
                       const childCount = allFolders.filter(f => f.parent_id === subFolder.id).length;
                       const testCount = allTests.filter(t => t.folder_id === subFolder.id).length;
+                      const parentFolder = subFolder.parent_id ? allFolders.find(f => f.id === subFolder.parent_id) : null;
                       const isTopLevel = !subFolder.parent_id || subFolder.parent_id === 'null' || subFolder.parent_id === '';
                       const defaultImage = FOLDER_IMAGES[idx % FOLDER_IMAGES.length];
-                      const displayImage = subFolder.thumbnail_url || defaultImage;
+                      
+                      // Inherit parent image if no thumbnail, and apply hue-rotate if it's inherited (to avoid duplicates)
+                      const isInherited = !subFolder.thumbnail_url && parentFolder?.thumbnail_url;
+                      const displayImage = subFolder.thumbnail_url || (parentFolder ? parentFolder.thumbnail_url : null) || defaultImage;
+                      const hueRotate = (!isTopLevel && isInherited) ? `hue-rotate(${(idx * 65) % 360}deg)` : 'none';
                       
                       let badgeText = null;
                       let displayTitle = subFolder.title;
@@ -1222,7 +1227,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                       return (
                         <div key={subFolder.id} onClick={() => handleFolderClick(subFolder.id)} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-[#0ea5e9] transition-all duration-300 cursor-pointer flex flex-col group relative">
                           <div className={`h-[120px] relative overflow-hidden bg-slate-800`}>
-                            <img src={displayImage} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" alt="folder" />
+                            <img src={displayImage} style={{ filter: hueRotate }} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" alt="folder" />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
                             <div className={`absolute bottom-4 right-4 ${badgeText ? 'left-20' : 'left-5'}`}>
                                 <h3 className="text-[16px] font-black leading-snug line-clamp-2 w-full text-white drop-shadow-md">

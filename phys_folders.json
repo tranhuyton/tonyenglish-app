@@ -1,0 +1,32 @@
+[
+  {
+    "id": "242f395e-9bc4-49fc-90d9-6f33b816e5f0",
+    "title": "P1: Motion, forces & energy",
+    "parent_id": "cb222dec-9a5d-4ee0-91b0-eab1aa4ce0fb"
+  },
+  {
+    "id": "31074be7-c622-432a-997c-b0c9796c5ca9",
+    "title": "P3: Waves",
+    "parent_id": "cb222dec-9a5d-4ee0-91b0-eab1aa4ce0fb"
+  },
+  {
+    "id": "4292c365-691e-43b8-8df9-b4d82aee0617",
+    "title": "P4: Electricity and magnetism",
+    "parent_id": "cb222dec-9a5d-4ee0-91b0-eab1aa4ce0fb"
+  },
+  {
+    "id": "60bf38c1-0c7a-4733-8473-166c465e2a60",
+    "title": "P5: Nuclear physics",
+    "parent_id": "cb222dec-9a5d-4ee0-91b0-eab1aa4ce0fb"
+  },
+  {
+    "id": "839c606f-d7a9-4b1a-8d41-cbd1ba8810da",
+    "title": "P2: Thermal physics",
+    "parent_id": "cb222dec-9a5d-4ee0-91b0-eab1aa4ce0fb"
+  },
+  {
+    "id": "23d18154-4f31-45a8-8a7a-01810f7300d4",
+    "title": "P6: Space physics",
+    "parent_id": "cb222dec-9a5d-4ee0-91b0-eab1aa4ce0fb"
+  }
+]

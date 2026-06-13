@@ -1,0 +1,62 @@
+[
+  {
+    "id": "f2e85f88-01c7-4658-9232-e7f14d7d2890",
+    "title": "C2: Atoms elements and compounds",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "eaf4971a-e7b6-4687-b977-8f3be5da5e05",
+    "title": "C1: States of matter",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "3cadd610-b793-4b0a-8420-cf4c048b5c3a",
+    "title": "C3: Stoichiometry",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "d16a9aa6-fe2b-47ab-8835-6c7690239135",
+    "title": "C5: Chemical energetics",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "34b47095-f1e0-4ed7-8dff-b85db1e106c8",
+    "title": "C6: Chemical reactions",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "dcc5024d-ab78-4228-a43a-09829d264734",
+    "title": "C7: Acids bases and salts",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "be0b58de-e6c4-4318-8d7f-f5a5c3aebd6b",
+    "title": "C8: Periodic table",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "91138768-fd44-4ea2-8cc1-f987a6976e18",
+    "title": "C9: Metals",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "e5224557-9508-4c51-9b4c-b600eda73707",
+    "title": "C12: Experimental techniques and Chemical analysis",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "e4f0ab23-a75f-4145-9362-21a54eb62c95",
+    "title": "C11: Organic chemistry",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "9868a5e2-b06a-4610-b576-0c262478d61e",
+    "title": "C4: Electrochemistry",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  },
+  {
+    "id": "1ab83152-2bec-4ef8-95c5-d37506d04f37",
+    "title": "C10: Chemistry of the environment",
+    "parent_id": "2995c6cf-fda6-4535-9faa-1638098f6bb7"
+  }
+]
