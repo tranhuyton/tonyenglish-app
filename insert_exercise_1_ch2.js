@@ -70,7 +70,7 @@ const contentJson = {
   parts: [
     {
       id: "part1",
-      readingText: readingText,
+      content: readingText,
       sections: [
         {
           id: "sec1",
@@ -108,11 +108,11 @@ async function run() {
     order_index: maxOrder + 1
   };
   
-  const { data, error } = await supabase.from('tests').insert([payload]).select();
+  const { data, error } = await supabase.from('tests').update(payload).eq('title', "Chapter 2: Exercise 1").eq('course_id', courseId).select();
   if (error) {
-    console.error("Error inserting:", error);
+    console.error("Error updating:", error);
   } else {
-    console.log("Successfully inserted test:", data[0].title);
+    console.log("Successfully updated test:", data && data.length > 0 ? data[0].title : "Not found");
   }
 }
 
