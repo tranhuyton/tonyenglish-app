@@ -10,11 +10,17 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
     e.preventDefault();
     setLoading(true);
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+      // Timeout 10 giây — nếu Supabase chậm thì báo lỗi thay vì treo vô hạn
+      const loginPromise = supabase.auth.signInWithPassword({ email, password });
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('TIMEOUT')), 10000)
+      );
+      
+      const { data, error } = await Promise.race([loginPromise, timeoutPromise]) as any;
       if (error) throw error;
       
       // 🚀 GHI LOG ĐĂNG NHẬP (fire-and-forget, không block login flow)
-      if (data.user) {
+      if (data?.user) {
           supabase.from('activity_logs').insert([{
               user_id: data.user.id,
               action_type: 'login',
@@ -30,7 +36,11 @@ export default function AuthModal({ onClose, onNavigate }: { onClose?: () => voi
         window.location.href = '/';
       }
     } catch (error: any) {
-      alert(error.message === 'Invalid login credentials' ? 'Sai email hoặc mật khẩu!' : 'Lỗi: ' + error.message);
+      if (error.message === 'TIMEOUT') {
+        alert('⏳ Máy chủ đang phản hồi chậm. Vui lòng thử lại!');
+      } else {
+        alert(error.message === 'Invalid login credentials' ? 'Sai email hoặc mật khẩu!' : 'Lỗi: ' + error.message);
+      }
     } finally {
       setLoading(false);
     }

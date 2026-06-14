@@ -29,10 +29,16 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
     setIsLoading(true);
 
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+      // Timeout 10 giây — tránh treo vô hạn khi Supabase chậm
+      const loginPromise = supabase.auth.signInWithPassword({ email, password });
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('TIMEOUT')), 10000)
+      );
+      
+      const { data, error } = await Promise.race([loginPromise, timeoutPromise]) as any;
       if (error) {
         alert("Đăng nhập thất bại! Vui lòng kiểm tra lại Email hoặc Mật khẩu.");
-      } else if (data.user) {
+      } else if (data?.user) {
         const { data: profile } = await supabase.from('profiles').select('role').eq('id', data.user.id).single();
         
         setShowLoginModal(false);
@@ -42,8 +48,12 @@ export default function Home({ onNavigate, onStartTest }: { onNavigate: (view: s
           onNavigate('portal');
         }
       }
-    } catch (err) {
-      alert("Đã có lỗi xảy ra khi kết nối máy chủ.");
+    } catch (err: any) {
+      if (err.message === 'TIMEOUT') {
+        alert("⏳ Máy chủ đang phản hồi chậm. Vui lòng thử lại!");
+      } else {
+        alert("Đã có lỗi xảy ra khi kết nối máy chủ.");
+      }
     } finally {
       setIsLoading(false);
     }
