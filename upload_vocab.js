@@ -21,7 +21,18 @@ async function uploadImages() {
     if (!match) continue;
     
     const sectionNum = match[1];
-    const imageFile = files.find(f => f.startsWith(`vocab_${sectionNum}_`));
+    
+    // Find all files matching the prefix and get the latest one
+    const matchingFiles = files.filter(f => f.startsWith(`vocab_${sectionNum}_`));
+    let imageFile = null;
+    let latestTime = 0;
+    for (const f of matchingFiles) {
+      const stats = fs.statSync(path.join(imagesDir, f));
+      if (stats.mtimeMs > latestTime) {
+        latestTime = stats.mtimeMs;
+        imageFile = f;
+      }
+    }
     
     if (imageFile) {
       console.log(`Processing ${folder.title} with ${imageFile}`);
