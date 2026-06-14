@@ -1798,7 +1798,10 @@ const handleFinish = async () => {
                                });
                                
                                return (
-                                 <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
+                                 <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border-2 border-slate-200 mb-6">
+                                   {sec?.content && (
+                                     <div className="text-slate-600 text-[15px] leading-relaxed mb-6 html-content-renderer" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content) }} />
+                                   )}
                                    {/* Block questions with drop targets */}
                                    <div className="space-y-4">
                                      {(Array.isArray(sec.questions) ? sec.questions : []).map((q: any) => {
