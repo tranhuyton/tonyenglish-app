@@ -83,7 +83,7 @@ const contentJson = {
       sections: [
         {
           id: "sec1",
-          sectionTitle: "Choose the right meaning for the words in bold.",
+          title: "Choose the right meaning for the words in bold.",
           content: "",
           questionType: "Trắc nghiệm",
           questions: qList.map((data, index) => ({
