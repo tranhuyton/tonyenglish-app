@@ -257,7 +257,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 { data: tData },
                 { data: cData }
             ] = await Promise.all([
-                supabase.from('folders').select('id, title, course_id, display_order, thumbnail_url').in('course_id', courseIds),
+                supabase.from('folders').select('id, title, course_id, display_order, thumbnail_url, parent_id').in('course_id', courseIds),
                 supabase.from('lectures').select('id, title, course_id, module_id, order_index, is_published').eq('is_published', true).in('course_id', courseIds),
                 supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('is_published', true).or(`course_id.in.(${courseIds.join(',')}),course_id.is.null`),
                 supabase.from('courses').select('*').in('id', courseIds)
