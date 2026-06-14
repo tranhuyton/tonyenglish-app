@@ -315,29 +315,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             }
 
             if (hData) {
-                // Lọc dữ liệu: Chỉ giữ bài làm nghiêm túc
-                const validHistory = hData.filter((item: any) => {
-                    let detailsObj = item.details || {};
-                    if (typeof detailsObj === 'string') {
-                        try { detailsObj = JSON.parse(detailsObj); } catch(e) { detailsObj = {}; }
-                    }
-                    
-                    const type = String(item.test_type || '').toLowerCase();
-                    const title = String(item.test_title || '').toLowerCase();
-                    const isIelts = type.includes('ielts') || title.includes('ielts') || detailsObj.bandScore !== undefined;
-                    
-                    if (isIelts) {
-                        const band = parseFloat(detailsObj.bandScore);
-                        if (!isNaN(band)) {
-                            return band > 3.0; // IELTS phải lớn hơn Band 3.0
-                        }
-                        const fallbackScore = parseFloat(item.score || 0);
-                        return fallbackScore > 3.0; 
-                    } else {
-                        const score = parseFloat(item.score || 0);
-                        return score > 3.0; // Điểm Standard/Game phải lớn hơn 3.0
-                    }
-                });
+                const validHistory = hData; // Tạm thời lấy tất cả, không lọc điểm
 
                 setHistoryData(validHistory.map((item: any) => {
                     let detailsObj = item.details || {};
