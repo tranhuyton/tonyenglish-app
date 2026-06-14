@@ -249,6 +249,13 @@ export default function StandardTest({
     };
   }, []);
 
+  useEffect(() => {
+    const qType = parts?.[0]?.sections?.[0]?.questionType || 'unknown';
+    const isDragBlock = ["Kéo thả", "Matching", "Kéo thả vào Part"].includes(qType);
+    const hasBrack = /\[\s*\d+\s*\]/.test(String(parts?.[0]?.sections?.[0]?.content || '') + ' ' + String(parts?.[0]?.sections?.[0]?.questions?.[0]?.content || ''));
+    alert(`MOUNTED STANDARD TEST! qType: ${qType}, isDragBlock: ${isDragBlock}, hasBrackets: ${hasBrack}, leftWidth: ${leftWidth}`);
+  }, [parts]);
+
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen().catch(err => console.error(err));
