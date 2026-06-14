@@ -249,13 +249,6 @@ export default function StandardTest({
     };
   }, []);
 
-  useEffect(() => {
-    const qType = parts?.[0]?.sections?.[0]?.questionType || 'unknown';
-    const isDragBlock = ["Kéo thả", "Matching", "Kéo thả vào Part"].includes(qType);
-    const hasBrack = /\[\s*\d+\s*\]/.test(String(parts?.[0]?.sections?.[0]?.content || '') + ' ' + String(parts?.[0]?.sections?.[0]?.questions?.[0]?.content || ''));
-    alert(`MOUNTED STANDARD TEST! qType: ${qType}, isDragBlock: ${isDragBlock}, hasBrackets: ${hasBrack}, leftWidth: ${leftWidth}`);
-  }, [parts]);
-
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen().catch(err => console.error(err));
@@ -1245,10 +1238,6 @@ const handleFinish = async () => {
                {parts?.map((part: any, pIdx: number) => {
                   return (
                     <div key={`qpane-${part?.id || pIdx}`}>
-                       
-                       <div className="text-red-500 font-black text-4xl bg-yellow-300 p-8">
-                         PART RENDERED! pIdx: {pIdx} | ID: {part?.id}
-                       </div>
                        
                        {/* NỘI DUNG PART SANG BÊN PHẢI NẾU LÀ LISTENING */}
                        {isListening && (
