@@ -138,6 +138,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [historyPage, setHistoryPage] = useState(1);
 
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
+  const [analyticsDropdownOpen, setAnalyticsDropdownOpen] = useState(false);
   const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'standard'>('ielts');
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
@@ -683,7 +684,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   entry.bandCount += 1;
               }
           } else {
-              entry.stdScoreSum += (h.scoreObj.value || 0);
+              const p = h.scoreObj.total > 0 ? (h.scoreObj.value / h.scoreObj.total) * 100 : h.scoreObj.value || 0;
+              entry.stdScoreSum += p;
               entry.stdCount += 1;
           }
       });
@@ -722,12 +724,13 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                   bandCount++;
               }
           } else {
-              stdSum += (h.scoreObj.value || 0);
+              const p = h.scoreObj.total > 0 ? (h.scoreObj.value / h.scoreObj.total) * 100 : h.scoreObj.value || 0;
+              stdSum += p;
               stdCount++;
           }
       });
 
-      const score = stdCount > 0 ? (stdSum / stdCount).toFixed(1) : '0';
+      const score = stdCount > 0 ? (stdSum / stdCount).toFixed(1) + '%' : '0%';
       const ielts = bandCount > 0 ? (bandSum / bandCount).toFixed(1) : '0.0';
       
       return { analyticsTotalTestsDone: total, analyticsTotalTimeHours: hours, avgScore: score, avgIelts: ielts };
@@ -1415,12 +1418,40 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                         </button>
                     </div>
                 )}
-                <div className="w-full sm:w-56 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer focus-within:border-[#0ea5e9] focus-within:ring-4 focus-within:ring-[#0ea5e9]/10 transition-all">
-                  <select value={analyticsCourse} onChange={(e) => setAnalyticsCourse(e.target.value)} className="w-full bg-transparent font-bold text-[13px] text-slate-700 outline-none cursor-pointer appearance-none">
-                    <option value="all">Tất cả khóa học</option>
-                    {courses.length > 0 && courses.map(course => ( <option key={course.id} value={course.id}>{course.title}</option> ))}
-                  </select>
-                  <span className="text-slate-400 text-xs">▼</span>
+                <div className="relative w-full sm:w-64">
+                  <div 
+                    onClick={() => setAnalyticsDropdownOpen(!analyticsDropdownOpen)}
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer hover:border-[#0ea5e9] hover:bg-white transition-all shadow-sm"
+                  >
+                    <span className="font-bold text-[13px] text-slate-700 truncate pr-2">
+                      {analyticsCourse === 'all' ? 'Tất cả khóa học' : courses.find(c => String(c.id) === String(analyticsCourse))?.title || 'Tất cả khóa học'}
+                    </span>
+                    <span className={`text-slate-400 text-[10px] transition-transform duration-300 ${analyticsDropdownOpen ? 'rotate-180' : ''}`}>▼</span>
+                  </div>
+                  
+                  {analyticsDropdownOpen && (
+                    <>
+                      <div className="fixed inset-0 z-40" onClick={() => setAnalyticsDropdownOpen(false)}></div>
+                      <div className="absolute z-50 mt-2 w-full bg-white border border-slate-200 rounded-xl shadow-xl max-h-72 overflow-y-auto py-2 animate-in fade-in slide-in-from-top-2 duration-200 custom-scrollbar">
+                        <div 
+                          onClick={() => { setAnalyticsCourse('all'); setAnalyticsDropdownOpen(false); }}
+                          className={`px-5 py-3 cursor-pointer text-[13px] font-bold transition-colors ${analyticsCourse === 'all' ? 'bg-[#0ea5e9]/10 text-[#0ea5e9]' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
+                        >
+                          Tất cả khóa học
+                        </div>
+                        {courses.length > 0 && courses.map(course => (
+                          <div 
+                            key={course.id}
+                            onClick={() => { setAnalyticsCourse(course.id); setAnalyticsDropdownOpen(false); }}
+                            className={`px-5 py-3 cursor-pointer text-[13px] font-bold truncate transition-colors ${String(analyticsCourse) === String(course.id) ? 'bg-[#0ea5e9]/10 text-[#0ea5e9]' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}
+                            title={course.title}
+                          >
+                            {course.title}
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
 
               </div>
