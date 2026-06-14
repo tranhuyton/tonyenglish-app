@@ -1397,24 +1397,24 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <div>
                 <h2 className="text-[22px] md:text-[24px] font-black text-slate-800 tracking-tight">Hiệu Suất Học Tập</h2>
                 <p className="text-[14px] text-slate-500 font-medium mt-1">Phân tích kết quả và biểu đồ kỹ năng</p>
+              </div>
+              <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
                 {isIeltsCourseSelected && (
-                    <div className="flex bg-slate-100/80 p-1 rounded-xl mt-4 w-fit border border-slate-200/50 backdrop-blur-sm">
+                    <div className="flex bg-slate-100/80 p-1 rounded-xl w-full sm:w-fit border border-slate-200/50 backdrop-blur-sm">
                         <button
                             onClick={() => setAnalyticsTestType('ielts')}
-                            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'ielts' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
+                            className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'ielts' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
                         >
                             <span>🎯</span> Luyện thi IELTS
                         </button>
                         <button
                             onClick={() => setAnalyticsTestType('standard')}
-                            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'standard' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
+                            className={`flex-1 sm:flex-none flex justify-center items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'standard' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
                         >
                             <span>📝</span> Bài Tập Bổ Trợ
                         </button>
                     </div>
                 )}
-              </div>
-              <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                 <div className="w-full sm:w-56 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer focus-within:border-[#0ea5e9] focus-within:ring-4 focus-within:ring-[#0ea5e9]/10 transition-all">
                   <select value={analyticsCourse} onChange={(e) => setAnalyticsCourse(e.target.value)} className="w-full bg-transparent font-bold text-[13px] text-slate-700 outline-none cursor-pointer appearance-none">
                     <option value="all">Tất cả khóa học</option>
