@@ -74,7 +74,7 @@ const contentJson = {
       sections: [
         {
           id: "sec1",
-          title: "Questions 1-4",
+          title: "",
           content: "",
           questionType: "Trắc nghiệm",
           questions: qList.map((data, index) => ({
