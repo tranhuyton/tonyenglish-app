@@ -84,6 +84,7 @@ const contentJson = {
         {
           id: "sec1",
           sectionTitle: "Vocabulary Review",
+          content: "Choose the right word for each blank in the sentence.",
           questionType: "Trắc nghiệm",
           questions: qList.map((data, index) => ({
             id: String(index + 1),
