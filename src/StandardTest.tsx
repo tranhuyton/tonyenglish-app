@@ -1292,6 +1292,9 @@ const handleFinish = async () => {
                              )}
                              
                              {/* DẠNG BÀI INLINE: Điền từ, Kéo thả, Matching, Inline Droplist */}
+                             <div className="text-red-500 font-black text-3xl p-4 border-4 border-red-500 mb-4 bg-yellow-100">
+                                DEBUG - TEST TYPE: {sec?.questionType} | HAS INLINE: {String(/\[\s*\d+\s*\]/.test(String(sec.content || '') + ' ' + String(sec.questions?.[0]?.content || '')))}
+                             </div>
                              {(() => {
                                // Build raw content text for inline types
                                const inlineTypes = ["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"];
