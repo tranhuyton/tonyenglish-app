@@ -138,6 +138,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [historyPage, setHistoryPage] = useState(1);
 
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
+  const [analyticsTestType, setAnalyticsTestType] = useState<'ielts' | 'standard'>('ielts');
   const [analyticsCategory, setAnalyticsCategory] = useState('all');
   const [viewingHistoryDetail, setViewingHistoryDetail] = useState<any>(null);
   
@@ -635,14 +636,25 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const totalTestPages = Math.ceil(processedTests.length / ITEMS_PER_PAGE);
   const paginatedTests = useMemo(() => processedTests.slice((testPage - 1) * ITEMS_PER_PAGE, testPage * ITEMS_PER_PAGE), [processedTests, testPage]);
 
+  const isIeltsCourseSelected = analyticsCourse === 'all' 
+      ? courses.some(c => (c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')
+      : courses.find(c => String(c.id) === String(analyticsCourse))?.title.toLowerCase().includes('ielts');
+  const isIeltsContext = isIeltsCourseSelected && analyticsTestType === 'ielts';
+
   // CHUẨN BỊ DỮ LIỆU BÁO CÁO TỪ HISTORY ĐÃ LỌC
   const processedHistory = useMemo(() => {
       return historyData.filter(h => analyticsCourse === 'all' || String(h.courseId) === String(analyticsCourse)).filter(h => {
          if (analyticsCategory === 'all') return true;
          const ft = allTests.find(t => String(t.id) === String(h.testId));
          return (ft?.content_json?.basicInfo?.category || 'test') === analyticsCategory;
+      }).filter(h => {
+         if (!isIeltsCourseSelected) return true;
+         const type = String(h.details?.test_type || h.name).toLowerCase();
+         const isIeltsTest = type.includes('ielts') || h.details?.bandScore !== undefined;
+         if (analyticsTestType === 'ielts') return isIeltsTest;
+         return !isIeltsTest;
       }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  }, [historyData, analyticsCourse, analyticsCategory, allTests]);
+  }, [historyData, analyticsCourse, analyticsCategory, allTests, isIeltsContext, analyticsTestType]);
 
   // TÍNH TOÁN DỮ LIỆU CHO 4 AREA CHART TỔNG QUAN THEO NGÀY
   const aggregatedByDate = useMemo(() => {
@@ -690,10 +702,6 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
           };
       }).slice(-14); 
   }, [processedHistory]);
-
-  const isIeltsContext = analyticsCourse === 'all' 
-      ? courses.some(c => (c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')
-      : courses.find(c => String(c.id) === String(analyticsCourse))?.title.toLowerCase().includes('ielts');
 
   const { analyticsTotalTestsDone, analyticsTotalTimeHours, avgScore, avgIelts } = useMemo(() => {
       const total = processedHistory.length;
@@ -1389,6 +1397,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
               <div>
                 <h2 className="text-[22px] md:text-[24px] font-black text-slate-800 tracking-tight">Hiệu Suất Học Tập</h2>
                 <p className="text-[14px] text-slate-500 font-medium mt-1">Phân tích kết quả và biểu đồ kỹ năng</p>
+                {isIeltsCourseSelected && (
+                    <div className="flex bg-slate-100/80 p-1 rounded-xl mt-4 w-fit border border-slate-200/50 backdrop-blur-sm">
+                        <button
+                            onClick={() => setAnalyticsTestType('ielts')}
+                            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'ielts' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
+                        >
+                            <span>🎯</span> Luyện thi IELTS
+                        </button>
+                        <button
+                            onClick={() => setAnalyticsTestType('standard')}
+                            className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-bold text-[13px] transition-all duration-300 ${analyticsTestType === 'standard' ? 'bg-white text-blue-600 shadow-sm ring-1 ring-slate-200/50' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'}`}
+                        >
+                            <span>📝</span> Bài Tập Bổ Trợ
+                        </button>
+                    </div>
+                )}
               </div>
               <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                 <div className="w-full sm:w-56 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 flex items-center justify-between cursor-pointer focus-within:border-[#0ea5e9] focus-within:ring-4 focus-within:ring-[#0ea5e9]/10 transition-all">
