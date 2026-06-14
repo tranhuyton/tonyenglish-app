@@ -1246,6 +1246,10 @@ const handleFinish = async () => {
                   return (
                     <div key={`qpane-${part?.id || pIdx}`}>
                        
+                       <div className="text-red-500 font-black text-4xl bg-yellow-300 p-8">
+                         PART RENDERED! pIdx: {pIdx} | ID: {part?.id}
+                       </div>
+                       
                        {/* NỘI DUNG PART SANG BÊN PHẢI NẾU LÀ LISTENING */}
                        {isListening && (
                            <div className="mb-8 bg-transparent">
