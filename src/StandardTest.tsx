@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { supabase } from './supabase';
 import './tailwind.css';
 
@@ -323,6 +323,9 @@ export default function StandardTest({
 
   const [draggedOption, setDraggedOption] = useState<string | null>(null);
 
+  // Dictionary popup state
+  const [dictPopup, setDictPopup] = useState<{ show: boolean, word: string, x: number, y: number, rectTop: number, data: any, isLoading: boolean } | null>(null);
+
   // Tự động lưu nháp
   useEffect(() => {
     if (!isReviewMode && !isFinishingRef.current && safeData?.id) {
@@ -637,6 +640,57 @@ const handleFinish = async () => {
       
       window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
   };
+
+  // =========================================================================================
+  // TỪ ĐIỂN BÔI ĐEN TRA TỪ (Dictionary Lookup)
+  // =========================================================================================
+  const triggerDictionary = useCallback((word: string, x: number, y: number, rectTop: number) => {
+    setDictPopup({ show: true, word, x, y, rectTop, data: null, isLoading: true });
+    Promise.allSettled([
+      fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`)
+        .then(r => r.ok ? r.json() : Promise.reject()),
+      fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(word)}&langpair=en|vi`)
+        .then(r => r.json())
+    ]).then(([enRes, viRes]) => {
+      let phonetics = '';
+      let audio = '';
+      let translation = 'Không tìm thấy bản dịch.';
+      if (enRes.status === 'fulfilled' && enRes.value[0]) {
+        phonetics = enRes.value[0].phonetics?.find((p:any) => p.text)?.text || '';
+        audio = enRes.value[0].phonetics?.find((p:any) => p.audio)?.audio || '';
+      }
+      if (viRes.status === 'fulfilled' && viRes.value?.responseData?.translatedText) {
+        translation = viRes.value.responseData.translatedText;
+      }
+      setDictPopup(prev => prev ? { ...prev, data: { phonetics, audio, translation }, isLoading: false } : null);
+    });
+  }, []);
+
+  const handleTextSelection = useCallback(() => {
+    setTimeout(() => {
+      const selection = window.getSelection();
+      if (!selection || selection.rangeCount === 0) return;
+      const text = selection.toString().trim();
+      if (!text) return;
+      if (text.length > 0 && text.length < 40 && text.split(' ').length <= 4) {
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        triggerDictionary(text, rect.left + (rect.width / 2), rect.bottom, rect.top);
+      }
+    }, 100);
+  }, [triggerDictionary]);
+
+  // Close dictionary popup when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const dictPop = document.getElementById('std-dict-popup');
+      if (dictPop && !dictPop.contains(e.target as Node)) {
+        setDictPopup(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   // Drag-drop handlers
   const onDragStart = (e: React.DragEvent<HTMLDivElement>, option: string) => {
@@ -1044,6 +1098,7 @@ const handleFinish = async () => {
               <div 
                   className="bg-white overflow-y-auto custom-scrollbar w-full md:w-auto" 
                   ref={leftPaneRef} 
+                  onMouseUp={handleTextSelection}
                   style={{ width: window.innerWidth > 768 ? `calc(${leftWidth}% - 5px)` : '100%' }}
               >
                 <div className={`p-6 md:p-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
@@ -2277,6 +2332,56 @@ const handleFinish = async () => {
       ) : (
         renderTestLayout()
       )}
+
+      {/* DICTIONARY POPUP */}
+      {dictPopup && dictPopup.show && (
+        <div id="std-dict-popup" className="fixed bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] ring-1 ring-slate-900/5 w-[90vw] max-w-[340px] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200"
+          style={{ 
+            zIndex: 99999, 
+            left: Math.max(10, Math.min(dictPopup.x - 170, window.innerWidth - 350)), 
+            ...(window.innerHeight - dictPopup.y < 300 ? { bottom: window.innerHeight - dictPopup.rectTop + 15 } : { top: dictPopup.y + 15 }), 
+            maxHeight: '400px' 
+          }}>
+          <div className="bg-slate-50/80 backdrop-blur border-b border-slate-100 py-2.5 px-5 flex items-center justify-between shrink-0">
+            <div className="flex items-center">
+              <span className="text-base mr-2">📖</span>
+              <span className="font-bold text-[11px] text-slate-500 tracking-widest uppercase">Từ điển AI</span>
+            </div>
+            <button onClick={() => setDictPopup(null)} className="text-slate-400 hover:text-slate-700 text-lg font-bold">✕</button>
+          </div>
+          <div className="bg-white border-b border-slate-100 p-5 shrink-0 relative">
+            <h4 className="text-[20px] font-black text-slate-900 pr-10 leading-tight mb-1">
+              {dictPopup.word}
+            </h4>
+            {dictPopup.data?.phonetics && (
+              <span className="text-[14px] text-emerald-600 font-mono bg-emerald-50 px-2 py-0.5 rounded">
+                {dictPopup.data.phonetics}
+              </span>
+            )}
+            {dictPopup.data?.audio && (
+              <button 
+                onClick={() => { if(dictPopup.data.audio) { new Audio(dictPopup.data.audio).play(); } }} 
+                className="absolute top-5 right-5 w-10 h-10 rounded-full bg-blue-50 text-[#0ea5e9] flex items-center justify-center hover:bg-[#0ea5e9] hover:text-white transition-colors shadow-sm"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 001.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06zM18.584 5.106a.75.75 0 011.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 11-1.06-1.06 8.25 8.25 0 000-11.668.75.75 0 010-1.06z" /><path d="M15.932 7.757a.75.75 0 011.061 0 4.5 4.5 0 010 6.364.75.75 0 01-1.06-1.06 3 3 0 000-4.244.75.75 0 010-1.06z" /></svg>
+              </button>
+            )}
+          </div>
+          <div className="p-5 bg-slate-50 overflow-y-auto custom-scrollbar flex-1 text-[15px]" style={{ WebkitOverflowScrolling: 'touch' }}>
+            {dictPopup.isLoading ? (
+              <div className="flex flex-col items-center justify-center py-4 opacity-50">
+                <span className="w-6 h-6 border-2 border-[#0ea5e9] border-t-transparent rounded-full animate-spin mb-2"></span>
+                <span className="text-[13px] font-medium">Đang dịch...</span>
+              </div>
+            ) : (
+              <div className="text-slate-700 leading-relaxed font-medium">
+                {dictPopup.data?.translation}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
     </React.Fragment>
   );
 }
