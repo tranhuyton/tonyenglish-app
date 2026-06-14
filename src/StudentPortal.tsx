@@ -224,7 +224,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             supabase.from('lecture_progress').select('lecture_id, completed').eq('user_id', user.id),
             supabase.from('class_students').select('class_id').eq('user_id', user.id),
             supabase.from('enrollments').select('course_id').eq('user_id', user.id),
-            supabase.from('test_results').select('id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(50)
+            supabase.from('test_results').select('id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(1000)
         ]);
 
         setUserProfile(profile);
@@ -319,7 +319,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         }
 
         if (hData) {
-            const validHistory = hData; // Tạm thời lấy tất cả, không lọc điểm
+            // Lọc dữ liệu: Chỉ giữ bài làm nghiêm túc
+            const validHistory = hData.filter((item: any) => {
+                let detailsObj = item.details || {};
+                if (typeof detailsObj === 'string') {
+                    try { detailsObj = JSON.parse(detailsObj); } catch(e) { detailsObj = {}; }
+                }
+                const sc = parseFloat(item.score || 0);
+                const band = parseFloat(detailsObj.bandScore || 0);
+                return sc > 3.0 || band > 3.0;
+            });
 
             setHistoryData(validHistory.map((item: any) => {
                 let detailsObj = item.details || {};
