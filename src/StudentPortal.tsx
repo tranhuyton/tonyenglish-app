@@ -329,7 +329,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 
                 return {
                     id: item.id, 
-                    testId: item.test_id, 
+                    testId: item.test_id || detailsObj.test_id, 
                     name: item.test_title || 'Bài thi không tên', 
                     courseId: item.course_id,
                     scoreObj: { 
