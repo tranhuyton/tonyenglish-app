@@ -313,34 +313,35 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 };
                 fetchRichData();
             }
-
-            if (hData) {
-                const validHistory = hData; // Tạm thời lấy tất cả, không lọc điểm
-
-                setHistoryData(validHistory.map((item: any) => {
-                    let detailsObj = item.details || {};
-                    if (typeof detailsObj === 'string') {
-                        try { detailsObj = JSON.parse(detailsObj); } catch(e) { detailsObj = {}; }
-                    }
-                    
-                    return {
-                        id: item.id, 
-                        testId: item.test_id, 
-                        name: item.test_title || 'Bài thi không tên', 
-                        courseId: item.course_id,
-                        scoreObj: { 
-                            value: parseFloat(item.score || 0), 
-                            display: `${item.score || 0} / ${item.total_score || 0}` 
-                        },
-                        timeSpent: Math.round((item.time_spent || 0) / 60), 
-                        date: item.created_at, 
-                        details: detailsObj
-                    };
-                }));
-            }
         } else {
             setCourses([]);
             setAllTests([]);
+        }
+
+        if (hData) {
+            const validHistory = hData; // Tạm thời lấy tất cả, không lọc điểm
+
+            setHistoryData(validHistory.map((item: any) => {
+                let detailsObj = item.details || {};
+                if (typeof detailsObj === 'string') {
+                    try { detailsObj = JSON.parse(detailsObj); } catch(e) { detailsObj = {}; }
+                }
+                
+                return {
+                    id: item.id, 
+                    testId: item.test_id, 
+                    name: item.test_title || 'Bài thi không tên', 
+                    courseId: item.course_id,
+                    scoreObj: { 
+                        value: parseFloat(item.score || 0), 
+                        display: `${item.score || 0} / ${item.total_score || 0}` 
+                    },
+                    timeSpent: Math.round((item.time_spent || 0) / 60), 
+                    date: item.created_at, 
+                    details: detailsObj
+                };
+            }));
+        } else {
             setHistoryData([]);
         }
     } catch (err: any) {
