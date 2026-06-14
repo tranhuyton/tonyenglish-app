@@ -326,8 +326,14 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     try { detailsObj = JSON.parse(detailsObj); } catch(e) { detailsObj = {}; }
                 }
                 const sc = parseFloat(item.score || 0);
-                const band = parseFloat(detailsObj.bandScore || 0);
-                return sc > 3.0 || band > 3.0;
+                const type = String(item.test_type || item.test_title || '').toLowerCase();
+                const isIeltsTest = type.includes('ielts') || detailsObj.bandScore !== undefined;
+                
+                if (isIeltsTest) {
+                    const band = parseFloat(detailsObj.bandScore || 0);
+                    return band > 3.0;
+                }
+                return sc > 3.0;
             });
 
             setHistoryData(validHistory.map((item: any) => {
