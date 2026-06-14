@@ -349,6 +349,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                     courseId: item.course_id,
                     scoreObj: { 
                         value: parseFloat(item.score || 0), 
+                        total: parseFloat(item.total_score || 0),
                         display: `${item.score || 0} / ${item.total_score || 0}` 
                     },
                     timeSpent: Math.round((item.time_spent || 0) / 60), 
@@ -1631,7 +1632,22 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                             </td>
                             <td className="px-6 md:px-8 py-5 text-center">
                               <span className={`inline-flex items-center justify-center px-4 py-2 rounded-lg text-[14px] font-black border ${isHigh ? 'bg-emerald-50 text-emerald-600 border-emerald-200' : 'bg-slate-50 text-slate-700 border-slate-200'}`}>
-                                {history.details?.bandScore ? `Band ${history.details.bandScore}` : `${history.scoreObj.value} điểm`}
+                                {(() => {
+                                   const isIelts = String(history.details?.test_type || history.name).toLowerCase().includes('ielts') || history.details?.bandScore !== undefined;
+                                   if (isIelts) {
+                                       return `${history.scoreObj.value}/${history.scoreObj.total} - Band ${history.details?.bandScore || '0.0'}`;
+                                   } else {
+                                       const p = history.scoreObj.total > 0 ? (history.scoreObj.value / history.scoreObj.total) * 100 : 0;
+                                       let grade = 'U';
+                                       if (p >= 90) grade = 'A*';
+                                       else if (p >= 80) grade = 'A';
+                                       else if (p >= 70) grade = 'B';
+                                       else if (p >= 60) grade = 'C';
+                                       else if (p >= 50) grade = 'D';
+                                       else if (p >= 40) grade = 'E';
+                                       return `${Math.round(p)}% - ${grade}`;
+                                   }
+                                })()}
                               </span>
                             </td>
                             <td className="px-6 md:px-8 py-5 text-right">
