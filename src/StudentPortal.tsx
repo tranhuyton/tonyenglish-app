@@ -224,7 +224,7 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
             supabase.from('lecture_progress').select('lecture_id, completed').eq('user_id', user.id),
             supabase.from('class_students').select('class_id').eq('user_id', user.id),
             supabase.from('enrollments').select('course_id').eq('user_id', user.id),
-            supabase.from('test_results').select('id, test_id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(50)
+            supabase.from('test_results').select('id, test_title, course_id, score, total_score, time_spent, created_at, test_type, details').eq('user_id', user.id).order('created_at', { ascending: false }).limit(50)
         ]);
 
         setUserProfile(profile);
