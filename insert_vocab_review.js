@@ -74,7 +74,7 @@ const contentJson = {
     title: "Chapter 2: Vocabulary Review",
     timeLimit: 0,
     category: "exercise",
-    skill: "Standard-Reading"
+    skill: "Standard-Listening"
   },
   parts: [
     {
@@ -105,7 +105,7 @@ async function run() {
   const { data, error } = await supabase.from('tests')
     .update({
       content_json: contentJson,
-      test_type: 'Standard-Reading'
+      test_type: 'Standard-Listening'
     })
     .eq('course_id', courseId)
     .eq('folder_id', folderId)
