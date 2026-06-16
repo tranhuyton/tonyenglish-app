@@ -1013,24 +1013,6 @@ const handleFinish = async () => {
             </span>
           </div>
 
-          {/* MIDDLE SECTION FOR TIMER AND LABEL */}
-          {!isReviewMode && testStarted && (
-             <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-4 text-slate-700 font-bold bg-white px-5 py-1.5 rounded-full border border-slate-200 shadow-sm">
-               {basicInfo?.category === 'exercise' ? (
-                   <span className="text-[#0ea5e9] tracking-widest uppercase text-[13px]">BÀI TẬP</span>
-               ) : (
-                   <>
-                       <span className="text-rose-500 tracking-widest uppercase text-[13px]">ĐỀ THI</span>
-                       <div className="w-[1px] h-4 bg-slate-300"></div>
-                       <div className="flex items-center gap-1.5 text-rose-600">
-                           <span>⏱️</span> 
-                           <span className="font-mono tracking-widest text-[15px]">{formatTime(timeLeft)}</span>
-                       </div>
-                   </>
-               )}
-             </div>
-          )}
-          
           {isReviewMode && (
             <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-4">
                <button 
@@ -1052,7 +1034,24 @@ const handleFinish = async () => {
             </div>
           )}
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
+            {/* LABEL AND TIMER (TOP RIGHT) */}
+            {!isReviewMode && testStarted && (
+               <div className="flex items-center gap-3">
+                 {basicInfo?.category === 'exercise' ? (
+                     <span className="text-[#0ea5e9] font-black tracking-[0.2em] uppercase text-[15px]">BÀI TẬP</span>
+                 ) : (
+                     <>
+                         <span className="text-rose-500 font-black tracking-[0.2em] uppercase text-[15px]">ĐỀ THI</span>
+                         <div className="flex items-center gap-1.5 text-rose-600 bg-rose-50 px-3 py-1 rounded-lg border border-rose-100">
+                             <span className="text-[14px]">⏱️</span> 
+                             <span className="font-mono font-bold tracking-widest text-[16px]">{formatTime(timeLeft)}</span>
+                         </div>
+                     </>
+                 )}
+               </div>
+            )}
+
             {/* ⚙ NÚT CÀI ĐẶT */}
             <div className="relative">
               <button 
