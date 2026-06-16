@@ -1285,7 +1285,7 @@ const handleFinish = async () => {
 
           {/* PANEL PHẢI (CÂU HỎI VÀ NỘI DUNG LISTENING) */}
           <div 
-              className={`bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1 min-h-0 ${isListening ? 'md:mr-[280px] lg:mr-[320px]' : ''}`} 
+              className="bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1 min-h-0 md:mr-[280px] lg:mr-[320px]" 
               id="questions-container" 
               ref={rightPaneRef} 
               style={!isListening && window.innerWidth > 768 ? { width: `calc(${100 - leftWidth}% - 8px)`, flex: 'none' } : { flex: 1 }}
@@ -2241,9 +2241,8 @@ const handleFinish = async () => {
              </div>
           </div>
 
-          {/* RIGHT SIDEBAR ONLY FOR LISTENING (MCQ) */}
-          {isListening && (
-              <aside className="flex flex-col bg-white border-t md:border-t-0 md:border-l border-slate-200 overflow-hidden z-20 shrink-0 w-full md:w-[280px] lg:w-[320px] max-h-[50%] md:max-h-none md:absolute md:right-0 md:top-0 md:bottom-0 min-h-0">
+          {/* RIGHT SIDEBAR FOR MCQ */}
+          <aside className="flex flex-col bg-white border-t md:border-t-0 md:border-l border-slate-200 overflow-hidden z-20 shrink-0 w-full md:w-[280px] lg:w-[320px] max-h-[50%] md:max-h-none md:absolute md:right-0 md:top-0 md:bottom-0 min-h-0">
                 <div className="p-5 border-b border-slate-200 flex flex-col items-center shrink-0">
                   {isReviewMode ? (
                     <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm mb-4">
@@ -2374,110 +2373,8 @@ const handleFinish = async () => {
                   </div>
                 )}
               </aside>
-          )}
 
         </div> {/* ĐÓNG flex-1 flex overflow-hidden relative flex-col md:flex-row */}
-        
-        {/* BẢNG PALETTE ĐIỀU HƯỚNG CÂU HỎI FOOTER - CHỈ HIỂN THỊ KHI LÀ BÀI ĐỌC (SPLITSCREEN) */}
-        {!isListening && (
-            <footer className="h-[64px] bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex justify-between items-center px-6 shrink-0 select-none font-sans relative z-30">
-              <div className="flex-1 flex justify-start sm:justify-center items-center gap-2 overflow-x-auto py-1 custom-scrollbar min-w-0">
-                {allQuestionIds.map(id => {
-                  let isAns = answers[id] && answers[id].trim() !== '';
-                  const isMarked = marked[id];
-                  
-                  let btnClass = 'w-9 h-9 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 rounded-xl ';
-                  
-                  const section = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id));
-                  const qType = section?.questionType;
-
-                  if (!isReviewMode && qType === 'Checkbox') {
-                      const combos = buildCheckboxCombos(section?.questions);
-                      const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id));
-                      if (myCombo) {
-                          const comboIds = myCombo.map((q:any) => String(q.id));
-                          const userAnsArr = Array.from(new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim()))));
-                          const idxInCombo = comboIds.indexOf(id);
-                          isAns = idxInCombo < userAnsArr.length;
-                      }
-                  }
-
-                  if (isReviewMode) {
-                      let isCorrect = false;
-                      if (qType === 'Checkbox') {
-                          const combos: any[][] = [];
-                          parts.flatMap((p:any) => p.sections || []).forEach(sec => {
-                              if (sec.questionType === 'Checkbox') {
-                                  const c = buildCheckboxCombos(sec.questions);
-                                  combos.push(...c);
-                              }
-                          });
-                          const myCombo = combos.find(c => c.some((q:any) => String(q.id) === id)) || [];
-                          if (myCombo.length > 0) {
-                              const comboIds = myCombo.map((q:any) => String(q.id));
-                              const userAnsSet = new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
-                              const correctAnsSet = new Set(myCombo.flatMap((q:any)=>String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
-                              let pts = 0; 
-                              userAnsSet.forEach((v:string) => { 
-                                  if(correctAnsSet.has(v)) pts++; 
-                              });
-                              const idxInCombo = comboIds.indexOf(id);
-                              isCorrect = idxInCombo < pts;
-                          }
-                      } else {
-                          const q = section?.questions.find((q:any) => String(q.id) === id);
-                          isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase() && String(q.correctAnswer || '').trim() !== '';
-                      }
-                      btnClass += isCorrect ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/30 border-transparent' : 'bg-red-500 text-white shadow-md shadow-red-500/30 border-transparent';
-                  } else { 
-                      if (isAns) {
-                          btnClass += 'bg-[#0ea5e9] text-white shadow-md shadow-[#0ea5e9]/30 border-transparent cursor-pointer'; 
-                      } else {
-                          btnClass += 'bg-white border ' + (isMarked ? 'border-amber-400 bg-amber-50 text-amber-600 shadow-sm' : 'border-slate-200 text-slate-600') + ' cursor-pointer hover:bg-slate-50 hover:border-slate-300 hover:text-[#0ea5e9]'; 
-                      }
-                  }
-                  
-                  return (
-                      <button key={id} id={'nav-' + id} onClick={() => scrollToQuestion(id)} className={btnClass}>
-                          {questionIndexMap[id]}
-                      </button>
-                  );
-                })}
-              </div>
-
-              <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-200">
-                 {/* Nút Next/Prev không áp dụng cho StandardTest vì hiển thị cuộn liên tục */}
-                 
-                 {isReviewMode ? (
-                   <div className="flex items-center gap-2">
-                       <button 
-                          onClick={() => {
-                            const tutorContext = {
-                              overall: scoreResult.score + '/' + scoreResult.total,
-                              transcript: 'Bài test: ' + basicInfo.title + '. Điểm số của em là: ' + scoreResult.score + '/' + scoreResult.total + '.',
-                              feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
-                            };
-                            sessionStorage.setItem('tony_live_mode', 'TUTOR');
-                            sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
-                            sessionStorage.setItem('tony_auto_start', 'true');
-                            window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-                          }}
-                          className="bg-[#0ea5e9] hover:bg-[#0284c7] text-white px-4 sm:px-6 py-2.5 rounded-xl text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-md shadow-[#0ea5e9]/20 flex items-center gap-2"
-                       >
-                           📞 Gọi Gia Sư
-                       </button>
-                       <button onClick={handleExit} className="bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 px-4 sm:px-6 py-2.5 rounded-xl text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide">
-                           Thoát
-                       </button>
-                   </div>
-                 ) : (
-                   <button onClick={handleFinish} className="bg-[#0ea5e9] hover:bg-[#0284c7] shadow-md shadow-[#0ea5e9]/20 text-white px-6 py-2.5 rounded-xl text-[14px] font-bold transition ml-2 uppercase tracking-wide">
-                       Nộp bài
-                   </button>
-                 )}
-              </div>
-            </footer>
-        )}
       </div>
     );
   };
