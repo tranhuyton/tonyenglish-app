@@ -2241,107 +2241,243 @@ const handleFinish = async () => {
              </div>
           </div>
 
-          {/* BẢNG PALETTE ĐIỀU HƯỚNG CÂU HỎI ĐÃ ĐƯỢC CHUYỂN XUỐNG FOOTER */}
+          {/* RIGHT SIDEBAR ONLY FOR LISTENING (MCQ) */}
+          {isListening && (
+              <aside className="w-full lg:w-[320px] shrink-0 lg:sticky top-4 h-auto lg:h-[calc(100vh-80px)] flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20 m-4 lg:m-6 lg:ml-0">
+                <div className="p-5 border-b border-slate-200 flex flex-col items-center">
+                  {isReviewMode ? (
+                    <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm mb-4">
+                      <p className="text-[12px] font-bold uppercase tracking-widest mb-2">Kết quả của bạn</p>
+                      <p className="text-5xl font-black mb-4">
+                          {scoreResult.score} <span className="text-2xl text-emerald-400">/ {scoreResult.total}</span>
+                      </p>
+                      
+                      <button 
+                          onClick={() => {
+                            const tutorContext = {
+                              overall: scoreResult.score + '/' + scoreResult.total,
+                              transcript: `Bài test: ${basicInfo.title}. Điểm số của em là: ${scoreResult.score}/${scoreResult.total}.`,
+                              feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
+                            };
+                            sessionStorage.setItem('tony_live_mode', 'TUTOR');
+                            sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+                            sessionStorage.setItem('tony_auto_start', 'true');
+                            window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+                          }}
+                          className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-full text-[13px] font-bold transition uppercase tracking-wider shadow flex items-center justify-center gap-2 w-full"
+                      >
+                          📞 Gọi Gia Sư AI
+                      </button>
+                    </div>
+                  ) : basicInfo?.category === 'exercise' ? (
+                    <div className="bg-emerald-50 text-emerald-600 px-6 py-2.5 rounded-lg font-black text-[18px] mb-4 border border-emerald-200 flex items-center justify-center gap-2 w-full shadow-sm tracking-widest uppercase">
+                        BÀI TẬP
+                    </div>
+                  ) : (
+                    <div className="bg-red-50 text-red-500 px-6 py-2.5 rounded-lg font-bold text-[18px] mb-4 border border-red-100 flex items-center justify-center gap-2 w-full shadow-sm tracking-wider">
+                      <span className="text-red-400">⏳</span> {formatTime(timeLeft)} phút
+                    </div>
+                  )}
+                  
+                  <div className="w-full text-[14px] font-bold text-slate-800 mb-3 text-left">
+                      Danh sách câu hỏi
+                  </div>
+                  
+                  <div className="w-full flex flex-wrap gap-x-4 gap-y-2 text-[12px] font-medium text-slate-600 mb-2">
+                     <div className="flex items-center gap-1.5">
+                         <div className="w-3 h-3 rounded-full bg-slate-200"></div> Chưa trả lời ({totalCount - answeredCount})
+                     </div>
+                     <div className="flex items-center gap-1.5">
+                         <div className="w-3 h-3 rounded-full bg-[#0ea5e9]"></div> Đã trả lời ({answeredCount})
+                     </div>
+                     {!isReviewMode && (
+                       <div className="flex items-center gap-1.5 w-full mt-1">
+                           <div className="w-3 h-3 rounded-full border-2 border-amber-500 bg-amber-50"></div> Đánh dấu ({markedCount})
+                       </div>
+                     )}
+                  </div>
+                </div>
+                
+                <div className="flex-1 overflow-y-auto p-5 custom-scrollbar bg-white">
+                  <p className="text-[12px] text-slate-400 mb-4">Bấm vào ô để đến câu hỏi</p>
+                  <div className="grid grid-cols-5 gap-2">
+                    {allQuestionIds.map(id => {
+                      let isAns = answers[id] && answers[id].trim() !== '';
+                      const isMarked = marked[id];
+                      let btnStyle = 'w-10 h-10 flex items-center justify-center rounded-xl font-bold text-[13px] transition-all border '; 
+                      
+                      const section = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id));
+                      const qType = section?.questionType;
+
+                      if (!isReviewMode && qType === 'Checkbox') {
+                          const combos = buildCheckboxCombos(section?.questions);
+                          const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id));
+                          if (myCombo) {
+                              const comboIds = myCombo.map((q:any) => String(q.id));
+                              const userAnsArr = Array.from(new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim()))));
+                              const idxInCombo = comboIds.indexOf(id);
+                              isAns = idxInCombo < userAnsArr.length;
+                          }
+                      }
+
+                      if (isReviewMode) {
+                          let isCorrect = false;
+                          if (qType === 'Checkbox') {
+                              const combos: any[][] = [];
+                              parts.flatMap((p:any) => p.sections || []).forEach(sec => {
+                                  if (sec.questionType === 'Checkbox') {
+                                      const c = buildCheckboxCombos(sec.questions);
+                                      combos.push(...c);
+                                  }
+                              });
+                              const myCombo = combos.find(c => c.some((q:any) => String(q.id) === id)) || [];
+                              if (myCombo.length > 0) {
+                                  const comboIds = myCombo.map((q:any) => String(q.id));
+                                  const userAnsSet = new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
+                                  const correctAnsSet = new Set(myCombo.flatMap((q:any)=>String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
+                                  let pts = 0; 
+                                  userAnsSet.forEach((v:string) => { 
+                                      if(correctAnsSet.has(v)) pts++; 
+                                  });
+                                  const idxInCombo = comboIds.indexOf(id);
+                                  isCorrect = idxInCombo < pts;
+                              }
+                          } else {
+                              const q = section?.questions.find((q:any) => String(q.id) === id);
+                              isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase() && String(q.correctAnswer || '').trim() !== '';
+                          }
+                          btnStyle += isCorrect ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/30 border-transparent' : 'bg-red-500 text-white shadow-md shadow-red-500/30 border-transparent';
+                      } else {
+                          if (isAns) {
+                              btnStyle += 'bg-[#0ea5e9] text-white shadow-md shadow-[#0ea5e9]/30 border-transparent cursor-pointer';
+                          } else {
+                              btnStyle += 'bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100 hover:border-slate-300 cursor-pointer';
+                              if (isMarked) {
+                                  btnStyle = 'w-10 h-10 flex items-center justify-center rounded-xl font-bold text-[13px] transition-all border border-amber-400 bg-amber-50 text-amber-600 shadow-sm cursor-pointer hover:bg-amber-100';
+                              }
+                          }
+                      }
+                      
+                      return (
+                          <button key={id} id={'nav-' + id} onClick={() => scrollToQuestion(id)} className={btnStyle}>
+                              {questionIndexMap[id]}
+                          </button>
+                      );
+                    })}
+                  </div>
+                </div>
+                {!isReviewMode && (
+                  <div className="p-5 border-t border-slate-200 bg-slate-50 flex gap-3">
+                     <button onClick={handleFinish} className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl text-[14px] uppercase tracking-widest transition-colors shadow-lg shadow-[#0ea5e9]/20">
+                         Nộp bài
+                     </button>
+                  </div>
+                )}
+              </aside>
+          )}
+
         </div> {/* ĐÓNG flex-1 flex overflow-hidden relative flex-col md:flex-row */}
         
-        <footer className="h-[64px] bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex justify-between items-center px-6 shrink-0 select-none font-sans relative z-30">
-          <div className="flex-1 flex justify-start sm:justify-center items-center gap-2 overflow-x-auto py-1 custom-scrollbar min-w-0">
-            {allQuestionIds.map(id => {
-              let isAns = answers[id] && answers[id].trim() !== '';
-              const isMarked = marked[id];
-              
-              let btnClass = 'w-9 h-9 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 rounded-xl ';
-              
-              const section = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id));
-              const qType = section?.questionType;
+        {/* BẢNG PALETTE ĐIỀU HƯỚNG CÂU HỎI FOOTER - CHỈ HIỂN THỊ KHI LÀ BÀI ĐỌC (SPLITSCREEN) */}
+        {!isListening && (
+            <footer className="h-[64px] bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex justify-between items-center px-6 shrink-0 select-none font-sans relative z-30">
+              <div className="flex-1 flex justify-start sm:justify-center items-center gap-2 overflow-x-auto py-1 custom-scrollbar min-w-0">
+                {allQuestionIds.map(id => {
+                  let isAns = answers[id] && answers[id].trim() !== '';
+                  const isMarked = marked[id];
+                  
+                  let btnClass = 'w-9 h-9 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 rounded-xl ';
+                  
+                  const section = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id));
+                  const qType = section?.questionType;
 
-              if (!isReviewMode && qType === 'Checkbox') {
-                  const combos = buildCheckboxCombos(section?.questions);
-                  const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id));
-                  if (myCombo) {
-                      const comboIds = myCombo.map((q:any) => String(q.id));
-                      const userAnsArr = Array.from(new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim()))));
-                      const idxInCombo = comboIds.indexOf(id);
-                      isAns = idxInCombo < userAnsArr.length;
-                  }
-              }
-
-              if (isReviewMode) {
-                  let isCorrect = false;
-                  if (qType === 'Checkbox') {
-                      const combos: any[][] = [];
-                      parts.flatMap((p:any) => p.sections || []).forEach(sec => {
-                          if (sec.questionType === 'Checkbox') {
-                              const c = buildCheckboxCombos(sec.questions);
-                              combos.push(...c);
-                          }
-                      });
-                      const myCombo = combos.find(c => c.some((q:any) => String(q.id) === id)) || [];
-                      if (myCombo.length > 0) {
+                  if (!isReviewMode && qType === 'Checkbox') {
+                      const combos = buildCheckboxCombos(section?.questions);
+                      const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id));
+                      if (myCombo) {
                           const comboIds = myCombo.map((q:any) => String(q.id));
-                          const userAnsSet = new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
-                          const correctAnsSet = new Set(myCombo.flatMap((q:any)=>String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
-                          let pts = 0; 
-                          userAnsSet.forEach((v:string) => { 
-                              if(correctAnsSet.has(v)) pts++; 
-                          });
+                          const userAnsArr = Array.from(new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim()))));
                           const idxInCombo = comboIds.indexOf(id);
-                          isCorrect = idxInCombo < pts;
+                          isAns = idxInCombo < userAnsArr.length;
                       }
-                  } else {
-                      const q = section?.questions.find((q:any) => String(q.id) === id);
-                      isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase() && String(q.correctAnswer || '').trim() !== '';
                   }
-                  btnClass += isCorrect ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/30 border-transparent' : 'bg-red-500 text-white shadow-md shadow-red-500/30 border-transparent';
-              } else { 
-                  if (isAns) {
-                      btnClass += 'bg-[#0ea5e9] text-white shadow-md shadow-[#0ea5e9]/30 border-transparent cursor-pointer'; 
-                  } else {
-                      btnClass += 'bg-white border ' + (isMarked ? 'border-amber-400 bg-amber-50 text-amber-600 shadow-sm' : 'border-slate-200 text-slate-600') + ' cursor-pointer hover:bg-slate-50 hover:border-slate-300 hover:text-[#0ea5e9]'; 
+
+                  if (isReviewMode) {
+                      let isCorrect = false;
+                      if (qType === 'Checkbox') {
+                          const combos: any[][] = [];
+                          parts.flatMap((p:any) => p.sections || []).forEach(sec => {
+                              if (sec.questionType === 'Checkbox') {
+                                  const c = buildCheckboxCombos(sec.questions);
+                                  combos.push(...c);
+                              }
+                          });
+                          const myCombo = combos.find(c => c.some((q:any) => String(q.id) === id)) || [];
+                          if (myCombo.length > 0) {
+                              const comboIds = myCombo.map((q:any) => String(q.id));
+                              const userAnsSet = new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
+                              const correctAnsSet = new Set(myCombo.flatMap((q:any)=>String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
+                              let pts = 0; 
+                              userAnsSet.forEach((v:string) => { 
+                                  if(correctAnsSet.has(v)) pts++; 
+                              });
+                              const idxInCombo = comboIds.indexOf(id);
+                              isCorrect = idxInCombo < pts;
+                          }
+                      } else {
+                          const q = section?.questions.find((q:any) => String(q.id) === id);
+                          isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase() && String(q.correctAnswer || '').trim() !== '';
+                      }
+                      btnClass += isCorrect ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/30 border-transparent' : 'bg-red-500 text-white shadow-md shadow-red-500/30 border-transparent';
+                  } else { 
+                      if (isAns) {
+                          btnClass += 'bg-[#0ea5e9] text-white shadow-md shadow-[#0ea5e9]/30 border-transparent cursor-pointer'; 
+                      } else {
+                          btnClass += 'bg-white border ' + (isMarked ? 'border-amber-400 bg-amber-50 text-amber-600 shadow-sm' : 'border-slate-200 text-slate-600') + ' cursor-pointer hover:bg-slate-50 hover:border-slate-300 hover:text-[#0ea5e9]'; 
+                      }
                   }
-              }
-              
-              return (
-                  <button key={id} id={'nav-' + id} onClick={() => scrollToQuestion(id)} className={btnClass}>
-                      {questionIndexMap[id]}
-                  </button>
-              );
-            })}
-          </div>
+                  
+                  return (
+                      <button key={id} id={'nav-' + id} onClick={() => scrollToQuestion(id)} className={btnClass}>
+                          {questionIndexMap[id]}
+                      </button>
+                  );
+                })}
+              </div>
 
-          <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-200">
-             {/* Nút Next/Prev không áp dụng cho StandardTest vì hiển thị cuộn liên tục */}
-             
-             {isReviewMode ? (
-               <div className="flex items-center gap-2">
-                   <button 
-                      onClick={() => {
-                        const tutorContext = {
-                          overall: scoreResult.score + '/' + scoreResult.total,
-                          transcript: 'Bài test: ' + basicInfo.title + '. Điểm số của em là: ' + scoreResult.score + '/' + scoreResult.total + '.',
-                          feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
-                        };
-                        sessionStorage.setItem('tony_live_mode', 'TUTOR');
-                        sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
-                        sessionStorage.setItem('tony_auto_start', 'true');
-                        window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
-                      }}
-                      className="bg-[#0ea5e9] hover:bg-[#0284c7] text-white px-4 sm:px-6 py-2.5 rounded-xl text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-md shadow-[#0ea5e9]/20 flex items-center gap-2"
-                   >
-                       📞 Gọi Gia Sư
+              <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-200">
+                 {/* Nút Next/Prev không áp dụng cho StandardTest vì hiển thị cuộn liên tục */}
+                 
+                 {isReviewMode ? (
+                   <div className="flex items-center gap-2">
+                       <button 
+                          onClick={() => {
+                            const tutorContext = {
+                              overall: scoreResult.score + '/' + scoreResult.total,
+                              transcript: 'Bài test: ' + basicInfo.title + '. Điểm số của em là: ' + scoreResult.score + '/' + scoreResult.total + '.',
+                              feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
+                            };
+                            sessionStorage.setItem('tony_live_mode', 'TUTOR');
+                            sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+                            sessionStorage.setItem('tony_auto_start', 'true');
+                            window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+                          }}
+                          className="bg-[#0ea5e9] hover:bg-[#0284c7] text-white px-4 sm:px-6 py-2.5 rounded-xl text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-md shadow-[#0ea5e9]/20 flex items-center gap-2"
+                       >
+                           📞 Gọi Gia Sư
+                       </button>
+                       <button onClick={handleExit} className="bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 px-4 sm:px-6 py-2.5 rounded-xl text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide">
+                           Thoát
+                       </button>
+                   </div>
+                 ) : (
+                   <button onClick={handleFinish} className="bg-[#0ea5e9] hover:bg-[#0284c7] shadow-md shadow-[#0ea5e9]/20 text-white px-6 py-2.5 rounded-xl text-[14px] font-bold transition ml-2 uppercase tracking-wide">
+                       Nộp bài
                    </button>
-                   <button onClick={handleExit} className="bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 px-4 sm:px-6 py-2.5 rounded-xl text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide">
-                       Thoát
-                   </button>
-               </div>
-             ) : (
-               <button onClick={handleFinish} className="bg-[#0ea5e9] hover:bg-[#0284c7] shadow-md shadow-[#0ea5e9]/20 text-white px-6 py-2.5 rounded-xl text-[14px] font-bold transition ml-2 uppercase tracking-wide">
-                   Nộp bài
-               </button>
-             )}
-          </div>
-
-        </footer>
+                 )}
+              </div>
+            </footer>
+        )}
       </div>
     );
   };
