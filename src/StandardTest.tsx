@@ -1142,7 +1142,7 @@ const handleFinish = async () => {
         </header>
 
         {/* TAB BAR FOR NAVIGATION BETWEEN PARTS */}
-        {parts.length > 1 && (
+        {parts.length > 1 && !isListening && (
           <div className={`border-b border-slate-200 px-6 pt-2 pb-0 flex gap-4 overflow-x-auto shrink-0 font-sans ${isReviewMode ? 'bg-emerald-50' : 'bg-white'}`}>
             {parts.map((p: any, index: number) => {
               const isActive = currentPartIndex === index;
@@ -1199,7 +1199,7 @@ const handleFinish = async () => {
                   )}
 
                   {parts?.map((part: any, pIdx: number) => {
-                    if (parts.length > 1 && pIdx !== currentPartIndex) return null;
+                    if (parts.length > 1 && !isListening && pIdx !== currentPartIndex) return null;
                     return (
                       <div key={part?.id || pIdx} className="mb-12">
                         {part?.title && (
@@ -1303,7 +1303,7 @@ const handleFinish = async () => {
                )}
 
                {parts?.map((part: any, pIdx: number) => {
-                  if (parts.length > 1 && pIdx !== currentPartIndex) return null;
+                  if (parts.length > 1 && !isListening && pIdx !== currentPartIndex) return null;
                   return (
                     <div key={`qpane-${part?.id || pIdx}`}>
                        
@@ -2243,7 +2243,7 @@ const handleFinish = async () => {
 
           {/* RIGHT SIDEBAR ONLY FOR LISTENING (MCQ) */}
           {isListening && (
-              <aside className="flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20 mx-4 mb-4 lg:my-6 lg:mr-6 lg:ml-0 shrink-0 w-auto lg:w-[320px] max-h-[45%] lg:max-h-none lg:h-[calc(100%-48px)] min-h-0">
+              <aside className="flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20 mx-4 mb-4 md:my-6 md:mr-6 md:ml-0 shrink-0 w-auto md:w-[280px] lg:w-[320px] max-h-[45%] md:max-h-none md:h-[calc(100%-48px)] min-h-0">
                 <div className="p-5 border-b border-slate-200 flex flex-col items-center shrink-0">
                   {isReviewMode ? (
                     <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm mb-4">
