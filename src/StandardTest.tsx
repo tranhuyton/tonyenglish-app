@@ -2243,7 +2243,7 @@ const handleFinish = async () => {
 
           {/* RIGHT SIDEBAR ONLY FOR LISTENING (MCQ) */}
           {isListening && (
-              <aside className="flex flex-col bg-white border-t md:border-t-0 md:border-l border-slate-200 overflow-hidden z-20 shrink-0 w-full md:w-[280px] lg:w-[320px] max-h-[50%] md:max-h-none md:self-stretch min-h-0">
+              <aside className="flex flex-col bg-white border-t md:border-t-0 md:border-l border-slate-200 overflow-hidden z-20 shrink-0 w-full md:w-[280px] lg:w-[320px] max-h-[50%] md:max-h-none md:self-stretch md:h-full min-h-0">
                 <div className="p-5 border-b border-slate-200 flex flex-col items-center shrink-0">
                   {isReviewMode ? (
                     <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm mb-4">
