@@ -1159,7 +1159,7 @@ const handleFinish = async () => {
           </div>
         )}
 
-        <div className="flex-1 flex overflow-hidden relative flex-col md:flex-row" ref={containerRef} onClick={() => showSettings && setShowSettings(false)}>
+        <div className="flex-1 min-h-0 flex overflow-hidden relative flex-col md:flex-row" ref={containerRef} onClick={() => showSettings && setShowSettings(false)}>
           
           {/* PANEL TRÁI (BÀI ĐỌC) - ẨN ĐI NẾU LÀ BÀI LISTENING */}
           {!isListening && (
@@ -1285,7 +1285,7 @@ const handleFinish = async () => {
 
           {/* PANEL PHẢI (CÂU HỎI VÀ NỘI DUNG LISTENING) */}
           <div 
-              className="bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1" 
+              className="bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1 min-h-0" 
               id="questions-container" 
               ref={rightPaneRef} 
               style={!isListening && window.innerWidth > 768 ? { width: `calc(${100 - leftWidth}% - 8px)`, flex: 'none' } : { flex: 1 }}
@@ -2298,7 +2298,7 @@ const handleFinish = async () => {
                   </div>
                 </div>
                 
-                <div className="flex-1 overflow-y-auto p-5 custom-scrollbar bg-white">
+                <div className="flex-1 min-h-0 overflow-y-auto p-5 custom-scrollbar bg-white">
                   <p className="text-[12px] text-slate-400 mb-4">Bấm vào ô để đến câu hỏi</p>
                   <div className="grid grid-cols-5 gap-2">
                     {allQuestionIds.map(id => {
