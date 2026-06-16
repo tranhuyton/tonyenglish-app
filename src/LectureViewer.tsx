@@ -1057,8 +1057,10 @@ export default function LectureViewer({
          
          const type = String(testData.test_type || '').toLowerCase();
 
-         if (type.includes('standard')) {
-             onStartTest('standard', testData);
+          if (type.includes('standard-reading')) {
+              onStartTest('standard-reading', testData);
+          } else if (type.includes('standard')) {
+              onStartTest('standard', testData);
          } else if (type.includes('case-study') || type.includes('business')) {
              onStartTest('case-study', testData);
          } else if (type === 'ielts-writing') {
