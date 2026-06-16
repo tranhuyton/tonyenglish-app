@@ -2243,8 +2243,8 @@ const handleFinish = async () => {
 
           {/* RIGHT SIDEBAR ONLY FOR LISTENING (MCQ) */}
           {isListening && (
-              <aside className="w-full lg:w-[320px] shrink-0 lg:sticky top-4 h-auto lg:h-[calc(100vh-80px)] flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20 m-4 lg:m-6 lg:ml-0">
-                <div className="p-5 border-b border-slate-200 flex flex-col items-center">
+              <aside className="flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20 mx-4 mb-4 lg:my-6 lg:mr-6 lg:ml-0 shrink-0 w-auto lg:w-[320px] max-h-[45%] lg:max-h-none lg:h-[calc(100%-48px)] min-h-0">
+                <div className="p-5 border-b border-slate-200 flex flex-col items-center shrink-0">
                   {isReviewMode ? (
                     <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm mb-4">
                       <p className="text-[12px] font-bold uppercase tracking-widest mb-2">Kết quả của bạn</p>
@@ -2367,7 +2367,7 @@ const handleFinish = async () => {
                   </div>
                 </div>
                 {!isReviewMode && (
-                  <div className="p-5 border-t border-slate-200 bg-slate-50 flex gap-3">
+                  <div className="p-5 border-t border-slate-200 bg-slate-50 flex gap-3 shrink-0">
                      <button onClick={handleFinish} className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl text-[14px] uppercase tracking-widest transition-colors shadow-lg shadow-[#0ea5e9]/20">
                          Nộp bài
                      </button>
