@@ -1227,11 +1227,7 @@ const handleFinish = async () => {
 
                           return (
                             <div key={sec?.id || sIdx} className="mb-8">
-                              {displaySecTitle && (
-                                  <h4 className="font-bold text-[15px] text-slate-800 bg-slate-100 border border-slate-200 inline-block px-4 py-1.5 rounded-lg mb-4">
-                                      {displaySecTitle}
-                                  </h4>
-                              )}
+                              {/* Removed displaySecTitle to avoid duplicating with the right pane */}
                               
                               {sec?.imageUrl && (
                                   <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />
