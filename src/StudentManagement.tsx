@@ -255,7 +255,9 @@ export default function StudentManagement({ onStartTest, autoSelectUserId, autoT
     if (foundTest && onStartTest) {
         const type = String(foundTest.test_type || '').toLowerCase();
         let targetMode = 'standard';
-        if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
+        if (type.includes('split-standard')) targetMode = 'split-standard';
+        else if (type.includes('standard-reading')) targetMode = 'standard-reading';
+        else if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
         else if (type.includes('igcse') && type.includes('direct')) targetMode = 'igcse-direct';
         else if (type.includes('igcse') || type.includes('science')) targetMode = 'igcse';
         else if (type === 'ielts-writing') targetMode = 'ielts-writing';

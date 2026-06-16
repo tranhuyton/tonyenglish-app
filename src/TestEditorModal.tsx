@@ -1003,6 +1003,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                     >
                       <option value="Standard-Listening">MCQ (Standard)</option>
                       <option value="Standard-Reading">SplitScreen (Standard)</option>
+                      <option value="Split-Standard">Split (Standard)</option>
                       <option value="IELTS-Listening">Listening (IELTS)</option>
                       <option value="IELTS-Reading">Reading (IELTS)</option>
                       <option value="Mixed-Paper">Mixed Paper (Có hình)</option>

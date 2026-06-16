@@ -159,7 +159,7 @@ const parseStyle = (styleStr: string) => {
 // =========================================================================================
 // COMPONENT CHÍNH QUẢN LÝ BÀI THI STANDARD TEST
 // =========================================================================================
-export default function StandardTest({ 
+export default function StandardSplitScreenTest({ 
     onBack, 
     testData, 
     onFinish 
@@ -191,7 +191,7 @@ export default function StandardTest({
   const basicInfo = contentJSON?.basicInfo || { title: "Standard Test", timeLimit: "60", skill: "" };
   const parts = Array.isArray(contentJSON?.parts) ? contentJSON.parts : [];
   
-  const isListening = true;
+  const isListening = false;
   const globalAudio = basicInfo.audioUrl || parts[0]?.audioUrl;
 
   const hasAnyAudio = useMemo(() => {
@@ -235,7 +235,19 @@ export default function StandardTest({
   const globalAudioRef = useRef<HTMLAudioElement>(null);
   const isFinishingRef = useRef(false);
 
+  const [leftWidth, setLeftWidth] = useState(50); 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   const containerRef = useRef<HTMLDivElement>(null);
+  const leftPaneRef = useRef<HTMLDivElement>(null);
   const rightPaneRef = useRef<HTMLDivElement>(null);
 
   // Xử lý Fullscreen
@@ -538,28 +550,45 @@ const handleFinish = async () => {
   };
 
   const scrollToQuestion = (id: string) => {
-    const el = document.getElementById(`q-${id}`);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      el.classList.add('ring-4', 'ring-[#0ea5e9]/40', 'rounded-xl');
+    const targetPartIndex = questionToPartMap[String(id)];
+    if (targetPartIndex !== undefined && targetPartIndex !== currentPartIndex) {
+      setCurrentPartIndex(targetPartIndex);
       setTimeout(() => {
-          el.classList.remove('ring-4', 'ring-[#0ea5e9]/40', 'rounded-xl');
-      }, 1500);
+        const el = document.getElementById(`q-${id}`);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('ring-4', 'ring-[#0ea5e9]/40', 'rounded-xl');
+          setTimeout(() => {
+              el.classList.remove('ring-4', 'ring-[#0ea5e9]/40', 'rounded-xl');
+          }, 1500);
+        }
+      }, 150);
+    } else {
+      const el = document.getElementById(`q-${id}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('ring-4', 'ring-[#0ea5e9]/40', 'rounded-xl');
+        setTimeout(() => {
+            el.classList.remove('ring-4', 'ring-[#0ea5e9]/40', 'rounded-xl');
+        }, 1500);
+      }
     }
     setShowPalette(false);
   };
 
   // Quét ID câu hỏi để tạo Bảng điều hướng
-  const { allQuestionIds, questionIndexMap, questionDataMap } = useMemo(() => {
+  const { allQuestionIds, questionIndexMap, questionToPartMap, questionDataMap } = useMemo(() => {
     const ids: string[] = [];
+    const partMap: Record<string, number> = {};
     const dataMap: Record<string, { qType: string, options: string[] }> = {};
-    parts?.forEach((p: any) => {
+    parts?.forEach((p: any, pIdx: number) => {
       p?.sections?.forEach((s: any) => {
         if (Array.isArray(s?.questions)) {
           s.questions.forEach((q: any) => {
             const qIdStr = String(q.id);
             if (q?.id && !ids.includes(qIdStr)) {
               ids.push(qIdStr);
+              partMap[qIdStr] = pIdx;
               dataMap[qIdStr] = { qType: s.questionType, options: q.options || [] };
             }
           });
@@ -572,6 +601,7 @@ const handleFinish = async () => {
               const num = m.replace(/\D/g, '').trim();
               if (!ids.includes(num)) {
                 ids.push(num);
+                partMap[num] = pIdx;
                 const qInSec = (s.questions || []).find((qq: any) => String(qq.id) === num);
                 dataMap[num] = { qType: s.questionType, options: qInSec?.options || s.questions?.[0]?.options || [] };
               }
@@ -587,7 +617,7 @@ const handleFinish = async () => {
         return acc; 
     }, {});
     
-    return { allQuestionIds: ids, questionIndexMap: map, questionDataMap: dataMap };
+    return { allQuestionIds: ids, questionIndexMap: map, questionToPartMap: partMap, questionDataMap: dataMap };
   }, [parts]);
 
   const { answeredCount, markedCount, totalCount } = useMemo(() => {
@@ -1157,17 +1187,17 @@ const handleFinish = async () => {
           </div>
         )}
 
-        <div className="flex-1 min-h-0 h-full flex overflow-hidden relative flex-col md:flex-row" ref={containerRef} onClick={() => showSettings && setShowSettings(false)}>
+        <main className="flex flex-1 overflow-hidden relative bg-[#eeeeee]" ref={containerRef} onClick={() => showSettings && setShowSettings(false)}>
           
           {/* PANEL TRÁI (BÀI ĐỌC) - ẨN ĐI NẾU LÀ BÀI LISTENING */}
           {!isListening && (
-              <div 
-                  className="bg-white overflow-y-auto custom-scrollbar w-full md:w-auto" 
-                  ref={leftPaneRef} 
-                  onMouseUp={handleTextSelection}
-                  style={{ width: window.innerWidth > 768 ? `calc(${leftWidth}% - 8px)` : '100%' }}
-              >
-                <div className={`p-6 md:p-10 ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
+            <React.Fragment>
+              <div className="flex flex-col h-full bg-white relative" style={{ width: window.innerWidth > 768 ? `${leftWidth}%` : '100%', flex: 'none' }}>
+                <section 
+                    className={`p-8 md:p-10 overflow-y-auto custom-scrollbar flex-1 relative ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`} 
+                    ref={leftPaneRef as any} 
+                    onMouseUp={handleTextSelection}
+                >
                   {isReviewMode && (
                     <div className="bg-emerald-50 rounded-2xl shadow-sm border border-emerald-100 p-6 mb-8 text-center relative">
                        <h3 className="text-emerald-700 font-bold uppercase tracking-widest text-xs mb-2">Kết quả bài làm</h3>
@@ -1260,16 +1290,14 @@ const handleFinish = async () => {
                       </div>
                     );
                   })}
-                </div>
+                </section>
               </div>
-          )}
 
-          {/* THANH KÉO THẢ RESIZER - ẨN ĐI NẾU LÀ BÀI LISTENING */}
-          {!isListening && (
+              {/* THANH KÉO THẢ RESIZER */}
               <div 
                 onMouseDown={startDrag}
                 onTouchStart={startDrag}
-                className="hidden md:flex w-4 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex-col justify-center items-center shrink-0 z-10 transition-colors shadow-sm"
+                className="w-4 bg-[#e8e8e8] border-x border-[#c0c0c0] hover:bg-[#d4d4d4] cursor-col-resize flex flex-col justify-center items-center z-10 shrink-0 transition-colors shadow-sm"
                 title="Kéo để điều chỉnh độ rộng"
               >
                  <div className="flex flex-col gap-1.5 opacity-40">
@@ -1279,16 +1307,17 @@ const handleFinish = async () => {
                     <div className="w-1 h-1 bg-black"></div>
                  </div>
               </div>
+            </React.Fragment>
           )}
 
           {/* PANEL PHẢI (CÂU HỎI VÀ NỘI DUNG LISTENING) */}
-          <div 
-              className={`bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1 min-h-0 ${isListening ? 'md:pr-[312px] lg:pr-[352px]' : ''}`} 
+          <section 
+              className={`p-8 md:p-10 overflow-y-auto custom-scrollbar html-content-renderer scroll-smooth ${isReviewMode ? 'bg-[#f4f4f4]' : 'bg-[#f4f4f4]'}`} 
               id="questions-container" 
-              ref={rightPaneRef} 
-              style={!isListening && window.innerWidth > 768 ? { width: `calc(${100 - leftWidth}% - 8px)`, flex: 'none' } : { flex: 1 }}
+              ref={rightPaneRef as any} 
+              style={{ width: !isListening ? `${100 - leftWidth}%` : '100%', flex: 'none' }}
           >
-             <div className={`p-6 md:p-10 max-w-3xl mx-auto ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`}>
+             <div className={`mx-auto relative ${!isListening ? 'pr-8' : ''} ${fontSize === 'S' ? 'text-[14px]' : fontSize === 'L' ? 'text-[18px]' : 'text-[16px]'}`} style={{ width: !isListening ? '100%' : '768px', maxWidth: '100%' }}>
                
                {/* NẾU LÀ BÀI LISTENING CÓ CHẾ ĐỘ XEM LẠI, HIỂN THỊ ĐIỂM Ở ĐÂY CHO ĐẸP */}
                {isListening && isReviewMode && (
@@ -1305,12 +1334,14 @@ const handleFinish = async () => {
                   return (
                     <div key={`qpane-${part?.id || pIdx}`}>
                        
-                       {/* NỘI DUNG PART */}
-                       <div className="mb-8 bg-transparent">
-                           {part?.title && <h3 className="font-black text-xl text-slate-800 mb-2">{part.title}</h3>}
-                           {part?.content && <div className="text-[15px] text-slate-600 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} />}
-                           {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />}
-                       </div>
+                       {/* NỘI DUNG PART SANG BÊN PHẢI NẾU LÀ LISTENING */}
+                       {isListening && (
+                           <div className="mb-8 bg-transparent">
+                               {part?.title && <h3 className="font-black text-xl text-slate-800 mb-2">{part.title}</h3>}
+                               {part?.content && <div className="text-[15px] text-slate-600 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} />}
+                               {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />}
+                           </div>
+                       )}
 
                        {part?.sections?.map((sec: any, sIdx: number) => {
                           
@@ -1344,14 +1375,16 @@ const handleFinish = async () => {
                                  </div>
                              )}
 
-                             {/* NỘI DUNG SECTION */}
-                             <div className="mb-6">
-                                {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
-                                {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
-                                {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
-                                   <div className="text-slate-600 text-[15px] leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} />
-                                )}
-                             </div>
+                             {/* NỘI DUNG SECTION SANG BÊN PHẢI NẾU LÀ LISTENING */}
+                             {isListening && (
+                                 <div className="mb-6">
+                                    {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
+                                    {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
+                                    {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
+                                       <div className="text-slate-600 text-[15px] leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} />
+                                    )}
+                                 </div>
+                             )}
                              
                              {/* DẠNG BÀI INLINE: Điền từ, Kéo thả, Matching, Inline Droplist */}
                              {(() => {
@@ -2232,9 +2265,9 @@ const handleFinish = async () => {
                      </div>
                    );
                  })}
-             </div>
-          </div>
-
+                 <div className="h-[200px]" />
+              </div>
+          </section>
           {/* RIGHT SIDEBAR FOR MCQ */}
           {isListening && (
             <aside className="w-auto mx-4 my-4 md:w-[280px] lg:w-[320px] shrink-0 flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20 md:mx-0 md:my-0 md:absolute md:right-4 md:top-4 md:bottom-4 md:h-[calc(100%-2rem)] min-h-0">
@@ -2373,10 +2406,106 @@ const handleFinish = async () => {
                 </div>
               </aside>
           )}
+         </main>
 
+         {!isListening && (
+             <footer className="w-full h-[64px] bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex justify-between items-center px-6 shrink-0 select-none font-sans relative z-30">
+               <div className="flex-1 flex justify-start sm:justify-center items-center gap-1.5 overflow-x-auto py-1 custom-scrollbar min-w-0">
+                 {allQuestionIds.map(id => {
+                    let isAns = answers[id] && answers[id].trim() !== '';
+                    const isMarked = marked[id];
+                    let btnClass = 'w-8 h-8 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 rounded-none border ';
+                    
+                    const section = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id));
+                    const qType = section?.questionType;
 
+                    if (!isReviewMode && qType === 'Checkbox') {
+                        const combos = buildCheckboxCombos(section?.questions);
+                        const myCombo = combos.find((c: any[]) => c.some((q:any) => String(q.id) === id));
+                        if (myCombo) {
+                            const comboIds = myCombo.map((q:any) => String(q.id));
+                            const userAnsArr = Array.from(new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim()))));
+                            const idxInCombo = comboIds.indexOf(id);
+                            isAns = idxInCombo < userAnsArr.length;
+                        }
+                    }
 
-         </div> {/* ĐÓNG flex-1 flex overflow-hidden relative flex-col md:flex-row */}
+                    if (isReviewMode) {
+                        let isCorrect = false;
+                        if (qType === 'Checkbox') {
+                            const combos: any[][] = [];
+                            parts.flatMap((p:any) => p.sections || []).forEach(sec => {
+                                if (sec.questionType === 'Checkbox') {
+                                    const c = buildCheckboxCombos(sec.questions);
+                                    combos.push(...c);
+                                }
+                            });
+                            const myCombo = combos.find(c => c.some((q:any) => String(q.id) === id)) || [];
+                            if (myCombo.length > 0) {
+                                const comboIds = myCombo.map((q:any) => String(q.id));
+                                const userAnsSet = new Set(comboIds.map(cid => answers[cid]).filter(v => v && v.trim() !== '').flatMap(x => x.split(',').map(v=>v.trim().toUpperCase())));
+                                const correctAnsSet = new Set(myCombo.flatMap((q:any)=>String(q.correctAnswer || '').split(',').map((x:string)=>x.trim().toUpperCase()).filter(Boolean)));
+                                let pts = 0; 
+                                userAnsSet.forEach((v:string) => { 
+                                    if(correctAnsSet.has(v)) pts++; 
+                                });
+                                const idxInCombo = comboIds.indexOf(id);
+                                isCorrect = idxInCombo < pts;
+                            }
+                        } else {
+                            const q = section?.questions.find((q:any) => String(q.id) === id);
+                            isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase() && String(q.correctAnswer || '').trim() !== '';
+                        }
+                        btnClass += isCorrect ? 'bg-emerald-500 text-white border-emerald-500' : 'bg-red-500 text-white border-red-500';
+                    } else { 
+                        if (isAns) {
+                            btnClass += 'bg-[#0ea5e9] text-white border-[#0ea5e9] hover:bg-[#0284c7] hover:border-[#0284c7] cursor-pointer'; 
+                        } else {
+                            btnClass += isMarked 
+                              ? 'border-amber-400 bg-amber-50 text-amber-600 cursor-pointer hover:bg-amber-100 hover:border-amber-500' 
+                              : 'bg-white border-slate-300 text-slate-600 cursor-pointer hover:bg-slate-50 hover:border-slate-400 hover:text-[#0ea5e9]'; 
+                        }
+                    }
+                    
+                    return (
+                        <button key={id} id={'nav-' + id} onClick={() => scrollToQuestion(id)} className={btnClass}>
+                            {questionIndexMap[id]}
+                        </button>
+                    );
+                 })}
+               </div>
+
+               <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-200">
+                  {isReviewMode ? (
+                    <div className="flex items-center gap-2">
+                        <button 
+                           onClick={() => {
+                             const tutorContext = {
+                               overall: scoreResult.score + '/' + scoreResult.total,
+                               transcript: 'Bài test: ' + basicInfo.title + '. Điểm số của em là: ' + scoreResult.score + '/' + scoreResult.total + '.',
+                               feedback: "Học sinh vừa làm xong bài test. Hãy chúc mừng và đưa ra nhận xét chung. Hỏi xem học sinh có muốn bạn chữa câu nào cụ thể không."
+                             };
+                             sessionStorage.setItem('tony_live_mode', 'TUTOR');
+                             sessionStorage.setItem('tony_tutor_data', JSON.stringify(tutorContext));
+                             sessionStorage.setItem('tony_auto_start', 'true');
+                             window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
+                           }}
+                           className="bg-[#0ea5e9] hover:bg-[#0284c7] text-white px-4 sm:px-6 py-2.5 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-md shadow-[#0ea5e9]/20 flex items-center gap-2"
+                        >
+                            📞 Gọi Gia Sư
+                        </button>
+                        <button onClick={handleExit} className="bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 px-4 sm:px-6 py-2.5 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide">
+                            Thoát
+                        </button>
+                    </div>
+                  ) : (
+                    <button onClick={handleFinish} className="bg-[#0ea5e9] hover:bg-[#0284c7] shadow-md shadow-[#0ea5e9]/20 text-white px-6 py-2.5 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
+                        Nộp bài
+                    </button>
+                  )}
+               </div>
+             </footer>
+         )} {/* ĐÓNG flex-1 flex overflow-hidden relative flex-col md:flex-row */}
       </div>
     );
   };

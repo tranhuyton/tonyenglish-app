@@ -468,6 +468,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         onStartTest('igcse-direct', testData);
     } else if (type.includes('igcse')) {
         onStartTest('igcse', testData);
+    } else if (type.includes('split-standard')) {
+        onStartTest('split-standard', testData);
+    } else if (type.includes('standard-reading')) {
+        onStartTest('standard-reading', testData);
     } else if (type.includes('standard')) {
         onStartTest('standard', testData);
     } else if (type.includes('case-study') || type.includes('business')) {
@@ -1818,7 +1822,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
 
                             const type = String(testDataToUse.test_type || '').toLowerCase();
                             let targetMode = 'standard';
-                            if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
+                            if (type.includes('standard-reading')) targetMode = 'standard-reading';
+                            else if (type.includes('case-study') || type.includes('business')) targetMode = 'case-study';
                             else if (type === 'ielts-writing') targetMode = 'ielts-writing';
                             else if (type === 'ielts-speaking') targetMode = 'ielts-speaking';
                             else if (type.includes('ielts')) targetMode = 'computer';
