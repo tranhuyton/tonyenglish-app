@@ -1115,6 +1115,23 @@ const handleFinish = async () => {
             >
                {isFullscreen ? <ExitFullscreenIcon /> : <FullscreenIcon />}
             </button>
+            {isReviewMode && (
+               <button 
+                   onClick={() => {
+                       if (window.confirm("Bạn có chắc chắn muốn làm lại bài thi này? Mọi kết quả cũ sẽ bị xóa.")) {
+                           if (safeData?.id) {
+                               localStorage.removeItem(`std_ans_${safeData.id}`);
+                               localStorage.removeItem(`standard_mark_${safeData.id}`);
+                               localStorage.removeItem(`standard_endtime_${safeData.id}`);
+                           }
+                           window.location.reload();
+                       }
+                   }} 
+                   className="text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border bg-emerald-600 text-white border-emerald-500 hover:bg-emerald-800"
+               >
+                 ↺ Làm lại
+               </button>
+            )}
             <button 
                 onClick={handleExit} 
                 className={`text-[13px] font-bold px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-sm border ${isReviewMode ? 'bg-emerald-600 text-white border-emerald-500 hover:bg-emerald-800' : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'}`}
