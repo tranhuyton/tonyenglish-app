@@ -1012,6 +1012,24 @@ const handleFinish = async () => {
                 {isReviewMode ? `[CHỮA BÀI] ${basicInfo?.title}` : basicInfo?.title}
             </span>
           </div>
+
+          {/* MIDDLE SECTION FOR TIMER AND LABEL */}
+          {!isReviewMode && testStarted && (
+             <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-4 text-slate-700 font-bold bg-white px-5 py-1.5 rounded-full border border-slate-200 shadow-sm">
+               {basicInfo?.category === 'exercise' ? (
+                   <span className="text-[#0ea5e9] tracking-widest uppercase text-[13px]">BÀI TẬP</span>
+               ) : (
+                   <>
+                       <span className="text-rose-500 tracking-widest uppercase text-[13px]">ĐỀ THI</span>
+                       <div className="w-[1px] h-4 bg-slate-300"></div>
+                       <div className="flex items-center gap-1.5 text-rose-600">
+                           <span>⏱️</span> 
+                           <span className="font-mono tracking-widest text-[15px]">{formatTime(timeLeft)}</span>
+                       </div>
+                   </>
+               )}
+             </div>
+          )}
           
           {isReviewMode && (
             <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-4">
@@ -1495,7 +1513,7 @@ const handleFinish = async () => {
                                      <div 
                                          key={q.id} 
                                          id={`q-${q.id}`} 
-                                         className={`bg-white p-6 rounded-2xl shadow-sm border transition-all mb-4 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#0ea5e9]/50'}`}
+                                         className={`bg-white p-6 rounded-2xl shadow-sm border transition-all mb-6 scroll-mt-20 relative group ${isReviewMode ? (isQuestionCorrect ? 'border-emerald-300 bg-emerald-50/20' : 'border-red-300 bg-red-50/20') : 'border-slate-200 hover:border-[#0ea5e9]/50'}`}
                                      >
                                         {!isReviewMode && (
                                           <button 
@@ -1594,7 +1612,7 @@ const handleFinish = async () => {
                                   <div 
                                       key={q.id} 
                                       id={`q-${q.id}`} 
-                                      className={`bg-white p-6 md:p-8 rounded-2xl border shadow-sm relative group scroll-mt-20 transition-colors ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-50/30 border-emerald-200' : 'bg-red-50/30 border-red-200') : 'hover:border-[#0ea5e9]/50 border-slate-200'}`}
+                                      className={`bg-white p-6 md:p-8 rounded-2xl border shadow-sm relative group scroll-mt-20 transition-colors mb-6 ${isReviewMode ? (isQuestionCorrect ? 'bg-emerald-50/30 border-emerald-200' : 'bg-red-50/30 border-red-200') : 'hover:border-[#0ea5e9]/50 border-slate-200'}`}
                                   >
                                      {!isReviewMode && (
                                         <button 
@@ -1719,7 +1737,7 @@ const handleFinish = async () => {
 
                              {/* DẠNG BÀI DROPLIST KHỐI (chỉ khi KHÔNG CÓ [num] inline) */}
                              {sec?.questionType === "Droplist" && !/\[\s*\d+\s*\]/.test(String(sec.content || '') + ' ' + String(sec.questions?.[0]?.content || '')) && (
-                                <div className="space-y-4 bg-white p-6 md:p-8 border border-gray-200 rounded-xl shadow-sm">
+                                <div className="space-y-4 bg-white p-6 md:p-8 border border-slate-200 rounded-2xl shadow-sm mb-6">
                                   {sec.questions?.map((q: any) => {
                                       if (!q?.id) return null;
                                       const correctAns = String(q.correctAnswer || '').trim().toUpperCase(); 
@@ -1936,7 +1954,7 @@ const handleFinish = async () => {
 
                              {/* DẠNG CHECKBOX GROUP */}
                              {sec?.questionType === "Checkbox" && (
-                                <div className="space-y-6">
+                                <div className="space-y-6 mb-6">
                                   {(() => {
                                       const combos: any[][] = [];
                                       sec.questions?.forEach((q: any) => {
@@ -2124,7 +2142,7 @@ const handleFinish = async () => {
 
                              {/* DẠNG ĐOẠN VĂN (PARAGRAPH AI GRADING) */}
                              {sec?.questionType === "Đoạn văn" && (
-                                <div className="space-y-6">
+                                <div className="space-y-6 mb-6">
                                   {sec.questions?.map((q: any) => {
                                       const qNum = String(q.id);
                                       const userAns = String(answers[qNum] || '');
@@ -2192,14 +2210,13 @@ const handleFinish = async () => {
           {/* BẢNG PALETTE ĐIỀU HƯỚNG CÂU HỎI ĐÃ ĐƯỢC CHUYỂN XUỐNG FOOTER */}
         </div> {/* ĐÓNG flex-1 flex overflow-hidden relative flex-col md:flex-row */}
         
-        <footer className="h-[60px] bg-white border-t border-slate-400 flex justify-between items-center px-6 shrink-0 select-none font-sans">
-          <div className="flex-1 flex justify-start sm:justify-center items-center gap-1.5 overflow-x-auto py-1 custom-scrollbar min-w-0">
+        <footer className="h-[64px] bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex justify-between items-center px-6 shrink-0 select-none font-sans relative z-30">
+          <div className="flex-1 flex justify-start sm:justify-center items-center gap-2 overflow-x-auto py-1 custom-scrollbar min-w-0">
             {allQuestionIds.map(id => {
               let isAns = answers[id] && answers[id].trim() !== '';
               const isMarked = marked[id];
               
-              const shapeClass = isMarked ? 'rounded-full' : 'rounded-none';
-              let btnClass = 'w-8 h-8 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 ' + shapeClass + ' ';
+              let btnClass = 'w-9 h-9 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 rounded-xl ';
               
               const section = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id));
               const qType = section?.questionType;
@@ -2241,12 +2258,12 @@ const handleFinish = async () => {
                       const q = section?.questions.find((q:any) => String(q.id) === id);
                       isCorrect = q && answers[id]?.trim().toUpperCase() === String(q.correctAnswer || '').trim().toUpperCase() && String(q.correctAnswer || '').trim() !== '';
                   }
-                  btnClass += isCorrect ? 'bg-emerald-200 border border-emerald-600 text-emerald-900' : 'bg-red-200 border border-red-600 text-red-900';
+                  btnClass += isCorrect ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/30 border-transparent' : 'bg-red-500 text-white shadow-md shadow-red-500/30 border-transparent';
               } else { 
                   if (isAns) {
-                      btnClass += 'bg-slate-800 text-white border border-black cursor-pointer'; 
+                      btnClass += 'bg-[#0ea5e9] text-white shadow-md shadow-[#0ea5e9]/30 border-transparent cursor-pointer'; 
                   } else {
-                      btnClass += 'bg-white border ' + (isMarked ? 'border-amber-400 bg-amber-50' : 'border-slate-400') + ' text-black cursor-pointer hover:bg-slate-200'; 
+                      btnClass += 'bg-white border ' + (isMarked ? 'border-amber-400 bg-amber-50 text-amber-600 shadow-sm' : 'border-slate-200 text-slate-600') + ' cursor-pointer hover:bg-slate-50 hover:border-slate-300 hover:text-[#0ea5e9]'; 
                   }
               }
               
@@ -2258,7 +2275,7 @@ const handleFinish = async () => {
             })}
           </div>
 
-          <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-400">
+          <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-200">
              {/* Nút Next/Prev không áp dụng cho StandardTest vì hiển thị cuộn liên tục */}
              
              {isReviewMode ? (
@@ -2275,16 +2292,16 @@ const handleFinish = async () => {
                         sessionStorage.setItem('tony_auto_start', 'true');
                         window.dispatchEvent(new CustomEvent('tony-navigate', { detail: 'live-test' }));
                       }}
-                      className="bg-emerald-600 hover:bg-emerald-500 text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-sm flex items-center gap-2"
+                      className="bg-[#0ea5e9] hover:bg-[#0284c7] text-white px-4 sm:px-6 py-2.5 rounded-xl text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide shadow-md shadow-[#0ea5e9]/20 flex items-center gap-2"
                    >
                        📞 Gọi Gia Sư
                    </button>
-                   <button onClick={handleExit} className="bg-[#064e3b] hover:bg-[#047857] text-white px-4 sm:px-6 py-2 rounded-none text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide">
+                   <button onClick={handleExit} className="bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 px-4 sm:px-6 py-2.5 rounded-xl text-[13px] sm:text-[14px] font-bold transition uppercase tracking-wide">
                        Thoát
                    </button>
                </div>
              ) : (
-               <button onClick={handleFinish} className="bg-slate-900 hover:bg-black text-white px-6 py-2 rounded-none text-[14px] font-bold transition ml-2 uppercase tracking-wide">
+               <button onClick={handleFinish} className="bg-[#0ea5e9] hover:bg-[#0284c7] shadow-md shadow-[#0ea5e9]/20 text-white px-6 py-2.5 rounded-xl text-[14px] font-bold transition ml-2 uppercase tracking-wide">
                    Nộp bài
                </button>
              )}
