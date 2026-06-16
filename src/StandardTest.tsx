@@ -44,7 +44,7 @@ const cleanHtmlContent = (html: any) => {
   if (!html) return '';
   return String(html).replace(/style\s*=\s*(['"])(.*?)\1/gi, (match, quote, styleContent) => {
       let newStyle = styleContent
-          .replace(/(?:^|;)\s*(max-height|min-height|height|overflow|overflow-y|overflow-x)\s*:[^;]+/gi, '')
+          .replace(/(?:^|;)\s*(max-width|width|max-height|min-height|height|overflow|overflow-y|overflow-x)\s*:[^;]+/gi, '')
           .replace(/^;+|;+$/g, '')
           .trim();
       if (newStyle) {
