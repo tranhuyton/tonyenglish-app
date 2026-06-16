@@ -2193,24 +2193,10 @@ const handleFinish = async () => {
         </div> {/* ĐÓNG flex-1 flex overflow-hidden relative flex-col md:flex-row */}
         
         <footer className="h-[60px] bg-white border-t border-slate-400 flex justify-between items-center px-6 shrink-0 select-none font-sans">
-          
-          <div className="flex items-center gap-2 h-full pr-6 border-r border-slate-400 shrink-0 min-w-max">
-            <input 
-              type="checkbox" 
-              id="review" 
-              className="w-4 h-4 cursor-pointer accent-black" 
-              disabled={isReviewMode} 
-              checked={!!marked[activeQuestionId]}
-              onChange={() => toggleMark(activeQuestionId)}
-            />
-            <label htmlFor="review" className="text-[14px] font-bold text-black cursor-pointer mt-0.5 whitespace-nowrap">Review</label>
-          </div>
-
-          <div className="flex-1 flex justify-start sm:justify-center items-center gap-1.5 overflow-x-auto px-6 py-1 custom-scrollbar min-w-0">
+          <div className="flex-1 flex justify-start sm:justify-center items-center gap-1.5 overflow-x-auto py-1 custom-scrollbar min-w-0">
             {allQuestionIds.map(id => {
               let isAns = answers[id] && answers[id].trim() !== '';
               const isMarked = marked[id];
-              const isActive = activeQuestionId === id;
               
               const shapeClass = isMarked ? 'rounded-full' : 'rounded-none';
               let btnClass = 'w-8 h-8 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 ' + shapeClass + ' ';
@@ -2257,9 +2243,7 @@ const handleFinish = async () => {
                   }
                   btnClass += isCorrect ? 'bg-emerald-200 border border-emerald-600 text-emerald-900' : 'bg-red-200 border border-red-600 text-red-900';
               } else { 
-                  if (isActive) {
-                      btnClass += 'bg-slate-900 text-white border border-black shadow-inner';
-                  } else if (isAns) {
+                  if (isAns) {
                       btnClass += 'bg-slate-800 text-white border border-black cursor-pointer'; 
                   } else {
                       btnClass += 'bg-white border ' + (isMarked ? 'border-amber-400 bg-amber-50' : 'border-slate-400') + ' text-black cursor-pointer hover:bg-slate-200'; 
@@ -2275,26 +2259,7 @@ const handleFinish = async () => {
           </div>
 
           <div className="flex items-center gap-4 shrink-0 pl-6 border-l border-slate-400">
-             <div className="flex items-center gap-2 hidden sm:flex">
-                <button 
-                    onClick={() => {
-                       const currIdx = allQuestionIds.indexOf(activeQuestionId);
-                       if (currIdx > 0) scrollToQuestion(allQuestionIds[currIdx - 1]);
-                    }} 
-                    className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition"
-                >
-                    ←
-                </button>
-                <button 
-                    onClick={() => {
-                       const currIdx = allQuestionIds.indexOf(activeQuestionId);
-                       if (currIdx < allQuestionIds.length - 1) scrollToQuestion(allQuestionIds[currIdx + 1]);
-                    }} 
-                    className="w-8 h-8 flex items-center justify-center text-black hover:bg-slate-200 border border-slate-400 bg-white rounded-none transition"
-                >
-                    →
-                </button>
-             </div>
+             {/* Nút Next/Prev không áp dụng cho StandardTest vì hiển thị cuộn liên tục */}
              
              {isReviewMode ? (
                <div className="flex items-center gap-2">
