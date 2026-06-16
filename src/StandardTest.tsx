@@ -289,7 +289,7 @@ export default function StandardTest({
     if (isDragging.current && containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect(); 
         const newLeftWidth = ((clientX - containerRect.left) / containerRect.width) * 100;
-        if (newLeftWidth > 20 && newLeftWidth < 80) {
+        if (newLeftWidth >= 10 && newLeftWidth <= 90) {
             setLeftWidth(newLeftWidth);
         }
     }
