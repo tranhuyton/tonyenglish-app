@@ -1159,7 +1159,7 @@ const handleFinish = async () => {
           </div>
         )}
 
-        <div className="flex-1 min-h-0 flex overflow-hidden relative flex-col md:flex-row" ref={containerRef} onClick={() => showSettings && setShowSettings(false)}>
+        <div className="flex-1 min-h-0 h-full flex overflow-hidden relative flex-col md:flex-row" ref={containerRef} onClick={() => showSettings && setShowSettings(false)}>
           
           {/* PANEL TRÁI (BÀI ĐỌC) - ẨN ĐI NẾU LÀ BÀI LISTENING */}
           {!isListening && (
@@ -2367,7 +2367,7 @@ const handleFinish = async () => {
                   </div>
                 </div>
                 {!isReviewMode && (
-                  <div className="p-5 border-t border-slate-200 bg-slate-50 flex gap-3 shrink-0">
+                  <div className="p-5 border-t border-slate-200 bg-slate-50 flex gap-3 shrink-0 mt-auto">
                      <button onClick={handleFinish} className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl text-[14px] uppercase tracking-widest transition-colors shadow-lg shadow-[#0ea5e9]/20">
                          Nộp bài
                      </button>
