@@ -225,6 +225,8 @@ export default function StandardTest({
       total: parseInt(safeData?.past_total || 0) 
   });
   
+  const [currentPartIndex, setCurrentPartIndex] = useState(0);
+  
   const [showPalette, setShowPalette] = useState(false); 
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -1122,6 +1124,24 @@ const handleFinish = async () => {
           </div>
         </header>
 
+        {/* TAB BAR FOR NAVIGATION BETWEEN PARTS */}
+        {parts.length > 1 && (
+          <div className={`border-b border-slate-200 px-6 pt-2 pb-0 flex gap-4 overflow-x-auto shrink-0 font-sans ${isReviewMode ? 'bg-emerald-50' : 'bg-white'}`}>
+            {parts.map((p: any, index: number) => {
+              const isActive = currentPartIndex === index;
+              return (
+                <button 
+                  key={index} 
+                  onClick={() => setCurrentPartIndex(index)} 
+                  className={`px-4 py-2 text-[14px] font-bold transition-all whitespace-nowrap border-b-[3px] rounded-none ${isActive ? (isReviewMode ? 'text-emerald-700 border-emerald-600' : 'text-[#0ea5e9] border-[#0ea5e9]') : 'text-slate-500 border-transparent hover:text-slate-800'}`}
+                >
+                  {p.title || `Part ${index + 1}`}
+                </button>
+              )
+            })}
+          </div>
+        )}
+
         <div className="flex-1 flex overflow-hidden relative flex-col md:flex-row" ref={containerRef} onClick={() => showSettings && setShowSettings(false)}>
           
           {/* PANEL TRÁI (BÀI ĐỌC) - ẨN ĐI NẾU LÀ BÀI LISTENING */}
@@ -1162,6 +1182,7 @@ const handleFinish = async () => {
                   )}
 
                   {parts?.map((part: any, pIdx: number) => {
+                    if (parts.length > 1 && pIdx !== currentPartIndex) return null;
                     return (
                       <div key={part?.id || pIdx} className="mb-12">
                         {part?.title && (
@@ -1269,6 +1290,7 @@ const handleFinish = async () => {
                )}
 
                {parts?.map((part: any, pIdx: number) => {
+                  if (parts.length > 1 && pIdx !== currentPartIndex) return null;
                   return (
                     <div key={`qpane-${part?.id || pIdx}`}>
                        
