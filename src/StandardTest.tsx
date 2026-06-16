@@ -1285,7 +1285,7 @@ const handleFinish = async () => {
 
           {/* PANEL PHẢI (CÂU HỎI VÀ NỘI DUNG LISTENING) */}
           <div 
-              className="bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1 min-h-0 md:mr-[280px] lg:mr-[320px]" 
+              className="bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1 min-h-0 md:pr-[312px] lg:pr-[352px]" 
               id="questions-container" 
               ref={rightPaneRef} 
               style={!isListening && window.innerWidth > 768 ? { width: `calc(${100 - leftWidth}% - 8px)`, flex: 'none' } : { flex: 1 }}
@@ -2242,7 +2242,7 @@ const handleFinish = async () => {
           </div>
 
           {/* RIGHT SIDEBAR FOR MCQ */}
-          <aside className="flex flex-col bg-white border-t md:border-t-0 md:border-l border-slate-200 overflow-hidden z-20 shrink-0 w-full md:w-[280px] lg:w-[320px] h-full max-h-none md:absolute md:right-0 md:top-0 md:bottom-0 min-h-0">
+          <aside className="w-auto mx-4 my-4 md:w-[280px] lg:w-[320px] shrink-0 flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden z-20 md:mx-0 md:my-0 md:absolute md:right-4 md:top-4 md:bottom-4 md:h-[calc(100%-2rem)] min-h-0">
                 <div className="p-5 border-b border-slate-200 flex flex-col items-center shrink-0">
                   {isReviewMode ? (
                     <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm mb-4">
