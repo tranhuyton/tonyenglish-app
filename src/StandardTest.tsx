@@ -2200,8 +2200,8 @@ const handleFinish = async () => {
               id="review" 
               className="w-4 h-4 cursor-pointer accent-black" 
               disabled={isReviewMode} 
-              checked={!!reviewFlags[activeQuestionId]}
-              onChange={() => setReviewFlags(prev => ({...prev, [activeQuestionId]: !prev[activeQuestionId]}))}
+              checked={!!marked[activeQuestionId]}
+              onChange={() => toggleMark(activeQuestionId)}
             />
             <label htmlFor="review" className="text-[14px] font-bold text-black cursor-pointer mt-0.5 whitespace-nowrap">Review</label>
           </div>
@@ -2211,9 +2211,8 @@ const handleFinish = async () => {
               let isAns = answers[id] && answers[id].trim() !== '';
               const isMarked = marked[id];
               const isActive = activeQuestionId === id;
-              const isReview = reviewFlags[id];
               
-              const shapeClass = isReview ? 'rounded-full' : 'rounded-none';
+              const shapeClass = isMarked ? 'rounded-full' : 'rounded-none';
               let btnClass = 'w-8 h-8 flex items-center justify-center font-bold text-[13px] transition-all box-border shrink-0 ' + shapeClass + ' ';
               
               const section = parts.flatMap((p: any) => p.sections || []).find((s:any) => s.questions?.some((sq:any)=>String(sq.id)===id));
