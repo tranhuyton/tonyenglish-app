@@ -601,14 +601,14 @@ const handleFinish = async () => {
   }, [answers, marked, allQuestionIds]);
 
   const getCleanQuestionText = (htmlContent: string) => {
-    let txt = String(htmlContent || '').trim();
+    let txt = cleanHtmlContent(String(htmlContent || '')).trim();
     txt = txt.replace(/^<p[^>]*>/i, '').replace(/<\/p>$/i, '').trim();
     txt = txt.replace(/^(<[^>]+>)*(Câu\s*\d+|\d+[\-\d]*)\s*[\.\):]?\s*(<\/[^>]+>)*\s*/i, '').trim();
     return txt;
   };
 
   const getCleanOptionText = (opt: string, index: number) => {
-    let cleanOpt = String(opt || '').replace(/^<p[^>]*>/i, '').replace(/<\/p>$/i, '').trim();
+    let cleanOpt = cleanHtmlContent(String(opt || '')).replace(/^<p[^>]*>/i, '').replace(/<\/p>$/i, '').trim();
     const expectedLetter = String.fromCharCode(65 + index);
     const match = cleanOpt.match(/^(<[^>]+>)*([a-zA-Z])([\.\):]?)\s*(<\/[^>]+>)*\s*([\s\S]*)/i);
     
@@ -965,7 +965,7 @@ const handleFinish = async () => {
           </span>
         );
       }
-      return <span key={index} dangerouslySetInnerHTML={{ __html: partText || '' }} />;
+      return <span key={index} dangerouslySetInnerHTML={{ __html: cleanHtmlContent(partText || '') }} />;
     });
   };
 
@@ -1215,7 +1215,7 @@ const handleFinish = async () => {
                         {part?.content && (
                           <div 
                               className="prose prose-slate max-w-none text-slate-800 text-[16px] leading-[1.9] whitespace-pre-wrap mb-8 text-justify bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm" 
-                              dangerouslySetInnerHTML={{ __html: part.content || '' }} 
+                              dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} 
                           />
                         )}
                         
@@ -1253,7 +1253,7 @@ const handleFinish = async () => {
                               {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
                                 <div 
                                     className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed bg-white p-5 rounded-xl border border-slate-200 shadow-sm" 
-                                    dangerouslySetInnerHTML={{ __html: sec.content || '' }} 
+                                    dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} 
                                 />
                               )}
                             </div>
@@ -1311,7 +1311,7 @@ const handleFinish = async () => {
                        {isListening && (
                            <div className="mb-8 bg-transparent">
                                {part?.title && <h3 className="font-black text-xl text-slate-800 mb-2">{part.title}</h3>}
-                               {part?.content && <div className="text-[15px] text-slate-600 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: part.content || '' }} />}
+                               {part?.content && <div className="text-[15px] text-slate-600 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(part.content || '') }} />}
                                {part?.imageUrl && <img src={part.imageUrl} className="max-w-full mb-6 rounded-xl shadow-sm border border-slate-200" alt="Part Image" />}
                            </div>
                        )}
@@ -1354,7 +1354,7 @@ const handleFinish = async () => {
                                     {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
                                     {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
                                     {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
-                                       <div className="text-slate-600 text-[15px] leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: sec.content || '' }} />
+                                       <div className="text-slate-600 text-[15px] leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} />
                                     )}
                                  </div>
                              )}
@@ -1501,7 +1501,7 @@ const handleFinish = async () => {
                                                  <div className="flex items-center gap-2 mb-2">
                                                      <span className="bg-slate-800 text-white font-bold px-2 py-0.5 text-[13px] rounded">Câu {qIdx}</span>
                                                  </div>
-                                                 <div className="text-[14px] text-slate-700 italic leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: explanationText }} />
+                                                 <div className="text-[14px] text-slate-700 italic leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(explanationText) }} />
                                                  
                                                  <div className="flex items-center gap-2 mt-4 pt-4 border-t border-slate-200">
                                                      <button 
@@ -1568,7 +1568,7 @@ const handleFinish = async () => {
                                          <span className="font-bold text-slate-800 shrink-0 w-6 text-right pt-[2px]">{displayIdx}.</span>
                                          <div className="flex-1">
                                            {q.imageUrl && <img src={q.imageUrl} className="max-w-[80%] mb-4 rounded border border-slate-200" alt="Question" />}
-                                           {cleanQText && <div className="text-[16px] text-slate-800 font-medium leading-relaxed whitespace-pre-wrap mb-4" dangerouslySetInnerHTML={{ __html: cleanQText }} />}
+                                           {cleanQText && <div className="text-[16px] text-slate-800 font-medium leading-relaxed whitespace-pre-wrap mb-4" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
                                            
                                            <div className="flex flex-row flex-wrap gap-4">
                                              {q.options?.map((opt: string, i: number) => {
@@ -1602,7 +1602,7 @@ const handleFinish = async () => {
                                                           disabled={isReviewMode} 
                                                           className="w-4 h-4 accent-[#0ea5e9] cursor-pointer" 
                                                       />
-                                                      <span className="text-[15px] font-semibold" dangerouslySetInnerHTML={{ __html: safeOpt }} />
+                                                      <span className="text-[15px] font-semibold" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(safeOpt) }} />
                                                    </label>
                                                 );
                                              })}
@@ -1611,7 +1611,7 @@ const handleFinish = async () => {
                                            {isReviewMode && q.explanation && (
                                              <div className="mt-6 pt-4 border-t border-slate-100">
                                                 <p className="text-[12px] font-black text-amber-600 uppercase mb-2">💡 Giải thích:</p>
-                                                <div className="text-[14px] text-slate-700 italic leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: String(q.explanation) }} />
+                                                <div className="text-[14px] text-slate-700 italic leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(String(q.explanation)) }} />
                                                 
                                                 {/* 🚀 THÊM NÚT GỌI GIA SƯ */}
                                                 <div className="flex items-center gap-2 mt-3">
@@ -1675,7 +1675,7 @@ const handleFinish = async () => {
                                         )}
                                         <div className="flex-1 w-full">
                                            {q.imageUrl && <img src={q.imageUrl} className={`mb-4 rounded-xl border border-slate-200 shadow-sm ${isListening ? 'max-w-[400px] w-full mx-auto block' : 'max-w-[80%]'}`} alt="Question Image" />}
-                                           {cleanQText && <div className="text-[16px] text-slate-800 leading-relaxed font-medium mb-3 whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: cleanQText }} />}
+                                           {cleanQText && <div className="text-[16px] text-slate-800 leading-relaxed font-medium mb-3 whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanQText) }} />}
                                         </div>
                                      </div>
                                      
@@ -1731,7 +1731,7 @@ const handleFinish = async () => {
                                                  </div>
                                                  <span className={`text-[16px] leading-relaxed ${textStyle}`}>
                                                      <span className="font-bold mr-2">{val}.</span> 
-                                                     <span dangerouslySetInnerHTML={{ __html: cleanOpt }} />
+                                                     <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanOpt) }} />
                                                  </span>
                                               </label>
                                            );
@@ -1741,7 +1741,7 @@ const handleFinish = async () => {
                                      {isReviewMode && q.explanation && (
                                         <div className="mt-8 pt-5 border-t border-slate-200 ml-10">
                                            <p className="text-[12px] font-black text-amber-600 uppercase tracking-widest mb-2">💡 Giải thích đáp án:</p>
-                                           <div className="text-[14px] text-slate-700 italic leading-relaxed whitespace-pre-wrap border-l-[3px] border-slate-300 pl-3 mb-3" dangerouslySetInnerHTML={{ __html: String(q.explanation) }} />
+                                           <div className="text-[14px] text-slate-700 italic leading-relaxed whitespace-pre-wrap border-l-[3px] border-slate-300 pl-3 mb-3" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(String(q.explanation)) }} />
                                            
                                            <div className="flex items-center gap-2 mt-3">
                                                <button 
@@ -2084,7 +2084,7 @@ const handleFinish = async () => {
                                                  {qText && (
                                                      <div 
                                                          className="text-[16px] font-medium leading-relaxed text-slate-800 mb-2 whitespace-pre-wrap" 
-                                                         dangerouslySetInnerHTML={{ __html: qText }} 
+                                                         dangerouslySetInnerHTML={{ __html: cleanHtmlContent(qText) }} 
                                                      />
                                                  )}
                                                  
@@ -2124,7 +2124,7 @@ const handleFinish = async () => {
                                                          />
                                                          <span className="text-[16px] leading-relaxed text-slate-800">
                                                              <span className="font-bold mr-2 font-sans">{optionValue}.</span> 
-                                                             <span dangerouslySetInnerHTML={{ __html: cleanOpt }} />
+                                                             <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(cleanOpt) }} />
                                                          </span>
                                                        </label>
                                                      )
@@ -2140,7 +2140,7 @@ const handleFinish = async () => {
                                                         return (
                                                             <div key={q.id} className="text-[14px] text-gray-600 italic leading-relaxed mb-3 last:mb-0 border-l-[3px] border-slate-300 pl-4 bg-slate-50 py-3 pr-3 rounded-r-xl">
                                                                 <span className="font-bold text-white px-2 py-0.5 bg-slate-800 rounded text-[11px] mr-2 font-sans not-italic">Câu {questionIndexMap[String(q.id)] || q.id}</span>
-                                                                <span dangerouslySetInnerHTML={{ __html: q.explanation }} />
+                                                                <span dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.explanation) }} />
                                                                 
                                                                 <div className="flex items-center gap-2 mt-3 not-italic">
                                                                     <button 
@@ -2189,7 +2189,7 @@ const handleFinish = async () => {
                                                     {displayIndex}
                                                 </div>
                                                 <div className="flex-1 min-w-0">
-                                                    <div className="text-slate-800 font-medium text-[16px] leading-[1.8] mb-4" dangerouslySetInnerHTML={{ __html: q.content || '' }} />
+                                                    <div className="text-slate-800 font-medium text-[16px] leading-[1.8] mb-4" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(q.content || '') }} />
                                                     
                                                     {isReviewMode ? (
                                                         <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
