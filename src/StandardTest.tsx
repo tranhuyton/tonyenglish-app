@@ -2242,7 +2242,7 @@ const handleFinish = async () => {
           </div>
 
           {/* RIGHT SIDEBAR FOR MCQ */}
-          <aside className="flex flex-col bg-white border-t md:border-t-0 md:border-l border-slate-200 overflow-hidden z-20 shrink-0 w-full md:w-[280px] lg:w-[320px] max-h-[50%] md:max-h-none md:absolute md:right-0 md:top-0 md:bottom-0 min-h-0">
+          <aside className="flex flex-col bg-white border-t md:border-t-0 md:border-l border-slate-200 overflow-hidden z-20 shrink-0 w-full md:w-[280px] lg:w-[320px] h-full max-h-none md:absolute md:right-0 md:top-0 md:bottom-0 min-h-0">
                 <div className="p-5 border-b border-slate-200 flex flex-col items-center shrink-0">
                   {isReviewMode ? (
                     <div className="bg-emerald-50 text-emerald-700 p-6 rounded-2xl border border-emerald-100 w-full text-center shadow-sm mb-4">
@@ -2365,13 +2365,17 @@ const handleFinish = async () => {
                     })}
                   </div>
                 </div>
-                {!isReviewMode && (
-                  <div className="p-5 border-t border-slate-200 bg-slate-50 flex gap-3 shrink-0 mt-auto">
+                <div className="p-5 border-t border-slate-200 bg-slate-50 flex gap-3 shrink-0 mt-auto">
+                  {isReviewMode ? (
+                     <button onClick={handleExit} className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 py-4 rounded-xl text-[14px] font-black uppercase tracking-widest transition-colors shadow-sm">
+                         Thoát
+                     </button>
+                  ) : (
                      <button onClick={handleFinish} className="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-black py-4 rounded-xl text-[14px] uppercase tracking-widest transition-colors shadow-lg shadow-[#0ea5e9]/20">
                          Nộp bài
                      </button>
-                  </div>
-                )}
+                  )}
+                </div>
               </aside>
 
         </div> {/* ĐÓNG flex-1 flex overflow-hidden relative flex-col md:flex-row */}
