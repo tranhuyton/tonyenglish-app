@@ -1,0 +1,234 @@
+const fs = require('fs');
+
+const words = [
+  { word: "advance", phonetics: "[ədˈvæns]", type: "v.", def: "To advance is to go forward.", ex: "He advanced up the ladder slowly." },
+  { word: "athlete", phonetics: "[ˈæθliːt]", type: "n.", def: "An athlete is a person who plays sports.", ex: "Some athletes can play many sports very well." },
+  { word: "average", phonetics: "[ˈævərɪdʒ]", type: "adj.", def: "If something is average, it is at a normal level.", ex: "I’m not rich or poor; I’m average." },
+  { word: "behavior", phonetics: "[bɪˈheɪvjər]", type: "n.", def: "Your behavior is the way you act.", ex: "Their behavior was good this semester. They didn’t cause trouble." },
+  { word: "behind", phonetics: "[bɪˈhaɪnd]", type: "prep.", def: "Behind means to be at the back of something.", ex: "The little girl was hiding behind a tree." },
+  { word: "course", phonetics: "[kɔːrs]", type: "n.", def: "A course is a class in school.", ex: "I took a P.E. course in school this year." },
+  { word: "lower", phonetics: "[ˈloʊər]", type: "v.", def: "To lower something is to make it go down.", ex: "The chart shows how his production has lowered over the year." },
+  { word: "match", phonetics: "[mætʃ]", type: "v.", def: "To match is to be the same or similar.", ex: "The two shoes matched. They looked the same." },
+  { word: "member", phonetics: "[ˈmɛmbər]", type: "n.", def: "A member is a person who is part of a group.", ex: "Julie is the newest member of our team." },
+  { word: "mental", phonetics: "[ˈmɛntl]", type: "adj.", def: "If something is mental, it has to do with your mind.", ex: "I made a mental picture of the room." },
+  { word: "passenger", phonetics: "[ˈpæsəndʒər]", type: "n.", def: "A passenger is a person who rides in a car, train, or airplane.", ex: "One passenger was standing in the subway train." },
+  { word: "personality", phonetics: "[ˌpɜːrsəˈnæləti]", type: "n.", def: "Your personality is what you are like and how you behave.", ex: "John has a bad personality." },
+  { word: "poem", phonetics: "[ˈpoʊəm]", type: "n.", def: "A poem is a short kind of writing.", ex: "William Shakespeare wrote many poems." },
+  { word: "pole", phonetics: "[poʊl]", type: "n.", def: "A pole is a long thin stick made of wood or metal that supports things.", ex: "The flag was hanging from the flag pole." },
+  { word: "remove", phonetics: "[rɪˈmuːv]", type: "v.", def: "To remove something is to take it away.", ex: "I removed the nail from the board." },
+  { word: "safety", phonetics: "[ˈseɪfti]", type: "n.", def: "Safety means to be the condition of being safe and free from danger.", ex: "For his own safety, he was placed in a car seat." },
+  { word: "shoot", phonetics: "[ʃuːt]", type: "v.", def: "To shoot is to fire something like a bullet at someone or something.", ex: "The hunter raised his gun to shoot at the target." },
+  { word: "sound", phonetics: "[saʊnd]", type: "v.", def: "To sound means to make a noise.", ex: "The alarm clock sounded and woke us all up." },
+  { word: "swim", phonetics: "[swɪm]", type: "v.", def: "To swim is to move through water.", ex: "I love to swim in the ocean." },
+  { word: "web", phonetics: "[wɛb]", type: "n.", def: "A web is a home made by a spider.", ex: "Mom cleaned the spider webs out of the garage." }
+];
+
+let wordHtml = `<div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">{WORD}</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">{PHONETICS}</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">{TYPE}</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">{DEF}</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ {EX}</div></div></div>`;
+
+let allWordsHtml = words.map(w => wordHtml.replace('{WORD}', w.word).replace('{PHONETICS}', w.phonetics).replace('{TYPE}', w.type).replace('{DEF}', w.def).replace('{EX}', w.ex)).join('');
+
+let part1Content = `<div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;"><div style="display: flex; flex-direction: column; gap: 16px;"><img src="/unit23_word_list_1.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /><img src="/unit23_word_list_2.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /></div><div style="display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;"><h3 style="font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Detailed Meanings</h3><div style="display: flex; flex-direction: column; gap: 24px;">${allWordsHtml}</div></div></div>`;
+
+let storyRaw = `<div style="font-family: Arial, sans-serif; "><h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">The Camp</h1><p style="margin-bottom: 1rem;">Stacie wanted to stay at a nice hotel for vacation. But her parents sent her to a terrible camp instead. For breakfast, Stacie liked fresh juice and chocolate milk, but she got water at the camp. In the afternoon she wanted to write <b>poems</b>, but she had to <b>swim</b>. The camp was near an airport with loud planes. Spider<b>webs</b> hung over her bed. To her, the kids' <b>average</b> <b>behavior</b> was very bad. No girl <b>matched</b> her <b>personality</b>. She hated it.</p><p style="margin-bottom: 1rem;">One day, they had a class. <b>Mental</b> exercise <b>sounded</b> good to Stacie. But it was a <b>course</b> on water <b>safety</b>. They learned how to be safe <b>passengers</b> on a boat. Stacie didn't ever plan to go on a boat.</p><p style="margin-bottom: 1rem;">The next day, they played a game. There were a red team and a blue team. Stacie was on the blue team. Each team had to try to <b>remove</b> the other team's flag from a <b>pole</b>. They also had to use water guns. "I'm not much of an <b>athlete</b>," she said. But she still had to play.</p><p style="margin-bottom: 1rem;">Stacie took a water gun and looked for somewhere to hide. A boy said, "Stacie, you <b>advance</b> to the middle. I will go right. Those two will go left."</p><p style="margin-bottom: 1rem;">Stacie still didn't want to play. She walked into the forest and saw a red team player coming. Stacie hid <b>behind</b> a tree and then jumped out and <b>shot</b> the other player. "This is fun!" Stacie thought.</p><p style="margin-bottom: 1rem;">Several minutes after <b>advancing</b> further, Stacie saw the red flag. A red team <b>member</b> was watching over it. She <b>shot</b> him with her water gun. Then she <b>lowered</b> the flag and ran back to her team. "I got it!" she yelled. The blue team won!</p><p style="margin-bottom: 1rem;">Stacie was the hero. For the rest of the week, Stacie had fun.</p></div>`;
+
+let part2Content = storyRaw; // already minified
+
+const json = {
+  basicInfo: {
+    skill: "Standard-Reading",
+    title: "Unit 23",
+    category: "exercise",
+    timeLimit: 0
+  },
+  parts: [
+    {
+      id: "part1",
+      title: "Word List",
+      content: part1Content,
+      sections: [
+        {
+          id: "sec1",
+          title: "Exercise 1: Write a word that is similar in meaning to the underlined part.",
+          content: "",
+          questionType: "Điền từ",
+          questions: [
+            { id: "1", content: "1. I need to find the other sock that is the same as this one. ma[1]", answers: [{ id: "1", answer: "matches" }] },
+            { id: "2", content: "2. Please take away your feet from the table. rem[1]", answers: [{ id: "1", answer: "remove" }] },
+            { id: "3", content: "3. This is a(an) very normal morning. Nothing bad has happened. ave[1]", answers: [{ id: "1", answer: "average" }] },
+            { id: "4", content: "4. The bell rattled, so we changed classes. so[1]", answers: [{ id: "1", answer: "sounded" }] },
+            { id: "5", content: "5. William wanted to go forward, but a wall stopped him. adv[1]", answers: [{ id: "1", answer: "advance" }] },
+            { id: "6", content: "6. Clara is a person in a group of the running club. me[1]", answers: [{ id: "1", answer: "member" }] },
+            { id: "7", content: "7. jesse is a very good sports player. at[1]", answers: [{ id: "1", answer: "athlete" }] },
+            { id: "8", content: "8. What is your favorite class? c[1]", answers: [{ id: "1", answer: "course" }] },
+            { id: "9", content: "9. He was a person taking a ride on the ship. pa[1]", answers: [{ id: "1", answer: "passenger" }] },
+            { id: "10", content: "10. What kind of character does Ted have? P[1]", answers: [{ id: "1", answer: "personality" }] }
+          ]
+        },
+        {
+          id: "sec2",
+          title: "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          content: "",
+          questionType: "Trắc nghiệm",
+          questions: [
+            {
+              id: "11",
+              content: "1. Which sentence makes better sense?",
+              options: ["a. I was behind the winner, so I won the race!", "b. Webs are made by spiders."],
+              correctAnswer: "b. Webs are made by spiders.",
+              explanation: "Webs are made by spiders. is the logically correct sentence."
+            },
+            {
+              id: "12",
+              content: "2. Which sentence makes better sense?",
+              options: ["a. Reading increases your mental activity.", "b. We removed the city last week."],
+              correctAnswer: "a. Reading increases your mental activity.",
+              explanation: "Reading increases your mental activity. is logical."
+            },
+            {
+              id: "13",
+              content: "3. Which sentence makes better sense?",
+              options: ["a. My shoes were behind the couch.", "b. This mental exercise makes my arms tired."],
+              correctAnswer: "a. My shoes were behind the couch.",
+              explanation: "My shoes were behind the couch. is logical."
+            },
+            {
+              id: "14",
+              content: "4. Which sentence makes better sense?",
+              options: ["a. Have you ever found a bird's web?", "b. I lowered the box onto the ground."],
+              correctAnswer: "b. I lowered the box onto the ground.",
+              explanation: "I lowered the box onto the ground. is logical."
+            },
+            {
+              id: "15",
+              content: "5. Which sentence makes better sense?",
+              options: ["a. Could you help me lower my seat please?", "b. Be sure to remove the trash from the house."],
+              correctAnswer: "b. Be sure to remove the trash from the house.",
+              explanation: "The correct choice is b based on the answer key."
+            }
+          ]
+        },
+        {
+          id: "sec3",
+          title: "Exercise 3: Choose the right word for the given definition.",
+          content: "",
+          questionType: "Trắc nghiệm",
+          questions: [
+            {
+              id: "16",
+              content: "1. to move through water",
+              options: ["a. lower", "b. average", "c. advance", "d. swim"],
+              correctAnswer: "d. swim",
+              explanation: "swim nghĩa là to move through water."
+            },
+            {
+              id: "17",
+              content: "2. something nice to read",
+              options: ["a. poem", "b. web", "c. member", "d. behind"],
+              correctAnswer: "a. poem",
+              explanation: "poem nghĩa là something nice to read (a short kind of writing)."
+            },
+            {
+              id: "18",
+              content: "3. the condition free from any danger",
+              options: ["a. shoot", "b. safety", "c. athlete", "d. personality"],
+              correctAnswer: "b. safety",
+              explanation: "safety nghĩa là the condition free from any danger."
+            },
+            {
+              id: "19",
+              content: "4. a metal or wooden stick used to support things",
+              options: ["a. pole", "b. remove", "c. passenger", "d. sound"],
+              correctAnswer: "a. pole",
+              explanation: "pole nghĩa là a metal or wooden stick used to support things."
+            },
+            {
+              id: "20",
+              content: "5. the way you act",
+              options: ["a. mental", "b. match", "c. course", "d. behavior"],
+              correctAnswer: "d. behavior",
+              explanation: "behavior nghĩa là the way you act."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Comprehensive Reading",
+      content: part2Content,
+      imageUrl: "/unit23_story.png",
+      sections: [
+        {
+          id: "sec4",
+          title: "Answer the questions.",
+          content: "",
+          questionType: "Trắc nghiệm",
+          questions: [
+            {
+              id: "21",
+              content: "1. How did Stacie win the game?",
+              options: [
+                "a. She advanced to the right.",
+                "b. She lowered the red team's flag.",
+                "c. She hit the red team with her water gun.",
+                "d. She swam all afternoon."
+              ],
+              correctAnswer: "b. She lowered the red team's flag.",
+              explanation: "In the story, she lowered the red team's flag and ran back, making her team win."
+            },
+            {
+              id: "22",
+              content: "2. Because of her personality, what would Stacie likely NOT want to do?",
+              options: [
+                "a. Read a poem",
+                "b. Play a mental game",
+                "c. Become an athlete",
+                "d. Stay at a nice hotel"
+              ],
+              correctAnswer: "c. Become an athlete",
+              explanation: "She says 'I'm not much of an athlete' in the story."
+            },
+            {
+              id: "23",
+              content: "3. Instead of camp, where did Stacie want to be?",
+              options: [
+                "a. At a fancy hotel",
+                "b. At the airport",
+                "c. On a boat as a passenger",
+                "d. With an average student"
+              ],
+              correctAnswer: "a. At a fancy hotel",
+              explanation: "The story says she wanted to stay at a nice hotel for vacation."
+            },
+            {
+              id: "24",
+              content: "4. What did Stacie start to like about the camp?",
+              options: [
+                "a. The other kids' behavior",
+                "b. Having chocolate milk",
+                "c. Spider webs over her bed",
+                "d. Beating the red team"
+              ],
+              correctAnswer: "d. Beating the red team",
+              explanation: "She thought shooting the other player was fun, and winning made her the hero."
+            },
+            {
+              id: "25",
+              content: "5. What was Stacie's course about?",
+              options: [
+                "a. It was a course on water safety. They learned how to be safe passengers on a boat.",
+                "b. It was a mental exercise game.",
+                "c. It was a class about swimming.",
+                "d. It was a course on reading poems."
+              ],
+              correctAnswer: "a. It was a course on water safety. They learned how to be safe passengers on a boat.",
+              explanation: "The story explicitly says 'But it was a course on water safety. They learned how to be safe passengers on a boat.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+fs.writeFileSync('unit23.json', JSON.stringify(json, null, 2));

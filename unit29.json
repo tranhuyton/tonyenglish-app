@@ -1,0 +1,317 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 29",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit29_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit29_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">advertise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ædvərtàiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To advertise is to tell people about something on TV, radio, etc.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They used a rabbit to help them advertise their product.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">assign</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əsáin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To assign something to someone is to tell them to do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I assigned the worker an important task.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">audience</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ́ːdiəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An audience is a group of people who watch something together.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a large audience at the game.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">breakfast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[brékfəst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Breakfast is the first meal of the day.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I eat breakfast at 8:00 every morning.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">competition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑ̀mpətíʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A competition is a contest to see who is the best at something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He won the running competition over the weekend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cool</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kuːl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If the weather is cool, it is a little bit cold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The weather is cool in the fall.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you gain something, you get more of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I gained some weight over the summer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">importance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impɔ́ːrtns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Importance means the quality or condition of being needed or valued.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ VIPs are people of great importance.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">knowledge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɑ́lidʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Knowledge is information that you have about something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A music teacher should have good knowledge of music.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">major</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[méidʒər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is major, it is big or important.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have a major problem. My boss wants me to redo my project!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mean</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[miːn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Mean describes someone who is unkind or cruel.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My co-worker is a very mean person. He gets angry very quickly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prefer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prifə́ːr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you prefer something, you want it more than something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I prefer to take the path that will lead me to a bright future.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">president</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prézidənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A president is the leader of a country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The president of our country made an important announcement.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">progress</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑ́gres]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Progress is the act of getting closer to doing or finishing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our company made financial progress this year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">respect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rispékt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Respect is a good opinion of someone because they are good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have great respect for firemen.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rich</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ritʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are rich, you have a lot of money.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He’s rich. He can buy anything he wants.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">skill</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A skill is the knowledge and ability that allows you to do something well.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A snowboarder must have the right skills to do well.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">somehow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌ́mhàu]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Somehow means in a way or by some means which is not known.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He somehow had to find a way to reach the life preserver.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">strength</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[streŋkθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Strength is the physical power that you have.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Exercising will increase your strength and give you more power.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vote</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vout]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To vote is to officially choose between two or more things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I voted for Billy to be our class president.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Part A: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. breakfast",
+              "options": [
+                "power",
+                "the first meal of the day",
+                "having a lot of money",
+                "the reason for something"
+              ],
+              "correctAnswer": "the first meal of the day",
+              "explanation": "breakfast nghĩa là bữa sáng (the first meal of the day)."
+            },
+            {
+              "id": "2",
+              "content": "2. knowledge",
+              "options": [
+                "something that you can do",
+                "a good feeling about someone",
+                "to become better",
+                "what a person knows"
+              ],
+              "correctAnswer": "what a person knows",
+              "explanation": "knowledge nghĩa là kiến thức (what a person knows)."
+            },
+            {
+              "id": "3",
+              "content": "3. president",
+              "options": [
+                "the leader of a country",
+                "a little bit cold",
+                "to change other things",
+                "to tell people what to do"
+              ],
+              "correctAnswer": "the leader of a country",
+              "explanation": "president nghĩa là tổng thống, chủ tịch (the leader of a country)."
+            },
+            {
+              "id": "4",
+              "content": "4. gain",
+              "options": [
+                "to get more",
+                "to tell about",
+                "important",
+                "to want more than something else"
+              ],
+              "correctAnswer": "to get more",
+              "explanation": "gain nghĩa là đạt được, lấy thêm (to get more)."
+            },
+            {
+              "id": "5",
+              "content": "5. audience",
+              "options": [
+                "not hard",
+                "the first meal of the day",
+                "having a lot of money",
+                "a group of people watching something"
+              ],
+              "correctAnswer": "a group of people watching something",
+              "explanation": "audience nghĩa là khán giả (a group of people watching something)."
+            },
+            {
+              "id": "6",
+              "content": "6. somehow",
+              "options": [
+                "unkind or unpleasant",
+                "slightly cold",
+                "in a way not known",
+                "to change something"
+              ],
+              "correctAnswer": "in a way not known",
+              "explanation": "somehow nghĩa là bằng cách nào đó (in a way not known)."
+            },
+            {
+              "id": "7",
+              "content": "7. competition",
+              "options": [
+                "a leader",
+                "a game to find the best",
+                "a reason for something",
+                "something you can do"
+              ],
+              "correctAnswer": "a game to find the best",
+              "explanation": "competition nghĩa là cuộc thi (a game to find the best)."
+            },
+            {
+              "id": "8",
+              "content": "8. skill",
+              "options": [
+                "what you know",
+                "power",
+                "the ability to do something well",
+                "to think someone is good"
+              ],
+              "correctAnswer": "the ability to do something well",
+              "explanation": "skill nghĩa là kỹ năng (the ability to do something well)."
+            },
+            {
+              "id": "9",
+              "content": "9. mean",
+              "options": [
+                "not short",
+                "to get more",
+                "big or important",
+                "not kind"
+              ],
+              "correctAnswer": "not kind",
+              "explanation": "mean nghĩa là xấu tính, tàn nhẫn (not kind)."
+            },
+            {
+              "id": "10",
+              "content": "10. assign",
+              "options": [
+                "to want more",
+                "give",
+                "to tell someone to do something",
+                "having a lot of money"
+              ],
+              "correctAnswer": "to tell someone to do something",
+              "explanation": "assign nghĩa là phân công (to tell someone to do something)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Part B: Fill in the blanks with the correct words from the word bank.",
+          "content": "",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. If you [11] something widely, everyone will know about it.",
+              "correctAnswer": "advertise",
+              "explanation": "Từ cần điền là advertise (quảng cáo)."
+            },
+            {
+              "id": "12",
+              "content": "2. If you have a [12] problem, you might need more help.",
+              "correctAnswer": "major",
+              "explanation": "Từ cần điền là major (lớn, quan trọng)."
+            },
+            {
+              "id": "13",
+              "content": "3. I want to be in the [13] to show that I am the best.",
+              "correctAnswer": "competition",
+              "explanation": "Từ cần điền là competition (cuộc thi)."
+            },
+            {
+              "id": "14",
+              "content": "4. His skiing [14] are great! He can be a professional.",
+              "correctAnswer": "skills",
+              "explanation": "Từ cần điền là skills (kỹ năng)."
+            },
+            {
+              "id": "15",
+              "content": "5. Next month, our country will [15] for a new president.",
+              "correctAnswer": "vote",
+              "explanation": "Từ cần điền là vote (bầu cử)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Part C: Check the one that suits the blank naturally.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. I’m hungry because.",
+              "options": [
+                "I didn’t eat breakfast",
+                "I don’t have much knowledge"
+              ],
+              "correctAnswer": "I didn’t eat breakfast",
+              "explanation": "Đói (hungry) nên chưa ăn sáng (didn't eat breakfast) là hợp lý nhất."
+            },
+            {
+              "id": "17",
+              "content": "2. I’m reading a science book.",
+              "options": [
+                "I want to be in the audience",
+                "I want to gain some new information"
+              ],
+              "correctAnswer": "I want to gain some new information",
+              "explanation": "Đọc sách khoa học để tiếp thu kiến thức mới (gain some new information)."
+            },
+            {
+              "id": "18",
+              "content": "3. She always does the right thing.",
+              "options": [
+                "This makes her rich",
+                "I have a lot of respect for her"
+              ],
+              "correctAnswer": "I have a lot of respect for her",
+              "explanation": "Luôn làm điều đúng thì đáng được tôn trọng (respect)."
+            },
+            {
+              "id": "19",
+              "content": "4. I have milk and water.",
+              "options": [
+                "Which one do you prefer",
+                "Do you want a president"
+              ],
+              "correctAnswer": "Which one do you prefer",
+              "explanation": "Đưa ra hai lựa chọn (sữa và nước) thì câu hỏi là bạn thích cái nào hơn (prefer)."
+            },
+            {
+              "id": "20",
+              "content": "5. He works on his project every day. ______________.",
+              "options": [
+                "He assigned it to me",
+                "He’s making a lot of progress"
+              ],
+              "correctAnswer": "He’s making a lot of progress",
+              "explanation": "Làm việc chăm chỉ mỗi ngày thì đang tiến bộ nhiều (making a lot of progress)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the World Got Light</h1>        <p style=\"margin-bottom: 1rem;\">The <b>president</b> of Darkland was a pig—a very bad pig. He was a pig of <b>major</b> <b>importance</b>. He was <b>rich</b>, and he had a lot of <b>strength</b>. But he was <b>mean</b> to all the animals in Darkland. He kept all of the world's light in a bag. He <b>preferred</b> to keep the world <b>cool</b> and dark. He wanted to stop the <b>progress</b> of the city. The animals couldn't work in the dark. He didn't have any <b>respect</b> for them. \"Light is too good for them,\" he said. \"Only I should have light.\"</p>    <p style=\"margin-bottom: 1rem;\">But the animals needed light. So they decided to hold a <b>competition</b>. They wanted to find the smartest animal in Darkland. That animal had to steal light from the <b>president</b>. They <b>advertised</b> the <b>competition</b> everywhere. All the animals came.</p>    <p style=\"margin-bottom: 1rem;\">The animals all showed off their <b>skills</b>. The <b>audience</b> watched and then <b>voted</b> for the animal with the most <b>knowledge</b>. The winner was a tall bird named Raven. They <b>assigned</b> him the job of getting light.</p>    <p style=\"margin-bottom: 1rem;\">The next morning, Raven ate <b>breakfast</b> and then left his home. \"How will I <b>gain</b> light from the <b>president</b>?\" thought Raven. He needed to trick the <b>president</b> <b>somehow</b>. Then, Raven had an idea. Raven could make his voice sound like anything!</p>    <p style=\"margin-bottom: 1rem;\">Raven walked up to the <b>president</b>'s door. He made the sound of a crying baby. He cried very loudly. Soon, the <b>president</b> opened the door.</p>    <p style=\"margin-bottom: 1rem;\">\"Be quiet!\" the <b>president</b> yelled. Right then, Raven quickly made his move. He flew by the pig and found the soft bag. He took it outside. The sun was inside the bag!</p>    <p style=\"margin-bottom: 1rem;\">Raven flew high and put the sun in the sky. The <b>president</b> was very mad. Raven tricked him! But the animals were very happy. At last, they had light—all because of Raven's smart thinking.</p></div>",
+      "imageUrl": "/unit29_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. What is this story about?",
+              "options": [
+                "How a big, tall bird gave light to the world",
+                "A rich president who helped the world stay cool",
+                "How a competition helped animals gain skills",
+                "The importance of gaining the president’s respect"
+              ],
+              "correctAnswer": "How a big, tall bird gave light to the world",
+              "explanation": "Câu chuyện nói về việc Raven (một chú chim cao lớn) mang ánh sáng lại cho thế giới."
+            },
+            {
+              "id": "22",
+              "content": "2. Why did the pig hide the sun?",
+              "options": [
+                "To let the people assign a job to Raven",
+                "To bring an audience to see his big house",
+                "To prevent the animals from voting",
+                "To stop progress"
+              ],
+              "correctAnswer": "To stop progress",
+              "explanation": "Lợn giấu mặt trời để ngăn chặn sự tiến bộ (To stop progress)."
+            },
+            {
+              "id": "23",
+              "content": "3. What is NOT true of the president?",
+              "options": [
+                "He kept the sun in a soft bag.",
+                "He did not like the animals of Darkland.",
+                "He found a baby outside his house.",
+                "He became very angry at Raven."
+              ],
+              "correctAnswer": "He found a baby outside his house.",
+              "explanation": "Tổng thống không tìm thấy đứa bé nào ngoài nhà (đó là do Raven giả giọng)."
+            },
+            {
+              "id": "24",
+              "content": "4. How did Raven steal the sun?",
+              "options": [
+                "He used his strength to fight the president for it.",
+                "He used his knowledge of the area to find it.",
+                "He made a sound like a baby to make the pig open the door.",
+                "He advertised a major competition and won it."
+              ],
+              "correctAnswer": "He made a sound like a baby to make the pig open the door.",
+              "explanation": "Raven giả tiếng em bé khóc để dụ tổng thống mở cửa."
+            },
+            {
+              "id": "25",
+              "content": "5. What was inside the soft bag?",
+              "options": [
+                "The sun was inside the bag!",
+                "A crying baby",
+                "A life preserver",
+                "A lot of money"
+              ],
+              "correctAnswer": "The sun was inside the bag!",
+              "explanation": "Bên trong chiếc túi mềm là mặt trời."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

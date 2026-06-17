@@ -133,8 +133,16 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const [searchTest, setSearchTest] = useState('');
   const [sortTest, setSortTest] = useState('name-asc');
   const [filterType, setFilterType] = useState('all');
-  const [folderPage, setFolderPage] = useState(1);
-  const [testPage, setTestPage] = useState(1);
+  const [folderPage, setFolderPage] = useState(() => parseInt(sessionStorage.getItem('portal_folder_page') || '1', 10) || 1);
+  const [testPage, setTestPage] = useState(() => parseInt(sessionStorage.getItem('portal_test_page') || '1', 10) || 1);
+
+  useEffect(() => {
+    sessionStorage.setItem('portal_folder_page', folderPage.toString());
+  }, [folderPage]);
+
+  useEffect(() => {
+    sessionStorage.setItem('portal_test_page', testPage.toString());
+  }, [testPage]);
   const [historyPage, setHistoryPage] = useState(1);
 
   const [analyticsCourse, setAnalyticsCourse] = useState('all');
@@ -448,6 +456,8 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   const handleStartTestClick = async (test: any) => {
     if (!onStartTest) return;
     
+    sessionStorage.setItem('portal_scroll_y', window.scrollY.toString());
+
     // Always fetch full test data (with content_json) for the specific test being started
     const { data: fullTest } = await supabase.from('tests').select('*').eq('id', test.id).single();
     const testData = fullTest || test;
@@ -640,6 +650,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
   
   const totalTestPages = Math.ceil(processedTests.length / ITEMS_PER_PAGE);
   const paginatedTests = useMemo(() => processedTests.slice((testPage - 1) * ITEMS_PER_PAGE, testPage * ITEMS_PER_PAGE), [processedTests, testPage]);
+
+  useEffect(() => {
+      if (paginatedTests.length > 0 || paginatedFolders.length > 0) {
+          const savedScrollY = sessionStorage.getItem('portal_scroll_y');
+          if (savedScrollY) {
+              setTimeout(() => {
+                  window.scrollTo({
+                      top: parseInt(savedScrollY, 10),
+                      behavior: 'smooth'
+                  });
+                  sessionStorage.removeItem('portal_scroll_y');
+              }, 100);
+          }
+      }
+  }, [paginatedTests, paginatedFolders]);
 
   const isIeltsCourseSelected = analyticsCourse === 'all' 
       ? courses.some(c => (c.title||'').toLowerCase().includes('ielts') || c.type === 'IELTS')

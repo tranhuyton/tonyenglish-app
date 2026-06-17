@@ -1,0 +1,322 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 27",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit27_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit27_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">actually</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æktʃuəli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Actually means in fact or really.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dad looks a little mean, but actually he's very kind.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Bite is the act of using your teeth to cut and tear into something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy took a big bite out of his hamburger.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">coast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[koust]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The coast is the land by an ocean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I stayed on the southern coast of Australia.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[di:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A deal is an agreement that you have with another person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I made a deal with the other company to give us some money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">desert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dezərt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The desert is an area of land without many plants or water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Not many plants grow in the desert.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">earthquake</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ə:rθkweik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An earthquake is a shaking movement of the ground.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The building shook during the earthquake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">effective</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ifektiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is effective, it works well.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Swimming is an effective way to stay healthy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">examine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[igzæmin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To examine something is to look at it carefully.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The doctor examined my eyes today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">false</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ:ls]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is false, it is not correct.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you think the answer is false, press the red button.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gift</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gift]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A gift is something you give someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Dave received many gifts for Christmas.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hunger</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hʌŋgər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hunger is the feeling that you get when you need to eat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After playing all day long, he was filled with hunger.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">imagine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[imædʒin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To imagine something is to think of it in your mind.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sally imagined herself winning lots of money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">journey</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒə:rni]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A journey is a long trip.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I went on a journey across the country with my parents.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">puzzle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌzl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A puzzle is something that is hard to understand.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The question was a puzzle to him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">quite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kwait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Quite is used to say that something is complete or very much.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I think typing on a keyboard is quite easy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rather</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ræðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Rather is used when you want to do one thing but not the other.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I would rather have the red one than the blue one.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">specific</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spisifik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is specific, it is precise or exact.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please choose a specific place on the map.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tour</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tuər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tour is a short trip in which you see many sights.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I took a tour of Asia and Europe.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A trip is a journey to a certain place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Ken took a trip to the city yesterday.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">value</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vælju:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something has value, it is worth a lot of money.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Matthew found a treasure of very high value.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "1. gift",
+              "options": [
+                "a. somewhere you go",
+                "b. something you give",
+                "c. someone at a doctor",
+                "d. something you think about"
+              ],
+              "correctAnswer": "b. something you give",
+              "explanation": "Theo bài, gift (món quà) là something you give (thứ bạn trao tặng)."
+            },
+            {
+              "id": "q2",
+              "content": "2. value",
+              "options": [
+                "a. worth",
+                "b. the ocean",
+                "c. information",
+                "d. not true"
+              ],
+              "correctAnswer": "a. worth",
+              "explanation": "Theo bài, value (giá trị) nghĩa là worth (sự đáng giá)."
+            },
+            {
+              "id": "q3",
+              "content": "3. earthquake",
+              "options": [
+                "a. to see many things",
+                "b. movement of the ground",
+                "c. a need to eat",
+                "d. to work well"
+              ],
+              "correctAnswer": "b. movement of the ground",
+              "explanation": "earthquake (động đất) là movement of the ground (sự chuyển động của mặt đất)."
+            },
+            {
+              "id": "q4",
+              "content": "4. quite",
+              "options": [
+                "a. to feel awake",
+                "b. instead",
+                "c. to look at",
+                "d. very much"
+              ],
+              "correctAnswer": "d. very much",
+              "explanation": "quite có nghĩa là very much."
+            },
+            {
+              "id": "q5",
+              "content": "5. puzzle",
+              "options": [
+                "a. sand",
+                "b. to be gone a long time",
+                "c. in fact",
+                "d. a difficult question"
+              ],
+              "correctAnswer": "d. a difficult question",
+              "explanation": "puzzle là một câu đố khó hiểu (a difficult question)."
+            },
+            {
+              "id": "q6",
+              "content": "6. deal",
+              "options": [
+                "a. a lot of information",
+                "b. an agreement with another person",
+                "c. a game",
+                "d. to want to do one thing but not another"
+              ],
+              "correctAnswer": "b. an agreement with another person",
+              "explanation": "deal là thoả thuận với người khác."
+            },
+            {
+              "id": "q7",
+              "content": "7. hunger",
+              "options": [
+                "a. a strong need for food",
+                "b. a long trip to a place",
+                "c. when you feel awake",
+                "d. something worth a lot of money"
+              ],
+              "correctAnswer": "a. a strong need for food",
+              "explanation": "hunger là cảm giác đói (a strong need for food)."
+            },
+            {
+              "id": "q8",
+              "content": "8. desert",
+              "options": [
+                "a. a place without water",
+                "b. something you give someone",
+                "c. in fact",
+                "d. something that is not correct"
+              ],
+              "correctAnswer": "a. a place without water",
+              "explanation": "desert là sa mạc (a place without water)."
+            },
+            {
+              "id": "q9",
+              "content": "9. effective",
+              "options": [
+                "a. to think in your head",
+                "b. to go somewhere",
+                "c. to choose something",
+                "d. working very well"
+              ],
+              "correctAnswer": "d. working very well",
+              "explanation": "effective (hiệu quả) là working very well."
+            },
+            {
+              "id": "q10",
+              "content": "10. coast",
+              "options": [
+                "a. to look at something",
+                "b. to see many things",
+                "c. the ground moving",
+                "d. the edge of the ocean"
+              ],
+              "correctAnswer": "d. the edge of the ocean",
+              "explanation": "coast (bờ biển) là the edge of the ocean."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Check the better response to each question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q11",
+              "content": "1. Which would you have, juice or water?",
+              "options": [
+                "a. I would like water, please.",
+                "b. Yes, thank you."
+              ],
+              "correctAnswer": "a. I would like water, please.",
+              "explanation": "Người hỏi cho bạn sự lựa chọn nên trả lời cụ thể loại nước."
+            },
+            {
+              "id": "q12",
+              "content": "2. Where did you go on your trip?",
+              "options": [
+                "a. We went to Rome.",
+                "b. We like to stay home."
+              ],
+              "correctAnswer": "a. We went to Rome.",
+              "explanation": "Hỏi về điểm đến trong chuyến đi."
+            },
+            {
+              "id": "q13",
+              "content": "3. Do you enjoy solving puzzles?",
+              "options": [
+                "a. They don't taste very good.",
+                "b. Yes, I think they are fun."
+              ],
+              "correctAnswer": "b. Yes, I think they are fun.",
+              "explanation": "Puzzles là trò giải đố, không phải đồ ăn."
+            },
+            {
+              "id": "q14",
+              "content": "4. Try to imagine what your future husband or wife will look like.",
+              "options": [
+                "a. That's quite difficult.",
+                "b. OK, I will go there tomorrow."
+              ],
+              "correctAnswer": "a. That's quite difficult.",
+              "explanation": "Yêu cầu tưởng tượng tương lai, trả lời rằng việc đó khá khó."
+            },
+            {
+              "id": "q15",
+              "content": "5. Have you studied Spanish? I'm a little worried about taking the class.",
+              "options": [
+                "a. Actually it's not as hard as you think.",
+                "b. Actually I would rather sleep now."
+              ],
+              "correctAnswer": "a. Actually it's not as hard as you think.",
+              "explanation": "An ủi người kia rằng môn này không khó như họ nghĩ."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Choose the word that is a better fit for each sentence.",
+          "content": "",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "q16",
+              "content": "I have a (gift[1]) for you. Do you think that my car has much (value[2]).",
+              "options": [],
+              "correctAnswer": "gift|value",
+              "explanation": "gift (món quà), value (giá trị)"
+            },
+            {
+              "id": "q17",
+              "content": "It is hot in the (desert[1]). I like to watch the ocean at the (coast[2]).",
+              "options": [],
+              "correctAnswer": "desert|coast",
+              "explanation": "desert (sa mạc), coast (bờ biển)"
+            },
+            {
+              "id": "q18",
+              "content": "Having dinner will make my (hunger[1]) go away. Be careful around those dogs; they might (bite[2]) you.",
+              "options": [],
+              "correctAnswer": "hunger|bite",
+              "explanation": "hunger (cơn đói), bite (cắn)"
+            },
+            {
+              "id": "q19",
+              "content": "I would like to take a (tour[1]) of the capital city sometime. I went on a (journey[2]) around the world last year.",
+              "options": [],
+              "correctAnswer": "tour|journey",
+              "explanation": "tour (chuyến tham quan), journey (chuyến hành trình)"
+            },
+            {
+              "id": "q20",
+              "content": "I think this dress is (quite[1]) pretty. (Examine[2]) your paper to check for mistakes.",
+              "options": [],
+              "correctAnswer": "quite|Examine",
+              "explanation": "quite (khá), examine (kiểm tra)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Spider and the Bird</h1>        <p style=\"margin-bottom: 1rem;\">There was once a very big spider. If a bug got into his web, he would <b>examine</b> it. However, he didn't eat the bug right away. He asked the bug a question first. It was always <b>quite</b> a difficult <b>puzzle</b>. If the bug's answer was correct, he let it go. If not, he ate it.</p>    <p style=\"margin-bottom: 1rem;\">One day, a small bird on a <b>journey</b> flew into the spider's web. The spider couldn't <b>imagine</b> eating a bird. It was so big! But his <b>hunger</b> was too great. He said to the bird, \"If you cannot give me a <b>specific</b> answer, I will eat you.\"</p>    <p style=\"margin-bottom: 1rem;\">The bird laughed. \"I could eat you!\" But the bird was <b>actually</b> scared. She had used all her energy trying to get out of the web. And a spider's <b>bite</b> can be very <b>effective</b> in killing animals.</p>    <p style=\"margin-bottom: 1rem;\">\"Please don't eat me,\" the bird said. \"I would <b>rather</b> make a <b>deal</b> with you.\"</p>    <p style=\"margin-bottom: 1rem;\">\"OK,\" the spider said. \"If your answer is right, I will let you go. If not, you must give me a <b>gift</b>. It must be something of great <b>value</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">The bird said, \"You can pick anything you want to eat. I will find it for you.\" The spider agreed.</p>    <p style=\"margin-bottom: 1rem;\">\"Where can you take a <b>trip</b> to the <b>coast</b>, the <b>desert</b>, and the mountains at the same time?\" the spider asked.</p>    <p style=\"margin-bottom: 1rem;\">The bird asked, \"Does this place have <b>earthquakes</b>?\" But the spider did not say anything. \"I can see those places when I fly. Is the 'sky' the right answer?\"</p>    <p style=\"margin-bottom: 1rem;\">\"<b>False</b>!\" said the spider. \"The answer is Hawaii! Now you must find some bugs for me.\"</p>    <p style=\"margin-bottom: 1rem;\">The spider climbed on the bird's back. They flew and ate bugs together. They took a <b>tour</b> of the forest. From that day on, the bird took the spider home. They were friends. And they never tried to eat each other again.</p></div>",
+      "imageUrl": "/unit27_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q21",
+              "content": "1. Which is NOT part of the spider's puzzle?",
+              "options": [
+                "a. The coast",
+                "b. An earthquake",
+                "c. A mountain",
+                "d. The desert"
+              ],
+              "correctAnswer": "b. An earthquake",
+              "explanation": "Đáp án B là đúng theo key."
+            },
+            {
+              "id": "q22",
+              "content": "2. Why does the bird make a deal instead of flying away?",
+              "options": [
+                "a. Her wings are quite effective in the web.",
+                "b. She is too tired from trying to get out of the web.",
+                "c. She cannot fly because of her hunger.",
+                "d. She would rather take the spider on a trip."
+              ],
+              "correctAnswer": "b. She is too tired from trying to get out of the web.",
+              "explanation": "Đáp án B là đúng theo key."
+            },
+            {
+              "id": "q23",
+              "content": "3. What will be the bird's gift to the spider?",
+              "options": [
+                "a. A tour of the coast",
+                "b. A specific kind of web",
+                "c. Anything the spider wants to eat",
+                "d. A trip to anywhere"
+              ],
+              "correctAnswer": "c. Anything the spider wants to eat",
+              "explanation": "Đáp án C là đúng theo key."
+            },
+            {
+              "id": "q24",
+              "content": "4. What is the spider's response to the bird's answer?",
+              "options": [
+                "a. Your answer is false!",
+                "b. Can you imagine!",
+                "c. No deal!",
+                "d. That has no value!"
+              ],
+              "correctAnswer": "a. Your answer is false!",
+              "explanation": "Đáp án A là đúng theo key."
+            },
+            {
+              "id": "q25",
+              "content": "5. What is the first thing the spider does when a bug gets into his web?",
+              "options": [
+                "a. He asks the bug a question first.",
+                "b. He eats it right away.",
+                "c. He makes a deal.",
+                "d. He asks for a gift."
+              ],
+              "correctAnswer": "a. He asks the bug a question first.",
+              "explanation": "He asks the bug a question first."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

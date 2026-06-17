@@ -1,0 +1,230 @@
+const fs = require('fs');
+
+const wordListHtml = `<div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;"><div style="display: flex; flex-direction: column; gap: 16px;"><img src="/unit28_word_list_1.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /><img src="/unit28_word_list_2.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /></div><div style="display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;"><h3 style="font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Detailed Meanings</h3><div style="display: flex; flex-direction: column; gap: 24px;"><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🎸</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">band</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[bænd]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A band is a group of people who play music.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ My brother is in a rock band.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🤏</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">barely</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[bearli]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">adv.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Barely means by the smallest amount, almost not.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ I barely had enough money to pay for my bus ticket.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🥱</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">boring</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[bɔ:riŋ]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">adj.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">If something is boring, it is not fun.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ I think the Internet is boring.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">❌</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">cancel</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[kænsəl]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To cancel means to decide that an event or a request will not happen.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ She cancelled the rest of her plans because of the rain.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🛣️</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">driveway</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[draivwei]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A driveway is a short private road that leads to a person's home.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ The long driveway led us to their new house.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🗑️</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">garbage</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[ga:rbidʒ]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Garbage is waste material like unwanted or spoiled food, bottles, paper, etc.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ The boy cleaned up the garbage around his house.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🎹</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">instrument</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[instrəmənt]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">An instrument is something designed to do a certain task like music.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ My favorite musical instrument is the piano.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">📋</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">list</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[list]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A list is a record of information printed with an item on each line.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ My mom makes a list of groceries to buy.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🪄</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">magic</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[mædʒik]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">Magic is the power to do impossible things.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ The magician used magic to pull a rabbit out of his hat.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">✉️</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">message</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[mesidʒ]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A message is a set of words that you send to someone.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ I left a message for you in the envelope.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">👀</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">notice</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[noutis]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To notice something is to see it for the first time.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ Did you notice the view?</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🏠</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">own</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[oun]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To own something means to have it. That thing belongs to you.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ My grandfather owns that house.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🔮</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">predict</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[pridikt]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To predict something is to say that it will happen.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ She predicted that I would get married next year.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">👨‍🏫</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">professor</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[prəfesər]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A professor is a person who teaches in college.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ Mike's science professor knows a lot about physics.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🏃</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">rush</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[rʌʃ]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To rush is to go somewhere or do something very quickly.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ Nancy rushed to finish her homework.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">📅</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">schedule</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[skedʒu:l]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A schedule is a plan that tells you when to do things.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ What is your class schedule for today?</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🤝</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">share</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[ʃear]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">v.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">To share something is to give some of it to another person.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ Jimmy shared his apple with me.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">🎭</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">stage</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[steidʒ]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A stage is a place where actors or musicians act or sing.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ A large screen was on the stage.</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">⛈️</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">storm</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[stɔ:rm]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">n.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">A storm is very bad weather. There is a lot of rain or snow.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ Did that storm wake you up last night?</div></div></div><div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">📦</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">within</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">[wiðin]</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">prep.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">You use within to say that something is inside another thing.</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ Within the box, there was a pizza.</div></div></div></div></div></div>`;
+
+const storyHtml = `<div style="font-family: Arial, sans-serif; ">    <h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">The Party</h1>        <p style="margin-bottom: 1rem;">Cody's family moved to a new house. His dad got a new job as a <b>professor</b>. Cody liked his new town, but he missed his grandparents. For his birthday, Cody wanted to have a party. His dad said, "Yes, we could even have a <b>band</b> play!"</p>    <p style="margin-bottom: 1rem;">On the day of the party, Cody woke up and <b>rush</b>ed to get ready. He started to check his <b>list</b> of things to do. He was so excited! But then he <b>notice</b>d something terrible. There was snow on the ground and lots of it! "Dad!" he yelled. "How can the <b>band</b> play their <b>instrument</b>s outside?"</p>    <p style="margin-bottom: 1rem;">Dad said, "We'll move the <b>stage</b> inside." It <b>barely</b> fit <b>within</b> the garage because there were some boxes and <b>garbage</b> there. But when they finished, they got a call from the <b>band</b>. They did not want to come in the snow <b>storm</b>.</p>    <p style="margin-bottom: 1rem;">Dad said, "Let's get someone to perform <b>magic</b>." But no one would come because of the snow.</p>    <p style="margin-bottom: 1rem;">Finally, Dad said, "Cody, there's too much snow. We need to <b>cancel</b> the party."</p>    <p style="margin-bottom: 1rem;">"Yes, sir," Cody said sadly. "It's going to be a <b>boring</b> birthday," he <b>predict</b>ed.</p>    <p style="margin-bottom: 1rem;">Cody wanted to <b>share</b> his birthday with someone. He wanted to be at his old home. He wanted to see his grandparents.</p>    <p style="margin-bottom: 1rem;">But then something got his attention. He <b>notice</b>d a car in the <b>driveway</b>. His grandparents <b>own</b>ed a car like that!</p>    <p style="margin-bottom: 1rem;">Cody was right. His grandparents came for his birthday! "Happy birthday, Cody! We're sorry we are late. But there was so much snow. It made us go off <b>schedule</b>. We tried to leave a <b>message</b> to tell you."</p>    <p style="margin-bottom: 1rem;">Cody told them what happened. "I'm sorry," said Grandpa.</p>    <p style="margin-bottom: 1rem;">"I was sad," Cody said. "But I'm not anymore. I'm so happy to see you." Dad brought out Cody's birthday treat. It was his favorite type, a sundae with whipped cream on top. Then Cody told his grandparents about the new town. It was his best birthday ever.</p></div>`;
+
+const unit28 = {
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 28",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": wordListHtml,
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Fill in the blanks with the correct words from the word bank.",
+          "content": "WORD BANK: list, professor, band, barely, schedule, predict, message, boring, rush, garbage",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. If you don't understand the class, you should ask your (professor[1]) for help.",
+              "correctAnswer": "professor",
+              "explanation": ""
+            },
+            {
+              "id": "2",
+              "content": "2. I could (barely[2]) hear his speech because of all the noise.",
+              "correctAnswer": "barely",
+              "explanation": ""
+            },
+            {
+              "id": "3",
+              "content": "3. I (predict[3]) that tomorrow will be a good day.",
+              "correctAnswer": "predict",
+              "explanation": ""
+            },
+            {
+              "id": "4",
+              "content": "4. There was a lot of (garbage[4]) in his closet.",
+              "correctAnswer": "garbage",
+              "explanation": ""
+            },
+            {
+              "id": "5",
+              "content": "5. I made a (list[5]) of things I want for my birthday.",
+              "correctAnswer": "list",
+              "explanation": ""
+            },
+            {
+              "id": "6",
+              "content": "6. I think that this TV show is (boring[6]). Let's watch something else.",
+              "correctAnswer": "boring",
+              "explanation": ""
+            },
+            {
+              "id": "7",
+              "content": "7. Have you ever heard this (band[7])? I really like its music.",
+              "correctAnswer": "band",
+              "explanation": ""
+            },
+            {
+              "id": "8",
+              "content": "8. Do you have time in your (schedule[8]) to come over this week?",
+              "correctAnswer": "schedule",
+              "explanation": ""
+            },
+            {
+              "id": "9",
+              "content": "9. If I am not home when you call, just leave a (message[9]).",
+              "correctAnswer": "message",
+              "explanation": ""
+            },
+            {
+              "id": "10",
+              "content": "10. If you wake up early, you don't need to (rush[10]) to get to school.",
+              "correctAnswer": "rush",
+              "explanation": ""
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Circle two words that are related in each group.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. a. cancel b. see c. notice d. own",
+              "options": ["cancel and own", "see and notice", "cancel and see", "notice and own"],
+              "correctAnswer": "see and notice",
+              "explanation": ""
+            },
+            {
+              "id": "12",
+              "content": "2. a. band b. boring c. instrument d. predict",
+              "options": ["band and instrument", "boring and predict", "band and boring", "instrument and predict"],
+              "correctAnswer": "band and instrument",
+              "explanation": ""
+            },
+            {
+              "id": "13",
+              "content": "3. a. magic b. rush c. tour d. trip",
+              "options": ["magic and rush", "tour and trip", "magic and trip", "rush and tour"],
+              "correctAnswer": "tour and trip",
+              "explanation": ""
+            },
+            {
+              "id": "14",
+              "content": "4. a. bite b. within c. hunger d. share",
+              "options": ["within and share", "bite and hunger", "bite and share", "within and hunger"],
+              "correctAnswer": "bite and hunger",
+              "explanation": ""
+            },
+            {
+              "id": "15",
+              "content": "5. a. schedule b. message c. stage d. list",
+              "options": ["schedule and list", "message and stage", "schedule and message", "stage and list"],
+              "correctAnswer": "schedule and list",
+              "explanation": ""
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Check the one that suits the blank naturally.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. I don't like this show.",
+              "options": ["a. It is very boring", "b. It is a long list"],
+              "correctAnswer": "a. It is very boring",
+              "explanation": ""
+            },
+            {
+              "id": "17",
+              "content": "2. A treasure appeared in the middle of the room.",
+              "options": ["a. It owned us", "b. It was magic"],
+              "correctAnswer": "b. It was magic",
+              "explanation": ""
+            },
+            {
+              "id": "18",
+              "content": "3. The man read the weather report.",
+              "options": ["a. He rushed through the building", "b. He predicted rain"],
+              "correctAnswer": "b. He predicted rain",
+              "explanation": ""
+            },
+            {
+              "id": "19",
+              "content": "4. I have many things to do today.",
+              "options": ["a. My schedule is full", "b. I can share with you"],
+              "correctAnswer": "a. My schedule is full",
+              "explanation": ""
+            },
+            {
+              "id": "20",
+              "content": "5. When the play started, _________.",
+              "options": ["a. the actors walked onto the stage", "b. there were no people within the room"],
+              "correctAnswer": "a. the actors walked onto the stage",
+              "explanation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": storyHtml,
+      "imageUrl": "/unit28_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. What does Cody's dad do as a job?",
+              "options": ["a. His dad is a professor.", "b. His dad is in a band.", "c. His dad owns a restaurant.", "d. His dad does magic shows."],
+              "correctAnswer": "a. His dad is a professor.",
+              "explanation": ""
+            },
+            {
+              "id": "22",
+              "content": "2. What does Cody want for his birthday?",
+              "options": ["a. A musical instrument", "b. A stage to play music on", "c. Someone to share it with", "d. Everything on his list"],
+              "correctAnswer": "c. Someone to share it with",
+              "explanation": ""
+            },
+            {
+              "id": "23",
+              "content": "3. What does Cody predict will happen?",
+              "options": ["a. He will have a boring birthday.", "b. He will eat ice cream.", "c. No one will notice the snow storm.", "d. He will have to rush to get ready for the party."],
+              "correctAnswer": "a. He will have a boring birthday.",
+              "explanation": ""
+            },
+            {
+              "id": "24",
+              "content": "4. What gets Cody's attention?",
+              "options": ["a. His dad calling him \"sir\"", "b. The car his grandparents own", "c. The stage within the garage", "d. That nothing is happening on schedule"],
+              "correctAnswer": "b. The car his grandparents own",
+              "explanation": ""
+            },
+            {
+              "id": "25",
+              "content": "5. Why did his grandparents try to leave a message?",
+              "options": ["a. To tell him about the snow.", "b. To tell him that they would be late.", "c. To wish him a happy birthday.", "d. To say they wouldn't come."],
+              "correctAnswer": "b. To tell him that they would be late.",
+              "explanation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+fs.writeFileSync('c:/Users/Tony/.gemini/antigravity/scratch/tonyenglish-app/unit28.json', JSON.stringify(unit28, null, 2));

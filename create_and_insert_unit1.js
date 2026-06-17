@@ -1,0 +1,346 @@
+const { createClient } = require('@supabase/supabase-js');
+const fs = require('fs');
+
+const env = fs.readFileSync('.env', 'utf-8');
+const urlMatch = env.match(/^VITE_SUPABASE_URL=(.*)$/m);
+const keyMatch = env.match(/^VITE_SUPABASE_SERVICE_ROLE_KEY=(.*)$/m);
+
+if (!urlMatch || !keyMatch) {
+  console.error("Supabase credentials not found in .env");
+  process.exit(1);
+}
+
+const url = urlMatch[1].trim();
+const key = keyMatch[1].trim();
+const supabase = createClient(url, key);
+
+const words = [
+  { word: "anxious", pos: "adj.", pron: "[æŋkʃəs]", def: "When a person is anxious, they worry that something bad will happen.", ex: "She was anxious about not making her appointment on time.", emoji: "😰" },
+  { word: "awful", pos: "adj.", pron: "[ɔ:fəl]", def: "When something is awful, it is very bad.", ex: "Her performance last night was awful.", emoji: "😣" },
+  { word: "consist", pos: "v.", pron: "[kənsist]", def: "To consist of is to be made of parts or things.", ex: "Today's choices for lunch consisted of pizza, hamburgers, and hot dogs.", emoji: "🍕" },
+  { word: "desire", "pos": "v.", pron: "[dizaiər]", def: "To desire is to want something.", ex: "My sister desires a big house and lots of money.", emoji: "🤩" },
+  { word: "eager", "pos": "adj.", pron: "[i:gər]", def: "When a person is eager about something, they are excited about it.", ex: "The man was eager to talk about the good news.", emoji: "😁" },
+  { word: "household", "pos": "n.", pron: "[haushould]", def: "A household is all the people who live in one house.", ex: "Our household is made up of my father, my mother and me.", emoji: "👨‍👩‍👧" },
+  { word: "intent", "pos": "n.", pron: "[intent]", def: "An intent is a plan to do something.", ex: "Her intent is to visit Italy next summer.", emoji: "🎯" },
+  { word: "landscape", "pos": "n.", pron: "[lændskeip]", def: "A landscape is how an area of land looks.", ex: "The landscape of the country is very green.", emoji: "🌄" },
+  { word: "lift", "pos": "v.", pron: "[lift]", "def": "To lift something is to move it higher.", "ex": "The man tried to lift the box.", emoji: "🏋️" },
+  { word: "load", "pos": "v.", pron: "[loud]", "def": "To load is to put objects into something.", "ex": "The man loaded the boxes into a truck.", emoji: "📦" },
+  { word: "lung", "pos": "n.", pron: "[lʌŋ]", def: "A lung is the organ in the body that fills with air when breathing.", ex: "Having strong lungs is necessary for a healthy life.", emoji: "🫁" },
+  { word: "motion", "pos": "n.", pron: "[mouʃən]", def: "A motion is a movement that someone makes.", "ex": "The police officer made a motion with his hand.", emoji: "👋" },
+  { "word": "pace", "pos": "n.", "pron": "[peis]", "def": "The pace of something is the speed at which it happens.", "ex": "I ran the race at a slower pace than my friend.", emoji: "🏃" },
+  { "word": "polite", "pos": "adj.", "pron": "[pəlait]", "def": "When someone is polite, they are acting in a thoughtful way.", "ex": "The boy was very polite: he behaved very thoughtfully.", emoji: "🤝" },
+  { "word": "possess", "pos": "v.", "pron": "[pəzes]", "def": "To possess something is to have it or own it.", "ex": "My uncle possesses three sheep, a chicken, a cow and a dog.", emoji: "🗝️" },
+  { "word": "rapidly", "pos": "adv.", "pron": "[ræpidli]", "def": "When something happens rapidly, it happens very fast.", "ex": "The train moved rapidly on the tracks.", emoji: "🚅" },
+  { "word": "remark", "pos": "v.", "pron": "[rimɑ:rk]", "def": "To remark is to say something.", "ex": "The teacher remarked on how quickly the students were learning.", emoji: "💬" },
+  { "word": "seek", "pos": "v.", "pron": "[si:k]", "def": "To seek is to look for something.", "ex": "If I have a problem, I seek my sister's advice.", emoji: "🔍" },
+  { "word": "shine", "pos": "v.", "pron": "[ʃain]", "def": "To shine is to make a bright light.", "ex": "The candles are shining in the dark room.", emoji: "✨" },
+  { "word": "spill", "pos": "v.", "pron": "[spil]", "def": "To spill is to have something fall out of its container.", "ex": "I spilled the coffee on the table.", emoji: "☕" }
+];
+
+let wordListHtml = `<div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;"><div style="display: flex; flex-direction: column; gap: 16px;"><img src="/unit1_word_list_1.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /><img src="/unit1_word_list_2.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /></div><div style="display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;"><h3 style="font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Detailed Meanings</h3><div style="display: flex; flex-direction: column; gap: 24px;">`;
+
+words.forEach(w => {
+  wordListHtml += `<div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">${w.emoji}</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">${w.word}</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">${w.pron}</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">${w.pos}</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">${w.def}</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ ${w.ex}</div></div></div>`;
+});
+
+wordListHtml += `</div></div></div>`;
+
+const storyHtml = `<div style="font-family: Arial, sans-serif; "><h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">The Twelve Months</h1><p style="margin-bottom: 1rem;">An <b>awful</b> woman lived with her daughter and stepdaughter in her <b>household</b>. She <b>possessed</b> feelings of hate for her stepdaughter, Anna. Anna worked while her stepsister did nothing. On a cold January night, Anna's stepmother <b>remarked</b>, "Your stepsister <b>desires</b> flowers. Go and find some."</p><p style="margin-bottom: 1rem;">Anna wasn't <b>anxious</b> to walk through the chilled <b>landscape</b>. The cold air made her <b>lungs</b> burn. She walked at a slow <b>pace</b> because of the snow. Soon she saw a group of people. It <b>consisted</b> of twelve men. Anna told them about the flowers.</p><p style="margin-bottom: 1rem;">One of the man said they were the twelve months and that they would help Anna. January walked to her and made a <b>motion</b> with his hand. The days of the month passed <b>rapidly</b> until it was February's turn. February also made the month speed up. Then March made the sun <b>shine</b> and flowers grew in the field.</p><p style="margin-bottom: 1rem;">Anna <b>loaded</b> her basket with so many flowers that she could hardly <b>lift</b> it. Then she gave a quick but <b>polite</b> "thank you" to the twelve men and returned home. She was very <b>eager</b> to show her stepmother all the flowers. Back at the house, she <b>spilled</b> the flowers onto the table. Then she told her stepmother about the twelve men. Anna's stepmother and stepsister went to <b>seek</b> the twelve months. Their <b>intent</b> was to ask for gifts. They looked and looked. They became very lost and never returned home. Anna lived happily by herself.</p></div>`;
+
+const wordListSections = [
+  {
+    "id": "u1_wl_ex1",
+    "title": "Part A: Choose the right word for the given definition.",
+    "content": "",
+    "questionType": "Trắc nghiệm",
+    "questions": [
+      {
+        "id": "u1_q1",
+        "content": "1. a movement",
+        "options": ["pace", "intent", "lungs", "motion"],
+        "correctAnswer": "motion",
+        "explanation": "motion nghĩa là chuyển động (movement)."
+      },
+      {
+        "id": "u1_q2",
+        "content": "2. to look for",
+        "options": ["seek", "possess", "shine", "spill"],
+        "correctAnswer": "seek",
+        "explanation": "seek nghĩa là tìm kiếm (to look for)."
+      },
+      {
+        "id": "u1_q3",
+        "content": "3. to pick up",
+        "options": ["eager", "lift", "remark", "awful"],
+        "correctAnswer": "lift",
+        "explanation": "lift nghĩa là nhấc lên (to pick up)."
+      },
+      {
+        "id": "u1_q4",
+        "content": "4. very fast",
+        "options": ["landscape", "household", "rapidly", "anxious"],
+        "correctAnswer": "rapidly",
+        "explanation": "rapidly nghĩa là rất nhanh (very fast)."
+      },
+      {
+        "id": "u1_q5",
+        "content": "5. feeling worried",
+        "options": ["consisting of", "load", "polite", "anxious"],
+        "correctAnswer": "anxious",
+        "explanation": "anxious nghĩa là cảm thấy lo lắng (feeling worried)."
+      }
+    ]
+  },
+  {
+    "id": "u1_wl_ex2",
+    "title": "Part B: Choose the right definition for the given word.",
+    "content": "",
+    "questionType": "Trắc nghiệm",
+    "questions": [
+      {
+        "id": "u1_q6",
+        "content": "1. possess",
+        "options": ["to look for", "to own", "to pick up", "to put in"],
+        "correctAnswer": "to own",
+        "explanation": "possess nghĩa là sở hữu (to own)."
+      },
+      {
+        "id": "u1_q7",
+        "content": "2. desire",
+        "options": ["to want", "to make up of", "to have", "to say"],
+        "correctAnswer": "to want",
+        "explanation": "desire nghĩa là khao khát, mong muốn (to want)."
+      },
+      {
+        "id": "u1_q8",
+        "content": "3. intent",
+        "options": ["an area of land", "an organ", "a plan", "a feeling"],
+        "correctAnswer": "a plan",
+        "explanation": "intent nghĩa là ý định, kế hoạch (a plan)."
+      },
+      {
+        "id": "u1_q9",
+        "content": "4. shine",
+        "options": ["to learn", "to make light", "to have something fall out", "to move fast"],
+        "correctAnswer": "to make light",
+        "explanation": "shine nghĩa là chiếu sáng (to make light)."
+      },
+      {
+        "id": "u1_q10",
+        "content": "5. polite",
+        "options": ["thoughtful", "worried", "fast", "excited"],
+        "correctAnswer": "thoughtful",
+        "explanation": "polite nghĩa là lịch sự, ân cần (thoughtful)."
+      }
+    ]
+  },
+  {
+    "id": "u1_wl_ex3",
+    "title": "Exercise 2: Which sentence makes better sense?",
+    "content": "",
+    "questionType": "Trắc nghiệm",
+    "questions": [
+      {
+        "id": "u1_q11",
+        "content": "1.",
+        "options": ["a. It is hard to seek for things when it is sunny.", "b. A landscape may have snow during the winter."],
+        "correctAnswer": "b. A landscape may have snow during the winter.",
+        "explanation": "landscape là cảnh quan. Một cảnh quan có thể có tuyết vào mùa đông."
+      },
+      {
+        "id": "u1_q12",
+        "content": "2.",
+        "options": ["a. Most children are eager to get gifts.", "b. Good friends are awful to have around."],
+        "correctAnswer": "a. Most children are eager to get gifts.",
+        "explanation": "eager là háo hức. Hầu hết trẻ em đều háo hức nhận quà."
+      },
+      {
+        "id": "u1_q13",
+        "content": "3.",
+        "options": ["a. The lungs help move blood through the body.", "b. People may feel anxious when they give a speech."],
+        "correctAnswer": "b. People may feel anxious when they give a speech.",
+        "explanation": "anxious là lo lắng. Mọi người có thể cảm thấy lo lắng khi phát biểu."
+      },
+      {
+        "id": "u1_q14",
+        "content": "4.",
+        "options": ["a. It isn't polite to take things without asking first.", "b. You should help spill the dishes after dinner."],
+        "correctAnswer": "a. It isn't polite to take things without asking first.",
+        "explanation": "polite là lịch sự. Không xin phép trước khi lấy đồ là không lịch sự."
+      },
+      {
+        "id": "u1_q15",
+        "content": "5.",
+        "options": ["a. If you work at a fast pace, things will get done quickly.", "b. It is important to lift your notes before a test."],
+        "correctAnswer": "a. If you work at a fast pace, things will get done quickly.",
+        "explanation": "pace là tốc độ. Làm việc với tốc độ nhanh sẽ giúp mọi việc hoàn thành nhanh chóng."
+      },
+      {
+        "id": "u1_q16",
+        "content": "6.",
+        "options": ["a. People are eager to leave when they don't want to go anywhere.", "b. You should get help when lifting heavy boxes."],
+        "correctAnswer": "b. You should get help when lifting heavy boxes.",
+        "explanation": "lifting là nhấc lên. Bạn nên nhờ người giúp khi nhấc những chiếc hộp nặng."
+      },
+      {
+        "id": "u1_q17",
+        "content": "7.",
+        "options": ["a. Some people live in the landscape while others live in the city.", "b. Everyone has awful days where nothing goes right."],
+        "correctAnswer": "b. Everyone has awful days where nothing goes right.",
+        "explanation": "awful là tồi tệ. Ai cũng có những ngày tồi tệ khi mọi việc đều không suôn sẻ."
+      },
+      {
+        "id": "u1_q18",
+        "content": "8.",
+        "options": ["a. It is good to seek advice when you have a problem.", "b. Students feel anxious when they get good grades."],
+        "correctAnswer": "a. It is good to seek advice when you have a problem.",
+        "explanation": "seek là tìm kiếm. Tìm kiếm lời khuyên khi gặp vấn đề là điều tốt."
+      },
+      {
+        "id": "u1_q19",
+        "content": "9.",
+        "options": ["a. When you breathe, air goes into your lungs.", "b. Some students pace to school every day."],
+        "correctAnswer": "a. When you breathe, air goes into your lungs.",
+        "explanation": "lungs là phổi. Khi bạn hít thở, không khí sẽ đi vào phổi."
+      },
+      {
+        "id": "u1_q20",
+        "content": "10.",
+        "options": ["a. Polite people do not say 'please' or 'thank you.'", "b. When you spill something, you should clean it up right away."],
+        "correctAnswer": "b. When you spill something, you should clean it up right away.",
+        "explanation": "spill là làm đổ. Khi bạn làm đổ thứ gì đó, bạn nên dọn dẹp ngay."
+      }
+    ]
+  }
+];
+
+const storySections = [
+  {
+    "id": "u1_rd_ex1",
+    "title": "Answer the questions based on the story.",
+    "content": "",
+    "questionType": "Trắc nghiệm",
+    "questions": [
+      {
+        "id": "u1_q21",
+        "content": "1. What is the story about?",
+        "options": [
+          "Why a year consists of twelve months",
+          "How a girl made the sun shine in winter",
+          "Why moving at a slow pace is good",
+          "How the months helped a polite girl"
+        ],
+        "correctAnswer": "How the months helped a polite girl",
+        "explanation": "Câu chuyện kể về việc các tháng trong năm đã giúp đỡ một cô bé ngoan ngoãn và lịch sự."
+      },
+      {
+        "id": "u1_q22",
+        "content": "2. Why did Anna need to seek flowers?",
+        "options": [
+          "Her stepmother remarked that she liked them.",
+          "Her awful stepsister desired them for her birthday.",
+          "She spilled the ones she already possessed.",
+          "She was eager to please her stepmother."
+        ],
+        "correctAnswer": "Her awful stepsister desired them for her birthday.",
+        "explanation": "Trong đoạn 1, người mẹ kế nói: 'Your stepsister desires flowers. Go and find some.' (bản gốc có thể là desire them, đáp án đúng theo sách là b)"
+      },
+      {
+        "id": "u1_q23",
+        "content": "3. In paragraph 4 we can infer that_____________.",
+        "options": [
+          "the months rapidly helped Anna load her basket",
+          "Anna asked the months to live in her household",
+          "Anna's awful stepmother and stepsister never found the months",
+          "Anna got lost going across the dark landscape on her way home"
+        ],
+        "correctAnswer": "Anna's awful stepmother and stepsister never found the months",
+        "explanation": "Người mẹ kế và chị kế đã đi tìm 12 tháng nhưng bị lạc và không bao giờ trở về."
+      },
+      {
+        "id": "u1_q24",
+        "content": "4. According to the passage, all the following are true EXCEPT_______",
+        "options": [
+          "the cold air hurt Anna's lungs",
+          "Anna's stepmother lifted the basket",
+          "January made a motion to speed up time",
+          "Anna wasn't anxious to go out in the cold, dark night"
+        ],
+        "correctAnswer": "Anna's stepmother lifted the basket",
+        "explanation": "Anna là người đã nâng giỏ hoa lên, không phải người mẹ kế."
+      },
+      {
+        "id": "u1_q25",
+        "content": "5. What was Anna's stepmother's and stepsister's intent when they left?",
+        "options": [
+          "They wanted to ask the Twelve Months for gifts.",
+          "They wanted to find Anna.",
+          "They wanted to seek flowers.",
+          "They wanted to live with the twelve months."
+        ],
+        "correctAnswer": "They wanted to ask the Twelve Months for gifts.",
+        "explanation": "Ý định của họ khi rời đi là để xin những món quà (Their intent was to ask for gifts)."
+      }
+    ]
+  }
+];
+
+const contentJson = {
+  basicInfo: {
+    skill: "Standard-Reading",
+    title: "Unit 1",
+    category: "exercise",
+    timeLimit: 0
+  },
+  parts: [
+    {
+      id: "part1",
+      title: "Word List",
+      content: wordListHtml,
+      sections: wordListSections
+    },
+    {
+      id: "part2",
+      title: "Comprehensive Reading",
+      content: storyHtml,
+      imageUrl: "/unit1_story.png",
+      sections: storySections
+    }
+  ]
+};
+
+async function run() {
+  const courseId = '8c3bea0e-458c-4c18-ab60-44b432e71170';
+  const folderId = '64f471c2-e1c0-431b-bd81-f76aa1c0dc61'; // Volume 2 folder
+
+  const { data: existing, error: err2 } = await supabase
+    .from('tests')
+    .select('id')
+    .eq('title', 'Unit 1')
+    .eq('folder_id', folderId)
+    .single();
+
+  if (existing) {
+    const { data, error } = await supabase
+      .from('tests')
+      .update({ content_json: contentJson })
+      .eq('id', existing.id);
+    if (error) console.error('Error updating:', error);
+    else console.log('Unit 1 updated in Supabase successfully!');
+  } else {
+    const { data, error } = await supabase
+      .from('tests')
+      .insert({
+        title: 'Unit 1',
+        test_type: 'vocabulary',
+        course_id: courseId,
+        folder_id: folderId,
+        content_json: contentJson,
+        is_published: true
+      });
+    if (error) console.error('Error inserting:', error);
+    else console.log('Unit 1 inserted into Supabase successfully!');
+  }
+}
+
+run();

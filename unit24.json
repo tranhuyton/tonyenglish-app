@@ -1,0 +1,332 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 24",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit24_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit24_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">block</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[blak]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A block is a solid piece of wood, stone or ice.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw a block of ice on the floor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cheer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To cheer is to give a loud shout of approval or encouragement.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The crowd all cheered when the home team won.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">complex</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑmpleks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is complex, it has many small parts. It is hard to understand.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A jig-saw puzzle can be complex because it has so many pieces.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">critic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kritik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A critic is someone who give their opinions about movies, books, plays.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wine critic tasted the wine so he could give his opinion.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">event</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ivɛnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An event is something that happens, especially something important.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Finishing high school was a major event in his life.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exercise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɛksərsaɪz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To exercise is to run or play sports so that you can be healthy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ You should exercise every day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something fits, it is small enough or the right size to go there.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The colorful eggs fit into the box.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">friendship</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[frendʃip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Friendship is the relationship between people who are friends.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Michael and Lisa have a very strong friendship with each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">guide</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɡaid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A guide is someone who shows you where to go.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We followed a guide at the park.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lack</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[læk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If there is a lack of something, there is not enough of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His only problem is a lack of money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">passage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pæsidʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A passage is a long area with walls that goes from one place to another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The long passage led us to the other side of the field.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">perform</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pərfɔːrm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To perform is to do something in front of people who watch.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He will perform a song for the class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pressure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[preʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Pressure is what you apply to make someone do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They put pressure on him to change his mind.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">probable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑbəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is probable, it is likely to happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is probable that you will get a good grade if you study for the test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">public</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌblik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is public, it is meant for everyone to use.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I went to the public park to play with my friends.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">strike</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[straɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To strike someone or something is to hit them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She struck the other girl in the face.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">support</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səpɔːrt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To support something is to like it and help it be successful.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Everyone at work supports the new plan.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">task</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tæsk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A task is work that someone has to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Who has the task of building the brick wall?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">term</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tɜːrm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A term is a word for something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I often use the term \"oops\" when I make a mistake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">unite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[junaɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To unite is to get together to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If we unite, we can finish our project faster.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Part A: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. probable",
+              "options": [
+                "a. a word for something",
+                "b. to hit",
+                "c. a leader",
+                "d. likely"
+              ],
+              "correctAnswer": "d. likely",
+              "explanation": "probable nghĩa là có khả năng xảy ra (likely)."
+            },
+            {
+              "id": "2",
+              "content": "2. lack",
+              "options": [
+                "a. to not have enough",
+                "b. to try to make people act",
+                "c. to have many parts",
+                "d. to do activities to be healthy"
+              ],
+              "correctAnswer": "a. to not have enough",
+              "explanation": "lack nghĩa là thiếu (to not have enough)."
+            },
+            {
+              "id": "3",
+              "content": "3. term",
+              "options": [
+                "a. available for everyone",
+                "b. to help something work",
+                "c. a thing that happens",
+                "d. a word for something"
+              ],
+              "correctAnswer": "d. a word for something",
+              "explanation": "term nghĩa là thuật ngữ (a word for something)."
+            },
+            {
+              "id": "4",
+              "content": "4. unite",
+              "options": [
+                "a. a person who dislikes",
+                "b. relationship between people who are friends",
+                "c. to work together",
+                "d. to do something to entertain"
+              ],
+              "correctAnswer": "c. to work together",
+              "explanation": "unite nghĩa là đoàn kết (to work together)."
+            },
+            {
+              "id": "5",
+              "content": "5. fit",
+              "options": [
+                "a. a large piece",
+                "b. connection between places",
+                "c. to be the right size",
+                "d. a loud shout of encouragement"
+              ],
+              "correctAnswer": "c. to be the right size",
+              "explanation": "fit nghĩa là vừa vặn (to be the right size)."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Part B: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. The car will (hit[1]) the wall if they don't slow down.",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "strike",
+                  "explanation": "hit tương đương với strike."
+                }
+              ]
+            },
+            {
+              "id": "7",
+              "content": "2. The athletes (run to stay healthy[1]) every morning.",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "exercise",
+                  "explanation": "run to stay healthy tương đương với exercise."
+                }
+              ]
+            },
+            {
+              "id": "8",
+              "content": "3. I hope they will (do in public[1]) a funny play.",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "perform",
+                  "explanation": "do in public tương đương với perform."
+                }
+              ]
+            },
+            {
+              "id": "9",
+              "content": "4. Is there a (way to get from one place to another[1]) in the city?",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "passage",
+                  "explanation": "way to get from one place to another tương đương với passage."
+                }
+              ]
+            },
+            {
+              "id": "10",
+              "content": "5. Her (effort to make someone do something[1]) made Brad change his mind.",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "pressure",
+                  "explanation": "effort to make someone do something tương đương với pressure."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 2: Check (V) the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. They've known each other for years...",
+              "options": [
+                "a. and have a good friendship",
+                "b. go to a passage"
+              ],
+              "correctAnswer": "a. and have a good friendship",
+              "explanation": "Biết nhau nhiều năm thì có tình bạn tốt."
+            },
+            {
+              "id": "12",
+              "content": "2. I don't know where we are...",
+              "options": [
+                "a. We need a guide",
+                "b. Let's perform right now"
+              ],
+              "correctAnswer": "a. We need a guide",
+              "explanation": "Không biết đang ở đâu thì cần hướng dẫn viên."
+            },
+            {
+              "id": "13",
+              "content": "3. The concert tonight...",
+              "options": [
+                "a. will strike the wall",
+                "b. will be a fun event"
+              ],
+              "correctAnswer": "b. will be a fun event",
+              "explanation": "Buổi hòa nhạc là một sự kiện vui vẻ."
+            },
+            {
+              "id": "14",
+              "content": "4. I gave him money because...",
+              "options": [
+                "a. I support his company",
+                "b. He didn't do any work"
+              ],
+              "correctAnswer": "a. I support his company",
+              "explanation": "Cho tiền vì ủng hộ công ty anh ấy."
+            },
+            {
+              "id": "15",
+              "content": "5. At the end of her speech...",
+              "options": [
+                "a. don't forget to cheer loudly",
+                "b. fit into your clothes"
+              ],
+              "correctAnswer": "a. don't forget to cheer loudly",
+              "explanation": "Kết thúc bài phát biểu thì cổ vũ."
+            },
+            {
+              "id": "16",
+              "content": "6. You don't have to pay to get in when...",
+              "options": [
+                "a. an accident is probable",
+                "b. you go to a public park"
+              ],
+              "correctAnswer": "b. you go to a public park",
+              "explanation": "Công viên công cộng thì miễn phí."
+            },
+            {
+              "id": "17",
+              "content": "7. You must think hard because...",
+              "options": [
+                "a. I am under pressure",
+                "b. the problem is complex"
+              ],
+              "correctAnswer": "b. the problem is complex",
+              "explanation": "Phải suy nghĩ nhiều vì vấn đề phức tạp."
+            },
+            {
+              "id": "18",
+              "content": "8. Glad is...",
+              "options": [
+                "a. another term for happy",
+                "b. the way people unite"
+              ],
+              "correctAnswer": "a. another term for happy",
+              "explanation": "Glad là một từ khác để chỉ sự vui vẻ."
+            },
+            {
+              "id": "19",
+              "content": "9. The artist made his art...",
+              "options": [
+                "a. from a block of wood",
+                "b. the people cheered for victory"
+              ],
+              "correctAnswer": "a. from a block of wood",
+              "explanation": "Nghệ sĩ làm nghệ thuật từ một khối gỗ."
+            },
+            {
+              "id": "20",
+              "content": "10. He thought the book was boring...",
+              "options": [
+                "a. He was a critic of it",
+                "b. He really enjoyed it"
+              ],
+              "correctAnswer": "a. He was a critic of it",
+              "explanation": "Nếu thấy chán, anh ấy là một nhà phê bình của nó."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Strong Friendship</h1>        <p style=\"margin-bottom: 1rem;\">Tim was the strongest man in the town. When he played sports, he always won. He <b>performed</b> and <b>exercised</b> in the <b>public</b> park. He did this to show everyone how strong he was. Most people liked him, but one man didn't. His name was Jack.</p>    <p style=\"margin-bottom: 1rem;\">Jack hated Tim. Jack was a movie <b>critic</b> and the smartest man in town. He could solve <b>complex</b> math problems. But no one cared. Jack wanted to be famous like Tim.</p>    <p style=\"margin-bottom: 1rem;\">One day, there was an unusual <b>event</b>. A big storm came suddenly. Snow covered the town. No one could get out. They needed food. The people said, \"This is a <b>task</b> for a strong man.\" Tim was under <b>pressure</b> to save them. But Jack wanted to be the hero, so they both went. Tim said, \"You can't help because of your <b>lack</b> of strength.\"</p>    <p style=\"margin-bottom: 1rem;\">But Jack found some small <b>passages</b> under the snow. One of them led toward another town. That town had food. Because Tim was so big and strong, he almost couldn't <b>fit</b> inside. They walked until there was a <b>block</b> of ice in their way. Jack said, \"We can't get past it. But if you <b>strike</b> it, it might break.\" Tim knew that was <b>probable</b>.</p>    <p style=\"margin-bottom: 1rem;\">He broke it. When there were more ice blocks, Tim broke them. That made him tired. He couldn't walk anymore.</p>    <p style=\"margin-bottom: 1rem;\">Jack said, \"Let's <b>unite</b> and <b>support</b> each other. I'll get the food alone. You rest here.\"</p>    <p style=\"margin-bottom: 1rem;\">Jack came back with food. Tim couldn't remember which <b>passage</b> led home. He needed Jack to be his <b>guide</b>. The men became friends by working together.</p>    <p style=\"margin-bottom: 1rem;\">In town, people saw Jack with the food and <b>cheered</b>. They called Jack a hero. But Jack didn't care. He was thinking of something else. He said to Tim, \"I thought I was smart, but I learned a new <b>term</b> today: <b>friendship</b>.\"</p></div>",
+      "imageUrl": "/unit24_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. What is the main idea of this story?",
+              "options": [
+                "a. The best way to strike blocks",
+                "b. How a strong man learned a new term",
+                "c. How two men unite and support each other",
+                "d. How to solve complex problems"
+              ],
+              "correctAnswer": "c. How two men unite and support each other",
+              "explanation": "Câu chuyện kể về sự đoàn kết và hỗ trợ lẫn nhau."
+            },
+            {
+              "id": "22",
+              "content": "2. How did Tim show people he was strong?",
+              "options": [
+                "a. He struck the critic in front of them.",
+                "b. He performed and exercised in public places.",
+                "c. He found a passage in the snow.",
+                "d. He lifted a block of ice for them."
+              ],
+              "correctAnswer": "b. He performed and exercised in public places.",
+              "explanation": "Tim biểu diễn và tập thể dục nơi công cộng để thể hiện sức mạnh."
+            },
+            {
+              "id": "23",
+              "content": "3. Why did Jack become a hero?",
+              "options": [
+                "a. He fit inside the passage.",
+                "b. He brought food to the town.",
+                "c. He put pressure on Tim to save the town.",
+                "d. He won every sport he played."
+              ],
+              "correctAnswer": "b. He brought food to the town.",
+              "explanation": "Anh ấy mang thức ăn về cho thị trấn."
+            },
+            {
+              "id": "24",
+              "content": "4. What did Tim think while in the passage?",
+              "options": [
+                "a. He thought breaking the ice was probable.",
+                "b. He thought the storm was an unusual event.",
+                "c. He thought he was a good guide for Jack.",
+                "d. He thought it was a very difficult task."
+              ],
+              "correctAnswer": "a. He thought breaking the ice was probable.",
+              "explanation": "Tim nghĩ rằng việc phá băng là có thể."
+            },
+            {
+              "id": "25",
+              "content": "5. What happened when Jack was called a hero?",
+              "options": [
+                "a. He didn't care.",
+                "b. He looked at Tim and said, \"I thought I was smart, but I learned a new term today: friendship.\"",
+                "c. He showed his strength.",
+                "d. He became a critic."
+              ],
+              "correctAnswer": "b. He looked at Tim and said, \"I thought I was smart, but I learned a new term today: friendship.\"",
+              "explanation": "Anh ấy nhận ra ý nghĩa của tình bạn."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
