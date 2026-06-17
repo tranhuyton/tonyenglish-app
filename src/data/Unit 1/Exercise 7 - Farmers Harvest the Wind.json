@@ -1,0 +1,125 @@
+{
+  "title": "Exercise 7 - Farmers Harvest the Wind",
+  "test_type": "IELTS-Reading",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<p><b>A</b> Some farmers and ranchers in the United States are raising a new cash crop: electricity. They have discovered that they own not only land but also the wind rights that go with that land.</p>\n<p><b>B</b> A farmer in Iowa who leases a quarter acre of cropland to the local utility as a site for a wind turbine can typically earn $2,000 a year in royalties from the electricity produced. In a good year, that same plot can produce $100 worth of corn. Wind turbines strung across the farm at appropriate intervals can provide a welcome boost to farm income, yielding a year-round cash flow.</p>\n<p><b>C</b> Harnessing the wind has become increasingly profitable. The American Wind Energy Association reports that the cost per kilowatt-hour of wind-generated electricity has fallen from 38¢ to 3¢ - 6¢ in 2000, depending primarily on wind speed at the site. Already competitive with other sources, the cost of wind-generated electricity is expected to continue to decline. These falling costs, facilitated by advances in wind turbine design, help explain why wind power is expanding rapidly beyond its original stronghold in California.</p>\n<p><b>D</b> As wind farms have come online in farming and ranching states such as Minnesota, Iowa, Texas, and Wyoming, wind electric generation has soared, pushing US wind-generating capacity from 1,928 megawatts in 1998 to 2,490 megawatts in 1999 — a gain of 29%. Contrary to public perceptions, the potential of wind power is enormous. A US Department of Energy wind resource inventory found that three states — North Dakota, Kansas, and Texas — have enough harnessable wind energy to meet the electricity needs for the whole country.</p>\n<p><b>E</b> In the Great Plains, where an acre of rangeland produces only $20 worth of beef a year or where an acre in wheat may yield $120 worth of grain, the attraction of wind power is obvious. For ranchers with prime wind sites, income from wind could easily exceed that from cattle sales. And the turbines scattered across a farm or ranch do not interfere with the use of the land for farming or cattle grazing.</p>\n<p><b>F</b> Another attraction is that much of the income generated stays in the local community, since a single large wind turbine can generate $100,000 or more worth of electricity per year, harnessing local wind energy can revitalize rural communities.</p>\n<p><b>G</b> Many state governments are taking the initiative. Minnesota is requiring its largest utility to install 425 megawatts of wind-generating capacity by 2002. In Texas, the legislature has set a goal of 2,000 megawatts of generating capacity from renewable sources by 2009, with most of it expected to come from the state's abundant wind power. In Colorado, offering a wind power option to both residential and business electricity users has led to the installation of 20 megawatts of wind-generating capacity — an amount expected to double soon.</p>\n<p><b>H</b> And it is not only the wind farms themselves that provide income, jobs, and tax revenue. The first utility-scale wind turbine manufacturing facility to be built outside of California has recently started operation in Champaign, Illinois, in the heart of the Corn Belt.</p>\n<p><b>I</b> Agricultural land values may soon reflect this new source of income. The wind meteorologist who identifies the best sites for turbines is playing a role in the emerging new energy economy comparable to that of the petroleum geologist in the old energy economy. The mere sight of a wind meteorologist installing wind-measuring instruments in a community could raise land prices.</p>\n<p><b>J</b> Satisfying the local demand for electricity from wind is not the end of the story. Cheap electricity produced from wind can be used to electrolyse water, producing hydrogen, now widely viewed as the fuel of the future. With automobiles powered by fuel cell engines expected on the market within a few years and with hydrogen as the fuel of choice for these new engines, a huge new market is opening up. Royal Dutch Shell, a leader in this area, is already starting to open hydrogen stations in Europe. William Ford, CEO of the Ford Motor Company, has said he expects to preside over the demise of the internal combustion engine.</p>\n<p><b>K</b> US \"wind farmers\" are part of a fast-growing global trend in the use of wind energy. Worldwide, wind electric generation in 1999 expanded by a staggering 39%. Wind already supplies 10% of Denmark's electricity. Spain's northern industrial province of Navarra gets 23% of its electricity from wind, up from zero just four years ago. In China, which recently brought its first wind farm online in Inner Mongolia, wind analysts estimate that the country's wind potential is sufficient to double national electricity generation.</p>\n<p><b>L</b> In Denmark, Germany, and the Netherlands, individual farmers are investing in the turbines themselves and selling the electricity to the local utilities, thus boosting the farmers' share of income from wind power.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-6",
+            "content": "<p>From the list of headings choose the most suitable headings for paragraphs B-G. Write the appropriate numbers (i-ix) in boxes 1-6 on your answer sheet. Paragraph A has been done as an example.</p><p><b>NB</b> There are more headings than paragraphs so you will not use all of them. You may use any heading more than once.</p><div style=\"padding: 10px; border: 1px solid black;\"><b>List of Headings</b><br>(i) Declining costs of wind power<br>(ii) State governments are taking action<br>(iii) Farm income increased<br>(iv) Large wind resource in US<br>(v) A new cash crop<br>(vi) A boost to rural economy<br>(vii) Land value raised<br>(viii) Extra income<br>(ix) Wide use of wind power</div>",
+            "questionType": "Droplist",
+            "questions": [
+              {
+                "id": "1",
+                "content": "Paragraph B",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "iii",
+                "explanation": ""
+              },
+              {
+                "id": "2",
+                "content": "Paragraph C",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "i",
+                "explanation": ""
+              },
+              {
+                "id": "3",
+                "content": "Paragraph D",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "iv",
+                "explanation": ""
+              },
+              {
+                "id": "4",
+                "content": "Paragraph E",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "viii",
+                "explanation": ""
+              },
+              {
+                "id": "5",
+                "content": "Paragraph F",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "vi",
+                "explanation": ""
+              },
+              {
+                "id": "6",
+                "content": "Paragraph G",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "ii",
+                "explanation": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "title": "Exercise 3 - More Than Sympathy",
+  "test_type": "IELTS-Reading",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<h3>More Than Sympathy</h3>\n<p><i>Tea now brews up health benefits and gourmet appeal</i></p>\n<p><b>A</b> Americans are far more sophisticated about beverages than they were 20 years ago. Witness the Starbucks revolution and you'll know where the trend goes. Now, spurred on by recent studies suggesting that it can cut the risk of cancer and heart disease and retard the aging process, tea is enjoying a similar jolt. Enough chic tea salons are springing up to make even die-hard coffee drinkers consider switching beverages.</p>\n<p><b>B</b> Tea is available in more places than ever. \"Tea was one of the most prolific beverage categories in 1999,\" with 24 per cent more products offered over the previous year, reports Tom Vierhile of Marketing Intelligence Service, which tracks food and beverage trends. And the Tea Association of the United States reports that from 1990 to 1999, annual sales of the drink grew to $4.6 billion from $1.8 billion. \"Green tea is seen by consumers as a 'functional food' — delivering health benefits beyond sustenance,\" says Vierhile.</p>\n<p><b>C</b> Recently published studies point out that not all brews are created equal. Only teas that come from the leaves of the plant <i>Camellia sinensis</i> — which, in their raw state are brewed to make green tea, and, with curing, can be turned into oolong and black tea leaves — have been shown to contain health benefits. Other herbal teas and infusions may taste good, yet they do little more than warm up the drinker. But for <i>Camellia sinensis</i>, the evidence is powerful. In a 1998 study, Harvard University researchers found that drinking one cup of black tea a day lowered the risk of heart attack by as much as 44 per cent compared with non-tea drinkers, and other studies have suggested that the antioxidants in these so-called real teas can also prevent cancer.</p>\n<p><b>D</b> One such antioxidant in green tea is ECGC, a compound 20 times as powerful as vitamin E and 200 times as powerful as vitamin C. \"When people ask me for something good and cheap they can do to reduce their cancer risk, I tell them drink real tea,\" says Mitchell Gaynor, director of medical oncology at New York City's Strang-Cornell Cancer Prevention Center.</p>\n<p><b>E</b> Among those inspired to become a green-tea drinker is Tess Ghilaga, a New York writer who took it up after consulting a nutritionist six years ago. \"I've never been a coffee drinker,\" says Ghilaga, 33. \"She told me to start drinking green tea for the antioxidant properties.\" Now Ghilaga and her husband routinely brew tea — they order theirs from InPursuitofTea.com, an Internet tea company. And although tea contains about half the amount of caffeine in a cup of coffee, \"you still get a nice buzz from it,\" says Ghilaga.</p>\n<p><b>F</b> Restaurants and coffee bars are also getting in on the act. \"In restaurants nowadays, you're a lot less likely to be offered a pitcher of hot water and a tea bag if you order tea after a meal,\" says Sebastian Beckwith of InPursuitofTea.com. At a Los Angeles coffee bar Urth Caffé, customers can select from 65 varieties of tea, coming from countries as diverse as China, Japan, India, and Iran, and enjoy a pot of tea for about the price of a gourmet coffee — $2.50 for a small pot and $3.50 for a large. \"The tea experience is the exact opposite of the coffee experience,\" says Urth Caffé co-founder Shallom Berkman, explaining the beverage's newfound popularity. \"Coffee jars you with its caffeine; tea is more nurturing and soothing, and people seem to be looking for that now.\" That could add up to lots of green for those who make their living in tea.</p>\n<p><b>G</b> www.alitea.com. Along with green, black, and oolong teas, this company sells a wide variety of herbal teas — and offers a \"Tea of the Month\" club.</p>\n<p>www.teasofgreen.com. This site sells higher-end green, black, and oolong teas and has good tips on proper storage and preparation of tea.</p>\n<p>www.tea.com. Tea drinkers can find links to sites offering tea lore, such as articles about tea ceremonies in foreign lands. An exhaustive \"frequently asked questions\" file rounds out the site.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-6",
+            "content": "<p>The following reading passage has seven paragraphs A-G. Choose the most suitable headings for paragraphs B-G from the list of headings below. Write the appropriate numbers (i-ix) in the spaces provided.</p>\n<p><b>NB</b> There are more headings than paragraphs so you will not use all of them. You may use any of the headings more than once.</p>\n<div style=\"border: 1px solid black; padding: 10px;\">\n<b>List of Headings</b>\n<br>(i) The spreading tea\n<br>(ii) The history of tea growing\n<br>(iii) Changes of tastes for drinks\n<br>(iv) Reducing cancer risks\n<br>(v) The plant <i>Camellia sinensis</i>\n<br>(vi) A woman's opinion of tea\n<br>(vii) Where to find it\n<br>(viii) Japanese tea\n<br>(ix) More varieties to choose from\n</div>\n<br>\n<p>Example: Paragraph A - Answer: iii</p>",
+            "questionType": "Droplist",
+            "questions": [
+              {
+                "id": "1",
+                "content": "Paragraph B",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "i",
+                "explanation": ""
+              },
+              {
+                "id": "2",
+                "content": "Paragraph C",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "v",
+                "explanation": ""
+              },
+              {
+                "id": "3",
+                "content": "Paragraph D",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "iv",
+                "explanation": ""
+              },
+              {
+                "id": "4",
+                "content": "Paragraph E",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "vi",
+                "explanation": ""
+              },
+              {
+                "id": "5",
+                "content": "Paragraph F",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "ix",
+                "explanation": ""
+              },
+              {
+                "id": "6",
+                "content": "Paragraph G",
+                "options": [
+                  "i",
+                  "ii",
+                  "iii",
+                  "iv",
+                  "v",
+                  "vi",
+                  "vii",
+                  "viii",
+                  "ix"
+                ],
+                "correctAnswer": "vii",
+                "explanation": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

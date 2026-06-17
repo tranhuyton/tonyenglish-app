@@ -1,0 +1,209 @@
+{
+  "title": "Exercise 2 - Population Growth and Food Supply",
+  "test_type": "IELTS-Reading",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<p><b>1</b> About two thirds of the world's population live in what are loosely called \"developing countries\". Of course, strictly speaking, all countries are developing, but the term is used to describe those which are undeniably poor. Although the rich countries have only about 34% of the world's population, they earn about 90% of the world's income. They also possess about 90% of the world's financial resources, and more than 80% of the world's scientists and technicians. They produce 80% of the world's protein \u2014 including 70% of its meat \u2014 and they eat it.</p>\n<p><b>2</b> Thanks to an impressive succession of agricultural revolutions, man's food-growing capacity is now hundreds of times larger than it was at the turn of the century, and we are now feeding more people than at any time in history. Nonetheless, the number of hungry and malnourished people is also larger than at any time in history. Admittedly, total food production has increased since 1961 in most parts of the world. Yet, per capita food production is little changed from the inadequate levels of the early 1960s. In short, world and regional production have barely kept up with population growth, as Fig. 1 shows.</p>\n<p><b>3</b> There appear to be five food problems. First, there is the problem of quantity \u2014 of every human being getting enough calories to provide him with the energy to work and progress. Second, there is that of quality \u2014 of everyone getting enough protein, vitamins, and necessary minerals. Next, there is the matter of distribution: we have to find satisfactory ways of transporting, storing and issuing food. Then there is the problem of poverty: many people in developing countries do not have money to buy food in sufficient quantity and of sufficient quality. And last, we must find ways of avoiding ecological side-effects. In other words, we must be able to grow enough food without further degrading our land, water and air.</p>\n<p><b>4</b> A number of proposals have been made to improve food quantity and quality. An obvious and very necessary one is to limit population growth. Another is to increase the amount of land under cultivation by clearing forests and by irrigating arid land. Furthermore, the ocean (comprising 70% of the Earth's surface) is a potential source of more food, and there have been developments recently in the use of nonconventional proteins and synthetic foods. And last, various attempts are being made to increase the yield per hectare by developing or selecting new genetic hybrids of plants (the \"Green Revolution\"), by increasing the use of fertilizers, water, pesticides and herbicides, and by using modern agricultural and management techniques in poorer countries.</p>\n<p><b>5</b> But the basic facts remain, which are that the world's population is increasing at a rate of about 3% p.a.. If food production can also be increased by 3% p.a., this will provide for human needs only at the present inadequate level. Something better is needed. Yet many countries are already failing to increase their rate of food production by 3% annually. The situation is particularly disturbing because population increase and inadequate food production are both worse in the very countries that are already short of food.</p>\n<p><b>6</b> Are we, then, doomed to massive famines in coming decades? There is no easy answer to this controversial question. The introduction of new high-yield wheat and rice in parts of Asia and Africa since 1967 created a wave of optimism. But by 1973, bad weather plus a realization of the limitations of this increase in yield caused a return to pessimism. Some experts point out that we are already experiencing the greatest famine in the history of mankind, with somewhere between 5 and 20 million human beings dying from starvation, malnutrition and malnutrition-caused diseases each year. Half are children under five.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-6",
+            "content": "<p>Choose a suitable heading for each paragraph of the passage from the list below. Note there are more headings than paragraphs.</p>\n<p>A. Food production must grow faster<br>B. Developing countries vs. rich countries<br>C. The Green Revolution<br>D. Avoiding ecological side-effects<br>E. Increasing the yield per hectare<br>F. What's our future?<br>G. Food problems<br>H. Food production growth vs. population growth<br>I. Consumption of resources in rich countries<br>J. Improving quantity and quality</p>",
+            "questionType": "Droplist",
+            "questions": [
+              {
+                "id": "1",
+                "content": "Paragraph 1",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J"
+                ],
+                "correctAnswer": "B",
+                "explanation": ""
+              },
+              {
+                "id": "2",
+                "content": "Paragraph 2",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J"
+                ],
+                "correctAnswer": "H",
+                "explanation": ""
+              },
+              {
+                "id": "3",
+                "content": "Paragraph 3",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J"
+                ],
+                "correctAnswer": "G",
+                "explanation": ""
+              },
+              {
+                "id": "4",
+                "content": "Paragraph 4",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J"
+                ],
+                "correctAnswer": "J",
+                "explanation": ""
+              },
+              {
+                "id": "5",
+                "content": "Paragraph 5",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J"
+                ],
+                "correctAnswer": "A",
+                "explanation": ""
+              },
+              {
+                "id": "6",
+                "content": "Paragraph 6",
+                "options": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E",
+                  "F",
+                  "G",
+                  "H",
+                  "I",
+                  "J"
+                ],
+                "correctAnswer": "F",
+                "explanation": ""
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "title": "Questions 7",
+            "content": "<p>Choose a suitable title for the passage from the list below by circling an appropriate letter.</p>",
+            "questionType": "Trắc nghiệm",
+            "questions": [
+              {
+                "id": "7",
+                "content": "Choose a suitable title for the passage from the list below.",
+                "options": [
+                  "A. Improve Food Quantity and Quality",
+                  "B. Feeding the World",
+                  "C. Problems Concerning Food Production",
+                  "D. The Success of the Green Revolution"
+                ],
+                "correctAnswer": "B. Feeding the World",
+                "explanation": ""
+              }
+            ]
+          },
+          {
+            "id": "3",
+            "title": "Questions 8-10",
+            "content": "<p>Answer the following questions.</p>",
+            "questionType": "Điền từ",
+            "questions": [
+              {
+                "id": "8",
+                "content": "When was the per capita food production the highest?",
+                "options": [],
+                "correctAnswer": "1972",
+                "explanation": ""
+              },
+              {
+                "id": "9",
+                "content": "Name two food problems.",
+                "options": [],
+                "correctAnswer": "Any two of the following: quantity, quality, poverty, distribution, ecological side-effects",
+                "explanation": ""
+              },
+              {
+                "id": "10",
+                "content": "Name two attempts made to increase the yield per hectare.",
+                "options": [],
+                "correctAnswer": "Any two of the following: developing new hybrids, increasing the use of fertilizers, water, pesticides and herbicides, using modern techniques",
+                "explanation": ""
+              }
+            ]
+          },
+          {
+            "id": "4",
+            "title": "Questions 11-13",
+            "content": "<p>Name one country that has had a \"Green Revolution\" in the following crop(s):</p>",
+            "questionType": "Điền từ",
+            "questions": [
+              {
+                "id": "11",
+                "content": "wheat",
+                "options": [],
+                "correctAnswer": "Pakistan / India",
+                "explanation": ""
+              },
+              {
+                "id": "12",
+                "content": "rice",
+                "options": [],
+                "correctAnswer": "Burma / Bangladesh / Thailand / Malaysia / Vietnam / the Philippines",
+                "explanation": ""
+              },
+              {
+                "id": "13",
+                "content": "wheat and corn",
+                "options": [],
+                "correctAnswer": "Mexico",
+                "explanation": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
