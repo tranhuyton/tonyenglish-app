@@ -302,13 +302,7 @@ const contentJson = {
 };
 
 async function run() {
-  const { data: u3 } = await supabase.from('tests').select('course_id, module_id').eq('title', 'Unit 3').single();
-  const courseId = u3 ? u3.course_id : null;
-
-  if (!courseId) {
-    console.error('Could not find courseId from Unit 3');
-    return;
-  }
+  const courseId = '8c3bea0e-458c-4c18-ab60-44b432e71170';
 
   const { data: existing, error: err2 } = await supabase.from('tests').select('id').eq('title', 'Unit 5').single();
 
