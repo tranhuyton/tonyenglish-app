@@ -1,0 +1,92 @@
+{
+  "unit": 13,
+  "words": [
+    { "word": "aboard", "pos": "prep.", "pron": "[abo:rd]", "def": "When someone is aboard a ship or plane, they are on or in it.", "ex": "They climbed aboard the kayak and paddled through the river." },
+    { "word": "bitter", "pos": "adj.", "pron": "[bitar]", "def": "When a person is bitter, they are upset with someone or a situation.", "ex": "He was extremely bitter when his computer crashed." },
+    { "word": "bullet", "pos": "n.", "pron": "[bulit]", "def": "A bullet is a small metal object that is shot out of guns.", "ex": "Bullets come in different sizes for different guns." },
+    { "word": "devil", "pos": "n.", "pron": "[devl]", "def": "The devil is a powerful evil spirit in some religions.", "ex": "The church promised protection from the devil." },
+    { "word": "drift", "pos": "v.", "pron": "[drift]", "def": "To drift means to be moved slowly by wind or water.", "ex": "The large chunk of ice drifted in the water." },
+    { "word": "enforce", "pos": "v.", "pron": "[enfo:rs]", "def": "To enforce means to make a person follow a rule.", "ex": "Police enforce traffic laws to keep everyone safe." },
+    { "word": "fountain", "pos": "n.", "pron": "[fauntin]", "def": "A fountain is a source of water made by people.", "ex": "There was a beautiful fountain in the middle of the park." },
+    { "word": "harbor", "pos": "n.", "pron": "[ha:rbar]", "def": "A harbor is an area of water along a shore where boats land.", "ex": "There were a few small boats in the harbor." },
+    { "word": "inhabit", "pos": "v.", "pron": "[inhabit]", "def": "To inhabit means to live in a certain place.", "ex": "No one inhabits the ancient city." },
+    { "word": "march", "pos": "v.", "pron": "[ma:rtj]", "def": "To march means to walk at a steady pace together with others.", "ex": "The soldiers marched in straight rows." },
+    { "word": "millionaire", "pos": "n.", "pron": "[miljaneer]", "def": "A millionaire is a person who has at least a million dollars.", "ex": "He became a millionaire because he was smart with his money." },
+    { "word": "port", "pos": "n.", "pron": "[po:rt]", "def": "A port is a place where ships stop to load and unload things.", "ex": "The ship was being loaded with materials at the port." },
+    { "word": "sheriff", "pos": "n.", "pron": "[jerif]", "def": "A sheriff is a police officer who is in charge of a large area.", "ex": "It was the sheriff’s job to make the city safe." },
+    { "word": "startle", "pos": "v.", "pron": "[sta:rtl]", "def": "To startle means to scare someone suddenly.", "ex": "The loud crash startled the sleeping woman." },
+    { "word": "sweat", "pos": "v.", "pron": "[swet]", "def": "To sweat means to lose liquid from the body through the skin.", "ex": "Whenever I workout, I sweat quite a bit." },
+    { "word": "trigger", "pos": "n.", "pron": "[trigar]", "def": "A trigger is the part of the gun that a person pulls to make it fire.", "ex": "The man had his finger on the trigger of the gun." },
+    { "word": "unify", "pos": "v.", "pron": "[ju:nafai]", "def": "To unify means to bring people or things together.", "ex": "With their good deeds, the children tried to unify the world." },
+    { "word": "vessel", "pos": "n.", "pron": "[vesal]", "def": "A vessel is a large ship or boat.", "ex": "We toured the area aboard a luxury vessel." },
+    { "word": "voyage", "pos": "n.", "pron": "[voiid3]", "def": "A voyage is a long journey made on a boat or an aircraft.", "ex": "The astronauts took off on a long voyage to the moon." },
+    { "word": "worship", "pos": "v.", "pron": "[wa:rjip]", "def": "To worship means to like and honor a person, thing, or religious figure.", "ex": "Many people around the world worship in a church." }
+  ],
+  "story": {
+    "title": "Sheriff Dan",
+    "paragraphs": [
+      "Dan was the evil sheriff of Oceantown. Dan was as cruel as the devil. He worshipped money. Dan was a millionaire, but he paid his police officers almost nothing. The police were very bitter, but Dan didn’t care. He only cared about his money.",
+      "Every person who inhabited Oceantown disliked him. Dan enforced cruel laws. Once, Dan even put his own brother in jail for throwing a coin into a fountain! Sometimes he pointed his gun into the air and pulled the trigger. He didn’t want the bullets to hit anyone. He just wanted to scare people with the loud sound.",
+      "Finally, the people of Oceantown decided that they had to get rid of Sheriff Dan. With their understanding, the crowd sought to unify the town. They marched to Dan’s house. He was startled by the sight when he ran to the door. When he opened the door, the crowd jumped on him. They used a rope to tie him to a chair. Dan yelled, “Get your hands off of me! I’ll put you all in jail for the rest of your lives!”",
+      "The crowd didn’t listen. They carried Dan to the harbor and put him aboard a vessel. Dan was so scared that he began to sweat. He begged, “If you let me go, I will give you all my money!”",
+      "The crowd said back, “Sheriff, we don’t care about your money. We know you will never change. We’re sending you on a voyage to the middle of the ocean.” The boat drifted out of the port, and Dan was never seen again. The people voted for a new sheriff who was kind and fair."
+    ]
+  },
+  "word_list_exercises": [
+    {
+      "title": "Exercise 1: Choose the word that is a better fit for each blank.",
+      "questions": [
+        { "content": "1. We cannot go on our ___________ because there are too many passengers on the small ___________. (voyage / vessel)", "options": ["voyage", "vessel", "port", "aboard"], "correctAnswer": "voyage", "explanation": "voyage (chuyến đi biển) hợp lý cho câu: không thể đi chuyến đi của chúng ta." },
+        { "content": "2. The ship entered the ___________, and boxes of supplies were put ___________. (aboard / port)", "options": ["port", "aboard", "harbor", "vessel"], "correctAnswer": "port", "explanation": "port (cảng) là nơi con tàu đi vào." },
+        { "content": "3. The criminal’s shirt was soaked with ___________ because he had been running from the ___________. (sheriff / sweat)", "options": ["sweat", "sheriff", "fountain", "devil"], "correctAnswer": "sweat", "explanation": "sweat (mồ hôi) làm ướt áo." },
+        { "content": "4. The ___________ flew his private jet across the world to visit a new ___________ that was said to bring people luck. (millionaire / fountain)", "options": ["millionaire", "fountain", "sheriff", "trigger"], "correctAnswer": "millionaire", "explanation": "millionaire (triệu phú) có máy bay riêng." },
+        { "content": "5. Churches ___________ many people that want a safe, quiet place to ___________. (worship / harbor)", "options": ["harbor", "worship", "inhabit", "march"], "correctAnswer": "harbor", "explanation": "harbor (chứa chấp, là nơi trú ẩn) phù hợp trong ngữ cảnh này." },
+        { "content": "6. Criminals ___________ a prison, and the guards ___________ the rules. (enforce / inhabit)", "options": ["inhabit", "enforce", "unify", "startle"], "correctAnswer": "inhabit", "explanation": "inhabit (cư ngụ, ở) tại nhà tù." },
+        { "content": "7. The criminal pulled the ___________ of the gun, but it had no ___________. (bullets / trigger)", "options": ["trigger", "bullets", "sweat", "devil"], "correctAnswer": "trigger", "explanation": "trigger (cò súng) được kéo." },
+        { "content": "8. To ___________ the new soldiers, the officer had them ___________ together for an hour. (unify / march)", "options": ["unify", "march", "drift", "startle"], "correctAnswer": "unify", "explanation": "unify (thống nhất, gắn kết) những người lính mới." },
+        { "content": "9. I’m going to ___________ my friends when I show up to the costume party dressed as a ___________. (startle / devil)", "options": ["startle", "devil", "bitter", "worship"], "correctAnswer": "startle", "explanation": "startle (làm giật mình) bạn bè." },
+        { "content": "10. The boy will be quite ___________ if you let his kite ___________ away. (bitter / drift)", "options": ["bitter", "drift", "aboard", "sweat"], "correctAnswer": "bitter", "explanation": "bitter (tức giận/cay đắng) khi để diều bay mất." }
+      ]
+    },
+    {
+      "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+      "questions": [
+        { "content": "1. I will go on a [long journey] to Japan this spring.", "options": ["voyage", "march", "harbor", "port"], "correctAnswer": "voyage", "explanation": "voyage mang nghĩa chuyến đi dài ngày." },
+        { "content": "2. I was [on a plane] headed to South America.", "options": ["aboard", "bitter", "drift", "unify"], "correctAnswer": "aboard", "explanation": "aboard nghĩa là ở trên tàu, máy bay." },
+        { "content": "3. The [part of a gun that you pull to make it fire] broke off the old gun.", "options": ["trigger", "bullet", "devil", "sheriff"], "correctAnswer": "trigger", "explanation": "trigger là cò súng." },
+        { "content": "4. The [police officer in charge of a large area] arrested the criminal who robbed the bank.", "options": ["sheriff", "millionaire", "vessel", "fountain"], "correctAnswer": "sheriff", "explanation": "sheriff là cảnh sát trưởng." },
+        { "content": "5. There is a beautiful [water source] at the shopping mall.", "options": ["fountain", "port", "harbor", "sweat"], "correctAnswer": "fountain", "explanation": "fountain là đài phun nước." },
+        { "content": "6. My brother likes to hide in the closet and [suddenly scare] me.", "options": ["startle", "enforce", "worship", "inhabit"], "correctAnswer": "startle", "explanation": "startle là làm giật mình." },
+        { "content": "7. The president wants to [bring together] the people of her country.", "options": ["unify", "march", "enforce", "drift"], "correctAnswer": "unify", "explanation": "unify là thống nhất, gắn kết." },
+        { "content": "8. We sailed the boat into the [area where the boats are supposed to land].", "options": ["harbor", "vessel", "voyage", "trigger"], "correctAnswer": "harbor", "explanation": "harbor là bến cảng." },
+        { "content": "9. I hope a bear doesn’t [live in] this cave!", "options": ["inhabit", "worship", "enforce", "startle"], "correctAnswer": "inhabit", "explanation": "inhabit là sinh sống, cư ngụ." },
+        { "content": "10. The [evil spirit] made me commit the horrible crime.", "options": ["devil", "sheriff", "millionaire", "bullet"], "correctAnswer": "devil", "explanation": "devil là ác quỷ, tà linh." }
+      ]
+    },
+    {
+      "title": "Exercise 3: Choose the answer that best fits the question.",
+      "questions": [
+        { "content": "1. Which of the following can afford very expensive things?", "options": ["A sheriff", "A trigger", "A millionaire", "A devil"], "correctAnswer": "A millionaire", "explanation": "A millionaire (Triệu phú) là người có thể mua những thứ đắt tiền." },
+        { "content": "2. How would a person feel if they were upset about a situation?", "options": ["Bitter", "Aboard", "Startled", "Unified"], "correctAnswer": "Bitter", "explanation": "Bitter diễn tả cảm giác tức giận, cay đắng về một tình huống." },
+        { "content": "3. Where can many sailors be found?", "options": ["With a bullet", "On a vessel", "In a fountain", "In a sweat"], "correctAnswer": "On a vessel", "explanation": "On a vessel (Trên con tàu) là nơi có nhiều thủy thủ." },
+        { "content": "4. What does a toy boat do on water?", "options": ["Worship", "Drift", "Inhabit", "Enforce"], "correctAnswer": "Drift", "explanation": "Drift (trôi dạt) là chuyển động của thuyền đồ chơi trên mặt nước." },
+        { "content": "5. What do people do in the army?", "options": ["Harbor", "Voyage", "March", "Port"], "correctAnswer": "March", "explanation": "March (hành quân) là hoạt động quân đội thường làm." }
+      ]
+    }
+  ],
+  "story_exercise": {
+    "title": "Reading Comprehension",
+    "questions": [
+      { "content": "Part A - 1. The sheriff enforced cruel laws.", "options": ["True", "False", "Not Given", "None of the above"], "correctAnswer": "True", "explanation": "Dan enforced cruel laws. (Đúng)" },
+      { "content": "Part A - 2. Dan pulled the trigger on his gun and shot bullets in the air to scare away criminals.", "options": ["True", "False", "Not Given", "None of the above"], "correctAnswer": "False", "explanation": "Dan bắn súng lên trời để dọa người dân, không phải tội phạm." },
+      { "content": "Part A - 3. With their understanding, the crowd sought to unify the town.", "options": ["True", "False", "Not Given", "None of the above"], "correctAnswer": "True", "explanation": "Đám đông đã đoàn kết cả thị trấn. (Đúng)" },
+      { "content": "Part A - 4. Dan’s police officers were paid almost nothing.", "options": ["True", "False", "Not Given", "None of the above"], "correctAnswer": "True", "explanation": "Cảnh sát hầu như không được trả lương. (Đúng)" },
+      { "content": "Part A - 5. Dan was sent on a voyage around the world.", "options": ["True", "False", "Not Given", "None of the above"], "correctAnswer": "False", "explanation": "Dan bị đưa lên một chuyến đi ra giữa đại dương, không phải vòng quanh thế giới." },
+      { "content": "Part A - 6. Every person who inhabited Oceantown worshipped Dan.", "options": ["True", "False", "Not Given", "None of the above"], "correctAnswer": "False", "explanation": "Mọi người sống ở Oceantown đều ghét Dan." },
+      { "content": "Part B - 1. Where did the crowd take Dan?", "options": ["To the streets", "To the harbor", "To Dan’s house", "To the jail"], "correctAnswer": "To the harbor", "explanation": "Họ đưa Dan đến bến cảng (harbor)." },
+      { "content": "Part B - 2. At the end of the reading, Dan .", "options": ["became fair and kind", "drifted into another port", "was never seen again", "made Oceantown happy"], "correctAnswer": "was never seen again", "explanation": "Sau khi bị thả trôi, Dan không bao giờ được nhìn thấy nữa (was never seen again)." },
+      { "content": "Part B - 3. Why did Dan put his brother in jail?", "options": ["He broke a fair law.", "He tied Dan to a chair.", "He startled Dan.", "He tossed a coin in a fountain."], "correctAnswer": "He tossed a coin in a fountain.", "explanation": "Dan tống anh trai vào tù chỉ vì ném một đồng xu vào đài phun nước." },
+      { "content": "Part B - 4. According to the reading, why did the crowd send Dan away?", "options": ["The police were bitter towards Dan.", "They wanted Dan’s money.", "Dan was a devil to them.", "They hated millionaires."], "correctAnswer": "Dan was a devil to them.", "explanation": "Mọi người coi Dan là một con quỷ độc ác." }
+    ]
+  }
+}

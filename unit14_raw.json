@@ -1,0 +1,510 @@
+{
+  "unit": 14,
+  "words": [
+    {
+      "word": "apprentice",
+      "pos": "n.",
+      "pron": "[əˈprentis]",
+      "def": "An apprentice is a person who learns how to do a job from a skilled person.",
+      "ex": "Mark is an apprentice chef at the restaurant."
+    },
+    {
+      "word": "assure",
+      "pos": "v.",
+      "pron": "[əˈʃuər]",
+      "def": "To assure someone is to tell them something is true to make them less worried.",
+      "ex": "He assured the boss that the building would be done on time."
+    },
+    {
+      "word": "bandage",
+      "pos": "n.",
+      "pron": "[ˈbændidʒ]",
+      "def": "A bandage is a piece of cloth used to stop bleeding.",
+      "ex": "If you cut yourself, please get a bandage from the first-aid kit."
+    },
+    {
+      "word": "bleed",
+      "pos": "v.",
+      "pron": "[bliːd]",
+      "def": "To bleed is to lose blood.",
+      "ex": "If you are not careful, you will cut your finger and bleed."
+    },
+    {
+      "word": "bond",
+      "pos": "v.",
+      "pron": "[bɑnd]",
+      "def": "To bond with someone is to become friends with them.",
+      "ex": "The women bonded after several hours of conversation."
+    },
+    {
+      "word": "chef",
+      "pos": "n.",
+      "pron": "[ʃef]",
+      "def": "A chef is a person who cooks in a restaurant.",
+      "ex": "Tom is a chef at the restaurant near my house."
+    },
+    {
+      "word": "crown",
+      "pos": "n.",
+      "pron": "[kraun]",
+      "def": "A crown is the hat worn by a king or queen.",
+      "ex": "The crown is made of gold."
+    },
+    {
+      "word": "departure",
+      "pos": "n.",
+      "pron": "[diˈpɑːrtʃər]",
+      "def": "A departure is the act of leaving a place.",
+      "ex": "They were excited about their departure back home."
+    },
+    {
+      "word": "diligent",
+      "pos": "adj.",
+      "pron": "[ˈdilədʒənt]",
+      "def": "If someone is diligent, they work hard and are careful.",
+      "ex": "Craig has always been a very diligent person at work."
+    },
+    {
+      "word": "emperor",
+      "pos": "n.",
+      "pron": "[ˈempərər]",
+      "def": "An emperor is the leader of a group of countries.",
+      "ex": "The emperor Julius Caesar was in control of ancient Rome."
+    },
+    {
+      "word": "fiber",
+      "pos": "n.",
+      "pron": "[ˈfaibər]",
+      "def": "Fiber is a thread of a substance used to make clothes or rope.",
+      "ex": "The mat was made from tiny fibers."
+    },
+    {
+      "word": "horrible",
+      "pos": "adj.",
+      "pron": "[ˈhɔːrəbl]",
+      "def": "If something is horrible, it is very bad.",
+      "ex": "The assignment was horrible. I hated it."
+    },
+    {
+      "word": "impolite",
+      "pos": "adj.",
+      "pron": "[ˌimpəˈlait]",
+      "def": "If someone is impolite, they are rude.",
+      "ex": "Roger is impolite to everyone he meets."
+    },
+    {
+      "word": "kneel",
+      "pos": "v.",
+      "pron": "[niːl]",
+      "def": "To kneel is to put one or both knees on the ground.",
+      "ex": "Daryl got down on one knee and asked Nina to marry him."
+    },
+    {
+      "word": "luxury",
+      "pos": "n.",
+      "pron": "[ˈlʌkʃəri]",
+      "def": "A luxury is an expensive thing that you do not need.",
+      "ex": "We stayed at a luxury resort for our honeymoon."
+    },
+    {
+      "word": "massive",
+      "pos": "adj.",
+      "pron": "[ˈmæsiv]",
+      "def": "If something is massive, it is very big.",
+      "ex": "The wheels on his truck were massive."
+    },
+    {
+      "word": "panic",
+      "pos": "v.",
+      "pron": "[ˈpænik]",
+      "def": "To panic is to feel so nervous or afraid that you cannot think clearly.",
+      "ex": "Everyone panicked when the house caught on fire."
+    },
+    {
+      "word": "priority",
+      "pos": "n.",
+      "pron": "[praiˈɔːrəti]",
+      "def": "A priority is something that is more important than other things.",
+      "ex": "My priority is to get good grades in school."
+    },
+    {
+      "word": "robe",
+      "pos": "n.",
+      "pron": "[roub]",
+      "def": "A robe is a long, loose piece of clothing.",
+      "ex": "Many people wear robes in the morning."
+    },
+    {
+      "word": "scold",
+      "pos": "v.",
+      "pron": "[skould]",
+      "def": "To scold means to criticize one angrily because they have done wrong.",
+      "ex": "Jesse was scolded by the teacher for not paying attention."
+    }
+  ],
+  "story": {
+    "title": "The Helpful Apprentice",
+    "paragraphs": [
+      "There was once a small restaurant. People said that the best chef in the world worked there. But the chef was a horrible person to work for. He was impolite and scolded his workers all the time.",
+      "The chef had a young apprentice. The apprentice's first priority was to make the best food in the world. He was happy to have a good teacher, but he didn't like the chef. The boy was a diligent worker, but the chef scolded him more than anyone else.",
+      "Then one day, the chef got great news. The emperor wanted to have dinner there that night. He was very excited. He was working very fast, and he made a mistake. He cut his hand with a knife, and it started to bleed. The apprentice gave him a bandage, but the chef still couldn't cook.",
+      "The chef started to panic. The apprentice tried to assure him. \"Everything will be OK,\" he said. But the chef was still afraid. Then they started to work together. They began to bond. The chef told the apprentice what to do. The boy cooked a great meal.",
+      "As soon as they finished, the emperor arrived. He wore a beautiful robe made of soft fibers. He also had a massive crown. Everyone in the restaurant kneeled when the emperor came in. The chef and the boy brought out his food. The emperor was used to luxuries. Would he like the food?",
+      "The emperor loved the food. After his departure, the chef was very proud and very thankful to his new friend, the apprentice."
+    ]
+  },
+  "word_list_exercises": [
+    {
+      "title": "Exercise 1: Choose the right word for the given definition.",
+      "questions": [
+        {
+          "content": "1. hardworking",
+          "options": [
+            "a. diligent",
+            "b. massive",
+            "c. horrible",
+            "d. impolite"
+          ],
+          "correctAnswer": "a. diligent",
+          "explanation": "diligent: chăm chỉ"
+        },
+        {
+          "content": "2. to lose control because of stress",
+          "options": [
+            "a. bleed",
+            "b. kneel",
+            "c. panic",
+            "d. bond"
+          ],
+          "correctAnswer": "c. panic",
+          "explanation": "panic: hoảng loạn"
+        },
+        {
+          "content": "3. a person learning a job",
+          "options": [
+            "a. emperor",
+            "b. apprentice",
+            "c. chef",
+            "d. thread"
+          ],
+          "correctAnswer": "b. apprentice",
+          "explanation": "apprentice: người học việc"
+        },
+        {
+          "content": "4. someone in control of a large area of land",
+          "options": [
+            "a. priority",
+            "b. luxury",
+            "c. assure",
+            "d. emperor"
+          ],
+          "correctAnswer": "d. emperor",
+          "explanation": "emperor: hoàng đế"
+        },
+        {
+          "content": "5. to angrily tell someone that they did something wrong",
+          "options": [
+            "a. scold",
+            "b. bandage",
+            "c. crown",
+            "d. robe"
+          ],
+          "correctAnswer": "a. scold",
+          "explanation": "scold: la mắng"
+        }
+      ]
+    },
+    {
+      "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+      "questions": [
+        {
+          "content": "1. The dinner plates with designs made of gold were a [treat but not needed].",
+          "options": [
+            "luxury",
+            "crown",
+            "chef",
+            "massive"
+          ],
+          "correctAnswer": "luxury",
+          "explanation": "luxury: xa xỉ phẩm"
+        },
+        {
+          "content": "2. The king wore a large, golden [hat].",
+          "options": [
+            "crown",
+            "robe",
+            "fiber",
+            "bandage"
+          ],
+          "correctAnswer": "crown",
+          "explanation": "crown: vương miện"
+        },
+        {
+          "content": "3. Joan is a [person who gets paid to cook in a restaurant].",
+          "options": [
+            "chef",
+            "apprentice",
+            "emperor",
+            "bond"
+          ],
+          "correctAnswer": "chef",
+          "explanation": "chef: đầu bếp"
+        },
+        {
+          "content": "4. George started to [lose blood] when he cut his finger.",
+          "options": [
+            "bleed",
+            "kneel",
+            "panic",
+            "assure"
+          ],
+          "correctAnswer": "bleed",
+          "explanation": "bleed: chảy máu"
+        },
+        {
+          "content": "5. The book was so [bad] that I couldn't read the whole thing.",
+          "options": [
+            "horrible",
+            "impolite",
+            "massive",
+            "diligent"
+          ],
+          "correctAnswer": "horrible",
+          "explanation": "horrible: tồi tệ"
+        },
+        {
+          "content": "6. It is [rude] to walk away when someone is talking to you.",
+          "options": [
+            "impolite",
+            "horrible",
+            "diligent",
+            "massive"
+          ],
+          "correctAnswer": "impolite",
+          "explanation": "impolite: bất lịch sự"
+        },
+        {
+          "content": "7. Everyone is supposed to [get down on one knee] when the king walks past.",
+          "options": [
+            "kneel",
+            "bleed",
+            "scold",
+            "panic"
+          ],
+          "correctAnswer": "kneel",
+          "explanation": "kneel: quỳ gối"
+        },
+        {
+          "content": "8. Her new boat is [very big]. Twenty people can ride on it.",
+          "options": [
+            "massive",
+            "diligent",
+            "horrible",
+            "impolite"
+          ],
+          "correctAnswer": "massive",
+          "explanation": "massive: to lớn"
+        },
+        {
+          "content": "9. He wanted to [become friends] with his new co-workers.",
+          "options": [
+            "bond",
+            "assure",
+            "panic",
+            "scold"
+          ],
+          "correctAnswer": "bond",
+          "explanation": "bond: gắn kết"
+        },
+        {
+          "content": "10. The long [threads] were woven into a warm scarf.",
+          "options": [
+            "fiber",
+            "bandage",
+            "robe",
+            "luxury"
+          ],
+          "correctAnswer": "fiber",
+          "explanation": "fiber: sợi"
+        }
+      ]
+    },
+    {
+      "title": "Exercise 3: Choose the answer that best fits the question.",
+      "questions": [
+        {
+          "content": "1. Why would someone need a bandage?",
+          "options": [
+            "a. They have overeaten.",
+            "b. They have a cut.",
+            "c. They are sweaty.",
+            "d. They are sleepy."
+          ],
+          "correctAnswer": "b. They have a cut.",
+          "explanation": "băng gạc được dùng khi bị đứt tay"
+        },
+        {
+          "content": "2. If someone panics, what might they do?",
+          "options": [
+            "a. Remain calm",
+            "b. Begin telling jokes",
+            "c. Take a quick nap to save energy",
+            "d. Scream and lose control"
+          ],
+          "correctAnswer": "d. Scream and lose control",
+          "explanation": "người hoảng loạn thường la hét và mất kiểm soát"
+        },
+        {
+          "content": "3. Where would you probably not see someone wearing a robe?",
+          "options": [
+            "a. At the office",
+            "b. In a hospital",
+            "c. At home",
+            "d. In a king and queen's castle"
+          ],
+          "correctAnswer": "a. At the office",
+          "explanation": "áo choàng thường không mặc ở văn phòng"
+        },
+        {
+          "content": "4. What is a good way to bond with a person?",
+          "options": [
+            "a. To find something you both like",
+            "b. To argue often",
+            "c. To tell rumors about them",
+            "d. To fight with them"
+          ],
+          "correctAnswer": "a. To find something you both like",
+          "explanation": "tìm sở thích chung là cách tốt để gắn kết"
+        },
+        {
+          "content": "5. Which answer below would not be considered an important priority?",
+          "options": [
+            "a. Paying your bills",
+            "b. Having at least three meals a day",
+            "c. Drinking plenty of liquids",
+            "d. Having ice cream"
+          ],
+          "correctAnswer": "d. Having ice cream",
+          "explanation": "ăn kem không phải là ưu tiên quan trọng"
+        },
+        {
+          "content": "6. Which of the following best describes an apprentice?",
+          "options": [
+            "a. An experienced chef",
+            "b. A woman learning to drive",
+            "c. A married man",
+            "d. A girl learning a new job"
+          ],
+          "correctAnswer": "d. A girl learning a new job",
+          "explanation": "apprentice là người đang học việc"
+        },
+        {
+          "content": "7. What will usually happen if someone is diligent?",
+          "options": [
+            "a. Success",
+            "b. Sadness",
+            "c. Failure",
+            "d. Laughter"
+          ],
+          "correctAnswer": "a. Success",
+          "explanation": "chăm chỉ thường dẫn đến thành công"
+        },
+        {
+          "content": "8. If you kneel, what does that make you become?",
+          "options": [
+            "a. Taller",
+            "b. Older",
+            "c. Smaller",
+            "d. Younger"
+          ],
+          "correctAnswer": "c. Smaller",
+          "explanation": "quỳ gối làm bạn trông thấp (nhỏ bé) hơn"
+        },
+        {
+          "content": "9. If you are assuring someone of something, what are you doing?",
+          "options": [
+            "a. Making them feel less worried",
+            "b. Relieving a high fever",
+            "c. Dreaming with them",
+            "d. Playing with them"
+          ],
+          "correctAnswer": "a. Making them feel less worried",
+          "explanation": "cam đoan giúp người khác bớt lo lắng"
+        },
+        {
+          "content": "10. Besides a departure time, airplane tickets will also have what other kind of time?",
+          "options": [
+            "a. A fun time",
+            "b. A sleep time",
+            "c. A movie time",
+            "d. An arrival time"
+          ],
+          "correctAnswer": "d. An arrival time",
+          "explanation": "vé máy bay có giờ khởi hành và giờ đến"
+        }
+      ]
+    }
+  ],
+  "story_exercise": {
+    "title": "Reading Comprehension",
+    "questions": [
+      {
+        "content": "Part A: Mark each statement T for true or F for false.",
+        "options": [
+          "1. The apprentice helped the chef make food for the Emperor.",
+          "2. The chef was a massive person that everyone hated.",
+          "3. The Emperor had a crown and a robe.",
+          "4. The chef's finger was bleeding and needed a bandage.",
+          "5. The chef was very polite and always scolded his workers.",
+          "6. The apprentice was a diligent worker."
+        ],
+        "correctAnswer": "1. T, 2. F (The chef was a horrible person that everyone hated.), 3. T, 4. T, 5. F (The chef was very impolite and always scolded his workers.), 6. T",
+        "explanation": "Xác định đúng/sai dựa vào nội dung câu chuyện."
+      },
+      {
+        "content": "Part B: 1. Why was the restaurant famous?",
+        "options": [
+          "a. It served beautiful fibers.",
+          "b. The chef was very impolite.",
+          "c. The best chef in the world worked there.",
+          "d. The Emperor ate there."
+        ],
+        "correctAnswer": "c. The best chef in the world worked there.",
+        "explanation": "Nhà hàng nổi tiếng vì có đầu bếp giỏi nhất thế giới."
+      },
+      {
+        "content": "Part B: 2. Why did the chef panic before the Emperor arrived?",
+        "options": [
+          "a. The apprentice assured him things were good.",
+          "b. He wanted to bond with the apprentice.",
+          "c. The Emperor was a horrible person.",
+          "d. He cut himself and couldn't cook."
+        ],
+        "correctAnswer": "d. He cut himself and couldn't cook.",
+        "explanation": "Đầu bếp hoảng loạn vì ông bị đứt tay và không thể nấu."
+      },
+      {
+        "content": "Part B: 3. What was the apprentice's first priority?",
+        "options": [
+          "a. To fill the restaurant with luxuries.",
+          "b. To cook great food.",
+          "c. To bond with the chef.",
+          "d. To make a meal for the Emperor."
+        ],
+        "correctAnswer": "b. To cook great food.",
+        "explanation": "Ưu tiên hàng đầu của người học việc là nấu món ăn ngon nhất thế giới."
+      },
+      {
+        "content": "Part B: 4. Why was the chef a bad person to work for?",
+        "options": [
+          "a. He was the best chef in the world.",
+          "b. He often cooked for the Emperor.",
+          "c. He often scolded his workers.",
+          "d. He wanted everyone to be diligent."
+        ],
+        "correctAnswer": "c. He often scolded his workers.",
+        "explanation": "Đầu bếp rất tệ vì ông thường xuyên mắng chửi nhân viên."
+      }
+    ]
+  }
+}

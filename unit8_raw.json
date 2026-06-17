@@ -1,0 +1,563 @@
+{
+  "unit": 8,
+  "words": [
+    {
+      "word": "anniversary",
+      "pos": "n.",
+      "pron": "[ænəvə́ːrsəri]",
+      "def": "An anniversary is a day that celebrates something from the past.",
+      "ex": "My parents went out to eat for their wedding anniversary."
+    },
+    {
+      "word": "arithmetic",
+      "pos": "n.",
+      "pron": "[əríθmətik]",
+      "def": "Arithmetic is math.",
+      "ex": "I like to study arithmetic at school."
+    },
+    {
+      "word": "ashamed",
+      "pos": "adj.",
+      "pron": "[əʃéimd]",
+      "def": "To be ashamed is to feel upset because you did something wrong or bad.",
+      "ex": "He was ashamed when he found out that I knew about his past."
+    },
+    {
+      "word": "burst",
+      "pos": "v.",
+      "pron": "[bəːrst]",
+      "def": "To burst is to suddenly break open or apart.",
+      "ex": "The bomb burst over the city."
+    },
+    {
+      "word": "carpenter",
+      "pos": "n.",
+      "pron": "[kɑ́ːrpəntər]",
+      "def": "A carpenter is a person who builds things with wood.",
+      "ex": "We hired a carpenter to make a cupboard."
+    },
+    {
+      "word": "coal",
+      "pos": "n.",
+      "pron": "[koul]",
+      "def": "Coal is a hard black rock that you burn for heat.",
+      "ex": "Many power stations burn coal to produce energy."
+    },
+    {
+      "word": "couch",
+      "pos": "n.",
+      "pron": "[kautʃ]",
+      "def": "A couch is a long, soft seat that many people can sit on.",
+      "ex": "Kim and Martin's new couch was very expensive."
+    },
+    {
+      "word": "drip",
+      "pos": "v.",
+      "pron": "[drip]",
+      "def": "When a liquid drips, just a little bit falls at a time.",
+      "ex": "I heard water dripping from the faucet."
+    },
+    {
+      "word": "elegant",
+      "pos": "adj.",
+      "pron": "[éləgənt]",
+      "def": "If something is elegant, it is very fancy and pleasing.",
+      "ex": "In Japan, women wear elegant kimonos on special occasions."
+    },
+    {
+      "word": "fabric",
+      "pos": "n.",
+      "pron": "[fǽbrik]",
+      "def": "Fabric is cloth used to make clothes, furniture, etc.",
+      "ex": "The towels were made from a soft fabric."
+    },
+    {
+      "word": "highlands",
+      "pos": "n.",
+      "pron": "[háiləndz]",
+      "def": "The highlands are high areas of land, usually with mountains.",
+      "ex": "The man had a small home in the highlands."
+    },
+    {
+      "word": "ivory",
+      "pos": "n.",
+      "pron": "[áivəri]",
+      "def": "Ivory is a white, hard substance that comes from elephants.",
+      "ex": "The elephant's long ivory tusks looked very impressive."
+    },
+    {
+      "word": "mill",
+      "pos": "n.",
+      "pron": "[mil]",
+      "def": "A mill is a building where flour is made.",
+      "ex": "The farmer took his wheat to the mill to make it into flour."
+    },
+    {
+      "word": "needle",
+      "pos": "n.",
+      "pron": "[níːdl]",
+      "def": "A needle is a small, sharp piece of metal that you use to make or fix clothes.",
+      "ex": "I used a needle to fix the hole in my pants."
+    },
+    {
+      "word": "polish",
+      "pos": "v.",
+      "pron": "[pɑ́liʃ]",
+      "def": "To polish something is to rub it in order to make it shiny.",
+      "ex": "Mark spent all morning polishing his shoes for the wedding."
+    },
+    {
+      "word": "sew",
+      "pos": "v.",
+      "pron": "[sou]",
+      "def": "To sew means to put pieces of cloth together using string.",
+      "ex": "I learned to sew when I was a little girl."
+    },
+    {
+      "word": "shed",
+      "pos": "n.",
+      "pron": "[ʃed]",
+      "def": "A shed is a small building where you store things like tools.",
+      "ex": "We have a small shed in the backyard for storage."
+    },
+    {
+      "word": "thread",
+      "pos": "n.",
+      "pron": "[θred]",
+      "def": "A thread is a thin piece of string.",
+      "ex": "I have many different colors of thread at home."
+    },
+    {
+      "word": "trim",
+      "pos": "v.",
+      "pron": "[trim]",
+      "def": "To trim something is to cut it a little bit.",
+      "ex": "I had my hair trimmed this afternoon."
+    },
+    {
+      "word": "upwards",
+      "pos": "adv.",
+      "pron": "[ʌ́pwərdz]",
+      "def": "If something goes upwards, it moves vertically higher.",
+      "ex": "The kite went upwards further and further."
+    }
+  ],
+  "story": {
+    "title": "The Anniversary Gift",
+    "paragraphs": [
+      "Joe was a carpenter. He built houses in the highlands. Joe's wife Stella used a needle and thread to sew elegant clothing. She only used beautiful fabric to make clothes.",
+      "Since they didn't have a lot of money, they lived in an old shed. Water dripped in when it rained. They had broken chairs instead of a couch. But they had coal for heat, and flour from the mill for bread. Together, they trimmed the bushes to make their house look nice. Joe and Stella were poor, but not ashamed. They were happy.",
+      "Sometimes in the evening, they walked downtown. They looked in store windows and dreamed. Stella wanted a hairbrush with an ivory handle. She pulled her hair upwards every day because she didn't have a brush to make it nice. Joe wanted to fix his grandfather's watch.",
+      "For their anniversary, Stella wanted to get Joe what he wanted. But then she did the arithmetic. It would take at least six months to save enough money. Then she had an idea. She cut off all of her hair and sold it.",
+      "Meanwhile, Joe knew that he could never fix his watch. So he polished it and sold it. He made enough to buy the brush.",
+      "On their anniversary, the door burst open. Joe was excited to give Stella his gift. But first, Stella gave him the money to fix the watch. When he saw his wife without any hair, he smiled. \"I sold my watch to buy you something,\" Joe said. He gave her the brush, and she laughed. They were both willing to give up something very special to make each other happy."
+    ]
+  },
+  "word_list_exercises": [
+    {
+      "title": "Exercise 1: Choose the word that is the better fit for each blank.",
+      "questions": [
+        {
+          "content": "1. Because it was their _____, my father bought my mother a gift. It was an _____ coat.",
+          "options": [
+            "anniversary / elegant",
+            "arithmetic / upwards",
+            "ashamed / couch",
+            "burst / dripped"
+          ],
+          "correctAnswer": "anniversary / elegant",
+          "explanation": "anniversary: kỉ niệm, elegant: thanh lịch."
+        },
+        {
+          "content": "2. It takes a lot of _____ to design new airplanes. You have to know how to make them go _____ in the easiest way.",
+          "options": [
+            "arithmetic / upwards",
+            "ashamed / couch",
+            "burst / dripped",
+            "carpenter / sew"
+          ],
+          "correctAnswer": "arithmetic / upwards",
+          "explanation": "arithmetic: toán học, upwards: hướng lên."
+        },
+        {
+          "content": "3. You should be _____ of yourself! You know you're not supposed to eat on the _____.",
+          "options": [
+            "ashamed / couch",
+            "burst / dripped",
+            "carpenter / sew",
+            "highlands / coal"
+          ],
+          "correctAnswer": "ashamed / couch",
+          "explanation": "ashamed: xấu hổ, couch: ghế dài."
+        },
+        {
+          "content": "4. When the wind blew, the door _____ open. And since it was raining, water _____ into the room.",
+          "options": [
+            "burst / dripped",
+            "carpenter / sew",
+            "highlands / coal",
+            "needle / ivory"
+          ],
+          "correctAnswer": "burst / dripped",
+          "explanation": "burst: bật mở, dripped: nhỏ giọt."
+        },
+        {
+          "content": "5. My brother is a _____, so he knows about construction. However, he doesn't know how to _____.",
+          "options": [
+            "carpenter / sew",
+            "highlands / coal",
+            "needle / ivory",
+            "mill / threads"
+          ],
+          "correctAnswer": "carpenter / sew",
+          "explanation": "carpenter: thợ mộc, sew: may vá."
+        },
+        {
+          "content": "6. I heard a news story about something in the _____. I guess they found _____ under the ground.",
+          "options": [
+            "highlands / coal",
+            "needle / ivory",
+            "mill / threads",
+            "polish / fabric"
+          ],
+          "correctAnswer": "highlands / coal",
+          "explanation": "highlands: vùng cao nguyên, coal: than đá."
+        },
+        {
+          "content": "7. Archeologist found _____ made from _____ in Africa.",
+          "options": [
+            "needles / ivory",
+            "mills / threads",
+            "polishes / fabrics",
+            "sheds / trims"
+          ],
+          "correctAnswer": "needles / ivory",
+          "explanation": "needles: cây kim, ivory: ngà voi. (Lưu ý: số nhiều của needle)."
+        },
+        {
+          "content": "8. People who work at the _____ do many things to stay safe. For example, they do not have _____ hanging from their clothing because they can get caught in the machinery.",
+          "options": [
+            "mill / threads",
+            "polish / fabric",
+            "shed / trim",
+            "anniversary / elegant"
+          ],
+          "correctAnswer": "mill / threads",
+          "explanation": "mill: cối xay, threads: sợi chỉ."
+        },
+        {
+          "content": "9. Bruce worked hard to _____ the wood floors. Afterwards, he wiped the floor with a soft _____.",
+          "options": [
+            "polish / fabric",
+            "shed / trim",
+            "anniversary / elegant",
+            "arithmetic / upwards"
+          ],
+          "correctAnswer": "polish / fabric",
+          "explanation": "polish: đánh bóng, fabric: vải."
+        },
+        {
+          "content": "10. On Saturday, my dad made me clean out the _____. I also had to _____ the bushes.",
+          "options": [
+            "shed / trim",
+            "anniversary / elegant",
+            "arithmetic / upwards",
+            "ashamed / couch"
+          ],
+          "correctAnswer": "shed / trim",
+          "explanation": "shed: nhà kho, trim: cắt tỉa."
+        }
+      ]
+    },
+    {
+      "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+      "questions": [
+        {
+          "content": "1. How good are you at [math]?",
+          "options": [
+            "arithmetic",
+            "thread",
+            "trim",
+            "fabric"
+          ],
+          "correctAnswer": "arithmetic",
+          "explanation": "math (toán học) tương đương arithmetic."
+        },
+        {
+          "content": "2. There were some [thin strings] hanging from my shirt.",
+          "options": [
+            "threads",
+            "mills",
+            "fabrics",
+            "sheds"
+          ],
+          "correctAnswer": "threads",
+          "explanation": "thin strings (sợi chỉ) tương đương threads."
+        },
+        {
+          "content": "3. I wanted to get a little hair [cut off] today, but I had no time to make it to the salon.",
+          "options": [
+            "trimmed",
+            "sewed",
+            "polished",
+            "burst"
+          ],
+          "correctAnswer": "trimmed",
+          "explanation": "cut off (cắt tỉa) tương đương trimmed. Lưu ý từ gốc là trim."
+        },
+        {
+          "content": "4. The [cloth] was dirty from being outside.",
+          "options": [
+            "fabric",
+            "coal",
+            "ivory",
+            "needle"
+          ],
+          "correctAnswer": "fabric",
+          "explanation": "cloth (vải) tương đương fabric."
+        },
+        {
+          "content": "5. Smoke from the fire rose [high into the air].",
+          "options": [
+            "upwards",
+            "elegant",
+            "ashamed",
+            "highlands"
+          ],
+          "correctAnswer": "upwards",
+          "explanation": "high into the air (lên cao) tương đương upwards."
+        },
+        {
+          "content": "6. Sometimes the dog goes inside the [small building with tools] when it gets cold.",
+          "options": [
+            "shed",
+            "mill",
+            "couch",
+            "carpenter"
+          ],
+          "correctAnswer": "shed",
+          "explanation": "small building with tools (nhà kho) tương đương shed."
+        },
+        {
+          "content": "7. I live in the [mountainous area] of the country.",
+          "options": [
+            "highlands",
+            "anniversary",
+            "arithmetic",
+            "fabric"
+          ],
+          "correctAnswer": "highlands",
+          "explanation": "mountainous area (vùng núi cao) tương đương highlands."
+        },
+        {
+          "content": "8. The old [place where they made flour] was interesting to visit.",
+          "options": [
+            "mill",
+            "shed",
+            "couch",
+            "coal"
+          ],
+          "correctAnswer": "mill",
+          "explanation": "place where they made flour (cối xay gió/nhà máy bột) tương đương mill."
+        },
+        {
+          "content": "9. I used to [put cloth together] with my grandmother.",
+          "options": [
+            "sew",
+            "trim",
+            "burst",
+            "drip"
+          ],
+          "correctAnswer": "sew",
+          "explanation": "put cloth together (khâu vá) tương đương sew."
+        },
+        {
+          "content": "10. The silver was [made to look shiny].",
+          "options": [
+            "polished",
+            "dripped",
+            "ashamed",
+            "trimmed"
+          ],
+          "correctAnswer": "polished",
+          "explanation": "made to look shiny (đánh bóng) tương đương polished."
+        }
+      ]
+    },
+    {
+      "title": "Exercise 3: Choose the answer that best fits the question.",
+      "questions": [
+        {
+          "content": "1. What kind of material does a carpenter work with?",
+          "options": [
+            "Plastic",
+            "Iron",
+            "Brick",
+            "Wood"
+          ],
+          "correctAnswer": "Wood",
+          "explanation": "Thợ mộc (carpenter) làm việc với gỗ (wood)."
+        },
+        {
+          "content": "2. Which of these things could drip?",
+          "options": [
+            "A dog",
+            "Water",
+            "A ball",
+            "Dirt"
+          ],
+          "correctAnswer": "Water",
+          "explanation": "Nước (water) có thể nhỏ giọt (drip)."
+        },
+        {
+          "content": "3. What could you make with a needle?",
+          "options": [
+            "A shirt",
+            "A car",
+            "A computer",
+            "A chair"
+          ],
+          "correctAnswer": "A shirt",
+          "explanation": "Bạn có thể may áo (A shirt) bằng kim (needle)."
+        },
+        {
+          "content": "4. What does it mean if your water pipes burst?",
+          "options": [
+            "They are new.",
+            "They've been cleaned.",
+            "They are frozen.",
+            "They've exploded."
+          ],
+          "correctAnswer": "They've exploded.",
+          "explanation": "Burst nghĩa là nổ tung, phá vỡ (exploded)."
+        },
+        {
+          "content": "5. Which is the same color as ivory?",
+          "options": [
+            "A needle",
+            "A tooth",
+            "Coal",
+            "Wood"
+          ],
+          "correctAnswer": "A tooth",
+          "explanation": "Ngà voi (ivory) có màu trắng giống như chiếc răng (A tooth)."
+        }
+      ]
+    }
+  ],
+  "story_exercise": {
+    "title": "Reading Comprehension",
+    "questions": [
+      {
+        "content": "1. Stella and Joe were ashamed of themselves.",
+        "options": [
+          "True",
+          "False",
+          "Not mentioned",
+          "None of the above"
+        ],
+        "correctAnswer": "False",
+        "explanation": "Trong truyện viết: 'Joe and Stella were poor, but not ashamed.' (Họ nghèo nhưng không xấu hổ)."
+      },
+      {
+        "content": "2. Joe was a carpenter.",
+        "options": [
+          "True",
+          "False",
+          "Not mentioned",
+          "None of the above"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Đúng, truyện viết: 'Joe was a carpenter.'"
+      },
+      {
+        "content": "3. Stella and Joe were too poor to heat their shed with coal.",
+        "options": [
+          "True",
+          "False",
+          "Not mentioned",
+          "None of the above"
+        ],
+        "correctAnswer": "False",
+        "explanation": "Trong truyện viết họ dùng than đá (coal) để sưởi ấm."
+      },
+      {
+        "content": "4. Joe asked Stella to trim the bushes.",
+        "options": [
+          "True",
+          "False",
+          "Not mentioned",
+          "None of the above"
+        ],
+        "correctAnswer": "False",
+        "explanation": "Họ cùng nhau cắt tỉa bụi rậm (Together, they trimmed the bushes)."
+      },
+      {
+        "content": "5. Stella used a needle and thread to sew elegant things with beautiful fabric.",
+        "options": [
+          "True",
+          "False",
+          "Not mentioned",
+          "None of the above"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Đúng, cô ấy dùng kim chỉ may những thứ thanh lịch."
+      },
+      {
+        "content": "6. Water dripped into their house.",
+        "options": [
+          "True",
+          "False",
+          "Not mentioned",
+          "None of the above"
+        ],
+        "correctAnswer": "True",
+        "explanation": "Đúng, nước nhỏ giọt vào nhà (Water dripped in when it rained)."
+      },
+      {
+        "content": "7. Where were the houses that Joe worked on?",
+        "options": [
+          "Near the mill",
+          "In the shed",
+          "On an elegant street",
+          "In the highlands"
+        ],
+        "correctAnswer": "In the highlands",
+        "explanation": "Joe làm thợ mộc xây nhà ở vùng cao nguyên (He built houses in the highlands)."
+      },
+      {
+        "content": "8. What did Joe do with his watch?",
+        "options": [
+          "Hit it with his hammer",
+          "Lifted it upward to see it",
+          "Left it in the shed",
+          "Polished it and sold it"
+        ],
+        "correctAnswer": "Polished it and sold it",
+        "explanation": "Joe đánh bóng và bán đồng hồ của mình (He polished it and sold it)."
+      },
+      {
+        "content": "9. What did Stella make?",
+        "options": [
+          "Elegant clothing",
+          "Ivory hairbrushes",
+          "Couches",
+          "Anything for herself"
+        ],
+        "correctAnswer": "Elegant clothing",
+        "explanation": "Stella may những bộ quần áo thanh lịch (elegant clothing)."
+      },
+      {
+        "content": "10. What did Stella do for Joe on their anniversary?",
+        "options": [
+          "Sold her hair",
+          "Combed her hair",
+          "Made him a shirt",
+          "Bought him a gold watch"
+        ],
+        "correctAnswer": "Sold her hair",
+        "explanation": "Stella đã bán tóc của mình để mua quà cho Joe (She cut off all of her hair and sold it)."
+      }
+    ]
+  }
+}

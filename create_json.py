@@ -1,0 +1,98 @@
+import json
+data = {
+  'unit': 9,
+  'words': [
+    {'word': 'ail', 'pos': 'v.', 'pron': '[eil]', 'def': 'To ail a person or group is to cause difficulty or pain.', 'ex': 'My brother went to the doctor to see what was ailing him.'},
+    {'word': 'ally', 'pos': 'n.', 'pron': '[ælai]', 'def': 'An ally is someone who agrees to help or support you.', 'ex': 'I was happy to find many allies who shared the same opinion as me.'},
+    {'word': 'boast', 'pos': 'v.', 'pron': '[boust]', 'def': 'To boast is to talk about how good you are.', 'ex': 'We all became tired of listening to him boast about himself all day.'},
+    {'word': 'bounce', 'pos': 'v.', 'pron': '[bauns]', 'def': 'To bounce is to move something up and away from a surface after hitting it.', 'ex': 'Owen bounced the ball on the ground.'},
+    {'word': 'bully', 'pos': 'n.', 'pron': '[buli]', 'def': 'A bully is a person who is mean to others.', 'ex': 'The two bullies always picked on the smaller, weaker kids.'},
+    {'word': 'carbohydrate', 'pos': 'n.', 'pron': '[ka:rbouhaidreit]', 'def': 'Carbohydrates are substances in foods like bread that give you energy.', 'ex': 'Carbohydrates like rice are a good source of energy for active people.'},
+    {'word': 'crawl', 'pos': 'v.', 'pron': '[krɔ:l]', 'def': 'To crawl is to move slowly on your hands and knees.', 'ex': 'The baby crawled across the floor.'},
+    {'word': 'defeat', 'pos': 'v.', 'pron': '[difi:t]', 'def': 'To defeat someone is to beat them in a game or battle.', 'ex': 'The champion defeated the challenger in the boxing match.'},
+    {'word': 'dial', 'pos': 'n.', 'pron': '[daial]', 'def': 'A dial is the front of a clock.', 'ex': 'I looked at the dial to see what time it was.'},
+    {'word': 'dominant', 'pos': 'adj.', 'pron': '[dɑmənənt]', 'def': 'When someone or something is dominant, they are stronger than others.', 'ex': 'The gorilla is one of the dominant animals in the jungle.'},
+    {'word': 'mercy', 'pos': 'n.', 'pron': '[mɝ:si]', 'def': 'If you show mercy, you choose not to punish or harm someone.', 'ex': 'He asked his boss for mercy and to not fire him.'},
+    {'word': 'nod', 'pos': 'v.', 'pron': '[nɑd]', 'def': 'To nod is to move your head up and down.', 'ex': 'I nodded my head as I listened to the song.'},
+    {'word': 'opponent', 'pos': 'n.', 'pron': '[əpounənt]', 'def': 'An opponent is someone who fights against you.', 'ex': 'On the field, our opponents were too good for us.'},
+    {'word': 'quarrel', 'pos': 'v.', 'pron': '[kwɔ:rəl]', 'def': 'To quarrel is to argue or fight.', 'ex': 'Billy quarreled with his wife about buying a new house.'},
+    {'word': 'rival', 'pos': 'n.', 'pron': '[raivəl]', 'def': 'A rival is someone that is trying to keep you from getting what you want.', 'ex': 'The three rivals were all competing for the same job.'},
+    {'word': 'sore', 'pos': 'adj.', 'pron': '[sɔ:r]', 'def': 'When a part of your body is sore, it hurts.', 'ex': 'After lifting the heavy box, Mona\'s back was sore.'},
+    {'word': 'sting', 'pos': 'v.', 'pron': '[stiŋ]', 'def': 'To sting is to cause pain by pushing a sharp part into the skin.', 'ex': 'The needle stung my arm and made me say, "Ouch!"'},
+    {'word': 'strain', 'pos': 'v.', 'pron': '[strein]', 'def': 'To strain is to try very hard.', 'ex': 'Casey strained to lift the heavy box.'},
+    {'word': 'torture', 'pos': 'n.', 'pron': '[tɔ:rtʃər]', 'def': 'Torture is something that causes you physical or mental pain.', 'ex': 'Greg thought that writing the essay was torture.'},
+    {'word': 'wrestle', 'pos': 'v.', 'pron': '[resəl]', 'def': 'To wrestle is to play a game where you try to push someone to the floor.', 'ex': 'My dad loved to wrestle when he was in high school.'}
+  ],
+  'story': {
+    'title': 'Dalton vs. the Bully',
+    'paragraphs': [
+      "Dalton was a nice boy, but sometimes the other boys made fun of him because he was so tall and skinny. Dalton's biggest problem was Mitch. He was a bully who boasted about his strength. He quarreled with the other boys. Sometimes, if boys gave Mitch their lunch money, he would have mercy and leave them alone.",
+      "One day, the boys learned about a special Middle School Olympics. Their gym class was going to be in it. Many kids were excited. But Dalton thought it sounded like torture.",
+      "That morning, Dalton ate plenty of carbohydrates for breakfast. He entered the gym and looked at the dial on the clock. It was time to begin. The teacher asked if they were ready. Everyone nodded, except Dalton.",
+      "\"I got stung by a bee. I need to see the nurse.\" said Dalton. He made it up so he wouldn't have to play.",
+      "\"I don't believe you. Get ready to play,\" responded the coach.",
+      "First, they wrestled. Then they jumped, crawled and played other games. But Mitch was dominant in every event.",
+      "They strained all morning to defeat him. By lunch, they were sore. Their entire bodies ailed them. They thought about how to win. They knew the last game of the day was volleyball. Kids who used to be Dalton's rivals became his allies. They wanted him to help them beat Mitch. Dalton was going to be Mitch's opponent.",
+      "The game started. Every time Mitch tried to hit the ball over the net, Dalton stopped it. Finally, Mitch used all of his strength. But the ball bounced off Dalton's hands and back into Mitch's face! Finally Mitch was defeated."
+    ]
+  },
+  'word_list_exercises': [
+    {
+      'title': 'Part A: Choose the word for the given definition.',
+      'questions': [
+        {'content': '1. someone who helps you', 'options': ['bully', 'ally', 'bounce', 'quarrel'], 'correctAnswer': 'ally', 'explanation': '\"ally\" nghĩa là đồng minh, người giúp đỡ bạn.'},
+        {'content': '2. to move your head up and down', 'options': ['wrestle', 'strain', 'nod', 'defeat'], 'correctAnswer': 'nod', 'explanation': '\"nod\" nghĩa là gật đầu.'},
+        {'content': '3. to move on your hands and knees', 'options': ['crawl', 'boast', 'torture', 'mercy'], 'correctAnswer': 'crawl', 'explanation': '\"crawl\" nghĩa là bò, trườn.'},
+        {'content': '4. to move something up and away after hitting it', 'options': ['sore', 'sting', 'defeat', 'bounce'], 'correctAnswer': 'bounce', 'explanation': '\"bounce\" nghĩa là nảy lên.'},
+        {'content': '5. to cause difficulty or pain', 'options': ['rival', 'ail', 'whistle', 'carbohydrate'], 'correctAnswer': 'ail', 'explanation': '\"ail\" nghĩa là gây khó khăn hay đau đớn cho ai đó.'}
+      ]
+    },
+    {
+      'title': 'Part B: Choose the right definition for the given word.',
+      'questions': [
+        {'content': '1. boast', 'options': ['to go on your hands', 'to be mean to people', 'to move you head', 'to talk about yourself'], 'correctAnswer': 'to talk about yourself', 'explanation': '\"boast\" nghĩa là khoác lác, nói nhiều về bản thân.'},
+        {'content': '2. dominant', 'options': ['to be hurt', 'a friend', 'stronger', 'a fight'], 'correctAnswer': 'stronger', 'explanation': '\"dominant\" nghĩa là vượt trội, mạnh hơn.'},
+        {'content': '3. defeat', 'options': ['to feel tired', 'to try hard', 'to beat', 'a face'], 'correctAnswer': 'to beat', 'explanation': '\"defeat\" nghĩa là đánh bại.'},
+        {'content': '4. mercy', 'options': ['someone on the other side', 'to push to the ground', 'to not give punishment', 'to feel terrible'], 'correctAnswer': 'to not give punishment', 'explanation': '\"mercy\" nghĩa là lòng khoan dung, không trừng phạt.'},
+        {'content': '5. carbohydrate', 'options': ['to win', 'to move off of something', 'to cause an injury', 'food'], 'correctAnswer': 'food', 'explanation': '\"carbohydrate\" là tinh bột (có trong thức ăn).'},
+        {'content': '6. quarrel', 'options': ['an argument', 'a face of a clock', 'to move your head', 'to talk about yourself'], 'correctAnswer': 'an argument', 'explanation': '\"quarrel\" nghĩa là cuộc cãi vã, tranh luận.'},
+        {'content': '7. strain', 'options': ['to try very hard', 'a friend', 'stronger', 'to move something up and away'], 'correctAnswer': 'to try very hard', 'explanation': '\"strain\" nghĩa là cố gắng hết sức.'},
+        {'content': '8. rival', 'options': ['to move the head up and down', 'to try hard', 'food', 'one who keeps another from getting something'], 'correctAnswer': 'one who keeps another from getting something', 'explanation': '\"rival\" nghĩa là đối thủ.'},
+        {'content': '9. wrestle', 'options': ['someone on the other side', 'to push to the ground', 'to be hurt', 'to feel terrible'], 'correctAnswer': 'to push to the ground', 'explanation': '\"wrestle\" nghĩa là vật lộn, đẩy ai đó xuống đất.'},
+        {'content': '10. sore', 'options': ['not giving another punishment', 'to be hurt', 'to cause an injury', 'to move on the floor'], 'correctAnswer': 'to be hurt', 'explanation': '\"sore\" nghĩa là bị đau nhức.'}
+      ]
+    },
+    {
+      'title': 'Exercise 2: Write a word that is similar in meaning to the underlined part.',
+      'questions': [
+        {'content': '1. Carol is always talking about how good she is to other people.', 'options': ['boasting', 'bouncing', 'crawling', 'straining'], 'correctAnswer': 'boasting', 'explanation': '\"boasting\" (khoác lác) đồng nghĩa với việc luôn nói tốt về bản thân.'},
+        {'content': '2. Jerry is a person who enjoys being mean to classmates.', 'options': ['bully', 'ally', 'opponent', 'rival'], 'correctAnswer': 'bully', 'explanation': '\"bully\" (kẻ bắt nạt) đồng nghĩa với người thích làm điều ác với bạn học.'},
+        {'content': '3. Foods like bread and rice give you a lot of energy for an active lifestyle.', 'options': ['Carbohydrates', 'Dials', 'Tortures', 'Mercies'], 'correctAnswer': 'Carbohydrates', 'explanation': '\"Carbohydrates\" (tinh bột) như bánh mì và gạo cung cấp năng lượng.'},
+        {'content': '4. We were all sad after our team was beaten in the game.', 'options': ['defeated', 'ailed', 'nodded', 'bounced'], 'correctAnswer': 'defeated', 'explanation': '\"defeated\" đồng nghĩa với bị đánh bại (was beaten).'},
+        {'content': '5. I was caused pain by a sharp point as I was walking through the grass barefoot.', 'options': ['stung', 'strained', 'quarreled', 'wrestled'], 'correctAnswer': 'stung', 'explanation': '\"stung\" (bị chích, đốt) đồng nghĩa với bị đau bởi một vật nhọn.'},
+        {'content': '6. Look at the numbers on the clock face to see what time it is.', 'options': ['dial', 'sore', 'boast', 'mercy'], 'correctAnswer': 'dial', 'explanation': '\"dial\" (mặt đồng hồ) đồng nghĩa với mặt của đồng hồ.'},
+        {'content': '7. If you can\'t speak, then move your head up and down for yes and no.', 'options': ['nod', 'crawl', 'bounce', 'wrestle'], 'correctAnswer': 'nod', 'explanation': '\"nod\" (gật đầu) đồng nghĩa với di chuyển đầu lên xuống.'},
+        {'content': '8. The person who was fighting against me tried to catch me off guard.', 'options': ['rival', 'ally', 'bully', 'carbohydrate'], 'correctAnswer': 'rival', 'explanation': '\"rival\" (đối thủ) đồng nghĩa với người đang chiến đấu chống lại bạn.'},
+        {'content': '9. I tried very hard to lift the heavy boxes from the desk.', 'options': ['strained', 'boasted', 'crawled', 'nodded'], 'correctAnswer': 'strained', 'explanation': '\"strained\" (cố sức) đồng nghĩa với việc cố gắng hết sức.'},
+        {'content': '10. Sitting through his long, boring speech was a horrible mental pain.', 'options': ['torture', 'mercy', 'quarrel', 'dial'], 'correctAnswer': 'torture', 'explanation': '\"torture\" (sự tra tấn) đồng nghĩa với nỗi đau tinh thần tồi tệ.'}
+      ]
+    }
+  ],
+  'story_exercise': {
+    'title': 'Answer the questions based on the story.',
+    'questions': [
+      {'content': 'Part A: 1. Mitch was a bully.', 'options': ['True', 'False', 'Not Given', 'None of the above'], 'correctAnswer': 'True', 'explanation': 'Trong bài có nhắc đến \"He was a bully\".'},
+      {'content': 'Part A: 2. Everyone was nice to Dalton.', 'options': ['True', 'False', 'Not Given', 'None of the above'], 'correctAnswer': 'False', 'explanation': 'Trong bài có nhắc đến \"sometimes the other boys made fun of him\".'},
+      {'content': 'Part A: 3. Dalton became ailed when a bee stung him.', 'options': ['True', 'False', 'Not Given', 'None of the above'], 'correctAnswer': 'False', 'explanation': 'Dalton chỉ giả vờ bị ong đốt để không phải thi đấu.'},
+      {'content': 'Part A: 4. Dalton\'s biggest problem was being tall.', 'options': ['True', 'False', 'Not Given', 'None of the above'], 'correctAnswer': 'False', 'explanation': 'Vấn đề lớn nhất của Dalton là Mitch, không phải do chiều cao.'},
+      {'content': 'Part A: 5. When they wrestled, Mitch was dominant.', 'options': ['True', 'False', 'Not Given', 'None of the above'], 'correctAnswer': 'False', 'explanation': 'Mitch chiếm ưu thế trong mọi môn chứ không chỉ riêng khi họ vật nhau.'},
+      {'content': 'Part A: 6. The boys felt sore at lunchtime.', 'options': ['True', 'False', 'Not Given', 'None of the above'], 'correctAnswer': 'True', 'explanation': 'Đến bữa trưa, họ đều cảm thấy đau nhức (sore).'},
+      {'content': 'Part B: 1. Which of the following was NOT part of their Olympics?', 'options': ['Wrestling', 'Volleyball', 'Crawling', 'Speed skating'], 'correctAnswer': 'Speed skating', 'explanation': 'Trong bài nhắc đến vật, trườn bò, bóng chuyền, nhưng không nhắc đến trượt băng tốc độ.'},
+      {'content': 'Part B: 2. What did boys give Mitch so he would have mercy on them?', 'options': ['A dial', 'Money', 'A whistle', 'Carbohydrates'], 'correctAnswer': 'Money', 'explanation': '\"if boys gave Mitch their lunch money, he would have mercy\" - đưa tiền ăn trưa để Mitch tha cho.'},
+      {'content': 'Part B: 3. Where did the Olympics happen?', 'options': ['In the gym', 'At the bully\'s school', 'At their rival\'s field', 'At Dalton\'s house'], 'correctAnswer': 'In the gym', 'explanation': '\"He entered the gym... First, they wrestled.\" - Cuộc thi diễn ra ở phòng thể dục.'},
+      {'content': 'Part B: 4. What did the boys want to do to Mitch?', 'options': ['Be his opponent', 'Show him mercy', 'Defeat him', 'Strain against him'], 'correctAnswer': 'Defeat him', 'explanation': '\"They wanted him to help them beat Mitch.\" - Họ muốn đánh bại Mitch.'}
+    ]
+  }
+}
+with open('c:/Users/Tony/.gemini/antigravity/scratch/tonyenglish-app/unit9_raw.json', 'w', encoding='utf-8') as f:
+  json.dump(data, f, indent=2, ensure_ascii=False)

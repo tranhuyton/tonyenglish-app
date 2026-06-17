@@ -1,0 +1,189 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 2",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit2_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit2_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bring</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[briŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bring means to take someone or something to a person or place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Oscar will bring in all the boxes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">castle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kæsl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A castle is a building with strong walls where royalty usually lives.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The castle was built many years ago.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">command</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To command someone is to tell them to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The general commanded his army to attack.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">counsel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kaunsəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To counsel someone is to listen and give advice about a problem.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher counseled the girl about her troubles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ensure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inʃuər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To ensure is to make certain that something happens.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Eating good food ensures that we stay healthy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">explosion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksplouʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An explosion is a violent burst, usually with a loud sound.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A nuclear explosion can cause great damage.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">jewelry</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒu:əlri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Jewelry is something that people wear like earrings or necklaces.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The woman looked beautiful with her nice dress and jewelry.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">land</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To land means to come to the ground usually from a ship or aircraft.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The parachutist landed safely on the ground.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">meteor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mi:tiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A meteor is a rock from outer space that falls to Earth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We saw a meteor in the sky last night.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">monster</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑnstər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A monster is any imaginary frightening creature that looks strange.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The monster scared everyone in the village.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">northern</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɔ:rðərn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is northern, it is in the direction of north.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is much colder in northern countries than it is here.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">remote</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rimout]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is remote, it is very far away and difficult to get to.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It took many days to get to the remote island.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">southern</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌðərn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is southern, it is in the direction of south.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Taegu is located in the southern part of the Korean peninsula.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">statue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stætʃu:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A statue is an image of a person or animal made of stone or metal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw a beautiful statue of a lion today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steam</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sti:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Steam is water that has become hot and has turned into a misty gas.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We could see the steam rise from the boiling water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">submit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səbmit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To submit to someone is to agree to do what they tell you to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She submitted to her mother’s wishes and did her homework.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">temple</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tempəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A temple is a building that is used for religious purposes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The people visited the temple to pray.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">upper</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌpər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Upper means higher in position or place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A home’s attic is at the upper part of the structure.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">weed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wi:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A weed is a plant, especially one that is not useful or wanted.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The yard of the house was full of ugly weeds.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wing</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wiŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A wing is the part of an animal that lets it fly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bird used its wings to fly across the water.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Check (V) the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1.",
+              "options": [
+                "Many castles are built with thick stone walls.",
+                "When you command somebody, you work for them."
+              ],
+              "correctAnswer": "Many castles are built with thick stone walls.",
+              "explanation": "Câu này hợp lý vì lâu đài thường được xây bằng tường đá dày."
+            },
+            {
+              "id": "2",
+              "content": "2.",
+              "options": [
+                "All children bring live animals to the zoo.",
+                "Some women wear jewelry on their ears and hands."
+              ],
+              "correctAnswer": "Some women wear jewelry on their ears and hands.",
+              "explanation": "Câu này hợp lý vì trang sức (jewelry) được đeo trên tai và tay."
+            },
+            {
+              "id": "3",
+              "content": "3.",
+              "options": [
+                "You put on jewelry when you take a bath.",
+                "When I counsel you, I am trying to help you."
+              ],
+              "correctAnswer": "When I counsel you, I am trying to help you.",
+              "explanation": "Câu này hợp lý vì 'counsel' (khuyên bảo) là để giúp đỡ người khác."
+            },
+            {
+              "id": "4",
+              "content": "4.",
+              "options": [
+                "It takes a long time to get to remote places.",
+                "Weeds make a house more beautiful."
+              ],
+              "correctAnswer": "It takes a long time to get to remote places.",
+              "explanation": "Câu này hợp lý vì những nơi xa xôi (remote places) mất nhiều thời gian để đi tới."
+            },
+            {
+              "id": "5",
+              "content": "5.",
+              "options": [
+                "Good parents ensure that their children are safe.",
+                "The people were happy when the monster was elected president."
+              ],
+              "correctAnswer": "Good parents ensure that their children are safe.",
+              "explanation": "Câu này hợp lý vì cha mẹ tốt luôn đảm bảo (ensure) sự an toàn cho con cái."
+            },
+            {
+              "id": "6",
+              "content": "6.",
+              "options": [
+                "The explosion made everyone sleepy.",
+                "I forgot to bring my camera when I went on vacation."
+              ],
+              "correctAnswer": "I forgot to bring my camera when I went on vacation.",
+              "explanation": "Câu này hợp lý vì 'bring' (mang theo) phù hợp với ngữ cảnh đi nghỉ mát."
+            },
+            {
+              "id": "7",
+              "content": "7.",
+              "options": [
+                "If I command you to work, then I want you to work.",
+                "You can easily ensure that it rains."
+              ],
+              "correctAnswer": "If I command you to work, then I want you to work.",
+              "explanation": "Câu này hợp lý vì 'command' (ra lệnh) nghĩa là bạn muốn người khác làm việc đó."
+            },
+            {
+              "id": "8",
+              "content": "8.",
+              "options": [
+                "The scary monster caused much damage to the village.",
+                "Students visit remote places after school every day."
+              ],
+              "correctAnswer": "The scary monster caused much damage to the village.",
+              "explanation": "Câu này hợp lý vì 'monster' (quái vật) có thể gây ra nhiều thiệt hại."
+            },
+            {
+              "id": "9",
+              "content": "9.",
+              "options": [
+                "Many people have a castle inside their house.",
+                "If you don't keep your yard clean, weeds will grow."
+              ],
+              "correctAnswer": "If you don't keep your yard clean, weeds will grow.",
+              "explanation": "Câu này hợp lý vì cỏ dại (weeds) sẽ mọc nếu sân không được dọn dẹp sạch sẽ."
+            },
+            {
+              "id": "10",
+              "content": "10.",
+              "options": [
+                "Students must counsel their teachers.",
+                "The explosion in the sky was caused by the fireworks."
+              ],
+              "correctAnswer": "The explosion in the sky was caused by the fireworks.",
+              "explanation": "Câu này hợp lý vì tiếng nổ (explosion) trên bầu trời có thể do pháo hoa gây ra."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Dragon</h1><p style=\"margin-bottom: 1rem;\">An evil dragon lived in a <b>castle</b> in the <b>remote</b> <b>southern</b> mountains.</p><p style=\"margin-bottom: 1rem;\">One day the <b>monster</b> <b>landed</b> in a town. The dragon <b>commanded</b> the people, \"Give me food now, or I will eat you!\" The dragon lifted its <b>wings</b> so that its lungs could be completely filled with hot <b>steam</b>, and breathed it upon the people. A man turned into a stone <b>statue</b>!</p><p style=\"margin-bottom: 1rem;\">The people <b>submitted</b> and <b>brought</b> food. The dragon ate all of it and left.</p><p style=\"margin-bottom: 1rem;\">The people sent a boy to ask for help from a wise old man. He resided in a <b>temple</b>.</p><p style=\"margin-bottom: 1rem;\">The boy told the old man about the dragon. Then, the old man <b>counseled</b> the boy. \"A <b>meteor</b> will fall in the <b>northern</b> sky. It will make a huge <b>explosion</b>. Find the meteor and <b>bring</b> it to me. I will use it to make a sword for you.\"</p><p style=\"margin-bottom: 1rem;\">The boy did as the old man said. Soon, the sword was ready.</p><p style=\"margin-bottom: 1rem;\">\"Use this to kill the dragon. But be careful. You must cover yourself with <b>weeds</b> that smell bad. That will <b>ensure</b> that he does not smell you,\" the man said.</p><p style=\"margin-bottom: 1rem;\">The boy traveled for many days to find the <b>castle</b>. He went to the <b>upper</b> level and opened a door. He could see the dragon's tail. It was sleeping, so the boy killed it. Then, he took the dragon's gold and <b>jewelry</b> and returned to his town. The people were happy.</p></div>",
+      "imageUrl": "/unit2_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. What is this story about?",
+              "options": [
+                "How a dragon met a boy",
+                "Why dragons live in castles",
+                "Why a boy killed an evil dragon",
+                "How a boy found a remote place"
+              ],
+              "correctAnswer": "Why a boy killed an evil dragon",
+              "explanation": "Câu chuyện kể về hành trình một cậu bé tiêu diệt con rồng độc ác."
+            },
+            {
+              "id": "12",
+              "content": "2. How did the dragon turn the people into statues?",
+              "options": [
+                "It breathed steam on them.",
+                "It hit them with its wings.",
+                "It covered them with weeds.",
+                "It touched them with its tail."
+              ],
+              "correctAnswer": "It breathed steam on them.",
+              "explanation": "Con rồng thở ra hơi nước nóng (steam) vào người dân, biến một người đàn ông thành tượng đá."
+            },
+            {
+              "id": "13",
+              "content": "3. What can be assumed about the old man?",
+              "options": [
+                "He enjoyed commanding the townspeople.",
+                "He resided in the temple all his life.",
+                "Other dragons submitted to him in the past.",
+                "He counseled the townspeople when they had trouble."
+              ],
+              "correctAnswer": "He counseled the townspeople when they had trouble.",
+              "explanation": "Dựa vào việc người dân cử cậu bé đến xin lời khuyên, có thể thấy ông lão thường khuyên bảo (counsel) họ khi gặp rắc rối."
+            },
+            {
+              "id": "14",
+              "content": "4. According to the passage, all of the following are true EXCEPT",
+              "options": [
+                "a meteor fell in the northern sky",
+                "a boy killed the dragon with a golden sword",
+                "a boy took the dragon’s jewelry",
+                "a dragon lived in the southern mountains"
+              ],
+              "correctAnswer": "a boy killed the dragon with a golden sword",
+              "explanation": "Chi tiết dùng kiếm vàng không đúng, thanh kiếm được làm từ thiên thạch (meteor) chứ không nói là vàng."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 3",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arrow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈæroʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An arrow is a thin, straight stick shot from a bow.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The arrow flew through the air and hit the target.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">battle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbætl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A battle is a fight between two armies during a war.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The battle lasted for many days.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[boʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bow is a weapon made of curved wood and string that shoots arrows.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He went hunting with a bow and arrow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">brave</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[breɪv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people are brave, they are not afraid to face pain or danger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The brave firefighter saved the girl from the burning building.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chief</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃiːf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A chief is the leader of a group of people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The chief led the people through the mountains.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disadvantage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌdɪsədˈvæntɪdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A disadvantage is a situation where someone is likely to lose.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mike had a disadvantage in the race since he hurt his knee.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enemy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈenəmi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An enemy is a country that is fighting another country during a war.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The enemy prepared to attack the kingdom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">entrance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈentrəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An entrance is a place where someone can enter an area.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The gate was locked, so Bill had to find a different entrance.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hardly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhɑːrdli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something hardly happens, it almost does not happen at all.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I hardly saw the concert since I had to leave early.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈtend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To intend to do something means to plan to do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I intend to finish college in three years.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">laughter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈlæftər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Laughter is the sound produced by laughing about something funny.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Susan's joke made her classmates burst into laughter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">log</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɔːɡ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A log is a thick piece of wood that is cut from a tree.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fire was too small, so we added another log to it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">military</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmɪləteri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The military is the armed forces of a country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I joined the military after I finished high school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">obey</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[oʊˈbeɪ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To obey means to follow what a law or a person says you must do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My little sister did not obey my mother. Now she is in trouble.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">secure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɪˈkjʊr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To secure something means to get it after a lot of effort.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was able to secure a good grade on my test after weeks of studying.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steady</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈstedi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone or something is steady, they are under control.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The problem was hard but she remained steady and solved it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trust</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trʌst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To trust is to believe that someone is honest and will do what is right.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I trust my friends; they don't tell my secrets to other people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">twist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[twɪst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To twist something is to wrap it around itself or another thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She twisted the spaghetti around her fork.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">unless</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ənˈles]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">conj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Unless means if not or except when.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Unless you clean your room, you cannot play with your friends.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">weapon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈwepən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A weapon is an object that can be used to hurt people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Swords have been used as weapons for thousands of years.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Part B: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. a person of the highest rank",
+              "options": [
+                "brave",
+                "obey",
+                "chief",
+                "trust"
+              ],
+              "correctAnswer": "chief",
+              "explanation": "chief nghĩa là a person of the highest rank (người đứng đầu)."
+            },
+            {
+              "id": "2",
+              "content": "2. barely or almost unable to do",
+              "options": [
+                "hardly",
+                "unless",
+                "secure",
+                "disadvantage"
+              ],
+              "correctAnswer": "hardly",
+              "explanation": "hardly nghĩa là barely or almost unable to do (hầu như không)."
+            },
+            {
+              "id": "3",
+              "content": "3. to wrap around itself or another thing",
+              "options": [
+                "steady",
+                "arrow",
+                "bow",
+                "twist"
+              ],
+              "correctAnswer": "twist",
+              "explanation": "twist nghĩa là to wrap around itself or another thing (quấn lại)."
+            },
+            {
+              "id": "4",
+              "content": "4. to plan to do",
+              "options": [
+                "laughter",
+                "intend",
+                "battle",
+                "military"
+              ],
+              "correctAnswer": "intend",
+              "explanation": "intend nghĩa là to plan to do (dự định làm gì)."
+            },
+            {
+              "id": "5",
+              "content": "5. space used to go into an area",
+              "options": [
+                "enemy",
+                "entrance",
+                "log",
+                "weapon"
+              ],
+              "correctAnswer": "entrance",
+              "explanation": "entrance nghĩa là space used to go into an area (lối vào)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Battle of Thermopylae</h1><p style=\"margin-bottom: 1rem;\">This is a true story. It happened long ago in Greece.</p><p style=\"margin-bottom: 1rem;\">\"We must fight,\" the Spartan <b>chief</b> told his small army of <b>brave</b> men. They were at a great <b>disadvantage</b>. There were only three hundred of them. The Persian <b>military</b> had hundreds of thousands of men.</p><p style=\"margin-bottom: 1rem;\">They were going to lose <b>unless</b> they could <b>secure</b> a small <b>entrance</b>. The <b>enemy</b> couldn't move through it easily. They <b>intended</b> to stop the <b>enemy</b> here. The <b>chief</b> and his men got ready for the <b>battle</b>.</p><p style=\"margin-bottom: 1rem;\">Soon, long lines of the <b>enemy</b>'s army <b>twisted</b> around the hills. The <b>chief</b> met the <b>enemy</b> with <b>laughter</b>. He knew that his men's <b>weapons</b> and skills were better. The Spartans <b>trusted</b> their leader and <b>obeyed</b> him.</p><p style=\"margin-bottom: 1rem;\">First, the <b>enemy</b> soldiers shot <b>arrows</b> from their <b>bows</b>. The <b>chief</b> told his men to lift their shields. The <b>arrows</b> stuck into the shields but did not hurt any of the men.</p><p style=\"margin-bottom: 1rem;\">Then the <b>enemy</b>'s soldiers attacked the Spartans with long spears. The <b>chief</b> surprised them. His troops rolled <b>logs</b> down on the <b>enemy</b>.</p><p style=\"margin-bottom: 1rem;\">They fought for three days. Though they <b>hardly</b> slept at all, the <b>chief</b> and his men remained <b>steady</b>.</p><p style=\"margin-bottom: 1rem;\">But the <b>enemy</b> found a way to beat the Spartans. The <b>chief</b> and all of his men were killed. Even though they lost, the Battle of Thermopylae is one of the most famous <b>battles</b> in history.</p></div>",
+      "imageUrl": "/unit3_story.png",
+      "sections": [
+        {
+          "id": "sec2_reading",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. What is this story about?",
+              "options": [
+                "How an enemy made an attack against shields",
+                "Why logs were rolled down on soldiers",
+                "How a small disadvantaged army nearly beat a large military",
+                "Why good soldiers obey their leaders"
+              ],
+              "correctAnswer": "How a small disadvantaged army nearly beat a large military",
+              "explanation": "Câu chuyện kể về một đạo quân nhỏ bé ở thế bất lợi gần như đánh bại một quân đội lớn."
+            },
+            {
+              "id": "2",
+              "content": "2. Why was the smaller army not afraid of the larger one?",
+              "options": [
+                "The larger army didn't have any weapons.",
+                "The smaller army had better weapons and skills.",
+                "The larger army did not trust their leader.",
+                "The smaller army did not intend to fight."
+              ],
+              "correctAnswer": "The smaller army had better weapons and skills.",
+              "explanation": "Bởi vì họ có vũ khí và kỹ năng tốt hơn (He knew that his men's weapons and skills were better)."
+            },
+            {
+              "id": "3",
+              "content": "3. The brave men knew they would lose______",
+              "options": [
+                "because they heard the soldiers' laughter",
+                "unless they secured the narrow entrance",
+                "against the other army's bows and arrows",
+                "hardly any men fighting the large army"
+              ],
+              "correctAnswer": "unless they secured the narrow entrance",
+              "explanation": "Họ sẽ thua trừ khi họ chiếm được một lối vào nhỏ hẹp (They were going to lose unless they could secure a small entrance)."
+            },
+            {
+              "id": "4",
+              "content": "4. According to the passage, all the following are true about the Persian army EXCEPT_____________.",
+              "options": [
+                "their long lines of soldiers twisted around the hills",
+                "they used bows and arrows",
+                "they had a steady three-day attack against the Spartans",
+                "they used fire to defeat the Spartans"
+              ],
+              "correctAnswer": "they used fire to defeat the Spartans",
+              "explanation": "Trong bài đọc không đề cập đến việc quân Ba Tư sử dụng lửa để đánh bại quân Spartan."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
