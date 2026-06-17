@@ -382,6 +382,21 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
   // =========================================================================================
 
+  const fetchAllPages = async (queryFn: (from: number, to: number) => any) => {
+      let allData: any[] = [];
+      let from = 0;
+      const step = 1000;
+      while (true) {
+          const { data, error } = await queryFn(from, from + step - 1);
+          if (error) { console.error('Error fetching paginated data:', error); break; }
+          if (!data || data.length === 0) break;
+          allData = allData.concat(data);
+          if (data.length < step) break;
+          from += step;
+      }
+      return { data: allData };
+  };
+
   const fetchCourses = async () => {
     setIsLoadingCourses(true); 
     const { data } = await supabase.from('courses').select('*').order('order_index', { ascending: true }).order('created_at', { ascending: false });
@@ -390,7 +405,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const fetchLibraryTests = async () => {
-    const { data } = await supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await fetchAllPages((from, to) => supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').order('order_index', { ascending: true }).order('created_at', { ascending: false }).range(from, to));
     setLibraryTests(data || []);
   };
 
@@ -1868,6 +1883,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                    <select value={targetMoveTestType} onChange={e=>setTargetMoveTestType(e.target.value)} className="border border-purple-200 bg-white rounded px-2 py-1 md:py-1.5 text-[11px] md:text-[13px] font-bold text-slate-700 outline-none w-[140px] md:w-[160px] truncate focus:border-purple-500">
                       <option value="">-- Chọn Dạng Đề --</option>
                       <option value="Standard-Listening">MCQ (Standard)</option>
+                      <option value="Standard-Reading">SplitScreen (Standard)</option>
                       <option value="Mixed-Paper">Mixed Paper (có hình)</option>
                       <option value="Computer">Computer Test (IELTS)</option>
                       <option value="Paper">Paper Test (IELTS)</option>

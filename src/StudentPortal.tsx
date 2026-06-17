@@ -259,6 +259,21 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
         let allT: any[] = [];
         let allC: any[] = [];
 
+        const fetchAllPages = async (queryFn: (from: number, to: number) => any) => {
+            let allData: any[] = [];
+            let from = 0;
+            const step = 1000;
+            while (true) {
+                const { data, error } = await queryFn(from, from + step - 1);
+                if (error) { console.error('Error fetching paginated data:', error); break; }
+                if (!data || data.length === 0) break;
+                allData = allData.concat(data);
+                if (data.length < step) break;
+                from += step;
+            }
+            return { data: allData };
+        };
+
         // Step 2: Fetch catalog tables — PHASE 1: metadata only (no content_json) for fast loading
         if (courseIds.length > 0) {
             const [
@@ -267,10 +282,10 @@ export default function StudentPortal({ onNavigate, onStartTest, onOpenLecture }
                 { data: tData },
                 { data: cData }
             ] = await Promise.all([
-                supabase.from('folders').select('id, title, course_id, display_order, thumbnail_url, parent_id').in('course_id', courseIds),
-                supabase.from('lectures').select('id, title, course_id, module_id, order_index, is_published').eq('is_published', true).in('course_id', courseIds),
-                supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('is_published', true).or(`course_id.in.(${courseIds.join(',')}),course_id.is.null`),
-                supabase.from('courses').select('*').in('id', courseIds)
+                fetchAllPages((from, to) => supabase.from('folders').select('id, title, course_id, display_order, thumbnail_url, parent_id').in('course_id', courseIds).order('id').range(from, to)),
+                fetchAllPages((from, to) => supabase.from('lectures').select('id, title, course_id, module_id, order_index, is_published').eq('is_published', true).in('course_id', courseIds).order('id').range(from, to)),
+                fetchAllPages((from, to) => supabase.from('tests').select('id, title, course_id, folder_id, is_published, order_index, created_at, test_type').eq('is_published', true).or(`course_id.in.(${courseIds.join(',')}),course_id.is.null`).order('id').range(from, to)),
+                supabase.from('courses').select('*').in('id', courseIds).limit(100)
             ]);
             allF = fData || [];
             allL = lData || [];
