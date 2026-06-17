@@ -9,252 +9,334 @@
     {
       "id": "part1",
       "title": "Word List",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit26_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit26_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">advice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədváis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Advice is an opinion about what to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I don't know how to study for my exams. Can you give me some advice?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">along</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əlɔ́(ː)ŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Along means to move from one part of a road, river, etc. to another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Walk along this tunnel for ten minutes, and you'll see a door on the left.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">attention</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əténʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Attention is the notice, thought, or consideration of someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His work got the attention of two of his co-workers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">attract</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ətrǽkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To attract means to make a person or thing come closer or be interested.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The magnet attracted the metal.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">climb</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klaim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To climb means to use your hands and feet to go up on something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girls climbed to the top of the mountain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">drop</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[drɔp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To drop is to fall or allow something to fall.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A small amount of water dropped from the bottle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">final</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fáinl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is final, it is the last part.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the final part of the film, the man and the woman got married.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">further</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fə́ːrðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Further is used to say something is from a distance or time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The escalator is further along than I thought.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">imply</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[implái]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To imply something is to suggest it without saying it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man implied that he wanted the job, but he didn't say so.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">maintain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[meintéin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To maintain means to make something stay the same.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The balls maintain constant movement.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">neither</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[níːðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">You use neither to connect two negative statements.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Neither the pass on the left nor the pass on the right will lead us home.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">otherwise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌ́ðərwàiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Otherwise means different or in another way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It's good to stay active; otherwise, you'll gain weight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">physical</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fízikəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is physical, it is related to your body and not your mind.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Biking is good for your physical health.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prove</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pruːv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To prove something is to show that it is true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My teacher proved the answer on the board.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">react</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[riǽkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To react is to act in a certain way because of something that happened.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ James reacted badly to the news.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ride</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[raid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To ride something is to travel on it. You can ride an animal, a bike, etc.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I will ride a roller-coaster for the first time today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">situated</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sítʃuèitid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is situated somewhere, it is in that place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The white board is situated between the two men.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">society</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səsáiəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Society is people and the way that they live.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Society expects people to be good and honest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">standard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stǽndərd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A standard is what people consider normal or good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This older model TV is below our store's standards.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">suggest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səgdʒést]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To suggest something means to give an idea or plan about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He suggested that we go to see his boss.</div></div></div></div></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit26_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit26_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accuse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈkyuːz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To accuse someone of something is to blame them for doing it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She accused her brother of breaking her computer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adjust</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈdʒʌst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To adjust something means to change it so it is better.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He adjusted the old guitar to make it sound better.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">amuse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈmyuːz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To amuse someone means to do something that is funny or entertaining.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The singer was very good. She amused the crowd.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">coral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɔːrəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Coral is the hard, colorful material formed by the shells of animals.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The diver admired the beautiful coral under the water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cotton</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑːtn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cotton is a cloth made from the fibers of the cotton plant.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I like to wear clothes made from cotton in the summer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crash</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kræʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To crash means to hit and break something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a loud noise when the car crashed into the tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deck</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dek]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A deck is a wooden floor built outside of a house or the floor of a ship.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A ship will store many supplies below its deck.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">engage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈɡeɪdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To engage in something means to do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Dad was engaged in sawing a piece of wood in half.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">firm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɜːrm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is firm, it is solid but not too hard.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He sleeps better on a firm bed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fuel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfjuːəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fuel is something that creates heat or energy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Heat is the fuel that comes from fire.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grand</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɡrænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is grand, it is big and liked by people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The grand mountain rose high into the sky.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hurricane</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhɜːrəkeɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hurricane is a bad storm that happens over the ocean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wind from the hurricane bent the palm tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">loss</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɔːs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A loss means the act or an instance of losing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I suffered a big loss while I was gambling.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pleɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is simple, it is plain and not decorated.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He bought a pair of plain white shoes over the weekend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reef</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[riːf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A reef is a group of rocks or coral that rise to or near the ocean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He walked along the reef and looked at the water below.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shut</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃʌt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To shut something means to close it tightly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please shut the door; the air outside is cold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">strict</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strɪkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is strict, they make sure others follow rules.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher is strict. She does not let students talk in class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">surf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɜːrf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To surf means to use a special board to ride on waves in the ocean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students went to the beach to surf during their vacation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">task</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tæsk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A task is a piece of work to be done that is usually difficult.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My task for the weekend was to clean the entire back yard.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">zone</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[zoʊn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A zone is an area that has different qualities from the ones around it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Firefighters often work in danger zones.</div></div></div></div></div></div>",
       "sections": [
         {
-          "id": "sec1",
-          "title": "Part A: Choose the right word for the given definition.",
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the word that is a better fit for each sentence.",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "1",
-              "content": "1. to keep something going",
+              "id": "1a",
+              "content": "The _________ for the car is gas.",
               "options": [
-                "maintain",
-                "react",
-                "standard",
-                "prove"
+                "fuel",
+                "cotton",
+                "loss",
+                "insure"
               ],
-              "correctAnswer": "maintain",
-              "explanation": "maintain nghĩa là duy trì, giữ cho việc gì đó tiếp tục."
+              "correctAnswer": "fuel",
+              "explanation": ""
             },
             {
-              "id": "2",
-              "content": "2. not this one or that one",
+              "id": "1b",
+              "content": "My favorite shirt is made out of _________.",
               "options": [
-                "neither",
-                "further",
-                "along",
-                "situated"
+                "fuel",
+                "cotton",
+                "loss",
+                "insure"
               ],
-              "correctAnswer": "neither",
-              "explanation": "neither nghĩa là không cái này cũng không cái kia."
+              "correctAnswer": "cotton",
+              "explanation": ""
             },
             {
-              "id": "3",
-              "content": "3. people and how they act",
+              "id": "2a",
+              "content": "The _________ of his job made Steve worry about money.",
               "options": [
-                "otherwise",
-                "society",
-                "advice",
-                "climb"
+                "loss",
+                "insure",
+                "coral",
+                "reef"
               ],
-              "correctAnswer": "society",
-              "explanation": "society nghĩa là xã hội, con người và cách họ sống."
+              "correctAnswer": "loss",
+              "explanation": ""
             },
             {
-              "id": "4",
-              "content": "4. describing the body",
+              "id": "2b",
+              "content": "She wanted to _________ that her car was safe, so she locked the door.",
               "options": [
-                "final",
-                "drop",
-                "physical",
-                "attention"
+                "loss",
+                "insure",
+                "coral",
+                "reef"
               ],
-              "correctAnswer": "physical",
-              "explanation": "physical nghĩa là thuộc về thể chất."
+              "correctAnswer": "insure",
+              "explanation": ""
             },
             {
-              "id": "5",
-              "content": "5. to make someone interested",
+              "id": "3a",
+              "content": "The boy found a piece of colorful _________ in the ocean.",
               "options": [
-                "imply",
-                "suggest",
-                "attract",
-                "ride"
+                "coral",
+                "reef",
+                "amuse",
+                "surfed"
               ],
-              "correctAnswer": "attract",
-              "explanation": "attract nghĩa là thu hút, làm ai đó quan tâm."
+              "correctAnswer": "coral",
+              "explanation": ""
+            },
+            {
+              "id": "3b",
+              "content": "That group of rocks coming out of the ocean is a _________.",
+              "options": [
+                "coral",
+                "reef",
+                "amuse",
+                "surfed"
+              ],
+              "correctAnswer": "reef",
+              "explanation": ""
+            },
+            {
+              "id": "4a",
+              "content": "Funny stories always _________ me.",
+              "options": [
+                "amuse",
+                "surfed",
+                "task",
+                "shut"
+              ],
+              "correctAnswer": "amuse",
+              "explanation": ""
+            },
+            {
+              "id": "4b",
+              "content": "I _________ quite a bit when I was in Hawaii last summer.",
+              "options": [
+                "amuse",
+                "surfed",
+                "task",
+                "shut"
+              ],
+              "correctAnswer": "surfed",
+              "explanation": ""
+            },
+            {
+              "id": "5a",
+              "content": "I was given the _________ of editing his entire manuscript.",
+              "options": [
+                "task",
+                "shut",
+                "fuel",
+                "cotton"
+              ],
+              "correctAnswer": "task",
+              "explanation": ""
+            },
+            {
+              "id": "5b",
+              "content": "Don't forget to _________ the door on your way out.",
+              "options": [
+                "task",
+                "shut",
+                "fuel",
+                "cotton"
+              ],
+              "correctAnswer": "shut",
+              "explanation": ""
             }
           ]
         },
         {
-          "id": "sec2",
-          "title": "Part B: Write a word that is similar in meaning to the underlined part.",
-          "content": "",
-          "questionType": "Điền từ",
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
+          "content": "Word Bank: accuse, grand, strict, ensure, shut",
+          "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "6",
-              "content": "1. How did Clare act when you told her about the party? (re[1])",
-              "options": [],
-              "correctAnswer": "react",
-              "explanation": "react: phản ứng"
+              "id": "ex2_1",
+              "content": "There are _________ rules about what people may wear at fancy parties.",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "correctAnswer": "strict",
+              "explanation": ""
             },
             {
-              "id": "7",
-              "content": "2. In this group of people, wearing hats is common. (soc[2])",
-              "options": [],
-              "correctAnswer": "society",
-              "explanation": "society: xã hội, nhóm người"
+              "id": "ex2_2",
+              "content": "Instead of normal things, people must _________ that they wear...",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "correctAnswer": "ensure",
+              "explanation": ""
             },
             {
-              "id": "8",
-              "content": "3. I invited Jane and Lisa to my house, but not Jane or Lisa could come. (nei[3])",
-              "options": [],
-              "correctAnswer": "neither",
-              "explanation": "neither: không phải một trong hai"
+              "id": "ex2_3",
+              "content": "...that they wear _________ clothing.",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "correctAnswer": "grand",
+              "explanation": ""
             },
             {
-              "id": "9",
-              "content": "4. I've nearly finished the book. I'm on the last page. (f[4])",
-              "options": [],
-              "correctAnswer": "final",
-              "explanation": "final: cuối cùng"
+              "id": "ex2_4",
+              "content": "If a man wears the wrong clothes, people will _________ him of ruining the evening.",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "correctAnswer": "accuse",
+              "explanation": ""
             },
             {
-              "id": "10",
-              "content": "5. I can jump higher than you. Watch me, and I will show you that I can do it. (p[5])",
-              "options": [],
-              "correctAnswer": "prove",
-              "explanation": "prove: chứng minh"
+              "id": "ex2_5",
+              "content": "They will make him leave and _________ the door behind him.",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "correctAnswer": "shut",
+              "explanation": ""
             }
           ]
         },
         {
-          "id": "sec3",
-          "title": "Part C: Choose the word that is a better fit for each sentence.",
-          "content": "",
-          "questionType": "Điền từ",
-          "questions": [
-            {
-              "id": "11",
-              "content": "1a. Can I give you some [1]? (suggest / advice)",
-              "options": [],
-              "correctAnswer": "advice",
-              "explanation": "advice là lời khuyên."
-            },
-            {
-              "id": "12",
-              "content": "1b. I [2] that you do your homework before you go out. (suggest / advice)",
-              "options": [],
-              "correctAnswer": "suggest",
-              "explanation": "suggest là đề nghị, gợi ý."
-            },
-            {
-              "id": "13",
-              "content": "2a. I got everyone's [3] with my new dress. (situated / attention)",
-              "options": [],
-              "correctAnswer": "attention",
-              "explanation": "attention là sự chú ý."
-            },
-            {
-              "id": "14",
-              "content": "2b. Where is your office [4] in the building? (situated / attention)",
-              "options": [],
-              "correctAnswer": "situated",
-              "explanation": "situated là nằm ở vị trí nào đó."
-            },
-            {
-              "id": "15",
-              "content": "3a. The [5] of his work is very high. (dropped / standard)",
-              "options": [],
-              "correctAnswer": "standard",
-              "explanation": "standard là tiêu chuẩn."
-            },
-            {
-              "id": "16",
-              "content": "3b. I accidentally [6] my phone in the snow. (dropped / standard)",
-              "options": [],
-              "correctAnswer": "dropped",
-              "explanation": "dropped là đánh rơi."
-            },
-            {
-              "id": "17",
-              "content": "4a. He [7] my attention by waving to me. (attracted / reacted)",
-              "options": [],
-              "correctAnswer": "attracted",
-              "explanation": "attracted là thu hút."
-            },
-            {
-              "id": "18",
-              "content": "4b. She [8] badly to the news. (attracted / reacted)",
-              "options": [],
-              "correctAnswer": "reacted",
-              "explanation": "reacted là phản ứng."
-            },
-            {
-              "id": "19",
-              "content": "5a. How much [9] is the beach? I'm tired! (further / along)",
-              "options": [],
-              "correctAnswer": "further",
-              "explanation": "further là xa hơn."
-            },
-            {
-              "id": "20",
-              "content": "5b. We walked [10] the path for two hours. (further / along)",
-              "options": [],
-              "correctAnswer": "along",
-              "explanation": "along là dọc theo."
-            }
-          ]
-        },
-        {
-          "id": "sec4",
-          "title": "Part D: Check the one that suits the blank naturally.",
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
           "content": "",
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "21",
-              "content": "1. She was angry when__________.",
+              "id": "ex3_1",
+              "content": "He blamed me of taking the last piece of pie. (ac__________)",
               "options": [
-                "he implied that she was not smart",
-                "he proved that she was right"
+                "accused",
+                "plain",
+                "amuse",
+                "adjust"
               ],
-              "correctAnswer": "he implied that she was not smart",
-              "explanation": "Cô ấy tức giận khi anh ta ám chỉ rằng cô ấy không thông minh."
+              "correctAnswer": "accused",
+              "explanation": ""
             },
             {
-              "id": "22",
-              "content": "2. If you want to win the race, you need to __________.",
+              "id": "ex3_2",
+              "content": "The man's bedroom was very simple. (pla____)",
               "options": [
-                "be in good physical condition",
-                "drop off all of your extra work"
+                "plain",
+                "accused",
+                "amuse",
+                "adjust"
               ],
-              "correctAnswer": "be in good physical condition",
-              "explanation": "Cần phải có thể lực tốt (physical condition) để thắng cuộc đua."
+              "correctAnswer": "plain",
+              "explanation": ""
             },
             {
-              "id": "23",
-              "content": "3. He said that I should play sports, so I __________.",
+              "id": "ex3_3",
+              "content": "The clown likes to entertain children. (amu____)",
               "options": [
-                "suggested playing football",
-                "gave him my advice"
+                "amuse",
+                "adjust",
+                "engaged",
+                "cotton"
               ],
-              "correctAnswer": "suggested playing football",
-              "explanation": "Gợi ý (suggest) chơi bóng đá phù hợp với vế trước."
+              "correctAnswer": "amuse",
+              "explanation": ""
             },
             {
-              "id": "24",
-              "content": "4. The sound of the car's horn__________.",
+              "id": "ex3_4",
+              "content": "I need to change the way I run so I can be faster. (adj______)",
               "options": [
-                "got everyone's attention",
-                "is situated next to the bus stop"
+                "adjust",
+                "engaged",
+                "cotton",
+                "hurricane"
               ],
-              "correctAnswer": "got everyone's attention",
-              "explanation": "Tiếng còi ô tô thu hút sự chú ý của mọi người (attention)."
+              "correctAnswer": "adjust",
+              "explanation": ""
             },
             {
-              "id": "25",
-              "content": "5. We are nearly at Jack's house.__________.",
+              "id": "ex3_5",
+              "content": "During their free time, the children did many different activities. (en___________ in)",
               "options": [
-                "It's much further down the road",
-                "He lives along this road"
+                "engaged",
+                "cotton",
+                "hurricane",
+                "shut"
               ],
-              "correctAnswer": "He lives along this road",
-              "explanation": "Anh ấy sống dọc theo (along) con đường này."
+              "correctAnswer": "engaged",
+              "explanation": ""
+            },
+            {
+              "id": "ex3_6",
+              "content": "This cloth dress is one of my favorites. (co_________)",
+              "options": [
+                "cotton",
+                "hurricane",
+                "shut",
+                "crash"
+              ],
+              "correctAnswer": "cotton",
+              "explanation": ""
+            },
+            {
+              "id": "ex3_7",
+              "content": "The bad storm over the ocean almost reached the land. (hu_______________)",
+              "options": [
+                "hurricane",
+                "shut",
+                "crash",
+                "zone"
+              ],
+              "correctAnswer": "hurricane",
+              "explanation": ""
+            },
+            {
+              "id": "ex3_8",
+              "content": "Tightly close the window before the rain starts! (s______)",
+              "options": [
+                "shut",
+                "crash",
+                "zone",
+                "accused"
+              ],
+              "correctAnswer": "shut",
+              "explanation": ""
+            },
+            {
+              "id": "ex3_9",
+              "content": "He will hit something and break his bike if he closes his eyes while riding. (c_____)",
+              "options": [
+                "crash",
+                "zone",
+                "accused",
+                "plain"
+              ],
+              "correctAnswer": "crash",
+              "explanation": ""
+            },
+            {
+              "id": "ex3_10",
+              "content": "The army fights in the war area. (z____)",
+              "options": [
+                "zone",
+                "crash",
+                "accused",
+                "plain"
+              ],
+              "correctAnswer": "zone",
+              "explanation": ""
             }
           ]
         }
@@ -263,7 +345,7 @@
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Archie and His Donkey</h1>        <p style=\"margin-bottom: 1rem;\">        Old Archie needed some money. He decided to sell his donkey. So he and his son Tom went to town. It was <b>situated</b> many miles away.</p>    <p style=\"margin-bottom: 1rem;\">        Soon, they met a woman. \"Where are you going?\" she asked.</p>    <p style=\"margin-bottom: 1rem;\">        \"To town,\" said Archie.</p>    <p style=\"margin-bottom: 1rem;\">        \"Any smart person would <b>ride</b> the donkey,\" she said.</p>    <p style=\"margin-bottom: 1rem;\">        \"What are you <b>implying</b>?\" Archie asked. \"I'm very smart!\" Archie wanted to look smart. So he <b>climbed</b> onto the donkey. Then they continued in the direction of the town.</p>    <p style=\"margin-bottom: 1rem;\">        <b>Further</b> <b>along</b> the road, they met a farmer.</p>    <p style=\"margin-bottom: 1rem;\">        \"Hello,\" said Archie. \"We want to sell this donkey. Do you want to buy it?\"</p>    <p style=\"margin-bottom: 1rem;\">        \"I don't need a donkey,\" said the farmer. \"But if you want my <b>advice</b>, don't <b>ride</b> it. The donkey needs to be in good <b>physical</b> condition.\"</p>    <p style=\"margin-bottom: 1rem;\">        \"Good idea,\" said Archie. \"Tom, I want you to <b>ride</b> it. You're lighter.\"</p>    <p style=\"margin-bottom: 1rem;\">        \"<b>Neither</b> you nor your son should <b>ride</b> it. It looks very tired. You should carry the donkey,\" <b>suggested</b> the farmer.</p>    <p style=\"margin-bottom: 1rem;\">        \"You're right,\" said Archie. \"Come on, Tom! We'll carry it for the <b>final</b> few miles!\"</p>    <p style=\"margin-bottom: 1rem;\">        The donkey was very heavy, and they couldn't <b>maintain</b> a good speed. They didn't arrive until late in the evening. At last, they walked into the town. But there they <b>attracted</b> the <b>attention</b> of some teenage boys. They laughed at Tom and Archie. They started to throw stones at them. The donkey <b>reacted</b> by kicking. Tom and Archie dropped the donkey. It fell on the ground and then ran away. Archie lost his donkey. He went home with no money.</p>    <p style=\"margin-bottom: 1rem;\">        What does this story teach us? We cannot please everyone in our <b>society</b>. Don't take everyone's <b>advice</b>, but set your own <b>standards</b>. <b>Prove</b> to everyone you can make decisions by yourself. <b>Otherwise</b>, you may end up with nothing at all.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Two Captains</h1><p style=\"margin-bottom: 1rem;\">Once there were two ships. Both ships carried <b>cotton</b>. The captains were very different. Thomas was <b>strict</b>. He made his crew <b>engage</b> in difficult <b>tasks</b>. \"Make sure the ship's <b>deck</b> is <b>firm</b> and that nothing falls! Put more <b>fuel</b> in the tank!\" he said. His ship was very <b>plain</b>, but he never had a problem with it.</p><p style=\"margin-bottom: 1rem;\">The second captain, William, was not serious. He had a <b>grand</b> ship, and he loved having fun. His crew <b>amused</b> him by singing and dancing. But his crew never fixed anything on the ship. They just wanted to <b>surf</b>.</p><p style=\"margin-bottom: 1rem;\">One day, Thomas saw a <b>hurricane</b> ahead. He knew that his ship needed to turn around. But he was sure William did not see the storm. He <b>adjusted</b> the dials on the radio and called his friend. Thomas said, \"You'll hit the <b>reef</b>. It's made completely of <b>coral</b>. Turn around to ensure that you do not <b>crash</b>.\"</p><p style=\"margin-bottom: 1rem;\">William said, \"We will go under the <b>deck</b> and <b>shut</b> the door. We will dance and sing until we are past the danger <b>zone</b>.\"</p><p style=\"margin-bottom: 1rem;\">When William's ship got to the <b>hurricane</b>, the wind blew it into the <b>reef</b>. The ship <b>crashed</b>, and water flowed below the <b>deck</b>. William's crew <b>accused</b> him of being a bad captain. The <b>loss</b> of the ship taught William a lesson. There are times to have fun, but there are also times to be serious.</p></div>",
       "imageUrl": "/unit26_story.png",
       "sections": [
         {
@@ -273,64 +355,64 @@
           "questionType": "Trắc nghiệm",
           "questions": [
             {
-              "id": "26",
-              "content": "1. What is the main idea of this story?",
+              "id": "rc_1",
+              "content": "1. What is this story about?",
               "options": [
-                "You should always take the advice of older people.",
-                "Teenage boys are the nicest people in society.",
-                "You should set your own standards.",
-                "You should neither ride nor carry a donkey."
+                "a. Why surfing amuses William",
+                "b. How Thomas is too strict to be a captain",
+                "c. Why people should be serious sometimes",
+                "d. Why hurricanes form over the ocean"
               ],
-              "correctAnswer": "You should set your own standards.",
-              "explanation": "Đoạn cuối câu chuyện chỉ ra bài học: Hãy thiết lập tiêu chuẩn của riêng bạn (set your own standards)."
+              "correctAnswer": "c. Why people should be serious sometimes",
+              "explanation": ""
             },
             {
-              "id": "27",
-              "content": "2. Why did Archie get on the donkey?",
+              "id": "rc_2",
+              "content": "2. Why did Thomas turn his ship around?",
               "options": [
-                "The woman implied that he wasn't smart.",
-                "The town was situated further away than he had thought.",
-                "He did not want to climb the final hill.",
-                "His walking speed was too slow."
+                "a. He saw the hurricane and did not want to crash.",
+                "b. He wanted to go to the reef.",
+                "c. He could not shut the door.",
+                "d. He wanted to engage in other activities."
               ],
-              "correctAnswer": "The woman implied that he wasn't smart.",
-              "explanation": "Archie leo lên lừa vì người phụ nữ ngầm ám chỉ (implied) ông không thông minh."
+              "correctAnswer": "a. He saw the hurricane and did not want to crash.",
+              "explanation": ""
             },
             {
-              "id": "28",
-              "content": "3. Why did the farmer suggest carrying the donkey?",
+              "id": "rc_3",
+              "content": "3. Why did William's crew accuse him of being a bad captain?",
               "options": [
-                "To attract people's attention",
-                "To keep the donkey in good physical condition",
-                "To maintain their speed",
-                "To prove that Archie was strong"
+                "a. William did not go into the storm's danger zone.",
+                "b. William caused the loss of the ship.",
+                "c. He did not succeed in getting the cotton to its destination.",
+                "d. He ensured his crew that they would not crash."
               ],
-              "correctAnswer": "To keep the donkey in good physical condition",
-              "explanation": "Người nông dân khuyên vậy vì con lừa cần có thể trạng tốt (good physical condition)."
+              "correctAnswer": "b. William caused the loss of the ship.",
+              "explanation": ""
             },
             {
-              "id": "29",
-              "content": "4. Why did the donkey start kicking?",
+              "id": "rc_4",
+              "content": "4. According to the passage, all of the following are true about Thomas EXCEPT",
               "options": [
-                "It didn't want to be carried along the road.",
-                "It didn't want to go in the direction of the river.",
-                "It reacted badly to a group of teenage boys' teasing.",
-                "It became very angry at Archie and Tom."
+                "a. he told his crew to put fuel in the tank",
+                "b. he had his crew make sure the deck was firm",
+                "c. he adjusted the radio dial to call William",
+                "d. he sang and danced to songs from an opera"
               ],
-              "correctAnswer": "It reacted badly to a group of teenage boys' teasing.",
-              "explanation": "Con lừa phản ứng (reacted) khi bị bọn trẻ trêu chọc và ném đá."
+              "correctAnswer": "d. he sang and danced to songs from an opera",
+              "explanation": ""
             },
             {
-              "id": "30",
-              "content": "5. What did the teenage boys do when they saw Archie, Tom, and the donkey?",
+              "id": "rc_5",
+              "content": "5. What happened when William's ship reached the hurricane?",
               "options": [
-                "They laughed at Tom and Archie and started to throw stones.",
-                "They tried to buy the donkey.",
-                "They gave Archie some advice.",
-                "They helped carry the donkey."
+                "When his ship reached the hurricane the wind blew it into the reef, and it crashed.",
+                "The ship safely sailed through the storm.",
+                "Thomas's ship rescued William's crew.",
+                "The crew started singing and dancing."
               ],
-              "correctAnswer": "They laughed at Tom and Archie and started to throw stones.",
-              "explanation": "Bọn trẻ cười nhạo và bắt đầu ném đá."
+              "correctAnswer": "When his ship reached the hurricane the wind blew it into the reef, and it crashed.",
+              "explanation": ""
             }
           ]
         }

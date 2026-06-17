@@ -41,7 +41,7 @@ async function run() {
       .from('tests')
       .insert({
         title: unitTitle,
-        test_type: 'vocabulary',
+        test_type: contentJson.basicInfo.skill || 'Standard-Reading',
         course_id: courseId,
         content_json: contentJson,
         is_published: true

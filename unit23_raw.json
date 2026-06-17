@@ -1,0 +1,209 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 23",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit23_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit23_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fierce</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fiərs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a person or animal is fierce, they are angry or violent.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Wolves are fierce animals. Do not disturb them.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gamble</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gæmbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To gamble means to play a game that involves winning or losing money.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many people like to go to casinos to gamble.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Aborigine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æbərídʒəni:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An Aborigine is a native of Australia before Europeans lived there.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Aborigines created beautiful artwork.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ban</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bæn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To ban something is to not let people do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Smoking is banned in this building.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cautious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔ́:ʃəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are cautious, you are careful in a dangerous situation.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Be very cautious as you stack those boxes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">confess</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənfés]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To confess something is to say that you did it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He confessed that he was responsible for choosing the winning story.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cottage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kάtidʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cottage is a small, old house in the countryside.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My aunt lives in a pretty cottage in the mountains.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">daytime</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[déitàim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Daytime is the time of the day when the sky is light.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I only allowed my kids to play outside in the daytime.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">desperate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[déspərət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are desperate, you will try anything to do or change something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I'm desperate to find a new job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fade</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something fades, it gets quieter or darker.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The piece of cloth I found was old and faded.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lawn</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɔ:n]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A lawn is an area covered in grass.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dad keeps the lawn in front of our house very neat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To mow grass is to cut it to make it very short.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I mow our lawn every weekend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">outlaw</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[áutlɔ̀:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An outlaw is a criminal who hides from the police.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The police passed out posters of the outlaw to all the people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prospect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prάspekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A prospect is a possibility that something will happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He wakes up every morning with the prospect of having a good day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">purse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pə:rs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A purse is a bag where women keep money, makeup and keys.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister likes to buy designer purses.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rod</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɑd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rod is a thin stick made of wood or metal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I bought a new fishing rod to use while on vacation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">seldom</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[séldəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something seldom happens, it doesn't happen very often.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It seldom rains in southern Arizona.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shave</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃeiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To shave means to cut the hairs on your face with a sharp tool.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My father shaves his face every day because he doesn't want a beard.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">terrified</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[térəfàid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are terrified, you are extremely scared.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I saw the ghost, I was absolutely terrified!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wizard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wízərd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A wizard is a man who can do magic.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wizard made gold fall from the sky.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. Where are the Aborigines originally from?",
+              "options": [
+                "Australia",
+                "Asia",
+                "South America",
+                "Europe"
+              ],
+              "correctAnswer": "Australia",
+              "explanation": "Aborigine là người bản địa ở Úc trước khi người châu Âu đến (Australia)."
+            },
+            {
+              "id": "2",
+              "content": "2. If someone confesses, what do they do?",
+              "options": [
+                "Go away",
+                "Make up a story",
+                "Tell the truth",
+                "Go back home"
+              ],
+              "correctAnswer": "Tell the truth",
+              "explanation": "confess nghĩa là thú nhận, tức là nói ra sự thật (Tell the truth)."
+            },
+            {
+              "id": "3",
+              "content": "3. Who often shaves their faces?",
+              "options": [
+                "Children",
+                "Women",
+                "Babies",
+                "Men"
+              ],
+              "correctAnswer": "Men",
+              "explanation": "Đàn ông (Men) thường cạo râu trên mặt (shave their faces)."
+            },
+            {
+              "id": "4",
+              "content": "4. Which of the animals below is very fierce?",
+              "options": [
+                "A mouse",
+                "A lion",
+                "A rabbit",
+                "A horse"
+              ],
+              "correctAnswer": "A lion",
+              "explanation": "Trong số các con vật, sư tử (A lion) là loài rất hung dữ (fierce)."
+            },
+            {
+              "id": "5",
+              "content": "5. What do you need if you want to gamble?",
+              "options": [
+                "A kitchen",
+                "Money",
+                "A book",
+                "Special boots"
+              ],
+              "correctAnswer": "Money",
+              "explanation": "gamble là đánh bạc, cần phải có tiền (Money) để chơi."
+            },
+            {
+              "id": "6",
+              "content": "6. What does it mean if you'll try anything to make a change?",
+              "options": [
+                "You are fierce.",
+                "You will rob.",
+                "You are desperate.",
+                "You are terrified."
+              ],
+              "correctAnswer": "You are desperate.",
+              "explanation": "desperate nghĩa là tuyệt vọng, bất chấp làm mọi thứ để thay đổi điều gì đó (try anything to make a change)."
+            },
+            {
+              "id": "7",
+              "content": "7. What does a person with a lot of opportunities have?",
+              "options": [
+                "Cottages",
+                "Purses",
+                "Prospects",
+                "Lawns"
+              ],
+              "correctAnswer": "Prospects",
+              "explanation": "prospects là triển vọng, tương tự như việc có nhiều cơ hội (opportunities)."
+            },
+            {
+              "id": "8",
+              "content": "8. What should a person be like if they are handling something dangerous?",
+              "options": [
+                "Cautious",
+                "Mow",
+                "Wizard",
+                "Confess"
+              ],
+              "correctAnswer": "Cautious",
+              "explanation": "Khi xử lý thứ gì đó nguy hiểm, cần phải cẩn thận (cautious)."
+            },
+            {
+              "id": "9",
+              "content": "9. What might happen to someone who doesn't follow the rules of a library?",
+              "options": [
+                "They may be sent to see an Aborigine.",
+                "They may be banned from the place.",
+                "They may have to mow the grass.",
+                "They may only be allowed to enter during the daytime."
+              ],
+              "correctAnswer": "They may be banned from the place.",
+              "explanation": "Nếu không tuân thủ nội quy thư viện, người đó có thể bị cấm (banned) khỏi đó."
+            },
+            {
+              "id": "10",
+              "content": "10. What happens to a cloth that is washed too many times?",
+              "options": [
+                "Its colors begin to fade.",
+                "Its gambled,",
+                "Its outlawed.",
+                "Its seldom seen."
+              ],
+              "correctAnswer": "Its colors begin to fade.",
+              "explanation": "Khi vải bị giặt quá nhiều lần, màu sắc của nó sẽ bắt đầu phai (fade)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Lazy Hans</h1><p style=\"margin-bottom: 1rem;\">Hans was lazy. He <b>seldom</b> helped his mother with anything. He didn't cook and he never <b>mowed</b> the <b>lawn</b>. He didn't even <b>shave</b>! He spent the <b>daytime</b> <b>gambling</b> with his mother's money. One day, his mother realized that her money was gone from her <b>purse</b>. \"You're <b>banned</b> from my house!\" she shouted. \"Don't come back until you've learned your lesson!\"</p><p style=\"margin-bottom: 1rem;\">Hans went to live in the forest like an <b>outlaw</b>. But it was cold, and Hans couldn't find food. He went to a <b>cottage</b> to ask for a meal.</p><p style=\"margin-bottom: 1rem;\">An <b>Aborigine</b> answered the door. \"Can I stay here please?\" Hans asked.</p><p style=\"margin-bottom: 1rem;\">\"You can stay if you work,\" the man replied.</p><p style=\"margin-bottom: 1rem;\">Hans liked the <b>prospect</b> of food and warmth, so he agreed.</p><p style=\"margin-bottom: 1rem;\">The man pointed to a field. \"Take this <b>rod</b> and plant it over there. I am a <b>wizard</b>, and this magic rod will bring us food.\"</p><p style=\"margin-bottom: 1rem;\">The field was far away. Hans knew it would be hard to walk there. So he just threw the rod behind the cottage and sat by the river. When daylight <b>faded</b>, he returned to the cottage and went to sleep.</p><p style=\"margin-bottom: 1rem;\">The next morning, the old man looked very <b>fierce</b>. \"You didn't take the rod to the field!\" he shouted.</p><p style=\"margin-bottom: 1rem;\">\"No,\" <b>confessed</b> Hans, \"it was too far!\"</p><p style=\"margin-bottom: 1rem;\">\"Because of you we have nothing to eat!\" replied the man.</p><p style=\"margin-bottom: 1rem;\">Hans was <b>terrified</b> that the man would punish him. So he ran home. \"Mama!\" he cried, \"I'm <b>desperate</b> to come back!\" His mother was <b>cautious</b>.</p><p style=\"margin-bottom: 1rem;\">\"Do you promise to work?\" she asked.</p><p style=\"margin-bottom: 1rem;\">\"Yes!\" said Hans, \"I'll never be lazy again!\"</p></div>",
+      "imageUrl": "/unit23_v3_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. At the beginning of the story, what did Hans do during the daytime?",
+              "options": [
+                "Gamble",
+                "Shave",
+                "Do domestic work",
+                "Mow the lawn"
+              ],
+              "correctAnswer": "Gamble",
+              "explanation": "Trong truyện có câu: 'He spent the daytime gambling with his mother's money.'"
+            },
+            {
+              "id": "12",
+              "content": "2. Why did Hans's mother ban him from her house?",
+              "options": [
+                "He was lazy.",
+                "He wasn't good at gambling,",
+                "He couldn't farm.",
+                "He didn't listen to the wizard."
+              ],
+              "correctAnswer": "He was lazy.",
+              "explanation": "Mẹ Hans cấm cậu về nhà vì cậu quá lười biếng và lấy cắp tiền của bà."
+            },
+            {
+              "id": "13",
+              "content": "3. What did Hans confess to doing?",
+              "options": [
+                "Eating all of the food",
+                "Throwing the rod behind the cottage",
+                "Sleeping in the field",
+                "Stealing his mother's money"
+              ],
+              "correctAnswer": "Throwing the rod behind the cottage",
+              "explanation": "Khi ông già pháp sư tức giận vì Hans không mang cây gậy ra đồng, Hans thú nhận (confessed) là vì quá xa nên cậu đã ném nó ra phía sau túp lều."
+            },
+            {
+              "id": "14",
+              "content": "4. How did Hans's mother feel when Hans returned home?",
+              "options": [
+                "Desperate",
+                "Terrified",
+                "Fierce",
+                "Cautious"
+              ],
+              "correctAnswer": "Cautious",
+              "explanation": "Trong truyện có câu: 'His mother was cautious. \"Do you promise to work?\" she asked.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

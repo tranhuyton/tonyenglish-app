@@ -1,0 +1,217 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 10",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit10_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit10_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">citizen</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sitəzən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A citizen is someone who lives in a certain town or city.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Carlos was born in Spain. He is a Spanish citizen.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">council</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kaunsəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A council is a group of people who run a city or town.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The council met to discuss the new laws for the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">declare</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diklɛər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To declare is to say something officially.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I declared my love for him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enormous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inɔ:rməs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people or things are enormous, they are very large.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dog looks enormous next to yours.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">extraordinary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikstrɔ:rdənɛri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone or something are extraordinary, they are amazing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fireman who rescued the girl was extraordinary.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fog</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ:g]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fog is a thick cloud that is near the ground or water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I did not want to drive in the thick fog.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">funeral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fju:nərəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A funeral is a ceremony that takes place after a person dies.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They had a funeral for the soldier who died during the war.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">giant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒaiənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people or things are giant, they are very big.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The giant truck got in my way.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impression</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impreʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An impression is the way of thinking about someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Most people's first impression of Dr. Giani is that he is mean.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">income</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkʌm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Income is how much money a person or business makes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her company pays her a fairly good income.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mad</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mæd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is mad, they are angry.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mother got mad when I didn't listen to her.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ought</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">aux. v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone ought to do something, then it is the right thing to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I ought to take my library books back.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">resist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rizist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To resist something is to fight against it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He resisted the treatment at the hospital.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reveal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rivi:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To reveal is to show something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I will reveal where I hid the candy bar.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To rid is to make a place free from something or someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We rid our home of mice by using traps.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sword</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɔ:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sword is a long sharp weapon.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They used to use swords in battles in ancient times.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tale</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[teil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tale is a story.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She told her two friends about the wild tale of her day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[træp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To trap people or animals is to capture them so they cannot get away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We trapped butterflies in a net.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[traiəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A trial is the way a court discovers if a person is guilty or innocent.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He went on trial for robbing the bank.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">violent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vaiələnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people are violent, they want to hurt someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man was put into jail because he was violent.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "u10_ex1_1",
+              "content": "1. wanting to hurt someone",
+              "options": [
+                "funeral",
+                "violent",
+                "rid",
+                "enormous"
+              ],
+              "correctAnswer": "violent",
+              "explanation": "violent nghĩa là bạo lực, muốn làm tổn thương người khác (wanting to hurt someone)."
+            },
+            {
+              "id": "u10_ex1_2",
+              "content": "2. very big",
+              "options": [
+                "fog",
+                "declare",
+                "giant",
+                "mad"
+              ],
+              "correctAnswer": "giant",
+              "explanation": "giant nghĩa là khổng lồ, rất lớn (very big)."
+            },
+            {
+              "id": "u10_ex1_3",
+              "content": "3. to show something",
+              "options": [
+                "resist",
+                "extraordinary",
+                "ought",
+                "reveal"
+              ],
+              "correctAnswer": "reveal",
+              "explanation": "reveal nghĩa là tiết lộ, phơi bày (to show something)."
+            },
+            {
+              "id": "u10_ex1_4",
+              "content": "4. to capture",
+              "options": [
+                "trap",
+                "citizen",
+                "income",
+                "trial"
+              ],
+              "correctAnswer": "trap",
+              "explanation": "trap nghĩa là đặt bẫy, bắt giữ (to capture)."
+            },
+            {
+              "id": "u10_ex1_5",
+              "content": "5. a way of thinking about a person",
+              "options": [
+                "council",
+                "impression",
+                "sword",
+                "tale"
+              ],
+              "correctAnswer": "impression",
+              "explanation": "impression nghĩa là ấn tượng, cách nghĩ về một người (a way of thinking about a person)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "u10_ex2_1",
+              "content": "1. mad",
+              "options": [
+                "big",
+                "to capture",
+                "amazing",
+                "angry"
+              ],
+              "correctAnswer": "angry",
+              "explanation": "mad nghĩa là tức giận (angry)."
+            },
+            {
+              "id": "u10_ex2_2",
+              "content": "2. income",
+              "options": [
+                "to free from",
+                "the money earned by a person",
+                "the right thing to do",
+                "a person that lives in a town"
+              ],
+              "correctAnswer": "the money earned by a person",
+              "explanation": "income nghĩa là thu nhập (the money earned by a person)."
+            },
+            {
+              "id": "u10_ex2_3",
+              "content": "3. resist",
+              "options": [
+                "to want to hurt someone",
+                "to show something",
+                "to fight against",
+                "large"
+              ],
+              "correctAnswer": "to fight against",
+              "explanation": "resist nghĩa là chống cự, chống lại (to fight against)."
+            },
+            {
+              "id": "u10_ex2_4",
+              "content": "4. sword",
+              "options": [
+                "a long, sharp weapon",
+                "cloud near the ground or water",
+                "tobacco rolled up for smoking",
+                "a way to think of a person"
+              ],
+              "correctAnswer": "a long, sharp weapon",
+              "explanation": "sword nghĩa là thanh gươm (a long, sharp weapon)."
+            },
+            {
+              "id": "u10_ex2_5",
+              "content": "5. tale",
+              "options": [
+                "to hold clothes in place",
+                "a way to see if someone should go to jail",
+                "to say something",
+                "a story"
+              ],
+              "correctAnswer": "a story",
+              "explanation": "tale nghĩa là câu chuyện (a story)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Blackbeard</h1><p style=\"margin-bottom: 1rem;\">A longtime ago, I had my first job. It didn’t give me much of an <b>income</b>. It was on a <b>giant</b> pirate ship. On my first night, there was a thick <b>fog</b> over the water. A lamp on the ship <b>revealed</b> an <b>enormous</b> man. He had a <b>sword</b> in his belt. His name was Blackbeard, and he was one of the most <b>violent</b> pirates ever.</p><p style=\"margin-bottom: 1rem;\">One day, Blackbeard did an <b>extraordinary</b> thing. He attacked several ships near a town. He took some of the town’s <b>citizens</b>. Then he <b>declared</b>, “You give me medicine!” Blackbeard wanted the medicine for some of the sick pirates on his ship.</p><p style=\"margin-bottom: 1rem;\">The people had a bad <b>impression</b> of him. They were <b>mad</b>, and they <b>resisted</b>. But they were <b>trapped</b>. They wanted to get <b>rid</b> of him. So the town’s <b>council</b> decided to give him the medicine.</p><p style=\"margin-bottom: 1rem;\">After this, there was a reward for catching Blackbeard. If Blackbeard was caught, he would have a <b>trial</b>. He didn’t want to go to jail, so he quit being a pirate.</p><p style=\"margin-bottom: 1rem;\">Blackbeard became a fisherman. But he <b>ought</b> to have stayed on land. The Royal Navy was still looking for him. They attacked him while he was fishing on his boat. Blackbeard fought against many men. Finally, he was killed. He didn’t even get a <b>funeral</b>. But people still tell <b>tales</b> about him many years later.</p></div>",
+      "imageUrl": "/unit10_story.png",
+      "sections": [
+        {
+          "id": "sec3_reading",
+          "title": "Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "u10_rd_1",
+              "content": "1. What is this tale about?",
+              "options": [
+                "How many pirates become fishermen",
+                "An enormous violent pirate",
+                "A boy resisting having to take medicine",
+                "A ship that ought to have stayed at sea"
+              ],
+              "correctAnswer": "An enormous violent pirate",
+              "explanation": "Câu chuyện nói về Blackbeard, một tên cướp biển khổng lồ và bạo lực."
+            },
+            {
+              "id": "u10_rd_2",
+              "content": "2. What can be assumed from the passage?",
+              "options": [
+                "The town gave Blackbeard the medicine.",
+                "Blackbeard was an extraordinary fighter.",
+                "Blackbeard's lamp revealed where he was.",
+                "The citizens were mad when Blackbeard was killed."
+              ],
+              "correctAnswer": "Blackbeard was an extraordinary fighter.",
+              "explanation": "Dựa vào đoạn cuối 'Blackbeard fought against many men', có thể suy ra ông ta là một chiến binh phi thường."
+            },
+            {
+              "id": "u10_rd_3",
+              "content": "3. Which of the following is true about Blackbeard?",
+              "options": [
+                "He kept his sword in his belt.",
+                "He lit his cigarettes using a lamp.",
+                "He wanted to get rid of his giant ship.",
+                "He had a trial in the town."
+              ],
+              "correctAnswer": "He kept his sword in his belt.",
+              "explanation": "Đoạn 1 viết: 'He had a sword in his belt.'"
+            },
+            {
+              "id": "u10_rd_4",
+              "content": "4. Why were the people in town trapped?",
+              "options": [
+                "Blackbeard was waiting for a reward.",
+                "The fog was too thick for ships to sail in.",
+                "Blackbeard wouldn't let ships in or out.",
+                "Blackbeard declared that there was a strong storm coming."
+              ],
+              "correctAnswer": "Blackbeard wouldn't let ships in or out.",
+              "explanation": "Dù không nói rõ 'wouldn't let ships in or out' nhưng qua việc Blackbeard tấn công tàu gần thị trấn, dân làng bị mắc kẹt."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

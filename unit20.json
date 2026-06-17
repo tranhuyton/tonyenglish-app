@@ -1,0 +1,187 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 20",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit20_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit20_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accomplish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈkɑːmplɪʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To accomplish something means to finish it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He accomplished his goal of running ten miles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">approve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈpruːv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To approve of something means you like it or are happy about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her co-workers approved her new plan.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">approximate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈprɑːksɪmət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Approximate means to be close to an exact amount, number or time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My approximate height is two meters.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">barrier</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbæriər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A barrier is something that is in your way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Great Wall was a barrier between China and its enemies.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">detect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈtekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To detect something means to notice or find something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy ran to the kitchen when he detected the smell of cookies.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">duty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈduːti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A duty is something that a person has to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is parents' duty to take care of their children.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">elementary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌelɪˈmentri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is elementary, it is the first or most simple thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Children go to elementary school before high school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">failure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfeɪljər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A failure happens when you do not do something right.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My cooking ended in failure because I burned the food.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gradual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɡrædʒuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is gradual, it happens slowly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Children learn to read at a gradual pace. They do not learn right away.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">immigrant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪmɪɡrənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An immigrant is a person who moves to a different country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My parents were immigrants. They came from Poland.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">insert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈsɜːrt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To insert something means to put it in something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mailman inserted the letter into the mailbox.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">instant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪnstənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An instant is a very short amount of time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A microwave oven cooks food in an instant.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">poverty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpɑːvərti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Poverty is the state of being poor.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Poverty is a problem in many countries around the world.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pretend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɪˈtend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pretend means to make believe something is real.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy liked to pretend he was a king.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rank</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ræŋk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A person's rank is their place in an order of people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man got to the rank of captain in the navy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recognition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌrekəɡˈnɪʃn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Recognition is getting praise from other people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hero got recognition for his brave deed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">refrigerate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɪˈfrɪdʒəreɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To refrigerate something means to make it cold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Grocery stores refrigerate fruit to make it last long.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rent]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Rent is the money people pay to someone to live in a certain place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ To live in this house, I have to pay rent at the start of each month.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">retire</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɪˈtaɪər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To retire is to leave a job, usually because of old age.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My father is sixty-five years old. He is about to retire from work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">statistic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stəˈtɪstɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A statistic is a number that tells a fact about something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The statistics showed that we did just as well this year as last year.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1.",
+              "options": [
+                "Learning Spanish was a gradual process for me.",
+                "The boy retired his mother."
+              ],
+              "correctAnswer": "Learning Spanish was a gradual process for me.",
+              "explanation": "Option a makes better sense."
+            },
+            {
+              "id": "2",
+              "content": "2.",
+              "options": [
+                "The bottle fell and broke in an instant.",
+                "I accomplish sleeping before I go to bed."
+              ],
+              "correctAnswer": "The bottle fell and broke in an instant.",
+              "explanation": "Option a makes better sense."
+            },
+            {
+              "id": "3",
+              "content": "3.",
+              "options": [
+                "Four is the approximate number of forty.",
+                "The old man retired from his job."
+              ],
+              "correctAnswer": "The old man retired from his job.",
+              "explanation": "Option b makes better sense."
+            },
+            {
+              "id": "4",
+              "content": "4.",
+              "options": [
+                "It is not always easy to accomplish hard goals.",
+                "The racecar won by going at a gradual speed."
+              ],
+              "correctAnswer": "It is not always easy to accomplish hard goals.",
+              "explanation": "Option a makes better sense."
+            },
+            {
+              "id": "5",
+              "content": "5.",
+              "options": [
+                "Peanuts are an instant to grow and eat.",
+                "His approximate height is two meters."
+              ],
+              "correctAnswer": "His approximate height is two meters.",
+              "explanation": "Option b makes better sense."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Fill in the blanks with the correct words from the word bank. (barrier, recognition, failure, elementary, immigrant)",
+          "content": "",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "6",
+              "content": "My new friend is an (app[1]) who came from Italy. He goes to the same (app[2]) school that I do. He does not know many English words. Having to learn new words is a hard (app[3]) for him to get past. When he says things wrong, he feels like a (app[4]). I tell him not to worry. Soon he will know English very well. When I help him learn, he is happy and gives me (app[5]) for my good deed.",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "immigrant"
+                },
+                {
+                  "id": "2",
+                  "answer": "elementary"
+                },
+                {
+                  "id": "3",
+                  "answer": "barrier"
+                },
+                {
+                  "id": "4",
+                  "answer": "failure"
+                },
+                {
+                  "id": "5",
+                  "answer": "recognition"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif;\">    <h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Albert Einstein</h1>    <p style=\"margin-bottom: 1rem;\">My name is Albert Einstein. Many people know about the great things I've <b>accomplished</b>. But I had many <b>barriers</b> before I became famous.</p>    <p style=\"margin-bottom: 1rem;\">I was born in Germany. When I was in <b>elementary</b> school, I already knew about math and <b>statistics</b>. When I was a boy, I <b>pretended</b> to be a great scientist. I loved school, but my life at home was hard. My father lost his job, so my family lived in <b>poverty</b>. We could not pay the <b>rent</b> in Germany. We became <b>immigrants</b> and went to Italy. I finished high school and went to college in Switzerland.</p>    <p style=\"margin-bottom: 1rem;\">After college, I began writing about science. I did not reach success in an <b>instant</b>, though. At first, other scientists did not <b>approve</b> of my work. They thought I was a <b>failure</b>. Rising to the <b>rank</b> of an admired scientist was a <b>gradual</b> process. Soon, people started to notice that I was right. At last, I began to get some <b>recognition</b>.</p>    <p style=\"margin-bottom: 1rem;\">I showed how to find the <b>approximate</b> size of very big things, like stars. I also <b>detected</b> and explained the movement of very small things, like atoms. And for fun, I made a machine that could <b>refrigerate</b> food by <b>inserting</b> heat. I never <b>retired</b>. It was my <b>duty</b> to keep working. I overcame many hard times, and I will be remembered for my important works.</p></div>",
+      "imageUrl": "/unit20_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "7",
+              "content": "1. What is this story about?",
+              "options": [
+                "How Einstein got instant recognition",
+                "Why Einstein was a failure at first",
+                "How Einstein got past barriers to accomplish many great things",
+                "Why Einstein pretended to be sick while in elementary school"
+              ],
+              "correctAnswer": "How Einstein got past barriers to accomplish many great things",
+              "explanation": "Option c is correct."
+            },
+            {
+              "id": "8",
+              "content": "2. Why did Einstein's family become immigrants?",
+              "options": [
+                "They were unhappy about new developments in math and statistics.",
+                "They couldn't pay their rent in Germany and had to leave.",
+                "His parents didn't want him to stay in school.",
+                "They wanted Einstein to go to college in Switzerland."
+              ],
+              "correctAnswer": "They couldn't pay their rent in Germany and had to leave.",
+              "explanation": "Option b is correct."
+            },
+            {
+              "id": "9",
+              "content": "3. Why was Einstein's rise in the ranks of scientists gradual?",
+              "options": [
+                "Einstein did not write down his ideas.",
+                "Einstein's ideas could not be proven.",
+                "Other scientists already knew about his ideas.",
+                "Other scientists didn't approve of his ideas at first."
+              ],
+              "correctAnswer": "Other scientists didn't approve of his ideas at first.",
+              "explanation": "Option d is correct."
+            },
+            {
+              "id": "10",
+              "content": "4. According to the passage, all the following are true about Einstein EXCEPT",
+              "options": [
+                "he found the approximate size of stars",
+                "he refrigerated food by inserting heat as a power source",
+                "he had a duty to retire",
+                "he detected the movement of atoms"
+              ],
+              "correctAnswer": "he had a duty to retire",
+              "explanation": "Option c is correct."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Answer the question.",
+          "content": "",
+          "questionType": "Tự luận",
+          "questions": [
+            {
+              "id": "11",
+              "content": "5. Why did Albert's family live in poverty?",
+              "correctAnswer": "Albert's family lived in poverty because his father lost his job.",
+              "explanation": "From the text."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

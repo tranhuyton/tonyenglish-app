@@ -1,0 +1,209 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 18",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit18_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit18_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ability</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[abilati]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Ability is the quality of a person being able to do something well.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His swimming abilities let him cross the entire lake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">agriculture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aegrikAltJar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Agriculture is the growing of food and animals.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The farmer studied agriculture in college.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cartoon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ka:rtu:n]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cartoon is a funny drawing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sometimes, people draw cartoons for the newspaper.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ceiling</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[si:liŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The ceiling is the top of a room.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He painted the ceiling with a special roller.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convince</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənvins]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To convince someone means to make them sure of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She convinced me to buy the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">curious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kjuəriəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When you are curious about something, you want to know more about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I opened up the clock because I was curious about how it worked.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">delay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dilei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To delay means to wait to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was delayed at the airport for over two hours.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[daiəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A diary is a book in which people write their personal experiences.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I do not let anybody read my diary.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">element</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[elimənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An element of something is a particular part of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Tackling an opponent is Johnny’s favorite element of American football.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">faith</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feiθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people have faith in something, they believe in it and trust it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sick girl had faith in doctors. She knew they would make her better.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[grein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Grain is food crops such as wheat, corn, rice or oats.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The farmer planted two fields of grain this year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">greet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gri:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To greet someone means to meet and welcome them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When my friend came over, I greeted him at the door.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">investigate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[investigeit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To investigate means to search for something or learn about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The detective went to investigate the crime.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">joy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒɔi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Joy is a feeling you get when you are really happy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I love baseball. I feel joy when I play.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">label</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[leibəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A label is a tag that tells about something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The label on the back of your shirt will tell you what size it is.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">monk</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mʌŋk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A monk is a religious person who lives a simple life.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The monks knew a lot about religion.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">odd</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ad]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is odd, it is unusual.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her cat is odd. It walks on two feet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pause</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pɔ:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pause means to stop doing something for a while.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since she was so hungry, she paused to make a snack.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">priest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pri:st]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A priest is a person trained to perform religious duties.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The priest taught us about God.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">profession</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəfeʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A profession is a person’s job.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He loved sailing, so he chose to work on ships as a profession.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Part A: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. investigate",
+              "options": [
+                "to search for",
+                "to meet",
+                "to stop",
+                "to make someone sure"
+              ],
+              "correctAnswer": "to search for",
+              "explanation": "investigate nghĩa là to search for."
+            },
+            {
+              "id": "2",
+              "content": "2. element",
+              "options": [
+                "the top of a room",
+                "a funny drawing",
+                "a tag",
+                "a particular part of something"
+              ],
+              "correctAnswer": "a particular part of something",
+              "explanation": "element nghĩa là a particular part of something."
+            },
+            {
+              "id": "3",
+              "content": "3. odd",
+              "options": [
+                "a religious man",
+                "wanting to know more",
+                "not normal",
+                "a happy feeling"
+              ],
+              "correctAnswer": "not normal",
+              "explanation": "odd nghĩa là not normal."
+            },
+            {
+              "id": "4",
+              "content": "4. priest",
+              "options": [
+                "a private book",
+                "a person trained to perform religious duties",
+                "food crops",
+                "a funny drawing"
+              ],
+              "correctAnswer": "a person trained to perform religious duties",
+              "explanation": "priest nghĩa là a person trained to perform religious duties."
+            },
+            {
+              "id": "5",
+              "content": "5. label",
+              "options": [
+                "things you do well",
+                "a tag that tells about something",
+                "your job",
+                "a particular part of something"
+              ],
+              "correctAnswer": "a tag that tells about something",
+              "explanation": "label nghĩa là a tag that tells about something."
+            },
+            {
+              "id": "6",
+              "content": "6. pause",
+              "options": [
+                "to search for",
+                "to meet",
+                "to stop",
+                "to make someone sure"
+              ],
+              "correctAnswer": "to stop",
+              "explanation": "pause nghĩa là to stop."
+            },
+            {
+              "id": "7",
+              "content": "7. agriculture",
+              "options": [
+                "growing food",
+                "believing in something",
+                "not normal",
+                "wanting to know more"
+              ],
+              "correctAnswer": "growing food",
+              "explanation": "agriculture nghĩa là growing food."
+            },
+            {
+              "id": "8",
+              "content": "8. diary",
+              "options": [
+                "a job",
+                "food crops",
+                "the top of a room",
+                "a private book"
+              ],
+              "correctAnswer": "a private book",
+              "explanation": "diary nghĩa là a private book."
+            },
+            {
+              "id": "9",
+              "content": "9. faith",
+              "options": [
+                "a happy feeling",
+                "things you do well",
+                "a tag",
+                "belief in something"
+              ],
+              "correctAnswer": "belief in something",
+              "explanation": "faith nghĩa là belief in something."
+            },
+            {
+              "id": "10",
+              "content": "10. curious",
+              "options": [
+                "the business of farming",
+                "wanting to know more",
+                "a religious man",
+                "things you do well"
+              ],
+              "correctAnswer": "wanting to know more",
+              "explanation": "curious nghĩa là wanting to know more."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Priest</h1><p style=\"margin-bottom: 1rem;\">A young <b>priest</b> was always sad. He was good at his <b>profession</b>, but he still had no <b>joy</b>. He visited a group of wise <b>monks</b>.</p><p style=\"margin-bottom: 1rem;\">When he got to the <b>monks</b>’ house, they <b>greeted</b> him and let him in. The <b>monks</b> asked the <b>priest</b>, “What is the matter?” The <b>priest</b> said, “I should be happy, but I am not. I don’t know what to do.” The wise <b>monks</b> <b>paused</b> for a minute. Then one said, “We are <b>convinced</b> of your <b>faith</b>. You are a very good <b>priest</b>. But to find <b>joy</b>, you have to do more. Above all, <b>investigate</b> the <b>elements</b> of your life that you love.” The <b>priest</b> thought that this answer was <b>odd</b>, but he was <b>curious</b>.</p><p style=\"margin-bottom: 1rem;\">The next day, the <b>priest</b> thought about his <b>abilities</b>. He got a few ideas, and he did not want to <b>delay</b> any longer. He liked to draw, so he made some <b>cartoons</b>. He also liked to write, so he started a <b>diary</b>. He was interested in <b>agriculture</b>, so he planted some <b>grains</b>. He made jam from berries. He made his own <b>labels</b> to put on the jars of jam. He painted his <b>ceiling</b>. The <b>priest</b> learned something. It is not too hard to be happy after all. All one has to do is find things they like doing, and do them!</p></div>",
+      "imageUrl": "/unit18_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. What is this story about?",
+              "options": [
+                "Why monks have faith in God",
+                "How a priest finds joy",
+                "How to investigate odd answers",
+                "Why a priest did not like his profession"
+              ],
+              "correctAnswer": "How a priest finds joy",
+              "explanation": "Câu chuyện nói về cách mà một linh mục tìm thấy niềm vui (How a priest finds joy)."
+            },
+            {
+              "id": "12",
+              "content": "2. Why did the priest go to the monks?",
+              "options": [
+                "Because he was convinced that he was a fine priest",
+                "Because he wanted to greet them",
+                "Because he wanted their help",
+                "Because he wanted to tell them how happy he became"
+              ],
+              "correctAnswer": "Because he wanted their help",
+              "explanation": "Linh mục đến gặp các nhà sư vì anh ấy cần sự giúp đỡ (Because he wanted their help)."
+            },
+            {
+              "id": "13",
+              "content": "3. After the priest talked to the monks, what did he think about?",
+              "options": [
+                "His abilities",
+                "His curious job",
+                "His pauses",
+                "His delays"
+              ],
+              "correctAnswer": "His abilities",
+              "explanation": "Sau khi nói chuyện, anh ấy đã suy nghĩ về những khả năng của mình (His abilities)."
+            },
+            {
+              "id": "14",
+              "content": "4. According to the passage, all the following are true of the priest EXCEPT",
+              "options": [
+                "he painted his ceiling",
+                "he tried agriculture and planted grains",
+                "he drew cartoons",
+                "he forgot to put labels on his jam"
+              ],
+              "correctAnswer": "he forgot to put labels on his jam",
+              "explanation": "Tất cả đều đúng ngoại trừ việc anh ấy quên dán nhãn lên mứt (he forgot to put labels on his jam) vì anh ấy thực sự đã tự làm nhãn (He made his own labels)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

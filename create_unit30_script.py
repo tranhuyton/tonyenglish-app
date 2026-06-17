@@ -1,0 +1,129 @@
+import json
+
+words = [
+    {"word": "appeal", "phonetics": "[əˈpiːl]", "type": "v.", "def": "To appeal to someone is to be interesting or attractive to them.", "ex": "Sleeping all day appeals to me, but I have to go to school."},
+    {"word": "assume", "phonetics": "[əˈsjuːm]", "type": "v.", "def": "To assume something is to think that it is true, even with no proof.", "ex": "I assume you are both familiar with this plan."},
+    {"word": "borrow", "phonetics": "[ˈbɑːroʊ]", "type": "v.", "def": "To borrow something is to take it and then give it back later.", "ex": "Can I borrow a pencil to use today? I’ll give it back to you tomorrow."},
+    {"word": "client", "phonetics": "[ˈklaɪənt]", "type": "n.", "def": "A client is a person or business that pays another to do a service.", "ex": "She has many clients who enjoy coming to her salon."},
+    {"word": "downtown", "phonetics": "[ˌdaʊnˈtaʊn]", "type": "n.", "def": "The downtown is the center of most cities.", "ex": "The downtown is filled with many tall buildings."},
+    {"word": "dull", "phonetics": "[dʌl]", "type": "adj.", "def": "If something is dull, it is not exciting.", "ex": "The movie was very dull. I fell asleep watching it."},
+    {"word": "embarrass", "phonetics": "[ɪmˈbærəs]", "type": "v.", "def": "To embarrass someone is to make them feel ashamed or foolish.", "ex": "He was embarrassed when he couldn’t remember her name."},
+    {"word": "fare", "phonetics": "[fɛr]", "type": "n.", "def": "A fare is an amount of money paid to use a bus, train, or taxi.", "ex": "Since he is a senior, my grandfather pays a low fare for the bus."},
+    {"word": "former", "phonetics": "[ˈfɔːrmər]", "type": "adj.", "def": "Former describes something that used to be but is not any more.", "ex": "The hotel, a former castle, was built over 200 years ago."},
+    {"word": "formula", "phonetics": "[ˈfɔːrmjələ]", "type": "n.", "def": "A formula is a set mathematical way or method of solving a problem.", "ex": "I learned a new formula that may help us with our problem."},
+    {"word": "found", "phonetics": "[faʊnd]", "type": "v.", "def": "To found a company or organization means to start it.", "ex": "The pilgrims founded one of the first colonies in the United States."},
+    {"word": "invest", "phonetics": "[ɪnˈvest]", "type": "v.", "def": "To invest means to use money in a way that will bring a profit later.", "ex": "I invested money in a new building that should bring me a profit."},
+    {"word": "loan", "phonetics": "[loʊn]", "type": "n.", "def": "A loan is the act of lending something, usually money.", "ex": "I got a loan from the bank."},
+    {"word": "practical", "phonetics": "[ˈpræktɪkəl]", "type": "adj.", "def": "If something is practical, it is useful in normal life.", "ex": "Learning English is practical; you can use it in many places."},
+    {"word": "quarter", "phonetics": "[ˈkwɔːrtər]", "type": "n.", "def": "A quarter is 25 cents.", "ex": "He paid a quarter for the candy."},
+    {"word": "salary", "phonetics": "[ˈsæləri]", "type": "n.", "def": "A salary is how much money a person makes at his or her job.", "ex": "He got a new job with a better salary."},
+    {"word": "scholarship", "phonetics": "[ˈskɑːlərʃɪp]", "type": "n.", "def": "A scholarship is money given to one so they can go to school.", "ex": "I got a scholarship to help me pay for university."},
+    {"word": "temporary", "phonetics": "[ˈtempəreri]", "type": "adj.", "def": "If something is temporary, it exists for a short time.", "ex": "This car is only temporary; I’ll get a new one soon."},
+    {"word": "treasure", "phonetics": "[ˈtreʒər]", "type": "n.", "def": "A treasure is a collection of valuable things, especially jewels or gold.", "ex": "They became very rich when they found the buried treasure."},
+    {"word": "urge", "phonetics": "[ɜːrdʒ]", "type": "v.", "def": "To urge someone is to try very hard to get them to do something.", "ex": "He urged them to believe his story."}
+]
+
+wordListHtml = '<div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;"><div style="display: flex; flex-direction: column; gap: 16px;"><img src="/unit30_word_list_1.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /><img src="/unit30_word_list_2.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /></div><div style="display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;"><h3 style="font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Detailed Meanings</h3><div style="display: flex; flex-direction: column; gap: 24px;">'
+
+for w in words:
+    wordListHtml += f'<div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">{w["word"]}</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">{w["phonetics"]}</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">{w["type"]}</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">{w["def"]}</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ {w["ex"]}</div></div></div>'
+
+wordListHtml += '</div></div></div>'
+
+questions1 = [
+  {"id": "1", "content": "1. salary", "options": ["a system of beliefs", "to give but receive back later", "the money one makes at a job", "to make a person feel stupid"], "correctAnswer": "the money one makes at a job", "explanation": "salary nghĩa là lương (the money one makes at a job)."},
+  {"id": "2", "content": "2. former", "options": ["in the past", "useful", "to establish something", "boring"], "correctAnswer": "in the past", "explanation": "former nghĩa là trước đây (in the past)."},
+  {"id": "3", "content": "3. formula", "options": ["to believe without proof", "existing for a short time", "a mathematical rule", "the center of a city"], "correctAnswer": "a mathematical rule", "explanation": "formula nghĩa là công thức (a mathematical rule)."},
+  {"id": "4", "content": "4. practical", "options": ["the way it used to be", "useful", "to complain", "money for school"], "correctAnswer": "useful", "explanation": "practical nghĩa là thực tế, hữu ích (useful)."},
+  {"id": "5", "content": "5. borrow", "options": ["to be wanted", "to take for a short time", "a system of beliefs", "the center of a town"], "correctAnswer": "to take for a short time", "explanation": "borrow nghĩa là mượn (to take for a short time)."},
+  {"id": "6", "content": "6. assume", "options": ["to believe without proof", "to establish", "25 cents", "to try to get someone to act"], "correctAnswer": "to believe without proof", "explanation": "assume nghĩa là cho rằng, giả định (to believe without proof)."},
+  {"id": "7", "content": "7. downtown", "options": ["a group of letter or numbers", "to encourage", "food with a lot of sugar", "the center of a city"], "correctAnswer": "the center of a city", "explanation": "downtown nghĩa là trung tâm thành phố (the center of a city)."},
+  {"id": "8", "content": "8. dull", "options": ["boring", "the money you make at a job", "to take for a short time", "a valuable collection"], "correctAnswer": "boring", "explanation": "dull nghĩa là buồn tẻ (boring)."},
+  {"id": "9", "content": "9. treasure", "options": ["money for school", "to lend something and get back later", "a valuable collection", "a system of beliefs"], "correctAnswer": "a valuable collection", "explanation": "treasure nghĩa là kho báu (a valuable collection)."},
+  {"id": "10", "content": "10. temporary", "options": ["a small amount of money", "to believe without proof", "existing for a short time", "to give but get back later"], "correctAnswer": "existing for a short time", "explanation": "temporary nghĩa là tạm thời (existing for a short time)."}
+]
+
+questions2 = [
+  {"id": "11", "content": "1. The lawyer is very busy because_____.", "options": ["she has many clients", "she makes a good salary"], "correctAnswer": "she has many clients", "explanation": "client là khách hàng. Luật sư bận rộn vì cô ấy có nhiều khách hàng."},
+  {"id": "12", "content": "2. I want to make more money, so_____.", "options": ["I will invest some of my money", "I assume that I did"], "correctAnswer": "I will invest some of my money", "explanation": "invest là đầu tư. Muốn có thêm tiền thì sẽ đầu tư."},
+  {"id": "13", "content": "3. I didn’t like the book;_____.", "options": ["it was only temporary", "it was very dull"], "correctAnswer": "it was very dull", "explanation": "dull là nhàm chán. Không thích cuốn sách vì nó nhàm chán."},
+  {"id": "14", "content": "4. This math problem is hard,_____.", "options": ["and I wish I had a formula", "so I need a scholarship"], "correctAnswer": "and I wish I had a formula", "explanation": "formula là công thức. Bài toán khó nên ước gì có công thức."},
+  {"id": "15", "content": "5. I don’t need more money._____.", "options": ["I will found a bakery", "I have enough cash"], "correctAnswer": "I have enough cash", "explanation": "cash là tiền mặt. Không cần thêm tiền vì đã có đủ tiền mặt."}
+]
+
+questions3 = [
+  {"id": "16", "content": "1. If something is _____, you can use it often.", "options": ["urge", "borrow", "practical", "appeal", "downtown"], "correctAnswer": "practical", "explanation": "practical: thực tế, hữu ích (có thể sử dụng thường xuyên)."},
+  {"id": "17", "content": "2. You can _____ my hat, but you have to give it back to me.", "options": ["urge", "borrow", "practical", "appeal", "downtown"], "correctAnswer": "borrow", "explanation": "borrow: mượn. (Mượn mũ và sau đó trả lại)."},
+  {"id": "18", "content": "3. I like living _____; it is an exciting place.", "options": ["urge", "borrow", "practical", "appeal", "downtown"], "correctAnswer": "downtown", "explanation": "downtown: trung tâm thành phố. (Nơi thú vị để sống)."},
+  {"id": "19", "content": "4. I _____ you to save money; you might need it later.", "options": ["urge", "borrow", "practical", "appeal", "downtown"], "correctAnswer": "urge", "explanation": "urge: thúc giục, khuyên nhủ. (Khuyên nên tiết kiệm tiền)."},
+  {"id": "20", "content": "5. Does flying _____ to you? I've always wanted to try it.", "options": ["urge", "borrow", "practical", "appeal", "downtown"], "correctAnswer": "appeal", "explanation": "appeal: hấp dẫn, lôi cuốn. (Việc bay lượn có hấp dẫn bạn không?)."}
+]
+
+storyHtml = '<div style="font-family: Arial, sans-serif; "><h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">The Taxi Driver</h1><p style="margin-bottom: 1rem;">Peter\'s job was driving a taxi <b>downtown</b>. He made a small <b>salary</b>. But he liked his job because it wasn\'t <b>dull</b>. Every day, he saw new things that <b>appealed</b> to him. Peter was <b>practical</b> about the future. "Maybe I can get a <b>scholarship</b> to college," he thought. "I could learn mathematical <b>formulas</b> and get a job at a bank. I could help <b>clients</b> <b>invest</b> their money."</p><p style="margin-bottom: 1rem;">Peter stopped to pick up a passenger. "Where to?" he asked.</p><p style="margin-bottom: 1rem;">"Go to the Fourth Street Bank. And don\'t talk to me. I\'ve had a rough day," the man said. Peter was angry, but he had a peaceful philosophy. When they stopped, the man\'s <b>fare</b> came to $10.25. He put his hands in his pockets. "I can\'t find my wallet!" he said. "I can\'t pay the <b>fare</b>!"</p><p style="margin-bottom: 1rem;">Peter said, "Maybe I\'ll give you a <b>temporary</b> <b>loan</b>. You can <b>borrow</b> ten dollars and a <b>quarter</b> from me."</p><p style="margin-bottom: 1rem;">The man was <b>embarrassed</b>, saying, "I was mean to you, but now I want to help you. I <b>founded</b> this bank. I want to give you one thousand dollars."</p><p style="margin-bottom: 1rem;">That much money was like a <b>treasure</b> to Peter. The man <b>urged</b> him to take the money, but he didn\'t.</p><p style="margin-bottom: 1rem;">"You\'re an honest person," the man said. "I <b>assumed</b> you would take it. I want you to work for me."</p><p style="margin-bottom: 1rem;">The next day, Peter started his job at the bank. He was happy to be done with his <b>former</b> job.</p></div>'
+
+storyQuestions = [
+  {"id": "21", "content": "1. What is this story about?", "options": ["How a poor taxi driver got a new job by being kind", "Why a dull job with a high salary appeals to people", "How to get a scholarship to go to college", "Why it is important not to borrow money"], "correctAnswer": "How a poor taxi driver got a new job by being kind", "explanation": "Câu chuyện kể về việc một người lái taxi nghèo có được công việc mới nhờ lòng tốt của mình."},
+  {"id": "22", "content": "2. What does Peter do downtown?", "options": ["He drives a taxi.", "He studies math formulas.", "He grumbles about his job.", "He drives people around for a quarter."], "correctAnswer": "He drives a taxi.", "explanation": "Bài đọc viết: 'Peter\\'s job was driving a taxi downtown.'"},
+  {"id": "23", "content": "3. Why does the man give Peter a job?", "options": ["He assumes that Peter is practical.", "He didn't want to give Peter a treasure.", "Peter showed that he was honest.", "Peter loaned him twenty five cents."], "correctAnswer": "Peter showed that he was honest.", "explanation": "Người đàn ông nói: 'You\\'re an honest person... I want you to work for me.'"},
+  {"id": "24", "content": "4. Why does Peter like his job?", "options": ["He invested a lot of money in it.", "It is only a temporary job.", "He can embarrass other people by being rude.", "It is never dull and he meets many people."], "correctAnswer": "It is never dull and he meets many people.", "explanation": "Bài đọc viết: '...he liked his job because it wasn\\'t dull. Every day, he saw new things that appealed to him.'"},
+  {"id": "25", "content": "5. What does the man urge Peter to do?", "options": ["He urged Peter to leave the bank.", "He urged Peter to take the money.", "He urged Peter to buy a car.", "He urged Peter to sleep all day."], "correctAnswer": "He urged Peter to take the money.", "explanation": "Bài đọc viết: 'The man urged him to take the money, but he didn\\'t.'"}
+]
+
+data = {
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 30",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": wordListHtml,
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": questions1
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Check the one that suits the blank naturally.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": questions2
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Fill in the blanks with the correct words.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": questions3
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": storyHtml,
+      "imageUrl": "/unit30_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": storyQuestions
+        }
+      ]
+    }
+  ]
+}
+
+with open("c:/Users/Tony/.gemini/antigravity/scratch/tonyenglish-app/unit30.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print("unit30.json created successfully!")

@@ -1,6 +1,4 @@
-const fs = require('fs');
-
-const unitData = {
+{
   "basicInfo": {
     "skill": "Standard-Reading",
     "title": "Unit 28",
@@ -412,7 +410,4 @@ const unitData = {
       ]
     }
   ]
-};
-
-fs.writeFileSync('unit28_raw.json', JSON.stringify(unitData, null, 2));
-console.log('Successfully wrote unit28_raw.json');
+}

@@ -1,0 +1,413 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 16",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit16_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit16_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adolescent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ædəlesənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An adolescent is a young person or a teenager.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The adolescent was excited about getting a skateboard for his birthday.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aptitude</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æptitu:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Aptitude is a natural ability or skill.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He has a natural aptitude for water skiing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compliment</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑmpləmənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To compliment is to say a nice thing about someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her co-worker complimented her for doing a good job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hinder</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hindər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To hinder is to keep someone or something from doing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All the traffic hindered me from getting to work on time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">journalism</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒə:rnəlizm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Journalism is the work of collecting the news to put in newspapers or on TV.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Before becoming a teacher, she worked in journalism.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">jury</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒuəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A jury is a group of people that listen to a trial and say if someone is guilty.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The jury listened closely to the attorney before they made their decision.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">justice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒʌstis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Justice is fairness in the way that you treat other people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People turn to the court system when they are seeking justice.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">liberty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[libərti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Liberty is freedom to do what you want.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ To many people, the Statue of Liberty is a symbol of freedom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">literary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[litəreri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is literary, it is involved with literature in some way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He worked hard to create a successful literary career.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pharmacy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɑrməsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pharmacy is a place where medicine is sold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My mother sells medicine to people at the pharmacy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pill</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pill is a small object that has medicine inside.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She took a pill for her headache.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">presume</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prizu:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To presume is to believe something is true without being certain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since he raised his hand, the teacher presumed he knew the answer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">privacy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[praivəsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To have privacy is to be away from other people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please hang the sign on the door so we can have some privacy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">punishment</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌniʃmənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A punishment is something that one must endure for any wrongdoing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was given a punishment for being rude to the teacher.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sensible</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sensəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is sensible, they make good decisions.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was sensible for her to save some money each month.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">slice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[slais]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A slice is a piece from something larger, such as a cake.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girl enjoyed a slice of cake at her birthday party.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sorrow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɑrou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Sorrow is a very sad feeling.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girl felt sorrow after her best friend moved away.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">straw</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strɔ:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A straw is a thin tube that is used to suck liquid into the mouth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I drank the orange juice through a straw.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">swell</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[swel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To swell is to become larger and rounder.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister’s stomach began to swell after she got pregnant.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tidy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[taidi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is tidy, it is clean and in order.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Leon has always been a very tidy boy.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. the condition of being away from other people",
+              "options": [
+                "presume",
+                "privacy",
+                "slice",
+                "adolescent"
+              ],
+              "correctAnswer": "privacy",
+              "explanation": "privacy nghĩa là sự riêng tư, tình trạng tránh xa người khác (the condition of being away from other people)."
+            },
+            {
+              "id": "2",
+              "content": "2. to say something nice to someone",
+              "options": [
+                "compliment",
+                "sensible",
+                "hinder",
+                "punishment"
+              ],
+              "correctAnswer": "compliment",
+              "explanation": "compliment nghĩa là khen ngợi (to say something nice to someone)."
+            },
+            {
+              "id": "3",
+              "content": "3. an object with medicine inside",
+              "options": [
+                "straw",
+                "pill",
+                "aptitude",
+                "justice"
+              ],
+              "correctAnswer": "pill",
+              "explanation": "pill nghĩa là viên thuốc (an object with medicine inside)."
+            },
+            {
+              "id": "4",
+              "content": "4. fairness to others",
+              "options": [
+                "sorrow",
+                "justice",
+                "liberty",
+                "jury"
+              ],
+              "correctAnswer": "justice",
+              "explanation": "justice nghĩa là sự công bằng đối với người khác (fairness to others)."
+            },
+            {
+              "id": "5",
+              "content": "5. a store that sells medicine",
+              "options": [
+                "pharmacy",
+                "compliment",
+                "literary",
+                "swell"
+              ],
+              "correctAnswer": "pharmacy",
+              "explanation": "pharmacy nghĩa là tiệm thuốc tây (a store that sells medicine)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. What is a group of people that decides whether someone is guilty or not?",
+              "options": [
+                "A jury",
+                "A punishment",
+                "A pill",
+                "An adolescent"
+              ],
+              "correctAnswer": "A jury",
+              "explanation": "A jury là bồi thẩm đoàn, nhóm người quyết định ai đó có tội hay không."
+            },
+            {
+              "id": "7",
+              "content": "2. If you are going to someone’s wedding, what will others think?",
+              "options": [
+                "That you are out for justice",
+                "That they’ll presume you know the couple",
+                "That you are tidy",
+                "That you work in a pharmacy"
+              ],
+              "correctAnswer": "That they’ll presume you know the couple",
+              "explanation": "Người ta sẽ cho rằng (presume) bạn biết cặp đôi đó."
+            },
+            {
+              "id": "8",
+              "content": "3. If you have the ability to do something, then you have ________.",
+              "options": [
+                "aptitude",
+                "swell",
+                "privacy",
+                "hinder"
+              ],
+              "correctAnswer": "aptitude",
+              "explanation": "aptitude nghĩa là năng khiếu, khả năng tự nhiên để làm gì đó."
+            },
+            {
+              "id": "9",
+              "content": "4. A ________ person reads a lot of books.",
+              "options": [
+                "literary",
+                "liberty",
+                "pill",
+                "journalism"
+              ],
+              "correctAnswer": "literary",
+              "explanation": "literary nghĩa là có tính văn học, người đọc nhiều sách."
+            },
+            {
+              "id": "10",
+              "content": "5. If someone exercises regularly, what kind of person can we say they are?",
+              "options": [
+                "One who has aptitude",
+                "A sensible person",
+                "One who likes to give compliments",
+                "A person who enjoys a slice of pizza"
+              ],
+              "correctAnswer": "A sensible person",
+              "explanation": "Người tập thể dục thường xuyên là một người biết suy nghĩ hợp lý (sensible person)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. The teacher preferred working with children instead of young people.",
+              "options": [
+                "adolescents",
+                "aptitude",
+                "compliment",
+                "sensible"
+              ],
+              "correctAnswer": "adolescents",
+              "explanation": "young people có nghĩa tương đồng với adolescents (thanh thiếu niên)."
+            },
+            {
+              "id": "12",
+              "content": "2. It was hard for the students not to feel sadness or regret at the end of the school year.",
+              "options": [
+                "sorrow",
+                "justice",
+                "liberty",
+                "privacy"
+              ],
+              "correctAnswer": "sorrow",
+              "explanation": "sadness or regret tương đồng với sorrow (sự đau buồn)."
+            },
+            {
+              "id": "13",
+              "content": "3. The newspaper was known for its excellent work in writing news stories.",
+              "options": [
+                "journalism",
+                "jury",
+                "pharmacy",
+                "punishment"
+              ],
+              "correctAnswer": "journalism",
+              "explanation": "writing news stories có liên quan đến nghề báo (journalism)."
+            },
+            {
+              "id": "14",
+              "content": "4. The pregnant woman’s stomach started to grow larger and rounder.",
+              "options": [
+                "swell",
+                "presume",
+                "hinder",
+                "compliment"
+              ],
+              "correctAnswer": "swell",
+              "explanation": "grow larger and rounder tương tự với swell (phình to)."
+            },
+            {
+              "id": "15",
+              "content": "5. The wall stopped his ability to see what was on the other side.",
+              "options": [
+                "hindered",
+                "presumed",
+                "swelled",
+                "complimented"
+              ],
+              "correctAnswer": "hindered",
+              "explanation": "stopped his ability tương đồng với hindered (cản trở)."
+            },
+            {
+              "id": "16",
+              "content": "6. Henry’s sentence for doing wrong was to spend two years in prison.",
+              "options": [
+                "punishment",
+                "justice",
+                "liberty",
+                "jury"
+              ],
+              "correctAnswer": "punishment",
+              "explanation": "sentence for doing wrong tương đồng với punishment (sự trừng phạt)."
+            },
+            {
+              "id": "17",
+              "content": "7. Everybody in the group received three pieces or portions of pizza each.",
+              "options": [
+                "slices",
+                "straws",
+                "pills",
+                "adolescents"
+              ],
+              "correctAnswer": "slices",
+              "explanation": "pieces or portions tương đồng với slices (lát, phần)."
+            },
+            {
+              "id": "18",
+              "content": "8. I asked my father if we had any long tubes for drinking liquid.",
+              "options": [
+                "straws",
+                "slices",
+                "pills",
+                "pharmacies"
+              ],
+              "correctAnswer": "straws",
+              "explanation": "long tubes for drinking liquid chính là straws (ống hút)."
+            },
+            {
+              "id": "19",
+              "content": "9. The children enjoyed their freedom on the playground after school.",
+              "options": [
+                "liberty",
+                "justice",
+                "privacy",
+                "sorrow"
+              ],
+              "correctAnswer": "liberty",
+              "explanation": "freedom tương đồng với liberty (sự tự do)."
+            },
+            {
+              "id": "20",
+              "content": "10. The doctor’s office was clean and orderly.",
+              "options": [
+                "tidy",
+                "sensible",
+                "literary",
+                "miserable"
+              ],
+              "correctAnswer": "tidy",
+              "explanation": "clean and orderly tương đồng với tidy (gọn gàng, sạch sẽ)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Matthew Learns a Lesson</h1><p style=\"margin-bottom: 1rem;\">Matthew was a <b>sensible</b> boy. He always kept his room <b>tidy</b> and had a natural <b>literary</b> <b>aptitude</b>. One day, he hoped to have a career in <b>journalism</b>. The <b>adolescent</b> spent much of his time reading and liked having <b>privacy</b>. But his quiet personality <b>hindered</b> his ability to make friends.</p><p style=\"margin-bottom: 1rem;\">One day, Matthew went to the <b>pharmacy</b> to pick up some <b>pills</b> for his grandmother. He saw some boys leaning against a pole outside. One of the boys <b>complimented</b> Matthew. \"I like your jacket.\"</p><p style=\"margin-bottom: 1rem;\">Another boy asked, \"Do you want to go to Nate's Restaurant?\"</p><p style=\"margin-bottom: 1rem;\">\"Sure!\" Matthew said.</p><p style=\"margin-bottom: 1rem;\">The boys walked to the restaurant. They were going to have <b>slices</b> of pizza. They ordered their food and drank soda with <b>straws</b>. They ate until their bellies <b>swelled</b> up. Matthew was having so much fun.</p><p style=\"margin-bottom: 1rem;\">One of the boys said, \"Let's leave without paying.\"</p><p style=\"margin-bottom: 1rem;\">Matthew didn't want to. But he <b>presumed</b> his new friends wouldn't like him if he didn't.</p><p style=\"margin-bottom: 1rem;\">Suddenly, the waiter yelled, \"Stop!\" The two other boys ran, leaving Matthew there alone.</p><p style=\"margin-bottom: 1rem;\">Soon, the police arrived. \"Leaving without paying for your meal is the same as stealing,\" said the police officer. \"The restaurant wants <b>justice</b>. So next week you have to go to court and let a <b>jury</b> decide your <b>punishment</b>.\"</p><p style=\"margin-bottom: 1rem;\">When he went to court, the judge asked, \"Do you have anything to say, Matthew?\"</p><p style=\"margin-bottom: 1rem;\">He said, \"I feel <b>sorrow</b> for what I've done. Now I know that real friends won't ask you to do something illegal.\"</p><p style=\"margin-bottom: 1rem;\">The <b>jury</b> then let him have his <b>liberty</b>. But they made Matthew pick up trash as <b>punishment</b>. Much to Matthew's surprise, he ended up meeting some new friends.</p></div>",
+      "imageUrl": "/unit16_v3_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. The adolescent had a natural literary aptitude.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Câu chuyện mô tả Matthew: 'He always kept his room tidy and had a natural literary aptitude.'"
+            },
+            {
+              "id": "22",
+              "content": "2. The boy leaning against the pole complimented Matthew’s pills.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "False",
+              "explanation": "Cậu bé đã khen áo khoác của Matthew chứ không phải thuốc: 'One of the boys complimented Matthew. “I like your jacket.”'"
+            },
+            {
+              "id": "23",
+              "content": "3. Matthew ordered a slice of pizza at the restaurant.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Theo câu chuyện: 'They were going to have slices of pizza.'"
+            },
+            {
+              "id": "24",
+              "content": "4. The boys ate too much, so their bellies swelled.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Theo câu chuyện: 'They ate until their bellies swelled up.'"
+            },
+            {
+              "id": "25",
+              "content": "5. Matthew wants to work in the justice system when he grows up.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "False",
+              "explanation": "Matthew muốn làm trong ngành báo chí: 'One day, he hoped to have a career in journalism.'"
+            },
+            {
+              "id": "26",
+              "content": "6. The jury allowed Matthew to keep his liberty, but he had to help in the community as punishment.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "True",
+              "explanation": "Theo câu chuyện: 'The jury then let him have his liberty. But they made Matthew pick up trash as punishment.'"
+            }
+          ]
+        },
+        {
+          "id": "sec5_reading",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "27",
+              "content": "1. Why was Matthew at the pharmacy?",
+              "options": [
+                "He wanted some privacy.",
+                "He needed to buy straws.",
+                "He was buying pills.",
+                "He felt sorrow."
+              ],
+              "correctAnswer": "He was buying pills.",
+              "explanation": "Theo câu chuyện: 'Matthew went to the pharmacy to pick up some pills for his grandmother.'"
+            },
+            {
+              "id": "28",
+              "content": "2. Which of the following is NOT a word used to describe Matthew?",
+              "options": [
+                "Sensible",
+                "Quiet",
+                "Rude",
+                "Tidy"
+              ],
+              "correctAnswer": "Rude",
+              "explanation": "Câu chuyện miêu tả Matthew là 'sensible', 'tidy' và 'quiet', nhưng không hề dùng từ 'rude'."
+            },
+            {
+              "id": "29",
+              "content": "3. Why did Matthew try to leave the restaurant without paying for his meal?",
+              "options": [
+                "He didn’t enjoy the food.",
+                "He presumed his friends would like him.",
+                "He couldn’t find the waiter.",
+                "He didn’t have enough money."
+              ],
+              "correctAnswer": "He presumed his friends would like him.",
+              "explanation": "Theo câu chuyện: 'But he presumed his new friends wouldn’t like him if he didn’t.'"
+            },
+            {
+              "id": "30",
+              "content": "4. Why did Matthew get to keep his liberty at the end of the story?",
+              "options": [
+                "He complimented the jury.",
+                "He persuaded the jury he had learned his lesson.",
+                "He picked up trash as a punishment.",
+                "He hindered the jury from making a decision."
+              ],
+              "correctAnswer": "He picked up trash as a punishment.",
+              "explanation": "Bồi thẩm đoàn để cho cậu tự do nhưng bắt cậu nhặt rác thay thế: 'The jury then let him have his liberty. But they made Matthew pick up trash as punishment.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
