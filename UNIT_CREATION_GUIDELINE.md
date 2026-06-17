@@ -15,7 +15,7 @@ Tài liệu này là bộ khung (framework) bắt buộc dành cho bất kỳ AI
 **Tuyệt đối KHÔNG** cắt hình ảnh nhàm chán từ file PDF (trừ khi người dùng ép buộc). Toàn bộ ảnh đều phải được tạo bằng AI (`generate_image`) với chất lượng cao nhất:
 1. **Ảnh Word List 1 & 2**: Tạo 2 bức ảnh minh hoạ sinh động, phong cách hoạt hình (colorful, cute cartoon, storybook style). Trên ảnh phải có dòng chữ nghệ thuật "FUN WORD ADVENTURES! VOCABULARY FOR KIDS" và lồng ghép 10 từ vựng của mỗi phần trôi nổi trong không gian ảnh.
 2. **Ảnh Bài Đọc (Story)**: Đọc nội dung câu chuyện và tạo 1 bức ảnh minh họa sát với bối cảnh truyện (phong cách: high quality, colorful, cute cartoon, storybook style). 
-3. **Lưu ý**: Đặt tên ảnh theo cấu trúc `unitX_word_list_1.png`, `unitX_word_list_2.png`, `unitX_story.png` và di chuyển tất cả vào thư mục `public/`.
+3. **Lưu ý**: Đặt tên ảnh theo cấu trúc `unitX_volY_word_list_1.png`, `unitX_volY_word_list_2.png`, `unitX_volY_story.png` (trong đó Y là số Volume hiện tại, ví dụ: vol5) và di chuyển tất cả vào thư mục `public/`. **CẢNH BÁO:** Bắt buộc phải có `volY` trong tên file, nếu không bạn sẽ ghi đè và làm hỏng toàn bộ ảnh của các Volume trước đó!
 
 ---
 
@@ -27,7 +27,7 @@ Toàn bộ `content_json` phải tuân thủ nghiêm ngặt cấu trúc có kh�
 {
   "basicInfo": {
     "skill": "Standard-Reading",
-    "title": "Unit X",
+    "title": "Unit X: Volume Y", // CẢNH BÁO: Tên này phải TRÙNG KHỚP HOÀN TOÀN với tên lưu trên Database. KHÔNG được chỉ để "Unit X" hay "Volume Y - Unit X".
     "category": "exercise",
     "timeLimit": 0
   },
@@ -51,9 +51,10 @@ Toàn bộ `content_json` phải tuân thủ nghiêm ngặt cấu trúc có kh�
 Dưới đây là quy định chi tiết về HTML cho từng tab:
 
 ### Tab 1: Word List (`parts[0]`)
-HTML của Word List phải bọc trong các thẻ `div` với flex-direction và khoảng cách (`gap`) chuẩn như sau. KHÔNG được tự ý chèn thêm số thứ tự hay khung nền xám!
+HTML của Word List phải bọc trong các thẻ `div` với flex-direction và khoảng cách (`gap`) chuẩn như sau. 
 
 **🚨 CẢNH BÁO CỰC KỲ QUAN TRỌNG VỀ FORMAT HTML 🚨**
+- **KHÔNG** được tự ý chèn thêm số thứ tự (1, 2, 3...) hay các vòng tròn số có khung nền xám vào danh sách từ vựng! Nếu phá vỡ quy tắc này, giao diện của người dùng sẽ bị hỏng hoàn toàn!
 - **TUYỆT ĐỐI KHÔNG ĐƯỢC THÊM KÝ TỰ XUỐNG DÒNG (`\n`), KÝ TỰ TAB (`\t`) HAY THỤT LỀ (INDENT) VÀO TRONG CHUỖI HTML!**
 - Toàn bộ chuỗi HTML phải nằm trên **MỘT DÒNG DUY NHẤT** (Minified HTML).
 - Nếu bạn dùng template string (backticks) rồi tự ý format HTML cho dễ đọc (xuống dòng, thụt lề), Next.js/React trên frontend sẽ render các khoảng trắng dư thừa này, làm **VỠ HOÀN TOÀN GIAO DIỆN**.
@@ -147,11 +148,13 @@ Trích xuất câu hỏi đọc hiểu vào mảng sections. **BẮT BUỘC:** `
 ---
 
 ## BƯỚC 4: LƯU VÀ PUSH CODE (BẮT BUỘC)
-Sau khi cập nhật xong database qua API Supabase, BẮT BUỘC phải thực hiện thao tác đẩy code chứa các file ảnh AI vừa tạo lên hệ thống lưu trữ Github:
+Sau khi cập nhật xong database qua API Supabase, BẮT BUỘC phải tuân thủ 2 điều sau:
 
-1. Di chuyển vào thư mục dự án.
-2. Thêm toàn bộ các thay đổi và file ảnh mới: `git add public/unitX_*.png`
-3. Commit rõ ràng: `git commit -m "Add assets and implement Unit X"`
-4. Đẩy code lên web: `git push`
+1. **Upload lên Supabase:** Khi `insert` vào bảng `tests` trên Supabase, trường `test_type` BẮT BUỘC phải là `"Standard-Reading"`. Tuyệt đối không dùng `"vocabulary"` hay tên khác, nếu không giao diện bài thi sẽ bị rỗng (mất layout Split-Screen).
+2. **Push Ảnh Lên Github:** Đẩy code chứa các file ảnh AI vừa tạo lên hệ thống lưu trữ Github:
+   - Di chuyển vào thư mục dự án.
+   - Thêm toàn bộ các thay đổi và file ảnh mới: `git add public/unitX_volY_*.png`
+   - Commit rõ ràng: `git commit -m "Add assets and implement Unit X Volume Y"`
+   - Đẩy code lên web: `git push`
 
-**CẢNH BÁO:** Bỏ qua bước đẩy code này sẽ khiến toàn bộ công sức đổ sông đổ bể vì hệ thống Frontend (Vercel/Netlify) sẽ không lấy được hình ảnh hiển thị cho người dùng!
+**CẢNH BÁO:** Bỏ qua bước đẩy code này sẽ khiến toàn bộ công sức đổ sông đổ bể vì hệ thống Frontend (Vercel/Netlify) sẽ không lấy được hình ảnh hiển thị cho người dùng (làm mất luôn 20 từ vựng được nhúng trong ảnh)!
