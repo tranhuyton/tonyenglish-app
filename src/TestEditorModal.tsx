@@ -449,7 +449,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
         title: testRecord.title || (isImportMode ? 'Đề thi Import từ Excel/CSV' : ''),
         courseId: testRecord.course_id || 'all', 
         folderId: testRecord.folder_id || '', 
-        skill: testRecord.test_type || 'Standard-Listening',
+        skill: testRecord.test_type || 'Standard-Reading',
         category: testRecord.content_json?.basicInfo?.category || 'exercise', 
         mode: 'Đề thi',
         timeLimit: '40',

@@ -749,7 +749,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
         id: 'new', 
         title: '', 
         folder_id: currentFolderId || '', 
-        test_type: mode === 'case-study' ? 'Case-Study' : 'Standard-Listening', 
+        test_type: mode === 'case-study' ? 'Case-Study' : 'Standard-Reading', 
         content_json: null, 
         mode 
     });
@@ -777,7 +777,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
     const payload: any = { 
        title: finalData.basicInfo?.title || 'Untitled Test', 
-       test_type: finalData.basicInfo?.skill || 'Standard-Listening', 
+       test_type: finalData.basicInfo?.skill || 'Standard-Reading', 
        content_json: finalData, 
        json_config: parsedJsonConfig, 
        folder_id: resolvedFolderId, 

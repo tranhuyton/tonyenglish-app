@@ -181,7 +181,7 @@ export default function BatchImportModal({ courses, supabase, onClose, onSuccess
   ]);
   const [courseId, setCourseId] = useState('all');
   const [category, setCategory] = useState('exercise');
-  const [skill, setSkill] = useState('Standard-Listening');
+  const [skill, setSkill] = useState('Standard-Reading');
   const [timeLimit, setTimeLimit] = useState('40');
   const [isProcessing, setIsProcessing] = useState(false);
   const [isDone, setIsDone] = useState(false);
