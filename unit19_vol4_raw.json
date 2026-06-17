@@ -1,0 +1,345 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 19",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit19_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit19_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">afflicted</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈflɪktɪd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">chịu đựng, khổ sở vì điều gì.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">He was afflicted by pain in his right arm.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aisle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aɪl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">lối đi giữa các hàng ghế/kệ hàng.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">They were told to clear the aisle because the plane was about to land.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">atmosphere</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈætməsfɪər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">bầu không khí, khí quyển.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">Scientists worry that harmful substances are hurting the atmosphere.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">author</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɔːθər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">tác giả.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">The author was hard at work on his next novel.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">breakdown</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbreɪkdaʊn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">sự hỏng hóc, sự suy nhược.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">Her car had a breakdown, and she wasn't sure how to fix it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cargo</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑːrgoʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">hàng hóa chở trên tàu, máy bay.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">The cargo of the ship got wet when it started raining.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chapter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtʃæptər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">chương sách.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">The first chapter of a book usually introduces the main character of a story.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">connect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəˈnekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">kết nối, nối lại với nhau.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">I connected the mouse to my laptop computer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">etc.</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪtˈsetərə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">vân vân, và những thứ khác.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">She was going to bring treats to the party: cookies, muffins, cake, etc.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flɪp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">bật, lật (công tắc).</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">To turn on the lights, just flip this switch.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">idle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈaɪdl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">nhàn rỗi, không làm gì.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">She read a book to keep from being idle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">notify</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈnoʊtəfaɪ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">thông báo cho ai đó.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">The teacher notified us about a change to our assignment.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pea</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[piː]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">hạt đậu (Hà Lan).</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">His favorite food was peas.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">raisin</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈreɪzən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">nho khô.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">Raisins are one of my favorite snacks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">retain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɪˈteɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">giữ lại, duy trì.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">Even by the afternoon, the day had retained the morning's freshness.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">state</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[steɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">phát biểu, tuyên bố.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">The president stated his opinion about the world's health concerns.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tray</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[treɪ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">cái khay đựng đồ.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">The waiter brought our food on a tray.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">unfortunate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌnˈfɔːrtʃənət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">không may, đáng tiếc.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">It was unfortunate that Dave's team lost, but he still had fun.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vivid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈvɪvɪd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">sống động, chói lọi, rực rỡ.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">The figures in the painting were vivid.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vomit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈvɑːmɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">nôn mửa.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">It is common for women to vomit when they are pregnant.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "1. cargo",
+              "options": [
+                "space",
+                "items",
+                "air",
+                "list"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"cargo\" nghĩa là hàng hóa, do đó đáp án B. items là chính xác."
+            },
+            {
+              "id": "q2",
+              "content": "2. retain",
+              "options": [
+                "to keep",
+                "to join",
+                "to do",
+                "to press a switch"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"retain\" nghĩa là giữ lại, tương đương với \"to keep\"."
+            },
+            {
+              "id": "q3",
+              "content": "3. vivid",
+              "options": [
+                "to not work",
+                "bright",
+                "end",
+                "vegetable"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"vivid\" có nghĩa là chói lọi, sống động, tương đương với \"bright\"."
+            },
+            {
+              "id": "q4",
+              "content": "4. raisin",
+              "options": [
+                "division",
+                "grape",
+                "air",
+                "writer"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"raisin\" nghĩa là nho khô, có liên quan đến \"grape\" (quả nho)."
+            },
+            {
+              "id": "q5",
+              "content": "5. idle",
+              "options": [
+                "doing nothing",
+                "affected",
+                "plate",
+                "to have food come up"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"idle\" nghĩa là nhàn rỗi, không làm gì, tương đương với \"doing nothing\"."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Write a word that is similar in meaning to the bold part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q6",
+              "content": "1. Scientists do not completely understand the **air that surrounds the Earth**.",
+              "options": [
+                "cargo",
+                "atmosphere",
+                "chapter",
+                "breakdown"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"air that surrounds the Earth\" (không khí bao quanh Trái Đất) có nghĩa là bầu khí quyển, tức là \"atmosphere\"."
+            },
+            {
+              "id": "q7",
+              "content": "2. The police officer said in a **definite way** that he arrived at exactly 1:15 PM.",
+              "options": [
+                "stated",
+                "flipped",
+                "notified",
+                "connected"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"said in a definite way\" (nói một cách chắc chắn) có nghĩa là tuyên bố, phát biểu, tương đương với \"stated\"."
+            },
+            {
+              "id": "q8",
+              "content": "3. The teacher asked the students to read three **divisions in a book**.",
+              "options": [
+                "aisles",
+                "peas",
+                "chapters",
+                "trays"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"divisions in a book\" (các phần trong một cuốn sách) có nghĩa là các chương sách, tức là \"chapters\"."
+            },
+            {
+              "id": "q9",
+              "content": "4. Carolyn **told** me that she would be late to the meeting.",
+              "options": [
+                "notified",
+                "retained",
+                "vomited",
+                "betrayed"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"told\" (bảo, nói) trong ngữ cảnh này mang nghĩa thông báo cho ai đó biết, tương đương với \"notified\"."
+            },
+            {
+              "id": "q10",
+              "content": "5. His mother brought his food to him on a **flat serving plate**.",
+              "options": [
+                "raisin",
+                "tray",
+                "aisle",
+                "cargo"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"flat serving plate\" (đĩa phẳng phục vụ thức ăn) chính là cái khay đựng đồ ăn, tức là \"tray\"."
+            },
+            {
+              "id": "q11",
+              "content": "6. Gina was **affected with** guilt because her brother got hurt while she watched him.",
+              "options": [
+                "afflicted by",
+                "stated",
+                "idle",
+                "vivid"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"affected with\" (bị ảnh hưởng, đau khổ bởi) mang nghĩa là bị giày vò, khổ sở, tương đương với \"afflicted by\"."
+            },
+            {
+              "id": "q12",
+              "content": "7. Islands like Bali, Hawaii, Brunei, and **the others similar**, rely on tourism.",
+              "options": [
+                "authors",
+                "etc.",
+                "chapters",
+                "raisins"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"the others similar\" (những cái khác tương tự) mang nghĩa vân vân, tương đương với \"etc.\"."
+            },
+            {
+              "id": "q13",
+              "content": "8. The flight attendant asked me to keep my bag out of the **space between the seats**.",
+              "options": [
+                "breakdown",
+                "cargo",
+                "aisle",
+                "atmosphere"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"space between the seats\" (khoảng trống giữa các ghế) chính là lối đi, tức là \"aisle\"."
+            },
+            {
+              "id": "q14",
+              "content": "9. The computer's **failure to work** caused major problems at work.",
+              "options": [
+                "breakdown",
+                "author",
+                "chapter",
+                "tray"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"failure to work\" (không hoạt động được) chính là sự hỏng hóc, sự cố, tức là \"breakdown\"."
+            },
+            {
+              "id": "q15",
+              "content": "10. The **person who wrote the book** was nice enough to sign my copy of his book.",
+              "options": [
+                "author",
+                "pea",
+                "raisin",
+                "atmosphere"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"person who wrote the book\" (người viết cuốn sách) chính là tác giả, tức là \"author\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Isaac's First Plane Trip</h1><p style=\"margin-bottom: 1rem;\">Isaac's family was going on vacation. He was excited about the trip except for one thing. He had never been on a plane before. He was scared that his plane would have a <b>breakdown</b>.</p><p style=\"margin-bottom: 1rem;\">Isaac got onto the plane. He walked down the <b>aisle</b> until he found his seat. He sat down and <b>connected</b> the ends of his seat belt. After being <b>idle</b> for a few minutes, the pilot announced that they were ready to leave.</p><p style=\"margin-bottom: 1rem;\">He looked out the window at the <b>vivid</b> colors of the sky. He began to feel scared. The girl sitting next to him said, \"Hi, I'm Rachel! You look nervous, but you don't need to be. Flying is fun!\"</p><p style=\"margin-bottom: 1rem;\">\"I'm still a bit nervous,\" Issac said, \"and I'm getting hungry.\"</p><p style=\"margin-bottom: 1rem;\">\"The food service will begin soon. Just lower the <b>tray</b> on the seat in front of you, and <b>flip</b> this switch. Then they'll bring your dinner! Last time, they served chicken, <b>peas</b>, and a box of <b>raisins</b>,\" Rachel explained.</p><p style=\"margin-bottom: 1rem;\">Then the pilot <b>notified</b> the passengers of bad conditions in the <b>atmosphere</b>. \"We're tracking the weather: lightning, clouds, <b>etc.</b> The ride might get a bit rough,\" he <b>stated</b>.</p><p style=\"margin-bottom: 1rem;\">Suddenly, the plane started to shake. Isaac was badly <b>afflicted</b> by his fear. His stomach hurt, and he thought he might <b>vomit</b>. He couldn't believe that he was in such an <b>unfortunate</b> place. Finally, the shaking stopped. Isaac was still scared, but he tried to <b>retain</b> a good attitude.</p><p style=\"margin-bottom: 1rem;\">\"The first time I flew, the plane shook so bad that <b>cargo</b> started falling. My parents told me to listen to music and read a <b>chapter</b> in my book. It calmed me,\" Rachel said.</p><p style=\"margin-bottom: 1rem;\">Suddenly, the plane shook again. This time, Isaac followed Rachel's advice. He put on headphones and took out a book by his favorite <b>author</b>. The book and the music helped Isaac feel better. After a while, he didn't even notice the bad weather. The bad situation didn't feel so bad after someone helped him.</p></div>",
+      "imageUrl": "/unit19_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q16",
+              "content": "1. Isaac was scared the plane would have a breakdown.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng (True). \"He was scared that his plane would have a breakdown.\""
+            },
+            {
+              "id": "q17",
+              "content": "2. Isaac ate raisins and peas and read a book by his favorite author.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai (False). Cậu bé nghe nhạc và đọc sách, nhưng không có đoạn nào nói cậu đã ăn nho khô và đậu Hà Lan. Rachel chỉ nói về nho khô và đậu."
+            },
+            {
+              "id": "q18",
+              "content": "3. Rachel's parents suggested she read a chapter in her book when she was scared.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng (True). Rachel kể rằng: \"My parents told me to listen to music and read a chapter in my book.\""
+            },
+            {
+              "id": "q19",
+              "content": "4. Isaac's fear went away as soon as he took a nap.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai (False). Nỗi sợ của Isaac không biến mất sau khi cậu chợp mắt, mà là sau khi làm theo lời khuyên của Rachel (nghe nhạc và đọc sách)."
+            },
+            {
+              "id": "q20",
+              "content": "5. The pilot stated that the conditions in the atmosphere were sun, wind, etc.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai (False). Phi công thông báo rằng: \"We're tracking the weather: lightning, clouds, etc.\""
+            },
+            {
+              "id": "q21",
+              "content": "6. Isaac was scared, but he tried to retain a good attitude.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng (True). Trong bài đọc có viết: \"Isaac was still scared, but he tried to retain a good attitude.\""
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q22",
+              "content": "1. What would happen if Isaac flipped the switch?",
+              "options": [
+                "The cargo would fall.",
+                "They would bring him his dinner.",
+                "He would vomit.",
+                "They would bring him some water."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Theo lời Rachel: \"Just lower the tray on the seat in front of you, and flip this switch. Then they'll bring your dinner!\""
+            },
+            {
+              "id": "q23",
+              "content": "2. What did Isaac do as the plane left?",
+              "options": [
+                "He played with Rachel.",
+                "He was idle.",
+                "He fell asleep.",
+                "He looked at the vivid sky."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Sau khi được thông báo là đã sẵn sàng khởi hành, \"He looked out the window at the vivid colors of the sky.\""
+            },
+            {
+              "id": "q24",
+              "content": "3. What did Isaac think when the plane first started shaking?",
+              "options": [
+                "He was in an unfortunate place.",
+                "He was afflicted by pain.",
+                "The pilot made a mistake.",
+                "His food would fall off the tray."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Khi máy bay rung lắc lần đầu: \"He couldn't believe that he was in such an unfortunate place.\""
+            },
+            {
+              "id": "q25",
+              "content": "4. What happened the first time Rachel was on a plane?",
+              "options": [
+                "The dinner service was late.",
+                "She had to wait in the aisle.",
+                "The cargo fell from above.",
+                "Her seat belt wasn't connected."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Rachel kể: \"The first time I flew, the plane shook so bad that cargo started falling.\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

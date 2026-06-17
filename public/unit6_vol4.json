@@ -1,0 +1,541 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 6",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit6_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit6_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">absolute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aebsaluit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is absolute, it is total or complete.<br><b>hoàn toàn, tuyệt đối</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— My presentation was an absolute disaster! It was terrible!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alas</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[alaes]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">int.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Alas is a word that people say when something bad happens.<br><b>chao ôi, than ôi (dùng khi có chuyện buồn, không may)</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— I looked everywhere for my purse, but alas, I couldn’t find it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">attentive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[atentiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are attentive, you are careful and you pay attention.<br><b>chú ý, cẩn thận</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— He is a good student because he is attentive to every detail on his work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cape</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[keip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cape is a large cloth that covers one’s back and is tied around the neck.<br><b>áo choàng</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The superhero wore a long red cape.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">envision</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[invi3an]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To envision something means to imagine that it may happen.<br><b>mường tượng, hình dung</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— I can envision my mom’s face when I give her this present!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">evenly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[i:vanli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something happens evenly, it happens at the same rate or level.<br><b>đồng đều</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The food was handed out evenly among the hungry people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">folk</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fouk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Folk are common or average people.<br><b>người, người dân</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— I’ve invited all the folks from our street to a gathering at my place.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">melt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[melt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To melt means to turn from a solid to a liquid.<br><b>tan chảy</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The snowman that we made yesterday melted in the sun.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">patch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paetj]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A patch is a part of a surface that is different in appearance from the rest.<br><b>miếng, mảng</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— There was one small patch of grass in the sand-covered desert.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pleasure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[Pie38r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Pleasure is a feeling of happiness.<br><b>niềm vui, sự thích thú</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The student smiled with pleasure when she received the prize.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pop</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pap]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pop is a short, loud sound.<br><b>tiếng nổ bốp</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— I heard a loud pop; then my computer screen shattered.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pudding</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pudirj]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pudding is a sweet dessert.<br><b>bánh pudding, món tráng miệng ngọt</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— Would you like some chocolate pudding and coffee for dessert?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rail</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rail is a horizontal bar made of metal or wood.<br><b>lan can, thanh chắn</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The cat was sitting on the rail of the fence.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recipe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[resspi:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A recipe is a set of instructions to make food.<br><b>công thức nấu ăn</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— The apple cake that you made is really tasty. Can I have the recipe, please?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">role</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[roul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A role is the normal purpose or function of a person or thing.<br><b>vai trò</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— My role at work is to check the quality of the products.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shrink</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[jriQk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To shrink means to get smaller.<br><b>co lại, nhỏ lại</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— If you stick to a healthy diet, your stomach will shrink!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">soak</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[souk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To soak something means to make it very wet.<br><b>ngâm, nhúng ướt</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— You need to soak these beans overnight before you cook them.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spark</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spark]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A spark is a small, quick flash of fire.<br><b>tia lửa</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— As he welded the two pieces of metal together, sparks flew everywhere.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spirit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spirit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A spirit is someone’s feelings and personality, but not a physical body part.<br><b>tinh thần, tâm trạng</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— He has a very outgoing spirit. He can make friends with anyone.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">suit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[suit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A suit is a set of clothes. It usually includes a jacket with pants ora skirt.<br><b>bộ com-lê, bộ đồ</b></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">— I wore my new suit on my date with Melissa.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1 - Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. a set of clothes",
+              "options": [
+                "spirit",
+                "suit",
+                "recipe",
+                "rail"
+              ],
+              "correctAnswer": "B",
+              "explanation": "suit (bộ com-lê, bộ đồ) phù hợp với định nghĩa 'a set of clothes'."
+            },
+            {
+              "id": "2",
+              "content": "2. common people",
+              "options": [
+                "folk",
+                "pleasure",
+                "absolute",
+                "attentive"
+              ],
+              "correctAnswer": "A",
+              "explanation": "folk (người, người dân) phù hợp với định nghĩa 'common people'."
+            },
+            {
+              "id": "3",
+              "content": "3. to get smaller",
+              "options": [
+                "melt",
+                "pop",
+                "shrink",
+                "envision"
+              ],
+              "correctAnswer": "C",
+              "explanation": "shrink (co lại, nhỏ lại) phù hợp với định nghĩa 'to get smaller'."
+            },
+            {
+              "id": "4",
+              "content": "4. a large cloth worn on the back",
+              "options": [
+                "patch",
+                "cape",
+                "spark",
+                "role"
+              ],
+              "correctAnswer": "B",
+              "explanation": "cape (áo choàng) phù hợp với định nghĩa 'a large cloth worn on the back'."
+            },
+            {
+              "id": "5",
+              "content": "5. happening at the same rate everywhere",
+              "options": [
+                "evenly",
+                "alas",
+                "soaks",
+                "pudding"
+              ],
+              "correctAnswer": "A",
+              "explanation": "evenly (đồng đều) phù hợp với định nghĩa 'happening at the same rate everywhere'."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 1 - Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. melt",
+              "options": [
+                "to get smaller",
+                "to turn to liquid",
+                "to make wet",
+                "to imagine"
+              ],
+              "correctAnswer": "B",
+              "explanation": "melt (tan chảy) nghĩa là 'to turn to liquid'."
+            },
+            {
+              "id": "2",
+              "content": "2. spark",
+              "options": [
+                "a flash of fire",
+                "a set of clothes",
+                "a sweet dessert",
+                "a set of instructions"
+              ],
+              "correctAnswer": "A",
+              "explanation": "spark (tia lửa) nghĩa là 'a flash of fire'."
+            },
+            {
+              "id": "3",
+              "content": "3. rail",
+              "options": [
+                "a horizontal bar",
+                "a common person",
+                "a normal purpose",
+                "a different part of a surface"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rail (lan can, thanh chắn) nghĩa là 'a horizontal bar'."
+            },
+            {
+              "id": "4",
+              "content": "4. absolute",
+              "options": [
+                "said when bad things happen",
+                "careful",
+                "happening at the same rate",
+                "total and complete"
+              ],
+              "correctAnswer": "D",
+              "explanation": "absolute (hoàn toàn, tuyệt đối) nghĩa là 'total and complete'."
+            },
+            {
+              "id": "5",
+              "content": "5. pleasure",
+              "options": [
+                "to make a noise",
+                "to get smaller",
+                "a feeling of happiness",
+                "personality"
+              ],
+              "correctAnswer": "C",
+              "explanation": "pleasure (niềm vui) nghĩa là 'a feeling of happiness'."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2 - Part A: Match the phrases to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. Mom made chocolate pudding",
+              "options": [
+                "out of the computer.",
+                "flour, eggs and sugar.",
+                "for dessert last night.",
+                "of the fence."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Mom made chocolate pudding for dessert last night. (Mẹ làm bánh pudding sô-cô-la cho bữa tráng miệng tối qua.)"
+            },
+            {
+              "id": "2",
+              "content": "2. He is very attentive",
+              "options": [
+                "to meet you.",
+                "during science class.",
+                "two hundred years ago.",
+                "for dessert last night."
+              ],
+              "correctAnswer": "B",
+              "explanation": "He is very attentive during science class. (Anh ấy rất chú ý trong giờ khoa học.)"
+            },
+            {
+              "id": "3",
+              "content": "3. People wore capes more often",
+              "options": [
+                "to meet you.",
+                "two hundred years ago.",
+                "as a politician.",
+                "of the fence."
+              ],
+              "correctAnswer": "B",
+              "explanation": "People wore capes more often two hundred years ago. (Mọi người thường xuyên mặc áo choàng vào hai trăm năm trước.)"
+            },
+            {
+              "id": "4",
+              "content": "4. His strong spirit",
+              "options": [
+                "out of the computer.",
+                "to manage the team of employees.",
+                "flour, eggs and sugar.",
+                "could not be hurt from mean comments."
+              ],
+              "correctAnswer": "D",
+              "explanation": "His strong spirit could not be hurt from mean comments. (Tinh thần mạnh mẽ của anh ấy không bị tổn thương bởi những bình luận ác ý.)"
+            },
+            {
+              "id": "5",
+              "content": "5. I can’t envision you",
+              "options": [
+                "out of the computer.",
+                "for dessert last night.",
+                "as a politician.",
+                "of the fence."
+              ],
+              "correctAnswer": "C",
+              "explanation": "I can’t envision you as a politician. (Tôi không thể hình dung bạn là một chính trị gia.)"
+            },
+            {
+              "id": "6",
+              "content": "6. It was a pleasure",
+              "options": [
+                "two hundred years ago.",
+                "for dessert last night.",
+                "during science class.",
+                "to meet you."
+              ],
+              "correctAnswer": "D",
+              "explanation": "It was a pleasure to meet you. (Rất hân hạnh được gặp bạn.)"
+            },
+            {
+              "id": "7",
+              "content": "7. His role at work is",
+              "options": [
+                "out of the computer.",
+                "flour, eggs and sugar.",
+                "to manage the team of employees.",
+                "to meet you."
+              ],
+              "correctAnswer": "C",
+              "explanation": "His role at work is to manage the team of employees. (Vai trò của anh ấy tại nơi làm việc là quản lý đội ngũ nhân viên.)"
+            },
+            {
+              "id": "8",
+              "content": "8. The cat is sitting on the rail",
+              "options": [
+                "as a politician.",
+                "during science class.",
+                "two hundred years ago.",
+                "of the fence."
+              ],
+              "correctAnswer": "D",
+              "explanation": "The cat is sitting on the rail of the fence. (Con mèo đang ngồi trên thanh chắn hàng rào.)"
+            },
+            {
+              "id": "9",
+              "content": "9. For this recipe, I will need",
+              "options": [
+                "flour, eggs and sugar.",
+                "of the fence.",
+                "as a politician.",
+                "could not be hurt from mean comments."
+              ],
+              "correctAnswer": "A",
+              "explanation": "For this recipe, I will need flour, eggs and sugar. (Với công thức này, tôi sẽ cần bột mì, trứng và đường.)"
+            },
+            {
+              "id": "10",
+              "content": "10. There were sparks flying",
+              "options": [
+                "out of the computer.",
+                "to manage the team of employees.",
+                "two hundred years ago.",
+                "could not be hurt from mean comments."
+              ],
+              "correctAnswer": "A",
+              "explanation": "There were sparks flying out of the computer. (Có những tia lửa bắn ra từ máy tính.)"
+            }
+          ]
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 2 - Part B: Match the clauses to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. If you wash this silk shirt in hot water,",
+              "options": [
+                "it will melt.",
+                "it will shrink.",
+                "the soldiers spread out evenly.",
+                "but alas, I still didn’t do very well."
+              ],
+              "correctAnswer": "B",
+              "explanation": "If you wash this silk shirt in hot water, it will shrink. (Nếu bạn giặt chiếc áo lụa này trong nước nóng, nó sẽ co lại.)"
+            },
+            {
+              "id": "2",
+              "content": "2. Tony didn’t practice the presentation,",
+              "options": [
+                "when I heard the pop.",
+                "so it was an absolute disaster.",
+                "when folks meet with their families.",
+                "it will melt."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Tony didn’t practice the presentation, so it was an absolute disaster. (Tony đã không thực hành bài thuyết trình, vì vậy nó hoàn toàn là một thảm họa.)"
+            },
+            {
+              "id": "3",
+              "content": "3. I studied hard for the test,",
+              "options": [
+                "it will shrink.",
+                "when folks meet with their families.",
+                "but alas, I still didn’t do very well.",
+                "it will melt."
+              ],
+              "correctAnswer": "C",
+              "explanation": "I studied hard for the test, but alas, I still didn’t do very well. (Tôi đã học chăm chỉ cho bài kiểm tra, nhưng than ôi, tôi vẫn không làm tốt lắm.)"
+            },
+            {
+              "id": "4",
+              "content": "4. Dan was very unlucky",
+              "options": [
+                "because he fell in a patch of rocks.",
+                "so I usually wear a suit.",
+                "so it was an absolute disaster.",
+                "the soldiers spread out evenly."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dan was very unlucky because he fell in a patch of rocks. (Dan rất không may mắn vì anh ấy bị ngã vào một bãi đá.)"
+            },
+            {
+              "id": "5",
+              "content": "5. Christmas is an important holiday",
+              "options": [
+                "the soldiers spread out evenly.",
+                "when I heard the pop.",
+                "when folks meet with their families.",
+                "it will shrink."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Christmas is an important holiday when folks meet with their families. (Giáng sinh là ngày lễ quan trọng khi người ta gặp gỡ gia đình của họ.)"
+            },
+            {
+              "id": "6",
+              "content": "6. If you put the butter near the fire,",
+              "options": [
+                "the soldiers spread out evenly.",
+                "but alas, I still didn’t do very well.",
+                "so it was an absolute disaster.",
+                "it will melt."
+              ],
+              "correctAnswer": "D",
+              "explanation": "If you put the butter near the fire, it will melt. (Nếu bạn để bơ gần lửa, nó sẽ tan chảy.)"
+            },
+            {
+              "id": "7",
+              "content": "7. This pan was so dirty",
+              "options": [
+                "the soldiers spread out evenly.",
+                "but alas, I still didn’t do very well.",
+                "that I had to soak it overnight.",
+                "so it was an absolute disaster."
+              ],
+              "correctAnswer": "C",
+              "explanation": "This pan was so dirty that I had to soak it overnight. (Cái chảo này quá bẩn đến nỗi tôi phải ngâm nó qua đêm.)"
+            },
+            {
+              "id": "8",
+              "content": "8. To protect the kingdom,",
+              "options": [
+                "it will shrink.",
+                "the soldiers spread out evenly.",
+                "so I usually wear a suit.",
+                "it will melt."
+              ],
+              "correctAnswer": "B",
+              "explanation": "To protect the kingdom, the soldiers spread out evenly. (Để bảo vệ vương quốc, binh lính dàn trải đồng đều.)"
+            },
+            {
+              "id": "9",
+              "content": "9. I knew the television had broken",
+              "options": [
+                "because he fell in a patch of rocks.",
+                "it will melt.",
+                "but alas, I still didn’t do very well.",
+                "when I heard the pop."
+              ],
+              "correctAnswer": "D",
+              "explanation": "I knew the television had broken when I heard the pop. (Tôi biết ti vi đã hỏng khi tôi nghe tiếng 'bốp'.)"
+            },
+            {
+              "id": "10",
+              "content": "10. At work, we have to dress well,",
+              "options": [
+                "that I had to soak it overnight.",
+                "but alas, I still didn’t do very well.",
+                "it will shrink.",
+                "so I usually wear a suit."
+              ],
+              "correctAnswer": "D",
+              "explanation": "At work, we have to dress well, so I usually wear a suit. (Tại nơi làm việc, chúng tôi phải ăn mặc đẹp, vì vậy tôi thường mặc một bộ com-lê.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jack Frost and the Pudding</h1><p style=\"margin-bottom: 1rem;\">Every winter, a magical boy with a wild <b>spirit</b> named Jack Frost arrives in town. He wears a white <b>cape</b>, and his <b>role</b> is to cover everything with frost and ice. But Jack Frost also gets <b>pleasure</b> from playing tricks on common <b>folks</b>.</p><p style=\"margin-bottom: 1rem;\">One dark winter evening, he was sitting on the <b>rail</b> of a fence near a river, pointing at some trees. When he did so, there was a <b>pop</b>, and the trees were <b>evenly</b> covered in frost.</p><p style=\"margin-bottom: 1rem;\">Then old Tom Muggins came along the path. He was carrying a basket of ingredients for his wife’s cake <b>recipe</b>. \"I’ll have some fun with him!\" said Jack Frost. He pointed, and suddenly there was a <b>patch</b> of ice on the path. Poor Tom slipped and fell into the river.</p><p style=\"margin-bottom: 1rem;\">The bags of flour, fruit and sugar fell open and got wet. A couple of eggs broke, and a stick of butter <b>shrank</b> in the water. Tom gathered the ingredients and climbed out of the river. The food made an <b>absolute</b> mess of the path. \"<b>Alas</b>!\" he cried. \"There’ll be no cake for me!\"</p><p style=\"margin-bottom: 1rem;\">Jack Frost laughed at poor Tom because his nice <b>suit</b> got <b>soaked</b> as well. \"Are you cold?\" he said. \"Don’t worry, I’ll make you warm!\" He pointed at the mess in Tom’s basket. Suddenly, there was a <b>spark</b>.</p><p style=\"margin-bottom: 1rem;\">What was left of the food caught fire! Jack Frost ran off laughing.</p><p style=\"margin-bottom: 1rem;\">Poor Tom sat by the fire. He could only <b>envision</b> how angry his wife would be. He wished he had been more <b>attentive</b> and noticed that Jack was around.</p><p style=\"margin-bottom: 1rem;\">Suddenly, a pleasant smell came from the basket. Tom looked inside. The butter was <b>melting</b> and the eggs were starting to cook! Even the fruit began to simmer. Soon there was a fat, brown <b>pudding</b> in the basket! Tom tasted it. It was delicious! He happily took it home for dessert. Although Jack Frost had tried to make Tom’s life difficult, Jack had actually made Tom a wonderful <b>pudding</b>!</p></div>",
+      "imageUrl": "/unit6_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec1_reading",
+          "title": "Reading Comprehension - Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. Tom Muggins likes playing tricks on folks.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "F. Jack Frost likes playing tricks on folks."
+            },
+            {
+              "id": "2",
+              "content": "2. Jack Frost was sitting on the rail of a fence.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "T."
+            },
+            {
+              "id": "3",
+              "content": "3. Jack Frost’s role is to cover everything with fire.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "F. Jack Frost’s role is to decorate everything with frost and ice."
+            },
+            {
+              "id": "4",
+              "content": "4. Tom wished that he had been more attentive.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "T."
+            },
+            {
+              "id": "5",
+              "content": "5. Tom said “Alas!” because he knew he wouldn’t have any cake.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "T."
+            },
+            {
+              "id": "6",
+              "content": "6. When Jack Frost set fire to the food, the eggs started to melt.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "F. When Jack Frost set fire to the food, the butter started to melt."
+            }
+          ]
+        },
+        {
+          "id": "sec2_reading",
+          "title": "Reading Comprehension - Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. What was Tom wearing?",
+              "options": [
+                "A nice suit",
+                "A white cape",
+                "A heavy coat",
+                "A red hat"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Tom mặc 'a nice suit' (một bộ com-lê đẹp), theo chi tiết: 'Jack Frost laughed at poor Tom because his nice suit got soaked as well.'"
+            },
+            {
+              "id": "2",
+              "content": "2. Which of the following was NOT an ingredient of the wonderful pudding?",
+              "options": [
+                "Flour",
+                "Sugar",
+                "Butter",
+                "Meat"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Meat (thịt) không phải là nguyên liệu của bánh pudding, các thành phần được nhắc đến gồm bột mì, trái cây, đường và bơ."
+            },
+            {
+              "id": "3",
+              "content": "3. What shrank when it got soaked in the river?",
+              "options": [
+                "The eggs",
+                "A stick of butter",
+                "The fruit",
+                "The sugar"
+              ],
+              "correctAnswer": "B",
+              "explanation": "A stick of butter (một thanh bơ) đã co lại, theo câu: 'a stick of butter shrank in the water.'"
+            },
+            {
+              "id": "4",
+              "content": "4. What happened when there was a pop sound?",
+              "options": [
+                "Tom fell into the river.",
+                "The food caught fire.",
+                "The trees became covered in frost.",
+                "A patch of ice formed."
+              ],
+              "correctAnswer": "C",
+              "explanation": "The trees became covered in frost (cây cối bị bao phủ bởi sương giá). Chi tiết: 'there was a pop, and the trees were evenly covered in frost.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

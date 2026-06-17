@@ -1,0 +1,481 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 27",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit27_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit27_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beneficial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[benəfiʃəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is beneficial, it is good for you.<br><i>(Nếu một điều gì đó là beneficial, nó tốt cho bạn.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Drinking milk everyday is beneficial to your bones.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">birthplace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bə:rθpleis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A birthplace is a place where a person is born or where something started.<br><i>(Birthplace là nơi một người được sinh ra hoặc nơi một điều gì đó bắt đầu.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ China is the birthplace of chopsticks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">capacity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəpæsəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The capacity of something is the amount of things that can be put in it.<br><i>(Capacity của một vật là lượng thứ có thể được đưa vào trong đó.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The parking lot has reached its full capacity.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">comparative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmpærətiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is comparative, it is being judged based on something else.<br><i>(Nếu một thứ là comparative, nó được đánh giá dựa trên một thứ khác.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The money that John has is comparative to most other adults.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">comprehensive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑmprihensiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is comprehensive, it has all the details about something else.<br><i>(Nếu một điều gì đó là comprehensive, nó có tất cả các chi tiết về điều khác.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher gave us a comprehensive review for the exam.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conserve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənsə:rv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To conserve something is to protect it from being ruined or used completely.<br><i>(Conserve là bảo vệ cái gì đó khỏi bị phá hủy hoặc dùng hết.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The group worked to conserve the beauty of Europe’s national parks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crucial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kru:ʃəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is crucial, it is extremely important to another thing.<br><i>(Nếu cái gì là crucial, nó cực kỳ quan trọng đối với một thứ khác.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Clean air is crucial to the survival of humans, plants, and animals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cumulative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kju:mjəleitiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cumulative describes an increase by adding one after another.<br><i>(Cumulative mô tả sự gia tăng bằng cách thêm cái này nối tiếp cái kia.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The cumulative snowfall in the area is 50 centimeters per year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deposit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dipɑzit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To deposit something is to put it into a place or another thing.<br><i>(Deposit cái gì đó là đặt nó vào một nơi hoặc vật khác.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I deposited the money into my bank account.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">distribute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[distribju:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To distribute something is to give it to a number of people.<br><i>(Distribute cái gì đó là phân phát nó cho nhiều người.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher distributed crayons and markers to his students.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">equator</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikweitər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The equator is an imaginary line that splits the Earth into north and south.<br><i>(Equator là đường xích đạo, một đường tưởng tượng chia Trái Đất thành bắc và nam.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The equator crosses the northern part of South America.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exotic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[igzɑtik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Exotic describes something unusual because it is from far away.<br><i>(Exotic mô tả cái gì đó kỳ lạ bởi vì nó đến từ một nơi xa xôi.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Rebecca tried many exotic foods on her trip to Africa.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">federal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fedərəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is federal, it comes from the government of a country.<br><i>(Nếu cái gì đó thuộc về federal, nó đến từ chính phủ của một quốc gia.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sometimes federal laws are different from state laws.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">formation</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ:rmeiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A formation is the way that something is made.<br><i>(Formation là cách thức mà một thứ được tạo ra.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The formation of ice happens when water freezes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frequency</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fri:kwənsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The frequency of something is the number of times that it happens.<br><i>(Frequency của cái gì đó là tần suất nó xảy ra.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The frequency of rainstorms is very high, especially during the spring.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">objective</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əbdʒektiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An objective is a goal or plan that someone has.<br><i>(Objective là mục tiêu hay kế hoạch mà ai đó có.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My objective this week is to finish my homework by 7:30 every night.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">oxygen</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑksidʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Oxygen is a gas that all living things need to breathe.<br><i>(Oxygen là khí ô-xy mà mọi sinh vật sống đều cần để thở.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My aunt believes that the oxygen in the country is cleaner than in the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rainforest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reinfɔ(:)rist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rainforest is a forest that is in a place where it rains very often.<br><i>(Rainforest là khu rừng ở nơi mưa rất thường xuyên.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The rainforest is home to many animals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">strategy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strætədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A strategy is a plan for how to do something.<br><i>(Strategy là chiến lược hoặc kế hoạch để làm điều gì đó.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The team came up with a strategy to win the game.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wooded</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wudid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If an area is wooded, it is covered with trees.<br><i>(Nếu một khu vực là wooded, nó được bao phủ bởi cây cối.)</i></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jim and Ben decided to go hiking in the wooded area by the river.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec1_1",
+              "content": "1. to give something away",
+              "options": [
+                "deposit",
+                "distribute",
+                "comprehensive",
+                "conserve"
+              ],
+              "correctAnswer": "B",
+              "explanation": "to give something away nghĩa là phân phát đi (distribute)."
+            },
+            {
+              "id": "sec1_2",
+              "content": "2. extremely important",
+              "options": [
+                "cumulative",
+                "federal",
+                "crucial",
+                "wooded"
+              ],
+              "correctAnswer": "C",
+              "explanation": "extremely important nghĩa là cực kỳ quan trọng (crucial)."
+            },
+            {
+              "id": "sec1_3",
+              "content": "3. where something begins",
+              "options": [
+                "birthplace",
+                "formation",
+                "rainforest",
+                "equator"
+              ],
+              "correctAnswer": "A",
+              "explanation": "where something begins nghĩa là nơi bắt nguồn (birthplace)."
+            },
+            {
+              "id": "sec1_4",
+              "content": "4. a person’s goal",
+              "options": [
+                "strategy",
+                "capacity",
+                "objective",
+                "frequency"
+              ],
+              "correctAnswer": "C",
+              "explanation": "a person's goal nghĩa là mục tiêu (objective)."
+            },
+            {
+              "id": "sec1_5",
+              "content": "5. unusual and unfamiliar",
+              "options": [
+                "oxygen",
+                "exotic",
+                "comparative",
+                "beneficial"
+              ],
+              "correctAnswer": "B",
+              "explanation": "unusual and unfamiliar nghĩa là kỳ lạ, không quen thuộc (exotic)."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec2_1",
+              "content": "1. strategy",
+              "options": [
+                "a plan",
+                "a goal",
+                "a line",
+                "a forest"
+              ],
+              "correctAnswer": "A",
+              "explanation": "strategy (chiến lược) nghĩa là một kế hoạch (a plan)."
+            },
+            {
+              "id": "sec2_2",
+              "content": "2. beneficial",
+              "options": [
+                "filled with trees",
+                "good for you",
+                "unusual or exciting",
+                "containing many details"
+              ],
+              "correctAnswer": "B",
+              "explanation": "beneficial (có lợi) nghĩa là tốt cho bạn (good for you)."
+            },
+            {
+              "id": "sec2_3",
+              "content": "3. formation",
+              "options": [
+                "how something is made",
+                "the number of things inside something",
+                "where someone is born",
+                "how often something happens"
+              ],
+              "correctAnswer": "A",
+              "explanation": "formation (sự hình thành) nghĩa là cách mà một thứ được tạo ra (how something is made)."
+            },
+            {
+              "id": "sec2_4",
+              "content": "4. federal",
+              "options": [
+                "made from added parts",
+                "coming from the government",
+                "very important",
+                "based on something else"
+              ],
+              "correctAnswer": "B",
+              "explanation": "federal (thuộc liên bang) có nghĩa là đến từ chính phủ (coming from the government)."
+            },
+            {
+              "id": "sec2_5",
+              "content": "5. conserve",
+              "options": [
+                "to protect",
+                "to give",
+                "to put into",
+                "to breathe"
+              ],
+              "correctAnswer": "A",
+              "explanation": "conserve (bảo tồn) nghĩa là bảo vệ (to protect)."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 2: Choose the word that is similar in meaning to the bracketed part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec3_1",
+              "content": "1. I like going to the park because it’s [covered with trees], and I feel like I’m in the mountains.",
+              "options": [
+                "wooded",
+                "exotic",
+                "beneficial",
+                "cumulative"
+              ],
+              "correctAnswer": "A",
+              "explanation": "covered with trees nghĩa là có nhiều cây cối, đồng nghĩa với wooded."
+            },
+            {
+              "id": "sec3_2",
+              "content": "2. Sam [gave away] party invitations to his friends.",
+              "options": [
+                "deposited",
+                "distributed",
+                "conserved",
+                "objective"
+              ],
+              "correctAnswer": "B",
+              "explanation": "gave away nghĩa là phân phát, đồng nghĩa với distribute."
+            },
+            {
+              "id": "sec3_3",
+              "content": "3. The letter came from a [national government] office.",
+              "options": [
+                "crucial",
+                "comparative",
+                "federal",
+                "comprehensive"
+              ],
+              "correctAnswer": "C",
+              "explanation": "national government liên quan đến chính phủ, đồng nghĩa với federal."
+            },
+            {
+              "id": "sec3_4",
+              "content": "4. The business’s [goal] is to earn more money this year than it did last year.",
+              "options": [
+                "capacity",
+                "formation",
+                "objective",
+                "strategy"
+              ],
+              "correctAnswer": "C",
+              "explanation": "goal nghĩa là mục tiêu, đồng nghĩa với objective."
+            },
+            {
+              "id": "sec3_5",
+              "content": "5. My mother grows [unusual and unfamiliar] flowers in her garden.",
+              "options": [
+                "crucial",
+                "exotic",
+                "federal",
+                "wooded"
+              ],
+              "correctAnswer": "B",
+              "explanation": "unusual and unfamiliar nghĩa là kỳ lạ, đồng nghĩa với exotic."
+            },
+            {
+              "id": "sec3_6",
+              "content": "6. He needed [gas required for breathing] to help him survive.",
+              "options": [
+                "equator",
+                "capacity",
+                "oxygen",
+                "birthplace"
+              ],
+              "correctAnswer": "C",
+              "explanation": "gas required for breathing là khí ô-xy (oxygen)."
+            },
+            {
+              "id": "sec3_7",
+              "content": "7. This book about the history of India is [full of details].",
+              "options": [
+                "cumulative",
+                "comparative",
+                "comprehensive",
+                "beneficial"
+              ],
+              "correctAnswer": "C",
+              "explanation": "full of details nghĩa là đầy đủ chi tiết, toàn diện (comprehensive)."
+            },
+            {
+              "id": "sec3_8",
+              "content": "8. I’m going to visit a small town in Ecuador that is near the [imaginary line].",
+              "options": [
+                "formation",
+                "frequency",
+                "birthplace",
+                "equator"
+              ],
+              "correctAnswer": "D",
+              "explanation": "imaginary line là đường xích đạo (equator)."
+            },
+            {
+              "id": "sec3_9",
+              "content": "9. The number of shoes that Jane and Beth have is [judged based on something else].",
+              "options": [
+                "comparative",
+                "cumulative",
+                "crucial",
+                "federal"
+              ],
+              "correctAnswer": "A",
+              "explanation": "judged based on something else nghĩa là đánh giá một cách tương đối (comparative)."
+            },
+            {
+              "id": "sec3_10",
+              "content": "10. Eddie didn’t want to eat it, but he knew the broccoli would be [good for his health].",
+              "options": [
+                "exotic",
+                "beneficial",
+                "comprehensive",
+                "wooded"
+              ],
+              "correctAnswer": "B",
+              "explanation": "good for his health nghĩa là có lợi cho sức khỏe (beneficial)."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Exercise 3: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec4_1",
+              "content": "1. Which word has about the same meaning as capacity?",
+              "options": [
+                "open",
+                "expand",
+                "reduce",
+                "maximum amount"
+              ],
+              "correctAnswer": "D",
+              "explanation": "capacity (sức chứa) gần nghĩa với maximum amount (lượng tối đa)."
+            },
+            {
+              "id": "sec4_2",
+              "content": "2. Which of these can be cumulative?",
+              "options": [
+                "Snow",
+                "A plate",
+                "A radio",
+                "Air"
+              ],
+              "correctAnswer": "A",
+              "explanation": "cumulative là tích lũy, tuyết (snow) có thể tích lũy rơi xuống thành đống."
+            },
+            {
+              "id": "sec4_3",
+              "content": "3. What is something you would deposit into a closet?",
+              "options": [
+                "A television",
+                "Jackets",
+                "Money",
+                "Water"
+              ],
+              "correctAnswer": "B",
+              "explanation": "deposit là đặt vào, ta có thể đặt áo khoác (jackets) vào tủ quần áo."
+            },
+            {
+              "id": "sec4_4",
+              "content": "4. What is something you probably wouldn’t encounter in a rainforest?",
+              "options": [
+                "Many trees",
+                "Monkeys",
+                "Humid weather",
+                "Kangaroos"
+              ],
+              "correctAnswer": "D",
+              "explanation": "rainforest là rừng nhiệt đới, kangaroos sống ở Úc (chủ yếu đồng cỏ/sa mạc), hiếm gặp trong rừng nhiệt đới."
+            },
+            {
+              "id": "sec4_5",
+              "content": "5. In which place is there a high frequency of snowfall?",
+              "options": [
+                "Antarctica",
+                "Spain",
+                "England",
+                "Australia"
+              ],
+              "correctAnswer": "A",
+              "explanation": "frequency of snowfall là tần suất tuyết rơi, Nam Cực (Antarctica) có tần suất rất cao."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Dying Forest</h1><p style=\"margin-bottom: 1rem;\"><b>Rainforests</b> provide much of the world’s <b>oxygen</b> supply. But the forests’ <b>exotic</b> trees and animals are being killed to make room for farmers and roads. People have been trying to <b>conserve</b> rainforests for years. But another type of forest—the cloud forest—is just as <b>beneficial</b> to humans. Cloud forests are also in danger of disappearing, but little is being done to save them.</p><p style=\"margin-bottom: 1rem;\">These forests are located at the tops of mountains, generally near the <b>equator</b>. These humid, <b>wooded</b> mountaintops are mainly in African and Central and South American countries. They are called “cloud forests” because their height allows for the <b>formation</b> of clouds among the trees.</p><p style=\"margin-bottom: 1rem;\">Rainforests produce large amounts of oxygen. Cloud forests produce <b>comparative</b> amounts of water. The trees in these forests pull water out of the clouds. The moisture gathers on the leaves. When it drips, it is <b>deposited</b> into streams. The streams flow into towns at the bottom of the mountain. Then, it’s <b>distributed</b> to people. The yearly <b>cumulative</b> rainfall in these areas is 173-198 centimeters. Cloud forests can pull in up to 60 percent of that. This water is <b>crucial</b> to the plants and the people in the area. It helps them survive.</p><p style=\"margin-bottom: 1rem;\">Cloud forests are also the <b>birthplace</b> of countless species of plants that can’t be found anywhere else. One small cloud forest has the <b>capacity</b> for as many types of plants as there are in all of Europe. There are so many, in fact, that scientists haven’t made a <b>comprehensive</b> list of them yet.</p><p style=\"margin-bottom: 1rem;\">These forests are being destroyed with increasing <b>frequency</b>. Trees are being cut down, and roads are being built in their place. Some people have an <b>objective</b> to get <b>federal</b> money to protect the forests. But they have had little success. Another <b>strategy</b> is to replace the destroyed plants. That, too, has been difficult because the plants are so unique. There’s plenty of work to be done, but saving the cloud forests is still a possibility.</p></div>",
+      "imageUrl": "/unit27_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Reading Comprehension: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec5_1",
+              "content": "1. Cloud forests provide much of the world’s oxygen supply.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Rainforests provide much of the world's oxygen supply, not cloud forests."
+            },
+            {
+              "id": "sec5_2",
+              "content": "2. Cloud forests are located at the tops of mountains, generally near the equator.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. The text states: 'These forests are located at the tops of mountains, generally near the equator.'"
+            },
+            {
+              "id": "sec5_3",
+              "content": "3. Cloud forests produce comparative amounts of water.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. The text states: 'Cloud forests produce comparative amounts of water.'"
+            },
+            {
+              "id": "sec5_4",
+              "content": "4. These humid, wooded mountaintops are mainly in European and Asian countries.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. They are mainly in African and Central and South American countries."
+            },
+            {
+              "id": "sec5_5",
+              "content": "5. Cloud forests are the birthplace of countless species of plants that can’t be found anywhere else.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. The text explicitly mentions this."
+            },
+            {
+              "id": "sec5_6",
+              "content": "6. One strategy to save the forests is to replace the destroyed plants.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. The text says: 'Another strategy is to replace the destroyed plants.'"
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Reading Comprehension: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec6_1",
+              "content": "1. What is true about cloud forests?",
+              "options": [
+                "They are located at the tops of mountains near the equator.",
+                "They are mostly found in North America and Asia.",
+                "They produce the majority of the world's oxygen.",
+                "They are completely safe from destruction."
+              ],
+              "correctAnswer": "A",
+              "explanation": "The text states: 'These forests are located at the tops of mountains, generally near the equator.'"
+            },
+            {
+              "id": "sec6_2",
+              "content": "2. What do the trees in cloud forests pull out of the clouds?",
+              "options": [
+                "Water",
+                "Oxygen",
+                "Dirt",
+                "Animals"
+              ],
+              "correctAnswer": "A",
+              "explanation": "The text mentions: 'The trees in these forests pull water out of the clouds.'"
+            },
+            {
+              "id": "sec6_3",
+              "content": "3. Why are cloud forests being destroyed?",
+              "options": [
+                "To gather more moisture.",
+                "To create new species of plants.",
+                "To make room for farmers and roads.",
+                "To conserve the area."
+              ],
+              "correctAnswer": "C",
+              "explanation": "The text says trees are being killed 'to make room for farmers and roads', and similarly for cloud forests, 'Trees are being cut down, and roads are being built in their place.'"
+            },
+            {
+              "id": "sec6_4",
+              "content": "4. What is one strategy people use to try to save the forests?",
+              "options": [
+                "Cutting down trees.",
+                "Distributing more water.",
+                "Moving the equator.",
+                "Getting federal money or replacing destroyed plants."
+              ],
+              "correctAnswer": "D",
+              "explanation": "The text mentions two main strategies: getting federal money and replacing destroyed plants."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

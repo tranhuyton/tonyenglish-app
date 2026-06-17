@@ -1,0 +1,413 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 28",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit28_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit28_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">avail</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aveil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Avail is help. It is often used in the achievement of a goal.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Avail (Danh từ): Sự giúp ích, lợi ích (thường dùng trong cụm \"to no avail\" - vô ích).</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His studying was to no avail because he failed the test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">expand</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikspænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To expand is to become bigger in size.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Expand (Động từ): Mở rộng, làm cho lớn hơn.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A balloon will expand as you blow air into it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">define</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[difain]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To define means to clearly state, show, or explain what something is.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Define (Động từ): Định nghĩa, xác định rõ.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People define success in many different ways.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dread</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dred]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dread is to be afraid of something that could, or is going to, happen.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Dread (Động từ): Khiếp sợ, kinh sợ.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I dread the idea that I will not get into college.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fundamental</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fʌndəmentl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is fundamental, it is a basic part of something.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Fundamental (Tính từ): Cơ bản, chủ yếu.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fundamental rules of basketball are easy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">horrifying</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hɔ:rəfaiin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is horrifying, it is frightening and very unpleasant.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Horrifying (Tính từ): Kinh hoàng, kinh khủng.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a horrifying car accident today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">incredulous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkredʒələs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is incredulous about something, they do not believe that it is true.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Incredulous (Tính từ): Hoài nghi, không tin.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was incredulous that monkeys could ever drive a car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">linger</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[liŋgər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To linger is to last for a long time.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Linger (Động từ): Nán lại, kéo dài.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The smell of fresh cookies lingered in the bakery.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">organism</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:rgənizəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An organism is a living thing, especially a very small one.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Organism (Danh từ): Sinh vật, thực thể sống.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We studied the organism on the microscope.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">paraphrase</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pærəfreiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To paraphrase is to make someone else’s writing or speech shorter.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Paraphrase (Động từ): Diễn giải lại, viết lại bằng từ khác.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students were asked to paraphrase the story they just heard.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plague</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pleig]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A plague is a serious disease that quickly spreads to many people.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Plague (Danh từ): Bệnh dịch.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A plague in Europe killed millions of people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">presently</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prezəntli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something happens presently, it is happening right now.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Presently (Trạng từ): Hiện tại, ngay lúc này.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Presently, our profits are good, but by next year we can do even better.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">random</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rændəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is random, it happens without any pattern or reason.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Random (Tính từ): Ngẫu nhiên, tình cờ.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Young children often ask random questions.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">riot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[raiət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A riot is a crowd that reacts to bad news by violently breaking laws.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Riot (Danh từ): Cuộc bạo loạn.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A riot broke out after the candidate lost the election.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scribble</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skribl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To scribble is to write something quickly without caring about how it looks.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Scribble (Động từ): Viết ngoáy, viết vội.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I scribbled a rough diagram of our plan and gave it to him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shrine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃrain]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shrine is a religious building built to honor a person, event, or god.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Shrine (Danh từ): Ngôi đền, điện thờ.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He prayed at the shrine for an hour.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">solitude</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[salitju:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Solitude is the state of being totally alone.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Solitude (Danh từ): Sự cô đơn, trạng thái một mình.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ John lives a life of solitude because he doesn’t get along well with people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stark</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sta:rk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a contrast is stark, then the things being compared are utterly different.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Stark (Tính từ): Rõ rệt, hoàn toàn.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is a stark contrast between their test scores.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">summon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌmən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To summon a person is to ask them to come to you.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Summon (Động từ): Triệu tập, gọi đến.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We summoned the doctor as soon as we noticed she was sick.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">worsen</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wə:rsən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To worsen is to get worse.<br/><span style=\"color: #3b82f6; font-weight: 600;\">Worsen (Động từ): Trở nên tồi tệ hơn.</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The weather suddenly worsened, and we had to stay inside.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1, Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. to ask someone to come",
+              "options": [
+                "worsen",
+                "scribble",
+                "linger",
+                "summon"
+              ],
+              "correctAnswer": "D",
+              "explanation": "summon có nghĩa là triệu tập, yêu cầu ai đó đến (to ask someone to come)."
+            },
+            {
+              "id": "2",
+              "content": "2. basic",
+              "options": [
+                "verse",
+                "riot",
+                "avail",
+                "fundamental"
+              ],
+              "correctAnswer": "D",
+              "explanation": "fundamental có nghĩa là cơ bản (basic)."
+            },
+            {
+              "id": "3",
+              "content": "3. to get bigger",
+              "options": [
+                "expand",
+                "define",
+                "stark",
+                "organism"
+              ],
+              "correctAnswer": "A",
+              "explanation": "expand có nghĩa là mở rộng, trở nên lớn hơn (to get bigger)."
+            },
+            {
+              "id": "4",
+              "content": "4. to be afraid",
+              "options": [
+                "dread",
+                "shrine",
+                "random",
+                "horrifying"
+              ],
+              "correctAnswer": "A",
+              "explanation": "dread có nghĩa là khiếp sợ, e sợ (to be afraid)."
+            },
+            {
+              "id": "5",
+              "content": "5. not believing",
+              "options": [
+                "solitude",
+                "presently",
+                "incredulous",
+                "plague"
+              ],
+              "correctAnswer": "C",
+              "explanation": "incredulous có nghĩa là hoài nghi, không tin (not believing)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 1, Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. plague",
+              "options": [
+                "a violent reaction",
+                "different",
+                "a disease",
+                "without reason"
+              ],
+              "correctAnswer": "C",
+              "explanation": "plague có nghĩa là bệnh dịch (a disease)."
+            },
+            {
+              "id": "7",
+              "content": "2. solitude",
+              "options": [
+                "being alone",
+                "success",
+                "afraid",
+                "right now"
+              ],
+              "correctAnswer": "A",
+              "explanation": "solitude có nghĩa là sự cô đơn, trạng thái ở một mình (being alone)."
+            },
+            {
+              "id": "8",
+              "content": "3. define",
+              "options": [
+                "to last a longtime",
+                "to get bigger",
+                "to explain clearly",
+                "to make easier"
+              ],
+              "correctAnswer": "C",
+              "explanation": "define có nghĩa là định nghĩa, giải thích rõ ràng (to explain clearly)."
+            },
+            {
+              "id": "9",
+              "content": "4. organism",
+              "options": [
+                "a religious building",
+                "a living thing",
+                "not believing",
+                "to send for"
+              ],
+              "correctAnswer": "B",
+              "explanation": "organism có nghĩa là sinh vật, thực thể sống (a living thing)."
+            },
+            {
+              "id": "10",
+              "content": "5. horrifying",
+              "options": [
+                "to get worse",
+                "basic",
+                "to write quickly",
+                "very unpleasant"
+              ],
+              "correctAnswer": "D",
+              "explanation": "horrifying có nghĩa là kinh khủng, rất khó chịu (very unpleasant)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. There was a ___________ in the city yesterday, but the ___________ was not damaged.",
+              "options": [
+                "riot / shrine",
+                "shrine / riot",
+                "plague / random",
+                "organism / summon"
+              ],
+              "correctAnswer": "A",
+              "explanation": "riot (bạo loạn) và shrine (ngôi đền). Có một cuộc bạo loạn ở thành phố hôm qua, nhưng ngôi đền không bị phá hoại."
+            },
+            {
+              "id": "12",
+              "content": "2. For the book report, I ___________ the story and ___________ my purpose for writing it.",
+              "options": [
+                "paraphrased / defined",
+                "defined / paraphrased",
+                "scribbled / lingered",
+                "worsened / dreaded"
+              ],
+              "correctAnswer": "A",
+              "explanation": "paraphrased (diễn giải lại) và defined (định nghĩa, xác định rõ). Đối với báo cáo sách, tôi đã diễn giải lại câu chuyện và xác định rõ mục đích viết nó."
+            },
+            {
+              "id": "13",
+              "content": "3. There are 15 members in the group ___________ . We should ___________ it.",
+              "options": [
+                "expand / presently",
+                "presently / expand",
+                "linger / scribble",
+                "avail / solitude"
+              ],
+              "correctAnswer": "B",
+              "explanation": "presently (hiện tại) và expand (mở rộng). Hiện tại có 15 thành viên trong nhóm. Chúng ta nên mở rộng nó."
+            },
+            {
+              "id": "14",
+              "content": "4. His attempt to catch the train was to no ___________ . He sat in ___________ waiting for the next one.",
+              "options": [
+                "solitude / avail",
+                "avail / solitude",
+                "random / plague",
+                "shrine / riot"
+              ],
+              "correctAnswer": "B",
+              "explanation": "avail (ích lợi) và solitude (sự cô đơn). Nỗ lực bắt chuyến tàu của anh ấy không thành công (to no avail). Anh ấy ngồi trong sự cô đơn chờ chuyến tiếp theo."
+            },
+            {
+              "id": "15",
+              "content": "5. The ___________ point of my speech was to show that people need to act. If we don’t do something, things will ___________ .",
+              "options": [
+                "worsen / fundamental",
+                "fundamental / worsen",
+                "stark / incredulous",
+                "horrifying / dreaded"
+              ],
+              "correctAnswer": "B",
+              "explanation": "fundamental (cơ bản) và worsen (tồi tệ hơn). Điểm cơ bản trong bài phát biểu của tôi là chỉ ra rằng mọi người cần hành động. Nếu không làm gì, mọi thứ sẽ tồi tệ hơn."
+            },
+            {
+              "id": "16",
+              "content": "6. I tried to ___________ the information as fast as I could because I didn’t have time to ___________ .",
+              "options": [
+                "linger / scribble",
+                "scribble / linger",
+                "paraphrase / define",
+                "summon / expand"
+              ],
+              "correctAnswer": "B",
+              "explanation": "scribble (viết ngoáy) và linger (nán lại). Tôi cố viết ngoáy thông tin nhanh nhất có thể vì tôi không có thời gian nán lại."
+            },
+            {
+              "id": "17",
+              "content": "7. After seeing that ___________ plane crash, I ___________ getting on an airplane.",
+              "options": [
+                "dreaded / horrifying",
+                "horrifying / dreaded",
+                "stark / incredulous",
+                "random / plague"
+              ],
+              "correctAnswer": "B",
+              "explanation": "horrifying (kinh hoàng) và dreaded (khiếp sợ). Sau khi thấy vụ rơi máy bay kinh hoàng đó, tôi khiếp sợ việc lên máy bay."
+            },
+            {
+              "id": "18",
+              "content": "8. She was ___________ that there could be such a ___________ contrast between boys’ and girls’ grades.",
+              "options": [
+                "stark / incredulous",
+                "incredulous / stark",
+                "fundamental / worsen",
+                "presently / expand"
+              ],
+              "correctAnswer": "B",
+              "explanation": "incredulous (hoài nghi) và stark (hoàn toàn, rõ rệt). Cô ấy không tin được (hoài nghi) rằng lại có sự tương phản rõ rệt như vậy giữa điểm của nam và nữ."
+            },
+            {
+              "id": "19",
+              "content": "9. We had to ___________ scientists from around the world to study this new ___________ .",
+              "options": [
+                "organism / summon",
+                "summon / organism",
+                "avail / solitude",
+                "plague / random"
+              ],
+              "correctAnswer": "B",
+              "explanation": "summon (triệu tập) và organism (sinh vật). Chúng tôi phải triệu tập các nhà khoa học trên toàn thế giới để nghiên cứu sinh vật mới này."
+            },
+            {
+              "id": "20",
+              "content": "10. At first we thought it was ___________ that people were getting sick. Then we realized that a ___________ was spreading.",
+              "options": [
+                "plague / random",
+                "random / plague",
+                "riot / shrine",
+                "worsen / fundamental"
+              ],
+              "correctAnswer": "B",
+              "explanation": "random (ngẫu nhiên) và plague (bệnh dịch). Lúc đầu chúng tôi nghĩ việc mọi người bị ốm là ngẫu nhiên. Sau đó chúng tôi nhận ra rằng một bệnh dịch đang lây lan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Thucydides and the Plague of Athens</h1><p style=\"margin-bottom: 1rem;\">Thucydides was the world’s first historian. <b>Presently</b>, we get most of our knowledge about ancient Greece from his writing. But Thucydides didn’t just write about history, he lived through it. However, he almost didn’t survive one historical event: the <b>Plague</b> of Athens.</p><p style=\"margin-bottom: 1rem;\">In 430 BCE, an army attacked the city of Athens, where Thucydides lived. Thousands of people hid from the army behind Athens’ large walls. The city became very crowded as the population <b>expanded</b>. Then a <b>horrifying</b> disease broke out. People <b>summoned</b> doctors. But it was to no <b>avail</b> because no one understood how the disease spread.</p><p style=\"margin-bottom: 1rem;\">It seemed <b>random</b>. They didn’t know that it was an <b>organism</b>. Instead, they <b>defined</b> disease as a punishment from their gods. Thucydides was <b>incredulous</b> that gods caused the <b>plague</b>, but he explained why others believed it. There was an old, long verse which predicted the disease. To <b>paraphrase</b> it, the verse said the gods would send a disease during a war. As a result, large crowds gathered at <b>shrines</b> to ask the gods to stop the <b>plague</b>. But the situation only <b>worsened</b> because these people were so close to each other they became sick. That’s how they learned a <b>fundamental</b> lesson about the <b>plague</b>: it spread from person to person.</p><p style=\"margin-bottom: 1rem;\">People wanted to leave the crowded city, but they <b>dreaded</b> what the army outside would do to them. At this time, Thucydides got sick, too. He quickly <b>scribbled</b> down notes because he thought he would soon die. His writing shows a <b>stark</b> contrast between people’s behavior before and during the <b>plague</b>. There were <b>riots</b>, and people ignored laws. They didn’t think they’d live long enough to be punished. Many sick people were left to die in <b>solitude</b> because no one wanted to be near them. The <b>plague</b> <b>lingered</b> for two years. But luckily, Thucydides survived. Without his writing, we would know much less about ancient Greece and the <b>Plague</b> of Athens.</p></div>",
+      "imageUrl": "/unit28_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Reading Comprehension, Part A: Mark each statement True or False.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. Presently, a horrifying plague has broken out in Athens.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Thực tế là bệnh dịch đã bùng phát ở Athens vào năm 430 TCN, không phải hiện tại (presently)."
+            },
+            {
+              "id": "22",
+              "content": "2. At first, people thought the spread of the disease was random.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Lúc đầu mọi người nghĩ rằng sự lây lan của căn bệnh là ngẫu nhiên (random)."
+            },
+            {
+              "id": "23",
+              "content": "3. The people summoned doctors to no avail.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mọi người đã triệu tập (summoned) các bác sĩ nhưng vô ích (to no avail)."
+            },
+            {
+              "id": "24",
+              "content": "4. Thucydides was incredulous that the plague was caused by an organism.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Thucydides không tin (incredulous) rằng bệnh dịch do các vị thần gây ra, chứ không phải do sinh vật (organism)."
+            },
+            {
+              "id": "25",
+              "content": "5. By gathering in shrines, people made the plague worse.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bằng cách tụ tập ở các ngôi đền (shrines), mọi người đã làm cho bệnh dịch tồi tệ hơn."
+            },
+            {
+              "id": "26",
+              "content": "6. Thucydides luckily survived the plague.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "May mắn thay, Thucydides đã sống sót qua trận dịch."
+            }
+          ]
+        },
+        {
+          "id": "sec5_reading",
+          "title": "Reading Comprehension, Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "27",
+              "content": "1. Why did Athens’ population expand?",
+              "options": [
+                "Because the army moved into the city",
+                "Because people were hiding from the army",
+                "Because the army told people to enter",
+                "Because people dreaded the plague"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dân số Athens tăng lên (expand) vì hàng ngàn người đã trốn quân đội (hiding from the army) đằng sau những bức tường lớn của Athens."
+            },
+            {
+              "id": "28",
+              "content": "2. Thucydides scribbled quickly because ________.",
+              "options": [
+                "there were so many riots",
+                "he had to define the disease",
+                "he though he’d die soon",
+                "there were too many sick people"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Thucydides đã viết vội vàng (scribbled) vì ông nghĩ rằng mình sẽ sớm chết (thought he'd die soon)."
+            },
+            {
+              "id": "29",
+              "content": "3. What fundamental lesson did the people learn?",
+              "options": [
+                "The plague was a punishment.",
+                "The plague was ended in the shrines.",
+                "The plague was from the army.",
+                "The plague was spread between people."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Bài học cơ bản (fundamental lesson) mà mọi người học được là bệnh dịch lây lan từ người sang người (spread between people)."
+            },
+            {
+              "id": "30",
+              "content": "4. What is NOT true of Thucydides?",
+              "options": [
+                "He was the world’s first historian.",
+                "He thought gods caused the plague.",
+                "He survived the Plague of Athens.",
+                "He lived in the city of Athens."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Điều KHÔNG ĐÚNG là Thucydides nghĩ các vị thần đã gây ra bệnh dịch. Ông ấy không tin (incredulous) điều đó."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

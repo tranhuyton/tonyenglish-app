@@ -1,0 +1,532 @@
+{
+  "basicInfo": {
+    "bookId": "4000-essential-english-words-4",
+    "unitId": "unit-16",
+    "title": "Unit 16"
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit16_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit16_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">altogether</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:ltəgeðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something happens altogether, it happens completely. (hoàn toàn, toàn bộ)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ The company stopped using sugar altogether in its food.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bind</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[baind]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bind is to bring people together. (liên kết, gắn kết)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ The victims of the flood were bound by their need to help each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bruise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bru:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bruise is a dark mark caused by being hit by something. (vết bầm tím)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ She got a bruise on her knee from falling down.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">custom</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kʌstəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A custom is a way of doing things that has been the same for a long time. (phong tục, tập quán)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ It is a custom that the bride and groom have the first dance.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disobedient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disəbi:diənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is disobedient, they do not follow the rules or instructions. (không vâng lời, ngang bướng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ The disobedient children didn’t listen to their mother and had an accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">foresee</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ:rsi:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To foresee something is to know about it before it happens. (thấy trước, lường trước)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ The teacher didn’t foresee any problems with her large class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">glimpse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[glimps]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To glimpse something is to see it for a short time. (nhìn lướt qua, thoáng thấy)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ She glimpsed outside the window as the plane was about to land.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hoop</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hu:p]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hoop is a ring that is made of plastic, metal, or wood. (cái vòng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ The boys tried to toss the ball through the basketball hoop.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">misfortune</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[misfɔ:rtʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Misfortune is bad luck or an unlucky event. (sự bất hạnh, rủi ro)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ His family helped him when he encountered misfortune.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">negative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[negətiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is negative, it is unpleasant or sad. (tiêu cực, bi quan)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ She doesn’t like to say negative things about her friends.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">per</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Per is used to mean “each” when giving a price, size, or amount. (mỗi, cho mỗi)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ It costs $8 per person to watch the baseball game.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plead</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pli:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To plead is to ask for something you want very badly. (nài nỉ, van xin)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ He pleaded for his parents to let him go to the soccer game.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To rip something means to pull it apart. (xé toạc, xé rách)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ She ripped the paper in half by accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sake</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[seik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The sake of something is the reason for doing it. (mục đích, lợi ích)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ The parents worked hard for their children’s sake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scrape</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skreip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To scrape something is to rub it very hard with something sharp. (cạo, làm xước)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ I accidentally scraped the paint off the side of the car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">source</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɔ:rs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A source of something is the place that it comes from. (nguồn, nguồn gốc)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ The river was the source of drinking water for the village.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stern</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stə:rn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When somebody is stern, they are very serious. (nghiêm khắc, lạnh lùng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ The stern teacher didn’t allow the students to speak during class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stitch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stitʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To stitch is to use a needle and thread to join pieces of cloth together. (khâu, may)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ My grandmother stitched the pieces together to make a big blanket.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thump</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θʌmp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A thump is the sound of a heavy object falling. (tiếng rơi bịch)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ They heard the thump when the bowling ball hit the floor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vehement</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vi:əmənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When somebody is vehement, they are angry and emotional. (mãnh liệt, dữ dội, kịch liệt)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">↳ Gina was vehement when she found out that Liz was bad in school.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. Greg had the _____ of falling in a pool, though he didn’t know how to swim. The experience left him with _____ feelings about swimming pools.",
+              "options": [
+                "custom / stern",
+                "misfortune / negative",
+                "source / altogether",
+                "bruise / bound"
+              ],
+              "correctAnswer": "B",
+              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. After one day, the _____ on her lip began to go away. In a week, it had disappeared _____.",
+              "options": [
+                "bruise / altogether",
+                "hoop / disobedient",
+                "sake / custom",
+                "thump / per"
+              ],
+              "correctAnswer": "A",
+              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn)."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. For the _____ of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices _____ person.",
+              "options": [
+                "foresee / altogether",
+                "glimpse / per",
+                "sake / per",
+                "source / custom"
+              ],
+              "correctAnswer": "C",
+              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người)."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. A woman _____ with the child to behave in the store. The child, however, continued to be _____.",
+              "options": [
+                "scraped / negative",
+                "pleaded / disobedient",
+                "stitched / stern",
+                "ripped / vehement"
+              ],
+              "correctAnswer": "B",
+              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời)."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. They walked past a large river, which the guide said was the _____ of a waterfall. They finally _____ the waterfall when they reached the bottom of the hill.",
+              "options": [
+                "misfortune / stitched",
+                "hoop / altogether",
+                "custom / bind",
+                "source / glimpsed"
+              ],
+              "correctAnswer": "D",
+              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó."
+            },
+            {
+              "id": "ex1_6",
+              "content": "6. The girl wanted to make her plastic _____ look pretty, so she _____ cloth around it.",
+              "options": [
+                "bruise / scraped",
+                "thump / bound",
+                "hoop / stitched",
+                "sake / ripped"
+              ],
+              "correctAnswer": "C",
+              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó."
+            },
+            {
+              "id": "ex1_7",
+              "content": "7. The family was _____ tightly. For example, on Saturdays, it was their _____ to go to the park together.",
+              "options": [
+                "bound / custom",
+                "disobedient / source",
+                "stern / sake",
+                "vehement / misfortune"
+              ],
+              "correctAnswer": "A",
+              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau."
+            },
+            {
+              "id": "ex1_8",
+              "content": "8. The _____ teacher was angry to see the students passing notes. She took the note from the students and _____ it into pieces.",
+              "options": [
+                "vehement / per",
+                "disobedient / pleaded",
+                "negative / glimpsed",
+                "stern / ripped"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy."
+            },
+            {
+              "id": "ex1_9",
+              "content": "9. The boy lost his balance and fell with a _____. When he got up, he noticed that he’d _____ his elbow.",
+              "options": [
+                "bruise / bound",
+                "thump / scraped",
+                "hoop / stitched",
+                "misfortune / foreseen"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay."
+            },
+            {
+              "id": "ex1_10",
+              "content": "10. The coach didn’t _____ the loss for his team. So, after the game, he was _____.",
+              "options": [
+                "foresee / vehement",
+                "glimpse / negative",
+                "plead / disobedient",
+                "bind / altogether"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ)."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2 Part A: Match the phrases to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2a_1",
+              "content": "1. Kelly had the misfortune of breaking _____.",
+              "options": [
+                "her arm before the competition",
+                "eating dinner early on Sundays",
+                "bad weather this weekend",
+                "to use the computer"
+              ],
+              "correctAnswer": "A",
+              "explanation": "misfortune of breaking her arm (sự rủi ro bị gãy tay)."
+            },
+            {
+              "id": "ex2a_2",
+              "content": "2. The disobedient dog ran away _____.",
+              "options": [
+                "to give her a better grade",
+                "bad weather this weekend",
+                "from its owner at the park",
+                "eating dinner early on Sundays"
+              ],
+              "correctAnswer": "C",
+              "explanation": "disobedient dog (con chó không vâng lời) chạy khỏi chủ (from its owner)."
+            },
+            {
+              "id": "ex2a_3",
+              "content": "3. She felt bound to her friends because she had _____.",
+              "options": [
+                "bad weather this weekend",
+                "known them for a long time",
+                "to use the computer",
+                "eating dinner early on Sundays"
+              ],
+              "correctAnswer": "B",
+              "explanation": "bound to her friends (gắn kết với bạn bè) vì biết họ lâu rồi."
+            },
+            {
+              "id": "ex2a_4",
+              "content": "4. The weatherman didn’t foresee any _____.",
+              "options": [
+                "to give her a better grade",
+                "bad weather this weekend",
+                "before it was completed",
+                "her arm before the competition"
+              ],
+              "correctAnswer": "B",
+              "explanation": "foresee any bad weather (lường trước thời tiết xấu)."
+            },
+            {
+              "id": "ex2a_5",
+              "content": "5. The family had a custom of _____.",
+              "options": [
+                "eating dinner early on Sundays",
+                "to use the computer",
+                "off the window",
+                "gave one piece to his friend"
+              ],
+              "correctAnswer": "A",
+              "explanation": "custom of eating dinner early (thói quen ăn tối sớm)."
+            },
+            {
+              "id": "ex2a_6",
+              "content": "6. She glimpsed at his painting _____.",
+              "options": [
+                "before it was completed",
+                "from its owner at the park",
+                "to give her a better grade",
+                "her arm before the competition"
+              ],
+              "correctAnswer": "A",
+              "explanation": "glimpsed at his painting (nhìn lướt qua bức tranh) trước khi nó hoàn thành."
+            },
+            {
+              "id": "ex2a_7",
+              "content": "7. Charlie ripped the paper in half and _____.",
+              "options": [
+                "gave one piece to his friend",
+                "bad weather this weekend",
+                "off the window",
+                "to use the computer"
+              ],
+              "correctAnswer": "A",
+              "explanation": "ripped the paper in half (xé giấy làm đôi) và đưa một nửa cho bạn."
+            },
+            {
+              "id": "ex2a_8",
+              "content": "8. Jasmine pleaded with her teacher _____.",
+              "options": [
+                "her arm before the competition",
+                "to give her a better grade",
+                "eating dinner early on Sundays",
+                "before it was completed"
+              ],
+              "correctAnswer": "B",
+              "explanation": "pleaded with her teacher (van nài giáo viên) cho điểm cao hơn."
+            },
+            {
+              "id": "ex2a_9",
+              "content": "9. Leslie scraped the ice _____.",
+              "options": [
+                "to give her a better grade",
+                "bad weather this weekend",
+                "eating dinner early on Sundays",
+                "off the window"
+              ],
+              "correctAnswer": "D",
+              "explanation": "scraped the ice off the window (cạo băng khỏi cửa sổ)."
+            },
+            {
+              "id": "ex2a_10",
+              "content": "10. George was vehement about being allowed _____.",
+              "options": [
+                "from its owner at the park",
+                "to use the computer",
+                "gave one piece to his friend",
+                "before it was completed"
+              ],
+              "correctAnswer": "B",
+              "explanation": "vehement about being allowed to use the computer (kịch liệt về việc được cho phép dùng máy tính)."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 2 Part B: Match the clauses to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2b_1",
+              "content": "1. There was a tear in my shirt, _____.",
+              "options": [
+                "but only 2 cans per week",
+                "so he had bruises on his arm",
+                "so my mom stitched it back together",
+                "because stern rules built character"
+              ],
+              "correctAnswer": "C",
+              "explanation": "stitch it back together (khâu nó lại) vì áo bị rách (a tear)."
+            },
+            {
+              "id": "ex2b_2",
+              "content": "2. She dropped the scissors on the carpet, _____.",
+              "options": [
+                "so there was a slight thump",
+                "because stern rules built character",
+                "but the sources were unreliable",
+                "so he tried jumping through the hoop"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rơi kéo gây ra 'a slight thump' (tiếng động nhỏ)."
+            },
+            {
+              "id": "ex2b_3",
+              "content": "3. His parents were strict, _____.",
+              "options": [
+                "but only 2 cans per week",
+                "because stern rules built character",
+                "so he had bruises on his arm",
+                "it filled him with negative dreams"
+              ],
+              "correctAnswer": "B",
+              "explanation": "strict (nghiêm khắc) đồng nghĩa với 'stern rules'."
+            },
+            {
+              "id": "ex2b_4",
+              "content": "4. The website was good, _____.",
+              "options": [
+                "but the sources were unreliable",
+                "because stern rules built character",
+                "so there was a slight thump",
+                "but only 2 cans per week"
+              ],
+              "correctAnswer": "A",
+              "explanation": "trang web tốt nhưng 'sources' (nguồn) không đáng tin."
+            },
+            {
+              "id": "ex2b_5",
+              "content": "5. The fight was horrifying, _____.",
+              "options": [
+                "so my mom stitched it back together",
+                "it filled him with negative dreams",
+                "that was altogether different from mine",
+                "but the sources were unreliable"
+              ],
+              "correctAnswer": "B",
+              "explanation": "trận đánh kinh hoàng khiến có 'negative dreams' (giấc mơ tiêu cực)."
+            },
+            {
+              "id": "ex2b_6",
+              "content": "6. I enjoy soda, _____.",
+              "options": [
+                "but only 2 cans per week",
+                "because stern rules built character",
+                "so he had bruises on his arm",
+                "so my mom stitched it back together"
+              ],
+              "correctAnswer": "A",
+              "explanation": "uống soda nhưng chỉ '2 cans per week' (2 lon mỗi tuần)."
+            },
+            {
+              "id": "ex2b_7",
+              "content": "7. He went to school despite being sick _____.",
+              "options": [
+                "because the sake of his grade depended on it",
+                "that was altogether different from mine",
+                "so he tried jumping through the hoop",
+                "it filled him with negative dreams"
+              ],
+              "correctAnswer": "A",
+              "explanation": "sake of his grade (vì lợi ích điểm số của anh ấy)."
+            },
+            {
+              "id": "ex2b_8",
+              "content": "8. They used a different system _____.",
+              "options": [
+                "but only 2 cans per week",
+                "that was altogether different from mine",
+                "so he had bruises on his arm",
+                "because the sake of his grade depended on it"
+              ],
+              "correctAnswer": "B",
+              "explanation": "different system (hệ thống khác) 'altogether different from mine' (hoàn toàn khác biệt với của tôi)."
+            },
+            {
+              "id": "ex2b_9",
+              "content": "9. He liked showing off, _____.",
+              "options": [
+                "so he tried jumping through the hoop",
+                "but only 2 cans per week",
+                "because stern rules built character",
+                "it filled him with negative dreams"
+              ],
+              "correctAnswer": "A",
+              "explanation": "showing off (khoe khoang) nên nhảy qua 'hoop' (vòng)."
+            },
+            {
+              "id": "ex2b_10",
+              "content": "10. He fell down the stairs, _____.",
+              "options": [
+                "but the sources were unreliable",
+                "so he tried jumping through the hoop",
+                "so he had bruises on his arm",
+                "that was altogether different from mine"
+              ],
+              "correctAnswer": "C",
+              "explanation": "ngã cầu thang nên có 'bruises' (vết bầm)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif;\"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Gwen’s New Friends</h1><p style=\"margin-bottom: 1rem;\">Gwen walked into the gym for her next class. Coach Peeves said, “Today, we’re playing basketball. The <b>custom</b> is to let you choose your own teams. However, we’re going to do things differently.”</p><p style=\"margin-bottom: 1rem;\">The coach assigned each girl to a team. There were six girls <b>per</b> team. Gwen <b>glimpsed</b> at her teammates. She didn’t know any of them. All of her friends were on the other teams. She couldn’t believe her <b>misfortune</b>.</p><p style=\"margin-bottom: 1rem;\">“I feel sick. May I go to the nurse?” asked Gwen.</p><p style=\"margin-bottom: 1rem;\">The coach could <b>foresee</b> Gwen’s excuses. It wasn’t the first time Gwen tried to leave class. With a <b>stern</b> voice, the coach said, “No.”</p><p style=\"margin-bottom: 1rem;\">Gwen was <b>vehement</b>. “I don’t know any of these girls! Let me play on another team. Please!” she <b>pleaded</b>.</p><p style=\"margin-bottom: 1rem;\">“Gwen, don’t be <b>disobedient</b>. I don’t want to hear any more <b>negative</b> comments from you.”</p><p style=\"margin-bottom: 1rem;\">Gwen had no choice. Then a girl smiled at her. “Hi, I’m Stephanie. I was in your English class last year,” she said. Gwen remembered her. “For the <b>sake</b> of the team, please try your best. I know you’re a good player,” said Stephanie.</p><p style=\"margin-bottom: 1rem;\">When the game started, Gwen played as best as she could. She took a long shot. The ball sailed through the air and went right through the <b>hoop</b>!</p><p style=\"margin-bottom: 1rem;\">“That was awesome!” said one of her teammates. Later, Gwen fell with a loud <b>thump</b>.</p><p style=\"margin-bottom: 1rem;\">“Are you OK?” asked her teammates. They were worried.</p><p style=\"margin-bottom: 1rem;\">She had <b>ripped</b> her jeans. She had <b>scraped</b> her knee and had a small <b>bruise</b>.</p><p style=\"margin-bottom: 1rem;\">Gwen told her teammates, “My knee is fine, and I can <b>stitch</b> my pants later. Let’s keep playing!”</p><p style=\"margin-bottom: 1rem;\">By the end of the game, Gwen forgot <b>altogether</b> that she hadn’t wanted to play, and her team won! The victory <b>bound</b> Gwen’s team together. She had made a lot of new friends, and they were a <b>source</b> of happiness for her for many years.</p></div>",
+      "imageUrl": "/unit16_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "rc_a1",
+              "content": "1. The custom was to allow the girls to choose their own teams.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bài đọc viết: 'The custom is to let you choose your own teams.' (Đó là thói quen để các em tự chọn đội)."
+            },
+            {
+              "id": "rc_a2",
+              "content": "2. Gwen told her teammates that she could stitch her pants later.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bài đọc viết: '...and I can stitch my pants later.' (và mình có thể khâu quần sau)."
+            },
+            {
+              "id": "rc_a3",
+              "content": "3. There were eight girls per team.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Bài đọc nói: 'There were six girls per team.' (Có sáu cô gái mỗi đội)."
+            },
+            {
+              "id": "rc_a4",
+              "content": "4. Gwen pleaded to be on another team that had some of her friends.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bài đọc viết: '...Let me play on another team. Please! she pleaded.' (Hãy cho em chơi ở đội khác, cô nài nỉ)."
+            },
+            {
+              "id": "rc_a5",
+              "content": "5. Stephanie asked Gwen to lose on purpose for the sake of the team.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Stephanie yêu cầu Gwen cố gắng hết sức (try your best) vì lợi ích của đội (for the sake of the team)."
+            },
+            {
+              "id": "rc_a6",
+              "content": "6. Gwen ripped her jeans, scraped her knee, and got a bruise when she fell.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bài đọc viết: 'She had ripped her jeans. She had scraped her knee and had a small bruise.'"
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "rc_b1",
+              "content": "1. Why did Coach Peeves speak to Gwen in a stern voice?",
+              "options": [
+                "For falling with a thump",
+                "For making negative comments",
+                "For choosing her own team",
+                "For having misfortune"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Huấn luyện viên cảnh báo Gwen không được ngang bướng và đưa ra nhận xét tiêu cực (negative comments)."
+            },
+            {
+              "id": "rc_b2",
+              "content": "2. How did Gwen know Stephanie?",
+              "options": [
+                "They were old friends.",
+                "They were vehement.",
+                "They could foresee the team.",
+                "They had an English class together."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Stephanie nói: 'I was in your English class last year.' (Mình học chung lớp tiếng Anh với cậu năm ngoái)."
+            },
+            {
+              "id": "rc_b3",
+              "content": "3. What happened after Gwen’s shot went through the hoop?",
+              "options": [
+                "She faced the stern coach.",
+                "Her teammate said it was awesome.",
+                "She changed teams.",
+                "She forgot about the rules altogether."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bài đọc viết: 'That was awesome! said one of her teammates.' (Thật tuyệt vời! một đồng đội nói)."
+            },
+            {
+              "id": "rc_b4",
+              "content": "4. How were the girls on Gwen’s team bound together?",
+              "options": [
+                "They were all disobedient.",
+                "They won the game.",
+                "They chose a new team.",
+                "They all had bruises."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bài đọc viết: 'The victory bound Gwen’s team together.' (Chiến thắng đã gắn kết đội của Gwen lại với nhau)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "basicInfo": {
+    "id": "unit17",
+    "title": "Unit 17",
+    "description": "Vocabulary and Reading Comprehension",
+    "level": "Volume 4",
+    "unitNumber": 17,
+    "imageUrl": "/unit17_vol4_story.png"
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit17_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit17_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">civilization</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌsɪvəlaɪˈzeɪʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Nền văn minh. An organized group of humans that have culture and government.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Most early civilizations in Central America didn't use metal weapons.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convenient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənˈviːnjənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Tiện lợi. Easy to do and does not take a lot of work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The bus is a convenient way to get to school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">den</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[den]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hang ổ. A living space for some types of animals, such as lions.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The mother lion left her babies in the den.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dew</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[djuː]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Sương. The drops of water that form on the ground outside during the night.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ When we woke up, we saw that the grass was covered in dew.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">drastic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdræstɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Quyết liệt, mạnh mẽ. Extreme or major.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ She made a drastic decision to get her long hair cut short.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɛɡzɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Thoát ra, rời đi. To leave.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The students exited through the front door.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flock</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flɑk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Bầy, đàn. A group of animals, such as birds, sheep or goats.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ There was one black sheep in the entire flock.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fold</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[foʊld]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Gấp. To bend something like paper or cloth so that it takes up less space.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ I folded the paper and put it in my pocket.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɪd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cái nắp. A top for a box or container that can be removed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ He lifted the lid of the box and revealed her present.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">loom</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[luːm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hiện ra lù lù. To seem very large and often scary.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The ominous clouds loomed over the school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mighty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmaɪti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hùng mạnh. Strong and large.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The mighty wrestler scared all who faced him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mushroom</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmʌʃruːm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Nấm. A fungus with a round top. Some are used as food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The soup had fresh mushrooms in it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">native</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈneɪtɪv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Bản địa. Originating in a certain place or area.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Avocadoes are native fruits of Mexico.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">poison</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpɔɪzən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Chất độc. A dangerous substance that causes illness or death.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ They used poison to get rid of the rats in their home.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[riːd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cây sậy. Tall and skinny plants that grow in groups near water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The sun set behind the reeds of the lake's shore.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shield</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃiːld]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Che chắn, bảo vệ. To protect it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ She shielded her eyes from the sun with sunglasses.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stormy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈstɔːrmi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Có bão. Affected or characterized by storms.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The golfers decided to go home because of the stormy weather.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sway</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sweɪ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Đung đưa. To move slowly from side to side.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ She swayed while she listened to the music.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">urban</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɜːrbən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Thuộc về đô thị. Related to the city.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Subways are an important form of urban transportation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wade</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[weɪd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Lội nước. To walk in or pass through water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The child waded in the water at the beach.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Part A: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "1. What word below best describes a superhero?",
+              "options": [
+                "Mushrooms",
+                "Dew",
+                "Mighty",
+                "Reeds"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Mighty nghĩa là hùng mạnh (strong and large)."
+            },
+            {
+              "id": "q2",
+              "content": "2. Something that is easy to do is described as what?",
+              "options": [
+                "Drastic",
+                "Convenient",
+                "Poison",
+                "Urban"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Convenient nghĩa là tiện lợi, dễ dàng thực hiện."
+            },
+            {
+              "id": "q3",
+              "content": "3. What is an activity done in the water?",
+              "options": [
+                "Sway",
+                "Fold",
+                "Exit",
+                "Wade"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Wade nghĩa là lội nước."
+            },
+            {
+              "id": "q4",
+              "content": "4. Which covers a box?",
+              "options": [
+                "A den",
+                "A lid",
+                "A civilization",
+                "A flock"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Lid nghĩa là cái nắp đậy hộp."
+            },
+            {
+              "id": "q5",
+              "content": "5. Which word fits best? Koalas are _________ to Australia.",
+              "options": [
+                "loom",
+                "shield",
+                "stormy",
+                "native"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Native nghĩa là bản địa. Koalas là động vật bản địa của Úc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Kara Goes Camping</h1><p style=\"margin-bottom: 1rem;\">\"Kara, would you like to go camping with my family?\" asked Tracy. Kara had never been camping before, but she decided to go anyway. That weekend, they drove to Estes Park. When they arrived, Kara looked around. She felt so far from <b>civilization</b>.</p><p style=\"margin-bottom: 1rem;\">After they set up the camp, they went for a walk. Tracy's father, Mr. Grieves, showed them the <b>native</b> plants and animals. \"Look,\" he said, \"that's a fox's <b>den</b>. Do you see that bunch of <b>mushrooms</b> next to it. Don't touch them. They contain <b>poison</b>.\" Kara was bored. She didn't care about nature.</p><p style=\"margin-bottom: 1rem;\">As the day went on, <b>mighty</b> clouds soon <b>loomed</b> in the distance. \"It looks like <b>stormy</b> weather,\" said Tracy. \"We should go back.\" It suddenly began to rain. They used an umbrella to <b>shield</b> them from the rain. Back at the camp, they ate cold sandwiches for dinner and went to sleep.</p><p style=\"margin-bottom: 1rem;\">By morning, the rain had stopped. It was a <b>drastic</b> change from the previous day's weather. They <b>folded</b> their sleeping bags and put them in a box. Tracy closed the <b>lid</b> and told Kara, \"Today will be fun, I promise!\" Kara didn't believe her. She missed her <b>convenient</b> life in the city. She was used to an <b>urban</b> lifestyle.</p><p style=\"margin-bottom: 1rem;\">After breakfast, they went for a walk. The grass was covered with <b>dew</b>, and it gleamed in the sunlight. Finally, they reached a lake. Kara and Tracy <b>waded</b> into the water. The <b>reeds</b> <b>swayed</b> in the wind, and a <b>flock</b> of birds flew above. Kara felt very peaceful.</p><p style=\"margin-bottom: 1rem;\">That night, they made a fire. They sat around it while Mr. Grieves told scary stories. Kara had a lot of fun. Camping was a good way for friends to spend time together, she realized.</p><p style=\"margin-bottom: 1rem;\">The next day, it was time for them to leave. She felt sad while they <b>exited</b> the park. She didn't like camping at first, but she learned how fun it could be over the weekend.</p></div>",
+      "imageUrl": "/unit17_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec2_reading_tf",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q6",
+              "content": "1. Tracy invites Kara to visit a new civilization with her family.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Tracy mời Kara đi cắm trại (go camping) chứ không phải đi thăm một nền văn minh mới."
+            },
+            {
+              "id": "q7",
+              "content": "2. Tracy's father shows them native plants and animals.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Chi tiết trong bài: 'Tracy's father, Mr. Grieves, showed them the native plants and animals.'"
+            },
+            {
+              "id": "q8",
+              "content": "3. The group returns to camp because mighty clouds were looming.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Chi tiết trong bài: 'mighty clouds soon loomed in the distance. \"It looks like stormy weather,\" said Tracy. \"We should go back.\"'"
+            },
+            {
+              "id": "q9",
+              "content": "4. They used an umbrella to shield themselves from the rain.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Chi tiết trong bài: 'They used an umbrella to shield them from the rain.'"
+            },
+            {
+              "id": "q10",
+              "content": "5. The weather was stormy on the second day of camping.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Ngày hôm sau trời tạnh mưa và thời tiết khác biệt rõ rệt: 'By morning, the rain had stopped. It was a drastic change from the previous day's weather.'"
+            },
+            {
+              "id": "q11",
+              "content": "6. Kara has a drastic change in opinion about camping at the end of the story.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Ban đầu cô không thích (She didn't like camping at first) nhưng cuối cùng thấy cắm trại rất vui (she learned how fun it could be over the weekend)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_reading_mc",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q12",
+              "content": "1. Which of the following does Kara NOT see during the trip?",
+              "options": [
+                "A fox's den",
+                "A flock of birds",
+                "A bunch of mushrooms",
+                "An animal with poison"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Chi tiết trong bài: 'Do you see that bunch of mushrooms next to it. Don't touch them. They contain poison.' Kara thấy nấm có độc chứ không thấy động vật có độc."
+            },
+            {
+              "id": "q13",
+              "content": "2. What does Kara miss about her urban lifestyle?",
+              "options": [
+                "It is convenient.",
+                "It is easier to sleep.",
+                "It is far from civilization.",
+                "It isn't covered in dew."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Chi tiết trong bài: 'She missed her convenient life in the city. She was used to an urban lifestyle.'"
+            },
+            {
+              "id": "q14",
+              "content": "3. What does Kara see swaying in the water?",
+              "options": [
+                "Birds",
+                "Fish",
+                "Reeds",
+                "Lids"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Chi tiết trong bài: 'The reeds swayed in the wind...'"
+            },
+            {
+              "id": "q15",
+              "content": "4. How does Kara feel as she exits the park?",
+              "options": [
+                "Relieved",
+                "Angry",
+                "Tired",
+                "Sad"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Chi tiết trong bài: 'She felt sad while they exited the park.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

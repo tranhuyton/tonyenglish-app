@@ -1,0 +1,533 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 3",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit3_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit3_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">admonish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ædmɑniʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To admonish someone is to tell them you disapprove of their behavior.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher admonished Mark because he was chewing gum in class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">audible</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:dəbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is audible, then it is able to be heard.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sound of the drums was audible from miles away.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">awesome</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:səm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something or someone is awesome, they are impressive or frightening.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The huge military plane was an awesome sight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beware</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[biwɛər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To beware means to be careful of something or someone that is dangerous.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ You should beware of driving fast on wet roads.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">brag</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bræg]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To brag means to talk of one's abilities or achievements in a proud way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He had strong muscles and bragged about it to the entire class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conscious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnʃəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is conscious of something, then they are aware of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new student was conscious of the other students staring at her.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disagree</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disəgri:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To disagree with someone means to have a different opinion from them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lawyers disagreed about the best way to settle the case.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">echo</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ekou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To echo means that a sound repeats itself because it bounced off an object.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The child yelled over the canyon, and the wall echoed the sound.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">eventual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iventʃuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is eventual, it will happen at the end of a series of events.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The constant training and planning led the team to an eventual victory.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hint</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hint]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hint is information that suggests something will happen or is true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I quietly passed on a hint to my sister about the test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">idiot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[idiət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An idiot is a person who is not smart or who has done something silly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because he got lost in the forest, the man felt like an idiot.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">immense</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[imens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is immense, it is very large.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ An immense amount of money was needed to buy such a large boat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">indirect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[indirekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is indirect, then it is not the easiest or straightest way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He chose to take the most indirect route to the coast.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">option</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑpʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An option is a choice between two or more things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The children were given the option of three houses to pick from.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pastime</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pæstaim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pastime is an activity done for fun that you do often.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the US, baseball is considered the national pastime.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">perfect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pə:rfikt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is perfect, then it is without any mistakes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She got all the questions right, so her score was perfect.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pinpoint</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pinpɔint]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pinpoint something means to locate it exactly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The navigation system in my car is able to pinpoint my exact location.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">switch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[switʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To switch means to change something to something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom switched the TV station from the news to her favorite show.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thorough</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θə:rou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something or someone is thorough, then they are complete in everyway.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Tina did a thorough job of cleaning the stains out of the carpet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">torment</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tɔ:rment]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To torment someone means to cause them to suffer on purpose.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She tormented her little brother by taking his favorite toy.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "1. I had the ___________ of going with them or staying home. I felt like an __________ for the choice I made.",
+              "options": [
+                "idiot / option",
+                "option / idiot",
+                "option / immense",
+                "immense / idiot"
+              ],
+              "correctAnswer": "B",
+              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2."
+            },
+            {
+              "id": "q2",
+              "content": "2. Because he liked to ___________ the kitten by pouring water on it, the boy's mother ___________ him for his cruel behavior.",
+              "options": [
+                "admonished / torment",
+                "torment / perfect",
+                "torment / admonished",
+                "admonished / brag"
+              ],
+              "correctAnswer": "C",
+              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2."
+            },
+            {
+              "id": "q3",
+              "content": "3. It was difficult to ___________ the dog's location because its cries ___________ off of the hills.",
+              "options": [
+                "echoed / pinpoint",
+                "pinpoint / echoed",
+                "pinpoint / switch",
+                "switch / echoed"
+              ],
+              "correctAnswer": "B",
+              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2."
+            },
+            {
+              "id": "q4",
+              "content": "4. My sister likes to ___________ about how my mother and father think her behavior is ___________.",
+              "options": [
+                "brag / perfect",
+                "perfect / brag",
+                "perfect / eventual",
+                "brag / eventual"
+              ],
+              "correctAnswer": "A",
+              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2."
+            },
+            {
+              "id": "q5",
+              "content": "5. When you ___________ the machine on, you need to ___________ because the machine is dangerous.",
+              "options": [
+                "beware / switch",
+                "switch / beware",
+                "switch / conscious",
+                "conscious / beware"
+              ],
+              "correctAnswer": "B",
+              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2."
+            },
+            {
+              "id": "q6",
+              "content": "6. All of the accidents at the swimming pool led to the __________ closing of it and the end of a favorite summer __________.",
+              "options": [
+                "eventual / pastime",
+                "pastime / eventual",
+                "pastime / awesome",
+                "eventual / awesome"
+              ],
+              "correctAnswer": "A",
+              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2."
+            },
+            {
+              "id": "q7",
+              "content": "7. The king wanted people to think that his power was __________ . He would put people in jail if they ___________ with him.",
+              "options": [
+                "disagreed / awesome",
+                "awesome / disagreed",
+                "awesome / immense",
+                "disagreed / immense"
+              ],
+              "correctAnswer": "B",
+              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2."
+            },
+            {
+              "id": "q8",
+              "content": "8. Even though the little girl was trying to sneak up on her parents, her __________ steps made her parents ___________ of her.",
+              "options": [
+                "audible / conscious",
+                "conscious / audible",
+                "audible / thorough",
+                "conscious / thorough"
+              ],
+              "correctAnswer": "A",
+              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2."
+            },
+            {
+              "id": "q9",
+              "content": "9. An ___________ tree fell across the road, forcing the travelers to take a more __________ route through the countryside.",
+              "options": [
+                "indirect / immense",
+                "immense / indirect",
+                "immense / perfect",
+                "indirect / perfect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2."
+            },
+            {
+              "id": "q10",
+              "content": "10. The police could not find a single clue to the crime, which gave a ___________ as to how ___________ the thief had been.",
+              "options": [
+                "hint / thorough",
+                "thorough / hint",
+                "hint / option",
+                "thorough / option"
+              ],
+              "correctAnswer": "A",
+              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Part A Match the phrases to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q11",
+              "content": "1. You should beware",
+              "options": [
+                "a. about which game was better",
+                "b. of the hole in the bridge",
+                "c. for talking during the test",
+                "d. was the reason for the bad smell"
+              ],
+              "correctAnswer": "B",
+              "explanation": "beware of (cẩn thận với) phù hợp với 'the hole in the bridge'."
+            },
+            {
+              "id": "q12",
+              "content": "2. My favorite pastime",
+              "options": [
+                "a. took an hour more to drive",
+                "b. fear that his home would be damaged",
+                "c. from her left hand to her right",
+                "d. is listening to music"
+              ],
+              "correctAnswer": "D",
+              "explanation": "pastime (thú vui) phù hợp với 'listening to music'."
+            },
+            {
+              "id": "q13",
+              "content": "3. The doctor did a thorough check",
+              "options": [
+                "a. about how good she is at sports",
+                "b. of the sick man's health",
+                "c. took an hour more to drive",
+                "d. fear that his home would be damaged"
+              ],
+              "correctAnswer": "B",
+              "explanation": "thorough check (kiểm tra kỹ lưỡng) phù hợp với sức khỏe của bệnh nhân."
+            },
+            {
+              "id": "q14",
+              "content": "4. The two friends disagreed",
+              "options": [
+                "a. about which game was better",
+                "b. of the hole in the bridge",
+                "c. for talking during the test",
+                "d. was the reason for the bad smell"
+              ],
+              "correctAnswer": "A",
+              "explanation": "disagreed about (không đồng tình về) phù hợp với việc trò chơi nào tốt hơn."
+            },
+            {
+              "id": "q15",
+              "content": "5. She switched the bag",
+              "options": [
+                "a. took an hour more to drive",
+                "b. fear that his home would be damaged",
+                "c. from her left hand to her right",
+                "d. is listening to music"
+              ],
+              "correctAnswer": "C",
+              "explanation": "switched (chuyển đổi) từ tay trái sang tay phải."
+            },
+            {
+              "id": "q16",
+              "content": "6. His proud sister brags",
+              "options": [
+                "a. about how good she is at sports",
+                "b. of the sick man's health",
+                "c. took an hour more to drive",
+                "d. fear that his home would be damaged"
+              ],
+              "correctAnswer": "A",
+              "explanation": "brags about (khoe khoang về) khả năng chơi thể thao."
+            },
+            {
+              "id": "q17",
+              "content": "7. An immense pile of garbage",
+              "options": [
+                "a. about which game was better",
+                "b. of the hole in the bridge",
+                "c. for talking during the test",
+                "d. was the reason for the bad smell"
+              ],
+              "correctAnswer": "D",
+              "explanation": "immense pile of garbage (đống rác khổng lồ) là nguyên nhân gây mùi hôi."
+            },
+            {
+              "id": "q18",
+              "content": "8. The indirect route",
+              "options": [
+                "a. about how good she is at sports",
+                "b. of the sick man's health",
+                "c. took an hour more to drive",
+                "d. fear that his home would be damaged"
+              ],
+              "correctAnswer": "C",
+              "explanation": "indirect route (đường vòng) mất thêm một giờ lái xe."
+            },
+            {
+              "id": "q19",
+              "content": "9. The awesome storm caused",
+              "options": [
+                "a. about how good she is at sports",
+                "b. of the sick man's health",
+                "c. took an hour more to drive",
+                "d. fear that his home would be damaged"
+              ],
+              "correctAnswer": "D",
+              "explanation": "awesome storm (cơn bão đáng sợ) gây ra nỗi sợ hãi."
+            },
+            {
+              "id": "q20",
+              "content": "10. She admonished the student",
+              "options": [
+                "a. about which game was better",
+                "b. of the hole in the bridge",
+                "c. for talking during the test",
+                "d. was the reason for the bad smell"
+              ],
+              "correctAnswer": "C",
+              "explanation": "admonished (khiển trách) học sinh vì nói chuyện trong giờ kiểm tra."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 2: Part B Match the clauses to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q21",
+              "content": "1. He couldn't sleep at night",
+              "options": [
+                "a. if they wanted to get a perfect grade",
+                "b. but he was conscious of the other boats",
+                "c. because bad dreams tormented him",
+                "d. then people might think you're an idiot"
+              ],
+              "correctAnswer": "C",
+              "explanation": "bad dreams tormented him (những giấc mơ xấu hành hạ anh ta) khiến anh ta không thể ngủ."
+            },
+            {
+              "id": "q22",
+              "content": "2. We knew he broke his leg when he fell",
+              "options": [
+                "a. but it was just the echo of her voice",
+                "b. because there weren't any other options",
+                "c. so he could pinpoint his location in the wild",
+                "d. because the sound of the bone breaking was audible"
+              ],
+              "correctAnswer": "D",
+              "explanation": "sound of the bone breaking was audible (tiếng gãy xương có thể nghe rõ)."
+            },
+            {
+              "id": "q23",
+              "content": "3. He had to choose the blue car",
+              "options": [
+                "a. but it was just the echo of her voice",
+                "b. because there weren't any other options",
+                "c. so he could pinpoint his location in the wild",
+                "d. because the sound of the bone breaking was audible"
+              ],
+              "correctAnswer": "B",
+              "explanation": "there weren't any other options (không còn lựa chọn nào khác)."
+            },
+            {
+              "id": "q24",
+              "content": "4. The hiker always carried a compass and map,",
+              "options": [
+                "a. but it was just the echo of her voice",
+                "b. because there weren't any other options",
+                "c. so he could pinpoint his location in the wild",
+                "d. because the sound of the bone breaking was audible"
+              ],
+              "correctAnswer": "C",
+              "explanation": "pinpoint his location (xác định vị trí chính xác) bằng la bàn và bản đồ."
+            },
+            {
+              "id": "q25",
+              "content": "5. She didn't eat good food and didn't exercise,",
+              "options": [
+                "a. and it led to her eventual illness",
+                "b. because they gave him so many hints",
+                "c. if they wanted to get a perfect grade",
+                "d. but he was conscious of the other boats"
+              ],
+              "correctAnswer": "A",
+              "explanation": "led to her eventual illness (dẫn đến căn bệnh cuối cùng của cô ấy) do thói quen xấu."
+            },
+            {
+              "id": "q26",
+              "content": "6. The students had to answer all the questions correctly",
+              "options": [
+                "a. and it led to her eventual illness",
+                "b. because they gave him so many hints",
+                "c. if they wanted to get a perfect grade",
+                "d. but he was conscious of the other boats"
+              ],
+              "correctAnswer": "C",
+              "explanation": "get a perfect grade (đạt điểm hoàn hảo) nếu trả lời đúng tất cả."
+            },
+            {
+              "id": "q27",
+              "content": "7. The captain did not see the ship approaching behind him,",
+              "options": [
+                "a. and it led to her eventual illness",
+                "b. because they gave him so many hints",
+                "c. if they wanted to get a perfect grade",
+                "d. but he was conscious of the other boats"
+              ],
+              "correctAnswer": "D",
+              "explanation": "conscious of the other boats (nhận thức được các thuyền khác)."
+            },
+            {
+              "id": "q28",
+              "content": "8. She thought someone was calling to her from the other cliff,",
+              "options": [
+                "a. because bad dreams tormented him",
+                "b. then people might think you're an idiot",
+                "c. but it was just the echo of her voice",
+                "d. because there weren't any other options"
+              ],
+              "correctAnswer": "C",
+              "explanation": "echo of her voice (tiếng vang giọng nói của cô ấy)."
+            },
+            {
+              "id": "q29",
+              "content": "9. He knew his friends were having a surprise party for him",
+              "options": [
+                "a. and it led to her eventual illness",
+                "b. because they gave him so many hints",
+                "c. if they wanted to get a perfect grade",
+                "d. but he was conscious of the other boats"
+              ],
+              "correctAnswer": "B",
+              "explanation": "gave him so many hints (đã cho anh ta quá nhiều gợi ý)."
+            },
+            {
+              "id": "q30",
+              "content": "10. If you can't tie your own shoes by the time you're twelve years old",
+              "options": [
+                "a. because bad dreams tormented him",
+                "b. then people might think you're an idiot",
+                "c. but it was just the echo of her voice",
+                "d. because there weren't any other options"
+              ],
+              "correctAnswer": "B",
+              "explanation": "people might think you're an idiot (mọi người có thể nghĩ bạn là kẻ ngốc)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Young Man and the Old Man</h1><p style=\"margin-bottom: 1rem;\">A proud young man was looking for a new <b>pastime</b>. He heard about people hiking in the national parks and decided to try it for himself. As he started his stroll, an old man walked up to him.</p><p style=\"margin-bottom: 1rem;\">\"Don't go this way,\" the old man said. \"<b>Beware</b>. The paths are not clear. It's easy to become lost.\"</p><p style=\"margin-bottom: 1rem;\">But the young man <b>disagreed</b> with the old man and <b>bragged</b> that he had a <b>perfect</b> understanding of the park. \"I studied maps of this area,\" he told him. \"I believe I have a <b>thorough</b> knowledge of these trails. I won't become lost.\"</p><p style=\"margin-bottom: 1rem;\">The old man listened to the young man and then <b>admonished</b> him for his pride.</p><p style=\"margin-bottom: 1rem;\">\"I have walked these trails my entire life,\" he said. \"If you think you will be safe, then go ahead.\"</p><p style=\"margin-bottom: 1rem;\">The young man ignored the old man and started along the trail.</p><p style=\"margin-bottom: 1rem;\">Whenever he had to choose between an easy or difficult route, he always chose the more difficult <b>option</b>. In addition, he was not <b>conscious</b> of which direction he was going. After a while, he decided to return home. Because his course through the wilderness was so <b>indirect</b>, he had no idea where he was.</p><p style=\"margin-bottom: 1rem;\">He looked at his map but could not <b>pinpoint</b> his location. He walked one path after another but soon realized he was lost.</p><p style=\"margin-bottom: 1rem;\">The sun was going down, and sudden strong winds gave a <b>hint</b> that it might rain. <b>Immense</b> clouds filled the sky. <b>Awesome</b> sounds of thunder were <b>audible</b> from all directions. It <b>echoed</b> off the mountains. The thought of the <b>eventual</b> storm <b>tormented</b> the young man. He hurried in one direction, but soon <b>switched</b> out of confusion. Luckily, it led him out of the park.</p><p style=\"margin-bottom: 1rem;\">When he arrived home, he knew that he had acted like an <b>idiot</b>. He realized he was lucky to be alive. He decided to listen to people with more experience than himself.</p></div>",
+      "imageUrl": "/unit3_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Reading Comprehension: Part A",
+          "content": "Mark each statement T for true or F for false.",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q31",
+              "content": "1. The young man decided to hike in the national parks.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. He heard about people hiking in the national parks and decided to try it for himself."
+            },
+            {
+              "id": "q32",
+              "content": "2. The young man disagreed with the old man.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. The young man disagreed with the old man and bragged that he had a perfect understanding of the park."
+            },
+            {
+              "id": "q33",
+              "content": "3. The young man believed that his knowledge of the park's trails was thorough.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. He told the old man: 'I believe I have a thorough knowledge of these trails.'"
+            },
+            {
+              "id": "q34",
+              "content": "4. When the young man had an option of two trails, he always chose the easier one.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Whenever he had to choose between an easy or difficult route, he always chose the more difficult option."
+            },
+            {
+              "id": "q35",
+              "content": "5. The young man was tormented by the thought of the eventual storm.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. The thought of the eventual storm tormented the young man."
+            },
+            {
+              "id": "q36",
+              "content": "6. When the young man got home, he knew that the old man had acted like an idiot.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. When he arrived home, he knew that he had acted like an idiot (không phải là ông lão)."
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Reading Comprehension: Part B",
+          "content": "Answer the questions.",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q37",
+              "content": "1. What did the young man choose as his new pastime?",
+              "options": [
+                "a. Picking trails",
+                "b. Climbing mountains",
+                "c. Talking with old men",
+                "d. Hiking in parks"
+              ],
+              "correctAnswer": "D",
+              "explanation": "A proud young man was looking for a new pastime. He heard about people hiking in the national parks and decided to try it for himself."
+            },
+            {
+              "id": "q38",
+              "content": "2. Why did the old man admonish the young man?",
+              "options": [
+                "a. The young man was awesome.",
+                "b. The young man bragged that he was perfect.",
+                "c. The young man's route was too indirect.",
+                "d. The young man chose difficult trails."
+              ],
+              "correctAnswer": "B",
+              "explanation": "The young man bragged that he had a perfect understanding of the park, so the old man admonished him for his pride."
+            },
+            {
+              "id": "q39",
+              "content": "3. Why did the young man become lost?",
+              "options": [
+                "a. He was not conscious of where he went.",
+                "b. He pinpointed his location on his map.",
+                "c. He did not switch to an easier trail.",
+                "d. He listened to the old man's advice."
+              ],
+              "correctAnswer": "A",
+              "explanation": "In addition, he was not conscious of which direction he was going. Because his course was so indirect, he had no idea where he was."
+            },
+            {
+              "id": "q40",
+              "content": "4. Which of the following gave a hint of an eventual storm?",
+              "options": [
+                "a. The sudden strong winds",
+                "b. The sparse clouds in the sky",
+                "c. The weather getting colder",
+                "d. The lightining flashing in the sky"
+              ],
+              "correctAnswer": "A",
+              "explanation": "The sun was going down, and sudden strong winds gave a hint that it might rain."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

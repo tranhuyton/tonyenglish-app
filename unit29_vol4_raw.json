@@ -1,0 +1,473 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 29",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit29_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit29_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🚗</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">automobile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:təməbi:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An automobile is a car. (Ô tô)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The first automobiles were very different from the ones that exist today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👤</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">candidate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kændideit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A candidate is a person who is competing to win something such as a job. (Ứng cử viên)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Alice is the best candidate for the job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤐</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">confidential</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnfidenʃəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is confidential, it must be kept secret. (Bí mật)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The information from the meeting is confidential.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏢</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">corporate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔ:rpərit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is corporate, it is related to a large business. (Thuộc về đoàn thể, doanh nghiệp)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Tom enjoys working in the corporate world.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📈</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enhance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inhæns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To enhance something is to make it better. (Nâng cao, cải thiện)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Amy's blue shirt really enhances the color of her eyes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">⏳</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">era</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[erə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An era is a period of time that has something special about it. (Kỷ nguyên, thời đại)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ During the medieval era, knights wore protective armor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📝</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">guideline</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gaidlain]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A guideline is a rule about how to do something. (Hướng dẫn)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Before they began the project, the teacher gave them some guidelines.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🧩</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">incorporate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkɔ:rpəreit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To incorporate is to add something to another thing. (Kết hợp, sáp nhập)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ I decided to incorporate a new ingredient into my cake recipe.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤝</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">interact</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intərækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To interact is to talk to or do something with another person. (Tương tác)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The kids began to interact when the adults left the room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">⏱️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">interval</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intərvəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An interval is the time between two things happening. (Khoảng thời gian)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Tony rested for brief intervals while he worked in the yard.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mobile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[moubail]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is mobile, it can be moved easily. (Di động)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Mobile phones are popular because you can take them anywhere.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🔧</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">modify</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑdəfai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To modify something is to change it a little bit. (Sửa đổi)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ I modified my outfit by adding a belt to it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">⏸️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">parallel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pærəlel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If two things are parallel, they are the same distance away from each other. (Song song)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ There are two yellow parallel lines dividing both sides of traffic.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌠</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">phenomenon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[finɑmənɑn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A phenomenon is something that can be seen as it is happening. (Hiện tượng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ I was amazed when I saw the phenomenon of shooting stars.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏭</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pollute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pəlu:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pollute means to make air, water, or land dirty, unclean, or foul. (Gây ô nhiễm)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The careless factory polluted the river with chemicals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😂</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ridicule</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ridikju:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To ridicule is to make fun of something in a mean way. (Chế nhạo)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The other students ridicule Peter's foreign accent.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">☀️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">solar</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[soulər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is solar, it is related to the sun. (Thuộc về mặt trời)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Using solar energy is good for the environment.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🗺️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">territory</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[terətɔ:ri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A territory is a piece of land that belongs to a country but isn't a state. (Lãnh thổ)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Gibraltar is a territory of Great Britain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏆</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tournament</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tuərnəmənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tournament is a competition, usually with many people participating. (Giải đấu)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ My dad is playing in a golf tournament tomorrow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🚌</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">transportation</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trænspərteiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Transportation is any type of vehicle that can carry people or things. (Phương tiện giao thông)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ I don't have a car, so my normal transportation is the train.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_ex1",
+          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. A survey found that not very many people like the __________. So he is trying to think of ways to ___________ his image and make people like him.",
+              "options": [
+                "candidate / enhance",
+                "enhance / candidate",
+                "candidate / era",
+                "enhance / era"
+              ],
+              "correctAnswer": "A",
+              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng."
+            },
+            {
+              "id": "2",
+              "content": "2. We live in a(n) ___________ where people are very concerned about conserving our natural resources. Many people think using ___________ energy is a good way to do this.",
+              "options": [
+                "solar / era",
+                "era / solar",
+                "pollute / solar",
+                "era / pollute"
+              ],
+              "correctAnswer": "B",
+              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng."
+            },
+            {
+              "id": "3",
+              "content": "3. The company doesn't want to ___________ the air anymore, so they are going to ___________ new rules for disposing waste.",
+              "options": [
+                "incorporate / pollute",
+                "pollute / incorporate",
+                "modify / incorporate",
+                "pollute / modify"
+              ],
+              "correctAnswer": "B",
+              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng."
+            },
+            {
+              "id": "4",
+              "content": "4. The ___________ files were locked in the basement. The information in them was about important customers and had to be kept ___________.",
+              "options": [
+                "corporate / confidential",
+                "confidential / corporate",
+                "mobile / confidential",
+                "corporate / mobile"
+              ],
+              "correctAnswer": "A",
+              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng."
+            },
+            {
+              "id": "5",
+              "content": "5. In the early 1900s, music records were an amazing ___________. People back then would have been even more amazed by today's ___________ music players.",
+              "options": [
+                "phenomenon / mobile",
+                "mobile / phenomenon",
+                "automobile / phenomenon",
+                "phenomenon / automobile"
+              ],
+              "correctAnswer": "A",
+              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng."
+            },
+            {
+              "id": "6",
+              "content": "6. The old ___________ was very large and difficult to drive. Jane had trouble parking it between the ___________ lines in the parking lot.",
+              "options": [
+                "automobile / parallel",
+                "parallel / automobile",
+                "automobile / territory",
+                "parallel / territory"
+              ],
+              "correctAnswer": "A",
+              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng."
+            },
+            {
+              "id": "7",
+              "content": "7. Ben didn't listen to my advice about ___________. Instead, he ___________ me and continued to drive fast, eventually causing an accident.",
+              "options": [
+                "transportation / ridiculed",
+                "ridiculed / transportation",
+                "guidelines / ridiculed",
+                "transportation / guidelines"
+              ],
+              "correctAnswer": "A",
+              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng."
+            },
+            {
+              "id": "8",
+              "content": "8. The ___________ for the race are very simple: just run as fast as you can. There will be short ___________ when you can stop for a drink of water.",
+              "options": [
+                "intervals / guidelines",
+                "guidelines / intervals",
+                "guidelines / territories",
+                "intervals / territories"
+              ],
+              "correctAnswer": "B",
+              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng."
+            },
+            {
+              "id": "9",
+              "content": "9. The government decided to ___________ its borders. It made several of its ___________ smaller so that it could create a new one.",
+              "options": [
+                "territories / modify",
+                "modify / territories",
+                "modify / interact",
+                "territories / interact"
+              ],
+              "correctAnswer": "B",
+              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng."
+            },
+            {
+              "id": "10",
+              "content": "10. The baseball ___________ is always a lot of fun. It allows students from all over the city to ___________ with each other.",
+              "options": [
+                "tournament / interact",
+                "interact / tournament",
+                "tournament / modify",
+                "interact / modify"
+              ],
+              "correctAnswer": "A",
+              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng."
+            }
+          ]
+        },
+        {
+          "id": "sec1_ex2",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. Factories built in the early 1900s contine to _unleash_ _chemicals_ _into_ the air.",
+              "options": [
+                "pollute",
+                "modify",
+                "incorporate",
+                "interact"
+              ],
+              "correctAnswer": "A",
+              "explanation": "pollute có nghĩa tương tự (gây ô nhiễm)."
+            },
+            {
+              "id": "12",
+              "content": "2. My soccer team is playing in a _competition_ next weekend.",
+              "options": [
+                "era",
+                "tournament",
+                "territory",
+                "guideline"
+              ],
+              "correctAnswer": "B",
+              "explanation": "tournament (giải đấu) tương đồng với competition."
+            },
+            {
+              "id": "13",
+              "content": "3. When the new buildings are finished, they will be _the_ _same_ _distance_ _away_ _from_ _each_ _other_.",
+              "options": [
+                "parallel",
+                "mobile",
+                "corporate",
+                "confidential"
+              ],
+              "correctAnswer": "A",
+              "explanation": "parallel (song song) có nghĩa là the same distance away from each other."
+            },
+            {
+              "id": "14",
+              "content": "4. In order for my science project to work, I need to _alter_ it.",
+              "options": [
+                "pollute",
+                "modify",
+                "enhance",
+                "ridicule"
+              ],
+              "correctAnswer": "B",
+              "explanation": "modify (sửa đổi) tương đồng với alter."
+            },
+            {
+              "id": "15",
+              "content": "5. Amy hurt Jane's feelings when she _made_ _fun_ _of_ her.",
+              "options": [
+                "ridiculed",
+                "incorporated",
+                "interacted",
+                "modified"
+              ],
+              "correctAnswer": "A",
+              "explanation": "ridiculed (chế nhạo) tương đồng với made fun of."
+            },
+            {
+              "id": "16",
+              "content": "6. In this _period_ _of_ _time_, it's more common for kids to play video games than read books.",
+              "options": [
+                "interval",
+                "territory",
+                "era",
+                "phenomenon"
+              ],
+              "correctAnswer": "C",
+              "explanation": "era (kỷ nguyên/thời kỳ) tương đồng với period of time."
+            },
+            {
+              "id": "17",
+              "content": "7. Kate is very shy and doesn't like to _talk_ _to_ _and_ _do_ _things_ _with_ the other girls.",
+              "options": [
+                "pollute",
+                "ridicule",
+                "interact",
+                "enhance"
+              ],
+              "correctAnswer": "C",
+              "explanation": "interact (tương tác) tương đồng với talk to and do things with."
+            },
+            {
+              "id": "18",
+              "content": "8. Tom wants to _add_ more colors _into_ his painting.",
+              "options": [
+                "incorporate",
+                "modify",
+                "pollute",
+                "ridicule"
+              ],
+              "correctAnswer": "A",
+              "explanation": "incorporate (kết hợp/thêm vào) tương đồng với add into."
+            },
+            {
+              "id": "19",
+              "content": "9. My grandfather used to race _cars_ across the long distances in endurance races.",
+              "options": [
+                "intervals",
+                "automobiles",
+                "guidelines",
+                "tournaments"
+              ],
+              "correctAnswer": "B",
+              "explanation": "automobiles (ô tô) tương đồng với cars."
+            },
+            {
+              "id": "20",
+              "content": "10. The _person_ _competing_ _for_ _the_ _job_ interviewed very well.",
+              "options": [
+                "phenomenon",
+                "candidate",
+                "territory",
+                "era"
+              ],
+              "correctAnswer": "B",
+              "explanation": "candidate (ứng viên) tương đồng với person competing for the job."
+            }
+          ]
+        },
+        {
+          "id": "sec1_ex3",
+          "title": "Exercise 3: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. Which of the following means confidential?",
+              "options": [
+                "soft",
+                "compete",
+                "moveable",
+                "secret"
+              ],
+              "correctAnswer": "D",
+              "explanation": "confidential có nghĩa là secret (bí mật)."
+            },
+            {
+              "id": "22",
+              "content": "2. What is the word solar related to?",
+              "options": [
+                "Lines",
+                "Land",
+                "The sun",
+                "A car"
+              ],
+              "correctAnswer": "C",
+              "explanation": "solar (thuộc về mặt trời) liên quan đến The sun."
+            },
+            {
+              "id": "23",
+              "content": "3. Which of these is mobile?",
+              "options": [
+                "A tree",
+                "A bus",
+                "A building",
+                "A sidewalk"
+              ],
+              "correctAnswer": "B",
+              "explanation": "mobile (di động) chỉ A bus (xe buýt)."
+            },
+            {
+              "id": "24",
+              "content": "4. Which of the following is a form of transportation?",
+              "options": [
+                "a friend",
+                "an airplane",
+                "a new job",
+                "a meal"
+              ],
+              "correctAnswer": "B",
+              "explanation": "transportation (phương tiện giao thông) là an airplane (máy bay)."
+            },
+            {
+              "id": "25",
+              "content": "5. Which of these words are related to corporate?",
+              "options": [
+                "Business",
+                "Time",
+                "Competition",
+                "Winning"
+              ],
+              "correctAnswer": "A",
+              "explanation": "corporate (doanh nghiệp) liên quan đến Business."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Solar Car Race</h1><p style=\"margin-bottom: 1rem;\">We live in a <b>mobile</b> society. But the cars we drive require too much gas, plus they <b>pollute</b> the air. Eventually, the natural resources used to make gas will run out. So what happens then? Many people think <b>solar</b>-powered <b>automobiles</b> are the answer. To learn more about this type of <b>transportation</b>, teams from universities and <b>corporate</b> organizations gather in Australia every two years for a <b>solar</b> car race.</p><p style=\"margin-bottom: 1rem;\">The race is called the World Solar Challenge. <b>Candidates</b> for this <b>tournament</b> must design their own cars. The teams keep all their plans <b>confidential</b>. They don't <b>interact</b> with other teams because the race is very competitive. And these cars aren't just <b>enhanced</b> and <b>modified</b> versions of normal cars. They are completely different.</p><p style=\"margin-bottom: 1rem;\">The cars only have room for one person and are very simple inside—they don't even have a cushion for the driver to sit on. These cars are shorter and much more flat than normal cars. Most importantly, the cars <b>incorporate</b> <b>solar</b> panels onto the outside that lie <b>parallel</b> to each other. These panels are made from materials that take in light from the sun and turn it into electric energy. That's how they move.</p><p style=\"margin-bottom: 1rem;\">These cars race over 3,000 kilometers across the Australian <b>territories</b>. The drivers have to heed strict <b>guidelines</b>. They must stop at certain <b>intervals</b> to charge their batteries. And unlike normal race cars, they can't go very fast. They have to drive at the normal speed limits. Although the drivers want to finish the race quickly, that is not the main goal. The objective is to see how well the cars work under normal driving conditions.</p><p style=\"margin-bottom: 1rem;\">Because of the World Solar Challenge, a new <b>era</b> in car making and in driving is beginning. People may <b>ridicule</b> the <b>solar</b> cars because they look strange, but this is a <b>phenomenon</b> that isn't going away. Using the technology from the vehicles, car makers will eventually create <b>solar</b> cars for the rest of us.</p></div>",
+      "imageUrl": "/unit29_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec2_read_a",
+          "title": "Reading Comprehension: Part A - Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "26",
+              "content": "1. Teams from universities and corporate organizations gather in Australia every two years for a solar car race.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Bài đọc cho biết 'teams from universities and corporate organizations gather in Australia every two years for a solar car race.'"
+            },
+            {
+              "id": "27",
+              "content": "2. Candidates for this tournament must design their own cars and keep all their plans confidential.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Bài có đoạn 'Candidates for this tournament must design their own cars. The teams keep all their plans confidential.'"
+            },
+            {
+              "id": "28",
+              "content": "3. The cars incorporate solar panels onto the outside that lie perpendicular to each other.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Các tấm năng lượng mặt trời nằm song song (parallel), không phải vuông góc (perpendicular)."
+            },
+            {
+              "id": "29",
+              "content": "4. These cars drive over 300 kilometers across the Australian territories.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Trong bài, họ đua qua hơn 3,000 kilometers."
+            },
+            {
+              "id": "30",
+              "content": "5. The objective of the race is to see how well the cars work under normal driving conditions.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Trong bài có câu 'The objective is to see how well the cars work under normal driving conditions.'"
+            },
+            {
+              "id": "31",
+              "content": "6. They must never stop at any intervals to charge their batteries.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Bài có viết 'They must stop at certain intervals to charge their batteries.'"
+            }
+          ]
+        },
+        {
+          "id": "sec2_read_b",
+          "title": "Reading Comprehension: Part B - Answer the questions based on the story.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "32",
+              "content": "1. What is this reading about?",
+              "options": [
+                "Traditional automobiles",
+                "Gas pollution",
+                "The Solar Car Race",
+                "Fast driving"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Bài đọc nói về cuộc đua xe năng lượng mặt trời (The Solar Car Race)."
+            },
+            {
+              "id": "33",
+              "content": "2. What do the drivers have to heed during the race?",
+              "options": [
+                "Strict guidelines",
+                "The weather",
+                "Other drivers",
+                "Strange phenomena"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bài có nói 'The drivers have to heed strict guidelines.'"
+            },
+            {
+              "id": "34",
+              "content": "3. How are these cars different inside from normal cars?",
+              "options": [
+                "They have large engines",
+                "They have a big cushion",
+                "They have a radio",
+                "They only have room for one person"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Bài đọc nói: 'The cars only have room for one person and are very simple inside'."
+            },
+            {
+              "id": "35",
+              "content": "4. What will car makers eventually create according to the passage?",
+              "options": [
+                "Solar cars for the rest of us",
+                "Better gas cars",
+                "Spaceships",
+                "Motorcycles"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Câu cuối bài: 'car makers will eventually create solar cars for the rest of us.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

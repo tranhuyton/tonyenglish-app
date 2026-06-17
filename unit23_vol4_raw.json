@@ -1,0 +1,525 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 23",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit23_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit23_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accurate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ækjarit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is accurate, it is completely correct. (Nếu một cái gì đó chính xác, nó hoàn toàn đúng.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The story in the newspaper wasn't very accurate.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">analyze</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ænəlaiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To analyze something is to study it. (Phân tích một cái gì đó là nghiên cứu nó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The scientist will analyze the blood sample.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">asteroid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æstəroid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An asteroid is a giant rock from outer space. (Tiểu hành tinh là một tảng đá khổng lồ ngoài vũ trụ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ In 1908, a giant asteroid hit Siberia.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">controversy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑntrəvə:rsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A controversy is a dispute about something that affects many people. (Sự tranh cãi là một cuộc tranh luận về một điều gì đó ảnh hưởng đến nhiều người.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ There has been a lot of controversy over the judge's decision.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">evolve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ivɑlv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To evolve is to change over time. (Tiến hóa là thay đổi theo thời gian.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Many people think that humans evolved from animals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">factor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fæktər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A factor is something that has an effect on the way another thing happens. (Yếu tố là một cái gì đó có ảnh hưởng đến cách một cái gì đó khác xảy ra.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Smoking is the main factor that causes lung cancer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">genetic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒənetik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is genetic, it is related to the genes in one's body. (Nếu một cái gì đó mang tính di truyền, nó liên quan đến gen trong cơ thể của một người.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The color of one's eyes is genetic.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">genome</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒi:noum]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A genome is the collection of all the genes in a living thing. (Hệ gen là tập hợp tất cả các gen trong một sinh vật sống.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Understanding the human genome may help cure many diseases.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">identical</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aidentikəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To be identical is to be the same as someone or something else. (Giống hệt nhau là giống hệt như một người hoặc một cái gì đó khác.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ James and John are identical twins.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intellectual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intəlektjuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An intellectual is a very smart person. (Người trí thức là một người rất thông minh.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ We've always considered my Uncle Max the intellectual of the family.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">majority</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mədʒɔ:rəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A majority of something is almost all of the people or things in that group. (Đa số của một cái gì đó là hầu hết tất cả mọi người hoặc mọi thứ trong nhóm đó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ A majority of the people voted for Tom Smith in the election.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mammal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mæməl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mammal is an animal that usually has hair and is not born from an egg. (Động vật có vú là động vật thường có lông và không sinh ra từ trứng.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Even though it lives in the water, whales are actually mammals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">multiply</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mʌltəplai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To multiply is to increase in number. (Nhân lên là gia tăng về số lượng.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ In the past year, the number of people at work multiplied by ten percent.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">offspring</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:fspriŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Offspring are the children of a person or the babies of an animal. (Con cái là những đứa trẻ của một người hoặc con của động vật.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The dog's offspring had the same color of fur as she did.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pesticide</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pestəsaid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pesticide is a substance used to kill insects. (Thuốc trừ sâu là chất dùng để diệt côn trùng.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The farmer sprayed his crops with a pesticide to keep bugs away.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">regulate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[regjəleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To regulate something is to control how it happens. (Quy định hoặc điều chỉnh một cái gì đó là kiểm soát cách nó diễn ra.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The bank regulates how much money people can borrow from it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reinforce</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ri:infɔ:rs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To reinforce something is to make it stronger. (Củng cố một cái gì đó là làm cho nó mạnh mẽ hơn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Peter reinforced his opinion with information from a book.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stricken</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strikən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If one is stricken by a disease or problem, they are badly affected by it. (Nếu một người bị ảnh hưởng bởi bệnh tật hay vấn đề, họ bị ảnh hưởng nặng nề bởi điều đó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ Mike was stricken with a horrible illness.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[væst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is vast, it is very large. (Nếu một cái gì đó rộng lớn, nó rất to lớn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ The wealthy man bought a vast amount of land in the countryside.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vegetarian</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vedʒəteəriən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A vegetarian is someone who does not eat any meat products. (Người ăn chay là người không ăn các sản phẩm từ thịt.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">✨ I became a vegetarian because I don't like the taste of meat.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. A professor at a university is probably ____________.",
+              "options": [
+                "a majority",
+                "an intellectual",
+                "a controversy",
+                "a factor"
+              ],
+              "correctAnswer": "B",
+              "explanation": "intellectual (n): người trí thức. Một giáo sư đại học có thể là một người trí thức."
+            },
+            {
+              "id": "2",
+              "content": "2. If every member of a family has a disease, the disease is ____________.",
+              "options": [
+                "accurate",
+                "identical",
+                "vast",
+                "genetic"
+              ],
+              "correctAnswer": "D",
+              "explanation": "genetic (adj): thuộc về di truyền. Căn bệnh xuất hiện ở mọi thành viên trong gia đình là do di truyền."
+            },
+            {
+              "id": "3",
+              "content": "3. What would a farmer do if bugs were eating his plants?",
+              "options": [
+                "Use a pesticide",
+                "Find a mammal",
+                "Raise offspring",
+                "Become a vegetarian"
+              ],
+              "correctAnswer": "A",
+              "explanation": "pesticide (n): thuốc trừ sâu. Nông dân sẽ sử dụng thuốc trừ sâu để diệt bọ."
+            },
+            {
+              "id": "4",
+              "content": "4. What is something that scientists do?",
+              "options": [
+                "Analyze chemicals",
+                "Multiply books",
+                "Reinforce messages",
+                "Regulate businesses"
+              ],
+              "correctAnswer": "A",
+              "explanation": "analyze (v): phân tích. Các nhà khoa học thường phân tích hóa chất."
+            },
+            {
+              "id": "5",
+              "content": "5. Which word is related to the term \"outer space\"?",
+              "options": [
+                "Stricken",
+                "Evolve",
+                "Genome",
+                "Asteroid"
+              ],
+              "correctAnswer": "D",
+              "explanation": "asteroid (n): tiểu hành tinh. Từ này liên quan đến không gian vũ trụ."
+            },
+            {
+              "id": "6",
+              "content": "6. What happens when something evolves?",
+              "options": [
+                "It studies more.",
+                "It disagrees.",
+                "It changes.",
+                "It gets stronger."
+              ],
+              "correctAnswer": "C",
+              "explanation": "evolve (v): tiến hóa. Tiến hóa nghĩa là thay đổi theo thời gian."
+            },
+            {
+              "id": "7",
+              "content": "7. Which of these is a mammal?",
+              "options": [
+                "A chicken",
+                "A snake",
+                "A spider",
+                "A monkey"
+              ],
+              "correctAnswer": "D",
+              "explanation": "mammal (n): động vật có vú. Khỉ là một loài động vật có vú."
+            },
+            {
+              "id": "8",
+              "content": "8. What would a vegetarian eat?",
+              "options": [
+                "Steak",
+                "Sausage",
+                "Chicken",
+                "Corn"
+              ],
+              "correctAnswer": "D",
+              "explanation": "vegetarian (n): người ăn chay. Người ăn chay sẽ ăn ngô (corn) thay vì thịt."
+            },
+            {
+              "id": "9",
+              "content": "9. If something is accurate, it is ____________.",
+              "options": [
+                "long",
+                "false",
+                "correct",
+                "mysterious"
+              ],
+              "correctAnswer": "C",
+              "explanation": "accurate (adj): chính xác. Nghĩa là đúng hoàn toàn (correct)."
+            },
+            {
+              "id": "10",
+              "content": "10. Which of these is usually considered vast?",
+              "options": [
+                "The sky",
+                "A bedroom",
+                "A pool",
+                "The newspaper"
+              ],
+              "correctAnswer": "A",
+              "explanation": "vast (adj): rộng lớn. Bầu trời thường được coi là rất rộng lớn."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Match to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "e2a1",
+              "content": "1. The cheaper blouse is nearly identical ____________",
+              "options": [
+                "will be printed in a science textbook",
+                "to the one I found in that expensive store",
+                "are made of rock, ice and metal",
+                "crops cause illnesses in humans"
+              ],
+              "correctAnswer": "B",
+              "explanation": "identical to...: giống hệt. Chiếc áo sơ mi rẻ hơn gần như giống hệt cái tôi tìm thấy trong cửa hàng đắt tiền đó."
+            },
+            {
+              "id": "e2a2",
+              "content": "2. The zoo is full of mammals ____________",
+              "options": [
+                "that come from all over the world",
+                "a big machine to a tiny one",
+                "with an example from a scientific study",
+                "about each patient"
+              ],
+              "correctAnswer": "A",
+              "explanation": "mammals that come from...: các loài động vật có vú đến từ khắp nơi trên thế giới."
+            },
+            {
+              "id": "e2a3",
+              "content": "3. The computer has evolved from ____________",
+              "options": [
+                "with two broken legs and an injured arm",
+                "to the one I found in that expensive store",
+                "a big machine to a tiny one",
+                "big enough to fit at least 5,000 people"
+              ],
+              "correctAnswer": "C",
+              "explanation": "evolved from a big machine to a tiny one: tiến hóa / phát triển từ một cỗ máy lớn thành một cái nhỏ xíu."
+            },
+            {
+              "id": "e2a4",
+              "content": "4. My teacher said that asteroids ____________",
+              "options": [
+                "will be printed in a science textbook",
+                "are made of rock, ice and metal",
+                "about each patient",
+                "crops cause illnesses in humans"
+              ],
+              "correctAnswer": "B",
+              "explanation": "asteroids are made of rock...: tiểu hành tinh được tạo thành từ đá, băng và kim loại."
+            },
+            {
+              "id": "e2a5",
+              "content": "5. Many pesticides that are used on ____________",
+              "options": [
+                "crops cause illnesses in humans",
+                "that come from all over the world",
+                "a big machine to a tiny one",
+                "with an example from a scientific study"
+              ],
+              "correctAnswer": "A",
+              "explanation": "pesticides that are used on crops: thuốc trừ sâu được sử dụng trên cây trồng gây bệnh cho con người."
+            },
+            {
+              "id": "e2a6",
+              "content": "6. The woman reinforced her statement ____________",
+              "options": [
+                "about each patient",
+                "to the one I found in that expensive store",
+                "with an example from a scientific study",
+                "big enough to fit at least 5,000 people"
+              ],
+              "correctAnswer": "C",
+              "explanation": "reinforced her statement with an example: củng cố tuyên bố của mình bằng một ví dụ từ một nghiên cứu khoa học."
+            },
+            {
+              "id": "e2a7",
+              "content": "7. The doctor analyzes the daily report ____________",
+              "options": [
+                "are made of rock, ice and metal",
+                "about each patient",
+                "with two broken legs and an injured arm",
+                "will be printed in a science textbook"
+              ],
+              "correctAnswer": "B",
+              "explanation": "analyzes the daily report about each patient: phân tích báo cáo hàng ngày về từng bệnh nhân."
+            },
+            {
+              "id": "e2a8",
+              "content": "8. The vast space of the room was ____________",
+              "options": [
+                "big enough to fit at least 5,000 people",
+                "crops cause illnesses in humans",
+                "that come from all over the world",
+                "a big machine to a tiny one"
+              ],
+              "correctAnswer": "A",
+              "explanation": "vast space ... big enough to fit: không gian rộng lớn ... đủ lớn để chứa ít nhất 5.000 người."
+            },
+            {
+              "id": "e2a9",
+              "content": "9. My report on animal genomes ____________",
+              "options": [
+                "will be printed in a science textbook",
+                "with an example from a scientific study",
+                "to the one I found in that expensive store",
+                "are made of rock, ice and metal"
+              ],
+              "correctAnswer": "A",
+              "explanation": "report on animal genomes will be printed: báo cáo về bộ gen động vật sẽ được in trong một cuốn sách giáo khoa."
+            },
+            {
+              "id": "e2a10",
+              "content": "10. The accident left her stricken ____________",
+              "options": [
+                "about each patient",
+                "big enough to fit at least 5,000 people",
+                "with two broken legs and an injured arm",
+                "crops cause illnesses in humans"
+              ],
+              "correctAnswer": "C",
+              "explanation": "stricken with two broken legs: bị thương nặng với hai chân gãy và một cánh tay bị thương."
+            },
+            {
+              "id": "e2b1",
+              "content": "11. A small group of kids wanted pizza, ____________",
+              "options": [
+                "but the majority wanted hamburgers",
+                "but her offspring are very tall",
+                "since the news isn't accurate",
+                "so we must regulate their actions"
+              ],
+              "correctAnswer": "A",
+              "explanation": "majority: đa số. Một nhóm nhỏ muốn ăn pizza, nhưng đa số lại muốn ăn hamburger."
+            },
+            {
+              "id": "e2b2",
+              "content": "12. I don't read gossip magazines ____________",
+              "options": [
+                "but the flowers multiplied fast",
+                "since the news isn't accurate",
+                "but his brother is more of an intellectual",
+                "so dad thought it was genetic"
+              ],
+              "correctAnswer": "B",
+              "explanation": "accurate: chính xác. Tôi không đọc các tạp chí ngồi lê đôi mách vì tin tức không chính xác."
+            },
+            {
+              "id": "e2b3",
+              "content": "13. The people in this department can't be trusted, ____________",
+              "options": [
+                "but it caused a lot of controversy",
+                "but she didn't know he was a vegetarian",
+                "so we must regulate their actions",
+                "but the most important factor is its price"
+              ],
+              "correctAnswer": "C",
+              "explanation": "regulate: quản lý, điều chỉnh. Những người ở bộ phận này không đáng tin, vì vậy chúng ta phải quản lý hành động của họ."
+            },
+            {
+              "id": "e2b4",
+              "content": "14. There are many things to consider about the car, ____________",
+              "options": [
+                "but the flowers multiplied fast",
+                "but the most important factor is its price",
+                "but his brother is more of an intellectual",
+                "so dad thought it was genetic"
+              ],
+              "correctAnswer": "B",
+              "explanation": "factor: yếu tố. Có nhiều điều cần xem xét về chiếc xe, nhưng yếu tố quan trọng nhất là giá của nó."
+            },
+            {
+              "id": "e2b5",
+              "content": "15. The sisters both had the strange disease, ____________",
+              "options": [
+                "but it caused a lot of controversy",
+                "so we must regulate their actions",
+                "so dad thought it was genetic",
+                "but the majority wanted hamburgers"
+              ],
+              "correctAnswer": "C",
+              "explanation": "genetic: mang tính di truyền. Cả hai chị em đều mắc căn bệnh lạ, nên bố nghĩ nó là do di truyền."
+            },
+            {
+              "id": "e2b6",
+              "content": "16. James thought he made the right choice, ____________",
+              "options": [
+                "but it caused a lot of controversy",
+                "since the news isn't accurate",
+                "but the most important factor is its price",
+                "but her offspring are very tall"
+              ],
+              "correctAnswer": "A",
+              "explanation": "controversy: sự tranh cãi. James nghĩ rằng anh ấy đã chọn đúng, nhưng nó đã gây ra rất nhiều tranh cãi."
+            },
+            {
+              "id": "e2b7",
+              "content": "17. Pam served steak and potatoes to Ben, ____________",
+              "options": [
+                "but the flowers multiplied fast",
+                "but his brother is more of an intellectual",
+                "so we must regulate their actions",
+                "but she didn't know he was a vegetarian"
+              ],
+              "correctAnswer": "D",
+              "explanation": "vegetarian: người ăn chay. Pam phục vụ bít tết và khoai tây cho Ben, nhưng cô không biết anh là người ăn chay."
+            },
+            {
+              "id": "e2b8",
+              "content": "18. Alice is a short woman, ____________",
+              "options": [
+                "but her offspring are very tall",
+                "but it caused a lot of controversy",
+                "since the news isn't accurate",
+                "so dad thought it was genetic"
+              ],
+              "correctAnswer": "A",
+              "explanation": "offspring: con cái. Alice là một phụ nữ thấp bé, nhưng con cái của cô ấy lại rất cao."
+            },
+            {
+              "id": "e2b9",
+              "content": "19. I thought it would take weeks for them to grow, ____________",
+              "options": [
+                "but the flowers multiplied fast",
+                "but she didn't know he was a vegetarian",
+                "but the most important factor is its price",
+                "but his brother is more of an intellectual"
+              ],
+              "correctAnswer": "A",
+              "explanation": "multiplied: nhân lên, phát triển. Tôi nghĩ sẽ mất nhiều tuần để chúng lớn lên, nhưng hoa phát triển rất nhanh."
+            },
+            {
+              "id": "e2b10",
+              "content": "20. Daniel loves sports and parties, ____________",
+              "options": [
+                "so dad thought it was genetic",
+                "but his brother is more of an intellectual",
+                "but her offspring are very tall",
+                "but the majority wanted hamburgers"
+              ],
+              "correctAnswer": "B",
+              "explanation": "intellectual: người trí thức. Daniel thích thể thao và tiệc tùng, nhưng anh trai cậu lại là một người trí thức."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the Dinosaurs Really Died</h1><p style=\"margin-bottom: 1rem;\">Many scientists and <b>intellectuals</b> think that dinosaurs died when an <b>asteroid</b> smashed into the Earth millions of years ago. However, recently, there has been some <b>controversy</b> over this theory. Some scientists think that it isn't <b>accurate</b>. They think that a tiny insect may have been the biggest <b>factor</b> in the death of these huge creatures. That insect was the mosquito.</p><p style=\"margin-bottom: 1rem;\">These scientists do think that an <b>asteroid</b> hit the Earth at the time of the dinosaurs. But that wasn't what killed all of them. At that time, insects, including the mosquito, were beginning to <b>evolve</b>. Today, we can <b>regulate</b> the number of mosquitoes with <b>pesticides</b>. But that was impossible millions of years ago. The mosquitoes <b>multiplied</b> quickly. And they were certainly not idle. Since there were so many mosquitoes, it was easy for them to bite many of the dinosaurs. When they bit another living thing, the mosquitoes passed along a deadly disease. So the dinosaurs were <b>stricken</b> with the disease. A <b>vast</b> <b>majority</b> of them, from the <b>vegetarians</b> to the meat eaters, died.</p><p style=\"margin-bottom: 1rem;\">To <b>reinforce</b> this idea, scientists stress how gradually the dinosaurs died. If an <b>asteroid</b> killed them, they would have died very quickly. But the number of dinosaurs decreased slowly. In addition, scientists have found <b>genetic</b> material of mosquitoes in fossils. This material proves that mosquitoes existed back then. Although there may have been other <b>factors</b>, the dinosaurs died mainly because of disease, the scientists say.</p><p style=\"margin-bottom: 1rem;\">No matter how it happened, the dinosaurs' death had a major impact on other living things. Many dinosaurs ate <b>mammals</b>. After the dinosaurs died, <b>mammals</b> were able to <b>evolve</b> and produce <b>offspring</b>. Birds also <b>evolved</b>. Scientists have <b>analyzed</b> the <b>genomes</b> of birds, and they discovered that birds have <b>identical</b> <b>genetic</b> material to some dinosaurs. So there may still be dinosaurs among us after all.</p></div>",
+      "imageUrl": "/unit23_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. Some scientists think the asteroid theory isn't accurate.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Thông tin trong bài: \"Some scientists think that it isn't accurate.\" (Một số nhà khoa học cho rằng giả thuyết tiểu hành tinh là không chính xác.)"
+            },
+            {
+              "id": "12",
+              "content": "2. A huge creature may have been the biggest factor in the death of these tiny insects.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Theo bài viết: \"A tiny insect may have been the biggest factor in the death of these huge creatures.\" (Một loài côn trùng nhỏ bé có thể là yếu tố lớn nhất gây ra cái chết của những sinh vật khổng lồ này, chứ không phải ngược lại.)"
+            },
+            {
+              "id": "13",
+              "content": "3. Today, we can regulate the number of mosquitoes with pesticides.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Thông tin trong bài: \"Today, we can regulate the number of mosquitoes with pesticides.\" (Ngày nay, chúng ta có thể kiểm soát số lượng muỗi bằng thuốc trừ sâu.)"
+            },
+            {
+              "id": "14",
+              "content": "4. A vast majority of mosquitoes, from the vegetarians to the meat eaters, died.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bài viết nói: \"A vast majority of them (dinosaurs), from the vegetarians to the meat eaters, died.\" (Đại đa số khủng long chết, chứ không phải muỗi.)"
+            },
+            {
+              "id": "15",
+              "content": "5. In addition, scientists have found the genetic material of mammals in fossils.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Theo bài: \"In addition, scientists have found genetic material of mosquitoes in fossils.\" (Các nhà khoa học tìm thấy vật liệu di truyền của muỗi trong hóa thạch, không phải của động vật có vú.)"
+            },
+            {
+              "id": "16",
+              "content": "6. Many dinosaurs ate mammals.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Thông tin trong bài: \"Many dinosaurs ate mammals.\" (Nhiều con khủng long đã ăn động vật có vú.)"
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "17",
+              "content": "1. What might have been the biggest factor in the dinosaurs' death?",
+              "options": [
+                "Their genetic material",
+                "An asteroid",
+                "Other animals",
+                "Mosquitoes"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Dựa vào đoạn đầu: \"They think that a tiny insect may have been the biggest factor... That insect was the mosquito.\" (Họ nghĩ rằng một loài côn trùng nhỏ bé có thể là yếu tố lớn nhất... Đó là muỗi.)"
+            },
+            {
+              "id": "18",
+              "content": "2. What do we do to regulate the number of mosquitoes?",
+              "options": [
+                "We use pesticides.",
+                "We feed them to vegetarians.",
+                "We kill their offspring.",
+                "We analyze their genomes."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dựa vào đoạn 2: \"Today, we can regulate the number of mosquitoes with pesticides.\" (Ngày nay, chúng ta dùng thuốc trừ sâu để kiểm soát số lượng muỗi.)"
+            },
+            {
+              "id": "19",
+              "content": "3. How did the mosquitoes spread the deadly disease?",
+              "options": [
+                "They produced offspring.",
+                "They bit many dinosaurs.",
+                "They ate birds.",
+                "They multiplied quickly."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dựa vào đoạn 2: \"Since there were so many mosquitoes, it was easy for them to bite many of the dinosaurs. When they bit another living thing, the mosquitoes passed along a deadly disease.\" (Muỗi cắn nhiều khủng long và truyền bệnh chết người.)"
+            },
+            {
+              "id": "20",
+              "content": "4. What proves that mosquitoes were around at the same time as dinosaurs?",
+              "options": [
+                "Genetic material in fossils",
+                "Similar modern insects",
+                "Asteroids that hit the Earth",
+                "Genomes of birds"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dựa vào đoạn 3: \"scientists have found genetic material of mosquitoes in fossils. This material proves that mosquitoes existed back then.\" (Vật liệu di truyền của muỗi trong hóa thạch chứng minh chúng đã tồn tại vào thời điểm đó.)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

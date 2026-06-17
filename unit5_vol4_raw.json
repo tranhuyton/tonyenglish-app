@@ -1,0 +1,513 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 5",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit5_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit5_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">awhile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈwaɪl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you do something awhile, you do it for a short time. (trong chốc lát)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Wait here awhile, and I’ll bring some tea.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cyberspace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsaɪbərspeɪs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cyberspace is the imaginary place of the Internet where activities occur. (không gian mạng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I didn’t receive your email. It probably got lost in cyberspace.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">edit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈedɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To edit means to correct a piece of writing so that it is suitable to be published. (chỉnh sửa)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She asked her brother to edit her paper before she submitted it to her teacher.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">essay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈeseɪ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An essay is a short piece of writing on a certain subject. (bài luận)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She had to write a two-page essay for her English class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">evaluate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪˈvæljueɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To evaluate something means to study it, so a decision can be made. (đánh giá)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Joe and Ken evaluated the plan and agreed that it would work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">faint</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feɪnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To faint means to go unconscious and fall down. (ngất xỉu)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Carol fainted because she hadn’t eaten in over a day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">global</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɡloʊbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is global, it happens all around the world. (toàn cầu)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Pollution is a global problem.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gymnasium</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒɪmˈneɪziəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A gymnasium is a building with equipment that you can use to get exercise. (phòng thể dục)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I go to the gymnasium, I use the treadmill for 20 minutes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">highlight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhaɪlaɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To highlight something means to mark it with a color so that it is easy to see. (làm nổi bật)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I read my vocabulary list and highlighted the most difficult words.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ignorant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪɡnərənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is ignorant about something, they have no knowledge about it. (thiếu hiểu biết)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I’m a bit ignorant about his theories. Can you explain them to me?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">index</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪndeks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An index is a list of words at the end of a book that gives information. (bảng chỉ mục (cuối sách))</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you look in the index, you’ll find the right page number.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lecture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈlektʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A lecture is a long, educational speech. (bài giảng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His lecture on world hunger was very informative.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">moral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmɔːrəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A moral is a message at the end of a story that teaches you something. (bài học đạo đức)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At the end of the story, Mother explained the moral to the children.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">operate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɑːpəreɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To operate means to work or function. (vận hành / hoạt động)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I’m sorry, but the trains are not operating today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">private</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpraɪvət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is private, it is only used by one person or group. (riêng tư)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Don’t look at my diary! It’s private!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈriːsnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is recent, it happened a short time ago. (gần đây)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I did not know what caused his recent behavior.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">resolution</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌrezəˈluːʃn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A resolution is a personal decision. (sự quyết tâm / quyết định)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At New Year, I made a list of resolutions to help me have a better year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">semester</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɪˈmestər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A semester is a portion of a school year. (học kỳ)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jack is in his second semester of college.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">typewritten</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtaɪprɪtn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is typewritten, it is written on a computer or typewriter. (được đánh máy)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This is an important, formal project and must be typewritten.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">weird</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wɪrd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is weird, it is very strange. (kỳ lạ)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My best friend’s dad is a bit weird.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. If you know how to __________ a computer, you can get access to __________.",
+              "options": [
+                "cyberspace / operate",
+                "operate / cyberspace"
+              ],
+              "correctAnswer": "B",
+              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'."
+            },
+            {
+              "id": "2",
+              "content": "2. A __________ study shows that __________ hunger is a very big problem.",
+              "options": [
+                "recent / global",
+                "global / recent"
+              ],
+              "correctAnswer": "A",
+              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn."
+            },
+            {
+              "id": "3",
+              "content": "3. My mom is completely __________ about computers. She thinks that email and chat rooms are __________ ways to spend one's time.",
+              "options": [
+                "ignorant / weird",
+                "weird / ignorant"
+              ],
+              "correctAnswer": "A",
+              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian."
+            },
+            {
+              "id": "4",
+              "content": "4. Joe has the ability to write great __________. His writing is so good that he never has to __________ his work.",
+              "options": [
+                "edit / essays",
+                "essays / edit"
+              ],
+              "correctAnswer": "B",
+              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình."
+            },
+            {
+              "id": "5",
+              "content": "5. The report is due at the end of the __________. You should look in the __________ to see if this book will help you with the report.",
+              "options": [
+                "semester / index",
+                "index / semester"
+              ],
+              "correctAnswer": "A",
+              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích."
+            },
+            {
+              "id": "6",
+              "content": "6. Our teacher __________ while she was giving us a __________ about health!",
+              "options": [
+                "lecture / fainted",
+                "fainted / lecture"
+              ],
+              "correctAnswer": "B",
+              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe."
+            },
+            {
+              "id": "7",
+              "content": "7. Jennifer's notes are very neat! They are __________, and she has __________ the most important parts with a green pen.",
+              "options": [
+                "typewritten / highlighted",
+                "highlighted / typewritten"
+              ],
+              "correctAnswer": "A",
+              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất."
+            },
+            {
+              "id": "8",
+              "content": "8. I made a __________ to go to the __________ more often to improve my health.",
+              "options": [
+                "gymnasium / resolution",
+                "resolution / gymnasium"
+              ],
+              "correctAnswer": "B",
+              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn."
+            },
+            {
+              "id": "9",
+              "content": "9. The __________ of the story is that you should think __________ before saying anything that might hurt someone.",
+              "options": [
+                "awhile / moral",
+                "moral / awhile"
+              ],
+              "correctAnswer": "B",
+              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói."
+            },
+            {
+              "id": "10",
+              "content": "10. We __________ the company, and our suggestions are written in this __________ document.",
+              "options": [
+                "private / evaluated",
+                "evaluated / private"
+              ],
+              "correctAnswer": "B",
+              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2 Part A: Match the phrases to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. The team evaluated _____.",
+              "options": [
+                "to eat less chocolate",
+                "ate soup with a knife",
+                "to be nicer to people",
+                "the success of the project"
+              ],
+              "correctAnswer": "D",
+              "explanation": "evaluated: đánh giá. 'The team evaluated the success of the project.' (Đội ngũ đã đánh giá sự thành công của dự án)."
+            },
+            {
+              "id": "12",
+              "content": "2. The moral of the story is _____.",
+              "options": [
+                "to be nicer to people",
+                "this large machine",
+                "aren't as important as real friends",
+                "ate soup with a knife"
+              ],
+              "correctAnswer": "A",
+              "explanation": "moral: bài học đạo đức. 'The moral of the story is to be nicer to people.' (Bài học của câu chuyện là hãy tử tế hơn với mọi người)."
+            },
+            {
+              "id": "13",
+              "content": "3. The global economic problems _____.",
+              "options": [
+                "ate soup with a knife",
+                "are getting worse",
+                "to be nicer to people",
+                "is halfway through the school year"
+              ],
+              "correctAnswer": "B",
+              "explanation": "global: toàn cầu. 'The global economic problems are getting worse.' (Các vấn đề kinh tế toàn cầu đang trở nên tồi tệ hơn)."
+            },
+            {
+              "id": "14",
+              "content": "4. Joe operates _____.",
+              "options": [
+                "ate soup with a knife",
+                "is halfway through the school year",
+                "this large machine",
+                "with a yellow pen"
+              ],
+              "correctAnswer": "C",
+              "explanation": "operates: vận hành. 'Joe operates this large machine.' (Joe vận hành cỗ máy lớn này)."
+            },
+            {
+              "id": "15",
+              "content": "5. We went to a lecture _____.",
+              "options": [
+                "this large machine",
+                "aren't as important as real friends",
+                "about birds",
+                "ate soup with a knife"
+              ],
+              "correctAnswer": "C",
+              "explanation": "lecture: bài giảng. 'We went to a lecture about birds.' (Chúng tôi đã đi nghe một bài giảng về các loài chim)."
+            },
+            {
+              "id": "16",
+              "content": "6. The friends you meet in cyberspace _____.",
+              "options": [
+                "are getting worse",
+                "to eat less chocolate",
+                "to be nicer to people",
+                "aren't as important as real friends"
+              ],
+              "correctAnswer": "D",
+              "explanation": "cyberspace: không gian mạng. 'The friends you meet in cyberspace aren't as important as real friends.' (Những người bạn trên mạng không quan trọng bằng bạn ngoài đời)."
+            },
+            {
+              "id": "17",
+              "content": "7. The weird kid at school _____.",
+              "options": [
+                "with a yellow pen",
+                "are getting worse",
+                "ate soup with a knife",
+                "the success of the project"
+              ],
+              "correctAnswer": "C",
+              "explanation": "weird: kỳ lạ. 'The weird kid at school ate soup with a knife.' (Đứa trẻ kỳ lạ ở trường ăn súp bằng dao)."
+            },
+            {
+              "id": "18",
+              "content": "8. You should highlight these words _____.",
+              "options": [
+                "ate soup with a knife",
+                "with a yellow pen",
+                "aren't as important as real friends",
+                "the success of the project"
+              ],
+              "correctAnswer": "B",
+              "explanation": "highlight: làm nổi bật. 'You should highlight these words with a yellow pen.' (Bạn nên làm nổi bật những từ này bằng bút vàng)."
+            },
+            {
+              "id": "19",
+              "content": "9. I made a resolution _____.",
+              "options": [
+                "with a yellow pen",
+                "to eat less chocolate",
+                "ate soup with a knife",
+                "to be nicer to people"
+              ],
+              "correctAnswer": "B",
+              "explanation": "resolution: sự quyết tâm. 'I made a resolution to eat less chocolate.' (Tôi đã quyết tâm ăn ít sô-cô-la lại)."
+            },
+            {
+              "id": "20",
+              "content": "10. The end of the first semester _____.",
+              "options": [
+                "is halfway through the school year",
+                "the success of the project",
+                "to eat less chocolate",
+                "aren't as important as real friends"
+              ],
+              "correctAnswer": "A",
+              "explanation": "semester: học kỳ. 'The end of the first semester is halfway through the school year.' (Cuối học kỳ 1 là nửa chặng đường của năm học)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2 Part B: Match the clauses to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. I wanted to get fit, _____.",
+              "options": [
+                "so I went to the gymnasium",
+                "because he's ignorant about math",
+                "so I wrote an essay about rocks",
+                "it's private"
+              ],
+              "correctAnswer": "A",
+              "explanation": "gymnasium: phòng thể dục. Muốn khỏe mạnh nên tôi đến phòng thể dục (so I went to the gymnasium)."
+            },
+            {
+              "id": "22",
+              "content": "2. Geology is my favorite subject, _____.",
+              "options": [
+                "so I wrote an essay about rocks",
+                "so you should find a more recent one",
+                "if someone faints",
+                "it's private"
+              ],
+              "correctAnswer": "A",
+              "explanation": "essay: bài luận. Địa chất là môn yêu thích nên tôi viết một bài luận về đá (so I wrote an essay about rocks)."
+            },
+            {
+              "id": "23",
+              "content": "3. My paper was full of mistakes, _____.",
+              "options": [
+                "so I went to the gymnasium",
+                "so you should find a more recent one",
+                "so I looked under 'V' in the index",
+                "but he helped me edit it"
+              ],
+              "correctAnswer": "D",
+              "explanation": "edit: chỉnh sửa. Bài báo cáo của tôi đầy lỗi, nhưng anh ấy đã giúp tôi chỉnh sửa (but he helped me edit it)."
+            },
+            {
+              "id": "24",
+              "content": "4. My brother couldn't help me with my math homework _____.",
+              "options": [
+                "so I went to the gymnasium",
+                "because he's ignorant about math",
+                "you wait here awhile",
+                "if someone faints"
+              ],
+              "correctAnswer": "B",
+              "explanation": "ignorant: thiếu hiểu biết. Anh tôi không thể giúp làm bài toán vì anh ấy thiếu hiểu biết về môn toán (because he's ignorant about math)."
+            },
+            {
+              "id": "25",
+              "content": "5. In the first aid class, we learned what to do _____.",
+              "options": [
+                "it's private",
+                "so you should find a more recent one",
+                "if someone faints",
+                "you wait here awhile"
+              ],
+              "correctAnswer": "C",
+              "explanation": "faints: ngất xỉu. Lớp học sơ cứu dạy chúng tôi phải làm gì nếu ai đó ngất xỉu (if someone faints)."
+            },
+            {
+              "id": "26",
+              "content": "6. I wanted to find some information about volcanoes, _____.",
+              "options": [
+                "but he helped me edit it",
+                "so I looked under 'V' in the index",
+                "so I went to the gymnasium",
+                "so you should find a more recent one"
+              ],
+              "correctAnswer": "B",
+              "explanation": "index: mục lục / chỉ mục. Tìm thông tin về núi lửa bằng cách tra chữ 'V' ở phần mục lục cuối sách (so I looked under 'V' in the index)."
+            },
+            {
+              "id": "27",
+              "content": "7. That copy of the text book is too old, _____.",
+              "options": [
+                "but he helped me edit it",
+                "because my essay has to be typewritten",
+                "so I went to the gymnasium",
+                "so you should find a more recent one"
+              ],
+              "correctAnswer": "D",
+              "explanation": "recent: gần đây. Sách giáo khoa đó quá cũ, nên tìm bản gần đây hơn (so you should find a more recent one)."
+            },
+            {
+              "id": "28",
+              "content": "8. I need a computer _____.",
+              "options": [
+                "because he's ignorant about math",
+                "because my essay has to be typewritten",
+                "so I wrote an essay about rocks",
+                "so I went to the gymnasium"
+              ],
+              "correctAnswer": "B",
+              "explanation": "typewritten: đánh máy. Tôi cần máy tính vì bài luận của tôi phải được đánh máy (because my essay has to be typewritten)."
+            },
+            {
+              "id": "29",
+              "content": "9. I'll get some tea if _____.",
+              "options": [
+                "it's private",
+                "so I wrote an essay about rocks",
+                "because my essay has to be typewritten",
+                "you wait here awhile"
+              ],
+              "correctAnswer": "D",
+              "explanation": "awhile: một chốc / một lát. Tôi sẽ mang trà ra nếu bạn đợi ở đây một chốc (you wait here awhile)."
+            },
+            {
+              "id": "30",
+              "content": "10. You mustn't tell anyone this information; _____.",
+              "options": [
+                "so you should find a more recent one",
+                "it's private",
+                "because my essay has to be typewritten",
+                "if someone faints"
+              ],
+              "correctAnswer": "B",
+              "explanation": "private: riêng tư. Không được nói với ai thông tin này; nó là chuyện riêng tư (it's private)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Magic Computer</h1><p style=\"margin-bottom: 1rem;\">I had a difficult geography project to finish by the end of the <b>semester</b>. My teacher wanted it to be <b>typewritten</b>, so I went to the school computer room. But when I got there, all the computers were turned off. Apparently there was a <b>recent</b> problem, and technicians were fixing it.</p><p style=\"margin-bottom: 1rem;\">I knew of some <b>private</b> study rooms downstairs. They were small and dark, and the computers were very old, but I had no choice. At least the computers were <b>operating</b> correctly. I typed and <b>highlighted</b> the assignment’s title: “<b>Evaluate</b> the Government’s Response to <b>Global</b> Warming.” But I didn’t know what to write in my <b>essay</b>. Finally I decided to find a book to help me. I went to the library, checked the book <b>indexes</b> and eventually found a useful book. Then I returned to the computer.</p><p style=\"margin-bottom: 1rem;\">When I looked at the screen, I saw something so <b>weird</b> that I nearly <b>fainted</b>! The <b>essay</b> was complete! Had somebody in <b>cyberspace</b> written it? I didn’t know, but I was very happy. I printed it out and handed it in. I got an “A.”</p><p style=\"margin-bottom: 1rem;\">After that, I used the computer for all my assignments. I’d type the title, wait <b>awhile</b>, and the computer would do it. Every assignment was perfect; I never had to <b>edit</b> anything. I stopped paying attention to my teacher’s <b>lectures</b> and spent my extra time in the <b>gymnasium</b>. And my grades got better and better.</p><p style=\"margin-bottom: 1rem;\">A month later, I was walking into class when my friend said, “Are you prepared for the test?”</p><p style=\"margin-bottom: 1rem;\">“What test?” I asked.</p><p style=\"margin-bottom: 1rem;\">“The geography test!” he replied. “I hope you studied. It’s worth seventy percent of our final grade!”</p><p style=\"margin-bottom: 1rem;\">I failed the test, of course. I was completely <b>ignorant</b> about the subject.</p><p style=\"margin-bottom: 1rem;\">After that, I made a <b>resolution</b> never to use the magic computer again. The <b>moral</b> of this story is that if you cheat at school, you won’t learn anything.</p></div>",
+      "imageUrl": "/unit5_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Reading Comprehension Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "31",
+              "content": "1. The computers were turned off because there was a recent problem.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng (True). 'Apparently there was a recent problem, and technicians were fixing it.'"
+            },
+            {
+              "id": "32",
+              "content": "2. The private study rooms were upstairs.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai (False). The private study rooms were downstairs."
+            },
+            {
+              "id": "33",
+              "content": "3. The computers in the private study rooms weren't operating correctly.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai (False). The computers in the private study rooms were operating correctly."
+            },
+            {
+              "id": "34",
+              "content": "4. In his project, the student had to evaluate the government's response to global warming.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng (True). 'I typed and highlighted the assignment’s title: “Evaluate the Government’s Response to Global Warming.”'"
+            },
+            {
+              "id": "35",
+              "content": "5. The geography test was worth fifty percent of the final grade.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai (False). The geography test was worth seventy percent of the final grade."
+            },
+            {
+              "id": "36",
+              "content": "6. The student failed the test because he was completely ignorant about the subject.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng (True). 'I failed the test, of course. I was completely ignorant about the subject.'"
+            }
+          ]
+        },
+        {
+          "id": "sec5_reading",
+          "title": "Reading Comprehension Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "37",
+              "content": "1. How did the teacher want the project to be written?",
+              "options": [
+                "In first person",
+                "Handwritten",
+                "Typewritten",
+                "In black ink"
+              ],
+              "correctAnswer": "C",
+              "explanation": "'My teacher wanted it to be typewritten...'"
+            },
+            {
+              "id": "38",
+              "content": "2. What was the project about?",
+              "options": [
+                "Global warming",
+                "Economics",
+                "Weird computers",
+                "Computer science"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dự án yêu cầu 'Evaluate the Government’s Response to Global Warming.' nên liên quan tới Global warming (Trái đất nóng lên)."
+            },
+            {
+              "id": "39",
+              "content": "3. What did the student NOT have to do in order to use the magic computer?",
+              "options": [
+                "Type in the essay title",
+                "Edit his paper",
+                "Plug it in",
+                "Wait awhile"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Cậu bé không cần phải chỉnh sửa bài luận: 'Every assignment was perfect; I never had to edit anything.'"
+            },
+            {
+              "id": "40",
+              "content": "4. Where did the student spend his free time?",
+              "options": [
+                "In lectures",
+                "In the gymnasium",
+                "In the library",
+                "In cyberspace"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Cậu bé bỏ bê bài giảng và dành thời gian rảnh ở phòng thể dục: '...spent my extra time in the gymnasium.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

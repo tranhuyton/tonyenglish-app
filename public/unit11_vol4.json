@@ -1,0 +1,537 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 11",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alliance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈlaɪəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An alliance is a group of people who work together. (Liên minh là một nhóm người làm việc cùng nhau.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The junior executives formed an alliance with each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">applause</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈplɔːz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Applause is the noise made when people clap hands to show approval. (Tiếng vỗ tay là âm thanh tạo ra khi mọi người vỗ tay để thể hiện sự tán thành.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At the end of his speech, everyone gave applause.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">armed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑːrmd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are armed, you are carrying a weapon. (Nếu bạn được vũ trang, bạn đang mang theo vũ khí.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The robber was armed with a gun.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">authoritative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈθɔːrəteɪtɪv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is authoritative, it uses the best information available. (Nếu một thứ gì đó có tính thẩm quyền, nó sử dụng thông tin tốt nhất có sẵn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This book is an authoritative source on Ancient Egypt’s Queen Nefertiti.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ceremony</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈserəmoʊni]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A ceremony is an event that happens on special occasions. (Một buổi lễ là một sự kiện diễn ra vào những dịp đặc biệt.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Tom and Amy’s marriage ceremony is in June.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">culture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkʌltʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Culture is the music, art, and writings of a certain place or group of people. (Văn hóa là âm nhạc, nghệ thuật và chữ viết của một địa phương hoặc một nhóm người nhất định.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Ancient Mexican culture is renowned for its architecture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">defense</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈfens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A defense is something that is done to protect another thing. (Phòng thủ là một việc được thực hiện để bảo vệ một thứ khác.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The airforce works in defense of its country.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">detail</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdiːteɪl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A detail is a small piece of information. (Chi tiết là một mẩu thông tin nhỏ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jane told Ben all the details of her trip to China.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diverse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈvɜːrs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a group of things is diverse, it is made up of a wide variety of things. (Khi một nhóm có tính đa dạng, nó được tạo thành từ nhiều thứ khác nhau.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Big cities have diverse populations with people of different races and ages.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enchant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈtʃænt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To enchant someone is to make them feel very interested or happy. (Mê hoặc ai đó là làm cho họ cảm thấy rất thích thú hoặc vui vẻ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The beautiful woman enchanted everybody in the room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">equip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪˈkwɪp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To equip someone is to give them the things needed to do something. (Trang bị cho ai đó là cung cấp cho họ những thứ cần thiết để làm việc gì đó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Steve was equipped with the tools needed to do the job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exception</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪkˈsepʃn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An exception is someone or something not conforming to a rule. (Ngoại lệ là người hoặc điều gì đó không tuân theo một quy tắc chung.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Most students thought the test was hard, but Tim was the exception.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">genre</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈʒɑːnrə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A genre is a type of literature, art, or music characterized by its style. (Thể loại là một loại hình văn học, nghệ thuật hoặc âm nhạc đặc trưng bởi phong cách của nó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She is considered a master in the comedy genre.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impact</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪmpækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An impact is the effect someone or something has on another. (Tác động là ảnh hưởng mà một người hoặc một vật gây ra cho người/vật khác.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandmother had a great impact on my life.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lʊr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To lure someone is to convince them to do something, by using a trick. (Dụ dỗ ai đó là thuyết phục họ làm điều gì đó bằng cách sử dụng mánh khóe.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The store lures people in with big signs that say “Sale!”</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">obstacle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɑːbstəkl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An obstacle is an object or a problem that stops you from doing something. (Chướng ngại vật là một vật thể hoặc một vấn đề ngăn cản bạn làm điều gì đó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Climbing over the giant rock was the biggest obstacle for the hikers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shelter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈʃeltər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shelter is a place to go that is safe from danger or bad weather. (Nơi trú ẩn là nơi an toàn giúp tránh khỏi nguy hiểm hoặc thời tiết xấu.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The frog took shelter from the storm in a nearby cave.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sort</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɔːrt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sort means to separate things into different groups or classes. (Phân loại có nghĩa là tách các vật thành các nhóm hoặc lớp khác nhau.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He sorted his clothes by colors and sizes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">supply</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səˈplaɪ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To supply something means to give people what they need or want. (Cung cấp điều gì đó có nghĩa là mang đến cho mọi người những gì họ cần hoặc muốn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The water heater supplied the house with warm water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[veɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If people are vain, they are only concerned with how they look. (Nếu mọi người tự phụ/kiêu ngạo, họ chỉ quan tâm đến vẻ bề ngoài của mình.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Rebecca is so vain that she looks at herself in every mirror.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. to provide the things that someone needs to do something",
+              "options": [
+                "sort",
+                "enchant",
+                "equip",
+                "lure"
+              ],
+              "correctAnswer": "C",
+              "explanation": "equip (v.): trang bị cho ai đó là cung cấp cho họ những thứ cần thiết để làm việc gì đó."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. a safe place",
+              "options": [
+                "genre",
+                "shelter",
+                "defense",
+                "culture"
+              ],
+              "correctAnswer": "B",
+              "explanation": "shelter (n.): nơi trú ẩn là nơi an toàn khỏi nguy hiểm hoặc thời tiết xấu."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. holding a weapon",
+              "options": [
+                "authoritative",
+                "vain",
+                "diverse",
+                "armed"
+              ],
+              "correctAnswer": "D",
+              "explanation": "armed (adj.): được trang bị vũ khí, mang theo vũ khí."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. pieces of information",
+              "options": [
+                "details",
+                "impacts",
+                "applause",
+                "supplies"
+              ],
+              "correctAnswer": "A",
+              "explanation": "details (n.): chi tiết, những mẩu thông tin."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. a group working together",
+              "options": [
+                "ceremony",
+                "alliance",
+                "exception",
+                "obstacle"
+              ],
+              "correctAnswer": "B",
+              "explanation": "alliance (n.): liên minh là một nhóm người làm việc cùng nhau."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. Please (put into different groups) all the leaves you find.",
+              "options": [
+                "sort",
+                "impact",
+                "equip",
+                "lure"
+              ],
+              "correctAnswer": "A",
+              "explanation": "sort (v.) đồng nghĩa với 'put into different groups' (phân loại)."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. Everybody was (very interested) when Kate read that beautiful poem out loud.",
+              "options": [
+                "armed",
+                "vain",
+                "enchanted",
+                "diverse"
+              ],
+              "correctAnswer": "C",
+              "explanation": "enchanted (v.) đồng nghĩa với 'very interested' (mê hoặc, thích thú)."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. The performer heard great (sounds of people clapping their hands).",
+              "options": [
+                "defense",
+                "applause",
+                "alliance",
+                "ceremony"
+              ],
+              "correctAnswer": "B",
+              "explanation": "applause (n.) đồng nghĩa với 'sounds of people clapping their hands' (tiếng vỗ tay)."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. Tim takes a long time to get ready because he is so (concerned with how he looks).",
+              "options": [
+                "vain",
+                "authoritative",
+                "diverse",
+                "armed"
+              ],
+              "correctAnswer": "A",
+              "explanation": "vain (adj.) đồng nghĩa với 'concerned with how he looks' (tự phụ, kiêu ngạo, chú trọng vẻ bề ngoài)."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. Ocean life is made up of a (wide variety of things).",
+              "options": [
+                "vain",
+                "diverse",
+                "authoritative",
+                "armed"
+              ],
+              "correctAnswer": "B",
+              "explanation": "diverse (adj.) đồng nghĩa với 'wide variety of things' (đa dạng)."
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. What is your favorite (kind or style) of music?",
+              "options": [
+                "obstacle",
+                "genre",
+                "culture",
+                "shelter"
+              ],
+              "correctAnswer": "B",
+              "explanation": "genre (n.) đồng nghĩa với 'kind or style' (thể loại)."
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. The (special event) will start at 8 o’clock tonight.",
+              "options": [
+                "alliance",
+                "defense",
+                "exception",
+                "ceremony"
+              ],
+              "correctAnswer": "D",
+              "explanation": "ceremony (n.) đồng nghĩa với 'special event' (buổi lễ, sự kiện đặc biệt)."
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. The city’s only (action taken to protect itself) was to build a giant brick wall around it.",
+              "options": [
+                "defense",
+                "impact",
+                "obstacle",
+                "detail"
+              ],
+              "correctAnswer": "A",
+              "explanation": "defense (n.) đồng nghĩa với 'action taken to protect itself' (phòng thủ, bảo vệ)."
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. Ben went through many (problems) before he finished his project.",
+              "options": [
+                "obstacles",
+                "supplies",
+                "alliances",
+                "ceremonies"
+              ],
+              "correctAnswer": "A",
+              "explanation": "obstacles (n.) đồng nghĩa với 'problems' (chướng ngại vật, vấn đề)."
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. Most girls like to play with dolls, but Samantha is the one who (doesn’t conform).",
+              "options": [
+                "exception",
+                "genre",
+                "culture",
+                "applause"
+              ],
+              "correctAnswer": "A",
+              "explanation": "exception (n.) đồng nghĩa với 'the one who doesn’t conform' (ngoại lệ)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Match the phrases and clauses to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3a_1",
+              "content": "1. I’m going to try to lure my friends ____.",
+              "options": [
+                "into coming to the museum with me",
+                "into three equal groups",
+                "was not being able to read very well",
+                "was popularized by artists like Picasso and Dali"
+              ],
+              "correctAnswer": "A",
+              "explanation": "lure (dụ dỗ) bạn bè đi đến bảo tàng."
+            },
+            {
+              "id": "ex3a_2",
+              "content": "2. Sort the pieces ____.",
+              "options": [
+                "into coming to the museum with me",
+                "into three equal groups",
+                "was not being able to read very well",
+                "was popularized by artists like Picasso and Dali"
+              ],
+              "correctAnswer": "B",
+              "explanation": "sort (phân loại) các mảnh thành ba nhóm bằng nhau."
+            },
+            {
+              "id": "ex3a_3",
+              "content": "3. The biggest obstacle Mary faced ____.",
+              "options": [
+                "into coming to the museum with me",
+                "into three equal groups",
+                "was not being able to read very well",
+                "was popularized by artists like Picasso and Dali"
+              ],
+              "correctAnswer": "C",
+              "explanation": "obstacle (trở ngại) lớn nhất của Mary là không đọc tốt."
+            },
+            {
+              "id": "ex3a_4",
+              "content": "4. The genre of abstract art ____.",
+              "options": [
+                "into coming to the museum with me",
+                "into three equal groups",
+                "was not being able to read very well",
+                "was popularized by artists like Picasso and Dali"
+              ],
+              "correctAnswer": "D",
+              "explanation": "genre (thể loại) nghệ thuật trừu tượng được phổ biến bởi các nghệ sĩ như Picasso và Dali."
+            },
+            {
+              "id": "ex3a_5",
+              "content": "5. The awards ceremony is ____.",
+              "options": [
+                "tonight at the Royal Crown Hotel",
+                "known for its interesting folk art",
+                "is to wear a lot of sunscreen",
+                "with pencils, scissors, and a lot of glue"
+              ],
+              "correctAnswer": "A",
+              "explanation": "ceremony (buổi lễ) trao giải diễn ra vào tối nay tại khách sạn Royal Crown."
+            },
+            {
+              "id": "ex3a_6",
+              "content": "6. Mexican culture is ____.",
+              "options": [
+                "tonight at the Royal Crown Hotel",
+                "known for its interesting folk art",
+                "is to wear a lot of sunscreen",
+                "with pencils, scissors, and a lot of glue"
+              ],
+              "correctAnswer": "B",
+              "explanation": "culture (văn hóa) Mexico nổi tiếng với nghệ thuật dân gian thú vị."
+            },
+            {
+              "id": "ex3a_7",
+              "content": "7. The best defense against skin cancer ____.",
+              "options": [
+                "tonight at the Royal Crown Hotel",
+                "known for its interesting folk art",
+                "is to wear a lot of sunscreen",
+                "with pencils, scissors, and a lot of glue"
+              ],
+              "correctAnswer": "C",
+              "explanation": "defense (phòng thủ) tốt nhất để chống ung thư da là thoa nhiều kem chống nắng."
+            },
+            {
+              "id": "ex3a_8",
+              "content": "8. The students were equipped ____.",
+              "options": [
+                "tonight at the Royal Crown Hotel",
+                "known for its interesting folk art",
+                "is to wear a lot of sunscreen",
+                "with pencils, scissors, and a lot of glue"
+              ],
+              "correctAnswer": "D",
+              "explanation": "equip (trang bị) cho học sinh bút chì, kéo và nhiều hồ dán."
+            },
+            {
+              "id": "ex3a_9",
+              "content": "9. An armed man ran into ____.",
+              "options": [
+                "the jewelry store and stole diamonds",
+                "talk about herself for hours and hours",
+                "with pencils, scissors, and a lot of glue",
+                "is to wear a lot of sunscreen"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Một người đàn ông có vũ trang (armed) lao vào cửa hàng trang sức và ăn trộm kim cương."
+            },
+            {
+              "id": "ex3a_10",
+              "content": "10. The vain woman could ____.",
+              "options": [
+                "the jewelry store and stole diamonds",
+                "talk about herself for hours and hours",
+                "with pencils, scissors, and a lot of glue",
+                "is to wear a lot of sunscreen"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Người phụ nữ kiêu ngạo (vain) có thể nói về bản thân hàng giờ liền."
+            },
+            {
+              "id": "ex3b_1",
+              "content": "11. It started raining really hard, ____.",
+              "options": [
+                "so we ran inside for shelter",
+                "so he supplied them with blankets",
+                "and officer Jones is no exception",
+                "because he sounds authoritative when he speaks"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Trời mưa rất to nên chúng tôi chạy vào trong để trú ẩn (shelter)."
+            },
+            {
+              "id": "ex3b_2",
+              "content": "12. He saw that the children were cold, ____.",
+              "options": [
+                "so we ran inside for shelter",
+                "so he supplied them with blankets",
+                "and officer Jones is no exception",
+                "because he sounds authoritative when he speaks"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Anh ấy thấy những đứa trẻ bị lạnh, vì vậy anh ấy đã cung cấp (supplied) chăn cho chúng."
+            },
+            {
+              "id": "ex3b_3",
+              "content": "13. Police officers work very hard, ____.",
+              "options": [
+                "so we ran inside for shelter",
+                "so he supplied them with blankets",
+                "and officer Jones is no exception",
+                "because he sounds authoritative when he speaks"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Các sĩ quan cảnh sát làm việc rất chăm chỉ, và sĩ quan Jones cũng không phải là ngoại lệ (exception)."
+            },
+            {
+              "id": "ex3b_4",
+              "content": "14. Everyone always trusts Seth ____.",
+              "options": [
+                "so we ran inside for shelter",
+                "so he supplied them with blankets",
+                "and officer Jones is no exception",
+                "because he sounds authoritative when he speaks"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Mọi người luôn tin tưởng Seth vì giọng anh ấy nghe có vẻ rất có thẩm quyền (authoritative) khi nói."
+            },
+            {
+              "id": "ex3b_5",
+              "content": "15. Mother Teresa was a very well-known person, ____.",
+              "options": [
+                "and her work impacted many lives",
+                "but I like a diverse selection",
+                "but it had so many details that he couldn't finish",
+                "but everyone else is enchanted by her"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mẹ Teresa là một người rất nổi tiếng, và công việc của bà đã tác động (impacted) đến nhiều cuộc đời."
+            },
+            {
+              "id": "ex3b_6",
+              "content": "16. He only likes one type of music, ____.",
+              "options": [
+                "and her work impacted many lives",
+                "but I like a diverse selection",
+                "but it had so many details that he couldn't finish",
+                "but everyone else is enchanted by her"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Anh ấy chỉ thích một loại nhạc, nhưng tôi thích sự lựa chọn đa dạng (diverse) hơn."
+            },
+            {
+              "id": "ex3b_7",
+              "content": "17. James tried to write the report last night, ____.",
+              "options": [
+                "and her work impacted many lives",
+                "but I like a diverse selection",
+                "but it had so many details that he couldn't finish",
+                "but everyone else is enchanted by her"
+              ],
+              "correctAnswer": "C",
+              "explanation": "James đã cố gắng viết báo cáo vào đêm qua, nhưng nó có quá nhiều chi tiết (details) khiến anh ấy không thể hoàn thành."
+            },
+            {
+              "id": "ex3b_8",
+              "content": "18. I don’t really like Jennifer, ____.",
+              "options": [
+                "and her work impacted many lives",
+                "but I like a diverse selection",
+                "but it had so many details that he couldn't finish",
+                "but everyone else is enchanted by her"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Tôi không thực sự thích Jennifer, nhưng mọi người khác đều bị cô ấy mê hoặc (enchanted)."
+            },
+            {
+              "id": "ex3b_9",
+              "content": "19. Bob and Eric both want to beat James at the game, ____.",
+              "options": [
+                "so they will form an alliance",
+                "and the crowd gave him great applause",
+                "and her work impacted many lives",
+                "but I like a diverse selection"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cả Bob và Eric đều muốn đánh bại James trong trò chơi, vì vậy họ sẽ thành lập một liên minh (alliance)."
+            },
+            {
+              "id": "ex3b_10",
+              "content": "20. The performer did a great job, ____.",
+              "options": [
+                "so they will form an alliance",
+                "and the crowd gave him great applause",
+                "and her work impacted many lives",
+                "but I like a diverse selection"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Người biểu diễn đã làm rất tốt và đám đông đã dành cho anh ấy những tràng pháo tay (applause) nồng nhiệt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How a Singer Helped Win the War</h1><p style=\"margin-bottom: 1rem;\">Sometimes famous people are <b>vain</b>. They only care about themselves. But Josephine Baker was an <b>exception</b>. In the 1930s and 1940s, Baker was one of the most famous women in France. She was a big part of the new jazz <b>genre</b> and <b>culture</b> and had a <b>diverse</b> group of fans. The French people especially loved her. And she loved France. So when World War II started, she wanted to help the nation that had given her so much.</p><p style=\"margin-bottom: 1rem;\">In 1940, <b>armed</b> German troops entered Paris. When this happened, some French people formed a secret <b>alliance</b>. It was called the French Resistance. The group worked for the <b>defense</b> of France. It helped the European and American armies fight the Germans.</p><p style=\"margin-bottom: 1rem;\">Baker was an important member of the Resistance. She had three jobs. The first was to carry messages to and from other members. The messages were written in code on her sheets of music. The second was to provide <b>shelter</b> and <b>supply</b> goods to Resistance members. It would have been dangerous if the Germans found them.</p><p style=\"margin-bottom: 1rem;\">Baker’s third job was the most important. Baker held concerts for European politicians and army members. She <b>lured</b> them in, promising an entertaining show. She <b>enchanted</b> them with her singing and dancing and got lots of <b>applause</b>.</p><p style=\"margin-bottom: 1rem;\">But Baker was always <b>equipped</b> with a small notebook at these concerts. She listened for <b>details</b> about the war and wrote them down. Baker <b>sorted</b> the details and gave <b>authoritative</b> reports to the Resistance.</p><p style=\"margin-bottom: 1rem;\">Some thought Baker’s fame would be an <b>obstacle</b>. The Germans knew who she was, but they didn’t think she was smart enough to work for the Resistance. So she could get information from the Germans easily. This helped the Resistance and the French army save lives and win the war.</p><p style=\"margin-bottom: 1rem;\">Baker had a big <b>impact</b> on the Resistance’s work. She got many awards for her help. When she died, the army had a special <b>ceremony</b> to thank her again for her bravery.</p></div>",
+      "imageUrl": "/unit11_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec_reading_1",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "rc_1",
+              "content": "1. Which is true about Josephine Baker's first job for the Resistance?",
+              "options": [
+                "Baker’s first job was to carry messages written in code to and from European politicians.",
+                "Baker’s first job was to carry messages written in code to and from Resistance members.",
+                "Baker's first job was to provide shelter.",
+                "Baker's first job was to supply goods."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dựa vào bài đọc: 'The first was to carry messages to and from other members. The messages were written in code on her sheets of music.'"
+            },
+            {
+              "id": "rc_2",
+              "content": "2. Which genre of music was Josephine Baker famous for?",
+              "options": [
+                "She was famous for jazz music.",
+                "She was famous for blues music.",
+                "She was famous for rock music.",
+                "She was famous for country music."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dựa vào bài: 'She was a big part of the new jazz genre and culture'."
+            },
+            {
+              "id": "rc_3",
+              "content": "3. What happened when the Germans entered Paris?",
+              "options": [
+                "Armed soldiers fought them.",
+                "Baker lured them back to Germany.",
+                "The French formed a secret alliance.",
+                "They sent messages in code."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Dựa vào bài: 'In 1940, armed German troops entered Paris. When this happened, some French people formed a secret alliance.'"
+            },
+            {
+              "id": "rc_4",
+              "content": "4. What was Baker’s most important job?",
+              "options": [
+                "To provide shelter",
+                "To give authoritative reports",
+                "To write messages in code",
+                "To have a diverse group of fans"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dựa vào bài: 'Baker’s third job was the most important... Baker sorted the details and gave authoritative reports to the Resistance.'"
+            },
+            {
+              "id": "rc_5",
+              "content": "5. What happened when Baker died?",
+              "options": [
+                "The army had a special ceremony.",
+                "Baker had an impact on France.",
+                "Her fame became an obstacle.",
+                "The Resistance found her secret codes."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dựa vào đoạn cuối: 'When she died, the army had a special ceremony to thank her again for her bravery.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

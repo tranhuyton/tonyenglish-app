@@ -1,0 +1,406 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 2",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit2_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit2_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accident</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æksidənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An accident is an unexpected undesirable event. (Tai nạn là một sự kiện không mong muốn xảy ra bất ngờ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ She had to go to the hospital after she was in a serious car accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">admiral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ædmərəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An admiral is someone who controls many military ships. (Đô đốc là người điều khiển nhiều tàu quân sự.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ They won the sea battle because of the admiral's great leadership.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arc</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[a:rk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An arc is a curved shape. (Hình cung là một hình dạng cong.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ A rainbow has the shape of an arc.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">character</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kærəktər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Your character is your personality. (Tính cách của bạn là nhân cách của bạn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ My sister's character is fun and very outgoing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conscience</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnʃəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Your conscience is your inner sense of what is right and wrong. (Lương tâm của bạn là cảm giác sâu thẳm bên trong về điều gì đúng và sai.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ I recycle everything I can, so my conscience is clear!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fiery</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[faiəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is fiery, it is burning strongly. (Nếu một thứ gì đó \"fiery\" (bốc cháy dữ dội), nó đang cháy rất mạnh mẽ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The fiery blaze burned all night long.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flesh</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fleʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Flesh is the skin, muscle and fat on your body. (Thịt (trên cơ thể) là da, cơ bắp và mỡ trên cơ thể bạn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The zebra's flesh has black and white stripes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grapefruit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[greipfru:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A grapefruit is a fruit similar to an orange, but bigger and not as sweet. (Quả bưởi (tây) là một loại trái cây tương tự như quả cam, nhưng lớn hơn và không ngọt bằng.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Would you like a grapefruit with your breakfast?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hay is dry grass used to feed animals or used as a covering. (Cỏ khô là cỏ được phơi khô dùng làm thức ăn cho động vật hoặc dùng để làm lớp phủ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ I need to buy some more hay for the horse to sleep on.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">horrified</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hɔ:rəfaid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are horrified, you are very shocked and feel upset. (Nếu bạn \"horrified\" (kinh hoàng), bạn rất sốc và cảm thấy hoảng sợ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ I was horrified when I read about the old lady who was attacked.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">kerosene</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kerəsi:n]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Kerosene is a type of oil. It is used in some lamps and stoves. (Dầu hỏa là một loại dầu. Nó được sử dụng trong một số loại đèn và bếp.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Many people in poor countries cook on kerosene stoves.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">loop</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lu:p]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A loop is a line made into the shape of a circle. (Vòng lặp là một sợi dây được tạo thành hình tròn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ He made a loop with the rope and placed it over the post.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">paddle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pædl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A paddle is a piece of wood or plastic that moves a boat across water. (Mái chèo là một mảnh gỗ hoặc nhựa dùng để di chuyển thuyền trên mặt nước.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ We need a paddle to help us move across the water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">raft</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ræft]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A raft is a floating platform made from pieces of wood tied together. (Cái bè là một nền tảng nổi được làm từ những mảnh gỗ buộc lại với nhau.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The man made a raft out of bamboo and floated out to sea.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sour</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sauər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is sour, it has a sharp and unpleasant taste. (Khi một thứ gì đó \"sour\" (chua), nó có vị gắt và khó chịu.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ I don't like lemons because I think they are too sour.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stake</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[steik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A stake is a small, sharp piece of wood or metal that is put into the ground. (Cái cọc là một mảnh gỗ hoặc kim loại nhỏ, sắc nhọn được cắm xuống đất.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ We marked our property by placing stakes into the ground.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steward</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stju:ərd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A steward is a person like a waiter who serves food on planes and ships. (Người phục vụ (tiếp viên) là một người giống như bồi bàn phục vụ đồ ăn trên máy bay và tàu thủy.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The steward is bringing some tea.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">string</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[striŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">String is a thin piece of fabric or rope. (Sợi dây là một đoạn vải hoặc dây thừng mỏng.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ I found a large ball of string.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thorn</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θɔ:rn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A thorn is a sharp part of a plant. (Cái gai là một phần sắc nhọn của cây.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Be careful of the thorns when you pick the roses!</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wreck</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rek]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To wreck something means to destroy or ruin it. (\"Wreck\" một thứ gì đó có nghĩa là phá hủy hoặc làm hỏng nó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The teenagers wrecked the house for no reason at all.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1 - Part A: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. thorn",
+              "options": [
+                "a sharp part on a plant",
+                "a captain on a ship",
+                "someone who serves food",
+                "a piece of wood that moves a boat"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"thorn\" có nghĩa là cái gai. Chọn a. a sharp part on a plant (phần sắc nhọn trên cây)."
+            },
+            {
+              "id": "2",
+              "content": "2. arc",
+              "options": [
+                "a thin rope",
+                "a part of your mind",
+                "a circle in a rope",
+                "a curved shape"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"arc\" có nghĩa là hình cung. Chọn d. a curved shape (hình dạng cong)."
+            },
+            {
+              "id": "3",
+              "content": "3. raft",
+              "options": [
+                "a waiter",
+                "an undesirable event",
+                "on fire",
+                "a floating platform"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"raft\" có nghĩa là cái bè. Chọn d. a floating platform (một nền tảng nổi)."
+            },
+            {
+              "id": "4",
+              "content": "4. hay",
+              "options": [
+                "oil",
+                "dry grass",
+                "a piece of wood in the ground",
+                "a fruit"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"hay\" có nghĩa là cỏ khô. Chọn b. dry grass (cỏ khô)."
+            },
+            {
+              "id": "5",
+              "content": "5. character",
+              "options": [
+                "where something is bought",
+                "personality",
+                "difficulties",
+                "skin and muscle"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"character\" có nghĩa là tính cách. Chọn b. personality (tính cách)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 1 - Part B: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. a piece of wood in the ground",
+              "options": [
+                "admiral",
+                "flesh",
+                "stake",
+                "loop"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"stake\" là cái cọc (một thanh gỗ cắm xuống đất). Chọn c."
+            },
+            {
+              "id": "7",
+              "content": "2. frightened",
+              "options": [
+                "wrecked",
+                "horrified",
+                "fiery",
+                "sour"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"horrified\" có nghĩa là hoảng sợ, kinh hoàng. Chọn b."
+            },
+            {
+              "id": "8",
+              "content": "3. a curved shape",
+              "options": [
+                "arc",
+                "hay",
+                "kerosene",
+                "string"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"arc\" là hình cung (hình dạng cong). Chọn a."
+            },
+            {
+              "id": "9",
+              "content": "4. part of your mind that stops you from doing bad things",
+              "options": [
+                "character",
+                "conscience",
+                "accident",
+                "steward"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"conscience\" là lương tâm (phần tâm trí ngăn bạn làm điều xấu). Chọn b."
+            },
+            {
+              "id": "10",
+              "content": "5. something you use to move a boat",
+              "options": [
+                "thorn",
+                "raft",
+                "grapefruit",
+                "paddle"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"paddle\" là mái chèo (vật dùng để di chuyển thuyền). Chọn d."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. Tom was promoted, and now he is an ____ (important sea officer that controls military ships).",
+              "options": [],
+              "correctAnswer": "admiral",
+              "explanation": "\"an important sea officer that controls military ships\" (một sĩ quan hải quân quan trọng điều khiển tàu quân sự) có nghĩa là \"admiral\" (đô đốc)."
+            },
+            {
+              "id": "12",
+              "content": "2. Some people thought that the meal was too ____ (sharp and unpleasant tasting).",
+              "options": [],
+              "correctAnswer": "sour",
+              "explanation": "\"sharp and unpleasant tasting\" (có vị gắt và khó chịu) có nghĩa là \"sour\" (chua)."
+            },
+            {
+              "id": "13",
+              "content": "3. The ____ (oil in lamps and stoves) is a very cheap form of heat.",
+              "options": [],
+              "correctAnswer": "kerosene",
+              "explanation": "\"oil in lamps and stoves\" (dầu dùng trong đèn và bếp) có nghĩa là \"kerosene\" (dầu hỏa)."
+            },
+            {
+              "id": "14",
+              "content": "4. Why did you steal the woman's bag? Don't you have a ____ (mind that understands what is wrong)?",
+              "options": [],
+              "correctAnswer": "conscience",
+              "explanation": "\"a mind that understands what is wrong\" (tâm trí hiểu được điều gì là sai trái) là \"conscience\" (lương tâm)."
+            },
+            {
+              "id": "15",
+              "content": "5. Can you buy three yellow ____ (pieces of fruit that are like oranges) from the supermarket please?",
+              "options": [],
+              "correctAnswer": "grapefruits",
+              "explanation": "\"pieces of fruit that are like oranges\" (những quả giống như cam) là \"grapefruits\" (quả bưởi tây)."
+            },
+            {
+              "id": "16",
+              "content": "6. I hope that the ____ (waiter on the plane) will bring some water soon.",
+              "options": [],
+              "correctAnswer": "steward",
+              "explanation": "\"waiter on the plane\" (người phục vụ trên máy bay) là \"steward\" (tiếp viên)."
+            },
+            {
+              "id": "17",
+              "content": "7. After lightning struck the tree, the forest turned into a ____ (burning blaze).",
+              "options": [],
+              "correctAnswer": "fiery",
+              "explanation": "\"burning blaze\" (ngọn lửa đang bốc cháy) tương ứng với tính từ \"fiery\" (bốc cháy dữ dội)."
+            },
+            {
+              "id": "18",
+              "content": "8. Use this ____ (thin rope) to tie the package.",
+              "options": [],
+              "correctAnswer": "string",
+              "explanation": "\"thin rope\" (sợi dây thừng mỏng) có nghĩa là \"string\" (sợi dây)."
+            },
+            {
+              "id": "19",
+              "content": "9. I cleaned the rabbit's cage and left some ____ (dry grass) for it to eat.",
+              "options": [],
+              "correctAnswer": "hay",
+              "explanation": "\"dry grass\" (cỏ khô) có nghĩa là \"hay\"."
+            },
+            {
+              "id": "20",
+              "content": "10. I threw the ball through the ____ (line in the shape of a circle).",
+              "options": [],
+              "correctAnswer": "loop",
+              "explanation": "\"line in the shape of a circle\" (sợi dây có hình vòng tròn) có nghĩa là \"loop\" (vòng lặp)."
+            }
+          ]
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
+          "content": "Word bank: character, accident, flesh, stake, wreck",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. I'm going to tie the cow to a ____ in the ground.",
+              "options": [],
+              "correctAnswer": "stake",
+              "explanation": "\"stake\" là cái cọc. (Tôi sẽ buộc con bò vào một cái cọc trên mặt đất.)"
+            },
+            {
+              "id": "22",
+              "content": "2. You shouldn't eat the chicken. The ____ is still pink.",
+              "options": [],
+              "correctAnswer": "flesh",
+              "explanation": "\"flesh\" là thịt (của động vật). (Bạn không nên ăn thịt gà này. Thịt vẫn còn màu hồng.)"
+            },
+            {
+              "id": "23",
+              "content": "3. New drivers are more likely to ____ their cars than experienced drivers.",
+              "options": [],
+              "correctAnswer": "wreck",
+              "explanation": "\"wreck\" là phá hủy, làm hỏng. (Những người mới lái xe dễ làm hỏng xe của họ hơn những người lái xe có kinh nghiệm.)"
+            },
+            {
+              "id": "24",
+              "content": "4. Many people were hurt in the boating ____.",
+              "options": [],
+              "correctAnswer": "accident",
+              "explanation": "\"accident\" là tai nạn. (Nhiều người bị thương trong vụ tai nạn chèo thuyền.)"
+            },
+            {
+              "id": "25",
+              "content": "5. My brother has a very friendly and cheerful ____.",
+              "options": [],
+              "correctAnswer": "character",
+              "explanation": "\"character\" là tính cách. (Anh trai tôi có tính cách rất thân thiện và vui vẻ.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Monkey Island</h1><p style=\"margin-bottom: 1rem;\">In the middle of the ocean, there is a small island shaped like an <b>arc</b>. Here, monkeys play on the beach and in the trees. But how did the monkeys get there?</p><p style=\"margin-bottom: 1rem;\">Once, an English <b>admiral</b> was exploring Africa when he found hundreds of monkeys. The admiral's <b>character</b> was mean. He thought, \"I could sell these monkeys and become very rich! I'm going to take them to England.\"</p><p style=\"margin-bottom: 1rem;\">So the admiral set traps to catch the monkeys. He put <b>stakes</b> in the ground, tied <b>string</b> around them and made <b>loops</b> in the <b>string</b>. When the monkeys ran through the forest, their feet got caught in the <b>loops</b>, and they couldn't escape. Then the <b>admiral</b> put the monkeys in cages on his ship and sailed away.</p><p style=\"margin-bottom: 1rem;\">The cages were small and uncomfortable. There was no soft <b>hay</b> for the monkeys to sleep on. Instead, they slept on branches with sharp <b>thorns</b> that cut into the monkeys' <b>flesh</b>. For dinner, he gave them tiny pieces of <b>sour</b> <b>grapefruit</b> to eat. The monkeys grew hungry and weak.</p><p style=\"margin-bottom: 1rem;\">But one day, the <b>admiral</b> hired a new <b>steward</b>. He was a kind man with a good <b>conscience</b>. He was <b>horrified</b> to see the thin monkeys in the cages. So one night he let them out.</p><p style=\"margin-bottom: 1rem;\">The monkeys ran and played all over the ship! They attacked the <b>admiral</b> and the <b>steward</b> and ate their food. They completely <b>wrecked</b> the ship. One monkey ran into a <b>kerosene</b> lamp, and it fell over. The ship caught fire and began to sink! The whole crew was lost except for the monkeys.</p><p style=\"margin-bottom: 1rem;\">After the <b>accident</b>, the monkeys jumped onto a <b>raft</b>. They floated away from the <b>fiery</b> blaze of the ship. In the morning, they saw a little island in the distance. The monkeys used a piece of wood as a <b>paddle</b>, and they went toward it. They found the island shaped like an <b>arc</b>. They felt so happy to find a new home, and they still live there today.</p></div>",
+      "imageUrl": "/unit2_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec5_reading",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "26",
+              "content": "1. The admiral thought that selling the monkeys would make him rich.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "T. Dựa vào đoạn văn: 'He thought, \"I could sell these monkeys and become very rich!\"'"
+            },
+            {
+              "id": "27",
+              "content": "2. The admiral caught the monkeys using loops of string and stakes.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "T. Theo đoạn văn: \"He put stakes in the ground, tied string around them and made loops in the string.\""
+            },
+            {
+              "id": "28",
+              "content": "3. The admiral put hay in the monkeys' cages.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "F. Theo đoạn văn: \"There was no soft hay for the monkeys to sleep on. Instead, they slept on branches with sharp thorns...\" Câu sửa lại: The admiral put branches with sharp thorns in the monkeys' cages."
+            },
+            {
+              "id": "29",
+              "content": "4. The steward had no conscience.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "F. Theo đoạn văn: \"He was a kind man with a good conscience.\" Câu sửa lại: The steward had a good conscience."
+            },
+            {
+              "id": "30",
+              "content": "5. The admiral was horrified because the monkeys were muscular.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "F. Theo đoạn văn: \"He [the steward] was horrified to see the thin monkeys in the cages.\" Câu sửa lại: The steward was horrified because the monkeys were thin and weak."
+            },
+            {
+              "id": "31",
+              "content": "6. The monkeys jumped on a raft after the accident.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "T. Theo đoạn văn: \"After the accident, the monkeys jumped onto a raft.\""
+            }
+          ]
+        },
+        {
+          "id": "sec6_reading",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "32",
+              "content": "1. Which adjective describes the admiral's character?",
+              "options": [
+                "Generous",
+                "Mean",
+                "Sour",
+                "Fiery"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Mean. Dựa vào đoạn văn: 'The admiral's character was mean.'"
+            },
+            {
+              "id": "33",
+              "content": "2. Where did the admiral plan to take the monkeys?",
+              "options": [
+                "To the wrecked ship",
+                "To England",
+                "To an island",
+                "To Africa"
+              ],
+              "correctAnswer": "B",
+              "explanation": "To England. Dựa vào đoạn văn: 'I\\'m going to take them to England.'"
+            },
+            {
+              "id": "34",
+              "content": "3. What did the monkeys eat while they were in the cages?",
+              "options": [
+                "Thorns",
+                "Hay",
+                "Grapefruit",
+                "Flesh"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Grapefruit. Dựa vào đoạn văn: 'For dinner, he gave them tiny pieces of sour grapefruit to eat.'"
+            },
+            {
+              "id": "35",
+              "content": "4. What shape was the island that the monkeys found?",
+              "options": [
+                "A paddle",
+                "An arc",
+                "A circle",
+                "A rope"
+              ],
+              "correctAnswer": "B",
+              "explanation": "An arc. Dựa vào đoạn văn: 'They found the island shaped like an arc.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 22",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit22_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit22_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">charity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃǽrəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Charity is an act of giving help, usually money, to those who need it. (Làm từ thiện là hành động giúp đỡ, thường là tiền, cho những người cần nó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Thanks to his friends' charity, he had enough money to pay the rent.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">commerce</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑ́mərs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Commerce is the activity of buying and selling things. (Thương mại là hoạt động mua bán hàng hóa.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new shopping mall increased the commerce in that section of town.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">condemn</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəndém]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To condemn someone means to give them a specific punishment. (Lên án/kết án ai đó nghĩa là đưa ra cho họ một hình phạt cụ thể.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The judge condemned the criminal to five years in prison.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cozy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kóuzi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is cozy, then it is comfortable, warm, and relaxing. (Nếu một thứ gì đó ấm cúng, nó sẽ thoải mái, ấm áp và thư giãn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The thick blanket made the bed very cozy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deplete</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diplíːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To deplete an amount of something means to use up all of it. (Làm cạn kiệt một lượng gì đó nghĩa là sử dụng hết tất cả chúng.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All the driving he was doing was depleting his car's fuel supply.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">economy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikɑ́nəmi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An economy is the money and businesses of a country or region. (Nền kinh tế là tiền tệ và các hoạt động kinh doanh của một quốc gia hay vùng lãnh thổ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The factory was good for the economy because it brought jobs to the area.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">empire</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[émpaiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An empire is a large group of countries ruled by an emperor or empress. (Đế chế là một nhóm lớn các quốc gia được cai trị bởi hoàng đế hoặc nữ hoàng.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The emperor built roads to make travel easier throughout the empire.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">goods</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gudz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Goods are anything that can be bought or sold. (Hàng hóa là bất cứ thứ gì có thể được mua hoặc bán.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Shoes, hats, dresses and purses were the goods she wanted to buy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">heed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hiːd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To heed something means to obey or follow it. (Chú ý/nghe theo cái gì đó nghĩa là tuân theo hoặc làm theo nó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ You should heed the advice on the sign and not drive so fast.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hitchhike</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hítʃhàik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To hitchhike means to travel by asking for rides from passing vehicles. (Quá giang nghĩa là đi lại bằng cách xin đi nhờ các phương tiện đi ngang qua.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She didn't have a car, so she hitchhiked several miles to her brother's home.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mock</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To mock someone means to tease them in a cruel way. (Chế nhạo ai đó nghĩa là trêu chọc họ một cách tàn nhẫn.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girls mocked Nancy because she was a new student.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">neutral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[njúːtrəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is neutral, then they do not help either of the two fighting sides. (Nếu ai đó trung lập, họ sẽ không giúp bên nào trong hai phe đang chiến đấu.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girl's friend remained neutral while the couple was arguing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">persecute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pə́ːrsikjùːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To persecute means to treat someone badly. (Bức hại nghĩa là đối xử tệ bạc với ai đó.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Dan felt persecuted because he was smaller than the other boys at school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[píti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Pity is the feeling of sadness and kindness for those who are suffering. (Lòng thương hại là cảm giác buồn bã và tử tế dành cho những người đang đau khổ.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because she had pity for the lost boy, she helped him find his parents.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reduce</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ridjúːs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To reduce something means to make it less in size or number. (Giảm cái gì đó nghĩa là làm cho nó ít đi về kích thước hoặc số lượng.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the store reduced its prices, people wanted to shop there.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scribe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skraib]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A scribe was a person whose job was to copy written works. (Người sao chép là người có công việc chép lại các tác phẩm bằng văn bản.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In Ancient Egypt, scribes recorded important events.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">temper</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[témpər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A temper is someone's mood or a chance that they might get angry. (Tâm trạng/sự nóng giận là cảm xúc của ai đó hoặc khả năng họ có thể trở nên tức giận.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She has a temper. Even the slightest mistakes make her angry.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">throne</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θroun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A throne is the special chair in which a ruler sits. (Ngai vàng là chiếc ghế đặc biệt mà một người cai trị ngồi.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Nobody except the king and queen sat in the thrones in the great hall.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">unity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[júːnəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Unity is the state of people working together for a certain purpose. (Sự đoàn kết là trạng thái mọi người làm việc cùng nhau vì một mục đích nhất định.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The project was finished early, thanks to the unity of the workers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">victor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[víktər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A victor is a group or person that wins in a contest. (Người chiến thắng là một nhóm hoặc người giành chiến thắng trong một cuộc thi.)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At the end of the game, the blue team was the victor.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist_ex1",
+          "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_q1",
+              "content": "1. Appliances are `things that are bought` that usually last for many years.",
+              "options": [
+                "goods",
+                "charity",
+                "victors",
+                "empire"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Từ cần điền là 'goods' (hàng hóa), đồng nghĩa với 'things that are bought' (những thứ được mua)."
+            },
+            {
+              "id": "ex1_q2",
+              "content": "2. After making five cakes, all the sugar in the house was `used up`.",
+              "options": [
+                "heeded",
+                "depleted",
+                "mocked",
+                "reduced"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Từ cần điền là 'depleted' (cạn kiệt), đồng nghĩa với 'used up' (sử dụng hết)."
+            },
+            {
+              "id": "ex1_q3",
+              "content": "3. During the holidays, `offering financial help to others` is very common.",
+              "options": [
+                "unity",
+                "charity",
+                "temper",
+                "pity"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Từ cần điền là 'charity' (từ thiện), đồng nghĩa với 'offering financial help to others' (cung cấp hỗ trợ tài chính cho người khác)."
+            },
+            {
+              "id": "ex1_q4",
+              "content": "4. Because my views were different, I was `treated badly` by my classmates.",
+              "options": [
+                "hitchhiked",
+                "heeded",
+                "persecuted",
+                "mocked"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Từ cần điền là 'persecuted' (bị bức hại), đồng nghĩa với 'treated badly' (bị đối xử tệ)."
+            },
+            {
+              "id": "ex1_q5",
+              "content": "5. `The group that wins` this game will have to play the very best team.",
+              "options": [
+                "scribes",
+                "goods",
+                "commerce",
+                "victors"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Từ cần điền là 'victors' (những người chiến thắng), đồng nghĩa với 'The group that wins' (nhóm chiến thắng)."
+            },
+            {
+              "id": "ex1_q6",
+              "content": "6. When his car ran out of gas, he `traveled by asking for rides` to the gas station.",
+              "options": [
+                "hitchhiked",
+                "depleted",
+                "reduced",
+                "persecuted"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Từ cần điền là 'hitchhiked' (đi quá giang), đồng nghĩa với 'traveled by asking for rides' (đi bằng cách xin đi nhờ xe)."
+            },
+            {
+              "id": "ex1_q7",
+              "content": "7. Though it might seem like fun at the time, it's not nice to `tease in a cruel way` people.",
+              "options": [
+                "heed",
+                "mock",
+                "condemn",
+                "pity"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Từ cần điền là 'mock' (chế nhạo), đồng nghĩa với 'tease in a cruel way' (trêu chọc một cách tàn nhẫn)."
+            },
+            {
+              "id": "ex1_q8",
+              "content": "8. The warm weather `lessened` the snow that covered the ground.",
+              "options": [
+                "depleted",
+                "persecuted",
+                "reduced",
+                "condemned"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Từ cần điền là 'reduced' (làm giảm đi), đồng nghĩa với 'lessened' (làm ít đi)."
+            },
+            {
+              "id": "ex1_q9",
+              "content": "9. `The state of working together` the groups showed helped them to solve their problems.",
+              "options": [
+                "economy",
+                "empire",
+                "unity",
+                "commerce"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Từ cần điền là 'unity' (sự đoàn kết), đồng nghĩa với 'The state of working together' (trạng thái làm việc cùng nhau)."
+            },
+            {
+              "id": "ex1_q10",
+              "content": "10. `The many countries ruled by one person` was beginning to slowly fall apart.",
+              "options": [
+                "empire",
+                "throne",
+                "charity",
+                "victor"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Từ cần điền là 'empire' (đế chế), đồng nghĩa với 'The many countries ruled by one person' (nhiều quốc gia do một người cai trị)."
+            }
+          ]
+        },
+        {
+          "id": "sec1_wordlist_ex2",
+          "title": "Exercise 2: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_q1",
+              "content": "1. Who is someone who would NOT sit on a throne?",
+              "options": [
+                "A king",
+                "A queen",
+                "A chef",
+                "An emperor"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Throne là ngai vàng. Vua, Nữ hoàng và Hoàng đế đều ngồi trên ngai vàng, chỉ có 'A chef' (đầu bếp) là không."
+            },
+            {
+              "id": "ex2_q2",
+              "content": "2. All of the following describe something that's cozy EXCEPT _____.",
+              "options": [
+                "relaxing",
+                "large",
+                "comfortable",
+                "warm"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Cozy nghĩa là ấm cúng, thư giãn, thoải mái. 'Large' (rộng lớn) không miêu tả sự ấm cúng."
+            },
+            {
+              "id": "ex2_q3",
+              "content": "3. What is something that you might heed?",
+              "options": [
+                "Food",
+                "Money",
+                "Fun",
+                "Advice"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Heed nghĩa là chú ý, lắng nghe, làm theo. Người ta thường 'heed advice' (nghe theo lời khuyên)."
+            },
+            {
+              "id": "ex2_q4",
+              "content": "4. If someone can't control their temper, then they are likely to easily become _____.",
+              "options": [
+                "upset",
+                "proud",
+                "happy",
+                "sleepy"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Temper là sự nóng giận. Nếu không kiểm soát được sự nóng giận, người ta rất dễ trở nên 'upset' (tức giận, buồn bực)."
+            },
+            {
+              "id": "ex2_q5",
+              "content": "5. Which of the following is something a scribe would use?",
+              "options": [
+                "Goods",
+                "An oven",
+                "A pen",
+                "Nails"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Scribe là người sao chép tài liệu, vì vậy họ sẽ cần sử dụng 'A pen' (cái bút)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Scribe's Warning</h1><p style=\"margin-bottom: 1rem;\">A great and powerful <b>empire</b> needed the wood from its western areas to build palaces and homes for the emperor and his friends. However, the <b>empire</b> had <b>depleted</b> many of the forests. The trees were important to the western areas' <b>economy</b>. With no trees to sell, the <b>commerce</b> in that area was <b>reduced</b>. Citizens could no longer purchase the <b>goods</b> that they needed to survive. Their life became difficult.</p><p style=\"margin-bottom: 1rem;\">A poor <b>scribe</b> from the area wanted to help. He <b>hitchhiked</b> to the capital to ask the emperor for <b>charity</b>. He was invited to the palace. It was large and <b>cozy</b>. Tables were loaded with food, and fires burned warmly in every fireplace.</p><p style=\"margin-bottom: 1rem;\">The emperor sat up upon his <b>throne</b>, and the <b>scribe</b> stood in front of him.</p><p style=\"margin-bottom: 1rem;\">\"I've come to ask for help,\" the <b>scribe</b> said. \"We're all very poor and hungry. You've used up all of the forests, and now we have nothing to sell.\"</p><p style=\"margin-bottom: 1rem;\">Then he added a warning. \"If we don't receive help, I'm afraid that the entire <b>empire</b> will suffer. We must establish some <b>unity</b>.\"</p><p style=\"margin-bottom: 1rem;\">Upon hearing the <b>scribe</b>'s request, the emperor's bad <b>temper</b> surfaced. He <b>mocked</b> the <b>scribe</b>. \"You think I should help,\" he said and laughed. \"You should just be happy to belong to this great <b>empire</b>. You will get nothing from me.\"</p><p style=\"margin-bottom: 1rem;\">The emperor felt no <b>pity</b> for the citizens of the western area. They were <b>condemned</b> to starve. The <b>scribe</b> returned home with nothing.</p><p style=\"margin-bottom: 1rem;\">Not long after, an enemy invaded the <b>empire</b> from the west. They were marching to the capital. Because the citizens felt <b>persecuted</b> by the emperor, they remained <b>neutral</b>. They didn't fight the invaders but allowed them to march freely to the capital.</p><p style=\"margin-bottom: 1rem;\">The emperor was defeated. If he had <b>heeded</b> the words of the <b>scribe</b>, then the citizens might have been the <b>victors</b>. But because he had treated them badly, they treated him badly in return.</p></div>",
+      "imageUrl": "/unit22_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec2_reading_comp",
+          "title": "Reading Comprehension: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "rc_q1",
+              "content": "1. Why were the citizens hungry?",
+              "options": [
+                "Commerce was high.",
+                "They couldn't buy goods.",
+                "Prices were reduced.",
+                "They were too cozy."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Chi tiết trong bài: 'With no trees to sell, the commerce in that area was reduced. Citizens could no longer purchase the goods that they needed to survive.' Do không thể mua hàng hóa nên họ bị đói."
+            },
+            {
+              "id": "rc_q2",
+              "content": "2. The emperor's palace was all of the following EXCEPT _____.",
+              "options": [
+                "large and cozy",
+                "made with wood",
+                "cold and dark",
+                "in the capital"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Bài đọc miêu tả cung điện: 'It was large and cozy. Tables were loaded with food, and fires burned warmly in every fireplace.' (Cung điện lớn, ấm cúng và có lửa cháy ấm áp). Vậy cung điện không hề 'cold and dark' (lạnh lẽo và tối tăm)."
+            },
+            {
+              "id": "rc_q3",
+              "content": "3. When the emperor heard the scribe's request, how did he behave?",
+              "options": [
+                "He felt pity.",
+                "He asked for unity.",
+                "He remained neutral.",
+                "He showed his temper."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Chi tiết trong bài: 'Upon hearing the scribe’s request, the emperor’s bad temper surfaced.' (Khi nghe lời yêu cầu của người sao chép, hoàng đế đã nổi nóng)."
+            },
+            {
+              "id": "rc_q4",
+              "content": "4. At the end of the story, what happened to the emperor?",
+              "options": [
+                "He was defeated.",
+                "He changed his evil ways.",
+                "He became rich.",
+                "He got married."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Chi tiết ở cuối bài đọc: 'The emperor was defeated.' (Hoàng đế đã bị đánh bại do người dân không giúp đỡ ông)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

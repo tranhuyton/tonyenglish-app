@@ -1,0 +1,412 @@
+{
+  "basicInfo": {
+    "title": "Unit 24: The Traveler and the Innkeeper",
+    "level": "4000 Essential English Words Volume 4",
+    "description": "Learn 20 essential English words from Unit 24 through 'The Traveler and the Innkeeper' reading passage and exercises."
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit24_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit24_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cherish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtʃerɪʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To <strong>cherish</strong> something means to hold it as very important. <br/> <span style=\"color: #64748b;\">(Trân trọng điều gì đó có nghĩa là coi nó rất quan trọng.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ I cherish this trophy I won.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compassion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmˈpæʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"><strong>Compassion</strong> is a feeling of understanding for someone who is hurt or suffering. <br/> <span style=\"color: #64748b;\">(Lòng trắc ẩn là cảm giác thấu hiểu đối với người bị tổn thương hoặc đau khổ.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ The veterinarian had compassion for the sick little puppy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənˈsent]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"><strong>Consent</strong> is permission to do something. <br/> <span style=\"color: #64748b;\">(Sự đồng ý là sự cho phép làm điều gì đó.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ Their mother gave the children consent to go outside and play.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">core</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔːr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The <strong>core</strong> is the center of something. <br/> <span style=\"color: #64748b;\">(Lõi là trung tâm của một cái gì đó.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ The rings of a tree start forming at its core.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cunning</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkʌnɪŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is <strong>cunning</strong>, they are good at tricking people. <br/> <span style=\"color: #64748b;\">(Nếu ai đó xảo quyệt, họ rất giỏi lừa gạt mọi người.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ The cunning child fooled his parents into thinking that he was kind.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dizzy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdɪzi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is <strong>dizzy</strong>, then they feel off balance as if they will fall down. <br/> <span style=\"color: #64748b;\">(Nếu ai đó chóng mặt, họ cảm thấy mất thăng bằng như thể sắp ngã.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ The pregnant woman was dizzy after standing up too quickly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">equilibrium</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌiːkwəˈlɪbriəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"><strong>Equilibrium</strong> is the balance between different forces. <br/> <span style=\"color: #64748b;\">(Cân bằng là sự cân đối giữa các lực lượng khác nhau.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ The sudden drop in prices upset the equilibrium of the economy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">foster</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfɔːstər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To <strong>foster</strong> a feeling or a skill means to help it develop. <br/> <span style=\"color: #64748b;\">(Nuôi dưỡng một cảm xúc hoặc một kỹ năng có nghĩa là giúp nó phát triển.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ She helped foster a sense of calm in the little boy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grind</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɡraɪnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To <strong>grind</strong> something means to break it into very small pieces or powder. <br/> <span style=\"color: #64748b;\">(Xay hoặc nghiền một cái gì đó có nghĩa là phá vỡ nó thành những mảnh hoặc bột rất nhỏ.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ She wanted to grind the beans, so she could brew some coffee.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">growl</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɡraʊl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To <strong>growl</strong> means to make a deep, angry sound. <br/> <span style=\"color: #64748b;\">(Gầm gừ có nghĩa là tạo ra một âm thanh trầm, tức giận.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ The dog started to growl at the man walking by.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">moderation</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌmɑːdəˈreɪʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\"><strong>Moderation</strong> is a state of being just enough but not too much. <br/> <span style=\"color: #64748b;\">(Điều độ là trạng thái vừa đủ chứ không quá nhiều.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ It is important to eat in moderation so that you can have a healthy body.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">predator</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpredətər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A <strong>predator</strong> is an animal that kills and eats other animals. <br/> <span style=\"color: #64748b;\">(Động vật ăn thịt là động vật giết và ăn thịt các động vật khác.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ The peregrine falcon is a predator that eats fish.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sane</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[seɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is <strong>sane</strong>, they can think in a normal way. <br/> <span style=\"color: #64748b;\">(Nếu ai đó tỉnh táo, họ có thể suy nghĩ một cách bình thường.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ Oliver does not act like a sane person when he is angry.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">saucer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsɔːsər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A <strong>saucer</strong> is a small round dish that you set a cup on. <br/> <span style=\"color: #64748b;\">(Đĩa đựng tách là một cái đĩa nhỏ, tròn mà bạn đặt tách lên.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ He placed the spoon on the saucer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">snatch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[snætʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To <strong>snatch</strong> something means to take it away with a quick motion. <br/> <span style=\"color: #64748b;\">(Chộp lấy cái gì đó có nghĩa là lấy nó đi với một chuyển động nhanh.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ He was so hungry that he snatched an apple from a tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stagger</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈstæɡər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To <strong>stagger</strong> means to move in an unsteady way and almost fall over. <br/> <span style=\"color: #64748b;\">(Loạng choạng có nghĩa là di chuyển một cách không vững và gần như ngã.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ He staggered around after having too much to drink.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stumble</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈstʌmbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To <strong>stumble</strong> means to put your foot down wrong so that you almost fall. <br/> <span style=\"color: #64748b;\">(Vấp ngã có nghĩa là đặt chân xuống sai khiến bạn gần như ngã.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ He stumbled as he ran through the puddle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tense</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is <strong>tense</strong>, they are worried something bad might happen. <br/> <span style=\"color: #64748b;\">(Nếu ai đó căng thẳng, họ lo lắng điều gì đó tồi tệ có thể xảy ra.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ After the phone call, Monica was very tense.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tumble</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtʌmbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To <strong>tumble</strong> means to fall, often in a rolling way. <br/> <span style=\"color: #64748b;\">(Ngã lộn nhào có nghĩa là ngã, thường theo kiểu lăn.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ He lost his balance while snowboarding and tumbled to the ground.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌱</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">withhold</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wɪðˈhoʊld]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To <strong>withhold</strong> something is to not give it to someone. <br/> <span style=\"color: #64748b;\">(Giữ lại cái gì đó có nghĩa là không đưa nó cho ai đó.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">+ They withheld all information until she paid her fine.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1 Part A. Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q_p0_s1_1",
+              "content": "Which of the following means to make a noise?",
+              "options": [
+                "Grasp",
+                "Plush",
+                "Growl",
+                "Stagger"
+              ],
+              "correctAnswer": "C",
+              "explanation": "'Growl' có nghĩa là gầm gừ, tạo ra tiếng ồn."
+            },
+            {
+              "id": "q_p0_s1_2",
+              "content": "Which of the following eats other animals?",
+              "options": [
+                "Core",
+                "Predator",
+                "Cunning",
+                "Saucer"
+              ],
+              "correctAnswer": "B",
+              "explanation": "'Predator' là động vật ăn thịt, ăn các động vật khác."
+            },
+            {
+              "id": "q_p0_s1_3",
+              "content": "What is a balance between two things?",
+              "options": [
+                "Equilibrium",
+                "Foster",
+                "Compassion",
+                "Sane"
+              ],
+              "correctAnswer": "A",
+              "explanation": "'Equilibrium' có nghĩa là sự cân bằng."
+            },
+            {
+              "id": "q_p0_s1_4",
+              "content": "Which of the following means not too much?",
+              "options": [
+                "Dizzy",
+                "Withhold",
+                "Tense",
+                "Moderation"
+              ],
+              "correctAnswer": "D",
+              "explanation": "'Moderation' có nghĩa là sự điều độ, không quá mức."
+            },
+            {
+              "id": "q_p0_s1_5",
+              "content": "What word means the same as agreement?",
+              "options": [
+                "Cherish",
+                "Stumble",
+                "Snatch",
+                "Consent"
+              ],
+              "correctAnswer": "D",
+              "explanation": "'Consent' có nghĩa là sự đồng ý."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2 Part B. Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q_p0_s2_1",
+              "content": "withhold",
+              "options": [
+                "to think normally",
+                "to be together",
+                "to not give",
+                "to express happiness"
+              ],
+              "correctAnswer": "C",
+              "explanation": "'withhold' có nghĩa là giữ lại, không đưa cho (to not give)."
+            },
+            {
+              "id": "q_p0_s2_2",
+              "content": "snatch",
+              "options": [
+                "to leave",
+                "to throw",
+                "to give",
+                "to take"
+              ],
+              "correctAnswer": "D",
+              "explanation": "'snatch' có nghĩa là chộp lấy, lấy đi (to take)."
+            },
+            {
+              "id": "q_p0_s2_3",
+              "content": "cherish",
+              "options": [
+                "to break into pieces",
+                "to love something important",
+                "to agree with",
+                "to give something away"
+              ],
+              "correctAnswer": "B",
+              "explanation": "'cherish' có nghĩa là trân trọng, yêu quý thứ gì đó quan trọng (to love something important)."
+            },
+            {
+              "id": "q_p0_s2_4",
+              "content": "stagger",
+              "options": [
+                "to turn off",
+                "to run into someone",
+                "to take something away",
+                "to trip and almost fall"
+              ],
+              "correctAnswer": "D",
+              "explanation": "'stagger' có nghĩa là loạng choạng, gần như ngã (to trip and almost fall)."
+            },
+            {
+              "id": "q_p0_s2_5",
+              "content": "saucer",
+              "options": [
+                "a small dish",
+                "to stop being angry",
+                "helping someone",
+                "to go against"
+              ],
+              "correctAnswer": "A",
+              "explanation": "'saucer' là một cái đĩa nhỏ đựng tách (a small dish)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3 Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q_p0_s3_1",
+              "content": "I ___________ going to the movies, but in ___________ because it can be expensive.",
+              "options": [
+                "growl / predator",
+                "cherish / moderation",
+                "consent / withhold",
+                "equilibrium / stagger"
+              ],
+              "correctAnswer": "B",
+              "explanation": "'cherish' (trân trọng/thích) và 'moderation' (điều độ) phù hợp với ngữ cảnh: Tôi thích đi xem phim, nhưng ở mức độ vừa phải vì nó đắt."
+            },
+            {
+              "id": "q_p0_s3_2",
+              "content": "The lion began to ___________, and the deer knew there was a ___________ to be afraid of.",
+              "options": [
+                "tumble / dizzy",
+                "core / foster",
+                "growl / predator",
+                "snatch / saucer"
+              ],
+              "correctAnswer": "C",
+              "explanation": "'growl' (gầm gừ) và 'predator' (thú săn mồi) phù hợp: Sư tử bắt đầu gầm gừ, và con nai biết có thú săn mồi để sợ."
+            },
+            {
+              "id": "q_p0_s3_3",
+              "content": "The man was ___________, so he felt ___________ for the starving child in need.",
+              "options": [
+                "sane / compassion",
+                "tense / stumble",
+                "cunning / grind",
+                "cherish / moderation"
+              ],
+              "correctAnswer": "A",
+              "explanation": "'sane' (tỉnh táo) và 'compassion' (lòng trắc ẩn) phù hợp: Người đàn ông tỉnh táo, nên cảm thấy thương cảm cho đứa trẻ đang chết đói."
+            },
+            {
+              "id": "q_p0_s3_4",
+              "content": "The boy moved to ___________ the cup from his sister and knocked over the ___________.",
+              "options": [
+                "core / foster",
+                "growl / predator",
+                "withhold / consent",
+                "snatch / saucer"
+              ],
+              "correctAnswer": "D",
+              "explanation": "'snatch' (giật lấy) và 'saucer' (cái đĩa) phù hợp: Cậu bé định giật cái cốc từ em gái và làm đổ cái đĩa."
+            },
+            {
+              "id": "q_p0_s3_5",
+              "content": "Deep in the ___________ of the tree, there are minerals that ___________ new growth.",
+              "options": [
+                "core / foster",
+                "sane / compassion",
+                "tumble / dizzy",
+                "equilibrium / stagger"
+              ],
+              "correctAnswer": "A",
+              "explanation": "'core' (lõi) và 'foster' (nuôi dưỡng) phù hợp: Sâu trong lõi cây, có những khoáng chất nuôi dưỡng sự phát triển mới."
+            },
+            {
+              "id": "q_p0_s3_6",
+              "content": "The ___________ criminal started to ___________ up the gemstone so no one would know it was the same stone.",
+              "options": [
+                "snatch / saucer",
+                "tense / stumble",
+                "cunning / grind",
+                "consent / withhold"
+              ],
+              "correctAnswer": "C",
+              "explanation": "'cunning' (xảo quyệt) và 'grind' (nghiền nát) phù hợp: Tên tội phạm xảo quyệt bắt đầu nghiền nát viên đá quý."
+            },
+            {
+              "id": "q_p0_s3_7",
+              "content": "After he ___________ down the hill, he felt ___________.",
+              "options": [
+                "cherish / moderation",
+                "tumbled / dizzy",
+                "cunning / grind",
+                "core / foster"
+              ],
+              "correctAnswer": "B",
+              "explanation": "'tumbled' (lăn/ngã lộn nhào) và 'dizzy' (chóng mặt) phù hợp: Sau khi lăn xuống đồi, anh ta cảm thấy chóng mặt."
+            },
+            {
+              "id": "q_p0_s3_8",
+              "content": "The woman decided to ___________ her permission and did not give ___________ to her daughter's request.",
+              "options": [
+                "growl / predator",
+                "equilibrium / stagger",
+                "withhold / consent",
+                "sane / compassion"
+              ],
+              "correctAnswer": "C",
+              "explanation": "'withhold' (giữ lại) và 'consent' (sự đồng ý) phù hợp: Người phụ nữ quyết định giữ lại sự cho phép và không đồng ý với yêu cầu của con gái."
+            },
+            {
+              "id": "q_p0_s3_9",
+              "content": "The man felt ___________ after his horse started to ___________ because he thought that the horse might fall.",
+              "options": [
+                "tense / stumble",
+                "snatch / saucer",
+                "tumbled / dizzy",
+                "cunning / grind"
+              ],
+              "correctAnswer": "A",
+              "explanation": "'tense' (căng thẳng) và 'stumble' (vấp ngã) phù hợp: Người đàn ông cảm thấy căng thẳng sau khi con ngựa của anh ta vấp ngã."
+            },
+            {
+              "id": "q_p0_s3_10",
+              "content": "I felt like I had no ___________. As a result, I started to ___________ as I walked.",
+              "options": [
+                "withhold / consent",
+                "core / foster",
+                "tense / stumble",
+                "equilibrium / stagger"
+              ],
+              "correctAnswer": "D",
+              "explanation": "'equilibrium' (thăng bằng) và 'stagger' (loạng choạng) phù hợp: Tôi cảm thấy mình không có thăng bằng, dẫn đến việc đi loạng choạng."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Traveler and the Innkeeper</h1><p style=\"margin-bottom: 1rem;\">A traveler stopped at an inn. He sat and watched people closely, like a <b>predator</b>. He heard the old innkeeper talking to a young man in the <b>core</b> of the inn.</p><p style=\"margin-bottom: 1rem;\">\"I just need to borrow some money. I swear that I'll spend it in <b>moderation</b>, and my friend will pay you back tomorrow,\" the man said. The innkeeper gave his <b>consent</b> and pulled out some money.</p><p style=\"margin-bottom: 1rem;\">The traveler knew that this was a trick. The man was going to leave with the poor innkeeper's money and never return.</p><p style=\"margin-bottom: 1rem;\">He felt <b>compassion</b> for the nice innkeeper and did not want him to be tricked. The <b>cunning</b> traveler decided to teach the innkeeper a lesson.</p><p style=\"margin-bottom: 1rem;\">The traveler walked over to the innkeeper and sat down. The innkeeper had started to <b>grind</b> coffee beans to make coffee. He made the coffee and handed the traveler a <b>saucer</b> and a cup. The two started talking. After a while the traveler yawned and then growled like a wolf.</p><p style=\"margin-bottom: 1rem;\">\"Are you not <b>sane</b>? I thought I just heard you <b>growl</b>,\" said the innkeeper.</p><p style=\"margin-bottom: 1rem;\">\"I did. I am cursed. Every time I yawn three times in a row, I turn into a wolf and attack people.\"</p><p style=\"margin-bottom: 1rem;\">The innkeeper became <b>tense</b>. Then the traveler yawned again. As the traveler started to yawn a third time, the innkeeper turned to run outside. As he ran, the traveler snatched his coat. The scared innkeeper staggered outside and tumbled into the street.</p><p style=\"margin-bottom: 1rem;\">The traveler followed him out because he did not want to <b>withhold</b> the truth any longer. He just wanted to <b>foster</b> happiness and restore the innkeeper's emotional <b>equilibrium</b>. The innkeeper was <b>dizzy</b>, and he stumbled. The traveler helped him stand up.</p><p style=\"margin-bottom: 1rem;\">\"That was a trick,\" the traveler said as he returned the coat.</p><p style=\"margin-bottom: 1rem;\">\"Oh, good. I <b>cherish</b> this coat,\" responded the innkeeper.</p><p style=\"margin-bottom: 1rem;\">\"Well, hopefully this will teach you that you shouldn't believe every story that you hear.\"</p></div>",
+      "imageUrl": "/unit24_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec1_reading",
+          "title": "Part A. Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q_p1_s1_1",
+              "content": "The traveler watched people closely, like a predator.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Câu chuyện nói: 'He sat and watched people closely, like a predator.'"
+            },
+            {
+              "id": "q_p1_s1_2",
+              "content": "The traveler staggered outside and tumbled into the street.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Trong câu chuyện là người chủ quán (innkeeper): 'The scared innkeeper staggered outside and tumbled into the street.'"
+            },
+            {
+              "id": "q_p1_s1_3",
+              "content": "The innkeeper handed the traveler a saucer and a cup.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Câu chuyện kể: 'He made the coffee and handed the traveler a saucer and a cup.'"
+            },
+            {
+              "id": "q_p1_s1_4",
+              "content": "The traveler snatched the innkeeper's coat.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. 'As he ran, the traveler snatched his coat.'"
+            },
+            {
+              "id": "q_p1_s1_5",
+              "content": "The traveler wanted to withhold the truth and not foster happiness.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Anh ấy muốn mang lại niềm vui và nói ra sự thật: 'He did not want to withhold the truth any longer. He just wanted to foster happiness.'"
+            },
+            {
+              "id": "q_p1_s1_6",
+              "content": "The innkeeper cherished his coat.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Ông chủ quán nói: 'Oh, good. I cherish this coat.'"
+            }
+          ]
+        },
+        {
+          "id": "sec2_reading",
+          "title": "Part B. Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q_p1_s2_1",
+              "content": "What did the traveler snatch from the innkeeper?",
+              "options": [
+                "A cup",
+                "A saucer",
+                "Some money",
+                "His coat"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Theo câu chuyện: 'As he ran, the traveler snatched his coat.'"
+            },
+            {
+              "id": "q_p1_s2_2",
+              "content": "Why did the traveler decide to trick the innkeeper?",
+              "options": [
+                "To steal his money",
+                "To teach the innkeeper a lesson",
+                "To be a predator",
+                "To sell it and make money"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Theo câu chuyện: 'The cunning traveler decided to teach the innkeeper a lesson.'"
+            },
+            {
+              "id": "q_p1_s2_3",
+              "content": "Why did the innkeeper consent to give the young man money?",
+              "options": [
+                "The young man was scary.",
+                "The young man was cunning.",
+                "The young man was dizzy.",
+                "The young man's friend would repay him."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Người thanh niên hứa rằng bạn của anh ta sẽ trả lại tiền vào ngày mai: 'my friend will pay you back tomorrow'."
+            },
+            {
+              "id": "q_p1_s2_4",
+              "content": "Why did the innkeeper hand the traveler a saucer and a cup?",
+              "options": [
+                "So he could drink coffee",
+                "So he could restore equilibrium",
+                "Because he was dizzy",
+                "To teach him a lesson"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Ông chủ quán pha cà phê và đưa tách cùng đĩa cho vị khách để uống."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

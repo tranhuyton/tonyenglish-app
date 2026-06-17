@@ -1,0 +1,392 @@
+{
+  "basicInfo": {
+    "title": "Unit 10: Anton's Great Discovery",
+    "description": "4000 Essential English Words - Volume 4"
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit10_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit10_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">animate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ænamit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is animate, it has life.<br><span style=\"color: #0284c7;\">Khi thứ gì đó có sự sống, nó có sự sống. (animate: có sự sống)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Rocks and machines are not animate things.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">classify</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klæsəfai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To classify things is to put them into groups based on their type.<br><span style=\"color: #0284c7;\">Phân loại các vật là đặt chúng vào các nhóm dựa trên loại của chúng. (classify: phân loại)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The biologist classified the plant as a completely new species.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">concede</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənsiːd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To concede is to admit that something is true against your wish.<br><span style=\"color: #0284c7;\">Thừa nhận là chấp nhận điều gì đó là sự thật trái với mong muốn của bạn. (concede: thừa nhận)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The student conceded that he had cheated on the test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">concept</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnsept]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A concept is an idea about something.<br><span style=\"color: #0284c7;\">Khái niệm là một ý tưởng về điều gì đó. (concept: khái niệm)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ I learned some concepts of molecules before working in the science lab.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">construct</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənstrʌkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To construct something means to make or build it.<br><span style=\"color: #0284c7;\">Xây dựng cái gì đó có nghĩa là làm hoặc tạo ra nó. (construct: xây dựng)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The men used wood and metal to construct a house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">decade</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dekeid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A decade is a period of ten years.<br><span style=\"color: #0284c7;\">Thập kỷ là khoảng thời gian mười năm. (decade: thập kỷ)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ She celebrated her three decades of work with the company.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diagram</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[daiəgræm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A diagram is a simple drawing that explains what something is or how it works.<br><span style=\"color: #0284c7;\">Biểu đồ là một bản vẽ đơn giản giải thích điều gì đó là gì hoặc nó hoạt động như thế nào. (diagram: biểu đồ)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ By following the diagram, I was able to put the desk together.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ferry</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A ferry is a boat that carries passengers over short distances.<br><span style=\"color: #0284c7;\">Phà là một con thuyền chở hành khách qua những khoảng cách ngắn. (ferry: phà)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The ferry took the people across the lake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">handy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hændi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is handy, it is useful.<br><span style=\"color: #0284c7;\">Nếu thứ gì đó tiện dụng, nó hữu ích. (handy: tiện dụng, hữu ích)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ An eraser is handy if you make a lot of mistakes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">isolate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aisəleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To isolate is to separate one person or thing from a group.<br><span style=\"color: #0284c7;\">Cách ly là tách một người hoặc vật ra khỏi nhóm. (isolate: cách ly)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The teacher isolated the bad child from the class before talking with her.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">longing</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɔ(:)ŋiŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A longing is a strong feeling of wanting.<br><span style=\"color: #0284c7;\">Sự khao khát là một cảm giác mong muốn mãnh liệt. (longing: khao khát)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Since he skipped breakfast, he had a longing for food all morning.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">numerous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nju:mərəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is numerous, there are many of those things.<br><span style=\"color: #0284c7;\">Nếu có nhiều thứ gì đó, thì có rất nhiều thứ đó. (numerous: nhiều)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ It was hard to drive fast since there were numerous holes in the road.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">particle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pɑ:rtikl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A particle is a very small piece of something.<br><span style=\"color: #0284c7;\">Hạt là một mẩu rất nhỏ của thứ gì đó. (particle: hạt)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The bottles of wine were covered in a layer of dust particles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plea</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pli:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A plea is a request that is urgent or emotional.<br><span style=\"color: #0284c7;\">Lời cầu xin là một yêu cầu khẩn cấp hoặc đầy cảm xúc. (plea: lời cầu xin)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The poor, hungry man made a plea for food.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">refrain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rifrein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To refrain from something is to avoid doing it.<br><span style=\"color: #0284c7;\">Kiềm chế làm gì đó là tránh làm nó. (refrain: kìm nén)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The doctor asked Mary to refrain from eating fast food as part of her diet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">review</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rivju:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A review of something is a formal inspection of it by people in authority.<br><span style=\"color: #0284c7;\">Sự đánh giá điều gì đó là sự kiểm tra chính thức của nó bởi những người có thẩm quyền. (review: sự xem xét, duyệt lại)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The government ordered a careful review of the economic situation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sophisticated</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səfistikeitid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is sophisticated, they know many things about the world.<br><span style=\"color: #0284c7;\">Nếu ai đó tinh vi, họ biết nhiều điều về thế giới. (sophisticated: sành sỏi, tinh vi)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Jake is one of the most sophisticated persons I've ever met.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">surrender</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sərendər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To surrender something is to give it up.<br><span style=\"color: #0284c7;\">Đầu hàng thứ gì đó là từ bỏ nó. (surrender: từ bỏ, đầu hàng)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The thief surrendered the money to the police when he was caught.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">upright</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌprait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is upright, it is standing up straight.<br><span style=\"color: #0284c7;\">Nếu thứ gì đó thẳng đứng, nó đang đứng thẳng. (upright: thẳng đứng)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Meerkats can't walk like humans, but they can stand upright.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">worthwhile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wə:rθwail]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is worthwhile, it is important or useful.<br><span style=\"color: #0284c7;\">Nếu điều gì đó đáng giá, nó quan trọng hoặc hữu ích. (worthwhile: đáng giá)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ On his visit to Canada, he realized studying English was worthwhile.</div></div></div></div></div></div>",
+      "imageUrl": "",
+      "sections": [
+        {
+          "id": "ex1_partA",
+          "title": "Exercise 1 - Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "10_1_a_1",
+              "content": "1. a formal inspection",
+              "options": [
+                "review",
+                "diagram",
+                "plea",
+                "longing"
+              ],
+              "correctAnswer": "A",
+              "explanation": "a formal inspection (sự kiểm tra chính thức) đồng nghĩa với review (sự xem xét lại)."
+            },
+            {
+              "id": "10_1_a_2",
+              "content": "2. to accept the truth",
+              "options": [
+                "isolate",
+                "classify",
+                "construct",
+                "concede"
+              ],
+              "correctAnswer": "D",
+              "explanation": "to accept the truth (chấp nhận sự thật) đồng nghĩa với concede (thừa nhận)."
+            },
+            {
+              "id": "10_1_a_3",
+              "content": "3. an idea about how something is",
+              "options": [
+                "decade",
+                "ferry",
+                "concept",
+                "particle"
+              ],
+              "correctAnswer": "C",
+              "explanation": "an idea about how something is (một ý tưởng về điều gì đó) đồng nghĩa với concept (khái niệm)."
+            },
+            {
+              "id": "10_1_a_4",
+              "content": "4. knowing a lot about the world",
+              "options": [
+                "upright",
+                "sophisticated",
+                "handy",
+                "surrender"
+              ],
+              "correctAnswer": "B",
+              "explanation": "knowing a lot about the world (biết nhiều về thế giới) đồng nghĩa với sophisticated (sành sỏi, tinh vi)."
+            },
+            {
+              "id": "10_1_a_5",
+              "content": "5. important",
+              "options": [
+                "refrain",
+                "numerous",
+                "worthwhile",
+                "animate"
+              ],
+              "correctAnswer": "C",
+              "explanation": "important (quan trọng) đồng nghĩa với worthwhile (đáng giá)."
+            }
+          ]
+        },
+        {
+          "id": "ex1_partB",
+          "title": "Exercise 1 - Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "10_1_b_1",
+              "content": "1. particle",
+              "options": [
+                "a small piece of something",
+                "a drawing",
+                "a formal inspection",
+                "a strong feeling of want"
+              ],
+              "correctAnswer": "A",
+              "explanation": "particle: hạt, một mẩu rất nhỏ (a small piece of something)."
+            },
+            {
+              "id": "10_1_b_2",
+              "content": "2. decade",
+              "options": [
+                "an idea about something",
+                "a period of ten years",
+                "a type of boat",
+                "a thing that has life"
+              ],
+              "correctAnswer": "B",
+              "explanation": "decade: thập kỷ, mười năm (a period of ten years)."
+            },
+            {
+              "id": "10_1_b_3",
+              "content": "3. upright",
+              "options": [
+                "important",
+                "to not do something",
+                "standing straight",
+                "a request"
+              ],
+              "correctAnswer": "C",
+              "explanation": "upright: thẳng đứng (standing straight)."
+            },
+            {
+              "id": "10_1_b_4",
+              "content": "4. isolate",
+              "options": [
+                "to separate",
+                "to group together by type",
+                "to give up",
+                "to accept the truth"
+              ],
+              "correctAnswer": "A",
+              "explanation": "isolate: cách ly, tách ra (to separate)."
+            },
+            {
+              "id": "10_1_b_5",
+              "content": "5. handy",
+              "options": [
+                "to make something",
+                "common",
+                "plentiful",
+                "useful"
+              ],
+              "correctAnswer": "D",
+              "explanation": "handy: tiện dụng, hữu ích (useful)."
+            }
+          ]
+        },
+        {
+          "id": "ex2",
+          "title": "Exercise 2: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "10_2_1",
+              "content": "1. animate / particle\nScientists thought that the tiny _________ was not a living thing, so they were very surprised to find that it was indeed _________.",
+              "options": [
+                "particle / animate",
+                "animate / particle"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống)."
+            },
+            {
+              "id": "10_2_2",
+              "content": "2. handy / numerous\nMy uncle, the carpenter, keeps _________ tools in his truck. However, he keeps the most _________ ones on his tool belt at all times.",
+              "options": [
+                "handy / numerous",
+                "numerous / handy"
+              ],
+              "correctAnswer": "B",
+              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất)."
+            },
+            {
+              "id": "10_2_3",
+              "content": "3. classify / upright\nOne way that scientists _________ the different species of early humans is by how they walked. Homo Erectus, for example, walked _________.",
+              "options": [
+                "classify / upright",
+                "upright / classify"
+              ],
+              "correctAnswer": "A",
+              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng)."
+            },
+            {
+              "id": "10_2_4",
+              "content": "4. longing / plea\nAfter sitting in the cell for just one hour, the prisoner felt a _________ to be free. He made a _________ to the officers to release him immediately.",
+              "options": [
+                "longing / plea",
+                "plea / longing"
+              ],
+              "correctAnswer": "A",
+              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin)."
+            },
+            {
+              "id": "10_2_5",
+              "content": "5. sophisticated / worthwhile\nLearning how to speak another language is a _________ skill to have in the world of international business. It also can make one into a more _________ person.",
+              "options": [
+                "sophisticated / worthwhile",
+                "worthwhile / sophisticated"
+              ],
+              "correctAnswer": "B",
+              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn)."
+            },
+            {
+              "id": "10_2_6",
+              "content": "6. review / concept\nJack had a great _________ for a new system, but his boss needs to conduct a thorough _________ to see if it will work.",
+              "options": [
+                "review / concept",
+                "concept / review"
+              ],
+              "correctAnswer": "B",
+              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng)."
+            },
+            {
+              "id": "10_2_7",
+              "content": "7. diagram / isolate\nWilliam used a piece of white paper to _________ the different plants in the garden. That made it easier for him to draw a _________ of the leaves of each type of plant.",
+              "options": [
+                "isolate / diagram",
+                "diagram / isolate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ)."
+            },
+            {
+              "id": "10_2_8",
+              "content": "8. constructed / decades\nThe great pyramids of Egypt were not _________ overnight. In fact, it took many _________ to complete them.",
+              "options": [
+                "constructed / decades",
+                "decades / constructed"
+              ],
+              "correctAnswer": "A",
+              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ)."
+            },
+            {
+              "id": "10_2_9",
+              "content": "9. concede / ferry\nAs he drove his car onto the _________, John felt sad. He wanted to travel by airplane, but after looking at ticket prices, he had to _________ that air travel was just too expensive.",
+              "options": [
+                "concede / ferry",
+                "ferry / concede"
+              ],
+              "correctAnswer": "B",
+              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận)."
+            },
+            {
+              "id": "10_2_10",
+              "content": "10. refrain / surrender\nIn maintaining good health, it is important to _________ from eating unhealthy foods. But that doesn't mean you must _________ all of the foods that you enjoy.",
+              "options": [
+                "refrain / surrender",
+                "surrender / refrain"
+              ],
+              "correctAnswer": "A",
+              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"padding: 24px; background: #f8fafc; border-radius: 12px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #334155; line-height: 1.8; font-size: 1.05rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0;\"><h2 style=\"color: #0f172a; text-align: center; margin-top: 0; margin-bottom: 24px; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #cbd5e1; padding-bottom: 12px;\">Reading Passage</h2>mm<br>Exercise 1<br>PABTf A Choose the right word for the given definition.<br>1. a formal inspection <br>a. review<br>c. plea<br>2. to accept the truth <br>a. isolate<br>c. construct<br>3. an idea about how something is <br>a. decade<br>c. concept<br>4. knowing a lot about the world <br>a. upright<br>c. handy<br>5. important <br>a. refrain<br>c. worthwhile<br>b. diagram <br>d. longing<br>b. classify <br>d. concede<br>b. ferry <br>d. particle<br>b. sophisticated <br>d. surrender<br>b. numerous <br>d. animate<br>B Choose the right definition for the given word.<br>1. particle<br>a. a small piece of something <br>c. a formal inspection<br>2. decade<br>a. an idea about something<br>c. a type of boat<br>3. upright<br>a. important<br>c. standing straight<br>4. isolate<br>a. to separate<br>c. to give up<br>5. handy<br>a. to make something<br>c. plentiful<br>b. a drawing<br>d. a strong feeling of want<br>b. a period often years<br>d. a thing that has life<br>b. to not do something<br>d. a request<br>b. to group together by type<br>c. to accept the truth<br>b. common<br>d. useful<br><br>Exercise 2<br>10<br>Choose the word that is the better fit for each blank.<br>1. animate / particle<br>Scientists thought that the tiny___________was not a living thing, so they were very<br>surprised to find that it was indeed__________ .<br>2. handy / numerous<br>My uncle, the carpenter, keeps___________tools in his truck. However, he keeps<br>the most___________ones on his tool belt at all times.<br>3. classify / upright<br>One way that scientists___________the different species of early humans is by how<br>they walked. Homo Erectus, for example, walked__________ .<br>4. longing / plea<br>After sitting in the cell for just one hour, the prisoner felt a __________ to be free.<br>He made a ___________to the officers to release him immediately.<br>5. sophisticated / worthwhile<br>Learning how to speak another language is a ___________skill to have in the world<br>of international business. It also can make one into a more___________person.<br>6. review / concept<br>Jack had a great__________ for a new system, but his boss needs to conduct a<br>thorough___________to see if it will work.<br>7. diagram / isolate<br>William used a piece of white paperto__________ the different plants in the<br>garden. That made it easier for him to draw a __________ of the leaves of each type<br>of plant.<br>8. constructed / decades<br>The great pyramids of Egypt were not__________ overnight. In fact, it took many<br>__________to complete them.<br>9. concede / ferry<br>As he drove his car onto the__________ , John felt sad. He wanted to travel by<br>airplane, but after looking at ticket prices, he had to___________that air travel was<br>just too expensive.<br>10. refrain / surrender<br>In maintaining good health, it is important to__________ from eating unhealthy<br>foods. But that doesn’t mean you must__________ all of the foods that you enjoy.<br><br>Anton’s Great Discovery<br>Anton Van Leeuwenhoek was a Dutch cloth merchant. His life began to change after <br>he got his first microscope in 1653. It was a very simple microscope. It had a lens in an <br>upright stand. It could make small things look large. It was handy for looking closely at <br>cloth.<br>Soon, Anton felt a longing to build a more powerful microscope. He dreamed of <br>using it to make an important scientific discovery. He wanted to become famous. Three <br>decades later, he did.<br>For many years, Anton experimented with microscopes and lenses. Eventually he <br>constructed a very powerful microscope. If he had sold the concept to others, it would <br>have made him very rich. However, Anton refrained from surrendering his secret <br>to anyone. Instead, he wanted to use it to become famous. So he used his secret <br>microscope to study the natural world.<br>One day he was looking at saliva from his mouth with the microscope. In the saliva, <br>he saw numerous tiny particles. Some of them were moving! He thought that the <br>particles were tiny organisms. So he isolated them from each other and studied each<br>one carefully. Then he classified them into different categories. Some <br>were round. Others were long and had tails. All were alive.<br>Anton was so excited. He knew he could become famous <br>now. He was the first person to see these tiny organisms. So <br>he drew diagrams of the organisms and sent them to a group <br>of scientists in London. The scientists were sophisticated men <br>who did not believe tiny, animate organisms could live in our <br>mouths. Anton made a plea for them to come to Holland to <br>see the organisms with their own eyes. The men took a ferry <br>to Holland and met Anton. They performed a careful review of <br>his work, and they conceded that he had made a <br>worthwhile discovery. Anton Van Leeuwenhoek <br>had discovered bacteria. After decades of <br>hard work, he had become famous.<br>■ <br>■</div>",
+      "imageUrl": "/unit10_vol4_story.png",
+      "sections": [
+        {
+          "id": "reading_comp_A",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "10_rc_A_1",
+              "content": "1. Anton's first microscope had an upright stand.",
+              "options": [
+                "T (True)",
+                "F (False)"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Thông tin trong bài: 'It had a lens in an upright stand.'"
+            },
+            {
+              "id": "10_rc_A_2",
+              "content": "2. Anton had a longing to become rich.",
+              "options": [
+                "T (True)",
+                "F (False)"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sửa lại: Anton had a longing to become famous. (Thông tin trong bài: 'Soon, Anton felt a longing to build a more powerful microscope... He wanted to become famous.')"
+            },
+            {
+              "id": "10_rc_A_3",
+              "content": "3. The tiny particles Anton saw were bacteria.",
+              "options": [
+                "T (True)",
+                "F (False)"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Thông tin trong bài: 'Anton Van Leeuwenhoek had discovered bacteria.'"
+            },
+            {
+              "id": "10_rc_A_4",
+              "content": "4. Anton classified the particles into different categories.",
+              "options": [
+                "T (True)",
+                "F (False)"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Thông tin trong bài: 'Then he classified them into different categories.'"
+            },
+            {
+              "id": "10_rc_A_5",
+              "content": "5. The sophisticated scientists drew diagrams of the bacteria.",
+              "options": [
+                "T (True)",
+                "F (False)"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sửa lại: Anton drew diagrams of the bacteria. (Thông tin trong bài: 'So he drew diagrams of the organisms and sent them to a group of scientists...')"
+            },
+            {
+              "id": "10_rc_A_6",
+              "content": "6. Anton took a ferry to Holland.",
+              "options": [
+                "T (True)",
+                "F (False)"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sửa lại: The scientists took a ferry to Holland. (Thông tin trong bài: 'The men took a ferry to Holland and met Anton.')"
+            }
+          ]
+        },
+        {
+          "id": "reading_comp_B",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "10_rc_B_1",
+              "content": "1. Which is true about Anton's discovery?",
+              "options": [
+                "It isolated him from his work.",
+                "It was not worthwhile.",
+                "It was handy for his business.",
+                "It took him three decades to make it."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Dựa vào đoạn 2: 'He wanted to become famous. Three decades later, he did.'"
+            },
+            {
+              "id": "10_rc_B_2",
+              "content": "2. Why was Anton's first microscope handy?",
+              "options": [
+                "It made him rich.",
+                "It helped him look at cloth.",
+                "It was easy to construct.",
+                "It made him famous."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dựa vào đoạn 1: 'It was handy for looking closely at cloth.'"
+            },
+            {
+              "id": "10_rc_B_3",
+              "content": "3. What was Anton's plea to the scientists?",
+              "options": [
+                "To buy his microscope",
+                "To send him animate organisms",
+                "To invite him to London",
+                "To see the particles with their own eyes"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Dựa vào đoạn cuối: 'Anton made a plea for them to come to Holland to see the organisms with their own eyes.'"
+            },
+            {
+              "id": "10_rc_B_4",
+              "content": "4. Why didn't Anton sell his concept of a powerful microscope?",
+              "options": [
+                "He didn't want to surrender his secret.",
+                "Scientists needed to review it first.",
+                "He was already rich.",
+                "It wasn't perfected yet."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dựa vào đoạn 3: 'However, Anton refrained from surrendering his secret to anyone. Instead, he wanted to use it to become famous.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

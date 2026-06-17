@@ -1,0 +1,533 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 15",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit15_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit15_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">although</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔːlðou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">conj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">You use although to say that one thing is contrasted by another. (mặc dù)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Although she was late, her friends gave her a warm welcome.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">2️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">apply</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əplai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To apply something means to put it on. (bôi, thoa, áp dụng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She always applies makeup to her face before going outside.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">3️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">await</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əweit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To await something means to wait for it. (chờ đợi)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The players awaited the judge's decision.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">4️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beloved</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bilʌvid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is beloved, it is very special and you like it very much. (yêu dấu)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy took a nap next to his beloved cat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">5️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bury</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[beri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bury someone or something means to put them in the ground. (chôn cất)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They buried their grandfather under his favorite tree after he died.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">6️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">climate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klaimit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A climate is the usual weather in a place. (khí hậu)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The climate in the desert is very hot.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">7️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">complain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmplein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When you complain, you say that you are unhappy about something. (phàn nàn)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The workers complained that they were being treated unfairly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">8️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">confuse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənfju:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To confuse someone means to make them feel like they are unsure. (làm bối rối, làm lúng túng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sign confused the traveler because it pointed in two directions.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">9️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">due</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dju:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is due, it is expected to happen or be done at that time. (đến hạn)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The papers were due on the 19th.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🔟</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">entire</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intaiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When you talk about an entire thing, you are talking about the whole thing. (toàn bộ)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was so hungry that he ate the entire pizza by himself.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣1️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">establish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[istæbliʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To establish something means to create it. (thành lập)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He wanted to establish a club for people to help the Earth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣2️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">furnace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fə:rnis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A furnace is a place where heat is made. (lò sưởi, lò luyện)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mr. Jones came to fix the furnace.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣3️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">leash</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[li:ʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A leash is a rope or chain that is used to lead an animal. (dây xích, dây dắt chó)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A lot of dogs must wear a leash to keep them from running away.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣4️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mature</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mətʃuə:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To mature means to grow up to become an adult. (trưởng thành)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When they matured, they became as tall as their parents.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣5️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">measure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[meʒər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To measure something means to find out the quality, value, or effect of it. (đo lường)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The scientists carefully measured the amount of chemicals in the tubes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣6️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">midst</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[midst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The midst of something is the middle of it. (ở giữa)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was in the midst of cleaning when the telephone rang.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣7️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">misery</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mizəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Misery is extreme suffering. (sự khốn khổ)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a lot of misery after Sam lost his dog.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣8️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prior</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[praiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something happened prior to something else, it happened earlier. (trước, ưu tiên)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Ron had to wait since he arrived prior to the scheduled meeting time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1️⃣9️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">research</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[risə:rtʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Research is close and careful study to discover new things. (nghiên cứu)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Scientists did a lot of research on the subject of blood type.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">2️⃣0️⃣</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">variety</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vəraiəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A variety of something is a group of many different kinds of it. (sự đa dạng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are a variety of flowers at the shop.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the word that is a better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "1. After weeks of hard work, the scientists must ________ the results of their ________.",
+              "options": [
+                "await / research",
+                "research / await",
+                "await / misery",
+                "research / due"
+              ],
+              "correctAnswer": "A",
+              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ)."
+            },
+            {
+              "id": "q2",
+              "content": "2. After the death of her ________ pet, the woman felt nothing but ________ for many weeks.",
+              "options": [
+                "beloved / misery",
+                "misery / beloved",
+                "variety / complained",
+                "complain / variety"
+              ],
+              "correctAnswer": "A",
+              "explanation": "beloved là yêu dấu, misery là sự khốn khổ."
+            },
+            {
+              "id": "q3",
+              "content": "3. The store had a ________ of canned vegetables, but the man ________ that they didn’t have his favorite brand.",
+              "options": [
+                "complained / variety",
+                "variety / complained",
+                "due / confused",
+                "confused / due"
+              ],
+              "correctAnswer": "B",
+              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại."
+            },
+            {
+              "id": "q4",
+              "content": "4. The new schedule ________ passengers who thought the train was ________ at 8 a.m.",
+              "options": [
+                "confused / due",
+                "due / confused",
+                "establish / climate",
+                "climate / establish"
+              ],
+              "correctAnswer": "A",
+              "explanation": "confused là làm bối rối, due là đến hạn (có mặt)."
+            },
+            {
+              "id": "q5",
+              "content": "5. The island was a great place to ________ a hotel since the ________ was warm throughout the year.",
+              "options": [
+                "establish / climate",
+                "climate / establish",
+                "furnace / entire",
+                "entire / furnace"
+              ],
+              "correctAnswer": "A",
+              "explanation": "establish là thành lập/xây dựng, climate là khí hậu."
+            },
+            {
+              "id": "q6",
+              "content": "6. ________ he had a lot of bad luck in the past, he refused to let ________ events stop him from moving forward.",
+              "options": [
+                "Prior / although",
+                "Although / prior",
+                "Although / midst",
+                "Prior / mature"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Although là mặc dù, prior là trước đó."
+            },
+            {
+              "id": "q7",
+              "content": "7. The ________ was turned up to the highest temperature, but it couldn’t heat the ________ room.",
+              "options": [
+                "furnace / entire",
+                "entire / furnace",
+                "leash / measured",
+                "measured / leash"
+              ],
+              "correctAnswer": "A",
+              "explanation": "furnace là lò sưởi, entire là toàn bộ."
+            },
+            {
+              "id": "q8",
+              "content": "8. In the ________ of a terrible war, the young boys had to ________ quickly.",
+              "options": [
+                "mature / midst",
+                "midst / mature",
+                "apply / buried",
+                "buried / apply"
+              ],
+              "correctAnswer": "B",
+              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó."
+            },
+            {
+              "id": "q9",
+              "content": "9. To make sure the dog’s ________ was long enough, Bob took out a ruler and ________ it.",
+              "options": [
+                "measured / leash",
+                "leash / measured",
+                "leash / entire",
+                "entire / measured"
+              ],
+              "correctAnswer": "B",
+              "explanation": "leash là dây xích chó, measured là đã đo đạc."
+            },
+            {
+              "id": "q10",
+              "content": "10. She insisted that they ________ her mother’s favorite perfume before they ________ her.",
+              "options": [
+                "buried / apply",
+                "apply / buried",
+                "apply / measure",
+                "measured / apply"
+              ],
+              "correctAnswer": "B",
+              "explanation": "apply là bôi/thoa, buried là đã chôn cất."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2 Part A: Match the phrases to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q11",
+              "content": "1. Although he didn’t know how to dance, _____",
+              "options": [
+                "he went to the party anyway",
+                "before new medicines can be created",
+                "food to choose from at the store",
+                "around seven in the morning"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mặc dù anh ấy không biết khiêu vũ, anh ấy vẫn đi dự tiệc."
+            },
+            {
+              "id": "q12",
+              "content": "2. A furnace keeps _____",
+              "options": [
+                "a room warm during the winter",
+                "the team’s best player had to be replaced",
+                "many travelers want to vacation there",
+                "a dog from running away"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Lò sưởi giữ cho căn phòng ấm áp trong mùa đông."
+            },
+            {
+              "id": "q13",
+              "content": "3. Florida’s warm climate makes _____",
+              "options": [
+                "always calmed her",
+                "many travelers want to vacation there",
+                "around seven in the morning",
+                "a dog from running away"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Khí hậu ấm áp của Florida khiến nhiều du khách muốn đi nghỉ tại đó."
+            },
+            {
+              "id": "q14",
+              "content": "4. He wanted to establish _____",
+              "options": [
+                "food to choose from at the store",
+                "a school for blind children",
+                "around seven in the morning",
+                "the team’s best player had to be replaced"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Anh ấy muốn thành lập một trường học cho trẻ em khiếm thị."
+            },
+            {
+              "id": "q15",
+              "content": "5. The train was due to arrive at _____",
+              "options": [
+                "around seven in the morning",
+                "always calmed her",
+                "before new medicines can be created",
+                "a room warm during the winter"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đoàn tàu dự kiến đến vào khoảng 7 giờ sáng."
+            },
+            {
+              "id": "q16",
+              "content": "6. A lot of research is needed _____",
+              "options": [
+                "a dog from running away",
+                "food to choose from at the store",
+                "before new medicines can be created",
+                "always calmed her"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Cần rất nhiều nghiên cứu trước khi có thể tạo ra các loại thuốc mới."
+            },
+            {
+              "id": "q17",
+              "content": "7. Shoppers have a variety of _____",
+              "options": [
+                "food to choose from at the store",
+                "the team’s best player had to be replaced",
+                "a room warm during the winter",
+                "around seven in the morning"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Người mua sắm có nhiều loại thức ăn để lựa chọn tại cửa hàng."
+            },
+            {
+              "id": "q18",
+              "content": "8. In the midst of the game _____",
+              "options": [
+                "the team’s best player had to be replaced",
+                "before new medicines can be created",
+                "a school for blind children",
+                "many travelers want to vacation there"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Giữa trận đấu, cầu thủ giỏi nhất của đội phải được thay ra."
+            },
+            {
+              "id": "q19",
+              "content": "9. A leash keeps _____",
+              "options": [
+                "a dog from running away",
+                "always calmed her",
+                "food to choose from at the store",
+                "around seven in the morning"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dây xích giữ cho chó không chạy đi mất."
+            },
+            {
+              "id": "q20",
+              "content": "10. Her beloved sister _____",
+              "options": [
+                "before new medicines can be created",
+                "always calmed her",
+                "the team’s best player had to be replaced",
+                "a school for blind children"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Người em gái yêu dấu của cô ấy luôn khiến cô bình tĩnh lại."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 2 Part B: Match the clauses to make complete sentences.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q21",
+              "content": "1. To determine if the new drug was safe, _____",
+              "options": [
+                "scientists measured all the effects",
+                "but his prior works were very successful",
+                "because the pirate had buried it",
+                "so she applied makeup to her face"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Để xác định xem thuốc mới có an toàn không, các nhà khoa học đã đo lường mọi hiệu ứng."
+            },
+            {
+              "id": "q22",
+              "content": "2. His newest book did not sell well, _____",
+              "options": [
+                "so he became confused",
+                "but his prior works were very successful",
+                "so the diners complained to the waiter",
+                "but she became more serious as she matured"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Cuốn sách mới nhất của ông bán không chạy, nhưng các tác phẩm trước đó thì rất thành công."
+            },
+            {
+              "id": "q23",
+              "content": "3. He wanted to finish the race, _____",
+              "options": [
+                "so they drank the entire bowl of punch",
+                "but the pain in his ankle gave him too much misery",
+                "so she patiently awaited his letters",
+                "so she applied makeup to her face"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Anh muốn hoàn thành cuộc đua, nhưng cơn đau mắt cá chân mang lại quá nhiều đau khổ."
+            },
+            {
+              "id": "q24",
+              "content": "4. He lost his map, _____",
+              "options": [
+                "so he became confused",
+                "because the pirate had buried it",
+                "but his prior works were very successful",
+                "so the diners complained to the waiter"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Anh ấy mất bản đồ nên đã bị bối rối mất phương hướng."
+            },
+            {
+              "id": "q25",
+              "content": "5. The soup was cold, _____",
+              "options": [
+                "so she patiently awaited his letters",
+                "but the pain in his ankle gave him too much misery",
+                "so the diners complained to the waiter",
+                "so they drank the entire bowl of punch"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Súp bị nguội, vì thế các thực khách phàn nàn với người phục vụ."
+            },
+            {
+              "id": "q26",
+              "content": "6. Sue was very silly as a child, _____",
+              "options": [
+                "but she became more serious as she matured",
+                "because the pirate had buried it",
+                "scientists measured all the effects",
+                "so he became confused"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Sue hồi nhỏ rất ngốc nghếch, nhưng cô trở nên nghiêm túc hơn khi trưởng thành."
+            },
+            {
+              "id": "q27",
+              "content": "7. No one could find the treasure _____",
+              "options": [
+                "but his prior works were very successful",
+                "because the pirate had buried it",
+                "so the diners complained to the waiter",
+                "so she applied makeup to her face"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Không ai có thể tìm thấy kho báu vì tên cướp biển đã chôn nó."
+            },
+            {
+              "id": "q28",
+              "content": "8. He said he would write to her, _____",
+              "options": [
+                "but the pain in his ankle gave him too much misery",
+                "so she patiently awaited his letters",
+                "scientists measured all the effects",
+                "so they drank the entire bowl of punch"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Anh nói sẽ viết thư cho cô, vì thế cô kiên nhẫn chờ đợi thư của anh."
+            },
+            {
+              "id": "q29",
+              "content": "9. She wanted to look older, _____",
+              "options": [
+                "so she applied makeup to her face",
+                "so he became confused",
+                "but she became more serious as she matured",
+                "because the pirate had buried it"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cô ấy muốn trông lớn tuổi hơn, nên đã trang điểm lên mặt."
+            },
+            {
+              "id": "q30",
+              "content": "10. They were thirsty, _____",
+              "options": [
+                "so they drank the entire bowl of punch",
+                "scientists measured all the effects",
+                "but his prior works were very successful",
+                "so the diners complained to the waiter"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Họ đang khát nên đã uống toàn bộ bát nước uống (punch)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Laika, the Space Dog</h1><p style=\"margin-bottom: 1rem;\">One of the world's most <b>beloved</b> space travelers was also the furriest. Laika was a little dog living on the streets of Moscow, Russia. She <b>matured</b> on the streets because no one would give her a home. She had to learn how to live without eating much. She found ways to keep warm in a very cold <b>climate</b>. Scientists thought a tough dog like Laika would do well in a project they were putting together.</p><p style=\"margin-bottom: 1rem;\">In a <b>prior</b> launch, Russia had put the first man-made object into space. Now, scientists wanted to see if a living thing could go to space. <b>Although</b> many facts about space had been learned, they weren't enough to help send humans to space safely.</p><p style=\"margin-bottom: 1rem;\">Laika and two other dogs were chosen to help scientists with their <b>research</b>. The animals were used in a <b>variety</b> of tests. In the end, though, only Laika would go to space. On November 3, 1957 the Sputnik 2 spaceship was <b>due</b> to leave Earth.</p><p style=\"margin-bottom: 1rem;\">Scientists carefully <b>applied</b> wires to Laika's skin to <b>measure</b> her body's reactions once she got into space. Laika also wore a special <b>leash</b>. Without it, she would float around in the spaceship. Soon after, Laika left the planet. Scientists on Earth <b>awaited</b> information from the ship.</p><p style=\"margin-bottom: 1rem;\">But in the <b>midst</b> of so much excitement, something very sad happened. Scientists were able to tell that Laika was under a lot of stress. The trip <b>confused</b> and scared her. Laika's <b>entire</b> ship had become as hot as a <b>furnace</b>. Scientists were powerless to help the dog in her <b>misery</b>. After about five hours, Laika died.</p><p style=\"margin-bottom: 1rem;\">Some have <b>complained</b> that the little dog should never have been used in the mission. Scientists knew that she would not survive the trip. Laika was never <b>buried</b>, but a memorial has been <b>established</b> in Moscow. There are many songs and books about her, too. It seems that Laika became a hero to many people.</p></div>",
+      "imageUrl": "/unit15_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Reading Comprehension: Part A",
+          "content": "Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q31",
+              "content": "1. Scientists did a variety of tests for research before the Sputnik 2 was due to leave.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng (True). Câu chuyện nói: 'The animals were used in a variety of tests... Sputnik 2 spaceship was due to leave Earth.'"
+            },
+            {
+              "id": "q32",
+              "content": "2. Wires were applied to Laika’s leash so that scientists could find the ship.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai (False). Dây (wires) được gắn vào da của Laika (Laika's skin) để đo lường phản ứng của cơ thể cô ấy."
+            },
+            {
+              "id": "q33",
+              "content": "3. Although Laika could not be buried, a spaceship was established in her honor.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai (False). Một đài tưởng niệm (a memorial) được thành lập để vinh danh Laika, không phải một con tàu vũ trụ."
+            },
+            {
+              "id": "q34",
+              "content": "4. In the midst of the scientists’ excitement, Laika’s ship became too hot.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng (True). Câu chuyện viết: 'In the midst of so much excitement... Laika's entire ship had become as hot as a furnace.'"
+            },
+            {
+              "id": "q35",
+              "content": "5. In a prior launch, scientists sent two other dogs into space.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai (False). Trong lần phóng trước, Nga đã đưa vật thể nhân tạo (man-made object) đầu tiên vào không gian."
+            },
+            {
+              "id": "q36",
+              "content": "6. Many people complained that Laika should not have gone to space.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng (True). Một số người đã phàn nàn (complained) rằng không bao giờ nên dùng chú chó nhỏ cho sứ mệnh này."
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Reading Comprehension: Part B",
+          "content": "Answer the questions.",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q37",
+              "content": "1. Why did scientists choose Laika for the mission?",
+              "options": [
+                "She was tough.",
+                "She was a beloved space traveler.",
+                "The trip to space confused her.",
+                "She needed to wear a special leash."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Các nhà khoa học nghĩ rằng một chú chó kiên cường (tough) như Laika sẽ làm tốt trong dự án."
+            },
+            {
+              "id": "q38",
+              "content": "2. Why did Laika die during the trip?",
+              "options": [
+                "The ship became as hot as a furnace.",
+                "The scientists were under a lot of stress.",
+                "Living things cannot survive in space.",
+                "The scientists didn’t get information from her."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cô ấy chết vì con tàu trở nên nóng như lò sưởi (as hot as a furnace)."
+            },
+            {
+              "id": "q39",
+              "content": "3. Scientists made Laika wear a special leash because they ________.",
+              "options": [
+                "were awaiting information from the ship",
+                "were not able to bury her",
+                "didn’t want her to float around the ship",
+                "needed to adjust the climate"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Không có dây xích, cô ấy sẽ trôi nổi khắp con tàu (float around in the spaceship)."
+            },
+            {
+              "id": "q40",
+              "content": "4. Why did scientists apply wires to Laika’s skin?",
+              "options": [
+                "To measure her body’s reactions",
+                "To allow her to mature",
+                "To take her for the entire trip",
+                "To return her to Earth"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Các nhà khoa học gắn dây điện vào da Laika để đo lường các phản ứng của cơ thể cô ấy (measure her body's reactions)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

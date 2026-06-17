@@ -1,0 +1,385 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 4",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit4_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit4_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beak</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bi:k]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A beak is the hard curved part of a bird's mouth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The bird used her beak to dig a small hole in the ground.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">damp</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dæmp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is damp, it is somewhat wet.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"My hair is still damp from my shower.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disapprove</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disəprú:v]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To disapprove of something is to think that it is wrong.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"Alex disapproved of his son's behavior.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">except</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksépt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">You use except to talk about the only thing that a statement does not apply to.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"Everyone had fun on the trip except Jim, who felt ill the whole time.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A flight is an act of flying, often in an airplane.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The airplane made a flight around the world.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fond</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɑnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is fond of something, they like it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"I am very fond of chocolate cake.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">immoral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[imɔ(:)rəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something or someone is immoral, they are evil or do bad things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"Stealing money from one's mother is an immoral act.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ivy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[áivi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Ivy is a plant with long vines that grows upward typically on walls.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The walls of the castle are covered with ivy.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">moan</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[moun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To moan is to make a low sound when feeling pain or sadness.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The sick man moaned from his bed.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">oblivious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əblíviəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is oblivious of something, they are unaware of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"I was late to school because I was oblivious of the time.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">perish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[périʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To perish means to die, usually because of bad conditions or bad events.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"Many people perish in wars.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pit is a big hole in the ground.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"Michael fell into the pit and needed some help to get out.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rim</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The rim is the outside edge of a round thing, like a cup or bottle.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"I put my lips to the rim of the bottle and took a drink.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">roost</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ru:st]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A roost is a place where birds can land and rest or sleep.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The family of doves made a roost at the top of the tree.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">slippery</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[slípəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is slippery, it is wet or smooth and causes people to slip.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"The repairman fell down on the floor because it was too slippery.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">soar</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɔ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To soar means to fly high in the air.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"As the sun rose, two eagles soared through the sky.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trivial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tríviəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is trivial, it is not important or meaningful.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"Television is trivial, but learning to read is very important.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">typical</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[típikəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is typical, it is normal for a certain type of thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"Barking is typical behavior for dogs.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">utterly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌ́tərli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is utterly a way, it is completely that way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"When the sun was blocked by the moon, it was utterly dark outside.\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">weep</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wi:p]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To weep means to cry.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">\"My sister told me the dramatic movie would make me weep.\"</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. What does a sad movie cause people to do?",
+              "options": [
+                "To weep",
+                "To except",
+                "To perish",
+                "To disapprove"
+              ],
+              "correctAnswer": "A",
+              "explanation": "weep: khóc."
+            },
+            {
+              "id": "2",
+              "content": "2. Where would a bird build a home?",
+              "options": [
+                "On a rim",
+                "In a pit",
+                "On a roost",
+                "On a flight"
+              ],
+              "correctAnswer": "C",
+              "explanation": "roost: chỗ chim đậu."
+            },
+            {
+              "id": "3",
+              "content": "3. Which word best describes a wet towel?",
+              "options": [
+                "Immoral",
+                "Damp",
+                "Trivial",
+                "Fond"
+              ],
+              "correctAnswer": "B",
+              "explanation": "damp: ẩm ướt."
+            },
+            {
+              "id": "4",
+              "content": "4. What does it mean to fly?",
+              "options": [
+                "To soar",
+                "To moan",
+                "To be oblivious",
+                "To be typical"
+              ],
+              "correctAnswer": "A",
+              "explanation": "soar: bay lượn."
+            },
+            {
+              "id": "5",
+              "content": "5. Which word would best describe a smooth, wet stone?",
+              "options": [
+                "Ivy",
+                "Utterly",
+                "Slippery",
+                "Immoral"
+              ],
+              "correctAnswer": "C",
+              "explanation": "slippery: trơn trượt."
+            },
+            {
+              "id": "6",
+              "content": "6. Which word describes something that would have a rim?",
+              "options": [
+                "A thought",
+                "A cup",
+                "A person",
+                "A smell"
+              ],
+              "correctAnswer": "B",
+              "explanation": "rim: miệng ly, vành cốc."
+            },
+            {
+              "id": "7",
+              "content": "7. Which word describes something that has a beak?",
+              "options": [
+                "A bird",
+                "A boat",
+                "A car",
+                "A lion"
+              ],
+              "correctAnswer": "A",
+              "explanation": "beak: mỏ chim."
+            },
+            {
+              "id": "8",
+              "content": "8. What is typical about fish?",
+              "options": [
+                "They can swim.",
+                "One type can sing.",
+                "They can live on land.",
+                "Some can live for close to 50 years"
+              ],
+              "correctAnswer": "A",
+              "explanation": "typical: điển hình (cá thì bơi)."
+            },
+            {
+              "id": "9",
+              "content": "9. Which of these people would most likely be moaning?",
+              "options": [
+                "A doctor",
+                "A happy boy",
+                "A wife",
+                "A hurt woman"
+              ],
+              "correctAnswer": "D",
+              "explanation": "moan: rên rỉ (do đau đớn)."
+            },
+            {
+              "id": "10",
+              "content": "10. Which person has been proven to have committed an immoral act?",
+              "options": [
+                "A teacher",
+                "A criminal",
+                "A judge",
+                "A fireman"
+              ],
+              "correctAnswer": "B",
+              "explanation": "immoral: vô đạo đức (tội phạm)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. All of the people in the movie will ___________ if they remain ___________ of the monster.",
+              "options": [
+                "oblivious / perish",
+                "perish / oblivious"
+              ],
+              "correctAnswer": "B",
+              "explanation": "perish: chết; oblivious: không hay biết."
+            },
+            {
+              "id": "12",
+              "content": "2. When the owl wants to make a ___________, it is ___________ of using an empty barn.",
+              "options": [
+                "roost / fond",
+                "fond / roost"
+              ],
+              "correctAnswer": "A",
+              "explanation": "roost: chỗ đậu; fond of: thích."
+            },
+            {
+              "id": "13",
+              "content": "3. He grabbed the can by its ___________, then tossed it far down into the ___________.",
+              "options": [
+                "rim / pit",
+                "pit / rim"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rim: miệng lon; pit: cái hố."
+            },
+            {
+              "id": "14",
+              "content": "4. The eagle ___________ into the clouds when it goes on a long ___________.",
+              "options": [
+                "soars / flight",
+                "flight / soars"
+              ],
+              "correctAnswer": "A",
+              "explanation": "soar: bay lượn; flight: chuyến bay."
+            },
+            {
+              "id": "15",
+              "content": "5. Every time the sick woman would ___________ in pain, her daughter would ___________.",
+              "options": [
+                "moan / weep",
+                "weep / moan"
+              ],
+              "correctAnswer": "A",
+              "explanation": "moan: rên rỉ; weep: khóc."
+            },
+            {
+              "id": "16",
+              "content": "6. It is not ___________ for a policeman to do ___________ things like stealing.",
+              "options": [
+                "typical / immoral",
+                "immoral / typical"
+              ],
+              "correctAnswer": "A",
+              "explanation": "typical: điển hình; immoral: vô đạo đức."
+            },
+            {
+              "id": "17",
+              "content": "7. Every part of the bird was beautiful, ___________ for its short, ugly ___________.",
+              "options": [
+                "except / beak",
+                "beak / except"
+              ],
+              "correctAnswer": "A",
+              "explanation": "except for: ngoại trừ; beak: mỏ chim."
+            },
+            {
+              "id": "18",
+              "content": "8. Because his assistant is teaching them ___________ plays, the coach will ___________ of the time wasted.",
+              "options": [
+                "trivial / disapprove",
+                "disapprove / trivial"
+              ],
+              "correctAnswer": "A",
+              "explanation": "trivial: tầm thường; disapprove of: không tán thành."
+            },
+            {
+              "id": "19",
+              "content": "9. Because it ___________ covered the fence, the gardener had to remove all of the ___________.",
+              "options": [
+                "utterly / ivy",
+                "ivy / utterly"
+              ],
+              "correctAnswer": "A",
+              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân."
+            },
+            {
+              "id": "20",
+              "content": "10. The ground became dangerous and ___________ because everyone placed their ___________ towels there.",
+              "options": [
+                "slippery / damp",
+                "damp / slippery"
+              ],
+              "correctAnswer": "A",
+              "explanation": "slippery: trơn trượt; damp: ẩm ướt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Tricky Fox</h1><p style=\"margin-bottom: 1rem;\">There was a fox that lived in the forest. Fox loved to play mean tricks on the other animals. One day, he used the sharp <b>rim</b> of a bottle to dig a <b>pit</b> in the ground. He hid in a tree until Rabbit came to the pit's edge. Then, he jumped out and pushed Rabbit into the pit. Fox laughed and ran away. The angry Rabbit climbed out and told the other animals what happened.</p><p style=\"margin-bottom: 1rem;\">The others said, \"That is <b>typical</b> behavior for Fox. He does mean things all the time. Sometimes, he is completely <b>immoral</b>. We all <b>disapprove</b> of his actions, so we should teach him a lesson. Tomorrow, we'll push Fox into that pit.\"</p><p style=\"margin-bottom: 1rem;\">The next day, all of the animals hid near the pit and waited for Fox. Fox was <b>oblivious</b> to the hidden animals. He walked up to the pit to see if Rabbit was still trapped. Just then, the other animals ran up to Fox and pushed him in. All the animals laughed and cheered, <b>except</b> Fox, of course.</p><p style=\"margin-bottom: 1rem;\">Fox couldn't get out! The walls of the pit were covered in <b>damp</b> <b>ivy</b>. It was too <b>slippery</b> for him to climb out. He was <b>utterly</b> helpless. He <b>moaned</b> and began to <b>weep</b>.</p><p style=\"margin-bottom: 1rem;\">At last, he saw Eagle watching him from her <b>roost</b>. He yelled, \"Eagle, please help me! If I don't get out of here, I will <b>perish</b>!\"</p><p style=\"margin-bottom: 1rem;\">Eagle said, \"You may think your tricks are <b>trivial</b>, but you hurt others when you do mean things. I'll help you if you promise to be nice.\"</p><p style=\"margin-bottom: 1rem;\">Fox said, \"I promise!\"</p><p style=\"margin-bottom: 1rem;\">Eagle began her <b>flight</b> to the bottom of the pit. She picked up Fox with her <b>beak</b> and <b>soared</b> out of the pit. She dropped Fox safely on the ground.</p><p style=\"margin-bottom: 1rem;\">Fox thanked Eagle and kept his promise. He was nice to the other animals.</p></div>",
+      "imageUrl": "/unit4_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec3_reading",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. Fox used the rim of a bottle to dig a deep pit.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Trong bài: he used the sharp rim of a bottle to dig a pit in the ground."
+            },
+            {
+              "id": "22",
+              "content": "2. Fox had a roost near the pit.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Eagle had a roost near the pit, không phải Fox."
+            },
+            {
+              "id": "23",
+              "content": "3. The damp ivy was too slippery for Fox to climb out.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Trong bài: The walls of the pit were covered in damp ivy. It was too slippery for him to climb out."
+            },
+            {
+              "id": "24",
+              "content": "4. Immoral and mean behavior was typical with Fox.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Trong bài: That is typical behavior for Fox. He does mean things all the time. Sometimes, he is completely immoral."
+            },
+            {
+              "id": "25",
+              "content": "5. Fox was oblivious to the hidden pit.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Fox was oblivious to the hidden animals, không phải hố."
+            },
+            {
+              "id": "26",
+              "content": "6. Eagle flew into the pit to save Fox.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Trong bài: Eagle began her flight to the bottom of the pit. She picked up Fox... và đưa anh ta ra ngoài."
+            }
+          ]
+        },
+        {
+          "id": "sec4_reading",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "27",
+              "content": "1. How did Rabbit fall into the pit?",
+              "options": [
+                "Rabbit ran into the pit.",
+                "Fox pushed him into the pit.",
+                "Rabbit sat on the edge.",
+                "Fox laughed and ran away."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Trong bài: Then, he jumped out and pushed Rabbit into the pit."
+            },
+            {
+              "id": "28",
+              "content": "2. Why did Fox thank Eagle?",
+              "options": [
+                "She gave him money.",
+                "She became fond of Fox.",
+                "She did not let Fox perish.",
+                "She gave Fox some rope to climb out."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Fox sắp chết (perish), và Eagle đã cứu anh ta ra khỏi hố."
+            },
+            {
+              "id": "29",
+              "content": "3. Why did Fox moan and weep?",
+              "options": [
+                "The animals taught him a lesson.",
+                "He saw Eagle in her roost.",
+                "He felt trivial.",
+                "He felt utterly helpless."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Trong bài: He was utterly helpless. He moaned and began to weep."
+            },
+            {
+              "id": "30",
+              "content": "4. What happened after Eagle's flight to the bottom of the pit?",
+              "options": [
+                "She disapproved of Fox.",
+                "She got stuck in the pit.",
+                "She made Fox promise to leave the forest.",
+                "She picked up Fox with her beak."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Trong bài: She picked up Fox with her beak and soared out of the pit."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

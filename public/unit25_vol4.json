@@ -1,0 +1,461 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 25",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit25_vol4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit25_vol4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aircraft</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈer.kræft]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An aircraft is a vehicle that flies in the sky, such as an airplane or helicopter. (Máy bay, phi cơ)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ At the museum in the airport, you can see a lot of old aircraft.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">celebrity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səˈleb.rə.ti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A celebrity is someone who is famous. (Người nổi tiếng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ It was the highlight of the evening when the celebrities arrived.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">concrete</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑːn.kriːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Concrete is a substance made from stones. (Bê tông)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The man covered the ground with concrete.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">decisive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈsaɪ.sɪv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is decisive, they make decisions quickly. (Kiên quyết, quyết đoán)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Our boss is very decisive, so it did not take long to organize the project.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">esteemed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪˈstiːmd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is esteemed, many people like or respect them. (Được kính trọng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ An esteemed scientist is coming to the university to talk about her discoveries.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ethical</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈeθ.ɪ.kəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is ethical, it is the right thing to do. (Đạo đức, hợp đạo lý)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Many people believe that it is ethical to help others in need.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">extinct</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪkˈstɪŋkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If plants or animals are extinct, there are none left. (Tuyệt chủng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ There used to be dinosaurs all over the world, but now they are extinct.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hardy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhɑːr.di]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a person or plant is hardy, it is strong and can live though difficult conditions. (Chịu đựng gian khổ, cứng cáp)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The farmer is a hardy man and doesn't mind working outside.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">institute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪn.stə.tuːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An institute is an organization that is interested in research or teaching. (Viện, học viện)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ I am going to a lecture about ancient Rome at the Historical Institute.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">jealousy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdʒel.ə.si]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Jealousy is a feeling of wanting something that somebody else has. (Sự ghen tị)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ She felt a lot of jealousy when she saw Luke with two girls.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">migrate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmaɪ.ɡreɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To migrate means to move from one place to another. (Di cư)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Many birds migrate to warmer countries in the winter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nurture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈnɜːr.tʃɚ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To nurture something means to care for it as it grows or develops. (Nuôi dưỡng)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Robert nurtured his plants, and that is why they grow so well.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overhead</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌoʊ.vɚˈhed]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is overhead, it is located above you. (Trên đầu)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ As we sat on top of the hill, a plane flew overhead.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">principle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈprɪn.sə.pəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A principle is a belief about the correct way to behave. (Nguyên tắc)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ To maintain principles, it's vital to watch, listen, and speak carefully.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rural</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈrʊr.əl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a place is rural, it is in the countryside instead of the city. (Nông thôn)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ I want to live in a small house in a rural area.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">secluded</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səˈkluː.dɪd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a place is secluded, it is far away from any other place. (Hẻo lánh, vắng vẻ)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ There was a secluded bench in the park.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">species</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈspiː.ʃiːz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A species is a type of plant or animal. (Loài)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ There are 21 different species of butterfly in this forest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">swamp</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[swɑːmp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A swamp is a very wet area of land. (Đầm lầy)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ There are lots of wild animals living in the swamp.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">traverse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trəˈvɜːrs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To traverse means to move or travel through an area. (Đi ngang qua, vượt qua)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ The explorer traversed the desert alone on a camel.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">zoology</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[zoʊˈɑː.lə.dʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Zoology is a subject in which people study animals. (Động vật học)</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">➔ Helen wants to study zoology because she has always liked animals.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "1. being the right thing to do",
+              "options": [
+                "a. jealousy",
+                "b. migrate",
+                "c. ethical",
+                "d. secluded"
+              ],
+              "correctAnswer": "C",
+              "explanation": "ethical có nghĩa là đạo đức, hợp đạo lý (being the right thing to do)."
+            },
+            {
+              "id": "q2",
+              "content": "2. a wet area of land",
+              "options": [
+                "a. swamp",
+                "b. institute",
+                "c. celebrity",
+                "d. species"
+              ],
+              "correctAnswer": "A",
+              "explanation": "swamp có nghĩa là đầm lầy (a wet area of land)."
+            },
+            {
+              "id": "q3",
+              "content": "3. able to make decisions quickly",
+              "options": [
+                "a. hardy",
+                "b. rural",
+                "c. extinct",
+                "d. decisive"
+              ],
+              "correctAnswer": "D",
+              "explanation": "decisive có nghĩa là kiên quyết, quyết đoán (able to make decisions quickly)."
+            },
+            {
+              "id": "q4",
+              "content": "4. respected by many people",
+              "options": [
+                "a. nurture",
+                "b. traverse",
+                "c. esteemed",
+                "d. overhead"
+              ],
+              "correctAnswer": "C",
+              "explanation": "esteemed có nghĩa là được kính trọng (respected by many people)."
+            },
+            {
+              "id": "q5",
+              "content": "5. a rule of behavior",
+              "options": [
+                "a. zoology",
+                "b. aircraft",
+                "c. concrete",
+                "d. principle"
+              ],
+              "correctAnswer": "D",
+              "explanation": "principle có nghĩa là nguyên tắc (a rule of behavior)."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q6",
+              "content": "1. nurture",
+              "options": [
+                "a. to travel",
+                "b. respected",
+                "c. to care for",
+                "d. to die"
+              ],
+              "correctAnswer": "C",
+              "explanation": "nurture có nghĩa là nuôi dưỡng (to care for)."
+            },
+            {
+              "id": "q7",
+              "content": "2. secluded",
+              "options": [
+                "a. respected",
+                "b. correct",
+                "c. alone",
+                "d. to make decisions"
+              ],
+              "correctAnswer": "C",
+              "explanation": "secluded có nghĩa là hẻo lánh, vắng vẻ (alone)."
+            },
+            {
+              "id": "q8",
+              "content": "3. species",
+              "options": [
+                "a. stones",
+                "b. an animal",
+                "c. wet land",
+                "d. a place to study"
+              ],
+              "correctAnswer": "B",
+              "explanation": "species có nghĩa là loài thực vật/động vật (an animal)."
+            },
+            {
+              "id": "q9",
+              "content": "4. jealousy",
+              "options": [
+                "a. knowing right and wrong",
+                "b. the act of wanting another person's things",
+                "c. famous",
+                "d. studying animals"
+              ],
+              "correctAnswer": "B",
+              "explanation": "jealousy có nghĩa là sự ghen tị (the act of wanting another person's things)."
+            },
+            {
+              "id": "q10",
+              "content": "5. overhead",
+              "options": [
+                "a. moving",
+                "b. above",
+                "c. able to fly",
+                "d. able to cope"
+              ],
+              "correctAnswer": "B",
+              "explanation": "overhead có nghĩa là ở trên đầu (above)."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 2: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q11",
+              "content": "1. How come we cannot see dinosaurs today?",
+              "options": [
+                "a. They are celebrities.",
+                "b. They are extinct.",
+                "c. It isn't ethical.",
+                "d. They have all traversed the desert."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Vì chúng đã tuyệt chủng (extinct)."
+            },
+            {
+              "id": "q12",
+              "content": "2. What should I do if I want to learn about animals?",
+              "options": [
+                "a. Go to a swamp",
+                "b. Study zoology",
+                "c. Nurture babies",
+                "d. Be decisive"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Học về động vật học (zoology)."
+            },
+            {
+              "id": "q13",
+              "content": "3. Which of these does NOT describe the countryside?",
+              "options": [
+                "a. It is very rural.",
+                "b. There are not a lot of buildings.",
+                "c. Birds often fly overhead.",
+                "d. There is a lot of concrete."
+              ],
+              "correctAnswer": "D",
+              "explanation": "Ở vùng quê thường không có nhiều bê tông (concrete)."
+            },
+            {
+              "id": "q14",
+              "content": "4. If you want to camp in the mountains, you need to ________.",
+              "options": [
+                "a. have principles",
+                "b. be hardy",
+                "c. feel jealousy",
+                "d. travel in an aircraft"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Để cắm trại trên núi cần phải cứng cáp, chịu được gian khổ (hardy)."
+            },
+            {
+              "id": "q15",
+              "content": "5. Birds ________ to warmer parts of the country during the winter.",
+              "options": [
+                "a. esteem",
+                "b. institute",
+                "c. species",
+                "d. migrate"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Chim di cư (migrate) đến những nơi ấm áp hơn vào mùa đông."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Exercise 3: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q16",
+              "content": "1. You need to be ________ if you want to ________ the mountains.",
+              "options": [
+                "A. hardy / traverse",
+                "B. traverse / hardy"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi."
+            },
+            {
+              "id": "q17",
+              "content": "2. A(n) ________ is going to give a talk at the ________ of Drama.",
+              "options": [
+                "A. institute / celebrity",
+                "B. celebrity / institute"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute)."
+            },
+            {
+              "id": "q18",
+              "content": "3. Many people ________ by ship or ________.",
+              "options": [
+                "A. aircraft / migrate",
+                "B. migrate / aircraft"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft)."
+            },
+            {
+              "id": "q19",
+              "content": "4. She felt a lot of ________ because her sister was highly ________.",
+              "options": [
+                "A. esteemed / jealousy",
+                "B. jealousy / esteemed"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed)."
+            },
+            {
+              "id": "q20",
+              "content": "5. They found the remains of ________ animals in the ________.",
+              "options": [
+                "A. swamp / extinct",
+                "B. extinct / swamp"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp)."
+            },
+            {
+              "id": "q21",
+              "content": "6. You can see many different bird ________ in this ________ location.",
+              "options": [
+                "A. secluded / species",
+                "B. species / secluded"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded)."
+            },
+            {
+              "id": "q22",
+              "content": "7. He made a quick, ________ choice, but he was worried if it was the ________ thing to fire him over the holidays.",
+              "options": [
+                "A. ethical / decisive",
+                "B. decisive / ethical"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical)."
+            },
+            {
+              "id": "q23",
+              "content": "8. He chose to study ________ because he has always liked to ________ animals.",
+              "options": [
+                "A. zoology / nurture",
+                "B. nurture / zoology"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật."
+            },
+            {
+              "id": "q24",
+              "content": "9. I like to be in ________ areas where there are no planes flying ________.",
+              "options": [
+                "A. overhead / rural",
+                "B. rural / overhead"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead)."
+            },
+            {
+              "id": "q25",
+              "content": "10. I don't like the ________ of covering the garden in ________.",
+              "options": [
+                "A. concrete / principle",
+                "B. principle / concrete"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Không thích nguyên tắc (principle) phủ kín sân bằng bê tông (concrete)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Gilbert and the Lizard</h1><p style=\"margin-bottom: 1rem;\">Eliza disliked Australia. Firstly, she'd had to spend twenty uncomfortable hours on an <b>aircraft</b> getting here. She wanted to go to the beach, but her husband was a <b>zoology</b> professor and wanted to look for some interesting animals. So now she was <b>traversing</b> a <b>swamp</b> in the midday heat.</p><p style=\"margin-bottom: 1rem;\">\"Let me sit down, Gilbert. I'm not <b>hardy</b> like you,\" she said, eventually.</p><p style=\"margin-bottom: 1rem;\">They sat under a tree. There were lots of birds in that <b>secluded</b>, <b>rural</b> place, and they watched them flying <b>overhead</b>.</p><p style=\"margin-bottom: 1rem;\">Then suddenly Gilbert saw something on a rock.</p><p style=\"margin-bottom: 1rem;\">\"That's strange,\" said Gilbert. \"That looks like a Red Swamp Lizard, but I thought that <b>species</b> was <b>extinct</b>.\" He carefully picked it up. \"Yes, it is! I'm going to take it back to the Zoology <b>Institute</b>. They will be filled with so much <b>jealousy</b> when they see what I have found!\"</p><p style=\"margin-bottom: 1rem;\">\"Are you sure we should take it from its home?\" asked Eliza.</p><p style=\"margin-bottom: 1rem;\">\"Nonsense, many animals <b>migrate</b>. They're used to changes,\" said Gilbert.</p><p style=\"margin-bottom: 1rem;\">\"Hmm, I don't agree with the <b>principle</b> of it,\" said Eliza. \"It isn't <b>ethical</b>.\" But Gilbert was <b>decisive</b> and took the lizard back to the hotel in the city. He thought that this find would make him a highly <b>esteemed</b> <b>celebrity</b> at the Zoology Institute.</p><p style=\"margin-bottom: 1rem;\">For the next few days, Gilbert fed and <b>nurtured</b> the lizard. But the lizard wasn't happy. It lost its beautiful red color and began to look ordinary. In fact, Gilbert started to wonder whether it was special at all. He went outside and found a common lizard on a piece of <b>concrete</b>. When he compared them, they looked exactly alike. The lizard was only red in the swamp!</p><p style=\"margin-bottom: 1rem;\">Gilbert said to Eliza, \"I'm going to return this lizard to the swamp. I've learned an important lesson. Home is where we are happiest. At home, we are special like the red lizard. We can never be so happy when we are away.\"</p><p style=\"margin-bottom: 1rem;\">\"Good,\" said Eliza. \"So, can we go home now?\"</p></div>",
+      "imageUrl": "/unit25_vol4_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q26",
+              "content": "1. The journey on the aircraft to Australia took a short time.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Câu nói này sai vì mất đến 20 giờ để đến Úc."
+            },
+            {
+              "id": "q27",
+              "content": "2. Eliza was a professor of zoology.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Gilbert mới là giáo sư động vật học, không phải Eliza."
+            },
+            {
+              "id": "q28",
+              "content": "3. Eliza was hardier than Gilbert.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Eliza nói rằng 'I'm not hardy like you' (Em không chịu đựng giỏi như anh)."
+            },
+            {
+              "id": "q29",
+              "content": "4. The swamp was in a rural, secluded area.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng, họ nghỉ ngơi dưới gốc cây tại nơi vắng vẻ, ở nông thôn."
+            },
+            {
+              "id": "q30",
+              "content": "5. Gilbert thought that the red lizard was an extinct species.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Anh ấy cho rằng đó là loài Red Swamp Lizard đã tuyệt chủng."
+            },
+            {
+              "id": "q31",
+              "content": "6. Gilbert nurtured the red lizard at the hotel.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng, Gilbert đã nuôi dưỡng và chăm sóc chú thằn lằn tại khách sạn."
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q32",
+              "content": "1. What did Gilbert and Eliza see flying overhead?",
+              "options": [
+                "a. An aircraft",
+                "b. Birds",
+                "c. An extinct species",
+                "d. Butterflies"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Họ nhìn thấy chim bay lượn trên đầu (watched them flying overhead)."
+            },
+            {
+              "id": "q33",
+              "content": "2. How was Gilbert described after he found the lizard?",
+              "options": [
+                "a. Full of jealousy",
+                "b. Highly esteemed",
+                "c. Decisive",
+                "d. Full of principles"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Gilbert rất quyết đoán (decisive) khi mang con thằn lằn về khách sạn."
+            },
+            {
+              "id": "q34",
+              "content": "3. What did Gilbert think that the find would make him feel like?",
+              "options": [
+                "a. A celebrity",
+                "b. Decisive",
+                "c. Ethical",
+                "d. Hardy"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Anh ấy nghĩ mình sẽ trở thành một người nổi tiếng (celebrity)."
+            },
+            {
+              "id": "q35",
+              "content": "4. Where did Gilbert want to take the red lizard?",
+              "options": [
+                "a. To the Zoology Institute",
+                "b. To the university",
+                "c. To a different swamp",
+                "d. To his home"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Gilbert muốn mang nó về Viện Động vật học (Zoology Institute)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
