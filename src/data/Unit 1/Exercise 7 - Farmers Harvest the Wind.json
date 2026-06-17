@@ -12,7 +12,7 @@
             "id": "1",
             "title": "Questions 1-6",
             "content": "<p>From the list of headings choose the most suitable headings for paragraphs B-G. Write the appropriate numbers (i-ix) in boxes 1-6 on your answer sheet. Paragraph A has been done as an example.</p><p><b>NB</b> There are more headings than paragraphs so you will not use all of them. You may use any heading more than once.</p><div style=\"padding: 10px; border: 1px solid black;\"><b>List of Headings</b><br>(i) Declining costs of wind power<br>(ii) State governments are taking action<br>(iii) Farm income increased<br>(iv) Large wind resource in US<br>(v) A new cash crop<br>(vi) A boost to rural economy<br>(vii) Land value raised<br>(viii) Extra income<br>(ix) Wide use of wind power</div>",
-            "questionType": "Droplist",
+            "questionType": "Kéo thả",
             "questions": [
               {
                 "id": "1",
@@ -29,7 +29,7 @@
                   "ix"
                 ],
                 "correctAnswer": "iii",
-                "explanation": ""
+                "explanation": "Đoạn B nhắc đến việc tua-bin gió giúp người nông dân kiếm thêm tiền và mang lại sự gia tăng đáng kể cho thu nhập từ nông trại (\"boost to farm income\"). Điều này khớp với heading (iii) - Farm income increased."
               },
               {
                 "id": "2",
@@ -46,7 +46,7 @@
                   "ix"
                 ],
                 "correctAnswer": "i",
-                "explanation": ""
+                "explanation": "Đoạn C tập trung vào việc chi phí điện từ sức gió giảm mạnh (\"cost per kilowatt-hour of wind-generated electricity has fallen from 38¢ to 3¢ - 6¢\" và \"These falling costs\"). Do đó, heading (i) - Declining costs of wind power là đáp án đúng."
               },
               {
                 "id": "3",
@@ -63,7 +63,7 @@
                   "ix"
                 ],
                 "correctAnswer": "iv",
-                "explanation": ""
+                "explanation": "Đoạn D nêu bật tiềm năng năng lượng gió to lớn ở Mỹ, ví dụ chỉ cần 3 bang đã có đủ năng lượng gió để đáp ứng nhu cầu điện cho cả nước (\"have enough harnessable wind energy to meet the electricity needs for the whole country\"). Điều này phù hợp với heading (iv) - Large wind resource in US."
               },
               {
                 "id": "4",
@@ -80,7 +80,7 @@
                   "ix"
                 ],
                 "correctAnswer": "viii",
-                "explanation": ""
+                "explanation": "Đoạn E nói về việc thu nhập từ năng lượng gió có thể vượt thu nhập từ việc bán gia súc (\"income from wind could easily exceed that from cattle sales\") mà không ảnh hưởng đến việc chăn thả, đóng vai trò như một nguồn thu nhập thêm đáng kể. Khớp với heading (viii) - Extra income."
               },
               {
                 "id": "5",
@@ -97,7 +97,7 @@
                   "ix"
                 ],
                 "correctAnswer": "vi",
-                "explanation": ""
+                "explanation": "Đoạn F đề cập đến việc phần lớn thu nhập được giữ lại trong cộng đồng và năng lượng gió có thể hồi sinh các cộng đồng nông thôn (\"revitalize rural communities\"). Điều này khớp với việc thúc đẩy nền kinh tế nông thôn ở heading (vi) - A boost to rural economy."
               },
               {
                 "id": "6",
@@ -114,7 +114,7 @@
                   "ix"
                 ],
                 "correctAnswer": "ii",
-                "explanation": ""
+                "explanation": "Đoạn G mở đầu bằng câu \"Many state governments are taking the initiative\" (Nhiều chính quyền bang đang chủ động hành động) và đưa ra ví dụ về các bang Minnesota, Texas, Colorado. Điều này thể hiện chính xác nội dung của heading (ii) - State governments are taking action."
               }
             ]
           }

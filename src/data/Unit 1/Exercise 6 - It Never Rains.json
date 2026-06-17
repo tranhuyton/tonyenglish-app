@@ -12,7 +12,7 @@
             "id": "1",
             "title": "Questions 1-10",
             "content": "<p>Choose the correct heading for Paragraphs B-K from the list of headings below.</p><div style=\"padding: 10px; border: 1px solid black;\"><b>List of Headings</b><br>(i) Commercial companies have cashed in<br>(ii) A business coveted by commercial companies<br>(iii) A new regulation enforced by European weathermen<br>(iv) A profitable market<br>(v) Complaints made by private companies<br>(vi) Commercial companies enjoyed unfair advantages<br>(vii) Value brought by accurate forecasts<br>(viii) How scientists get accurate forecasts<br>(ix) The situation will be changed soon<br>(x) Improved weather forecasts<br>(xi) The history of weather forecasting<br>(xii) How people avoid complying with the rule<br>(xiii) Damages caused by the hurricane<br>(xiv) Little profit made from a profitable market</div><p><i>Example: Paragraph A - Answer: iv</i></p>",
-            "questionType": "Droplist",
+            "questionType": "Kéo thả",
             "questions": [
               {
                 "id": "1",
@@ -34,7 +34,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "x",
-                "explanation": ""
+                "explanation": "Đoạn B nói về sự cải thiện độ chính xác của các dự báo thời tiết qua thời gian (\"Weather forecasts have become much more accurate over the past 20 years\"), tương ứng với \"Improved weather forecasts\" (Dự báo thời tiết được cải thiện)."
               },
               {
                 "id": "2",
@@ -56,7 +56,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "vii",
-                "explanation": ""
+                "explanation": "Đoạn C đề cập đến việc dự báo càng chính xác thì giá trị mang lại càng lớn (\"The more accurate the forecasts, the more they are worth\") kèm theo các ví dụ về lợi ích, khớp với \"Value brought by accurate forecasts\"."
               },
               {
                 "id": "3",
@@ -78,7 +78,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "ii",
-                "explanation": ""
+                "explanation": "Đoạn D nói về việc các công ty thương mại ngày càng muốn nhảy vào lĩnh vực kinh doanh dự báo thời tiết khi nó có giá trị hơn (\"the more commercial companies want to get into the business\"), khớp với \"A business coveted by commercial companies\"."
               },
               {
                 "id": "4",
@@ -100,7 +100,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "xiv",
-                "explanation": ""
+                "explanation": "Đoạn E nêu rằng thị trường dự báo thời tiết rất có giá trị, nhưng các cơ quan nhà nước chỉ thu về lợi nhuận khá nhỏ so với ngân sách của họ (\"brings in only £24m of its £155m budget\"), khớp với \"Little profit made from a profitable market\"."
               },
               {
                 "id": "5",
@@ -122,7 +122,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "i",
-                "explanation": ""
+                "explanation": "Đoạn F giải thích rằng các công ty thương mại đã kiếm lời và chiếm được thị phần đáng kể trong ngành công nghiệp thời tiết (\"commercial companies have been taking an increasing slice... captured 20% of the market\"), tương ứng với \"Commercial companies have cashed in\"."
               },
               {
                 "id": "6",
@@ -144,7 +144,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "vi",
-                "explanation": ""
+                "explanation": "Đoạn G đề cập trực tiếp đến việc các dịch vụ thời tiết của nhà nước than phiền rằng các công ty thương mại có lợi thế không công bằng (\"commercial companies have unfair advantages\") khi họ lấy được dữ liệu miễn phí từ Mỹ."
               },
               {
                 "id": "7",
@@ -166,7 +166,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "iii",
-                "explanation": ""
+                "explanation": "Đoạn H nói về việc các nhà khí tượng học châu Âu đã thúc đẩy áp dụng một quy định mới - Regulation 40 (\"European weathermen... made the WMO adopt a new rule - Regulation 40\"), đúng với \"A new regulation enforced by European weathermen\"."
               },
               {
                 "id": "8",
@@ -188,7 +188,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "xii",
-                "explanation": ""
+                "explanation": "Đoạn I nói về cách mọi người tìm cách lách quy định 40 bằng cách sử dụng Internet (\"everybody sets about circumventing Regulation 40... the main way around the rules is to use the Internet\"), khớp với \"How people avoid complying with the rule\"."
               },
               {
                 "id": "9",
@@ -210,7 +210,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "v",
-                "explanation": ""
+                "explanation": "Đoạn J đề cập đến việc các công ty tư nhân phàn nàn (\"Private companies have also complained...\") về các dịch vụ thời tiết của chính phủ, tương ứng với \"Complaints made by private companies\"."
               },
               {
                 "id": "10",
@@ -232,7 +232,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "ix",
-                "explanation": ""
+                "explanation": "Đoạn K kết luận rằng số tiền lớn liên quan (the amounts at stake) có thể sẽ sớm thay đổi tình hình này (\"may soon change this\"), phù hợp với \"The situation will be changed soon\"."
               }
             ]
           }

@@ -11,104 +11,104 @@
           {
             "id": "1",
             "title": "Questions 1-6",
-            "content": "<p><i>Match the following headings with appropriate paragraphs. Note there are more headings than paragraphs. The first has been done as an example.</i></p><p><b>A.</b> British chemists' achievement (example)<br><b>B.</b> The creation of six-membered rings<br><b>C.</b> Products produced by Diels-Alder reactions<br><b>D.</b> The large receptor molecule designed by British chemists<br><b>E.</b> The drawback of the receptor<br><b>F.</b> The Diels-Alder reaction<br><b>G.</b> Fast reactions due to the receptor<br><b>H.</b> Further efforts to be made on the receptor</p><p><b>Example:</b> Paragraph 1 <b>Answer:</b> A</p>",
-            "questionType": "Droplist",
+            "content": "<p><b>Example:</b> Paragraph 1 <b>Answer:</b> A</p>",
+            "questionType": "Kéo thả",
             "questions": [
               {
                 "id": "1",
                 "content": "Paragraph 2",
                 "options": [
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "E",
-                  "F",
-                  "G",
-                  "H"
+                  "British chemists' achievement (example)",
+                  "The creation of six-membered rings",
+                  "Products produced by Diels-Alder reactions",
+                  "The large receptor molecule designed by British chemists",
+                  "The drawback of the receptor",
+                  "The Diels-Alder reaction",
+                  "Fast reactions due to the receptor",
+                  "Further efforts to be made on the receptor"
                 ],
-                "correctAnswer": "D",
-                "explanation": ""
+                "correctAnswer": "The large receptor molecule designed by British chemists",
+                "explanation": "Đoạn 2 mô tả chi tiết về một phân tử thụ thể vòng lớn (\"large cyclic receptor molecule\") được thiết kế bởi các nhà hóa học Anh. Điều này khớp với heading D."
               },
               {
                 "id": "2",
                 "content": "Paragraph 3",
                 "options": [
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "E",
-                  "F",
-                  "G",
-                  "H"
+                  "British chemists' achievement (example)",
+                  "The creation of six-membered rings",
+                  "Products produced by Diels-Alder reactions",
+                  "The large receptor molecule designed by British chemists",
+                  "The drawback of the receptor",
+                  "The Diels-Alder reaction",
+                  "Fast reactions due to the receptor",
+                  "Further efforts to be made on the receptor"
                 ],
-                "correctAnswer": "F",
-                "explanation": ""
+                "correctAnswer": "The Diels-Alder reaction",
+                "explanation": "Đoạn 3 giải thích chi tiết về phản ứng Diels-Alder (\"Diels-Alder reaction\"), bao gồm các chất tham gia và quá trình hình thành liên kết mới. Điều này khớp với heading F."
               },
               {
                 "id": "3",
                 "content": "Paragraph 4",
                 "options": [
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "E",
-                  "F",
-                  "G",
-                  "H"
+                  "British chemists' achievement (example)",
+                  "The creation of six-membered rings",
+                  "Products produced by Diels-Alder reactions",
+                  "The large receptor molecule designed by British chemists",
+                  "The drawback of the receptor",
+                  "The Diels-Alder reaction",
+                  "Fast reactions due to the receptor",
+                  "Further efforts to be made on the receptor"
                 ],
-                "correctAnswer": "G",
-                "explanation": ""
+                "correctAnswer": "Fast reactions due to the receptor",
+                "explanation": "Đoạn 4 đề cập đến việc receptor giúp các phản ứng chậm có thể diễn ra nhanh chóng (\"allowing a fast reaction\"). Điều này khớp với heading G."
               },
               {
                 "id": "4",
                 "content": "Paragraph 5",
                 "options": [
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "E",
-                  "F",
-                  "G",
-                  "H"
+                  "British chemists' achievement (example)",
+                  "The creation of six-membered rings",
+                  "Products produced by Diels-Alder reactions",
+                  "The large receptor molecule designed by British chemists",
+                  "The drawback of the receptor",
+                  "The Diels-Alder reaction",
+                  "Fast reactions due to the receptor",
+                  "Further efforts to be made on the receptor"
                 ],
-                "correctAnswer": "C",
-                "explanation": ""
+                "correctAnswer": "Products produced by Diels-Alder reactions",
+                "explanation": "Đoạn 5 thảo luận về các sản phẩm (\"products\") được tạo ra từ các phản ứng Diels-Alder. Điều này khớp với heading C."
               },
               {
                 "id": "5",
                 "content": "Paragraph 6",
                 "options": [
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "E",
-                  "F",
-                  "G",
-                  "H"
+                  "British chemists' achievement (example)",
+                  "The creation of six-membered rings",
+                  "Products produced by Diels-Alder reactions",
+                  "The large receptor molecule designed by British chemists",
+                  "The drawback of the receptor",
+                  "The Diels-Alder reaction",
+                  "Fast reactions due to the receptor",
+                  "Further efforts to be made on the receptor"
                 ],
-                "correctAnswer": "H",
-                "explanation": ""
+                "correctAnswer": "Further efforts to be made on the receptor",
+                "explanation": "Đoạn 6 nói về hy vọng và nỗ lực trong tương lai để tiếp tục cải tiến receptor (\"modify the receptor\") nhằm tổng hợp các hợp chất mới. Điều này khớp với heading H."
               },
               {
                 "id": "6",
                 "content": "Paragraph 7",
                 "options": [
-                  "A",
-                  "B",
-                  "C",
-                  "D",
-                  "E",
-                  "F",
-                  "G",
-                  "H"
+                  "British chemists' achievement (example)",
+                  "The creation of six-membered rings",
+                  "Products produced by Diels-Alder reactions",
+                  "The large receptor molecule designed by British chemists",
+                  "The drawback of the receptor",
+                  "The Diels-Alder reaction",
+                  "Fast reactions due to the receptor",
+                  "Further efforts to be made on the receptor"
                 ],
-                "correctAnswer": "E",
-                "explanation": ""
+                "correctAnswer": "The drawback of the receptor",
+                "explanation": "Đoạn 7 chỉ ra một nhược điểm quan trọng của receptor (\"differs from an enzyme... in one important respect\") là cần số lượng lớn để tăng tốc độ phản ứng. Điều này khớp với heading E."
               }
             ]
           },
@@ -123,21 +123,21 @@
                 "content": "How fast can the receptor molecule make reactions proceed?",
                 "options": [],
                 "correctAnswer": "Almost 60,000 times as fast as usual.",
-                "explanation": ""
+                "explanation": "Đoạn 2 có câu \"...which makes one such reaction proceed almost 60,000 times as fast as usual.\", trả lời trực tiếp cho câu hỏi về tốc độ phản ứng."
               },
               {
                 "id": "8",
                 "content": "What is the mainstay of chemical synthesis?",
                 "options": [],
                 "correctAnswer": "Diels-Alder reaction.",
-                "explanation": ""
+                "explanation": "Đoạn 3 có câu \"...the so-called Diels-Alder reaction, a mainstay of chemical synthesis.\", chỉ ra phản ứng này là trụ cột của tổng hợp hóa học."
               },
               {
                 "id": "9",
                 "content": "What is crucial to making many pharmaceuticals and agrochemicals?",
                 "options": [],
                 "correctAnswer": "The creation of six-membered rings.",
-                "explanation": ""
+                "explanation": "Đoạn 3 nêu rõ: \"The creation of such six-membered rings is the crucial first step in making many pharmaceuticals and agrochemical.\""
               }
             ]
           }

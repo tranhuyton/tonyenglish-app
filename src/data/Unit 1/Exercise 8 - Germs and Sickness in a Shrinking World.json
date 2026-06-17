@@ -12,7 +12,7 @@
             "id": "1",
             "title": "Questions 1-7",
             "content": "<p>The reading passage has ten paragraphs A-J. From the list of headings below choose the most suitable headings for paragraphs B-H. Write the appropriate numbers (i-x) in boxes 1-7 on your answer sheet.</p>\n<div style=\"padding: 10px; border: 1px solid black;\">\n<p><b>List of Headings</b></p>\n<p>(i) A reversed process</p>\n<p>(ii) Extinctions due to infectious diseases</p>\n<p>(iii) Biologists' big concern — the health of birds</p>\n<p>(iv) Reduced habitat</p>\n<p>(v) Unknown causes</p>\n<p>(vi) Threat to biodiversity and human health</p>\n<p>(vii) The major cause of new wildlife diseases</p>\n<p>(viii) The humans' fault</p>\n<p>(ix) Infectious diseases on the rise</p>\n<p>(x) West Nile Fever.</p>\n</div>\n<p><i>Example: Paragraph A - Answer: iii</i></p>",
-            "questionType": "Droplist",
+            "questionType": "Kéo thả",
             "questions": [
               {
                 "id": "1",
@@ -30,7 +30,7 @@
                   "x"
                 ],
                 "correctAnswer": "ix",
-                "explanation": ""
+                "explanation": "Đoạn B có câu \"biologists say such infections are increasing\" (các nhà sinh vật học cho rằng những bệnh nhiễm trùng như vậy đang gia tăng), khớp với tiêu đề (ix) \"Infectious diseases on the rise\" (Các bệnh truyền nhiễm đang gia tăng)."
               },
               {
                 "id": "2",
@@ -48,7 +48,7 @@
                   "x"
                 ],
                 "correctAnswer": "vi",
-                "explanation": ""
+                "explanation": "Đoạn C có câu \"He believes such diseases pose a significant... threat to global biodiversity. And the spread of some wildlife infections also endangers human health\", nói rõ rằng bệnh tật đe dọa cả sự đa dạng sinh học và sức khỏe con người, khớp với tiêu đề (vi)."
               },
               {
                 "id": "3",
@@ -66,7 +66,7 @@
                   "x"
                 ],
                 "correctAnswer": "viii",
-                "explanation": ""
+                "explanation": "Đoạn D tập trung vào việc con người tạo ra những sự kết hợp mầm bệnh - vật chủ không bao giờ có trong tự nhiên (\"But humans cook up host-pathogen combinations...\"), ám chỉ đó là lỗi của con người, khớp với tiêu đề (viii)."
               },
               {
                 "id": "4",
@@ -84,7 +84,7 @@
                   "x"
                 ],
                 "correctAnswer": "vii",
-                "explanation": ""
+                "explanation": "Đoạn E mở đầu bằng câu khẳng định \"spillover of pathogens from domestic livestock and pets may be the leading cause of emerging wildlife diseases\" (sự lây lan mầm bệnh từ vật nuôi có thể là nguyên nhân hàng đầu gây ra các bệnh động vật hoang dã mới), hoàn toàn khớp với ý của tiêu đề (vii)."
               },
               {
                 "id": "5",
@@ -102,7 +102,7 @@
                   "x"
                 ],
                 "correctAnswer": "i",
-                "explanation": ""
+                "explanation": "Đoạn F bắt đầu bằng câu \"Sometimes, this process reverses itself...\" (Đôi khi, quá trình này đảo ngược lại...), trực tiếp nhắc đến khái niệm \"quá trình bị đảo ngược\" trong tiêu đề (i)."
               },
               {
                 "id": "6",
@@ -120,7 +120,7 @@
                   "x"
                 ],
                 "correctAnswer": "iv",
-                "explanation": ""
+                "explanation": "Đoạn G đề cập đến việc \"Destroying habitat\" (phá hủy môi trường sống) và \"Shrinking habitat\" (môi trường sống bị thu hẹp) làm bùng phát dịch bệnh, khớp với tiêu đề (iv) \"Reduced habitat\" (Môi trường sống bị thu hẹp)."
               },
               {
                 "id": "7",
@@ -138,7 +138,7 @@
                   "x"
                 ],
                 "correctAnswer": "v",
-                "explanation": ""
+                "explanation": "Đoạn H mở đầu với câu \"Occasionally, the culprit behind an emerging wildlife illness is a mystery\" (Đôi khi, thủ phạm đằng sau một căn bệnh mới là một bí ẩn), tương đương với ý \"nguyên nhân chưa rõ\" của tiêu đề (v) \"Unknown causes\"."
               }
             ]
           }

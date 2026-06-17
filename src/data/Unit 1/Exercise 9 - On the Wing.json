@@ -12,7 +12,7 @@
             "id": "1",
             "title": "Questions 1-11",
             "content": "<p><em>The following reading passage has twelve paragraphs A-L. Choose the most suitable headings for paragraphs B-L from the list of headings below. Write the appropriate numbers (i-xiv) in the spaces provided.</em></p>\n<p><em><strong>NB</strong> There are more headings than paragraphs so you will not use all of them. You may use any of the headings more than once.</em></p>\n<div style=\"padding: 10px; border: 1px solid black;\">\n<p><strong>List of Headings</strong></p>\n<p>(i) What else is needed to fly<br>\n(ii) Hang gliders' German origin<br>\n(iii) Unpowered flying — a flight fancy?<br>\n(iv) World competitions of hang glider flying<br>\n(v) The function of battens<br>\n(vi) Safer than balloons and airplanes<br>\n(vii) Training of hang glider fliers<br>\n(viii) The British test<br>\n(ix) Flying a hang glider<br>\n(x) What to do in case of emergency<br>\n(xi) Hang gliders can fly hundreds of miles<br>\n(xii) Development of hang gliders in America<br>\n(xiii) Testing systems to ensure safety<br>\n(xiv) The structure of hang gliders</p>\n</div>\n<p><em>Example: Paragraph A  Answer: iii</em></p>",
-            "questionType": "Droplist",
+            "questionType": "Kéo thả",
             "questions": [
               {
                 "id": "1",
@@ -34,7 +34,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "vi",
-                "explanation": ""
+                "explanation": "Đoạn B đưa ra tỷ lệ tử vong để chứng minh rằng bay diều lượn an toàn hơn bay khinh khí cầu và lái máy bay (22 so với 67 và 97). Do đó tiêu đề phù hợp là \"Safer than balloons and airplanes\"."
               },
               {
                 "id": "2",
@@ -56,7 +56,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "xiv",
-                "explanation": ""
+                "explanation": "Đoạn C mô tả chi tiết về cấu trúc của diều lượn, bao gồm khung ống nhôm (aluminium tubing), dây thừng (rigging wires) và thiết kế. Tiêu đề \"The structure of hang gliders\" là chính xác."
               },
               {
                 "id": "3",
@@ -78,7 +78,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "ii",
-                "explanation": ""
+                "explanation": "Đoạn D đề cập đến nguồn gốc của diều lượn bắt nguồn từ một người tiên phong người Đức, Otto Lilienthal vào những năm 1890. Tiêu đề \"Hang gliders' German origin\" phù hợp."
               },
               {
                 "id": "4",
@@ -100,7 +100,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "xii",
-                "explanation": ""
+                "explanation": "Đoạn E nói về sự phát triển lại của diều lượn tại Mỹ, nhờ vào công trình của Francis Rogallo trong nỗ lực không gian của Mỹ và sự ra đời của các chuyến bay dọc bờ biển California. Vì vậy, tiêu đề \"Development of hang gliders in America\" là phù hợp nhất."
               },
               {
                 "id": "5",
@@ -122,7 +122,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "xi",
-                "explanation": ""
+                "explanation": "Đoạn F nhắc đến việc phi công hiện nay có thể bay những khoảng cách rất xa, và kỷ lục thế giới là 303 dặm (488 km). Do đó tiêu đề \"Hang gliders can fly hundreds of miles\" là đúng."
               },
               {
                 "id": "6",
@@ -144,7 +144,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "ix",
-                "explanation": ""
+                "explanation": "Đoạn G mô tả các thao tác thực tế khi bay diều lượn: từ việc bay trên không (flying), cất cánh (launching) đến hạ cánh (landing). Vì vậy, tiêu đề \"Flying a hang glider\" là bao quát nội dung đoạn."
               },
               {
                 "id": "7",
@@ -166,7 +166,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "i",
-                "explanation": ""
+                "explanation": "Đoạn H liệt kê các phụ kiện và thiết bị cần thiết khác để bay như mũ bảo hiểm, găng tay, dù cứu hộ và đồng hồ đo tốc độ lên xuống. Tiêu đề \"What else is needed to fly\" là hoàn toàn phù hợp."
               },
               {
                 "id": "8",
@@ -188,7 +188,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "xiii",
-                "explanation": ""
+                "explanation": "Đoạn I nói về các hệ thống kiểm tra nghiêm ngặt mà diều lượn phải vượt qua để được chứng nhận đủ điều kiện bay, nhằm đảm bảo an toàn. Tiêu đề \"Testing systems to ensure safety\" là chính xác."
               },
               {
                 "id": "9",
@@ -210,7 +210,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "viii",
-                "explanation": ""
+                "explanation": "Đoạn J mô tả chi tiết phương pháp kiểm tra diều lượn tại Anh (Britain) do tổ chức BHGPA thực hiện. Tiêu đề \"The British test\" là đúng."
               },
               {
                 "id": "10",
@@ -232,7 +232,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "vii",
-                "explanation": ""
+                "explanation": "Đoạn K tập trung vào công tác huấn luyện và đào tạo (training and coaching) cho những người mới bắt đầu và các học viên khác. Tiêu đề \"Training of hang glider fliers\" khớp với nội dung này."
               },
               {
                 "id": "11",
@@ -254,7 +254,7 @@
                   "xiv"
                 ],
                 "correctAnswer": "iv",
-                "explanation": ""
+                "explanation": "Đoạn L nhắc đến các giải vô địch thế giới về diều lượn (World Championships) tại Brazil (1991) và California (1993). Do đó, tiêu đề \"World competitions of hang glider flying\" là phù hợp."
               }
             ]
           },
@@ -273,7 +273,7 @@
                   "NOT GIVEN"
                 ],
                 "correctAnswer": "YES",
-                "explanation": ""
+                "explanation": "Trong đoạn E có thông tin: \"He was employed in America's space effort... to design a steerable parachute for space-capsule reentry\" (Ông được thuê để thiết kế dù có thể điều khiển được phục vụ cho sự trở lại khí quyển của tàu vũ trụ). Việc đưa tàu trở lại chính là \"retrieval of spacecraft\". Do đó đáp án là YES."
               },
               {
                 "id": "13",
@@ -284,7 +284,7 @@
                   "NOT GIVEN"
                 ],
                 "correctAnswer": "NOT GIVEN",
-                "explanation": ""
+                "explanation": "Đoạn G có nhắc đến \"Landing is harder\" (Hạ cánh khó hơn) ngay sau câu nói về cất cánh (\"Launching the machine demands...\"). Tuy nhiên, bài viết không so sánh trực tiếp độ khó giữa việc hạ cánh và việc điều khiển trên không (controlling it while flying). Vì vậy đáp án là NOT GIVEN."
               },
               {
                 "id": "14",
@@ -295,7 +295,7 @@
                   "NOT GIVEN"
                 ],
                 "correctAnswer": "NO",
-                "explanation": ""
+                "explanation": "Theo đoạn F, kỷ lục khoảng cách thế giới được Larry Tudor thiết lập khi bay từ New Mexico đến Kansas, chứ không phải tại Giải vô địch thế giới năm 1991 ở Brazil (được nhắc đến ở đoạn L). Do đó, nhận định này là sai (NO)."
               }
             ]
           }
