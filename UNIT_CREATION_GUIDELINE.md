@@ -94,14 +94,19 @@ HTML của bài đọc phải đảm bảo **3 YẾU TỐ**:
 1. **KHÔNG** đặt thẻ `<img src...>` vào bên trong chuỗi HTML. Ảnh minh hoạ phải được truyền qua trường `imageUrl` của object `parts[1]`.
 2. **In đậm** (`<b>`) tất cả 20 từ vựng mục tiêu khi chúng xuất hiện trong bài đọc.
 3. Các đoạn văn (`<p>`) bắt buộc phải dùng CHÍNH XÁC thông số `style="margin-bottom: 1rem;"`. TUYỆT ĐỐI KHÔNG chèn thêm `font-size`, `line-height`, `color` hay bất kỳ CSS nào khác để tránh làm hỏng font chữ chuẩn của hệ thống. Đồng thời KHÔNG dùng `text-transform: uppercase` ở thẻ `<h1>`.
-4. Thẻ `<div>` bọc ngoài cùng phải có CHÍNH XÁC `style="font-family: Arial, sans-serif; "`.
+3. Thẻ `<div>` bọc ngoài cùng phải có CHÍNH XÁC `style="font-family: Arial, sans-serif; "`.
 
 **🚨 CẢNH BÁO HTML 🚨:** Giống như Tab 1, toàn bộ HTML của Tab 2 phải được minified thành **MỘT DÒNG DUY NHẤT**. Tuyệt đối không chứa ký tự xuống dòng (`\n`).
 
 ```html
 <!-- Dán đoạn HTML này vào parts[1].content -->
-<div style="font-family: Arial, sans-serif; ">    <h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Tên Câu Chuyện</h1>        <p style="margin-bottom: 1rem;">Đoạn văn đầu tiên chứa từ vựng được <b>in đậm</b>.</p>    <p style="margin-bottom: 1rem;">Đoạn văn thứ hai tiếp tục <b>in đậm</b> từ vựng học được trong unit.</p></div>
+<div style="font-family: Arial, sans-serif; "><h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Tên Câu Chuyện</h1><p style="margin-bottom: 1.25rem; line-height: 1.6; color: #374151; font-size: 1.125rem;">Đoạn văn đầu tiên chứa từ vựng được <b>in đậm</b>.</p><p style="margin-bottom: 1.25rem; line-height: 1.6; color: #374151; font-size: 1.125rem;">Đoạn văn thứ hai tiếp tục <b>in đậm</b> từ vựng học được trong unit.</p></div>
 ```
+
+**Quy định nghiêm ngặt cho HTML Bài đọc:**
+1. Thẻ `<h1>` giữ NGUYÊN các thuộc tính CSS như trên.
+2. Các đoạn văn (`<p>`) bắt buộc phải dùng CHÍNH XÁC thông số `style="margin-bottom: 1.25rem; line-height: 1.6; color: #374151; font-size: 1.125rem;"`.
+3. Toàn bộ chuỗi HTML phải **minified (viết trên cùng 1 dòng)** khi đưa vào code JSON.
 
 Object JSON của Tab 2 sẽ như sau (LƯU Ý phải có `imageUrl`):
 ```json
