@@ -194,18 +194,7 @@ export default function StandardTest({
   const isListening = true;
   const globalAudio = basicInfo.audioUrl || parts[0]?.audioUrl;
 
-  const hasAnyContent = useMemo(() => {
-    let flag = false;
-    parts.forEach((p: any) => {
-      if (isRealContent(p.content)) flag = true;
-      p.sections?.forEach((s: any) => {
-        if (isRealContent(s.content) && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(s.questionType) && !(s.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(s.content || '')))) flag = true;
-      });
-    });
-    return flag;
-  }, [parts]);
 
-  const showLeftPane = isReviewMode && hasAnyContent;
 
   const hasAnyAudio = useMemo(() => {
     let flag = !!globalAudio;
@@ -233,6 +222,19 @@ export default function StandardTest({
   const initIsReview = !!safeData?.isReview;
   const [testStarted, setTestStarted] = useState(initIsReview);
   const [isReviewMode, setIsReviewMode] = useState(initIsReview);
+
+  const hasAnyContent = useMemo(() => {
+    let flag = false;
+    parts.forEach((p: any) => {
+      if (isRealContent(p.content)) flag = true;
+      p.sections?.forEach((s: any) => {
+        if (isRealContent(s.content) && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(s.questionType) && !(s.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(s.content || '')))) flag = true;
+      });
+    });
+    return flag;
+  }, [parts]);
+
+  const showLeftPane = isReviewMode && hasAnyContent;
   const [scoreResult, setScoreResult] = useState({ 
       score: parseInt(safeData?.past_score || 0), 
       total: parseInt(safeData?.past_total || 0) 
