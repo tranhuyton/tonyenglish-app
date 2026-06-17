@@ -1,0 +1,561 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 9",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit9_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit9_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">archaic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[a:rkeiik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is archaic, it is very old or outdated.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ To be competitive, we must update our archaic equipment.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">benevolent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bənevələnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is benevolent, they are kind and generous.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My father was a benevolent man and gave lots of money to charity.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">brass</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bræs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Brass is a metal that is used to make musical instruments and ornaments.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Brass is used to make musical instruments like trumpets.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">capitalism</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kæpitəlizəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Capitalism is an economic system where private companies make goods for profit.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Most industries in the world today are based on capitalism.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">component</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmpounənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A component is a part of a larger machine.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Computers have many different components, so they are complicated to build.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dependence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dipendəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Dependence is a situation in which somebody relies on something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Young children have a dependence on their parents.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diminish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dəminiʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To diminish means to reduce or get smaller.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ As the economy got worse, my savings diminished.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">drawback</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[drɔ:bæk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A drawback is a disadvantage.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The drawback of having a car is that it is very expensive to maintain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fad</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fæd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fad is something that is popular for a short time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hula hoop was a fad for a few years, but it soon lost its popularity.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impouz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To impose means to interrupt or force your ideas on other people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He imposes on his wife every morning by expecting her to make breakfast.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">managerial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mænədʒiəriəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Managerial describes something related to a manager or management.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Nancy has a managerial position at the bank.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">medieval</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mi:dii:vəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is medieval, it comes from the period between 650 and 1500 CE.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We visited a castle that was built during medieval times.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">obsolete</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[absəli:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is obsolete, it is not used anymore because something better exists.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since computers became inexpensive, typewriters have become obsolete.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">peninsula</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pəninsələ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A peninsula is a large piece of land that is surrounded by the sea on three sides.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The state of Florida is an example of a peninsula.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prestige</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[presti:ʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a person has prestige, people admire or respect them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The young actress gained much prestige after she won an award.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">proportion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəpɔ:rʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A proportion is an amount that shows the link between the parts and the whole.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Only a small proportion of the people in this town actually work here.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">radical</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rædikəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is radical, it is very new or different.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The president is planning to make some radical changes to the law.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">refute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rifju:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To refute something means to prove that it is false or incorrect.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bank manager has refuted the claims that he lied to his customers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spectacular</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spektækjələr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is spectacular, it looks or sounds very impressive.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a spectacular fireworks display in the park at New Year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">weave</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wi:v]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To weave means to make cloth using horizontal and vertical threads.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We saw a woman weave a blanket on our vacation to South America.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. What is something that is archaic?",
+              "options": [
+                "A computer",
+                "An Egyptian pyramid",
+                "Some bread",
+                "Space ships"
+              ],
+              "correctAnswer": "B",
+              "explanation": "archaic nghĩa là cổ xưa/lỗi thời; Kim tự tháp Ai Cập (Egyptian pyramid) là một thứ cổ xưa."
+            },
+            {
+              "id": "2",
+              "content": "2. Which of these things is often made of brass?",
+              "options": [
+                "A saxophone",
+                "A coat",
+                "A chair",
+                "A doll"
+              ],
+              "correctAnswer": "A",
+              "explanation": "brass là đồng thau, thường dùng làm nhạc cụ như kèn saxophone."
+            },
+            {
+              "id": "3",
+              "content": "3. Which of these is a component in a radio?",
+              "options": [
+                "Music",
+                "Wires",
+                "A television",
+                "Diamonds"
+              ],
+              "correctAnswer": "B",
+              "explanation": "component là thành phần/linh kiện; dây điện (wires) là một linh kiện của radio."
+            },
+            {
+              "id": "4",
+              "content": "4. Which of these things could be seen during the medieval ages?",
+              "options": [
+                "Telephones",
+                "Skateboards",
+                "Castles",
+                "Soda"
+              ],
+              "correctAnswer": "C",
+              "explanation": "medieval (thời trung cổ) thì có lâu đài (castles)."
+            },
+            {
+              "id": "5",
+              "content": "5. If you are on a small peninsula, you will be quite near to ______",
+              "options": [
+                "the mountains",
+                "a forest",
+                "the sea",
+                "the moon"
+              ],
+              "correctAnswer": "C",
+              "explanation": "peninsula (bán đảo) là dải đất nhô ra biển, nên bạn sẽ ở gần biển (the sea)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Choose the one that is OPPOSITE in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. weave",
+              "options": [
+                "to sew",
+                "to create",
+                "to pull apart",
+                "to move"
+              ],
+              "correctAnswer": "C",
+              "explanation": "weave là dệt/kết lại, trái nghĩa với to pull apart (kéo rời ra/tháo ra)."
+            },
+            {
+              "id": "7",
+              "content": "2. managerial",
+              "options": [
+                "entry-level",
+                "legislative",
+                "ruling",
+                "supervisory"
+              ],
+              "correctAnswer": "A",
+              "explanation": "managerial là thuộc về quản lý (cấp cao), trái nghĩa với entry-level (cấp thấp/mới vào làm)."
+            },
+            {
+              "id": "8",
+              "content": "3. prestige",
+              "options": [
+                "fame",
+                "honor",
+                "sin",
+                "lowliness"
+              ],
+              "correctAnswer": "D",
+              "explanation": "prestige là uy tín/thanh thế, trái nghĩa với lowliness (sự thấp kém/hèn mọn)."
+            },
+            {
+              "id": "9",
+              "content": "4. drawback",
+              "options": [
+                "artist",
+                "benefit",
+                "disadvantage",
+                "boost"
+              ],
+              "correctAnswer": "B",
+              "explanation": "drawback là khuyết điểm/bất lợi, trái nghĩa với benefit (lợi ích). (Lưu ý: sách in đáp án là C - disadvantage nhưng đó là từ đồng nghĩa, từ trái nghĩa đúng là B)."
+            },
+            {
+              "id": "10",
+              "content": "5. obsolete",
+              "options": [
+                "old",
+                "innovative",
+                "stale",
+                "bright"
+              ],
+              "correctAnswer": "B",
+              "explanation": "obsolete là lỗi thời, trái nghĩa với innovative (tân tiến/đổi mới)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the one that is SIMILAR in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. benevolent",
+              "options": [
+                "crazy",
+                "kind",
+                "angry",
+                "dark"
+              ],
+              "correctAnswer": "B",
+              "explanation": "benevolent (nhân từ/tốt bụng) đồng nghĩa với kind."
+            },
+            {
+              "id": "12",
+              "content": "2. diminish",
+              "options": [
+                "buy",
+                "decide",
+                "ignore",
+                "decrease"
+              ],
+              "correctAnswer": "D",
+              "explanation": "diminish (giảm bớt) đồng nghĩa với decrease."
+            },
+            {
+              "id": "13",
+              "content": "3. radical",
+              "options": [
+                "new",
+                "closure",
+                "picture",
+                "disadvantage"
+              ],
+              "correctAnswer": "A",
+              "explanation": "radical (mang tính căn bản, hoàn toàn mới lạ) đồng nghĩa với new."
+            },
+            {
+              "id": "14",
+              "content": "4. spectacular",
+              "options": [
+                "unusual",
+                "sad",
+                "amazing",
+                "sudden"
+              ],
+              "correctAnswer": "C",
+              "explanation": "spectacular (ngoạn mục/đẹp mắt) đồng nghĩa với amazing."
+            },
+            {
+              "id": "15",
+              "content": "5. fad",
+              "options": [
+                "trend",
+                "annoyance",
+                "equipment",
+                "sale"
+              ],
+              "correctAnswer": "A",
+              "explanation": "fad (mốt nhất thời) đồng nghĩa với trend (xu hướng)."
+            }
+          ]
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. Knights in armor and their squires were common sites in medieval times.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "medieval (thời trung cổ) phù hợp với kỵ sĩ và áo giáp (Knights in armor)."
+            },
+            {
+              "id": "17",
+              "content": "2. Our new boss hasn't made any changes to the company. He has very radical ideas.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "radical (căn bản/đổi mới hoàn toàn), nhưng vế trước lại nói 'hasn't made any changes' là mâu thuẫn."
+            },
+            {
+              "id": "18",
+              "content": "3. I don't want to impose on my father to help me with my homework. He's very busy.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "impose on someone (áp đặt/làm phiền ai đó), câu này dùng chính xác."
+            },
+            {
+              "id": "19",
+              "content": "4. He refuted me because I didn't wash the plates after dinner.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "refute (bác bỏ/chứng minh là sai), không hợp nghĩa với việc 'vì tôi không rửa bát'."
+            },
+            {
+              "id": "20",
+              "content": "5. In capitalism, people can own just about any product or object they want.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "capitalism (chủ nghĩa tư bản), người dân có thể sở hữu sản phẩm họ muốn là đúng ý nghĩa."
+            }
+          ]
+        },
+        {
+          "id": "sec5_wordlist",
+          "title": "Exercise 5: Choose the word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. Our hotel was situated on a piece of land that was surrounded by the sea on three sides.",
+              "options": [
+                "peninsula",
+                "drawbacks",
+                "components",
+                "fad"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Một dải đất có 3 mặt giáp biển gọi là bán đảo (peninsula)."
+            },
+            {
+              "id": "22",
+              "content": "2. Doctors say the exercise can reduce the chances of getting ill.",
+              "options": [
+                "diminish",
+                "impose",
+                "refuted",
+                "weave"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Làm giảm đi (reduce) tương đương với diminish."
+            },
+            {
+              "id": "23",
+              "content": "3. Children's reliance on their parents decreases as they get older.",
+              "options": [
+                "dependence",
+                "proportion",
+                "fad",
+                "capitalism"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Sự phụ thuộc (reliance) tương đương với dependence."
+            },
+            {
+              "id": "24",
+              "content": "4. There are a number of disadvantages to taking up this new technology.",
+              "options": [
+                "drawbacks",
+                "components",
+                "prestige",
+                "brass"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nhược điểm (disadvantages) tương đương với drawbacks."
+            },
+            {
+              "id": "25",
+              "content": "5. A large amount of students from my school want to go to university.",
+              "options": [
+                "fad",
+                "proportion",
+                "prestige",
+                "medieval"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Một lượng lớn (amount/tỷ lệ) học sinh tương đương với proportion."
+            },
+            {
+              "id": "26",
+              "content": "6. I need to buy some new parts for my computer to make it work properly.",
+              "options": [
+                "drawbacks",
+                "components",
+                "brass",
+                "capitalism"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Các bộ phận (parts) tương đương với components."
+            },
+            {
+              "id": "27",
+              "content": "7. I'm sorry to interrupt and intrude on you, but I need some help with my car.",
+              "options": [
+                "refute",
+                "weave",
+                "impose",
+                "diminish"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Cắt ngang và làm phiền (interrupt and intrude) tương đương với impose."
+            },
+            {
+              "id": "28",
+              "content": "8. The newspaper editor disproved the claim that the stories in the paper were untrue.",
+              "options": [
+                "refuted",
+                "diminished",
+                "weaved",
+                "imposed"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bác bỏ/chứng minh là sai (disproved) tương đương với refuted."
+            },
+            {
+              "id": "29",
+              "content": "9. The show at the theater was very impressive.",
+              "options": [
+                "spectacular",
+                "archaic",
+                "obsolete",
+                "managerial"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Rất ấn tượng (very impressive) tương đương với spectacular."
+            },
+            {
+              "id": "30",
+              "content": "10. The kind and generous women gave lots of money to help the poor.",
+              "options": [
+                "benevolent",
+                "hostile",
+                "medieval",
+                "radical"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Tốt bụng và hào phóng (kind and generous) tương đương với benevolent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Weaving Machine</h1><p style=\"margin-bottom: 1rem;\">Mr. Joseph Franklin invented a machine that could <b>weave</b> cloth. It wove faster and straighter than anyone could weave by hand. He decided to take it to two cities on a <b>peninsula</b>, Netherton and Wilton. In these cities, a large <b>proportion</b> of the people worked in weaving. Joseph felt sure he could sell his machine there.</p><p style=\"margin-bottom: 1rem;\">Joseph first took his machine to the mayor of Netherton. \"Think of the money you will earn from this machine!\" Joseph said to him.</p><p style=\"margin-bottom: 1rem;\">But the mayor was a <b>benevolent</b> man. He knew about the people's <b>dependence</b> on weaving for their livelihood. If he bought the machine, the people would lose their jobs. So he refused to buy it.</p><p style=\"margin-bottom: 1rem;\">Joseph said, \"We are no longer in the <b>medieval</b> age! Soon everything will be made by machines. Cloth made by hand will soon be <b>obsolete</b>. If you don't change your <b>archaic</b> ways, your town's income will <b>diminish</b>!\"</p><p style=\"margin-bottom: 1rem;\">But the mayor said, \"I don't like <b>capitalism</b>. Don't <b>impose</b> your <b>radical</b> ideas on my town. Go away!\"</p><p style=\"margin-bottom: 1rem;\">So Joseph took his machine to the mayor at Wilton. This mayor thought Joseph's machine was <b>spectacular</b> and spent a long time looking at its different <b>components</b> made of <b>brass</b>. The mayor couldn't <b>refute</b> the fact that the machine had <b>drawbacks</b> that would affect the people's jobs. But he realized the machine could bring money and <b>prestige</b>. So he ordered Joseph to build twenty of them.</p><p style=\"margin-bottom: 1rem;\">Within a year, Wilton was a wealthy city, famous for its wonderful cloth. People no longer wove but worked in <b>managerial</b> jobs at cloth factories instead. Nobody bought the cloth from Netherton anymore. The people of Netherton became poor and hungry.</p><p style=\"margin-bottom: 1rem;\">Finally, the mayor of Netherton called Joseph and said, \"Now I realize that your machine is not just a passing <b>fad</b>. To succeed in business, we must be willing to change.\" He then ordered twenty weaving machines.</p><p style=\"margin-bottom: 1rem;\">After that, both Netherton and Wilton became rich cities, famous throughout the land for their wonderful cloth.</p></div>",
+      "imageUrl": "/unit9_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec6_reading_tf",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "31",
+              "content": "1. The mayor of Netherton wanted Joseph to impose his radical fad on the town.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Ông thị trưởng Netherton nói: 'Don't impose your radical ideas on my town. Go away!'"
+            },
+            {
+              "id": "32",
+              "content": "2. Joseph thought the mayor of Netherton's ideas were medieval and archaic.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Joseph nói: 'We are no longer in the medieval age!... If you don't change your archaic ways...'"
+            },
+            {
+              "id": "33",
+              "content": "3. The mayor of Wilton refuted the fact that the machine had drawbacks.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bài viết: 'The mayor couldn't refute the fact that the machine had drawbacks...'"
+            },
+            {
+              "id": "34",
+              "content": "4. In Wilton, the people who used to weave got managerial positions at the factories.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bài viết: 'People no longer wove but worked in managerial jobs at cloth factories instead.'"
+            },
+            {
+              "id": "35",
+              "content": "5. In the end, capitalism brought prestige to both cities.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng, cuối bài: 'both Netherton and Wilton became rich cities, famous throughout the land...'"
+            }
+          ]
+        },
+        {
+          "id": "sec7_reading_qa",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. What job did a large proportion of the people on the peninsula do?",
+              "options": [
+                "They worked in farming.",
+                "They worked in weaving.",
+                "They worked in managerial jobs.",
+                "They made brass."
+              ],
+              "correctAnswer": "B",
+              "explanation": "In these cities, a large proportion of the people worked in weaving."
+            },
+            {
+              "id": "37",
+              "content": "2. According to Joseph, what will soon be obsolete?",
+              "options": [
+                "Capitalism",
+                "Brass components",
+                "Cloth made by hand",
+                "Machines"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Joseph said: 'Cloth made by hand will soon be obsolete.'"
+            },
+            {
+              "id": "38",
+              "content": "3. What did the benevolent mayor of Netherton realize about the people's dependence on weaving?",
+              "options": [
+                "If he bought the machine, the people would lose their jobs.",
+                "They needed more thread.",
+                "Weaving is too hard.",
+                "They wanted to be managers."
+              ],
+              "correctAnswer": "A",
+              "explanation": "He knew about the people's dependence on weaving... If he bought the machine, the people would lose their jobs."
+            },
+            {
+              "id": "39",
+              "content": "4. What did the mayor of Wilton realize about the spectacular machine with components made of brass?",
+              "options": [
+                "It was too expensive.",
+                "It would break easily.",
+                "He realized the machine could bring money and prestige.",
+                "It was archaic."
+              ],
+              "correctAnswer": "C",
+              "explanation": "But he realized the machine could bring money and prestige."
+            },
+            {
+              "id": "40",
+              "content": "5. Why did income diminish in Netherton after machines were introduced in Wilton?",
+              "options": [
+                "Because they ran out of thread.",
+                "Nobody bought the cloth from Netherton anymore.",
+                "They were tired.",
+                "A storm destroyed the city."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Nobody bought the cloth from Netherton anymore. The people of Netherton became poor and hungry."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

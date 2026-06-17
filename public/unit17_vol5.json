@@ -1,0 +1,633 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 17",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit17_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit17_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">attorney</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈtɜːrni]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An attorney is one who gives others advice about the law.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The attorney appeared in front of the judge for me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chronic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkrɑːnɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is chronic, it happens over and over again over time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He had chronic pain in his chest and needed to see a doctor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">discipline</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdɪsəplɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Discipline is training that helps people follow the rules.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ One of the teacher’s jobs is to teach her students discipline.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">donor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdoʊnər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A donor is somebody who gives something to an organization.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was proud to be a blood donor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fellow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfeloʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fellow is someone who shares a job or quality with someone else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All of my fellow patients at the hospital have also complained about the food.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gossip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɡɑːsɪp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Gossip is information that might be untrue but is still discussed anyway.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The friends exchanged gossip about the people they knew in school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">graduate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɡrædʒueɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To graduate from a school means to complete and pass all courses of study there.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At the end of the spring, my friends and I will graduate from high school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">graffiti</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɡrəˈfiːti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Graffiti is words or drawings in public places.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wall was covered with colorful graffiti.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">guardian</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɡɑːrdiən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A guardian is someone who protects somebody or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The librarians are the guardians of the books.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">implicate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪmplɪkeɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To implicate someone is to show that they have done a crime or something bad.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man was implicated in the theft at the store.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">kin</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Kin is a person’s family and relatives.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His kin were all farmers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">referee</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌrefəˈriː]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A referee is a person who makes sure that the rules are followed in sports.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The soccer player didn’t agree with the referee.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sever</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsevər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sever something is to cut through it completely.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He severed the string using scissors.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shaft</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃæft]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shaft is a handle of a tool or weapon.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The golf club had a long wooden shaft that he held in his hands.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stab</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stæb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To stab means to cut someone or something with a sharp object like a knife.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He stabbed the fork into the potato and passed it to his daughter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stimulus</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈstɪmjələs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A stimulus is something that causes growth or activity.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Having a lot of money is a stimulus for people to buy more things.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">suspicion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səˈspɪʃn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A suspicion is a feeling that something is possible or true in a crime.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The police had a suspicion that the driver had stolen the purse.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">terminate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtɜːrmɪneɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To terminate something means to stop or end it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The trip was terminated after the car broke down.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">theme</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θiːm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A theme is the main subject of a book, movie, or painting.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students discussed the book’s theme in class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tuition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tuˈɪʃn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Tuition is the amount of money paid to go to a school.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ University tuitions have increased by fifty percent in the last five years.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. Which is a place that you would graduate from?",
+              "options": [
+                "An island",
+                "A school",
+                "A house",
+                "A party"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"graduate from\" (tốt nghiệp từ) thường kết hợp với trường học (school)."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. Which of the following has a shaft?",
+              "options": [
+                "A calendar",
+                "A keyboard",
+                "A basketball",
+                "A pool stick"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"shaft\" (trục, tay cầm) là bộ phận của gậy bi-a (pool stick)."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. What is one responsibility of a referee?",
+              "options": [
+                "To make sure a game is fair",
+                "To stop crime",
+                "To guard athletes",
+                "To be a good parent"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"referee\" (trọng tài) có trách nhiệm đảm bảo trận đấu công bằng."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. Why might somebody hire an attorney?",
+              "options": [
+                "To watch security tapes",
+                "To pay for their bills",
+                "To prove they didn't do a crime",
+                "To help them decorate their home"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"attorney\" (luật sư) được thuê để chứng minh sự trong sạch (prove they didn't do a crime)."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. How would you describe chronic pain?",
+              "options": [
+                "It hurts a lot.",
+                "It hurts all the time.",
+                "It hurts in the morning.",
+                "It hurts only when it is cold."
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"chronic\" (mãn tính, kéo dài) nghĩa là đau liên tục trong thời gian dài."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. kin",
+              "options": [
+                "relatives",
+                "boxes",
+                "friends",
+                "principals"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"kin\" (người thân) tương đương với relatives."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. chronic",
+              "options": [
+                "useless",
+                "unskilled",
+                "constant",
+                "again"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"chronic\" (mãn tính, liên tục) tương đương với constant."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. attorney",
+              "options": [
+                "police officer",
+                "lawyer",
+                "teacher",
+                "instructor"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"attorney\" (luật sư) tương đương với lawyer."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. gossip",
+              "options": [
+                "plans",
+                "an untrue talk",
+                "culture",
+                "evil"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"gossip\" (lời đồn) tương đương với an untrue talk."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. sever",
+              "options": [
+                "to watch",
+                "to cut off",
+                "to keep",
+                "to hit"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"sever\" (cắt đứt) tương đương với to cut off."
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. stab",
+              "options": [
+                "to cut",
+                "to prove",
+                "to get help",
+                "to wonder"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"stab\" (đâm, cắt) tương đương với to cut."
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. theme",
+              "options": [
+                "a book",
+                "a preview",
+                "a main idea",
+                "a perspective"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"theme\" (chủ đề, ý chính) tương đương với a main idea."
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. suspicion",
+              "options": [
+                "lunch money",
+                "classes",
+                "mistrust",
+                "clothes"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"suspicion\" (sự nghi ngờ) tương đương với mistrust."
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. guardian",
+              "options": [
+                "a protector",
+                "a judge",
+                "intelligence",
+                "truth"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"guardian\" (người bảo vệ) tương đương với a protector."
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. terminate",
+              "options": [
+                "to wait",
+                "to end",
+                "to destroy",
+                "to hurt"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"terminate\" (chấm dứt) tương đương với to end."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Fill in the blanks with the correct words.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. Mr. Wilson _______ from the university over 15 years ago.",
+              "options": [
+                "graduated",
+                "donor",
+                "tuition",
+                "stimulus"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"graduated\" (tốt nghiệp) phù hợp với ngữ cảnh từ trường đại học (university)."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. He has always been a generous _______ and wants to improve the school.",
+              "options": [
+                "donor",
+                "gossip",
+                "discipline",
+                "implicated"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"donor\" (người hiến tặng) phù hợp với tính từ generous (hào phóng)."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. The university recently decreased its _______.",
+              "options": [
+                "tuition",
+                "chronic",
+                "graffiti",
+                "terminate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"tuition\" (học phí) phù hợp với việc giảm chi phí tại trường đại học."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. It was supposed to be a _______ for more students to study there.",
+              "options": [
+                "stimulus",
+                "gossip",
+                "discipline",
+                "shaft"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"stimulus\" (động lực) giúp thu hút thêm sinh viên đến học thuật."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. Laurie was _______ in a terrible thing.",
+              "options": [
+                "implicated",
+                "severed",
+                "stabbed",
+                "graduated"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"implicated\" (dính líu) vào một việc tồi tệ (a terrible thing)."
+            },
+            {
+              "id": "ex3_6",
+              "content": "6. She was caught leaving _______ on the school wall.",
+              "options": [
+                "graffiti",
+                "tuition",
+                "gossip",
+                "chronic"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"graffiti\" (hình vẽ bậy) trên bức tường trường học (school wall)."
+            },
+            {
+              "id": "ex3_7",
+              "content": "7. Elliot had _______ problems at school.",
+              "options": [
+                "chronic",
+                "implicated",
+                "terminate",
+                "donor"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"chronic problems\" (vấn đề mãn tính, kéo dài) ở trường học."
+            },
+            {
+              "id": "ex3_8",
+              "content": "8. His parents decided to show more _______.",
+              "options": [
+                "discipline",
+                "graffiti",
+                "tuition",
+                "stimulus"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"discipline\" (kỷ luật) được phụ huynh áp dụng để giáo dục con cái."
+            },
+            {
+              "id": "ex3_9",
+              "content": "9. Hannah was tired of hearing _______ about her neighbors.",
+              "options": [
+                "gossip",
+                "donor",
+                "discipline",
+                "stimulus"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"gossip\" (lời đồn) về những người hàng xóm (neighbors)."
+            },
+            {
+              "id": "ex3_10",
+              "content": "10. She decided to _______ that behavior and think about better things.",
+              "options": [
+                "terminate",
+                "sever",
+                "stab",
+                "graduate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"terminate\" (chấm dứt) hành vi đó (that behavior)."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex4_1",
+              "content": "1. I may not be able to go to college next year. I don’t have enough money for tuition.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"tuition\" (học phí) dùng chính xác khi nói về tiền học đại học."
+            },
+            {
+              "id": "ex4_2",
+              "content": "2. The boy’s parents didn’t know how to control him. They taught him discipline.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"didn't know how to control\" (không biết cách kiểm soát) mâu thuẫn với việc đã dạy \"discipline\" (kỷ luật). Dùng sai."
+            },
+            {
+              "id": "ex4_3",
+              "content": "3. He was a donor. He received gifts from people all of the time.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"donor\" (người hiến tặng) mâu thuẫn với \"received gifts\" (nhận quà). Dùng sai."
+            },
+            {
+              "id": "ex4_4",
+              "content": "4. His new stove will be a stimulus for him to cook at home more often.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"stimulus\" (động lực) dùng chính xác cho việc khích lệ nấu ăn."
+            },
+            {
+              "id": "ex4_5",
+              "content": "5. Ellen didn’t like the color of her walls, so she painted graffiti on them.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"graffiti\" (vẽ bậy nơi công cộng) không dùng để chỉ việc sơn lại tường nhà. Dùng sai."
+            },
+            {
+              "id": "ex4_6",
+              "content": "6. Jason was implicated in the bank robbery. Several people saw him do it.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"implicated\" (bị dính líu, bị cáo buộc) dùng chính xác trong ngữ cảnh vụ cướp ngân hàng."
+            },
+            {
+              "id": "ex4_7",
+              "content": "7. Besides her parents, Olivia had no other kin. She only had one sister.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"kin\" (người thân) mâu thuẫn với việc có một người em gái (sister). Dùng sai."
+            },
+            {
+              "id": "ex4_8",
+              "content": "8. The gardener picked up the tool by the shaft. It was easiest to hold that way.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"shaft\" (cán, tay cầm) dùng chính xác cho công cụ làm vườn."
+            },
+            {
+              "id": "ex4_9",
+              "content": "9. The man was sent to prison for stabbing someone. The person was hurt but survived.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"stabbing\" (đâm) dùng chính xác trong tội phạm gây thương tích."
+            },
+            {
+              "id": "ex4_10",
+              "content": "10. The theme of the book was forgiveness.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"theme\" (chủ đề) dùng chính xác cho sách."
+            },
+            {
+              "id": "ex4_11",
+              "content": "11. Leslie’s father is a policeman. He is a guardian of crime.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"guardian of crime\" (người bảo vệ tội phạm) là sai, cảnh sát bảo vệ pháp luật. Dùng sai."
+            },
+            {
+              "id": "ex4_12",
+              "content": "12. I took a knife and severed the line from the pole to the fish’s mouth.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"severed\" (cắt đứt) dùng chính xác khi dùng dao cắt dây."
+            },
+            {
+              "id": "ex4_13",
+              "content": "13. The food was being held on suspicion of committing two crimes in the city.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"suspicion\" (nghi ngờ) về việc phạm tội không thể dùng cho đồ ăn (food). Dùng sai."
+            },
+            {
+              "id": "ex4_14",
+              "content": "14. I spoke to my fellow teachers, and we all agreed to support the students at the rally.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"fellow\" (đồng nghiệp) dùng chính xác khi nói về giáo viên khác."
+            },
+            {
+              "id": "ex4_15",
+              "content": "15. The referee said the player had broken the rules.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"referee\" (trọng tài) dùng chính xác trong thể thao."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">\"I Didn't Do It!\"</h1><p style=\"margin-bottom: 1rem;\">Billy was in big trouble. The day before, a <b>donor</b> gave the school a painting with a sports <b>theme</b>. It showed a <b>referee</b> congratulating two athletes. The principal hung the painting in front of the office, hoping that it would be a <b>stimulus</b> for students to play sports. The next morning, however, the painting was destroyed. There was <b>graffiti</b> on it, and it had many holes in it. The worst part was that one of Billy's <b>fellow</b> students said she thought she saw Billy do it!</p><p style=\"margin-bottom: 1rem;\">But Billy didn't do it. The principal called Billy's parents and said, \"Billy won't tell us the truth. He's a <b>chronic</b> liar, and he ruined the painting. If you don't pay for it, we'll <b>terminate</b> his education here.\"</p><p style=\"margin-bottom: 1rem;\">Billy's parents didn't have enough money to pay for the painting and for his <b>tuition</b>. But Billy's parents had an idea. That afternoon, they went to see Mr. Meyers, an <b>attorney</b>.</p><p style=\"margin-bottom: 1rem;\">\"Mr. Meyers, my son has been <b>implicated</b> in a crime he says he didn't do,\" Billy's father said. \"Everybody believes the <b>gossip</b>. Even some of our own <b>kin</b> think he did it!\"</p><p style=\"margin-bottom: 1rem;\">\"I believe you. My <b>suspicion</b> is that the tape from the security cameras will show who really did it,\" said Mr. Meyers.</p><p style=\"margin-bottom: 1rem;\">The next day, Mr. Meyers received a packet with the videotape from the school. It showed another student who resembled Billy walking up to the painting and writing on it. Then the student took a knife by the <b>shaft</b> and started to <b>stab</b> large holes in it. Finally, he <b>severed</b> the rope that held up the painting, and it fell to the floor.</p><p style=\"margin-bottom: 1rem;\">Mr. Meyers showed the tape to the principal. \"Clearly, that's not Billy,\" he said. \"This boy is actually responsible and needs some <b>discipline</b>.\"</p><p style=\"margin-bottom: 1rem;\">Billy was happy that someone believed him. He said to Mr. Meyers, \"When I <b>graduate</b> and go to university, I will major in law, so I can be a <b>guardian</b> of justice like you!\"</p></div>",
+      "imageUrl": "/unit17_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readA_1",
+              "content": "1. A donor gave the school a painting with a sports theme as a stimulus for students to play sports.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Hiệu trưởng (principal) mới là người treo bức tranh như một động lực (stimulus) cho sinh viên, không phải người hiến tặng (donor)."
+            },
+            {
+              "id": "readA_2",
+              "content": "2. The painting showed a referee congratulating two athletes.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bức tranh vẽ một trọng tài đang chúc mừng hai vận động viên."
+            },
+            {
+              "id": "readA_3",
+              "content": "3. Billy was implicated in the crime because a fellow student received a packet with a videotape showing him doing it.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Billy bị dính líu vì một bạn học (fellow student) nói rằng cô ấy nghĩ đã nhìn thấy cậu làm việc đó, không phải do cuộn băng."
+            },
+            {
+              "id": "readA_4",
+              "content": "4. Everybody gossiped about Billy, and even some of our kin think he did it.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mọi người đồn đoán (gossiped) và thậm chí một số người thân (kin) cũng nghĩ cậu ta làm."
+            },
+            {
+              "id": "readA_5",
+              "content": "5. The principal threatened to terminate Billy’s education if his parents didn’t pay his tuition.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Hiệu trưởng đe dọa chấm dứt học tập nếu cha mẹ không trả tiền cho bức tranh (pay for the painting), không phải học phí (tuition)."
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readB_1",
+              "content": "1. What did the principal say about Billy?",
+              "options": [
+                "That he was a chronic liar",
+                "That he was a guardian",
+                "That he was an attorney",
+                "That he had a lot of discipline"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Hiệu trưởng nói rằng Billy là một kẻ nói dối mãn tính (chronic liar)."
+            },
+            {
+              "id": "readB_2",
+              "content": "2. What was Mr. Meyers’ suspicion?",
+              "options": [
+                "That the tape from the security cameras would show who really did the crime",
+                "That Billy was guilty",
+                "That the graffiti was beautiful",
+                "That the tuition was too high"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Sự nghi ngờ (suspicion) của ông Meyers là đoạn băng từ camera an ninh sẽ cho thấy ai thực sự làm việc đó."
+            },
+            {
+              "id": "readB_3",
+              "content": "3. What did the videotape show?",
+              "options": [
+                "Another boy leaving graffiti, stabbing it, and severing the string",
+                "Billy doing the crime",
+                "A donor giving the painting",
+                "A referee in a game"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đoạn băng cho thấy một cậu bé khác đang vẽ bậy, đâm (stab) bức tranh và cắt đứt (sever) sợi dây."
+            },
+            {
+              "id": "readB_4",
+              "content": "4. What did the attorney suggest to the principal about the boy responsible for the crime?",
+              "options": [
+                "That he needed discipline",
+                "That he should be a fellow student",
+                "That he was a chronic liar",
+                "That he should pay the tuition"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Luật sư gợi ý rằng cậu bé thực sự chịu trách nhiệm cần phải được rèn kỷ luật (discipline)."
+            },
+            {
+              "id": "readB_5",
+              "content": "5. Why did Billy say he wanted his major to be law when he went to university?",
+              "options": [
+                "So he could be a guardian of justice like Mr. Meyers",
+                "So he could be a referee",
+                "So he could stop gossip",
+                "So he could sever the rope"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Billy muốn học luật để có thể trở thành người bảo vệ công lý (guardian of justice) giống như ông Meyers."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

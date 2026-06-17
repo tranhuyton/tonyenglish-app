@@ -1,0 +1,605 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 7",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit7_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit7_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aquatic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkwætik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a plant or animal is aquatic, it lives or grows in water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dolphin is an aquatic mammal.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">biosphere</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[baiəsfiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The biosphere is the earth's surface and atmosphere where there are living things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Birds, trees, and worms all thrive in the biosphere.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bizarre</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[biza:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is bizarre, it is very strange.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My bizarre dreams make no sense to me when I am awake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Celsius</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[selsiəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Celsius is a scale for measuring temperature.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Water freezes at zero degrees Celsius.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">coarse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔ:rs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is coarse, that means it has a rough texture.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The coarse sweater made my skin itch.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">companion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmpænjən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A companion is a person that someone spends a lot of time with.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I always walk to school with my companion Frank.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">digest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[didʒest]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To digest means to swallow food and pass it through the body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Allow some time for food to be digested before going swimming.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">duration</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[djureiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The duration of an event is the time during which it happens.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girls watched television for the duration of the evening.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ecology</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[i:kalədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Ecology is the study of the environment and living things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We study ecology to learn how to help improve the Earth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">feat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fi:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A feat is an impressive or difficult achievement or action.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The elephant's standing up on one leg was a feat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">infinite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[infənit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is infinite, it has no limit or end.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many scientists believe that the universe is infinite.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nucleus</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nju:kliəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The nucleus is the central part of an atom or cell.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The nucleus is made up of many tiny particles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">parasite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pærəsait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A parasite is a tiny animal or plant that attaches to another animal to get food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sick dog was covered in parasites.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prominent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pramənənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is prominent, it is important and well known.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Queen Victoria was a prominent person in history.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">repetitive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ripetətiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is repetitive, it is repeated many times and becomes boring.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Working on an assembly line making cars every day is a repetitive job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reproductive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ri:prədʌktiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is reproductive, it has to do with a living thing producing young.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The reproductive system of a plant is simple.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">temperate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tempərit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a place is temperate, it never gets too hot or cold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In Peru, the weather is temperate and rarely gets too hot or cold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tolerance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[talərəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Tolerance is the ability to accept something painful or unpleasant.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Boxers have a high tolerance for pain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">undergo</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌndərgou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To undergo an action means to have it happen to you.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The cancer patient undergoes treatments twice a week.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vulnerable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vʌlnərəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is vulnerable, they are weak and without protection.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He felt very vulnerable when he was stranded in the desert.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Fill in the blanks with the correct words.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. The climate where I live is very _____________.",
+              "options": [
+                "temperate",
+                "Celsius",
+                "ecology",
+                "bizarre"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Khí hậu (climate) ôn hoà (temperate) là đáp án hợp lý nhất."
+            },
+            {
+              "id": "2",
+              "content": "2. It never drops below 10 degrees _____________.",
+              "options": [
+                "aquatic",
+                "Celsius",
+                "companion",
+                "feat"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Đơn vị đo nhiệt độ (độ C) là Celsius."
+            },
+            {
+              "id": "3",
+              "content": "3. I learned about a tiny animal called a _____________.",
+              "options": [
+                "biosphere",
+                "vulnerable",
+                "parasite",
+                "feat"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Một động vật nhỏ gọn được gọi là kí sinh trùng (parasite)."
+            },
+            {
+              "id": "4",
+              "content": "4. Some live on land, and others are _____________.",
+              "options": [
+                "aquatic",
+                "bizarre",
+                "temperate",
+                "repetitive"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Sống trên cạn (on land) và sống dưới nước (aquatic)."
+            },
+            {
+              "id": "5",
+              "content": "5. The strange old man's behavior is quite _____________.",
+              "options": [
+                "prominent",
+                "bizarre",
+                "vulnerable",
+                "coarse"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Hành vi kì lạ (strange) tương đương với bizarre."
+            },
+            {
+              "id": "6",
+              "content": "6. The plastic chicken he takes with him everywhere is his only _____________.",
+              "options": [
+                "companion",
+                "parasite",
+                "feat",
+                "ecology"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Một vật mang theo khắp nơi đóng vai trò như bạn đồng hành (companion)."
+            },
+            {
+              "id": "7",
+              "content": "7. Jim loves every type of plant and animal in the _____________.",
+              "options": [
+                "Celsius",
+                "biosphere",
+                "nucleus",
+                "duration"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sinh quyển (biosphere) là nơi chứa các loài thực vật và động vật."
+            },
+            {
+              "id": "8",
+              "content": "8. Therefore, he is going to college to study _____________.",
+              "options": [
+                "ecology",
+                "parasite",
+                "tolerance",
+                "feat"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nghiên cứu về môi trường sinh thái là ecology."
+            },
+            {
+              "id": "9",
+              "content": "9. Without his shield, the sword fighter was _____________.",
+              "options": [
+                "infinite",
+                "vulnerable",
+                "prominent",
+                "aquatic"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Không có khiên bảo vệ, anh ta trở nên dễ bị tổn thương (vulnerable)."
+            },
+            {
+              "id": "10",
+              "content": "10. Defeating his enemy without protection was an amazing _____________.",
+              "options": [
+                "feat",
+                "biosphere",
+                "companion",
+                "Celsius"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Chiến thắng kẻ thù mà không cần bảo vệ là một chiến công/kì tích (feat)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. Dogs do not have the ability to bear the pain to high pitched noises.",
+              "options": [
+                "tolerance",
+                "duration",
+                "nucleus",
+                "ecology"
+              ],
+              "correctAnswer": "A",
+              "explanation": "ability to bear the pain tương đương với sự chịu đựng (tolerance)."
+            },
+            {
+              "id": "12",
+              "content": "2. The boring and repeating sounds from a ticking clock can make some people annoyed.",
+              "options": [
+                "coarse",
+                "bizarre",
+                "repetitive",
+                "infinite"
+              ],
+              "correctAnswer": "C",
+              "explanation": "boring and repeating tương đương với repetitive (lặp đi lặp lại)."
+            },
+            {
+              "id": "13",
+              "content": "3. My sister is a well-known and important musician.",
+              "options": [
+                "aquatic",
+                "prominent",
+                "temperate",
+                "vulnerable"
+              ],
+              "correctAnswer": "B",
+              "explanation": "well-known and important tương đương với prominent (nổi bật/xuất chúng)."
+            },
+            {
+              "id": "14",
+              "content": "4. I used my microscope to see the cell's central part.",
+              "options": [
+                "parasite",
+                "companion",
+                "nucleus",
+                "feat"
+              ],
+              "correctAnswer": "C",
+              "explanation": "central part of a cell là nucleus (nhân tế bào)."
+            },
+            {
+              "id": "15",
+              "content": "5. The rough fur of the gorilla is a defining trait.",
+              "options": [
+                "coarse",
+                "bizarre",
+                "temperate",
+                "infinite"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rough tương đương với coarse (thô ráp)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. The reproductive process in rabbits explains how they hunt for food.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "reproductive nghĩa là sinh sản, không liên quan đến cách chúng săn mồi (hunt for food)."
+            },
+            {
+              "id": "17",
+              "content": "2. In Biology class, we learned about the different parts of a cell's nucleus.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "nucleus (nhân tế bào) phù hợp với ngữ cảnh lớp học sinh học."
+            },
+            {
+              "id": "18",
+              "content": "3. It is hard for some people to remain silent for the duration of a long movie.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "duration (khoảng thời gian) hoàn toàn hợp lý."
+            },
+            {
+              "id": "19",
+              "content": "4. I could listen to my favorite song all day. I have tolerance for great music.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "tolerance là khả năng chịu đựng điều gì đó khó chịu, không dùng cho 'great music' (nhạc hay)."
+            },
+            {
+              "id": "20",
+              "content": "5. I will have to undergo through the tunnel to get home.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "undergo là trải qua (một quá trình/sự việc/đợt điều trị), không đi kèm giới từ through (chỉ việc đi qua đường hầm)."
+            },
+            {
+              "id": "21",
+              "content": "6. This blanket is not very comfortable. It would be better if it was not so coarse.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "coarse (thô ráp) hợp lý với chiếc chăn không thoải mái."
+            },
+            {
+              "id": "22",
+              "content": "7. She has exactly twenty jelly beans, which is an infinite amount.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "infinite là vô hạn, không thể dùng cho số lượng cụ thể là 'exactly twenty'."
+            },
+            {
+              "id": "23",
+              "content": "8. The boy became a prominent figure in town after he saved the woman's life.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "prominent figure (nhân vật nổi bật) là một cụm từ hợp lý sau khi cứu sống ai đó."
+            },
+            {
+              "id": "24",
+              "content": "9. Her new car is bizarre. It has five wheels and no doors!",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "bizarre (kì lạ) dùng miêu tả chiếc ô tô có 5 bánh và không cửa là chính xác."
+            },
+            {
+              "id": "25",
+              "content": "10. There is no life on Venus, so researchers study its ecology instead.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "ecology (hệ sinh thái) liên quan đến sinh vật và môi trường sống, không có sự sống thì không nghiên cứu ecology."
+            },
+            {
+              "id": "26",
+              "content": "11. The vulnerable lion roared and scared away the zebras.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "vulnerable nghĩa là dễ bị tổn thương/yếu đuối, không hợp lý khi con sư tử gầm rống và đuổi ngựa vằn."
+            },
+            {
+              "id": "27",
+              "content": "12. Fish must live in aquatic environments.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "aquatic environments (môi trường nước) hoàn toàn đúng cho cá."
+            },
+            {
+              "id": "28",
+              "content": "13. The circus performers were capable of many wonderful feats.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "feats (kĩ năng/màn trình diễn xuất sắc) hợp lý với diễn viên xiếc."
+            },
+            {
+              "id": "29",
+              "content": "14. The repetitive sound of ocean waves helps me to fall asleep.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "repetitive sound (âm thanh lặp lại đều đặn) của sóng biển ru ngủ là đúng."
+            },
+            {
+              "id": "30",
+              "content": "15. The cake digested the delicious cookies.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "digest (tiêu hoá), bánh ngọt (cake) không thể tiêu hoá cookie."
+            },
+            {
+              "id": "31",
+              "content": "16. The temperate nights were almost too cold to bear.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "temperate (ôn hoà/ấm áp), không thể miêu tả thời tiết 'too cold to bear'."
+            },
+            {
+              "id": "32",
+              "content": "17. Parasites are independent forms of life.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "parasite (kí sinh trùng) sống dựa vào sinh vật khác, nên không phải là dạng sống độc lập (independent)."
+            },
+            {
+              "id": "33",
+              "content": "18. I don't want to go alone. I wish I had a companion.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "companion (người đồng hành) rất phù hợp ngữ cảnh."
+            },
+            {
+              "id": "34",
+              "content": "19. Will you please Celsius the temperature outside?",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Celsius (độ C) là danh từ chỉ đơn vị đo, không thể dùng như động từ."
+            },
+            {
+              "id": "35",
+              "content": "20. The drawing of the earth showed the different elements of the biosphere.",
+              "options": [
+                "Correct",
+                "Incorrect",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "biosphere (sinh quyển) hoàn toàn hợp nghĩa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Small World</h1><p style=\"margin-bottom: 1rem;\">Even though people can't see me, I'm an important part of Earth's <b>biosphere</b>. Scientists who study <b>ecology</b> know that I was the first life form on Earth. There is more of my kind than any other plant or animal in the world. Without me, other plants and animals would not even exist. I am a protist, and my tiny body is made up of one single cell.</p><p style=\"margin-bottom: 1rem;\">In my small world, things can be absolutely <b>bizarre</b>. Unlike most <b>aquatic</b> plants and animals, I don't need a <b>temperate</b> climate. I have a very high <b>tolerance</b> for extreme conditions. Right now, I'm swimming around in a bucket of boiling water! The temperature is 150 degrees <b>Celsius</b>, but I feel comfortable. I have <b>coarse</b> hairs called cilia that help me swim around in here. I move my cilia in a <b>repetitive</b> motion for the <b>duration</b> of my swim. I cannot go very fast, though. It takes me about five minutes to swim a distance of just one millimeter!</p><p style=\"margin-bottom: 1rem;\">When I get hungry, I look for tiny, <b>vulnerable</b> <b>parasites</b>. I swim up to one and swallow it whole. I <b>digest</b> things much like people do. I have an organ that works just like a human stomach. After I eat, I release nitrogen gas. Nitrogen is a <b>prominent</b> gas in the earth's atmosphere. Other plants and animals need my nitrogen to survive.</p><p style=\"margin-bottom: 1rem;\">My <b>reproductive</b> ability is my most unique trait. I don't need a <b>companion</b> to mate with. Instead, I <b>undergo</b> a process called fission, where my own <b>nucleus</b> splits in half. An exact copy of my nucleus is made, which forms into another protist. It really is an impressive <b>feat</b>. I can create an <b>infinite</b> number of new protists all by myself!</p></div>",
+      "imageUrl": "/unit7_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading_tf",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. Protists have a high tolerance for temperate conditions.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bài văn ghi rõ: 'I have a very high tolerance for extreme conditions.' (không phải temperate)."
+            },
+            {
+              "id": "37",
+              "content": "2. Things in an aquatic protist's world can be absolutely bizarre.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bài văn ghi: 'In my small world, things can be absolutely bizarre.'"
+            },
+            {
+              "id": "38",
+              "content": "3. A protist splits its companion's nucleus in fission.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bài văn ghi: '...my own nucleus splits in half.' (tự chia nhân của chính nó, không phải của bạn đồng hành)."
+            },
+            {
+              "id": "39",
+              "content": "4. Coarse cilia move in a repetitive motion for the duration of a protist's swim.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bài viết: 'I move my cilia in a repetitive motion for the duration of my swim.'"
+            },
+            {
+              "id": "40",
+              "content": "5. An infinite number of new protists can be created by the impressive feat of fission.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng với nội dung cuối bài đọc: 'I can create an infinite number of new protists all by myself!'"
+            }
+          ]
+        },
+        {
+          "id": "sec5_reading_qa",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "41",
+              "content": "1. What temperature, in degrees Celsius, could the protist be comfortable in?",
+              "options": [
+                "10 degrees Celsius",
+                "100 degrees Celsius",
+                "150 degrees Celsius",
+                "200 degrees Celsius"
+              ],
+              "correctAnswer": "C",
+              "explanation": "The temperature is 150 degrees Celsius, but I feel comfortable."
+            },
+            {
+              "id": "42",
+              "content": "2. What do scientists who study ecology know about protists?",
+              "options": [
+                "They are bizarre.",
+                "They are the first life form on Earth.",
+                "They cannot reproduce.",
+                "They live on land."
+              ],
+              "correctAnswer": "B",
+              "explanation": "...know that I was the first life form on Earth."
+            },
+            {
+              "id": "43",
+              "content": "3. What prominent thing does a protist release into the biosphere?",
+              "options": [
+                "Oxygen gas",
+                "Hydrogen gas",
+                "Nitrogen gas",
+                "Carbon dioxide"
+              ],
+              "correctAnswer": "C",
+              "explanation": "After I eat, I release nitrogen gas."
+            },
+            {
+              "id": "44",
+              "content": "4. How does a protist catch vulnerable parasites to digest?",
+              "options": [
+                "It traps them in its cilia.",
+                "It freezes them.",
+                "It swims up to one and swallows it whole.",
+                "It hunts them in groups."
+              ],
+              "correctAnswer": "C",
+              "explanation": "I swim up to one and swallow it whole."
+            },
+            {
+              "id": "45",
+              "content": "5. What unique reproductive process does a protist undergo?",
+              "options": [
+                "Mating with a companion",
+                "Fission",
+                "Cloning",
+                "Digestion"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I undergo a process called fission..."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 19",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit19_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit19_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accordingly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈkɔːrdɪŋli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone acts accordingly, they act in a way that is suitable.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He feels like he did a good job, and his boss should pay him accordingly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">anchor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈæŋkər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An anchor is a heavy object dropped from a boat to make it stay in one place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the ship reached its destination, the crew dropped the anchor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">buoy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbuːi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A buoy is a floating sign that warns boats of dangerous areas.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Don’t steer the boat near those buoys. There are rocks underneath the water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">catastrophe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəˈtæstrəfi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A catastrophe is an unexpected event that causes great suffering or damage.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was a catastrophe for my family when my dad lost his job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">context</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑːntekst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Context is the situations that form the background of an event.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They studied the context of the battle before giving their presentation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">designate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdezɪɡneɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To designate someone or something means to give them a particular description.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The famous lighthouse was designated a historical monument.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">distort</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈstɔːrt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To distort something means to lie about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His lawyer distorted the facts so that he would be set free.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dock</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɑːk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dock is an enclosed area where ships go to be loaded, unloaded, and repaired.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The huge ship pulled into the dock, and the crew unloaded the cargo.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔːr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The fore of something is the front part of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher’s desk is at the fore of the classroom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frequent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfriːkwənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is frequent, then it happens or is done often.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ While Dad was sick, the doctor made frequent visits to his house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">genuine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdʒenjuɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is genuine, it is true or real.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After the painting was determined to be genuine, it sold for a million dollars.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grease</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɡriːs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Grease is an oily substance put on moving parts, so they work smoothly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I was done working on the car, I had grease all over my hands.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intricate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪntrɪkət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is intricate, it has many small parts or details.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The intricate painting on the quilt was very lovely.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">offset</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌɔːfˈset]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To offset means to use one thing to cancel out the effect of another thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Increased wages are offset by higher prices for goods.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overlap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌoʊvərˈlæp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To overlap something means to cover a piece of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The gift on top overlaps the other gift on the bottom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">precipitate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɪˈsɪpɪteɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To precipitate an event means to cause it to happen sooner than normal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The violent attack precipitated an all-out war.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">secondhand</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌsekəndˈhænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is secondhand, it has been owned by someone else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her secondhand jeans were a bit faded in the front.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">slot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[slɑːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A slot is a narrow opening in a machine or container.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ To operate the machine, put your coins into the slot.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">submerge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səbˈmɜːrdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To submerge something means to put it below the surface of a liquid.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The whale submerged its huge body into the ocean.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tactic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtæktɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tactic is a careful plan to achieve something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sam thought of a good tactic in order to attract more business.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. Which person uses an anchor?",
+              "options": [
+                "A mailman",
+                "A sailor",
+                "A writer",
+                "A priest"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"anchor\" (mỏ neo) là dụng cụ của thủy thủ (sailor) dùng trên thuyền."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. If your jacket is made of genuine leather, it______ .",
+              "options": [
+                "is not expensive",
+                "falls apart easily",
+                "is real leather",
+                "is alive"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"genuine\" (thật, chính hãng) có nghĩa là đồ da thật (real leather)."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. What might precipitate a fight?",
+              "options": [
+                "Taking a nap",
+                "Sharing lunch",
+                "Doing homework",
+                "Name calling"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"precipitate\" (đẩy nhanh, gây ra) một cuộc đánh nhau thường là do chửi rủa, lăng mạ (name calling)."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. Where would you most likely see a buoy?",
+              "options": [
+                "On the ocean",
+                "On the street",
+                "At the store",
+                "In an airplane"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"buoy\" (phao cứu sinh, phao cảnh báo) thường được nhìn thấy trên đại dương (on the ocean)."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. If a problem is frequent, then it happens,",
+              "options": [
+                "several times",
+                "only once",
+                "almost never",
+                "in the afternoon"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"frequent\" (thường xuyên) nghĩa là xảy ra nhiều lần (several times)."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. I buy most of my clothes once owned.",
+              "options": [
+                "secondhand",
+                "genuine",
+                "frequent",
+                "intricate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"once owned\" (từng thuộc về người khác) đồng nghĩa với secondhand (đồ cũ)."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. The enclosed area in the harbor for loading ships is very busy this time of day.",
+              "options": [
+                "dock",
+                "anchor",
+                "fore",
+                "slot"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"The enclosed area in the harbor for loading ships\" (khu vực bến cảng để chất hàng lên tàu) đồng nghĩa với dock (bến tàu)."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. Be sure not to lie about the facts about the crime. The police need to know everything in order to help us.",
+              "options": [
+                "distort",
+                "offset",
+                "designate",
+                "submerge"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"lie about\" (nói dối về) đồng nghĩa với distort (xuyên tạc)."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. The women sat on the front part of the ship and enjoyed the warm sun.",
+              "options": [
+                "fore",
+                "context",
+                "buoy",
+                "tactic"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"the front part\" (phần phía trước) đồng nghĩa với fore (phía trước tàu)."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. I have to add a stop to our trip, so adjust your plans in a way that depends on the situation.",
+              "options": [
+                "accordingly",
+                "frequent",
+                "intricate",
+                "genuine"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"in a way that depends on the situation\" (tùy theo tình huống) đồng nghĩa với accordingly (một cách phù hợp)."
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. To understand this show, you have to know the general situation that relates to it.",
+              "options": [
+                "context",
+                "grease",
+                "catastrophe",
+                "anchor"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"general situation\" (tình huống chung, bối cảnh) đồng nghĩa với context (ngữ cảnh, bối cảnh)."
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. The new sewing machine was made up of many small parts and details.",
+              "options": [
+                "intricate",
+                "secondhand",
+                "frequent",
+                "genuine"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"many small parts and details\" (nhiều bộ phận và chi tiết nhỏ) đồng nghĩa với intricate (phức tạp, tinh xảo)."
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. Let’s hope that our plans do not have a part of one occupying the space of the other.",
+              "options": [
+                "overlap",
+                "offset",
+                "distort",
+                "precipitate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"occupying the space of the other\" (chiếm không gian của cái khác) đồng nghĩa với overlap (chồng chéo)."
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. The city has decided to give a particular description of this area as a non-smoking zone.",
+              "options": [
+                "designate",
+                "submerge",
+                "offset",
+                "distort"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"give a particular description\" (chỉ định) đồng nghĩa với designate."
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. I think the gears need a little more oily substance used to make parts work smoothly.",
+              "options": [
+                "grease",
+                "anchor",
+                "buoy",
+                "slot"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"oily substance\" (chất nhờn, dầu mỡ) đồng nghĩa với grease."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. The key fit perfectly in the slot.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"slot\" (khe, rãnh) dùng đúng cho chìa khóa."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. Jackets help to offset the effect of a cold wind.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"offset\" (bù đắp, làm giảm tác động) dùng đúng khi áo khoác chống lại gió lạnh."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. I need to distort my homework if I’m going to get it turned in by tomorrow.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"distort\" (xuyên tạc, bóp méo) không dùng cho việc làm bài tập về nhà."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. The parade was a catastrophe. It went smoothly, and everyone had a great time.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"catastrophe\" (thảm họa) mâu thuẫn với việc buổi diễu hành diễn ra suôn sẻ (went smoothly)."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. They had to water the tree four times a day. It was a frequent chore.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"frequent\" (thường xuyên) dùng đúng cho việc tưới cây 4 lần một ngày."
+            },
+            {
+              "id": "ex3_6",
+              "content": "6. The intricate bench was just a large, unpainted piece of wood.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"intricate\" (tinh xảo, phức tạp) mâu thuẫn với một khúc gỗ thô không sơn (unpainted piece of wood)."
+            },
+            {
+              "id": "ex3_7",
+              "content": "7. The weather precipitates a great weekend.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"precipitates\" (gây ra, đẩy nhanh) thường đi với điều tiêu cực hoặc biến cố, không dùng với \"great weekend\"."
+            },
+            {
+              "id": "ex3_8",
+              "content": "8. We walked to the docks to watch ships pull in and out.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"docks\" (bến tàu) dùng đúng với ngữ cảnh xem tàu cập bến."
+            },
+            {
+              "id": "ex3_9",
+              "content": "9. The lion submerged out of the bushes and attacked its prey.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"submerged\" (lặn xuống nước) không dùng cho sư tử phóng ra từ bụi rậm."
+            },
+            {
+              "id": "ex3_10",
+              "content": "10. The secondhand book was brand new. I was the first to read it.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"secondhand\" (đồ cũ) mâu thuẫn với \"brand new\" (hoàn toàn mới)."
+            },
+            {
+              "id": "ex3_11",
+              "content": "11. She was noted for creating some imaginative tactics to claim victory.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"tactics\" (chiến thuật) dùng đúng để giành chiến thắng."
+            },
+            {
+              "id": "ex3_12",
+              "content": "12. The guide asked us to be very quiet, so we acted accordingly.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"accordingly\" (một cách phù hợp) dùng đúng cho việc làm theo lời hướng dẫn viên."
+            },
+            {
+              "id": "ex3_13",
+              "content": "13. The chef arranged the slices of bread so that they overlapped each other.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"overlapped\" (xếp chồng lên nhau) dùng đúng cho lát bánh mì."
+            },
+            {
+              "id": "ex3_14",
+              "content": "14. We knew from the beginning that the genuine man was not who he claimed to be.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"genuine\" (chân thật) mâu thuẫn với việc người đàn ông đó không phải là người anh ta nhận (\"not who he claimed to be\")."
+            },
+            {
+              "id": "ex3_15",
+              "content": "15. The buoy over there warns ships that the water is too shallow.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"buoy\" (phao cảnh báo) dùng đúng để cảnh báo tàu bè."
+            },
+            {
+              "id": "ex3_16",
+              "content": "16. We stood at the fore of the ship. At the front we could see where we were going.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"fore\" (phần mũi tàu) đồng nghĩa với front, dùng đúng."
+            },
+            {
+              "id": "ex3_17",
+              "content": "17. The grease made it easy to find a good parking spot.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"grease\" (dầu mỡ bôi trơn) không liên quan gì đến việc tìm chỗ đậu xe."
+            },
+            {
+              "id": "ex3_18",
+              "content": "18. The fireman who saved the family was designated the “hero of the month.”",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"designated\" (được phong, được chỉ định) dùng đúng cho danh hiệu anh hùng."
+            },
+            {
+              "id": "ex3_19",
+              "content": "19. Check the context for spelling errors before you turn it in to the teacher.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"context\" (ngữ cảnh) bị dùng sai, đáng lẽ phải là \"content\" hoặc \"essay\"."
+            },
+            {
+              "id": "ex3_20",
+              "content": "20. This looks like a good place to drop the boat’s anchor and relax in the sun.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"anchor\" (mỏ neo) dùng đúng khi thả neo thuyền để nghỉ ngơi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jane's Pride</h1><p style=\"margin-bottom: 1rem;\">Jane and her father, Mike, owned a <b>secondhand</b> boat. They called it \"High Hopes.\" The two loved to spend time together on the ocean and would often go on long fishing trips.</p><p style=\"margin-bottom: 1rem;\">Mike taught Jane how to perform important tasks. Jane learned how to steer the boat and adjust the sails. She learned how to put <b>grease</b> on the <b>intricate</b> gears of the motor. She learned how to <b>submerge</b> the <b>anchor</b> and secure it by putting a rope in a <b>slot</b>. Jane liked helping her father, but she thought that she wasn't very good at it. Sometimes, she omitted important steps and made <b>frequent</b> mistakes. Jane thought she wasn't capable of manual labor.</p><p style=\"margin-bottom: 1rem;\">Mike wanted to prove to her that she was indeed capable and important. He thought of a <b>tactic</b> to test Jane's skills in the <b>context</b> of a <b>catastrophe</b>. He hid under the deck and pretended to be trapped. He shouted, \"Jane, I can't get out! You have to get back to the <b>dock</b> and find help!\"</p><p style=\"margin-bottom: 1rem;\">Jane began to panic. She thought she might make her usual mistakes, which would <b>precipitate</b> a disaster. However, she had to listen to her dad and act <b>accordingly</b>. She pulled up the anchor with all of her might. She remembered to <b>overlap</b> the sails to <b>offset</b> the wind. She steered the boat around <b>buoys</b> where the water was shallow. When they got to shore, Mike came out from under the deck.</p><p style=\"margin-bottom: 1rem;\">Jane said, \"I thought you were trapped!\"</p><p style=\"margin-bottom: 1rem;\">Mike laughed. He said, \"It wasn't a <b>genuine</b> emergency. I <b>distorted</b> the truth to test your abilities. Look at what a great job you did getting the boat home safely! I knew you could do it.\"</p><p style=\"margin-bottom: 1rem;\">To honor his daughter, Mike decided to rename his boat. He <b>designated</b> it \"Jane's Pride\" and painted the name on the <b>fore</b> of the ship. Jane finally had something to be proud of.</p></div>",
+      "imageUrl": "/unit19_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readA_1",
+              "content": "1. Jane thought she would precipitate a disaster if she omitted her frequent mistakes.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Jane nghĩ mình sẽ gây ra thảm họa nếu cô ấy mắc lỗi thường xuyên (made her frequent mistakes), không phải bỏ qua chúng."
+            },
+            {
+              "id": "readA_2",
+              "content": "2. Jane submerged the anchor and secured it by putting a rope in a slot.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Jane đã học được cách thả neo (submerge the anchor) và cố định bằng sợi dây qua rãnh (slot)."
+            },
+            {
+              "id": "readA_3",
+              "content": "3. Jane put grease on the intricate buoy.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Cô ấy bôi trơn (grease) lên các bánh răng phức tạp (intricate gears) của động cơ, không phải lên chiếc phao (buoy)."
+            },
+            {
+              "id": "readA_4",
+              "content": "4. Mike thought of a tactic to test Jane’s skills in the context of a catastrophe.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mike đã nghĩ ra một chiến thuật (tactic) để kiểm tra kỹ năng của con gái trong tình huống thảm họa."
+            },
+            {
+              "id": "readA_5",
+              "content": "5. Mike designated the secondhand boat “Jane’s Pride.”",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Ông ấy đã đặt tên (designated) con thuyền cũ là \"Jane's Pride\"."
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readB_1",
+              "content": "1. Where did Jane have to steer the boat to find help?",
+              "options": [
+                "To the dock",
+                "To the buoy",
+                "To the anchor",
+                "To the context"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bố Jane bảo cô phải đưa tàu về bến (dock) để tìm sự giúp đỡ."
+            },
+            {
+              "id": "readB_2",
+              "content": "2. What was the first thing Jane did after she decided to listen to her dad and act accordingly?",
+              "options": [
+                "She pulled up the anchor with all of her might.",
+                "She put grease on the intricate gears.",
+                "She steered around buoys.",
+                "She overlapped the sails."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Việc đầu tiên Jane làm là dốc sức kéo mỏ neo lên (pulled up the anchor)."
+            },
+            {
+              "id": "readB_3",
+              "content": "3. On which part of the boat did they paint the name?",
+              "options": [
+                "On the fore of the ship",
+                "On the anchor",
+                "On the slot",
+                "On the dock"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cái tên mới được vẽ ở phần mũi tàu (fore of the ship)."
+            },
+            {
+              "id": "readB_4",
+              "content": "4. When Jane overlapped the sails, what was she trying to offset?",
+              "options": [
+                "The wind",
+                "The grease",
+                "The catastrophe",
+                "The frequent mistakes"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cô xếp chồng các cánh buồm (overlap the sails) để cản lại sức gió (offset the wind)."
+            },
+            {
+              "id": "readB_5",
+              "content": "5. What was the purpose of Mike deceiving his daughter?",
+              "options": [
+                "To prove to her that she was capable and important",
+                "To distort the truth",
+                "To test the intricate gears",
+                "To make her precipitate a disaster"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mục đích của Mike là chứng minh rằng con gái mình rất có năng lực và quan trọng (capable and important)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

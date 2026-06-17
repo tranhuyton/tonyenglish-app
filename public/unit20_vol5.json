@@ -1,0 +1,583 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 20",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit20_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit20_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aggregate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈæɡrɪɡət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a number is aggregate, it is made up of smaller amounts added together.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The company totaled its aggregate sales for the entire year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">antibiotic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌæntibaɪˈɑːtɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An antibiotic is a medical drug used to kill bacteria and treat infections.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The doctor gave me a shot of an antibiotic when I got the flu.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">circuit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsɜːrkɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A circuit is a piece of an electronic device that allows electricity to flow.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Be very careful not to shock yourself when fixing an electrical circuit.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">complement</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑːmplɪment]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To complement something or someone is to make them better.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wool scarf complemented her lovely eyes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compress</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmˈpres]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To compress something means to press or squeeze it so that it takes up less space.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I compressed my clothes to fit into a single suitcase.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">database</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdeɪtəbeɪs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A database is a collection of data that is stored in a computer.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The company has a database of all the names and accounts of their customers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">equivalent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪˈkwɪvələnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An equivalent is an amount or value that is the same as another amount or value.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I worked the equivalent of sixty hours this week.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">immune</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪˈmjuːn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is immune to a disease, they cannot be affected by it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Children usually get shots to make them immune to certain diseases.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">input</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪnpʊt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Input is information that is put into a computer.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Type the input into the computer program.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intimate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɪntɪmət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a relationship is intimate, the two things are very closely connected.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I only tell my secrets to my most intimate friends.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">magnet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmæɡnət]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A magnet is a piece of iron or other material which attracts iron toward it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I used a magnet to pick up the nails that were scattered on the floor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">metabolism</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[məˈtæbəlɪzəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A person’s metabolism is the way chemical processes in their body use energy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you exercise every day, your metabolism speeds up.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">microchip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmaɪkroʊtʃɪp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A microchip is a small device inside a computer that holds information.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I can put more data on my computer if I buy a more powerful microchip.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">phase</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feɪz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A phase is a stage in a process or the gradual development of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The first phase in the recycling project involves finding volunteers to help out.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pinch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pɪntʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pinch means to take a piece of skin between one’s fingers and squeeze.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I pinched my nose, so I couldn’t smell the odor from the garbage.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prevalent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈprevələnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is prevalent, it is common.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Growing a beard is more prevalent behavior in men than women.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">quantum</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkwɑːntəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is quantum, it relates to the behavior of atomic particles.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The physics student studied quantum mechanics.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ratio</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈreɪʃioʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A ratio is a relationship between two things expressed in numbers or amounts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy to girl ratio is one to three.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spiral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈspaɪrəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A spiral is a shape which winds round and round in a larger and larger circle.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A strand of DNA looks like two interlocking spirals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">viral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈvaɪrəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is viral, it is a disease or infection that is caused by a virus.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girl was in bed for a week when she had a viral infection.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. Where would you find a microchip?",
+              "options": [
+                "In a salad",
+                "In a laptop",
+                "In a chair",
+                "In your dog"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"microchip\" (vi mạch) được tìm thấy trong máy tính xách tay (laptop)."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. What is found at a quantum level?",
+              "options": [
+                "A comet",
+                "Atomic particles",
+                "A scale",
+                "Biological theories"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"quantum\" (lượng tử) liên quan đến các hạt nguyên tử (atomic particles)."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. What does a magnet attract?",
+              "options": [
+                "Metal",
+                "Trees",
+                "Water",
+                "Plastic"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"magnet\" (nam châm) hút kim loại (metal)."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. What is an example of a ratio?",
+              "options": [
+                "Rough to smooth",
+                "Cat to dog",
+                "Two to one",
+                "Black and white"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"ratio\" (tỷ lệ) là tỷ số giữa các con số, ví dụ như hai trên một (two to one)."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. What is the equivalent of 60 minutes?",
+              "options": [
+                "One hour",
+                "30 minutes",
+                "One day",
+                "One century"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"equivalent\" (tương đương) của 60 phút là 1 giờ (one hour)."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Fill in the blanks with the correct words.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. The doctors just found out that the infection is _______ .",
+              "options": [
+                "viral",
+                "phase",
+                "input",
+                "database"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"viral\" (do virus) bổ nghĩa cho danh từ infection."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. Since a virus is not a bacteria, it cannot be treated with a(n) _______ .",
+              "options": [
+                "antibiotic",
+                "ratio",
+                "prevalent",
+                "immune"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"antibiotic\" (thuốc kháng sinh) không điều trị được virus mà chỉ trị được vi khuẩn."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. He looked at the information that was stored in the _______ .",
+              "options": [
+                "database",
+                "spiral",
+                "input",
+                "magnet"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"database\" (cơ sở dữ liệu) là nơi lưu trữ thông tin."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. After comparing the data, he expressed the results in a _______ .",
+              "options": [
+                "ratio",
+                "phase",
+                "viral",
+                "prevalent"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"ratio\" (tỷ lệ) dùng để biểu thị kết quả so sánh số liệu."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. The process of building the house is in the final _______ .",
+              "options": [
+                "phase",
+                "immune",
+                "antibiotic",
+                "database"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"phase\" (giai đoạn) phù hợp với quy trình xây dựng (process)."
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. The last step is putting in a staircase in the shape of a _______ .",
+              "options": [
+                "spiral",
+                "viral",
+                "prevalent",
+                "magnet"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"spiral\" (hình xoắn ốc) phù hợp để chỉ hình dáng cầu thang."
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. We learned what metals are attracted to a _______ .",
+              "options": [
+                "magnet",
+                "database",
+                "input",
+                "ratio"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"magnet\" (nam châm) hút kim loại."
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. We fed our results into the computer as _______ .",
+              "options": [
+                "input",
+                "viral",
+                "immune",
+                "spiral"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"input\" (dữ liệu đầu vào) được đưa vào máy tính."
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. In this country, polio is not _______ .",
+              "options": [
+                "prevalent",
+                "phase",
+                "antibiotic",
+                "ratio"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"prevalent\" (phổ biến) ý chỉ căn bệnh bại liệt không còn phổ biến ở nước này."
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. It is highly uncommon because most people are _______ thanks to vaccines.",
+              "options": [
+                "immune",
+                "spiral",
+                "input",
+                "database"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"immune\" (miễn dịch) nhờ vào vắc-xin."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. Walking was the most common form of transportation in the big city.",
+              "options": [
+                "prevalent",
+                "aggregate",
+                "quantum",
+                "equivalent"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"common\" (phổ biến) đồng nghĩa với prevalent."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. We are now ready to begin the first particular stage in the process.",
+              "options": [
+                "phase",
+                "circuit",
+                "metabolism",
+                "magnet"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"particular stage\" (giai đoạn cụ thể) đồng nghĩa với phase."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. Do the doctors know if the condition is a disease caused by a virus?",
+              "options": [
+                "viral",
+                "intimate",
+                "immune",
+                "intricate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"a disease caused by a virus\" (bệnh do virus gây ra) đồng nghĩa với viral."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. Some people don’t believe in taking drugs used to treat infections.",
+              "options": [
+                "antibiotics",
+                "equivalents",
+                "inputs",
+                "ratios"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"drugs used to treat infections\" (thuốc trị nhiễm trùng) đồng nghĩa với antibiotics."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. We were offered a bottle of sparkling cider to go well with our meal.",
+              "options": [
+                "complement",
+                "pinch",
+                "compress",
+                "distort"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"go well with\" (bổ sung, làm cho tốt hơn) đồng nghĩa với complement."
+            },
+            {
+              "id": "ex3_6",
+              "content": "6. I seem to have lost some of the information that is put into a computer.",
+              "options": [
+                "input",
+                "phase",
+                "database",
+                "microchip"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"information that is put into a computer\" đồng nghĩa với input (dữ liệu đầu vào)."
+            },
+            {
+              "id": "ex3_7",
+              "content": "7. I wish they wouldn’t store personal information in the collection of data in the computer.",
+              "options": [
+                "database",
+                "circuit",
+                "metabolism",
+                "magnet"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"collection of data\" (tập hợp dữ liệu) đồng nghĩa với database."
+            },
+            {
+              "id": "ex3_8",
+              "content": "8. His grandmother loves to take a piece of skin and squeeze his cheeks.",
+              "options": [
+                "pinch",
+                "submerge",
+                "precipitate",
+                "designate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"take a piece of skin and squeeze\" (véo da) đồng nghĩa với pinch."
+            },
+            {
+              "id": "ex3_9",
+              "content": "9. I don’t really understand my body’s way that chemical processes cause food to be used.",
+              "options": [
+                "metabolism",
+                "ratio",
+                "aggregate",
+                "quantum"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"way that chemical processes cause food to be used\" đồng nghĩa với metabolism (sự trao đổi chất)."
+            },
+            {
+              "id": "ex3_10",
+              "content": "10. A spring looks like a shape which winds round and round.",
+              "options": [
+                "spiral",
+                "equivalent",
+                "buoy",
+                "anchor"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"shape which winds round and round\" (hình cuộn vòng) đồng nghĩa với spiral."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex4_1",
+              "content": "1. The microchip was damaged when she spilled water on the computer.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"microchip\" (vi mạch máy tính) dùng chính xác, nước làm hỏng máy tính."
+            },
+            {
+              "id": "ex4_2",
+              "content": "2. Quantum mechanics deals with planets and stars.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"quantum mechanics\" (cơ học lượng tử) liên quan đến các hạt vi mô, không phải hành tinh."
+            },
+            {
+              "id": "ex4_3",
+              "content": "3. People with fast metabolisms are usually thin and in good shape.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"metabolisms\" (sự trao đổi chất) dùng chính xác cho việc giữ vóc dáng."
+            },
+            {
+              "id": "ex4_4",
+              "content": "4. I compressed the sponge into a little ball.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"compressed\" (nén lại) dùng chính xác cho việc nắn miếng bọt biển."
+            },
+            {
+              "id": "ex4_5",
+              "content": "5. You should pinch your homework if you want to get it turned in on time.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"pinch\" (véo, kẹp) không dùng cho việc hoàn thành bài tập về nhà."
+            },
+            {
+              "id": "ex4_6",
+              "content": "6. I was amazed by the aggregate total of donated gifts and money.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"aggregate\" (tổng số) dùng đúng khi nói về tổng tiền và quà quyên góp."
+            },
+            {
+              "id": "ex4_7",
+              "content": "7. The children played all day on the circuit.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"circuit\" (mạch điện) không phải là nơi trẻ em có thể chơi đùa."
+            },
+            {
+              "id": "ex4_8",
+              "content": "8. Dressing and pepper complemented the tasty salad.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"complemented\" (bổ sung, làm tôn lên) dùng đúng cho gia vị món salad."
+            },
+            {
+              "id": "ex4_9",
+              "content": "9. Intimate friends should not tell lies about each other.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"intimate\" (thân thiết) dùng chính xác cho tình bạn."
+            },
+            {
+              "id": "ex4_10",
+              "content": "10. This tuba is the equivalent of a set of drums.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"equivalent\" (tương đương) dùng sai vì kèn tuba và dàn trống không thể tương đương nhau về số lượng hay âm thanh."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Microchips</h1><p style=\"margin-bottom: 1rem;\">The bond between humans and computers is becoming more <b>intimate</b> than ever before. Scientists are now putting <b>microchips</b> inside people's bodies. They are made up of <b>compressed</b> electrical <b>circuits</b> that can detect and record data about the body. They are tiny, but they hold the <b>equivalent</b> amount of data as most computers.</p><p style=\"margin-bottom: 1rem;\">A <b>microchip</b> is put to use inside a person with a simple procedure. First, a doctor must put data about the patient onto a chip. <b>Input</b> about the person's age, race, gender, and medical history is stored on the chip. The second <b>phase</b> of the process involves putting it in the person's skin. The doctor <b>pinches</b> a piece of skin and cuts a tiny hole with a tool shaped like a <b>spiral</b>. The chip is inserted, and the skin is allowed to heal. At last, it begins the task of putting data into its <b>database</b>.</p><p style=\"margin-bottom: 1rem;\">Microchips scan the patient's body to record what is happening on the <b>quantum</b> level. They can find problems with the person's <b>metabolism</b> and organs. They can also detect <b>viral</b> infections. They can find the <b>aggregate</b> number of <b>immune</b> and infected cells and present the results in a <b>ratio</b>. They can even tell doctors what type of <b>antibiotic</b> to give to the patient!</p><p style=\"margin-bottom: 1rem;\">To recover the chip's data, the doctor uses a special <b>magnet</b> that copies it. This way, the doctor can put the information from the chip onto a computer. Then they can find out exactly what is wrong with the person.</p><p style=\"margin-bottom: 1rem;\">The idea of putting chips in humans is still very new. However, it is now becoming more <b>prevalent</b>. Scientists and doctors are hopeful about the future uses of microchips. Someday, all new babies might get a microchip soon after they are born. Doctors will be able to know about any problems from the very beginning. It is obvious that medicine and computers <b>complement</b> each other well.</p></div>",
+      "imageUrl": "/unit20_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readA_1",
+              "content": "1. Microchips are made up of compressed electrical circuits.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đoạn văn nêu rõ vi mạch (microchips) được làm bằng các mạch điện nén (compressed electrical circuits)."
+            },
+            {
+              "id": "readA_2",
+              "content": "2. Chips express the aggregate number of immune and intimate cells in a ratio.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Vi mạch thể hiện số lượng tổng cộng của tế bào miễn dịch (immune) và tế bào bị lây nhiễm (infected), không phải tế bào thân thiết (intimate cells)."
+            },
+            {
+              "id": "readA_3",
+              "content": "3. Chips detect viral infections and problems with people’s metabolism.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đoạn văn có nhắc đến khả năng phát hiện bệnh do virus và vấn đề trao đổi chất."
+            },
+            {
+              "id": "readA_4",
+              "content": "4. A doctor pinches the skin and cuts a hole with a tool shaped like a spiral.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bác sĩ véo (pinches) da và rạch lỗ nhỏ bằng công cụ hình xoắn ốc (spiral)."
+            },
+            {
+              "id": "readA_5",
+              "content": "5. Putting antibiotics in humans is becoming more prevalent.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Việc cấy vi mạch (putting microchips) mới đang trở nên phổ biến (prevalent), chứ không phải việc tiêm thuốc kháng sinh (antibiotics)."
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readB_1",
+              "content": "1. What does the doctor’s special magnet do?",
+              "options": [
+                "It copies the chip's data.",
+                "It compresses the circuit.",
+                "It finds the aggregate number.",
+                "It complements the medicine."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nam châm đặc biệt (special magnet) được dùng để sao chép dữ liệu của vi mạch (copies the chip's data)."
+            },
+            {
+              "id": "readB_2",
+              "content": "2. What holds the equivalent amount of storage as most computers?",
+              "options": [
+                "Microchips",
+                "Databases",
+                "Magnets",
+                "Ratios"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Vi mạch (Microchips) lưu trữ một lượng dữ liệu tương đương (equivalent amount) với hầu hết các máy tính."
+            },
+            {
+              "id": "readB_3",
+              "content": "3. After the input is stored on the chip, what is the next phase of the process?",
+              "options": [
+                "Putting it underneath the person's skin",
+                "Finding a viral infection",
+                "Taking an antibiotic",
+                "Using a magnet"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Giai đoạn tiếp theo là cấy vi mạch vào dưới da người bệnh."
+            },
+            {
+              "id": "readB_4",
+              "content": "4. What do microchips do to record what is happening on the quantum level?",
+              "options": [
+                "They scan the patient's body.",
+                "They pinch the skin.",
+                "They create a spiral.",
+                "They detect the metabolism."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Vi mạch quét (scan) cơ thể bệnh nhân để ghi lại hoạt động ở cấp độ lượng tử."
+            },
+            {
+              "id": "readB_5",
+              "content": "5. What complements each other, according to the passage?",
+              "options": [
+                "Medicine and computer technology",
+                "Immune and infected cells",
+                "Quantum mechanics and biology",
+                "Doctors and patients"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Y học và công nghệ máy tính (Medicine and computers) bổ sung, hỗ trợ cho nhau rất tốt (complement each other well)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

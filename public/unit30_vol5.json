@@ -1,0 +1,583 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 30",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit30_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit30_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">burden</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bə:rdn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A burden is a serious or difficult responsibility.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Children who do not behave are a burden to their parents.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compromise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑmprəmaiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To compromise is to agree to something that is not exactly what you want.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We both compromised about the game we decided to play.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">craft</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kræft]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To craft something is to make it using skill.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She crafted the bookcase out of solid pine wood and then painted it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crook</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kruk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A crook is someone who is not honest or who commits crimes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The manager was arrested by the police for being a crook.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">currency</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kə:rənsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Currency is the form of money used in a certain place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Elizabeth had to exchange her dollars for foreign currency.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enigma</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inigmə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An enigma is someone or something that is mysterious or hard to understand.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The theft of the paintings is an enigma to the investigators.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fragile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[frædʒəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people or things are fragile, they are not strong and can be damaged easily.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fragile glassware was carefully packed into boxes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hybrid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[haibrid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hybrid is a mixture of different things or styles.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In Greek mythology, a centaur is a hybrid of a man and a horse.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">innocence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inəsns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Innocence is a lack of experience of difficult or complex things in life.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Everyone who met her found her innocence to be charming.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">merge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mə:rdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To merge two things is to combine them into one whole thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The storm clouds merged into one large menacing cloud that filled the sky.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">moderate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑdəreit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is moderate, it is not too big or too small in size or amount.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It takes a moderate amount of patience to be around small children all day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overwhelm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvərhwelm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To overwhelm is to exist in such a large amount that someone cannot deal with it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The amount of homework her teacher assigned has overwhelmed her.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">perception</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pərsepʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A perception of a situation is a way of thinking about it or understanding it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since he couldn't see, his perception of life was much different than mine.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reunion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ri:ju:njən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A reunion is the meeting of people or things that have been separated.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Every summer we have a family reunion at the lake.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rig</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rig]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To rig something means to dishonestly arrange it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bad politician rigged the election so that he would win.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shiver</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃivər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shiver is a shaking movement the body makes when someone is cold or scared.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I got shivers on my way home because it was so cold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sociable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[souʃəbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is sociable, they are friendly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many of my good friends are sociable, but I am shy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">talkative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tɔ:kətiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is talkative, they talk a lot.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My aunt is very talkative whenever she is on the phone.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tow something is to pull it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The truck was towing a trailer behind it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tramp</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[træmp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tramp is to put your feet down in a loud, heavy way as you walk.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The baby tramped across the floor as he was learning to walk.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. If you are an enigma, you are ______.",
+              "options": [
+                "funny",
+                "mysterious",
+                "dishonest",
+                "sleepy"
+              ],
+              "correctAnswer": "B",
+              "explanation": "enigma là điều bí ẩn (mysterious)."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. If someone is too talkative during a movie, then others may ______.",
+              "options": [
+                "get sleepy",
+                "get angry",
+                "start to sing",
+                "join in"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Nếu ai đó quá nói nhiều (talkative) trong rạp phim, người khác sẽ nổi giận (get angry)."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. If someone has shivers, what should they do?",
+              "options": [
+                "Stop running",
+                "Put on a sweater",
+                "Be quiet",
+                "Sit down"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Nếu ai đó bị run lẩy bẩy (shivers) do lạnh, họ nên mặc áo len (Put on a sweater)."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. How should someone deal with another that is overwhelming them?",
+              "options": [
+                "Ask for help",
+                "Forget it",
+                "Keep quite",
+                "Cry"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Khi bị áp đảo/quá tải (overwhelming), nên nhờ giúp đỡ (Ask for help)."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. Which of the following would have the most innocence?",
+              "options": [
+                "A grandparent",
+                "A sea captain",
+                "A teen",
+                "A president"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Một thiếu niên (A teen) có sự ngây thơ (innocence) nhiều nhất trong số các lựa chọn."
+            },
+            {
+              "id": "ex1_6",
+              "content": "6. What would someone consider a burden?",
+              "options": [
+                "Working two jobs",
+                "A happy child",
+                "Resting",
+                "Taking a walk"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Làm hai công việc cùng lúc (Working two jobs) có thể được coi là gánh nặng (a burden)."
+            },
+            {
+              "id": "ex1_7",
+              "content": "7. If someone exercised a moderate amount, they would be ______.",
+              "options": [
+                "stressed",
+                "healthy",
+                "very ill",
+                "a good leader"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Tập thể dục ở mức vừa phải (moderate) sẽ giúp khỏe mạnh (healthy)."
+            },
+            {
+              "id": "ex1_8",
+              "content": "8. Who would you probably see at a reunion?",
+              "options": [
+                "Your family",
+                "The police",
+                "Your boss",
+                "Your barber"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bạn thường gặp gia đình (Your family) ở buổi đoàn tụ (reunion)."
+            },
+            {
+              "id": "ex1_9",
+              "content": "9. Where would a crook most likely end up for doing something wrong?",
+              "options": [
+                "At church",
+                "In jail",
+                "In school",
+                "On vacation"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Kẻ lừa đảo/tội phạm (a crook) thường sẽ phải vào tù (In jail)."
+            },
+            {
+              "id": "ex1_10",
+              "content": "10. What is a boat most likely to tow behind it?",
+              "options": [
+                "A trailer",
+                "A water skier",
+                "A fisherman",
+                "A rocket"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Thuyền thường sẽ kéo (tow) một người lướt ván nước (A water skier) theo sau."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. I met a very friendly girl on my first day of school.",
+              "options": [
+                "sociable",
+                "fragile",
+                "talkative",
+                "moderate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "friendly (thân thiện) tương đương với sociable."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. Marty walked heavily across the kitchen to the back door.",
+              "options": [
+                "tramped",
+                "towed",
+                "rigged",
+                "crafted"
+              ],
+              "correctAnswer": "A",
+              "explanation": "walked heavily (bước đi nặng nề) tương đương với tramped."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. That lovely dresser was skillfully made from oak.",
+              "options": [
+                "crafted",
+                "merged",
+                "rigged",
+                "towed"
+              ],
+              "correctAnswer": "A",
+              "explanation": "skillfully made (làm một cách khéo léo) tương đương với crafted."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. The man had dishonestly changed the game so that he would win every time.",
+              "options": [
+                "rigged",
+                "merged",
+                "crafted",
+                "towed"
+              ],
+              "correctAnswer": "A",
+              "explanation": "dishonestly changed (thay đổi một cách gian lận) tương đương với rigged."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. The paint colors combined to make new ones on the canvas.",
+              "options": [
+                "merged",
+                "crafted",
+                "rigged",
+                "towed"
+              ],
+              "correctAnswer": "A",
+              "explanation": "combined (kết hợp) tương đương với merged."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. fragile",
+              "options": [
+                "sturdy",
+                "strong",
+                "robust",
+                "weak"
+              ],
+              "correctAnswer": "D",
+              "explanation": "fragile là mong manh, dễ vỡ (weak)."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. shiver",
+              "options": [
+                "jump",
+                "fall",
+                "shake",
+                "stand"
+              ],
+              "correctAnswer": "C",
+              "explanation": "shiver là run rẩy (shake)."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. currency",
+              "options": [
+                "money",
+                "recent",
+                "waves",
+                "spend"
+              ],
+              "correctAnswer": "A",
+              "explanation": "currency là tiền tệ (money)."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. overwhelm",
+              "options": [
+                "too much",
+                "not enough",
+                "completed",
+                "unfinished"
+              ],
+              "correctAnswer": "A",
+              "explanation": "overwhelm là áp đảo, làm quá tải (too much)."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. sociable",
+              "options": [
+                "rude",
+                "friendly",
+                "cunning",
+                "wise"
+              ],
+              "correctAnswer": "B",
+              "explanation": "sociable là hòa đồng, thân thiện (friendly)."
+            },
+            {
+              "id": "ex3_6",
+              "content": "6. craft",
+              "options": [
+                "to bend",
+                "to make",
+                "to ruin",
+                "to stir"
+              ],
+              "correctAnswer": "B",
+              "explanation": "craft là chế tác, làm thủ công (to make)."
+            },
+            {
+              "id": "ex3_7",
+              "content": "7. enigma",
+              "options": [
+                "public",
+                "dramatic",
+                "mystery",
+                "parent"
+              ],
+              "correctAnswer": "C",
+              "explanation": "enigma là điều bí ẩn (mystery)."
+            },
+            {
+              "id": "ex3_8",
+              "content": "8. crook",
+              "options": [
+                "thief",
+                "hermit",
+                "wizard",
+                "warrior"
+              ],
+              "correctAnswer": "A",
+              "explanation": "crook là kẻ lừa đảo, kẻ trộm (thief)."
+            },
+            {
+              "id": "ex3_9",
+              "content": "9. merge",
+              "options": [
+                "to pull apart",
+                "to float",
+                "to carry",
+                "to combine"
+              ],
+              "correctAnswer": "D",
+              "explanation": "merge là hòa nhập, kết hợp (to combine)."
+            },
+            {
+              "id": "ex3_10",
+              "content": "10. burden",
+              "options": [
+                "a deal",
+                "a resolution",
+                "an order",
+                "a hard responsibility"
+              ],
+              "correctAnswer": "D",
+              "explanation": "burden là gánh nặng, trách nhiệm nặng nề (a hard responsibility)."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex4_1",
+              "content": "1. Let’s compromise and do exactly what I want.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Compromise là thỏa hiệp (nhượng bộ), không thể là \"làm chính xác những gì tôi muốn\"."
+            },
+            {
+              "id": "ex4_2",
+              "content": "2. Jill’s perception of the movie was opposite to many viewers.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Cách nhìn nhận (perception) về bộ phim."
+            },
+            {
+              "id": "ex4_3",
+              "content": "3. The temperature in here is too moderate. I’m freezing!",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Moderate là vừa phải, ôn hòa. Nếu nhiệt độ ôn hòa thì không thể \"chết cóng\" (freezing) được."
+            },
+            {
+              "id": "ex4_4",
+              "content": "4. We had a reunion yesterday. I haven’t seen her for years.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Reunion là đoàn tụ (thường dùng cho gia đình/tập thể). Nếu chỉ gặp một người bạn cũ thì thường không dùng reunion."
+            },
+            {
+              "id": "ex4_5",
+              "content": "5. Tonya’s new car is a hybrid that runs on gas and electricity.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Xe lai (hybrid) chạy bằng xăng và điện."
+            },
+            {
+              "id": "ex4_6",
+              "content": "6. It is such burden to drive two hours to work each day.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Lái xe hai giờ mỗi ngày là một gánh nặng (burden)."
+            },
+            {
+              "id": "ex4_7",
+              "content": "7. The enigma was so simple that a child could find a solution.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Enigma là điều bí ẩn, khó hiểu. Không thể đơn giản đến mức trẻ con cũng giải được."
+            },
+            {
+              "id": "ex4_8",
+              "content": "8. Her innocence reminded many of us when we were young.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Sự ngây thơ (innocence) của cô bé."
+            },
+            {
+              "id": "ex4_9",
+              "content": "9. I crafted the airplane out of pieces of old wood.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Tôi chế tạo/lắp ráp (crafted) chiếc máy bay từ gỗ."
+            },
+            {
+              "id": "ex4_10",
+              "content": "10. The snake tramped quietly on its stomach.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Tramp là bước đi nặng nề, ồn ào. Rắn không có chân và trườn nhẹ nhàng nên không thể tramp."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Demon's Bridge</h1><p style=\"margin-bottom: 1rem;\">A young woman's cow had crossed the river in the morning when the water level was <b>moderate</b>. But when the woman returned with her dog to get the cow, she was <b>overwhelmed</b> by how high the water had risen. Even if she crossed, she still couldn't <b>tow</b> her cow back through the river.</p><p style=\"margin-bottom: 1rem;\">\"What am I going to do?\" she wondered.</p><p style=\"margin-bottom: 1rem;\">Suddenly, a man appeared across the river. \"A <b>fragile</b> young lady like you shouldn't have to struggle across a river,\" he said. \"I'll build you a bridge.\"</p><p style=\"margin-bottom: 1rem;\">The man was an <b>enigma</b>. The young woman's <b>perception</b> of him was that he was a <b>sociable</b> person. He was <b>talkative</b>, yet something was strange about him.</p><p style=\"margin-bottom: 1rem;\">\"I don't want to be a <b>burden</b> to you, sir,\" the woman replied.</p><p style=\"margin-bottom: 1rem;\">\"Don't worry,\" he told her as he began <b>crafting</b> a bridge. He <b>merged</b> the pieces of the bridge together with amazing speed. Soon, it was finished.</p><p style=\"margin-bottom: 1rem;\">\"Oh, but how can I pay you for your work? Let's <b>compromise</b>. I am sure that we can find a fair solution. What do you think?\" The woman asked.</p><p style=\"margin-bottom: 1rem;\">\"The only <b>currency</b> I need is the first living thing that crosses the bridge,\" the man replied.</p><p style=\"margin-bottom: 1rem;\">She thought, \"This deal sounds weird. Maybe he's actually a river demon.\" She <b>shivered</b> because she realized that he had taken advantage of her <b>innocence</b> and <b>rigged</b> the deal somehow. But she had a plan of her own. She pulled a piece of bread from her pocket and threw it across the bridge. Her dog ran after it.</p><p style=\"margin-bottom: 1rem;\">\"The dog is the first living thing across the bridge,\" she said to the man.</p><p style=\"margin-bottom: 1rem;\">The man was angry. He suddenly changed into a <b>hybrid</b> of a human and a fish. \"You <b>crook</b>!\" he shouted. \"You tricked me. I have no use for your dog!\" He screamed and dove into the river.</p><p style=\"margin-bottom: 1rem;\">The woman <b>tramped</b> across the bridge to the other side and had a happy <b>reunion</b> with her dog and cow.</p></div>",
+      "imageUrl": "/unit30_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec5_1",
+              "content": "1. The woman’s perception was that though the man was talkative and sociable, he was also an enigma.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Mặc dù ông ta nói nhiều và hòa đồng, nhưng vẫn là một người bí ẩn (enigma)."
+            },
+            {
+              "id": "sec5_2",
+              "content": "2. When the young woman returned, she was overwhelmed by the moderate water level.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Cô ấy bị quá tải (overwhelmed) bởi mực nước đã dâng lên rất cao, chứ không phải ở mức vừa phải (moderate)."
+            },
+            {
+              "id": "sec5_3",
+              "content": "3. The fragile young woman thought she might be a burden to the man.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Cô gái yếu ớt (fragile) nghĩ mình có thể trở thành gánh nặng (burden) cho người đàn ông."
+            },
+            {
+              "id": "sec5_4",
+              "content": "4. While crafting the bridge, the man merged the pieces with amazing speed.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Anh ta đã lắp ráp các bộ phận của cây cầu với tốc độ đáng kinh ngạc."
+            },
+            {
+              "id": "sec5_5",
+              "content": "5. The woman tramped across the bridge and had a happy reunion with the man.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Cô bước qua cầu và có một cuộc đoàn tụ (reunion) vui vẻ với chó và con bò của mình, chứ không phải với người đàn ông."
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec6_1",
+              "content": "1. What did the man change into a hybrid of after the dog crossed the bridge?",
+              "options": [
+                "The man turned into a hybrid of a human and a fish.",
+                "The man turned into a hybrid of a human and a bird.",
+                "The man turned into a hybrid of a bear and a fish.",
+                "The man turned into a hybrid of a dog and a fish."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Người đàn ông biến thành một sinh vật lai (hybrid) giữa người và cá."
+            },
+            {
+              "id": "sec6_2",
+              "content": "2. Why was the young woman unable to tow her cow across the river?",
+              "options": [
+                "She was overwhelmed by how high the water had risen.",
+                "The cow was too heavy to tow.",
+                "The river was moving too fast.",
+                "She didn't have a rope."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cô ấy bị choáng ngợp (overwhelmed) bởi mực nước đã dâng lên rất cao nên không thể kéo bò qua sông."
+            },
+            {
+              "id": "sec6_3",
+              "content": "3. What currency did the man ask to compromise?",
+              "options": [
+                "He asked for the first living thing that crosses the bridge.",
+                "He asked for a piece of bread.",
+                "He asked for money.",
+                "He asked for the cow."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Loại \"tiền tệ\" (currency) ông ta yêu cầu là sinh vật sống đầu tiên bước qua cây cầu."
+            },
+            {
+              "id": "sec6_4",
+              "content": "4. Why did the young woman shiver?",
+              "options": [
+                "She shivered because she realized that he had taken advantage of her innocence and rigged a trap for her.",
+                "She shivered because the water was cold.",
+                "She shivered because the demon was scary.",
+                "She shivered because the dog ran away."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cô ấy rùng mình (shivered) vì nhận ra ông ta đã lợi dụng sự ngây thơ của cô và gài bẫy (rigged) cô."
+            },
+            {
+              "id": "sec6_5",
+              "content": "5. What did the water demon call the woman just before he dove into the river?",
+              "options": [
+                "He called her a \"crook.\"",
+                "He called her a \"thief.\"",
+                "He called her a \"liar.\"",
+                "He called her a \"genius.\""
+              ],
+              "correctAnswer": "A",
+              "explanation": "Con quỷ nước đã gọi cô là một kẻ lừa đảo (\"crook\") trước khi lặn xuống sông."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 28",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit28_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit28_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aquarium</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkwɛəriəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An aquarium is a building where fish and underwater animals are kept.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We took a trip to the aquarium and saw a scary shark.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arbitrary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[a:rbitreri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is arbitrary, it is not based on any plan or system, so it seems random.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The classroom had many arbitrary rules that made me confused.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">autobiography</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:təbaiɑgrəfi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An autobiography is a true story of a person's life written by that person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I read an autobiography about my favorite entertainer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convention</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənvenʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A convention is behavior that is considered to be common or polite.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the US, a popular convention is to shake hands when you meet someone.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gracious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[greiʃəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is gracious, then they are kind and helpful to those who need it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The operator was gracious enough to help me find his number.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">improve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impru:v]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To improve something means to make it better.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He studied hard to improve his test scores from the previous year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">insulate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[insəleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To insulate something means to protect it from heat, cold, or noise.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People can conserve energy by insulating their houses.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intrigue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intri:g]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To intrigue means to cause an interest in something or someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her mysterious past intrigued her new friend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">longevity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɑndʒevəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Longevity is the ability to live for a long time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sea turtles have an amazing longevity.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">misplace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mispleis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To misplace something means to lose it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I misplaced my wallet, and I didn't find it until a week later.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">naughty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɔ:ti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When children are naughty, they behave badly or do not do what they are told.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy had to go to his room because he was being naughty.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">norm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɔ:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A norm is a way of behaving that is considered normal in a particular society.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Wearing a heavy coat all summer is not considered a norm in the desert.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">orangutan</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:ræŋutæn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An orangutan is a large ape with red and brown hair and long arms.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Orangutans use their long arms to swing from trees.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overload</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvərloud]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To overload something means to put more things into it than it is meant to hold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you overload the truck, it might crash.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">philanthropy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[filænθrəpi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Philanthropy is the act of helping others, without wanting anything in return.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wealthy business owner is well known for his acts of philanthropy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">probe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[proub]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To probe into something means to ask questions to discover facts about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bank probed into his financial history to see if he qualified for a loan.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recipient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[risipiənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A recipient of something is the person who receives it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was the recipient of four phone calls today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reptile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reptail]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A reptile is a cold-blooded animal that lays eggs and has skin covered with scales.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Lizards are my favorite type of reptile.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thrive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θraiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To thrive means to do well and be successful, healthy, or strong.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He may be an old man, but he continues to thrive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ultimate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌltəmit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is ultimate, it is the final result or aim of a long series of events.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ By trying hard in school, I will reach my ultimate goal of becoming a doctor.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. What would you find at an aquarium?",
+              "options": [
+                "A blanket",
+                "A squid",
+                "A cow",
+                "A coyote"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Trong thủy cung (aquarium), bạn có thể tìm thấy một con mực (A squid)."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. What can you do to improve your grades?",
+              "options": [
+                "Copy them",
+                "Study more",
+                "Miss class",
+                "Get less sleep"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bạn có thể học nhiều hơn (Study more) để cải thiện điểm số."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. What is the ultimate result of going to college?",
+              "options": [
+                "Signing up for classes",
+                "Taking many tests",
+                "Getting a degree",
+                "Dating"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Kết quả cuối cùng (ultimate result) của việc học đại học là lấy được bằng cấp (Getting a degree)."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. What happens if you insulate a house in the winter?",
+              "options": [
+                "Cold air stays outside.",
+                "Fires cannot be lit.",
+                "You can never get outside.",
+                "It will float."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cách nhiệt (insulate) cho ngôi nhà vào mùa đông giúp giữ không khí lạnh ở bên ngoài."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. Who would most likely publish an autobiography?",
+              "options": [
+                "An important person",
+                "A five-year-old",
+                "A shy teenager",
+                "A dead person"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Một người quan trọng (An important person) có khả năng cao xuất bản tự truyện (autobiography) của họ."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. recipient",
+              "options": [
+                "an attempt",
+                "a giver",
+                "a friend",
+                "a follower"
+              ],
+              "correctAnswer": "B",
+              "explanation": "recipient là người nhận, ngược lại là người cho (a giver)."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. misplace",
+              "options": [
+                "to try",
+                "to help",
+                "to find",
+                "to declare"
+              ],
+              "correctAnswer": "C",
+              "explanation": "misplace là làm mất, ngược lại là tìm thấy (to find)."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. naughty",
+              "options": [
+                "wanting more",
+                "over",
+                "lacking",
+                "behaving well"
+              ],
+              "correctAnswer": "D",
+              "explanation": "naughty là hư hỏng, nghịch ngợm, ngược lại là cư xử tốt (behaving well)."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. longevity",
+              "options": [
+                "short life",
+                "plans",
+                "answers",
+                "tallness"
+              ],
+              "correctAnswer": "A",
+              "explanation": "longevity là tuổi thọ cao, sống lâu, ngược lại là cuộc đời ngắn ngủi (short life)."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. thrive",
+              "options": [
+                "to create",
+                "to do bad",
+                "to agree",
+                "to move around"
+              ],
+              "correctAnswer": "B",
+              "explanation": "thrive là phát triển mạnh, làm tốt, ngược lại là làm tệ (to do bad)."
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. gracious",
+              "options": [
+                "mean",
+                "silly",
+                "kind",
+                "smart"
+              ],
+              "correctAnswer": "A",
+              "explanation": "gracious là tử tế, tốt bụng, ngược lại là keo kiệt, xấu tính (mean)."
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. norm",
+              "options": [
+                "abnormal",
+                "common",
+                "everyday",
+                "average"
+              ],
+              "correctAnswer": "A",
+              "explanation": "norm là chuẩn mực, bình thường, ngược lại là bất thường (abnormal)."
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. intrigue",
+              "options": [
+                "to excite",
+                "to bore",
+                "to reassure",
+                "to trust"
+              ],
+              "correctAnswer": "B",
+              "explanation": "intrigue là gây hứng thú, tò mò, ngược lại là gây nhàm chán (to bore)."
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. arbitrary",
+              "options": [
+                "accidental",
+                "solar",
+                "random",
+                "planned"
+              ],
+              "correctAnswer": "D",
+              "explanation": "arbitrary là ngẫu nhiên, tùy tiện, ngược lại là có kế hoạch (planned)."
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. probe",
+              "options": [
+                "to touch",
+                "to open",
+                "to ignore",
+                "to build"
+              ],
+              "correctAnswer": "C",
+              "explanation": "probe là thăm dò, hỏi han, ngược lại là phớt lờ (to ignore)."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. Make sure to misplace your money so that you will always have it.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Misplace (làm mất) tiền sẽ khiến bạn không còn nó, chứ không phải luôn có nó."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. The orangutans at the zoo swung so gracefully from the trees.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Đười ươi (orangutans) đu đưa trên cây."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. The tigers in the aquarium loved to run and play.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Hổ (tigers) không sống trong thủy cung (aquarium)."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. The greedy man loved philanthropy. He never offered to help anybody.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Người tham lam không bao giờ giúp đỡ ai thì không thể yêu thích lòng bác ái (philanthropy)."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. The box broke when he overloaded it with books.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Chiếc hộp bị vỡ khi chất quá tải (overloaded) sách."
+            },
+            {
+              "id": "ex3_6",
+              "content": "6. The mechanics of computers intrigue me.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Cơ chế của máy tính gây hứng thú (intrigue) cho tôi."
+            },
+            {
+              "id": "ex3_7",
+              "content": "7. The longevity of the rat was fifty centimeters.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Longevity là tuổi thọ (thời gian sống), không đo bằng centimet (độ dài)."
+            },
+            {
+              "id": "ex3_8",
+              "content": "8. Plants will thrive if they are not given any water.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Cây sẽ không thể phát triển mạnh mẽ (thrive) nếu không được tưới nước."
+            },
+            {
+              "id": "ex3_9",
+              "content": "9. The naughty girl always obeyed her mother.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Cô bé hư hỏng (naughty) thì không thể luôn vâng lời (obeyed) mẹ."
+            },
+            {
+              "id": "ex3_10",
+              "content": "10. The ultimate result of the game was a win for the home team.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Kết quả cuối cùng (ultimate result)."
+            },
+            {
+              "id": "ex3_11",
+              "content": "11. Some people play the lottery in hopes that they will improve their lives.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Cải thiện (improve) cuộc sống."
+            },
+            {
+              "id": "ex3_12",
+              "content": "12. Paying for gasoline before pumping it is a norm.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Trả tiền xăng trước khi bơm là một điều bình thường/chuẩn mực (norm)."
+            },
+            {
+              "id": "ex3_13",
+              "content": "13. I probed the audience because I didn’t want to hear what they had to say.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Probe là thăm dò, hỏi han. Nếu không muốn nghe thì sẽ không probe."
+            },
+            {
+              "id": "ex3_14",
+              "content": "14. Waiting your turn in line is a social convention.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Xếp hàng chờ đến lượt là một quy ước xã hội (social convention)."
+            },
+            {
+              "id": "ex3_15",
+              "content": "15. My dog is a great reptile.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Chó là động vật có vú, không phải là loài bò sát (reptile)."
+            },
+            {
+              "id": "ex3_16",
+              "content": "16. I insulated my room with blankets to keep the loud noises out.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Cách âm (insulated) bằng chăn để ngăn tiếng ồn."
+            },
+            {
+              "id": "ex3_17",
+              "content": "17. She was the recipient of the grand prize.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Người nhận (recipient) giải đặc biệt."
+            },
+            {
+              "id": "ex3_18",
+              "content": "18. Someday, I will write my father’s autobiography.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Autobiography là tự truyện (tự mình viết về mình). Nếu viết về bố thì gọi là biography (tiểu sử)."
+            },
+            {
+              "id": "ex3_19",
+              "content": "19. I don’t want to play with you anymore. You make up arbitrary rules as we play.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Nghĩ ra những luật lệ tùy tiện (arbitrary rules)."
+            },
+            {
+              "id": "ex3_20",
+              "content": "20. The store clerk was so gracious. He helped me find everything I was looking for.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Nhân viên cửa hàng rất tử tế (gracious)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lottery</h1><p style=\"margin-bottom: 1rem;\">Joe was watching television when he heard a knock at the door. He thought, \"Who could that be? It's probably one of the <b>naughty</b> neighborhood children.\" Joe stood up and walked to the door. When he opened it, he saw a beautiful woman.</p><p style=\"margin-bottom: 1rem;\">She said, \"Good morning, Joe! I have great news. You're the <b>recipient</b> of this check for one million dollars! You won the lottery!\"</p><p style=\"margin-bottom: 1rem;\">Joe couldn't believe it. His mind was <b>overloaded</b> with emotions. Joe said, \"Thank you! Thank you!\"</p><p style=\"margin-bottom: 1rem;\">After he calmed down, Joe made a photocopy of the check in case he <b>misplaced</b> the original one. He sat and thought about what he wanted to do with the money. He didn't want to spend it in an <b>arbitrary</b> way. Joe thought, \"I know there are others who need this money more than I do. I've always loved animals, so I think I'll buy things for the zoo!\"</p><p style=\"margin-bottom: 1rem;\">Joe knew that the zoo was in bad shape. The cages were too small, and they weren't <b>insulated</b> from the cold. Animals couldn't <b>thrive</b> in such conditions.</p><p style=\"margin-bottom: 1rem;\">He took out some stationery and wrote a letter to the zoo. He offered to help the zoo buy huge cages for the large mammals and <b>reptiles</b>. He offered to buy healthy food for the <b>orangutans</b> to increase their <b>longevity</b>. He even said that he would buy new glass walls for the <b>aquarium</b> because the old ones were cracked.</p><p style=\"margin-bottom: 1rem;\">Joe's act of <b>philanthropy</b> <b>intrigued</b> the zookeeper. He <b>probed</b> Joe to learn why he spent his money to <b>improve</b> the zoo. It wasn't a social <b>convention</b> for a person to be so <b>gracious</b>.</p><p style=\"margin-bottom: 1rem;\">Joe told the zookeeper, \"I know it's not the <b>norm</b>, but my <b>ultimate</b> decision to help these animals is better than anything I could have done for myself. If I ever write an <b>autobiography</b>, I will write that this was the happiest day of my life.\"</p></div>",
+      "imageUrl": "/unit28_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec4_1",
+              "content": "1. Joe was the recipient of a check because he won the lottery.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Joe là người nhận tấm séc vì anh đã trúng xổ số."
+            },
+            {
+              "id": "sec4_2",
+              "content": "2. He wanted to buy new glass walls for the aquarium because the old ones were cracked.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Anh ấy muốn mua kính mới cho thuỷ cung vì những cái cũ đã bị nứt."
+            },
+            {
+              "id": "sec4_3",
+              "content": "3. If Joe wrote an autobiography, he would write about the norms of the overloaded aquarium.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Nếu viết tự truyện (autobiography), anh ấy sẽ viết rằng ngày trúng số và giúp đỡ động vật là ngày hạnh phúc nhất đời anh."
+            },
+            {
+              "id": "sec4_4",
+              "content": "4. Joe made a photocopy of the check in case he misplaced the original one.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Anh ấy photo tấm séc phòng trường hợp làm mất (misplaced) bản gốc."
+            },
+            {
+              "id": "sec4_5",
+              "content": "5. When Joe opened the door, he saw one of the naughty neighborhood children.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Khi mở cửa, anh ấy nhìn thấy một người phụ nữ xinh đẹp mang theo tấm séc."
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec5_1",
+              "content": "1. What did Joe think the naughty children were doing to him?",
+              "options": [
+                "Joe thought the naughty neighborhood children were playing a trick on him.",
+                "Joe thought they were selling cookies.",
+                "Joe thought they wanted his money.",
+                "Joe thought they were lost."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Joe nghĩ những đứa trẻ nghịch ngợm hàng xóm đang trêu đùa anh."
+            },
+            {
+              "id": "sec5_2",
+              "content": "2. Why did Joe take out stationery?",
+              "options": [
+                "He took out some stationery to write a letter to the zoo.",
+                "He took out some stationery to write a book.",
+                "He took out some stationery to draw a picture.",
+                "He took out some stationery to write a check."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Anh lấy giấy bút ra để viết một lá thư gửi cho sở thú."
+            },
+            {
+              "id": "sec5_3",
+              "content": "3. What did Joe improve to help the orangutans increase their longevity?",
+              "options": [
+                "He bought healthy food for them.",
+                "He bought new toys for them.",
+                "He bought bigger trees for them.",
+                "He bought new cages for them."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Anh ấy đã mua thức ăn tốt cho đười ươi để giúp chúng sống lâu hơn."
+            },
+            {
+              "id": "sec5_4",
+              "content": "4. What was the purpose of the zookeeper wanting to probe Joe with questions?",
+              "options": [
+                "He probed Joe to learn why he spent his money on the zoo instead of on himself.",
+                "He probed Joe to see if he was rich.",
+                "He probed Joe to ask for more money.",
+                "He probed Joe to sell him a ticket."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nhân viên sở thú gạn hỏi để tìm hiểu lý do tại sao Joe dùng tiền cho sở thú thay vì cho bản thân."
+            },
+            {
+              "id": "sec5_5",
+              "content": "5. If Joe were to write an autobiography, how would he describe this day?",
+              "options": [
+                "He would describe this day as the happiest day of his life.",
+                "He would describe this day as a normal day.",
+                "He would describe this day as the luckiest day.",
+                "He would describe this day as the most confusing day."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Anh ấy sẽ miêu tả ngày hôm nay là ngày hạnh phúc nhất trong cuộc đời anh."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

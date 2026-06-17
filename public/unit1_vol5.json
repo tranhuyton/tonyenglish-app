@@ -1,0 +1,523 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Volume 5 - Unit 1",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit1_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit1_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">allot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈlɑt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To allot something means to give it to someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The coach allotted each team five minutes to prepare a strategy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">appall</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈpɔ:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To appall means to horrify, shock, or disgust someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy was appalled when he saw the accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cache</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kæʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cache is a hiding place for valuable things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The pirates kept their jewelry in a cache hidden in a cave.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convenience</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənˈvi:njəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Convenience is a state of being able to do something with little effort.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Internet allows consumers to shop at their own convenience.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dearth</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[də:rθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dearth is an amount or supply which is not large enough.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is a dearth of money in my bank account. I can’t afford a new car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deliberate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diˈlibərit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a thing you do is deliberate, you intend to do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She made a deliberate effort to save money each month.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dire</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdaiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is dire, it is terrible and very serious.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The tornado created a dire situation for the small town.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">elapse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iˈlæps]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To elapse means to pass, as in seconds, minutes, or hours.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A few seconds must elapse before you can take another picture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">empathy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈempəθi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Empathy is sharing or understanding another person’s feelings.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The caring nurse had empathy for her patients.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fanciful</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfænsifəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is fanciful, it is unusual or unrealistic.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girl had fanciful ideas about doing well in school without studying.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gripe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[graip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To gripe means to complain constantly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Lawrence always gripes when he has to do chores.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grueling</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈgru:əliŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is grueling, it is very hard to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The climber faced the grueling task of reaching the top of the steep mountain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mundane</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mʌnˈdein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is mundane, it is boring, common, or ordinary.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man had the mundane chore of raking thousands of leaves into piles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">opt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑpt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To opt is to make a choice, especially when deciding in favor of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My brother likes chocolate ice cream, but I always opt for vanilla.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">outrage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈautreidʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Outrage is a very strong emotion of anger or shock.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Tommy was feeling outrage when his parents said he couldn’t go to the dance.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">paltry</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpɔ:ltri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When an amount of something is paltry, it is very small.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The poor man had a paltry sum of money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rectify</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈrektəfai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To rectify something means to correct it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I quickly rectified the spelling mistakes that I had on my essay.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">resourceful</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ri:ˈsɔ:rsfəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is resourceful, they are good at dealing with hard situations.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After his boat sunk, Matt was resourceful enough to build a raft.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sustenance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsʌstənəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Sustenance is food and water needed to keep a person, animal, or plant alive.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Without the proper sustenance, the man will starve.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tedious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈti:diəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is tedious, it is long, frustrating, and boring.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His job involved a lot of tedious typing, filing, and organizing.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "1. You would have empathy if you______.",
+              "options": [
+                "shared sad feelings",
+                "lost in a game",
+                "hurt your arm",
+                "ate a large meal"
+              ],
+              "correctAnswer": "A",
+              "explanation": "empathy là sự thấu cảm, tương đương với chia sẻ cảm xúc buồn (shared sad feelings)."
+            },
+            {
+              "id": "q2",
+              "content": "2. How would you feel if there was a dearth of food?",
+              "options": [
+                "Happy",
+                "Hungry",
+                "Full",
+                "Sleepy"
+              ],
+              "correctAnswer": "B",
+              "explanation": "dearth là sự thiếu hụt. Thiếu hụt thức ăn sẽ cảm thấy đói (Hungry)."
+            },
+            {
+              "id": "q3",
+              "content": "3. If something is a convenience, then it makes______.",
+              "options": [
+                "you very angry",
+                "you feel sick",
+                "a lot of money",
+                "a task easier"
+              ],
+              "correctAnswer": "D",
+              "explanation": "convenience là sự thuận tiện. Sự thuận tiện làm cho công việc dễ dàng hơn (a task easier)."
+            },
+            {
+              "id": "q4",
+              "content": "4. How would a resourceful person deal with a problem?",
+              "options": [
+                "Ignore it",
+                "Give up",
+                "Cry and ask for help",
+                "Find a solution"
+              ],
+              "correctAnswer": "D",
+              "explanation": "resourceful là tháo vát. Người tháo vát sẽ tìm ra giải pháp (Find a solution)."
+            },
+            {
+              "id": "q5",
+              "content": "5. If something was deliberate, then it was______.",
+              "options": [
+                "done with pride",
+                "done easily",
+                "done on purpose",
+                "not done at all"
+              ],
+              "correctAnswer": "C",
+              "explanation": "deliberate là cố ý, có chủ đích. Cố ý nghĩa là làm có chủ đích (done on purpose)."
+            },
+            {
+              "id": "q6",
+              "content": "6. How would you describe someone feeling a sense of outrage?",
+              "options": [
+                "Peaceful",
+                "Upset",
+                "Tired",
+                "Arrogant"
+              ],
+              "correctAnswer": "B",
+              "explanation": "outrage là phẫn nộ, tức giận. Cảm thấy phẫn nộ đồng nghĩa với việc bực tức (Upset)."
+            },
+            {
+              "id": "q7",
+              "content": "7. What fanciful idea might a doctor have?",
+              "options": [
+                "Give a patient medicine",
+                "Be kind to them",
+                "Tell them to rest",
+                "Ask a fairy for advice"
+              ],
+              "correctAnswer": "D",
+              "explanation": "fanciful là kỳ lạ, viển vông. Ý tưởng viển vông là hỏi xin lời khuyên từ tiên (Ask a fairy for advice)."
+            },
+            {
+              "id": "q8",
+              "content": "8. What would a tired person likely opt to do?",
+              "options": [
+                "Watch a movie",
+                "Exercise",
+                "Finish a book",
+                "Go to bed"
+              ],
+              "correctAnswer": "D",
+              "explanation": "opt là chọn. Người mệt mỏi có thể sẽ chọn đi ngủ (Go to bed)."
+            },
+            {
+              "id": "q9",
+              "content": "9. To rectify hurting your friend, you would___",
+              "options": [
+                "say sorry",
+                "laugh at him",
+                "hit him",
+                "ignore him"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rectify là sửa chữa, khắc phục. Khắc phục việc làm tổn thương bạn là nói xin lỗi (say sorry)."
+            },
+            {
+              "id": "q10",
+              "content": "10. What might appall a teacher?",
+              "options": [
+                "Smart students",
+                "A happy student",
+                "A mean attitude",
+                "A long test"
+              ],
+              "correctAnswer": "C",
+              "explanation": "appall là làm kinh hãi, phẫn nộ. Một giáo viên có thể bị phẫn nộ bởi thái độ thô lỗ (A mean attitude)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q11",
+              "content": "1. outrage",
+              "options": [
+                "idea",
+                "anger",
+                "beauty",
+                "personality"
+              ],
+              "correctAnswer": "B",
+              "explanation": "outrage là sự phẫn nộ, tương đương với anger (sự tức giận)."
+            },
+            {
+              "id": "q12",
+              "content": "2. rectify",
+              "options": [
+                "to correct",
+                "to sadden",
+                "to bore",
+                "to be hard"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rectify là sửa chữa, tương đương với to correct."
+            },
+            {
+              "id": "q13",
+              "content": "3. sustenance",
+              "options": [
+                "belief",
+                "flowing",
+                "food and drink",
+                "torn"
+              ],
+              "correctAnswer": "C",
+              "explanation": "sustenance là chất bổ dưỡng, thực phẩm, tương đương với food and drink."
+            },
+            {
+              "id": "q14",
+              "content": "4. dire",
+              "options": [
+                "terrible",
+                "likely",
+                "large",
+                "small"
+              ],
+              "correctAnswer": "A",
+              "explanation": "dire là thảm khốc, tồi tệ, tương đương với terrible."
+            },
+            {
+              "id": "q15",
+              "content": "5. opt",
+              "options": [
+                "to remove",
+                "to yell",
+                "to shout",
+                "to choose"
+              ],
+              "correctAnswer": "D",
+              "explanation": "opt là lựa chọn, tương đương với to choose."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the one that is opposite in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q16",
+              "content": "1. tedious",
+              "options": [
+                "fun",
+                "to read",
+                "to shrink",
+                "to love"
+              ],
+              "correctAnswer": "A",
+              "explanation": "tedious là nhàm chán. Trái nghĩa là fun (vui vẻ)."
+            },
+            {
+              "id": "q17",
+              "content": "2. appall",
+              "options": [
+                "to greet",
+                "to lower",
+                "to please",
+                "to create"
+              ],
+              "correctAnswer": "C",
+              "explanation": "appall là làm kinh hãi. Trái nghĩa là to please (làm hài lòng)."
+            },
+            {
+              "id": "q18",
+              "content": "3. paltry",
+              "options": [
+                "worthless",
+                "large",
+                "ugly",
+                "absent"
+              ],
+              "correctAnswer": "B",
+              "explanation": "paltry là ít ỏi, nhỏ nhặt. Trái nghĩa là large (lớn)."
+            },
+            {
+              "id": "q19",
+              "content": "4. grueling",
+              "options": [
+                "rough",
+                "exact",
+                "easy",
+                "necessary"
+              ],
+              "correctAnswer": "C",
+              "explanation": "grueling là cực nhọc. Trái nghĩa là easy (dễ dàng)."
+            },
+            {
+              "id": "q20",
+              "content": "5. resourceful",
+              "options": [
+                "foolish",
+                "realistic",
+                "impressive",
+                "surprising"
+              ],
+              "correctAnswer": "A",
+              "explanation": "resourceful là tháo vát, khôn ngoan. Trái nghĩa là foolish (ngu ngốc)."
+            }
+          ]
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q21",
+              "content": "1. I had a big breakfast. Many hours will elapse before I feel hungry again.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "elapse (trôi qua). Thời gian trôi qua trước khi đói lại. Sử dụng đúng."
+            },
+            {
+              "id": "q22",
+              "content": "2. Dan was a nice man, but no one would work for him because of his fanciful ideas.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "fanciful (viển vông). Mọi người không làm việc cho anh ta vì ý tưởng viển vông. Sử dụng đúng."
+            },
+            {
+              "id": "q23",
+              "content": "3. I was very grateful for my birthday gifts. I griped about them to all of my friends.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "gripe (phàn nàn). Biết ơn nhưng lại phàn nàn là mâu thuẫn. Sử dụng sai."
+            },
+            {
+              "id": "q24",
+              "content": "4. Because there was a dearth of food at home, the family went out to eat.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "dearth (sự thiếu hụt). Vì thiếu thức ăn nên ra ngoài ăn. Sử dụng đúng."
+            },
+            {
+              "id": "q25",
+              "content": "5. The puppy was happy to learn new tricks. Each one was very mundane for him.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "mundane (nhàm chán, bình thường). Cún con vui vẻ học thủ thuật mới nên không thể là nhàm chán. Sử dụng sai."
+            },
+            {
+              "id": "q26",
+              "content": "6. Mother allotted me and my brother the money. Now she had all the money.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "allot (phân bổ). Mẹ đã phân bổ tiền cho tôi và em trai thì mẹ không thể còn tất cả tiền. Sử dụng sai."
+            },
+            {
+              "id": "q27",
+              "content": "7. The boy was proud of his trophies. He displayed them in a cache for everyone to see.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "cache (nơi cất giấu). Trưng bày cúp cho mọi người xem ở nơi cất giấu bí mật là vô lý. Sử dụng sai."
+            },
+            {
+              "id": "q28",
+              "content": "8. Because he had planned for the trap to capture his victim, he was very deliberate.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "deliberate (có chủ ý, tính toán). Lên kế hoạch bẫy là hành động có chủ ý. Sử dụng đúng."
+            },
+            {
+              "id": "q29",
+              "content": "9. The violent criminal was on the news this evening. His actions appalled most people.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "appall (làm kinh hãi). Hành động của tên tội phạm bạo lực làm kinh hãi hầu hết mọi người. Sử dụng đúng."
+            },
+            {
+              "id": "q30",
+              "content": "10. That man is very selfish. He has empathy for every person he meets.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "empathy (sự đồng cảm). Người ích kỷ (selfish) thì không thể có sự đồng cảm với mọi người. Sử dụng sai."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Little Mice</h1><p style=\"margin-bottom: 1rem;\">Beth was a very <b>resourceful</b> and conservative mouse. She knew that winter was coming and that there would soon be a <b>dearth</b> of food. So she decided to make gathering food for winter her primary job. Gathering food was a <b>grueling</b> and <b>mundane</b> activity, but Beth made a <b>deliberate</b> effort because she knew that it was important. She <b>allotted</b> herself a few hours every day to collect beans. By winter, she had collected a massive pile and hid them in a <b>cache</b>.</p><p style=\"margin-bottom: 1rem;\">Beth had a sister named Mary. Mary lacked ambition. She had <b>fanciful</b> ideas about how she would survive winter. She thought that food would just come to her and that she could work at her own <b>convenience</b>. She <b>opted</b> to spend the days playing and dancing, instead of gathering beans. When the final hours of autumn <b>elapsed</b>, Mary had only a <b>paltry</b> amount of food stored away.</p><p style=\"margin-bottom: 1rem;\">Mary realized that her food supply was too small to last through winter. She visited her sister. Mary said, “Beth, I am in a <b>dire</b> situation. I didn’t gather enough food for winter. Will you let me share your beans? Please have some <b>empathy</b> for your sister!”</p><p style=\"margin-bottom: 1rem;\">Beth thought for a moment. Then she replied, “Mary, I am truly sorry for you. But I will not give you any of my beans. Instead, I will let you have my empty bag. You can still work hard and gather enough food for the winter. It will be <b>tedious</b>, but you will learn the value of hard work.”</p><p style=\"margin-bottom: 1rem;\">Beth’s words <b>appalled</b> Mary. Mary cried with <b>outrage</b>, “There is too much work! I won’t have any time to dance or play!”</p><p style=\"margin-bottom: 1rem;\">Beth said, “It is crucial that you gather enough food. You must have <b>sustenance</b> before you have fun. Go now, and <b>rectify</b> your situation.”</p><p style=\"margin-bottom: 1rem;\">Mary <b>griped</b> some more, but she knew that her sister was right. She took the bag and went to work gathering her own beans for the winter.</p></div>",
+      "imageUrl": "/unit1_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5_reading_A",
+          "title": "Part A: Mark each statement True (T) or False (F).",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q31",
+              "content": "1. Beth was resourceful and conservative, so she gathered a paltry pile of beans for her cache.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Câu chuyện nói Beth đã thu thập được một lượng lớn đậu (a massive pile)."
+            },
+            {
+              "id": "q32",
+              "content": "2. Because gathering food was tedious, Beth allotted a few hours of every day to do it.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng như câu chuyện: 'She allotted herself a few hours every day to collect beans.'"
+            },
+            {
+              "id": "q33",
+              "content": "3. Beth did grueling and mundane work to overcome the dearth of food in the winter.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng như câu chuyện, cô biết rằng mùa đông sẽ có sự thiếu hụt thức ăn (a dearth of food)."
+            },
+            {
+              "id": "q34",
+              "content": "4. Beth’s reply appalled Mary and made her reply in outrage.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng như câu chuyện: 'Beth’s words appalled Mary. Mary cried with outrage'."
+            },
+            {
+              "id": "q35",
+              "content": "5. When the hours of autumn elapsed, Mary had a massive amount of food.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Theo câu chuyện, Mary chỉ có một lượng thức ăn ít ỏi (a paltry amount of food)."
+            }
+          ]
+        },
+        {
+          "id": "sec6_reading_B",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q36",
+              "content": "1. What was Beth’s primary job?",
+              "options": [
+                "To play and dance",
+                "To gather food",
+                "To sleep all day",
+                "To complain to Mary"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Beth’s primary job was to gather food."
+            },
+            {
+              "id": "q37",
+              "content": "2. What fanciful idea did Mary opt to try?",
+              "options": [
+                "She thought that food would just come to her, and she wouldn’t have to work.",
+                "She decided to plant a massive farm.",
+                "She opted to steal from her sister.",
+                "She chose to work twice as hard as Beth."
+              ],
+              "correctAnswer": "A",
+              "explanation": "She thought that food would just come to her, and she wouldn’t have to work."
+            },
+            {
+              "id": "q38",
+              "content": "3. What did Mary want her sister to have empathy about?",
+              "options": [
+                "Her sore feet from dancing",
+                "Her lack of a warm house",
+                "Mary not having anything to eat",
+                "The boring work of gathering food"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Mary not having anything to eat."
+            },
+            {
+              "id": "q39",
+              "content": "4. How did Mary rectify her dire situation and get sustenance?",
+              "options": [
+                "She cried until Beth gave her the food.",
+                "Mary took the bag and went to work gathering beans.",
+                "She found another cache of food in the forest.",
+                "She continued to play and ignore the problem."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Mary took the bag and went to work gathering beans."
+            },
+            {
+              "id": "q40",
+              "content": "5. Even though she griped, what did Mary know at the end of the story?",
+              "options": [
+                "She knew her sister was right.",
+                "She knew winter would be short.",
+                "She knew she could find a different friend.",
+                "She knew the beans were not tasty."
+              ],
+              "correctAnswer": "A",
+              "explanation": "She knew her sister was right."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

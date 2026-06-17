@@ -1,0 +1,543 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 26",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit26_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit26_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">behalf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bihæf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is done on one's behalf, it is done for that person by another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The original speaker was sick, so his son gave the speech on his behalf.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flæp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To flap means to move quickly up and down or from side to side.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The tiny bird flapped its wings and ate from the flowers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">glacier</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gleiʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A glacier is a large piece of ice that moves very slowly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The North Pole is covered by a huge glacier.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">globe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gloub]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The globe refers to the Earth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Water covers most of the globe.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">horizontal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hɔ:rəzɑntl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is horizontal, it is flat and level with the ground.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Russian flag has three horizontal stripes of white, blue, and red.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hum</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hʌm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To hum means to make a low, continuous noise.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man hummed his favorite song.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inventory</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[invəntɔ:ri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An inventory is a supply of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Gwen was checking the inventory to make sure we had what we needed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inward</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inwərd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a thought or feeling is inward, it is not expressed or shown to others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She had an inward feeling of guilt when she lied to her mother.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">loaf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[louf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A loaf of bread is bread shaped and baked in one piece.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Could you please buy a loaf of bread for sandwiches?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">oracle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ(:)rəkəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An oracle is person who speaks with gods and gives advice about the future.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The king went to the oracle to ask if going to war was a good idea.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">orbit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:rbit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To orbit something means to move around it in a continuous, curving path.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The moon orbits the Earth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overview</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvərvyu:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An overview is a general description of a situation.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My brother gave me an overview of the important parts of the book.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">preview</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pri:vyu:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A preview is an opportunity to see something before it is available to the public.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The band played us a preview of their new song.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">previous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pri:viəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is previous, then it happened earlier in time or order.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He turned back to the previous page to read the paragraph again.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">provide</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəvaid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To provide something means to supply it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Each student was provided with a test and three sharp pencils.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recur</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rikə:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To recur means to happen more than once.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Burglaries seem to recur over and over in our neighborhood.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">relevant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reləvənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is relevant, it is important to a certain person or situation.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The thirty-year-old book about politics is still relevant to our society today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rite is a traditional ceremony carried out by a particular group or society.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Special masks are worn during the rite when a new baby is born.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stall</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stɔ:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To stall means to stop a process and continue it at a later time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you give the car a push, it won't stall.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">supernatural</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[su:pərnætʃərəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is supernatural, it is not real or explainable by natural law.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dragon had supernatural powers such as flying and breathing fire.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. What recurs when watching a funny movie?",
+              "options": [
+                "Boredom",
+                "Laughter",
+                "Headaches",
+                "Hunger"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Laughter (tiếng cười) là thứ thường tái diễn (recur) khi xem một bộ phim hài."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. What orbits the Earth?",
+              "options": [
+                "The moon",
+                "A car",
+                "A bird",
+                "A kite"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mặt trăng (The moon) xoay quanh (orbit) Trái đất."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. Why do birds flap their wings?",
+              "options": [
+                "To eat",
+                "To fly",
+                "To whistle",
+                "To exercise"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Chim vỗ (flap) cánh để bay (To fly)."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. What is supernatural?",
+              "options": [
+                "A frog",
+                "A school",
+                "A ghost",
+                "An eclipse"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Con ma (A ghost) là một hiện tượng siêu nhiên (supernatural)."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. If you give an overview of a movie, you...",
+              "options": [
+                "describe the important parts",
+                "watch it again",
+                "tell others it was a good movie",
+                "pay money"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Overview (tổng quan) là việc mô tả những phần quan trọng nhất của bộ phim."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
+          "content": "Word Bank: globe, behalf, rite, overview, provided, loaf, inward, relevant, oracles, orbit",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. I’m going on a trip halfway across the _____________.",
+              "options": [
+                "globe",
+                "behalf",
+                "rite",
+                "overview"
+              ],
+              "correctAnswer": "A",
+              "explanation": "globe (địa cầu). Chuyến đi vòng quanh nửa vòng trái đất."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. While I’m gone, Sarah will turn in my homework on my _____________.",
+              "options": [
+                "globe",
+                "behalf",
+                "rite",
+                "overview"
+              ],
+              "correctAnswer": "B",
+              "explanation": "on my behalf (thay mặt tôi). Sarah sẽ nộp bài tập thay tôi."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. On our vacation to Africa, we got to witness an old Egyptian _____________.",
+              "options": [
+                "globe",
+                "behalf",
+                "rite",
+                "overview"
+              ],
+              "correctAnswer": "C",
+              "explanation": "rite (nghi lễ). Chứng kiến một nghi lễ Ai Cập cổ đại."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. We weren’t told all the details of it, but we were given a brief _____________.",
+              "options": [
+                "globe",
+                "behalf",
+                "rite",
+                "overview"
+              ],
+              "correctAnswer": "D",
+              "explanation": "overview (tổng quan). Được cung cấp một bản tóm tắt ngắn gọn."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. He _____________ slices of bread for the children’s sandwiches.",
+              "options": [
+                "provided",
+                "loaf",
+                "inward",
+                "relevant"
+              ],
+              "correctAnswer": "A",
+              "explanation": "provided (cung cấp). Anh ấy cung cấp những lát bánh mì."
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. He can make several by baking a single _____________ of bread.",
+              "options": [
+                "provided",
+                "loaf",
+                "inward",
+                "relevant"
+              ],
+              "correctAnswer": "B",
+              "explanation": "loaf (ổ bánh mì). Bằng cách nướng một ổ bánh mì."
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. Sometimes, I choose to keep my thoughts and feelings _____________.",
+              "options": [
+                "provided",
+                "loaf",
+                "inward",
+                "relevant"
+              ],
+              "correctAnswer": "C",
+              "explanation": "inward (bên trong). Giữ kín suy nghĩ và cảm xúc bên trong."
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. Though I’m quiet about them, they are still _____________.",
+              "options": [
+                "provided",
+                "loaf",
+                "inward",
+                "relevant"
+              ],
+              "correctAnswer": "D",
+              "explanation": "relevant (có liên quan/quan trọng). Dù im lặng, chúng vẫn rất quan trọng."
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. In the past, people asked _____________ how the gods moved the planets.",
+              "options": [
+                "oracles",
+                "orbit",
+                "globe",
+                "rite"
+              ],
+              "correctAnswer": "A",
+              "explanation": "oracles (nhà tiên tri). Người xưa thường hỏi các nhà tiên tri."
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. Today, science explains how the planets _____________ the sun.",
+              "options": [
+                "oracles",
+                "orbit",
+                "globe",
+                "rite"
+              ],
+              "correctAnswer": "B",
+              "explanation": "orbit (quay quanh quỹ đạo). Khoa học giải thích cách các hành tinh quay quanh mặt trời."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. relevant",
+              "options": [
+                "important",
+                "beautiful",
+                "vast",
+                "different"
+              ],
+              "correctAnswer": "A",
+              "explanation": "relevant có nghĩa là có liên quan, quan trọng (important)."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. horizontal",
+              "options": [
+                "heavy",
+                "flat",
+                "large",
+                "nice"
+              ],
+              "correctAnswer": "B",
+              "explanation": "horizontal có nghĩa là nằm ngang, bằng phẳng (flat)."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. a rite",
+              "options": [
+                "a story",
+                "a belief",
+                "a body",
+                "a ceremony"
+              ],
+              "correctAnswer": "D",
+              "explanation": "rite có nghĩa là nghi lễ (ceremony)."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. stall",
+              "options": [
+                "to stop",
+                "to fade",
+                "to blink",
+                "to react"
+              ],
+              "correctAnswer": "A",
+              "explanation": "stall có nghĩa là làm dừng lại (to stop)."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. inventory",
+              "options": [
+                "a brand",
+                "a trait",
+                "a supply",
+                "a car"
+              ],
+              "correctAnswer": "C",
+              "explanation": "inventory có nghĩa là hàng tồn kho, nguồn cung cấp (supply)."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Exercise 4: Choose the word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex4_1",
+              "content": "1. My earlier report was just a short account of the long, difficult book.",
+              "options": [
+                "previous",
+                "oracle",
+                "horizontal",
+                "preview"
+              ],
+              "correctAnswer": "A",
+              "explanation": "earlier có nghĩa là trước đó, tương đương với previous."
+            },
+            {
+              "id": "ex4_2",
+              "content": "2. In ancient Greece, the person who gives advice often gave information about the future.",
+              "options": [
+                "previous",
+                "oracle",
+                "horizontal",
+                "preview"
+              ],
+              "correctAnswer": "B",
+              "explanation": "người cho lời khuyên về tương lai tương đương với nhà tiên tri (oracle)."
+            },
+            {
+              "id": "ex4_3",
+              "content": "3. The top of the fence was perfectly flat and level with the ground.",
+              "options": [
+                "previous",
+                "oracle",
+                "horizontal",
+                "preview"
+              ],
+              "correctAnswer": "C",
+              "explanation": "flat and level with the ground có nghĩa là nằm ngang (horizontal)."
+            },
+            {
+              "id": "ex4_4",
+              "content": "4. I know about the piece because I saw the viewing before it was available to the public.",
+              "options": [
+                "previous",
+                "oracle",
+                "horizontal",
+                "preview"
+              ],
+              "correctAnswer": "D",
+              "explanation": "viewing before it was available có nghĩa là xem trước (preview)."
+            },
+            {
+              "id": "ex4_5",
+              "content": "5. The baker made an extra piece of bread for the homeless man in the alley.",
+              "options": [
+                "loaf",
+                "inward",
+                "hum",
+                "provide"
+              ],
+              "correctAnswer": "A",
+              "explanation": "piece of bread tương đương với ổ bánh mì (loaf)."
+            },
+            {
+              "id": "ex4_6",
+              "content": "6. She is embarrassed of some of her not expressed or shown thoughts.",
+              "options": [
+                "loaf",
+                "inward",
+                "hum",
+                "provide"
+              ],
+              "correctAnswer": "B",
+              "explanation": "not expressed or shown thoughts tương đương với suy nghĩ nội tâm (inward)."
+            },
+            {
+              "id": "ex4_7",
+              "content": "7. The fisherman liked to make a low, continuous noise while he waited for a bite.",
+              "options": [
+                "loaf",
+                "inward",
+                "hum",
+                "provide"
+              ],
+              "correctAnswer": "C",
+              "explanation": "make a low, continuous noise tương đương với ngân nga (hum)."
+            },
+            {
+              "id": "ex4_8",
+              "content": "8. The travelers were given a place to stay, but they had to supply their own food.",
+              "options": [
+                "loaf",
+                "inward",
+                "hum",
+                "provide"
+              ],
+              "correctAnswer": "D",
+              "explanation": "supply tương đương với cung cấp (provide)."
+            },
+            {
+              "id": "ex4_9",
+              "content": "9. The company had to stop the process of the production of the dangerous toy.",
+              "options": [
+                "stall",
+                "glacier",
+                "hum",
+                "rite"
+              ],
+              "correctAnswer": "A",
+              "explanation": "stop the process tương đương với làm dừng lại, trì hoãn (stall)."
+            },
+            {
+              "id": "ex4_10",
+              "content": "10. We saw a cute polar bear jump into the water from the edge of the large mass of ice.",
+              "options": [
+                "stall",
+                "glacier",
+                "hum",
+                "rite"
+              ],
+              "correctAnswer": "B",
+              "explanation": "large mass of ice tương đương với sông băng (glacier)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cosmo's Flight</h1><p style=\"margin-bottom: 1rem;\">When Cosmo woke up, he was crying. He had a dream that he was falling. This dream had <b>recurred</b> for the <b>previous</b> five nights. Cosmo was scared that his dreams were a <b>preview</b> of what was going to happen on his flight the next day.</p><p style=\"margin-bottom: 1rem;\">Cosmo was a <b>supernatural</b> being who was about to turn 15 years old. In his culture, boys of his age were required to participate in an important <b>rite</b>. They were given wings and instructed to <b>orbit</b> the Earth. After successful flights, the boys officially became men. Cosmo certainly wanted to be a man, but he was scared. He went to the <b>oracle</b> of a god named Dano. Cosmo said, \"I'm not sure I can make such a long trip. What if I get tired? What if my strength <b>stalls</b>, and I can't stay in the air. I'll crash and die!\"</p><p style=\"margin-bottom: 1rem;\">Dano replied, \"Don't be afraid. You have all the <b>relevant</b> skills in your personal <b>inventory</b> that have been building up over the years. To ease your worry, let me tell you a little about what will happen tomorrow. You'll begin over Africa. You'll keep flying north until you come to the Himalayas. The mountaintops will look like small <b>loaves</b> of bread at such a high distance. The rivers of the world will look like pieces of blue string that cross the <b>globe</b>. Keep your body <b>horizontal</b> when flying against the winds of the Pacific Ocean. Keep your eyes open and enjoy the beauty of the Earth. You will be fine, you'll see.\"</p><p style=\"margin-bottom: 1rem;\">Cosmo replied, \"Thanks for the <b>overview</b> of my journey, I'll do my best.\"</p><p style=\"margin-bottom: 1rem;\">The next morning, Cosmo was <b>provided</b> with a divine set of wings and sent on his way. He <b>flapped</b> his wings and went high above the Earth. He flew over mountains, oceans, and <b>glaciers</b>. After a while, his <b>inward</b> thoughts were no longer about falling. He was actually having fun! He began to <b>hum</b> a song as he enjoyed the view. When he reached home, his tribe was there to greet him.</p><p style=\"margin-bottom: 1rem;\">The chief said, \"On <b>behalf</b> of the tribe, I declare you a man. We're proud of you, Cosmo!\" Cosmo was proud of himself, too.</p></div>",
+      "imageUrl": "/unit26_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec5_1",
+              "content": "1. Cosmo was scared that his recurring dreams of the previous nights were a preview of what would happen.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Cosmo sợ rằng những giấc mơ của cậu là điềm báo trước (preview)."
+            },
+            {
+              "id": "sec5_2",
+              "content": "2. Supernatural boys of Cosmo’s age participated in an important rite.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Những cậu bé có năng lực siêu nhiên đều phải tham gia một nghi lễ quan trọng."
+            },
+            {
+              "id": "sec5_3",
+              "content": "3. In Dano’s summary, he told Cosmo to keep his body horizontal against the winds of the Indian Ocean.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Dano bảo Cosmo giữ cơ thể nằm ngang khi bay ngược gió ở Thái Bình Dương (Pacific Ocean), không phải Ấn Độ Dương."
+            },
+            {
+              "id": "sec5_4",
+              "content": "4. Dano flapped the wings he was provided with and orbited the globe.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Cosmo là người vỗ cánh và bay quanh địa cầu, không phải Dano."
+            },
+            {
+              "id": "sec5_5",
+              "content": "5. Cosmo sang a tune while he flew and enjoyed the view.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Cosmo ngân nga (hummed) một giai điệu chứ không phải hát (sang) khi bay."
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec6_1",
+              "content": "1. What inward thoughts were no longer relevant to Cosmo after he started having fun?",
+              "options": [
+                "His inward thoughts about falling.",
+                "His inward thoughts about his family.",
+                "His inward thoughts about flying too fast.",
+                "His inward thoughts about the cold."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Những suy nghĩ nội tâm của Cosmo về việc bị rơi không còn liên quan nữa khi cậu bắt đầu tận hưởng."
+            },
+            {
+              "id": "sec6_2",
+              "content": "2. What did Dano tell Cosmo that the tops of the Himalaya Mountains will look like?",
+              "options": [
+                "They will look like loaves of bread.",
+                "They will look like pieces of blue string.",
+                "They will look like big clouds.",
+                "They will look like white hats."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dano nói rằng những đỉnh núi Himalaya trông sẽ giống như những ổ bánh mì (loaves of bread)."
+            },
+            {
+              "id": "sec6_3",
+              "content": "3. What did Cosmo say after he thanked the oracle for the overview?",
+              "options": [
+                "\"I'll do my best.\"",
+                "\"I'll fly slowly.\"",
+                "\"I'll be careful.\"",
+                "\"I'll come back soon.\""
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cosmo nói: \"Cháu sẽ cố gắng hết sức.\" (I'll do my best)."
+            },
+            {
+              "id": "sec6_4",
+              "content": "4. The oracle told Cosmo that the rivers of the world will look like what?",
+              "options": [
+                "Pieces of blue string.",
+                "Long green snakes.",
+                "Silver ribbons.",
+                "Deep blue lines."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nhà tiên tri bảo rằng những dòng sông trông sẽ giống những sợi dây màu xanh lam."
+            },
+            {
+              "id": "sec6_5",
+              "content": "5. What did the chief declare on behalf of the tribe?",
+              "options": [
+                "He declared Cosmo a man.",
+                "He declared Cosmo a warrior.",
+                "He declared Cosmo a hero.",
+                "He declared Cosmo an adult."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Trưởng làng thay mặt bộ lạc tuyên bố Cosmo đã trở thành một người đàn ông (a man)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

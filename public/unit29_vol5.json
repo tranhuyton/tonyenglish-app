@@ -1,0 +1,543 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 29",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit29_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit29_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">antique</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ænti:k]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is antique, it is very old and rare, and therefore valuable.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandmother's antique rocking chair is worth a lot of money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">applicant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æplikənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An applicant is someone who writes a request to be considered for a job or prize.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Lots of applicants came into the store when the job position became available.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">artifact</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[a:rtifækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An artifact is an old object made by humans that is historically interesting.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We studied artifacts from an ancient Chinese settlement.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">authentic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:θentik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is authentic, it is not false or a copy of the original.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We ate authentic Italian food on our vacation to Rome.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chronology</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[krənɑlədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The chronology of a series of past events is when they happened.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We learned the chronology of World War II in history class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diplomat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dipləmæt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A diplomat is a representative of a country who works with another country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Spanish diplomat discussed trade issues with officials in Peru.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">epic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[epik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An epic is a long book, poem, or movie about a period of time or a great event.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The poet wrote an epic about the great discoveries of the past thousand years.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">excerpt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eksə:rpt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An excerpt is a short piece of writing or music taken from a larger piece.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I didn't listen to the entire symphony online, but I did play an excerpt.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fossil</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɑsl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fossil is the hard remains of a prehistoric animal or plant.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The expert arranged the fossils to build the skeleton of the dinosaur.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">humiliate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hju:milieit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To humiliate someone means to make them feel ashamed and embarrassed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was humiliated when I tripped and fell down in front of the whole school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lyric</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lirik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a poem is considered lyric, it is written in a simple and direct style.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I enjoy reading and creating my own lyric poetry.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">majesty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mædʒisti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Majesty is supreme greatness or authority.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ You should address the king and queen as your majesty.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">monarch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑnərk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The monarch of a country is the king, queen, emperor, or empress.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The monarch lived in a beautiful palace with a grand gate.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">precede</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prisi:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To precede something means to come before it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hurricane was preceded by a moment of still wind and clear sky.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">punctual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌŋktʃuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is punctual, they do something or arrive at the right time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My mother hates being late. She is the most punctual person I know.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recruit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rikru:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To recruit people means to select them to join or work for an organization.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We successfully recruited someone to be the new manager.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">refund</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ri:fʌnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A refund is money given back to a person when an item is returned to a store.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I asked for a refund because the shoes I bought were too tight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">register</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[redʒistər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A register is an official list or record of people or things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At a wedding there is register for all of the guests to sign.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">renown</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rinaun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Renown is the quality of being well known due to having done good things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Michael is a singer of great renown in New Zealand.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tusk</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʌsk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tusk is a long, curved, pointed tooth of an elephant, boar, or walrus.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sadly, some people hunt elephants and remove their tusks to sell them.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. Which of the following might humiliate someone?",
+              "options": [
+                "Spilling a drink",
+                "Getting a new car",
+                "Working ten hours",
+                "Sitting down"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Làm đổ đồ uống (Spilling a drink) có thể khiến ai đó cảm thấy xấu hổ (humiliate)."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. What might be antique?",
+              "options": [
+                "A sweet fruit",
+                "An old sofa",
+                "A good father",
+                "A cell phone"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Một chiếc ghế sofa cũ (An old sofa) có thể là đồ cổ (antique)."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. Who is referred to as her majesty?",
+              "options": [
+                "A queen",
+                "A student",
+                "A mother",
+                "A teacher"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Một nữ hoàng (A queen) được gọi là bệ hạ (her majesty)."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. Where might a job applicant go for job?",
+              "options": [
+                "An abandoned house",
+                "A store with an available position",
+                "A sandy beach",
+                "A graveyard"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Người xin việc (job applicant) có thể đến một cửa hàng đang có vị trí trống."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. What precedes waking up in the morning?",
+              "options": [
+                "Going to sleep",
+                "Going to school",
+                "Buying a new bed",
+                "Shopping"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đi ngủ (Going to sleep) xảy ra trước (precedes) việc thức dậy vào buổi sáng."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Fill in the blanks with the correct words.",
+          "content": "Word Bank: antique, refund, monarch, artifact, authentic, register, Majesty, tusks, fossil, applicants",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. The statue of the walrus had long, beautiful _____________.",
+              "options": [
+                "tusks",
+                "antique",
+                "monarch",
+                "Majesty"
+              ],
+              "correctAnswer": "A",
+              "explanation": "tusks (ngà/răng nanh). Bức tượng con hải mã có những chiếc răng nanh dài và đẹp."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. The _____________ piece was over a hundred years old and quite valuable.",
+              "options": [
+                "tusks",
+                "antique",
+                "monarch",
+                "Majesty"
+              ],
+              "correctAnswer": "B",
+              "explanation": "antique (đồ cổ). Món đồ cổ này đã hơn 100 năm tuổi."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. Many stories have been told about the powerful _____________.",
+              "options": [
+                "tusks",
+                "antique",
+                "monarch",
+                "Majesty"
+              ],
+              "correctAnswer": "C",
+              "explanation": "monarch (quốc vương). Nhiều câu chuyện về vị quốc vương quyền lực."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. All of the king’s servants addressed him as \"Your _____________.\"",
+              "options": [
+                "tusks",
+                "antique",
+                "monarch",
+                "Majesty"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Majesty (bệ hạ). Các người hầu gọi nhà vua là \"Bệ hạ\"."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. The college must decide who to accept among thousands of _____________.",
+              "options": [
+                "applicants",
+                "register",
+                "authentic",
+                "refund"
+              ],
+              "correctAnswer": "A",
+              "explanation": "applicants (người nộp đơn). Chọn người trúng tuyển trong số hàng nghìn người nộp đơn."
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. The most qualified will add their names to the elite _____________.",
+              "options": [
+                "applicants",
+                "register",
+                "authentic",
+                "refund"
+              ],
+              "correctAnswer": "B",
+              "explanation": "register (danh sách/sổ đăng ký). Ghi tên vào danh sách tinh anh."
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. I now see that my new leather boots are not _____________.",
+              "options": [
+                "applicants",
+                "register",
+                "authentic",
+                "refund"
+              ],
+              "correctAnswer": "C",
+              "explanation": "authentic (hàng thật/chính hãng). Đôi bốt da không phải là hàng thật."
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. I need to take these fake boots back to the store and get a _____________.",
+              "options": [
+                "applicants",
+                "register",
+                "authentic",
+                "refund"
+              ],
+              "correctAnswer": "D",
+              "explanation": "refund (tiền hoàn lại). Nhận lại tiền từ cửa hàng."
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. Mark thought that the old bone he found was a dinosaur _____________.",
+              "options": [
+                "fossil",
+                "artifact",
+                "tusks",
+                "antique"
+              ],
+              "correctAnswer": "A",
+              "explanation": "fossil (hóa thạch). Tưởng là hóa thạch khủng long."
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. However, it turned out to be a man-made _____________.",
+              "options": [
+                "fossil",
+                "artifact",
+                "tusks",
+                "antique"
+              ],
+              "correctAnswer": "B",
+              "explanation": "artifact (tạo tác). Thực ra là một đồ vật nhân tạo có tính lịch sử."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. humiliate",
+              "options": [
+                "impress",
+                "entertain",
+                "destroy",
+                "embarrass"
+              ],
+              "correctAnswer": "D",
+              "explanation": "humiliate có nghĩa là làm nhục, làm xấu hổ, tương đương với embarrass."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. diplomat",
+              "options": [
+                "a representative",
+                "a user",
+                "a creature",
+                "a joker"
+              ],
+              "correctAnswer": "A",
+              "explanation": "diplomat là nhà ngoại giao, người đại diện (a representative)."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. punctual",
+              "options": [
+                "hurried",
+                "on time",
+                "too loud",
+                "brave"
+              ],
+              "correctAnswer": "B",
+              "explanation": "punctual có nghĩa là đúng giờ (on time)."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. precede",
+              "options": [
+                "to fail",
+                "to quit",
+                "to rely",
+                "to go first"
+              ],
+              "correctAnswer": "D",
+              "explanation": "precede có nghĩa là đi trước, xảy ra trước (to go first)."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. register",
+              "options": [
+                "a control",
+                "a list",
+                "an apartment",
+                "a grave"
+              ],
+              "correctAnswer": "B",
+              "explanation": "register là sổ sách, danh sách đăng ký (a list)."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Exercise 4: Choose the word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex4_1",
+              "content": "1. The circus performer held on to the elephant’s long, curved tooth.",
+              "options": [
+                "tusk",
+                "authentic",
+                "recruit",
+                "punctual"
+              ],
+              "correctAnswer": "A",
+              "explanation": "long, curved tooth (răng dài cong) của voi tương đương với ngà (tusk)."
+            },
+            {
+              "id": "ex4_2",
+              "content": "2. The salesman assured me that the artwork was not false or an imitation.",
+              "options": [
+                "tusk",
+                "authentic",
+                "recruit",
+                "punctual"
+              ],
+              "correctAnswer": "B",
+              "explanation": "not false or an imitation (không giả mạo) tương đương với đồ thật (authentic)."
+            },
+            {
+              "id": "ex4_3",
+              "content": "3. At the end of the year, our club will select a new person to join.",
+              "options": [
+                "tusk",
+                "authentic",
+                "recruit",
+                "punctual"
+              ],
+              "correctAnswer": "C",
+              "explanation": "select a new person to join tương đương với tuyển dụng/kết nạp (recruit)."
+            },
+            {
+              "id": "ex4_4",
+              "content": "4. Janet isn’t able to arrive at the right time at all. She’s late to school every day.",
+              "options": [
+                "tusk",
+                "authentic",
+                "recruit",
+                "punctual"
+              ],
+              "correctAnswer": "D",
+              "explanation": "arrive at the right time tương đương với đúng giờ (punctual)."
+            },
+            {
+              "id": "ex4_5",
+              "content": "5. It is difficult to follow the series of past events and times of computer programming.",
+              "options": [
+                "chronology",
+                "fossil",
+                "excerpt",
+                "lyric"
+              ],
+              "correctAnswer": "A",
+              "explanation": "series of past events and times (chuỗi sự kiện và thời gian quá khứ) tương đương với niên biểu/trình tự thời gian (chronology)."
+            },
+            {
+              "id": "ex4_6",
+              "content": "6. DNA can be taken from a part of hard remains from a prehistoric animal.",
+              "options": [
+                "chronology",
+                "fossil",
+                "excerpt",
+                "lyric"
+              ],
+              "correctAnswer": "B",
+              "explanation": "hard remains from a prehistoric animal tương đương với hóa thạch (fossil)."
+            },
+            {
+              "id": "ex4_7",
+              "content": "7. Please stand and read a(an) short piece of writing taken from a larger piece.",
+              "options": [
+                "chronology",
+                "fossil",
+                "excerpt",
+                "lyric"
+              ],
+              "correctAnswer": "C",
+              "explanation": "short piece of writing taken from a larger piece tương đương với đoạn trích (excerpt)."
+            },
+            {
+              "id": "ex4_8",
+              "content": "8. I took a class at the university where I wrote simple and direct poetry.",
+              "options": [
+                "chronology",
+                "fossil",
+                "excerpt",
+                "lyric"
+              ],
+              "correctAnswer": "D",
+              "explanation": "simple and direct poetry tương đương với thơ trữ tình (lyric)."
+            },
+            {
+              "id": "ex4_9",
+              "content": "9. The Iliad is a wonderful long book about great events.",
+              "options": [
+                "epic",
+                "renown",
+                "refund",
+                "diplomat"
+              ],
+              "correctAnswer": "A",
+              "explanation": "long book about great events tương đương với sử thi, trường ca (epic)."
+            },
+            {
+              "id": "ex4_10",
+              "content": "10. Her mother was a dancer of some quality of being well known for doing good things.",
+              "options": [
+                "epic",
+                "renown",
+                "refund",
+                "diplomat"
+              ],
+              "correctAnswer": "B",
+              "explanation": "quality of being well known for doing good things tương đương với danh tiếng (renown)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jen's New Job</h1><p style=\"margin-bottom: 1rem;\">The history museum needed to <b>recruit</b> a new tour guide. The director interviewed dozens of <b>applicants</b> before he decided to hire Jen. She was chosen because she was friendly, <b>punctual</b> and had a great attitude.</p><p style=\"margin-bottom: 1rem;\">On her first day, Jen got to work and prepared to give her first tour. She looked at the names on the <b>register</b>. She saw that the Queen of England and a <b>diplomat</b> were visiting the museum. She thought, \"It's my very first day, and I have to impress a <b>monarch</b>! I hope I don't <b>humiliate</b> myself in front of a person of such <b>renown</b>!\"</p><p style=\"margin-bottom: 1rem;\">Jen was nervous. She took a deep breath and said, \"Hello, everyone! I'm going to talk to you about the <b>chronology</b> of ancient Egypt.\" As she turned around to show the group some <b>artifacts</b>, she bumped into a <b>fossil</b> of an <b>authentic</b> elephant <b>tusk</b>. It fell to the ground and broke into a million pieces! \"Oh no!\" said Jen in a subtle voice. \"I sure hope the rest of the tour goes better than this!\"</p><p style=\"margin-bottom: 1rem;\">The rest of the tour did not go any better. She tripped over an <b>antique</b> vase and broke a piece off of it. As she was reading an <b>excerpt</b> from a <b>lyric</b> poem, she sneezed and tore a page of the <b>epic</b>.</p><p style=\"margin-bottom: 1rem;\">After the tour, Jen approached the queen to apologize. She said, \"I'm sorry, Your <b>Majesty</b>. I was a terrible tour guide. Let me give you a <b>refund</b> for the money you spent.\"</p><p style=\"margin-bottom: 1rem;\">The queen laughed. She said, \"I don't want my money back, Jen. I loved the tour. You just have to be a little more careful and work hard to become the best at your job. Hard work <b>precedes</b> success.\"</p><p style=\"margin-bottom: 1rem;\">Jen smiled and thanked the queen. She decided to be extra careful from then on. She was persistent and worked hard. In time, Jen became the best tour guide at the museum.</p></div>",
+      "imageUrl": "/unit29_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec5_1",
+              "content": "1. The museum director interviewed dozens of applicants when he recruited a new tour guide.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Giám đốc bảo tàng đã phỏng vấn hàng chục người nộp đơn (applicants)."
+            },
+            {
+              "id": "sec5_2",
+              "content": "2. Jen did not want to humiliate herself in front of the diplomat and the monarch.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Jen không muốn bị mất mặt (humiliate) trước mặt nhà ngoại giao và nữ hoàng."
+            },
+            {
+              "id": "sec5_3",
+              "content": "3. The queen bumped into the fossil of an authentic elephant tusk.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Chính Jen là người đã va vào hóa thạch ngà voi thật, không phải Nữ hoàng."
+            },
+            {
+              "id": "sec5_4",
+              "content": "4. Jen was chosen for the job because she was friendly, punctual, and had a register.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Jen được chọn vì cô ấy thân thiện, đúng giờ (punctual) và có thái độ tốt (great attitude), không phải vì cô ấy có một quyển sổ đăng ký (register)."
+            },
+            {
+              "id": "sec5_5",
+              "content": "5. Jen broke artifacts, including an antique vase.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Jen đã làm vỡ các đồ tạo tác, bao gồm một chiếc bình cổ (antique vase)."
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec6_1",
+              "content": "1. What did Jen say she hoped for in a subtle voice?",
+              "options": [
+                "Jen hoped that the rest of the tour would go better.",
+                "Jen hoped that she would get a raise.",
+                "Jen hoped that the queen would leave.",
+                "Jen hoped that she could find the pieces."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Jen hy vọng phần còn lại của chuyến tham quan sẽ diễn ra suôn sẻ hơn."
+            },
+            {
+              "id": "sec6_2",
+              "content": "2. What chronology did Jen want to talk about to her tour group?",
+              "options": [
+                "Jen wanted to talk about the chronology of Ancient Egypt.",
+                "Jen wanted to talk about the chronology of Rome.",
+                "Jen wanted to talk about the chronology of the museum.",
+                "Jen wanted to talk about the chronology of dinosaurs."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cô ấy muốn nói về trình tự thời gian (chronology) của Ai Cập Cổ đại."
+            },
+            {
+              "id": "sec6_3",
+              "content": "3. What happened as Jen was reading the excerpt from the epic lyric poem?",
+              "options": [
+                "She sneezed and tore a page of the epic.",
+                "She dropped the book.",
+                "She forgot the words.",
+                "She began to cry."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Khi đang đọc đoạn trích, Jen đã hắt xì và làm rách một trang của cuốn sử thi (epic)."
+            },
+            {
+              "id": "sec6_4",
+              "content": "4. Why did Jen offer her majesty a refund?",
+              "options": [
+                "Jen thought she was a horrible tour guide.",
+                "The tour was canceled.",
+                "The museum was closed.",
+                "The queen asked for it."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Jen đề nghị hoàn tiền vì cô ấy nghĩ mình đã làm một hướng dẫn viên quá tồi tệ."
+            },
+            {
+              "id": "sec6_5",
+              "content": "5. What precedes success, according to the queen?",
+              "options": [
+                "Hard work",
+                "Good luck",
+                "Many friends",
+                "Being a monarch"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Theo nữ hoàng, làm việc chăm chỉ (hard work) chính là điều đi trước (precedes) thành công."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

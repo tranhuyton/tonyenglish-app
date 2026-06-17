@@ -1,0 +1,583 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Volume 5 - Unit 4",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit4_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit4_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">administrator</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ædminəstreitər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An administrator is a person who controls a business, company, or organization.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Everyone in the store did whatever the administrator asked them to do.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">affluent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æflu:ənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is affluent, they are wealthy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People in the city are usually more affluent than people in the country.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">audit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:dit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To audit means to inspect financial records from a person or business.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The government usually audits companies that report lower than usual incomes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">automate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:təmeit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To automate a company means to install machines or computers to do the work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the bank automated, it started installing ATM machines.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bribe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[braib]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bribe someone means to illegally persuade them for a favor with money.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The judge was bribed so that she would set the suspect free.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">corrupt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kərʌpt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is corrupt, they break the law for money or fame.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The corrupt policemen didn’t arrest the man because he gave them money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dispose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dispouz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dispose of something means to get rid of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He disposed of the can by throwing it into the recycle bin.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">headquarters</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hedkwɔ:rtərz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A headquarters is a building where the bosses of a company work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He drove the long route to headquarters because it was a nice day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">incentive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[insentiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An incentive is what makes a person want to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The chance of winning a prize was incentive to get people to play the game.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">infrastructure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[infrəstrʌktʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An infrastructure is a collection of services needed to run a society or business.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Power lines are important parts of a city’s infrastructure.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">legislate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ledʒisleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To legislate means to make laws.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Senators have to legislate fairly, so most people will enjoy the benefits.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">legitimate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lidʒitəmit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is legitimate, then it is acceptable according to the law.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She found a legitimate plan to raise extra funds for her vacation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">manipulate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mənipjəleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To manipulate something means to skillfully or unfairly control or affect it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Dr. manipulated the data to make it look like the cure was working.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">merchandise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mə:rtʃəndaiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Merchandise is goods ready to be purchased or sold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The store added more merchandise because there were more shoppers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">retail</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ri:teil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Retail is the activity of selling goods to the public, often for personal use.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Though cheap to make, once a t-shirt reaches retail, it costs ten times as much.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">revenue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[revənu:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Revenue is the income made by a company.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new products really increased the business’s monthly revenue.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rubbish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rʌbiʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Rubbish is trash or waste.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The floor around the garbage can was covered with all kinds of rubbish.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">subsidy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌbsidi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A subsidy is money given by the government to companies to assist them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The official gave the company a subsidy, so it could open two new factories.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">transaction</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trænsækʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A transaction is an act of buying or selling something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because the clerk was new at the job, the simple transaction took a long time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px; font-weight: bold; color: #475569;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">violate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vaiəleit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To violate a law, rule, or agreement means to break it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was given a ticket because the policeman said I violated the speed limit.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q1",
+              "content": "1. merchandise",
+              "options": [
+                "stores",
+                "money",
+                "goods",
+                "fame"
+              ],
+              "correctAnswer": "C",
+              "explanation": "merchandise (hàng hóa) tương đương với goods."
+            },
+            {
+              "id": "q2",
+              "content": "2. corrupt",
+              "options": [
+                "healthy",
+                "bad",
+                "angry",
+                "nice"
+              ],
+              "correctAnswer": "B",
+              "explanation": "corrupt (tham nhũng, đồi bại) mang nghĩa xấu (bad)."
+            },
+            {
+              "id": "q3",
+              "content": "3. rubbish",
+              "options": [
+                "trash",
+                "power",
+                "food",
+                "truth"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rubbish (rác rưởi) tương đương với trash."
+            },
+            {
+              "id": "q4",
+              "content": "4. transaction",
+              "options": [
+                "meeting",
+                "friend",
+                "test",
+                "sale"
+              ],
+              "correctAnswer": "D",
+              "explanation": "transaction (giao dịch) tương đương với sale (việc bán hàng)."
+            },
+            {
+              "id": "q5",
+              "content": "5. revenue",
+              "options": [
+                "concert",
+                "guide",
+                "income",
+                "trade"
+              ],
+              "correctAnswer": "C",
+              "explanation": "revenue (doanh thu) tương đương với income (thu nhập)."
+            },
+            {
+              "id": "q6",
+              "content": "6. manipulate",
+              "options": [
+                "control",
+                "explain",
+                "decrease",
+                "attempt"
+              ],
+              "correctAnswer": "A",
+              "explanation": "manipulate (thao túng, điều khiển) tương đương với control."
+            },
+            {
+              "id": "q7",
+              "content": "7. infrastructure",
+              "options": [
+                "education",
+                "science",
+                "religion",
+                "roads"
+              ],
+              "correctAnswer": "D",
+              "explanation": "infrastructure (cơ sở hạ tầng) bao gồm đường sá (roads)."
+            },
+            {
+              "id": "q8",
+              "content": "8. headquarters",
+              "options": [
+                "material",
+                "base",
+                "dream",
+                "section"
+              ],
+              "correctAnswer": "B",
+              "explanation": "headquarters (trụ sở chính) tương đương với base."
+            },
+            {
+              "id": "q9",
+              "content": "9. audit",
+              "options": [
+                "enjoy",
+                "leave",
+                "inspect",
+                "prepare"
+              ],
+              "correctAnswer": "C",
+              "explanation": "audit (kiểm toán, kiểm tra) tương đương với inspect."
+            },
+            {
+              "id": "q10",
+              "content": "10. incentive",
+              "options": [
+                "reason",
+                "product",
+                "waste",
+                "idea"
+              ],
+              "correctAnswer": "A",
+              "explanation": "incentive (khuyến khích, động lực) tương đương với reason (lý do để làm gì đó)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q11",
+              "content": "1. This is the affluent area of the city. It is where most of the poor people live.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "affluent (giàu có). Khu vực giàu có không thể là nơi hầu hết người nghèo sống. Sử dụng sai."
+            },
+            {
+              "id": "q12",
+              "content": "2. He added his trash to the large pile of rubbish.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "rubbish (rác thải). Thêm rác vào đống rác lớn là sử dụng đúng."
+            },
+            {
+              "id": "q13",
+              "content": "3. The company automated by hiring twenty new workers.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "automate (tự động hóa). Tự động hóa là dùng máy móc, không phải thuê thêm công nhân. Sử dụng sai."
+            },
+            {
+              "id": "q14",
+              "content": "4. This painting is an important part of the city’s infrastructure.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "infrastructure (cơ sở hạ tầng). Bức tranh không phải là cơ sở hạ tầng. Sử dụng sai."
+            },
+            {
+              "id": "q15",
+              "content": "5. The subsidy helped the company recover some of the money it had lost.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "subsidy (tiền trợ cấp). Tiền trợ cấp giúp công ty phục hồi số tiền đã mất là sử dụng đúng."
+            },
+            {
+              "id": "q16",
+              "content": "6. The store sold most of its merchandise in the sale over the weekend.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "merchandise (hàng hóa). Cửa hàng bán phần lớn hàng hóa của mình là đúng."
+            },
+            {
+              "id": "q17",
+              "content": "7. The cook violated the two sauces together into one delicious sauce.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "violate (vi phạm). Trộn hai loại nước sốt không dùng từ vi phạm. Sử dụng sai."
+            },
+            {
+              "id": "q18",
+              "content": "8. She took the food out of the refrigerator and then disposed the door.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "dispose (vứt bỏ). Cô ấy không thể vứt bỏ cánh cửa tủ lạnh sau khi lấy thức ăn. Sử dụng sai."
+            },
+            {
+              "id": "q19",
+              "content": "9. The company’s bank records were audited.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "audit (kiểm toán). Hồ sơ ngân hàng của công ty được kiểm toán là sử dụng đúng."
+            },
+            {
+              "id": "q20",
+              "content": "10. Bigger kids sometimes find it easy to manipulate smaller children.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "manipulate (thao túng). Trẻ lớn đôi khi dễ dàng thao túng trẻ nhỏ là sử dụng đúng."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the one that is opposite in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q21",
+              "content": "1. violate",
+              "options": [
+                "borrow",
+                "respect",
+                "approve",
+                "explain"
+              ],
+              "correctAnswer": "B",
+              "explanation": "violate (vi phạm) trái nghĩa với respect (tôn trọng, tuân thủ)."
+            },
+            {
+              "id": "q22",
+              "content": "2. affluent",
+              "options": [
+                "smart",
+                "quick",
+                "poor",
+                "evil"
+              ],
+              "correctAnswer": "C",
+              "explanation": "affluent (giàu có) trái nghĩa với poor (nghèo)."
+            },
+            {
+              "id": "q23",
+              "content": "3. dispose",
+              "options": [
+                "keep",
+                "make",
+                "feed",
+                "speak"
+              ],
+              "correctAnswer": "A",
+              "explanation": "dispose (vứt bỏ) trái nghĩa với keep (giữ lại)."
+            },
+            {
+              "id": "q24",
+              "content": "4. administrator",
+              "options": [
+                "singer",
+                "student",
+                "mother",
+                "worker"
+              ],
+              "correctAnswer": "D",
+              "explanation": "administrator (người quản lý) trái nghĩa với worker (công nhân)."
+            },
+            {
+              "id": "q25",
+              "content": "5. legitimate",
+              "options": [
+                "free",
+                "pretty",
+                "wrong",
+                "alert"
+              ],
+              "correctAnswer": "C",
+              "explanation": "legitimate (hợp pháp, đúng đắn) trái nghĩa với wrong (sai trái)."
+            }
+          ]
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q26",
+              "content": "1. Getting to play with her friends was something to make her want to clean her room.",
+              "options": [
+                "incentive",
+                "revenue",
+                "rubbish",
+                "transaction"
+              ],
+              "correctAnswer": "A",
+              "explanation": "something to make her want (điều khiến cô ấy muốn) tương đương incentive (động lực)."
+            },
+            {
+              "id": "q27",
+              "content": "2. The act of selling something took place right before the shop closed.",
+              "options": [
+                "transaction",
+                "retail",
+                "manipulate",
+                "infrastructure"
+              ],
+              "correctAnswer": "A",
+              "explanation": "act of selling something (hành động bán cái gì đó) tương đương transaction."
+            },
+            {
+              "id": "q28",
+              "content": "3. By the end of the meeting, they had made into law the repair of the highways.",
+              "options": [
+                "legislated",
+                "violated",
+                "automated",
+                "audited"
+              ],
+              "correctAnswer": "A",
+              "explanation": "made into law (đưa vào luật) tương đương legislated."
+            },
+            {
+              "id": "q29",
+              "content": "4. She illegally persuaded the guard, so he would let her into the secret meeting.",
+              "options": [
+                "bribed",
+                "disposed",
+                "audited",
+                "manipulated"
+              ],
+              "correctAnswer": "A",
+              "explanation": "illegally persuaded (thuyết phục bất hợp pháp bằng tiền) tương đương bribed."
+            },
+            {
+              "id": "q30",
+              "content": "5. It was a good year for the banks, but it was a bad year for places that sell things to the public.",
+              "options": [
+                "retail",
+                "revenue",
+                "subsidy",
+                "merchandise"
+              ],
+              "correctAnswer": "A",
+              "explanation": "places that sell things to the public (nơi bán hàng cho công chúng) tương đương retail."
+            },
+            {
+              "id": "q31",
+              "content": "6. The person who controls the company is a very efficient manager.",
+              "options": [
+                "administrator",
+                "corrupt",
+                "affluent",
+                "legitimate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "person who controls the company (người điều hành công ty) tương đương administrator."
+            },
+            {
+              "id": "q32",
+              "content": "7. The papers that she needed were at the building where the bosses worked.",
+              "options": [
+                "headquarters",
+                "infrastructure",
+                "retail",
+                "rubbish"
+              ],
+              "correctAnswer": "A",
+              "explanation": "building where the bosses worked tương đương headquarters."
+            },
+            {
+              "id": "q33",
+              "content": "8. The law-breaking company was stealing money from many of its investors.",
+              "options": [
+                "corrupt",
+                "affluent",
+                "legitimate",
+                "retail"
+              ],
+              "correctAnswer": "A",
+              "explanation": "law-breaking (phạm luật, đồi bại) tương đương corrupt."
+            },
+            {
+              "id": "q34",
+              "content": "9. Shawn is working for a law-following organization in a bad part of town.",
+              "options": [
+                "legitimate",
+                "affluent",
+                "corrupt",
+                "automated"
+              ],
+              "correctAnswer": "A",
+              "explanation": "law-following (tuân thủ luật pháp) tương đương legitimate."
+            },
+            {
+              "id": "q35",
+              "content": "10. The money made by our company was even better than last year’s.",
+              "options": [
+                "revenue",
+                "subsidy",
+                "merchandise",
+                "transaction"
+              ],
+              "correctAnswer": "A",
+              "explanation": "money made by our company (tiền công ty kiếm được) tương đương revenue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Corrupt Administrator</h1><p style=\"margin-bottom: 1rem;\">Mr. Pig was an <b>administrator</b> at a big factory that made different kinds of <b>merchandise</b>. During a meeting at the company’s <b>headquarters</b>, his bosses said they wanted the factory to make more money.</p><p style=\"margin-bottom: 1rem;\">“If the factory makes more money, then you will too,” his boss, Mr. Horse, told him. It was a great <b>incentive</b>. Pig had always wanted to be as <b>affluent</b> as his bosses.</p><p style=\"margin-bottom: 1rem;\">Mr. Pig returned to the factory and started making changes. However, most were not very nice, and some were not <b>legitimate</b>.</p><p style=\"margin-bottom: 1rem;\">First, he fired all his employees. Then he <b>automated</b> the entire factory. Machines now made everything, and the other animals, Mr. Rabbit, Mr. Sheep, and Mr. Dog had no jobs. Next, he <b>bribed</b> some <b>corrupt</b> senators into <b>legislating</b> special <b>subsidies</b> for the factory. Finally, instead of paying a company to <b>dispose</b> of the factory’s <b>rubbish</b> properly, he <b>violated</b> the law by throwing it into the river to save money.</p><p style=\"margin-bottom: 1rem;\">At first, all the changes to the factory’s <b>infrastructure</b> created more <b>revenue</b>. But soon many stores could no longer sell the factory’s goods at <b>retail</b>. It seemed that the machines couldn’t make products as well as the workers. The customers were disappointed with the factory’s merchandise.</p><p style=\"margin-bottom: 1rem;\">There were other problems, too. The animals had told their friends and family to stop buying the factory’s goods. Officials discovered the factory’s rubbish in the river, and when they <b>audited</b> the company, they discovered that Pig had <b>manipulated</b> the law in order to get more money.</p><p style=\"margin-bottom: 1rem;\">All <b>transactions</b> with Pig’s factory stopped. The factory lost money, and Pig lost his job. He realized his mistakes too late. He had tried to become rich by saving money any way possible, but the cheapest way was not always the best.</p></div>",
+      "imageUrl": "/unit4_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5_reading_A",
+          "title": "Part A: Mark each statement True (T) or False (F).",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q36",
+              "content": "1. Mr. Rabbit was an administrator at a big factory that made different kinds of merchandise.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Ông Lợn (Mr. Pig) mới là administrator, không phải ông Thỏ."
+            },
+            {
+              "id": "q37",
+              "content": "2. Some of the changes made to the factory were legitimate.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Theo câu chuyện, các thay đổi hầu hết không tốt và một số không hợp pháp (not legitimate)."
+            },
+            {
+              "id": "q38",
+              "content": "3. Mr. Pig bribed some corrupt senators into legislating special subsidies for his factory.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng với câu chuyện."
+            },
+            {
+              "id": "q39",
+              "content": "4. Mr. Pig violated the law by disposing of the factory’s rubbish in the ocean.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Ông ta vứt rác xuống sông (in the river), không phải đại dương (ocean)."
+            },
+            {
+              "id": "q40",
+              "content": "5. At first, changes to the factory’s infrastructure created less revenue.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Ban đầu các thay đổi này tạo ra nhiều doanh thu hơn (created more revenue)."
+            }
+          ]
+        },
+        {
+          "id": "sec6_reading_B",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "q41",
+              "content": "1. During their meeting at headquarters, what incentive did Mr. Pig’s affluent boss give him?",
+              "options": [
+                "His boss told him, 'If the factory makes more money, then you will too.'",
+                "His boss gave him a new car",
+                "His boss told him he could take a vacation",
+                "His boss gave him a raise"
+              ],
+              "correctAnswer": "A",
+              "explanation": "His boss told him, 'If the factory makes more money, then you will too.'"
+            },
+            {
+              "id": "q42",
+              "content": "2. What happened to the other animals after Pig automated his factory?",
+              "options": [
+                "After Pig automated his factory, the other animals had no jobs.",
+                "They got more jobs",
+                "They were promoted",
+                "They got better tools to work"
+              ],
+              "correctAnswer": "A",
+              "explanation": "After Pig automated his factory, the other animals had no jobs."
+            },
+            {
+              "id": "q43",
+              "content": "3. According to the officials who audited Pig’s factory, why did he manipulate the law?",
+              "options": [
+                "According to the officials, Pig manipulated the law in order to get more money.",
+                "Pig manipulated the law to help the animals",
+                "Pig manipulated the law to build a new factory",
+                "Pig manipulated the law by mistake"
+              ],
+              "correctAnswer": "A",
+              "explanation": "According to the officials, Pig manipulated the law in order to get more money."
+            },
+            {
+              "id": "q44",
+              "content": "4. What happened to Mr. Pig and his factory when all transactions stopped?",
+              "options": [
+                "When all transactions stopped, the factory lost money, and Pig lost his job.",
+                "Pig got a promotion",
+                "Pig was sent to another country",
+                "Pig bought a new house"
+              ],
+              "correctAnswer": "A",
+              "explanation": "When all transactions stopped, the factory lost money, and Pig lost his job."
+            },
+            {
+              "id": "q45",
+              "content": "5. Why could the stores no longer sell goods at retail?",
+              "options": [
+                "Because the machines didn't make products as well as the workers, and customers were disappointed.",
+                "Because they were too expensive.",
+                "Because they ran out of materials.",
+                "Because the stores were closed."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Because the machines didn't make products as well as the workers, and customers were disappointed."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

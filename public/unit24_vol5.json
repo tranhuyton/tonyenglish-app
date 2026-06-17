@@ -1,0 +1,535 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 24",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit24_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit24_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bankrupt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bæŋkrʌpt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is bankrupt, then they are unable to pay their debts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The store had few customers and soon went bankrupt.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conform</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənfɔ:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To conform to rules or laws is to obey them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new student had to conform to the school’s dress code.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">employ</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[implɔi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To employ someone means to give work to them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bookstore employed two full-time clerks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">expel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikspel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To expel someone means to force them to leave a place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since he would not follow the rules, the principal had to expel the student.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">extension</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikstenʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An extension is a part added to something to give it more time or space.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My parents decided to add an extension to our house for the new baby.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">forthcoming</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ:rθkʌmiŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is forthcoming, then it is about to happen in the future.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some economists predicted that the forthcoming world economy would be severe.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">furnish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fə:rniʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To furnish means to put furniture in a house or room.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Most homes are furnished with tables, chairs, and beds.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hygiene</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[haidʒi:n]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hygiene is the conditions or methods needed for health and cleanliness.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People who brush their teeth at least twice a day are practicing good hygiene.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hygienic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[haidʒi:nik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is hygienic, then it is clean and unlikely to cause disease.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister works very hard to keep her entire home as hygienic as possible.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">landlord</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lændlɔ:rd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A landlord is a man who rents property to a person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The landlord collected everyone’s rent money on the first day of every month.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lease</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[li:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To lease means to rent property, usually an apartment or land.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the family first leased the apartment, the rent was very low.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mandatory</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mændətɔ:ri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is mandatory, then it is required by law.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It’s mandatory that everyone be at least sixteen to drive a car in the US.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To mend something means to fix it when it is broken or damaged.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mother mended the rip in my pants with a piece of cloth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mortgage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɔ:rgidʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mortgage is a loan for property, especially homes and businesses.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When they bought their new home, the married couple had to sign a mortgage.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">personnel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pə:rsənel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Personnel are employees in a business.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When business increased, we had to hire more personnel.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plumbing</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[plʌmiŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Plumbing is the system of pipes used in a home to supply water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the plumbing stopped working, no one was allowed to use the toilets.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tenant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tenənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tenant is a person who rents property from a landlord.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new tenants moved into the house across the street.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trendy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trendi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is trendy, then it is very popular and new.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Carlo bought a trendy new car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">utility</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ju:tiləti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A utility is a business that supplies services such as water or electricity.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you don’t pay the utilities, you may have your electricity turned off.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">whereby</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwɛərbai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">conj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Whereby means by which or through which.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mayor had a new bridge built whereby the citizens could cross the river.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. Which of the following means the closest to mend?",
+              "options": [
+                "Repair",
+                "Highlight",
+                "Exchange",
+                "Plant"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mend là sửa chữa. Đồng nghĩa với repair."
+            },
+            {
+              "id": "2",
+              "content": "2. Which of following would NOT be considered part of an office’s personnel?",
+              "options": [
+                "Cleaning staff",
+                "Technicians",
+                "Executives",
+                "Referees"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Personnel là nhân viên trong tổ chức văn phòng. Trọng tài (Referees) không thuộc nhân sự văn phòng."
+            },
+            {
+              "id": "3",
+              "content": "3. Plumbing involves work on_______ in a house or building.",
+              "options": [
+                "electrical wiring",
+                "plants and bushes",
+                "water pipes",
+                "interior design"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Plumbing là hệ thống cấp nước, liên quan đến các đường ống nước (water pipes)."
+            },
+            {
+              "id": "4",
+              "content": "4. If something is trendy, then it is______ .",
+              "options": [
+                "outdated",
+                "in style",
+                "almost empty",
+                "very cheap"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Trendy là hợp thời trang, phổ biến. Đồng nghĩa với in style (thịnh hành)."
+            },
+            {
+              "id": "5",
+              "content": "5. Which is NOT considered a utility?",
+              "options": [
+                "Room service",
+                "Electrical service",
+                "Water service",
+                "Gas service"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Utility là dịch vụ tiện ích như điện, nước, khí đốt. Dịch vụ phòng (Room service) không phải là tiện ích công cộng."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. His company gives work to about 100 people in the community. (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "employs"
+                }
+              ]
+            },
+            {
+              "id": "7",
+              "content": "2. Joan was forced to leave from the auditorium for her hostile comments. (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "expelled"
+                }
+              ]
+            },
+            {
+              "id": "8",
+              "content": "3. My new apartment in the city was complete with bed, sofa, and TV. (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "furnished"
+                }
+              ]
+            },
+            {
+              "id": "9",
+              "content": "4. The prisoner’s condition for health and cleanliness was absolutely terrible. (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "hygiene"
+                }
+              ]
+            },
+            {
+              "id": "10",
+              "content": "5. I’m going to rent the apartment for only six months. (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "lease"
+                }
+              ]
+            },
+            {
+              "id": "11",
+              "content": "6. I need to fix the hole in my pants. (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "mend"
+                }
+              ]
+            },
+            {
+              "id": "12",
+              "content": "7. He was lucky to find employees who are honest and hardworking. (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "personnel"
+                }
+              ]
+            },
+            {
+              "id": "13",
+              "content": "8. We need to have our system of pipes that brings water into our house checked. (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "plumbing"
+                }
+              ]
+            },
+            {
+              "id": "14",
+              "content": "9. The popular and new fashion these days for men is boots. (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "trendy"
+                }
+              ]
+            },
+            {
+              "id": "15",
+              "content": "10. Did you remember to pay the company that provides our water? (app[1])",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "utility"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. The sharp rocks mended his jeans into pieces.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Mend là sửa chữa. Những hòn đá sắc nhọn không thể \"sửa chữa\" chiếc quần thành từng mảnh được. Sai (I)."
+            },
+            {
+              "id": "17",
+              "content": "2. The school sent a second bus whereby the students could get to school.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Whereby nghĩa là nhờ đó, qua đó. Đúng (C)."
+            },
+            {
+              "id": "18",
+              "content": "3. He had poor hygiene. He never washed his hands or brushed his teeth.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Hygiene là vệ sinh cá nhân. Không rửa tay, không đánh răng là poor hygiene. Đúng (C)."
+            },
+            {
+              "id": "19",
+              "content": "4. The dam on the lake became bankrupt, and soon water broke through the cracks.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bankrupt là phá sản (về mặt tài chính). Con đập không thể phá sản được. Sai (I)."
+            },
+            {
+              "id": "20",
+              "content": "5. The restaurant was a trendy place where all the rich and famous people went.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Trendy là hợp thời, nổi tiếng. Nhà hàng là một nơi thịnh hành thu hút người nổi tiếng. Đúng (C)."
+            },
+            {
+              "id": "21",
+              "content": "6. The first three cars to finish were given an award, but the forthcoming car got nothing.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Forthcoming là sắp tới (tương lai). Không dùng cho chiếc xe xếp thứ 4 (fourth). Từ đồng âm bị nhầm lẫn. Sai (I)."
+            },
+            {
+              "id": "22",
+              "content": "7. She made a mistake and accidentally walked into the mandatory bathroom.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Mandatory là bắt buộc theo luật. Phòng tắm không thể là phòng bắt buộc theo luật. Sai (I)."
+            },
+            {
+              "id": "23",
+              "content": "8. After he furnished dinner, the host gave him some dessert.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Furnish là trang bị đồ đạc nội thất. Không thể nói là trang bị bữa tối. Phải dùng từ finish. Sai (I)."
+            },
+            {
+              "id": "24",
+              "content": "9. Rather than conforming to one religion, Mary chose what she liked from all of them.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Conform là tuân theo. Mary không tuân theo một tôn giáo nào mà tự chọn những gì cô ấy thích. Đúng (C)."
+            },
+            {
+              "id": "25",
+              "content": "10. I knew something was wrong with the plumbing once the hot water stopped working.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Plumbing là hệ thống ống nước. Nước nóng ngưng chảy báo hiệu hệ thống ống nước có vấn đề. Đúng (C)."
+            },
+            {
+              "id": "26",
+              "content": "11. She graduated from university where she studied utility.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Utility là các tiện ích công cộng. Không phải là một chuyên ngành học chính ở đại học. Sai (I)."
+            },
+            {
+              "id": "27",
+              "content": "12. Because of an error, the game was given an extension of five more minutes.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Extension là sự gia hạn. Trận đấu được gia hạn thêm 5 phút. Đúng (C)."
+            },
+            {
+              "id": "28",
+              "content": "13. He’s very hygienic because he bathes once a week and seldom changes his clothes.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Hygienic là hợp vệ sinh, sạch sẽ. Tắm mỗi tuần một lần và hiếm khi thay đồ thì không thể gọi là hygienic. Sai (I)."
+            },
+            {
+              "id": "29",
+              "content": "14. The landlord owned several buildings throughout the capital city.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Landlord là chủ đất/chủ nhà. Đúng (C)."
+            },
+            {
+              "id": "30",
+              "content": "15. The factory needed more workers. It had to employ twenty more people.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Employ là thuê người làm. Đúng (C)."
+            },
+            {
+              "id": "31",
+              "content": "16. Tom didn’t want to talk about his father’s new job. He thought it was too personnel.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Nên dùng personal (cá nhân), không phải personnel (nhân sự). Sai (I)."
+            },
+            {
+              "id": "32",
+              "content": "17. There was too much sugar in the recipe, so she leased the amount with a spoon.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Lease là cho thuê tài sản. Ở đây muốn nói đến từ lessened (giảm bớt), dùng từ lease là sai. Sai (I)."
+            },
+            {
+              "id": "33",
+              "content": "18. Because the rent was so expensive, all of the tenants are probably wealthy people.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Tenants là những người thuê nhà. Đúng (C)."
+            },
+            {
+              "id": "34",
+              "content": "19. They were expelled from the restaurant because they couldn’t pay their bill.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Expel là bị đuổi ra. Họ bị đuổi khỏi nhà hàng vì không trả tiền. Đúng (C)."
+            },
+            {
+              "id": "35",
+              "content": "20. In order to buy a house, most people have to get a mortgage.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mortgage là khoản vay thế chấp. Để mua nhà thì phải vay thế chấp là đúng. Đúng (C)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Resourceful Landlord</h1><p style=\"margin-bottom: 1rem;\">A kind <b>landlord</b> was afraid that he would lose his apartment building. He needed to make some <b>mandatory</b> repairs to the old building, or his <b>tenants</b> would have to leave by the end of the month. Without tenants to <b>lease</b> the rooms, the landlord would be unable to pay his <b>mortgage</b>. He’d be <b>bankrupt</b>, and the bank would take his building.</p><p style=\"margin-bottom: 1rem;\">But he didn’t have the money <b>whereby</b> he could <b>employ</b> the <b>personnel</b> needed to make the repairs. It would seem like he did not want to <b>conform</b> to the city’s codes before the <b>forthcoming</b> inspection. He had requested an <b>extension</b>, but it was denied by the city.</p><p style=\"margin-bottom: 1rem;\">He held a meeting with his tenants and explained the unfortunate situation. “If the building does not meet the appropriate standards for safety and <b>hygiene</b>,” he said, “the city will <b>expel</b> everyone.”</p><p style=\"margin-bottom: 1rem;\">The tenants were all sad for the kind old man.</p><p style=\"margin-bottom: 1rem;\">“Maybe we can help,” the hairdresser who lived on the first floor stated. The other tenants agreed.</p><p style=\"margin-bottom: 1rem;\">One tenant had worked for the city’s <b>utilities</b>. He knew a lot about <b>plumbing</b>, so that’s how he helped. Another tenant was a carpenter; he <b>mended</b> the holes in the floor and walls. Others cleaned the building from top to bottom so that it was more <b>hygienic</b>. They even <b>furnished</b> some of the apartments with new beds, dressers, and chairs. When they were done, all of the people dispersed, and the landlord went home to rest.</p><p style=\"margin-bottom: 1rem;\">When the deadline of the inspection arrived, the apartment building was hygienic and safe. The landlord couldn’t believe it. His old building now looked like one of the <b>trendiest</b> buildings in town.</p><p style=\"margin-bottom: 1rem;\">The building passed its inspection, and the landlord and the tenants had a big party.</p><p style=\"margin-bottom: 1rem;\">“Thank you all so much,” the landlord said during the party. “I could never have done it by myself. But by working together, we now all have a beautiful place to live.”</p></div>",
+      "imageUrl": "/unit24_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. If the tenants didn’t pay the mortgage, the landlord could not pay his lease and would be bankrupt.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Nếu những người thuê nhà không trả tiền thuê nhà (lease), chủ nhà sẽ không thể trả tiền vay mua nhà thế chấp (mortgage) và sẽ bị phá sản."
+            },
+            {
+              "id": "37",
+              "content": "2. The landlord did not have money whereby he could employ personnel.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Chủ nhà không có tiền để có thể thuê nhân công (nhân sự) tiến hành sửa chữa."
+            },
+            {
+              "id": "38",
+              "content": "3. The city would expel everyone if the building did not pass the inspection for safety and hygiene.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Thành phố sẽ trục xuất (đuổi) mọi người ra khỏi đó nếu tòa nhà không vượt qua buổi kiểm tra an toàn và vệ sinh."
+            },
+            {
+              "id": "39",
+              "content": "4. The hairdresser mended the holes in the floors and walls.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Người thợ mộc (carpenter) là người vá các lỗ trên sàn và tường chứ không phải thợ cắt tóc."
+            },
+            {
+              "id": "40",
+              "content": "5. After everyone helped to fix it, the building looked like one of the trendiest buildings in town.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Sau khi sửa xong, tòa nhà trông giống như một trong những nơi thời thượng (trendy) nhất thị trấn."
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "41",
+              "content": "1. In addition to dressers, what did the tenants furnish some of the apartments with?",
+              "options": [
+                "New televisions and stereos.",
+                "New beds and chairs.",
+                "New carpets and curtains.",
+                "New paintings and lamps."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dựa vào văn bản: \"They even furnished some of the apartments with new beds, dressers, and chairs.\""
+            },
+            {
+              "id": "42",
+              "content": "2. If the landlord did not conform to the city’s mandatory hygienic standards, what would happen to the tenants?",
+              "options": [
+                "His tenants would have to leave by the end of the month.",
+                "His tenants would have to pay a fine.",
+                "His tenants would go to jail.",
+                "His tenants would buy the building."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nếu chủ nhà không tuân thủ quy định bắt buộc, người thuê sẽ phải rời đi vào cuối tháng (his tenants would have to leave by the end of the month)."
+            },
+            {
+              "id": "43",
+              "content": "3. What happened to the landlord’s request for an extension to the forthcoming deadline?",
+              "options": [
+                "The city approved it immediately.",
+                "He got a two-week extension.",
+                "He had requested an extension, but the city denied it.",
+                "He forgot to submit the request."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Dựa vào văn bản: \"He had requested an extension, but it was denied by the city.\""
+            },
+            {
+              "id": "44",
+              "content": "4. What did the tenant who had worked for the city’s utilities do to the building’s plumbing?",
+              "options": [
+                "He completely replaced the plumbing.",
+                "He charged the landlord for the plumbing repairs.",
+                "He repaired the building’s plumbing.",
+                "He broke the plumbing."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Người đã từng làm việc ở công ty tiện ích thành phố biết nhiều về hệ thống ống nước và đã sửa ống nước."
+            },
+            {
+              "id": "45",
+              "content": "5. What did the landlord do after all of the people dispersed?",
+              "options": [
+                "He went to the city office to complain.",
+                "He went home to rest.",
+                "He threw a party right away.",
+                "He went to sleep in the lobby."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dựa vào văn bản: \"When they were done, all of the people dispersed, and the landlord went home to rest.\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

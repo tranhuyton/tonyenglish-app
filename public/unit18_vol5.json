@@ -1,0 +1,533 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 18",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit18_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit18_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aggressive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈɡresɪv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is aggressive, then they constantly want to fight.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Nobody liked to play games with him because he was always too aggressive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">amnesty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈæmnəsti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Amnesty is a pardon given to prisoners of war.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was denied amnesty for her involvement in the war.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arena</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈriːnə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An arena is a building where people can watch sports and concerts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new arena was all set to hold the championship match.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">auditorium</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌɔːdɪˈtɔːriəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An auditorium is a large building used for public events.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People have gathered at the school auditorium to watch the play.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">captive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkæptɪv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A captive is a prisoner.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The guards told the captive that there was no way he could escape the prison.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">combat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑːmbæt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Combat is fighting between two people or groups.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The two warriors were locked in combat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">commonplace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑːmənpleɪs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is commonplace, then it is ordinary.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is nothing commonplace about the way Morris dresses.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compound</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑːmpaʊnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A compound is an enclosed area such as a prison or factory.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The workers waited outside the compound for the gates to the factory to open.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">corps</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔːr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A corps is a division of a military force.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The army had a corps of archers who trained apart from the regular soldiers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">distract</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈstrækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To distract someone means to stop them from concentrating on something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The phone call distracted him so much that he forgot all about his homework.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dumb</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʌm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is dumb, they are unable to speak.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She did not share the secret. She remained silent as if she were dumb.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">foe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[foʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A foe is an enemy or opponent.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was hard to believe that anyone could be his foe.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hack</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hæk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To hack something means to cut it into uneven pieces.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My uncle used the ax to hack the tree into many logs.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">meditate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmedɪteɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To meditate means to focus or think deeply in silence.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She liked to meditate for several hours of each day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nick</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To nick someone means to cut them slightly with a sharp object.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ While cutting the carrots, the cook nicked his finger with the edge of his knife.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">provoke</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəˈvoʊk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To provoke someone means to annoy them on purpose to cause violence.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The older boy provoked Paul by calling him mean names.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">realm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[relm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A realm is any area of activity or interest.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was not very active in the realm of business.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reign</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[reɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A reign is the period of time in which a ruler rules.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The emperor’s reign lasted for only two years.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rust</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rʌst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Rust is a red and brown coating on iron objects caused by water and air.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The old metal gate would not swing because the hinges were covered in rust.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sacred</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈseɪkrɪd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is sacred, then it is worshipped and respected.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ One religion in India will not harm cows because it believes that they are sacred.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. Who would most likely serve in a corps?",
+              "options": [
+                "A teacher",
+                "A baby",
+                "A minister",
+                "A soldier"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"corps\" (quân đoàn) là một đơn vị quân đội, phù hợp với người lính (soldier)."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. What would you find near a compound?",
+              "options": [
+                "A fence",
+                "A napkin",
+                "A parade",
+                "A computer program"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"compound\" (khu vực có tường rào bao quanh) thường có hàng rào (fence) gần đó."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. Which would you most likely see in an auditorium?",
+              "options": [
+                "A shark",
+                "A river",
+                "A crowd",
+                "A thumb"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"auditorium\" (khán phòng) là nơi diễn ra các sự kiện công cộng, nên sẽ thấy đám đông (crowd)."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. Who would most likely be involved in combat?",
+              "options": [
+                "A warrior",
+                "A teacher",
+                "A swimmer",
+                "A highway"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"combat\" (chiến đấu) thường liên quan đến chiến binh (warrior)."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. Which of the following is a dumb thing to do?",
+              "options": [
+                "To go swimming",
+                "To chop wood",
+                "To play with matches",
+                "To trim your fingernails"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Nghịch diêm (play with matches) là một hành động nguy hiểm, ngu ngốc (dumb thing to do)."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. foe",
+              "options": [
+                "shovel",
+                "friend",
+                "room",
+                "thumb"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"foe\" (kẻ thù) trái nghĩa với friend (bạn bè)."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. amnesty",
+              "options": [
+                "education",
+                "prison",
+                "energy",
+                "highway"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"amnesty\" (sự ân xá) trái nghĩa với prison (bỏ tù)."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. combat",
+              "options": [
+                "peace",
+                "brush",
+                "carpet",
+                "bird"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"combat\" (chiến đấu) trái nghĩa với peace (hòa bình)."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. sacred",
+              "options": [
+                "brave",
+                "better",
+                "evil",
+                "warm"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"sacred\" (linh thiêng) trái nghĩa với evil (độc ác, tà ác)."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. distract",
+              "options": [
+                "increase",
+                "pretend",
+                "return",
+                "focus"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"distract\" (làm sao nhãng) trái nghĩa với focus (tập trung)."
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. dumb",
+              "options": [
+                "kind",
+                "wrong",
+                "loud",
+                "hurt"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"dumb\" (câm, không nói được) trái nghĩa với loud (ồn ào)."
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. commonplace",
+              "options": [
+                "unusual",
+                "fresh",
+                "pleasant",
+                "actual"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"commonplace\" (bình thường, phổ biến) trái nghĩa với unusual (bất thường)."
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. hack",
+              "options": [
+                "mend",
+                "sneeze",
+                "blame",
+                "dig"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"hack\" (chặt đứt, băm) trái nghĩa với mend (vá lại, sửa chữa)."
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. aggressive",
+              "options": [
+                "smart",
+                "tall",
+                "calm",
+                "young"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"aggressive\" (hung hăng) trái nghĩa với calm (bình tĩnh)."
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. provoke",
+              "options": [
+                "mash",
+                "burn",
+                "tire",
+                "soothe"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"provoke\" (khiêu khích, chọc giận) trái nghĩa với soothe (làm dịu)."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. realm",
+              "options": [
+                "lunch",
+                "area",
+                "gown",
+                "idea"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"realm\" (lĩnh vực, vùng) đồng nghĩa với area."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. auditorium",
+              "options": [
+                "market",
+                "assembly hall",
+                "music",
+                "present"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"auditorium\" (khán phòng) đồng nghĩa với assembly hall."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. rust",
+              "options": [
+                "morning",
+                "speed",
+                "truth",
+                "decay"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"rust\" (rỉ sét) đồng nghĩa với decay (sự mục nát, phân rã)."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. corps",
+              "options": [
+                "basin",
+                "troop",
+                "pace",
+                "image"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"corps\" (quân đoàn) đồng nghĩa với troop."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. meditate",
+              "options": [
+                "think",
+                "bake",
+                "swim",
+                "sweep"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"meditate\" (ngồi thiền, suy ngẫm) đồng nghĩa với think."
+            },
+            {
+              "id": "ex3_6",
+              "content": "6. compound",
+              "options": [
+                "garbage",
+                "pasture",
+                "kilogram",
+                "camp"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"compound\" (khu vực có tường bao) đồng nghĩa với camp (doanh trại)."
+            },
+            {
+              "id": "ex3_7",
+              "content": "7. reign",
+              "options": [
+                "bath",
+                "snow",
+                "rule",
+                "chalk"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"reign\" (triều đại, sự cai trị) đồng nghĩa với rule."
+            },
+            {
+              "id": "ex3_8",
+              "content": "8. arena",
+              "options": [
+                "stadium",
+                "boulder",
+                "camera",
+                "believable"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"arena\" (đấu trường) đồng nghĩa với stadium."
+            },
+            {
+              "id": "ex3_9",
+              "content": "9. nick",
+              "options": [
+                "scratch",
+                "choice",
+                "grain",
+                "glove"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"nick\" (khía, vết xước) đồng nghĩa với scratch."
+            },
+            {
+              "id": "ex3_10",
+              "content": "10. captive",
+              "options": [
+                "challenge",
+                "motor",
+                "prisoner",
+                "ticket"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"captive\" (tù nhân) đồng nghĩa với prisoner."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex4_1",
+              "content": "1. The arena was filled with adoring fans.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"arena\" (đấu trường, sân vận động) dùng đúng khi nói về nơi chứa đầy người hâm mộ."
+            },
+            {
+              "id": "ex4_2",
+              "content": "2. The wooden fence was covered in a thick layer of rust.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"rust\" (rỉ sét) chỉ xảy ra với kim loại, không dùng cho hàng rào gỗ (wooden fence)."
+            },
+            {
+              "id": "ex4_3",
+              "content": "3. His reign only lasted three years before he became sick and passed away.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"reign\" (thời gian trị vì) dùng chính xác cho khoảng thời gian ông cai trị."
+            },
+            {
+              "id": "ex4_4",
+              "content": "4. You will like Jack. You both have so much commonplace together.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"commonplace\" (bình thường, tầm thường) bị dùng sai ngữ cảnh, lẽ ra nên dùng từ \"in common\" (điểm chung)."
+            },
+            {
+              "id": "ex4_5",
+              "content": "5. Her perfume was too strong. I was distracted by it during the meeting.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"distracted\" (bị phân tâm) dùng chính xác khi mùi nước hoa làm mất tập trung."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Soldier's Decision</h1><p style=\"margin-bottom: 1rem;\">A soldier was captured while fighting in an enemy king's land. It was well known that this king would make <b>captives</b> fight one another. This was <b>commonplace</b> during his <b>reign</b>. For these fights, the king had built several large <b>arenas</b>. He often awarded the winners by setting them free or even having them join his elite army <b>corps</b>.</p><p style=\"margin-bottom: 1rem;\">The soldier, however, decided he had seen too much violence. He now felt that all life was <b>sacred</b>. The night before his first match, he made a risky decision. He decided that he would not engage in <b>combat</b>. He knew he may never be set free, but it was a decision that he was willing to accept.</p><p style=\"margin-bottom: 1rem;\">In the morning, he was led from the prisoners' <b>compound</b> to one of the king's arenas. A gate coated in <b>rust</b> stood between him and the <b>auditorium</b>'s floor. He was worried, but he knew what he had to do.</p><p style=\"margin-bottom: 1rem;\">When the gate opened, he calmly walked to the center of the arena and sat. He started to <b>meditate</b>. His <b>foe</b> Darius, who was skilled in the <b>realm</b> of sword fighting and was typically not very <b>aggressive</b>, would not fight the quiet soldier until he attacked Darius first.</p><p style=\"margin-bottom: 1rem;\">Darius tried to <b>provoke</b> him by <b>hacking</b> at the air close to his head with his sword. But the soldier was not <b>distracted</b>. He sat quietly, as if he were <b>dumb</b>, and looked calmly up at the sky. Even when Darius <b>nicked</b> him on the cheek with the edge of his sword, the soldier did not move.</p><p style=\"margin-bottom: 1rem;\">At last he threw down his sword and shield and gave up.</p><p style=\"margin-bottom: 1rem;\">\"I can't fight someone who refuses to fight me!\" Darius shouted to the king.</p><p style=\"margin-bottom: 1rem;\">The king was very impressed with the soldier. Never in any battle had he seen someone so brave. As a result, he gave the peaceful soldier <b>amnesty</b>. The soldier's actions proved to the king and everyone in the arena that peace was more powerful than fighting.</p></div>",
+      "imageUrl": "/unit18_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readA_1",
+              "content": "1. The gate between the soldier and the auditorium was coated with rust.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Câu chuyện có chi tiết chiếc cổng sắt phủ rỉ sét (coated in rust)."
+            },
+            {
+              "id": "readA_2",
+              "content": "2. The prisoner was led from the arena to the compound.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Anh ta được dẫn từ khu trại giam (compound) tới đấu trường (arena), không phải ngược lại."
+            },
+            {
+              "id": "readA_3",
+              "content": "3. While he meditated, the soldier was distracted by his opponent.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Người lính không hề bị đối thủ làm xao nhãng (was not distracted)."
+            },
+            {
+              "id": "readA_4",
+              "content": "4. The king gave the brave soldier amnesty and made him join his elite army corps.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Nhà vua chỉ ban lệnh ân xá (amnesty) cho anh, không bắt anh gia nhập đội quân tinh nhuệ."
+            },
+            {
+              "id": "readA_5",
+              "content": "5. The quiet soldier felt that all life was sacred.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Người lính cảm thấy mọi sự sống đều là thiêng liêng (sacred)."
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readB_1",
+              "content": "1. Why did the captive seem like he was dumb?",
+              "options": [
+                "He was quiet",
+                "He was aggressive",
+                "He didn't know how to fight",
+                "He didn't know the king"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Tù binh có vẻ như bị câm (dumb) bởi vì anh ta rất im lặng (quiet)."
+            },
+            {
+              "id": "readB_2",
+              "content": "2. What was commonplace during the reign of the enemy king?",
+              "options": [
+                "Making captives fight one another",
+                "Giving amnesty",
+                "Meditating",
+                "Rust on gates"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Việc bắt các tù binh chiến đấu với nhau (making captives fight one another) là phổ biến (commonplace) dưới thời vị vua này."
+            },
+            {
+              "id": "readB_3",
+              "content": "3. In what realm did the soldier’s opponent Darius have skill?",
+              "options": [
+                "Sword fighting",
+                "Meditation",
+                "Magic",
+                "Archery"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Darius có kỹ năng trong lĩnh vực đấu kiếm (sword fighting)."
+            },
+            {
+              "id": "readB_4",
+              "content": "4. Where did the soldier get nicked by his opponent?",
+              "options": [
+                "On his cheek",
+                "On his leg",
+                "On his arm",
+                "On his head"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Người lính bị đối thủ sượt nhẹ (nicked) vào má (on his cheek)."
+            },
+            {
+              "id": "readB_5",
+              "content": "5. What did the quiet soldier prove by refusing to engage his foe in combat?",
+              "options": [
+                "That peace can conquer violence",
+                "That he was a coward",
+                "That he was a traitor",
+                "That he wanted to join the army corps"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Anh ta đã chứng minh rằng hòa bình có thể chiến thắng bạo lực (peace can conquer violence)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

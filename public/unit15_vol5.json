@@ -1,0 +1,533 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 15",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit15_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit15_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accessory</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æksésəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An accessory is a thing that is added to another thing to make it look better.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The store sold colorful accessories like bags, sunglasses, and makeup.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">acquisition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æ̀kwəzíʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An acquisition is something that a person buys or gets in some way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Marty was happy with his new acquisition: a very fast bicycle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adequate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ǽdikwit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is adequate, it is good enough for something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Without adequate notice of the road block, they will have to turn around.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cardboard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kάːrdbɔ̀ːrd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cardboard is a material made out of stiff paper. It is often used to make boxes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We packed our things into cardboard boxes and moved to our new home.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dilemma</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dilémə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dilemma is a difficult situation in which a choice has to be made.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Choosing either the tastier or healthier drink proved to be quite a dilemma.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">elaborate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ilǽbərèit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is elaborate, it contains a lot of details.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She gave the teacher an elaborate explanation of her project.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">facilitate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fəsílətèit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To facilitate something is to make it easier.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ To facilitate the meeting, Melissa used a simple computer program.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fleet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fliːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fleet is a group of ships.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fleet of ships spent a few days at the dock.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[grid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A grid is a pattern of squares with numbers and letters to find places on a map.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We located our town using the grid.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">import</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impɔ́ːrt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To import means to bring in a product from another country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Foods that have been imported are usually more expensive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">infer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[infə́ːr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To infer something is to decide it is true based on other information one has.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ By the position of the sun in the sky, she inferred that it was noon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inflate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[infléit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To inflate something means to fill it up with air.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I helped him inflate the balloons.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">innate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inéit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is innate, it is something that one is born with, it is not learned.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He had the innate desire to please his teachers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">marble</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mάːrbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Marble is a type of rock that feels cold and is smooth when cut.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The large house had floors made of marble.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mæst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mast is a long pole on a ship that holds the sail.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mast held both sails of the ship upright.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nausea</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɔ́ːziə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Nausea is the feeling of being sick to your stomach.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The doctor said the medicine would help get rid of her nausea.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">naval</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[néivəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is naval, it relates to a country's navy or military ships.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The country sent all of its naval forces to protect them.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pouch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pautʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pouch is a small, flexible bag that is usually made of cloth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I keep my money in a small pouch.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">saturated</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sǽtʃərèitid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is saturated, it is completely wet.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Leigh's hair became saturated in the rain storm.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">update</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[Λpdèit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An update is an act of making something more modern.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I'm doing an update on my personal phone directory.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. What is marble often used for?",
+              "options": [
+                "To make cars",
+                "To make boats",
+                "To make statues",
+                "To make fires"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"marble\" (đá hoa cương) thường dùng để làm tượng (statues) hoặc lát sàn nhà."
+            },
+            {
+              "id": "2",
+              "content": "2. Accessories like earrings, purses, and ______ often make clothes look nicer.",
+              "options": [
+                "computers",
+                "shoes",
+                "eye color",
+                "muscles"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Phụ kiện (accessories) giúp quần áo đẹp hơn, ví dụ như khuyên tai, ví, và giày (shoes)."
+            },
+            {
+              "id": "3",
+              "content": "3. What does it mean to update something?",
+              "options": [
+                "To put away",
+                "To leave as it is",
+                "To make more modern",
+                "To break"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"update\" nghĩa là cập nhật, làm cho hiện đại hơn (To make more modern)."
+            },
+            {
+              "id": "4",
+              "content": "4. What is something that should not be imported?",
+              "options": [
+                "Fruits",
+                "Shoes",
+                "Ideas",
+                "Diseases"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"import\" là mang từ nơi khác/nước ngoài vào. Dịch bệnh (diseases) là thứ không nên mang vào."
+            },
+            {
+              "id": "5",
+              "content": "5. Naval forces are designed to ______ a country from danger.",
+              "options": [
+                "protect",
+                "fly",
+                "incorporate",
+                "lead"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"Naval forces\" (hải quân) được thiết kế để bảo vệ (protect) đất nước khỏi nguy hiểm."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. The equipment in the school was so old that Isla ______ that it would not be...",
+              "options": [
+                "inferred",
+                "inflated",
+                "facilitate",
+                "adequate"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"inferred\" (suy luận). Vì thiết bị cũ kĩ nên Isla đã suy luận rằng..."
+            },
+            {
+              "id": "7",
+              "content": "2. ...______ for students to use.",
+              "options": [
+                "saturated",
+                "adequate",
+                "fleet",
+                "innate"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"adequate\" (đầy đủ/đủ tốt). ...nó không đủ tốt cho học sinh sử dụng."
+            },
+            {
+              "id": "8",
+              "content": "3. Marilyn had a(n) ______ love for education.",
+              "options": [
+                "innate",
+                "saturated",
+                "inflated",
+                "naval"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"innate\" (bẩm sinh). Tình yêu giáo dục bẩm sinh."
+            },
+            {
+              "id": "9",
+              "content": "4. She read many books to ______ her learning.",
+              "options": [
+                "import",
+                "facilitate",
+                "update",
+                "infer"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"facilitate\" (làm cho dễ dàng/tạo điều kiện). Để giúp ích/tạo điều kiện cho việc học."
+            },
+            {
+              "id": "10",
+              "content": "5. Larry took a pen out of the ______ in his backpack...",
+              "options": [
+                "pouch",
+                "mast",
+                "fleet",
+                "dilemma"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"pouch\" (cái túi/ngăn nhỏ). Lấy bút ra từ ngăn nhỏ của balo."
+            },
+            {
+              "id": "11",
+              "content": "6. ...and used it to ______ the information on the form.",
+              "options": [
+                "infer",
+                "update",
+                "inflate",
+                "import"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"update\" (cập nhật). Dùng bút để cập nhật thông tin trên biểu mẫu."
+            },
+            {
+              "id": "12",
+              "content": "7. The ______ was used to being out at sea.",
+              "options": [
+                "fleet",
+                "mast",
+                "pouch",
+                "accessory"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"fleet\" (hạm đội). Hạm đội đã quen với việc ở ngoài biển khơi."
+            },
+            {
+              "id": "13",
+              "content": "8. As a result, they didn’t mind having their clothes ______ with sea water.",
+              "options": [
+                "adequate",
+                "saturated",
+                "innate",
+                "elaborate"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"saturated\" (ướt sũng). Bị ướt sũng nước biển."
+            },
+            {
+              "id": "14",
+              "content": "9. After the fire, nothing was left of the ship except for its tall ______.",
+              "options": [
+                "mast",
+                "fleet",
+                "grid",
+                "marble"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"mast\" (cột buồm). Chỉ còn lại cái cột buồm cao."
+            },
+            {
+              "id": "15",
+              "content": "10. Soon, the sailors ______ a rescue boat and sailed to safety.",
+              "options": [
+                "inferred",
+                "inflated",
+                "facilitated",
+                "updated"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"inflated\" (bơm phồng). Bơm phồng chiếc thuyền cứu sinh."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. adequate",
+              "options": [
+                "smart",
+                "enough",
+                "new",
+                "safe"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"adequate\" là đầy đủ, tương đương \"enough\"."
+            },
+            {
+              "id": "17",
+              "content": "2. facilitate",
+              "options": [
+                "to make easier",
+                "to do first",
+                "to try once",
+                "to find out"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"facilitate\" là tạo điều kiện dễ dàng hơn, tương đương \"to make easier\"."
+            },
+            {
+              "id": "18",
+              "content": "3. elaborate",
+              "options": [
+                "beautiful",
+                "small",
+                "detailed",
+                "welcoming"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"elaborate\" là kỹ lưỡng, nhiều chi tiết, tương đương \"detailed\"."
+            },
+            {
+              "id": "19",
+              "content": "4. dilemma",
+              "options": [
+                "two parts",
+                "contradiction",
+                "problem",
+                "rescue"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"dilemma\" là tình thế tiến thoái lưỡng nan/vấn đề nan giải, tương đương \"problem\"."
+            },
+            {
+              "id": "20",
+              "content": "5. inflate",
+              "options": [
+                "to fill with air",
+                "to enter",
+                "to put away",
+                "to utilize"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"inflate\" là bơm hơi, tương đương \"to fill with air\"."
+            },
+            {
+              "id": "21",
+              "content": "6. innate",
+              "options": [
+                "strong",
+                "natural",
+                "evil",
+                "full"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"innate\" là bẩm sinh, tự nhiên có, tương đương \"natural\"."
+            },
+            {
+              "id": "22",
+              "content": "7. saturated",
+              "options": [
+                "wet",
+                "likely",
+                "uncommon",
+                "unable to change"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"saturated\" là ướt sũng, tương đương \"wet\"."
+            },
+            {
+              "id": "23",
+              "content": "8. pouch",
+              "options": [
+                "a costume",
+                "an animal",
+                "a bag",
+                "a part"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"pouch\" là cái túi/bao nhỏ, tương đương \"a bag\"."
+            },
+            {
+              "id": "24",
+              "content": "9. nausea",
+              "options": [
+                "improvement",
+                "strength",
+                "lost",
+                "sickness"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"nausea\" là cảm giác buồn nôn, bệnh, tương đương \"sickness\"."
+            },
+            {
+              "id": "25",
+              "content": "10. fleet",
+              "options": [
+                "shipbuilder",
+                "structure",
+                "group",
+                "underwater"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"fleet\" là đội/nhóm tàu, tương đương \"group\"."
+            }
+          ]
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "26",
+              "content": "1. The cardboard box was made from a tough metal.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Cardboard là giấy bìa cứng, không thể làm từ kim loại (metal)."
+            },
+            {
+              "id": "27",
+              "content": "2. The man had an acquisition for being mean to the people that he met.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Acquisition mang nghĩa thu nhận, mua được (vật phẩm), không dùng cho tính cách (mean)."
+            },
+            {
+              "id": "28",
+              "content": "3. The man helped the old woman infer the large object on the shelf.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Infer là suy luận, không thể giúp ai đó \"suy luận\" một vật thể lớn trên kệ theo ngữ cảnh nhấc đồ lên."
+            },
+            {
+              "id": "29",
+              "content": "4. We used the grid on the map to help us locate the museum.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Grid là lưới tọa độ trên bản đồ giúp xác định vị trí."
+            },
+            {
+              "id": "30",
+              "content": "5. The painting was elaborate. The artist paid attention to every detail.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Elaborate là tỉ mỉ, rất nhiều chi tiết."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Big Ship</h1><p style=\"margin-bottom: 1rem;\">Ernest looked at his <b>fleet</b> of ships. Usually, he used them for his firm, which <b>imported marble</b> statues from other countries. But today he was going fishing. And the ship he chose was his favorite. It had an <b>elaborate</b> painting on the side that showed a <b>naval</b> battle. It also had some new <b>updates</b> to its computer system. His favorite ship’s latest <b>acquisition</b> was a device with a small <b>grid</b> to show the ship’s exact location. This new <b>accessory</b> kept Ernest from getting lost.</p><p style=\"margin-bottom: 1rem;\">At daybreak, Ernest happily sailed the temperate waters until he was far from land. Then he saw a small boat in the distance. There was an old man standing next to its <b>mast</b>. He was waving his arms in the air. There was also a boy with his head hanging over the boat’s edge. Ernest <b>inferred</b> that the boy was suffering from <b>nausea</b>. Both of their clothes were <b>saturated</b> with sea water. Ernest assumed that they were in trouble. Most people never realized, but Ernest had an <b>innate</b> desire to help people. He began sailing toward them, eager to <b>facilitate</b> their rescue and thus solve their <b>dilemma</b>.</p><p style=\"margin-bottom: 1rem;\">As he got closer to the boat, he was shocked by its simplicity. The boat’s wood looked no stronger than <b>cardboard</b>, and the equipment was old. Still, there were several large fish in a <b>pouch</b> in the boat.</p><p style=\"margin-bottom: 1rem;\">Ernest threw a large package onto the boat. He yelled, “Here! You can <b>inflate</b> this boat to get you back to land.”</p><p style=\"margin-bottom: 1rem;\">“Get out of here!” screamed the old man.</p><p style=\"margin-bottom: 1rem;\">Ernest was confused. “Don’t you need help?” he asked. “Your ship doesn’t seem <b>adequate</b> enough to sail so far away from land.”</p><p style=\"margin-bottom: 1rem;\">“You’ve just scared away a huge fish,” the boy said. “We waved to let you know you were too close to us.”</p><p style=\"margin-bottom: 1rem;\">Ernest turned around and headed home. He learned that it’s better not to help unless asked to. Otherwise, you might not help anyone at all.</p></div>",
+      "imageUrl": "/unit15_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5_reading",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "31",
+              "content": "1. Ernest usually used his fleet for his firm that imported marble statues from other countries.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Công ty của Ernest nhập khẩu các bức tượng đá hoa cương từ nước ngoài."
+            },
+            {
+              "id": "32",
+              "content": "2. His favorite ship had updated accessories like a new grid.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Chiếc thuyền anh thích nhất có một bản cập nhật mới là thiết bị hiển thị tọa độ bản đồ (grid)."
+            },
+            {
+              "id": "33",
+              "content": "3. When Ernest saw the old man standing next to the mast, he decided to go home.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Khi thấy họ vẫy tay, anh đã quyết định giúp họ thoát khỏi khó khăn (dilemma), không phải đi về nhà."
+            },
+            {
+              "id": "34",
+              "content": "4. Ernest offered the man and the boy a boat that inflates to facilitate their rescue.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Ernest ném cho họ một chiếc thuyền phao (có thể bơm phồng - inflate) để hỗ trợ cứu hộ."
+            },
+            {
+              "id": "35",
+              "content": "5. Ernest had the innate desire to make a lot of money.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Ernest có khát khao bẩm sinh (innate desire) là giúp đỡ người khác, không phải kiếm thật nhiều tiền."
+            }
+          ]
+        },
+        {
+          "id": "sec6_reading",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. What was on the side of Ernest’s favorite ship?",
+              "options": [
+                "There was an elaborate painting of a naval battle.",
+                "There was a sign.",
+                "There was a map.",
+                "There was a name."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bên hông thuyền có một bức tranh cầu kỳ (elaborate painting) vẽ cảnh một trận hải chiến (naval battle)."
+            },
+            {
+              "id": "37",
+              "content": "2. How does the author describe the clothes of the people in the boat?",
+              "options": [
+                "Their clothes were dry.",
+                "Their clothes were saturated with seawater.",
+                "Their clothes were new.",
+                "Their clothes were colorful."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Quần áo của họ ướt sũng (saturated) nước biển."
+            },
+            {
+              "id": "38",
+              "content": "3. What did Ernest think was wrong with the boy?",
+              "options": [
+                "He thought the boy was suffering from nausea.",
+                "He thought the boy was hungry.",
+                "He thought the boy was thirsty.",
+                "He thought the boy was sleeping."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Vì thấy cậu bé chúi đầu ra mép thuyền, Ernest suy luận rằng cậu bị say sóng / buồn nôn (nausea)."
+            },
+            {
+              "id": "39",
+              "content": "4. Where did the people in the small boat keep their fish?",
+              "options": [
+                "In a bucket.",
+                "In a cooler.",
+                "There were several large fish in a pouch in the boat.",
+                "On the floor."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Họ giữ những con cá lớn trong một chiếc túi (pouch) trên thuyền."
+            },
+            {
+              "id": "40",
+              "content": "5. What did Ernest learn at the end of the story?",
+              "options": [
+                "Ernest learned it's better not to offer help unless it was asked for.",
+                "Ernest learned to fish better.",
+                "Ernest learned to stay home.",
+                "Ernest learned to sail faster."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Ernest học được bài học rằng không nên tự ý giúp người khác khi họ không yêu cầu, nếu không có khi lại làm hỏng việc của họ (như làm con cá sợ chạy mất)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

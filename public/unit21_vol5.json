@@ -1,0 +1,555 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 21",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit21_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit21_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">attribute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ætribju:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An attribute is a characteristic of a person or thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He isn’t very clever, but he does have some other positive attributes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bilingual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bailiŋgwəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is bilingual, then they can speak two languages.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since you already know English, after learning French you’ll be bilingual.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">clone</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kloun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A clone is an identical copy of a living creature.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Scientists recently made a clone of a sheep.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">colloquial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəloukwiəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Colloquial describes informal words that are more suitable for speech than writing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I find it difficult to understand people if they use colloquial language.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cosmetics</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑzmetiks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cosmetics are substances that make the face and skin more beautiful.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Girls often look nicer when they don’t use so many cosmetics.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dash</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dæʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dash means to run or move quickly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Helen dashed up the stairs, so she wouldn’t be late for her appointment.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disgust</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disgʌst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Disgust is a feeling of distaste and anger caused by something rude or unpleasant.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He felt disgust toward his date because she had such terrible eating habits.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fluorescent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fluəresnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is fluorescent, it is such a bright color that it seems to give off light.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She highlighted the key words in the document with a fluorescent yellow pen.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">furious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fjuəriəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are furious, you are extremely angry.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My father was furious when he read my bad school report.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">astounded</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əstaundid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are astounded, you are very surprised.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was astounded that Monica won the art competition.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gulf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gʌlf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A gulf is a gap between people who do not understand each other.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There has been a gulf between James and Tony since their parents died.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">humanities</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hju:mænətiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Humanities are subjects which analyze human ideas, such as history and literature.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jennifer has always been more interested in humanities than science.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">knot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɑt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A knot is made when you tie the ends of rope or cord together.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He tied a knot in his shoelaces, so they wouldn’t come off during the race.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">linguist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[liŋgwist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A linguist is someone who studies languages.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Tony is a good linguist and speaks four different languages.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">participant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pɑ:rtisəpənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A participant is someone who joins in a social event or competition.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There were thousands of participants in this year’s marathon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plausible</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[plɔ:zəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is plausible, it is reasonable or possible.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is plausible that Jack isn’t here today because he is sick.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ritual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ritʃuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A ritual is a formal custom that people do regularly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Ken was very interested to learn about the religious rituals of the natives.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sibling</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sibliŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sibling is a brother or sister.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jane has two siblings, an older brother and a younger sister.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">skinny</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skini]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is skinny, they are extremely thin.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Polly is very skinny. I think she needs to eat more.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vague</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[veig]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is vague, it is not clear, and it gives very few details.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I asked him about his mother’s health, but he was very vague about it.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. Cosmetics are typically used to make someone______ .",
+              "options": [
+                "look better",
+                "think clearer",
+                "feel stronger",
+                "eat healthier"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cosmetics (Mỹ phẩm) thường được dùng để làm cho ai đó trông đẹp hơn (look better)."
+            },
+            {
+              "id": "2",
+              "content": "2. Which of the following would NOT be considered a subject studied in humanities?",
+              "options": [
+                "Film",
+                "Literature",
+                "Mythology",
+                "Mathematics"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Toán học (Mathematics) là môn khoa học tự nhiên, không phải là môn khoa học nhân văn (humanities)."
+            },
+            {
+              "id": "3",
+              "content": "3. Which of the following could NOT be used to make a knot?",
+              "options": [
+                "Lines of clouds",
+                "Wire",
+                "Thread",
+                "Yarn"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Những đám mây (Lines of clouds) không thể dùng để thắt nút (knot), trong khi dây kẽm, chỉ và len thì có thể."
+            },
+            {
+              "id": "4",
+              "content": "4. Positive attributes include being energetic, optimistic, and___",
+              "options": [
+                "dreary",
+                "pessimistic",
+                "cheerful",
+                "arrogant"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Các thuộc tính (attributes) tích cực bao gồm năng động, lạc quan và vui vẻ (cheerful)."
+            },
+            {
+              "id": "5",
+              "content": "5. Which of the following is similar in meaning to the word dash?",
+              "options": [
+                "Stroll",
+                "Run",
+                "Sprint",
+                "Meander"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dash có nghĩa là chạy hoặc di chuyển nhanh chóng, đồng nghĩa với từ Run (hoặc Sprint, nhưng đáp án theo sách là Run)."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. astounded",
+              "options": [
+                "angry",
+                "surprised",
+                "interested",
+                "bored"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Astounded có nghĩa là kinh ngạc, rất ngạc nhiên (surprised)."
+            },
+            {
+              "id": "7",
+              "content": "2. disgust",
+              "options": [
+                "information",
+                "detail",
+                "money",
+                "anger"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Disgust là cảm giác ghê tởm hoặc tức giận, gần nghĩa với anger (tức giận)."
+            },
+            {
+              "id": "8",
+              "content": "3. gulf",
+              "options": [
+                "island",
+                "gap",
+                "entrance",
+                "partnership"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Gulf (khoảng cách, sự khác biệt) đồng nghĩa với từ gap (khoảng trống, khoảng cách)."
+            },
+            {
+              "id": "9",
+              "content": "4. vague",
+              "options": [
+                "pretty",
+                "useful",
+                "unclear",
+                "dirty"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Vague có nghĩa là mơ hồ, không rõ ràng (unclear)."
+            },
+            {
+              "id": "10",
+              "content": "5. furious",
+              "options": [
+                "lively",
+                "quiet",
+                "angry",
+                "shocking"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Furious có nghĩa là cực kỳ tức giận (angry)."
+            },
+            {
+              "id": "11",
+              "content": "6. bilingual",
+              "options": [
+                "foreign",
+                "surprised",
+                "poison",
+                "using two languages"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Bilingual là người có thể nói hoặc sử dụng hai ngôn ngữ (using two languages)."
+            },
+            {
+              "id": "12",
+              "content": "7. clone",
+              "options": [
+                "double",
+                "extra",
+                "light",
+                "copy"
+              ],
+              "correctAnswer": "D",
+              "explanation": "Clone là bản sao hoàn hảo, đồng nghĩa với copy."
+            },
+            {
+              "id": "13",
+              "content": "8. plausible",
+              "options": [
+                "never",
+                "always",
+                "possible",
+                "weak"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Plausible có nghĩa là hợp lý hoặc có thể xảy ra (possible)."
+            },
+            {
+              "id": "14",
+              "content": "9. skinny",
+              "options": [
+                "large",
+                "thin",
+                "tall",
+                "short"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Skinny có nghĩa là cực kỳ gầy gò (thin)."
+            },
+            {
+              "id": "15",
+              "content": "10. fluorescent",
+              "options": [
+                "bright",
+                "gloomy",
+                "open",
+                "ground"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Fluorescent có nghĩa là phát sáng hoặc rất sáng (bright)."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. Kevin was very vague about his job interview, and he told me all the details.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Vague có nghĩa là mơ hồ, không rõ ràng. Nếu anh ta kể chi tiết (told me all the details) thì không thể dùng vague ở đây. Sai (I)."
+            },
+            {
+              "id": "17",
+              "content": "2. Liam had a plausible reason for not doing his work, saying aliens took it.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Plausible là hợp lý. Việc nói người ngoài hành tinh lấy cắp bài tập thì không phải là lý do hợp lý. Sai (I)."
+            },
+            {
+              "id": "18",
+              "content": "3. Tom can only speak English. He is bilingual.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bilingual là người nói 2 ngôn ngữ. Tom chỉ nói được mỗi tiếng Anh thì không phải là bilingual. Sai (I)."
+            },
+            {
+              "id": "19",
+              "content": "4. Emma likes studying humanities like chemistry and physics.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Hóa học và vật lý là khoa học tự nhiên, không phải là khoa học nhân văn (humanities). Sai (I)."
+            },
+            {
+              "id": "20",
+              "content": "5. Ivy doesn’t have any siblings. It must be lonely without brothers or sisters.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Siblings nghĩa là anh chị em ruột. Câu này dùng đúng từ (C)."
+            },
+            {
+              "id": "21",
+              "content": "6. The two brothers looked so much alike that they could be clones.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Clones là bản sao y hệt. Hai anh em nhìn quá giống nhau như những bản sao. Câu này dùng đúng từ (C)."
+            },
+            {
+              "id": "22",
+              "content": "7. My mother was furious when she heard that I passed all my exams.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Furious là cực kỳ tức giận. Mẹ không thể tức giận khi nghe tin con qua tất cả các kỳ thi được. Sai (I)."
+            },
+            {
+              "id": "23",
+              "content": "8. Miranda is so skinny. She really needs to lose some weight.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Skinny là quá gầy. Nếu cô ấy đã gầy thì không cần thiết phải giảm cân (lose some weight). Sai (I)."
+            },
+            {
+              "id": "24",
+              "content": "9. I was filled with disgust when I heard the news that he had lied to all of us.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Disgust là sự ghê tởm, tức giận. Tôi cảm thấy ghê tởm khi biết anh ta đã nói dối. Câu này dùng đúng từ (C)."
+            },
+            {
+              "id": "25",
+              "content": "10. Sarah and I really understand each other. There is a big gulf between us.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Gulf là khoảng cách, sự khác biệt. Nếu thực sự thấu hiểu nhau thì không thể có một khoảng cách lớn giữa hai người. Sai (I)."
+            },
+            {
+              "id": "26",
+              "content": "11. Around the world, there are lots of different marriage rituals.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Rituals là các nghi thức. Câu nói có nhiều nghi thức kết hôn khác nhau là sử dụng đúng (C)."
+            },
+            {
+              "id": "27",
+              "content": "12. We had lots of participants in the fishing competition last Saturday.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Participants là người tham gia. Chúng tôi có rất nhiều người tham gia cuộc thi câu cá. Sử dụng đúng (C)."
+            },
+            {
+              "id": "28",
+              "content": "13. Kay is a linguist and will give a lecture on the best way to learn a language.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Linguist là nhà ngôn ngữ học. Việc Kay là nhà ngôn ngữ học và thuyết trình về cách học ngôn ngữ là đúng ngữ cảnh (C)."
+            },
+            {
+              "id": "29",
+              "content": "14. You should wear dark clothes for the interview, such as your fluorescent jacket.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Fluorescent là màu sắc rực rỡ, phát sáng. Nó không phải là quần áo tối màu (dark clothes). Sai (I)."
+            },
+            {
+              "id": "30",
+              "content": "15. You always dash so slowly. I wish you would walk faster.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dash nghĩa là chạy nhanh, lao đi nhanh. Không thể kết hợp với \"so slowly\" (rất chậm). Sai (I)."
+            },
+            {
+              "id": "31",
+              "content": "16. I can’t use this thread for sewing because it has too many knots in it.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Knots là những nút thắt. Sợi chỉ có quá nhiều nút thắt thì không thể dùng khâu vá được. Câu này đúng (C)."
+            },
+            {
+              "id": "32",
+              "content": "17. Jan wanted to make a cake, so she went to the shop to buy some cosmetics.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Cosmetics là mỹ phẩm. Bạn không thể làm bánh bằng mỹ phẩm được. Sai (I)."
+            },
+            {
+              "id": "33",
+              "content": "18. The lesson was long and boring, and all the students felt astounded.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Astounded là kinh ngạc. Bài học dài và chán thì học sinh phải thấy chán nản, chứ không thể thấy kinh ngạc. Sai (I)."
+            },
+            {
+              "id": "34",
+              "content": "19. I think Tom should get the job because he has all the right attributes.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Attributes là những đặc điểm, phẩm chất. Tom nên có công việc vì anh ta có những phẩm chất phù hợp. Đúng (C)."
+            },
+            {
+              "id": "35",
+              "content": "20. You shouldn’t use colloquial language when you make formal presentations.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Colloquial language là ngôn ngữ giao tiếp đời thường. Bạn không nên dùng nó trong các buổi thuyết trình trang trọng. Đúng (C)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Twins</h1><p style=\"margin-bottom: 1rem;\">Katie and Alice were twins. They were so alike that few people could tell the <b>siblings</b> apart. They were almost like <b>clones</b>. They even used the same <b>colloquial</b> language as each other. They were best friends.</p><p style=\"margin-bottom: 1rem;\">But the twins’ <b>attributes</b> were not all identical. Alice liked <b>humanities</b>, and Katie was a good <b>linguist</b>. One summer, Katie decided to be a <b>participant</b> at a summer camp in France. Alice wasn’t interested in the French language, so she didn’t go. But she felt angry that Katie wanted to spend the summer away from her.</p><p style=\"margin-bottom: 1rem;\">Two months later, Katie returned. Alice <b>dashed</b> to the airport to greet her sister. But when Alice saw Katie, she was <b>astounded</b>. Katie was now <b>bilingual</b>, and she looked completely different! She was wearing nice clothes, <b>cosmetics</b> and looked <b>skinnier</b>. Alice felt very messy next to her. She was just wearing a <b>fluorescent</b> t-shirt, and her hair had <b>knots</b> in it.</p><p style=\"margin-bottom: 1rem;\">When Alice asked Katie about France, Katie was <b>vague</b> and didn’t say much. It made Alice <b>furious</b> and filled her with <b>disgust</b> because in the past they’d always told each other everything. Now there was a huge <b>gulf</b> between them. Over the weeks, the sisters spoke even less.</p><p style=\"margin-bottom: 1rem;\">Two months later, it was the twins’ birthday. All their lives, they’d had a <b>ritual</b>. Before their birthday, they’d talk all night long. That night, Alice came into Katie’s bedroom.</p><p style=\"margin-bottom: 1rem;\">“I’m sorry I haven’t spoken much lately,” Katie said.</p><p style=\"margin-bottom: 1rem;\">“I understand. You have new friends now,” said Alice, angrily.</p><p style=\"margin-bottom: 1rem;\">Katie said, “My French friends don’t write much nowadays. For a while, I thought they were more exciting than my friends at home. But I was wrong. You’re my sister, and you’ll always be my best friend.”</p><p style=\"margin-bottom: 1rem;\">Alice said, “I’m sorry, too. I wanted our relationship to stay the same forever. But it’s totally <b>plausible</b> for twins to have different interests. We can still be best friends without being together all the time.”</p></div>",
+      "imageUrl": "/unit21_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. The girls looked like clones, but they used different colloquial language.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Cặp sinh đôi trông giống như những bản sao và họ sử dụng cùng một ngôn ngữ giao tiếp thông tục (they used the same colloquial language)."
+            },
+            {
+              "id": "37",
+              "content": "2. The twins’ attributes were different in that Katie was bilingual and Alice liked humanities.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Các thuộc tính của cặp song sinh khác nhau ở chỗ Katie là nhà ngôn ngữ học (linguist) chứ không phải lúc đầu đã song ngữ."
+            },
+            {
+              "id": "38",
+              "content": "3. Alice’s hair was in knots when she dashed to the airport to meet her sister.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Tóc của Alice đã bị rối (in knots) khi cô chạy đến sân bay."
+            },
+            {
+              "id": "39",
+              "content": "4. Alice was astounded when she saw Katie wearing a fluorescent t-shirt.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Alice kinh ngạc khi thấy Katie mặc quần áo đẹp, còn chính Alice mới là người mặc áo thun màu dạ quang (fluorescent)."
+            },
+            {
+              "id": "40",
+              "content": "5. When the gulf formed between the sisters, they stopped speaking to each other in detail.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Khi khoảng cách lớn (gulf) hình thành giữa hai chị em, họ đã nói chuyện với nhau ít đi rất nhiều."
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "41",
+              "content": "1. Why didn’t Alice want to be a participant at the summer camps with the other linguists?",
+              "options": [
+                "Alice wasn’t interested in French.",
+                "Alice didn't have money for the trip.",
+                "Alice had to study for exams.",
+                "Alice hated traveling."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dựa vào đoạn 2: 'Alice wasn’t interested in the French language, so she didn’t go.'"
+            },
+            {
+              "id": "42",
+              "content": "2. How did Alice feel when she saw Katie looking skinny and wearing cosmetics?",
+              "options": [
+                "Alice felt very proud of her.",
+                "Alice felt very happy.",
+                "Alice felt very messy next to her.",
+                "Alice felt furious immediately."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Dựa vào đoạn 3: 'Alice felt very messy next to her.'"
+            },
+            {
+              "id": "43",
+              "content": "3. Why was Alice furious and filled with disgust when Katie answered her questions in a vague way?",
+              "options": [
+                "Because Katie lied to her.",
+                "Because Katie insulted her.",
+                "Because in the past they’d always told each other everything.",
+                "Because Katie was showing off."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Dựa vào đoạn 4: '...because in the past they’d always told each other everything.'"
+            },
+            {
+              "id": "44",
+              "content": "4. What ritual did the siblings always do before their birthday?",
+              "options": [
+                "They would bake a cake together.",
+                "They’d talk all night long.",
+                "They went shopping.",
+                "They sang songs."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Dựa vào đoạn 5: 'Before their birthday, they’d talk all night long.'"
+            },
+            {
+              "id": "45",
+              "content": "5. What did Alice learn was plausible?",
+              "options": [
+                "It’s plausible for twins to hate each other.",
+                "It's totally plausible to be bilingual.",
+                "It’s totally plausible for twins to have different interests.",
+                "It's plausible to learn French in a month."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Dựa vào đoạn cuối: 'But it’s totally plausible for twins to have different interests.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

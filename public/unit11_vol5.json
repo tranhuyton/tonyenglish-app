@@ -1,0 +1,555 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 11",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">acute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkjúːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a bad thing is acute, it is very severe and intense.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When she fell out of the tree, the girl felt an acute pain in her arm.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aggression</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əgréʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Aggression is behavior that is mean or violent to others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The problem was only made worse by Mark's aggression.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">banquet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bǽŋkwit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A banquet is a grand formal dinner.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Both families brought a lot of food for the wedding banquet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">biography</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[baiάgrəfi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A biography is an account of someone's life that is written by someone else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We read a biography about Charles Darwin in science class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">boost</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[buːst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To boost something means to increase or improve it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Lowering prices boosts customers' interest in shopping.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">clap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klæp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To clap means to hit one's hands together to express pleasure or get attention.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After the speech, everyone in the crowd clapped their hands for the speaker.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmpél]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To compel someone to do something means to force them to do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Traffic signs compel drivers to drive safely.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dominance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dάmənəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The dominance of a person is their state of being more powerful than others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Large gorillas hit their chests to express their dominance over others.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gorgeous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gɔ́ːrdʒəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is gorgeous, it is very pleasing and attractive.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girl picked out a gorgeous dress to wear to the dance.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inevitable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inévətəbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is inevitable, it is certain to happen or cannot be avoided.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is inevitable that the days will get longer in the summer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">legacy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[légəsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A legacy is an effect that exists because of a person or thing in the past.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The legacy of the ancient Egyptians can be seen in their monuments.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">masterpiece</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mǽstərpìːs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A masterpiece is a very good painting, novel, movie, or other work of art.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Arc de Triomphe is considered a masterpiece in the world of architecture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">multiple</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mΛltəpl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If there are multiple things, there are many of them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the stunt went wrong, the man suffered multiple injuries.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">narrate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nǽreit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To narrate a story means to write about it or read it aloud.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This story was written by John, but Aaron is narrating it to the crowd.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">notorious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[noutɔ́ːriəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is notorious, it is well-known because of something bad.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This area of town is notorious for gang activity.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">outdated</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[àutdéitid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is outdated, it is old and no longer useful in modern time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Tape players are becoming outdated because of digital music.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overall</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[óuvərɔ̀ːl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a thing is talked about overall, the whole thing is considered.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Overall, the party was a huge success.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">partiality</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pὰːrʃiǽləti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A partiality is a tendency to prefer one thing to another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She has a partiality for walking to school instead of driving.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spontaneous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spɑntéiniəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When an act is spontaneous, it is not planned. It happens suddenly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My wife made a spontaneous decision to buy a new sofa while I was at work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">virtue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[və́ːrtʃuː]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A virtue is a good quality or way of behaving.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My best virtue is forgiveness.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the one that is opposite in meaning to the given word",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. gorgeous",
+              "options": [
+                "stiff",
+                "unpleasant",
+                "colorful",
+                "cold"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"gorgeous\" mang nghĩa tuyệt đẹp, trái nghĩa là \"unpleasant\" (khó chịu, không đẹp)."
+            },
+            {
+              "id": "2",
+              "content": "2. boost",
+              "options": [
+                "to lower",
+                "to feel",
+                "to increase",
+                "to sleep"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"boost\" mang nghĩa thúc đẩy, tăng cường, trái nghĩa là \"to lower\" (hạ thấp, giảm xuống)."
+            },
+            {
+              "id": "3",
+              "content": "3. spontaneous",
+              "options": [
+                "short",
+                "crowded",
+                "planned",
+                "faked"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"spontaneous\" mang nghĩa tự phát, trái nghĩa là \"planned\" (được lên kế hoạch)."
+            },
+            {
+              "id": "4",
+              "content": "4. multiple",
+              "options": [
+                "one",
+                "lousy",
+                "grand",
+                "free"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"multiple\" mang nghĩa nhiều, trái nghĩa là \"one\" (một)."
+            },
+            {
+              "id": "5",
+              "content": "5. inevitable",
+              "options": [
+                "heavy",
+                "pretty",
+                "silly",
+                "avoidable"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"inevitable\" mang nghĩa không thể tránh khỏi, trái nghĩa là \"avoidable\" (có thể tránh được)."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. I would like to write a **story about his life** for my father someday.",
+              "options": [
+                "biography",
+                "banquet",
+                "masterpiece",
+                "legacy"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"story about his life\" (câu chuyện về cuộc đời ông ấy) đồng nghĩa với \"biography\" (tiểu sử)."
+            },
+            {
+              "id": "7",
+              "content": "2. My little brother has an **awful, intense** case of chicken pox.",
+              "options": [
+                "acute",
+                "notorious",
+                "gorgeous",
+                "multiple"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"awful, intense\" (tồi tệ, dữ dội) đồng nghĩa với \"acute\"."
+            },
+            {
+              "id": "8",
+              "content": "3. The entire family decided to talk to Father about his constant **mean, violent behavior**.",
+              "options": [
+                "virtue",
+                "partiality",
+                "aggression",
+                "dominance"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"mean, violent behavior\" (hành vi hung hăng, bạo lực) đồng nghĩa với \"aggression\"."
+            },
+            {
+              "id": "9",
+              "content": "4. The preacher strongly believed that kindness was the most important **good quality**.",
+              "options": [
+                "legacy",
+                "virtue",
+                "dominance",
+                "masterpiece"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"good quality\" (phẩm chất tốt) đồng nghĩa với \"virtue\" (đức hạnh)."
+            },
+            {
+              "id": "10",
+              "content": "5. The action in the play was **read aloud** by the teacher. The students read the rest.",
+              "options": [
+                "compelled",
+                "boosted",
+                "narrated",
+                "clapped"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"read aloud\" (đọc to) đồng nghĩa với \"narrated\" (được kể lại)."
+            },
+            {
+              "id": "11",
+              "content": "6. The girl had a strong **preference over another** flavor for chocolate ice cream.",
+              "options": [
+                "partiality",
+                "aggression",
+                "virtue",
+                "biography"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"preference over another\" (sự ưu tiên hơn cái khác) đồng nghĩa với \"partiality\"."
+            },
+            {
+              "id": "12",
+              "content": "7. Black and white TVs are **no longer used in modern time** because people prefer color TVs.",
+              "options": [
+                "overall",
+                "outdated",
+                "spontaneous",
+                "inevitable"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"no longer used in modern time\" (không còn được sử dụng trong thời đại hiện nay) đồng nghĩa với \"outdated\" (lỗi thời)."
+            },
+            {
+              "id": "13",
+              "content": "8. The great actor left behind a great **result of his actions that continues to exist**.",
+              "options": [
+                "masterpiece",
+                "legacy",
+                "dominance",
+                "banquet"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"result of his actions that continues to exist\" (kết quả hành động tiếp tục tồn tại) đồng nghĩa với \"legacy\" (di sản)."
+            },
+            {
+              "id": "14",
+              "content": "9. She is **known for bad things** because she likes to hang around the wrong people.",
+              "options": [
+                "acute",
+                "notorious",
+                "gorgeous",
+                "outdated"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"known for bad things\" (được biết đến vì những điều tồi tệ) đồng nghĩa với \"notorious\" (khét tiếng)."
+            },
+            {
+              "id": "15",
+              "content": "10. I have no idea what would **force** Dan to act in such a mean way.",
+              "options": [
+                "compel",
+                "boost",
+                "narrate",
+                "clap"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"force\" (ép buộc) đồng nghĩa với \"compel\"."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. The good father was notorious for doing nice things for his family.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. \"Notorious\" mang nghĩa tiêu cực (khét tiếng), không phù hợp với \"doing nice things\" (làm việc tốt)."
+            },
+            {
+              "id": "17",
+              "content": "2. We discussed the overall details of the plan.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Overall\" được dùng đúng (chi tiết tổng thể)."
+            },
+            {
+              "id": "18",
+              "content": "3. We planned our spontaneous vacation for weeks before we left for the trip.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. \"Spontaneous\" mang nghĩa tự phát, không được lên kế hoạch trước, mâu thuẫn với \"planned... for weeks\"."
+            },
+            {
+              "id": "19",
+              "content": "4. At the mayor’s banquet, guests ate steak and lobster.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Banquet\" (bữa tiệc lớn) phù hợp với bối cảnh ăn bít tết và tôm hùm."
+            },
+            {
+              "id": "20",
+              "content": "5. It is polite to wait until the end of a play to clap for the performers.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Clap\" (vỗ tay) được dùng đúng."
+            },
+            {
+              "id": "21",
+              "content": "6. The outdated computer came with all the newest software.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Máy tính \"outdated\" (lỗi thời) không thể đi kèm phần mềm mới nhất (newest software)."
+            },
+            {
+              "id": "22",
+              "content": "7. This novel is a masterpiece by the best writer of the 20th century.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Masterpiece\" (kiệt tác) được dùng đúng."
+            },
+            {
+              "id": "23",
+              "content": "8. When the child got scared, he hid in the closet to show his dominance.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Trốn vào tủ vì sợ không thể hiện \"dominance\" (sự thống trị)."
+            },
+            {
+              "id": "24",
+              "content": "9. A funny movie always boosts my mood when I am feeling sad.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Boosts\" (nâng cao, thúc đẩy) được dùng đúng."
+            },
+            {
+              "id": "25",
+              "content": "10. The sunset was so gorgeous that everyone turned away in disgust.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. \"Gorgeous\" là tuyệt đẹp, không ai quay đi vì ghê tởm (disgust)."
+            },
+            {
+              "id": "26",
+              "content": "11. The acute puppy rolled around on the floor.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. \"Acute\" (dữ dội, cấp tính) không thể dùng cho một con chó con."
+            },
+            {
+              "id": "27",
+              "content": "12. I moved to a different climate because of my partiality for warmer weather.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Partiality\" (sự yêu thích, thiên vị) được dùng đúng."
+            },
+            {
+              "id": "28",
+              "content": "13. I will write my own biography when I turn 50 years old.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Tiểu sử tự viết phải gọi là \"autobiography\", còn \"biography\" là do người khác viết."
+            },
+            {
+              "id": "29",
+              "content": "14. My need to pay rent compelled me to get a job and make enough money.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Compelled\" (ép buộc, bắt buộc) được dùng đúng."
+            },
+            {
+              "id": "30",
+              "content": "15. Screaming loudly in the library is a virtue.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Hét lớn trong thư viện không phải là một \"virtue\" (đức tính tốt)."
+            },
+            {
+              "id": "31",
+              "content": "16. One coat of paint was not enough, so I put on multiple coats.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Multiple\" (nhiều lớp) được dùng đúng."
+            },
+            {
+              "id": "32",
+              "content": "17. The author of this book narrates some famous battles.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Narrates\" (kể lại) được dùng đúng."
+            },
+            {
+              "id": "33",
+              "content": "18. My legacy will be tested in the coming week.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. \"Legacy\" (di sản) là thứ để lại sau này, không dùng để nói về một bài kiểm tra trong tuần tới."
+            },
+            {
+              "id": "34",
+              "content": "19. We knew a win was inevitable when our team was ahead by 100 points.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Khi dẫn trước 100 điểm thì chiến thắng là \"inevitable\" (không thể tránh khỏi / chắc chắn)."
+            },
+            {
+              "id": "35",
+              "content": "20. I can be really mean. I wish I were better at controlling my aggression.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Aggression\" (sự hung hăng) được dùng đúng."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Beethoven’s Gift</h1><p style=\"margin-bottom: 1rem;\">Beethoven was a great composer of classical music in the 1800s. Many <b>biographies</b> have been written that <b>narrate</b> his <b>dominance</b> in the music world. But do you know what really makes him special? Even though millions of people got to hear his <b>multiple masterpieces</b>, he never did. Beethoven wrote his best pieces after he went completely deaf!</p><p style=\"margin-bottom: 1rem;\">His <b>partiality</b> toward classical music developed when he was very young. He wasn’t interested in anything else as a child. When he was five, he learned how to play the piano. From then, nothing could stop his passion for writing and playing music.</p><p style=\"margin-bottom: 1rem;\">When Beethoven was twenty, he began to lose his hearing. He got <b>acute</b>, <b>spontaneous</b> pains in his ears. His hearing kept getting worse over time. It was <b>inevitable</b> that he would eventually lose it altogether. It was very hard for him to keep writing music. He lost the <b>virtue</b> of patience, and he became <b>notorious</b> for his <b>aggression</b>. Still, he never stopped trying. His passion for music <b>compelled</b> him to keep performing even after he went deaf. He couldn’t hear himself play, but he knew that his creations sounded <b>gorgeous</b>.</p><p style=\"margin-bottom: 1rem;\">His final concert was held at a huge <b>banquet</b>. He gave the musicians a cue, and they began to play. He directed the concert with all his heart. He couldn’t hear the music, but he said that he could feel it. <b>Overall</b>, performance was one of the finest in history. When it was over, he turned to the crowd. They <b>clapped</b> and cheered wildly. In that beautiful moment, the applause <b>boosted</b> his emotions, and he began to cry.</p><p style=\"margin-bottom: 1rem;\">In 1827, he suffered from lead poisoning. He didn’t survive the sickness, but his music did because great music never becomes <b>outdated</b>. Even though Beethoven is gone, his <b>legacy</b> will live on forever.</p></div>",
+      "imageUrl": "/unit11_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. People have narrated biographies about Beethoven’s dominance.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False (Dựa theo sách/ngữ cảnh gốc là False vì câu chuyện nói về dominance in the music world, không phải những quyển tự truyện do người dân viết kể về sự thống trị của ông - thực tế chi tiết bài là Many biographies have been written that narrate his dominance, nhưng key đáp án là False)."
+            },
+            {
+              "id": "37",
+              "content": "2. Beethoven created multiple masterpieces that sounded gorgeous.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Beethoven đã sáng tác nhiều kiệt tác (multiple masterpieces) vô cùng tuyệt vời."
+            },
+            {
+              "id": "38",
+              "content": "3. It was inevitable that Beethoven would lose his virtue altogether.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Ông mất thính giác (lose his hearing), chứ không phải mất đức tính (virtue)."
+            },
+            {
+              "id": "39",
+              "content": "4. Beethoven became notorious for his aggression.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Ông trở nên nổi tiếng xấu (notorious) vì tính hung hăng (aggression) của mình."
+            },
+            {
+              "id": "40",
+              "content": "5. Beethoven’s legacy lives on because great music is outdated.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Âm nhạc vĩ đại không bao giờ lỗi thời (never becomes outdated)."
+            }
+          ]
+        },
+        {
+          "id": "sec5_reading",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "41",
+              "content": "1. What did the young Beethoven develop a partiality for?",
+              "options": [
+                "Classical music",
+                "Jazz music",
+                "Painting",
+                "Acting"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Beethoven có sự yêu thích (partiality) với âm nhạc cổ điển (classical music)."
+            },
+            {
+              "id": "42",
+              "content": "2. How old was Beethoven when he first learned to play the piano?",
+              "options": [
+                "Three",
+                "Five",
+                "Ten",
+                "Twenty"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Khi ông 5 tuổi (five), ông đã học cách chơi piano."
+            },
+            {
+              "id": "43",
+              "content": "3. What did Beethoven do when he saw the crowd clap and cheer at the banquet?",
+              "options": [
+                "He shouted",
+                "He began to cry",
+                "He laughed",
+                "He got angry"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Khi thấy đám đông vỗ tay và reo hò, ông đã bật khóc (he began to cry)."
+            },
+            {
+              "id": "44",
+              "content": "4. What compelled him to keep performing after his acute, spontaneous hearing loss?",
+              "options": [
+                "His need for money",
+                "His passion for music",
+                "His family",
+                "His teacher"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Niềm đam mê âm nhạc (passion for music) đã thúc đẩy ông tiếp tục biểu diễn."
+            },
+            {
+              "id": "45",
+              "content": "5. What was special about Beethoven’s last performance?",
+              "options": [
+                "It was cancelled",
+                "It was one of the finest in history",
+                "No one came",
+                "He played the violin"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Buổi biểu diễn cuối cùng của ông là một trong những màn trình diễn tuyệt vời nhất trong lịch sử (one of the finest in history)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

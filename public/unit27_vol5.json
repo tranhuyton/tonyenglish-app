@@ -1,0 +1,555 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 27",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit27_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit27_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adapt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədæpt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To adapt means to change in order to deal with a new situation or addition.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When he went to the new town, he had to adapt to all the weather changes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">biological</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[baiəlɑdʒikəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Biological describes the process of life and living things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In science, we learned about the biological process of bacterial growth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cellular</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[seljələr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is cellular, it relates to the cells of animals or plants.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She used a microscope to see the activity at a cellular level.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dynamic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dainæmik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people are dynamic, they are lively and have creative ideas.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new, dynamic employee came up with a good way to juggle his work load.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fantasy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fæntəsi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fantasy is a pleasant situation that people think about but is unlikely to happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Becoming an astronaut is a fantasy shared by many children.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">heredity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hirədəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Heredity is the process of passing on features from parents to children.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy's face is similar to his father's because of heredity.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">internal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intə:rnl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is internal, it exists or happens inside a person, object, or place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We removed the outer case to reveal the computer's internal wires.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">minimal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[miniməl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is minimal, it is very small.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My lazy husband does a minimal amount of work around the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pioneer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paiəniər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pioneer is a person who is the first to discover or be involved in something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was a pioneer of computer programming.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prescribe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[priskraib]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To prescribe medicine means to tell someone to take it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I was sick, the doctor prescribed me flu medicine.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">respective</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rispektiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When things are respective, they relate separately to each person just mentioned.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boxers were told to return to their respective corners.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">revive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rivaiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To revive someone or something means to restore health or life to them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She revived the feeling of warmth in her leg by rubbing it softly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rigid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ridʒid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When rules or systems are rigid, they are severe because they cannot be changed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Societies often have rigid rules about the way that people are supposed to act.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sequence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[si:kwəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sequence is a number of events or things that come one after another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dominos fell in a sequence of one after another.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">substitute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌbstityu:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To substitute something or someone means to have them take the place of another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I ran out of juice, I had to substitute water to drink in the morning.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">surgeon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sə:rdʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A surgeon is a doctor who is trained to do surgery.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The surgeon operated on the old man's heart.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">therapy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θerəpi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Therapy is treatment for a particular physical or mental illness or condition.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After she broke her legs, she used physical therapy to learn how to walk again.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">transfer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trænsfə:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To transfer something means to move it from one place to another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The family transferred the groceries from the shopping cart to the car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">transition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trænziʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A transition is a process where there is a change from one form to another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The weather gets colder during the transition from summer to autumn.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">transplant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trænsplænt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A transplant is an operation in which a damaged part of one's body is replaced.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sick child needed a heart transplant to live.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. What thing is a result of heredity?",
+              "options": [
+                "Eye color",
+                "Clothing style",
+                "A haircut",
+                "A job"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Màu mắt (Eye color) là kết quả của di truyền (heredity)."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. What process is biological?",
+              "options": [
+                "Walking to school",
+                "Taking a test",
+                "Producing tears",
+                "Getting dressed"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Tiết nước mắt (Producing tears) là một quá trình sinh học (biological)."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. What is something that is prescribed?",
+              "options": [
+                "A car",
+                "A report card",
+                "A cold medicine",
+                "An illness"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Thuốc cảm lạnh (A cold medicine) là thứ được bác sĩ kê đơn (prescribed)."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. What might be transplanted?",
+              "options": [
+                "A file",
+                "A liver",
+                "A can",
+                "A shoe"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Gan (A liver) là một bộ phận có thể được cấy ghép (transplanted)."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. What does a surgeon wear?",
+              "options": [
+                "Gloves",
+                "Thick boots",
+                "A swimming suit",
+                "Goggles"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bác sĩ phẫu thuật (surgeon) đeo găng tay (Gloves) khi làm việc."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Choose the word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. The child received treatment for his mental condition after he became depressed.",
+              "options": [
+                "therapy",
+                "biological",
+                "fantasy",
+                "adapt"
+              ],
+              "correctAnswer": "A",
+              "explanation": "treatment for mental condition tương đương với liệu pháp tâm lý (therapy)."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. The medical students learned which processes were occurring inside living things.",
+              "options": [
+                "therapy",
+                "biological",
+                "fantasy",
+                "adapt"
+              ],
+              "correctAnswer": "B",
+              "explanation": "occurring inside living things (xảy ra trong sinh vật sống) tương đương với quá trình sinh học (biological)."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. Unicorns only exist in a situation people think about but will not happen.",
+              "options": [
+                "therapy",
+                "biological",
+                "fantasy",
+                "adapt"
+              ],
+              "correctAnswer": "C",
+              "explanation": "a situation people think about but will not happen tương đương với điều viển vông, ảo mộng (fantasy)."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. When he begins his rule, people will have to change to the new situation.",
+              "options": [
+                "therapy",
+                "biological",
+                "fantasy",
+                "adapt"
+              ],
+              "correctAnswer": "D",
+              "explanation": "change to the new situation tương đương với thích nghi (adapt)."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. At the relating to cells level, plants and animals are quite similar.",
+              "options": [
+                "cellular",
+                "rigid",
+                "dynamic",
+                "pioneer"
+              ],
+              "correctAnswer": "A",
+              "explanation": "relating to cells tương đương với cấp độ tế bào (cellular)."
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. We thought his rules were too severe because they cannot be changed.",
+              "options": [
+                "cellular",
+                "rigid",
+                "dynamic",
+                "pioneer"
+              ],
+              "correctAnswer": "B",
+              "explanation": "severe because they cannot be changed tương đương với cứng nhắc (rigid)."
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. The lively and creative scientist invented a new formula to help stop aging.",
+              "options": [
+                "cellular",
+                "rigid",
+                "dynamic",
+                "pioneer"
+              ],
+              "correctAnswer": "C",
+              "explanation": "lively and creative (sống động và sáng tạo) tương đương với năng động (dynamic)."
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. The creative inventor was a first person to discover the process of electricity.",
+              "options": [
+                "cellular",
+                "rigid",
+                "dynamic",
+                "pioneer"
+              ],
+              "correctAnswer": "D",
+              "explanation": "first person to discover tương đương với người tiên phong (pioneer)."
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. There is a specific number of events that come in an order in which to use the tools.",
+              "options": [
+                "sequence",
+                "revived",
+                "substitute",
+                "surgeon"
+              ],
+              "correctAnswer": "A",
+              "explanation": "number of events that come in an order tương đương với chuỗi/trình tự (sequence)."
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. The brilliant doctor brought back to life the dead patient.",
+              "options": [
+                "sequence",
+                "revived",
+                "substitute",
+                "surgeon"
+              ],
+              "correctAnswer": "B",
+              "explanation": "brought back to life tương đương với làm sống lại, phục hồi (revived)."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. The surgeon made a small cut into the patient’s skin.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Bác sĩ phẫu thuật (surgeon) tạo một vết cắt nhỏ."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. The building materials must be transferred to the new site.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Vật liệu xây dựng cần được chuyển (transferred) đến địa điểm mới."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. The rigid rules were confusing because they changed all the time.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Rigid rules (luật cứng nhắc) thì không thể thay đổi liên tục."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. The baby prescribed his mother to get a piece of candy.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Prescribe dùng cho bác sĩ kê đơn thuốc, không dùng để nói em bé đòi kẹo."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. You can observe water’s transition into ice when the temperature gets cold.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Transition into ice (quá trình chuyển hoá thành đá)."
+            },
+            {
+              "id": "ex3_6",
+              "content": "6. Blood flow is a biological process.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Sự lưu thông máu là một quá trình sinh học (biological process)."
+            },
+            {
+              "id": "ex3_7",
+              "content": "7. I never want to get a new house, so I substitute the one I have.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Substitute có nghĩa là thay thế, không hợp ngữ cảnh này."
+            },
+            {
+              "id": "ex3_8",
+              "content": "8. The dynamic teacher thought of new and exciting teaching methods.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Giáo viên năng động, sáng tạo (dynamic) nghĩ ra phương pháp mới."
+            },
+            {
+              "id": "ex3_9",
+              "content": "9. Going to sleep at night is a fantasy.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Ngủ vào ban đêm là một việc bình thường, không phải là chuyện viễn tưởng (fantasy)."
+            },
+            {
+              "id": "ex3_10",
+              "content": "10. He needed plenty of rest after his liver transplant.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Transplant (ca phẫu thuật cấy ghép)."
+            },
+            {
+              "id": "ex3_11",
+              "content": "11. The pieces must be put on the machine in the correct sequence.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Sequence (theo trình tự chính xác)."
+            },
+            {
+              "id": "ex3_12",
+              "content": "12. I admired how often he chose to be respective.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Respective nghĩa là \"tương ứng\", thường bổ nghĩa cho danh từ, không đứng một mình miêu tả tính cách như respectful."
+            },
+            {
+              "id": "ex3_13",
+              "content": "13. My new school is great. I can’t adapt to my classes.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Nếu trường mới tuyệt vời, thì đáng lẽ phải thích nghi (adapt) được, dùng can't adapt là mâu thuẫn."
+            },
+            {
+              "id": "ex3_14",
+              "content": "14. Hot dogs are one of my favorite surgical foods to revive.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Surgical food (thực phẩm phẫu thuật) và revive (cứu sống) không hợp lý khi dùng với xúc xích (hot dogs)."
+            },
+            {
+              "id": "ex3_15",
+              "content": "15. The heredity expert can tell us how traits are passed on from a father.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Chuyên gia di truyền học (heredity expert) giải thích về đặc điểm di truyền."
+            },
+            {
+              "id": "ex3_16",
+              "content": "16. Please take the big, cellular pieces to the recycling center.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Cellular (cấp độ tế bào) là những thứ rất nhỏ, không phải đồ vật lớn để mang đi tái chế."
+            },
+            {
+              "id": "ex3_17",
+              "content": "17. The hours of therapy were worth it when I could move my arm again.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Trị liệu vật lý (therapy) giúp hồi phục cử động."
+            },
+            {
+              "id": "ex3_18",
+              "content": "18. He’s always the last to understand a joke. He’s such a pioneer.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Người chậm hiểu trò đùa không thể gọi là người tiên phong (pioneer)."
+            },
+            {
+              "id": "ex3_19",
+              "content": "19. The internal roof got covered in snow after the storm.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "I (Incorrect). Internal (bên trong). Mái nhà bên trong không thể bị phủ tuyết, phải là mái nhà bên ngoài (external)."
+            },
+            {
+              "id": "ex3_20",
+              "content": "20. I was still hungry because I only ate a minimal amount of food at dinner.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "C (Correct). Ăn lượng thức ăn rất ít (minimal) nên vẫn đói."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The First Organ Transplant</h1><p style=\"margin-bottom: 1rem;\">In 1954, a man named Richard was dying of kidney disease. He wouldn't survive for long unless he got a new kidney right away. Richard's twin brother, Robert, was willing to donate one of his kidneys to his dying brother. At the time, however, no doctor had ever performed a successful <b>internal</b> organ <b>transplant</b>. The idea of taking an organ out of one person and putting it into another was just a <b>fantasy</b>. But the brothers decided to be brave and found a doctor who could make organ transplants a reality.</p><p style=\"margin-bottom: 1rem;\">Since Richard and Robert were twins, their <b>heredity</b> was identical. They had the exact same <b>biological</b> traits. Even their kidneys were identical on the <b>cellular</b> level. Therefore, Robert's working kidney could be <b>substituted</b> for Richard's bad one. Richard's body could <b>adapt</b> to the new organ if the operation was done correctly.</p><p style=\"margin-bottom: 1rem;\">The twins went to Dr. Murray, who was a <b>pioneer</b> of new surgical methods. His <b>dynamic</b> team of <b>surgeons</b> performed the transplant. Dr. Murray made sure his surgeons followed a <b>rigid</b> <b>sequence</b> of directions so that no mistakes were made. First, they made a <b>minimal</b> cut in Richard's side and removed the bad kidney. Then, they made another small cut in Robert's side, removed his kidney, and <b>transferred</b> it into Richard's body. Finally, they sewed up the <b>respective</b> cuts. The entire operation only took about one hour.</p><p style=\"margin-bottom: 1rem;\">After the surgery, it was clear that both brothers were going to be OK. The operation was confirmed a success. Richard's new kidney worked great! Doctors <b>prescribed</b> medicine for the pain caused by the surgery. Since Richard was still weak, he used physical <b>therapy</b> to <b>revive</b> his strength. At last, Richard's <b>transition</b> into a healthy, happy person was complete.</p><p style=\"margin-bottom: 1rem;\">Dr. Murray became a hero in the medical world. His success gave other doctors confidence to try organ transplants themselves. Now, doctors perform life-saving transplants and surgeries every day.</p></div>",
+      "imageUrl": "/unit27_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec4_1",
+              "content": "1. Internal organ transplants were a fantasy after 1954.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Cấy ghép nội tạng chỉ là một điều viển vông (fantasy) TRƯỚC năm 1954, không phải sau đó."
+            },
+            {
+              "id": "sec4_2",
+              "content": "2. Robert was a pioneer of new surgical procedures.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Tiến sĩ Murray mới là người tiên phong (pioneer) về quy trình phẫu thuật mới, không phải Robert."
+            },
+            {
+              "id": "sec4_3",
+              "content": "3. The twins’ kidneys were identical on the cellular level because of their heredity.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Thận của hai anh em giống hệt nhau ở cấp độ tế bào nhờ vào yếu tố di truyền (heredity)."
+            },
+            {
+              "id": "sec4_4",
+              "content": "4. The dynamic surgeons followed a rigid sequence of directions to avoid mistakes.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Các bác sĩ phẫu thuật phải tuân theo một trình tự nghiêm ngặt (rigid sequence) để tránh sai sót."
+            },
+            {
+              "id": "sec4_5",
+              "content": "5. Richard’s body adapted to the kidney that was transferred from his brother.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Cơ thể của Richard đã thích nghi được với quả thận được cấy ghép từ anh trai."
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "sec5_1",
+              "content": "1. What was substituted in the passage?",
+              "options": [
+                "Robert’s working kidney was substituted for Richard’s bad one.",
+                "Richard’s bad kidney was substituted for Robert’s working one.",
+                "Dr. Murray substituted the heart of a patient.",
+                "The liver was substituted."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Quả thận khoẻ mạnh của Robert được dùng để thay thế (substituted) cho quả thận hỏng của Richard."
+            },
+            {
+              "id": "sec5_2",
+              "content": "2. What was true of the twin’s biological traits?",
+              "options": [
+                "They had the exact same biological traits and cellular features.",
+                "They had different biological traits.",
+                "They had similar but not exact biological traits.",
+                "They had opposite biological traits."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Họ có những đặc điểm sinh học và đặc điểm tế bào giống hệt nhau."
+            },
+            {
+              "id": "sec5_3",
+              "content": "3. What did the doctors prescribe to revive Richard’s strength?",
+              "options": [
+                "Doctors prescribed physical therapy to revive Richard's strength.",
+                "Doctors prescribed more medicine.",
+                "Doctors prescribed a new diet.",
+                "Doctors prescribed daily exercise."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Các bác sĩ chỉ định liệu pháp vật lý (physical therapy) để phục hồi sức mạnh cho Richard."
+            },
+            {
+              "id": "sec5_4",
+              "content": "4. Where did the surgeons make minimal cuts in the respective bodies of each twin?",
+              "options": [
+                "The surgeons made minimal cuts in the twins’ sides.",
+                "The surgeons made minimal cuts in the twins’ backs.",
+                "The surgeons made minimal cuts in the twins’ chests.",
+                "The surgeons made minimal cuts in the twins’ legs."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Các bác sĩ phẫu thuật rạch những đường cắt nhỏ ở phần hông (sides) của hai người."
+            },
+            {
+              "id": "sec5_5",
+              "content": "5. What was the result of Richard’s transition after his therapy?",
+              "options": [
+                "Richard was a healthy, happy person.",
+                "Richard became a doctor.",
+                "Richard remained very weak.",
+                "Richard became a pioneer."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Quá trình chuyển biến (transition) đã giúp Richard trở lại là một người khỏe mạnh và hạnh phúc."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

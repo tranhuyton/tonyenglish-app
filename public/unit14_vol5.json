@@ -1,0 +1,555 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 14",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit14_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit14_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">asset</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ǽset]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An asset is a skill or quality that is useful or valuable.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The coach realized the boy's speed was an asset to the team.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aspect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ǽspekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An aspect is one part or feature of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I thought about the different aspects of owning two dogs.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Braille</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[breil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Braille is a system of raised patterns on paper that allows the blind to read.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy enjoyed reading his favorite books written in Braille.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bud</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bʌd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bud is a part of a plant that turns into a flower or a leaf.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Two weeks after planting the seed, a small bud appeared.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">coordinate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kouɔ́ːrdənèit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To coordinate things is to make different parts work together.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Each skating team had to coordinate their movements for the show.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disprove</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disprúːv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To disprove something means to show that it is not true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The scientist disproved the theory that the sun moved around the Earth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">humanitarian</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hjuːmæ̀nətέəriən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is humanitarian, it is connected to helping people's lives.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After the flood, several humanitarian organizations offered help.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hypothesis</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[haipάθəsis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hypothesis is an idea for something that has not been proved yet.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher did an experiment to prove whether his hypothesis was right.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">imprint</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ímprint]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An imprint is an effect or lesson from an experience that is hard to forget.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The experience of war left an imprint on his mind that troubled him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">informative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[infɔ́ːrmətiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is informative, it provides a lot of information.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The travel guide had a lot of informative facts about the region.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">optic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[άptik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is optic, it relates to the eyes or light.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her blindness was caused by a problem with her optic nerve.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">premise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prémis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A premise is an idea on which something is based.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The premise of the movie that Bobbi and I watched was unrealistic.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rack</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ræk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rack is an object with shelves that holds things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He stored his tools on a rack.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Renaissance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rénəsὰːns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The Renaissance was a period between the 14th and 17th centuries.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Leonardo Da Vinci was a popular artist of the Renaissance.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">revere</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rivíər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To revere something is to admire it greatly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students revere their teacher, who has taught them a lot.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">simultaneous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sàiməltéiniəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is simultaneous, it occurs at the same time as something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The movement of the gears inside the watch was simultaneous.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">skeptic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sképtik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A skeptic is a person who does not believe something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The scientist showed the skeptic that dinosaurs did exist by providing evidence.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spatial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spéiʃəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is spatial, it relates to the position and size of things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was asked where the books were located to test his spatial ability.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">specify</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spésəfài]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To specify is to describe something clearly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The poster didn't specify where the concert was taking place.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wax</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wæks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Wax is a substance that is slightly shiny and melts when heated.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The candles are made of wax.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. informative",
+              "options": [
+                "thoughtless",
+                "careful",
+                "helpful",
+                "thoughtful"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"informative\" mang ý nghĩa cung cấp nhiều thông tin bổ ích, đồng nghĩa với \"helpful\" (hữu ích)."
+            },
+            {
+              "id": "2",
+              "content": "2. coordinate",
+              "options": [
+                "to work together",
+                "to break",
+                "to listen",
+                "to finish"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"coordinate\" nghĩa là phối hợp làm việc chung, đồng nghĩa với \"to work together\"."
+            },
+            {
+              "id": "3",
+              "content": "3. premise",
+              "options": [
+                "an important part",
+                "a solution",
+                "an idea",
+                "a purpose"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"premise\" (tiền đề) là một ý tưởng (an idea) mà cái khác được dựa trên đó."
+            },
+            {
+              "id": "4",
+              "content": "4. aspect",
+              "options": [
+                "a valued thing",
+                "a feature",
+                "an idea",
+                "a location"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"aspect\" (khía cạnh) đồng nghĩa với \"a feature\" (đặc điểm, khía cạnh)."
+            },
+            {
+              "id": "5",
+              "content": "5. imprint",
+              "options": [
+                "effect",
+                "prison",
+                "presence",
+                "amount"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"imprint\" mang ý nghĩa dấu ấn hay hiệu ứng, đồng nghĩa với \"effect\" (ảnh hưởng, hiệu ứng)."
+            },
+            {
+              "id": "6",
+              "content": "6. rack",
+              "options": [
+                "a baker",
+                "a holder",
+                "a shelter",
+                "a waiter"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"rack\" (giá, kệ) là đồ vật để chứa/giữ đồ đạc, đồng nghĩa với \"a holder\"."
+            },
+            {
+              "id": "7",
+              "content": "7. optic",
+              "options": [
+                "visual",
+                "tight",
+                "medical",
+                "restful"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"optic\" liên quan đến thị giác/mắt, đồng nghĩa với \"visual\" (thuộc về thị giác)."
+            },
+            {
+              "id": "8",
+              "content": "8. Braille",
+              "options": [
+                "sign language",
+                "hearing aid",
+                "plant",
+                "a system of writing"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"Braille\" là hệ thống chữ nổi (a system of writing) dành cho người khiếm thị."
+            },
+            {
+              "id": "9",
+              "content": "9. bud",
+              "options": [
+                "tree",
+                "sprout",
+                "bark",
+                "leaves"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"bud\" là nụ hoặc chồi cây, đồng nghĩa với \"sprout\" (chồi/mầm)."
+            },
+            {
+              "id": "10",
+              "content": "10. wax",
+              "options": [
+                "bee substance",
+                "fire",
+                "ice",
+                "water"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"wax\" là sáp, thường liên quan đến sáp ong (\"bee substance\")."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. disprove",
+              "options": [
+                "to invent",
+                "to validate",
+                "to lie",
+                "untrue"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"disprove\" là bác bỏ, chứng minh sai. Trái nghĩa là \"to validate\" (chứng minh đúng, phê chuẩn)."
+            },
+            {
+              "id": "12",
+              "content": "2. revere",
+              "options": [
+                "to disrespect",
+                "to go fast",
+                "to keep",
+                "to put away"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"revere\" là tôn kính, ngưỡng mộ. Trái nghĩa là \"to disrespect\" (thiếu tôn trọng)."
+            },
+            {
+              "id": "13",
+              "content": "3. humanitarian",
+              "options": [
+                "animal",
+                "parasite",
+                "assistant",
+                "artist"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"humanitarian\" thuộc về nhân đạo/con người, trong ngữ cảnh này từ trái nghĩa là \"animal\" (động vật)."
+            },
+            {
+              "id": "14",
+              "content": "4. simultaneous",
+              "options": [
+                "frightening",
+                "slow",
+                "preceding",
+                "lost"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"simultaneous\" là diễn ra đồng thời cùng lúc. Trái nghĩa là \"preceding\" (diễn ra trước)."
+            },
+            {
+              "id": "15",
+              "content": "5. Renaissance",
+              "options": [
+                "last",
+                "modern",
+                "art",
+                "expensive"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"Renaissance\" là thời kỳ phục hưng (quá khứ). Trái nghĩa là \"modern\" (hiện đại)."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. We received humanitarian relief after I got a terrible haircut.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Cắt tóc xấu không phải thảm họa để nhận cứu trợ nhân đạo (humanitarian relief)."
+            },
+            {
+              "id": "17",
+              "content": "2. The boy waited for the Renaissance, which was going to start in the future.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Renaissance (thời Phục hưng) là một thời kỳ trong lịch sử, không thể diễn ra trong tương lai."
+            },
+            {
+              "id": "18",
+              "content": "3. Alice placed the ball on the rack where all her sport equipment was stored.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Rack\" (giá để đồ) dùng để lưu trữ thiết bị thể thao."
+            },
+            {
+              "id": "19",
+              "content": "4. The woman liked the premise of the show, but she thought the acting was bad.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Premise\" (tiền đề/cốt truyện) của buổi diễn."
+            },
+            {
+              "id": "20",
+              "content": "5. The boy was scared by the simultaneous sound of the thunder and the phone.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Simultaneous\" (diễn ra cùng lúc) của sấm và tiếng điện thoại."
+            },
+            {
+              "id": "21",
+              "content": "6. The map was informative and helped them from getting lost.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Bản đồ cung cấp nhiều thông tin (informative)."
+            },
+            {
+              "id": "22",
+              "content": "7. The teacher disproved her expectations. He did exactly what she thought he would.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Làm đúng những gì người khác nghĩ thì phải là proved (chứng minh đúng), không phải disproved (chứng minh sai)."
+            },
+            {
+              "id": "23",
+              "content": "8. Kelly had only met her uncle once and didn’t know much about him. She revered him.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Chỉ gặp một lần và không biết nhiều thì không thể \"revered\" (tôn sùng, kính trọng sâu sắc)."
+            },
+            {
+              "id": "24",
+              "content": "9. In spring, all of the plants in the garden are covered with tiny buds.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Mùa xuân cây cối đâm chồi (tiny buds)."
+            },
+            {
+              "id": "25",
+              "content": "10. The skeptic didn’t believe that the magician could actually make someone disappear.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Skeptic\" (người hay hoài nghi) sẽ không tin vào phép thuật."
+            },
+            {
+              "id": "26",
+              "content": "11. He didn’t think about the aspects of smoking. Later he realized the disadvantages.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Aspects\" (các khía cạnh) của việc hút thuốc."
+            },
+            {
+              "id": "27",
+              "content": "12. The new hearing aid provides a wide range of optic choices.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Máy trợ thính (hearing aid) không liên quan đến quang học hay thị giác (optic)."
+            },
+            {
+              "id": "28",
+              "content": "13. The bad dream left an imprint on Jared. He had forgot it by noon of the same day.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. Nếu để lại \"imprint\" (dấu ấn sâu sắc khó quên) thì không thể quên ngay vào buổi trưa."
+            },
+            {
+              "id": "29",
+              "content": "14. He had to specify to the waiter whether he wanted onions in his food or not.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Specify\" (chỉ rõ) việc có muốn ăn hành hay không."
+            },
+            {
+              "id": "30",
+              "content": "15. The fruits looked real, but they were made of wax.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Quả làm từ sáp (made of wax)."
+            },
+            {
+              "id": "31",
+              "content": "16. Her understanding has been a real asset in her successful career.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Trí tuệ/sự hiểu biết là một tài sản giá trị (\"asset\")."
+            },
+            {
+              "id": "32",
+              "content": "17. I did an experiment to prove my hypotheses.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Thực hiện thí nghiệm để chứng minh các giả thuyết (hypotheses)."
+            },
+            {
+              "id": "33",
+              "content": "18. Please use the spatial spoon to turn the eggs.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Incorrect. \"Spatial\" liên quan đến không gian, không dùng cho cái muỗng (spoon) nấu ăn (thường là spatula)."
+            },
+            {
+              "id": "34",
+              "content": "19. Braille has helped many blind people enjoy literature.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. Hệ thống chữ nổi \"Braille\" giúp người khiếm thị."
+            },
+            {
+              "id": "35",
+              "content": "20. If you coordinate all of sounds, you can make music.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Correct. \"Coordinate\" (phối hợp) các âm thanh lại tạo thành âm nhạc."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Day Without Sight</h1><p style=\"margin-bottom: 1rem;\">On Friday afternoon, Sam’s teacher had a special assignment.</p><p style=\"margin-bottom: 1rem;\">“Next week, we’ll be studying <b>humanitarian</b> efforts around the world since the time of the <b>Renaissance</b>, including those to help the blind,” she said. “Over the weekend, I want each of you to wear a blindfold for an entire day. The <b>premise</b> of this experiment is that it will help you understand what it’s like to be blind,” she said.</p><p style=\"margin-bottom: 1rem;\">Sam was a <b>skeptic</b>. He really didn’t think the assignment would be too challenging. On Saturday morning, Sam took a piece of cloth and tied it around his head to cover his eyes. Then he went into the kitchen for breakfast. He heard the voices of his parents and brothers but couldn’t <b>specify</b> where each voice was coming from. He thought about how important hearing is for blind people.</p><p style=\"margin-bottom: 1rem;\">“Could you pass me the newspaper, please?” he asked. Just then, he remembered he couldn’t see the words on the page. He wondered if <b>Braille</b> newspapers were ever made.</p><p style=\"margin-bottom: 1rem;\">After finishing breakfast, his brothers asked him to play soccer. As he followed them, he accidentally walked into the baker’s <b>rack</b>. He also found that he couldn’t play soccer. He wouldn’t be able to <b>coordinate</b> his actions without being able to see. Without his <b>optic</b> senses, he had no <b>spatial</b> awareness. Furthermore, he couldn’t do <b>simultaneous</b> activities because he had to make sure he was safe first.</p><p style=\"margin-bottom: 1rem;\">He sat on the lawn. Suddenly, he realized that though he couldn’t see, his other senses worked perfectly fine. In fact, he began to realize new and different <b>aspects</b> of common objects. For example, he took a flower <b>bud</b> and felt it with his finger. He realized for the first time that it seemed to be covered with <b>wax</b>.</p><p style=\"margin-bottom: 1rem;\">His <b>hypothesis</b> about being blind was <b>disproved</b>. The <b>informative</b> experiment had an <b>imprint</b> on him. It showed him sight was an <b>asset</b> that should be appreciated and taught him to <b>revere</b> the talents of blind people.</p></div>",
+      "imageUrl": "/unit14_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. Sam’s class is going to study humanitarian efforts since the time of the Renaissance next week.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Giáo viên nói: \"Next week, we'll be studying humanitarian efforts around the world since the time of the Renaissance...\""
+            },
+            {
+              "id": "37",
+              "content": "2. At first, Sam’s hypothesis is that the assignment is going to be difficult.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Ban đầu Sam là người hoài nghi (skeptic) và nghĩ rằng bài tập này sẽ không có gì thử thách (didn't think the assignment would be too challenging)."
+            },
+            {
+              "id": "38",
+              "content": "3. When Sam goes into the kitchen, he reads a Braille newspaper.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Khi xin báo, cậu mới nhận ra mình không thể đọc chữ trên giấy, và cậu chỉ tự hỏi không biết có báo bằng chữ Braille không."
+            },
+            {
+              "id": "39",
+              "content": "4. Sam runs into the baker’s rack on his way outside.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Trên đường ra ngoài chơi bóng, cậu vô tình đâm vào chiếc kệ bánh (baker's rack)."
+            },
+            {
+              "id": "40",
+              "content": "5. Without his sense of sight, Sam has better spatial awareness and can coordinate his movements more easily.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Không có thị giác, Sam hoàn toàn không có nhận thức không gian (no spatial awareness) và không thể phối hợp (couldn't coordinate) hành động của mình."
+            }
+          ]
+        },
+        {
+          "id": "sec5_reading",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "41",
+              "content": "1. What was the premise of the experiment, according to Sam’s teacher?",
+              "options": [
+                "The premise was to help the students understand what it’s like to be blind.",
+                "The premise was to learn how to cook.",
+                "The premise was to learn to run.",
+                "The premise was to sleep in the dark."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Tiền đề (premise) của thí nghiệm là giúp học sinh hiểu cảm giác bị mù sẽ như thế nào."
+            },
+            {
+              "id": "42",
+              "content": "2. What did Sam realize when he couldn’t specify where the voices were coming from?",
+              "options": [
+                "He realized he was deaf.",
+                "He realized how important hearing was for blind people.",
+                "He realized everyone was gone.",
+                "He realized he liked quiet."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sam nhận ra rằng thính giác (hearing) là vô cùng quan trọng đối với những người mù."
+            },
+            {
+              "id": "43",
+              "content": "3. Why wasn’t Sam able to perform simultaneous activities?",
+              "options": [
+                "Because he had to make sure he was safe first.",
+                "Because he was tired.",
+                "Because his hands were tied.",
+                "Because his parents told him not to."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Sam không thể làm nhiều việc cùng lúc (simultaneous activities) vì trước tiên cậu phải đảm bảo mình được an toàn."
+            },
+            {
+              "id": "44",
+              "content": "4. What aspect of the flower bud did Sam notice after he realized all his other senses worked fine?",
+              "options": [
+                "Sam noticed that the bud seemed to be covered with wax.",
+                "Sam noticed that the bud was red.",
+                "Sam noticed that the bud smelled bad.",
+                "Sam noticed that the bud was cold."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Sam nhận ra rằng nụ hoa (bud) dường như được bao phủ bởi một lớp sáp (wax)."
+            },
+            {
+              "id": "45",
+              "content": "5. After Sam’s theory was disproved, what was the impact the experiment had on him?",
+              "options": [
+                "It showed him sight was an asset that should be appreciated and taught him to revere the talents of blind people.",
+                "It showed him he should never wear a blindfold.",
+                "It showed him how to read Braille.",
+                "It made him want to stay inside forever."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Bài học cho thấy thị giác là một tài sản quý giá (asset) cần được trân trọng và dạy cậu biết ngưỡng mộ (revere) tài năng của những người mù."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

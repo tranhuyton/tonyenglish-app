@@ -1,0 +1,505 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 22",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit22_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit22_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">acid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æsid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An acid is a chemical that can burn or dissolve other substances.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In chemistry class, we mixed two acids together and watched the reaction.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">administration</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədminəstreiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An administration is the group of people who manage a company or organization.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She hoped she could be promoted to a job in the administration.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">administrative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədminəstreitiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Administrative describes anything related to managing a company or organization.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I work as an administrative assistant to the owner of the company.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">biotechnology</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[baiouteknɑlədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Biotechnology is the use of living parts, such as cells, in industry and technology.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Researchers at the biotechnology company use bacteria to make medicine.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cholesterol</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəlestəroul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cholesterol is a substance in fat, tissues, and blood of all animals.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When people have too much cholesterol, they are at a high risk for heart problems.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">coalition</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kouəliʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A coalition is a group of people or organizations working for a common purpose.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The companies formed a coalition to make trade less expensive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deceptive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diseptiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is deceptive, it encourages one to believe something that is false.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The scary-looking man’s appearance is deceptive, but he is actually very nice.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diabetes</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[daiəbi:tis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Diabetes is a medical condition where a person has too much sugar in their blood.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Overweight people are more likely to suffer from diabetes than slimmer ones.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">eliminate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ilimineit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To eliminate something that is unwanted means to completely remove it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Wearing a seatbelt eliminates some of the dangers of driving a car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">erosion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[irouʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Erosion is the destruction of rock or soil due to flowing water or weather.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Canyons are formed because rivers of fast-moving water caused erosion.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ethics</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eθiks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Ethics are moral beliefs or rules about right or wrong.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The act of stealing certainly doesn’t go against some people’s ethics.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">explicit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksplisit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is explicit, it is very clear, open, and truthful.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man gave a very explicit account of the car accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">framework</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[freimwə:rk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A framework is a set of rules or ideas that people use to solve problems.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His ideas fit into the framework of a successful business plan.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">manufacture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mænjəfæktʃə:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To manufacture something means to make it in a factory.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My father’s company manufactures steel building materials.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mechanism</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mekənizəm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mechanism is a part of a machine that performs a certain function.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I can’t open my car door because the locking mechanism is broke.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">minimize</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[minəmaiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To minimize means to reduce something to the lowest possible level.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I checked my homework twice to minimize errors I might have made.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nectar</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nektər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Nectar is a sweet liquid produced by flowers that bees and other insects collect.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Bees use nectar to make their honey.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">notion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nouʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A notion is an idea or belief about something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have a notion that this route would get us to the beach.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prone</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[proun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When things are prone to some bad thing, they are likely affected by it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some people are more prone to catching colds than others.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">straightforward</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[streitfɔ:rwərd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is straightforward, it is good because it is easy to understand.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher’s grading system was straightforward and fair.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. What is something you want to eliminate?",
+              "options": [
+                "A problem",
+                "A present",
+                "A statue",
+                "A victory"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Eliminate có nghĩa là loại bỏ. Bạn muốn loại bỏ một vấn đề (a problem), không phải món quà hay chiến thắng."
+            },
+            {
+              "id": "2",
+              "content": "2. What would collect nectar?",
+              "options": [
+                "A tree",
+                "A bee",
+                "A cat",
+                "A housefly"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Nectar là mật hoa. Ong (bee) là loài thu thập mật hoa."
+            },
+            {
+              "id": "3",
+              "content": "3. If you have good ethics, you_______.",
+              "options": [
+                "dislike school",
+                "know right from wrong",
+                "rarely follow the rules",
+                "are extremely smart"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Ethics là đạo đức. Nếu bạn có đạo đức tốt, bạn biết phân biệt đúng sai (know right from wrong)."
+            },
+            {
+              "id": "4",
+              "content": "4. Which is most closely related to something administrative?",
+              "options": [
+                "Loss",
+                "Fatigue",
+                "Organization",
+                "Swimming"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Administrative liên quan đến quản lý, hành chính. Tổ chức (organization) là từ có liên quan nhất."
+            },
+            {
+              "id": "5",
+              "content": "5. What might cause erosion?",
+              "options": [
+                "A strong wind",
+                "A fast car",
+                "A lonely person",
+                "Loud music"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Erosion là sự xói mòn. Một cơn gió mạnh (strong wind) hoặc nước chảy có thể gây ra xói mòn."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
+          "content": "Word bank: cholesterol, prone, framework, administration, explicit, deceptive, coalition, mechanisms, straightforward, manufactures",
+          "questionType": "Điền từ",
+          "questions": [
+            {
+              "id": "6",
+              "content": "I learned about all the different things the factory (app[1]). They make big machinery as well as tiny parts and (app[2]).",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "manufactures"
+                },
+                {
+                  "id": "2",
+                  "answer": "mechanisms"
+                }
+              ]
+            },
+            {
+              "id": "7",
+              "content": "The students asked the school’s (app[1]) to buy a better kind of meat. The meat served there is too high in fat and (app[2]).",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "administration"
+                },
+                {
+                  "id": "2",
+                  "answer": "cholesterol"
+                }
+              ]
+            },
+            {
+              "id": "8",
+              "content": "I can’t stand companies that are (app[1]). Customers have to make sure they get (app[2]) information about all details.",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "deceptive"
+                },
+                {
+                  "id": "2",
+                  "answer": "explicit"
+                }
+              ]
+            },
+            {
+              "id": "9",
+              "content": "Citizens formed a (app[1]) because the city’s air was making people ill. Elderly people and infants were the most (app[2]) to becoming sick.",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "coalition"
+                },
+                {
+                  "id": "2",
+                  "answer": "prone"
+                }
+              ]
+            },
+            {
+              "id": "10",
+              "content": "To solve our problem, we’ll first need a strong (app[1]). Our ideas need to be intelligent and (app[2]).",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "framework"
+                },
+                {
+                  "id": "2",
+                  "answer": "straightforward"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. Smoking makes people more prone to breathing problems.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Prone to có nghĩa là dễ bị mắc phải. Hút thuốc làm người ta dễ mắc bệnh hô hấp. Dùng đúng (C)."
+            },
+            {
+              "id": "12",
+              "content": "2. We toured the factory that manufactures cheese.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Manufacture là sản xuất (tại nhà máy). Dùng đúng (C)."
+            },
+            {
+              "id": "13",
+              "content": "3. The deceptive man was very open and honest about his plans.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Deceptive là lừa dối, không thể miêu tả một người cởi mở và trung thực (open and honest). Sai (I)."
+            },
+            {
+              "id": "14",
+              "content": "4. Eating a lot of fast food raises people’s cholesterol levels.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Cholesterol là mỡ trong máu. Ăn thức ăn nhanh làm tăng mức cholesterol. Dùng đúng (C)."
+            },
+            {
+              "id": "15",
+              "content": "5. The straightforward instructions were impossible to understand.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Straightforward là dễ hiểu, rõ ràng. Không thể nói là \"impossible to understand\". Sai (I)."
+            },
+            {
+              "id": "16",
+              "content": "6. The group decided on a framework for the new project.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Framework là khuôn khổ, cơ cấu. Dùng đúng (C)."
+            },
+            {
+              "id": "17",
+              "content": "7. Businesses try to minimize the amount of money they can make.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Minimize là giảm thiểu. Các doanh nghiệp muốn tăng (maximize) chứ không phải giảm số tiền họ kiếm được. Sai (I)."
+            },
+            {
+              "id": "18",
+              "content": "8. He had a notion that the speaker was not really an expert on the subject.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Notion là khái niệm, ý nghĩ, ý niệm. Dùng đúng (C)."
+            },
+            {
+              "id": "19",
+              "content": "9. The maid used a kind of acid to dissolve the stains on the floor.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Acid là axit, hóa chất có khả năng phân hủy, hòa tan. Dùng đúng (C)."
+            },
+            {
+              "id": "20",
+              "content": "10. It is important for a judge to have good ethics.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Ethics là đạo đức. Thẩm phán cần có đạo đức tốt. Dùng đúng (C)."
+            },
+            {
+              "id": "21",
+              "content": "11. Some factories produce energy by burning coalitions.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Coalition là liên minh, sự liên kết. Không thể \"đốt liên minh\" để tạo ra năng lượng. Sai (I)."
+            },
+            {
+              "id": "22",
+              "content": "12. The lawyer hoped that the witness would tell an explicit version of the story.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Explicit là rõ ràng, chi tiết. Lời khai của nhân chứng rõ ràng là phù hợp ngữ cảnh. Dùng đúng (C)."
+            },
+            {
+              "id": "23",
+              "content": "13. My father works in construction while my mom has an administrative job.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Administrative job là công việc hành chính. Dùng đúng (C)."
+            },
+            {
+              "id": "24",
+              "content": "14. Be sure to eliminate all the ingredients to make a great cake.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Eliminate là loại bỏ. Không thể loại bỏ tất cả nguyên liệu để làm bánh. Sai (I)."
+            },
+            {
+              "id": "25",
+              "content": "15. Jim receives shots to treat his diabetes. They reduce the sugar in his blood.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Diabetes là bệnh tiểu đường. Các mũi tiêm giúp giảm lượng đường trong máu. Dùng đúng (C)."
+            },
+            {
+              "id": "26",
+              "content": "16. All of the prisoners formed an administration where they played games.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Administration là chính quyền, ban quản lý. Tù nhân lập thành ban quản lý để chơi game thì không hợp lý. Sai (I)."
+            },
+            {
+              "id": "27",
+              "content": "17. Dry weather, followed by sudden floods, caused the erosion in the valley.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Erosion là xói mòn. Lũ lụt bất ngờ gây ra xói mòn trong thung lũng. Dùng đúng (C)."
+            },
+            {
+              "id": "28",
+              "content": "18. The biotechnology company only made things from nonliving rocks and sand.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Biotechnology là công nghệ sinh học (liên quan đến tế bào sống, sinh vật). Không thể làm từ đá và cát vô tri. Sai (I)."
+            },
+            {
+              "id": "29",
+              "content": "19. The cutting mechanism on the lawnmower is broken.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Mechanism là cơ cấu, bộ máy. Bộ máy cắt của máy cắt cỏ bị hỏng. Dùng đúng (C)."
+            },
+            {
+              "id": "30",
+              "content": "20. This nectar produces the best flowers.",
+              "options": [
+                "C",
+                "I"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Nectar là mật hoa (do hoa tạo ra). Mật hoa không thể sinh ra những bông hoa đẹp nhất. Sai (I)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The New Bioco</h1><p style=\"margin-bottom: 1rem;\">Jack got a new job at a <b>biotechnology</b> company called Bioco. Bioco <b>manufactured</b> drugs to treat <b>diabetes</b> and high <b>cholesterol</b>. Jack’s job was to use a tiny <b>mechanism</b> to get <b>nectar</b> from flowers. The nectar was a main ingredient in the drugs. Jack liked his job, and he thought that Bioco was a caring company. However, Jack soon learned that the company wasn’t as kind as he first thought.</p><p style=\"margin-bottom: 1rem;\">Bioco’s motto was “Make the Earth a Better Place.” However, this motto was <b>deceptive</b>. The company actually did a number of really bad things to the environment. The company produced a lot of smog and harmful <b>acid</b>. Bioco poured the acid in a nearby river, which caused <b>erosion</b> and made fish <b>prone</b> to illness.</p><p style=\"margin-bottom: 1rem;\">After a few weeks at the new job, Jack saw all the bad things Bioco was doing. He had always had strong <b>ethics</b>, and he knew he had to do something. One day, while the Bioco workers were eating in the cafeteria, Jack stood up and gave a speech. He said, “My fellow coworkers, I know you have all seen the evil things our company is doing. I have a <b>notion</b> that we can fix them if we form a <b>coalition</b>. We can go to the <b>administration</b> and tell them we’ll quit if they don’t <b>eliminate</b> the problems. They’ll have no choice but to listen to us.”</p><p style=\"margin-bottom: 1rem;\">Jack explained what they were to do. His coworkers liked his <b>explicit</b> plan. They went to the <b>administrative</b> offices and demanded that Bioco stop damaging the environment, or they all would quit. One supervisor said to them, “Thank you for being <b>straightforward</b> about this issue. Since I can’t afford to lose all of you workers, I guess we’ll just have to fix things.”</p><p style=\"margin-bottom: 1rem;\">Jack, his supervisor, and his coworkers spent the next month designing a new <b>framework</b> for the company. They cleaned up the acid from the river and <b>minimized</b> the amount of air pollution the company released. At last, the company motto became apt.</p></div>",
+      "imageUrl": "/unit22_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "31",
+              "content": "1. Bioco was a biotechnology company that manufactured diabetes and high cholesterol.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Công ty sản xuất ra thuốc (drugs) để ĐIỀU TRỊ bệnh tiểu đường và mỡ máu cao, không phải sản xuất ra bệnh."
+            },
+            {
+              "id": "32",
+              "content": "2. Jack used a mechanism to get nectar from flowers.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Jack dùng một bộ máy (mechanism) để lấy mật hoa."
+            },
+            {
+              "id": "33",
+              "content": "3. The new framework involved an explicit plan to fix the smog and acid problems.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Khuôn khổ mới bao gồm một kế hoạch rõ ràng để khắc phục các vấn đề về khói bụi và axit."
+            },
+            {
+              "id": "34",
+              "content": "4. The waste acid caused erosion and made fish prone to illness.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Đúng. Axit thải ra đã gây xói mòn và khiến cá dễ mắc bệnh."
+            },
+            {
+              "id": "35",
+              "content": "5. After the company minimized Jack’s ethics, the motto became apt.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sai. Sau khi công ty giảm thiểu ô nhiễm không khí (minimized air pollution), phương châm mới trở nên phù hợp."
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. What was Bioco’s deceptive motto?",
+              "options": [
+                "\"Make the Earth a better place.\"",
+                "\"Caring for your health.\"",
+                "\"Eliminate all pollution.\"",
+                "\"Making money over ethics.\""
+              ],
+              "correctAnswer": "A",
+              "explanation": "Dựa vào đoạn văn: Bioco’s motto was “Make the Earth a Better Place.”"
+            },
+            {
+              "id": "37",
+              "content": "2. What did Jack stand up to do in the cafeteria?",
+              "options": [
+                "Jack stood up to leave.",
+                "Jack stood up to fight his boss.",
+                "Jack stood up to give a speech.",
+                "Jack stood up to eat his food."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Dựa vào đoạn văn: Jack stood up and gave a speech."
+            },
+            {
+              "id": "38",
+              "content": "3. What was Jack’s notion about fixing things?",
+              "options": [
+                "He wanted to break the mechanism.",
+                "We can fix things if we all work together.",
+                "He thought they should just quit.",
+                "He wanted to call the police."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Jack nói rằng họ có thể khắc phục vấn đề nếu họ thành lập một liên minh (work together / form a coalition)."
+            },
+            {
+              "id": "39",
+              "content": "4. What did the coalition of workers threaten to do if the administration didn’t eliminate the problems?",
+              "options": [
+                "The workers threatened to strike.",
+                "The workers threatened to sue the company.",
+                "The workers threatened to quit.",
+                "The workers threatened to leak the secrets."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Công nhân đe dọa sẽ nghỉ việc (quit) nếu ban quản lý không loại bỏ các vấn đề."
+            },
+            {
+              "id": "40",
+              "content": "5. What did the boss in the offices say after the workers were straightforward with him?",
+              "options": [
+                "He fired all of them.",
+                "He ignored their demands.",
+                "Since I can’t afford to lose all my workers, I guess we’ll just have to fix things.",
+                "He promised to raise their salaries."
+              ],
+              "correctAnswer": "C",
+              "explanation": "Dựa vào đoạn văn, ông chủ nói: \"Since I can’t afford to lose all of you workers, I guess we’ll just have to fix things.\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

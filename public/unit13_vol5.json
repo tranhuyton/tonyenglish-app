@@ -1,0 +1,543 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 13",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit13_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit13_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">brook</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bruk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A brook is a small stream.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Water flows down several brooks on the mountain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cater</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kéitər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To cater to someone means to provide them with all the things needed or wanted.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Bill was too sick to get out of bed, so his nurse catered to his needs.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">considerate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənsídərit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is considerate, they pay attention to the needs of others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The considerate boy gave a present to his girlfriend on Valentine's Day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consumption</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənsΛmpʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The consumption of food or drink is the act of eating or drinking it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ These apples are too rotten for consumption.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">criteria</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kraitíəriə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Criteria are factors on which a person judges or decides something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Before she got the job, she had to meet all the necessary criteria.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crust</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[krʌst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Crust is the tough outer part of a loaf of bread.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The little boy never ate the crust of his pizza.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">degrade</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[digréid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To degrade someone means to cause people to have shame.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher degraded Bob when she announced his poor performance to the class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">entitle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[entáitl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To entitle someone means to give them the rights to have or do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His golden ticket entitled him to sit in the front row at the concert.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">escort</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[éskɔːrt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To escort people means to safely accompany them to a place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her bodyguards escorted her to the movie theater.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">external</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ikstə́ːrnl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is external, it is connected to an outer part.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is warm inside my house, but the external temperature is freezing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">facility</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fəsíləti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A facility is a building that exists for a particular purpose.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are many educational facilities in big cities.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">faculty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fǽkəlti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A faculty is a mental or physical ability.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy's mental faculties impressed all of his teachers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">heap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hiːp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A heap of things is a large pile of them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After the building was torn down, all that was left was a heap of bricks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hemisphere</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hémisfìər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hemisphere is one half of the earth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the northern hemisphere, the weather is usually warmest in July and August.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hound</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[haund]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hound is a type of dog that is often used for racing or hunting.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The men took their hounds with them when they went on the hunting trip.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impersonal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impə́ːrsənl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is impersonal, it is not friendly and makes people feel unimportant.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy felt scared on his first day at the big, impersonal high school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ornament</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ́ːrnəmənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An ornament is an attractive object that people display in their homes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The woman kept some colorful ornaments on the shelves.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pedestrian</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pədéstriən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pedestrian is a person who is walking on a street.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Cars should be careful when pedestrians are walking around.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sanctuary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sǽŋktʃuèri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A sanctuary is a place where people in danger can go to be safe.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The church was made into a sanctuary for homeless people in the winter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spectator</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spékteitər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A spectator is someone who watches something, especially a sports event.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There were thousands of spectators at the big game.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. What is an external body part?",
+              "options": [
+                "A nose",
+                "A heart",
+                "A brain",
+                "A skull"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"external body part\" là một bộ phận cơ thể ở bên ngoài, nên đáp án là mũi (A nose)."
+            },
+            {
+              "id": "2",
+              "content": "2. Which would NOT be considered a facility?",
+              "options": [
+                "A sports stadium",
+                "A surfboard",
+                "An auditorium",
+                "A library"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"facility\" là một cơ sở vật chất (như sân vận động, thư viện...), ván lướt sóng (surfboard) không phải là facility."
+            },
+            {
+              "id": "3",
+              "content": "3. If you live in the southern hemisphere, you ______ .",
+              "options": [
+                "are on the southern half of the earth",
+                "are warm all-year round",
+                "can’t travel very far north",
+                "are on your head"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Nếu bạn sống ở nam bán cầu (southern hemisphere), bạn đang ở nửa phía nam của trái đất."
+            },
+            {
+              "id": "4",
+              "content": "4. What does a pedestrian need the most?",
+              "options": [
+                "Good shoes",
+                "A driver’s license",
+                "A bus pass",
+                "Fuel"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"pedestrian\" là người đi bộ, vì thế thứ cần thiết nhất là một đôi giày tốt (Good shoes)."
+            },
+            {
+              "id": "5",
+              "content": "5. Which of the following is an example of crust?",
+              "options": [
+                "Hard cheese",
+                "Outer part of a pizza",
+                "A shell",
+                "Pudding"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"crust\" là phần vỏ cứng bên ngoài của bánh mì, vỏ bánh pizza là một ví dụ."
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. You probably shouldn’t take a drink from the ______.",
+              "options": [
+                "brook",
+                "hound",
+                "consumption",
+                "facility"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"brook\" là con suối nhỏ. Không nên uống nước từ con suối."
+            },
+            {
+              "id": "7",
+              "content": "2. The muddy water is not fit for ______.",
+              "options": [
+                "pedestrians",
+                "consumption",
+                "escort",
+                "faculty"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"consumption\" là sự tiêu thụ/uống. Nước đục không thích hợp để uống."
+            },
+            {
+              "id": "8",
+              "content": "3. When going to school, it is dangerous for small kids to be lone ______.",
+              "options": [
+                "spectators",
+                "pedestrians",
+                "considerate",
+                "impersonal"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"pedestrians\" là người đi bộ. Trẻ em đi bộ một mình rất nguy hiểm."
+            },
+            {
+              "id": "9",
+              "content": "4. Parents should ______ them to school to ensure they arrive safely.",
+              "options": [
+                "escort",
+                "cater",
+                "entitle",
+                "degrade"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"escort\" là hộ tống, đi cùng để đảm bảo an toàn."
+            },
+            {
+              "id": "10",
+              "content": "5. When I go hunting, I always bring my ______.",
+              "options": [
+                "sanctuary",
+                "hound",
+                "brook",
+                "heap"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"hound\" là chó săn."
+            },
+            {
+              "id": "11",
+              "content": "6. My dog has a great smelling ability. It’s his best ______.",
+              "options": [
+                "criteria",
+                "faculty",
+                "consumption",
+                "hemisphere"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"faculty\" ở đây mang nghĩa năng lực (thể chất/tinh thần)."
+            },
+            {
+              "id": "12",
+              "content": "7. When we got to the stadium, I was amazed at the number of ______.",
+              "options": [
+                "pedestrians",
+                "spectators",
+                "ornaments",
+                "crust"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"spectators\" là khán giả xem thể thao."
+            },
+            {
+              "id": "13",
+              "content": "8. There must have been 50,000 people at the sports ______.",
+              "options": [
+                "sanctuary",
+                "facility",
+                "brook",
+                "heap"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"facility\" là cơ sở (thể thao)."
+            },
+            {
+              "id": "14",
+              "content": "9. Because the dormitory was so big, I was afraid it would be ______.",
+              "options": [
+                "considerate",
+                "impersonal",
+                "external",
+                "crude"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"impersonal\" mang nghĩa thiếu thân thiện, xa cách."
+            },
+            {
+              "id": "15",
+              "content": "10. But I was wrong. Everyone was very nice, helpful, and ______.",
+              "options": [
+                "considerate",
+                "impersonal",
+                "muscular",
+                "masculine"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"considerate\" là chu đáo, ân cần."
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. cater",
+              "options": [
+                "impressive",
+                "to provide",
+                "faraway",
+                "to shame"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"cater\" (cung cấp, phục vụ) đồng nghĩa với \"to provide\"."
+            },
+            {
+              "id": "17",
+              "content": "2. degrade",
+              "options": [
+                "motherly",
+                "likely",
+                "ugly",
+                "to shame"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"degrade\" (làm bẽ mặt, hạ nhục) đồng nghĩa với \"to shame\"."
+            },
+            {
+              "id": "18",
+              "content": "3. heap",
+              "options": [
+                "a flash",
+                "a jar",
+                "a pile",
+                "a tool"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"heap\" (đống) đồng nghĩa với \"a pile\"."
+            },
+            {
+              "id": "19",
+              "content": "4. entitle",
+              "options": [
+                "to make happy",
+                "to succeed",
+                "to flee",
+                "to give rights"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"entitle\" (cho quyền) đồng nghĩa với \"to give rights\"."
+            },
+            {
+              "id": "20",
+              "content": "5. criteria",
+              "options": [
+                "sadness",
+                "letter",
+                "market",
+                "factors"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"criteria\" (tiêu chí) đồng nghĩa với \"factors\" (các yếu tố)."
+            }
+          ]
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. We went to the track to watch the **racing dogs** run.",
+              "options": [
+                "hounds",
+                "pedestrians",
+                "spectators",
+                "criteria"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"racing dogs\" (chó đua/chó săn) đồng nghĩa với \"hounds\"."
+            },
+            {
+              "id": "22",
+              "content": "2. The **outer part of a loaf of bread** was a dark brown and smelled like wheat and honey.",
+              "options": [
+                "crust",
+                "ornament",
+                "heap",
+                "sanctuary"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"outer part of a loaf of bread\" (vỏ bánh mì) là \"crust\"."
+            },
+            {
+              "id": "23",
+              "content": "3. The baseball player was yelled at by an angry **person who watches a sports event**.",
+              "options": [
+                "pedestrian",
+                "spectator",
+                "hound",
+                "faculty"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"person who watches a sports event\" (người xem sự kiện thể thao) là khán giả (\"spectator\")."
+            },
+            {
+              "id": "24",
+              "content": "4. People who celebrate Christmas hang colorful **attractive objects** on their trees.",
+              "options": [
+                "criteria",
+                "facilities",
+                "ornaments",
+                "crusts"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"attractive objects\" (các đồ vật trang trí bắt mắt) là \"ornaments\"."
+            },
+            {
+              "id": "25",
+              "content": "5. What are the **factors on which you judge** for becoming a member in your club?",
+              "options": [
+                "criteria",
+                "faculties",
+                "sanctuaries",
+                "brooks"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"factors on which you judge\" (các yếu tố dùng để đánh giá) là tiêu chí (\"criteria\")."
+            },
+            {
+              "id": "26",
+              "content": "6. The church was made into a **place people can go to be safe** after the hurricane.",
+              "options": [
+                "facility",
+                "sanctuary",
+                "hemisphere",
+                "heap"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"place people can go to be safe\" (nơi trú ẩn an toàn) là \"sanctuary\"."
+            },
+            {
+              "id": "27",
+              "content": "7. Concentration is an important **mental ability** to have when studying for a test.",
+              "options": [
+                "faculty",
+                "consumption",
+                "escort",
+                "criteria"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"mental ability\" (năng lực trí tuệ) là \"faculty\"."
+            },
+            {
+              "id": "28",
+              "content": "8. The messy girl kept her clothes in a **pile** on the floor.",
+              "options": [
+                "brook",
+                "heap",
+                "crust",
+                "sanctuary"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"pile\" (đống) đồng nghĩa với \"heap\"."
+            },
+            {
+              "id": "29",
+              "content": "9. The boy sat by the **small stream** and tossed stones into it.",
+              "options": [
+                "brook",
+                "hemisphere",
+                "facility",
+                "ornament"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"small stream\" (dòng suối nhỏ) là \"brook\"."
+            },
+            {
+              "id": "30",
+              "content": "10. Buying the house will **give the rights to me** to redecorate it any way I want.",
+              "options": [
+                "degrade",
+                "cater",
+                "entitle",
+                "escort"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"give the rights to me\" (cho tôi quyền) đồng nghĩa với \"entitle\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Old Hound</h1><p style=\"margin-bottom: 1rem;\">Elvis was a dog that loved to run. He possessed all the <b>criteria</b> to be a great racing dog. He had long legs, lean muscles, and a strong heart. He was so good that he never lost a race in the northern <b>hemisphere</b>. <b>Spectators</b> who bet on dog races always picked Elvis to win.</p><p style=\"margin-bottom: 1rem;\">After ten years of racing, however, Elvis was getting old. His <b>faculties</b> were not as strong as they used to be. His owner got upset when Elvis started losing. Elvis’s owner wasn’t a <b>considerate</b> person. He <b>degraded</b> the dog all the time. Finally, his owner decided to get rid of him. He threw Elvis in his car and took him to the middle of the forest. He tossed him out and drove away. Elvis was cold and scared. He decided to follow a <b>brook</b> into the city.</p><p style=\"margin-bottom: 1rem;\">Elvis soon found out that the city was a big and <b>impersonal</b> place. Everywhere he went, he saw signs that said, “No Dogs Allowed.” <b>Pedestrians</b> yelled at him. He was sad, hungry, and exhausted. He thought that nobody cared about him anymore. He was ready to give up when he heard a soft voice say, “What a beautiful <b>hound</b>!” Elvis looked up and saw an old woman. She said, “You’re <b>entitled</b> to a better life than this. I can take you to a <b>sanctuary</b> for old dogs like you. I’ll <b>cater</b> to all your needs. Would you like to come with me?”</p><p style=\"margin-bottom: 1rem;\">The woman <b>escorted</b> Elvis to a beautiful <b>facility</b>. There was a sign on the <b>external</b> door that said, “Dogs Welcome!” The interior of the building was painted blue, and shiny <b>ornaments</b> hung from the ceiling. There was a <b>heap</b> of tasty bones and bread <b>crusts</b> for <b>consumption</b>.</p><p style=\"margin-bottom: 1rem;\">Elvis learned there were kind people in the world after all.</p></div>",
+      "imageUrl": "/unit13_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5_reading",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "31",
+              "content": "1. Elvis possessed the criteria to be a spectator.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Chú chó Elvis hội tụ đủ tiêu chuẩn để làm chó đua (racing dog), không phải để làm khán giả (spectator)."
+            },
+            {
+              "id": "32",
+              "content": "2. Elvis’s owner was not considerate, and he degraded the dog.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Người chủ không chu đáo và thường xuyên hạ nhục, mắng mỏ chú chó."
+            },
+            {
+              "id": "33",
+              "content": "3. Elvis followed the brook to the big, impersonal city where pedestrians yelled at him.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Elvis đi theo con suối vào thành phố và bị người đi bộ xua đuổi."
+            },
+            {
+              "id": "34",
+              "content": "4. In the interior of the facility, there was a heap of ornaments and bread crusts for consumption.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "False. Trong khu nhà có một đống xương ngon và vỏ bánh mì để ăn (heap of tasty bones and bread crusts), ornaments (đồ trang trí) được treo trên trần nhà chứ không phải để ăn."
+            },
+            {
+              "id": "35",
+              "content": "5. The old woman wanted to cater to Elvis’s needs at the sanctuary for old hounds.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "True. Bà lão muốn đưa Elvis đến nơi trú ẩn và chăm sóc mọi nhu cầu của chú chó."
+            }
+          ]
+        },
+        {
+          "id": "sec6_reading",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. What was true of Elvis’s faculties when he started getting old?",
+              "options": [
+                "His faculties were not as strong as they used to be.",
+                "He became smarter.",
+                "He became faster.",
+                "He lost his teeth."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Các năng lực (faculties) của chú chó không còn mạnh như trước."
+            },
+            {
+              "id": "37",
+              "content": "2. What did the old woman believe Elvis was entitled to?",
+              "options": [
+                "Elvis was entitled to a worse life.",
+                "Elvis was entitled to a better life.",
+                "Elvis was entitled to a new collar.",
+                "Elvis was entitled to nothing."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bà lão nói với Elvis rằng: \"You're entitled to a better life than this.\""
+            },
+            {
+              "id": "38",
+              "content": "3. What happened at all the races in the northern hemisphere?",
+              "options": [
+                "He always lost.",
+                "He never lost a race in the northern hemisphere.",
+                "He never participated.",
+                "He got injured."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Khi còn trẻ, Elvis chưa bao giờ thua một cuộc đua nào ở bắc bán cầu."
+            },
+            {
+              "id": "39",
+              "content": "4. Where was Elvis escorted to?",
+              "options": [
+                "He was escorted to the forest.",
+                "He was escorted to a beautiful facility.",
+                "He was escorted to the pound.",
+                "He was escorted to the river."
+              ],
+              "correctAnswer": "B",
+              "explanation": "Người phụ nữ dẫn Elvis đến một cơ sở vật chất tuyệt đẹp (beautiful facility) là khu trú ẩn dành cho chó."
+            },
+            {
+              "id": "40",
+              "content": "5. What was on the external door?",
+              "options": [
+                "There was a sign that said, \"No Dogs Allowed.\"",
+                "There was a sign that said, \"Dogs Welcome!\"",
+                "There was a sign that said, \"Keep Out.\"",
+                "There was a sign that said, \"Beware of Dog.\""
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bên ngoài cánh cửa có tấm biển ghi \"Dogs Welcome!\"."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

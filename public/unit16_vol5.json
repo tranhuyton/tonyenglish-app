@@ -1,0 +1,513 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 16",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit16_vol5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit16_vol5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">addict</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈædɪkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An addict is a person who cannot stop doing or having something. <span style=\"color: #0ea5e9;\">(Người nghiện là người không thể ngừng làm hoặc ngừng sở hữu một thứ gì đó.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was a coffee addict. She had more than three cups each day. <span style=\"color: #0ea5e9;\">(→ Cô ấy là một người nghiện cà phê. Cô ấy uống hơn ba cốc mỗi ngày.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">archeological</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌɑːrkiəˈlɑːdʒɪkəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is archeological, it relates to archeology. <span style=\"color: #0ea5e9;\">(Khi một cái gì đó mang tính khảo cổ học, nó liên quan đến khảo cổ học.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They found archeological evidence that proved an ancient species of man. <span style=\"color: #0ea5e9;\">(→ Họ tìm thấy bằng chứng khảo cổ học chứng minh có loài người cổ xưa.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">archeology</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌɑːrkiˈɑːlədʒi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Archeology is the study of ancient people through their artifacts. <span style=\"color: #0ea5e9;\">(Khảo cổ học là nghiên cứu về người cổ đại thông qua các hiện vật của họ.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He studied archeology to learn more about ancient Egyptian culture. <span style=\"color: #0ea5e9;\">(→ Anh ấy nghiên cứu khảo cổ học để tìm hiểu thêm về văn hóa Ai Cập cổ đại.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">brainstorm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbreɪnstɔːrm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To brainstorm is to have a lot of ideas about a certain topic. <span style=\"color: #0ea5e9;\">(Động não là có rất nhiều ý tưởng về một chủ đề nhất định.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students met after school to brainstorm ideas for their assignment. <span style=\"color: #0ea5e9;\">(→ Các sinh viên gặp nhau sau giờ học để lên ý tưởng cho bài tập của mình.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">budget</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbʌdʒɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A budget is the amount of money available to spend on something. <span style=\"color: #0ea5e9;\">(Ngân sách là số tiền có sẵn để chi tiêu cho một việc gì đó.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His budget for food was very tight. <span style=\"color: #0ea5e9;\">(→ Ngân sách mua thực phẩm của anh ấy rất eo hẹp.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chaotic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[keɪˈɑːtɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is chaotic, it is crazy, confused, and hectic. <span style=\"color: #0ea5e9;\">(Khi một cái gì đó hỗn loạn, nó điên rồ, bối rối và bận rộn.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The first day of school can be chaotic for a new student. <span style=\"color: #0ea5e9;\">(→ Ngày đầu tiên đến trường có thể rất hỗn loạn đối với học sinh mới.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[saɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To cite something is to mention it as an example or as proof of something. <span style=\"color: #0ea5e9;\">(Trích dẫn điều gì đó là đề cập đến nó như một ví dụ hoặc bằng chứng về điều gì đó.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She cited six reasons that the school needed to build new classrooms. <span style=\"color: #0ea5e9;\">(→ Cô nêu sáu lý do mà trường cần xây dựng phòng học mới.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">correspond</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌkɔːrəˈspɑːnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To correspond is to match or to be similar to something. <span style=\"color: #0ea5e9;\">(Tương ứng là phù hợp hoặc tương tự với một cái gì đó.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy’s story didn’t correspond with his mother’s version. <span style=\"color: #0ea5e9;\">(→ Câu chuyện của cậu bé không phù hợp với phiên bản của mẹ cậu.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">courtyard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɔːrtjɑːrd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A courtyard is an outdoor area that is surrounded by the walls of a building. <span style=\"color: #0ea5e9;\">(Sân trong là khu vực ngoài trời được bao quanh bởi các bức tường của tòa nhà.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ During the summer, the courtyard is a nice place to have lunch. <span style=\"color: #0ea5e9;\">(→ Vào mùa hè, sân là nơi tuyệt vời để ăn trưa.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">estate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪˈsteɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An estate is a large area of land owned by a family or organization. <span style=\"color: #0ea5e9;\">(Bất động sản là một khu đất rộng lớn thuộc sở hữu của một gia đình hoặc tổ chức.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He lived on his father’s estate in the country. <span style=\"color: #0ea5e9;\">(→ Anh ấy sống trên mảnh đất của cha mình ở quê.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fraud</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[frɔːd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fraud is the crime of gaining money by lying or by tricking people. <span style=\"color: #0ea5e9;\">(Lừa đảo là tội kiếm tiền bằng cách nói dối hoặc lừa gạt người khác.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Experts say that credit card fraud increases around the holidays. <span style=\"color: #0ea5e9;\">(→ Các chuyên gia nói rằng gian lận thẻ tín dụng gia tăng vào những ngày lễ.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hydrogen</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhaɪdrədʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hydrogen is a gas that has no taste, color, or smell. <span style=\"color: #0ea5e9;\">(Hydro là một loại khí không có mùi vị, màu sắc hoặc mùi.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Balloons filled with hydrogen can easily float away if you aren’t careful. <span style=\"color: #0ea5e9;\">(→ Bong bóng chứa đầy hydro có thể dễ dàng trôi đi nếu bạn không cẩn thận.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">integrity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈteɡrəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Integrity is honesty and good morals. <span style=\"color: #0ea5e9;\">(Chính trực là sự trung thực và đạo đức tốt.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The principal had a lot of integrity. <span style=\"color: #0ea5e9;\">(→ Hiệu trưởng có rất nhiều tính chính trực.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">knit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To knit is to make fabric by connecting strings together. <span style=\"color: #0ea5e9;\">(Đan là làm vải bằng cách nối các sợi dây lại với nhau.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandmother knitted me a sweater. <span style=\"color: #0ea5e9;\">(→ Bà tôi đan cho tôi một chiếc áo len.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">outlook</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈaʊtlʊk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An outlook is a person’s opinion or way of thinking about something. <span style=\"color: #0ea5e9;\">(Quan điểm là ý kiến ​​hoặc cách suy nghĩ của một người về điều gì đó.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He changed his outlook about rats after he read a book about them. <span style=\"color: #0ea5e9;\">(→ Anh ấy đã thay đổi quan điểm của mình về loài chuột sau khi đọc một cuốn sách về chúng.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">parachute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpærəʃuːt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A parachute is a device that helps people and things fall to the ground safely. <span style=\"color: #0ea5e9;\">(Dù là thiết bị giúp người và đồ vật rơi xuống đất an toàn.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They used parachutes dropped from airplanes to send supplies to the civilians. <span style=\"color: #0ea5e9;\">(→ Họ sử dụng dù thả từ máy bay để gửi đồ tiếp tế cho dân thường.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prehistoric</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌpriːhɪˈstɔːrɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is prehistoric, it is from a time when there was no written history. <span style=\"color: #0ea5e9;\">(Khi một cái gì đó là thời tiền sử, đó là từ thời điểm chưa có lịch sử thành văn.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The scientists found prehistoric pots used by the people in the area. <span style=\"color: #0ea5e9;\">(→ Các nhà khoa học tìm thấy những chiếc bình thời tiền sử được người dân trong vùng sử dụng.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">proponent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəˈpoʊnənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A proponent is a person who supports an idea or a plan. <span style=\"color: #0ea5e9;\">(Người đề xuất là người ủng hộ một ý tưởng hoặc một kế hoạch.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was a proponent of using environmentally friendly products. <span style=\"color: #0ea5e9;\">(→ Ông là người đề xướng việc sử dụng các sản phẩm thân thiện với môi trường.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">refine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɪˈfaɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To refine something is to make it better by making changes. <span style=\"color: #0ea5e9;\">(Tinh chỉnh một cái gì đó là làm cho nó tốt hơn bằng cách thực hiện những thay đổi.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The principal refined his method of controlling students over the years. <span style=\"color: #0ea5e9;\">(→ Hiệu trưởng đã cải tiến phương pháp kiểm soát học sinh của mình qua nhiều năm.)</span></div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">restrict</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɪˈstrɪkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To restrict is to limit something and prevent it from getting bigger. <span style=\"color: #0ea5e9;\">(Hạn chế là hạn chế một cái gì đó và ngăn chặn nó ngày càng lớn hơn.)</span></div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The club restricted the amount of members. <span style=\"color: #0ea5e9;\">(→ Câu lạc bộ giới hạn số lượng thành viên.)</span></div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. Someone with integrity ______.",
+              "options": [
+                "invents new things",
+                "tricks people",
+                "lies",
+                "is honest"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"integrity\" nghĩa là sự trung thực (honesty and good morals). Chọn D."
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. What does a person with a good understanding of a budget take care of?",
+              "options": [
+                "Their safety",
+                "Their possessions",
+                "Their money",
+                "Their pet"
+              ],
+              "correctAnswer": "C",
+              "explanation": "\"budget\" nghĩa là ngân sách, lượng tiền có sẵn để chi tiêu (money available to spend). Chọn C."
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. Which of the following might an archeological expert be interested in?",
+              "options": [
+                "Reading about ancient devices",
+                "Studying the effects of height and speed",
+                "Learning how to save lives",
+                "Finding his car keys"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"archeological\" liên quan đến khảo cổ học, nghiên cứu về các đồ tạo tác cổ đại (ancient devices). Chọn A."
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. What does it mean to be a parachute addict?",
+              "options": [
+                "To want to be on land",
+                "To want to jump from a plane with a parachute",
+                "To always ride in hot-air balloons",
+                "To want to be at sea"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"parachute addict\" nghĩa là người nghiện nhảy dù, muốn nhảy khỏi máy bay với dù (jump from a plane with a parachute). Chọn B."
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. In order to refine an invention, one has to _______.",
+              "options": [
+                "spend money on it",
+                "make it better",
+                "be ignorant",
+                "know Italian"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"refine\" nghĩa là cải tiến, làm cho thứ gì đó tốt hơn (make it better). Chọn B."
+            }
+          ]
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. The teacher held classes in the [outdoor area surrounded by walls] on warm days.",
+              "options": [
+                "courtyard",
+                "estate",
+                "parachute",
+                "budget"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"outdoor area surrounded by walls\" là định nghĩa của courtyard (sân trong)."
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. The airport is usually [hectic] on Saturdays because many people were traveling.",
+              "options": [
+                "prehistoric",
+                "chaotic",
+                "archeological",
+                "friendly"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"hectic\" mang nghĩa hỗn loạn, tương đương với chaotic."
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. The teacher made sure the correct answers [matched with] the questions on the test.",
+              "options": [
+                "corresponded",
+                "cited",
+                "restricted",
+                "refined"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"matched with\" mang nghĩa phù hợp, tương ứng, tương đương với corresponded."
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. The student [gave an example] from an interview she heard on the radio.",
+              "options": [
+                "cited",
+                "knit",
+                "brainstormed",
+                "refined"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"gave an example\" mang nghĩa trích dẫn, đưa ra ví dụ, tương đương với cited."
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. The victim of the [crime of tricking] told the police about her experience.",
+              "options": [
+                "fraud",
+                "hydrogen",
+                "integrity",
+                "outlook"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"crime of tricking\" mang nghĩa tội phạm lừa đảo, tương đương với fraud."
+            }
+          ]
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "1. prehistoric",
+              "options": [
+                "large",
+                "old",
+                "upsetting",
+                "under"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"prehistoric\" nghĩa là thời tiền sử, tương đương với old (cũ, cổ xưa)."
+            },
+            {
+              "id": "ex3_2",
+              "content": "2. outlook",
+              "options": [
+                "outside",
+                "plan",
+                "work",
+                "viewpoint"
+              ],
+              "correctAnswer": "D",
+              "explanation": "\"outlook\" nghĩa là quan điểm, cách nhìn nhận, tương đương với viewpoint."
+            },
+            {
+              "id": "ex3_3",
+              "content": "3. proponent",
+              "options": [
+                "supporter",
+                "teacher",
+                "traveler",
+                "scientist"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"proponent\" nghĩa là người ủng hộ, tương đương với supporter."
+            },
+            {
+              "id": "ex3_4",
+              "content": "4. estate",
+              "options": [
+                "gas",
+                "property",
+                "airplane",
+                "evidence"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"estate\" nghĩa là điền trang, tài sản đất đai, tương đương với property."
+            },
+            {
+              "id": "ex3_5",
+              "content": "5. brainstorm",
+              "options": [
+                "to come up with",
+                "to read a lot",
+                "to get wet",
+                "to jump"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"brainstorm\" nghĩa là suy nghĩ, nảy ra ý tưởng, tương đương với to come up with."
+            }
+          ]
+        },
+        {
+          "id": "sec4",
+          "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "ex4_1",
+              "content": "1. The farmer lived on a large estate. It was given to him by his father.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"estate\" (điền trang) dùng chính xác trong ngữ cảnh này."
+            },
+            {
+              "id": "ex4_2",
+              "content": "2. The principal was a proponent of group learning. He wanted students to learn on their own.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"proponent of group learning\" (người ủng hộ học nhóm) mâu thuẫn với \"learn on their own\" (tự học). Dùng sai."
+            },
+            {
+              "id": "ex4_3",
+              "content": "3. He wanted to refine the machine before he sold it. He spent three years improving it.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"refine\" (cải tiến) đồng nghĩa với \"improving it\" (cải thiện nó). Dùng chính xác."
+            },
+            {
+              "id": "ex4_4",
+              "content": "4. The seat belt restricted the child’s movement in the car. He was able to move a lot.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"restricted\" (hạn chế) mâu thuẫn với \"able to move a lot\" (có thể di chuyển nhiều). Dùng sai."
+            },
+            {
+              "id": "ex4_5",
+              "content": "5. After an accident in the laboratory, hydrogen filled the air. The gas was completely invisible.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"hydrogen\" (khí hydro) là một loại khí (gas). Dùng chính xác."
+            },
+            {
+              "id": "ex4_6",
+              "content": "6. The boy had a different outlook than his brother. He thought that people should try to save the environment, but his brother thought it wasn’t worth trying.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"outlook\" (quan điểm) được dùng chính xác để chỉ sự khác biệt trong suy nghĩ."
+            },
+            {
+              "id": "ex4_7",
+              "content": "7. The scientists found many archeological items in the desert. It would help them study modern societies.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"archeological\" (thuộc về khảo cổ, đồ cổ) mâu thuẫn với \"modern societies\" (xã hội hiện đại). Dùng sai."
+            },
+            {
+              "id": "ex4_8",
+              "content": "8. Brian brainstormed with his group. After an hour, they came up with a great idea.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"brainstormed\" (tập trung suy nghĩ) để đưa ra \"great idea\" (ý tưởng tuyệt vời). Dùng chính xác."
+            },
+            {
+              "id": "ex4_9",
+              "content": "9. The people in the plane crash were saved by parachutes. They dropped safely to the ground using the device.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"parachutes\" (cái dù) dùng để rơi an toàn xuống đất. Dùng chính xác."
+            },
+            {
+              "id": "ex4_10",
+              "content": "10. Ellen wanted to learn how to knit. She wanted to save people from fires.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"knit\" (đan len) không liên quan đến việc \"save people from fires\" (cứu người khỏi hỏa hoạn). Dùng sai."
+            },
+            {
+              "id": "ex4_11",
+              "content": "11. The man was found guilty of fraud. He told people he was selling medicine, but it was only river water.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"fraud\" (lừa đảo) phù hợp với hành động bán nước sông giả làm thuốc. Dùng chính xác."
+            },
+            {
+              "id": "ex4_12",
+              "content": "12. The woman showed her integrity by lying to the police about her involvement in the crime.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"integrity\" (sự trung thực) mâu thuẫn với hành động \"lying\" (nói dối). Dùng sai."
+            },
+            {
+              "id": "ex4_13",
+              "content": "13. The chocolate addict ate chocolate bars about once a month.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"addict\" (người nghiện) mâu thuẫn với việc chỉ ăn một lần một tháng (once a month). Dùng sai."
+            },
+            {
+              "id": "ex4_14",
+              "content": "14. The archeology expert was called to study some ancient bones. They are thought to belong to dinosaurs.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "A",
+              "explanation": "\"archeology\" (khảo cổ học) liên quan đến nghiên cứu xương cổ đại (ancient bones). Dùng chính xác."
+            },
+            {
+              "id": "ex4_15",
+              "content": "15. The children ran into the courtyard when it started raining. They didn’t want to get wet.",
+              "options": [
+                "Correct",
+                "Incorrect"
+              ],
+              "correctAnswer": "B",
+              "explanation": "\"courtyard\" (sân trong) là khu vực ngoài trời (outdoor area), chạy ra đó vẫn bị ướt (get wet). Dùng sai."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The History of Parachutes</h1><p style=\"margin-bottom: 1rem;\">Scientists who study <b>archeology</b> say that there may be some evidence of <b>prehistoric</b> parachutes. But the first written history of the device comes from China about 2,100 years ago. Scientists <b>cite</b> an ancient book that describes parachutes. However, there is no <b>archeological</b> evidence that proves that an actual <b>parachute</b> was ever made. Later, people from northern Africa and Italy also had ideas about a similar invention. In fact, a Leonardo Da Vinci's drawing <b>corresponds</b> closely with the modern parachute design!</p><p style=\"margin-bottom: 1rem;\">In 1783, French scientist Sebastian Lenormand invented the first modern parachute. Sebastian <b>brainstormed</b> with other scientists to come up with a way to help people jump safely out of burning buildings. He thought the solution was to give people an object to <b>restrict</b> their speed while they traveled toward the ground. Many people thought that he was up to some kind of <b>fraud</b>, but Sebastian had a lot of <b>integrity</b>. His <b>budget</b> was limited, so he first tested his theory by using two umbrellas. He jumped out of a tree and found that the umbrellas worked.</p><p style=\"margin-bottom: 1rem;\">Next, he <b>refined</b> his invention. Rather than using umbrellas, he <b>knit</b> a large parachute. Finally, he jumped off a tall building on a French <b>estate</b> and landed safely in the <b>courtyard</b>.</p><p style=\"margin-bottom: 1rem;\">Sebastian's work gave another man an idea. Jean-Pierre Blanchard had a different <b>outlook</b> than Sebastian. He was a hot air balloon <b>addict</b>. He was one of the first people to ride in a hot air balloon powered by <b>hydrogen</b> gas. He was a <b>proponent</b> of using the parachutes to exit from hot air balloons. Starting in 1785, he used his dog to show that animals could land safely from hot air balloons by using parachutes. Then, in 1793, he was faced with a <b>chaotic</b> experience. The hot air balloon he was riding in burst and started to fall. He was forced to use a parachute himself. And much to his relief, it saved his life!</p></div>",
+      "imageUrl": "/unit16_vol5_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readA_1",
+              "content": "1. Archeological evidence shows there were prehistoric parachutes in China.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Không có bằng chứng khảo cổ nào (archeological evidence) cho thấy người Trung Quốc thực sự làm ra dù."
+            },
+            {
+              "id": "readA_2",
+              "content": "2. Archeology experts cite an old Chinese book that describes a parachute that corresponds with modern parachutes.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Bản vẽ của Leonardo Da Vinci (Leonardo Da Vinci's drawing) mới tương đồng (corresponds) với thiết kế dù hiện đại, không phải cuốn sách cũ của Trung Quốc."
+            },
+            {
+              "id": "readA_3",
+              "content": "3. Sebastian brainstormed with scientists to invent a device that would allow people to jump from buildings safely.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Sebastian đã cùng các nhà khoa học suy nghĩ (brainstormed) để tạo ra thiết bị giúp người nhảy khỏi tòa nhà đang cháy an toàn."
+            },
+            {
+              "id": "readA_4",
+              "content": "4. On Sebastian’s first jump, he used a large blanket to restrict his speed as he traveled to the ground.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Lần nhảy đầu tiên, ông dùng hai chiếc ô (two umbrellas) chứ không phải cái chăn lớn (blanket)."
+            },
+            {
+              "id": "readA_5",
+              "content": "5. Jean-Pierre was a hot air balloon addict.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Trong bài đọc có đề cập Jean-Pierre là một người nghiện khinh khí cầu (hot air balloon addict)."
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "readB_1",
+              "content": "1. Why did Sebastian use umbrellas on his first jump?",
+              "options": [
+                "Because he had a small budget",
+                "Because he had a lot of integrity",
+                "Because he was a proponent of them",
+                "Because it was chaotic"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Sebastian dùng ô vì ngân sách của ông hạn hẹp (budget was limited)."
+            },
+            {
+              "id": "readB_2",
+              "content": "2. What did Sebastian think that a parachute would do?",
+              "options": [
+                "Help him fly",
+                "Restrict the jumper's speed as they fell",
+                "Give him hydrogen gas",
+                "Become a prehistoric device"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Sebastian nghĩ rằng chiếc dù sẽ hạn chế tốc độ (restrict speed) của người nhảy khi họ rơi xuống."
+            },
+            {
+              "id": "readB_3",
+              "content": "3. Where did Sebastian jump with the parachute he refined and knitted?",
+              "options": [
+                "In a prehistoric courtyard",
+                "From a hot air balloon",
+                "Off a tall building on a French estate",
+                "Into the sea"
+              ],
+              "correctAnswer": "C",
+              "explanation": "Sebastian nhảy từ một tòa nhà cao tầng trong một điền trang ở Pháp (tall building on a French estate)."
+            },
+            {
+              "id": "readB_4",
+              "content": "4. How was Jean-Pierre’s outlook different from Sebastian?",
+              "options": [
+                "He wanted to use parachutes to jump out of hot air balloons",
+                "He wanted to jump out of burning buildings",
+                "He wanted to use umbrellas",
+                "He didn't like parachutes"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Jean-Pierre ủng hộ việc dùng dù để thoát khỏi khinh khí cầu (jump out of hot air balloons) thay vì nhảy khỏi tòa nhà đang cháy."
+            },
+            {
+              "id": "readB_5",
+              "content": "5. Why did Jean-Pierre first use the parachute?",
+              "options": [
+                "He wanted to test it",
+                "His hot air balloon burst and started to fall",
+                "He was pushed",
+                "He saw a Da Vinci drawing"
+              ],
+              "correctAnswer": "B",
+              "explanation": "Jean-Pierre buộc phải dùng dù vì khinh khí cầu của ông bị nổ và bắt đầu rơi (balloon burst and started to fall)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
