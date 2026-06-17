@@ -93,13 +93,13 @@ Trích xuất bài tập Word List và đẩy vào `sections`. **BẮT BUỘC:**
 HTML của bài đọc phải đảm bảo **3 YẾU TỐ**: 
 1. Ảnh minh hoạ câu chuyện ở đầu trang (có bo góc, viền và đổ bóng chuẩn).
 2. **In đậm** (`<b>`) tất cả 20 từ vựng mục tiêu khi chúng xuất hiện trong bài đọc.
-3. Các đoạn văn (`<p>`) phải dùng đúng thông số giãn dòng `margin-bottom: 1rem` (không chèn thêm line-height hay font-size để tránh phá vỡ giao diện hệ thống).
+3. Các đoạn văn (`<p>`) bắt buộc phải dùng đúng thông số style này để giãn dòng rộng rãi, dễ đọc: `style="margin-bottom: 1.25rem; line-height: 1.6; color: #374151; font-size: 1.125rem;"`. Chú ý KHÔNG ép tiêu đề `<h1>` in hoa toàn bộ (`text-transform: uppercase`) vì sẽ làm phá tỷ lệ so với Unit cũ.
 
 **🚨 CẢNH BÁO HTML 🚨:** Giống như Tab 1, toàn bộ HTML của Tab 2 phải được minified thành **MỘT DÒNG DUY NHẤT**. Tuyệt đối không chứa ký tự xuống dòng (`\n`).
 
 ```html
 <!-- Dán đoạn HTML này vào parts[1].content -->
-<div style="font-family: Arial, sans-serif;">    <img src="/unitX_story.png" style="width: 100%; border-radius: 12px; margin-bottom: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" />    <h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2; text-transform: uppercase;">Tên Câu Chuyện</h1>        <p style="margin-bottom: 1rem;">Đoạn văn đầu tiên chứa từ vựng được <b>in đậm</b>.</p>    <p style="margin-bottom: 1rem;">Đoạn văn thứ hai tiếp tục <b>in đậm</b> từ vựng học được trong unit.</p></div>
+<div style="font-family: Arial, sans-serif;">    <img src="/unitX_story.png" style="width: 100%; border-radius: 12px; margin-bottom: 24px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" />    <h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Tên Câu Chuyện</h1>        <p style="margin-bottom: 1.25rem; line-height: 1.6; color: #374151; font-size: 1.125rem;">Đoạn văn đầu tiên chứa từ vựng được <b>in đậm</b>.</p>    <p style="margin-bottom: 1.25rem; line-height: 1.6; color: #374151; font-size: 1.125rem;">Đoạn văn thứ hai tiếp tục <b>in đậm</b> từ vựng học được trong unit.</p></div>
 ```
 
 ### Câu hỏi đọc hiểu (`parts[1].sections`)
