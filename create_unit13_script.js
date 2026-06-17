@@ -1,0 +1,124 @@
+const fs = require('fs');
+
+const words = [
+  { w: "anxiety", p: "[æŋˈzaɪəti]", t: "n.", d: "When someone has anxiety, they have a lot of worries and fear.", e: "When I have to climb to high places, I’m filled with anxiety." },
+  { w: "army", p: "[ˈɑːrmi]", t: "n.", d: "An army is a large group of people who fight in wars.", e: "The army protects all the people in the country." },
+  { w: "billion", p: "[ˈbɪljən]", t: "n.", d: "A billion is a very large number: 1,000,000,000.", e: "There are billions of stars in outer space." },
+  { w: "carve", p: "[kɑːrv]", t: "v.", d: "To carve means to cut into something.", e: "My father usually carves the turkey for Thanksgiving." },
+  { w: "consult", p: "[kənˈsʌlt]", t: "v.", d: "To consult someone means to ask them for help.", e: "I will consult my accountant to find a way to pay for my bills." },
+  { w: "emergency", p: "[ɪˈmɜːrdʒənsi]", t: "n.", d: "An emergency is a time when someone needs help right away.", e: "There is a huge fire in my house! This is an emergency!" },
+  { w: "fortune", p: "[ˈfɔːrtʃən]", t: "n.", d: "When someone has good fortune, it means they have luck.", e: "I have good fortune when I play cards." },
+  { w: "guarantee", p: "[ˌɡærənˈtiː]", t: "v.", d: "To guarantee means to know something will happen.", e: "I guarantee that the sun will come up in the morning." },
+  { w: "hike", p: "[haɪk]", t: "v.", d: "To hike means to walk in the mountains or forest.", e: "I always bring plenty of equipment with me when I hike." },
+  { w: "initial", p: "[ɪˈnɪʃəl]", t: "adj.", d: "When something is initial, it is the first thing.", e: "The initial step when writing a paper is to find a good topic." },
+  { w: "intense", p: "[ɪnˈtens]", t: "adj.", d: "If something is intense, it is very strong.", e: "The skunk made an intense odor that filled the air." },
+  { w: "lend", p: "[lend]", t: "v.", d: "To lend something is to give it to someone for a short time.", e: "My sister lost her pen, so I will lend her mine." },
+  { w: "peak", p: "[piːk]", t: "n.", d: "The peak is the very top of a mountain.", e: "There is snow on the peaks of those mountains." },
+  { w: "potential", p: "[pəˈtenʃəl]", t: "adj.", d: "Potential means capable of being but not yet in existence.", e: "I’ve thought of some potential problems with your idea." },
+  { w: "pride", p: "[praɪd]", t: "n.", d: "When you have pride, you are happy with yourself.", e: "I take pride in getting good grades." },
+  { w: "proof", p: "[pruːf]", t: "n.", d: "Proof is a fact that shows something is real.", e: "They used his fingerprint as proof for the crime he committed." },
+  { w: "quit", p: "[kwɪt]", t: "v.", d: "To quit something means to stop doing it.", e: "I quit running because I got tired." },
+  { w: "spin", p: "[spɪn]", t: "v.", d: "To spin is to turn around in circles.", e: "The boy kept spinning until he fell down." },
+  { w: "tiny", p: "[ˈtaɪni]", t: "adj.", d: "When people or things are tiny, they are very small.", e: "A baby’s hand is tiny." },
+  { w: "tutor", p: "[ˈtuːtər]", t: "n.", d: "A tutor is someone who gives lessons in a certain subject.", e: "My sister is bad at math. So my mother hired a tutor to help her." }
+];
+
+let wordListHtml = `<div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;"><div style="display: flex; flex-direction: column; gap: 16px;"><img src="/unit13_word_list_1.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /><img src="/unit13_word_list_2.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /></div><div style="display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;"><h3 style="font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Detailed Meanings</h3><div style="display: flex; flex-direction: column; gap: 24px;">`;
+
+words.forEach(w => {
+  wordListHtml += `<div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">${w.w}</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">${w.p}</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">${w.t}</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">${w.d}</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ ${w.e}</div></div></div>`;
+});
+
+wordListHtml += `</div></div></div>`;
+
+let storyHtml = `<div style="font-family: Arial, sans-serif; "><h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">The Cat and the Fox</h1><p style="margin-bottom: 1rem;">One day, a cat <b>hiked</b> on a mountain. When he reached the <b>peak</b>, he met a fox. They began talking about how they get away from their enemies.</p><p style="margin-bottom: 1rem;">"I am very smart. I have <b>billions</b> of ideas. I can <b>carve</b> a <b>tiny</b> hole in a tree, and then climb in," the fox said. He added, "I have a lot of friends. If I am in trouble, I can call them to <b>lend</b> their help. I can escape an entire <b>army</b> if I have to!"</p><p style="margin-bottom: 1rem;">Then, the fox asked, "What are your <b>potential</b> plans?" The cat said, "I have only one plan." The fox said, "I hope you have good <b>fortune</b>, then! Do you want me to be your <b>tutor</b>? I can teach you many things." The cat said, "I <b>guarantee</b> that my plan works every time. We can <b>quit</b> talking about it."</p><p style="margin-bottom: 1rem;">Soon, they saw a group of wolves. It was an <b>emergency</b>. The cat quickly used her plan. She ran up a tree. The fox could not decide which plan to use. "What should my <b>initial</b> move be? Should I <b>consult</b> my friends?" The fox felt <b>intense</b> <b>anxiety</b>. All he could do was <b>spin</b> in a circle. The wolves caught the fox. The cat was full of <b>pride</b>. This is <b>proof</b> that having a good plan is better than having many bad plans.</p></div>`;
+
+const json = {
+  basicInfo: {
+    skill: "Standard-Reading",
+    title: "Unit 13",
+    category: "exercise",
+    timeLimit: 0
+  },
+  parts: [
+    {
+      id: "part1",
+      title: "Word List",
+      content: wordListHtml,
+      sections: [
+        {
+          id: "sec1",
+          title: "Exercise 1: Choose the right definition for the given word.",
+          content: "",
+          questionType: "Trắc nghiệm",
+          questions: [
+            { id: "1", content: "1. carve", options: ["to know", "to stop", "to teach", "to cut into"], correctAnswer: "to cut into", explanation: "carve nghĩa là cắt vào vật gì đó (to cut into)." },
+            { id: "2", content: "2. consult", options: ["to stop", "to ask for help", "to give", "to turn in circles"], correctAnswer: "to ask for help", explanation: "consult nghĩa là hỏi ý kiến, tìm kiếm sự giúp đỡ (to ask for help)." },
+            { id: "3", content: "3. anxiety", options: ["very small", "luck", "worries", "group of fighters"], correctAnswer: "worries", explanation: "anxiety là sự lo âu (worries)." },
+            { id: "4", content: "4. intense", options: ["strong", "first", "bad", "mountain top"], correctAnswer: "strong", explanation: "intense nghĩa là mạnh mẽ, dữ dội (strong)." },
+            { id: "5", content: "5. proof", options: ["luck", "facts", "a large number", "a group of fighters"], correctAnswer: "facts", explanation: "proof là bằng chứng, sự thật (facts)." },
+            { id: "6", content: "6. tutor", options: ["a group of fighters", "someone who gives lessons", "to turn in circles", "to stop"], correctAnswer: "someone who gives lessons", explanation: "tutor là người dạy kèm (someone who gives lessons)." },
+            { id: "7", content: "7. lend", options: ["to stop", "to know", "to give", "to cut"], correctAnswer: "to give", explanation: "lend là cho mượn, đưa cho (to give)." },
+            { id: "8", content: "8. initial", options: ["first", "mountain top", "very small", "strong"], correctAnswer: "first", explanation: "initial nghĩa là ban đầu (first)." },
+            { id: "9", content: "9. hike", options: ["to walk in the forest", "to teach", "to turn in circles", "to ask for help"], correctAnswer: "to walk in the forest", explanation: "hike là đi bộ đường dài trong rừng/núi (to walk in the forest)." },
+            { id: "10", content: "10. pride", options: ["a group of fighters", "able to happen", "needing help", "being happy with yourself"], correctAnswer: "being happy with yourself", explanation: "pride là niềm tự hào (being happy with yourself)." }
+          ]
+        },
+        {
+          id: "sec2",
+          title: "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          content: "",
+          questionType: "Trắc nghiệm",
+          questions: [
+            { id: "11", content: "1. Which sentence makes better sense?", options: ["a. I should quit eating candy because it is bad for me.", "b. The tiny tower stretched to the sky."], correctAnswer: "a. I should quit eating candy because it is bad for me.", explanation: "quit (từ bỏ) hợp lý khi nói bỏ ăn kẹo vì nó không tốt." },
+            { id: "12", content: "2. Which sentence makes better sense?", options: ["a. We ran far above the mountain peak.", "b. I will need water if I'm going to hike the long trail."], correctAnswer: "b. I will need water if I'm going to hike the long trail.", explanation: "hike (đi bộ đường dài) hợp lý khi cần nước uống." },
+            { id: "13", content: "3. Which sentence makes better sense?", options: ["a. If I want to get better at sports, I should quit playing.", "b. The tiny ant crawled in under the door."], correctAnswer: "b. The tiny ant crawled in under the door.", explanation: "tiny (nhỏ bé) hợp lý khi mô tả con kiến." },
+            { id: "14", content: "4. Which sentence makes better sense?", options: ["a. The clouds look like they can touch the mountain peaks.", "b. I have a great deal of pride when I lose a contest."], correctAnswer: "a. The clouds look like they can touch the mountain peaks.", explanation: "peak (đỉnh núi) hợp lý khi nói mây chạm đến đỉnh núi." },
+            { id: "15", content: "5. Which sentence makes better sense?", options: ["a. The boy was filled with pride when he learned how to read.", "b. I hiked downstairs from my room."], correctAnswer: "a. The boy was filled with pride when he learned how to read.", explanation: "pride (tự hào) hợp lý khi cậu bé học được cách đọc." }
+          ]
+        },
+        {
+          id: "sec3",
+          title: "Exercise 3: Choose the word that is a better fit for each sentence.",
+          content: "",
+          questionType: "Trắc nghiệm",
+          questions: [
+            { id: "16", content: "1. There are ___ problems with her plan.", options: ["guarantee", "potential"], correctAnswer: "potential", explanation: "potential (tiềm năng/tiềm ẩn) hợp lý đi cùng problems." },
+            { id: "17", content: "2. I ___ you that I'll get a good grade because I studied hard.", options: ["guarantee", "potential"], correctAnswer: "guarantee", explanation: "guarantee (đảm bảo) vì học chăm chỉ." },
+            { id: "18", content: "3. My mother ___ me her car when I need it.", options: ["lends", "tutor"], correctAnswer: "lends", explanation: "lends (cho mượn) xe." },
+            { id: "19", content: "4. I work as a ___ during the summer to make money.", options: ["lends", "tutor"], correctAnswer: "tutor", explanation: "tutor (người dạy kèm) là công việc." },
+            { id: "20", content: "5. My eyes hurt when I looked into the ___ light.", options: ["billions", "intense"], correctAnswer: "intense", explanation: "intense (cường độ mạnh) hợp lý khi mô tả ánh sáng." },
+            { id: "21", content: "6. There are ___ of people in the world.", options: ["billions", "intense"], correctAnswer: "billions", explanation: "billions (hàng tỷ) người trên thế giới." },
+            { id: "22", content: "7. To cook noodles, the ___ step is to boil water.", options: ["quit", "initial"], correctAnswer: "initial", explanation: "initial (ban đầu) là bước đầu tiên." },
+            { id: "23", content: "8. She ___ taking care of her plants, so they died.", options: ["quit", "initial"], correctAnswer: "quit", explanation: "quit (từ bỏ) việc chăm sóc cây." },
+            { id: "24", content: "9. I had a feeling of ___ when I thought the bully would hit me.", options: ["emergency", "anxiety"], correctAnswer: "anxiety", explanation: "anxiety (sự lo lắng) vì sợ bị đánh." },
+            { id: "25", content: "10. When the man stopped breathing, his wife knew it was an ___.", options: ["emergency", "anxiety"], correctAnswer: "emergency", explanation: "emergency (tình trạng khẩn cấp) khi ngừng thở." }
+          ]
+        }
+      ]
+    },
+    {
+      id: "part2",
+      title: "Comprehensive Reading",
+      content: storyHtml,
+      imageUrl: "/unit13_story.png",
+      sections: [
+        {
+          id: "sec4",
+          title: "Answer the questions based on the story.",
+          content: "",
+          questionType: "Trắc nghiệm",
+          questions: [
+            { id: "26", content: "1. What is this story about?", options: ["Why cats have good fortune", "How you make guarantees about plans", "Why you need a good plan in an emergency", "How foxes have the potential to make billions of plans"], correctAnswer: "Why you need a good plan in an emergency", explanation: "Câu chuyện cho thấy tại sao cần một kế hoạch tốt trong tình huống khẩn cấp (emergency)." },
+            { id: "27", content: "2. Why did the fox feel intense anxiety?", options: ["Because he tried to spin in circles", "Because his army of friends did not lend their help", "Because he did not know what his initial move should be", "Because he could not find a tree in which to carve a tiny hole"], correctAnswer: "Because he did not know what his initial move should be", explanation: "Cáo lo lắng dữ dội vì không biết bước đi đầu tiên (initial move) của mình nên là gì." },
+            { id: "28", content: "3. Why was the cat full of pride at the end of the story?", options: ["He hiked to the peak of the mountain.", "He had proof that his plan was best.", "He did not let the fox become his tutor.", "He loved to hide in the trees."], correctAnswer: "He had proof that his plan was best.", explanation: "Mèo tự hào vì có bằng chứng (proof) rằng kế hoạch của nó là tốt nhất." },
+            { id: "29", content: "4. According to the passage, all the following are true EXCEPT___", options: ["the fox got caught by the wolves", "the cat did not get caught by the wolves", "the fox said he could consult his friends if he got into trouble", "the fox decided to quit thinking of plans and just use one"], correctAnswer: "the fox decided to quit thinking of plans and just use one", explanation: "Cáo không hề quyết định từ bỏ việc nghĩ kế hoạch và chỉ dùng một cái. Đó là lựa chọn sai (EXCEPT)." },
+            { id: "30", content: "5. What guarantee did the cat make to the fox?", options: ["His plan works every time.", "He will lend his friends to the fox.", "He has billions of plans.", "He will teach the fox how to hike."], correctAnswer: "His plan works every time.", explanation: "Mèo đảm bảo rằng kế hoạch của mình luôn luôn hoạt động (works every time)." }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+fs.writeFileSync('c:/Users/Tony/.gemini/antigravity/scratch/tonyenglish-app/unit13.json', JSON.stringify(json, null, 2));

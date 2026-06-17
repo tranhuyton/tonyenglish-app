@@ -45,7 +45,8 @@ async function run() {
             title: `Unit ${unitNum}`,
             folder_id: folderId,
             content_json: contentJson,
-            order_index: unitNum
+            order_index: unitNum,
+            test_type: 'multi_part'
           });
         if (error) console.error(`Error inserting Unit ${unitNum}:`, error);
         else console.log(`Unit ${unitNum} successfully inserted!`);

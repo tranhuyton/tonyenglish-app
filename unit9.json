@@ -1,0 +1,247 @@
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 9",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit9_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit9_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤩</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">admire</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədmaiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To admire someone is to like them for what they do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I admire my brother for his hard work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤝</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">aid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To aid someone is to help them when they need something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The doctor aided the boy after his accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎯</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">attempt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ətempt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To attempt something is to try to do that thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I am attempting to learn English.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👮</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">authority</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əθɔ:rəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Authority is the power that someone has because of their position.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The policeman has authority on the streets.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏛️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">capital</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kæpitl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A capital is an important city where a country's leaders live and work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We will visit the capital to learn about our government.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👥</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cooperate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kouɑpəreit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To cooperate is to work together to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students cooperated to clean up the classroom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🛡️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">defend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[difend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To defend someone or something is to protect them from attack.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The soldiers defended the town from the invaders.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🏚️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">destruction</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[distrʌkʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Destruction is damage to something so bad that it can't be fixed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After the big fire, there was much destruction in the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌪️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disorder</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disɔ:rdər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Disorder is a lack of order, or a complete mess.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher's desk had many papers in disorder.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">➗</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">division</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diviʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A division is the act of making smaller groups out of a larger one.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The chart had six divisions which all had different colors.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🔑</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">enable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ineibəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To enable a person is to make it possible for them to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Having the key enabled us to open the door.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😫</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frustrate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[frʌstreit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To frustrate is to prevent someone from fulfilling their desire.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The machine frustrated me because I could not fix it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🇺🇸</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">govern</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[gʌvərn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To govern is to control the public business of a country, state, or city.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The United States is governed from the White House.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plenty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[plenti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To have plenty of something is to have more than you need.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The school had plenty of books for the students to read.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💊</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">relieve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rili:v]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To relieve someone is to make them feel less pain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The medicine relieved the sick boy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">⭐</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reputation</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[repjəteiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Reputation is the opinion that people have about someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The doctor had a reputation for helping people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👑</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">royal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rɔiəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Royal describes something that belongs to a king or queen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The king sat upon the royal throne.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">⛓️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">slave</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sleiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A slave is a person who is not free and must work for someone else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The slave worked very hard all day long.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤼</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">struggle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strʌgəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To struggle is to fight against someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The kids struggled with each other for the toy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤦</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stupid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stu:pid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is stupid, they lack intelligence.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He said something stupid that made everyone angry at him.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist_ex1",
+          "title": "Exercise 1: Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "u9_e1_1",
+              "content": "1.",
+              "options": [
+                "a. Parents have authority over their children.",
+                "b. Poor people aid rich people by giving them money."
+              ],
+              "correctAnswer": "a. Parents have authority over their children.",
+              "explanation": "Parents have authority over their children."
+            },
+            {
+              "id": "u9_e1_2",
+              "content": "2.",
+              "options": [
+                "a. When you have authority, you cannot do anything.",
+                "b. When people cooperate, they can get more done."
+              ],
+              "correctAnswer": "b. When people cooperate, they can get more done.",
+              "explanation": "When people cooperate, they can get more done."
+            },
+            {
+              "id": "u9_e1_3",
+              "content": "3.",
+              "options": [
+                "a. You should admire people who tell lies.",
+                "b. Learning a new language can frustrate some people."
+              ],
+              "correctAnswer": "b. Learning a new language can frustrate some people.",
+              "explanation": "Learning a new language can frustrate some people."
+            },
+            {
+              "id": "u9_e1_4",
+              "content": "4.",
+              "options": [
+                "a. If you aid someone, he or she will usually thank you.",
+                "b. If you cooperate with your friends, you will feel lonely."
+              ],
+              "correctAnswer": "a. If you aid someone, he or she will usually thank you.",
+              "explanation": "If you aid someone, he or she will usually thank you."
+            },
+            {
+              "id": "u9_e1_5",
+              "content": "5.",
+              "options": [
+                "a. You should frustrate your friends when they help you.",
+                "b. Most students admire teachers who work hard."
+              ],
+              "correctAnswer": "b. Most students admire teachers who work hard.",
+              "explanation": "Most students admire teachers who work hard."
+            }
+          ]
+        },
+        {
+          "id": "sec1_wordlist_ex3",
+          "title": "Exercise 2: Check the one that suits the blank naturally.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "u9_e3_1",
+              "content": "1. If you help other people, ________________ .",
+              "options": [
+                "a. they will admire you",
+                "b. they will struggle with you"
+              ],
+              "correctAnswer": "a. they will admire you",
+              "explanation": "they will admire you"
+            },
+            {
+              "id": "u9_e3_2",
+              "content": "2. After the fight, ________________ .",
+              "options": [
+                "a. the room was in disorder",
+                "b. the room got a reputation"
+              ],
+              "correctAnswer": "a. the room was in disorder",
+              "explanation": "the room was in disorder"
+            },
+            {
+              "id": "u9_e3_3",
+              "content": "3. The people wanted change, ________________ .",
+              "options": [
+                "a. so they defended themselves",
+                "b. so they elected a new person to govern the country"
+              ],
+              "correctAnswer": "b. so they elected a new person to govern the country",
+              "explanation": "so they elected a new person to govern the country"
+            },
+            {
+              "id": "u9_e3_4",
+              "content": "4. Because I could not solve the problem, ________________ .",
+              "options": [
+                "a. I became frustrated",
+                "b. there was a division between the animals"
+              ],
+              "correctAnswer": "a. I became frustrated",
+              "explanation": "I became frustrated"
+            },
+            {
+              "id": "u9_e3_5",
+              "content": "5. She found a mistake on her homework, so ________________ .",
+              "options": [
+                "a. she aided it to be fixed",
+                "b. she attempted to correct it"
+              ],
+              "correctAnswer": "b. she attempted to correct it",
+              "explanation": "she attempted to correct it"
+            },
+            {
+              "id": "u9_e3_6",
+              "content": "6. After returning from the library, ________________ .",
+              "options": [
+                "a. we could cooperate with our books",
+                "b. we had plenty of books to read"
+              ],
+              "correctAnswer": "b. we had plenty of books to read",
+              "explanation": "we had plenty of books to read"
+            },
+            {
+              "id": "u9_e3_7",
+              "content": "7. After her friends laughed at her, ________________ .",
+              "options": [
+                "a. she thought that the royal palace looked beautiful",
+                "b. she knew that her last remark was stupid"
+              ],
+              "correctAnswer": "b. she knew that her last remark was stupid",
+              "explanation": "she knew that her last remark was stupid"
+            },
+            {
+              "id": "u9_e3_8",
+              "content": "8. You cannot tell me what to do. ________________ .",
+              "options": [
+                "a. I live in the capital city",
+                "b. You don't have any authority"
+              ],
+              "correctAnswer": "b. You don't have any authority",
+              "explanation": "You don't have any authority"
+            },
+            {
+              "id": "u9_e3_9",
+              "content": "9. Read the directions carefully. ________________ .",
+              "options": [
+                "a. They will cause destruction",
+                "b. They will enable you to complete the project"
+              ],
+              "correctAnswer": "b. They will enable you to complete the project",
+              "explanation": "They will enable you to complete the project"
+            },
+            {
+              "id": "u9_e3_10",
+              "content": "10. Before he can feel better, ________________ .",
+              "options": [
+                "a. he must find a way to relieve the pain",
+                "b. he must become a slave"
+              ],
+              "correctAnswer": "a. he must find a way to relieve the pain",
+              "explanation": "he must find a way to relieve the pain"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Tale of Bartelby O'Boyle</h1><p style=\"margin-bottom: 1rem;\">Long ago, there was a clever man by the name of Bartelby O'Boyle. As a boy, he was kept as a <b>slave</b> by the <b>royal</b> family. He saw other children play, but he always had to work. This <b>frustrated</b> him very much. But he was not <b>stupid</b>, and he wanted to change things.</p><p style=\"margin-bottom: 1rem;\">Then one day there was a <b>struggle</b> for <b>authority</b> in the kingdom. There was a <b>division</b> of the people, and one group fought against another group to see which would <b>govern</b> the kingdom. There was <b>disorder</b> in the kingdom. Bartelby ran away. He saw much fighting and <b>destruction</b>. Many people had nothing to eat; Bartelby decided to <b>aid</b> them. He would help them get food. But how?</p><p style=\"margin-bottom: 1rem;\">Bartelby went to the <b>capital</b> to find an answer. There, he met a man named Gilliam. A group of men <b>attempted</b> to hurt Gilliam. Bartelby <b>defended</b> him. Then, he gave Gilliam some food to <b>relieve</b> his hunger. After that, the two became friends. They took food from the rich and gave it to the poor.</p><p style=\"margin-bottom: 1rem;\">Soon, other people <b>cooperated</b> with them. Working together <b>enabled</b> them to take more food, but they only took food from people who had <b>plenty</b>, and they always gave it to those who had none. Because of this, Bartleby gained a <b>reputation</b> across the kingdom. Even today, many people <b>admire</b> him for helping the poor.</p></div>",
+      "imageUrl": "/unit9_story.png",
+      "sections": [
+        {
+          "id": "sec2_reading",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "u9_r_1",
+              "content": "1. What is this story about?",
+              "options": [
+                "a. How a slave became a king",
+                "b. How a stupid mistake made Bartelby a slave",
+                "c. How a lad found plenty of food",
+                "d. How a man aided poor people"
+              ],
+              "correctAnswer": "d. How a man aided poor people",
+              "explanation": "How a man aided poor people"
+            },
+            {
+              "id": "u9_r_2",
+              "content": "2. What did Bartelby do in the capital?",
+              "options": [
+                "a. He cooperated with his group of friends.",
+                "b. He enabled Gilliam to have authority over the king.",
+                "c. He relieved Gilliam of his hunger.",
+                "d. He found a mask to wear."
+              ],
+              "correctAnswer": "c. He relieved Gilliam of his hunger.",
+              "explanation": "He relieved Gilliam of his hunger."
+            },
+            {
+              "id": "u9_r_3",
+              "content": "3. In paragraph 1, we can infer that________",
+              "options": [
+                "a. Bartelby did not like the royal family",
+                "b. the family attempted to cause disorder",
+                "c. the other children were not clever",
+                "d. Bartelby had a bad reputation"
+              ],
+              "correctAnswer": "a. Bartelby did not like the royal family",
+              "explanation": "Bartelby did not like the royal family"
+            },
+            {
+              "id": "u9_r_4",
+              "content": "4. According to the passage, all the following are true EXCEPT",
+              "options": [
+                "a. people today still admire Bartleby",
+                "b. Gilliam struggled with Bartley",
+                "c. Bartleby defended Gilliam",
+                "d. the fighting caused destruction"
+              ],
+              "correctAnswer": "b. Gilliam struggled with Bartley",
+              "explanation": "Gilliam struggled with Bartley"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

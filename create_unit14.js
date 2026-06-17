@@ -1,0 +1,259 @@
+const fs = require('fs');
+
+const words = [
+  { word: 'apparent', pron: '[əˈpærənt]', pos: 'adj', def: 'If something is apparent, it is easy to see.', ex: 'Her happiness was apparent from the smile on her face.', icon: '😎' },
+  { word: 'blind', pron: '[blaind]', pos: 'adj', def: 'When people are blind, they cannot see.', ex: 'The blind man didn’t see the hole and almost fell in.', icon: '😎' },
+  { word: 'calculate', pron: '[ˈkælkjəleit]', pos: 'v', def: 'To calculate is to find an answer using math.', ex: 'I calculated how much money I would need to buy the car.', icon: '😎' },
+  { word: 'chat', pron: '[tʃæt]', pos: 'v', def: 'To chat is to talk with someone.', ex: 'Even though they were far apart, the couple chatted every day.', icon: '😎' },
+  { word: 'commit', pron: '[kəˈmit]', pos: 'v', def: 'To commit to something is to promise to do it.', ex: 'Seth wanted to go home, but he had committed to finishing the job.', icon: '😎' },
+  { word: 'compose', pron: '[kəmˈpouz]', pos: 'v', def: 'To compose something is to make it from smaller parts.', ex: 'Tonya composed her report using many sources of information.', icon: '😎' },
+  { word: 'dormitory', pron: '[ˈdɔːrmətɔːri]', pos: 'n', def: 'A dormitory is a school building where students live.', ex: 'I will move into the dormitory at the beginning of the school year.', icon: '😎' },
+  { word: 'exhaust', pron: '[igˈzɔːst]', pos: 'v', def: 'To exhaust someone is to make them tired.', ex: 'John exhausted himself by swimming all day.', icon: '😎' },
+  { word: 'greenhouse', pron: '[ˈgriːnhaus]', pos: 'n', def: 'A greenhouse is a small glass building that is used to grow plants.', ex: 'We have a small greenhouse in our backyard where we grow plants.', icon: '😎' },
+  { word: 'ignore', pron: '[igˈnɔːr]', pos: 'v', def: 'To ignore something is to act like you do not see or hear it.', ex: 'I ignored the message he was making and kept studying.', icon: '😎' },
+  { word: 'obvious', pron: '[ˈɑbviəs]', pos: 'adj', def: 'If something is obvious, it is clear and easily seen.', ex: 'It was obvious that he was tired. He kept falling asleep.', icon: '😎' },
+  { word: 'physics', pron: '[ˈfiziks]', pos: 'n', def: 'Physics is a science that deals with energy and how it affects things.', ex: 'In physics class, we used Newton’s Cradle to learn about energy.', icon: '😎' },
+  { word: 'portion', pron: '[ˈpɔːrʃən]', pos: 'n', def: 'A portion of something is a part of it.', ex: 'I only ate a small portion of the pizza.', icon: '😎' },
+  { word: 'remind', pron: '[riˈmaind]', pos: 'v', def: 'To remind someone is to tell them to remember to do something.', ex: 'Nick’s dad reminded him to do his homework.', icon: '😎' },
+  { word: 'secretary', pron: '[ˈsekrətəri]', pos: 'n', def: 'A secretary is a person who works in an office.', ex: 'Rebecca asked her secretary to type a report.', icon: '😎' },
+  { word: 'severe', pron: '[siˈviər]', pos: 'adj', def: 'If something is severe, it is very bad or serious.', ex: 'After hitting his hand with the hammer, Sam was in severe pain.', icon: '😎' },
+  { word: 'talent', pron: '[ˈtælənt]', pos: 'n', def: 'If someone has a talent, they are naturally able to do it well.', ex: 'Maria has a talent for playing the piano.', icon: '😎' },
+  { word: 'thesis', pron: '[ˈθiːsis]', pos: 'n', def: 'A thesis is an idea that needs to be proved.', ex: 'She did not support her thesis very well.', icon: '😎' },
+  { word: 'uniform', pron: '[ˈjuːnəfɔːrm]', pos: 'n', def: 'A uniform is a piece of clothing worn by people of the same group.', ex: 'All the members of our marching band wear matching uniforms.', icon: '😎' },
+  { word: 'vision', pron: '[ˈviʒən]', pos: 'n', def: 'Vision is the act of seeing.', ex: 'The eye doctor tested my vision.', icon: '😎' }
+];
+
+let wordListHtml = `<div style="display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;"><div style="display: flex; flex-direction: column; gap: 16px;"><img src="/unit14_word_list_1.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /><img src="/unit14_word_list_2.png" style="width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" /></div><div style="display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;"><h3 style="font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;">Detailed Meanings</h3><div style="display: flex; flex-direction: column; gap: 24px;">`;
+
+words.forEach(w => {
+  wordListHtml += `<div style="display: flex; gap: 16px; align-items: flex-start;"><div style="width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;">😎</div><div style="display: flex; flex-direction: column; gap: 6px;"><div style="display: flex; align-items: baseline; gap: 8px;"><span style="font-size: 1.25rem; font-weight: 800; color: #65a30d;">${w.word}</span><span style="font-size: 0.875rem; color: #94a3b8; font-family: monospace;">${w.pron}</span><span style="font-size: 0.875rem; color: #94a3b8; font-style: italic;">${w.pos}.</span></div><div style="color: #475569; font-size: 0.95rem; line-height: 1.5;">${w.def}</div><div style="color: #64748b; font-size: 0.95rem; font-style: italic;">→ ${w.ex}</div></div></div>`;
+});
+
+wordListHtml += `</div></div></div>`;
+
+let storyHtml = `<div style="font-family: Arial, sans-serif; "><h1 style="color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">The Good Student</h1><p style="margin-bottom: 1rem;">Sue left her <b>dormitory</b> early that morning. She had even washed her <b>uniform</b> the night before. She wanted to look nice for the day.</p><p style="margin-bottom: 1rem;">Sue was <b>committed</b> to learning, and she had a <b>talent</b> for getting good grades. In fact, Sue didn’t sleep much. She <b>composed</b> a paper and found the perfect <b>thesis</b> about the importance of <b>greenhouses</b>. She also studied for her <b>physics</b> test. Sue was already tired.</p><p style="margin-bottom: 1rem;">During the test, she <b>calculated</b> her answers. Soon, she felt sick. Her face got hot, and her <b>vision</b> began to blur. She was <b>blind</b> for a moment. The teacher saw Sue’s <b>apparent</b> sickness. He wanted to send her to the nurse. But she wouldn’t go. Sue still had a <b>portion</b> of the test to finish.</p><p style="margin-bottom: 1rem;">After that, Sue went to the nurse. After seeing the <b>secretary</b>, she waited.</p><p style="margin-bottom: 1rem;">A few minutes later, the nurse came in with a glass of juice and told Sue they needed to <b>chat</b>. "It is <b>obvious</b> that you have <b>exhausted</b> yourself," the nurse said. "If you keep working so hard, it could have <b>severe</b> results."</p><p style="margin-bottom: 1rem;">"My parents tell me that all the time. I guess I shouldn’t <b>ignore</b> them," Sue said.</p><p style="margin-bottom: 1rem;">"You have to <b>remind</b> yourself it is OK to rest," the nurse said.</p><p style="margin-bottom: 1rem;">When Sue got back to her room, she went right to bed. She made sure she got enough rest every night after that.</p></div>`;
+
+const data = {
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 14",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": wordListHtml,
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. a part of something",
+              "options": [
+                "a. greenhouse",
+                "b. secretary",
+                "c. thesis",
+                "d. portion"
+              ],
+              "correctAnswer": "d. portion",
+              "explanation": "portion nghĩa là một phần (a part of something)."
+            },
+            {
+              "id": "2",
+              "content": "2. easy to see",
+              "options": [
+                "a. blind",
+                "b. talent",
+                "c. apparent",
+                "d. severe"
+              ],
+              "correctAnswer": "c. apparent",
+              "explanation": "apparent nghĩa là rõ ràng, dễ thấy (easy to see)."
+            },
+            {
+              "id": "3",
+              "content": "3. to make something",
+              "options": [
+                "a. compose",
+                "b. commit",
+                "c. exhaust",
+                "d. ignore"
+              ],
+              "correctAnswer": "a. compose",
+              "explanation": "compose nghĩa là tạo nên, sáng tác (to make something)."
+            },
+            {
+              "id": "4",
+              "content": "4. to find an answer",
+              "options": [
+                "a. ignore",
+                "b. exhaust",
+                "c. calculate",
+                "d. remind"
+              ],
+              "correctAnswer": "c. calculate",
+              "explanation": "calculate nghĩa là tính toán để tìm ra kết quả (to find an answer)."
+            },
+            {
+              "id": "5",
+              "content": "5. a kind of science",
+              "options": [
+                "a. physics",
+                "b. thesis",
+                "c. vision",
+                "d. uniform"
+              ],
+              "correctAnswer": "a. physics",
+              "explanation": "physics nghĩa là vật lý học, một môn khoa học (a kind of science)."
+            },
+            {
+              "id": "6",
+              "content": "6. the act of seeing",
+              "options": [
+                "a. dormitory",
+                "b. vision",
+                "c. physics",
+                "d. greenhouse"
+              ],
+              "correctAnswer": "b. vision",
+              "explanation": "vision nghĩa là tầm nhìn, thị lực (the act of seeing)."
+            },
+            {
+              "id": "7",
+              "content": "7. unable to see",
+              "options": [
+                "a. severe",
+                "b. apparent",
+                "c. obvious",
+                "d. blind"
+              ],
+              "correctAnswer": "d. blind",
+              "explanation": "blind nghĩa là mù, không thể thấy (unable to see)."
+            },
+            {
+              "id": "8",
+              "content": "8. a building used to grow plants",
+              "options": [
+                "a. thesis",
+                "b. greenhouse",
+                "c. portion",
+                "d. talent"
+              ],
+              "correctAnswer": "b. greenhouse",
+              "explanation": "greenhouse là nhà kính, dùng để trồng cây (a building used to grow plants)."
+            },
+            {
+              "id": "9",
+              "content": "9. a school building",
+              "options": [
+                "a. secretary",
+                "b. talent",
+                "c. dormitory",
+                "d. uniform"
+              ],
+              "correctAnswer": "c. dormitory",
+              "explanation": "dormitory là ký túc xá, toà nhà cho sinh viên ở (a school building)."
+            },
+            {
+              "id": "10",
+              "content": "10. to talk",
+              "options": [
+                "a. chat",
+                "b. compose",
+                "c. remind",
+                "d. calculate"
+              ],
+              "correctAnswer": "a. chat",
+              "explanation": "chat nghĩa là trò chuyện (to talk)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": storyHtml,
+      "imageUrl": "/unit14_story.png",
+      "sections": [
+        {
+          "id": "sec2_reading",
+          "title": "Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. What is this story about?",
+              "options": [
+                "a. A nurse reminding a student about her history paper",
+                "b. How to calculate an answer",
+                "c. A girl’s apparent talent for science",
+                "d. A girl who studies so much that she gets sick"
+              ],
+              "correctAnswer": "d. A girl who studies so much that she gets sick",
+              "explanation": "Câu chuyện kể về một cô gái học quá nhiều đến mức bị ốm."
+            },
+            {
+              "id": "12",
+              "content": "2. According to the passage, why did Sue stay up late the night before?",
+              "options": [
+                "a. She was washing her uniform.",
+                "b. She was ignoring her parents on purpose.",
+                "c. She was composing a thesis.",
+                "d. She was cleaning her dormitory."
+              ],
+              "correctAnswer": "c. She was composing a thesis.",
+              "explanation": "Đoạn văn viết: 'She composed a paper and found the perfect thesis about the importance of greenhouses.'"
+            },
+            {
+              "id": "13",
+              "content": "3. What did the nurse bring into the room?",
+              "options": [
+                "a. A glass of juice",
+                "b. The secretary",
+                "c. Sue’s physics test",
+                "d. A vision chart"
+              ],
+              "correctAnswer": "a. A glass of juice",
+              "explanation": "Đoạn văn viết: 'the nurse came in with a glass of juice...'"
+            },
+            {
+              "id": "14",
+              "content": "4. According to the passage, what was obvious to the nurse after seeing Sue?",
+              "options": [
+                "a. Sue had committed herself to learning.",
+                "b. Sue had exhausted herself.",
+                "c. Sue had done only a portion of the test.",
+                "d. Sue had become blind."
+              ],
+              "correctAnswer": "b. Sue had exhausted herself.",
+              "explanation": "Y tá nói: 'It is obvious that you have exhausted yourself.'"
+            },
+            {
+              "id": "15",
+              "content": "5. As they chatted, what did the nurse say would cause Sue severe sickness?",
+              "options": [
+                "a. Working so hard",
+                "b. Eating too much pizza",
+                "c. Ignoring her teacher",
+                "d. Washing her uniform"
+              ],
+              "correctAnswer": "a. Working so hard",
+              "explanation": "Y tá nói 'If you keep working so hard, it could have severe results.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+fs.writeFileSync('unit14.json', JSON.stringify(data, null, 2));
+console.log('Successfully created unit14.json');
