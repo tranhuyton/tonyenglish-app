@@ -1,11 +1,10 @@
 {
   "basicInfo": {
-    "id": "unit17",
-    "title": "Unit 17",
-    "description": "Vocabulary and Reading Comprehension",
-    "level": "Volume 4",
-    "unitNumber": 17,
-    "imageUrl": "/unit17_vol4_story.png"
+    "skill": "Standard-Reading",
+    "title": "Unit 17: Volume 4",
+    "category": "exercise",
+    "timeLimit": 0,
+    "description": "4000 Essential English Words - Volume 4"
   },
   "parts": [
     {

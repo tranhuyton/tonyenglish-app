@@ -1,8 +1,10 @@
 {
   "basicInfo": {
-    "bookId": "4000-essential-english-words-4",
-    "unitId": "unit-16",
-    "title": "Unit 16"
+    "skill": "Standard-Reading",
+    "title": "Unit 16: Volume 4",
+    "category": "exercise",
+    "timeLimit": 0,
+    "description": "4000 Essential English Words - Volume 4"
   },
   "parts": [
     {
