@@ -449,7 +449,7 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
         title: testRecord.title || (isImportMode ? 'Đề thi Import từ Excel/CSV' : ''),
         courseId: testRecord.course_id || 'all', 
         folderId: testRecord.folder_id || '', 
-        skill: testRecord.test_type || 'Standard-Reading',
+        skill: testRecord.test_type || 'SplitScreen (Standard)',
         category: testRecord.content_json?.basicInfo?.category || 'exercise', 
         mode: 'Đề thi',
         timeLimit: '40',
@@ -1001,9 +1001,8 @@ export default function TestEditorModal({ testData: testRecord, courses, folders
                       onChange={e => setTestData({...testData, basicInfo: {...testData.basicInfo, skill: e.target.value}})} 
                       className="w-full p-3 bg-slate-50 border border-slate-200 rounded-lg outline-none text-[14px] transition focus:border-[#00a651]"
                     >
-                      <option value="Standard-Listening">MCQ (Standard)</option>
-                      <option value="Standard-Reading">SplitScreen (Standard)</option>
-                      <option value="Split-Standard">Split (Standard)</option>
+                      <option value="SplitScreen (Standard)">SplitScreen (Standard)</option>
+                      <option value="MCQ (Standard)">MCQ (Standard)</option>
                       <option value="IELTS-Listening">Listening (IELTS)</option>
                       <option value="IELTS-Reading">Reading (IELTS)</option>
                       <option value="Mixed-Paper">Mixed Paper (Có hình)</option>

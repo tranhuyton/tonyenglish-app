@@ -181,7 +181,7 @@ export default function BatchImportModal({ courses, supabase, onClose, onSuccess
   ]);
   const [courseId, setCourseId] = useState('all');
   const [category, setCategory] = useState('exercise');
-  const [skill, setSkill] = useState('Standard-Reading');
+  const [skill, setSkill] = useState('SplitScreen (Standard)');
   const [timeLimit, setTimeLimit] = useState('40');
   const [isProcessing, setIsProcessing] = useState(false);
   const [isDone, setIsDone] = useState(false);
@@ -298,8 +298,8 @@ export default function BatchImportModal({ courses, supabase, onClose, onSuccess
             <div className="min-w-[150px]">
               <label className="text-[11px] font-bold text-slate-500 block mb-1 uppercase tracking-wide">Dạng đề</label>
               <select value={skill} onChange={e => setSkill(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-[13px] font-bold text-slate-700 outline-none bg-white focus:border-[#2bd6eb]">
-                <option value="Standard-Listening">MCQ (Standard)</option>
-                <option value="Standard-Reading">SplitScreen (Standard)</option>
+                <option value="MCQ (Standard)">MCQ (Standard)</option>
+                <option value="SplitScreen (Standard)">SplitScreen (Standard)</option>
                 <option value="IELTS-Listening">Listening (IELTS)</option>
                 <option value="IELTS-Reading">Reading (IELTS)</option>
                 <option value="Mixed-Paper">🖼️ Mixed Paper (Có hình)</option>

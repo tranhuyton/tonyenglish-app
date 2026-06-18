@@ -13,8 +13,8 @@ let adminSearchTimer: any;
 
 function displayTestType(type: string | null | undefined): string {
   if (!type) return 'Đề thi';
-  if (type === 'Standard-Listening') return 'STANDARD-MCQ';
-  if (type === 'Standard-Reading') return 'STANDARD-SPLITSCREEN';
+  if (type === 'MCQ (Standard)') return 'STANDARD-MCQ';
+  if (type === 'SplitScreen (Standard)') return 'STANDARD-SPLITSCREEN';
   return type;
 }
 
@@ -764,7 +764,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
         id: 'new', 
         title: '', 
         folder_id: currentFolderId || '', 
-        test_type: mode === 'case-study' ? 'Case-Study' : 'Standard-Reading', 
+        test_type: mode === 'case-study' ? 'Case-Study' : 'SplitScreen (Standard)', 
         content_json: null, 
         mode 
     });
@@ -792,7 +792,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
     const payload: any = { 
        title: finalData.basicInfo?.title || 'Untitled Test', 
-       test_type: finalData.basicInfo?.skill || 'Standard-Reading', 
+       test_type: finalData.basicInfo?.skill || 'SplitScreen (Standard)', 
        content_json: finalData, 
        json_config: parsedJsonConfig, 
        folder_id: resolvedFolderId, 
@@ -1859,8 +1859,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
           {/* VIEW: KHO ĐỀ THI VÀ BÀI TẬP */}
           {activeTab === 'library' && (
             <div className="space-y-4 md:space-y-6">
-              <div className="flex flex-col lg:flex-row justify-between gap-3 md:gap-4 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm relative z-20">
-                <div className="flex flex-wrap items-center gap-3">
+              <div className="flex flex-col gap-4 bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm relative z-20">
+                <div className="flex flex-wrap items-center justify-center gap-3">
                 <div className="flex bg-slate-100 rounded-lg p-1 border border-slate-200 shadow-sm shrink-0 overflow-x-auto custom-scrollbar">
                   <button onClick={() => handleBulkVisibility(true)} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-emerald-600 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">👁️ Hiện</button>
                   <button onClick={() => handleBulkVisibility(false)} className="px-3 md:px-4 py-1.5 text-[11px] md:text-[13px] font-bold text-slate-500 hover:bg-white rounded transition flex items-center gap-1 active:scale-95 whitespace-nowrap">👁️‍🗨️ Ẩn</button>
@@ -1882,8 +1882,8 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                    <span className="text-[11px] font-bold text-purple-800 hidden sm:inline ml-1 uppercase tracking-tight">Dạng:</span>
                    <select value={targetMoveTestType} onChange={e=>setTargetMoveTestType(e.target.value)} className="border border-purple-200 bg-white rounded px-2 py-1 md:py-1.5 text-[11px] md:text-[13px] font-bold text-slate-700 outline-none w-[140px] md:w-[160px] truncate focus:border-purple-500">
                       <option value="">-- Chọn Dạng Đề --</option>
-                      <option value="Standard-Listening">MCQ (Standard)</option>
-                      <option value="Standard-Reading">SplitScreen (Standard)</option>
+                      <option value="MCQ (Standard)">MCQ (Standard)</option>
+                      <option value="SplitScreen (Standard)">SplitScreen (Standard)</option>
                       <option value="Mixed-Paper">Mixed Paper (có hình)</option>
                       <option value="Computer">Computer Test (IELTS)</option>
                       <option value="Paper">Paper Test (IELTS)</option>
@@ -1892,15 +1892,15 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                 </div>
               </div>
                 
-                <div className="flex flex-col sm:flex-row gap-3 flex-1 justify-end w-full lg:w-auto">
-                  <input type="text" placeholder="Tìm kiếm tên..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:max-w-[200px] px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] text-[13px] md:text-sm transition-colors" />
+                {/* Dòng tìm kiếm và filter chuyển xuống dưới, phóng to và căn giữa */}
+                <div className="flex flex-col sm:flex-row gap-3 w-full justify-center items-center mt-2 border-t border-slate-100 pt-4">
+                  <input type="text" placeholder="Tìm kiếm tên đề thi, bài tập..." defaultValue={searchQuery} onChange={e => { clearTimeout(adminSearchTimer); adminSearchTimer = setTimeout(() => setSearchQuery(e.target.value), 350); }} className="w-full sm:flex-1 max-w-[400px] px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl outline-none focus:border-[#2bd6eb] focus:ring-2 focus:ring-blue-100 text-[13px] md:text-sm transition-all" />
                   
-                  <select value={filterCourse} onChange={e => setFilterCourse(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
+                  <select value={filterCourse} onChange={e => setFilterCourse(e.target.value)} className="w-full sm:w-auto px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white focus:border-[#2bd6eb] focus:ring-2 focus:ring-blue-100 transition-all cursor-pointer">
                     <option value="all">Tất cả khóa học</option>{courses.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
                   </select>
 
-
-                  <select value={sortTest} onChange={e => setSortTest(e.target.value)} className="w-full sm:w-auto px-3 py-2 md:py-2.5 border border-slate-200 rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white">
+                  <select value={sortTest} onChange={e => setSortTest(e.target.value)} className="w-full sm:w-auto px-4 py-2.5 md:py-3 border border-slate-300 shadow-sm rounded-lg md:rounded-xl text-[13px] md:text-sm font-bold text-slate-600 outline-none bg-white focus:border-[#2bd6eb] focus:ring-2 focus:ring-blue-100 transition-all cursor-pointer">
                     <option value="date-desc">🕐 Mới nhất</option>
                     <option value="date-asc">🕐 Cũ nhất</option>
                     <option value="name-asc">🔤 Tên A → Z</option>
@@ -1919,6 +1919,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         <th className="px-2 py-3 md:py-4 w-10"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedTests.length > 0 && selectedTests.length === filteredLibraryTests.length} onChange={(e) => handleSelectAll(e, filteredLibraryTests)} /></th>
                         <th className="px-4 md:px-6 py-3 md:py-4">TÊN MỤC</th>
                         <th className="px-4 md:px-6 py-3 md:py-4">KHÓA HỌC</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4">DẠNG ĐỀ</th>
                         <th className="px-4 md:px-6 py-3 md:py-4">CẬP NHẬT</th>
                         <th className="px-4 md:px-6 py-3 md:py-4 text-center">TRẠNG THÁI</th>
                         <th className="px-4 md:px-6 py-3 md:py-4 text-center">THỨ TỰ</th>
@@ -1926,7 +1927,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
-                      {paginatedTests.length === 0 ? <tr><td colSpan={9} className="text-center py-8 md:py-10 text-[13px] md:text-sm text-slate-400 font-medium">Không tìm thấy mục nào phù hợp.</td></tr> : (
+                      {paginatedTests.length === 0 ? <tr><td colSpan={10} className="text-center py-8 md:py-10 text-[13px] md:text-sm text-slate-400 font-medium">Không tìm thấy mục nào phù hợp.</td></tr> : (
                         paginatedTests.map((test, index) => (
                           <tr key={test.id} className={`hover:bg-slate-50 transition group bg-white ${selectedTests.includes(test.id) ? 'bg-blue-50/30' : ''}`}>
                             <td className="px-3 md:px-4 py-4 md:py-5 text-center text-[12px] md:text-[13px] font-bold text-slate-400">{(testCurrentPage - 1) * testItemsPerPage + index + 1}</td>
@@ -1938,7 +1939,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                                <div className="text-[10px] md:text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{test.folder_id ? `Đã gán: ${allFolders.find(f => f.id === test.folder_id)?.title || 'Thư mục khác'}` : 'Chưa gán thư mục'}</div>
                             </td>
                             <td className="px-4 md:px-6 py-4 md:py-5">{test.course_id ? <span className="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-[10px] md:text-[11px] font-bold text-slate-600">{getCourseNameForTest(test.course_id)}</span> : <span className="text-[10px] md:text-[11px] italic text-slate-400">-- Chung --</span>}</td>
-
+                            <td className="px-4 md:px-6 py-4 md:py-5"><span className="px-2 py-1 bg-indigo-50 border border-indigo-200 text-indigo-700 rounded text-[10px] md:text-[11px] font-bold whitespace-nowrap">{test.test_type || '---'}</span></td>
                             <td className="px-4 md:px-6 py-4 md:py-5"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(test.created_at)}</div></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[10px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded transition-colors ${test.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>

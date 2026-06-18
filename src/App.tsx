@@ -6,7 +6,7 @@ import StudentPortal from './StudentPortal';
 // 🚀 CODE SPLITTING: Lazy load các component nặng — chỉ tải khi cần
 const ComputerTest = React.lazy(() => import('./ComputerTest'));
 const PaperTest = React.lazy(() => import('./PaperTest'));
-const StandardTest = React.lazy(() => import('./StandardTest'));
+const StandardMCQTest = React.lazy(() => import('./StandardMCQTest'));
 const StandardSplitScreenTest = React.lazy(() => import('./StandardSplitScreenTest'));
 const AdminPanel = React.lazy(() => import('./AdminPanel'));
 const AdminLogin = React.lazy(() => import('./AdminLogin'));
@@ -211,7 +211,8 @@ export default function App() {
     try {
       setCurrentTestData(data); setReturnView(currentView); sessionStorage.setItem('lms_return_view', currentView);
       let targetView = type.toLowerCase();
-      if (targetView.includes('igcse-direct')) targetView = 'igcse-direct';
+      if (data?.title?.includes('Volume 4') || data?.title?.includes('Volume 3')) targetView = 'standard-splitscreen';
+      else if (targetView.includes('igcse-direct')) targetView = 'igcse-direct';
       else if (targetView.includes('igcse')) targetView = 'igcse';
       else if (targetView.includes('standard-reading') || (targetView.includes('splitscreen') && targetView.includes('standard'))) targetView = 'standard-splitscreen';
       else if (targetView.includes('split-standard')) targetView = 'case-study';
@@ -245,7 +246,7 @@ export default function App() {
         {currentView === 'computer' && <ComputerTest onBack={handleReturnFromTest} testData={currentTestData} />}
         {currentView === 'paper' && <PaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
         {currentView === 'mixed-paper' && <MixedPaperTest onBack={handleReturnFromTest} testData={currentTestData} />}
-        {currentView === 'standard' && <StandardTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
+        {currentView === 'standard' && <StandardMCQTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
         {currentView === 'standard-splitscreen' && <StandardSplitScreenTest onBack={handleReturnFromTest} testData={currentTestData} onFinish={handleReturnFromTest} />}
         {currentView === 'case-study' && <SplitScreenTest onBack={handleReturnFromTest} testData={currentTestData} />}
         {currentView === 'igcse' && <IgcsePaperTest onBack={handleReturnFromTest} testData={currentTestData} onStartTest={handleStartTest} />}
