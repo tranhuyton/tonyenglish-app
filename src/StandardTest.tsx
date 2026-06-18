@@ -928,7 +928,7 @@ const handleFinish = async () => {
 
         // Add specific tailwind classes for table elements
         if (tagName === 'table') {
-          props.className = `${props.className || ''} w-full border-collapse border border-slate-400 my-4 text-[15px]`.trim();
+          props.className = `${props.className || ''} w-full min-w-max border-collapse border border-slate-400 text-[15px]`.trim();
         } else if (tagName === 'th') {
           props.className = `${props.className || ''} border border-slate-400 bg-slate-100 p-3 font-bold text-left text-slate-800`.trim();
         } else if (tagName === 'td') {
@@ -942,7 +942,11 @@ const handleFinish = async () => {
           return React.createElement(tagName, props);
         }
 
-        return React.createElement(tagName, props, children.length > 0 ? children : null);
+        const element = React.createElement(tagName, props, children.length > 0 ? children : null);
+        if (tagName === 'table') {
+          return React.createElement('div', { key: `${pathKey}-wrapper`, className: 'w-full overflow-x-auto custom-scrollbar my-6 shadow-sm rounded-lg border border-slate-300' }, element);
+        }
+        return element;
       }
       return null;
     };
