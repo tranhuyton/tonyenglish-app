@@ -435,7 +435,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Ngay đoạn 1 có viết: '...they were outright enemies. The two men got into vicious arguments all the time.' (...họ là những kẻ thù hoàn toàn của nhau. Hai người đàn ông này lúc nào cũng vướng vào những cuộc tranh cãi ác ý). Câu hỏi phản ánh đúng y chang thông tin này nha!",
+              "explanation": "Câu này là True (Đúng) nhé. Ngay đoạn 1 có viết: '...they were outright enemies. The two men got into vicious arguments all the time.' (...họ là những kẻ thù hoàn toàn của nhau. Hai người đàn ông này lúc nào cũng vướng vào những cuộc tranh cãi ác ý). Câu hỏi phản ánh đúng y chang thông tin này !",
               "correctAnswer": "T"
             },
             {
@@ -445,7 +445,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 5 cho biết họ cẩn thận lấy từng khúc xương ra, sau đó: 'And to keep the bones together, they tied them with elastic strips.' (Và để giữ các khúc xương lại với nhau, họ đã buộc chúng bằng các dải thun). Họ dùng dây thun để 'buộc chúng lại' (tie them together) chứ không phải để 'đạt được chúng' (attain them) như câu hỏi viết đâu nhé.",
+              "explanation": "Câu này là False (Sai) . Đoạn 5 cho biết họ cẩn thận lấy từng khúc xương ra, sau đó: 'And to keep the bones together, they tied them with elastic strips.' (Và để giữ các khúc xương lại với nhau, họ đã buộc chúng bằng các dải thun). Họ dùng dây thun để 'buộc chúng lại' (tie them together) chứ không phải để 'đạt được chúng' (attain them) như câu hỏi viết đâu nhé.",
               "correctAnswer": "F"
             },
             {
@@ -455,7 +455,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Trong đoạn 2 có câu: 'Tim couldn’t conceive a plan to remove the huge skeleton all by himself. Such an endeavor would be too arduous.' (Tim không thể hình dung ra một kế hoạch để tự mình gỡ bỏ bộ xương khổng lồ. Một nỗ lực như vậy sẽ quá gian khổ). Hoàn toàn khớp với ý của câu hỏi luôn!",
+              "explanation": "Câu này là True (Đúng) nhé. Trong đoạn 2 có câu: 'Tim couldn’t conceive a plan to remove the huge skeleton all by himself. Such an endeavor would be too arduous.' (Tim không thể hình dung ra một kế hoạch để tự mình gỡ bỏ bộ xương khổng lồ. Một nỗ lực như vậy sẽ quá gian khổ). Hoàn toàn khớp với ý của câu hỏi luôn!",
               "correctAnswer": "T"
             },
             {
@@ -465,7 +465,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Bạn xem đoạn 4 sẽ thấy: 'Dean thought that Tim’s claim might be dubious.' (Dean nghĩ rằng lời khẳng định của Tim có thể là đáng ngờ). Chứ không phải 'Tim's ego' (cái tôi của Tim) đáng ngờ đâu nhé!",
+              "explanation": "Câu này là False (Sai) . Bạn xem đoạn 4 sẽ thấy: 'Dean thought that Tim’s claim might be dubious.' (Dean nghĩ rằng lời khẳng định của Tim có thể là đáng ngờ). Chứ không phải 'Tim's ego' (cái tôi của Tim) đáng ngờ đâu nhé!",
               "correctAnswer": "F"
             },
             {
@@ -475,7 +475,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 2 ghi rất rõ: '...excavated the dirt around it. As he dug, he uncovered more jagged bones.' (...đào lớp bụi bẩn xung quanh nó. Khi đào, anh ấy phát hiện ra nhiều đoạn xương lởm chởm hơn). Vậy xương ở đây là 'jagged bones' (lởm chởm) chứ không phải 'engraved bones' (xương được khắc chữ) nhé!",
+              "explanation": "Câu này là False (Sai) . Đoạn 2 ghi rất rõ: '...excavated the dirt around it. As he dug, he uncovered more jagged bones.' (...đào lớp bụi bẩn xung quanh nó. Khi đào, anh ấy phát hiện ra nhiều đoạn xương lởm chởm hơn). Vậy xương ở đây là 'jagged bones' (lởm chởm) chứ không phải 'engraved bones' (xương được khắc chữ) nhé!",
               "correctAnswer": "F"
             }
           ],
@@ -495,7 +495,7 @@
                 "Dean was dubious about Tim.",
                 "They were both vicious."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Để biết tại sao Tim và Dean không thể chung sống hòa bình, bạn nhìn vào đoạn 1: 'They couldn’t coexist peacefully because their egos were too large.' (Họ không thể cùng tồn tại một cách hòa bình bởi vì cái tôi của họ quá lớn). Vậy chọn A là chuẩn xác nhất nha!",
+              "explanation": "Đáp án đúng là A nhé. Để biết tại sao Tim và Dean không thể chung sống hòa bình, bạn nhìn vào đoạn 1: 'They couldn’t coexist peacefully because their egos were too large.' (Họ không thể cùng tồn tại một cách hòa bình bởi vì cái tôi của họ quá lớn). Vậy chọn A là chuẩn xác nhất !",
               "correctAnswer": "A"
             },
             {
@@ -507,7 +507,7 @@
                 "Tim used his shovel to build a house.",
                 "Tim used his shovel to engrave his name."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nha. Đoạn 2 miêu tả việc Tim dùng xẻng làm gì: 'He took his shovel and carefully excavated the dirt around it.' (Anh ấy lấy chiếc xẻng của mình và cẩn thận đào lớp bụi bẩn xung quanh nó). Vậy đáp án A diễn tả chính xác hành động này nhé!",
+              "explanation": "Đáp án đúng là A . Đoạn 2 miêu tả việc Tim dùng xẻng làm gì: 'He took his shovel and carefully excavated the dirt around it.' (Anh ấy lấy chiếc xẻng của mình và cẩn thận đào lớp bụi bẩn xung quanh nó). Vậy đáp án A diễn tả chính xác hành động này nhé!",
               "correctAnswer": "A"
             },
             {
@@ -519,7 +519,7 @@
                 "Tim was studying astrology.",
                 "Tim was trying to attain a diploma."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ngay câu đầu tiên của đoạn 2 đã viết: 'One day, Tim was searching for fossils on the periphery of the city...' (Một ngày nọ, Tim đang tìm kiếm hóa thạch ở vùng ngoại ô thành phố...). Rất rõ ràng phải không nào!",
+              "explanation": "Đáp án đúng là A nhé. Ngay câu đầu tiên của đoạn 2 đã viết: 'One day, Tim was searching for fossils on the periphery of the city...' (Một ngày nọ, Tim đang tìm kiếm hóa thạch ở vùng ngoại ô thành phố...). Rất rõ ràng phải không nào!",
               "correctAnswer": "A"
             },
             {
@@ -531,7 +531,7 @@
                 "They broke it into pieces.",
                 "They tied it with elastic."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nha. Đoạn 5 có nhắc đến: 'They used plaster to make a mold... They engraved their initials into it and gave it to the curator...' (Họ đã sử dụng thạch cao để tạo khuôn... Họ khắc tên viết tắt của mình vào đó và đưa nó cho người phụ trách...). Nên đáp án đúng phải là A nhé!",
+              "explanation": "Đáp án đúng là A . Đoạn 5 có nhắc đến: 'They used plaster to make a mold... They engraved their initials into it and gave it to the curator...' (Họ đã sử dụng thạch cao để tạo khuôn... Họ khắc tên viết tắt của mình vào đó và đưa nó cho người phụ trách...). Nên đáp án đúng phải là A nhé!",
               "correctAnswer": "A"
             },
             {
@@ -543,7 +543,7 @@
                 "“Let's go together.”",
                 "“I am the best fossil hunter.”"
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ở đoạn 4, Dean đã đáp lại lời nhờ vả của Tim rằng: 'If you’re serious about the skeleton, I’ll help.' (Nếu bạn nghiêm túc về bộ xương, tôi sẽ giúp). Vậy A là lựa chọn chính xác nha!",
+              "explanation": "Đáp án đúng là A nhé. Ở đoạn 4, Dean đã đáp lại lời nhờ vả của Tim rằng: 'If you’re serious about the skeleton, I’ll help.' (Nếu bạn nghiêm túc về bộ xương, tôi sẽ giúp). Vậy A là lựa chọn chính xác !",
               "correctAnswer": "A"
             }
           ],

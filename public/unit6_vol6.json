@@ -403,7 +403,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "True.",
+              "explanation": "Câu này là True (Đúng) . Trong đoạn 1 có viết: 'After the scientists publicized their discovery, many people thought it was fictitious.' (Sau khi các nhà khoa học công bố khám phá của họ, nhiều người cho rằng đó là chuyện hư cấu). Ý của câu hỏi miêu tả chính xác sự việc này!",
               "correctAnswer": "T"
             },
             {
@@ -413,7 +413,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "True.",
+              "explanation": "Câu này là True (Đúng) nhé. Ở đoạn 2 có câu: 'It was discovered that female komodo dragons can have babies without the help of their male counterparts.' (Người ta phát hiện ra rằng những con rồng komodo cái có thể sinh con mà không cần sự giúp đỡ của những con đực). Câu này hoàn toàn trùng khớp !",
               "correctAnswer": "T"
             },
             {
@@ -423,7 +423,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "F: Scientists verified that baby komodo dragons don’t have the same genes as their mothers and are devoid of genetic problems.",
+              "explanation": "Câu này là False (Sai) . Đoạn 3 khẳng định ngược lại: '...scientists verified that when Komodo babies are born, their genes aren’t the exact same genes as their mother. Also, they are devoid of any genetic problems.' (...các nhà khoa học đã xác minh rằng khi những con Komodo con được sinh ra... chúng không mắc phải bất kỳ vấn đề di truyền nào). Tức là chúng KHÔNG hề có hệ gen đồng nhất hay gặp vấn đề di truyền nhé!",
               "correctAnswer": "F"
             },
             {
@@ -433,7 +433,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "F: Scientists theorize that the special ability helps komodo dragons fend off extinction.",
+              "explanation": "Câu này là False (Sai) . Đoạn 4 có viết: 'Scientists theorize that Komodo dragons developed the ability because it helps the species fend off extinction.' (Các nhà khoa học đưa ra giả thuyết rằng rồng Komodo phát triển khả năng này vì nó giúp loài này chống lại sự tuyệt chủng). Khả năng này dùng để chống lại sự tuyệt chủng chứ không phải để lẩn tránh động vật ăn thịt (predators) đâu nhé!",
               "correctAnswer": "F"
             },
             {
@@ -443,7 +443,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "True.",
+              "explanation": "Câu này là True (Đúng) nhé. Theo đoạn 4: 'Then, the sparse population increases. Once again there is a surplus of lizards on one island.' (Sau đó, quần thể thưa thớt tăng lên. Một lần nữa lại có số lượng lớn thằn lằn dư thừa trên một hòn đảo). Nội dung câu hỏi đã tóm tắt chính xác diễn biến này!",
               "correctAnswer": "T"
             }
           ],
@@ -463,7 +463,7 @@
                 "They don't reproduce.",
                 "They reproduce every day."
               ],
-              "explanation": "They can reproduce without a father.",
+              "explanation": "Đáp án đúng là A nhé. Ở đoạn 2 có giải thích: '...female komodo dragons can have babies without the help of their male counterparts. This contradicts what scientists know...' (...rồng komodo cái có thể sinh con mà không cần sự giúp đỡ của con đực. Điều này mâu thuẫn với những gì các nhà khoa học biết...). Do đó chọn A là chuẩn nhất !",
               "correctAnswer": "A"
             },
             {
@@ -475,7 +475,7 @@
                 "Because they ride on boats.",
                 "Because they have a compass."
               ],
-              "explanation": "Because komodo dragons are vigorous swimmers and can plunge into the water.",
+              "explanation": "Đáp án đúng là A . Đoạn 4 đã miêu tả: 'Luckily, Komodo dragons are vigorous swimmers. So the surviving female can plunge into the ocean...' (May mắn thay, rồng Komodo là những con vật bơi lội mạnh mẽ. Vì vậy con cái sống sót có thể lao xuống đại dương...). Nhờ khả năng này mà chúng có thể dạt vào bờ (ashore) ở một hòn đảo khác.",
               "correctAnswer": "A"
             },
             {
@@ -487,7 +487,7 @@
                 "She can hide underground.",
                 "She can call for help."
               ],
-              "explanation": "She can reproduce by herself.",
+              "explanation": "Đáp án đúng là A nhé. Ở đoạn 4 có nói: '...she can prolong the survival of the species... she can reproduce by herself.' (...nó có thể kéo dài sự sống còn của giống loài... nó có thể tự mình sinh sản). Đây chính là cách duy trì nòi giống của chúng khi gặp thảm họa đó!",
               "correctAnswer": "A"
             },
             {
@@ -499,7 +499,7 @@
                 "They disappear.",
                 "They become homogenous."
               ],
-              "explanation": "Over time, the genes diverge.",
+              "explanation": "Đáp án đúng là A . Câu này có thể tìm thấy trực tiếp trong bài ở đoạn 4: 'Over time, the genes within the population diverge.' (Theo thời gian, các gen trong quần thể bị phân hóa). Cứ chọn A là đúng chuẩn luôn!",
               "correctAnswer": "A"
             },
             {
@@ -511,7 +511,7 @@
                 "They will be smarter.",
                 "They will run faster."
               ],
-              "explanation": "The babies will be weaker and have genetic problems.",
+              "explanation": "Đáp án đúng là A nhé. Đoạn 3 có nêu giả thiết này: 'If the genes are homogeneous, the babies are weaker and have genetic problems.' (Nếu các gen đồng nhất, những đứa con sẽ yếu hơn và có các vấn đề về di truyền). Câu trả lời bê nguyên ý của đoạn này !",
               "correctAnswer": "A"
             }
           ],

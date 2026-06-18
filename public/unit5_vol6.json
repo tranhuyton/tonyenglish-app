@@ -410,7 +410,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **True (Đúng)** nha. Trong đoạn 2, Becky trả lời bữa trưa có món gà mè (sesame chicken) nhưng thịt bị cháy xém (charred). Ý của câu hỏi hoàn toàn khớp với bài nhé!",
+              "explanation": "Câu này là True (Đúng) . Trong đoạn 2, Becky trả lời bữa trưa có món gà mè (sesame chicken) nhưng thịt bị cháy xém (charred). Ý của câu hỏi hoàn toàn khớp với bài nhé!",
               "correctAnswer": "T"
             },
             {
@@ -420,7 +420,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 5 ghi rõ: 'An argument ensued about eating chilies.' (Một cuộc tranh cãi đã nổ ra về việc ăn ớt). Không phải vì Becky phân vân có nên chạy tiếp sức (run the relay) hay không đâu nhé!",
+              "explanation": "Câu này là False (Sai) . Đoạn 5 ghi rõ: 'An argument ensued about eating chilies.' (Một cuộc tranh cãi đã nổ ra về việc ăn ớt). Không phải vì Becky phân vân có nên chạy tiếp sức (run the relay) hay không đâu nhé!",
               "correctAnswer": "F"
             },
             {
@@ -430,7 +430,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Ở đoạn 7 có trích lời: 'The loser has to carry the winner's books for a year!' (Người thua sẽ phải mang sách cho người thắng trong một năm!). Rất chính xác luôn!",
+              "explanation": "Câu này là True (Đúng) nhé. Ở đoạn 7 có trích lời: 'The loser has to carry the winner's books for a year!' (Người thua sẽ phải mang sách cho người thắng trong một năm!). Rất chính xác luôn!",
               "correctAnswer": "T"
             },
             {
@@ -440,7 +440,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Trong bài, người cảnh giác (wary) với quả ớt là Becky chứ không phải Russell: 'Becky was wary of eating the pepper' (đoạn 6) và 'The chili looked benign, but Becky knew...' (đoạn 10). Câu hỏi bị nhầm nhân vật rồi!",
+              "explanation": "Câu này là False (Sai) . Trong bài, người cảnh giác (wary) với quả ớt là Becky chứ không phải Russell: 'Becky was wary of eating the pepper' (đoạn 6) và 'The chili looked benign, but Becky knew...' (đoạn 10). Câu hỏi bị nhầm nhân vật rồi!",
               "correctAnswer": "F"
             },
             {
@@ -450,7 +450,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Becky không xin lỗi đơn thuần vì việc cô ấy ăn miếng đầu tiên, mà ở đoạn 14 cô nói: 'I'm sorry—I feel like I cheated by going first.' (Mình xin lỗi—Mình cảm thấy như mình đã gian lận khi ăn miếng đầu tiên). Bởi vì cô đã cắn phần ít cay nhất ở dưới cùng (bottom) và để lại phần cay nhất ở giữa cho bạn mình.",
+              "explanation": "Câu này là False (Sai) . Becky không xin lỗi đơn thuần vì việc cô ấy ăn miếng đầu tiên, mà ở đoạn 14 cô nói: 'I'm sorry—I feel like I cheated by going first.' (Mình xin lỗi—Mình cảm thấy như mình đã gian lận khi ăn miếng đầu tiên). Bởi vì cô đã cắn phần ít cay nhất ở dưới cùng (bottom) và để lại phần cay nhất ở giữa cho bạn mình.",
               "correctAnswer": "F"
             }
           ],
@@ -470,7 +470,7 @@
                 "She liked chilies.",
                 "She was hungry."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ở đầu đoạn 10 có giải thích nguyên nhân Becky đồng ý dù miễn cưỡng: 'His dogged persuasion convinced her.' (Sự thuyết phục dai dẳng của anh ấy đã thuyết phục được cô ấy). Vì vậy đáp án A là hoàn toàn chính xác nha!",
+              "explanation": "Đáp án đúng là A nhé. Ở đầu đoạn 10 có giải thích nguyên nhân Becky đồng ý dù miễn cưỡng: 'His dogged persuasion convinced her.' (Sự thuyết phục dai dẳng của anh ấy đã thuyết phục được cô ấy). Vì vậy đáp án A là hoàn toàn chính xác !",
               "correctAnswer": "A"
             },
             {
@@ -482,7 +482,7 @@
                 "He wanted to trick her.",
                 "He changed his mind."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nha. Ở đoạn 8, Becky nói: 'Fine, but to clarify...' (Được thôi, nhưng để làm rõ...). Do đó, mục đích của việc Russell nhắc lại điều khoản là để làm rõ (clarify) cho Becky hiểu. Chọn A là chuẩn luôn!",
+              "explanation": "Đáp án đúng là A . Ở đoạn 8, Becky nói: 'Fine, but to clarify...' (Được thôi, nhưng để làm rõ...). Do đó, mục đích của việc Russell nhắc lại điều khoản là để làm rõ (clarify) cho Becky hiểu. Chọn A là chuẩn luôn!",
               "correctAnswer": "A"
             },
             {
@@ -494,7 +494,7 @@
                 "He ate another pepper.",
                 "He ran away."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Đoạn 11 đã mô tả biểu cảm của Russell: 'He gasped and his face alternated between brave and pained expressions... He was on the verge of tears...' (Cậu ấy thở hổn hển và khuôn mặt cậu xen kẽ giữa vẻ dũng cảm và đau đớn... Cậu ấy chực khóc). Tất cả những chi tiết này đều nằm trong đáp án A nha.",
+              "explanation": "Đáp án đúng là A nhé. Đoạn 11 đã mô tả biểu cảm của Russell: 'He gasped and his face alternated between brave and pained expressions... He was on the verge of tears...' (Cậu ấy thở hổn hển và khuôn mặt cậu xen kẽ giữa vẻ dũng cảm và đau đớn... Cậu ấy chực khóc). Tất cả những chi tiết này đều nằm trong đáp án A .",
               "correctAnswer": "A"
             },
             {
@@ -506,7 +506,7 @@
                 "Her friend.",
                 "The lunch lady."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nha. Ở đoạn 4, Becky có nói rằng: 'My stepmother says you should be careful with them' (Mẹ kế của mình nói cậu nên cẩn thận với chúng). Do đó chính mẹ kế của Becky là người đã cảnh báo cô ấy.",
+              "explanation": "Đáp án đúng là A . Ở đoạn 4, Becky có nói rằng: 'My stepmother says you should be careful with them' (Mẹ kế của mình nói cậu nên cẩn thận với chúng). Do đó chính mẹ kế của Becky là người đã cảnh báo cô ấy.",
               "correctAnswer": "A"
             },
             {
@@ -518,7 +518,7 @@
                 "He cried.",
                 "He threw the chili away."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ở đoạn 13 có viết: '...he said, continuing to sip from the glass.' (...cậu ấy nói, tiếp tục nhấp từng ngụm từ chiếc cốc). Từ 'beverage' trong đáp án A đồng nghĩa với thức uống trong chiếc cốc ('glass') mà Becky đưa cho cậu. Nên A là chính xác nhé!",
+              "explanation": "Đáp án đúng là A nhé. Ở đoạn 13 có viết: '...he said, continuing to sip from the glass.' (...cậu ấy nói, tiếp tục nhấp từng ngụm từ chiếc cốc). Từ 'beverage' trong đáp án A đồng nghĩa với thức uống trong chiếc cốc ('glass') mà Becky đưa cho cậu. Nên A là chính xác nhé!",
               "correctAnswer": "A"
             }
           ],

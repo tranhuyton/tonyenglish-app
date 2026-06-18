@@ -473,7 +473,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 2 cho biết chính người quản gia (butler) mới là người dọn dẹp vào ban đêm: '...and then cleaned up after them late at night. Hence, while the superintendent slept soundly... the butler was still awake.' (...và sau đó dọn dẹp vào đêm khuya. Do đó, trong khi viên giám đốc ngủ say... thì người quản gia vẫn thức). Người quản gia bận rộn hơn viên giám đốc nhiều nhé!",
+              "explanation": "Câu này là False (Sai) . Đoạn 2 cho biết chính người quản gia (butler) mới là người dọn dẹp vào ban đêm: '...and then cleaned up after them late at night. Hence, while the superintendent slept soundly... the butler was still awake.' (...và sau đó dọn dẹp vào đêm khuya. Do đó, trong khi viên giám đốc ngủ say... thì người quản gia vẫn thức). Người quản gia bận rộn hơn viên giám đốc nhiều nhé!",
               "correctAnswer": "F"
             },
             {
@@ -483,7 +483,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 3 có viết ngược lại hoàn toàn: 'Sadly, though the butler was always overworked, his profession's intrinsic nature demanded he never be outspoken.' (Đáng buồn thay, mặc dù người quản gia luôn làm việc quá sức, nhưng bản chất vốn có của nghề nghiệp lại đòi hỏi ông không bao giờ được thẳng thắn lên tiếng). Câu hỏi đã tráo đổi vị trí của 'outspoken' và 'overworked' đó!",
+              "explanation": "Câu này là False (Sai) . Đoạn 3 có viết ngược lại hoàn toàn: 'Sadly, though the butler was always overworked, his profession's intrinsic nature demanded he never be outspoken.' (Đáng buồn thay, mặc dù người quản gia luôn làm việc quá sức, nhưng bản chất vốn có của nghề nghiệp lại đòi hỏi ông không bao giờ được thẳng thắn lên tiếng). Câu hỏi đã tráo đổi vị trí của 'outspoken' và 'overworked' đó!",
               "correctAnswer": "F"
             },
             {
@@ -493,7 +493,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Trong đoạn 4, viên giám đốc nói rất rõ: 'This particular party is important. People from the ministry are coming.' (Bữa tiệc cụ thể này rất quan trọng. Những người từ bộ sẽ đến). Vì vậy câu này mô tả hoàn toàn chính xác.",
+              "explanation": "Câu này là True (Đúng) nhé. Trong đoạn 4, viên giám đốc nói rất rõ: 'This particular party is important. People from the ministry are coming.' (Bữa tiệc cụ thể này rất quan trọng. Những người từ bộ sẽ đến). Vì vậy câu này mô tả hoàn toàn chính xác.",
               "correctAnswer": "T"
             },
             {
@@ -503,7 +503,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Ở đoạn 5, người quản gia đun sôi NƯỚC chứ không phải đun sôi CAFFEINE: 'He boiled water in a kettle for soup and chopped some beef into chunks.' (Ông ấy đun sôi nước trong ấm để nấu súp và thái thịt bò thành từng cục). Đọc kỹ là nhận ra ngay điểm sai nhé!",
+              "explanation": "Câu này là False (Sai) . Ở đoạn 5, người quản gia đun sôi NƯỚC chứ không phải đun sôi CAFFEINE: 'He boiled water in a kettle for soup and chopped some beef into chunks.' (Ông ấy đun sôi nước trong ấm để nấu súp và thái thịt bò thành từng cục). Đọc kỹ là nhận ra ngay điểm sai nhé!",
               "correctAnswer": "F"
             },
             {
@@ -513,7 +513,7 @@
                 "F",
                 "T"
               ],
-              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Trong đoạn 6 có chi tiết: '...and the soup tasted too pungent.' (...và món súp có vị quá hăng/cay nồng). Do đó câu hỏi đã nêu đúng tình tiết trong bài rồi.",
+              "explanation": "Câu này là True (Đúng) nhé. Trong đoạn 6 có chi tiết: '...and the soup tasted too pungent.' (...và món súp có vị quá hăng/cay nồng). Do đó câu hỏi đã nêu đúng tình tiết trong bài rồi.",
               "correctAnswer": "T"
             }
           ],
@@ -533,7 +533,7 @@
                 "The butler was eating.",
                 "The butler was out for a walk."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ở đoạn 2 có câu: '...while the superintendent slept soundly, snoring loudly in his bed, the butler was still awake.' (...trong khi viên giám đốc ngủ say sưa, ngáy to trên giường thì người quản gia vẫn còn thức). Do đó đáp án A là chính xác nhất!",
+              "explanation": "Đáp án đúng là A nhé. Ở đoạn 2 có câu: '...while the superintendent slept soundly, snoring loudly in his bed, the butler was still awake.' (...trong khi viên giám đốc ngủ say sưa, ngáy to trên giường thì người quản gia vẫn còn thức). Do đó đáp án A là chính xác nhất!",
               "correctAnswer": "A"
             },
             {
@@ -545,7 +545,7 @@
                 "He realized someone was at the door.",
                 "He realized he forgot to clean the attic."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nha. Đoạn 5 có miêu tả: 'But on his descent, he realized he needed to make the food.' (Nhưng trên đường đi xuống, ông nhận ra mình cần phải làm đồ ăn). Chọn A là chuẩn luôn!",
+              "explanation": "Đáp án đúng là A . Đoạn 5 có miêu tả: 'But on his descent, he realized he needed to make the food.' (Nhưng trên đường đi xuống, ông nhận ra mình cần phải làm đồ ăn). Chọn A là chuẩn luôn!",
               "correctAnswer": "A"
             },
             {
@@ -557,7 +557,7 @@
                 "If he had slept during the day.",
                 "If he had made the food earlier."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Câu cuối cùng của bài viết trích lời của viên giám đốc: 'You should have told me earlier, then we could have avoided this whole ordeal.' (Ông nên nói với tôi sớm hơn, thì chúng ta đã có thể tránh được toàn bộ thử thách này). Rất khớp với đáp án A nha.",
+              "explanation": "Đáp án đúng là A nhé. Câu cuối cùng của bài viết trích lời của viên giám đốc: 'You should have told me earlier, then we could have avoided this whole ordeal.' (Ông nên nói với tôi sớm hơn, thì chúng ta đã có thể tránh được toàn bộ thử thách này). Rất khớp với đáp án A .",
               "correctAnswer": "A"
             },
             {
@@ -569,7 +569,7 @@
                 "He remembered he had to buy more beef.",
                 "He remembered to lock the door."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nha. Đoạn 5 có câu kể rất rõ: 'Just as he was starting the soup, he remembered that he had to sweep the veranda.' (Ngay khi vừa bắt đầu nấu món súp, ông lại nhớ ra mình phải quét dọn hiên nhà). Vì thế đáp án A là câu trả lời đúng nhé.",
+              "explanation": "Đáp án đúng là A . Đoạn 5 có câu kể rất rõ: 'Just as he was starting the soup, he remembered that he had to sweep the veranda.' (Ngay khi vừa bắt đầu nấu món súp, ông lại nhớ ra mình phải quét dọn hiên nhà). Vì thế đáp án A là câu trả lời đúng nhé.",
               "correctAnswer": "A"
             },
             {
@@ -581,7 +581,7 @@
                 "Because the party started too late.",
                 "Because it was raining."
               ],
-              "explanation": "Chào bạn, đáp án đúng là **A** nha. Ở đoạn 6 có giải thích nguyên nhân: 'Some guests were dissatisfied. They started to make a fuss...' (Một số vị khách cảm thấy không hài lòng. Họ bắt đầu làm ầm ĩ lên...). Sự không hài lòng (dissatisfied) của khách chính là nguyên nhân dẫn đến sự việc này.",
+              "explanation": "Đáp án đúng là A . Ở đoạn 6 có giải thích nguyên nhân: 'Some guests were dissatisfied. They started to make a fuss...' (Một số vị khách cảm thấy không hài lòng. Họ bắt đầu làm ầm ĩ lên...). Sự không hài lòng (dissatisfied) của khách chính là nguyên nhân dẫn đến sự việc này.",
               "correctAnswer": "A"
             }
           ],
