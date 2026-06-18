@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "dusk",
                 "shelf"
               ],
-              "correctAnswer": "B",
-              "explanation": "vanity means pride."
+              "explanation": "vanity means pride.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "weather",
                 "angel"
               ],
-              "correctAnswer": "A",
-              "explanation": "aristocrat means noble."
+              "explanation": "aristocrat means noble.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "alley",
                 "subject"
               ],
-              "correctAnswer": "B",
-              "explanation": "pad means cushion."
+              "explanation": "pad means cushion.",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "short",
                 "rude"
               ],
-              "correctAnswer": "D",
-              "explanation": "vulgar means rude."
+              "explanation": "vulgar means rude.",
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "superior",
                 "parallel"
               ],
-              "correctAnswer": "C",
-              "explanation": "predominant means superior."
+              "explanation": "predominant means superior.",
+              "correctAnswer": "C"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "labor",
                 "smell"
               ],
-              "correctAnswer": "A",
-              "explanation": "attire means clothing."
+              "explanation": "attire means clothing.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "slope",
                 "spice"
               ],
-              "correctAnswer": "A",
-              "explanation": "tangle means knot."
+              "explanation": "tangle means knot.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "greet",
                 "swell"
               ],
-              "correctAnswer": "D",
-              "explanation": "enlarge means swell."
+              "explanation": "enlarge means swell.",
+              "correctAnswer": "D"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "funny",
                 "polite"
               ],
-              "correctAnswer": "C",
-              "explanation": "absurd means funny (ridiculous)."
+              "explanation": "absurd means funny (ridiculous).",
+              "correctAnswer": "C"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "consult",
                 "remove"
               ],
-              "correctAnswer": "B",
-              "explanation": "signify means symbolize."
+              "explanation": "signify means symbolize.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "tangle",
                 "craze"
               ],
-              "correctAnswer": "A",
-              "explanation": "strap: a thin long piece of fabric used to fasten or carry."
+              "explanation": "strap: a thin long piece of fabric used to fasten or carry.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "feminine",
                 "reputable"
               ],
-              "correctAnswer": "C",
-              "explanation": "feminine: having qualities that are commonly related to women."
+              "explanation": "feminine: having qualities that are commonly related to women.",
+              "correctAnswer": "C"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "aristocracy",
                 "excess"
               ],
-              "correctAnswer": "B",
-              "explanation": "attire: nice or special clothing."
+              "explanation": "attire: nice or special clothing.",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "absurd",
                 "feminine"
               ],
-              "correctAnswer": "A",
-              "explanation": "reputable: having a good reputation."
+              "explanation": "reputable: having a good reputation.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "tangles",
                 "hallmarks"
               ],
-              "correctAnswer": "A",
-              "explanation": "pad: a thick piece of soft material used to protect things."
+              "explanation": "pad: a thick piece of soft material used to protect things.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "rouge",
                 "aristocrat"
               ],
-              "correctAnswer": "A",
-              "explanation": "anemia: a blood condition that causes a person to be pale."
+              "explanation": "anemia: a blood condition that causes a person to be pale.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "attire",
                 "strap"
               ],
-              "correctAnswer": "A",
-              "explanation": "rouge: a red powder or cream used as makeup."
+              "explanation": "rouge: a red powder or cream used as makeup.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "strap",
                 "excess"
               ],
-              "correctAnswer": "C",
-              "explanation": "strap: long piece of fabric to carry a purse."
+              "explanation": "strap: long piece of fabric to carry a purse.",
+              "correctAnswer": "C"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "vanity",
                 "aristocracy"
               ],
-              "correctAnswer": "A",
-              "explanation": "craze: a brief and popular activity or object."
+              "explanation": "craze: a brief and popular activity or object.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "hallmark",
                 "excess"
               ],
-              "correctAnswer": "A",
-              "explanation": "aristocracy: the highest class of people."
+              "explanation": "aristocracy: the highest class of people.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "tangle",
                 "pad"
               ],
-              "correctAnswer": "A",
-              "explanation": "excess: an amount of something that is more than needed."
+              "explanation": "excess: an amount of something that is more than needed.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "signify",
                 "tangle"
               ],
-              "correctAnswer": "A",
-              "explanation": "vie: to compete against others for something."
+              "explanation": "vie: to compete against others for something.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "vulgar",
                 "feminine"
               ],
-              "correctAnswer": "A",
-              "explanation": "reputable: having a good reputation."
+              "explanation": "reputable: having a good reputation.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "vulgar",
                 "absurd"
               ],
-              "correctAnswer": "A",
-              "explanation": "feminine: qualities commonly related to women."
+              "explanation": "feminine: qualities commonly related to women.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,16 +329,16 @@
                 "aristocracy",
                 "anemia"
               ],
-              "correctAnswer": "A",
-              "explanation": "hallmark: a unique characteristic of something."
+              "explanation": "hallmark: a unique characteristic of something.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -348,8 +347,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Absurd means ridiculous."
+              "explanation": "Absurd means ridiculous.",
+              "correctAnswer": "C"
             },
             {
               "id": "27",
@@ -358,8 +357,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Tangle means twisted together."
+              "explanation": "Tangle means twisted together.",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -368,8 +367,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Anemia is a blood condition that makes one tired, not losing memory."
+              "explanation": "Anemia is a blood condition that makes one tired, not losing memory.",
+              "correctAnswer": "I"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Hallmark means a unique characteristic."
+              "explanation": "Hallmark means a unique characteristic.",
+              "correctAnswer": "C"
             },
             {
               "id": "30",
@@ -388,8 +387,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Craze means a popular activity, not a maze."
+              "explanation": "Craze means a popular activity, not a maze.",
+              "correctAnswer": "I"
             },
             {
               "id": "31",
@@ -398,8 +397,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Vanity is excessive pride, it does not mean charity."
+              "explanation": "Vanity is excessive pride, it does not mean charity.",
+              "correctAnswer": "I"
             },
             {
               "id": "32",
@@ -408,8 +407,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Rouge is makeup for cheeks or lips."
+              "explanation": "Rouge is makeup for cheeks or lips.",
+              "correctAnswer": "C"
             },
             {
               "id": "33",
@@ -418,8 +417,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Excess means an amount more than needed, not 'except'."
+              "explanation": "Excess means an amount more than needed, not 'except'.",
+              "correctAnswer": "I"
             },
             {
               "id": "34",
@@ -428,8 +427,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Vulgar means rude or lacking in style."
+              "explanation": "Vulgar means rude or lacking in style.",
+              "correctAnswer": "C"
             },
             {
               "id": "35",
@@ -438,24 +437,24 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Aristocrat is a person of the highest class, they usually don't have to wash dishes."
+              "explanation": "Aristocrat is a person of the highest class, they usually don't have to wash dishes.",
+              "correctAnswer": "I"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Dressed to Excess</h1><p style=\"margin-bottom: 2rem;\">If you traveled back in time to the 1700s in Europe, you would laugh when you saw how the <b>aristocracy</b> dressed. Soon you’d realize, though, that the <b>aristocrats</b> of Europe were very serious about their appearance.</p><p style=\"margin-bottom: 2rem;\">The <b>predominant</b> style in women’s <b>attire</b> was enormous dresses. They were often three times larger than the wearer. Ladies even used <b>pads</b> to <b>enlarge</b> the appearance of their hips and shoulders. On the other extreme, the aristocratic women made their waists appear extremely thin. It took several maids stretching fabric and pulling <b>straps</b> in order to get a lady’s waist to the proper thinness. These ladies could barely breathe and often fainted.</p><p style=\"margin-bottom: 2rem;\">Pale skin was also a <b>craze</b>, yet this too was done in <b>excess</b>. One could not simply be pale. Instead, she needed to look as if she had <b>anemia</b>. In order to look paler, ladies actually cut themselves daily, so they would bleed.</p><p style=\"margin-bottom: 2rem;\">The hairstyles, however, were the <b>hallmark</b> of women’s fashion. These stood a meter high on the ladies’ heads. The columns of hair were a ridiculous <b>tangle</b> of wigs, jewels, flowers, and even stuffed birds.</p><p style=\"margin-bottom: 2rem;\">Men’s fashion was similarly <b>absurd</b>. Today it would probably seem very <b>feminine</b>. <b>Reputable</b> men wore wigs of long curly hair. Their shoes had large soles or high heels so that they could walk high above the filth on the streets. Furthermore, just like the ladies, the men wore lipstick and put <b>rouge</b> on their cheeks.</p><p style=\"margin-bottom: 2rem;\">Their clothes were brightly colored, often purple and pink. They were made from the finest of fabrics and decorated with jewels and lace. The men <b>vied</b> with one another to see who wore the more expensive clothes, for the clothing <b>signified</b> his wealth and status.</p><p style=\"margin-bottom: 2rem;\">Both men and women spent huge amounts of money and time on how they looked. Though such <b>vanity</b> would seem <b>vulgar</b> today, three hundred years from now, the fashions of our time might also seem completely ridiculous.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dressed to Excess</h1>        <p style=\"margin-bottom: 1rem;\">If you traveled back in time to the 1700s in Europe, you would laugh when you saw how the <b>aristocracy</b> dressed. Soon you’d realize, though, that the <b>aristocrats</b> of Europe were very serious about their appearance.</p>    <p style=\"margin-bottom: 1rem;\">The <b>predominant</b> style in women’s <b>attire</b> was enormous dresses. They were often three times larger than the wearer. Ladies even used <b>pads</b> to <b>enlarge</b> the appearance of their hips and shoulders. On the other extreme, the aristocratic women made their waists appear extremely thin. It took several maids stretching fabric and pulling <b>straps</b> in order to get a lady’s waist to the proper thinness. These ladies could barely breathe and often fainted.</p>    <p style=\"margin-bottom: 1rem;\">Pale skin was also a <b>craze</b>, yet this too was done in <b>excess</b>. One could not simply be pale. Instead, she needed to look as if she had <b>anemia</b>. In order to look paler, ladies actually cut themselves daily, so they would bleed.</p>    <p style=\"margin-bottom: 1rem;\">The hairstyles, however, were the <b>hallmark</b> of women’s fashion. These stood a meter high on the ladies’ heads. The columns of hair were a ridiculous <b>tangle</b> of wigs, jewels, flowers, and even stuffed birds.</p>    <p style=\"margin-bottom: 1rem;\">Men’s fashion was similarly <b>absurd</b>. Today it would probably seem very <b>feminine</b>. <b>Reputable</b> men wore wigs of long curly hair. Their shoes had large soles or high heels so that they could walk high above the filth on the streets. Furthermore, just like the ladies, the men wore lipstick and put <b>rouge</b> on their cheeks.</p>    <p style=\"margin-bottom: 1rem;\">Their clothes were brightly colored, often purple and pink. They were made from the finest of fabrics and decorated with jewels and lace. The men <b>vied</b> with one another to see who wore the more expensive clothes, for the clothing <b>signified</b> his wealth and status.</p>    <p style=\"margin-bottom: 1rem;\">Both men and women spent huge amounts of money and time on how they looked. Though such <b>vanity</b> would seem <b>vulgar</b> today, three hundred years from now, the fashions of our time might also seem completely ridiculous.</p></div>",
       "imageUrl": "/unit3_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -464,8 +463,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "Ladies used pads to enlarge the appearance of their hips and shoulders."
+              "explanation": "Chào bạn, câu này là **True (Đúng)** nha. Trong đoạn 2 có nói rõ: 'Ladies even used pads to enlarge the appearance of their hips and shoulders.' (Các quý cô thậm chí còn dùng miếng đệm để làm to phần hông và vai của họ). Thông tin hoàn toàn khớp luôn nhé!",
+              "correctAnswer": "T"
             },
             {
               "id": "37",
@@ -474,8 +473,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, Just like the ladies, the men wore lipstick and rouge."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 5 cho biết: '...just like the ladies, the men wore lipstick and put rouge on their cheeks.' (...cũng giống như các quý cô, đàn ông cũng tô son và đánh phấn hồng lên má). Vậy không phải chỉ có phụ nữ mới trang điểm đâu nhé!",
+              "correctAnswer": "F"
             },
             {
               "id": "38",
@@ -484,8 +483,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "Though such vanity would seem vulgar today."
+              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Ngay câu cuối bài có viết: 'Though such vanity would seem vulgar today...' (Mặc dù sự phù phiếm như vậy có vẻ thô tục ngày nay...). Rất khớp với nội dung câu hỏi nha!",
+              "correctAnswer": "T"
             },
             {
               "id": "39",
@@ -494,8 +493,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, Women’s hair was a tangle of wigs, jewels, flowers, and stuffed birds."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Theo đoạn 4: 'The columns of hair were a ridiculous tangle of wigs, jewels, flowers, and even stuffed birds.' (Những cột tóc là một mớ hỗn độn nực cười của những bộ tóc giả, đồ trang sức, hoa và thậm chí cả những con chim nhồi bông). Ở đây họ cài 'jewels' (trang sức) chứ không phải 'straps' (dây đai) nhé!",
+              "correctAnswer": "F"
             },
             {
               "id": "40",
@@ -504,16 +503,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "Men’s fashion was similarly absurd. Today it would probably seem very feminine."
+              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Đầu đoạn 5 có miêu tả về thời trang của nam giới: 'Men’s fashion was similarly absurd. Today it would probably seem very feminine.' (Thời trang của nam giới cũng lố bịch tương tự. Ngày nay nó có lẽ sẽ trông rất nữ tính). Ý của câu hỏi miêu tả rất chính xác.",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -524,8 +523,8 @@
                 "Short skirts.",
                 "Large coats."
               ],
-              "correctAnswer": "A",
-              "explanation": "The predominant style in women's attire was enormous dresses."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Ngay câu đầu của đoạn 2 đã trả lời trực tiếp câu hỏi này: 'The predominant style in women’s attire was enormous dresses.' (Phong cách nổi bật trong trang phục của phụ nữ là những chiếc váy khổng lồ). Dễ quá phải không nào!",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -536,8 +535,8 @@
                 "His vanity.",
                 "His age."
               ],
-              "correctAnswer": "A",
-              "explanation": "The clothing signified his wealth and status."
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ở đoạn 6 có câu: '...for the clothing signified his wealth and status.' (...bởi vì quần áo biểu thị sự giàu có và địa vị của anh ta). Vậy đáp án A là hoàn toàn chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -548,8 +547,8 @@
                 "High heels.",
                 "Large wigs."
               ],
-              "correctAnswer": "A",
-              "explanation": "Pale skin was also a craze that was done in excess."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Bạn xem đầu đoạn 3 nhé: 'Pale skin was also a craze, yet this too was done in excess. One could not simply be pale. Instead, she needed to look as if she had anemia.' (Làn da nhợt nhạt cũng là một cơn sốt, nhưng điều này cũng được làm quá mức. Người ta không thể chỉ đơn giản là nhợt nhạt. Thay vào đó, cô ấy cần phải trông giống như bị thiếu máu). Từ đó suy ra trào lưu đó chính là 'Pale skin' (làn da nhợt nhạt).",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -560,8 +559,8 @@
                 "Dresses.",
                 "Jewels."
               ],
-              "correctAnswer": "A",
-              "explanation": "Hairstyles were the hallmark of women's fashion."
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Đầu đoạn 4 có một câu khẳng định rất rõ: 'The hairstyles, however, were the hallmark of women’s fashion.' (Tuy nhiên, các kiểu tóc mới là dấu ấn/đặc điểm nổi bật của thời trang nữ giới). Vì thế chọn A là chuẩn nhất nha!",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -572,10 +571,11 @@
                 "Who had the tallest hair.",
                 "Who had the best shoes."
               ],
-              "correctAnswer": "A",
-              "explanation": "The men vied with one another to see who wore the more expensive clothes."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Câu cuối của đoạn 6 có nhắc đến cuộc đua của các quý ông: 'The men vied with one another to see who wore the more expensive clothes...' (Những người đàn ông ganh đua với nhau xem ai mặc bộ quần áo đắt tiền hơn...). Đáp án A mô tả y hệt thông tin này luôn!",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

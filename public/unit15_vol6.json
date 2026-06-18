@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "A fire",
                 "A storm"
               ],
-              "correctAnswer": "B",
-              "explanation": "b. A virus"
+              "explanation": "b. A virus",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "Food",
                 "Electronics"
               ],
-              "correctAnswer": "C",
-              "explanation": "c. Food"
+              "explanation": "c. Food",
+              "correctAnswer": "C"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "clean it with a sponge",
                 "replace the light bulb"
               ],
-              "correctAnswer": "B",
-              "explanation": "b. fill it with food"
+              "explanation": "b. fill it with food",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "A carpool lane",
                 "A crosswalk"
               ],
-              "correctAnswer": "B",
-              "explanation": "b. A hole in the ground"
+              "explanation": "b. A hole in the ground",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "A mosquito",
                 "A flag"
               ],
-              "correctAnswer": "A",
-              "explanation": "a. A poison"
+              "explanation": "a. A poison",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "Vitamins",
                 "Pencils"
               ],
-              "correctAnswer": "C",
-              "explanation": "c. Vitamins"
+              "explanation": "c. Vitamins",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "Sleeping",
                 "Digesting food"
               ],
-              "correctAnswer": "D",
-              "explanation": "d. Digesting food"
+              "explanation": "d. Digesting food",
+              "correctAnswer": "D"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "Breathing regularly",
                 "Stretching your limbs"
               ],
-              "correctAnswer": "B",
-              "explanation": "b. Holding your breath"
+              "explanation": "b. Holding your breath",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "A bicycle rack",
                 "The soil"
               ],
-              "correctAnswer": "A",
-              "explanation": "a. A hospital room"
+              "explanation": "a. A hospital room",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "Make laws",
                 "Treat the sick"
               ],
-              "correctAnswer": "D",
-              "explanation": "d. Treat the sick"
+              "explanation": "d. Treat the sick",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "obvious",
                 "chosen"
               ],
-              "correctAnswer": "B",
-              "explanation": "b. required"
+              "explanation": "b. required",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "mastered",
                 "uncaring"
               ],
-              "correctAnswer": "A",
-              "explanation": "a. unimportant"
+              "explanation": "a. unimportant",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "afraid",
                 "uncaring"
               ],
-              "correctAnswer": "D",
-              "explanation": "d. uncaring"
+              "explanation": "d. uncaring",
+              "correctAnswer": "D"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "not free",
                 "not working"
               ],
-              "correctAnswer": "B",
-              "explanation": "b. not clean"
+              "explanation": "b. not clean",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "silly",
                 "bland"
               ],
-              "correctAnswer": "A",
-              "explanation": "a. empty"
+              "explanation": "a. empty",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "replenish",
                 "manifest"
               ],
-              "correctAnswer": "A",
-              "explanation": "upgrade"
+              "explanation": "upgrade",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "imperative",
                 "voluntary"
               ],
-              "correctAnswer": "C",
-              "explanation": "imperative"
+              "explanation": "imperative",
+              "correctAnswer": "C"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "provision",
                 "epidemic"
               ],
-              "correctAnswer": "C",
-              "explanation": "provision"
+              "explanation": "provision",
+              "correctAnswer": "C"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "adhere",
                 "upgrade"
               ],
-              "correctAnswer": "B",
-              "explanation": "manifest"
+              "explanation": "manifest",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "sterile",
                 "overcrowded"
               ],
-              "correctAnswer": "A",
-              "explanation": "viable"
+              "explanation": "viable",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "replenish",
                 "contaminate"
               ],
-              "correctAnswer": "B",
-              "explanation": "adhere"
+              "explanation": "adhere",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "compassionate",
                 "sterile"
               ],
-              "correctAnswer": "B",
-              "explanation": "voluntary"
+              "explanation": "voluntary",
+              "correctAnswer": "B"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "metabolic",
                 "sterile"
               ],
-              "correctAnswer": "A",
-              "explanation": "overcrowded"
+              "explanation": "overcrowded",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "manifest",
                 "adhere"
               ],
-              "correctAnswer": "A",
-              "explanation": "administer"
+              "explanation": "administer",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,10 +329,11 @@
                 "paramount",
                 "imperative"
               ],
-              "correctAnswer": "A",
-              "explanation": "compassionate"
+              "explanation": "compassionate",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -347,7 +347,6 @@
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -356,8 +355,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "T: Trong đoạn 1 có viết \"There was an extreme lack of clean drinking water in the overcrowded urban cities.\" (Có một sự thiếu hụt nghiêm trọng nước sạch ở các thành thị đông đúc). Điều này hoàn toàn khớp với câu hỏi.",
+              "correctAnswer": "T"
             },
             {
               "id": "27",
@@ -366,8 +365,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: A deficiency of important fluids caused metabolic processes to stop working correctly."
+              "explanation": "F: Bài đọc viết \"It also caused a deficiency of important fluids... Without the proper fluids and minerals, metabolic processes stopped working correctly.\" (Thiếu hụt chất lỏng và khoáng chất quan trọng làm quá trình trao đổi chất ngừng hoạt động). Nguyên nhân là thiếu chất lỏng quan trọng, không phải thiếu nước ô nhiễm (contaminated water).",
+              "correctAnswer": "F"
             },
             {
               "id": "28",
@@ -376,8 +375,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "T: Đoạn 2 nêu rõ \"If they had not received viable treatment, they would have been likely to die. It was imperative for help to come soon.\" (Nếu không có phương pháp điều trị khả thi, họ có thể chết. Việc giúp đỡ sớm là vô cùng cấp thiết).",
+              "correctAnswer": "T"
             },
             {
               "id": "29",
@@ -386,8 +385,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The system used to filter water is being upgraded."
+              "explanation": "F: Trong đoạn cuối ghi \"The system used to filter water is being upgraded.\" (Hệ thống dùng để lọc nước đang được nâng cấp), chứ không phải chính phủ (The government) đang được nâng cấp.",
+              "correctAnswer": "F"
             },
             {
               "id": "30",
@@ -396,16 +395,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "T: Đoạn cuối bài viết nêu rõ \"The government now administers the water supply plants and makes sure that they adhere to strict safety guidelines.\" (Chính phủ hiện đang quản lý các nhà máy cấp nước và đảm bảo chúng tuân thủ các quy định an toàn nghiêm ngặt).",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -416,8 +415,8 @@
                 "Countries recognized the need to start a war.",
                 "Countries recognized the need to abandon Zimbabwe."
               ],
-              "correctAnswer": "A",
-              "explanation": "Countries recognized the paramount need to contain the outbreak."
+              "explanation": "Đoạn 4 có ghi: \"Luckily, many other countries recognized the paramount need to contain the outbreak.\" (May mắn thay, nhiều quốc gia khác đã nhận ra nhu cầu tối cao là phải kiểm soát đợt bùng phát dịch bệnh này).",
+              "correctAnswer": "A"
             },
             {
               "id": "32",
@@ -428,8 +427,8 @@
                 "in December of 2007",
                 "in March of 2010"
               ],
-              "correctAnswer": "A",
-              "explanation": "in August of 2008"
+              "explanation": "Đoạn 1 nêu rõ thời gian: \"In August of 2008, a deadly cholera epidemic manifested in Zimbabwe.\" (Vào tháng 8 năm 2008, một trận dịch tả chết người đã bùng phát ở Zimbabwe).",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -440,8 +439,8 @@
                 "From the neighboring countries.",
                 "From Asia and Australia."
               ],
-              "correctAnswer": "A",
-              "explanation": "Britain, France, the United States, and other countries."
+              "explanation": "Trong đoạn 4 có đề cập: \"Dozens of voluntary practitioners from Britain, France, the United States, and other countries went to Zimbabwe...\" (Hàng chục bác sĩ tình nguyện từ Anh, Pháp, Mỹ và các quốc gia khác đã đến...).",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -452,8 +451,8 @@
                 "Infected people were unable to replenish air.",
                 "Infected people were unable to replenish bad bacteria."
               ],
-              "correctAnswer": "A",
-              "explanation": "Infected people were unable to replenish lost nutrients."
+              "explanation": "Đoạn 2 có viết: \"People were unable to digest food properly or replenish their lost nutrients.\" (Mọi người không thể tiêu hóa thức ăn đúng cách hoặc bổ sung lại các chất dinh dưỡng đã mất của họ). Do đó đáp án là nutrients.",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -464,10 +463,11 @@
                 "The doctors provided books and pencils.",
                 "The doctors provided toys and games."
               ],
-              "correctAnswer": "A",
-              "explanation": "The doctors provided sterile drinking water and medication."
+              "explanation": "Trong đoạn 4 có ghi: \"Through the provision of sterile drinking water and medication, people finally got the treatment...\" (Thông qua việc cung cấp nước uống vô trùng và thuốc men, mọi người cuối cùng đã nhận được sự điều trị).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "fort",
                 "fashion"
               ],
-              "correctAnswer": "B",
-              "explanation": "paw (n): an animal’s foot that has claws or soft bottoms."
+              "explanation": "paw (n): an animal’s foot that has claws or soft bottoms.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "fabric",
                 "hut"
               ],
-              "correctAnswer": "B",
-              "explanation": "cot (n): a small portable bed."
+              "explanation": "cot (n): a small portable bed.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "tired",
                 "scared"
               ],
-              "correctAnswer": "A",
-              "explanation": "camouflage (n): something used to hide people and things."
+              "explanation": "camouflage (n): something used to hide people and things.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "weather",
                 "green"
               ],
-              "correctAnswer": "D",
-              "explanation": "lush (adj): full of a variety of large, healthy plants."
+              "explanation": "lush (adj): full of a variety of large, healthy plants.",
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "large",
                 "comfortable"
               ],
-              "correctAnswer": "C",
-              "explanation": "substantial (adj): of great importance, size, or value."
+              "explanation": "substantial (adj): of great importance, size, or value.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the word that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "small",
                 "increase"
               ],
-              "correctAnswer": "A",
-              "explanation": "To contend with something means to struggle to overcome it. The opposite is give up."
+              "explanation": "To contend with something means to struggle to overcome it. The opposite is give up.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -107,8 +106,8 @@
                 "broken",
                 "small"
               ],
-              "correctAnswer": "E",
-              "explanation": "Substantial means of great size or value. The opposite is small."
+              "explanation": "Substantial means of great size or value. The opposite is small.",
+              "correctAnswer": "E"
             },
             {
               "id": "8",
@@ -119,8 +118,8 @@
                 "terrible",
                 "skin"
               ],
-              "correctAnswer": "B",
-              "explanation": "Hesitant means not sure. The opposite is certain."
+              "explanation": "Hesitant means not sure. The opposite is certain.",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -131,8 +130,8 @@
                 "boil",
                 "terrible"
               ],
-              "correctAnswer": "D",
-              "explanation": "Splendid means very good. The opposite is terrible."
+              "explanation": "Splendid means very good. The opposite is terrible.",
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -143,16 +142,16 @@
                 "handsome",
                 "quick"
               ],
-              "correctAnswer": "A",
-              "explanation": "Enlist means to join the military. The opposite is resign."
+              "explanation": "Enlist means to join the military. The opposite is resign.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -161,8 +160,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "Weary means tired."
+              "explanation": "Weary means tired.",
+              "correctAnswer": "C"
             },
             {
               "id": "12",
@@ -171,8 +170,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "Pages cannot quiver with sheer horror; people or animals quiver."
+              "explanation": "Pages cannot quiver with sheer horror; people or animals quiver.",
+              "correctAnswer": "I"
             },
             {
               "id": "13",
@@ -181,8 +180,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "Hesitant means not sure or slow in acting."
+              "explanation": "Hesitant means not sure or slow in acting.",
+              "correctAnswer": "C"
             },
             {
               "id": "14",
@@ -191,8 +190,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "Marrow is the soft substance in the center of bones."
+              "explanation": "Marrow is the soft substance in the center of bones.",
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -201,8 +200,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "Contend with means to struggle to overcome."
+              "explanation": "Contend with means to struggle to overcome.",
+              "correctAnswer": "C"
             },
             {
               "id": "16",
@@ -211,8 +210,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "Stray means to go in a wrong direction. The correct word is 'paid'."
+              "explanation": "Stray means to go in a wrong direction. The correct word is 'paid'.",
+              "correctAnswer": "I"
             },
             {
               "id": "17",
@@ -221,8 +220,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "Frontier is a border between two regions."
+              "explanation": "Frontier is a border between two regions.",
+              "correctAnswer": "C"
             },
             {
               "id": "18",
@@ -231,8 +230,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "Cot is a small portable bed, not a place to park."
+              "explanation": "Cot is a small portable bed, not a place to park.",
+              "correctAnswer": "I"
             },
             {
               "id": "19",
@@ -241,8 +240,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "Tract is a large area of land."
+              "explanation": "Tract is a large area of land.",
+              "correctAnswer": "I"
             },
             {
               "id": "20",
@@ -251,24 +250,24 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "Contemplate means to think about."
+              "explanation": "Contemplate means to think about.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Coward’s Lesson</h1><p style=\"margin-bottom: 2rem;\">Tom was easily frightened. He <b>enlisted</b> in the army because he thought the military would teach him courage. And though he needed courage, he never imagined how he would learn it.</p><p style=\"margin-bottom: 2rem;\">During a march across a <b>tract</b> of wilderness near his country’s <b>frontier</b>, Tom <b>strayed</b> from his squad. He had stopped to gaze at a <b>splendid</b> view of a <b>lush</b> valley. When he turned around, his squad was gone. He searched for them, but because their <b>outfits</b> had <b>camouflage</b>, he couldn’t find them.</p><p style=\"margin-bottom: 2rem;\">It was getting dark, and Tom grew <b>weary</b>. All he had was a knife, a boomerang, and his <b>handbook</b>. He made a camp for the night. It was cold, and the ground was hard. He wished he had his <b>cot</b> and a blanket. Instead, he made a fire, wrapped himself tightly in his jacket, and fell asleep.</p><p style=\"margin-bottom: 2rem;\">A loud noise roused him from his sleep. “What was that?” he wondered.</p><p style=\"margin-bottom: 2rem;\">Then he noticed it. An animal of <b>substantial</b> size had left a print from its <b>paw</b> in the dirt. He sat closer to the fire and looked into the darkness. He imagined a large beast jumping from the gloom and attacking him. He shook so much from fear that it felt like the <b>marrow</b> in his bones <b>quivered</b>.</p><p style=\"margin-bottom: 2rem;\">Tom <b>contemplated</b> many different plans. He was <b>hesitant</b> to act. He decided to stay by the fire, but during his <b>vigil</b>, he heard more noises.</p><p style=\"margin-bottom: 2rem;\">He couldn’t <b>contend</b> with his fear any longer. He knew what he had to do. He made a <b>torch</b> and followed the prints. He heard a twig snap very close ahead, but he bravely went on. Seconds later, he discovered what had scared him. It was only a kangaroo.</p><p style=\"margin-bottom: 2rem;\">Tom went back to his camp and slept. In the morning, he found his squad. He had finally learned courage. He learned that he had to confront his fear in order to conquer it.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Coward’s Lesson</h1>        <p style=\"margin-bottom: 1rem;\">Tom was easily frightened. He <b>enlisted</b> in the army because he thought the military would teach him courage. And though he needed courage, he never imagined how he would learn it.</p>    <p style=\"margin-bottom: 1rem;\">During a march across a <b>tract</b> of wilderness near his country’s <b>frontier</b>, Tom <b>strayed</b> from his squad. He had stopped to gaze at a <b>splendid</b> view of a <b>lush</b> valley. When he turned around, his squad was gone. He searched for them, but because their <b>outfits</b> had <b>camouflage</b>, he couldn’t find them.</p>    <p style=\"margin-bottom: 1rem;\">It was getting dark, and Tom grew <b>weary</b>. All he had was a knife, a boomerang, and his <b>handbook</b>. He made a camp for the night. It was cold, and the ground was hard. He wished he had his <b>cot</b> and a blanket. Instead, he made a fire, wrapped himself tightly in his jacket, and fell asleep.</p>    <p style=\"margin-bottom: 1rem;\">A loud noise roused him from his sleep. “What was that?” he wondered.</p>    <p style=\"margin-bottom: 1rem;\">Then he noticed it. An animal of <b>substantial</b> size had left a print from its <b>paw</b> in the dirt. He sat closer to the fire and looked into the darkness. He imagined a large beast jumping from the gloom and attacking him. He shook so much from fear that it felt like the <b>marrow</b> in his bones <b>quivered</b>.</p>    <p style=\"margin-bottom: 1rem;\">Tom <b>contemplated</b> many different plans. He was <b>hesitant</b> to act. He decided to stay by the fire, but during his <b>vigil</b>, he heard more noises.</p>    <p style=\"margin-bottom: 1rem;\">He couldn’t <b>contend</b> with his fear any longer. He knew what he had to do. He made a <b>torch</b> and followed the prints. He heard a twig snap very close ahead, but he bravely went on. Seconds later, he discovered what had scared him. It was only a kangaroo.</p>    <p style=\"margin-bottom: 1rem;\">Tom went back to his camp and slept. In the morning, he found his squad. He had finally learned courage. He learned that he had to confront his fear in order to conquer it.</p></div>",
       "imageUrl": "/unit14_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -277,8 +276,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Tom strayed from his squad to gaze at a splendid view of a lush valley near the forest."
+              "explanation": "Dịch: Tom bị lạc khỏi tiểu đội của mình để ngắm nhìn khung cảnh tuyệt đẹp của một khu rừng tươi tốt gần biên giới.\nGiải thích: F. Theo đoạn 2, anh ấy dừng lại để ngắm nhìn một thung lũng (valley) chứ không phải khu rừng (forest): \"He had stopped to gaze at a splendid view of a lush valley.\" (Anh ấy đã dừng lại để ngắm nhìn khung cảnh tuyệt đẹp của một thung lũng tươi tốt).",
+              "correctAnswer": "F"
             },
             {
               "id": "22",
@@ -287,8 +286,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Tom không thể tìm thấy tiểu đội của mình trên vùng hoang dã vì trang phục của họ có màu ngụy trang.\nGiải thích: T. Đoạn 2 nói rằng: \"He searched for them, but because their outfits had camouflage, he couldn’t find them.\" (Anh ấy tìm kiếm họ, nhưng vì trang phục của họ được ngụy trang nên anh ấy không thể tìm thấy). Câu này hoàn toàn đúng.",
+              "correctAnswer": "T"
             },
             {
               "id": "23",
@@ -297,8 +296,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: All Tom had with him was a knife, a boomerang, and his handbook."
+              "explanation": "Dịch: Tất cả những gì Tom có là cái giường gấp của anh ấy, một chiếc boomerang và cuốn sổ tay.\nGiải thích: F. Ở đoạn 3 tác giả kể: \"All he had was a knife, a boomerang, and his handbook. He made a camp for the night. It was cold, and the ground was hard. He wished he had his cot and a blanket.\" (Tất cả những gì anh có là một con dao, một chiếc boomerang và cuốn sổ tay. Anh ấy ước gì mình có chiếc giường gấp và một chiếc chăn). Vậy là anh ấy chỉ có dao, boomerang và sổ tay, chứ không hề có giường gấp (cot) nha!",
+              "correctAnswer": "F"
             },
             {
               "id": "24",
@@ -307,8 +306,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: A kangaroo of substantial size left a print from its paw in the dirt near Tom’s fire."
+              "explanation": "Dịch: Một con quái vật có kích thước lớn đã để lại dấu chân trên mặt đất gần đống lửa của Tom.\nGiải thích: F. Đoạn 5 có viết: \"An animal of substantial size had left a print from its paw in the dirt.\" (Một con vật có kích thước đáng kể đã để lại một dấu chân trên mặt đất). Đó chỉ là một con vật chứ không phải một con quái vật (monster) như trong câu hỏi nhắc tới nhé. (Sau đó anh ta mới phát hiện đó là một con kangaroo).",
+              "correctAnswer": "F"
             },
             {
               "id": "25",
@@ -317,16 +316,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Một tiếng động lớn đã đánh thức anh khỏi giấc ngủ.\nGiải thích: T. Đoạn 4 viết: \"A loud noise roused him from his sleep.\" (Một tiếng động lớn đã đánh thức anh ấy khỏi giấc ngủ). Từ \"roused\" đồng nghĩa với \"woke\", nên câu này hoàn toàn chính xác.",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -337,8 +336,8 @@
                 "He needed a job.",
                 "He liked wearing camouflage."
               ],
-              "correctAnswer": "A",
-              "explanation": "He enlisted in the army because he thought the military would teach him courage."
+              "explanation": "Dịch câu hỏi: Tại sao Tom nhập ngũ?\nGiải thích: Chọn A.\nĐoạn 1 có ghi: \"He enlisted in the army because he thought the military would teach him courage.\" (Anh ấy đã nhập ngũ vì anh ấy nghĩ rằng quân đội sẽ dạy cho anh ấy sự can đảm). Vậy lý do là anh ấy muốn học được sự can đảm nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -349,8 +348,8 @@
                 "A large beast.",
                 "A soldier calling his name."
               ],
-              "correctAnswer": "A",
-              "explanation": "A loud noise roused him from his sleep."
+              "explanation": "Dịch câu hỏi: Điều gì đã đánh thức Tom khỏi giấc ngủ?\nGiải thích: Chọn A.\nĐoạn 4 nói rất rõ: \"A loud noise roused him from his sleep.\" (Một tiếng động lớn đã đánh thức anh ấy khỏi giấc ngủ). Do đó tiếng động lớn (A loud noise) là đáp án đúng!",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -361,8 +360,8 @@
                 "A fever.",
                 "A loud noise."
               ],
-              "correctAnswer": "A",
-              "explanation": "Fear caused Tom to shake so much that the marrow in his bones quivered."
+              "explanation": "Dịch câu hỏi: Điều gì đã khiến Tom run rẩy đến mức tủy trong xương cũng phải run lên?\nGiải thích: Chọn A.\nCuối đoạn 5 tác giả có miêu tả: \"He shook so much from fear that it felt like the marrow in his bones quivered.\" (Anh ấy run rẩy vì sợ hãi đến mức có cảm giác như tủy trong xương cũng đang run lên). Vậy nguyên nhân chính là vì sự sợ hãi (fear).",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -373,8 +372,8 @@
                 "He fought the beast.",
                 "He called for help."
               ],
-              "correctAnswer": "A",
-              "explanation": "He decided to stay by the fire."
+              "explanation": "Dịch câu hỏi: Dù đã suy tính nhiều kế hoạch nhưng anh vẫn do dự không hành động. Cuối cùng anh ấy quyết định làm gì?\nGiải thích: Chọn A.\nTrong đoạn 6, bài đọc cho biết: \"Tom contemplated many different plans. He was hesitant to act. He decided to stay by the fire...\" (Tom đã suy tính nhiều kế hoạch khác nhau. Anh ấy ngần ngại hành động. Cuối cùng anh ấy quyết định ở lại bên đống lửa...). Vậy nên anh ấy đã chọn ở lại bên đống lửa.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -385,10 +384,11 @@
                 "His hunger.",
                 "His squad."
               ],
-              "correctAnswer": "A",
-              "explanation": "He couldn't contend with his fear any longer."
+              "explanation": "Dịch câu hỏi: Trong suốt thời gian thức canh, Tom không thể chống chọi thêm với điều gì nữa?\nGiải thích: Chọn A.\nỞ đầu đoạn 7 có viết: \"He couldn’t contend with his fear any longer. He knew what he had to do.\" (Anh ấy không thể chống chọi với nỗi sợ hãi của mình thêm được nữa. Anh ấy biết mình phải làm gì). Suy ra điều anh ấy không thể chịu đựng thêm là nỗi sợ hãi (his fear).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

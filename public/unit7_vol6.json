@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "sly",
                 "unprocessed"
               ],
-              "correctAnswer": "A",
-              "explanation": "credible (adj): can be believed or trusted. Opposite is unbelievable."
+              "explanation": "credible (adj): can be believed or trusted. Opposite is unbelievable.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "young",
                 "alive"
               ],
-              "correctAnswer": "D",
-              "explanation": "deceased (adj): dead. Opposite is alive."
+              "explanation": "deceased (adj): dead. Opposite is alive.",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "cruel",
                 "blessed"
               ],
-              "correctAnswer": "B",
-              "explanation": "ornate (adj): decorated with a lot of fancy things. Opposite is simple."
+              "explanation": "ornate (adj): decorated with a lot of fancy things. Opposite is simple.",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "unavailable",
                 "extra"
               ],
-              "correctAnswer": "B",
-              "explanation": "therapeutic (adj): helps to cure a disease. Opposite is sickening."
+              "explanation": "therapeutic (adj): helps to cure a disease. Opposite is sickening.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "eclipse",
                 "month"
               ],
-              "correctAnswer": "B",
-              "explanation": "dusk (n): time in the evening when it begins to get dark. Opposite is sunrise."
+              "explanation": "dusk (n): time in the evening when it begins to get dark. Opposite is sunrise.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "therapeutic",
                 "psychic"
               ],
-              "correctAnswer": "A",
-              "explanation": "credible (adj): can be believed or trusted."
+              "explanation": "credible (adj): can be believed or trusted.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "sinister",
                 "credible"
               ],
-              "correctAnswer": "A",
-              "explanation": "psychotic (adj): having a very serious mental illness."
+              "explanation": "psychotic (adj): having a very serious mental illness.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "mash",
                 "gratify"
               ],
-              "correctAnswer": "A",
-              "explanation": "decipher (v): figure out what it says."
+              "explanation": "decipher (v): figure out what it says.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "scope",
                 "strife"
               ],
-              "correctAnswer": "A",
-              "explanation": "altar (n): a table used in churches."
+              "explanation": "altar (n): a table used in churches.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "deceased",
                 "therapeutic"
               ],
-              "correctAnswer": "A",
-              "explanation": "ornate (adj): decorated with a lot of fancy things."
+              "explanation": "ornate (adj): decorated with a lot of fancy things.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "gratifies",
                 "deciphers"
               ],
-              "correctAnswer": "A",
-              "explanation": "mash (v): crush it so that it is soft."
+              "explanation": "mash (v): crush it so that it is soft.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "botany",
                 "deception"
               ],
-              "correctAnswer": "A",
-              "explanation": "arthritis (n): an illness causing pain and swelling in a person’s joints."
+              "explanation": "arthritis (n): an illness causing pain and swelling in a person’s joints.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "sinister",
                 "deceased"
               ],
-              "correctAnswer": "A",
-              "explanation": "psychic (adj): knowing what will happen or what people think."
+              "explanation": "psychic (adj): knowing what will happen or what people think.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "scope",
                 "altar"
               ],
-              "correctAnswer": "A",
-              "explanation": "dung (n): solid waste material produced by animals."
+              "explanation": "dung (n): solid waste material produced by animals.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "mash",
                 "hone"
               ],
-              "correctAnswer": "A",
-              "explanation": "gratify (v): to please someone."
+              "explanation": "gratify (v): to please someone.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "curse",
                 "improve"
               ],
-              "correctAnswer": "D",
-              "explanation": "hone (v): to improve it and make it very good."
+              "explanation": "hone (v): to improve it and make it very good.",
+              "correctAnswer": "D"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "approve",
                 "layer"
               ],
-              "correctAnswer": "B",
-              "explanation": "gratify (v): to please someone."
+              "explanation": "gratify (v): to please someone.",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "leave",
                 "gather"
               ],
-              "correctAnswer": "A",
-              "explanation": "mash (v): to crush it so that it is soft."
+              "explanation": "mash (v): to crush it so that it is soft.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "conflict",
                 "weakness"
               ],
-              "correctAnswer": "C",
-              "explanation": "strife (n): disagreement or fighting between people or groups."
+              "explanation": "strife (n): disagreement or fighting between people or groups.",
+              "correctAnswer": "C"
             },
             {
               "id": "20",
@@ -270,16 +269,16 @@
                 "willful",
                 "thoughtless"
               ],
-              "correctAnswer": "A",
-              "explanation": "sinister (adj): evil."
+              "explanation": "sinister (adj): evil.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Fill in the blanks with the correct words from the word bank.",
           "content": "Word Bank: deceased, decipher, sinister, pneumonia, dusk, scope, botany, therapeutic, strife, deception",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -290,8 +289,8 @@
                 "dusk",
                 "strife"
               ],
-              "correctAnswer": "A",
-              "explanation": "scope (n): how many people or things it relates to."
+              "explanation": "scope (n): how many people or things it relates to.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -302,8 +301,8 @@
                 "deception",
                 "deceased"
               ],
-              "correctAnswer": "A",
-              "explanation": "pneumonia (n): a dangerous illness causing the lungs to fill with liquid."
+              "explanation": "pneumonia (n): a dangerous illness causing the lungs to fill with liquid.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -314,8 +313,8 @@
                 "deceased",
                 "pneumonia"
               ],
-              "correctAnswer": "A",
-              "explanation": "therapeutic (adj): helps to cure a disease or makes you healthier."
+              "explanation": "therapeutic (adj): helps to cure a disease or makes you healthier.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -326,8 +325,8 @@
                 "botany",
                 "scope"
               ],
-              "correctAnswer": "A",
-              "explanation": "dusk (n): the time in the evening when it begins to get dark."
+              "explanation": "dusk (n): the time in the evening when it begins to get dark.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -338,8 +337,8 @@
                 "deceased",
                 "decipher"
               ],
-              "correctAnswer": "A",
-              "explanation": "deception (n): the act of lying or tricking someone."
+              "explanation": "deception (n): the act of lying or tricking someone.",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -350,8 +349,8 @@
                 "deceased",
                 "botany"
               ],
-              "correctAnswer": "A",
-              "explanation": "sinister (adj): evil."
+              "explanation": "sinister (adj): evil.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -362,8 +361,8 @@
                 "therapeutic",
                 "dusk"
               ],
-              "correctAnswer": "A",
-              "explanation": "deceased (adj): dead."
+              "explanation": "deceased (adj): dead.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -374,8 +373,8 @@
                 "strife",
                 "scope"
               ],
-              "correctAnswer": "A",
-              "explanation": "botany (n): the study of plants."
+              "explanation": "botany (n): the study of plants.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -386,8 +385,8 @@
                 "deceased",
                 "decipher"
               ],
-              "correctAnswer": "A",
-              "explanation": "strife (n): disagreement or fighting between people or groups."
+              "explanation": "strife (n): disagreement or fighting between people or groups.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -398,24 +397,24 @@
                 "sinister",
                 "pneumonia"
               ],
-              "correctAnswer": "A",
-              "explanation": "decipher (v): figure out what it says."
+              "explanation": "decipher (v): figure out what it says.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Greek Magical Papyri</h1><p style=\"margin-bottom: 2rem;\">The Greek Magical Papyri is a collection of writing about magic. After it was found in the Egyptian desert, it took experts years to <b>decipher</b> it. The text was written in at least three different ancient languages. After many years, experts realized it contained a number of spells that varied greatly in <b>scope</b>.</p><p style=\"margin-bottom: 2rem;\">The most common types of magic in the collection dealt with healing illnesses like <b>pneumonia</b>. Some spells also gave advice for treating people with mental illnesses, such as those who became <b>psychotic</b>. Some spells asked for unusual things, like crocodile <b>dung</b>.</p><p style=\"margin-bottom: 2rem;\">But <b>botany</b> was an important part of the magic. Many healing spells gave instructions on how to use herbs and plants that were believed to be <b>therapeutic</b>. For example, in order to cure <b>arthritis</b>, the book says that the magician should build an <b>ornate</b> <b>altar</b>. Then he should <b>mash</b> different types of herbs and place them on top of it. At <b>dusk</b>, he is supposed to say a spell, so the gods would be <b>gratified</b>.</p><p style=\"margin-bottom: 2rem;\">Other parts of the collection describe how to <b>hone</b> one’s <b>psychic</b> abilities and how to give <b>credible</b> descriptions of the future. Often, the book advised people how to use different objects to tell the future, including tea leaves. Also, one part of the book tells what different dreams might mean. It gives advice for using dreams to tell the future.</p><p style=\"margin-bottom: 2rem;\">A small part of the book, however, is more <b>sinister</b> than the rest. It is meant to cause <b>strife</b> and <b>deception</b>. For example, one tells how to give someone warts, while another will make all of the victim’s farm animals die. However, if someone’s farm animals died as a result of a curse, he could ask a magician to perform magic that makes the <b>deceased</b> come back to life.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Greek Magical Papyri</h1>        <p style=\"margin-bottom: 1rem;\">The Greek Magical Papyri is a collection of writing about magic. After it was found in the Egyptian desert, it took experts years to <b>decipher</b> it. The text was written in at least three different ancient languages. After many years, experts realized it contained a number of spells that varied greatly in <b>scope</b>.</p>    <p style=\"margin-bottom: 1rem;\">The most common types of magic in the collection dealt with healing illnesses like <b>pneumonia</b>. Some spells also gave advice for treating people with mental illnesses, such as those who became <b>psychotic</b>. Some spells asked for unusual things, like crocodile <b>dung</b>.</p>    <p style=\"margin-bottom: 1rem;\">But <b>botany</b> was an important part of the magic. Many healing spells gave instructions on how to use herbs and plants that were believed to be <b>therapeutic</b>. For example, in order to cure <b>arthritis</b>, the book says that the magician should build an <b>ornate</b> <b>altar</b>. Then he should <b>mash</b> different types of herbs and place them on top of it. At <b>dusk</b>, he is supposed to say a spell, so the gods would be <b>gratified</b>.</p>    <p style=\"margin-bottom: 1rem;\">Other parts of the collection describe how to <b>hone</b> one’s <b>psychic</b> abilities and how to give <b>credible</b> descriptions of the future. Often, the book advised people how to use different objects to tell the future, including tea leaves. Also, one part of the book tells what different dreams might mean. It gives advice for using dreams to tell the future.</p>    <p style=\"margin-bottom: 1rem;\">A small part of the book, however, is more <b>sinister</b> than the rest. It is meant to cause <b>strife</b> and <b>deception</b>. For example, one tells how to give someone warts, while another will make all of the victim’s farm animals die. However, if someone’s farm animals died as a result of a curse, he could ask a magician to perform magic that makes the <b>deceased</b> come back to life.</p></div>",
       "imageUrl": "/unit7_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -424,8 +423,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The Greek Magical Papyri was hard to decipher because it was written in at least three different ancient languages."
+              "explanation": "Bạn có thể thấy đáp án là Sai (F). Câu văn trong bài nói rằng: \"The text was written in at least three different ancient languages\" (Văn bản này được viết bằng ít nhất ba ngôn ngữ cổ khác nhau), điều này làm cho nó khó giải mã, chứ không phải vì phạm vi quá rộng.",
+              "correctAnswer": "F"
             },
             {
               "id": "32",
@@ -434,8 +433,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The book is about magic."
+              "explanation": "Đáp án là Sai (F) nhé. Ngay câu đầu tiên của bài đọc đã khẳng định: \"The Greek Magical Papyri is a collection of writing about magic\" (Greek Magical Papyri là một bộ sưu tập các bài viết về phép thuật). Thực vật học (botany) chỉ là một phần trong đó chứ không phải là chủ đề chính.",
+              "correctAnswer": "F"
             },
             {
               "id": "33",
@@ -444,8 +443,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đáp án là Đúng (T). Trong đoạn hai có nhắc đến: \"Some spells asked for unusual things, like crocodile dung\" (Một số phép thuật yêu cầu những thứ kỳ lạ, như phân cá sấu) để dùng cho việc chữa bệnh.",
+              "correctAnswer": "T"
             },
             {
               "id": "34",
@@ -454,8 +453,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: A spell was spoken at dusk to gratify the gods."
+              "explanation": "Đáp án là Sai (F). Theo đoạn ba, mục đích của việc đọc thần chú lúc chạng vạng là để làm hài lòng các vị thần: \"At dusk, he is supposed to say a spell, so the gods would be gratified\" (Lúc chạng vạng, người đó phải đọc một câu thần chú để các vị thần hài lòng).",
+              "correctAnswer": "F"
             },
             {
               "id": "35",
@@ -464,16 +463,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đáp án là Đúng (T). Đoạn bốn có đề cập rõ ràng rằng: \"Other parts of the collection describe how to hone one’s psychic abilities\" (Các phần khác của bộ sưu tập mô tả cách mài giũa khả năng ngoại cảm của một người).",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -484,8 +483,8 @@
                 "It helps people with asthma.",
                 "It is only about healing animals."
               ],
-              "correctAnswer": "A",
-              "explanation": "The book gives advice for curing arthritis, pneumonia, and psychotic people."
+              "explanation": "Đáp án đúng là A. Bài đọc cho biết cuốn sách chứa các loại phép thuật chữa bệnh như viêm phổi và cả bệnh tâm thần: \"The most common types of magic in the collection dealt with healing illnesses like pneumonia. Some spells also gave advice for treating people with mental illnesses, such as those who became psychotic.\"",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -496,8 +495,8 @@
                 "It tells readers to use common grass.",
                 "It recommends only fruit-bearing trees."
               ],
-              "correctAnswer": "A",
-              "explanation": "The book recommends using plants like herbs believed to be therapeutic."
+              "explanation": "Đáp án đúng là A. Trong đoạn ba, bài viết có nêu: \"Many healing spells gave instructions on how to use herbs and plants that were believed to be therapeutic\" (Nhiều phép thuật chữa bệnh đưa ra hướng dẫn cách sử dụng các loại thảo mộc và thực vật được tin là có tác dụng trị liệu).",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -508,8 +507,8 @@
                 "They should perform magic on farm animals.",
                 "They should read the book aloud at dawn."
               ],
-              "correctAnswer": "A",
-              "explanation": "A person trying to heal arthritis should build an ornate altar and place mashed herbs on it. Then he or she should say a spell at dusk."
+              "explanation": "Đáp án đúng là A. Đoạn ba hướng dẫn rất cụ thể: \"For example, in order to cure arthritis, the book says that the magician should build an ornate altar. Then he should mash different types of herbs and place them on top of it. At dusk, he is supposed to say a spell...\"",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -520,8 +519,8 @@
                 "Honing one's psychic abilities.",
                 "Interpreting dreams."
               ],
-              "correctAnswer": "A",
-              "explanation": "The sinister part of the book focuses on causing strife and deception."
+              "explanation": "Đáp án đúng là A. Đoạn cuối có viết: \"A small part of the book, however, is more sinister than the rest. It is meant to cause strife and deception.\" (Tuy nhiên, một phần nhỏ của cuốn sách lại nham hiểm hơn phần còn lại. Nó nhằm mục đích gây ra xung đột và lừa dối).",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -532,10 +531,11 @@
                 "Mash different types of herbs.",
                 "Read from the Greek Magical Papyri."
               ],
-              "correctAnswer": "A",
-              "explanation": "A farmer whose animals died could ask a magician to perform magic that makes the deceased come back to life."
+              "explanation": "Đáp án đúng là A. Dòng cuối cùng của bài đọc cho biết: \"However, if someone’s farm animals died as a result of a curse, he could ask a magician to perform magic that makes the deceased come back to life.\" (nếu động vật chết do lời nguyền, có thể yêu cầu pháp sư thực hiện phép thuật làm chúng sống lại).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

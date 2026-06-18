@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "A car",
                 "A star"
               ],
-              "correctAnswer": "A",
-              "explanation": "A rule"
+              "explanation": "A rule",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "Postal workers",
                 "Police officers"
               ],
-              "correctAnswer": "D",
-              "explanation": "Police officers"
+              "explanation": "Police officers",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "A tiny puppy",
                 "A newborn baby"
               ],
-              "correctAnswer": "B",
-              "explanation": "An evil king"
+              "explanation": "An evil king",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "can be bad",
                 "is pleasant"
               ],
-              "correctAnswer": "B",
-              "explanation": "cannot be controlled"
+              "explanation": "cannot be controlled",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "A young man",
                 "Someone in a wheelchair"
               ],
-              "correctAnswer": "D",
-              "explanation": "Someone in a wheelchair"
+              "explanation": "Someone in a wheelchair",
+              "correctAnswer": "D"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "showering",
                 "sleeping"
               ],
-              "correctAnswer": "D",
-              "explanation": "sleeping"
+              "explanation": "sleeping",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "A large company",
                 "A basketball"
               ],
-              "correctAnswer": "C",
-              "explanation": "A large company"
+              "explanation": "A large company",
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "A cruise",
                 "Cell phone"
               ],
-              "correctAnswer": "A",
-              "explanation": "A newspaper"
+              "explanation": "A newspaper",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "in need of practice",
                 "great"
               ],
-              "correctAnswer": "D",
-              "explanation": "great"
+              "explanation": "great",
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "A big city",
                 "A small village"
               ],
-              "correctAnswer": "C",
-              "explanation": "A big city"
+              "explanation": "A big city",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "smart",
                 "healthy"
               ],
-              "correctAnswer": "D",
-              "explanation": "healthy"
+              "explanation": "healthy",
+              "correctAnswer": "D"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "upset",
                 "popularity"
               ],
-              "correctAnswer": "A",
-              "explanation": "well known"
+              "explanation": "well known",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "round",
                 "caring"
               ],
-              "correctAnswer": "B",
-              "explanation": "start"
+              "explanation": "start",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "happiness",
                 "glow"
               ],
-              "correctAnswer": "C",
-              "explanation": "happiness"
+              "explanation": "happiness",
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "open",
                 "forget"
               ],
-              "correctAnswer": "B",
-              "explanation": "collect"
+              "explanation": "collect",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "poll",
                 "aspire"
               ],
-              "correctAnswer": "A",
-              "explanation": "outburst"
+              "explanation": "outburst",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "amend",
                 "outburst"
               ],
-              "correctAnswer": "A",
-              "explanation": "disseminate"
+              "explanation": "disseminate",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "aspire",
                 "amend"
               ],
-              "correctAnswer": "A",
-              "explanation": "limp"
+              "explanation": "limp",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "secrecy",
                 "outburst"
               ],
-              "correctAnswer": "A",
-              "explanation": "poll"
+              "explanation": "poll",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "flatter",
                 "limp"
               ],
-              "correctAnswer": "A",
-              "explanation": "aspire"
+              "explanation": "aspire",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "constitution",
                 "poll"
               ],
-              "correctAnswer": "A",
-              "explanation": "remorse"
+              "explanation": "remorse",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "aspire",
                 "disseminate"
               ],
-              "correctAnswer": "A",
-              "explanation": "amend"
+              "explanation": "amend",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "disseminate",
                 "limp"
               ],
-              "correctAnswer": "A",
-              "explanation": "flatter"
+              "explanation": "flatter",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "remorse",
                 "poll"
               ],
-              "correctAnswer": "A",
-              "explanation": "constitution"
+              "explanation": "constitution",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,16 +329,16 @@
                 "remorse",
                 "outburst"
               ],
-              "correctAnswer": "A",
-              "explanation": "secrecy"
+              "explanation": "secrecy",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -348,8 +347,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "I"
+              "explanation": "I",
+              "correctAnswer": "I"
             },
             {
               "id": "27",
@@ -358,8 +357,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "C"
+              "explanation": "C",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -368,8 +367,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "I"
+              "explanation": "I",
+              "correctAnswer": "I"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "I"
+              "explanation": "I",
+              "correctAnswer": "I"
             },
             {
               "id": "30",
@@ -388,24 +387,24 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "C"
+              "explanation": "C",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Mayor of Sherman</h1><p style=\"margin-bottom: 2rem;\">The <b>cosmopolitan</b> city of Sherman needed to elect a new mayor. Two men <b>aspired</b> to become mayor: Mr. Jones and Mr. Webb. Mr. Jones was a tall, handsome man. He was a <b>phenomenal</b> speaker, and the citizens loved him. However, Mr. Jones didn’t know much about running a city. He was a <b>pathological</b> liar who merely <b>flattered</b> people with his words. Mr. Webb was very different. He was a small, unattractive man. He was <b>lame</b> and <b>limped</b> when he walked. But he was an expert on politics and knew what was best for the people.</p><p style=\"margin-bottom: 2rem;\">The citizens of Sherman didn’t care about what the politicians had to say. No one listened to Mr. Webb, even though he had great ideas. They cheered when Mr. Jones spoke, although he didn’t talk about important things. His pretty words put people in a <b>trance</b>. All the <b>polls</b> predicted that Mr. Jones would win the election.</p><p style=\"margin-bottom: 2rem;\">When the votes were totaled, Mr. Jones won easily. But when he took office, he didn’t know what to do! He tried to hide his ignorance by working in <b>secrecy</b>. He added a law to the city’s <b>constitution</b> that prevented citizens from seeing the mayor. He even <b>censored</b> newspapers that tried to <b>disseminate</b> information about his inability to help the people.</p><p style=\"margin-bottom: 2rem;\">Soon, however, Mr. Jones became <b>infamous</b> for his poor leadership. There was an <b>outburst</b> of anger among the citizens. They were full of <b>remorse</b> for their misguided decision to elect an ignorant mayor. They voted to remove Mr. Jones and let Mr. Webb take over.</p><p style=\"margin-bottom: 2rem;\">Immediately, Mr. Webb proved that he was a great mayor. He <b>abolished</b> Mr. Jones’s law, and he was willing to talk openly with everyone. He <b>tackled</b> important issues and <b>amended</b> unfair laws in the city’s <b>charter</b>.</p><p style=\"margin-bottom: 2rem;\">The citizens learned that a pleasant appearance and nice words do not make a good leader. The most important qualities are intelligence and a desire to help others.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Mayor of Sherman</h1>        <p style=\"margin-bottom: 1rem;\">The <b>cosmopolitan</b> city of Sherman needed to elect a new mayor. Two men <b>aspired</b> to become mayor: Mr. Jones and Mr. Webb. Mr. Jones was a tall, handsome man. He was a <b>phenomenal</b> speaker, and the citizens loved him. However, Mr. Jones didn’t know much about running a city. He was a <b>pathological</b> liar who merely <b>flattered</b> people with his words. Mr. Webb was very different. He was a small, unattractive man. He was <b>lame</b> and <b>limped</b> when he walked. But he was an expert on politics and knew what was best for the people.</p>    <p style=\"margin-bottom: 1rem;\">The citizens of Sherman didn’t care about what the politicians had to say. No one listened to Mr. Webb, even though he had great ideas. They cheered when Mr. Jones spoke, although he didn’t talk about important things. His pretty words put people in a <b>trance</b>. All the <b>polls</b> predicted that Mr. Jones would win the election.</p>    <p style=\"margin-bottom: 1rem;\">When the votes were totaled, Mr. Jones won easily. But when he took office, he didn’t know what to do! He tried to hide his ignorance by working in <b>secrecy</b>. He added a law to the city’s <b>constitution</b> that prevented citizens from seeing the mayor. He even <b>censored</b> newspapers that tried to <b>disseminate</b> information about his inability to help the people.</p>    <p style=\"margin-bottom: 1rem;\">Soon, however, Mr. Jones became <b>infamous</b> for his poor leadership. There was an <b>outburst</b> of anger among the citizens. They were full of <b>remorse</b> for their misguided decision to elect an ignorant mayor. They voted to remove Mr. Jones and let Mr. Webb take over.</p>    <p style=\"margin-bottom: 1rem;\">Immediately, Mr. Webb proved that he was a great mayor. He <b>abolished</b> Mr. Jones’s law, and he was willing to talk openly with everyone. He <b>tackled</b> important issues and <b>amended</b> unfair laws in the city’s <b>charter</b>.</p>    <p style=\"margin-bottom: 1rem;\">The citizens learned that a pleasant appearance and nice words do not make a good leader. The most important qualities are intelligence and a desire to help others.</p></div>",
       "imageUrl": "/unit21_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -414,8 +413,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đúng. Bài đọc mở đầu bằng câu: \"The cosmopolitan city of Sherman needed to elect a new mayor. Two men aspired to become mayor...\" (Thành phố quốc tế Sherman cần bầu một thị trưởng mới. Hai người đàn ông khao khát trở thành thị trưởng...).",
+              "correctAnswer": "T"
             },
             {
               "id": "32",
@@ -424,8 +423,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, Mr. Jones was a pathological liar who flattered people with his words."
+              "explanation": "Sai. Bài đọc viết: \"He was a phenomenal speaker...\" (Ông ấy là một diễn giả hiện tượng...) và \"He was a pathological liar who merely flattered people with his words.\" (Ông ta là một kẻ nói dối bệnh hoạn, chỉ biết dùng lời lẽ để tâng bốc mọi người). Ông ấy là \"pathological liar\" (kẻ nói dối bệnh hoạn) chứ không phải \"pathological speaker\".",
+              "correctAnswer": "F"
             },
             {
               "id": "33",
@@ -434,8 +433,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đúng. Trong đoạn 1 có ghi: \"He was lame and limped when he walked.\" (Ông ấy bị thọt và đi cà nhắc khi bước đi).",
+              "correctAnswer": "T"
             },
             {
               "id": "34",
@@ -444,8 +443,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đúng. Đoạn 5 viết: \"He tackled important issues and amended unfair laws in the city’s charter.\" (Ông giải quyết các vấn đề quan trọng và sửa đổi những luật lệ không công bằng trong hiến chương của thành phố).",
+              "correctAnswer": "T"
             },
             {
               "id": "35",
@@ -454,16 +453,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, Mr. Jones censored newspapers that tried to disseminate information about his inability to help the people."
+              "explanation": "Sai. Đoạn 3 viết: \"He even censored newspapers that tried to disseminate information about his inability to help the people.\" (Ông ta thậm chí còn kiểm duyệt các tờ báo cố gắng phổ biến thông tin về sự bất lực của ông ta trong việc giúp đỡ người dân). Không phải là phổ biến sự phẫn nộ (outbursts of anger).",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -474,8 +473,8 @@
                 "They predicted a tie.",
                 "They predicted no one would win."
               ],
-              "correctAnswer": "A",
-              "explanation": "The polls predicted that Mr. Jones would win the election."
+              "explanation": "Đoạn 2 ghi rõ: \"His pretty words put people in a trance. All the polls predicted that Mr. Jones would win the election.\" (Những lời lẽ hoa mỹ của ông ta khiến mọi người mê mẩn. Tất cả các cuộc thăm dò đều dự đoán rằng ông Jones sẽ thắng cử). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -486,8 +485,8 @@
                 "The decision to build a new city.",
                 "The decision to leave the city."
               ],
-              "correctAnswer": "A",
-              "explanation": "The decision to elect an ignorant mayor."
+              "explanation": "Trong đoạn 4: \"They were full of remorse for their misguided decision to elect an ignorant mayor.\" (Họ tràn đầy hối hận vì quyết định sai lầm khi bầu ra một vị thị trưởng dốt nát). Đáp án A hoàn toàn trùng khớp.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -498,8 +497,8 @@
                 "He was willing to leave.",
                 "He was willing to sleep."
               ],
-              "correctAnswer": "A",
-              "explanation": "He was willing to talk openly with everyone."
+              "explanation": "Đoạn 5 viết: \"He abolished Mr. Jones’s law, and he was willing to talk openly with everyone.\" (Ông ấy đã bãi bỏ luật của ông Jones, và sẵn sàng nói chuyện cởi mở với mọi người). Đáp án A là lựa chọn đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -510,8 +509,8 @@
                 "He became infamous for his singing.",
                 "He became infamous for his money."
               ],
-              "correctAnswer": "A",
-              "explanation": "The phenomenal speaker became infamous for his poor leadership."
+              "explanation": "Đoạn 4 mở đầu bằng câu: \"Soon, however, Mr. Jones became infamous for his poor leadership.\" (Tuy nhiên, chẳng bao lâu sau, ông Jones trở nên khét tiếng vì khả năng lãnh đạo tồi tệ của mình). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -522,10 +521,11 @@
                 "He was trying to build a new house.",
                 "He was trying to escape."
               ],
-              "correctAnswer": "A",
-              "explanation": "He was trying to hide his ignorance."
+              "explanation": "Đoạn 3 có viết: \"He tried to hide his ignorance by working in secrecy.\" (Ông ta cố che giấu sự dốt nát của mình bằng cách làm việc trong bí mật). Do đó đáp án A là đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

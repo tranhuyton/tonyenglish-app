@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "young",
                 "vague"
               ],
-              "correctAnswer": "B",
-              "explanation": "veteran has a lot of experience, opposite is amateur."
+              "explanation": "veteran has a lot of experience, opposite is amateur.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "lessen",
                 "mark"
               ],
-              "correctAnswer": "B",
-              "explanation": "harmonize means to go well together, opposite is disagree."
+              "explanation": "harmonize means to go well together, opposite is disagree.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "common",
                 "well-planned"
               ],
-              "correctAnswer": "D",
-              "explanation": "misguided is based on bad judgment, opposite is well-planned."
+              "explanation": "misguided is based on bad judgment, opposite is well-planned.",
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "hero",
                 "loud person"
               ],
-              "correctAnswer": "C",
-              "explanation": "villain is evil person, opposite is hero."
+              "explanation": "villain is evil person, opposite is hero.",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "delicate",
                 "factory-related"
               ],
-              "correctAnswer": "A",
-              "explanation": "scorn means behave without respect, opposite is respect."
+              "explanation": "scorn means behave without respect, opposite is respect.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "communal",
                 "acrobats"
               ],
-              "correctAnswer": "D",
-              "explanation": "acrobats"
+              "explanation": "acrobats",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "inventive",
                 "metropolitan"
               ],
-              "correctAnswer": "A",
-              "explanation": "fluid"
+              "explanation": "fluid",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "judicial",
                 "statutes"
               ],
-              "correctAnswer": "A",
-              "explanation": "communal"
+              "explanation": "communal",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "metropolitan",
                 "fluid"
               ],
-              "correctAnswer": "A",
-              "explanation": "inventive"
+              "explanation": "inventive",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "communal",
                 "acrobats"
               ],
-              "correctAnswer": "A",
-              "explanation": "judicial"
+              "explanation": "judicial",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "rehearsed",
                 "industrious"
               ],
-              "correctAnswer": "A",
-              "explanation": "statutes"
+              "explanation": "statutes",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "inventive",
                 "communal"
               ],
-              "correctAnswer": "A",
-              "explanation": "rehearsed"
+              "explanation": "rehearsed",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "judicial",
                 "fluid"
               ],
-              "correctAnswer": "A",
-              "explanation": "industrious"
+              "explanation": "industrious",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "Acrobats",
                 "Statutes"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mandarin"
+              "explanation": "Mandarin",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "inventive",
                 "judicial"
               ],
-              "correctAnswer": "A",
-              "explanation": "metropolitan"
+              "explanation": "metropolitan",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -220,8 +219,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use of advocacy."
+              "explanation": "Correct use of advocacy.",
+              "correctAnswer": "C"
             },
             {
               "id": "17",
@@ -230,8 +229,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Incorrect use of scorned."
+              "explanation": "Incorrect use of scorned.",
+              "correctAnswer": "I"
             },
             {
               "id": "18",
@@ -240,8 +239,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use of sensory."
+              "explanation": "Correct use of sensory.",
+              "correctAnswer": "C"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use of staple."
+              "explanation": "Correct use of staple.",
+              "correctAnswer": "C"
             },
             {
               "id": "20",
@@ -260,8 +259,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use of communal."
+              "explanation": "Correct use of communal.",
+              "correctAnswer": "C"
             },
             {
               "id": "21",
@@ -270,8 +269,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Incorrect use."
+              "explanation": "Incorrect use.",
+              "correctAnswer": "I"
             },
             {
               "id": "22",
@@ -280,8 +279,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Incorrect use."
+              "explanation": "Incorrect use.",
+              "correctAnswer": "I"
             },
             {
               "id": "23",
@@ -290,8 +289,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use."
+              "explanation": "Correct use.",
+              "correctAnswer": "C"
             },
             {
               "id": "24",
@@ -300,8 +299,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Incorrect use."
+              "explanation": "Incorrect use.",
+              "correctAnswer": "I"
             },
             {
               "id": "25",
@@ -310,8 +309,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use."
+              "explanation": "Correct use.",
+              "correctAnswer": "C"
             },
             {
               "id": "26",
@@ -320,8 +319,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use."
+              "explanation": "Correct use.",
+              "correctAnswer": "C"
             },
             {
               "id": "27",
@@ -330,8 +329,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Incorrect use."
+              "explanation": "Incorrect use.",
+              "correctAnswer": "I"
             },
             {
               "id": "28",
@@ -340,8 +339,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use."
+              "explanation": "Correct use.",
+              "correctAnswer": "C"
             },
             {
               "id": "29",
@@ -350,8 +349,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use."
+              "explanation": "Correct use.",
+              "correctAnswer": "C"
             },
             {
               "id": "30",
@@ -360,8 +359,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Incorrect use."
+              "explanation": "Incorrect use.",
+              "correctAnswer": "I"
             },
             {
               "id": "31",
@@ -370,8 +369,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use."
+              "explanation": "Correct use.",
+              "correctAnswer": "C"
             },
             {
               "id": "32",
@@ -380,8 +379,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use."
+              "explanation": "Correct use.",
+              "correctAnswer": "C"
             },
             {
               "id": "33",
@@ -390,8 +389,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Incorrect use."
+              "explanation": "Incorrect use.",
+              "correctAnswer": "I"
             },
             {
               "id": "34",
@@ -400,8 +399,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Correct use."
+              "explanation": "Correct use.",
+              "correctAnswer": "C"
             },
             {
               "id": "35",
@@ -410,24 +409,24 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Incorrect use."
+              "explanation": "Incorrect use.",
+              "correctAnswer": "I"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Hundred Plays</h1><p style=\"margin-bottom: 2rem;\">Over two thousand years ago, Chinese farmers had a problem. Even though they were very <b>industrious</b>, the weather became too cold outside to plant their <b>staple</b> food, rice. So what did they do? Since they had so much free time during the long, cold winters, the <b>inventive</b> farmers started performing tricks to entertain themselves. They used their farm tools and anything they could find to make their tricks more spectacular. They even twisted their bodies into crazy shapes and performed awesome jumps. Over time, they became great <b>acrobats</b>, and their art form came to be known as “Hundred Plays.”</p><p style=\"margin-bottom: 2rem;\">Hundred Plays involves doing many kinds of tricks. For example, in <b>Mandarin</b>-speaking parts of China, performers do the lion dance. They wear costumes and <b>mimic</b> the animal’s movements. Early performers also did tricks on ropes and <b>vines</b> that were high above the ground.</p><p style=\"margin-bottom: 2rem;\">Even though the <b>acrobats</b>’ <b>fluid</b> movements may have looked easy, they took a lot of work.</p><p style=\"margin-bottom: 2rem;\">Learning Hundred Plays is a <b>communal</b> event. A <b>veteran</b> of the acrobatic arts usually teaches younger people in the village. They spend a lot of time <b>rehearsing</b>. The young performers also learn an old philosophy. The teachings help them <b>harmonize</b> the <b>sensory</b> aspects of acrobatics with mental aspects. In other words, it teaches them to use their physical and mental strength together.</p><p style=\"margin-bottom: 2rem;\">Since the art has its origins with poor farmers, rich people used to <b>scorn</b> <b>acrobats</b>. They thought <b>acrobats</b> were <b>villains</b>. The rich people thought the <b>acrobats</b> just wanted to trick them. But later, their <b>misguided</b> opinions changed. <b>Acrobats</b> came to be respected in Chinese society. They were invited to perform in <b>metropolitan</b> areas as well as in small villages. They performed for important people, including <b>judicial</b> officers. Arts <b>advocacy</b> groups convinced the government to support Chinese acrobatics. As a result, there is now a <b>statute</b> that made several villages the center of training future <b>acrobats</b>.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Hundred Plays</h1>        <p style=\"margin-bottom: 1rem;\">Over two thousand years ago, Chinese farmers had a problem. Even though they were very <b>industrious</b>, the weather became too cold outside to plant their <b>staple</b> food, rice. So what did they do? Since they had so much free time during the long, cold winters, the <b>inventive</b> farmers started performing tricks to entertain themselves. They used their farm tools and anything they could find to make their tricks more spectacular. They even twisted their bodies into crazy shapes and performed awesome jumps. Over time, they became great <b>acrobats</b>, and their art form came to be known as “Hundred Plays.”</p>    <p style=\"margin-bottom: 1rem;\">Hundred Plays involves doing many kinds of tricks. For example, in <b>Mandarin</b>-speaking parts of China, performers do the lion dance. They wear costumes and <b>mimic</b> the animal’s movements. Early performers also did tricks on ropes and <b>vines</b> that were high above the ground.</p>    <p style=\"margin-bottom: 1rem;\">Even though the <b>acrobats</b>’ <b>fluid</b> movements may have looked easy, they took a lot of work.</p>    <p style=\"margin-bottom: 1rem;\">Learning Hundred Plays is a <b>communal</b> event. A <b>veteran</b> of the acrobatic arts usually teaches younger people in the village. They spend a lot of time <b>rehearsing</b>. The young performers also learn an old philosophy. The teachings help them <b>harmonize</b> the <b>sensory</b> aspects of acrobatics with mental aspects. In other words, it teaches them to use their physical and mental strength together.</p>    <p style=\"margin-bottom: 1rem;\">Since the art has its origins with poor farmers, rich people used to <b>scorn</b> <b>acrobats</b>. They thought <b>acrobats</b> were <b>villains</b>. The rich people thought the <b>acrobats</b> just wanted to trick them. But later, their <b>misguided</b> opinions changed. <b>Acrobats</b> came to be respected in Chinese society. They were invited to perform in <b>metropolitan</b> areas as well as in small villages. They performed for important people, including <b>judicial</b> officers. Arts <b>advocacy</b> groups convinced the government to support Chinese acrobatics. As a result, there is now a <b>statute</b> that made several villages the center of training future <b>acrobats</b>.</p></div>",
       "imageUrl": "/unit25_vol6_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -436,8 +435,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "The Chinese farmers became great acrobats while entertaining themselves during the winters."
+              "explanation": "Sai. Đoạn 1 viết: \"Since they had so much free time during the long, cold winters, the inventive farmers started performing tricks to entertain themselves... Over time, they became great acrobats...\" (Vì có quá nhiều thời gian rảnh rỗi trong suốt mùa đông dài và lạnh giá, những người nông dân sáng tạo đã bắt đầu biểu diễn các trò kỹ xảo để giải trí... Theo thời gian, họ trở thành những diễn viên nhào lộn tài ba...). Vì vậy, họ không trở thành diễn viên nhào lộn trong lúc trồng trọt (while planting crops) mà là trong lúc rảnh rỗi vào mùa đông.",
+              "correctAnswer": "F"
             },
             {
               "id": "37",
@@ -446,8 +445,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "True"
+              "explanation": "Đúng. Đoạn 2 giải thích: \"...in Mandarin-speaking parts of China, performers do the lion dance. They wear costumes and mimic the animal’s movements.\" (...ở những vùng nói tiếng Quan Thoại của Trung Quốc, các nghệ sĩ biểu diễn múa lân. Họ mặc trang phục và bắt chước các chuyển động của con vật).",
+              "correctAnswer": "T"
             },
             {
               "id": "38",
@@ -456,8 +455,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "True"
+              "explanation": "Đúng. Đoạn 3 và 4 nêu rõ rằng những chuyển động mượt mà (fluid movements) đòi hỏi rất nhiều công sức: \"They spend a lot of time rehearsing.\" (Họ dành rất nhiều thời gian để tập luyện).",
+              "correctAnswer": "T"
             },
             {
               "id": "39",
@@ -466,8 +465,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "True"
+              "explanation": "Đúng. Đoạn 4 có viết: \"The teachings help them harmonize the sensory aspects of acrobatics with mental aspects.\" (Những lời dạy giúp họ kết hợp hài hòa các khía cạnh giác quan của nghệ thuật nhào lộn với các khía cạnh tinh thần).",
+              "correctAnswer": "T"
             },
             {
               "id": "40",
@@ -476,16 +475,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "Advocacy groups convinced the government to support Chinese acrobatics."
+              "explanation": "Sai. Đoạn cuối viết: \"Arts advocacy groups convinced the government to support Chinese acrobatics. As a result, there is now a statute that made several villages the center of training future acrobats.\" (Các nhóm ủng hộ nghệ thuật đã thuyết phục chính phủ hỗ trợ nghệ thuật nhào lộn Trung Quốc. Nhờ đó, hiện có một đạo luật biến một số ngôi làng thành trung tâm đào tạo những nghệ sĩ nhào lộn tương lai). Đạo luật này không dùng để \"bảo vệ họ khỏi bị khinh miệt\" (protect acrobats from being scorned).",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -496,8 +495,8 @@
                 "They were rich.",
                 "They were villains."
               ],
-              "correctAnswer": "A",
-              "explanation": "According to the passage, the farmers were inventive and industrious."
+              "explanation": "Đoạn 1 có ghi: \"...Chinese farmers had a problem. Even though they were very industrious... the inventive farmers started performing tricks...\" (...những người nông dân Trung Quốc gặp một vấn đề. Mặc dù họ rất cần cù... những người nông dân sáng tạo đã bắt đầu biểu diễn các trò kỹ xảo...). Do đó đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -508,8 +507,8 @@
                 "They go to the city.",
                 "They watch TV."
               ],
-              "correctAnswer": "A",
-              "explanation": "Acrobat's training is communal. A veteran performer teaches the young people in the village."
+              "explanation": "Đoạn 4 viết: \"A veteran of the acrobatic arts usually teaches younger people in the village.\" (Một người kỳ cựu trong nghệ thuật nhào lộn thường dạy cho những người trẻ tuổi trong làng). Vì vậy đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -520,8 +519,8 @@
                 "People thought they were farmers.",
                 "People thought they were aliens."
               ],
-              "correctAnswer": "A",
-              "explanation": "In the past, people thought that acrobats were villains and just wanted to trick rich people."
+              "explanation": "Đoạn cuối giải thích: \"...rich people used to scorn acrobats. They thought acrobats were villains. The rich people thought the acrobats just wanted to trick them.\" (...những người giàu có từng khinh miệt các nghệ sĩ nhào lộn. Họ cho rằng các nghệ sĩ nhào lộn là những kẻ xấu. Những người giàu nghĩ rằng các nghệ sĩ nhào lộn chỉ muốn lừa gạt họ). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -532,8 +531,8 @@
                 "Ladders",
                 "Airplanes"
               ],
-              "correctAnswer": "A",
-              "explanation": "The acrobats used vines to perform tricks high above the ground."
+              "explanation": "Cuối đoạn 2 có ghi: \"Early performers also did tricks on ropes and vines that were high above the ground.\" (Những người biểu diễn thời kỳ đầu cũng thực hiện các kỹ xảo trên dây thừng và dây leo ở trên cao). Do đó đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -544,10 +543,11 @@
                 "They performed in space.",
                 "They performed only for farmers."
               ],
-              "correctAnswer": "A",
-              "explanation": "The acrobats were invited to perform in metropolitan areas as well as villages and performed for judicial officers and other important people."
+              "explanation": "Đoạn cuối viết: \"They were invited to perform in metropolitan areas as well as in small villages. They performed for important people, including judicial officers.\" (Họ được mời đến biểu diễn ở các khu vực đô thị cũng như ở các ngôi làng nhỏ. Họ biểu diễn cho những người quan trọng, bao gồm cả các quan chức tư pháp). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

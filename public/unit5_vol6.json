@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "not true",
                 "not enough"
               ],
-              "correctAnswer": "B",
-              "explanation": "overdose (n): too much."
+              "explanation": "overdose (n): too much.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "Eating too much",
                 "Laying on a bed"
               ],
-              "correctAnswer": "B",
-              "explanation": "gasp (v): to make a noise by quickly breathing in when surprised."
+              "explanation": "gasp (v): to make a noise by quickly breathing in when surprised.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "A glass of soda",
                 "A piece of chicken"
               ],
-              "correctAnswer": "C",
-              "explanation": "sip (v): drink a small amount at a time."
+              "explanation": "sip (v): drink a small amount at a time.",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "Angry",
                 "Hungry"
               ],
-              "correctAnswer": "A",
-              "explanation": "benign (adj): do not hurt anyone."
+              "explanation": "benign (adj): do not hurt anyone.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "forgetting her friend's birthday",
                 "giving to charity"
               ],
-              "correctAnswer": "C",
-              "explanation": "apologetic (adj): sorry about something."
+              "explanation": "apologetic (adj): sorry about something.",
+              "correctAnswer": "C"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "Meeting for the first time",
                 "Going on a date"
               ],
-              "correctAnswer": "A",
-              "explanation": "negotiate (v): try to make an agreement through discussion."
+              "explanation": "negotiate (v): try to make an agreement through discussion.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "It is black on the outside.",
                 "It is red on the outside."
               ],
-              "correctAnswer": "C",
-              "explanation": "char (v): burn something so that it turns black."
+              "explanation": "char (v): burn something so that it turns black.",
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "Frightened",
                 "Nervous"
               ],
-              "correctAnswer": "B",
-              "explanation": "reluctance (n): feeling of not wanting to do something."
+              "explanation": "reluctance (n): feeling of not wanting to do something.",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "The arrival of a friend",
                 "A party"
               ],
-              "correctAnswer": "A",
-              "explanation": "ensue (v): to happen after something."
+              "explanation": "ensue (v): to happen after something.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "Her students not coming to class",
                 "Her students all passing an exam"
               ],
-              "correctAnswer": "C",
-              "explanation": "distress (n): feeling of being upset or worried."
+              "explanation": "distress (n): feeling of being upset or worried.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is similar in meaning to the given word",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -153,8 +152,8 @@
                 "hesitance",
                 "dependence"
               ],
-              "correctAnswer": "B",
-              "explanation": "reluctance is similar to hesitance."
+              "explanation": "reluctance is similar to hesitance.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -164,8 +163,8 @@
                 "lucky",
                 "sorry"
               ],
-              "correctAnswer": "C",
-              "explanation": "apologetic is similar to sorry."
+              "explanation": "apologetic is similar to sorry.",
+              "correctAnswer": "C"
             },
             {
               "id": "13",
@@ -175,8 +174,8 @@
                 "cook",
                 "on fire"
               ],
-              "correctAnswer": "A",
-              "explanation": "char means to burn."
+              "explanation": "char means to burn.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -186,8 +185,8 @@
                 "race",
                 "desert"
               ],
-              "correctAnswer": "B",
-              "explanation": "a relay is a race."
+              "explanation": "a relay is a race.",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -197,8 +196,8 @@
                 "influence",
                 "ripeness"
               ],
-              "correctAnswer": "B",
-              "explanation": "persuasion is related to influence."
+              "explanation": "persuasion is related to influence.",
+              "correctAnswer": "B"
             },
             {
               "id": "16",
@@ -209,8 +208,8 @@
                 "lose",
                 "summarize"
               ],
-              "correctAnswer": "D",
-              "explanation": "restate can be similar to summarize."
+              "explanation": "restate can be similar to summarize.",
+              "correctAnswer": "D"
             },
             {
               "id": "17",
@@ -221,8 +220,8 @@
                 "mean",
                 "drink"
               ],
-              "correctAnswer": "A",
-              "explanation": "gasp is related to breathing."
+              "explanation": "gasp is related to breathing.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -233,8 +232,8 @@
                 "fair",
                 "ask"
               ],
-              "correctAnswer": "B",
-              "explanation": "negotiate means to discuss for an agreement."
+              "explanation": "negotiate means to discuss for an agreement.",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -245,8 +244,8 @@
                 "an animal",
                 "shell"
               ],
-              "correctAnswer": "B",
-              "explanation": "sesame is a food item."
+              "explanation": "sesame is a food item.",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -257,16 +256,16 @@
                 "plan",
                 "last"
               ],
-              "correctAnswer": "A",
-              "explanation": "verge means edge or border."
+              "explanation": "verge means edge or border.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is opposite in meaning to the given word",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -277,8 +276,8 @@
                 "harmful",
                 "warm"
               ],
-              "correctAnswer": "C",
-              "explanation": "benign means harmless, so harmful is the opposite."
+              "explanation": "benign means harmless, so harmful is the opposite.",
+              "correctAnswer": "C"
             },
             {
               "id": "22",
@@ -289,8 +288,8 @@
                 "flexible",
                 "serious"
               ],
-              "correctAnswer": "C",
-              "explanation": "dogged means persistent, so flexible is the opposite."
+              "explanation": "dogged means persistent, so flexible is the opposite.",
+              "correctAnswer": "C"
             },
             {
               "id": "23",
@@ -301,8 +300,8 @@
                 "do again",
                 "order"
               ],
-              "correctAnswer": "A",
-              "explanation": "clarify means to make clear, so confuse is the opposite."
+              "explanation": "clarify means to make clear, so confuse is the opposite.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -313,8 +312,8 @@
                 "chili",
                 "solid"
               ],
-              "correctAnswer": "B",
-              "explanation": "waver means to be undecided, so determine is the opposite."
+              "explanation": "waver means to be undecided, so determine is the opposite.",
+              "correctAnswer": "B"
             },
             {
               "id": "25",
@@ -325,8 +324,8 @@
                 "peace",
                 "surprising"
               ],
-              "correctAnswer": "C",
-              "explanation": "distress means worry, so peace is the opposite."
+              "explanation": "distress means worry, so peace is the opposite.",
+              "correctAnswer": "C"
             },
             {
               "id": "26",
@@ -337,8 +336,8 @@
                 "provide",
                 "keep"
               ],
-              "correctAnswer": "A",
-              "explanation": "sip means to drink a little, gulp means to drink a lot."
+              "explanation": "sip means to drink a little, gulp means to drink a lot.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -349,8 +348,8 @@
                 "travel",
                 "continue"
               ],
-              "correctAnswer": "D",
-              "explanation": "alternate means to switch back and forth, continue is the opposite."
+              "explanation": "alternate means to switch back and forth, continue is the opposite.",
+              "correctAnswer": "D"
             },
             {
               "id": "28",
@@ -361,8 +360,8 @@
                 "teacher",
                 "cottage"
               ],
-              "correctAnswer": "A",
-              "explanation": "overdose means too much, lack means too little."
+              "explanation": "overdose means too much, lack means too little.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -373,8 +372,8 @@
                 "small",
                 "trusting"
               ],
-              "correctAnswer": "D",
-              "explanation": "wary means cautious/distrusting, trusting is the opposite."
+              "explanation": "wary means cautious/distrusting, trusting is the opposite.",
+              "correctAnswer": "D"
             },
             {
               "id": "30",
@@ -385,10 +384,11 @@
                 "punish",
                 "ask about"
               ],
-              "correctAnswer": "A",
-              "explanation": "ensue means to happen after, come before is the opposite."
+              "explanation": "ensue means to happen after, come before is the opposite.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -402,7 +402,6 @@
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -411,8 +410,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Chào bạn, câu này là **True (Đúng)** nha. Trong đoạn 2, Becky trả lời bữa trưa có món gà mè (sesame chicken) nhưng thịt bị cháy xém (charred). Ý của câu hỏi hoàn toàn khớp với bài nhé!",
+              "correctAnswer": "T"
             },
             {
               "id": "32",
@@ -421,8 +420,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The argument ensued about eating chilies."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 5 ghi rõ: 'An argument ensued about eating chilies.' (Một cuộc tranh cãi đã nổ ra về việc ăn ớt). Không phải vì Becky phân vân có nên chạy tiếp sức (run the relay) hay không đâu nhé!",
+              "correctAnswer": "F"
             },
             {
               "id": "33",
@@ -431,8 +430,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Ở đoạn 7 có trích lời: 'The loser has to carry the winner's books for a year!' (Người thua sẽ phải mang sách cho người thắng trong một năm!). Rất chính xác luôn!",
+              "correctAnswer": "T"
             },
             {
               "id": "34",
@@ -441,8 +440,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Becky was wary about eating the pepper even if it looked benign."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Trong bài, người cảnh giác (wary) với quả ớt là Becky chứ không phải Russell: 'Becky was wary of eating the pepper' (đoạn 6) và 'The chili looked benign, but Becky knew...' (đoạn 10). Câu hỏi bị nhầm nhân vật rồi!",
+              "correctAnswer": "F"
             },
             {
               "id": "35",
@@ -451,16 +450,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Becky was apologetic because she felt like she cheated by taking the first bite."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Becky không xin lỗi đơn thuần vì việc cô ấy ăn miếng đầu tiên, mà ở đoạn 14 cô nói: 'I'm sorry—I feel like I cheated by going first.' (Mình xin lỗi—Mình cảm thấy như mình đã gian lận khi ăn miếng đầu tiên). Bởi vì cô đã cắn phần ít cay nhất ở dưới cùng (bottom) và để lại phần cay nhất ở giữa cho bạn mình.",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -471,8 +470,8 @@
                 "She liked chilies.",
                 "She was hungry."
               ],
-              "correctAnswer": "A",
-              "explanation": "Becky took the bet because of Russell's dogged persuasion."
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ở đầu đoạn 10 có giải thích nguyên nhân Becky đồng ý dù miễn cưỡng: 'His dogged persuasion convinced her.' (Sự thuyết phục dai dẳng của anh ấy đã thuyết phục được cô ấy). Vì vậy đáp án A là hoàn toàn chính xác nha!",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -483,8 +482,8 @@
                 "He wanted to trick her.",
                 "He changed his mind."
               ],
-              "correctAnswer": "A",
-              "explanation": "Russell had to restate the terms to clarify for Becky."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Ở đoạn 8, Becky nói: 'Fine, but to clarify...' (Được thôi, nhưng để làm rõ...). Do đó, mục đích của việc Russell nhắc lại điều khoản là để làm rõ (clarify) cho Becky hiểu. Chọn A là chuẩn luôn!",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -495,8 +494,8 @@
                 "He ate another pepper.",
                 "He ran away."
               ],
-              "correctAnswer": "A",
-              "explanation": "Becky knew Russell was in distress because he gasped, then his expressions alternated between pained and brave, and he was on the verge of tears."
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Đoạn 11 đã mô tả biểu cảm của Russell: 'He gasped and his face alternated between brave and pained expressions... He was on the verge of tears...' (Cậu ấy thở hổn hển và khuôn mặt cậu xen kẽ giữa vẻ dũng cảm và đau đớn... Cậu ấy chực khóc). Tất cả những chi tiết này đều nằm trong đáp án A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -507,8 +506,8 @@
                 "Her friend.",
                 "The lunch lady."
               ],
-              "correctAnswer": "A",
-              "explanation": "Becky's stepmother warned her to be careful with chilies."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Ở đoạn 4, Becky có nói rằng: 'My stepmother says you should be careful with them' (Mẹ kế của mình nói cậu nên cẩn thận với chúng). Do đó chính mẹ kế của Becky là người đã cảnh báo cô ấy.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -519,10 +518,11 @@
                 "He cried.",
                 "He threw the chili away."
               ],
-              "correctAnswer": "A",
-              "explanation": "Russell sipped from the beverage."
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ở đoạn 13 có viết: '...he said, continuing to sip from the glass.' (...cậu ấy nói, tiếp tục nhấp từng ngụm từ chiếc cốc). Từ 'beverage' trong đáp án A đồng nghĩa với thức uống trong chiếc cốc ('glass') mà Becky đưa cho cậu. Nên A là chính xác nhé!",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

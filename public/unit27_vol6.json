@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "turn it upside down",
                 "drop it"
               ],
-              "correctAnswer": "C",
-              "explanation": "invert (v): turn it upside down."
+              "explanation": "invert (v): turn it upside down.",
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "Carrots",
                 "Water"
               ],
-              "correctAnswer": "D",
-              "explanation": "funnel (n): object with a wide top and narrow bottom for pouring liquids."
+              "explanation": "funnel (n): object with a wide top and narrow bottom for pouring liquids.",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "Its food",
                 "Its ally"
               ],
-              "correctAnswer": "C",
-              "explanation": "prey (n): animals hunted and eaten by another creature."
+              "explanation": "prey (n): animals hunted and eaten by another creature.",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "Favorite foods",
                 "Hobbies"
               ],
-              "correctAnswer": "B",
-              "explanation": "hereditary (adj): a trait passed onto children from parents."
+              "explanation": "hereditary (adj): a trait passed onto children from parents.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "try to end it",
                 "want to sing it"
               ],
-              "correctAnswer": "A",
-              "explanation": "fragrant (adj): has a pleasant smell."
+              "explanation": "fragrant (adj): has a pleasant smell.",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "A builder",
                 "An electrician"
               ],
-              "correctAnswer": "B",
-              "explanation": "seasoning (n): a mix of salt, herbs, and spices to improve taste."
+              "explanation": "seasoning (n): a mix of salt, herbs, and spices to improve taste.",
+              "correctAnswer": "B"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "A vice president",
                 "A Manager"
               ],
-              "correctAnswer": "C",
-              "explanation": "deputy (n): the second-highest-ranking person."
+              "explanation": "deputy (n): the second-highest-ranking person.",
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "Toys",
                 "Soda"
               ],
-              "correctAnswer": "B",
-              "explanation": "sodium (n): an element used to make substances such as salt."
+              "explanation": "sodium (n): an element used to make substances such as salt.",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "At the zoo",
                 "In a church"
               ],
-              "correctAnswer": "D",
-              "explanation": "hymn (n): a religious song praising a god."
+              "explanation": "hymn (n): a religious song praising a god.",
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "betrays you",
                 "is ill"
               ],
-              "correctAnswer": "B",
-              "explanation": "sarcastic (adj): the opposite of what is actually meant, often insulting."
+              "explanation": "sarcastic (adj): the opposite of what is actually meant, often insulting.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "procession",
                 "fragrant"
               ],
-              "correctAnswer": "A",
-              "explanation": "seasoning is an ingredient."
+              "explanation": "seasoning is an ingredient.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "earls",
                 "prey"
               ],
-              "correctAnswer": "A",
-              "explanation": "vinegar is a liquid you pour."
+              "explanation": "vinegar is a liquid you pour.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "tyrant",
                 "procession"
               ],
-              "correctAnswer": "A",
-              "explanation": "hymns are songs you sing."
+              "explanation": "hymns are songs you sing.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "seasoning",
                 "vinegar"
               ],
-              "correctAnswer": "A",
-              "explanation": "passed from mother to child means it is hereditary."
+              "explanation": "passed from mother to child means it is hereditary.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,8 +201,8 @@
                 "earls",
                 "hymns"
               ],
-              "correctAnswer": "A",
-              "explanation": "an archer is someone who hunts with a bow."
+              "explanation": "an archer is someone who hunts with a bow.",
+              "correctAnswer": "A"
             },
             {
               "id": "16",
@@ -214,8 +213,8 @@
                 "tyrant",
                 "seasoning"
               ],
-              "correctAnswer": "A",
-              "explanation": "prey is hunted and shot."
+              "explanation": "prey is hunted and shot.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -226,8 +225,8 @@
                 "hereditary",
                 "archer"
               ],
-              "correctAnswer": "A",
-              "explanation": "people line up in a procession."
+              "explanation": "people line up in a procession.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -238,8 +237,8 @@
                 "seasoning",
                 "tyrant"
               ],
-              "correctAnswer": "A",
-              "explanation": "earls are noblemen."
+              "explanation": "earls are noblemen.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "hymns",
                 "procession"
               ],
-              "correctAnswer": "A",
-              "explanation": "a tyrant acts strictly and harshly."
+              "explanation": "a tyrant acts strictly and harshly.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -262,16 +261,16 @@
                 "archer",
                 "earls"
               ],
-              "correctAnswer": "A",
-              "explanation": "fragrant means smelling pleasant."
+              "explanation": "fragrant means smelling pleasant.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "archer",
                 "tyranny"
               ],
-              "correctAnswer": "A",
-              "explanation": "vinegar: a strong tasting liquid made from sour wine."
+              "explanation": "vinegar: a strong tasting liquid made from sour wine.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "ancestry",
                 "prophet"
               ],
-              "correctAnswer": "A",
-              "explanation": "analogy: a connection made to show that things are similar."
+              "explanation": "analogy: a connection made to show that things are similar.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "earl",
                 "deputy"
               ],
-              "correctAnswer": "A",
-              "explanation": "archer: a person who uses a bow and arrows."
+              "explanation": "archer: a person who uses a bow and arrows.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "analogy",
                 "conspiracy"
               ],
-              "correctAnswer": "A",
-              "explanation": "tyranny: a cruel and unfair government."
+              "explanation": "tyranny: a cruel and unfair government.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,8 +329,8 @@
                 "prophet",
                 "archer"
               ],
-              "correctAnswer": "A",
-              "explanation": "conspiracy: a secret plan to do something illegal."
+              "explanation": "conspiracy: a secret plan to do something illegal.",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -342,8 +341,8 @@
                 "earl",
                 "deputy"
               ],
-              "correctAnswer": "A",
-              "explanation": "ancestry: the series of people from whom a person descended."
+              "explanation": "ancestry: the series of people from whom a person descended.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -354,8 +353,8 @@
                 "analogy",
                 "archer"
               ],
-              "correctAnswer": "A",
-              "explanation": "prophet: a person chosen by God."
+              "explanation": "prophet: a person chosen by God.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -366,8 +365,8 @@
                 "ancestry",
                 "prophet"
               ],
-              "correctAnswer": "A",
-              "explanation": "tyrant: a person who treats people in a cruel, harsh, and unfair way."
+              "explanation": "tyrant: a person who treats people in a cruel, harsh, and unfair way.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "tyrant",
                 "deputy"
               ],
-              "correctAnswer": "A",
-              "explanation": "earl: a nobleman from Britain."
+              "explanation": "earl: a nobleman from Britain.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -390,16 +389,16 @@
                 "archer",
                 "earl"
               ],
-              "correctAnswer": "A",
-              "explanation": "deputy: the second-highest-ranking person."
+              "explanation": "deputy: the second-highest-ranking person.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -408,8 +407,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Sarcastic means the opposite of what is meant, which conflicts with speaking clearly and honestly."
+              "explanation": "Sarcastic means the opposite of what is meant, which conflicts with speaking clearly and honestly.",
+              "correctAnswer": "I"
             },
             {
               "id": "32",
@@ -418,8 +417,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Tyranny is cruel and unfair, which contradicts making people feel welcome."
+              "explanation": "Tyranny is cruel and unfair, which contradicts making people feel welcome.",
+              "correctAnswer": "I"
             },
             {
               "id": "33",
@@ -428,8 +427,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "A funnel is used to pour liquids."
+              "explanation": "A funnel is used to pour liquids.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -438,8 +437,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Analogy is a comparison, which doesn't directly cause injury."
+              "explanation": "Analogy is a comparison, which doesn't directly cause injury.",
+              "correctAnswer": "I"
             },
             {
               "id": "35",
@@ -448,24 +447,24 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Sodium forms salt, which makes things salty."
+              "explanation": "Sodium forms salt, which makes things salty.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Earl of Shining</h1><p style=\"margin-bottom: 2rem;\">In the village of Hampton, there was an old soldier named Michael, but he was known to the world as the <b>earl</b> of Shining. Michael was once an expert <b>archer</b> and a great fighter. In fact, his skills seemed to be <b>hereditary</b>; all the people in his <b>ancestry</b> were famous warriors. However, he was getting old and no longer wished to fight.</p><p style=\"margin-bottom: 2rem;\">One day, he was in the forest hunting <b>prey</b> when he saw a beautiful <b>prophet</b> singing a <b>hymn</b>. She said, \"Michael, an evil army is involved in a <b>conspiracy</b> to take over Hampton. You're the only one who can defeat them and stop the <b>tyranny</b>. The village needs you!\"</p><p style=\"margin-bottom: 2rem;\">Michael replied, \"But I'm too old to fight! I'm not confident that I can do it.\"</p><p style=\"margin-bottom: 2rem;\">The <b>prophet</b> said, \"You must try. I will even make a potion to increase your strength.\"</p><p style=\"margin-bottom: 2rem;\">The <b>prophet</b> took out a bottle and a <b>funnel</b>. She poured some <b>vinegar</b> and garlic into the bottle. Next, she added some <b>seasoning</b> and <b>sodium</b> and shook it up.</p><p style=\"margin-bottom: 2rem;\">Michael smelled the potion. \"Wow, this is <b>fragrant</b>,\" he said in a <b>sarcastic</b> tone. He <b>inverted</b> the bottle and drank the whole potion. He immediately felt stronger. \"I'll try my best,\" he promised.</p><p style=\"margin-bottom: 2rem;\">Michael rode his horse to a hilltop, where he could see the village of Hampton below. He saw the evil <b>tyrant</b> and his men marching in a <b>procession</b> through the town.</p><p style=\"margin-bottom: 2rem;\">Michael charged down the hill and into the village. An enemy <b>deputy</b> officer shouted, \"He looks as strong as an ox!\" It was an apt <b>analogy</b>. Michael grabbed the officer and threw him across the street with one arm. The rest of the officers screamed and rode away, and their army followed.</p><p style=\"margin-bottom: 2rem;\">The <b>prophet</b> reappeared. Michael said, \"It's a good thing you gave me the potion.\"</p><p style=\"margin-bottom: 2rem;\">She replied, \"But Michael, the potion was fake! Your strength really came from having confidence!\"</p><p style=\"margin-bottom: 2rem;\">Michael realized he really was still great. He just needed to believe in himself.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Earl of Shining</h1>        <p style=\"margin-bottom: 1rem;\">In the village of Hampton, there was an old soldier named Michael, but he was known to the world as the <b>earl</b> of Shining. Michael was once an expert <b>archer</b> and a great fighter. In fact, his skills seemed to be <b>hereditary</b>; all the people in his <b>ancestry</b> were famous warriors. However, he was getting old and no longer wished to fight.</p>    <p style=\"margin-bottom: 1rem;\">One day, he was in the forest hunting <b>prey</b> when he saw a beautiful <b>prophet</b> singing a <b>hymn</b>. She said, \"Michael, an evil army is involved in a <b>conspiracy</b> to take over Hampton. You're the only one who can defeat them and stop the <b>tyranny</b>. The village needs you!\"</p>    <p style=\"margin-bottom: 1rem;\">Michael replied, \"But I'm too old to fight! I'm not confident that I can do it.\"</p>    <p style=\"margin-bottom: 1rem;\">The <b>prophet</b> said, \"You must try. I will even make a potion to increase your strength.\"</p>    <p style=\"margin-bottom: 1rem;\">The <b>prophet</b> took out a bottle and a <b>funnel</b>. She poured some <b>vinegar</b> and garlic into the bottle. Next, she added some <b>seasoning</b> and <b>sodium</b> and shook it up.</p>    <p style=\"margin-bottom: 1rem;\">Michael smelled the potion. \"Wow, this is <b>fragrant</b>,\" he said in a <b>sarcastic</b> tone. He <b>inverted</b> the bottle and drank the whole potion. He immediately felt stronger. \"I'll try my best,\" he promised.</p>    <p style=\"margin-bottom: 1rem;\">Michael rode his horse to a hilltop, where he could see the village of Hampton below. He saw the evil <b>tyrant</b> and his men marching in a <b>procession</b> through the town.</p>    <p style=\"margin-bottom: 1rem;\">Michael charged down the hill and into the village. An enemy <b>deputy</b> officer shouted, \"He looks as strong as an ox!\" It was an apt <b>analogy</b>. Michael grabbed the officer and threw him across the street with one arm. The rest of the officers screamed and rode away, and their army followed.</p>    <p style=\"margin-bottom: 1rem;\">The <b>prophet</b> reappeared. Michael said, \"It's a good thing you gave me the potion.\"</p>    <p style=\"margin-bottom: 1rem;\">She replied, \"But Michael, the potion was fake! Your strength really came from having confidence!\"</p>    <p style=\"margin-bottom: 1rem;\">Michael realized he really was still great. He just needed to believe in himself.</p></div>",
       "imageUrl": "/unit27_vol6_story.png",
       "sections": [
         {
           "id": "sec5",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -474,8 +473,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Đoạn 1 và 2 có nhắc đến việc Michael là một cung thủ xuất sắc và đang đi săn: \"Michael was once an expert archer... One day, he was in the forest hunting prey\" (Michael từng là một cung thủ xuất sắc... Một ngày nọ, ông đang đi săn mồi trong rừng).",
+              "correctAnswer": "T"
             },
             {
               "id": "37",
@@ -484,8 +483,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Trong đoạn 5, tác giả viết: \"The prophet took out a bottle and a funnel. She poured some vinegar and garlic... added some seasoning and sodium...\" (Nhà tiên tri lấy ra một cái chai và một cái phễu. Cô ấy đổ một ít giấm và tỏi... thêm một số gia vị và natri...).",
+              "correctAnswer": "T"
             },
             {
               "id": "38",
@@ -494,8 +493,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Đoạn 7 có miêu tả: \"He saw the evil tyrant and his men marching in a procession through the town.\" (Ông nhìn thấy tên bạo chúa xấu xa và đồng bọn đang diễu hành qua thị trấn).",
+              "correctAnswer": "T"
             },
             {
               "id": "39",
@@ -504,8 +503,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The evil army was involved in a conspiracy to take over Hampton."
+              "explanation": "Câu này SAI. Theo đoạn 2, nhà tiên tri hát thánh ca (\"singing a hymn\") nhưng chính đội quân xấu xa mới là kẻ tham gia vào âm mưu chiếm đoạt Hampton (\"an evil army is involved in a conspiracy to take over Hampton\"), không phải nhà tiên tri.",
+              "correctAnswer": "F"
             },
             {
               "id": "40",
@@ -514,16 +513,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Michael's strength really came from having confidence."
+              "explanation": "Câu này SAI. Ở đoạn 10, nhà tiên tri tiết lộ: \"...the potion was fake! Your strength really came from having confidence!\" (Lọ thuốc là giả đấy! Sức mạnh của ông thực sự đến từ sự tự tin!).",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -534,8 +533,8 @@
                 "He was an expert archer.",
                 "He grabbed the officer and threw him."
               ],
-              "correctAnswer": "A",
-              "explanation": "All the people in his ancestry were famous warriors."
+              "explanation": "Trong đoạn 1 có ghi: \"...his skills seemed to be hereditary; all the people in his ancestry were famous warriors.\" (...kỹ năng của ông dường như được di truyền; tất cả những người trong tổ tiên của ông đều là những chiến binh nổi tiếng). Vì vậy, đáp án đúng là A.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -546,8 +545,8 @@
                 "\"He is an expert archer.\"",
                 "\"He has magical strength.\""
               ],
-              "correctAnswer": "A",
-              "explanation": "\"He looks as strong as an ox!\""
+              "explanation": "Ở đoạn 8, viên sĩ quan của phe địch đã kêu lên: \"He looks as strong as an ox!\" (Ông ta trông khỏe như một con bò tót!). Đây chính là phép so sánh (analogy) được sử dụng. Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -558,8 +557,8 @@
                 "\"I'll try my best.\"",
                 "\"This smells bad.\""
               ],
-              "correctAnswer": "A",
-              "explanation": "\"Wow, this is fragrant.\""
+              "explanation": "Trong đoạn 6 có viết: \"Wow, this is fragrant, he said in a sarcastic tone.\" (\"Chà, thơm quá nhỉ\", ông nói với một giọng điệu mỉa mai). Do đó đáp án là A.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -570,8 +569,8 @@
                 "\"Wow, this is fragrant.\"",
                 "\"I am still great.\""
               ],
-              "correctAnswer": "A",
-              "explanation": "\"I'm too old to fight! I'm not confident that I can do it.\""
+              "explanation": "Ở đoạn 3, sau khi nghe nhà tiên tri nói, Michael đã đáp lại: \"But I'm too old to fight! I'm not confident that I can do it.\" (Nhưng ta đã quá già để chiến đấu rồi! Ta không tự tin là mình có thể làm được). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -582,10 +581,11 @@
                 "Michael realized he was an earl.",
                 "Michael realized he was too old to fight."
               ],
-              "correctAnswer": "A",
-              "explanation": "Michael realized he really was still great. He just needed to believe in himself."
+              "explanation": "Câu cuối cùng của truyện (đoạn 11) cho biết: \"Michael realized he really was still great. He just needed to believe in himself.\" (Michael nhận ra mình thực sự vẫn rất tuyệt vời. Ông chỉ cần tin vào chính mình). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

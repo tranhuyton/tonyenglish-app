@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "At a restaurant",
                 "At an airport"
               ],
-              "correctAnswer": "B",
-              "explanation": "columnist (n): a writer who creates articles about a particular subject."
+              "explanation": "columnist (n): a writer who creates articles about a particular subject.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "Reject free speech",
                 "Support tyranny"
               ],
-              "correctAnswer": "B",
-              "explanation": "liberal (adj): accept different ideas and people."
+              "explanation": "liberal (adj): accept different ideas and people.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "A bird",
                 "A tiger"
               ],
-              "correctAnswer": "C",
-              "explanation": "peck (v): when a bird bites or hits something with its beak."
+              "explanation": "peck (v): when a bird bites or hits something with its beak.",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "Books",
                 "Tools"
               ],
-              "correctAnswer": "A",
-              "explanation": "reservoir (n): a place for storing water."
+              "explanation": "reservoir (n): a place for storing water.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "A rhino",
                 "A gorilla"
               ],
-              "correctAnswer": "A",
-              "explanation": "streak (n): a long, thin mark that is easy to see."
+              "explanation": "streak (n): a long, thin mark that is easy to see.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "courteous",
                 "liberal"
               ],
-              "correctAnswer": "A",
-              "explanation": "haunt (v): to cause problems or negative thoughts over a long period of time."
+              "explanation": "haunt (v): to cause problems or negative thoughts over a long period of time.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "moss",
                 "gravel"
               ],
-              "correctAnswer": "A",
-              "explanation": "pebble (n): a small, round stone."
+              "explanation": "pebble (n): a small, round stone.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "expired",
                 "courteous"
               ],
-              "correctAnswer": "A",
-              "explanation": "peck (v): to bite or hit something with a beak."
+              "explanation": "peck (v): to bite or hit something with a beak.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "maze",
                 "granite"
               ],
-              "correctAnswer": "A",
-              "explanation": "reservoir (n): a place for storing water for a town to use."
+              "explanation": "reservoir (n): a place for storing water for a town to use.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "amber",
                 "gravel"
               ],
-              "correctAnswer": "A",
-              "explanation": "detergent (n): soap that is used to clean clothes or dishes."
+              "explanation": "detergent (n): soap that is used to clean clothes or dishes.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "expired",
                 "haunted"
               ],
-              "correctAnswer": "A",
-              "explanation": "courteous (adj): polite and respectful."
+              "explanation": "courteous (adj): polite and respectful.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "columnist",
                 "streak"
               ],
-              "correctAnswer": "A",
-              "explanation": "credentials (n): the proof of someone’s experience or ability."
+              "explanation": "credentials (n): the proof of someone’s experience or ability.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "amber",
                 "pebbles"
               ],
-              "correctAnswer": "A",
-              "explanation": "charcoal (n): a black material that is used as fuel for fire."
+              "explanation": "charcoal (n): a black material that is used as fuel for fire.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "columnist",
                 "maze"
               ],
-              "correctAnswer": "A",
-              "explanation": "euphemism (n): a term that is used in place of a mean or unpleasant word."
+              "explanation": "euphemism (n): a term that is used in place of a mean or unpleasant word.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "moss",
                 "gravel"
               ],
-              "correctAnswer": "A",
-              "explanation": "delta (n): flat area where a river splits into smaller rivers that flow into the sea."
+              "explanation": "delta (n): flat area where a river splits into smaller rivers that flow into the sea.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "electrician",
                 "CEO"
               ],
-              "correctAnswer": "B",
-              "explanation": "columnist (n): a writer who creates articles about a particular subject."
+              "explanation": "columnist (n): a writer who creates articles about a particular subject.",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "ant",
                 "mosquito"
               ],
-              "correctAnswer": "A",
-              "explanation": "cricket (n): an insect."
+              "explanation": "cricket (n): an insect.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "tower",
                 "puzzle"
               ],
-              "correctAnswer": "D",
-              "explanation": "maze (n): a system of paths that is complicated and easy to get lost in."
+              "explanation": "maze (n): a system of paths that is complicated and easy to get lost in.",
+              "correctAnswer": "D"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "hill",
                 "mound"
               ],
-              "correctAnswer": "B",
-              "explanation": "gravel (n): a combination of small stones mixed with sand."
+              "explanation": "gravel (n): a combination of small stones mixed with sand.",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -270,16 +269,16 @@
                 "terrorize",
                 "soothe"
               ],
-              "correctAnswer": "C",
-              "explanation": "haunt (v): to cause problems or negative thoughts over a long period of time."
+              "explanation": "haunt (v): to cause problems or negative thoughts over a long period of time.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Fill in the blanks with the correct words from the word bank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -290,8 +289,8 @@
                 "reservoir",
                 "streak"
               ],
-              "correctAnswer": "A",
-              "explanation": "maze (n): a system of paths that is complicated and easy to get lost in."
+              "explanation": "maze (n): a system of paths that is complicated and easy to get lost in.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -302,8 +301,8 @@
                 "haunted",
                 "courteous"
               ],
-              "correctAnswer": "A",
-              "explanation": "expire (v): to no longer be effective because its use has come to an end."
+              "explanation": "expire (v): to no longer be effective because its use has come to an end.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -314,8 +313,8 @@
                 "charcoal",
                 "pebbles"
               ],
-              "correctAnswer": "A",
-              "explanation": "granite (n): a very hard type of rock."
+              "explanation": "granite (n): a very hard type of rock.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -326,8 +325,8 @@
                 "gravel",
                 "euphemism"
               ],
-              "correctAnswer": "A",
-              "explanation": "amber (n): a hard, yellowish material that comes from trees."
+              "explanation": "amber (n): a hard, yellowish material that comes from trees.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -338,8 +337,8 @@
                 "cricket",
                 "credentials"
               ],
-              "correctAnswer": "A",
-              "explanation": "streak (n): a long, thin mark that is easy to see."
+              "explanation": "streak (n): a long, thin mark that is easy to see.",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -350,8 +349,8 @@
                 "expired",
                 "haunted"
               ],
-              "correctAnswer": "A",
-              "explanation": "courteous (adj): polite and respectful."
+              "explanation": "courteous (adj): polite and respectful.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -362,8 +361,8 @@
                 "columnist",
                 "maze"
               ],
-              "correctAnswer": "A",
-              "explanation": "pebble (n): a small, round stone."
+              "explanation": "pebble (n): a small, round stone.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -374,8 +373,8 @@
                 "streak",
                 "credentials"
               ],
-              "correctAnswer": "A",
-              "explanation": "reservoir (n): a place for storing water."
+              "explanation": "reservoir (n): a place for storing water.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -386,8 +385,8 @@
                 "gravel",
                 "detergent"
               ],
-              "correctAnswer": "A",
-              "explanation": "moss (n): a small green or yellow plant that grows on wet dirt, rocks, or tree trunks."
+              "explanation": "moss (n): a small green or yellow plant that grows on wet dirt, rocks, or tree trunks.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -398,24 +397,24 @@
                 "charcoal",
                 "amber"
               ],
-              "correctAnswer": "A",
-              "explanation": "cricket (n): an insect that makes loud noises, usually at night."
+              "explanation": "cricket (n): an insect that makes loud noises, usually at night.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Mad Hatter</h1><p style=\"margin-bottom: 2rem;\">One morning, Lucas sat outside with his grandfather. They looked past the <b>gravel</b> road that led to a natural <b>reservoir</b> on the <b>delta</b>. On the other side of the water, there was a cottage.</p><p style=\"margin-bottom: 2rem;\">“ Does a ghost live there?” Lucas asked.</p><p style=\"margin-bottom: 2rem;\">“ No, a mad hatter lives there,” said his grandfather. Lucas didn’t know what a mad hatter was, but the image of a scary man <b>haunted</b> him.</p><p style=\"margin-bottom: 2rem;\">Later, Lucas went for a walk in the forest. He collected pieces of <b>amber</b> and <b>granite</b> that he found on the ground. He looked at the <b>moss</b> on the trees and watched a bird <b>peck</b> at the ground. But the forest was like a <b>maze</b>. Soon, Lucas was lost.</p><p style=\"margin-bottom: 2rem;\">Lucas heard somebody behind him. He wanted to run away, but he fell. He had a <b>streak</b> of blood on his shirt and some <b>pebbles</b> stuck in his skin. Then a man appeared.</p><p style=\"margin-bottom: 2rem;\">“ I will take you home. First, let’s get you cleaned up,” he said.</p><p style=\"margin-bottom: 2rem;\">Lucas followed him. When they arrived at the cottage, he realized the man was the mad hatter!</p><p style=\"margin-bottom: 2rem;\">He sat down inside. It smelled like <b>charcoal</b>, but it looked like a normal house. The man brought Lucas back some medicine.</p><p style=\"margin-bottom: 2rem;\">“ It’s a bit old, but it’s not expired,” the man said.</p><p style=\"margin-bottom: 2rem;\">While Lucas cleaned his cut, the man washed the blood out of his shirt with <b>detergent</b>.</p><p style=\"margin-bottom: 2rem;\">Lucas asked, “Are you a mad hatter?”</p><p style=\"margin-bottom: 2rem;\">The man laughed and replied, “That’s a <b>euphemism</b> for a crazy person. Actually, I’m pretty normal. I’m a <b>columnist</b> fora newspaper,” said the man. He pointed to his <b>credentials</b> which hung on the wall.</p><p style=\"margin-bottom: 2rem;\">Lucas could hear the <b>crickets</b> outside. It was getting dark, so he asked, “ Could you take me home now?”</p><p style=\"margin-bottom: 2rem;\">The man said yes. Lucas was surprised that people thought the man was crazy. He was actually very <b>courteous</b>. Maybe Lucas should have a more <b>liberal</b> attitude. Next time, Lucas wouldn’t make judgments about people without getting to know them first.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Mad Hatter</h1>        <p style=\"margin-bottom: 1rem;\">One morning, Lucas sat outside with his grandfather. They looked past the <b>gravel</b> road that led to a natural <b>reservoir</b> on the <b>delta</b>. On the other side of the water, there was a cottage.</p>    <p style=\"margin-bottom: 1rem;\">“ Does a ghost live there?” Lucas asked.</p>    <p style=\"margin-bottom: 1rem;\">“ No, a mad hatter lives there,” said his grandfather. Lucas didn’t know what a mad hatter was, but the image of a scary man <b>haunted</b> him.</p>    <p style=\"margin-bottom: 1rem;\">Later, Lucas went for a walk in the forest. He collected pieces of <b>amber</b> and <b>granite</b> that he found on the ground. He looked at the <b>moss</b> on the trees and watched a bird <b>peck</b> at the ground. But the forest was like a <b>maze</b>. Soon, Lucas was lost.</p>    <p style=\"margin-bottom: 1rem;\">Lucas heard somebody behind him. He wanted to run away, but he fell. He had a <b>streak</b> of blood on his shirt and some <b>pebbles</b> stuck in his skin. Then a man appeared.</p>    <p style=\"margin-bottom: 1rem;\">“ I will take you home. First, let’s get you cleaned up,” he said.</p>    <p style=\"margin-bottom: 1rem;\">Lucas followed him. When they arrived at the cottage, he realized the man was the mad hatter!</p>    <p style=\"margin-bottom: 1rem;\">He sat down inside. It smelled like <b>charcoal</b>, but it looked like a normal house. The man brought Lucas back some medicine.</p>    <p style=\"margin-bottom: 1rem;\">“ It’s a bit old, but it’s not expired,” the man said.</p>    <p style=\"margin-bottom: 1rem;\">While Lucas cleaned his cut, the man washed the blood out of his shirt with <b>detergent</b>.</p>    <p style=\"margin-bottom: 1rem;\">Lucas asked, “Are you a mad hatter?”</p>    <p style=\"margin-bottom: 1rem;\">The man laughed and replied, “That’s a <b>euphemism</b> for a crazy person. Actually, I’m pretty normal. I’m a <b>columnist</b> fora newspaper,” said the man. He pointed to his <b>credentials</b> which hung on the wall.</p>    <p style=\"margin-bottom: 1rem;\">Lucas could hear the <b>crickets</b> outside. It was getting dark, so he asked, “ Could you take me home now?”</p>    <p style=\"margin-bottom: 1rem;\">The man said yes. Lucas was surprised that people thought the man was crazy. He was actually very <b>courteous</b>. Maybe Lucas should have a more <b>liberal</b> attitude. Next time, Lucas wouldn’t make judgments about people without getting to know them first.</p></div>",
       "imageUrl": "/unit30_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -424,8 +423,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Cuối đoạn 3 có ghi: \"Lucas didn’t know what a mad hatter was, but the image of a scary man haunted him.\" (Lucas không biết thợ làm mũ điên là gì, nhưng hình ảnh một người đàn ông đáng sợ cứ ám ảnh cậu). Do đó những suy nghĩ về ngôi nhà khiến cậu bị ám ảnh.",
+              "correctAnswer": "T"
             },
             {
               "id": "32",
@@ -434,8 +433,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Lucas collected pieces of amber and granite that he found on the ground."
+              "explanation": "Câu này SAI. Theo đoạn 4: \"He collected pieces of amber and granite that he found on the ground.\" (Cậu bé thu nhặt những mẩu hổ phách và đá granite tìm thấy trên mặt đất), chứ không phải thu nhặt dế (crickets) và rêu (moss).",
+              "correctAnswer": "F"
             },
             {
               "id": "33",
@@ -444,8 +443,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The bird pecked at the ground."
+              "explanation": "Câu này SAI. Đoạn 4 viết: \"...and watched a bird peck at the ground.\" (...và nhìn một con chim mổ xuống mặt đất), không phải mổ vào mê cung (maze).",
+              "correctAnswer": "F"
             },
             {
               "id": "34",
@@ -454,8 +453,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Đoạn 5 có miêu tả: \"He wanted to run away, but he fell. He had a streak of blood on his shirt and some pebbles stuck in his skin.\" (Cậu bé muốn bỏ chạy, nhưng lại bị ngã. Cậu có một vệt máu trên áo và vài viên sỏi găm vào da).",
+              "correctAnswer": "T"
             },
             {
               "id": "35",
@@ -464,16 +463,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The man's house smelled like charcoal."
+              "explanation": "Câu này SAI. Trong đoạn 8 có nhắc tới: \"It smelled like charcoal, but it looked like a normal house.\" (Nó có mùi giống như than củi, nhưng trông giống một ngôi nhà bình thường). Ngôi nhà có mùi than củi chứ không phải mùi thức ăn hết hạn.",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -484,8 +483,8 @@
                 "It was on top of a mountain made of granite.",
                 "It was next to a large maze."
               ],
-              "correctAnswer": "A",
-              "explanation": "The cottage was located past the gravel road and on the other side of the natural reservoir on the delta."
+              "explanation": "Ở đoạn 1 có miêu tả: \"They looked past the gravel road that led to a natural reservoir on the delta. On the other side of the water, there was a cottage.\" (Họ nhìn qua con đường rải sỏi dẫn đến một hồ chứa nước tự nhiên trên đồng bằng châu thổ. Ở phía bên kia mặt nước, có một ngôi nhà nhỏ). Do đó đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -496,8 +495,8 @@
                 "He washed it with charcoal.",
                 "He washed it with amber."
               ],
-              "correctAnswer": "A",
-              "explanation": "The man washed Lucas's shirt with detergent."
+              "explanation": "Đoạn 10 viết rất rõ: \"While Lucas cleaned his cut, the man washed the blood out of his shirt with detergent.\" (Trong khi Lucas rửa vết thương, người đàn ông đã giặt sạch vết máu trên áo cậu bằng bột giặt). Đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -508,8 +507,8 @@
                 "To prove that he was a doctor.",
                 "To show that he owned the cottage."
               ],
-              "correctAnswer": "A",
-              "explanation": "He pointed to his credentials to prove that he was a columnist."
+              "explanation": "Đoạn 12 kể lại: \"Actually, I’m pretty normal. I’m a columnist for a newspaper,” said the man. He pointed to his credentials which hung on the wall.\" (\"Thật ra, chú khá bình thường. Chú là người phụ trách chuyên mục cho một tờ báo,\" người đàn ông nói. Ông chỉ vào các chứng chỉ nghề nghiệp của mình treo trên tường). Điều này chứng minh ông ấy là một nhà báo, do đó đáp án A đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -520,8 +519,8 @@
                 "He said it meant he loved making hats.",
                 "He said it was a word for a very courteous person."
               ],
-              "correctAnswer": "A",
-              "explanation": "The man said the term “mad hatter” was a euphemism for a crazy person."
+              "explanation": "Cũng trong đoạn 12, ông giải thích: \"That’s a euphemism for a crazy person.\" (Đó là một lối nói hoa mỹ/uyển ngữ để chỉ một kẻ điên). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -532,10 +531,11 @@
                 "He taught him to be careful of birds that peck.",
                 "He taught him how to collect pebbles and amber."
               ],
-              "correctAnswer": "A",
-              "explanation": "The man taught Lucas that he should have a more liberal attitude and not judge people without getting to know them."
+              "explanation": "Ở đoạn cuối, Lucas rút ra bài học: \"Maybe Lucas should have a more liberal attitude. Next time, Lucas wouldn’t make judgments about people without getting to know them first.\" (Có lẽ Lucas nên có một thái độ cởi mở hơn. Lần tới, Lucas sẽ không phán xét người khác mà chưa tìm hiểu họ trước). Đáp án A là câu trả lời đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

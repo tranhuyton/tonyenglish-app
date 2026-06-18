@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "locale",
                 "shovel"
               ],
-              "correctAnswer": "A",
-              "explanation": "plaster (n): a smooth paste that gets hard when it dries."
+              "explanation": "plaster (n): a smooth paste that gets hard when it dries.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "terrestrial",
                 "jagged"
               ],
-              "correctAnswer": "A",
-              "explanation": "vicious (adj): violent and cruel."
+              "explanation": "vicious (adj): violent and cruel.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "elastic",
                 "dubious"
               ],
-              "correctAnswer": "A",
-              "explanation": "outright (adj): open and direct."
+              "explanation": "outright (adj): open and direct.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "ego",
                 "periphery"
               ],
-              "correctAnswer": "A",
-              "explanation": "locale (n): a small area or place where something specific happens."
+              "explanation": "locale (n): a small area or place where something specific happens.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "terrestrial",
                 "elastic"
               ],
-              "correctAnswer": "A",
-              "explanation": "arduous (adj): demands great effort or labor."
+              "explanation": "arduous (adj): demands great effort or labor.",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "vicious",
                 "skeletal"
               ],
-              "correctAnswer": "A",
-              "explanation": "dubious (adj): not considered honest."
+              "explanation": "dubious (adj): not considered honest.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "coexist",
                 "engrave"
               ],
-              "correctAnswer": "A",
-              "explanation": "attain (v): to gain or achieve it, often after a lot of effort."
+              "explanation": "attain (v): to gain or achieve it, often after a lot of effort.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "outright",
                 "elastic"
               ],
-              "correctAnswer": "A",
-              "explanation": "terrestrial (adj): relates to Earth."
+              "explanation": "terrestrial (adj): relates to Earth.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "attain",
                 "engrave"
               ],
-              "correctAnswer": "A",
-              "explanation": "conceive (v): to be able to imagine or believe it."
+              "explanation": "conceive (v): to be able to imagine or believe it.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "plaster",
                 "endeavor"
               ],
-              "correctAnswer": "A",
-              "explanation": "shovel (n): a tool with a long handle that is used for digging."
+              "explanation": "shovel (n): a tool with a long handle that is used for digging.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "c. “ I’m hungry.’",
                 "d. “ I’m sorry.”"
               ],
-              "correctAnswer": "a. “ I am the best.”",
-              "explanation": "An ego is a person’s sense of their own worth."
+              "explanation": "An ego is a person’s sense of their own worth.",
+              "correctAnswer": "a. “ I am the best.”"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "c. A cloud",
                 "d. A pillow"
               ],
-              "correctAnswer": "b. A cliff",
-              "explanation": "Jagged means having a tough, uneven shape or edge."
+              "explanation": "Jagged means having a tough, uneven shape or edge.",
+              "correctAnswer": "b. A cliff"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "c. A computer",
                 "d. The ground"
               ],
-              "correctAnswer": "d. The ground",
-              "explanation": "To excavate means to dig on land and remove dirt."
+              "explanation": "To excavate means to dig on land and remove dirt.",
+              "correctAnswer": "d. The ground"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "c. The skull",
                 "d. The fingernails"
               ],
-              "correctAnswer": "c. The skull",
-              "explanation": "Skeletal relates to bones in the body."
+              "explanation": "Skeletal relates to bones in the body.",
+              "correctAnswer": "c. The skull"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "c. Making coffee",
                 "d. Combing your hair"
               ],
-              "correctAnswer": "b. Inventing a new machine",
-              "explanation": "An endeavor is an attempt to do something, especially something new or original."
+              "explanation": "An endeavor is an attempt to do something, especially something new or original.",
+              "correctAnswer": "b. Inventing a new machine"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -220,8 +219,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Endeavor means an attempt to do something new, not ring."
+              "explanation": "Endeavor means an attempt to do something new, not ring.",
+              "correctAnswer": "I"
             },
             {
               "id": "17",
@@ -230,8 +229,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Excavate means to dig on land."
+              "explanation": "Excavate means to dig on land.",
+              "correctAnswer": "C"
             },
             {
               "id": "18",
@@ -240,8 +239,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Vicious means violent and cruel."
+              "explanation": "Vicious means violent and cruel.",
+              "correctAnswer": "I"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Terrestrial means relating to Earth (land animals)."
+              "explanation": "Terrestrial means relating to Earth (land animals).",
+              "correctAnswer": "C"
             },
             {
               "id": "20",
@@ -260,8 +259,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Dubious means not considered honest."
+              "explanation": "Dubious means not considered honest.",
+              "correctAnswer": "I"
             },
             {
               "id": "21",
@@ -270,8 +269,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Periphery means the edge of an area."
+              "explanation": "Periphery means the edge of an area.",
+              "correctAnswer": "C"
             },
             {
               "id": "22",
@@ -280,8 +279,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Arduous means demanding great effort or labor."
+              "explanation": "Arduous means demanding great effort or labor.",
+              "correctAnswer": "C"
             },
             {
               "id": "23",
@@ -290,8 +289,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "A shovel is used for digging, not climbing."
+              "explanation": "A shovel is used for digging, not climbing.",
+              "correctAnswer": "I"
             },
             {
               "id": "24",
@@ -300,8 +299,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Jagged means tough, uneven shape or edge."
+              "explanation": "Jagged means tough, uneven shape or edge.",
+              "correctAnswer": "I"
             },
             {
               "id": "25",
@@ -310,8 +309,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Attain means to gain or achieve, not shape or twist."
+              "explanation": "Attain means to gain or achieve, not shape or twist.",
+              "correctAnswer": "I"
             },
             {
               "id": "26",
@@ -320,8 +319,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Plaster is a smooth paste that hardens."
+              "explanation": "Plaster is a smooth paste that hardens.",
+              "correctAnswer": "C"
             },
             {
               "id": "27",
@@ -330,8 +329,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "A mold is a hollow container to make shapes."
+              "explanation": "A mold is a hollow container to make shapes.",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -340,8 +339,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Engrave means to cut a design into a surface, not complete homework."
+              "explanation": "Engrave means to cut a design into a surface, not complete homework.",
+              "correctAnswer": "I"
             },
             {
               "id": "29",
@@ -350,8 +349,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Conceive means to imagine or believe."
+              "explanation": "Conceive means to imagine or believe.",
+              "correctAnswer": "C"
             },
             {
               "id": "30",
@@ -360,8 +359,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Outright means open and direct."
+              "explanation": "Outright means open and direct.",
+              "correctAnswer": "C"
             },
             {
               "id": "31",
@@ -370,8 +369,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Elastic relates to stretching, not sound."
+              "explanation": "Elastic relates to stretching, not sound.",
+              "correctAnswer": "I"
             },
             {
               "id": "32",
@@ -380,8 +379,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Ego is a person's sense of self-worth, not an animal."
+              "explanation": "Ego is a person's sense of self-worth, not an animal.",
+              "correctAnswer": "I"
             },
             {
               "id": "33",
@@ -390,8 +389,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Locale is a small area or place."
+              "explanation": "Locale is a small area or place.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -400,8 +399,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Skeletal relates to bones, not clothing."
+              "explanation": "Skeletal relates to bones, not clothing.",
+              "correctAnswer": "I"
             },
             {
               "id": "35",
@@ -410,24 +409,24 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Coexist means to exist together in the same time and place."
+              "explanation": "Coexist means to exist together in the same time and place.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Fossil Hunters</h1><p style=\"margin-bottom: 2rem;\">Tim and Dean were great fossil hunters. They were the very best at finding dinosaur bones. Although Tim and Dean were quite similar, they were <b>outright</b> enemies. The two men got into <b>vicious</b> arguments all the time. They couldn’t <b>coexist</b> peacefully because their <b>egos</b> were too large. Tim thought he was the best fossil hunter, while Dean was sure that he was much better than Tim.</p><p style=\"margin-bottom: 2rem;\">One day, Tim was searching for fossils on the <b>periphery</b> of the city when he discovered a huge bone. He had never seen anything like it! He took his <b>shovel</b> and carefully <b>excavated</b> the dirt around it. As he dug, he uncovered more <b>jagged</b> bones. He realized that he had found an entire dinosaur skeleton! Tim couldn’t <b>conceive</b> a plan to remove the huge skeleton all by himself. Such an <b>endeavor</b> would be too <b>arduous</b>. He needed help. He tried to think of people who would be capable of helping him remove the skeleton without breaking it. The only person Tim could think of was Dean, his enemy.</p><p style=\"margin-bottom: 2rem;\">Tim ran into the city to find Dean. Tim found him and said, “Dean, I’ve found the <b>skeletal</b> remains of a huge <b>terrestrial</b> animal. But I can’t get the skeleton out by myself. Will you please help me?”</p><p style=\"margin-bottom: 2rem;\">Dean thought that Tim’s claim might be <b>dubious</b>. He replied, “If you’re serious about the skeleton, I’ll help.”</p><p style=\"margin-bottom: 2rem;\">Tim excitedly showed Dean the skeleton’s <b>locale</b>. They worked together to carefully remove each bone. And to keep the bones together, they tied them with <b>elastic</b> strips. When they were finished, they had <b>attained</b> a perfect skeleton. They used <b>plaster</b> to make a <b>mold</b> of the dinosaur’s skull. They <b>engraved</b> their initials into it and gave it to the curator of a local museum.</p><p style=\"margin-bottom: 2rem;\">Tim and Dean found out that they could work very well together. They decided to end their feud and become friends. By combining their talents, the men became even greater than they were before.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Fossil Hunters</h1>        <p style=\"margin-bottom: 1rem;\">Tim and Dean were great fossil hunters. They were the very best at finding dinosaur bones. Although Tim and Dean were quite similar, they were <b>outright</b> enemies. The two men got into <b>vicious</b> arguments all the time. They couldn’t <b>coexist</b> peacefully because their <b>egos</b> were too large. Tim thought he was the best fossil hunter, while Dean was sure that he was much better than Tim.</p>    <p style=\"margin-bottom: 1rem;\">One day, Tim was searching for fossils on the <b>periphery</b> of the city when he discovered a huge bone. He had never seen anything like it! He took his <b>shovel</b> and carefully <b>excavated</b> the dirt around it. As he dug, he uncovered more <b>jagged</b> bones. He realized that he had found an entire dinosaur skeleton! Tim couldn’t <b>conceive</b> a plan to remove the huge skeleton all by himself. Such an <b>endeavor</b> would be too <b>arduous</b>. He needed help. He tried to think of people who would be capable of helping him remove the skeleton without breaking it. The only person Tim could think of was Dean, his enemy.</p>    <p style=\"margin-bottom: 1rem;\">Tim ran into the city to find Dean. Tim found him and said, “Dean, I’ve found the <b>skeletal</b> remains of a huge <b>terrestrial</b> animal. But I can’t get the skeleton out by myself. Will you please help me?”</p>    <p style=\"margin-bottom: 1rem;\">Dean thought that Tim’s claim might be <b>dubious</b>. He replied, “If you’re serious about the skeleton, I’ll help.”</p>    <p style=\"margin-bottom: 1rem;\">Tim excitedly showed Dean the skeleton’s <b>locale</b>. They worked together to carefully remove each bone. And to keep the bones together, they tied them with <b>elastic</b> strips. When they were finished, they had <b>attained</b> a perfect skeleton. They used <b>plaster</b> to make a <b>mold</b> of the dinosaur’s skull. They <b>engraved</b> their initials into it and gave it to the curator of a local museum.</p>    <p style=\"margin-bottom: 1rem;\">Tim and Dean found out that they could work very well together. They decided to end their feud and become friends. By combining their talents, the men became even greater than they were before.</p></div>",
       "imageUrl": "/unit2_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -436,8 +435,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Ngay đoạn 1 có viết: '...they were outright enemies. The two men got into vicious arguments all the time.' (...họ là những kẻ thù hoàn toàn của nhau. Hai người đàn ông này lúc nào cũng vướng vào những cuộc tranh cãi ác ý). Câu hỏi phản ánh đúng y chang thông tin này nha!",
+              "correctAnswer": "T"
             },
             {
               "id": "37",
@@ -446,8 +445,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Tim and Dean removed the jagged bones and used elastic to tie them together."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 5 cho biết họ cẩn thận lấy từng khúc xương ra, sau đó: 'And to keep the bones together, they tied them with elastic strips.' (Và để giữ các khúc xương lại với nhau, họ đã buộc chúng bằng các dải thun). Họ dùng dây thun để 'buộc chúng lại' (tie them together) chứ không phải để 'đạt được chúng' (attain them) như câu hỏi viết đâu nhé.",
+              "correctAnswer": "F"
             },
             {
               "id": "38",
@@ -456,8 +455,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Trong đoạn 2 có câu: 'Tim couldn’t conceive a plan to remove the huge skeleton all by himself. Such an endeavor would be too arduous.' (Tim không thể hình dung ra một kế hoạch để tự mình gỡ bỏ bộ xương khổng lồ. Một nỗ lực như vậy sẽ quá gian khổ). Hoàn toàn khớp với ý của câu hỏi luôn!",
+              "correctAnswer": "T"
             },
             {
               "id": "39",
@@ -466,8 +465,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Dean thought Tim's claim might be dubious."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Bạn xem đoạn 4 sẽ thấy: 'Dean thought that Tim’s claim might be dubious.' (Dean nghĩ rằng lời khẳng định của Tim có thể là đáng ngờ). Chứ không phải 'Tim's ego' (cái tôi của Tim) đáng ngờ đâu nhé!",
+              "correctAnswer": "F"
             },
             {
               "id": "40",
@@ -476,16 +475,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: When Tim excavated the land, he uncovered many jagged bones."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 2 ghi rất rõ: '...excavated the dirt around it. As he dug, he uncovered more jagged bones.' (...đào lớp bụi bẩn xung quanh nó. Khi đào, anh ấy phát hiện ra nhiều đoạn xương lởm chởm hơn). Vậy xương ở đây là 'jagged bones' (lởm chởm) chứ không phải 'engraved bones' (xương được khắc chữ) nhé!",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -496,8 +495,8 @@
                 "Dean was dubious about Tim.",
                 "They were both vicious."
               ],
-              "correctAnswer": "A",
-              "explanation": "Their egos were too large."
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Để biết tại sao Tim và Dean không thể chung sống hòa bình, bạn nhìn vào đoạn 1: 'They couldn’t coexist peacefully because their egos were too large.' (Họ không thể cùng tồn tại một cách hòa bình bởi vì cái tôi của họ quá lớn). Vậy chọn A là chuẩn xác nhất nha!",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -508,8 +507,8 @@
                 "Tim used his shovel to build a house.",
                 "Tim used his shovel to engrave his name."
               ],
-              "correctAnswer": "A",
-              "explanation": "Tim used his shovel to carefully excavate the land around the bone."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Đoạn 2 miêu tả việc Tim dùng xẻng làm gì: 'He took his shovel and carefully excavated the dirt around it.' (Anh ấy lấy chiếc xẻng của mình và cẩn thận đào lớp bụi bẩn xung quanh nó). Vậy đáp án A diễn tả chính xác hành động này nhé!",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -520,8 +519,8 @@
                 "Tim was studying astrology.",
                 "Tim was trying to attain a diploma."
               ],
-              "correctAnswer": "A",
-              "explanation": "Tim was searching for fossils."
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ngay câu đầu tiên của đoạn 2 đã viết: 'One day, Tim was searching for fossils on the periphery of the city...' (Một ngày nọ, Tim đang tìm kiếm hóa thạch ở vùng ngoại ô thành phố...). Rất rõ ràng phải không nào!",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -532,8 +531,8 @@
                 "They broke it into pieces.",
                 "They tied it with elastic."
               ],
-              "correctAnswer": "A",
-              "explanation": "They engraved their initials into it."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Đoạn 5 có nhắc đến: 'They used plaster to make a mold... They engraved their initials into it and gave it to the curator...' (Họ đã sử dụng thạch cao để tạo khuôn... Họ khắc tên viết tắt của mình vào đó và đưa nó cho người phụ trách...). Nên đáp án đúng phải là A nhé!",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -544,10 +543,11 @@
                 "“Let's go together.”",
                 "“I am the best fossil hunter.”"
               ],
-              "correctAnswer": "A",
-              "explanation": "“If you’re serious about the skeleton, I’ll help.”"
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ở đoạn 4, Dean đã đáp lại lời nhờ vả của Tim rằng: 'If you’re serious about the skeleton, I’ll help.' (Nếu bạn nghiêm túc về bộ xương, tôi sẽ giúp). Vậy A là lựa chọn chính xác nha!",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

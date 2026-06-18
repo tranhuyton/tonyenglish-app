@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "clean",
                 "magical"
               ],
-              "correctAnswer": "B",
-              "explanation": "defect (n): a part of something that is wrong or missing. Similar to broken."
+              "explanation": "defect (n): a part of something that is wrong or missing. Similar to broken.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "original",
                 "compatible"
               ],
-              "correctAnswer": "C",
-              "explanation": "innovation (n): a product or an idea that is new or very original. Similar to original."
+              "explanation": "innovation (n): a product or an idea that is new or very original. Similar to original.",
+              "correctAnswer": "C"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "open",
                 "melt"
               ],
-              "correctAnswer": "A",
-              "explanation": "accelerate (v): to increase in speed. Similar to speed up."
+              "explanation": "accelerate (v): to increase in speed. Similar to speed up.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "body",
                 "mind"
               ],
-              "correctAnswer": "A",
-              "explanation": "meteorological (adj): concerned with the science of weather. Similar to weather."
+              "explanation": "meteorological (adj): concerned with the science of weather. Similar to weather.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "frigid",
                 "dull"
               ],
-              "correctAnswer": "D",
-              "explanation": "dreary (adj): dull, dark, and lifeless. Similar to dull."
+              "explanation": "dreary (adj): dull, dark, and lifeless. Similar to dull.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "duplicate",
                 "spur"
               ],
-              "correctAnswer": "A",
-              "explanation": "stimulates means to cause or to increase activity in."
+              "explanation": "stimulates means to cause or to increase activity in.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "glide",
                 "duplicate"
               ],
-              "correctAnswer": "A",
-              "explanation": "penetrate means to enter into it."
+              "explanation": "penetrate means to enter into it.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "accelerate",
                 "anew"
               ],
-              "correctAnswer": "A",
-              "explanation": "duplicate means to copy it."
+              "explanation": "duplicate means to copy it.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "stimulate",
                 "innovative"
               ],
-              "correctAnswer": "A",
-              "explanation": "spur means to urge them into action."
+              "explanation": "spur means to urge them into action.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "innovation",
                 "defect"
               ],
-              "correctAnswer": "A",
-              "explanation": "electron is a particle in all atoms that has a negative electric charge."
+              "explanation": "electron is a particle in all atoms that has a negative electric charge.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "dreary",
                 "ingenious"
               ],
-              "correctAnswer": "A",
-              "explanation": "anew means again and in a different way."
+              "explanation": "anew means again and in a different way.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "electromagnetic",
                 "innovation"
               ],
-              "correctAnswer": "A",
-              "explanation": "meteorology is the science that studies the weather."
+              "explanation": "meteorology is the science that studies the weather.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "accelerated",
                 "penetrated"
               ],
-              "correctAnswer": "A",
-              "explanation": "glided means flew on extended wings with little or no effort."
+              "explanation": "glided means flew on extended wings with little or no effort.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "spur",
                 "duplicate"
               ],
-              "correctAnswer": "A",
-              "explanation": "launch means to make it go into motion."
+              "explanation": "launch means to make it go into motion.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "innovative",
                 "dreary"
               ],
-              "correctAnswer": "A",
-              "explanation": "ingenious means very smart."
+              "explanation": "ingenious means very smart.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -220,8 +219,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "accelerate means to increase in speed."
+              "explanation": "accelerate means to increase in speed.",
+              "correctAnswer": "C"
             },
             {
               "id": "17",
@@ -230,8 +229,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "tenacious means not giving up easily, not a sound."
+              "explanation": "tenacious means not giving up easily, not a sound.",
+              "correctAnswer": "I"
             },
             {
               "id": "18",
@@ -240,8 +239,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "duplicated means copied exactly, so it would look like the original."
+              "explanation": "duplicated means copied exactly, so it would look like the original.",
+              "correctAnswer": "I"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "lions do not glide (fly on wings)."
+              "explanation": "lions do not glide (fly on wings).",
+              "correctAnswer": "I"
             },
             {
               "id": "20",
@@ -260,8 +259,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "launched means to put into motion, not eaten."
+              "explanation": "launched means to put into motion, not eaten.",
+              "correctAnswer": "I"
             },
             {
               "id": "21",
@@ -270,8 +269,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "should be simulated, not stimulated."
+              "explanation": "should be simulated, not stimulated.",
+              "correctAnswer": "I"
             },
             {
               "id": "22",
@@ -280,8 +279,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "innovation is a new product or idea."
+              "explanation": "innovation is a new product or idea.",
+              "correctAnswer": "C"
             },
             {
               "id": "23",
@@ -290,8 +289,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "penetrate means to enter into."
+              "explanation": "penetrate means to enter into.",
+              "correctAnswer": "C"
             },
             {
               "id": "24",
@@ -300,8 +299,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "spurred means urged into action."
+              "explanation": "spurred means urged into action.",
+              "correctAnswer": "C"
             },
             {
               "id": "25",
@@ -310,8 +309,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "anew means again."
+              "explanation": "anew means again.",
+              "correctAnswer": "C"
             },
             {
               "id": "26",
@@ -320,8 +319,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "meteorological relates to weather science."
+              "explanation": "meteorological relates to weather science.",
+              "correctAnswer": "C"
             },
             {
               "id": "27",
@@ -330,8 +329,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "propulsion is the force that moves something forward."
+              "explanation": "propulsion is the force that moves something forward.",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -340,8 +339,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "innovative means thinking in creative ways, not entering without knocking."
+              "explanation": "innovative means thinking in creative ways, not entering without knocking.",
+              "correctAnswer": "I"
             },
             {
               "id": "29",
@@ -350,8 +349,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "electromagnetic relates to electricity and magnetic fields."
+              "explanation": "electromagnetic relates to electricity and magnetic fields.",
+              "correctAnswer": "C"
             },
             {
               "id": "30",
@@ -360,8 +359,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "should be stimulate, not simulate."
+              "explanation": "should be stimulate, not simulate.",
+              "correctAnswer": "I"
             },
             {
               "id": "31",
@@ -370,8 +369,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "ingenious means smart, which contradicts not passing tests."
+              "explanation": "ingenious means smart, which contradicts not passing tests.",
+              "correctAnswer": "I"
             },
             {
               "id": "32",
@@ -380,8 +379,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "meteorology is weather, not meteors."
+              "explanation": "meteorology is weather, not meteors.",
+              "correctAnswer": "I"
             },
             {
               "id": "33",
@@ -390,8 +389,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "dreary means dull, dark, lifeless."
+              "explanation": "dreary means dull, dark, lifeless.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -400,8 +399,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "should be election, not electron."
+              "explanation": "should be election, not electron.",
+              "correctAnswer": "I"
             },
             {
               "id": "35",
@@ -410,24 +409,24 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "defects are flaws, so it wouldn't look perfect."
+              "explanation": "defects are flaws, so it wouldn't look perfect.",
+              "correctAnswer": "I"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Tenacious Inventor</h1><p style=\"margin-bottom: 2rem;\">A young student of meteorology was having a difficult time with an experiment. He was attempting to duplicate lightning in clouds. He had made a device that could simulate lightning. It worked by releasing an electromagnetic pulse into the cloud. This pulse, in turn, stimulated the electrons in the cloud’s particles. Then the electrons produced lightning.</p><p style=\"margin-bottom: 2rem;\">But his meteorological experiment had a major defect. He couldn’t get the device into the sky.</p><p style=\"margin-bottom: 2rem;\">He had tied it to balloons, but they had burst. He had shot the device from a cannon, but the force of the cannon had damaged it.</p><p style=\"margin-bottom: 2rem;\">“You should give up,” his friends told him. “You’ll never get that thing into the air.”</p><p style=\"margin-bottom: 2rem;\">But his friends’ criticisms only spurred him to try again. The student was very innovative, and at last, he thought that he had an innovation that would work. He attached wings to the device, and on one dreary day, when clouds blocked the light of the sun, he started his experiment anew.</p><p style=\"margin-bottom: 2rem;\">He placed the device on a rocket and launched it into the sky. The propulsion of the rocket carried the device high into the air. The rocket accelerated into the clouds and then released the device. It glided on its wings through the clouds, and when it penetrated the center of a large black cloud, it emitted the electromagnetic pulse. And just as he had predicted, lightning shot from the cloud!</p><p style=\"margin-bottom: 2rem;\">He called his professors, and the next day they came to watch. He successfully duplicated the experiment. His teachers were extremely impressed and called the student and his invention ingenious.</p><p style=\"margin-bottom: 2rem;\">The student was given many awards and became a famous inventor. He had not given up. He had remained tenacious and succeeded.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Tenacious Inventor</h1>        <p style=\"margin-bottom: 1rem;\">A young student of meteorology was having a difficult time with an experiment. He was attempting to duplicate lightning in clouds. He had made a device that could simulate lightning. It worked by releasing an electromagnetic pulse into the cloud. This pulse, in turn, stimulated the electrons in the cloud’s particles. Then the electrons produced lightning.</p>    <p style=\"margin-bottom: 1rem;\">But his meteorological experiment had a major defect. He couldn’t get the device into the sky.</p>    <p style=\"margin-bottom: 1rem;\">He had tied it to balloons, but they had burst. He had shot the device from a cannon, but the force of the cannon had damaged it.</p>    <p style=\"margin-bottom: 1rem;\">“You should give up,” his friends told him. “You’ll never get that thing into the air.”</p>    <p style=\"margin-bottom: 1rem;\">But his friends’ criticisms only spurred him to try again. The student was very innovative, and at last, he thought that he had an innovation that would work. He attached wings to the device, and on one dreary day, when clouds blocked the light of the sun, he started his experiment anew.</p>    <p style=\"margin-bottom: 1rem;\">He placed the device on a rocket and launched it into the sky. The propulsion of the rocket carried the device high into the air. The rocket accelerated into the clouds and then released the device. It glided on its wings through the clouds, and when it penetrated the center of a large black cloud, it emitted the electromagnetic pulse. And just as he had predicted, lightning shot from the cloud!</p>    <p style=\"margin-bottom: 1rem;\">He called his professors, and the next day they came to watch. He successfully duplicated the experiment. His teachers were extremely impressed and called the student and his invention ingenious.</p>    <p style=\"margin-bottom: 1rem;\">The student was given many awards and became a famous inventor. He had not given up. He had remained tenacious and succeeded.</p></div>",
       "imageUrl": "/unit17_vol6_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -436,8 +435,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, The student of meteorology had made a device that simulated lightning in clouds."
+              "explanation": "Dịch: Cậu sinh viên ngành khí tượng học đã mua một thiết bị mô phỏng sấm sét trong các đám mây.\nGiải thích: F. Đoạn 1 viết rằng: \"He had made a device that could simulate lightning.\" (Cậu ấy đã tự tạo ra một thiết bị có thể mô phỏng sấm sét). Cậu ấy tự làm ra nó (made) chứ không phải đi mua (bought).",
+              "correctAnswer": "F"
             },
             {
               "id": "37",
@@ -446,8 +445,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Xung điện từ đã kích thích các electron trong các hạt của đám mây.\nGiải thích: T. Đoạn 1 có miêu tả: \"This pulse, in turn, stimulated the electrons in the cloud’s particles.\" (Xung này sau đó kích thích các electron trong các hạt của đám mây). Câu này hoàn toàn đúng.",
+              "correctAnswer": "T"
             },
             {
               "id": "38",
@@ -456,8 +455,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Những lời chỉ trích của bạn bè cậu sinh viên đã thúc đẩy cậu ấy thử lại thí nghiệm của mình.\nGiải thích: T. Đoạn 5 nói: \"But his friends’ criticisms only spurred him to try again... he started his experiment anew.\" (Nhưng những lời chỉ trích của bạn bè chỉ thúc giục anh ấy thử lại lần nữa... anh ấy bắt đầu lại thí nghiệm của mình).",
+              "correctAnswer": "T"
             },
             {
               "id": "39",
@@ -466,8 +465,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Đó là một ngày ảm đạm khi thiết bị bay lượn vào trong những đám mây.\nGiải thích: T. Trong đoạn 5 tác giả có nói: \"and on one dreary day, when clouds blocked the light of the sun, he started his experiment anew.\" (và vào một ngày ảm đạm, khi những đám mây che khuất ánh sáng mặt trời, anh ấy bắt đầu lại thí nghiệm của mình).",
+              "correctAnswer": "T"
             },
             {
               "id": "40",
@@ -476,16 +475,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, The propulsion of the rocket carried the device high into the air."
+              "explanation": "Dịch: Lực đẩy của tên lửa đã làm tăng tốc độ của tia sét.\nGiải thích: F. Đoạn 6 cho biết lực đẩy của tên lửa dùng để đưa thiết bị lên cao: \"The propulsion of the rocket carried the device high into the air.\" (Lực đẩy của tên lửa đã đưa thiết bị lên cao trong không trung). Tên lửa không hề làm tăng tốc độ của tia sét!",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -496,8 +495,8 @@
                 "It did not produce lightning.",
                 "It burst the balloons."
               ],
-              "correctAnswer": "A",
-              "explanation": "The meteorological experiment had a major defect. It couldn't get into the sky."
+              "explanation": "Dịch câu hỏi: Khuyết điểm trong thí nghiệm khí tượng của cậu sinh viên là gì?\nGiải thích: Chọn A.\nĐoạn 2 nêu rất rõ: \"But his meteorological experiment had a major defect. He couldn’t get the device into the sky.\" (Nhưng thí nghiệm khí tượng của anh ấy có một khiếm khuyết lớn. Anh ấy không thể đưa thiết bị lên bầu trời).",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -508,8 +507,8 @@
                 "He tied it to balloons.",
                 "He carried it on a plane."
               ],
-              "correctAnswer": "A",
-              "explanation": "He placed the device on a rocket and launched it into the sky."
+              "explanation": "Dịch câu hỏi: Sáng kiến nào mà cậu sinh viên sáng tạo đã dùng để phóng thiết bị của mình vào các đám mây?\nGiải thích: Chọn A.\nĐoạn 6 viết: \"He placed the device on a rocket and launched it into the sky.\" (Anh ấy đặt thiết bị lên một quả tên lửa và phóng nó lên bầu trời). Đây chính là cách anh ấy dùng để đưa thiết bị lên cao.",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -520,8 +519,8 @@
                 "His parents.",
                 "The government."
               ],
-              "correctAnswer": "A",
-              "explanation": "He duplicated the experiment for his professors."
+              "explanation": "Dịch câu hỏi: Cậu sinh viên đã làm lại thí nghiệm thiên tài của mình cho ai xem?\nGiải thích: Chọn A.\nĐoạn 7 có chi tiết: \"He called his professors, and the next day they came to watch. He successfully duplicated the experiment.\" (Anh ấy đã gọi cho các giáo sư của mình, và ngày hôm sau họ đến xem. Anh ấy đã thực hiện lại thành công thí nghiệm). Vậy cậu ấy đã làm lại thí nghiệm cho các giáo sư (professors) xem.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -532,8 +531,8 @@
                 "It produced rain.",
                 "It accelerated."
               ],
-              "correctAnswer": "A",
-              "explanation": "When it penetrated the center of a large black cloud, it emitted the electromagnetic pulse."
+              "explanation": "Dịch câu hỏi: Thiết bị đã làm gì khi cuối cùng nó cũng xuyên qua trung tâm của một đám mây đen lớn?\nGiải thích: Chọn A.\nCũng ở đoạn 6: \"...and when it penetrated the center of a large black cloud, it emitted the electromagnetic pulse.\" (...và khi nó xuyên vào trung tâm của một đám mây đen lớn, nó phát ra xung điện từ). Vậy thiết bị đã phát ra xung điện từ (emitted the electromagnetic pulse).",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -544,10 +543,11 @@
                 "He failed the class.",
                 "He got struck by lightning."
               ],
-              "correctAnswer": "A",
-              "explanation": "Because he was so tenacious, the student had succeeded."
+              "explanation": "Dịch câu hỏi: Điều gì đã xảy ra với cậu sinh viên nhờ việc cậu ấy kiên trì?\nGiải thích: Chọn A.\nĐoạn cuối viết: \"The student was given many awards and became a famous inventor. He had not given up. He had remained tenacious and succeeded.\" (Cậu sinh viên đã được trao nhiều giải thưởng và trở thành một nhà phát minh nổi tiếng. Cậu ấy đã không bỏ cuộc. Cậu ấy vẫn kiên trì và đã thành công). Nên nhờ kiên trì, cậu ấy đã thành công và trở nên nổi tiếng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

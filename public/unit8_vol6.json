@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "distinct",
                 "hostile"
               ],
-              "correctAnswer": "B",
-              "explanation": "congested (adj): crowded, full or blocked."
+              "explanation": "congested (adj): crowded, full or blocked.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "inexpensive",
                 "unruly"
               ],
-              "correctAnswer": "A",
-              "explanation": "exclusive (adj): limited, only for rich people."
+              "explanation": "exclusive (adj): limited, only for rich people.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "increase",
                 "worry"
               ],
-              "correctAnswer": "D",
-              "explanation": "unsettle (v): make anxious or worry."
+              "explanation": "unsettle (v): make anxious or worry.",
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "criticism",
                 "unplanned action"
               ],
-              "correctAnswer": "A",
-              "explanation": "garment (n): a piece of clothing."
+              "explanation": "garment (n): a piece of clothing.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "capable",
                 "toughen"
               ],
-              "correctAnswer": "B",
-              "explanation": "propel (v): push or move somewhere."
+              "explanation": "propel (v): push or move somewhere.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "propel",
                 "socialize"
               ],
-              "correctAnswer": "A",
-              "explanation": "suppress (v): to prevent from happening."
+              "explanation": "suppress (v): to prevent from happening.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "socialize",
                 "suppressed"
               ],
-              "correctAnswer": "A",
-              "explanation": "deform (v): to change from its correct or original shape."
+              "explanation": "deform (v): to change from its correct or original shape.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "garments",
                 "freight"
               ],
-              "correctAnswer": "A",
-              "explanation": "insomnia (n): a condition with difficulty sleeping."
+              "explanation": "insomnia (n): a condition with difficulty sleeping.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "propel",
                 "deformed"
               ],
-              "correctAnswer": "A",
-              "explanation": "unsettle (v): to make anxious or upset."
+              "explanation": "unsettle (v): to make anxious or upset.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "exclusive",
                 "congested"
               ],
-              "correctAnswer": "A",
-              "explanation": "liable (adj): very likely to happen."
+              "explanation": "liable (adj): very likely to happen.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "premium",
                 "garment"
               ],
-              "correctAnswer": "A",
-              "explanation": "privilege (n): a special right given to a person or group."
+              "explanation": "privilege (n): a special right given to a person or group.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "courier",
                 "freight"
               ],
-              "correctAnswer": "A",
-              "explanation": "overboard (adv): over the side of a boat."
+              "explanation": "overboard (adv): over the side of a boat.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "premium",
                 "garment"
               ],
-              "correctAnswer": "A",
-              "explanation": "etiquette (n): the rules about how to be polite."
+              "explanation": "etiquette (n): the rules about how to be polite.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "premium",
                 "etiquette"
               ],
-              "correctAnswer": "A",
-              "explanation": "garments (n): pieces of clothing."
+              "explanation": "garments (n): pieces of clothing.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "socialized",
                 "obsessed"
               ],
-              "correctAnswer": "A",
-              "explanation": "warp (v): to become bent into the wrong shape."
+              "explanation": "warp (v): to become bent into the wrong shape.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
           "content": "Word Bank: congested, exclusive, suppress, premium, etiquette, courier, socialize, obsessed, warp, tram",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "obsessed",
                 "tram"
               ],
-              "correctAnswer": "A",
-              "explanation": "exclusive (adj): only for rich people, selective."
+              "explanation": "exclusive (adj): only for rich people, selective.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "courier",
                 "tram"
               ],
-              "correctAnswer": "A",
-              "explanation": "premium (n): a payment higher than average."
+              "explanation": "premium (n): a payment higher than average.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "congested",
                 "socialize"
               ],
-              "correctAnswer": "A",
-              "explanation": "obsess (v): to think about all the time."
+              "explanation": "obsess (v): to think about all the time.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "courier",
                 "tram"
               ],
-              "correctAnswer": "A",
-              "explanation": "etiquette (n): the group of rules about how to be polite."
+              "explanation": "etiquette (n): the group of rules about how to be polite.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "premium",
                 "etiquette"
               ],
-              "correctAnswer": "A",
-              "explanation": "tram (n): a vehicle like a streetcar."
+              "explanation": "tram (n): a vehicle like a streetcar.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "obsessed",
                 "socialize"
               ],
-              "correctAnswer": "A",
-              "explanation": "congested (adj): full or blocked."
+              "explanation": "congested (adj): full or blocked.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "premium",
                 "etiquette"
               ],
-              "correctAnswer": "A",
-              "explanation": "courier (n): someone who delivers mail or packages."
+              "explanation": "courier (n): someone who delivers mail or packages.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "suppress",
                 "obsessed"
               ],
-              "correctAnswer": "A",
-              "explanation": "socialize (v): to have a good time with people."
+              "explanation": "socialize (v): to have a good time with people.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "socialize",
                 "obsessed"
               ],
-              "correctAnswer": "A",
-              "explanation": "suppress (v): to prevent from happening."
+              "explanation": "suppress (v): to prevent from happening.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,16 +329,16 @@
                 "socialize",
                 "obsessed"
               ],
-              "correctAnswer": "A",
-              "explanation": "warp (v): to become bent into the wrong shape."
+              "explanation": "warp (v): to become bent into the wrong shape.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -348,8 +347,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Intuitive means knowing something without proof."
+              "explanation": "Intuitive means knowing something without proof.",
+              "correctAnswer": "C"
             },
             {
               "id": "27",
@@ -358,8 +357,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "If it is liable to rain, going for a picnic is a bad idea."
+              "explanation": "If it is liable to rain, going for a picnic is a bad idea.",
+              "correctAnswer": "I"
             },
             {
               "id": "28",
@@ -368,8 +367,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Obsessing means to think about it all the time, which contradicts forgetting it immediately."
+              "explanation": "Obsessing means to think about it all the time, which contradicts forgetting it immediately.",
+              "correctAnswer": "I"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Insomnia is difficulty sleeping."
+              "explanation": "Insomnia is difficulty sleeping.",
+              "correctAnswer": "C"
             },
             {
               "id": "30",
@@ -388,24 +387,24 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Garments are clothes."
+              "explanation": "Garments are clothes.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Watch Out!</h1><p style=\"margin-bottom: 2rem;\">Kevin stepped off the <b>tram</b> and walked toward the ship, holding a package tightly in his hands. He had been hired as a <b>courier</b> for an important broker. All he needed to do was deliver a package to an office in New York City; the ship would take him there.</p><p style=\"margin-bottom: 2rem;\">When he boarded, the ship was <b>congested</b> with people. As Kevin walked to his cabin, he saw the <b>exclusive</b> first-class section. Everybody inside was wearing fancy <b>garments</b>. He would have liked to <b>socialize</b> with the people inside, but it was against proper <b>etiquette</b>. People paid a <b>premium</b> for the <b>privilege</b> to ride in first-class.</p><p style=\"margin-bottom: 2rem;\">Instead, he went to his cabin next to the <b>freight</b> section of the boat. His room smelled bad, and the floorboards were <b>warped</b> and <b>deformed</b> in some areas. He could also hear the motor humming as it waited to <b>propel</b> the ship forward. Suddenly, Kevin was <b>unsettled</b> by something, but he wasn’t sure why.</p><p style=\"margin-bottom: 2rem;\">He took a short walk on the ship’s deck, but he still felt strange. That night, he suffered from <b>insomnia</b>—he couldn’t <b>suppress</b> his <b>obsessing</b> over how strange he felt.</p><p style=\"margin-bottom: 2rem;\">Kevin went back on deck. It was cold and dark outside. He looked <b>overboard</b>, but it seemed that everything was all right. “Just go back inside,” he thought. Then Kevin saw it. A giant iceberg was sticking out of the ocean in the distance!</p><p style=\"margin-bottom: 2rem;\">“Help!” he yelled.</p><p style=\"margin-bottom: 2rem;\">People looked at him as if he was crazy, but he continued to shout until he saw the captain.</p><p style=\"margin-bottom: 2rem;\">“There’s an iceberg out there,” Kevin said to him. “If the ship doesn’t move, we’re <b>liable</b> to crash,” he said, pointing toward the iceberg.</p><p style=\"margin-bottom: 2rem;\">The captain saw it and immediately instructed the crew to change the ship’s direction. “Without your help, we would have definitely hit the iceberg. That would have been a terrible disaster!” he said to Kevin.</p><p style=\"margin-bottom: 2rem;\">Kevin felt relieved. Now he knew to always trust his <b>intuitive</b> sense.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Watch Out!</h1>        <p style=\"margin-bottom: 1rem;\">Kevin stepped off the <b>tram</b> and walked toward the ship, holding a package tightly in his hands. He had been hired as a <b>courier</b> for an important broker. All he needed to do was deliver a package to an office in New York City; the ship would take him there.</p>    <p style=\"margin-bottom: 1rem;\">When he boarded, the ship was <b>congested</b> with people. As Kevin walked to his cabin, he saw the <b>exclusive</b> first-class section. Everybody inside was wearing fancy <b>garments</b>. He would have liked to <b>socialize</b> with the people inside, but it was against proper <b>etiquette</b>. People paid a <b>premium</b> for the <b>privilege</b> to ride in first-class.</p>    <p style=\"margin-bottom: 1rem;\">Instead, he went to his cabin next to the <b>freight</b> section of the boat. His room smelled bad, and the floorboards were <b>warped</b> and <b>deformed</b> in some areas. He could also hear the motor humming as it waited to <b>propel</b> the ship forward. Suddenly, Kevin was <b>unsettled</b> by something, but he wasn’t sure why.</p>    <p style=\"margin-bottom: 1rem;\">He took a short walk on the ship’s deck, but he still felt strange. That night, he suffered from <b>insomnia</b>—he couldn’t <b>suppress</b> his <b>obsessing</b> over how strange he felt.</p>    <p style=\"margin-bottom: 1rem;\">Kevin went back on deck. It was cold and dark outside. He looked <b>overboard</b>, but it seemed that everything was all right. “Just go back inside,” he thought. Then Kevin saw it. A giant iceberg was sticking out of the ocean in the distance!</p>    <p style=\"margin-bottom: 1rem;\">“Help!” he yelled.</p>    <p style=\"margin-bottom: 1rem;\">People looked at him as if he was crazy, but he continued to shout until he saw the captain.</p>    <p style=\"margin-bottom: 1rem;\">“There’s an iceberg out there,” Kevin said to him. “If the ship doesn’t move, we’re <b>liable</b> to crash,” he said, pointing toward the iceberg.</p>    <p style=\"margin-bottom: 1rem;\">The captain saw it and immediately instructed the crew to change the ship’s direction. “Without your help, we would have definitely hit the iceberg. That would have been a terrible disaster!” he said to Kevin.</p>    <p style=\"margin-bottom: 1rem;\">Kevin felt relieved. Now he knew to always trust his <b>intuitive</b> sense.</p></div>",
       "imageUrl": "/unit8_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -414,8 +413,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Kevin took a tram to the ship."
+              "explanation": "Đáp án là Sai (F). Câu đầu tiên của bài đọc ghi rõ: \"Kevin stepped off the tram and walked toward the ship\" (Kevin bước xuống khỏi xe điện và đi về phía con tàu), tức là anh ấy đi xe điện chứ không phải taxi.",
+              "correctAnswer": "F"
             },
             {
               "id": "32",
@@ -424,8 +423,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: In order to get the privilege to be in the exclusive section, one had to pay a premium."
+              "explanation": "Đáp án là Sai (F). Ở đoạn hai, tác giả viết: \"People paid a premium for the privilege to ride in first-class\" (Mọi người trả một mức phí cao cho đặc quyền đi khoang hạng nhất). Không phải mặc quần áo đẹp là được vào.",
+              "correctAnswer": "F"
             },
             {
               "id": "33",
@@ -434,8 +433,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Kevin didn’t socialize with the people in the exclusive section because it was against etiquette."
+              "explanation": "Đáp án là Sai (F). Theo đoạn hai: \"He would have liked to socialize with the people inside, but it was against proper etiquette\" (Anh ấy muốn giao lưu với những người bên trong, nhưng điều đó là trái với quy tắc lịch sự). Lý do không phải là vì quá đông đúc.",
+              "correctAnswer": "F"
             },
             {
               "id": "34",
@@ -444,8 +443,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T: That night, he suffered from insomnia."
+              "explanation": "Đáp án là Đúng (T). Trong đoạn bốn, bài viết có nêu: \"That night, he suffered from insomnia\" (Đêm đó, anh ấy bị chứng mất ngủ).",
+              "correctAnswer": "T"
             },
             {
               "id": "35",
@@ -454,16 +453,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T: Without his help, they would have crashed."
+              "explanation": "Đáp án là Đúng (T). Cuối bài đọc, thuyền trưởng khẳng định điều này khi nói với Kevin: \"Without your help, we would have definitely hit the iceberg\" (Nếu không có sự giúp đỡ của cậu, chúng ta chắc chắn đã đâm vào tảng băng trôi).",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -474,8 +473,8 @@
                 "It was full of mail and packages.",
                 "It was a tram."
               ],
-              "correctAnswer": "A",
-              "explanation": "His room smelled bad, and the floorboards were warped and deformed in some areas."
+              "explanation": "Đáp án đúng là A. Đoạn ba miêu tả phòng của Kevin nằm cạnh khu vực chở hàng: \"His room smelled bad, and the floorboards were warped and deformed in some areas\" (Phòng của anh có mùi hôi, và các tấm ván sàn bị cong vênh, biến dạng ở một số chỗ).",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -486,8 +485,8 @@
                 "He heard an iceberg.",
                 "He heard the tram."
               ],
-              "correctAnswer": "A",
-              "explanation": "He could also hear the motor humming as it waited to propel the ship forward."
+              "explanation": "Đáp án đúng là A. Trong đoạn ba, bài đọc có đề cập: \"He could also hear the motor humming as it waited to propel the ship forward\" (Anh cũng có thể nghe thấy tiếng động cơ rầm rì khi nó chờ để đẩy con tàu tiến về phía trước).",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -498,8 +497,8 @@
                 "He saw another ship.",
                 "He saw a fish."
               ],
-              "correctAnswer": "A",
-              "explanation": "He looked overboard, but it seemed that everything was all right."
+              "explanation": "Đáp án đúng là A. Ở đoạn năm, khi Kevin nhìn ra ngoài lần đầu, bài viết miêu tả: \"He looked overboard, but it seemed that everything was all right\" (Anh nhìn xuống mạn tàu, nhưng có vẻ như mọi thứ đều ổn), tức là anh không thấy điều gì bất thường cả.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -510,8 +509,8 @@
                 "He fell overboard.",
                 "He paid a premium."
               ],
-              "correctAnswer": "A",
-              "explanation": "The captain saw it and immediately instructed the crew to change the ship’s direction."
+              "explanation": "Đáp án đúng là A. Ngay khi nghe tin, theo đoạn chín: \"The captain saw it and immediately instructed the crew to change the ship’s direction\" (Thuyền trưởng đã nhìn thấy tảng băng và ngay lập tức chỉ thị cho thủy thủ đoàn thay đổi hướng đi của con tàu).",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -522,10 +521,11 @@
                 "He learned how to sleep with insomnia.",
                 "He learned how to propel a ship."
               ],
-              "correctAnswer": "A",
-              "explanation": "Now he knew to always trust his intuitive sense."
+              "explanation": "Đáp án đúng là A. Dòng cuối cùng của câu chuyện kết luận về bài học của Kevin: \"Now he knew to always trust his intuitive sense\" (Bây giờ anh đã biết luôn phải tin vào trực giác của mình).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "liquid",
                 "difficulty"
               ],
-              "correctAnswer": "A",
-              "explanation": "microbe (n): a very small living thing that often makes people sick."
+              "explanation": "microbe (n): a very small living thing that often makes people sick.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "breathing",
                 "moving"
               ],
-              "correctAnswer": "C",
-              "explanation": "respiration (n): the act of breathing."
+              "explanation": "respiration (n): the act of breathing.",
+              "correctAnswer": "C"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "medication",
                 "tube"
               ],
-              "correctAnswer": "D",
-              "explanation": "artery (n): a tube that takes blood from the heart to the rest of the body."
+              "explanation": "artery (n): a tube that takes blood from the heart to the rest of the body.",
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "toy",
                 "victim"
               ],
-              "correctAnswer": "A",
-              "explanation": "pest (n): an animal or insect that hurts plants or food."
+              "explanation": "pest (n): an animal or insect that hurts plants or food.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "stop",
                 "chase"
               ],
-              "correctAnswer": "B",
-              "explanation": "induce (v): to make something happen."
+              "explanation": "induce (v): to make something happen.",
+              "correctAnswer": "B"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "critical",
                 "untrue"
               ],
-              "correctAnswer": "D",
-              "explanation": "invalid (adj): not correct."
+              "explanation": "invalid (adj): not correct.",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "sting",
                 "bother"
               ],
-              "correctAnswer": "A",
-              "explanation": "rupture (v): to tear or burst open."
+              "explanation": "rupture (v): to tear or burst open.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "search",
                 "hide"
               ],
-              "correctAnswer": "C",
-              "explanation": "forage (v): to look around for food."
+              "explanation": "forage (v): to look around for food.",
+              "correctAnswer": "C"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "threaten",
                 "attack"
               ],
-              "correctAnswer": "A",
-              "explanation": "stun (v): to make someone unable to speak due to surprise or shock."
+              "explanation": "stun (v): to make someone unable to speak due to surprise or shock.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "informative",
                 "suffering"
               ],
-              "correctAnswer": "B",
-              "explanation": "susceptible (adj): easily harmed by something."
+              "explanation": "susceptible (adj): easily harmed by something.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "microbes",
                 "paralysis"
               ],
-              "correctAnswer": "A",
-              "explanation": "pests: animals or insects that hurt plants or food."
+              "explanation": "pests: animals or insects that hurt plants or food.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "impede",
                 "forage"
               ],
-              "correctAnswer": "B",
-              "explanation": "magnify: to make something look bigger than it really is."
+              "explanation": "magnify: to make something look bigger than it really is.",
+              "correctAnswer": "B"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "susceptible",
                 "negligible"
               ],
-              "correctAnswer": "A",
-              "explanation": "savage: very violent or cruel."
+              "explanation": "savage: very violent or cruel.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "induce",
                 "impede"
               ],
-              "correctAnswer": "C",
-              "explanation": "induce: to make something happen."
+              "explanation": "induce: to make something happen.",
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "microbes",
                 "respiration"
               ],
-              "correctAnswer": "A",
-              "explanation": "arteries: tubes that take blood from the heart to the rest of the body."
+              "explanation": "arteries: tubes that take blood from the heart to the rest of the body.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "anger",
                 "heal"
               ],
-              "correctAnswer": "A",
-              "explanation": "impede means to keep from moving. Opposite is allow."
+              "explanation": "impede means to keep from moving. Opposite is allow.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "venomous",
                 "shy"
               ],
-              "correctAnswer": "A",
-              "explanation": "elusive means hard to find. Opposite is available."
+              "explanation": "elusive means hard to find. Opposite is available.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "problems",
                 "doctor"
               ],
-              "correctAnswer": "B",
-              "explanation": "paralysis means loss of ability to move. Opposite is mobility."
+              "explanation": "paralysis means loss of ability to move. Opposite is mobility.",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "scientific",
                 "wild"
               ],
-              "correctAnswer": "A",
-              "explanation": "mainstream means normal and accepted. Opposite is uncommon."
+              "explanation": "mainstream means normal and accepted. Opposite is uncommon.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "important",
                 "unexpected"
               ],
-              "correctAnswer": "C",
-              "explanation": "negligible means extremely small and not important. Opposite is important."
+              "explanation": "negligible means extremely small and not important. Opposite is important.",
+              "correctAnswer": "C"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "save",
                 "shrink"
               ],
-              "correctAnswer": "D",
-              "explanation": "magnify means to make look bigger. Opposite is shrink."
+              "explanation": "magnify means to make look bigger. Opposite is shrink.",
+              "correctAnswer": "D"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "take",
                 "feel"
               ],
-              "correctAnswer": "B",
-              "explanation": "prevail means to be accepted or succeed. Opposite is fail."
+              "explanation": "prevail means to be accepted or succeed. Opposite is fail.",
+              "correctAnswer": "B"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "function",
                 "loss"
               ],
-              "correctAnswer": "A",
-              "explanation": "deterioration means the act of becoming worse. Opposite is improvement."
+              "explanation": "deterioration means the act of becoming worse. Opposite is improvement.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "gentle",
                 "unwilling"
               ],
-              "correctAnswer": "C",
-              "explanation": "savage means violent or cruel. Opposite is gentle."
+              "explanation": "savage means violent or cruel. Opposite is gentle.",
+              "correctAnswer": "C"
             },
             {
               "id": "25",
@@ -330,16 +329,16 @@
                 "kind",
                 "resigned"
               ],
-              "correctAnswer": "B",
-              "explanation": "inseparable means cannot be separated. Opposite is dividable."
+              "explanation": "inseparable means cannot be separated. Opposite is dividable.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Fill in the blanks with the correct words.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -350,8 +349,8 @@
                 "elusive",
                 "forage"
               ],
-              "correctAnswer": "A",
-              "explanation": "impede means to keep it from moving or going forward."
+              "explanation": "impede means to keep it from moving or going forward.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -362,8 +361,8 @@
                 "elusive",
                 "susceptible"
               ],
-              "correctAnswer": "B",
-              "explanation": "mainstream means normal and accepted."
+              "explanation": "mainstream means normal and accepted.",
+              "correctAnswer": "B"
             },
             {
               "id": "28",
@@ -374,8 +373,8 @@
                 "paralysis",
                 "deterioration"
               ],
-              "correctAnswer": "A",
-              "explanation": "elusive means hard to find."
+              "explanation": "elusive means hard to find.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -386,8 +385,8 @@
                 "microbes",
                 "stun"
               ],
-              "correctAnswer": "B",
-              "explanation": "forage means to look around for food."
+              "explanation": "forage means to look around for food.",
+              "correctAnswer": "B"
             },
             {
               "id": "30",
@@ -398,8 +397,8 @@
                 "deterioration",
                 "mainstream"
               ],
-              "correctAnswer": "B",
-              "explanation": "pests are animals that hurt plants or food."
+              "explanation": "pests are animals that hurt plants or food.",
+              "correctAnswer": "B"
             },
             {
               "id": "31",
@@ -410,8 +409,8 @@
                 "arteries",
                 "pests"
               ],
-              "correctAnswer": "A",
-              "explanation": "microbes are very small living things that make people sick."
+              "explanation": "microbes are very small living things that make people sick.",
+              "correctAnswer": "A"
             },
             {
               "id": "32",
@@ -422,8 +421,8 @@
                 "elusive",
                 "inseparable"
               ],
-              "correctAnswer": "A",
-              "explanation": "stunned means unable to speak or move due to shock."
+              "explanation": "stunned means unable to speak or move due to shock.",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -434,8 +433,8 @@
                 "respiration",
                 "rupture"
               ],
-              "correctAnswer": "B",
-              "explanation": "paralysis is the loss of ability to move."
+              "explanation": "paralysis is the loss of ability to move.",
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -446,8 +445,8 @@
                 "invalid",
                 "savage"
               ],
-              "correctAnswer": "A",
-              "explanation": "susceptible means easily harmed by it."
+              "explanation": "susceptible means easily harmed by it.",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -458,24 +457,24 @@
                 "deterioration",
                 "artery"
               ],
-              "correctAnswer": "C",
-              "explanation": "deterioration is the act of becoming worse."
+              "explanation": "deterioration is the act of becoming worse.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Dangerous Bites</h1><p style=\"margin-bottom: 2rem;\">There are many animals with dangerous bites in the world, but which one is the worst? Some would say that the <b>elusive</b> short-tailed mamushi has the worst bite. The snake only goes into homes to chase <b>pests</b> such as mice. Otherwise, it stays in the fields, where it's dangerous to people who <b>forage</b> for food there. If someone <b>stuns</b> it by accidentally stepping on it, it bites to protect itself. At first, the effects of the bite may seem <b>negligible</b> because it doesn't cause a lot of bleeding. However, after a few moments, the venom <b>induces</b> <b>paralysis</b> in the area where the individual was bitten. Furthermore, the venom can also <b>impede</b> <b>respiration</b>. If the person doesn't go to the doctor, they are <b>susceptible</b> to kidney <b>deterioration</b>.</p><p style=\"margin-bottom: 2rem;\">Others would argue that tigers have the worst bite. Mother tigers are <b>inseparable</b> from their babies and seem to be the gentlest creatures when they are around their young. However, if the babies are threatened, the mother tiger's <b>savage</b> nature <b>prevails</b>. With strong jaws and the ability to move quickly, the tiger can kill someone with one bite. That's because it always tries to bite an important <b>artery</b> when it attacks. If the <b>artery</b> is <b>ruptured</b>, the victim will bleed to death.</p><p style=\"margin-bottom: 2rem;\">In the <b>mainstream</b>, animal bites are seen as the most dangerous. But some scientists think this idea is <b>invalid</b>. In fact, the most dangerous bite might be the human bite. When scientists <b>magnified</b> the contents in human saliva, they found about three hundred different <b>microbes</b> in it. A human bite can be dangerous if the bacteria enters the body through a cut, which can make people very sick. Furthermore, most people don't realize how dangerous they are and don't visit the doctor right away.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dangerous Bites</h1>        <p style=\"margin-bottom: 1rem;\">There are many animals with dangerous bites in the world, but which one is the worst? Some would say that the <b>elusive</b> short-tailed mamushi has the worst bite. The snake only goes into homes to chase <b>pests</b> such as mice. Otherwise, it stays in the fields, where it's dangerous to people who <b>forage</b> for food there. If someone <b>stuns</b> it by accidentally stepping on it, it bites to protect itself. At first, the effects of the bite may seem <b>negligible</b> because it doesn't cause a lot of bleeding. However, after a few moments, the venom <b>induces</b> <b>paralysis</b> in the area where the individual was bitten. Furthermore, the venom can also <b>impede</b> <b>respiration</b>. If the person doesn't go to the doctor, they are <b>susceptible</b> to kidney <b>deterioration</b>.</p>    <p style=\"margin-bottom: 1rem;\">Others would argue that tigers have the worst bite. Mother tigers are <b>inseparable</b> from their babies and seem to be the gentlest creatures when they are around their young. However, if the babies are threatened, the mother tiger's <b>savage</b> nature <b>prevails</b>. With strong jaws and the ability to move quickly, the tiger can kill someone with one bite. That's because it always tries to bite an important <b>artery</b> when it attacks. If the <b>artery</b> is <b>ruptured</b>, the victim will bleed to death.</p>    <p style=\"margin-bottom: 1rem;\">In the <b>mainstream</b>, animal bites are seen as the most dangerous. But some scientists think this idea is <b>invalid</b>. In fact, the most dangerous bite might be the human bite. When scientists <b>magnified</b> the contents in human saliva, they found about three hundred different <b>microbes</b> in it. A human bite can be dangerous if the bacteria enters the body through a cut, which can make people very sick. Furthermore, most people don't realize how dangerous they are and don't visit the doctor right away.</p></div>",
       "imageUrl": "/unit9_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -484,8 +483,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, The mamushi attacks people if it is stunned."
+              "explanation": "Đáp án là Sai (F). Bài đọc cho biết rắn mamushi tấn công khi bị làm giật mình (stunned), ví dụ như vô tình giẫm phải nó: \"If someone stuns it by accidentally stepping on it, it bites to protect itself\" (Nếu ai đó làm nó giật mình bằng cách vô tình giẫm lên, nó sẽ cắn để tự vệ). Không phải vì nó bị làm phiền bởi sâu bọ.",
+              "correctAnswer": "F"
             },
             {
               "id": "37",
@@ -494,8 +493,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, The effects of a mamushi bite seem negligible, but they are very serious."
+              "explanation": "Đáp án là Sai (F). Ban đầu hậu quả có vẻ không đáng kể, nhưng thực ra rất nghiêm trọng. Bài viết chỉ ra: \"At first, the effects of the bite may seem negligible... However, after a few moments, the venom induces paralysis\" (Lúc đầu, tác động của vết cắn có vẻ không đáng kể... Tuy nhiên, sau vài khoảnh khắc, nọc độc gây ra chứng tê liệt).",
+              "correctAnswer": "F"
             },
             {
               "id": "38",
@@ -504,8 +503,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đáp án là Đúng (T). Ngay ở đoạn hai, tác giả viết: \"Mother tigers are inseparable from their babies\" (Hổ mẹ luôn gắn bó không thể tách rời khỏi con của chúng).",
+              "correctAnswer": "T"
             },
             {
               "id": "39",
@@ -514,8 +513,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đáp án là Đúng (T). Ở đoạn hai có câu: \"That's because it always tries to bite an important artery when it attacks\" (Đó là bởi vì nó luôn cố gắng cắn vào một động mạch quan trọng khi tấn công).",
+              "correctAnswer": "T"
             },
             {
               "id": "40",
@@ -524,16 +523,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, Scientists think that the mainstream idea that animal bites are the most dangerous is invalid."
+              "explanation": "Đáp án là Sai (F). Các nhà khoa học cho rằng quan niệm phổ biến (mainstream) \"động vật cắn là nguy hiểm nhất\" mới là sai (invalid). Đoạn cuối viết: \"In the mainstream, animal bites are seen as the most dangerous. But some scientists think this idea is invalid.\"",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -544,8 +543,8 @@
                 "People who live in houses",
                 "People who swim in rivers"
               ],
-              "correctAnswer": "A",
-              "explanation": "People who forage in fields for food are at risk for mamushi bites."
+              "explanation": "Đáp án đúng là A. Ở đoạn đầu, bài viết cho biết nhóm người có nguy cơ cao bị rắn cắn là những người tìm kiếm thức ăn trên cánh đồng: \"...where it's dangerous to people who forage for food there\" (nơi nó nguy hiểm đối với những người tìm kiếm thức ăn ở đó).",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -556,8 +555,8 @@
                 "It has no long-term effects",
                 "It makes people sleepy"
               ],
-              "correctAnswer": "A",
-              "explanation": "The mamushi bite can impede respiration, induce paralysis and cause the person to be susceptible to kidney deterioration."
+              "explanation": "Đáp án đúng là A. Theo đoạn một, nọc độc của rắn mamushi có thể gây tê liệt và cản trở hô hấp: \"...the venom induces paralysis... Furthermore, the venom can also impede respiration.\" (...nọc độc gây tê liệt... Hơn nữa, nọc độc cũng có thể làm cản trở hô hấp).",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -568,8 +567,8 @@
                 "During the night",
                 "When it rains"
               ],
-              "correctAnswer": "A",
-              "explanation": "A tiger's savage nature prevails if her babies are threatened."
+              "explanation": "Đáp án đúng là A. Ở đoạn hai có nêu rõ: \"However, if the babies are threatened, the mother tiger's savage nature prevails\" (Tuy nhiên, nếu hổ con bị đe dọa, bản chất hung dữ của hổ mẹ sẽ trỗi dậy).",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -580,8 +579,8 @@
                 "Water and minerals",
                 "Venom similar to a snake's"
               ],
-              "correctAnswer": "A",
-              "explanation": "Scientists found that there were over three hundred different microbes in human saliva."
+              "explanation": "Đáp án đúng là A. Đoạn cuối ghi rõ: \"When scientists magnified the contents in human saliva, they found about three hundred different microbes in it\" (Khi các nhà khoa học phóng đại các thành phần trong nước bọt của con người, họ tìm thấy khoảng ba trăm vi sinh vật khác nhau trong đó).",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -592,10 +591,11 @@
                 "Human teeth are sharp",
                 "The wounds are very large"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bites from humans often become infected because people don't realize how dangerous they are and don't visit the doctor right away."
+              "explanation": "Đáp án đúng là A. Câu cuối của bài cho biết mọi người thường không nhận ra vết cắn của người lại có thể nguy hiểm như thế nên không đi khám ngay: \"Furthermore, most people don't realize how dangerous they are and don't visit the doctor right away.\"",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

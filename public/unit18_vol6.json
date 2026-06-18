@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "A singer",
                 "A gangster"
               ],
-              "correctAnswer": "B",
-              "explanation": "hospitable (adj): friendly to strangers. A host is someone who would most likely be hospitable."
+              "explanation": "hospitable (adj): friendly to strangers. A host is someone who would most likely be hospitable.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "100 degrees",
                 "132 degrees"
               ],
-              "correctAnswer": "A",
-              "explanation": "centigrade (n): a scale where water freezes at 0 degrees."
+              "explanation": "centigrade (n): a scale where water freezes at 0 degrees.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "It would be sandy.",
                 "It would be snowy."
               ],
-              "correctAnswer": "A",
-              "explanation": "condense (v): to make a gas into a liquid. The ground would be wet."
+              "explanation": "condense (v): to make a gas into a liquid. The ground would be wet.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "Throw a party",
                 "Pack clothes"
               ],
-              "correctAnswer": "D",
-              "explanation": "beforehand (adv): in advance. You should pack clothes beforehand."
+              "explanation": "beforehand (adv): in advance. You should pack clothes beforehand.",
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "A swimmer",
                 "A superhero"
               ],
-              "correctAnswer": "A",
-              "explanation": "concerto (n): music for a solo instrument and orchestra. A musician would perform it."
+              "explanation": "concerto (n): music for a solo instrument and orchestra. A musician would perform it.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "abbey",
                 "frown"
               ],
-              "correctAnswer": "C",
-              "explanation": "monastery and abbey are both buildings for monks."
+              "explanation": "monastery and abbey are both buildings for monks.",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "quiet",
                 "tiny"
               ],
-              "correctAnswer": "A",
-              "explanation": "winding and spiral both refer to a twisting course."
+              "explanation": "winding and spiral both refer to a twisting course.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "region",
                 "bay"
               ],
-              "correctAnswer": "D",
-              "explanation": "cove and bay both refer to a part of the sea enclosed by land."
+              "explanation": "cove and bay both refer to a part of the sea enclosed by land.",
+              "correctAnswer": "D"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "toss",
                 "farther"
               ],
-              "correctAnswer": "A",
-              "explanation": "freeway is a type of road."
+              "explanation": "freeway is a type of road.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "large home",
                 "field"
               ],
-              "correctAnswer": "C",
-              "explanation": "manor means a large house."
+              "explanation": "manor means a large house.",
+              "correctAnswer": "C"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "cheerful",
                 "moisture"
               ],
-              "correctAnswer": "B",
-              "explanation": "parcel and package are similar."
+              "explanation": "parcel and package are similar.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "bridge",
                 "infant's center"
               ],
-              "correctAnswer": "D",
-              "explanation": "nursery and infant's center are places for children."
+              "explanation": "nursery and infant's center are places for children.",
+              "correctAnswer": "D"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "cheerful",
                 "tired"
               ],
-              "correctAnswer": "C",
-              "explanation": "vivacious means talkative and cheerful."
+              "explanation": "vivacious means talkative and cheerful.",
+              "correctAnswer": "C"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "join",
                 "outside"
               ],
-              "correctAnswer": "D",
-              "explanation": "exterior means the outside surface."
+              "explanation": "exterior means the outside surface.",
+              "correctAnswer": "D"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "join",
                 "walk"
               ],
-              "correctAnswer": "A",
-              "explanation": "zip means to close with a zipper."
+              "explanation": "zip means to close with a zipper.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "vivacious",
                 "winding"
               ],
-              "correctAnswer": "A",
-              "explanation": "outstretched means extended."
+              "explanation": "outstretched means extended.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "deteriorating",
                 "zipping"
               ],
-              "correctAnswer": "A",
-              "explanation": "chattering means talking quickly."
+              "explanation": "chattering means talking quickly.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "cove",
                 "profile"
               ],
-              "correctAnswer": "A",
-              "explanation": "freeway is a road where cars drive fast."
+              "explanation": "freeway is a road where cars drive fast.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "manor",
                 "parcel"
               ],
-              "correctAnswer": "A",
-              "explanation": "monastery is a building where monks live."
+              "explanation": "monastery is a building where monks live.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "hearty",
                 "vivacious"
               ],
-              "correctAnswer": "A",
-              "explanation": "winding means twisting."
+              "explanation": "winding means twisting.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "cove",
                 "freeway"
               ],
-              "correctAnswer": "A",
-              "explanation": "profile means an outline of a face, usually from the side."
+              "explanation": "profile means an outline of a face, usually from the side.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "chattered",
                 "zipped"
               ],
-              "correctAnswer": "A",
-              "explanation": "deteriorated means became worse."
+              "explanation": "deteriorated means became worse.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "nursery",
                 "monastery"
               ],
-              "correctAnswer": "A",
-              "explanation": "exterior is the outside surface."
+              "explanation": "exterior is the outside surface.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "winding",
                 "hospitable"
               ],
-              "correctAnswer": "A",
-              "explanation": "hearty means loud and happy."
+              "explanation": "hearty means loud and happy.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,24 +329,24 @@
                 "winding",
                 "hospitable"
               ],
-              "correctAnswer": "A",
-              "explanation": "vivacious means talkative and cheerful."
+              "explanation": "vivacious means talkative and cheerful.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Nurse's Lesson</h1><p style=\"margin-bottom: 2rem;\">One of the children in the <b>nursery</b> was sick. The child's mother, who was usually quite <b>vivacious</b> and <b>chattered</b> constantly, was quiet and worried. She knew that if she did not act quickly, the child's condition would <b>deteriorate</b>.</p><p style=\"margin-bottom: 2rem;\">She summoned the children's nurse and said to her, “The monks make a medicine that can cure my child’s sickness. Please, hurry tonight to the <b>monastery</b> and get it.”</p><p style=\"margin-bottom: 2rem;\">The nurse immediately hurried from the <b>manor</b> to get the medicine. The <b>monastery</b> was far away by Rabbit <b>Cove</b>, and there was no <b>freeway</b> leading to it. The only way there was to walk along a dark and <b>winding</b> trail.</p><p style=\"margin-bottom: 2rem;\">The temperature was close to zero degrees <b>centigrade</b>, and it was raining. Luckily, the nurse had grabbed her raincoat <b>beforehand</b>. She <b>zipped</b> it up and pulled the hood over her head.</p><p style=\"margin-bottom: 2rem;\">“I’ll never make it there,” she thought. “Perhaps I should return and go in the morning.” But she remembered the sick child and decided to continue.</p><p style=\"margin-bottom: 2rem;\">Finally, she arrived at the <b>monastery</b>. It was very late. She feared the monks would not be <b>hospitable</b>. But she approached the door and knocked anyway. The rain had <b>condensed</b> on the <b>exterior</b> of the windows by the door. All she could see was the <b>profile</b> of a large man coming to answer the door. Again, she was filled with fear.</p><p style=\"margin-bottom: 2rem;\">But the monk smiled at her when he opened the door. He took her <b>outstretched</b> hand and welcomed her with a <b>hearty</b> voice. The place was warm, and she heard a <b>concerto</b> playing in another room. She relaxed.</p><p style=\"margin-bottom: 2rem;\">“How can I help you?” the monk asked, and the nurse explained the situation.</p><p style=\"margin-bottom: 2rem;\">He instantly knew what to do. He grabbed a <b>parcel</b> of medicine and took her back to the <b>manor</b> in a carriage. The medicine worked. The nurse was happy she had persevered through the bad weather and found the <b>monastery</b>. Now the boy would be able to live a long natural life.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Nurse's Lesson</h1>        <p style=\"margin-bottom: 1rem;\">One of the children in the <b>nursery</b> was sick. The child's mother, who was usually quite <b>vivacious</b> and <b>chattered</b> constantly, was quiet and worried. She knew that if she did not act quickly, the child's condition would <b>deteriorate</b>.</p>    <p style=\"margin-bottom: 1rem;\">She summoned the children's nurse and said to her, “The monks make a medicine that can cure my child’s sickness. Please, hurry tonight to the <b>monastery</b> and get it.”</p>    <p style=\"margin-bottom: 1rem;\">The nurse immediately hurried from the <b>manor</b> to get the medicine. The <b>monastery</b> was far away by Rabbit <b>Cove</b>, and there was no <b>freeway</b> leading to it. The only way there was to walk along a dark and <b>winding</b> trail.</p>    <p style=\"margin-bottom: 1rem;\">The temperature was close to zero degrees <b>centigrade</b>, and it was raining. Luckily, the nurse had grabbed her raincoat <b>beforehand</b>. She <b>zipped</b> it up and pulled the hood over her head.</p>    <p style=\"margin-bottom: 1rem;\">“I’ll never make it there,” she thought. “Perhaps I should return and go in the morning.” But she remembered the sick child and decided to continue.</p>    <p style=\"margin-bottom: 1rem;\">Finally, she arrived at the <b>monastery</b>. It was very late. She feared the monks would not be <b>hospitable</b>. But she approached the door and knocked anyway. The rain had <b>condensed</b> on the <b>exterior</b> of the windows by the door. All she could see was the <b>profile</b> of a large man coming to answer the door. Again, she was filled with fear.</p>    <p style=\"margin-bottom: 1rem;\">But the monk smiled at her when he opened the door. He took her <b>outstretched</b> hand and welcomed her with a <b>hearty</b> voice. The place was warm, and she heard a <b>concerto</b> playing in another room. She relaxed.</p>    <p style=\"margin-bottom: 1rem;\">“How can I help you?” the monk asked, and the nurse explained the situation.</p>    <p style=\"margin-bottom: 1rem;\">He instantly knew what to do. He grabbed a <b>parcel</b> of medicine and took her back to the <b>manor</b> in a carriage. The medicine worked. The nurse was happy she had persevered through the bad weather and found the <b>monastery</b>. Now the boy would be able to live a long natural life.</p></div>",
       "imageUrl": "/unit18_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -356,8 +355,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The child's mother was usually a vivacious woman who constantly chattered."
+              "explanation": "Dịch: Người y tá thường là một người phụ nữ hoạt bát và luôn miệng trò chuyện.\nGiải thích: F. Đoạn 1 viết: \"The child's mother, who was usually quite vivacious and chattered constantly...\" (Mẹ của đứa trẻ, người thường khá hoạt bát và luôn miệng trò chuyện...). Do đó, người hoạt bát và hay nói chuyện là mẹ của đứa trẻ, không phải người y tá.",
+              "correctAnswer": "F"
             },
             {
               "id": "27",
@@ -366,8 +365,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The monastery was far from the freeway that was near Rabbit Cove."
+              "explanation": "Dịch: Phòng trẻ em cách xa đường cao tốc gần Vịnh Thỏ.\nGiải thích: F. Đoạn 3 có viết: \"The monastery was far away by Rabbit Cove, and there was no freeway leading to it.\" (Tu viện ở rất xa cạnh Vịnh Thỏ, và không có đường cao tốc nào dẫn đến đó). Thứ ở Vịnh Thỏ là tu viện (monastery) và không hề có đường cao tốc (no freeway) nào. Câu này sai hoàn toàn.",
+              "correctAnswer": "F"
             },
             {
               "id": "28",
@@ -376,8 +375,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: When it started to rain, the nurse zipped up her jacket."
+              "explanation": "Dịch: Khi thời tiết bắt đầu xấu đi, người y tá kéo khóa chiếc áo khoác mà cô đã mang theo từ trước.\nGiải thích: F. Đoạn 1 từ \"deteriorate\" được dùng để nói về tình trạng của đứa trẻ: \"the child's condition would deteriorate\" (tình trạng của đứa trẻ sẽ trở nên tồi tệ hơn). Câu hỏi cố tình dùng sai ngữ cảnh của từ này.",
+              "correctAnswer": "F"
             },
             {
               "id": "29",
@@ -386,8 +385,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Nhiệt độ gần bằng 0 độ C.\nGiải thích: T. Đoạn 4 nêu rõ: \"The temperature was close to zero degrees centigrade\" (Nhiệt độ gần bằng 0 độ C). Câu này hoàn toàn chính xác.",
+              "correctAnswer": "T"
             },
             {
               "id": "30",
@@ -396,16 +395,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: When the nurse heard a concerto playing in another room, she relaxed."
+              "explanation": "Dịch: Khi người y tá nghe thấy một bản hòa tấu đang được chơi ở phòng khác, cô ấy trở nên hiếu khách.\nGiải thích: F. Đoạn 7 viết: \"she heard a concerto playing in another room. She relaxed.\" (cô ấy nghe thấy một bản hòa tấu đang chơi ở phòng khác. Cô ấy cảm thấy thư giãn). Cô ấy thư giãn (relaxed) chứ không phải trở nên hiếu khách (hospitable).",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -416,8 +415,8 @@
                 "It went to the cove.",
                 "It went to the manor."
               ],
-              "correctAnswer": "A",
-              "explanation": "The dark and winding trail went to the monastery."
+              "explanation": "Dịch câu hỏi: Con đường tối tăm và ngoằn ngoèo dẫn đến đâu?\nGiải thích: Chọn A.\nĐoạn 3 có viết: \"The monastery was far away... The only way there was to walk along a dark and winding trail.\" (Tu viện ở rất xa... Cách duy nhất đến đó là đi dọc theo một con đường mòn tối tăm và ngoằn ngoèo). Vậy con đường đó dẫn đến tu viện (monastery).",
+              "correctAnswer": "A"
             },
             {
               "id": "32",
@@ -428,8 +427,8 @@
                 "The child took her hand.",
                 "The doctor took her hand."
               ],
-              "correctAnswer": "A",
-              "explanation": "The monk took the nurse's outstretched hand and welcomed her with a hearty voice."
+              "explanation": "Dịch câu hỏi: Ai đã nắm lấy bàn tay đang dang ra của người y tá và chào đón cô bằng một giọng điệu nồng nhiệt?\nGiải thích: Chọn A.\nĐoạn 7 có viết: \"But the monk smiled at her when he opened the door. He took her outstretched hand and welcomed her with a hearty voice.\" (Nhưng nhà sư đã mỉm cười với cô ấy khi ông mở cửa. Ông nắm lấy bàn tay đang dang ra của cô và chào đón cô bằng một giọng điệu nồng nhiệt). Đó chính là nhà sư (the monk).",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -440,8 +439,8 @@
                 "She was vivacious.",
                 "She felt hearty."
               ],
-              "correctAnswer": "A",
-              "explanation": "When she saw the profile of a man coming to answer the door, the nurse was filled with fear."
+              "explanation": "Dịch câu hỏi: Người y tá cảm thấy thế nào khi nhìn thấy dáng người của một người đàn ông ra mở cửa?\nGiải thích: Chọn A.\nĐoạn 6 mô tả: \"All she could see was the profile of a large man coming to answer the door. Again, she was filled with fear.\" (Tất cả những gì cô có thể nhìn thấy là bóng dáng của một người đàn ông to lớn đang tiến ra mở cửa. Một lần nữa, cô lại tràn ngập nỗi sợ hãi). Cô ấy đã cảm thấy sợ hãi (filled with fear).",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -452,8 +451,8 @@
                 "Tears had condensed.",
                 "Clouds had condensed."
               ],
-              "correctAnswer": "A",
-              "explanation": "Rain had condensed on the exterior of the monastery's windows."
+              "explanation": "Dịch câu hỏi: Thứ gì đã đọng lại trên mặt ngoài của cửa sổ tu viện?\nGiải thích: Chọn A.\nĐoạn 6 viết: \"The rain had condensed on the exterior of the windows by the door.\" (Mưa đã đọng lại trên mặt ngoài của những chiếc cửa sổ cạnh cửa ra vào). Vậy nên đáp án đúng là mưa (rain).",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -464,10 +463,11 @@
                 "Clothes were in the parcel.",
                 "Money was in the parcel."
               ],
-              "correctAnswer": "A",
-              "explanation": "Medicine was in the parcel that the nurse took back to the manor."
+              "explanation": "Dịch câu hỏi: Có gì trong gói đồ mà người y tá mang về dinh thự?\nGiải thích: Chọn A.\nĐoạn 9 viết: \"He grabbed a parcel of medicine and took her back to the manor in a carriage.\" (Ông ấy lấy một gói thuốc và đưa cô quay lại dinh thự bằng xe ngựa). Bên trong gói đồ là thuốc (medicine).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

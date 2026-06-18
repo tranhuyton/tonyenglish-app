@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "A guard",
                 "A chef"
               ],
-              "correctAnswer": "A",
-              "explanation": "A president has the power to authorize a war."
+              "explanation": "A president has the power to authorize a war.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "Having your jacket stolen",
                 "Cutting your finger"
               ],
-              "correctAnswer": "A",
-              "explanation": "Winning a great prize can give you euphoria."
+              "explanation": "Winning a great prize can give you euphoria.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "Heavy",
                 "Unreliable"
               ],
-              "correctAnswer": "A",
-              "explanation": "A sage is very wise or intelligent."
+              "explanation": "A sage is very wise or intelligent.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "Rainwater",
                 "Grass"
               ],
-              "correctAnswer": "A",
-              "explanation": "Oil is a valuable commodity."
+              "explanation": "Oil is a valuable commodity.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "Students getting rewarded for good grades",
                 "Students being told to go home early"
               ],
-              "correctAnswer": "A",
-              "explanation": "Students having daily tests might cause unrest."
+              "explanation": "Students having daily tests might cause unrest.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "reinforce",
                 "declare"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of authorize is reject."
+              "explanation": "The opposite of authorize is reject.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "eliminate",
                 "shortage"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of conquest is liberation."
+              "explanation": "The opposite of conquest is liberation.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "dry out",
                 "show as guilty"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of disclose is conceal."
+              "explanation": "The opposite of disclose is conceal.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "suggestion",
                 "untruthfulness"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of euphoria is depression."
+              "explanation": "The opposite of euphoria is depression.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "early stage",
                 "generosity"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of unrest is peace."
+              "explanation": "The opposite of unrest is peace.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "gloomy",
                 "praiseworthy"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of sage is fool."
+              "explanation": "The opposite of sage is fool.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "salesman",
                 "preacher"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of civilian is soldier."
+              "explanation": "The opposite of civilian is soldier.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "penniless",
                 "unchanging"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of festive is unhappy."
+              "explanation": "The opposite of festive is unhappy.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "enlist",
                 "make better"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of enroll is quit."
+              "explanation": "The opposite of enroll is quit.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "sinner",
                 "antisocial"
               ],
-              "correctAnswer": "A",
-              "explanation": "The opposite of advocate is oppose."
+              "explanation": "The opposite of advocate is oppose.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "nut",
                 "coin"
               ],
-              "correctAnswer": "A",
-              "explanation": "A lentil is similar to a bean."
+              "explanation": "A lentil is similar to a bean.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "sensible",
                 "cowardly"
               ],
-              "correctAnswer": "A",
-              "explanation": "Envious is similar to jealous."
+              "explanation": "Envious is similar to jealous.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "genius",
                 "act of scolding"
               ],
-              "correctAnswer": "A",
-              "explanation": "A commodity is similar to a product."
+              "explanation": "A commodity is similar to a product.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "edge of",
                 "enthusiasm"
               ],
-              "correctAnswer": "A",
-              "explanation": "Dynamics is similar to aspects."
+              "explanation": "Dynamics is similar to aspects.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "true story",
                 "large amount"
               ],
-              "correctAnswer": "A",
-              "explanation": "A prophecy is similar to a prediction."
+              "explanation": "A prophecy is similar to a prediction.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "sympathy",
                 "temperature"
               ],
-              "correctAnswer": "A",
-              "explanation": "Morale is similar to confidence."
+              "explanation": "Morale is similar to confidence.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "attempt",
                 "contain"
               ],
-              "correctAnswer": "A",
-              "explanation": "To marshal is similar to assemble."
+              "explanation": "To marshal is similar to assemble.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "appealing",
                 "rational"
               ],
-              "correctAnswer": "A",
-              "explanation": "Jolly is similar to merry."
+              "explanation": "Jolly is similar to merry.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "aspiration",
                 "school"
               ],
-              "correctAnswer": "A",
-              "explanation": "A senate is similar to a government."
+              "explanation": "A senate is similar to a government.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,16 +329,16 @@
                 "effort",
                 "acceptance"
               ],
-              "correctAnswer": "A",
-              "explanation": "Sentiment is similar to opinion."
+              "explanation": "Sentiment is similar to opinion.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -348,8 +347,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Senate is a part of government, not related to fixing cars."
+              "explanation": "Senate is a part of government, not related to fixing cars.",
+              "correctAnswer": "I"
             },
             {
               "id": "27",
@@ -358,8 +357,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "Conquest means taking over another country."
+              "explanation": "Conquest means taking over another country.",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -368,8 +367,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "Dynamics means the way that parts of a situation affect each other."
+              "explanation": "Dynamics means the way that parts of a situation affect each other.",
+              "correctAnswer": "C"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Enroll means to put one's name on a list, not related to clothes."
+              "explanation": "Enroll means to put one's name on a list, not related to clothes.",
+              "correctAnswer": "I"
             },
             {
               "id": "30",
@@ -388,10 +387,11 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "Advocate means to support or suggest an idea in public."
+              "explanation": "Advocate means to support or suggest an idea in public.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -405,7 +405,6 @@
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -414,8 +413,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: People were envious of King Croesus because he controlled a precious commodity, gold."
+              "explanation": "Đáp án là Sai (F). Mọi người ghen tị với Vua Croesus vì ông kiểm soát một mặt hàng có giá trị là vàng: \"...controlled a valuable commodity: gold. Many people were very envious of him\" (...kiểm soát một mặt hàng có giá trị: vàng. Nhiều người rất ghen tị với ông). Chứ không phải vì ông hiểu về động lực chiến tranh.",
+              "correctAnswer": "F"
             },
             {
               "id": "32",
@@ -424,8 +423,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đáp án là Đúng (T). Ngay đầu đoạn hai, bài đọc cho biết: \"One day, a messenger disclosed some interesting news: political unrest in Persia had weakened the empire\" (Một ngày nọ, một sứ giả tiết lộ tin tức thú vị: tình trạng bất ổn chính trị ở Ba Tư đã làm suy yếu đế chế).",
+              "correctAnswer": "T"
             },
             {
               "id": "33",
@@ -434,8 +433,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The sage man said that the king’s good luck wouldn’t last."
+              "explanation": "Đáp án là Sai (F). Vị hiền triết (sage) không hề chia sẻ quan điểm với nhà vua, mà chỉ cảnh báo ông rằng sự may mắn của ông sẽ không kéo dài mãi: \"The sage didn’t say whether he should attack the Persians or not. He only warned him that his good luck wouldn’t last.\"",
+              "correctAnswer": "F"
             },
             {
               "id": "34",
@@ -444,8 +443,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đáp án là Đúng (T). Trong đoạn bốn có viết rõ chi tiết này: \"The messenger gave the Oracle jugs of wine and baskets of lentils in order to make her happy\" (Sứ giả đã tặng Oracle những bình rượu và giỏ đậu lăng để làm bà vui).",
+              "correctAnswer": "T"
             },
             {
               "id": "35",
@@ -454,16 +453,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The Oracle’s prophecy was that if King Croesus went to war, a great civilization would be destroyed."
+              "explanation": "Đáp án là Sai (F). Lời tiên tri không nói là Lydia sẽ chiến thắng, mà chỉ dự báo rằng: \"She said that if you attack Persia, you will destroy a great empire\" (Bà ấy nói rằng nếu ngài tấn công Ba Tư, ngài sẽ tiêu diệt một đế chế vĩ đại). Và hóa ra \"đế chế vĩ đại\" bị tiêu diệt lại chính là vương quốc của ông.",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -474,8 +473,8 @@
                 "The sage told him to.",
                 "The Oracle's prophecy was good."
               ],
-              "correctAnswer": "A",
-              "explanation": "King Croesus advocated war with the Persians because the Persians were politically weak."
+              "explanation": "Đáp án đúng là A. Ở đoạn hai, tác giả viết: \"He decided that it would be a good time to try to beat the Persians while they were weak\" (Ông quyết định rằng đây sẽ là thời điểm tốt để đánh bại người Ba Tư trong khi họ đang suy yếu).",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -486,8 +485,8 @@
                 "He had defeated the Persians.",
                 "He liked the Oracle."
               ],
-              "correctAnswer": "A",
-              "explanation": "The messenger was in a festive and jolly mood because he thought the Oracle’s prophecy was good for the Lydians."
+              "explanation": "Đáp án đúng là A. Người sứ giả rất vui vẻ vì anh ta tin rằng lời tiên tri của Oracle là một dự báo tốt đẹp cho quân đội Lydia (nghĩ rằng đế chế Ba Tư sẽ bị tiêu diệt). Sự vui mừng này được thể hiện qua các từ \"festive mood\" và \"jolly\".",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -498,8 +497,8 @@
                 "He felt sad and envious.",
                 "He was filled with unrest."
               ],
-              "correctAnswer": "A",
-              "explanation": "King Croesus was filled with euphoria after he heard the Oracle’s prophecy."
+              "explanation": "Đáp án đúng là A. Ngay đầu đoạn tám, bài viết miêu tả cảm xúc của nhà vua: \"The news filled Croesus with euphoria\" (Tin tức khiến Croesus tràn ngập cảm giác sung sướng tột độ).",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -510,8 +509,8 @@
                 "They were scared of the Persians.",
                 "They were envious of the king."
               ],
-              "correctAnswer": "A",
-              "explanation": "The civilians who enrolled and were marshaled in the army had high morale because they thought they would win."
+              "explanation": "Đáp án đúng là A. Ở đoạn tám miêu tả tâm trạng của binh lính và dân thường tham gia quân đội: \"Their morale was high because they were sure they would win\" (Tinh thần của họ rất cao vì họ chắc chắn rằng mình sẽ chiến thắng).",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -522,10 +521,11 @@
                 "He learned that the Oracle lied.",
                 "He learned that Persians are friendly."
               ],
-              "correctAnswer": "A",
-              "explanation": "King Croesus learned that he should have considered advice more carefully."
+              "explanation": "Đáp án đúng là A. Câu cuối cùng của câu chuyện đúc kết lại bài học mà ông nhận được: \"King Croesus should have considered the advice more carefully\" (Vua Croesus lẽ ra nên cân nhắc lời khuyên một cách cẩn thận hơn).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

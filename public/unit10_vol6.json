@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "accident",
                 "item"
               ],
-              "correctAnswer": "A",
-              "explanation": "omen (n): a sign of what will happen in the future."
+              "explanation": "omen (n): a sign of what will happen in the future.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "device",
                 "name"
               ],
-              "correctAnswer": "C",
-              "explanation": "apparatus (n): a device used for a particular purpose."
+              "explanation": "apparatus (n): a device used for a particular purpose.",
+              "correctAnswer": "C"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "heat flow",
                 "movement"
               ],
-              "correctAnswer": "C",
-              "explanation": "convection (n): the flow of hot air through gas or liquid."
+              "explanation": "convection (n): the flow of hot air through gas or liquid.",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "wait",
                 "cry"
               ],
-              "correctAnswer": "D",
-              "explanation": "sob (v): to cry loudly."
+              "explanation": "sob (v): to cry loudly.",
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "hide",
                 "purchase"
               ],
-              "correctAnswer": "C",
-              "explanation": "seclude (v): to keep someone away from other people."
+              "explanation": "seclude (v): to keep someone away from other people.",
+              "correctAnswer": "C"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "lumberjack",
                 "guard"
               ],
-              "correctAnswer": "A",
-              "explanation": "ranger (n): a person who protects the forest or parks."
+              "explanation": "ranger (n): a person who protects the forest or parks.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "disaster",
                 "believable"
               ],
-              "correctAnswer": "A",
-              "explanation": "avalanche (n): a large amount of snow, ice, and rock falling off a mountain."
+              "explanation": "avalanche (n): a large amount of snow, ice, and rock falling off a mountain.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "collect",
                 "wave"
               ],
-              "correctAnswer": "C",
-              "explanation": "accumulate (v): to collect a lot of it over time."
+              "explanation": "accumulate (v): to collect a lot of it over time.",
+              "correctAnswer": "C"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "ruins",
                 "ice"
               ],
-              "correctAnswer": "C",
-              "explanation": "rubble (n): piles of broken stone and wood created after a building is destroyed."
+              "explanation": "rubble (n): piles of broken stone and wood created after a building is destroyed.",
+              "correctAnswer": "C"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "schedule",
                 "experience"
               ],
-              "correctAnswer": "A",
-              "explanation": "upbringing (n): the way that someone is taught to behave by their parents."
+              "explanation": "upbringing (n): the way that someone is taught to behave by their parents.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "secluded",
                 "sobbed"
               ],
-              "correctAnswer": "A",
-              "explanation": "discharged means allowed to leave from a place."
+              "explanation": "discharged means allowed to leave from a place.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "rubble",
                 "apparatus"
               ],
-              "correctAnswer": "A",
-              "explanation": "omen is a sign of what will happen in the future."
+              "explanation": "omen is a sign of what will happen in the future.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "aerial",
                 "sober"
               ],
-              "correctAnswer": "A",
-              "explanation": "poignant causes a very strong feeling of sadness."
+              "explanation": "poignant causes a very strong feeling of sadness.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "consistency",
                 "avalanche"
               ],
-              "correctAnswer": "A",
-              "explanation": "speck is a very small mark or amount."
+              "explanation": "speck is a very small mark or amount.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "accumulated",
                 "secluded"
               ],
-              "correctAnswer": "A",
-              "explanation": "sobbed means cried loudly."
+              "explanation": "sobbed means cried loudly.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "morning",
                 "apparent"
               ],
-              "correctAnswer": "B",
-              "explanation": "overcast means full of clouds and not sunny. The opposite is bright."
+              "explanation": "overcast means full of clouds and not sunny. The opposite is bright.",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "loyalty",
                 "intelligence"
               ],
-              "correctAnswer": "A",
-              "explanation": "consistency means always behaving in the same way. The opposite is irregularity."
+              "explanation": "consistency means always behaving in the same way. The opposite is irregularity.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "thoughtful",
                 "unemotional"
               ],
-              "correctAnswer": "D",
-              "explanation": "poignant means causing a strong feeling of sadness. The opposite is unemotional."
+              "explanation": "poignant means causing a strong feeling of sadness. The opposite is unemotional.",
+              "correctAnswer": "D"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "aged",
                 "tired"
               ],
-              "correctAnswer": "B",
-              "explanation": "intact means complete and not damaged. The opposite is broken."
+              "explanation": "intact means complete and not damaged. The opposite is broken.",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "deadly",
                 "everlasting"
               ],
-              "correctAnswer": "D",
-              "explanation": "mortal means cannot live forever. The opposite is everlasting."
+              "explanation": "mortal means cannot live forever. The opposite is everlasting.",
+              "correctAnswer": "D"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "far",
                 "clear"
               ],
-              "correctAnswer": "A",
-              "explanation": "speck is a very small mark or amount. The opposite is huge."
+              "explanation": "speck is a very small mark or amount. The opposite is huge.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "calm",
                 "ready"
               ],
-              "correctAnswer": "A",
-              "explanation": "sober means serious and calm, also not drunk. The opposite is drunk."
+              "explanation": "sober means serious and calm, also not drunk. The opposite is drunk.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "pay",
                 "arrive"
               ],
-              "correctAnswer": "B",
-              "explanation": "discharge means to allow to leave. The opposite is imprison."
+              "explanation": "discharge means to allow to leave. The opposite is imprison.",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "emergency",
                 "safety"
               ],
-              "correctAnswer": "A",
-              "explanation": "aerial means relating to being in the air. The opposite is from ground."
+              "explanation": "aerial means relating to being in the air. The opposite is from ground.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,16 +329,16 @@
                 "again",
                 "safely"
               ],
-              "correctAnswer": "B",
-              "explanation": "sideways means moving to or from the side. The opposite is forward."
+              "explanation": "sideways means moving to or from the side. The opposite is forward.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Fill in the blanks with the correct words from the word bank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -350,8 +349,8 @@
                 "aerial",
                 "poignant"
               ],
-              "correctAnswer": "A",
-              "explanation": "overcast fits the context of a storm."
+              "explanation": "overcast fits the context of a storm.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -362,8 +361,8 @@
                 "secluded",
                 "discharged"
               ],
-              "correctAnswer": "A",
-              "explanation": "accumulated means to collect a lot of it over time."
+              "explanation": "accumulated means to collect a lot of it over time.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -374,8 +373,8 @@
                 "aerial",
                 "poignant"
               ],
-              "correctAnswer": "A",
-              "explanation": "sideways means moving to or from the side."
+              "explanation": "sideways means moving to or from the side.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -386,8 +385,8 @@
                 "consistency",
                 "apparatus"
               ],
-              "correctAnswer": "A",
-              "explanation": "rubble means piles of broken stone and wood."
+              "explanation": "rubble means piles of broken stone and wood.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -398,8 +397,8 @@
                 "aerial",
                 "mortal"
               ],
-              "correctAnswer": "A",
-              "explanation": "intact means complete and not damaged."
+              "explanation": "intact means complete and not damaged.",
+              "correctAnswer": "A"
             },
             {
               "id": "31",
@@ -410,8 +409,8 @@
                 "speck",
                 "convection"
               ],
-              "correctAnswer": "A",
-              "explanation": "ranger is a person who protects the forest or parks."
+              "explanation": "ranger is a person who protects the forest or parks.",
+              "correctAnswer": "A"
             },
             {
               "id": "32",
@@ -422,8 +421,8 @@
                 "convection",
                 "consistency"
               ],
-              "correctAnswer": "A",
-              "explanation": "avalanche is a large amount of snow falling off a mountain."
+              "explanation": "avalanche is a large amount of snow falling off a mountain.",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -434,8 +433,8 @@
                 "sober",
                 "mortal"
               ],
-              "correctAnswer": "A",
-              "explanation": "aerial means relating to being in the air or flying."
+              "explanation": "aerial means relating to being in the air or flying.",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -446,8 +445,8 @@
                 "aerial",
                 "sideways"
               ],
-              "correctAnswer": "A",
-              "explanation": "sober means serious and calm, fitting a sad moment."
+              "explanation": "sober means serious and calm, fitting a sad moment.",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -458,24 +457,24 @@
                 "aerial",
                 "intact"
               ],
-              "correctAnswer": "A",
-              "explanation": "mortal means cannot live forever."
+              "explanation": "mortal means cannot live forever.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Avalanche</h1><p style=\"margin-bottom: 2rem;\">Randy was a forest <b>ranger</b>. Because of his job, he was <b>secluded</b> in a cabin in the wilderness.</p><p style=\"margin-bottom: 2rem;\">One day, the radio reported, “<b>Convection</b> in the atmosphere is causing a lot of clouds to form. A serious storm . . . ” Suddenly, the radio went silent. The signal was lost.</p><p style=\"margin-bottom: 2rem;\">He went outside and looked at the <b>overcast</b> sky. Anybody else would have taken the dark sky as an <b>omen</b> of a very bad storm, but not Randy. His <b>upbringing</b> had taught him <b>consistency</b>. He had done this job for years, and nothing could stop him. Besides, he thought nothing could hurt him.</p><p style=\"margin-bottom: 2rem;\">Today, he had a very important task to do. The snow was starting to pile up high on the mountain. If too much <b>accumulated</b>, it could cause an <b>avalanche</b>. But Randy had an <b>apparatus</b> to get rid of the snow. It used dynamite to shake the snow and make the top layer of snow come down.</p><p style=\"margin-bottom: 2rem;\">As the snow started falling, he thought about returning to the office until the storm stopped, but he decided not to. Suddenly, he heard a loud noise behind him. It was an <b>avalanche</b>! He started to run, but within seconds, he was knocked <b>sideways</b> and buried by the snow and <b>rubble</b> from an old cabin that had been destroyed. An <b>aerial</b> rescue team came quickly. Randy was just a <b>speck</b> amongst the great pile of snow, but the team found him thanks to his brightly colored jacket. They quickly took him to a hospital.</p><p style=\"margin-bottom: 2rem;\">After a few hours, Randy woke up in the hospital. He looked at the <b>sober</b> faces of the doctors and saw his wife <b>sobbing</b>.</p><p style=\"margin-bottom: 2rem;\">“What’s wrong?” he asked. He didn’t remember what had happened.</p><p style=\"margin-bottom: 2rem;\">“You were almost killed!” his wife said.</p><p style=\"margin-bottom: 2rem;\">“You broke several ribs. But the rest of you is still reasonably <b>intact</b>. You are really lucky to be alive,” the doctor said.</p><p style=\"margin-bottom: 2rem;\">After five days, Randy was <b>discharged</b> from the hospital. The experience had taught him a <b>poignant</b> lesson: he was a <b>mortal</b>, and nature was much more powerful than him.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Avalanche</h1>        <p style=\"margin-bottom: 1rem;\">Randy was a forest <b>ranger</b>. Because of his job, he was <b>secluded</b> in a cabin in the wilderness.</p>    <p style=\"margin-bottom: 1rem;\">One day, the radio reported, “<b>Convection</b> in the atmosphere is causing a lot of clouds to form. A serious storm . . . ” Suddenly, the radio went silent. The signal was lost.</p>    <p style=\"margin-bottom: 1rem;\">He went outside and looked at the <b>overcast</b> sky. Anybody else would have taken the dark sky as an <b>omen</b> of a very bad storm, but not Randy. His <b>upbringing</b> had taught him <b>consistency</b>. He had done this job for years, and nothing could stop him. Besides, he thought nothing could hurt him.</p>    <p style=\"margin-bottom: 1rem;\">Today, he had a very important task to do. The snow was starting to pile up high on the mountain. If too much <b>accumulated</b>, it could cause an <b>avalanche</b>. But Randy had an <b>apparatus</b> to get rid of the snow. It used dynamite to shake the snow and make the top layer of snow come down.</p>    <p style=\"margin-bottom: 1rem;\">As the snow started falling, he thought about returning to the office until the storm stopped, but he decided not to. Suddenly, he heard a loud noise behind him. It was an <b>avalanche</b>! He started to run, but within seconds, he was knocked <b>sideways</b> and buried by the snow and <b>rubble</b> from an old cabin that had been destroyed. An <b>aerial</b> rescue team came quickly. Randy was just a <b>speck</b> amongst the great pile of snow, but the team found him thanks to his brightly colored jacket. They quickly took him to a hospital.</p>    <p style=\"margin-bottom: 1rem;\">After a few hours, Randy woke up in the hospital. He looked at the <b>sober</b> faces of the doctors and saw his wife <b>sobbing</b>.</p>    <p style=\"margin-bottom: 1rem;\">“What’s wrong?” he asked. He didn’t remember what had happened.</p>    <p style=\"margin-bottom: 1rem;\">“You were almost killed!” his wife said.</p>    <p style=\"margin-bottom: 1rem;\">“You broke several ribs. But the rest of you is still reasonably <b>intact</b>. You are really lucky to be alive,” the doctor said.</p>    <p style=\"margin-bottom: 1rem;\">After five days, Randy was <b>discharged</b> from the hospital. The experience had taught him a <b>poignant</b> lesson: he was a <b>mortal</b>, and nature was much more powerful than him.</p></div>",
       "imageUrl": "/unit10_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -484,8 +483,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The avalanche was caused by snow which accumulated on the mountain."
+              "explanation": "Đáp án là Sai (F). Sự đối lưu (convection) trên đài phát thanh nói là gây ra bão, nhưng nguyên nhân trực tiếp gây lở tuyết (avalanche) là do tuyết tích tụ quá nhiều trên núi: \"If too much accumulated, it could cause an avalanche\" (Nếu tuyết tích tụ quá nhiều, nó có thể gây ra lở tuyết).",
+              "correctAnswer": "F"
             },
             {
               "id": "37",
@@ -494,8 +493,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Randy’s upbringing had taught him consistency."
+              "explanation": "Đáp án là Sai (F). Đoạn ba nói rõ rằng sự nuôi dưỡng từ nhỏ (upbringing) của anh ấy mới dạy anh ấy tính kiên định: \"His upbringing had taught him consistency\" (Sự giáo dục từ nhỏ đã dạy anh tính kiên định), chứ không phải do công việc kiểm lâm.",
+              "correctAnswer": "F"
             },
             {
               "id": "38",
@@ -504,8 +503,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Randy had an apparatus that used dynamite to help avoid avalanches."
+              "explanation": "Đáp án là Sai (F). Thiết bị (apparatus) của anh ấy sử dụng thuốc nổ (dynamite) để làm rung chuyển tuyết, chứ không phải di chuyển tuyết sang một bên (sideways): \"It used dynamite to shake the snow and make the top layer of snow come down\".",
+              "correctAnswer": "F"
             },
             {
               "id": "39",
@@ -514,8 +513,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đáp án là Đúng (T). Trong đoạn năm có nêu rõ chi tiết này: \"...the team found him thanks to his brightly colored jacket\" (...đội cứu hộ đã tìm thấy anh nhờ chiếc áo khoác sáng màu của anh).",
+              "correctAnswer": "T"
             },
             {
               "id": "40",
@@ -524,16 +523,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đáp án là Đúng (T). Bác sĩ đã nói trực tiếp với anh ở đoạn chín: \"You are really lucky to be alive, the doctor said.\" (Anh thực sự may mắn khi còn sống, bác sĩ nói).",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -544,8 +543,8 @@
                 "A visitor arriving soon",
                 "A successful hunting trip"
               ],
-              "correctAnswer": "A",
-              "explanation": "The overcast sky was an omen of a very bad storm."
+              "explanation": "Đáp án đúng là A. Ở đoạn ba, bài đọc viết: \"Anybody else would have taken the dark sky as an omen of a very bad storm...\" (Bất cứ ai khác cũng sẽ coi bầu trời u ám là điềm báo của một cơn bão rất tồi tệ...).",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -556,8 +555,8 @@
                 "The rubble of his old cabin",
                 "An aerial rescue team taking photos"
               ],
-              "correctAnswer": "A",
-              "explanation": "When Randy woke up, he saw his wife sobbing and the sober faces of the doctors."
+              "explanation": "Đáp án đúng là A. Đoạn sáu miêu tả cảnh khi anh tỉnh dậy ở bệnh viện: \"He looked at the sober faces of the doctors and saw his wife sobbing.\" (Anh nhìn những khuôn mặt nghiêm nghị của các bác sĩ và thấy vợ mình đang nức nở).",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -568,8 +567,8 @@
                 "He was lost during a hike",
                 "His family forced him to leave"
               ],
-              "correctAnswer": "A",
-              "explanation": "Because of his job, Randy was secluded in the wilderness."
+              "explanation": "Đáp án đúng là A. Ngay đầu bài đọc có nhắc đến: \"Randy was a forest ranger. Because of his job, he was secluded in a cabin in the wilderness.\" (Randy là một nhân viên kiểm lâm. Vì công việc của mình, anh ấy sống tách biệt trong một túp lều ở nơi hoang dã).",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -580,8 +579,8 @@
                 "Two weeks",
                 "Three days"
               ],
-              "correctAnswer": "A",
-              "explanation": "Randy was discharged after five days in the hospital."
+              "explanation": "Đáp án đúng là A. Câu đầu tiên của đoạn cuối (đoạn mười) viết: \"After five days, Randy was discharged from the hospital.\" (Sau năm ngày, Randy được xuất viện).",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -592,10 +591,11 @@
                 "Dynamite is too dangerous to use for avalanches",
                 "Forest rangers need better protective clothing"
               ],
-              "correctAnswer": "A",
-              "explanation": "Randy learned the poignant lesson that he was only a mortal and that nature was much more powerful than him."
+              "explanation": "Đáp án đúng là A. Câu cuối cùng của bài đọc tổng kết: \"The experience had taught him a poignant lesson: he was a mortal, and nature was much more powerful than him.\" (Trải nghiệm này đã dạy anh một bài học sâu sắc: anh chỉ là một người phàm, và thiên nhiên mạnh mẽ hơn anh rất nhiều).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

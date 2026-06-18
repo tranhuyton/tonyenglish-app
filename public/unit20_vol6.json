@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "switch",
                 "camp"
               ],
-              "correctAnswer": "C",
-              "explanation": "reverse (v): switch. To reverse means to change to the opposite direction."
+              "explanation": "reverse (v): switch. To reverse means to change to the opposite direction.",
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "tense",
                 "blank"
               ],
-              "correctAnswer": "B",
-              "explanation": "adverse (adj): harmful. If something is adverse, then it is harmful."
+              "explanation": "adverse (adj): harmful. If something is adverse, then it is harmful.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "stupid",
                 "middle"
               ],
-              "correctAnswer": "D",
-              "explanation": "intermediate (adj): middle. If something is intermediate, then it is in the middle of two levels, places, or times."
+              "explanation": "intermediate (adj): middle. If something is intermediate, then it is in the middle of two levels, places, or times.",
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "member",
                 "length"
               ],
-              "correctAnswer": "A",
-              "explanation": "regain (v): reclaim. To regain something means to get it back."
+              "explanation": "regain (v): reclaim. To regain something means to get it back.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "teacher",
                 "painter"
               ],
-              "correctAnswer": "C",
-              "explanation": "mentor (n): teacher. A mentor is a person with experience or knowledge who advises someone."
+              "explanation": "mentor (n): teacher. A mentor is a person with experience or knowledge who advises someone.",
+              "correctAnswer": "C"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "peninsula",
                 "welcome"
               ],
-              "correctAnswer": "D",
-              "explanation": "inclusion (n): welcome. Inclusion is the act of including someone or something in a group."
+              "explanation": "inclusion (n): welcome. Inclusion is the act of including someone or something in a group.",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "segment",
                 "treasure"
               ],
-              "correctAnswer": "A",
-              "explanation": "adhesive (n): paste. An adhesive is a substance used for sticking things together."
+              "explanation": "adhesive (n): paste. An adhesive is a substance used for sticking things together.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "dynamic",
                 "hollow"
               ],
-              "correctAnswer": "C",
-              "explanation": "vibrant (adj): dynamic. If something is vibrant, then it is bright and full of color."
+              "explanation": "vibrant (adj): dynamic. If something is vibrant, then it is bright and full of color.",
+              "correctAnswer": "C"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "freshness",
                 "tone"
               ],
-              "correctAnswer": "B",
-              "explanation": "dependency (n): need. A dependency is a strong need for someone or something."
+              "explanation": "dependency (n): need. A dependency is a strong need for someone or something.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "truth",
                 "ledge"
               ],
-              "correctAnswer": "B",
-              "explanation": "swarm (n): group. A swarm is a group of flying insects."
+              "explanation": "swarm (n): group. A swarm is a group of flying insects.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words from the word bank: phoenix, intermittent, dependency, texture, fro, mentor, pollen, adverse, photosynthesis, vibrant.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "phoenix",
                 "vibrant"
               ],
-              "correctAnswer": "A",
-              "explanation": "intermittent (adj): happening in a way that is not constant."
+              "explanation": "intermittent (adj): happening in a way that is not constant.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "dependency",
                 "texture"
               ],
-              "correctAnswer": "B",
-              "explanation": "fro (adv): backward and forward or side to side."
+              "explanation": "fro (adv): backward and forward or side to side.",
+              "correctAnswer": "B"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "phoenix",
                 "texture"
               ],
-              "correctAnswer": "C",
-              "explanation": "phoenix (n): an imaginary bird that burned to ashes and was reborn."
+              "explanation": "phoenix (n): an imaginary bird that burned to ashes and was reborn.",
+              "correctAnswer": "C"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "intermittent",
                 "fro"
               ],
-              "correctAnswer": "B",
-              "explanation": "vibrant (adj): bright and full of color."
+              "explanation": "vibrant (adj): bright and full of color.",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -202,8 +201,8 @@
                 "adverse",
                 "vibrant"
               ],
-              "correctAnswer": "C",
-              "explanation": "adverse (adj): harmful."
+              "explanation": "adverse (adj): harmful.",
+              "correctAnswer": "C"
             },
             {
               "id": "16",
@@ -214,8 +213,8 @@
                 "phoenix",
                 "mentor"
               ],
-              "correctAnswer": "A",
-              "explanation": "pollen (n): the tiny yellow powder made in the flowers of plants."
+              "explanation": "pollen (n): the tiny yellow powder made in the flowers of plants.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -226,8 +225,8 @@
                 "phoenix",
                 "texture"
               ],
-              "correctAnswer": "A",
-              "explanation": "mentor (n): a person with experience or knowledge who advises someone."
+              "explanation": "mentor (n): a person with experience or knowledge who advises someone.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -238,8 +237,8 @@
                 "adverse",
                 "photosynthesis"
               ],
-              "correctAnswer": "B",
-              "explanation": "texture (n): the quality of something that can be known by its touch."
+              "explanation": "texture (n): the quality of something that can be known by its touch.",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "mentor",
                 "fro"
               ],
-              "correctAnswer": "A",
-              "explanation": "dependency (n): a strong need for someone or something."
+              "explanation": "dependency (n): a strong need for someone or something.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -262,16 +261,16 @@
                 "texture",
                 "vibrant"
               ],
-              "correctAnswer": "A",
-              "explanation": "photosynthesis (n): the process in which plants change sunlight and air."
+              "explanation": "photosynthesis (n): the process in which plants change sunlight and air.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "instant",
                 "unclean"
               ],
-              "correctAnswer": "A",
-              "explanation": "Opposite of inclusion is exclusion."
+              "explanation": "Opposite of inclusion is exclusion.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "lose",
                 "smell"
               ],
-              "correctAnswer": "C",
-              "explanation": "Opposite of regain is lose."
+              "explanation": "Opposite of regain is lose.",
+              "correctAnswer": "C"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "flat",
                 "brief"
               ],
-              "correctAnswer": "D",
-              "explanation": "Opposite of eternal is brief."
+              "explanation": "Opposite of eternal is brief.",
+              "correctAnswer": "D"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "solve",
                 "glow"
               ],
-              "correctAnswer": "A",
-              "explanation": "Opposite of dump is gather."
+              "explanation": "Opposite of dump is gather.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,16 +329,16 @@
                 "stutter",
                 "choose"
               ],
-              "correctAnswer": "B",
-              "explanation": "Opposite of fluctuate is remain."
+              "explanation": "Opposite of fluctuate is remain.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -348,8 +347,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "fro means backward and forward or side to side."
+              "explanation": "fro means backward and forward or side to side.",
+              "correctAnswer": "C"
             },
             {
               "id": "27",
@@ -358,8 +357,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "pollen is the powder made in flowers."
+              "explanation": "pollen is the powder made in flowers.",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -368,8 +367,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "eternal means lasting forever, which contradicts lasting only ten minutes."
+              "explanation": "eternal means lasting forever, which contradicts lasting only ten minutes.",
+              "correctAnswer": "I"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "adhesive is a substance used for sticking things together."
+              "explanation": "adhesive is a substance used for sticking things together.",
+              "correctAnswer": "C"
             },
             {
               "id": "30",
@@ -388,8 +387,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "phoenix is a mythical bird, not a fee or money."
+              "explanation": "phoenix is a mythical bird, not a fee or money.",
+              "correctAnswer": "I"
             },
             {
               "id": "31",
@@ -398,8 +397,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "fluctuated means rising and falling or changing; 'warm and sunny every day' means it was constant."
+              "explanation": "fluctuated means rising and falling or changing; 'warm and sunny every day' means it was constant.",
+              "correctAnswer": "I"
             },
             {
               "id": "32",
@@ -408,8 +407,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "tickles means causing laughter by touching."
+              "explanation": "tickles means causing laughter by touching.",
+              "correctAnswer": "C"
             },
             {
               "id": "33",
@@ -418,8 +417,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "dumped means thrown away or gotten rid of."
+              "explanation": "dumped means thrown away or gotten rid of.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -428,8 +427,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "intermediate means in the middle of two levels."
+              "explanation": "intermediate means in the middle of two levels.",
+              "correctAnswer": "C"
             },
             {
               "id": "35",
@@ -438,10 +437,11 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "texture refers to the quality of something known by its touch, it doesn't make sense for a workload."
+              "explanation": "texture refers to the quality of something known by its touch, it doesn't make sense for a workload.",
+              "correctAnswer": "I"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -455,7 +455,6 @@
           "id": "sec5",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -464,8 +463,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đúng. Trong bài có câu: \"Bees had an important dependency on pollen.\" (Loài ong có một sự phụ thuộc quan trọng vào phấn hoa). Do đó câu này là True.",
+              "correctAnswer": "T"
             },
             {
               "id": "37",
@@ -474,8 +473,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The texture of the pollen in the vibrant flower tickled."
+              "explanation": "Sai. Bài đọc viết: \"The fine texture of the pollen tickled when it stuck to his body.\" (Kết cấu mịn của phấn hoa làm cậu buồn buột khi dính vào người). Chứ không phải cánh hoa (petals) làm cậu buồn buột.",
+              "correctAnswer": "F"
             },
             {
               "id": "38",
@@ -484,8 +483,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đúng. Trong bài có đoạn: \"He was blown to and fro. One minute he was flying straight, and the next minute the wind had reversed his course.\" (Cậu bị thổi bay tới tấp. Một phút trước cậu đang bay thẳng, phút tiếp theo cơn gió đã đảo ngược hướng của cậu).",
+              "correctAnswer": "T"
             },
             {
               "id": "39",
@@ -494,8 +493,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đúng. Đoạn 5 có viết: \"He tried to dump some of the pollen, but it acted as an adhesive. He couldn't get it off.\" (Cậu cố gắng vứt bớt phấn hoa đi, nhưng nó lại giống như chất kết dính. Cậu không thể rũ bỏ được).",
+              "correctAnswer": "T"
             },
             {
               "id": "40",
@@ -504,16 +503,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: After his mentor helped him regain his strength, the little bee flew back into the air like a phoenix."
+              "explanation": "Sai. Trong bài ghi là: \"Finally, with the pollen off of him, the bee easily regained his strength, and like a phoenix, the young bee flew back into the air.\" (Cuối cùng, khi đã rũ bỏ được phấn hoa, cậu ong dễ dàng lấy lại sức, và giống như một con phượng hoàng, cậu ong trẻ bay trở lại không trung). Nghĩa là cậu bay lên, chứ không phải rơi xuống đất (fell to the ground).",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -524,8 +523,8 @@
                 "He learned how to stop photosynthesis.",
                 "He didn't know anything about it."
               ],
-              "correctAnswer": "A",
-              "explanation": "He understood how flowers used photosynthesis to make oxygen/food."
+              "explanation": "Trong đoạn đầu tiên có câu: \"He understood how they used photosynthesis to make oxygen...\" (Cậu hiểu cách những bông hoa sử dụng quang hợp để tạo ra oxy...). Đáp án A là chính xác nhất.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -536,8 +535,8 @@
                 "He was allowed to sleep all day.",
                 "He was allowed to sting animals."
               ],
-              "correctAnswer": "A",
-              "explanation": "He was excited because he was finally allowed to leave the hive."
+              "explanation": "Trong bài có viết: \"Since he passed his exams, the little bee had earned his inclusion in the swarms that gathered pollen. He was excited because he was finally allowed to leave the hive.\" (Vì đã vượt qua kỳ thi, cậu ong nhỏ đã giành được vị trí trong đàn ong đi hái phấn. Cậu rất hào hứng vì cuối cùng cũng được phép rời khỏi tổ). Do đó đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -548,8 +547,8 @@
                 "Their task was to build a new hive.",
                 "Their task was to fight other insects."
               ],
-              "correctAnswer": "A",
-              "explanation": "From the beginning of time, bees' eternal task was to gather pollen and make honey with it."
+              "explanation": "Cuối đoạn 1 viết: \"From the beginning of time, bees' eternal task was to gather pollen and make honey with it.\" (Từ thuở sơ khai, nhiệm vụ muôn thuở của loài ong là thu thập phấn hoa và dùng nó để làm mật). Đáp án A trùng khớp hoàn toàn.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -560,8 +559,8 @@
                 "He flew higher into the sky.",
                 "He became completely invisible."
               ],
-              "correctAnswer": "A",
-              "explanation": "He had no control over his flight."
+              "explanation": "Đoạn 4 viết: \"...all the pollen had an adverse effect. He had no control over his flight.\" (...tất cả số phấn hoa này đã gây ra một tác động tiêu cực. Cậu không thể kiểm soát được chuyến bay của mình). Do vậy, đáp án A đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -572,10 +571,11 @@
                 "The sun was intermittent and fluctuated in power.",
                 "The rain was intermittent and fluctuated in power."
               ],
-              "correctAnswer": "A",
-              "explanation": "The wind was intermittent and fluctuated in power."
+              "explanation": "Trong đoạn 4: \"The intermittent wind fluctuated in power.\" (Cơn gió thoảng qua với sức gió không ổn định). Do đó đáp án A là đúng nhất.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

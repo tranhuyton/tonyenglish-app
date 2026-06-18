@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "A shark",
                 "A goldfish"
               ],
-              "correctAnswer": "B",
-              "explanation": "An alligator can survive ashore."
+              "explanation": "An alligator can survive ashore.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "Depressed",
                 "Humorous"
               ],
-              "correctAnswer": "C",
-              "explanation": "Devoid of happiness means lacking happiness, so depressed."
+              "explanation": "Devoid of happiness means lacking happiness, so depressed.",
+              "correctAnswer": "C"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "They have sharp teeth",
                 "They dig a hole in the ground"
               ],
-              "correctAnswer": "B",
-              "explanation": "They hide in their shells to elude predators."
+              "explanation": "They hide in their shells to elude predators.",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "A cup",
                 "A pool"
               ],
-              "correctAnswer": "D",
-              "explanation": "People can plunge into a pool."
+              "explanation": "People can plunge into a pool.",
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "A telescope",
                 "A baseball cap"
               ],
-              "correctAnswer": "C",
-              "explanation": "A telescope is not used to obstruct sunlight."
+              "explanation": "A telescope is not used to obstruct sunlight.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "surplus",
                 "theorized"
               ],
-              "correctAnswer": "A",
-              "explanation": "embryo (n): a human or animal that is still growing inside its mother."
+              "explanation": "embryo (n): a human or animal that is still growing inside its mother.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "publicized",
                 "plunged"
               ],
-              "correctAnswer": "C",
-              "explanation": "publicize (v): to make something get a lot of attention."
+              "explanation": "publicize (v): to make something get a lot of attention.",
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "homogenous",
                 "sparse"
               ],
-              "correctAnswer": "A",
-              "explanation": "surplus (n): an extra amount of something."
+              "explanation": "surplus (n): an extra amount of something.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "ashore",
                 "plunged"
               ],
-              "correctAnswer": "A",
-              "explanation": "theorize (v): to develop ideas about something."
+              "explanation": "theorize (v): to develop ideas about something.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "sparse",
                 "verify"
               ],
-              "correctAnswer": "D",
-              "explanation": "verify (v): to find out if something is true."
+              "explanation": "verify (v): to find out if something is true.",
+              "correctAnswer": "D"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "elude",
                 "homogenous"
               ],
-              "correctAnswer": "A",
-              "explanation": "ashore (adv): from water to the land."
+              "explanation": "ashore (adv): from water to the land.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "homogenous",
                 "sparse"
               ],
-              "correctAnswer": "A",
-              "explanation": "plunge (v): to move down into something very quickly."
+              "explanation": "plunge (v): to move down into something very quickly.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "sparse",
                 "embryos"
               ],
-              "correctAnswer": "A",
-              "explanation": "elude (v): to avoid being caught by something."
+              "explanation": "elude (v): to avoid being caught by something.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "publicized",
                 "surplus"
               ],
-              "correctAnswer": "A",
-              "explanation": "homogeneous (adj): made up of things which are all the same."
+              "explanation": "homogeneous (adj): made up of things which are all the same.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "verify",
                 "ashore"
               ],
-              "correctAnswer": "A",
-              "explanation": "sparse (adj): not very much of it in a big area."
+              "explanation": "sparse (adj): not very much of it in a big area.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "extend",
                 "destine"
               ],
-              "correctAnswer": "C",
-              "explanation": "prolong means to make something last for a longer time."
+              "explanation": "prolong means to make something last for a longer time.",
+              "correctAnswer": "C"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "wonderful",
                 "unseen"
               ],
-              "correctAnswer": "A",
-              "explanation": "fictitious means made up and not real."
+              "explanation": "fictitious means made up and not real.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "think about",
                 "describe"
               ],
-              "correctAnswer": "B",
-              "explanation": "contradict means to state the opposite."
+              "explanation": "contradict means to state the opposite.",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "unrelated",
                 "barred"
               ],
-              "correctAnswer": "A",
-              "explanation": "homogeneous means made up of things which are all the same."
+              "explanation": "homogeneous means made up of things which are all the same.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -270,16 +269,16 @@
                 "qualified",
                 "energetic"
               ],
-              "correctAnswer": "D",
-              "explanation": "vigorous means using a lot of energy."
+              "explanation": "vigorous means using a lot of energy.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -288,8 +287,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "obstruct means to get in its way."
+              "explanation": "obstruct means to get in its way.",
+              "correctAnswer": "C"
             },
             {
               "id": "22",
@@ -298,8 +297,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "fend off means to push away and avoid."
+              "explanation": "fend off means to push away and avoid.",
+              "correctAnswer": "C"
             },
             {
               "id": "23",
@@ -308,8 +307,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "diverge means to follow a different direction."
+              "explanation": "diverge means to follow a different direction.",
+              "correctAnswer": "C"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "publicize means to make something get a lot of attention, contradicting 'didn't want a lot of people to know'."
+              "explanation": "publicize means to make something get a lot of attention, contradicting 'didn't want a lot of people to know'.",
+              "correctAnswer": "I"
             },
             {
               "id": "25",
@@ -328,8 +327,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "gazette is a newspaper."
+              "explanation": "gazette is a newspaper.",
+              "correctAnswer": "C"
             },
             {
               "id": "26",
@@ -338,8 +337,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "contradict means to state the opposite, contradicting 'agreed about everything'."
+              "explanation": "contradict means to state the opposite, contradicting 'agreed about everything'.",
+              "correctAnswer": "I"
             },
             {
               "id": "27",
@@ -348,8 +347,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "verify means to find out if something is true."
+              "explanation": "verify means to find out if something is true.",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -358,8 +357,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "counterpart means something very similar to something else in what it does, not a physical object like a counter."
+              "explanation": "counterpart means something very similar to something else in what it does, not a physical object like a counter.",
+              "correctAnswer": "I"
             },
             {
               "id": "29",
@@ -368,8 +367,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "prolong means to make something last for a longer time."
+              "explanation": "prolong means to make something last for a longer time.",
+              "correctAnswer": "C"
             },
             {
               "id": "30",
@@ -378,24 +377,24 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "vigorous means using a lot of energy, and playing sports is usually vigorous exercise."
+              "explanation": "vigorous means using a lot of energy, and playing sports is usually vigorous exercise.",
+              "correctAnswer": "I"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Amazing Komodo Dragons</h1><p style=\"margin-bottom: 2rem;\">Once, a British <b>gazette</b> had an unusual story. Scientists at a zoo made a discovery about komodo dragons. Komodo dragons are giant lizards that grow up to two and a half meters long. A female lizard at the zoo had babies. However, it had never been around a male lizard in its entire life. After the scientists <b>publicized</b> their discovery, many people thought it was <b>fictitious</b>.</p><p style=\"margin-bottom: 2rem;\">But it was true. It was discovered that female komodo dragons can have babies without the help of their male <b>counterparts</b>. This <b>contradicts</b> what scientists know about how most animals have babies.</p><p style=\"margin-bottom: 2rem;\">In most cases, there are many things that can <b>obstruct</b> this type of reproduction. For example, adult males and females carry different genes needed to make an <b>embryo</b>. If the genes are <b>homogeneous</b>, the babies are weaker and have genetic problems. Over time, the weakened species dies out completely. This makes it necessary for the male to be involved. However, scientists <b>verified</b> that when Komodo babies are born, their genes aren’t the exact same genes as their mother. Also, they are <b>devoid</b> of any genetic problems.</p><p style=\"margin-bottom: 2rem;\">Scientists <b>theorize</b> that Komodo dragons developed the ability because it helps the species <b>fend</b> off extinction. If a volcano erupts, lava can kill all of the komodo dragons on an island. However, as long as one female <b>eludes</b> death, she can <b>prolong</b> the survival of the species. Luckily, Komodo dragons are <b>vigorous</b> swimmers. So the surviving female can <b>plunge</b> into the ocean and swim to another island. When she comes <b>ashore</b>, she can reproduce by herself. Over time, the genes within the population <b>diverge</b>. Then, the <b>sparse</b> population increases. Once again there is a <b>surplus</b> of lizards on one island. Scientists think that this may be how the lizards took over all of the islands in that area.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Amazing Komodo Dragons</h1>        <p style=\"margin-bottom: 1rem;\">Once, a British <b>gazette</b> had an unusual story. Scientists at a zoo made a discovery about komodo dragons. Komodo dragons are giant lizards that grow up to two and a half meters long. A female lizard at the zoo had babies. However, it had never been around a male lizard in its entire life. After the scientists <b>publicized</b> their discovery, many people thought it was <b>fictitious</b>.</p>    <p style=\"margin-bottom: 1rem;\">But it was true. It was discovered that female komodo dragons can have babies without the help of their male <b>counterparts</b>. This <b>contradicts</b> what scientists know about how most animals have babies.</p>    <p style=\"margin-bottom: 1rem;\">In most cases, there are many things that can <b>obstruct</b> this type of reproduction. For example, adult males and females carry different genes needed to make an <b>embryo</b>. If the genes are <b>homogeneous</b>, the babies are weaker and have genetic problems. Over time, the weakened species dies out completely. This makes it necessary for the male to be involved. However, scientists <b>verified</b> that when Komodo babies are born, their genes aren’t the exact same genes as their mother. Also, they are <b>devoid</b> of any genetic problems.</p>    <p style=\"margin-bottom: 1rem;\">Scientists <b>theorize</b> that Komodo dragons developed the ability because it helps the species <b>fend</b> off extinction. If a volcano erupts, lava can kill all of the komodo dragons on an island. However, as long as one female <b>eludes</b> death, she can <b>prolong</b> the survival of the species. Luckily, Komodo dragons are <b>vigorous</b> swimmers. So the surviving female can <b>plunge</b> into the ocean and swim to another island. When she comes <b>ashore</b>, she can reproduce by herself. Over time, the genes within the population <b>diverge</b>. Then, the <b>sparse</b> population increases. Once again there is a <b>surplus</b> of lizards on one island. Scientists think that this may be how the lizards took over all of the islands in that area.</p></div>",
       "imageUrl": "/unit6_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -404,8 +403,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "True."
+              "explanation": "True.",
+              "correctAnswer": "T"
             },
             {
               "id": "32",
@@ -414,8 +413,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "True."
+              "explanation": "True.",
+              "correctAnswer": "T"
             },
             {
               "id": "33",
@@ -424,8 +423,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Scientists verified that baby komodo dragons don’t have the same genes as their mothers and are devoid of genetic problems."
+              "explanation": "F: Scientists verified that baby komodo dragons don’t have the same genes as their mothers and are devoid of genetic problems.",
+              "correctAnswer": "F"
             },
             {
               "id": "34",
@@ -434,8 +433,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Scientists theorize that the special ability helps komodo dragons fend off extinction."
+              "explanation": "F: Scientists theorize that the special ability helps komodo dragons fend off extinction.",
+              "correctAnswer": "F"
             },
             {
               "id": "35",
@@ -444,16 +443,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "True."
+              "explanation": "True.",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -464,8 +463,8 @@
                 "They don't reproduce.",
                 "They reproduce every day."
               ],
-              "correctAnswer": "A",
-              "explanation": "They can reproduce without a father."
+              "explanation": "They can reproduce without a father.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -476,8 +475,8 @@
                 "Because they ride on boats.",
                 "Because they have a compass."
               ],
-              "correctAnswer": "A",
-              "explanation": "Because komodo dragons are vigorous swimmers and can plunge into the water."
+              "explanation": "Because komodo dragons are vigorous swimmers and can plunge into the water.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -488,8 +487,8 @@
                 "She can hide underground.",
                 "She can call for help."
               ],
-              "correctAnswer": "A",
-              "explanation": "She can reproduce by herself."
+              "explanation": "She can reproduce by herself.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -500,8 +499,8 @@
                 "They disappear.",
                 "They become homogenous."
               ],
-              "correctAnswer": "A",
-              "explanation": "Over time, the genes diverge."
+              "explanation": "Over time, the genes diverge.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -512,10 +511,11 @@
                 "They will be smarter.",
                 "They will run faster."
               ],
-              "correctAnswer": "A",
-              "explanation": "The babies will be weaker and have genetic problems."
+              "explanation": "The babies will be weaker and have genetic problems.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

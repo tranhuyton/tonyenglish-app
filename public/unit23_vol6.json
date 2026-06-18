@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "open",
                 "clear"
               ],
-              "correctAnswer": "B",
-              "explanation": "frigid (extremely cold) is the opposite of hot."
+              "explanation": "frigid (extremely cold) is the opposite of hot.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "likely",
                 "quick"
               ],
-              "correctAnswer": "A",
-              "explanation": "wavy is the opposite of straight."
+              "explanation": "wavy is the opposite of straight.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "nice",
                 "soft"
               ],
-              "correctAnswer": "D",
-              "explanation": "crisp (hard in a pleasant way) is the opposite of soft."
+              "explanation": "crisp (hard in a pleasant way) is the opposite of soft.",
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "friend",
                 "agreement"
               ],
-              "correctAnswer": "B",
-              "explanation": "replicate (to do it in the exact same way as someone before) is the opposite of original."
+              "explanation": "replicate (to do it in the exact same way as someone before) is the opposite of original.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "close",
                 "fight"
               ],
-              "correctAnswer": "A",
-              "explanation": "allocate (put aside for a purpose) is the opposite of take away."
+              "explanation": "allocate (put aside for a purpose) is the opposite of take away.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "discord",
                 "cavity"
               ],
-              "correctAnswer": "A",
-              "explanation": "locker (n): a small cabinet with a lock."
+              "explanation": "locker (n): a small cabinet with a lock.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "frigid",
                 "multicultural"
               ],
-              "correctAnswer": "A",
-              "explanation": "discord (n): disagreement or fighting."
+              "explanation": "discord (n): disagreement or fighting.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "locker",
                 "omission"
               ],
-              "correctAnswer": "A",
-              "explanation": "blizzard (n): a severe snow storm with strong winds."
+              "explanation": "blizzard (n): a severe snow storm with strong winds.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "appetizing",
                 "glacial"
               ],
-              "correctAnswer": "A",
-              "explanation": "multicultural (adj): relating to many different cultures."
+              "explanation": "multicultural (adj): relating to many different cultures.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "discord",
                 "locker"
               ],
-              "correctAnswer": "A",
-              "explanation": "cavity (n): a hole or space in something."
+              "explanation": "cavity (n): a hole or space in something.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "generate",
                 "pierce"
               ],
-              "correctAnswer": "A",
-              "explanation": "courtesy (n): excellence of manners or social conduct."
+              "explanation": "courtesy (n): excellence of manners or social conduct.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "allocate",
                 "generate"
               ],
-              "correctAnswer": "A",
-              "explanation": "oversee (v): make sure that it is being done properly."
+              "explanation": "oversee (v): make sure that it is being done properly.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "replicate",
                 "allocate"
               ],
-              "correctAnswer": "A",
-              "explanation": "generate (v): to cause it to develop or begin."
+              "explanation": "generate (v): to cause it to develop or begin.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "wavy",
                 "concentric"
               ],
-              "correctAnswer": "A",
-              "explanation": "frigid (adj): extremely cold."
+              "explanation": "frigid (adj): extremely cold.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "replicate",
                 "generate"
               ],
-              "correctAnswer": "A",
-              "explanation": "pierce (v): make a hole in it using a sharp object."
+              "explanation": "pierce (v): make a hole in it using a sharp object.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -220,8 +219,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "multicultural: relates to many different cultures."
+              "explanation": "multicultural: relates to many different cultures.",
+              "correctAnswer": "C"
             },
             {
               "id": "17",
@@ -230,8 +229,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "locker: a small cabinet with a lock."
+              "explanation": "locker: a small cabinet with a lock.",
+              "correctAnswer": "C"
             },
             {
               "id": "18",
@@ -240,8 +239,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "clockwise: moves in a circle in the same direction as a clock, not reverse."
+              "explanation": "clockwise: moves in a circle in the same direction as a clock, not reverse.",
+              "correctAnswer": "I"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "pierce: to make a hole in it using a sharp object."
+              "explanation": "pierce: to make a hole in it using a sharp object.",
+              "correctAnswer": "C"
             },
             {
               "id": "20",
@@ -260,8 +259,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "replicate: to do it in the exact same way."
+              "explanation": "replicate: to do it in the exact same way.",
+              "correctAnswer": "C"
             },
             {
               "id": "21",
@@ -270,8 +269,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "cavity: a hole or space, which doesn't travel down a stream."
+              "explanation": "cavity: a hole or space, which doesn't travel down a stream.",
+              "correctAnswer": "I"
             },
             {
               "id": "22",
@@ -280,8 +279,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "frigid: extremely cold, so it wouldn't burn a tongue."
+              "explanation": "frigid: extremely cold, so it wouldn't burn a tongue.",
+              "correctAnswer": "I"
             },
             {
               "id": "23",
@@ -290,8 +289,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "blizzard: a severe snow storm."
+              "explanation": "blizzard: a severe snow storm.",
+              "correctAnswer": "C"
             },
             {
               "id": "24",
@@ -300,8 +299,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "appetizing: looks and smells very good (for food), not related to a sad movie scene."
+              "explanation": "appetizing: looks and smells very good (for food), not related to a sad movie scene.",
+              "correctAnswer": "I"
             },
             {
               "id": "25",
@@ -310,8 +309,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "interchange: a discussion of each person's idea."
+              "explanation": "interchange: a discussion of each person's idea.",
+              "correctAnswer": "C"
             },
             {
               "id": "26",
@@ -320,8 +319,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "omission: something left out or not done, which contradicts 'include'."
+              "explanation": "omission: something left out or not done, which contradicts 'include'.",
+              "correctAnswer": "I"
             },
             {
               "id": "27",
@@ -330,8 +329,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "wavy: not straight but has a series of curves, doesn't describe children."
+              "explanation": "wavy: not straight but has a series of curves, doesn't describe children.",
+              "correctAnswer": "I"
             },
             {
               "id": "28",
@@ -340,8 +339,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "oversee: make sure that it is being done properly."
+              "explanation": "oversee: make sure that it is being done properly.",
+              "correctAnswer": "C"
             },
             {
               "id": "29",
@@ -350,8 +349,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "glacial: relates to large masses of ice that move slowly, doesn't describe a running dog."
+              "explanation": "glacial: relates to large masses of ice that move slowly, doesn't describe a running dog.",
+              "correctAnswer": "I"
             },
             {
               "id": "30",
@@ -360,8 +359,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "generate: cause to develop or begin."
+              "explanation": "generate: cause to develop or begin.",
+              "correctAnswer": "C"
             },
             {
               "id": "31",
@@ -370,8 +369,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "concentric: having the same center, doesn't make sense for a movie."
+              "explanation": "concentric: having the same center, doesn't make sense for a movie.",
+              "correctAnswer": "I"
             },
             {
               "id": "32",
@@ -380,8 +379,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "discord: disagreement or fighting."
+              "explanation": "discord: disagreement or fighting.",
+              "correctAnswer": "C"
             },
             {
               "id": "33",
@@ -390,8 +389,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "crisp: hard or has a hard surface in a pleasant way."
+              "explanation": "crisp: hard or has a hard surface in a pleasant way.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -400,8 +399,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "courtesy: excellence of manners, which a mother would not be disappointed by."
+              "explanation": "courtesy: excellence of manners, which a mother would not be disappointed by.",
+              "correctAnswer": "I"
             },
             {
               "id": "35",
@@ -410,24 +409,24 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "allocate: put aside for a certain purpose or person."
+              "explanation": "allocate: put aside for a certain purpose or person.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Ice House</h1><p style=\"margin-bottom: 2rem;\">Last year, Erik constructed one of the world's strangest houses in the <b>glacial</b> landscape of northern Sweden. He called it the Ice House: a house made entirely of ice and snow. All of the beds, chairs, tables, and walls are cold, hard sculptures of ice.</p><p style=\"margin-bottom: 2rem;\">A group of architects and volunteers from all over the world traveled to the site of the Ice House and began its construction. The <b>multicultural</b> group journeyed through <b>blizzards</b> and <b>frigid</b> temperatures to reach the site. Once the builders arrived, there was an <b>interchange</b> of ideas, and tools were <b>allocated</b> to each worker. An expert was selected to <b>oversee</b> the building process to make sure there was no <b>discord</b> between the workers. Once a plan was <b>generated</b>, they got right to work. The design was very unique; the builders couldn't <b>replicate</b> the design from normal houses.</p><p style=\"margin-bottom: 2rem;\">The first step was to build the walls and ceiling. The builders used a metal frame to help them build the structure. After the ice was in place, the frame was removed. The builders then created furniture and art pieces. Designs were carved into each piece. One worker carved big <b>wavy</b> lines, and another made tiny <b>clockwise</b>, <b>concentric</b> circles. Finally, the workers carved small <b>cavities</b> in the roof and inserted colored lights. When the work was finished, the beautiful house was ready for a resident to enjoy.</p><p style=\"margin-bottom: 2rem;\">Living in the Ice House is an experience like no other. Erik stores his belongings in an ice <b>locker</b> and lays out a sleeping bag on his ice bed. At dinner, he dines on a delicious salad with <b>crisp</b> toppings. And for the main course, he enjoys <b>appetizing</b> fish caught from a nearby river. The fish are <b>pierced</b> with icicles and served on ice plates. After dinner, he gets ready for a cold night. The <b>omission</b> of heaters can be too much for his visitors sometimes. Luckily, there are warm rooms nearby, as a <b>courtesy</b> to people who get too cold.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Ice House</h1>        <p style=\"margin-bottom: 1rem;\">Last year, Erik constructed one of the world's strangest houses in the <b>glacial</b> landscape of northern Sweden. He called it the Ice House: a house made entirely of ice and snow. All of the beds, chairs, tables, and walls are cold, hard sculptures of ice.</p>    <p style=\"margin-bottom: 1rem;\">A group of architects and volunteers from all over the world traveled to the site of the Ice House and began its construction. The <b>multicultural</b> group journeyed through <b>blizzards</b> and <b>frigid</b> temperatures to reach the site. Once the builders arrived, there was an <b>interchange</b> of ideas, and tools were <b>allocated</b> to each worker. An expert was selected to <b>oversee</b> the building process to make sure there was no <b>discord</b> between the workers. Once a plan was <b>generated</b>, they got right to work. The design was very unique; the builders couldn't <b>replicate</b> the design from normal houses.</p>    <p style=\"margin-bottom: 1rem;\">The first step was to build the walls and ceiling. The builders used a metal frame to help them build the structure. After the ice was in place, the frame was removed. The builders then created furniture and art pieces. Designs were carved into each piece. One worker carved big <b>wavy</b> lines, and another made tiny <b>clockwise</b>, <b>concentric</b> circles. Finally, the workers carved small <b>cavities</b> in the roof and inserted colored lights. When the work was finished, the beautiful house was ready for a resident to enjoy.</p>    <p style=\"margin-bottom: 1rem;\">Living in the Ice House is an experience like no other. Erik stores his belongings in an ice <b>locker</b> and lays out a sleeping bag on his ice bed. At dinner, he dines on a delicious salad with <b>crisp</b> toppings. And for the main course, he enjoys <b>appetizing</b> fish caught from a nearby river. The fish are <b>pierced</b> with icicles and served on ice plates. After dinner, he gets ready for a cold night. The <b>omission</b> of heaters can be too much for his visitors sometimes. Luckily, there are warm rooms nearby, as a <b>courtesy</b> to people who get too cold.</p></div>",
       "imageUrl": "/unit23_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -436,8 +435,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đúng. Đoạn 2 viết: \"The multicultural group journeyed through blizzards and frigid temperatures to reach the site.\" (Nhóm đa văn hóa đã vượt qua những trận bão tuyết và nhiệt độ lạnh giá để đến được địa điểm này).",
+              "correctAnswer": "T"
             },
             {
               "id": "37",
@@ -446,8 +445,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đúng. Câu này kết hợp ý trong bài: cậu dùng bữa với salad có lớp phủ giòn (crisp toppings) và món cá ngon miệng (appetizing fish) được xiên qua bằng các nhũ băng (pierced with icicles).",
+              "correctAnswer": "T"
             },
             {
               "id": "38",
@@ -456,8 +455,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The expert who oversaw the process made sure there wasn't discord between the workers."
+              "explanation": "Sai. Đoạn 2 ghi rõ: \"An expert was selected to oversee the building process to make sure there was no discord between the workers.\" (Một chuyên gia được chọn để giám sát quá trình xây dựng nhằm đảm bảo không có sự bất hòa giữa các công nhân). Không phải là không có sự bất hòa ở \"vùng đất băng giá\" (glacial landscape).",
+              "correctAnswer": "F"
             },
             {
               "id": "39",
@@ -466,8 +465,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Đúng. Đoạn 3 có viết: \"One worker carved big wavy lines, and another made tiny clockwise, concentric circles.\" (Một người thợ khắc những đường lượn sóng lớn, và một người khác tạo ra những vòng tròn nhỏ đồng tâm theo chiều kim đồng hồ).",
+              "correctAnswer": "T"
             },
             {
               "id": "40",
@@ -476,16 +475,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The builders couldn't replicate the design from normal houses."
+              "explanation": "Sai. Cuối đoạn 2 viết: \"The design was very unique; the builders couldn't replicate the design from normal houses.\" (Thiết kế rất độc đáo; những người thợ xây không thể sao chép thiết kế từ những ngôi nhà bình thường).",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -496,8 +495,8 @@
                 "Colored lights were inserted in the cavities in the roof.",
                 "Nearby warm rooms were a courtesy to people who got too cold."
               ],
-              "correctAnswer": "A",
-              "explanation": "Tools were allocated to each worker."
+              "explanation": "Đoạn 2 ghi rõ: \"Once the builders arrived, there was an interchange of ideas, and tools were allocated to each worker.\" (Khi những người thợ xây đến nơi, họ đã trao đổi ý tưởng và công cụ được phân phát cho từng công nhân). Đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -508,8 +507,8 @@
                 "They got right to work.",
                 "Erik stores his belongings in his ice locker."
               ],
-              "correctAnswer": "A",
-              "explanation": "Colored lights were inserted in the cavities in the roof."
+              "explanation": "Trong đoạn 3 có viết: \"Finally, the workers carved small cavities in the roof and inserted colored lights.\" (Cuối cùng, những người thợ khoét các lỗ nhỏ trên mái nhà và lắp đèn màu vào). Vì thế đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -520,8 +519,8 @@
                 "Tools were allocated to each worker.",
                 "Erik stores his belongings in his ice locker."
               ],
-              "correctAnswer": "A",
-              "explanation": "They got right to work."
+              "explanation": "Đoạn 2 có câu: \"Once a plan was generated, they got right to work.\" (Ngay khi một kế hoạch được tạo ra, họ liền bắt tay ngay vào làm việc). Do đó đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -532,8 +531,8 @@
                 "Tools were allocated to each worker.",
                 "Colored lights were inserted in the cavities in the roof."
               ],
-              "correctAnswer": "A",
-              "explanation": "Nearby warm rooms were a courtesy to people who got too cold."
+              "explanation": "Cuối bài đọc ghi: \"Luckily, there are warm rooms nearby, as a courtesy to people who get too cold.\" (May mắn thay, có những căn phòng ấm áp ở gần đó, như một sự ân cần dành cho những người bị quá lạnh). Vì vậy đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -544,10 +543,11 @@
                 "Colored lights were inserted in the cavities in the roof.",
                 "Nearby warm rooms were a courtesy to people who got too cold."
               ],
-              "correctAnswer": "A",
-              "explanation": "Erik stores his belongings in his ice locker."
+              "explanation": "Đoạn 4 có viết: \"Erik stores his belongings in an ice locker...\" (Erik cất giữ đồ đạc của mình trong một chiếc tủ đồ bằng băng...). Đáp án A là đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

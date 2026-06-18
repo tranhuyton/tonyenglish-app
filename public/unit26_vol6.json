@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "saliva",
                 "sprint"
               ],
-              "correctAnswer": "A",
-              "explanation": "tolerant (adj): accepting others."
+              "explanation": "tolerant (adj): accepting others.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "moist",
                 "nope"
               ],
-              "correctAnswer": "A",
-              "explanation": "saliva (n): watery liquid in the mouth."
+              "explanation": "saliva (n): watery liquid in the mouth.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "emulate",
                 "constrain"
               ],
-              "correctAnswer": "A",
-              "explanation": "restrain (v): to use physical strength to stop someone or something."
+              "explanation": "restrain (v): to use physical strength to stop someone or something.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "prod",
                 "spit"
               ],
-              "correctAnswer": "A",
-              "explanation": "sprint (v): to run very fast over a short distance."
+              "explanation": "sprint (v): to run very fast over a short distance.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "intimidate",
                 "restrain"
               ],
-              "correctAnswer": "A",
-              "explanation": "emulate (v): to imitate someone because they are admired."
+              "explanation": "emulate (v): to imitate someone because they are admired.",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "forefinger",
                 "janitor"
               ],
-              "correctAnswer": "A",
-              "explanation": "guts (n): organs inside a person or animal."
+              "explanation": "guts (n): organs inside a person or animal.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "tolerant",
                 "intimidate"
               ],
-              "correctAnswer": "A",
-              "explanation": "moist (adj): slightly wet."
+              "explanation": "moist (adj): slightly wet.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "depot",
                 "ransom"
               ],
-              "correctAnswer": "A",
-              "explanation": "forefinger (n): the finger between thumb and middle finger."
+              "explanation": "forefinger (n): the finger between thumb and middle finger.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "prod",
                 "stunt"
               ],
-              "correctAnswer": "A",
-              "explanation": "constrain (v): to limit development."
+              "explanation": "constrain (v): to limit development.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "ransom",
                 "sprint"
               ],
-              "correctAnswer": "A",
-              "explanation": "nope (adv): informal way of saying no."
+              "explanation": "nope (adv): informal way of saying no.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "speak",
                 "believe"
               ],
-              "correctAnswer": "B",
-              "explanation": "prod means to push."
+              "explanation": "prod means to push.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "brave",
                 "alive"
               ],
-              "correctAnswer": "A",
-              "explanation": "nope means no."
+              "explanation": "nope means no.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "run",
                 "pretend"
               ],
-              "correctAnswer": "C",
-              "explanation": "sprint means to run."
+              "explanation": "sprint means to run.",
+              "correctAnswer": "C"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "fear",
                 "imitate"
               ],
-              "correctAnswer": "D",
-              "explanation": "emulate means to imitate."
+              "explanation": "emulate means to imitate.",
+              "correctAnswer": "D"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "feather",
                 "trait"
               ],
-              "correctAnswer": "B",
-              "explanation": "vampire is a monster."
+              "explanation": "vampire is a monster.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -220,8 +219,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "saliva means watery liquid in the mouth."
+              "explanation": "saliva means watery liquid in the mouth.",
+              "correctAnswer": "C"
             },
             {
               "id": "17",
@@ -230,8 +229,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "depot means a station."
+              "explanation": "depot means a station.",
+              "correctAnswer": "C"
             },
             {
               "id": "18",
@@ -240,8 +239,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "yawn is opening mouth wide and breathing in air, usually due to tiredness, not from a joke."
+              "explanation": "yawn is opening mouth wide and breathing in air, usually due to tiredness, not from a joke.",
+              "correctAnswer": "I"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "tolerant means accepting others, contradicting the sentence."
+              "explanation": "tolerant means accepting others, contradicting the sentence.",
+              "correctAnswer": "I"
             },
             {
               "id": "20",
@@ -260,8 +259,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "spit means to force liquid from one's mouth."
+              "explanation": "spit means to force liquid from one's mouth.",
+              "correctAnswer": "C"
             },
             {
               "id": "21",
@@ -270,8 +269,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "constrain means to limit development, incorrect context for writing an essay."
+              "explanation": "constrain means to limit development, incorrect context for writing an essay.",
+              "correctAnswer": "I"
             },
             {
               "id": "22",
@@ -280,8 +279,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "restrain means to stop using physical strength, incorrect context."
+              "explanation": "restrain means to stop using physical strength, incorrect context.",
+              "correctAnswer": "I"
             },
             {
               "id": "23",
@@ -290,8 +289,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "inherent means a natural part of something, contradicting 'usually a very calm person'."
+              "explanation": "inherent means a natural part of something, contradicting 'usually a very calm person'.",
+              "correctAnswer": "I"
             },
             {
               "id": "24",
@@ -300,8 +299,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "ransom is money paid to a kidnapper."
+              "explanation": "ransom is money paid to a kidnapper.",
+              "correctAnswer": "C"
             },
             {
               "id": "25",
@@ -310,8 +309,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "guts means the organs inside a body."
+              "explanation": "guts means the organs inside a body.",
+              "correctAnswer": "C"
             },
             {
               "id": "26",
@@ -320,8 +319,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "intimidate means to frighten others, incorrect context."
+              "explanation": "intimidate means to frighten others, incorrect context.",
+              "correctAnswer": "I"
             },
             {
               "id": "27",
@@ -330,8 +329,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "stunt is something done to get attention."
+              "explanation": "stunt is something done to get attention.",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -340,8 +339,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "forefinger is the pointing finger."
+              "explanation": "forefinger is the pointing finger.",
+              "correctAnswer": "C"
             },
             {
               "id": "29",
@@ -350,8 +349,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "moist means slightly wet, deserts are typically dry."
+              "explanation": "moist means slightly wet, deserts are typically dry.",
+              "correctAnswer": "I"
             },
             {
               "id": "30",
@@ -360,10 +359,11 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "janitor makes repairs and takes care of a building."
+              "explanation": "janitor makes repairs and takes care of a building.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -377,7 +377,6 @@
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -386,8 +385,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Trong đoạn 1 có viết: \"Anne hated being constrained by her fears...\" (Anne ghét bị gò bó bởi những nỗi sợ hãi của chính mình...).",
+              "correctAnswer": "T"
             },
             {
               "id": "32",
@@ -396,8 +395,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, The scary man restrained her arms and legs and carried her to his house."
+              "explanation": "Câu này SAI. Đoạn 2 ghi rõ: \"The scary man restrained her arms and legs and carried her to his house.\" Không phải là \"vampire\" (ma cà rồng) mà là \"scary man\" (người đàn ông đáng sợ) đã trói tay chân và mang cô về nhà hắn.",
+              "correctAnswer": "F"
             },
             {
               "id": "33",
@@ -406,8 +405,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, Anne’s guts began to hurt because she was intimidated by the horrible man."
+              "explanation": "Câu này SAI. Trong truyện viết: \"Her guts began to hurt because she was so scared.\" (Ruột gan cô bắt đầu đau thắt lại vì quá sợ hãi) sau khi bị bắt cóc bởi kẻ xấu, chứ không phải vì bị đe dọa (\"intimidated\") bởi bạn cùng lớp.",
+              "correctAnswer": "F"
             },
             {
               "id": "34",
@@ -416,8 +415,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Đoạn 3 có nhắc đến: \"The dirty man spit when he talked. A string of saliva hung from his moist lips.\" (Gã đàn ông bẩn thỉu nhổ nước bọt khi hắn nói chuyện).",
+              "correctAnswer": "T"
             },
             {
               "id": "35",
@@ -426,16 +425,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Ở đoạn cuối, tác giả có viết: \"The kids were very tolerant of Anne from then on. They even decided that they would emulate her bravery...\" (Bọn trẻ từ đó rất khoan dung với Anne. Chúng thậm chí quyết định sẽ noi gương lòng dũng cảm của cô...).",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -446,8 +445,8 @@
                 "They would do their homework.",
                 "They would play games."
               ],
-              "correctAnswer": "A",
-              "explanation": "They would hide behind the door of the school janitor’s closet, and then jump out to scare her."
+              "explanation": "Ở đoạn 1 có ghi: \"They would hide behind the door of the school janitor’s closet, then jump out to scare her.\" (Bọn trẻ sẽ trốn sau cánh cửa tủ đồ của người lao công ở trường, sau đó nhảy xổ ra để hù dọa cô bé). Vì vậy, đáp án đúng là A.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -458,8 +457,8 @@
                 "He started singing.",
                 "He left the room."
               ],
-              "correctAnswer": "A",
-              "explanation": "Anne waited quietly until he fell asleep."
+              "explanation": "Đoạn 4 cho biết: \"Eventually, the man yawned. Anne waited quietly until he fell asleep.\" (Cuối cùng, gã đàn ông ngáp. Anne lặng lẽ chờ đợi cho đến khi hắn ngủ thiếp đi). Do đó đáp án là A.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -470,8 +469,8 @@
                 "“Your parents won't pay a ransom.”",
                 "“I forgot to ask for a ransom.”"
               ],
-              "correctAnswer": "A",
-              "explanation": "“You’ll stay right here until I get a ransom from your parents. Then I’ll be rich!”"
+              "explanation": "Ở đoạn 3, sau khi chọc ngón trỏ vào Anne, hắn nói: \"You’ll stay right here until I get a ransom from your parents. Then I’ll be rich!\" (Mày sẽ ở ngay đây cho đến khi tao nhận được tiền chuộc từ bố mẹ mày. Khi đó tao sẽ giàu to!). Vậy đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -482,8 +481,8 @@
                 "She hid in the depot.",
                 "She bought a ticket to another city."
               ],
-              "correctAnswer": "A",
-              "explanation": "She boarded a bus to the police station. She told the police what happened, and they arrested the kidnapper."
+              "explanation": "Cuối đoạn 4 có viết: \"...She sprinted to the bus depot and boarded a bus to the police station. She told the police what happened...\" (Cô bé chạy thục mạng đến bến xe buýt và lên xe đến đồn cảnh sát. Cô kể cho cảnh sát nghe chuyện gì đã xảy ra...). Đáp án A là hoàn toàn chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -494,10 +493,11 @@
                 "“Are you okay?”",
                 "“Did he hurt you?”"
               ],
-              "correctAnswer": "A",
-              "explanation": "“Weren’t you too scared to escape?”"
+              "explanation": "Ở đoạn 5 và 6, bọn trẻ hỏi: \"Weren’t you too scared to escape?\" (Cậu không quá sợ hãi để trốn thoát sao?), và Anne trả lời: \"Nope, I knew that I had to be brave...\" (Không, tớ biết rằng mình phải can đảm...). Vậy câu hỏi mà Anne phản hồi \"nope\" chính là A.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

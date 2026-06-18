@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "faraway",
                 "covered in mud"
               ],
-              "correctAnswer": "C",
-              "explanation": "faraway (c)"
+              "explanation": "faraway (c)",
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "ten",
                 "twelve"
               ],
-              "correctAnswer": "A",
-              "explanation": "two (a)"
+              "explanation": "two (a)",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "A surplus",
                 "A bonus"
               ],
-              "correctAnswer": "B",
-              "explanation": "A tax (b)"
+              "explanation": "A tax (b)",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "Under the ground",
                 "On a road"
               ],
-              "correctAnswer": "A",
-              "explanation": "In the water (a)"
+              "explanation": "In the water (a)",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "weight",
                 "temperature"
               ],
-              "correctAnswer": "D",
-              "explanation": "temperature (d)"
+              "explanation": "temperature (d)",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
           "content": "Word Bank: outback, thermometer, vice versa, ore, outweighed, whereabouts, grove, fulfill, Fahrenheit, shortcut",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -100,8 +99,8 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "A",
-              "explanation": "Fahrenheit"
+              "explanation": "Fahrenheit",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -118,8 +117,8 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "B",
-              "explanation": "thermometer"
+              "explanation": "thermometer",
+              "correctAnswer": "B"
             },
             {
               "id": "8",
@@ -136,8 +135,8 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "C",
-              "explanation": "outback"
+              "explanation": "outback",
+              "correctAnswer": "C"
             },
             {
               "id": "9",
@@ -154,8 +153,8 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "D",
-              "explanation": "grove"
+              "explanation": "grove",
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -172,8 +171,8 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "E",
-              "explanation": "fulfill"
+              "explanation": "fulfill",
+              "correctAnswer": "E"
             },
             {
               "id": "11",
@@ -190,8 +189,8 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "F",
-              "explanation": "shortcut"
+              "explanation": "shortcut",
+              "correctAnswer": "F"
             },
             {
               "id": "12",
@@ -208,8 +207,8 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "G",
-              "explanation": "outweighed"
+              "explanation": "outweighed",
+              "correctAnswer": "G"
             },
             {
               "id": "13",
@@ -226,8 +225,8 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "H",
-              "explanation": "vice versa"
+              "explanation": "vice versa",
+              "correctAnswer": "H"
             },
             {
               "id": "14",
@@ -244,8 +243,8 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "I",
-              "explanation": "ore"
+              "explanation": "ore",
+              "correctAnswer": "I"
             },
             {
               "id": "15",
@@ -262,16 +261,16 @@
                 "ore",
                 "whereabouts"
               ],
-              "correctAnswer": "J",
-              "explanation": "whereabouts"
+              "explanation": "whereabouts",
+              "correctAnswer": "J"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -282,8 +281,8 @@
                 "explain",
                 "favor"
               ],
-              "correctAnswer": "B",
-              "explanation": "consist (b)"
+              "explanation": "consist (b)",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -294,8 +293,8 @@
                 "lean",
                 "grip"
               ],
-              "correctAnswer": "C",
-              "explanation": "lean (c)"
+              "explanation": "lean (c)",
+              "correctAnswer": "C"
             },
             {
               "id": "18",
@@ -306,8 +305,8 @@
                 "chef",
                 "fort"
               ],
-              "correctAnswer": "A",
-              "explanation": "dock (a)"
+              "explanation": "dock (a)",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -318,8 +317,8 @@
                 "secure",
                 "similar"
               ],
-              "correctAnswer": "D",
-              "explanation": "similar (d)"
+              "explanation": "similar (d)",
+              "correctAnswer": "D"
             },
             {
               "id": "20",
@@ -330,16 +329,16 @@
                 "calendar",
                 "feather"
               ],
-              "correctAnswer": "A",
-              "explanation": "illogical (a)"
+              "explanation": "illogical (a)",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -350,8 +349,8 @@
                 "binoculars",
                 "depicted"
               ],
-              "correctAnswer": "A",
-              "explanation": "ore"
+              "explanation": "ore",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -362,8 +361,8 @@
                 "dual",
                 "comprised"
               ],
-              "correctAnswer": "A",
-              "explanation": "tariff"
+              "explanation": "tariff",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -374,8 +373,8 @@
                 "paradox",
                 "bulk"
               ],
-              "correctAnswer": "B",
-              "explanation": "binoculars"
+              "explanation": "binoculars",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
@@ -386,8 +385,8 @@
                 "binoculars",
                 "dual"
               ],
-              "correctAnswer": "A",
-              "explanation": "depicted"
+              "explanation": "depicted",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -398,8 +397,8 @@
                 "comprised",
                 "paradox"
               ],
-              "correctAnswer": "A",
-              "explanation": "whereabouts"
+              "explanation": "whereabouts",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -410,8 +409,8 @@
                 "thermometer",
                 "depicted"
               ],
-              "correctAnswer": "A",
-              "explanation": "dual"
+              "explanation": "dual",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -422,8 +421,8 @@
                 "tariff",
                 "ore"
               ],
-              "correctAnswer": "A",
-              "explanation": "comprised"
+              "explanation": "comprised",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -434,8 +433,8 @@
                 "bulk",
                 "whereabouts"
               ],
-              "correctAnswer": "A",
-              "explanation": "thermometer"
+              "explanation": "thermometer",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -446,8 +445,8 @@
                 "tariff",
                 "ore"
               ],
-              "correctAnswer": "A",
-              "explanation": "paradox"
+              "explanation": "paradox",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -458,10 +457,11 @@
                 "comprised",
                 "depicted"
               ],
-              "correctAnswer": "A",
-              "explanation": "bulk"
+              "explanation": "bulk",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -475,7 +475,6 @@
           "id": "sec5",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -484,8 +483,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Ngay đầu đoạn 1 có ghi: \"His load was comprised of many types of ore.\" (Hàng hóa của ông ta bao gồm nhiều loại quặng).",
+              "correctAnswer": "T"
             },
             {
               "id": "32",
@@ -494,8 +493,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, The paradox of the shortcut was that the shortest route could be the longest and vice versa."
+              "explanation": "Câu này SAI. Ở đoạn cuối, tác giả kết luận: \"The shortest route can be the longest, and vice versa, a long route may be the fastest.\" (Tuyến đường ngắn nhất có thể là dài nhất, và ngược lại, tuyến đường dài có thể lại là nhanh nhất). Do đó, \"ngược lại\" (vice versa) vẫn đúng chứ không phải là sai.",
+              "correctAnswer": "F"
             },
             {
               "id": "33",
@@ -504,8 +503,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, The thermometer read over 100 degrees Fahrenheit."
+              "explanation": "Câu này SAI. Trong đoạn 4 có viết: \"The thermometer read over 100 degrees Fahrenheit.\" (Nhiệt kế chỉ hơn 100 độ F), chứ không phải \"under\" (dưới 100 độ).",
+              "correctAnswer": "F"
             },
             {
               "id": "34",
@@ -514,8 +513,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, When the trailer tilted, most of the ore fell into the river."
+              "explanation": "Câu này SAI. Theo đoạn 3: \"The bridge started to break as the truck crossed, and the trailer tilted to the right... most of the ore fell into the river below.\" (Cây cầu bắt đầu gãy khi xe tải đi qua, và rơ-moóc nghiêng về bên phải... phần lớn quặng rơi xuống sông). Thứ rơi xuống sông là quặng (ore) chứ không phải ống nhòm (binoculars).",
+              "correctAnswer": "F"
             },
             {
               "id": "35",
@@ -524,16 +523,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F, The driver had not fulfilled his duty."
+              "explanation": "Câu này SAI. Ở đoạn 6, khi ông tới nơi và tàu đã rời đi, tác giả viết: \"He had not fulfilled his duty.\" (Ông ta đã không hoàn thành nhiệm vụ của mình).",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -544,8 +543,8 @@
                 "It was analogous to a fish swimming in the sea.",
                 "It was analogous to a horse running in the field."
               ],
-              "correctAnswer": "A",
-              "explanation": "It was analogous to an elephant trying to stand on a tree branch."
+              "explanation": "Trong đoạn 3, tác giả so sánh sức nặng của chiếc xe tải với cây cầu: \"It was analogous to an elephant trying to stand on a tree branch.\" (Nó tương tự như một con voi đang cố gắng đứng trên một cành cây). Do đó đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -556,8 +555,8 @@
                 "The fear of getting lost.",
                 "The beauty of the scenery."
               ],
-              "correctAnswer": "A",
-              "explanation": "The thought of extra money outweighed this concern."
+              "explanation": "Ở cuối đoạn 1 có viết: \"He worried about getting in trouble for not paying the tariff, but the thought of extra money outweighed this concern.\" (Ông ta lo lắng về việc gặp rắc rối vì không trả thuế, nhưng suy nghĩ về số tiền dư ra đã lấn át nỗi lo này). Đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -568,8 +567,8 @@
                 "It was scenic and fast.",
                 "It had better roads and less wind."
               ],
-              "correctAnswer": "A",
-              "explanation": "It not only avoided the border station but also was a shorter route to the coast."
+              "explanation": "Trong đoạn 2 có đề cập: \"It not only avoided the border station but also was a shorter route to the coast.\" (Nó không chỉ tránh được trạm biên giới mà còn là một con đường ngắn hơn đến bờ biển). Đây chính là lợi thế kép (dual advantage) của con đường. Đáp án A đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -580,8 +579,8 @@
                 "He wanted to take pictures.",
                 "He needed to eat lunch."
               ],
-              "correctAnswer": "A",
-              "explanation": "The truck's engine became too hot."
+              "explanation": "Đoạn 4 giải thích lý do: \"The truck’s engine became too hot, so the driver parked it in the shade of a grove of trees until it cooled down.\" (Động cơ xe tải trở nên quá nóng, vì vậy người tài xế đã đỗ xe dưới bóng râm của một lùm cây cho đến khi nó nguội bớt). Đáp án A chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -592,10 +591,11 @@
                 "It was too dark.",
                 "The ship sank."
               ],
-              "correctAnswer": "A",
-              "explanation": "The driver couldn't locate the ship's whereabouts at the pier because it had left thirty minutes ago."
+              "explanation": "Trong đoạn 6 có viết: \"When he asked about the ship’s whereabouts, a man said that it had left thirty minutes ago.\" (Khi ông hỏi về tung tích của con tàu, một người đàn ông nói rằng nó đã rời đi cách đây ba mươi phút). Vì vậy đáp án A đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

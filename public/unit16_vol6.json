@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "c. victim",
                 "d. muscle"
               ],
-              "correctAnswer": "c. victim",
-              "explanation": "culprit means someone who did a crime, opposite is victim."
+              "explanation": "culprit means someone who did a crime, opposite is victim.",
+              "correctAnswer": "c. victim"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "c. combine",
                 "d. improve"
               ],
-              "correctAnswer": "c. combine",
-              "explanation": "segregate means to place apart, opposite is combine."
+              "explanation": "segregate means to place apart, opposite is combine.",
+              "correctAnswer": "c. combine"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "c. jewels",
                 "d. substance"
               ],
-              "correctAnswer": "a. calm",
-              "explanation": "uproar means loud noise caused by anger, opposite is calm."
+              "explanation": "uproar means loud noise caused by anger, opposite is calm.",
+              "correctAnswer": "a. calm"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "c. healthy",
                 "d. graceful"
               ],
-              "correctAnswer": "d. graceful",
-              "explanation": "clumsy means awkward in handling things, opposite is graceful."
+              "explanation": "clumsy means awkward in handling things, opposite is graceful.",
+              "correctAnswer": "d. graceful"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "c. near",
                 "d. great"
               ],
-              "correctAnswer": "b. late",
-              "explanation": "premature means done too early, opposite is late."
+              "explanation": "premature means done too early, opposite is late.",
+              "correctAnswer": "b. late"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "billionaire",
                 "flammable"
               ],
-              "correctAnswer": "A",
-              "explanation": "uproar fits the context."
+              "explanation": "uproar fits the context.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "premature",
                 "amid"
               ],
-              "correctAnswer": "A",
-              "explanation": "backstage fits the context."
+              "explanation": "backstage fits the context.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "culprits",
                 "clumsy"
               ],
-              "correctAnswer": "A",
-              "explanation": "amid fits the context."
+              "explanation": "amid fits the context.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "uproar",
                 "segregated"
               ],
-              "correctAnswer": "A",
-              "explanation": "flammable fits the context."
+              "explanation": "flammable fits the context.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "premature",
                 "amid"
               ],
-              "correctAnswer": "A",
-              "explanation": "underestimate fits the context."
+              "explanation": "underestimate fits the context.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "clumsy",
                 "culprits"
               ],
-              "correctAnswer": "A",
-              "explanation": "billionaire fits the context."
+              "explanation": "billionaire fits the context.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "backstage",
                 "amid"
               ],
-              "correctAnswer": "A",
-              "explanation": "premature fits the context."
+              "explanation": "premature fits the context.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "billionaire",
                 "flammable"
               ],
-              "correctAnswer": "A",
-              "explanation": "clumsy fits the context."
+              "explanation": "clumsy fits the context.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "premature",
                 "backstage"
               ],
-              "correctAnswer": "A",
-              "explanation": "segregated fits the context."
+              "explanation": "segregated fits the context.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "clumsy",
                 "underestimate"
               ],
-              "correctAnswer": "A",
-              "explanation": "culprits fits the context."
+              "explanation": "culprits fits the context.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "c. gun",
                 "d. choice"
               ],
-              "correctAnswer": "b. crowd",
-              "explanation": "mob means a crowd."
+              "explanation": "mob means a crowd.",
+              "correctAnswer": "b. crowd"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "c. tent",
                 "d. noise"
               ],
-              "correctAnswer": "d. noise",
-              "explanation": "tumult means noise."
+              "explanation": "tumult means noise.",
+              "correctAnswer": "d. noise"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "c. smell",
                 "d. temper"
               ],
-              "correctAnswer": "a. monster",
-              "explanation": "brute means monster."
+              "explanation": "brute means monster.",
+              "correctAnswer": "a. monster"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "c. give",
                 "d. hate"
               ],
-              "correctAnswer": "d. hate",
-              "explanation": "resent means hate."
+              "explanation": "resent means hate.",
+              "correctAnswer": "d. hate"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "c. study",
                 "d. dream"
               ],
-              "correctAnswer": "c. study",
-              "explanation": "scrutiny means study or examination."
+              "explanation": "scrutiny means study or examination.",
+              "correctAnswer": "c. study"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "c. greet",
                 "d. declare"
               ],
-              "correctAnswer": "d. declare",
-              "explanation": "testify means declare."
+              "explanation": "testify means declare.",
+              "correctAnswer": "d. declare"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "c. float",
                 "d. bake"
               ],
-              "correctAnswer": "b. crash",
-              "explanation": "collide means crash."
+              "explanation": "collide means crash.",
+              "correctAnswer": "b. crash"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "c. sleep",
                 "d. teach"
               ],
-              "correctAnswer": "a. force",
-              "explanation": "subject means force."
+              "explanation": "subject means force.",
+              "correctAnswer": "a. force"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "c. check",
                 "d. share"
               ],
-              "correctAnswer": "a. leave",
-              "explanation": "evacuate means leave."
+              "explanation": "evacuate means leave.",
+              "correctAnswer": "a. leave"
             },
             {
               "id": "25",
@@ -330,16 +329,16 @@
                 "c. coffin",
                 "d. comedy"
               ],
-              "correctAnswer": "d. comedy",
-              "explanation": "satire means comedy."
+              "explanation": "satire means comedy.",
+              "correctAnswer": "d. comedy"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -348,8 +347,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "evacuate means leave a place of danger."
+              "explanation": "evacuate means leave a place of danger.",
+              "correctAnswer": "C"
             },
             {
               "id": "27",
@@ -358,8 +357,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "subject means force to experience."
+              "explanation": "subject means force to experience.",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -368,8 +367,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "satire is a comedy/funny work."
+              "explanation": "satire is a comedy/funny work.",
+              "correctAnswer": "C"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "collide means to crash, phones ring."
+              "explanation": "collide means to crash, phones ring.",
+              "correctAnswer": "I"
             },
             {
               "id": "30",
@@ -388,8 +387,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "tumult is loud noise, making whispering hard to hear."
+              "explanation": "tumult is loud noise, making whispering hard to hear.",
+              "correctAnswer": "I"
             },
             {
               "id": "31",
@@ -398,8 +397,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "brute means violent person, not kind."
+              "explanation": "brute means violent person, not kind.",
+              "correctAnswer": "I"
             },
             {
               "id": "32",
@@ -408,8 +407,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "mob is an angry crowd."
+              "explanation": "mob is an angry crowd.",
+              "correctAnswer": "C"
             },
             {
               "id": "33",
@@ -418,8 +417,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "testify means give evidence as witness."
+              "explanation": "testify means give evidence as witness.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -428,8 +427,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "resented means hated, doesn't fit solving."
+              "explanation": "resented means hated, doesn't fit solving.",
+              "correctAnswer": "I"
             },
             {
               "id": "35",
@@ -438,10 +437,11 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "billionaire has lots of money."
+              "explanation": "billionaire has lots of money.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -455,7 +455,6 @@
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -464,8 +463,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "The story never said what the satire was about."
+              "explanation": "Dịch: Buổi biểu diễn là một vở châm biếm về Chủ nghĩa Cộng sản.\nGiải thích: F. Đoạn 1 chỉ đề cập: \"Hundreds of people had come to see a popular satire\" (Hàng trăm người đã đến xem một vở kịch châm biếm nổi tiếng). Bài đọc hoàn toàn không nhắc đến việc nó châm biếm cái gì.",
+              "correctAnswer": "F"
             },
             {
               "id": "37",
@@ -474,8 +473,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "The billionaire and the theater's janitor, Bill, were the only two backstage."
+              "explanation": "Dịch: Vị tỷ phú và nữ diễn viên chính của vở kịch là hai người duy nhất ở trong hậu trường.\nGiải thích: F. Theo đoạn 2: \"only two people were in the area at the time. One was the husband of the play’s star actress, the billionaire Henry Rich. The other was the theater’s janitor, Bill...\" (chỉ có hai người ở khu vực đó vào lúc đó. Một người là chồng của nữ diễn viên chính, tỷ phú Henry Rich. Người kia là người gác cổng của nhà hát, Bill...). Như vậy hai người ở đó là tỷ phú và Bill, chứ không phải nữ diễn viên chính.",
+              "correctAnswer": "F"
             },
             {
               "id": "38",
@@ -484,8 +483,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "Because Bill looked like a brute, the crowd underestimated his character."
+              "explanation": "Dịch: Bởi vì Henry trông giống một kẻ vũ phu, đám đông đã đánh giá thấp nhân cách của ông ấy.\nGiải thích: F. Trong đoạn 2 và 4, người bị đánh giá thấp nhân cách và trông giống kẻ vũ phu là người gác cổng Bill, không phải tỷ phú Henry Rich. \"The other was the theater’s janitor, Bill, a large and strong man who looked like a brute.\" (Người kia là Bill, người quét dọn của nhà hát, một người đàn ông to lớn, mạnh mẽ trông giống như một tên vũ phu.)",
+              "correctAnswer": "F"
             },
             {
               "id": "39",
@@ -494,8 +493,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "The billionaire's wife fell down amid the tumult."
+              "explanation": "Dịch: Vị tỷ phú đã vấp ngã giữa sự hỗn loạn khi mọi người chạy trốn khỏi đám cháy.\nGiải thích: F. Đoạn 4 cho biết lời của người vợ: \"I fell down amid the tumult while everyone fled the fire.\" (Tôi đã bị ngã giữa sự hỗn loạn trong khi mọi người chạy trốn đám cháy). Người bị ngã là vợ của tỷ phú (nữ diễn viên), chứ không phải bản thân vị tỷ phú.",
+              "correctAnswer": "F"
             },
             {
               "id": "40",
@@ -504,16 +503,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "True according to the story."
+              "explanation": "Dịch: Đám đông đã gây ra một sự náo động lớn khi họ biết ai là người đã gây ra đám cháy.\nGiải thích: T. Đoạn 5 và 6 có chi tiết: \"The crowd then turned their eyes to the billionaire. “He did it!” they shouted... “Wait,” the billionaire said over the uproar.\" (Đám đông sau đó hướng ánh mắt về phía tỷ phú. \"Ông ta đã làm điều đó!\" họ hét lên... \"Đợi đã,\" tỷ phú nói lớn át đi tiếng ồn ào). Việc này hoàn toàn khớp với việc họ gây náo động.",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -524,8 +523,8 @@
                 "Because of an earthquake.",
                 "Because they were bored."
               ],
-              "correctAnswer": "A",
-              "explanation": "The audience and actors evacuated the building because there was a fire."
+              "explanation": "Dịch câu hỏi: Tại sao các diễn viên và khán giả phải sơ tán khỏi nhà hát?\nGiải thích: Chọn A.\nĐoạn 1 nêu rõ: \"during the performance a fire started in the theater. The audience and actors evacuated the building.\" (trong khi biểu diễn, một đám cháy đã bùng phát trong nhà hát. Khán giả và diễn viên đã sơ tán khỏi tòa nhà). Vậy nguyên nhân là do có hỏa hoạn (because there was a fire).",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -536,8 +535,8 @@
                 "The actress",
                 "The director"
               ],
-              "correctAnswer": "A",
-              "explanation": "Most of the crowd thought that Bill was to blame."
+              "explanation": "Dịch câu hỏi: Khi đám đông tách hai người đàn ông ra, ban đầu họ nghĩ ai là thủ phạm?\nGiải thích: Chọn A.\nĐoạn 3 có ghi: \"The crowd segregated the two men and demanded to know who the culprit was. Most of the crowd thought that Bill was to blame.\" (Đám đông tách hai người đàn ông ra và đòi biết ai là thủ phạm. Hầu hết đám đông đều nghĩ rằng Bill là người có lỗi). Do đó, đáp án là Bill.",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -548,8 +547,8 @@
                 "The police",
                 "Henry Rich"
               ],
-              "correctAnswer": "A",
-              "explanation": "The billionaire's wife testified in his defense."
+              "explanation": "Dịch câu hỏi: Ai đã làm chứng để bảo vệ Bill vì đám đông không hề xem xét kỹ lưỡng sự việc?\nGiải thích: Chọn A.\nĐầu đoạn 4: \"Luckily, the billionaire’s wife testified in his defense.\" (May mắn thay, vợ của vị tỷ phú đã làm chứng để bảo vệ anh ấy). Vậy người làm chứng chính là vợ của vị tỷ phú.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -560,8 +559,8 @@
                 "The paint",
                 "The wood"
               ],
-              "correctAnswer": "A",
-              "explanation": "The floor was flammable."
+              "explanation": "Dịch câu hỏi: Vật dễ cháy nào đã bắt lửa khi ông Rich va phải chiếc đèn?\nGiải thích: Chọn A.\nTrong đoạn 6, vị tỷ phú kể: \"I collided with a lamp, and it fell to the floor. The floor was flammable.\" (Tôi đã va phải một chiếc đèn, và nó rơi xuống sàn. Sàn nhà là vật dễ cháy). Nên đáp án đúng là sàn nhà (the floor).",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -572,10 +571,11 @@
                 "Bill was a billionaire.",
                 "There was no fire."
               ],
-              "correctAnswer": "A",
-              "explanation": "The mob was surprised to learn that the man they blamed was innocent and the billionaire was guilty."
+              "explanation": "Dịch câu hỏi: Bởi vì quyết định của họ là vội vàng, cuối cùng đám đông đã ngạc nhiên khi biết được điều gì?\nGiải thích: Chọn A.\nĐoạn cuối (đoạn 7) có viết: \"The mob was surprised. The man they blamed was innocent, and the billionaire was guilty.\" (Đám đông đã rất ngạc nhiên. Người mà họ đổ lỗi thì vô tội, còn vị tỷ phú mới là người có tội). Đáp án A miêu tả chính xác điều này!",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

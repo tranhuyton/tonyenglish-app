@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "stars",
                 "earth"
               ],
-              "correctAnswer": "B",
-              "explanation": "lunar (adj): related to the moon."
+              "explanation": "lunar (adj): related to the moon.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "broken",
                 "squeeze"
               ],
-              "correctAnswer": "A",
-              "explanation": "reflex (n): an unconscious action in which a body part responds to an event."
+              "explanation": "reflex (n): an unconscious action in which a body part responds to an event.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "describe",
                 "relate"
               ],
-              "correctAnswer": "D",
-              "explanation": "pertain (v): to be related or connected to something."
+              "explanation": "pertain (v): to be related or connected to something.",
+              "correctAnswer": "D"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "spoon",
                 "glove"
               ],
-              "correctAnswer": "C",
-              "explanation": "utensil (n): a common tool or container."
+              "explanation": "utensil (n): a common tool or container.",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "outdoors",
                 "innovative"
               ],
-              "correctAnswer": "A",
-              "explanation": "outmoded (adj): no longer in fashion or use."
+              "explanation": "outmoded (adj): no longer in fashion or use.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "novelty",
                 "constellation"
               ],
-              "correctAnswer": "A",
-              "explanation": "seizure (n): sudden illness in which the body loses control and shakes."
+              "explanation": "seizure (n): sudden illness in which the body loses control and shakes.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "outmoded",
                 "personalized"
               ],
-              "correctAnswer": "A",
-              "explanation": "definitive (adj): the most official."
+              "explanation": "definitive (adj): the most official.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "session",
                 "advent"
               ],
-              "correctAnswer": "A",
-              "explanation": "novelty (n): something that is new, original, or strange."
+              "explanation": "novelty (n): something that is new, original, or strange.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "psychiatric",
                 "definitive"
               ],
-              "correctAnswer": "A",
-              "explanation": "lunar (adj): related to the moon."
+              "explanation": "lunar (adj): related to the moon.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "reflex",
                 "airway"
               ],
-              "correctAnswer": "A",
-              "explanation": "constellation (n): a group of stars with a recognizable shape."
+              "explanation": "constellation (n): a group of stars with a recognizable shape.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "session",
                 "reflex"
               ],
-              "correctAnswer": "A",
-              "explanation": "utensil (n): a common tool or container."
+              "explanation": "utensil (n): a common tool or container.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "advent",
                 "novelty"
               ],
-              "correctAnswer": "A",
-              "explanation": "psychiatry (n): the study and treatment of mental illness."
+              "explanation": "psychiatry (n): the study and treatment of mental illness.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "definitive",
                 "lunar"
               ],
-              "correctAnswer": "A",
-              "explanation": "personalized (v): to design something to meet a person’s unique needs."
+              "explanation": "personalized (v): to design something to meet a person’s unique needs.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "airways",
                 "sessions"
               ],
-              "correctAnswer": "A",
-              "explanation": "reflex (n): an unconscious action in which a body part responds to an event."
+              "explanation": "reflex (n): an unconscious action in which a body part responds to an event.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "equate",
                 "inhale"
               ],
-              "correctAnswer": "A",
-              "explanation": "pertain (v): to be related or connected to something."
+              "explanation": "pertain (v): to be related or connected to something.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "sell",
                 "borrow"
               ],
-              "correctAnswer": "A",
-              "explanation": "inhale (v): to take air or a smell into the lungs."
+              "explanation": "inhale (v): to take air or a smell into the lungs.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "mental",
                 "similar"
               ],
-              "correctAnswer": "C",
-              "explanation": "psychiatric (adj): related to mental illness or its treatment."
+              "explanation": "psychiatric (adj): related to mental illness or its treatment.",
+              "correctAnswer": "C"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "candle",
                 "pipe"
               ],
-              "correctAnswer": "A",
-              "explanation": "advent (n): the arrival or beginning of an important person, thing, or event."
+              "explanation": "advent (n): the arrival or beginning of an important person, thing, or event.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "sleep",
                 "relate"
               ],
-              "correctAnswer": "D",
-              "explanation": "equate (v): to compare things and consider them very similar."
+              "explanation": "equate (v): to compare things and consider them very similar.",
+              "correctAnswer": "D"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "rubbish",
                 "meeting"
               ],
-              "correctAnswer": "D",
-              "explanation": "session (n): a meeting at a regular time."
+              "explanation": "session (n): a meeting at a regular time.",
+              "correctAnswer": "D"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "request",
                 "divide"
               ],
-              "correctAnswer": "C",
-              "explanation": "invoke (v): to mention something to ask for help."
+              "explanation": "invoke (v): to mention something to ask for help.",
+              "correctAnswer": "C"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "god",
                 "tower"
               ],
-              "correctAnswer": "C",
-              "explanation": "Almighty (n): a name for a god in a religion."
+              "explanation": "Almighty (n): a name for a god in a religion.",
+              "correctAnswer": "C"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "wooden",
                 "strict"
               ],
-              "correctAnswer": "A",
-              "explanation": "primal (adj): very basic or related to the origin of something."
+              "explanation": "primal (adj): very basic or related to the origin of something.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "road",
                 "plane"
               ],
-              "correctAnswer": "B",
-              "explanation": "airway (n): the passage by which air reaches a person’s lungs."
+              "explanation": "airway (n): the passage by which air reaches a person’s lungs.",
+              "correctAnswer": "B"
             },
             {
               "id": "25",
@@ -330,16 +329,16 @@
                 "dumb",
                 "old"
               ],
-              "correctAnswer": "D",
-              "explanation": "outmoded (adj): no longer in fashion or use."
+              "explanation": "outmoded (adj): no longer in fashion or use.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
@@ -350,8 +349,8 @@
                 "equated",
                 "pertained"
               ],
-              "correctAnswer": "A",
-              "explanation": "personalize (v): to design it to meet a person’s unique needs."
+              "explanation": "personalize (v): to design it to meet a person’s unique needs.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -362,8 +361,8 @@
                 "reflex",
                 "advent"
               ],
-              "correctAnswer": "A",
-              "explanation": "session (n): a meeting at a regular time."
+              "explanation": "session (n): a meeting at a regular time.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -374,8 +373,8 @@
                 "Almighty",
                 "utensil"
               ],
-              "correctAnswer": "A",
-              "explanation": "constellation (n): a group of stars with a recognizable shape."
+              "explanation": "constellation (n): a group of stars with a recognizable shape.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -386,8 +385,8 @@
                 "airway",
                 "novelty"
               ],
-              "correctAnswer": "A",
-              "explanation": "Almighty (n): a name for a god in a religion."
+              "explanation": "Almighty (n): a name for a god in a religion.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -398,24 +397,24 @@
                 "personalized",
                 "invoked"
               ],
-              "correctAnswer": "A",
-              "explanation": "equate (v): to compare things and consider them very similar."
+              "explanation": "equate (v): to compare things and consider them very similar.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Seizures Then and Now</h1><p style=\"margin-bottom: 2rem;\">If a person who lived 200 years ago was treated for a <b>seizure</b> today, they would be surprised by the treatment’s <b>novelty</b>. That’s because doctors in the 1800s were influenced more by <b>primal</b> medical beliefs than science.</p><p style=\"margin-bottom: 2rem;\">Rather than thinking the brain caused <b>seizures</b>, people in the 1800s still thought they were the result of strange forces. They <b>equated</b> <b>seizures</b> with the work of evil spirits. Others felt that the <b>seizures</b> had a cosmic or <b>lunar</b> cause. They believed that the cycles of the moon and <b>constellations</b> could make someone have a <b>seizure</b>.</p><p style=\"margin-bottom: 2rem;\">During a <b>session</b> to treat a patient who had <b>seizures</b>, doctors would force the patient to <b>invoke</b> the grace of the <b>Almighty</b>. They thought if the patient did this, then the patient would rid themselves of the evil spirits causing the <b>seizures</b>.</p><p style=\"margin-bottom: 2rem;\">The <b>advent</b> of modern <b>psychiatry</b> occurred during the 1800s. At that time people who suffered from <b>seizures</b> were placed in <b>psychiatric</b> hospitals. They were treated like they were insane. However, none of the <b>outmoded</b> treatments worked.</p><p style=\"margin-bottom: 2rem;\">It wasn’t until the late 1850s that the causes of <b>seizures</b> were understood. We know today that these causes <b>pertain</b> to the brain. Misfired signals from the brain cause a jerking <b>reflex</b> in the body. These usually occur when someone is very tired.</p><p style=\"margin-bottom: 2rem;\">Once the causes of <b>seizures</b> were known, <b>definitive</b> treatments were developed. Today, treatments range from taking pills to having surgery. Treatment is <b>personalized</b> according to the type of <b>seizure</b> the patient has.</p><p style=\"margin-bottom: 2rem;\">Even today, some people are unsure about <b>seizures</b>. Their most common mistake is thinking that a person having a <b>seizure</b> will swallow their tongue. They often shove some <b>utensil</b> in the person’s mouth. However, this doesn’t help. The <b>utensil</b> often blocks the <b>airway</b> and prevents the person from <b>inhaling</b>. Yet most of the public no longer fear people who have <b>seizures</b>. Instead, they can now help and comfort a person if they have a <b>seizure</b>.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Seizures Then and Now</h1>        <p style=\"margin-bottom: 1rem;\">If a person who lived 200 years ago was treated for a <b>seizure</b> today, they would be surprised by the treatment’s <b>novelty</b>. That’s because doctors in the 1800s were influenced more by <b>primal</b> medical beliefs than science.</p>    <p style=\"margin-bottom: 1rem;\">Rather than thinking the brain caused <b>seizures</b>, people in the 1800s still thought they were the result of strange forces. They <b>equated</b> <b>seizures</b> with the work of evil spirits. Others felt that the <b>seizures</b> had a cosmic or <b>lunar</b> cause. They believed that the cycles of the moon and <b>constellations</b> could make someone have a <b>seizure</b>.</p>    <p style=\"margin-bottom: 1rem;\">During a <b>session</b> to treat a patient who had <b>seizures</b>, doctors would force the patient to <b>invoke</b> the grace of the <b>Almighty</b>. They thought if the patient did this, then the patient would rid themselves of the evil spirits causing the <b>seizures</b>.</p>    <p style=\"margin-bottom: 1rem;\">The <b>advent</b> of modern <b>psychiatry</b> occurred during the 1800s. At that time people who suffered from <b>seizures</b> were placed in <b>psychiatric</b> hospitals. They were treated like they were insane. However, none of the <b>outmoded</b> treatments worked.</p>    <p style=\"margin-bottom: 1rem;\">It wasn’t until the late 1850s that the causes of <b>seizures</b> were understood. We know today that these causes <b>pertain</b> to the brain. Misfired signals from the brain cause a jerking <b>reflex</b> in the body. These usually occur when someone is very tired.</p>    <p style=\"margin-bottom: 1rem;\">Once the causes of <b>seizures</b> were known, <b>definitive</b> treatments were developed. Today, treatments range from taking pills to having surgery. Treatment is <b>personalized</b> according to the type of <b>seizure</b> the patient has.</p>    <p style=\"margin-bottom: 1rem;\">Even today, some people are unsure about <b>seizures</b>. Their most common mistake is thinking that a person having a <b>seizure</b> will swallow their tongue. They often shove some <b>utensil</b> in the person’s mouth. However, this doesn’t help. The <b>utensil</b> often blocks the <b>airway</b> and prevents the person from <b>inhaling</b>. Yet most of the public no longer fear people who have <b>seizures</b>. Instead, they can now help and comfort a person if they have a <b>seizure</b>.</p></div>",
       "imageUrl": "/unit19_vol6_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -424,8 +423,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Các bác sĩ điều trị cho bệnh nhân bị co giật vào những năm 1800 đã bị ảnh hưởng bởi những niềm tin y học nguyên thủy.\nGiải thích: T. Đoạn 1 có viết: \"doctors in the 1800s were influenced more by primal medical beliefs than science.\" (các bác sĩ vào những năm 1800 bị ảnh hưởng bởi những niềm tin y khoa nguyên thủy nhiều hơn là khoa học). Câu này hoàn toàn đúng.",
+              "correctAnswer": "T"
             },
             {
               "id": "32",
@@ -434,8 +433,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Doctors did not use outmoded treatments after definitive treatments were developed."
+              "explanation": "Dịch: Các bác sĩ vẫn sử dụng những phương pháp điều trị lỗi thời ngay cả sau khi các phương pháp điều trị chính thức được phát triển.\nGiải thích: F. Đoạn 6 cho biết: \"Once the causes of seizures were known, definitive treatments were developed.\" (Một khi nguyên nhân của cơn co giật được biết đến, các phương pháp điều trị dứt điểm đã được phát triển). Không có thông tin nào nói rằng họ vẫn tiếp tục dùng các cách cũ lỗi thời (outmoded) sau đó cả.",
+              "correctAnswer": "F"
             },
             {
               "id": "33",
@@ -444,8 +443,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The cause of seizures used to be equated to the work of evil spirits."
+              "explanation": "Dịch: Nguyên nhân của các cơn co giật từng bị đánh đồng với sự tác động của Đấng Toàn Năng.\nGiải thích: F. Theo đoạn 2, nguyên nhân của các cơn co giật được đánh đồng với tà ma chứ không phải Đấng Toàn Năng: \"They equated seizures with the work of evil spirits.\" (Họ đánh đồng những cơn co giật là do tà ma gây ra).",
+              "correctAnswer": "F"
             },
             {
               "id": "34",
@@ -454,8 +453,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Ngày nay, việc chăm sóc cho những người bị co giật đã tốt hơn vì các liệu trình điều trị được cá nhân hóa nhiều hơn.\nGiải thích: T. Đoạn 6 có nói: \"Treatment is personalized according to the type of seizure the patient has.\" (Việc điều trị được cá nhân hóa tùy theo loại co giật mà bệnh nhân mắc phải). Điều này làm cho việc chăm sóc tốt hơn.",
+              "correctAnswer": "T"
             },
             {
               "id": "35",
@@ -464,16 +463,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Nguyên nhân của các cơn co giật liên quan đến các tín hiệu sai lệch trong não gây ra phản xạ giật trong cơ thể.\nGiải thích: T. Đoạn 5 giải thích rất rõ: \"We know today that these causes pertain to the brain. Misfired signals from the brain cause a jerking reflex in the body.\" (Ngày nay chúng ta biết rằng những nguyên nhân này liên quan đến não bộ. Các tín hiệu bị lỗi từ não gây ra một phản xạ co giật trong cơ thể).",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -484,8 +483,8 @@
                 "Because they used to swallow their tongue.",
                 "Because doctors only prescribed pills."
               ],
-              "correctAnswer": "A",
-              "explanation": "They would be surprised by the treatment's novelty because doctors in the 1800s were influenced more by primal medical beliefs than science."
+              "explanation": "Dịch câu hỏi: Tại sao một người đến từ quá khứ lại ngạc nhiên trước sự mới mẻ của các phương pháp điều trị co giật ngày nay?\nGiải thích: Chọn A.\nĐoạn 1 nêu lý do: \"If a person who lived 200 years ago was treated for a seizure today, they would be surprised by the treatment’s novelty. That’s because doctors in the 1800s were influenced more by primal medical beliefs than science.\" (Bởi vì các bác sĩ vào những năm 1800 bị ảnh hưởng bởi những niềm tin y học nguyên thủy nhiều hơn là khoa học).",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -496,8 +495,8 @@
                 "It causes them to swallow their tongue.",
                 "It makes the seizures worse."
               ],
-              "correctAnswer": "A",
-              "explanation": "The utensil often blocks the airway and prevents the person from inhaling."
+              "explanation": "Dịch câu hỏi: Làm thế nào mà một dụng cụ đặt trong đường thở của ai đó lại ngăn cản họ hít thở?\nGiải thích: Chọn A.\nĐoạn 7 có viết: \"The utensil often blocks the airway and prevents the person from inhaling.\" (Dụng cụ đó thường làm tắc nghẽn đường thở và ngăn người bệnh hít vào). Vì vậy nó chặn (blocks) đường thở.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -508,8 +507,8 @@
                 "They were given personalized treatments.",
                 "They were told to look at constellations."
               ],
-              "correctAnswer": "A",
-              "explanation": "They were treated like they were insane."
+              "explanation": "Dịch câu hỏi: Trong thời kỳ khởi đầu của ngành tâm thần học hiện đại, những người ở bệnh viện tâm thần được đối xử như thế nào?\nGiải thích: Chọn A.\nĐoạn 4 nói về sự khởi đầu của tâm thần học hiện đại: \"The advent of modern psychiatry occurred during the 1800s... They were treated like they were insane.\" (Sự ra đời của ngành tâm thần học hiện đại diễn ra vào những năm 1800... Họ bị đối xử như thể họ bị điên).",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -520,8 +519,8 @@
                 "They believed they could block an airway.",
                 "They believed they could invoke the Almighty."
               ],
-              "correctAnswer": "A",
-              "explanation": "They believed that constellations and lunar cycles could make someone have a seizure."
+              "explanation": "Dịch câu hỏi: Một số người tin rằng các chòm sao và chu kỳ mặt trăng có thể gây ra điều gì?\nGiải thích: Chọn A.\nĐoạn 2 có chi tiết: \"Others felt that the seizures had a cosmic or lunar cause. They believed that the cycles of the moon and constellations could make someone have a seizure.\" (Những người khác cảm thấy rằng các cơn co giật có nguyên nhân từ vũ trụ hoặc mặt trăng. Họ tin rằng các chu kỳ của mặt trăng và các chòm sao có thể khiến ai đó lên cơn co giật).",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -532,10 +531,11 @@
                 "They would force the patient to look at a lunar eclipse.",
                 "They would force the patient to equate seizures to a reflex."
               ],
-              "correctAnswer": "A",
-              "explanation": "Doctors would force the patient to invoke the grace of the Almighty."
+              "explanation": "Dịch câu hỏi: Các bác sĩ đã bắt bệnh nhân bị co giật cầu xin ai để chữa trị các cơn co giật của họ?\nGiải thích: Chọn A.\nTrong đoạn 3: \"During a session to treat a patient who had seizures, doctors would force the patient to invoke the grace of the Almighty.\" (Trong một buổi điều trị cho một bệnh nhân bị co giật, các bác sĩ sẽ buộc bệnh nhân phải cầu xin ân sủng của Đấng Toàn Năng). Vậy họ bị ép cầu xin sự giúp đỡ của Đấng Toàn Năng (the Almighty).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

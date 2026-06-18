@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "temple",
                 "caven"
               ],
-              "correctAnswer": "B",
-              "explanation": "hectare (n): a unit of measure equal to 10,000 square meters."
+              "explanation": "hectare (n): a unit of measure equal to 10,000 square meters.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "video",
                 "patio"
               ],
-              "correctAnswer": "D",
-              "explanation": "terrace (n): an open area that is connected to a house or an apartment."
+              "explanation": "terrace (n): an open area that is connected to a house or an apartment.",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "decision",
                 "perfume"
               ],
-              "correctAnswer": "A",
-              "explanation": "casualty (n): a person killed or injured in a war or an accident."
+              "explanation": "casualty (n): a person killed or injured in a war or an accident.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "assist",
                 "digest"
               ],
-              "correctAnswer": "B",
-              "explanation": "allege (v): to say that it is true without offering proof."
+              "explanation": "allege (v): to say that it is true without offering proof.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "repair",
                 "compute"
               ],
-              "correctAnswer": "C",
-              "explanation": "renovate (v): to repair a building or build new structures on it."
+              "explanation": "renovate (v): to repair a building or build new structures on it.",
+              "correctAnswer": "C"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "exceed",
                 "borrow"
               ],
-              "correctAnswer": "C",
-              "explanation": "outnumber (v): to have a greater number than a group."
+              "explanation": "outnumber (v): to have a greater number than a group.",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "adjacent",
                 "absolute"
               ],
-              "correctAnswer": "C",
-              "explanation": "adjoining (adj): next to or joined with a building, or room."
+              "explanation": "adjoining (adj): next to or joined with a building, or room.",
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "plea",
                 "change"
               ],
-              "correctAnswer": "D",
-              "explanation": "revise (v): to change or update something to make it better."
+              "explanation": "revise (v): to change or update something to make it better.",
+              "correctAnswer": "D"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "gift",
                 "curve"
               ],
-              "correctAnswer": "D",
-              "explanation": "arch (n): a curved opening formed under a structure."
+              "explanation": "arch (n): a curved opening formed under a structure.",
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "animal",
                 "station"
               ],
-              "correctAnswer": "A",
-              "explanation": "petition (n): a written request asking an authority to do something."
+              "explanation": "petition (n): a written request asking an authority to do something.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "future",
                 "stance"
               ],
-              "correctAnswer": "A",
-              "explanation": "pasture is an area of land covered with grass. marsh is its opposite."
+              "explanation": "pasture is an area of land covered with grass. marsh is its opposite.",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "pleasant",
                 "muscular"
               ],
-              "correctAnswer": "C",
-              "explanation": "foul means not pleasant. pleasant is its opposite."
+              "explanation": "foul means not pleasant. pleasant is its opposite.",
+              "correctAnswer": "C"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "spit",
                 "pebble"
               ],
-              "correctAnswer": "D",
-              "explanation": "slab is a large thick flat piece. pebble is its opposite."
+              "explanation": "slab is a large thick flat piece. pebble is its opposite.",
+              "correctAnswer": "D"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "repeat",
                 "obey"
               ],
-              "correctAnswer": "B",
-              "explanation": "assemble means to get together. scatter is its opposite."
+              "explanation": "assemble means to get together. scatter is its opposite.",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -202,8 +201,8 @@
                 "expensive",
                 "miserable"
               ],
-              "correctAnswer": "D",
-              "explanation": "overjoyed means extremely happy. miserable is its opposite."
+              "explanation": "overjoyed means extremely happy. miserable is its opposite.",
+              "correctAnswer": "D"
             },
             {
               "id": "16",
@@ -214,8 +213,8 @@
                 "effort",
                 "sport"
               ],
-              "correctAnswer": "A",
-              "explanation": "turf is grass and dirt. ocean is its opposite."
+              "explanation": "turf is grass and dirt. ocean is its opposite.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -226,8 +225,8 @@
                 "donate",
                 "contain"
               ],
-              "correctAnswer": "B",
-              "explanation": "erect means to build. destroy is its opposite."
+              "explanation": "erect means to build. destroy is its opposite.",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -238,8 +237,8 @@
                 "elect",
                 "reduce"
               ],
-              "correctAnswer": "D",
-              "explanation": "heighten means to increase. reduce is its opposite."
+              "explanation": "heighten means to increase. reduce is its opposite.",
+              "correctAnswer": "D"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "female",
                 "blouse"
               ],
-              "correctAnswer": "B",
-              "explanation": "mansion is a large expensive home. shack is its opposite."
+              "explanation": "mansion is a large expensive home. shack is its opposite.",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -262,16 +261,16 @@
                 "unfriendliness",
                 "silence"
               ],
-              "correctAnswer": "C",
-              "explanation": "hospitality is friendly behavior. unfriendliness is its opposite."
+              "explanation": "hospitality is friendly behavior. unfriendliness is its opposite.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -280,8 +279,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Renovate applies to buildings, not weather."
+              "explanation": "Renovate applies to buildings, not weather.",
+              "correctAnswer": "I"
             },
             {
               "id": "22",
@@ -290,8 +289,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Slab is a piece of stone, not a laboratory."
+              "explanation": "Slab is a piece of stone, not a laboratory.",
+              "correctAnswer": "I"
             },
             {
               "id": "23",
@@ -300,8 +299,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Contradictory sentence."
+              "explanation": "Contradictory sentence.",
+              "correctAnswer": "I"
             },
             {
               "id": "24",
@@ -310,8 +309,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Arches are curved, not straight to form a square."
+              "explanation": "Arches are curved, not straight to form a square.",
+              "correctAnswer": "I"
             },
             {
               "id": "25",
@@ -320,8 +319,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Casualty refers to injured people."
+              "explanation": "Casualty refers to injured people.",
+              "correctAnswer": "C"
             },
             {
               "id": "26",
@@ -330,8 +329,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Erected means built."
+              "explanation": "Erected means built.",
+              "correctAnswer": "C"
             },
             {
               "id": "27",
@@ -340,8 +339,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Contradictory sentence."
+              "explanation": "Contradictory sentence.",
+              "correctAnswer": "I"
             },
             {
               "id": "28",
@@ -350,8 +349,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Hectare measures land area, not volume of water."
+              "explanation": "Hectare measures land area, not volume of water.",
+              "correctAnswer": "I"
             },
             {
               "id": "29",
@@ -360,8 +359,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Adjoining means next to."
+              "explanation": "Adjoining means next to.",
+              "correctAnswer": "C"
             },
             {
               "id": "30",
@@ -370,8 +369,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Hospitality means friendly behavior and entertainment."
+              "explanation": "Hospitality means friendly behavior and entertainment.",
+              "correctAnswer": "C"
             },
             {
               "id": "31",
@@ -380,8 +379,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Mansion is a large expensive home, not a dog house."
+              "explanation": "Mansion is a large expensive home, not a dog house.",
+              "correctAnswer": "I"
             },
             {
               "id": "32",
@@ -390,8 +389,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Allege means to accuse, not to run or exert physically."
+              "explanation": "Allege means to accuse, not to run or exert physically.",
+              "correctAnswer": "I"
             },
             {
               "id": "33",
@@ -400,8 +399,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Overjoyed means extremely happy."
+              "explanation": "Overjoyed means extremely happy.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -410,8 +409,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Pasture is a field for animals, not a storage room."
+              "explanation": "Pasture is a field for animals, not a storage room.",
+              "correctAnswer": "I"
             },
             {
               "id": "35",
@@ -420,24 +419,24 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Petition is a written request."
+              "explanation": "Petition is a written request.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Lord and the Farmers</h1><p style=\"margin-bottom: 2rem;\">A wealthy lord was <b>renovating</b> his <b>mansion</b>. He had added another story to his home with large windows that overlooked the farmers’ <b>pastures</b> on the eastern border of his land. Around the <b>mansion</b>, he then <b>erected</b> a great wall. He built an <b>arch</b> for the gate out of huge <b>slabs</b> of stone. The lord was <b>overjoyed</b> with the addition to his home.</p><p style=\"margin-bottom: 2rem;\">However, one day while he was sitting on the <b>terrace</b>, some farmers knocked at his door. He invited them in. Despite his <b>hospitality</b>, the farmers appeared to be in a <b>foul</b> mood.</p><p style=\"margin-bottom: 2rem;\">“Why are you so upset?” the lord asked.</p><p style=\"margin-bottom: 2rem;\">One farmer replied, “That is actually the reason for our visit.” He then handed the lord a <b>petition</b>. It <b>alleged</b> that the shadow cast by the <b>mansion</b> was harming their <b>pastures</b>. “Your <b>mansion</b> now casts a shadow over several <b>hectares</b> of our land,” the farmer explained. “The <b>turf</b> in the shadow has died, and our cattle now have less grass to eat.”</p><p style=\"margin-bottom: 2rem;\">“It is too late for me to <b>revise</b> my plans,” the lord answered. “You will just have to live with the change.”</p><p style=\"margin-bottom: 2rem;\">His reply only <b>heightened</b> the farmers’ anger. They left, but they <b>assembled</b> that night outside the <b>mansion</b>’s gate. They planned to destroy the <b>mansion</b>. The lord’s servants tried to defend the house, but the farmers <b>outnumbered</b> them.</p><p style=\"margin-bottom: 2rem;\">The servants fled, and the farmers rushed into the <b>mansion</b> and set it on fire. Everyone got out of the house, and there were no <b>casualties</b>. However, the fire soon spread from the house to the <b>adjoining</b> <b>pastures</b> that belonged to the farmers.</p><p style=\"margin-bottom: 2rem;\">Both sides’ properties were destroyed. The lord and the farmers were sorry for their actions. The lord promised to pay for the burned <b>pastures</b>, and the farmers promised to rebuild the <b>mansion</b>. They had learned that when you fight, both sides lose.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lord and the Farmers</h1>        <p style=\"margin-bottom: 1rem;\">A wealthy lord was <b>renovating</b> his <b>mansion</b>. He had added another story to his home with large windows that overlooked the farmers’ <b>pastures</b> on the eastern border of his land. Around the <b>mansion</b>, he then <b>erected</b> a great wall. He built an <b>arch</b> for the gate out of huge <b>slabs</b> of stone. The lord was <b>overjoyed</b> with the addition to his home.</p>    <p style=\"margin-bottom: 1rem;\">However, one day while he was sitting on the <b>terrace</b>, some farmers knocked at his door. He invited them in. Despite his <b>hospitality</b>, the farmers appeared to be in a <b>foul</b> mood.</p>    <p style=\"margin-bottom: 1rem;\">“Why are you so upset?” the lord asked.</p>    <p style=\"margin-bottom: 1rem;\">One farmer replied, “That is actually the reason for our visit.” He then handed the lord a <b>petition</b>. It <b>alleged</b> that the shadow cast by the <b>mansion</b> was harming their <b>pastures</b>. “Your <b>mansion</b> now casts a shadow over several <b>hectares</b> of our land,” the farmer explained. “The <b>turf</b> in the shadow has died, and our cattle now have less grass to eat.”</p>    <p style=\"margin-bottom: 1rem;\">“It is too late for me to <b>revise</b> my plans,” the lord answered. “You will just have to live with the change.”</p>    <p style=\"margin-bottom: 1rem;\">His reply only <b>heightened</b> the farmers’ anger. They left, but they <b>assembled</b> that night outside the <b>mansion</b>’s gate. They planned to destroy the <b>mansion</b>. The lord’s servants tried to defend the house, but the farmers <b>outnumbered</b> them.</p>    <p style=\"margin-bottom: 1rem;\">The servants fled, and the farmers rushed into the <b>mansion</b> and set it on fire. Everyone got out of the house, and there were no <b>casualties</b>. However, the fire soon spread from the house to the <b>adjoining</b> <b>pastures</b> that belonged to the farmers.</p>    <p style=\"margin-bottom: 1rem;\">Both sides’ properties were destroyed. The lord and the farmers were sorry for their actions. The lord promised to pay for the burned <b>pastures</b>, and the farmers promised to rebuild the <b>mansion</b>. They had learned that when you fight, both sides lose.</p></div>",
       "imageUrl": "/unit28_vol6_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -446,8 +445,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Ở cuối đoạn 6 có viết: \"The lord’s servants tried to defend the house, but the farmers outnumbered them.\" (Những người hầu của lãnh chúa cố gắng bảo vệ ngôi nhà, nhưng những người nông dân đã áp đảo họ về số lượng).",
+              "correctAnswer": "T"
             },
             {
               "id": "37",
@@ -456,8 +455,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Despite the lord’s hospitality, the farmers appeared to be in a foul mood."
+              "explanation": "Câu này SAI. Trong đoạn 2 viết: \"Despite his hospitality, the farmers appeared to be in a foul mood.\" (Mặc dù ông đã tiếp đón họ rất nồng hậu, nhưng những người nông dân có vẻ đang trong tâm trạng rất tồi tệ). Từ \"foul mood\" (tâm trạng tồi tệ) trái ngược với \"overjoyed\" (vui mừng khôn xiết).",
+              "correctAnswer": "F"
             },
             {
               "id": "38",
@@ -466,8 +465,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Câu này ĐÚNG. Đoạn 1 có miêu tả: \"He built an arch for the gate out of huge slabs of stone.\" (Ông ta đã xây một vòm cổng từ những phiến đá khổng lồ).",
+              "correctAnswer": "T"
             },
             {
               "id": "39",
@@ -476,8 +475,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T: His reply heightened the farmers' anger."
+              "explanation": "Câu này ĐÚNG. Ở đoạn 6 ghi rõ: \"His reply only heightened the farmers’ anger.\" (Câu trả lời của ông ta chỉ làm cơn tức giận của những người nông dân tăng thêm).",
+              "correctAnswer": "T"
             },
             {
               "id": "40",
@@ -486,16 +485,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The pastures were owned by the farmers."
+              "explanation": "Câu này SAI. Trong truyện viết (đoạn 1 và 4) rằng đồng cỏ thuộc về những người nông dân: \"...overlooked the farmers’ pastures...\" (nhìn xuống những đồng cỏ của những người nông dân) và \"...our cattle now have less grass to eat.\" (...gia súc của chúng tôi hiện có ít cỏ hơn để ăn).",
+              "correctAnswer": "F"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -506,8 +505,8 @@
                 "It alleged that the lord erected a great wall.",
                 "It alleged that the lord poisoned the water."
               ],
-              "correctAnswer": "A",
-              "explanation": "It alleged that the shadow cast by the mansion was harming their pastures."
+              "explanation": "Ở đoạn 4, khi đưa lá đơn kiến nghị, người nông dân nói: \"It alleged that the shadow cast by the mansion was harming their pastures.\" (Lá đơn cáo buộc rằng cái bóng do dinh thự đổ xuống đang làm hỏng đồng cỏ của họ). Do đó đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -518,8 +517,8 @@
                 "He erected a fountain.",
                 "He erected a hospital."
               ],
-              "correctAnswer": "A",
-              "explanation": "He erected a great wall."
+              "explanation": "Trong đoạn 1 có viết: \"Around the mansion, he then erected a great wall.\" (Sau đó, xung quanh dinh thự, ông ta đã dựng lên một bức tường lớn). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -530,8 +529,8 @@
                 "They flourished with new turf.",
                 "They were flooded."
               ],
-              "correctAnswer": "A",
-              "explanation": "The pastures adjoining the burning mansion also burned."
+              "explanation": "Cuối đoạn 7 có viết: \"However, the fire soon spread from the house to the adjoining pastures that belonged to the farmers.\" (Tuy nhiên, ngọn lửa đã nhanh chóng lan từ ngôi nhà sang những đồng cỏ liền kề thuộc về những người nông dân). Vậy nên đồng cỏ cũng bị cháy, đáp án A đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -542,8 +541,8 @@
                 "Because the fire was very small.",
                 "Because it was raining."
               ],
-              "correctAnswer": "A",
-              "explanation": "There were no casualties in the fire at the mansion because everyone got out of the house."
+              "explanation": "Ở đoạn 7 có ghi: \"Everyone got out of the house, and there were no casualties.\" (Mọi người đều đã thoát ra khỏi nhà, và không có thương vong nào). Đáp án A là câu trả lời chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -554,10 +553,11 @@
                 "The police.",
                 "His family members."
               ],
-              "correctAnswer": "A",
-              "explanation": "While he was sitting on the terrace, some farmers knocked at his door."
+              "explanation": "Ngay câu đầu của đoạn 2 có viết: \"However, one day while he was sitting on the terrace, some farmers knocked at his door.\" (Tuy nhiên, một ngày nọ khi ông đang ngồi trên sân thượng, một số nông dân đã gõ cửa nhà ông). Do đó đáp án A đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "suction",
                 "tension"
               ],
-              "correctAnswer": "B",
-              "explanation": "federation means union."
+              "explanation": "federation means union.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "rent",
                 "make"
               ],
-              "correctAnswer": "D",
-              "explanation": "render means make."
+              "explanation": "render means make.",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "arrive",
                 "hide"
               ],
-              "correctAnswer": "A",
-              "explanation": "smallpox means disease."
+              "explanation": "smallpox means disease.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "prevent",
                 "breathe"
               ],
-              "correctAnswer": "C",
-              "explanation": "curb means prevent."
+              "explanation": "curb means prevent.",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "extend",
                 "identify"
               ],
-              "correctAnswer": "D",
-              "explanation": "diagnose means identify."
+              "explanation": "diagnose means identify.",
+              "correctAnswer": "D"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "confirm",
                 "listen"
               ],
-              "correctAnswer": "C",
-              "explanation": "certify means confirm."
+              "explanation": "certify means confirm.",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "lists",
                 "pies"
               ],
-              "correctAnswer": "B",
-              "explanation": "rash means bumps."
+              "explanation": "rash means bumps.",
+              "correctAnswer": "B"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "moist",
                 "short"
               ],
-              "correctAnswer": "A",
-              "explanation": "needy means poor."
+              "explanation": "needy means poor.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "light",
                 "start"
               ],
-              "correctAnswer": "D",
-              "explanation": "onset means start."
+              "explanation": "onset means start.",
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "understand",
                 "determine"
               ],
-              "correctAnswer": "A",
-              "explanation": "collaborate means cooperate."
+              "explanation": "collaborate means cooperate.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "cancel",
                 "recline"
               ],
-              "correctAnswer": "C",
-              "explanation": "Opposite of enact is cancel."
+              "explanation": "Opposite of enact is cancel.",
+              "correctAnswer": "C"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "bearable",
                 "honorable"
               ],
-              "correctAnswer": "C",
-              "explanation": "Opposite of intolerable is bearable."
+              "explanation": "Opposite of intolerable is bearable.",
+              "correctAnswer": "C"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "throw",
                 "fall"
               ],
-              "correctAnswer": "A",
-              "explanation": "Opposite of pledge is lie."
+              "explanation": "Opposite of pledge is lie.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "support",
                 "repair"
               ],
-              "correctAnswer": "C",
-              "explanation": "Opposite of counteract is support."
+              "explanation": "Opposite of counteract is support.",
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -202,8 +201,8 @@
                 "elect",
                 "deceive"
               ],
-              "correctAnswer": "D",
-              "explanation": "Opposite of vow is deceive."
+              "explanation": "Opposite of vow is deceive.",
+              "correctAnswer": "D"
             },
             {
               "id": "16",
@@ -214,8 +213,8 @@
                 "allow",
                 "chew"
               ],
-              "correctAnswer": "C",
-              "explanation": "Opposite of prohibit is allow."
+              "explanation": "Opposite of prohibit is allow.",
+              "correctAnswer": "C"
             },
             {
               "id": "17",
@@ -226,8 +225,8 @@
                 "dig",
                 "burn"
               ],
-              "correctAnswer": "B",
-              "explanation": "Opposite of transmit is hold."
+              "explanation": "Opposite of transmit is hold.",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -238,8 +237,8 @@
                 "powerful",
                 "pretty"
               ],
-              "correctAnswer": "D",
-              "explanation": "Opposite of gross is pretty."
+              "explanation": "Opposite of gross is pretty.",
+              "correctAnswer": "D"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "mound",
                 "dinner"
               ],
-              "correctAnswer": "B",
-              "explanation": "Opposite of compile is scatter."
+              "explanation": "Opposite of compile is scatter.",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -262,16 +261,16 @@
                 "close",
                 "cruel"
               ],
-              "correctAnswer": "D",
-              "explanation": "Opposite of humane is cruel."
+              "explanation": "Opposite of humane is cruel.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "diagnose",
                 "collaborate"
               ],
-              "correctAnswer": "A",
-              "explanation": "render: make become something else."
+              "explanation": "render: make become something else.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "humane",
                 "gross"
               ],
-              "correctAnswer": "A",
-              "explanation": "needy: very poor."
+              "explanation": "needy: very poor.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "vowed",
                 "enacted"
               ],
-              "correctAnswer": "A",
-              "explanation": "compile: collect a variety of things into a group."
+              "explanation": "compile: collect a variety of things into a group.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "smallpox",
                 "federation"
               ],
-              "correctAnswer": "A",
-              "explanation": "rash: an infected area of the skin."
+              "explanation": "rash: an infected area of the skin.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,8 +329,8 @@
                 "prohibited",
                 "pledged"
               ],
-              "correctAnswer": "A",
-              "explanation": "diagnose: identify the medical condition."
+              "explanation": "diagnose: identify the medical condition.",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -342,8 +341,8 @@
                 "intolerable",
                 "needy"
               ],
-              "correctAnswer": "A",
-              "explanation": "gross: disgusting."
+              "explanation": "gross: disgusting.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -354,8 +353,8 @@
                 "curbed",
                 "counteracted"
               ],
-              "correctAnswer": "A",
-              "explanation": "transmit: pass it from one person or place to another."
+              "explanation": "transmit: pass it from one person or place to another.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -366,8 +365,8 @@
                 "rash",
                 "smallpox"
               ],
-              "correctAnswer": "A",
-              "explanation": "federation: a group of states or businesses working for a common cause."
+              "explanation": "federation: a group of states or businesses working for a common cause.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "intolerable",
                 "needy"
               ],
-              "correctAnswer": "A",
-              "explanation": "humane: good and kind."
+              "explanation": "humane: good and kind.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -390,24 +389,24 @@
                 "vow",
                 "pledge"
               ],
-              "correctAnswer": "A",
-              "explanation": "collaborate: work together on something."
+              "explanation": "collaborate: work together on something.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The End of Smallpox</h1><p style=\"margin-bottom: 2rem;\"><b>Smallpox</b> was once the most deadly disease in the world. During the 1800s, more than 20 million people got the disease every year. Of those, nearly half died. At the <b>onset</b> of <b>smallpox</b>, people suffered from high fevers, headaches, vomiting, and aching muscles. Yet the worst symptom of all was an <b>intolerable</b> <b>rash</b> that caused irritation on the entire body. Those who survived the disease were often <b>rendered</b> blind or left with <b>gross</b> scars on their face and body.</p><p style=\"margin-bottom: 2rem;\">Today, however, cases of <b>smallpox</b> are very rare due to the work of many countries during the late 1900s. This <b>federation</b> of countries <b>collaborated</b> to completely destroy <b>smallpox</b>. Early in the century, wealthy countries in Europe and North America had developed a substance that made the body immune to <b>smallpox</b>. They had required all their citizens to get this vaccine to <b>counteract</b> the disease. Hence, the people of these countries no longer had to worry about <b>smallpox</b>.</p><p style=\"margin-bottom: 2rem;\">However, many of the <b>needy</b> people in poorer parts of the world still suffered from the disease. Their countries could not afford the vaccine nor supply enough doctors to <b>curb</b> the spread of <b>smallpox</b>.</p><p style=\"margin-bottom: 2rem;\">In 1950, the wealthier countries of the world <b>vowed</b> to free the world of the disease. They <b>pledged</b> to supply the vaccine to any country that could not afford it. Scientists <b>compiled</b> lists of areas where the disease still thrived. Then doctors <b>diagnosed</b> people who had the disease in these areas. They <b>enacted</b> laws that <b>prohibited</b> people with <b>smallpox</b> from mixing with those who did not. In this way, they could not <b>transmit</b> the disease to others. Then the doctors gave all of them the vaccine.</p><p style=\"margin-bottom: 2rem;\">It took a long time and a lot of work. But nearly thirty years later, on December 9, 1979, a group of scientists <b>certified</b> that <b>smallpox</b> had been successfully stopped. The <b>humane</b> efforts of people from all over the world had accomplished a great task.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The End of Smallpox</h1>        <p style=\"margin-bottom: 1rem;\"><b>Smallpox</b> was once the most deadly disease in the world. During the 1800s, more than 20 million people got the disease every year. Of those, nearly half died. At the <b>onset</b> of <b>smallpox</b>, people suffered from high fevers, headaches, vomiting, and aching muscles. Yet the worst symptom of all was an <b>intolerable</b> <b>rash</b> that caused irritation on the entire body. Those who survived the disease were often <b>rendered</b> blind or left with <b>gross</b> scars on their face and body.</p>    <p style=\"margin-bottom: 1rem;\">Today, however, cases of <b>smallpox</b> are very rare due to the work of many countries during the late 1900s. This <b>federation</b> of countries <b>collaborated</b> to completely destroy <b>smallpox</b>. Early in the century, wealthy countries in Europe and North America had developed a substance that made the body immune to <b>smallpox</b>. They had required all their citizens to get this vaccine to <b>counteract</b> the disease. Hence, the people of these countries no longer had to worry about <b>smallpox</b>.</p>    <p style=\"margin-bottom: 1rem;\">However, many of the <b>needy</b> people in poorer parts of the world still suffered from the disease. Their countries could not afford the vaccine nor supply enough doctors to <b>curb</b> the spread of <b>smallpox</b>.</p>    <p style=\"margin-bottom: 1rem;\">In 1950, the wealthier countries of the world <b>vowed</b> to free the world of the disease. They <b>pledged</b> to supply the vaccine to any country that could not afford it. Scientists <b>compiled</b> lists of areas where the disease still thrived. Then doctors <b>diagnosed</b> people who had the disease in these areas. They <b>enacted</b> laws that <b>prohibited</b> people with <b>smallpox</b> from mixing with those who did not. In this way, they could not <b>transmit</b> the disease to others. Then the doctors gave all of them the vaccine.</p>    <p style=\"margin-bottom: 1rem;\">It took a long time and a lot of work. But nearly thirty years later, on December 9, 1979, a group of scientists <b>certified</b> that <b>smallpox</b> had been successfully stopped. The <b>humane</b> efforts of people from all over the world had accomplished a great task.</p></div>",
       "imageUrl": "/unit13_vol6_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -416,8 +415,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Vào những năm 1800, hơn 20 triệu người mắc bệnh đậu mùa mỗi năm.\nGiải thích: T. Đoạn 1 có ghi: \"During the 1800s, more than 20 million people got the disease every year.\" (Vào những năm 1800, mỗi năm có hơn 20 triệu người mắc bệnh này). \"got the disease\" đồng nghĩa với mắc bệnh, tương đương với ý câu hỏi nhé.",
+              "correctAnswer": "T"
             },
             {
               "id": "32",
@@ -426,8 +425,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Smallpox rendered people blind and caused an intolerable rash."
+              "explanation": "Dịch: Bệnh đậu mùa khiến người ta bị hói và gây ra phát ban kinh khủng để lại những vết sẹo lớn.\nGiải thích: F. Đoạn 1 có viết: \"Those who survived the disease were often rendered blind or left with gross scars on their face and body.\" (Những người sống sót sau căn bệnh này thường bị mù hoặc để lại những vết sẹo lớn trên mặt và cơ thể). Căn bệnh này khiến họ bị mù (blind) chứ không phải bị hói (bald) nha bạn!",
+              "correctAnswer": "F"
             },
             {
               "id": "33",
@@ -436,8 +435,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Các luật lệ được ban hành nhằm cấm những người bị bệnh tiếp xúc với những người khỏe mạnh.\nGiải thích: T. Trong đoạn 4, tác giả đề cập: \"They enacted laws that prohibited people with smallpox from mixing with those who did not.\" (Họ ban hành những đạo luật cấm những người mắc bệnh đậu mùa không được trộn lẫn, tiếp xúc với những người không mắc bệnh). Ý của câu hoàn toàn khớp với bài đọc nhé!",
+              "correctAnswer": "T"
             },
             {
               "id": "34",
@@ -446,8 +445,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Wealthier countries pledged to give any country that could not afford it a vaccine to counteract smallpox."
+              "explanation": "Dịch: Các nước giàu có cam kết sẽ cung cấp vắc-xin cho Bắc Mỹ để chống lại bệnh đậu mùa.\nGiải thích: F. Theo đoạn 4: \"They pledged to supply the vaccine to any country that could not afford it.\" (Họ cam kết sẽ cung cấp vắc-xin cho bất kỳ quốc gia nào không có khả năng chi trả). Như vậy là cho bất kì nước nào nghèo, chứ không phải dành riêng cho Bắc Mỹ nha! (Bắc Mỹ vốn là những nước giàu đã có vắc xin từ sớm rồi).",
+              "correctAnswer": "F"
             },
             {
               "id": "35",
@@ -456,16 +455,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Dịch: Những nỗ lực nhân đạo của mọi người ở khắp mọi nơi đã giúp ngăn chặn thành công bệnh đậu mùa.\nGiải thích: T. Câu cuối của đoạn văn có nói: \"The humane efforts of people from all over the world had accomplished a great task.\" (Những nỗ lực nhân đạo của người dân trên toàn thế giới đã hoàn thành một nhiệm vụ tuyệt vời). Hoàn toàn chính xác nhé!",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -476,8 +475,8 @@
                 "Blindness immediately.",
                 "Nothing until the rash appeared."
               ],
-              "correctAnswer": "A",
-              "explanation": "At the onset of smallpox, people suffered from high fevers, headaches, vomiting, and aching muscles."
+              "explanation": "Dịch câu hỏi: Mọi người phải chịu đựng những gì khi mới phát bệnh đậu mùa?\nGiải thích: Chọn A.\nDựa vào đoạn 1: \"At the onset of smallpox, people suffered from high fevers, headaches, vomiting, and aching muscles.\" (Khi mới phát bệnh đậu mùa, người bệnh bị sốt cao, nhức đầu, nôn mửa và đau nhức cơ bắp). Các đáp án khác không được đề cập đến là triệu chứng lúc khởi phát nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -488,8 +487,8 @@
                 "Build more hospitals.",
                 "Invade other countries."
               ],
-              "correctAnswer": "A",
-              "explanation": "This federation of countries collaborated to completely destroy smallpox."
+              "explanation": "Dịch câu hỏi: Liên minh các quốc gia đã hợp tác để làm gì?\nGiải thích: Chọn A.\nĐoạn 2 có viết: \"This federation of countries collaborated to completely destroy smallpox.\" (Liên minh các quốc gia này đã hợp tác để tiêu diệt hoàn toàn căn bệnh đậu mùa). Đáp án A là chính xác nhất nha bạn!",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -500,8 +499,8 @@
                 "They had too many people.",
                 "The disease mutated too quickly."
               ],
-              "correctAnswer": "A",
-              "explanation": "Their countries could not afford the vaccine nor supply enough doctors to curb the spread of smallpox."
+              "explanation": "Dịch câu hỏi: Tại sao các nước nghèo không thể kiềm chế sự lây lan của bệnh đậu mùa?\nGiải thích: Chọn A.\nThông tin ở đoạn 3: \"Their countries could not afford the vaccine nor supply enough doctors to curb the spread of smallpox.\" (Các quốc gia của họ không có khả năng mua vắc-xin cũng như không thể cung cấp đủ bác sĩ để kiềm chế sự lây lan của bệnh đậu mùa). Rất rõ ràng phải không nào!",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -512,8 +511,8 @@
                 "They asked people to stay home.",
                 "They compiled lists of healthy people."
               ],
-              "correctAnswer": "A",
-              "explanation": "Doctors enacted laws that prohibited people with smallpox from mixing with those that did not."
+              "explanation": "Dịch câu hỏi: Các bác sĩ đã làm gì để giúp làm giảm sự lây lan của bệnh đậu mùa?\nGiải thích: Chọn A.\nHãy xem đoạn 4: \"Then doctors diagnosed people who had the disease in these areas. They enacted laws that prohibited people with smallpox from mixing with those who did not.\" (Sau đó các bác sĩ chuẩn đoán những người mắc bệnh ở các khu vực này. Họ đã ban hành những đạo luật cấm người mắc bệnh đậu mùa tiếp xúc với người không mắc bệnh). Vậy nên đáp án A hoàn toàn phù hợp nhé!",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -524,10 +523,11 @@
                 "The needy people.",
                 "The United Nations."
               ],
-              "correctAnswer": "A",
-              "explanation": "On December 9, 1979, a group of scientists certified that smallpox had been successfully stopped."
+              "explanation": "Dịch câu hỏi: Ai đã xác nhận rằng bệnh đậu mùa đã được ngăn chặn vào tháng 12 năm 1979?\nGiải thích: Chọn A.\nĐoạn 5 có cung cấp thông tin: \"But nearly thirty years later, on December 9, 1979, a group of scientists certified that smallpox had been successfully stopped.\" (Nhưng gần 30 năm sau, vào ngày 9 tháng 12 năm 1979, một nhóm các nhà khoa học đã xác nhận rằng bệnh đậu mùa đã được ngăn chặn thành công). Do đó đáp án đúng là một nhóm nhà khoa học (A group of scientists) nha.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

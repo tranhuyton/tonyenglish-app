@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "patent",
                 "scrap"
               ],
-              "correctAnswer": "A",
-              "explanation": "synthesis (n): a combination of different ideas or styles."
+              "explanation": "synthesis (n): a combination of different ideas or styles.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "export",
                 "justify"
               ],
-              "correctAnswer": "A",
-              "explanation": "suspend (v): to delay or stop it from happening for a while."
+              "explanation": "suspend (v): to delay or stop it from happening for a while.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "defer",
                 "penalize"
               ],
-              "correctAnswer": "A",
-              "explanation": "subscribe (v): to agree or to concur with it."
+              "explanation": "subscribe (v): to agree or to concur with it.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "sector",
                 "petroleum"
               ],
-              "correctAnswer": "A",
-              "explanation": "prototype (n): a new machine that is not ready to be made in large quantities."
+              "explanation": "prototype (n): a new machine that is not ready to be made in large quantities.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "subsist",
                 "suspend"
               ],
-              "correctAnswer": "A",
-              "explanation": "export (v): to sell products to other countries."
+              "explanation": "export (v): to sell products to other countries.",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "output",
                 "fume"
               ],
-              "correctAnswer": "A",
-              "explanation": "conversion (n): the act of changing something into a different state or form."
+              "explanation": "conversion (n): the act of changing something into a different state or form.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "justify",
                 "defer"
               ],
-              "correctAnswer": "A",
-              "explanation": "subsist (v): to have the food, water, and money needed to stay alive."
+              "explanation": "subsist (v): to have the food, water, and money needed to stay alive.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "prototype",
                 "sector"
               ],
-              "correctAnswer": "A",
-              "explanation": "scrap (n): a small amount of it."
+              "explanation": "scrap (n): a small amount of it.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "penalize",
                 "suspend"
               ],
-              "correctAnswer": "A",
-              "explanation": "abide (v): to obey it."
+              "explanation": "abide (v): to obey it.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "justify",
                 "export"
               ],
-              "correctAnswer": "A",
-              "explanation": "defer (v): to arrange for an action to happen at a later time."
+              "explanation": "defer (v): to arrange for an action to happen at a later time.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -152,8 +151,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "overpopulation (n): having too many people in an area."
+              "explanation": "overpopulation (n): having too many people in an area.",
+              "correctAnswer": "C"
             },
             {
               "id": "12",
@@ -162,8 +161,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "cram (v): to put things into a place that can barely contain them."
+              "explanation": "cram (v): to put things into a place that can barely contain them.",
+              "correctAnswer": "C"
             },
             {
               "id": "13",
@@ -172,8 +171,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "C",
-              "explanation": "output (n): the amount of something that a person or thing produces."
+              "explanation": "output (n): the amount of something that a person or thing produces.",
+              "correctAnswer": "C"
             },
             {
               "id": "14",
@@ -182,8 +181,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "defer means to postpone to a later time, so 'until right now' is incorrect."
+              "explanation": "defer means to postpone to a later time, so 'until right now' is incorrect.",
+              "correctAnswer": "I"
             },
             {
               "id": "15",
@@ -192,24 +191,24 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "I",
-              "explanation": "conversion means changing into a different state, which does not make sense here."
+              "explanation": "conversion means changing into a different state, which does not make sense here.",
+              "correctAnswer": "I"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Preparing for the Future</h1><p style=\"margin-bottom: 2rem;\"><b>Overpopulation</b> is a big problem in the world today. Too many people are <b>crammed</b> into cities and towns around the globe. Earth’s population is about 6.5 billion people. This number is growing every day. In just 50 years, the population will be almost 9 billion.</p><p style=\"margin-bottom: 2rem;\">Many people worry that the Earth won’t have enough resources to support so many people. One major reason for this is that wasting resources and polluting have become <b>habitual</b> behaviors. Industrial <b>output</b> results in polluting the air with dangerous <b>fumes</b>. Also, cars and machines waste a ton of important natural resources like oil and water. It’s possible that the Earth may become so damaged that it cannot support a large population of humans.</p><p style=\"margin-bottom: 2rem;\">Another issue is the lack of useful land for cultivating crops. Even today, many people <b>subsist</b> on mere <b>scraps</b> of food and little water. In 50 years, many experts worry that huge numbers of people will starve to death. So what is being done to prepare for the future?</p><p style=\"margin-bottom: 2rem;\">People are realizing they can no longer <b>justify</b> their wasteful behavior or <b>defer</b> action to fix it. Many car companies already have <b>patents</b> on <b>prototypes</b> for very efficient cars. Such cars waste no resources and produce no pollution. A <b>conversion</b> to clean cars means that <b>petroleum</b> can be saved for the future. In addition, the environmental <b>sectors</b> of many governments are setting strict rules for industries that pollute too much. If companies do not <b>abide</b> by the standards, they are <b>penalized</b> with higher taxes. In some cases, their operations might be <b>suspended</b> altogether.</p><p style=\"margin-bottom: 2rem;\">Food is also an issue that is being tackled. Many countries are now <b>subscribing</b> to the point of view that immediate action is needed. They are determining ways to <b>export</b> goods to people in need, so that no one goes hungry. Experts will continue to come up with ideas for the future, and a <b>synthesis</b> of these ideas will help to support the growing population.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Preparing for the Future</h1>        <p style=\"margin-bottom: 1rem;\"><b>Overpopulation</b> is a big problem in the world today. Too many people are <b>crammed</b> into cities and towns around the globe. Earth’s population is about 6.5 billion people. This number is growing every day. In just 50 years, the population will be almost 9 billion.</p>    <p style=\"margin-bottom: 1rem;\">Many people worry that the Earth won’t have enough resources to support so many people. One major reason for this is that wasting resources and polluting have become <b>habitual</b> behaviors. Industrial <b>output</b> results in polluting the air with dangerous <b>fumes</b>. Also, cars and machines waste a ton of important natural resources like oil and water. It’s possible that the Earth may become so damaged that it cannot support a large population of humans.</p>    <p style=\"margin-bottom: 1rem;\">Another issue is the lack of useful land for cultivating crops. Even today, many people <b>subsist</b> on mere <b>scraps</b> of food and little water. In 50 years, many experts worry that huge numbers of people will starve to death. So what is being done to prepare for the future?</p>    <p style=\"margin-bottom: 1rem;\">People are realizing they can no longer <b>justify</b> their wasteful behavior or <b>defer</b> action to fix it. Many car companies already have <b>patents</b> on <b>prototypes</b> for very efficient cars. Such cars waste no resources and produce no pollution. A <b>conversion</b> to clean cars means that <b>petroleum</b> can be saved for the future. In addition, the environmental <b>sectors</b> of many governments are setting strict rules for industries that pollute too much. If companies do not <b>abide</b> by the standards, they are <b>penalized</b> with higher taxes. In some cases, their operations might be <b>suspended</b> altogether.</p>    <p style=\"margin-bottom: 1rem;\">Food is also an issue that is being tackled. Many countries are now <b>subscribing</b> to the point of view that immediate action is needed. They are determining ways to <b>export</b> goods to people in need, so that no one goes hungry. Experts will continue to come up with ideas for the future, and a <b>synthesis</b> of these ideas will help to support the growing population.</p></div>",
       "imageUrl": "/unit24_vol6_story.png",
       "sections": [
         {
           "id": "sec3",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -218,8 +217,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "The text states this explicitly."
+              "explanation": "Đúng. Đoạn 1 viết: \"Overpopulation is a big problem... Too many people are crammed into cities and towns around the globe.\" (Bùng nổ dân số là một vấn đề lớn... Quá nhiều người bị nhồi nhét vào các thành phố và thị trấn trên toàn cầu).",
+              "correctAnswer": "T"
             },
             {
               "id": "17",
@@ -228,8 +227,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "The environmental sectors of many governments are setting strict standards, not deferring them."
+              "explanation": "Sai. Đoạn 4 có câu: \"...the environmental sectors of many governments are setting strict rules for industries that pollute too much.\" (các ban ngành môi trường của nhiều chính phủ đang đặt ra những quy định nghiêm ngặt đối với các ngành công nghiệp gây ô nhiễm quá mức). Họ đang thiết lập quy định, không phải đang trì hoãn (deferring) chúng.",
+              "correctAnswer": "F"
             },
             {
               "id": "18",
@@ -238,8 +237,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "Many car companies already have patents on prototypes for very efficient cars."
+              "explanation": "Đúng. Đoạn 4 viết: \"Many car companies already have patents on prototypes for very efficient cars.\" (Nhiều công ty ô tô đã có bằng sáng chế về các nguyên mẫu cho những chiếc xe hơi rất tiết kiệm nhiên liệu).",
+              "correctAnswer": "T"
             },
             {
               "id": "19",
@@ -248,8 +247,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "F",
-              "explanation": "A conversion to clean cars means petroleum can be saved for the future."
+              "explanation": "Sai. Đoạn 4 giải thích: \"A conversion to clean cars means that petroleum can be saved for the future.\" (Việc chuyển đổi sang ô tô sạch đồng nghĩa với việc dầu mỏ có thể được tiết kiệm cho tương lai). Chứ không phải được sử dụng ngay bây giờ (right now).",
+              "correctAnswer": "F"
             },
             {
               "id": "20",
@@ -258,16 +257,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "T",
-              "explanation": "The text states that companies not abiding are penalized and their operations might be suspended."
+              "explanation": "Đúng. Đoạn 4 có viết: \"If companies do not abide by the standards, they are penalized with higher taxes. In some cases, their operations might be suspended altogether.\" (Nếu các công ty không tuân thủ các tiêu chuẩn, họ sẽ bị trừng phạt bằng mức thuế cao hơn. Trong một số trường hợp, hoạt động của họ có thể bị đình chỉ hoàn toàn).",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -278,8 +277,8 @@
                 "It will suspend the operations.",
                 "It will increase taxes."
               ],
-              "correctAnswer": "A",
-              "explanation": "A synthesis of these ideas will help to support the growing population."
+              "explanation": "Câu cuối của bài đọc ghi: \"...a synthesis of these ideas will help to support the growing population.\" (...sự tổng hợp của những ý tưởng này sẽ giúp nuôi sống dân số đang ngày một tăng). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -290,8 +289,8 @@
                 "Driving clean cars.",
                 "Building prototypes."
               ],
-              "correctAnswer": "A",
-              "explanation": "Wasting resources and polluting have become habitual behaviors."
+              "explanation": "Đoạn 2 giải thích: \"One major reason for this is that wasting resources and polluting have become habitual behaviors.\" (Một nguyên nhân lớn dẫn đến điều này là việc lãng phí tài nguyên và gây ô nhiễm đã trở thành những hành vi theo thói quen). Do đó đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -302,8 +301,8 @@
                 "Prototypes for airplanes.",
                 "Prototypes for farming tools."
               ],
-              "correctAnswer": "A",
-              "explanation": "They have patents on prototypes for very efficient cars."
+              "explanation": "Đoạn 4 có viết: \"Many car companies already have patents on prototypes for very efficient cars.\" (Nhiều công ty ô tô đã có bằng sáng chế về các nguyên mẫu cho những chiếc xe hơi rất tiết kiệm nhiên liệu). Vậy đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -314,8 +313,8 @@
                 "Studying too hard.",
                 "Saving petroleum."
               ],
-              "correctAnswer": "A",
-              "explanation": "They can no longer justify their wasteful behavior."
+              "explanation": "Đầu đoạn 4 nêu: \"People are realizing they can no longer justify their wasteful behavior...\" (Mọi người đang nhận ra rằng họ không thể tiếp tục biện minh cho hành vi lãng phí của mình...). Do đó đáp án A là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -326,10 +325,11 @@
                 "They should cram more people into cities.",
                 "They should export all petroleum."
               ],
-              "correctAnswer": "A",
-              "explanation": "Many countries are subscribing to the point of view that immediate action is needed."
+              "explanation": "Đoạn cuối có viết: \"Many countries are now subscribing to the point of view that immediate action is needed.\" (Hiện nay nhiều quốc gia đang đồng tình với quan điểm rằng cần phải hành động ngay lập tức). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

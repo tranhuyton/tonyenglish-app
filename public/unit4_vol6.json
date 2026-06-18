@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "silence",
                 "ghost"
               ],
-              "correctAnswer": "C",
-              "explanation": "din (n): loud, unpleasant noise. Opposite is silence."
+              "explanation": "din (n): loud, unpleasant noise. Opposite is silence.",
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "inside",
                 "bright"
               ],
-              "correctAnswer": "A",
-              "explanation": "outspoken (adj): not afraid to say what they think. Opposite is quiet."
+              "explanation": "outspoken (adj): not afraid to say what they think. Opposite is quiet.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "kind",
                 "young"
               ],
-              "correctAnswer": "B",
-              "explanation": "pungent (adj): tastes or smells strong and sharp. Opposite is mild."
+              "explanation": "pungent (adj): tastes or smells strong and sharp. Opposite is mild.",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "private",
                 "mature"
               ],
-              "correctAnswer": "C",
-              "explanation": "civic (adj): related to a town or city. Opposite is private."
+              "explanation": "civic (adj): related to a town or city. Opposite is private.",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "plate",
                 "bill"
               ],
-              "correctAnswer": "A",
-              "explanation": "descent (n): movement downwards. Opposite is climb."
+              "explanation": "descent (n): movement downwards. Opposite is climb.",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "number",
                 "cellar"
               ],
-              "correctAnswer": "D",
-              "explanation": "attic (n): a room just below a roof. Opposite is cellar (below ground)."
+              "explanation": "attic (n): a room just below a roof. Opposite is cellar (below ground).",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "argument",
                 "commerce"
               ],
-              "correctAnswer": "B",
-              "explanation": "fuss (n): excited or annoyed behavior. Opposite is calm."
+              "explanation": "fuss (n): excited or annoyed behavior. Opposite is calm.",
+              "correctAnswer": "B"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "trim",
                 "please"
               ],
-              "correctAnswer": "D",
-              "explanation": "dissatisfy (v): to fail to please someone. Opposite is please."
+              "explanation": "dissatisfy (v): to fail to please someone. Opposite is please.",
+              "correctAnswer": "D"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "select",
                 "repair"
               ],
-              "correctAnswer": "A",
-              "explanation": "overwork (v): to make someone tired with too much work. Opposite is relax."
+              "explanation": "overwork (v): to make someone tired with too much work. Opposite is relax.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "whole",
                 "lamp"
               ],
-              "correctAnswer": "C",
-              "explanation": "chunk (n): a thick, solid piece of something. Opposite is whole."
+              "explanation": "chunk (n): a thick, solid piece of something. Opposite is whole.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "usable",
                 "fragile"
               ],
-              "correctAnswer": "B",
-              "explanation": "intrinsic (adj): related to the basic nature of a thing. Similar to natural."
+              "explanation": "intrinsic (adj): related to the basic nature of a thing. Similar to natural.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "agency",
                 "bush"
               ],
-              "correctAnswer": "C",
-              "explanation": "ministry (n): a government department. Similar to agency."
+              "explanation": "ministry (n): a government department. Similar to agency.",
+              "correctAnswer": "C"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "rain",
                 "call"
               ],
-              "correctAnswer": "A",
-              "explanation": "snore (v): to make a loud noise while sleeping. Similar to grunt."
+              "explanation": "snore (v): to make a loud noise while sleeping. Similar to grunt.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "pot",
                 "pan"
               ],
-              "correctAnswer": "C",
-              "explanation": "kettle (n): a large metal pot used for boiling. Similar to pot."
+              "explanation": "kettle (n): a large metal pot used for boiling. Similar to pot.",
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -202,8 +201,8 @@
                 "sunrise",
                 "beginning"
               ],
-              "correctAnswer": "B",
-              "explanation": "superintendent (n): a person who runs a department. Similar to manager."
+              "explanation": "superintendent (n): a person who runs a department. Similar to manager.",
+              "correctAnswer": "B"
             },
             {
               "id": "16",
@@ -214,8 +213,8 @@
                 "legitimate",
                 "pleasant"
               ],
-              "correctAnswer": "A",
-              "explanation": "gourmet (adj): nicer and more expensive food. Similar to delicious."
+              "explanation": "gourmet (adj): nicer and more expensive food. Similar to delicious.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -226,8 +225,8 @@
                 "loudly",
                 "briefly"
               ],
-              "correctAnswer": "B",
-              "explanation": "soundly (adv): in the most complete way. Similar to totally."
+              "explanation": "soundly (adv): in the most complete way. Similar to totally.",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -238,8 +237,8 @@
                 "still",
                 "thus"
               ],
-              "correctAnswer": "D",
-              "explanation": "hence (adv): happens as a result. Similar to thus."
+              "explanation": "hence (adv): happens as a result. Similar to thus.",
+              "correctAnswer": "D"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "bargain",
                 "request"
               ],
-              "correctAnswer": "A",
-              "explanation": "ordeal (n): a bad experience. Similar to problem."
+              "explanation": "ordeal (n): a bad experience. Similar to problem.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -262,16 +261,16 @@
                 "exact",
                 "secret"
               ],
-              "correctAnswer": "C",
-              "explanation": "particular (adj): a single, important part. Similar to exact."
+              "explanation": "particular (adj): a single, important part. Similar to exact.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "ordeal",
                 "din"
               ],
-              "correctAnswer": "A",
-              "explanation": "descent (n): a movement downwards."
+              "explanation": "descent (n): a movement downwards.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "civic",
                 "intrinsic"
               ],
-              "correctAnswer": "A",
-              "explanation": "pungent (adj): tastes or smells strong and sharp."
+              "explanation": "pungent (adj): tastes or smells strong and sharp.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "kettle",
                 "ministry"
               ],
-              "correctAnswer": "A",
-              "explanation": "chunk (n): a thick, solid piece of something."
+              "explanation": "chunk (n): a thick, solid piece of something.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "fuss",
                 "ordeal"
               ],
-              "correctAnswer": "A",
-              "explanation": "superintendent (n): a person who runs a department."
+              "explanation": "superintendent (n): a person who runs a department.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,8 +329,8 @@
                 "outspoken",
                 "soundly"
               ],
-              "correctAnswer": "A",
-              "explanation": "overwork (v): to make someone tired with too much work."
+              "explanation": "overwork (v): to make someone tired with too much work.",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -342,8 +341,8 @@
                 "civic",
                 "intrinsic"
               ],
-              "correctAnswer": "A",
-              "explanation": "gourmet (adj): nicer and more expensive food."
+              "explanation": "gourmet (adj): nicer and more expensive food.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
@@ -354,8 +353,8 @@
                 "kettle",
                 "chunk"
               ],
-              "correctAnswer": "A",
-              "explanation": "attic (n): a room just below a house's roof."
+              "explanation": "attic (n): a room just below a house's roof.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -366,8 +365,8 @@
                 "pungent",
                 "gourmet"
               ],
-              "correctAnswer": "A",
-              "explanation": "outspoken (adj): not afraid to say what they think."
+              "explanation": "outspoken (adj): not afraid to say what they think.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "attics",
                 "kettles"
               ],
-              "correctAnswer": "A",
-              "explanation": "ministry (n): a government department."
+              "explanation": "ministry (n): a government department.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -390,16 +389,16 @@
                 "din",
                 "descent"
               ],
-              "correctAnswer": "A",
-              "explanation": "ordeal (n): a bad experience."
+              "explanation": "ordeal (n): a bad experience.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -408,8 +407,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Hence means it happens as a result of something."
+              "explanation": "Hence means it happens as a result of something.",
+              "correctAnswer": "C"
             },
             {
               "id": "32",
@@ -418,8 +417,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "I",
-              "explanation": "Din means loud, unpleasant noise. The word meant here is probably dinner."
+              "explanation": "Din means loud, unpleasant noise. The word meant here is probably dinner.",
+              "correctAnswer": "I"
             },
             {
               "id": "33",
@@ -428,8 +427,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Fuss is excited or annoyed behavior."
+              "explanation": "Fuss is excited or annoyed behavior.",
+              "correctAnswer": "C"
             },
             {
               "id": "34",
@@ -438,8 +437,8 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Ministry is a government department."
+              "explanation": "Ministry is a government department.",
+              "correctAnswer": "C"
             },
             {
               "id": "35",
@@ -448,24 +447,24 @@
                 "I",
                 "C"
               ],
-              "correctAnswer": "C",
-              "explanation": "Intrinsic means related to the basic nature of something."
+              "explanation": "Intrinsic means related to the basic nature of something.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Butler's Bad Day</h1><p style=\"margin-bottom: 2rem;\">The <b>superintendent</b> of <b>civic</b> projects was a busy man. He worked every day of the week and had fancy parties at his house every night.</p><p style=\"margin-bottom: 2rem;\">However, if there was someone busier than him, it was his butler. He worked all day organizing the <b>superintendent</b>'s parties and then cleaned up after them late at night. <b>Hence</b>, while the <b>superintendent</b> slept <b>soundly</b>, <b>snoring</b> loudly in his bed, the butler was still awake.</p><p style=\"margin-bottom: 2rem;\">Sadly, though the butler was always <b>overworked</b>, his profession's <b>intrinsic</b> nature demanded he never be <b>outspoken</b>. Therefore, his employer never knew the butler hadn't slept for several days. On any day the butler might make a mistake.</p><p style=\"margin-bottom: 2rem;\">One day, the <b>superintendent</b> said, \"This <b>particular</b> party is important. People from the <b>ministry</b> are coming. Everything must be perfect.\"</p><p style=\"margin-bottom: 2rem;\">The butler began preparing at once. First he went to the <b>attic</b> to get more chairs and tables. But on his <b>descent</b>, he realized he needed to make the food. A <b>gourmet</b> dinner was necessary for such a party. He boiled water in a <b>kettle</b> for soup and chopped some beef into <b>chunks</b>. Just as he was starting the soup, he remembered that he had to sweep the veranda. As he was sweeping the veranda, he realized that he had to clean the sauna.</p><p style=\"margin-bottom: 2rem;\">By this time, the first guests had arrived. The veranda was still dirty. There were not enough chairs for the guests to sit on, and the soup tasted too <b>pungent</b>. Some guests were <b>dissatisfied</b>. They started to make a <b>fuss</b>, and the party was filled with a <b>din</b> of complaints.</p><p style=\"margin-bottom: 2rem;\">The <b>superintendent</b>'s party was a disaster. He wondered why his butler had made so many mistakes. At last, the butler admitted to being exhausted. His boss felt pity for the butler. He had no idea the butler was so tired. He said, \"You should have told me earlier, then we could have avoided this whole <b>ordeal</b>.\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Butler's Bad Day</h1>        <p style=\"margin-bottom: 1rem;\">The <b>superintendent</b> of <b>civic</b> projects was a busy man. He worked every day of the week and had fancy parties at his house every night.</p>    <p style=\"margin-bottom: 1rem;\">However, if there was someone busier than him, it was his butler. He worked all day organizing the <b>superintendent</b>'s parties and then cleaned up after them late at night. <b>Hence</b>, while the <b>superintendent</b> slept <b>soundly</b>, <b>snoring</b> loudly in his bed, the butler was still awake.</p>    <p style=\"margin-bottom: 1rem;\">Sadly, though the butler was always <b>overworked</b>, his profession's <b>intrinsic</b> nature demanded he never be <b>outspoken</b>. Therefore, his employer never knew the butler hadn't slept for several days. On any day the butler might make a mistake.</p>    <p style=\"margin-bottom: 1rem;\">One day, the <b>superintendent</b> said, \"This <b>particular</b> party is important. People from the <b>ministry</b> are coming. Everything must be perfect.\"</p>    <p style=\"margin-bottom: 1rem;\">The butler began preparing at once. First he went to the <b>attic</b> to get more chairs and tables. But on his <b>descent</b>, he realized he needed to make the food. A <b>gourmet</b> dinner was necessary for such a party. He boiled water in a <b>kettle</b> for soup and chopped some beef into <b>chunks</b>. Just as he was starting the soup, he remembered that he had to sweep the veranda. As he was sweeping the veranda, he realized that he had to clean the sauna.</p>    <p style=\"margin-bottom: 1rem;\">By this time, the first guests had arrived. The veranda was still dirty. There were not enough chairs for the guests to sit on, and the soup tasted too <b>pungent</b>. Some guests were <b>dissatisfied</b>. They started to make a <b>fuss</b>, and the party was filled with a <b>din</b> of complaints.</p>    <p style=\"margin-bottom: 1rem;\">The <b>superintendent</b>'s party was a disaster. He wondered why his butler had made so many mistakes. At last, the butler admitted to being exhausted. His boss felt pity for the butler. He had no idea the butler was so tired. He said, \"You should have told me earlier, then we could have avoided this whole <b>ordeal</b>.\"</p></div>",
       "imageUrl": "/unit4_vol6_story.png",
       "sections": [
         {
           "id": "sec5",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -474,8 +473,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The butler cleaned late at night; hence, he was busier than the civic superintendent."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 2 cho biết chính người quản gia (butler) mới là người dọn dẹp vào ban đêm: '...and then cleaned up after them late at night. Hence, while the superintendent slept soundly... the butler was still awake.' (...và sau đó dọn dẹp vào đêm khuya. Do đó, trong khi viên giám đốc ngủ say... thì người quản gia vẫn thức). Người quản gia bận rộn hơn viên giám đốc nhiều nhé!",
+              "correctAnswer": "F"
             },
             {
               "id": "37",
@@ -484,8 +483,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: Though the butler was overworked, his job's intrinsic nature made him never be outspoken."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Đoạn 3 có viết ngược lại hoàn toàn: 'Sadly, though the butler was always overworked, his profession's intrinsic nature demanded he never be outspoken.' (Đáng buồn thay, mặc dù người quản gia luôn làm việc quá sức, nhưng bản chất vốn có của nghề nghiệp lại đòi hỏi ông không bao giờ được thẳng thắn lên tiếng). Câu hỏi đã tráo đổi vị trí của 'outspoken' và 'overworked' đó!",
+              "correctAnswer": "F"
             },
             {
               "id": "38",
@@ -494,8 +493,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Trong đoạn 4, viên giám đốc nói rất rõ: 'This particular party is important. People from the ministry are coming.' (Bữa tiệc cụ thể này rất quan trọng. Những người từ bộ sẽ đến). Vì vậy câu này mô tả hoàn toàn chính xác.",
+              "correctAnswer": "T"
             },
             {
               "id": "39",
@@ -504,8 +503,8 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "F",
-              "explanation": "F: The butler boiled water in a kettle and chopped beef into chunks."
+              "explanation": "Chào bạn, câu này là **False (Sai)** nha. Ở đoạn 5, người quản gia đun sôi NƯỚC chứ không phải đun sôi CAFFEINE: 'He boiled water in a kettle for soup and chopped some beef into chunks.' (Ông ấy đun sôi nước trong ấm để nấu súp và thái thịt bò thành từng cục). Đọc kỹ là nhận ra ngay điểm sai nhé!",
+              "correctAnswer": "F"
             },
             {
               "id": "40",
@@ -514,16 +513,16 @@
                 "F",
                 "T"
               ],
-              "correctAnswer": "T",
-              "explanation": "T"
+              "explanation": "Chào bạn, câu này là **True (Đúng)** nhé. Trong đoạn 6 có chi tiết: '...and the soup tasted too pungent.' (...và món súp có vị quá hăng/cay nồng). Do đó câu hỏi đã nêu đúng tình tiết trong bài rồi.",
+              "correctAnswer": "T"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -534,8 +533,8 @@
                 "The butler was eating.",
                 "The butler was out for a walk."
               ],
-              "correctAnswer": "A",
-              "explanation": "While the superintendent slept soundly and snored, the butler was still awake."
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Ở đoạn 2 có câu: '...while the superintendent slept soundly, snoring loudly in his bed, the butler was still awake.' (...trong khi viên giám đốc ngủ say sưa, ngáy to trên giường thì người quản gia vẫn còn thức). Do đó đáp án A là chính xác nhất!",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -546,8 +545,8 @@
                 "He realized someone was at the door.",
                 "He realized he forgot to clean the attic."
               ],
-              "correctAnswer": "A",
-              "explanation": "On his descent from the attic, he realized he needed to make the food."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Đoạn 5 có miêu tả: 'But on his descent, he realized he needed to make the food.' (Nhưng trên đường đi xuống, ông nhận ra mình cần phải làm đồ ăn). Chọn A là chuẩn luôn!",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
@@ -558,8 +557,8 @@
                 "If he had slept during the day.",
                 "If he had made the food earlier."
               ],
-              "correctAnswer": "A",
-              "explanation": "If he had told the superintendent earlier that he was tired, then he could have avoided the whole ordeal."
+              "explanation": "Chào bạn, đáp án đúng là **A** nhé. Câu cuối cùng của bài viết trích lời của viên giám đốc: 'You should have told me earlier, then we could have avoided this whole ordeal.' (Ông nên nói với tôi sớm hơn, thì chúng ta đã có thể tránh được toàn bộ thử thách này). Rất khớp với đáp án A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -570,8 +569,8 @@
                 "He remembered he had to buy more beef.",
                 "He remembered to lock the door."
               ],
-              "correctAnswer": "A",
-              "explanation": "As he started the soup, he remembered that he had to sweep the veranda."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Đoạn 5 có câu kể rất rõ: 'Just as he was starting the soup, he remembered that he had to sweep the veranda.' (Ngay khi vừa bắt đầu nấu món súp, ông lại nhớ ra mình phải quét dọn hiên nhà). Vì thế đáp án A là câu trả lời đúng nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
@@ -582,10 +581,11 @@
                 "Because the party started too late.",
                 "Because it was raining."
               ],
-              "correctAnswer": "A",
-              "explanation": "The party was filled with a din of unhappy guests making a fuss because some of the guests were dissatisfied."
+              "explanation": "Chào bạn, đáp án đúng là **A** nha. Ở đoạn 6 có giải thích nguyên nhân: 'Some guests were dissatisfied. They started to make a fuss...' (Một số vị khách cảm thấy không hài lòng. Họ bắt đầu làm ầm ĩ lên...). Sự không hài lòng (dissatisfied) của khách chính là nguyên nhân dẫn đến sự việc này.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }
