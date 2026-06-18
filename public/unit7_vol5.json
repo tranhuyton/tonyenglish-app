@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Fill in the blanks with the correct words.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "ecology",
                 "bizarre"
               ],
-              "correctAnswer": "A",
-              "explanation": "Khí hậu (climate) ôn hoà (temperate) là đáp án hợp lý nhất."
+              "explanation": "Khí hậu (climate) ôn hoà (temperate) là đáp án hợp lý nhất.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "companion",
                 "feat"
               ],
-              "correctAnswer": "B",
-              "explanation": "Đơn vị đo nhiệt độ (độ C) là Celsius."
+              "explanation": "Đơn vị đo nhiệt độ (độ C) là Celsius.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "parasite",
                 "feat"
               ],
-              "correctAnswer": "C",
-              "explanation": "Một động vật nhỏ gọn được gọi là kí sinh trùng (parasite)."
+              "explanation": "Một động vật nhỏ gọn được gọi là kí sinh trùng (parasite).",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "temperate",
                 "repetitive"
               ],
-              "correctAnswer": "A",
-              "explanation": "Sống trên cạn (on land) và sống dưới nước (aquatic)."
+              "explanation": "Sống trên cạn (on land) và sống dưới nước (aquatic).",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "vulnerable",
                 "coarse"
               ],
-              "correctAnswer": "B",
-              "explanation": "Hành vi kì lạ (strange) tương đương với bizarre."
+              "explanation": "Hành vi kì lạ (strange) tương đương với bizarre.",
+              "correctAnswer": "B"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "feat",
                 "ecology"
               ],
-              "correctAnswer": "A",
-              "explanation": "Một vật mang theo khắp nơi đóng vai trò như bạn đồng hành (companion)."
+              "explanation": "Một vật mang theo khắp nơi đóng vai trò như bạn đồng hành (companion).",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "nucleus",
                 "duration"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sinh quyển (biosphere) là nơi chứa các loài thực vật và động vật."
+              "explanation": "Sinh quyển (biosphere) là nơi chứa các loài thực vật và động vật.",
+              "correctAnswer": "B"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "tolerance",
                 "feat"
               ],
-              "correctAnswer": "A",
-              "explanation": "Nghiên cứu về môi trường sinh thái là ecology."
+              "explanation": "Nghiên cứu về môi trường sinh thái là ecology.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "prominent",
                 "aquatic"
               ],
-              "correctAnswer": "B",
-              "explanation": "Không có khiên bảo vệ, anh ta trở nên dễ bị tổn thương (vulnerable)."
+              "explanation": "Không có khiên bảo vệ, anh ta trở nên dễ bị tổn thương (vulnerable).",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "companion",
                 "Celsius"
               ],
-              "correctAnswer": "A",
-              "explanation": "Chiến thắng kẻ thù mà không cần bảo vệ là một chiến công/kì tích (feat)."
+              "explanation": "Chiến thắng kẻ thù mà không cần bảo vệ là một chiến công/kì tích (feat).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "nucleus",
                 "ecology"
               ],
-              "correctAnswer": "A",
-              "explanation": "ability to bear the pain tương đương với sự chịu đựng (tolerance)."
+              "explanation": "ability to bear the pain tương đương với sự chịu đựng (tolerance).",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "repetitive",
                 "infinite"
               ],
-              "correctAnswer": "C",
-              "explanation": "boring and repeating tương đương với repetitive (lặp đi lặp lại)."
+              "explanation": "boring and repeating tương đương với repetitive (lặp đi lặp lại).",
+              "correctAnswer": "C"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "temperate",
                 "vulnerable"
               ],
-              "correctAnswer": "B",
-              "explanation": "well-known and important tương đương với prominent (nổi bật/xuất chúng)."
+              "explanation": "well-known and important tương đương với prominent (nổi bật/xuất chúng).",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "nucleus",
                 "feat"
               ],
-              "correctAnswer": "C",
-              "explanation": "central part of a cell là nucleus (nhân tế bào)."
+              "explanation": "central part of a cell là nucleus (nhân tế bào).",
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "temperate",
                 "infinite"
               ],
-              "correctAnswer": "A",
-              "explanation": "rough tương đương với coarse (thô ráp)."
+              "explanation": "rough tương đương với coarse (thô ráp).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -222,8 +221,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "reproductive nghĩa là sinh sản, không liên quan đến cách chúng săn mồi (hunt for food)."
+              "explanation": "reproductive nghĩa là sinh sản, không liên quan đến cách chúng săn mồi (hunt for food).",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -234,8 +233,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "nucleus (nhân tế bào) phù hợp với ngữ cảnh lớp học sinh học."
+              "explanation": "nucleus (nhân tế bào) phù hợp với ngữ cảnh lớp học sinh học.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -246,8 +245,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "duration (khoảng thời gian) hoàn toàn hợp lý."
+              "explanation": "duration (khoảng thời gian) hoàn toàn hợp lý.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -258,8 +257,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "tolerance là khả năng chịu đựng điều gì đó khó chịu, không dùng cho 'great music' (nhạc hay)."
+              "explanation": "tolerance là khả năng chịu đựng điều gì đó khó chịu, không dùng cho 'great music' (nhạc hay).",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -270,8 +269,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "undergo là trải qua (một quá trình/sự việc/đợt điều trị), không đi kèm giới từ through (chỉ việc đi qua đường hầm)."
+              "explanation": "undergo là trải qua (một quá trình/sự việc/đợt điều trị), không đi kèm giới từ through (chỉ việc đi qua đường hầm).",
+              "correctAnswer": "B"
             },
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "coarse (thô ráp) hợp lý với chiếc chăn không thoải mái."
+              "explanation": "coarse (thô ráp) hợp lý với chiếc chăn không thoải mái.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "infinite là vô hạn, không thể dùng cho số lượng cụ thể là 'exactly twenty'."
+              "explanation": "infinite là vô hạn, không thể dùng cho số lượng cụ thể là 'exactly twenty'.",
+              "correctAnswer": "B"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "prominent figure (nhân vật nổi bật) là một cụm từ hợp lý sau khi cứu sống ai đó."
+              "explanation": "prominent figure (nhân vật nổi bật) là một cụm từ hợp lý sau khi cứu sống ai đó.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "bizarre (kì lạ) dùng miêu tả chiếc ô tô có 5 bánh và không cửa là chính xác."
+              "explanation": "bizarre (kì lạ) dùng miêu tả chiếc ô tô có 5 bánh và không cửa là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,8 +329,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "ecology (hệ sinh thái) liên quan đến sinh vật và môi trường sống, không có sự sống thì không nghiên cứu ecology."
+              "explanation": "ecology (hệ sinh thái) liên quan đến sinh vật và môi trường sống, không có sự sống thì không nghiên cứu ecology.",
+              "correctAnswer": "B"
             },
             {
               "id": "26",
@@ -342,8 +341,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "vulnerable nghĩa là dễ bị tổn thương/yếu đuối, không hợp lý khi con sư tử gầm rống và đuổi ngựa vằn."
+              "explanation": "vulnerable nghĩa là dễ bị tổn thương/yếu đuối, không hợp lý khi con sư tử gầm rống và đuổi ngựa vằn.",
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -354,8 +353,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "aquatic environments (môi trường nước) hoàn toàn đúng cho cá."
+              "explanation": "aquatic environments (môi trường nước) hoàn toàn đúng cho cá.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -366,8 +365,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "feats (kĩ năng/màn trình diễn xuất sắc) hợp lý với diễn viên xiếc."
+              "explanation": "feats (kĩ năng/màn trình diễn xuất sắc) hợp lý với diễn viên xiếc.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -378,8 +377,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "repetitive sound (âm thanh lặp lại đều đặn) của sóng biển ru ngủ là đúng."
+              "explanation": "repetitive sound (âm thanh lặp lại đều đặn) của sóng biển ru ngủ là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -390,8 +389,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "digest (tiêu hoá), bánh ngọt (cake) không thể tiêu hoá cookie."
+              "explanation": "digest (tiêu hoá), bánh ngọt (cake) không thể tiêu hoá cookie.",
+              "correctAnswer": "B"
             },
             {
               "id": "31",
@@ -402,8 +401,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "temperate (ôn hoà/ấm áp), không thể miêu tả thời tiết 'too cold to bear'."
+              "explanation": "temperate (ôn hoà/ấm áp), không thể miêu tả thời tiết 'too cold to bear'.",
+              "correctAnswer": "B"
             },
             {
               "id": "32",
@@ -414,8 +413,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "parasite (kí sinh trùng) sống dựa vào sinh vật khác, nên không phải là dạng sống độc lập (independent)."
+              "explanation": "parasite (kí sinh trùng) sống dựa vào sinh vật khác, nên không phải là dạng sống độc lập (independent).",
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -426,8 +425,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "companion (người đồng hành) rất phù hợp ngữ cảnh."
+              "explanation": "companion (người đồng hành) rất phù hợp ngữ cảnh.",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -438,8 +437,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Celsius (độ C) là danh từ chỉ đơn vị đo, không thể dùng như động từ."
+              "explanation": "Celsius (độ C) là danh từ chỉ đơn vị đo, không thể dùng như động từ.",
+              "correctAnswer": "B"
             },
             {
               "id": "35",
@@ -450,24 +449,24 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "biosphere (sinh quyển) hoàn toàn hợp nghĩa."
+              "explanation": "biosphere (sinh quyển) hoàn toàn hợp nghĩa.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Small World</h1><p style=\"margin-bottom: 1rem;\">Even though people can't see me, I'm an important part of Earth's <b>biosphere</b>. Scientists who study <b>ecology</b> know that I was the first life form on Earth. There is more of my kind than any other plant or animal in the world. Without me, other plants and animals would not even exist. I am a protist, and my tiny body is made up of one single cell.</p><p style=\"margin-bottom: 1rem;\">In my small world, things can be absolutely <b>bizarre</b>. Unlike most <b>aquatic</b> plants and animals, I don't need a <b>temperate</b> climate. I have a very high <b>tolerance</b> for extreme conditions. Right now, I'm swimming around in a bucket of boiling water! The temperature is 150 degrees <b>Celsius</b>, but I feel comfortable. I have <b>coarse</b> hairs called cilia that help me swim around in here. I move my cilia in a <b>repetitive</b> motion for the <b>duration</b> of my swim. I cannot go very fast, though. It takes me about five minutes to swim a distance of just one millimeter!</p><p style=\"margin-bottom: 1rem;\">When I get hungry, I look for tiny, <b>vulnerable</b> <b>parasites</b>. I swim up to one and swallow it whole. I <b>digest</b> things much like people do. I have an organ that works just like a human stomach. After I eat, I release nitrogen gas. Nitrogen is a <b>prominent</b> gas in the earth's atmosphere. Other plants and animals need my nitrogen to survive.</p><p style=\"margin-bottom: 1rem;\">My <b>reproductive</b> ability is my most unique trait. I don't need a <b>companion</b> to mate with. Instead, I <b>undergo</b> a process called fission, where my own <b>nucleus</b> splits in half. An exact copy of my nucleus is made, which forms into another protist. It really is an impressive <b>feat</b>. I can create an <b>infinite</b> number of new protists all by myself!</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Small World</h1>        <p style=\"margin-bottom: 1rem;\">Even though people can't see me, I'm an important part of Earth's <b>biosphere</b>. Scientists who study <b>ecology</b> know that I was the first life form on Earth. There is more of my kind than any other plant or animal in the world. Without me, other plants and animals would not even exist. I am a protist, and my tiny body is made up of one single cell.</p>    <p style=\"margin-bottom: 1rem;\">In my small world, things can be absolutely <b>bizarre</b>. Unlike most <b>aquatic</b> plants and animals, I don't need a <b>temperate</b> climate. I have a very high <b>tolerance</b> for extreme conditions. Right now, I'm swimming around in a bucket of boiling water! The temperature is 150 degrees <b>Celsius</b>, but I feel comfortable. I have <b>coarse</b> hairs called cilia that help me swim around in here. I move my cilia in a <b>repetitive</b> motion for the <b>duration</b> of my swim. I cannot go very fast, though. It takes me about five minutes to swim a distance of just one millimeter!</p>    <p style=\"margin-bottom: 1rem;\">When I get hungry, I look for tiny, <b>vulnerable</b> <b>parasites</b>. I swim up to one and swallow it whole. I <b>digest</b> things much like people do. I have an organ that works just like a human stomach. After I eat, I release nitrogen gas. Nitrogen is a <b>prominent</b> gas in the earth's atmosphere. Other plants and animals need my nitrogen to survive.</p>    <p style=\"margin-bottom: 1rem;\">My <b>reproductive</b> ability is my most unique trait. I don't need a <b>companion</b> to mate with. Instead, I <b>undergo</b> a process called fission, where my own <b>nucleus</b> splits in half. An exact copy of my nucleus is made, which forms into another protist. It really is an impressive <b>feat</b>. I can create an <b>infinite</b> number of new protists all by myself!</p></div>",
       "imageUrl": "/unit7_vol5_story.png",
       "sections": [
         {
           "id": "sec4_reading_tf",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -478,8 +477,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bài văn ghi rõ: 'I have a very high tolerance for extreme conditions.' (không phải temperate)."
+              "explanation": "Trong bài đọc, sinh vật nguyên sinh này nói rằng nó không cần khí hậu ôn hòa (temperate climate) mà có khả năng chịu đựng rất cao đối với các điều kiện khắc nghiệt (extreme conditions). Do đó nhận định này là sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "37",
@@ -490,8 +489,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài văn ghi: 'In my small world, things can be absolutely bizarre.'"
+              "explanation": "Tác giả có đề cập rõ trong bài rằng trong thế giới nhỏ bé của nó, mọi thứ có thể vô cùng kỳ lạ (bizarre). Nhận định này hoàn toàn chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -502,8 +501,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bài văn ghi: '...my own nucleus splits in half.' (tự chia nhân của chính nó, không phải của bạn đồng hành)."
+              "explanation": "Sinh vật này tự phân chia nhân của chính nó (my own nucleus) làm đôi trong quá trình phân hạch (fission), chứ không phải phân chia nhân của người bạn đồng hành (companion's nucleus). Nhận định này là sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "39",
@@ -514,8 +513,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài viết: 'I move my cilia in a repetitive motion for the duration of my swim.'"
+              "explanation": "Bài viết mô tả chi tiết rằng sinh vật này có những sợi lông thô (coarse hairs) gọi là cilia, và nó di chuyển chúng theo một chuyển động lặp đi lặp lại (repetitive motion) trong suốt thời gian bơi. Nhận định này là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -526,16 +525,16 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng với nội dung cuối bài đọc: 'I can create an infinite number of new protists all by myself!'"
+              "explanation": "Ở cuối bài, sinh vật này khẳng định rằng quá trình phân hạch là một kỳ tích ấn tượng (impressive feat) và nó có thể tự tạo ra một số lượng vô hạn (infinite number) các sinh vật nguyên sinh mới. Nhận định này đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading_qa",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -546,8 +545,8 @@
                 "150 degrees Celsius",
                 "200 degrees Celsius"
               ],
-              "correctAnswer": "C",
-              "explanation": "The temperature is 150 degrees Celsius, but I feel comfortable."
+              "explanation": "Trong đoạn 2 có câu The temperature is 150 degrees Celsius, but I feel comfortable. Điều này chứng tỏ sinh vật này cảm thấy thoải mái ở nhiệt độ 150 độ C. Chọn đáp án 150 degrees Celsius là chính xác.",
+              "correctAnswer": "C"
             },
             {
               "id": "42",
@@ -558,8 +557,8 @@
                 "They cannot reproduce.",
                 "They live on land."
               ],
-              "correctAnswer": "B",
-              "explanation": "...know that I was the first life form on Earth."
+              "explanation": "Câu thứ hai của đoạn 1 nói rõ rằng các nhà khoa học nghiên cứu hệ sinh thái biết sinh vật nguyên sinh này là dạng sống đầu tiên trên Trái đất (the first life form on Earth). Vậy đáp án là They are the first life form on Earth.",
+              "correctAnswer": "B"
             },
             {
               "id": "43",
@@ -570,8 +569,8 @@
                 "Nitrogen gas",
                 "Carbon dioxide"
               ],
-              "correctAnswer": "C",
-              "explanation": "After I eat, I release nitrogen gas."
+              "explanation": "Bài văn chỉ ra rằng sau khi ăn, sinh vật này thải ra khí nitơ (nitrogen gas), và đây là một loại khí quan trọng trong bầu khí quyển. Đáp án đúng là Nitrogen gas.",
+              "correctAnswer": "C"
             },
             {
               "id": "44",
@@ -582,8 +581,8 @@
                 "It swims up to one and swallows it whole.",
                 "It hunts them in groups."
               ],
-              "correctAnswer": "C",
-              "explanation": "I swim up to one and swallow it whole."
+              "explanation": "Khi đói, nó tìm kiếm những con ký sinh trùng nhỏ bé dễ bị tổn thương, bơi đến gần và nuốt chửng chúng (swallow it whole). Do đó ta chọn đáp án It swims up to one and swallows it whole.",
+              "correctAnswer": "C"
             },
             {
               "id": "45",
@@ -594,10 +593,11 @@
                 "Cloning",
                 "Digestion"
               ],
-              "correctAnswer": "B",
-              "explanation": "I undergo a process called fission..."
+              "explanation": "Đoạn cuối bài nhắc đến việc sinh vật này trải qua một quá trình gọi là phân hạch (fission) để sinh sản. Chọn đáp án Fission là đúng nhất nhé.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

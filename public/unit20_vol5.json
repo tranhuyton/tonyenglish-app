@@ -15,433 +15,433 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
-              "content": "1. Where would you find a microchip?",
+              "content": "Where would you find a microchip?",
               "options": [
                 "In a salad",
                 "In a laptop",
                 "In a chair",
                 "In your dog"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"microchip\" (vi mạch) được tìm thấy trong máy tính xách tay (laptop)."
+              "explanation": "\"microchip\" (vi mạch) được tìm thấy trong máy tính xách tay (laptop).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_2",
-              "content": "2. What is found at a quantum level?",
+              "content": "What is found at a quantum level?",
               "options": [
                 "A comet",
                 "Atomic particles",
                 "A scale",
                 "Biological theories"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"quantum\" (lượng tử) liên quan đến các hạt nguyên tử (atomic particles)."
+              "explanation": "\"quantum\" (lượng tử) liên quan đến các hạt nguyên tử (atomic particles).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_3",
-              "content": "3. What does a magnet attract?",
+              "content": "What does a magnet attract?",
               "options": [
                 "Metal",
                 "Trees",
                 "Water",
                 "Plastic"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"magnet\" (nam châm) hút kim loại (metal)."
+              "explanation": "\"magnet\" (nam châm) hút kim loại (metal).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_4",
-              "content": "4. What is an example of a ratio?",
+              "content": "What is an example of a ratio?",
               "options": [
                 "Rough to smooth",
                 "Cat to dog",
                 "Two to one",
                 "Black and white"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"ratio\" (tỷ lệ) là tỷ số giữa các con số, ví dụ như hai trên một (two to one)."
+              "explanation": "\"ratio\" (tỷ lệ) là tỷ số giữa các con số, ví dụ như hai trên một (two to one).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_5",
-              "content": "5. What is the equivalent of 60 minutes?",
+              "content": "What is the equivalent of 60 minutes?",
               "options": [
                 "One hour",
                 "30 minutes",
                 "One day",
                 "One century"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"equivalent\" (tương đương) của 60 phút là 1 giờ (one hour)."
+              "explanation": "\"equivalent\" (tương đương) của 60 phút là 1 giờ (one hour).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Fill in the blanks with the correct words.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_1",
-              "content": "1. The doctors just found out that the infection is _______ .",
+              "content": "The doctors just found out that the infection is _______ .",
               "options": [
                 "viral",
                 "phase",
                 "input",
                 "database"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"viral\" (do virus) bổ nghĩa cho danh từ infection."
+              "explanation": "\"viral\" (do virus) bổ nghĩa cho danh từ infection.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_2",
-              "content": "2. Since a virus is not a bacteria, it cannot be treated with a(n) _______ .",
+              "content": "Since a virus is not a bacteria, it cannot be treated with a(n) _______ .",
               "options": [
                 "antibiotic",
                 "ratio",
                 "prevalent",
                 "immune"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"antibiotic\" (thuốc kháng sinh) không điều trị được virus mà chỉ trị được vi khuẩn."
+              "explanation": "\"antibiotic\" (thuốc kháng sinh) không điều trị được virus mà chỉ trị được vi khuẩn.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_3",
-              "content": "3. He looked at the information that was stored in the _______ .",
+              "content": "He looked at the information that was stored in the _______ .",
               "options": [
                 "database",
                 "spiral",
                 "input",
                 "magnet"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"database\" (cơ sở dữ liệu) là nơi lưu trữ thông tin."
+              "explanation": "\"database\" (cơ sở dữ liệu) là nơi lưu trữ thông tin.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_4",
-              "content": "4. After comparing the data, he expressed the results in a _______ .",
+              "content": "After comparing the data, he expressed the results in a _______ .",
               "options": [
                 "ratio",
                 "phase",
                 "viral",
                 "prevalent"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"ratio\" (tỷ lệ) dùng để biểu thị kết quả so sánh số liệu."
+              "explanation": "\"ratio\" (tỷ lệ) dùng để biểu thị kết quả so sánh số liệu.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_5",
-              "content": "5. The process of building the house is in the final _______ .",
+              "content": "The process of building the house is in the final _______ .",
               "options": [
                 "phase",
                 "immune",
                 "antibiotic",
                 "database"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"phase\" (giai đoạn) phù hợp với quy trình xây dựng (process)."
+              "explanation": "\"phase\" (giai đoạn) phù hợp với quy trình xây dựng (process).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_6",
-              "content": "6. The last step is putting in a staircase in the shape of a _______ .",
+              "content": "The last step is putting in a staircase in the shape of a _______ .",
               "options": [
                 "spiral",
                 "viral",
                 "prevalent",
                 "magnet"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"spiral\" (hình xoắn ốc) phù hợp để chỉ hình dáng cầu thang."
+              "explanation": "\"spiral\" (hình xoắn ốc) phù hợp để chỉ hình dáng cầu thang.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_7",
-              "content": "7. We learned what metals are attracted to a _______ .",
+              "content": "We learned what metals are attracted to a _______ .",
               "options": [
                 "magnet",
                 "database",
                 "input",
                 "ratio"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"magnet\" (nam châm) hút kim loại."
+              "explanation": "\"magnet\" (nam châm) hút kim loại.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_8",
-              "content": "8. We fed our results into the computer as _______ .",
+              "content": "We fed our results into the computer as _______ .",
               "options": [
                 "input",
                 "viral",
                 "immune",
                 "spiral"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"input\" (dữ liệu đầu vào) được đưa vào máy tính."
+              "explanation": "\"input\" (dữ liệu đầu vào) được đưa vào máy tính.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_9",
-              "content": "9. In this country, polio is not _______ .",
+              "content": "In this country, polio is not _______ .",
               "options": [
                 "prevalent",
                 "phase",
                 "antibiotic",
                 "ratio"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"prevalent\" (phổ biến) ý chỉ căn bệnh bại liệt không còn phổ biến ở nước này."
+              "explanation": "\"prevalent\" (phổ biến) ý chỉ căn bệnh bại liệt không còn phổ biến ở nước này.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_10",
-              "content": "10. It is highly uncommon because most people are _______ thanks to vaccines.",
+              "content": "It is highly uncommon because most people are _______ thanks to vaccines.",
               "options": [
                 "immune",
                 "spiral",
                 "input",
                 "database"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"immune\" (miễn dịch) nhờ vào vắc-xin."
+              "explanation": "\"immune\" (miễn dịch) nhờ vào vắc-xin.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex3_1",
-              "content": "1. Walking was the most common form of transportation in the big city.",
+              "content": "Walking was the most common form of transportation in the big city.",
               "options": [
                 "prevalent",
                 "aggregate",
                 "quantum",
                 "equivalent"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"common\" (phổ biến) đồng nghĩa với prevalent."
+              "explanation": "\"common\" (phổ biến) đồng nghĩa với prevalent.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_2",
-              "content": "2. We are now ready to begin the first particular stage in the process.",
+              "content": "We are now ready to begin the first particular stage in the process.",
               "options": [
                 "phase",
                 "circuit",
                 "metabolism",
                 "magnet"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"particular stage\" (giai đoạn cụ thể) đồng nghĩa với phase."
+              "explanation": "\"particular stage\" (giai đoạn cụ thể) đồng nghĩa với phase.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_3",
-              "content": "3. Do the doctors know if the condition is a disease caused by a virus?",
+              "content": "Do the doctors know if the condition is a disease caused by a virus?",
               "options": [
                 "viral",
                 "intimate",
                 "immune",
                 "intricate"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"a disease caused by a virus\" (bệnh do virus gây ra) đồng nghĩa với viral."
+              "explanation": "\"a disease caused by a virus\" (bệnh do virus gây ra) đồng nghĩa với viral.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_4",
-              "content": "4. Some people don’t believe in taking drugs used to treat infections.",
+              "content": "Some people don’t believe in taking drugs used to treat infections.",
               "options": [
                 "antibiotics",
                 "equivalents",
                 "inputs",
                 "ratios"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"drugs used to treat infections\" (thuốc trị nhiễm trùng) đồng nghĩa với antibiotics."
+              "explanation": "\"drugs used to treat infections\" (thuốc trị nhiễm trùng) đồng nghĩa với antibiotics.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_5",
-              "content": "5. We were offered a bottle of sparkling cider to go well with our meal.",
+              "content": "We were offered a bottle of sparkling cider to go well with our meal.",
               "options": [
                 "complement",
                 "pinch",
                 "compress",
                 "distort"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"go well with\" (bổ sung, làm cho tốt hơn) đồng nghĩa với complement."
+              "explanation": "\"go well with\" (bổ sung, làm cho tốt hơn) đồng nghĩa với complement.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_6",
-              "content": "6. I seem to have lost some of the information that is put into a computer.",
+              "content": "I seem to have lost some of the information that is put into a computer.",
               "options": [
                 "input",
                 "phase",
                 "database",
                 "microchip"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"information that is put into a computer\" đồng nghĩa với input (dữ liệu đầu vào)."
+              "explanation": "\"information that is put into a computer\" đồng nghĩa với input (dữ liệu đầu vào).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_7",
-              "content": "7. I wish they wouldn’t store personal information in the collection of data in the computer.",
+              "content": "I wish they wouldn’t store personal information in the collection of data in the computer.",
               "options": [
                 "database",
                 "circuit",
                 "metabolism",
                 "magnet"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"collection of data\" (tập hợp dữ liệu) đồng nghĩa với database."
+              "explanation": "\"collection of data\" (tập hợp dữ liệu) đồng nghĩa với database.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_8",
-              "content": "8. His grandmother loves to take a piece of skin and squeeze his cheeks.",
+              "content": "His grandmother loves to take a piece of skin and squeeze his cheeks.",
               "options": [
                 "pinch",
                 "submerge",
                 "precipitate",
                 "designate"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"take a piece of skin and squeeze\" (véo da) đồng nghĩa với pinch."
+              "explanation": "\"take a piece of skin and squeeze\" (véo da) đồng nghĩa với pinch.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_9",
-              "content": "9. I don’t really understand my body’s way that chemical processes cause food to be used.",
+              "content": "I don’t really understand my body’s way that chemical processes cause food to be used.",
               "options": [
                 "metabolism",
                 "ratio",
                 "aggregate",
                 "quantum"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"way that chemical processes cause food to be used\" đồng nghĩa với metabolism (sự trao đổi chất)."
+              "explanation": "\"way that chemical processes cause food to be used\" đồng nghĩa với metabolism (sự trao đổi chất).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_10",
-              "content": "10. A spring looks like a shape which winds round and round.",
+              "content": "A spring looks like a shape which winds round and round.",
               "options": [
                 "spiral",
                 "equivalent",
                 "buoy",
                 "anchor"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"shape which winds round and round\" (hình cuộn vòng) đồng nghĩa với spiral."
+              "explanation": "\"shape which winds round and round\" (hình cuộn vòng) đồng nghĩa với spiral.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex4_1",
-              "content": "1. The microchip was damaged when she spilled water on the computer.",
+              "content": "The microchip was damaged when she spilled water on the computer.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"microchip\" (vi mạch máy tính) dùng chính xác, nước làm hỏng máy tính."
+              "explanation": "\"microchip\" (vi mạch máy tính) dùng chính xác, nước làm hỏng máy tính.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_2",
-              "content": "2. Quantum mechanics deals with planets and stars.",
+              "content": "Quantum mechanics deals with planets and stars.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"quantum mechanics\" (cơ học lượng tử) liên quan đến các hạt vi mô, không phải hành tinh."
+              "explanation": "\"quantum mechanics\" (cơ học lượng tử) liên quan đến các hạt vi mô, không phải hành tinh.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_3",
-              "content": "3. People with fast metabolisms are usually thin and in good shape.",
+              "content": "People with fast metabolisms are usually thin and in good shape.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"metabolisms\" (sự trao đổi chất) dùng chính xác cho việc giữ vóc dáng."
+              "explanation": "\"metabolisms\" (sự trao đổi chất) dùng chính xác cho việc giữ vóc dáng.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_4",
-              "content": "4. I compressed the sponge into a little ball.",
+              "content": "I compressed the sponge into a little ball.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"compressed\" (nén lại) dùng chính xác cho việc nắn miếng bọt biển."
+              "explanation": "\"compressed\" (nén lại) dùng chính xác cho việc nắn miếng bọt biển.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_5",
-              "content": "5. You should pinch your homework if you want to get it turned in on time.",
+              "content": "You should pinch your homework if you want to get it turned in on time.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"pinch\" (véo, kẹp) không dùng cho việc hoàn thành bài tập về nhà."
+              "explanation": "\"pinch\" (véo, kẹp) không dùng cho việc hoàn thành bài tập về nhà.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_6",
-              "content": "6. I was amazed by the aggregate total of donated gifts and money.",
+              "content": "I was amazed by the aggregate total of donated gifts and money.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"aggregate\" (tổng số) dùng đúng khi nói về tổng tiền và quà quyên góp."
+              "explanation": "\"aggregate\" (tổng số) dùng đúng khi nói về tổng tiền và quà quyên góp.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_7",
-              "content": "7. The children played all day on the circuit.",
+              "content": "The children played all day on the circuit.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"circuit\" (mạch điện) không phải là nơi trẻ em có thể chơi đùa."
+              "explanation": "\"circuit\" (mạch điện) không phải là nơi trẻ em có thể chơi đùa.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_8",
-              "content": "8. Dressing and pepper complemented the tasty salad.",
+              "content": "Dressing and pepper complemented the tasty salad.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"complemented\" (bổ sung, làm tôn lên) dùng đúng cho gia vị món salad."
+              "explanation": "\"complemented\" (bổ sung, làm tôn lên) dùng đúng cho gia vị món salad.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_9",
-              "content": "9. Intimate friends should not tell lies about each other.",
+              "content": "Intimate friends should not tell lies about each other.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"intimate\" (thân thiết) dùng chính xác cho tình bạn."
+              "explanation": "\"intimate\" (thân thiết) dùng chính xác cho tình bạn.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_10",
-              "content": "10. This tuba is the equivalent of a set of drums.",
+              "content": "This tuba is the equivalent of a set of drums.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"equivalent\" (tương đương) dùng sai vì kèn tuba và dàn trống không thể tương đương nhau về số lượng hay âm thanh."
+              "explanation": "\"equivalent\" (tương đương) dùng sai vì kèn tuba và dàn trống không thể tương đương nhau về số lượng hay âm thanh.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -455,127 +455,127 @@
           "id": "sec5",
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readA_1",
-              "content": "1. Microchips are made up of compressed electrical circuits.",
+              "content": "Microchips are made up of compressed electrical circuits.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đoạn văn nêu rõ vi mạch (microchips) được làm bằng các mạch điện nén (compressed electrical circuits)."
+              "explanation": "Đoạn 1 của bài viết chỉ ra rằng \"They are made up of compressed electrical circuits that can detect and record data about the body.\" (Chúng được tạo thành từ các mạch điện nén có thể phát hiện và ghi lại dữ liệu về cơ thể). Thông tin này trùng khớp hoàn toàn.",
+              "correctAnswer": "A"
             },
             {
               "id": "readA_2",
-              "content": "2. Chips express the aggregate number of immune and intimate cells in a ratio.",
+              "content": "Chips express the aggregate number of immune and intimate cells in a ratio.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Vi mạch thể hiện số lượng tổng cộng của tế bào miễn dịch (immune) và tế bào bị lây nhiễm (infected), không phải tế bào thân thiết (intimate cells)."
+              "explanation": "Trong đoạn 3, bài đọc viết \"They can find the aggregate number of immune and infected cells and present the results in a ratio.\" (Chúng có thể tìm ra tổng số tế bào miễn dịch và tế bào bị nhiễm bệnh rồi trình bày kết quả dưới dạng tỷ lệ). Câu hỏi nói về tế bào thân mật (intimate cells) thay vì tế bào nhiễm bệnh (infected cells), nên câu này là sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_3",
-              "content": "3. Chips detect viral infections and problems with people’s metabolism.",
+              "content": "Chips detect viral infections and problems with people’s metabolism.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đoạn văn có nhắc đến khả năng phát hiện bệnh do virus và vấn đề trao đổi chất."
+              "explanation": "Ở đoạn 3 có ghi \"They can find problems with the person's metabolism and organs. They can also detect viral infections.\" (Chúng có thể tìm ra các vấn đề về quá trình trao đổi chất và các cơ quan của con người. Chúng cũng có thể phát hiện bệnh truyền nhiễm do virus). Câu này tóm tắt đúng chức năng của chip.",
+              "correctAnswer": "A"
             },
             {
               "id": "readA_4",
-              "content": "4. A doctor pinches the skin and cuts a hole with a tool shaped like a spiral.",
+              "content": "A doctor pinches the skin and cuts a hole with a tool shaped like a spiral.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bác sĩ véo (pinches) da và rạch lỗ nhỏ bằng công cụ hình xoắn ốc (spiral)."
+              "explanation": "Trong đoạn 2 miêu tả quá trình cấy ghép \"The doctor pinches a piece of skin and cuts a tiny hole with a tool shaped like a spiral.\" (Bác sĩ véo một mảnh da và cắt một lỗ nhỏ bằng một dụng cụ có hình xoắn ốc). Điều này hoàn toàn đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "readA_5",
-              "content": "5. Putting antibiotics in humans is becoming more prevalent.",
+              "content": "Putting antibiotics in humans is becoming more prevalent.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Việc cấy vi mạch (putting microchips) mới đang trở nên phổ biến (prevalent), chứ không phải việc tiêm thuốc kháng sinh (antibiotics)."
+              "explanation": "Ở đoạn cuối, bài đọc nói \"The idea of putting chips in humans is still very new. However, it is now becoming more prevalent.\" (Ý tưởng cấy chip vào cơ thể người vẫn còn rất mới. Tuy nhiên, nó đang dần trở nên phổ biến hơn). Cái ngày càng phổ biến là việc cấy chip, chứ không phải là cho con người dùng thuốc kháng sinh (antibiotics).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readB_1",
-              "content": "1. What does the doctor’s special magnet do?",
+              "content": "What does the doctor’s special magnet do?",
               "options": [
                 "It copies the chip's data.",
                 "It compresses the circuit.",
                 "It finds the aggregate number.",
                 "It complements the medicine."
               ],
-              "correctAnswer": "A",
-              "explanation": "Nam châm đặc biệt (special magnet) được dùng để sao chép dữ liệu của vi mạch (copies the chip's data)."
+              "explanation": "Đoạn 4 cho biết \"To recover the chip's data, the doctor uses a special magnet that copies it.\" (Để lấy lại dữ liệu của chip, bác sĩ sử dụng một nam châm đặc biệt để sao chép nó). Vì vậy, nam châm có tác dụng sao chép dữ liệu.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_2",
-              "content": "2. What holds the equivalent amount of storage as most computers?",
+              "content": "What holds the equivalent amount of storage as most computers?",
               "options": [
                 "Microchips",
                 "Databases",
                 "Magnets",
                 "Ratios"
               ],
-              "correctAnswer": "A",
-              "explanation": "Vi mạch (Microchips) lưu trữ một lượng dữ liệu tương đương (equivalent amount) với hầu hết các máy tính."
+              "explanation": "Ở đoạn 1 có viết \"They are tiny, but they hold the equivalent amount of data as most computers.\" (Chúng rất nhỏ, nhưng chứa lượng dữ liệu tương đương với hầu hết các máy tính). Từ They ở đây chính là đang nhắc tới Microchips.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_3",
-              "content": "3. After the input is stored on the chip, what is the next phase of the process?",
+              "content": "After the input is stored on the chip, what is the next phase of the process?",
               "options": [
                 "Putting it underneath the person's skin",
                 "Finding a viral infection",
                 "Taking an antibiotic",
                 "Using a magnet"
               ],
-              "correctAnswer": "A",
-              "explanation": "Giai đoạn tiếp theo là cấy vi mạch vào dưới da người bệnh."
+              "explanation": "Theo đoạn 2, \"The second phase of the process involves putting it in the person's skin.\" (Giai đoạn thứ hai của quá trình bao gồm việc đặt nó vào dưới da của người bệnh). Đây là bước ngay sau khi lưu dữ liệu.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_4",
-              "content": "4. What do microchips do to record what is happening on the quantum level?",
+              "content": "What do microchips do to record what is happening on the quantum level?",
               "options": [
                 "They scan the patient's body.",
                 "They pinch the skin.",
                 "They create a spiral.",
                 "They detect the metabolism."
               ],
-              "correctAnswer": "A",
-              "explanation": "Vi mạch quét (scan) cơ thể bệnh nhân để ghi lại hoạt động ở cấp độ lượng tử."
+              "explanation": "Đoạn 3 có nhắc \"Microchips scan the patient's body to record what is happening on the quantum level.\" (Các vi mạch quét cơ thể bệnh nhân để ghi lại những gì đang xảy ra ở cấp độ lượng tử). Do đó, hành động chúng làm là quét cơ thể người bệnh.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_5",
-              "content": "5. What complements each other, according to the passage?",
+              "content": "What complements each other, according to the passage?",
               "options": [
                 "Medicine and computer technology",
                 "Immune and infected cells",
                 "Quantum mechanics and biology",
                 "Doctors and patients"
               ],
-              "correctAnswer": "A",
-              "explanation": "Y học và công nghệ máy tính (Medicine and computers) bổ sung, hỗ trợ cho nhau rất tốt (complement each other well)."
+              "explanation": "Câu cuối cùng của bài đọc kết luận \"It is obvious that medicine and computers complement each other well.\" (Rõ ràng là y học và máy tính bổ sung cho nhau rất tốt). Vậy thứ bổ sung cho nhau là y học và công nghệ máy tính.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

@@ -15,597 +15,597 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. If you need medication, you are probably ______.",
+              "content": "If you need medication, you are probably ______.",
               "options": [
                 "sick",
                 "hungry",
                 "bored",
                 "skinny"
               ],
-              "correctAnswer": "A",
-              "explanation": "medication là thuốc, người cần thuốc thường là người bệnh (sick)."
+              "explanation": "medication là thuốc, người cần thuốc thường là người bệnh (sick).",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
-              "content": "2. If you have a misconception about something, ______.",
+              "content": "If you have a misconception about something, ______.",
               "options": [
                 "you are clear",
                 "you are complicated",
                 "you are wrong",
                 "you are correct"
               ],
-              "correctAnswer": "C",
-              "explanation": "misconception là quan niệm sai lầm, tức là bạn đang sai (wrong)."
+              "explanation": "misconception là quan niệm sai lầm, tức là bạn đang sai (wrong).",
+              "correctAnswer": "C"
             },
             {
               "id": "3",
-              "content": "3. Which of the following is true of a ceramic bowl?",
+              "content": "Which of the following is true of a ceramic bowl?",
               "options": [
                 "It is metal.",
                 "It is clay.",
                 "It is wooden.",
                 "It is plastic."
               ],
-              "correctAnswer": "B",
-              "explanation": "ceramic là đồ gốm sứ, được làm từ đất sét (clay)."
+              "explanation": "ceramic là đồ gốm sứ, được làm từ đất sét (clay).",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
-              "content": "4. If you are adept at painting, you can ______.",
+              "content": "If you are adept at painting, you can ______.",
               "options": [
                 "paint badly",
                 "paint like a child",
                 "paint well",
                 "only use certain colors"
               ],
-              "correctAnswer": "C",
-              "explanation": "adept là tinh thông/giỏi, do đó bạn có thể vẽ tốt (paint well)."
+              "explanation": "adept là tinh thông/giỏi, do đó bạn có thể vẽ tốt (paint well).",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
-              "content": "5. When you peel a piece of fruit, you ______.",
+              "content": "When you peel a piece of fruit, you ______.",
               "options": [
                 "remove the skin",
                 "cut it into pieces",
                 "eat the skin",
                 "take a knife and chop it up"
               ],
-              "correctAnswer": "A",
-              "explanation": "peel có nghĩa là lột/gọt vỏ (remove the skin)."
+              "explanation": "peel có nghĩa là lột/gọt vỏ (remove the skin).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "1. My boss is a difficult person to deal with because he can become so _____________.",
+              "content": "My boss is a difficult person to deal with because he can become so _____________.",
               "options": [
                 "culinary",
                 "hostile",
                 "edible",
                 "misconception"
               ],
-              "correctAnswer": "B",
-              "explanation": "Một người khó đối phó vì hay trở nên thù hằn/cáu gắt (hostile)."
+              "explanation": "Một người khó đối phó vì hay trở nên thù hằn/cáu gắt (hostile).",
+              "correctAnswer": "B"
             },
             {
               "id": "7",
-              "content": "2. He gets incredibly angry when he can't _____________ an employee or a customer.",
+              "content": "He gets incredibly angry when he can't _____________ an employee or a customer.",
               "options": [
                 "peel",
                 "prescription",
                 "intake",
                 "dominate"
               ],
-              "correctAnswer": "D",
-              "explanation": "Tức giận khi không thể thống trị/kiểm soát (dominate) người khác."
+              "explanation": "Tức giận khi không thể thống trị/kiểm soát (dominate) người khác.",
+              "correctAnswer": "D"
             },
             {
               "id": "8",
-              "content": "3. There is a popular _____________ that cooking well is difficult.",
+              "content": "There is a popular _____________ that cooking well is difficult.",
               "options": [
                 "medication",
                 "malnutrition",
                 "misconception",
                 "hostile"
               ],
-              "correctAnswer": "C",
-              "explanation": "Một quan niệm sai lầm phổ biến (misconception) là nấu ăn ngon rất khó."
+              "explanation": "Một quan niệm sai lầm phổ biến (misconception) là nấu ăn ngon rất khó.",
+              "correctAnswer": "C"
             },
             {
               "id": "9",
-              "content": "4. Actually, most people can cook with basic _____________ techniques.",
+              "content": "Actually, most people can cook with basic _____________ techniques.",
               "options": [
                 "culinary",
                 "edible",
                 "intake",
                 "dominate"
               ],
-              "correctAnswer": "A",
-              "explanation": "kỹ năng nấu nướng cơ bản (culinary techniques)."
+              "explanation": "kỹ năng nấu nướng cơ bản (culinary techniques).",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
-              "content": "5. My _____________ is about to run out, but I still need more.",
+              "content": "My _____________ is about to run out, but I still need more.",
               "options": [
                 "medication",
                 "peel",
                 "malnutrition",
                 "prescription"
               ],
-              "correctAnswer": "A",
-              "explanation": "Thuốc (medication) sắp hết và cần thêm."
+              "explanation": "Thuốc (medication) sắp hết và cần thêm.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
-              "content": "6. Tomorrow, I will ask the doctor for a new _____________.",
+              "content": "Tomorrow, I will ask the doctor for a new _____________.",
               "options": [
                 "prescription",
                 "edible",
                 "culinary",
                 "dominate"
               ],
-              "correctAnswer": "A",
-              "explanation": "Xin bác sĩ một đơn thuốc mới (prescription)."
+              "explanation": "Xin bác sĩ một đơn thuốc mới (prescription).",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
-              "content": "7. The skin of some vegetables such as squash is not _____________.",
+              "content": "The skin of some vegetables such as squash is not _____________.",
               "options": [
                 "hostile",
                 "edible",
                 "peel",
                 "misconception"
               ],
-              "correctAnswer": "B",
-              "explanation": "Vỏ của một số loại rau củ không thể ăn được (not edible)."
+              "explanation": "Vỏ của một số loại rau củ không thể ăn được (not edible).",
+              "correctAnswer": "B"
             },
             {
               "id": "13",
-              "content": "8. That is why you have to _____________ it before you eat it.",
+              "content": "That is why you have to _____________ it before you eat it.",
               "options": [
                 "dominate",
                 "peel",
                 "intake",
                 "malnutrition"
               ],
-              "correctAnswer": "B",
-              "explanation": "Vì không ăn được nên phải gọt vỏ (peel)."
+              "explanation": "Vì không ăn được nên phải gọt vỏ (peel).",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
-              "content": "9. In some parts of the world, _____________ is a major problem.",
+              "content": "In some parts of the world, _____________ is a major problem.",
               "options": [
                 "malnutrition",
                 "prescription",
                 "medication",
                 "culinary"
               ],
-              "correctAnswer": "A",
-              "explanation": "Ở một số nơi, suy dinh dưỡng (malnutrition) là vấn đề lớn."
+              "explanation": "Ở một số nơi, suy dinh dưỡng (malnutrition) là vấn đề lớn.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
-              "content": "10. One of the causes is inadequate _____________ of necessary vitamins and minerals.",
+              "content": "One of the causes is inadequate _____________ of necessary vitamins and minerals.",
               "options": [
                 "intake",
                 "edible",
                 "misconception",
                 "peel"
               ],
-              "correctAnswer": "A",
-              "explanation": "Nguyên nhân là lượng nạp vào (intake) vitamin không đủ."
+              "explanation": "Nguyên nhân là lượng nạp vào (intake) vitamin không đủ.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
-              "content": "1. oppress",
+              "content": "oppress",
               "options": [
                 "cure",
                 "print",
                 "rule",
                 "break"
               ],
-              "correctAnswer": "C",
-              "explanation": "oppress (áp bức, cai trị tàn nhẫn) tương đương với rule (cai trị)."
+              "explanation": "oppress (áp bức, cai trị tàn nhẫn) tương đương với rule (cai trị).",
+              "correctAnswer": "C"
             },
             {
               "id": "17",
-              "content": "2. barren",
+              "content": "barren",
               "options": [
                 "ugly",
                 "mountainous",
                 "close",
                 "lifeless"
               ],
-              "correctAnswer": "D",
-              "explanation": "barren (cằn cỗi, không có cây cối) tương đương với lifeless (thiếu sức sống)."
+              "explanation": "barren (cằn cỗi, không có cây cối) tương đương với lifeless (thiếu sức sống).",
+              "correctAnswer": "D"
             },
             {
               "id": "18",
-              "content": "3. strive",
+              "content": "strive",
               "options": [
                 "attack",
                 "struggle",
                 "compete",
                 "win"
               ],
-              "correctAnswer": "B",
-              "explanation": "strive (phấn đấu, đấu tranh) tương đương với struggle (vật lộn, đấu tranh)."
+              "explanation": "strive (phấn đấu, đấu tranh) tương đương với struggle (vật lộn, đấu tranh).",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
-              "content": "4. dominate",
+              "content": "dominate",
               "options": [
                 "control",
                 "trick",
                 "encourage",
                 "entertain"
               ],
-              "correctAnswer": "A",
-              "explanation": "dominate (thống trị, áp đảo) tương đương với control (kiểm soát)."
+              "explanation": "dominate (thống trị, áp đảo) tương đương với control (kiểm soát).",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
-              "content": "5. culinary",
+              "content": "culinary",
               "options": [
                 "growing",
                 "creating",
                 "cooking",
                 "drinking"
               ],
-              "correctAnswer": "C",
-              "explanation": "culinary (thuộc về ẩm thực, nấu nướng) tương đương với cooking."
+              "explanation": "culinary (thuộc về ẩm thực, nấu nướng) tương đương với cooking.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
-              "content": "1. One of my classmates is very hostile. He always helps me with homework.",
+              "content": "One of my classmates is very hostile. He always helps me with homework.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "hostile là thù địch/khó gần, mâu thuẫn với việc 'always helps me'."
+              "explanation": "hostile là thù địch/khó gần, mâu thuẫn với việc 'always helps me'.",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
-              "content": "2. I chose an obscure book for my report. It was very difficult to find.",
+              "content": "I chose an obscure book for my report. It was very difficult to find.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "obscure (ít người biết, vô danh) nên rất khó tìm (difficult to find)."
+              "explanation": "obscure (ít người biết, vô danh) nên rất khó tìm (difficult to find).",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
-              "content": "3. In the past, many people suffered from malnutrition because of a lack of food.",
+              "content": "In the past, many people suffered from malnutrition because of a lack of food.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "malnutrition (suy dinh dưỡng) do thiếu thức ăn (lack of food) là hoàn toàn hợp lý."
+              "explanation": "malnutrition (suy dinh dưỡng) do thiếu thức ăn (lack of food) là hoàn toàn hợp lý.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
-              "content": "4. Did you know that some flowers are edible? They both look and taste good.",
+              "content": "Did you know that some flowers are edible? They both look and taste good.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "edible (có thể ăn được) nên có taste good (vị ngon)."
+              "explanation": "edible (có thể ăn được) nên có taste good (vị ngon).",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
-              "content": "5. The dog was hiding in a dense patch of grass. We had no trouble finding him.",
+              "content": "The dog was hiding in a dense patch of grass. We had no trouble finding him.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "dense (dày đặc), nếu trốn trong bãi cỏ dày đặc thì sẽ khó tìm, câu nói 'no trouble' là mâu thuẫn."
+              "explanation": "dense (dày đặc), nếu trốn trong bãi cỏ dày đặc thì sẽ khó tìm, câu nói 'no trouble' là mâu thuẫn.",
+              "correctAnswer": "B"
             },
             {
               "id": "26",
-              "content": "6. People enjoy Mark Twain's novels. They likewise enjoy his political comments.",
+              "content": "People enjoy Mark Twain's novels. They likewise enjoy his political comments.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "likewise (tương tự như vậy) dùng nối hai mệnh đề cùng ý nghĩa."
+              "explanation": "likewise (tương tự như vậy) dùng nối hai mệnh đề cùng ý nghĩa.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
-              "content": "7. You can have health problems if your sugar intake is too high.",
+              "content": "You can have health problems if your sugar intake is too high.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "sugar intake (lượng đường nạp vào) quá cao gây vấn đề sức khoẻ."
+              "explanation": "sugar intake (lượng đường nạp vào) quá cao gây vấn đề sức khoẻ.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
-              "content": "8. You need to ask your teacher for a prescription. Then you can get your medicine.",
+              "content": "You need to ask your teacher for a prescription. Then you can get your medicine.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "prescription (đơn thuốc) do bác sĩ kê, không phải do giáo viên (teacher)."
+              "explanation": "prescription (đơn thuốc) do bác sĩ kê, không phải do giáo viên (teacher).",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "9. After we lost the game, our coach showed his dignity. He yelled at us for hours.",
+              "content": "After we lost the game, our coach showed his dignity. He yelled at us for hours.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "dignity (sự điềm tĩnh/phẩm giá), nhưng lại la mắng (yelled) thì mâu thuẫn."
+              "explanation": "dignity (sự điềm tĩnh/phẩm giá), nhưng lại la mắng (yelled) thì mâu thuẫn.",
+              "correctAnswer": "B"
             },
             {
               "id": "30",
-              "content": "10. After the car accident, John needed a respirator. He could not walk without it.",
+              "content": "After the car accident, John needed a respirator. He could not walk without it.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "respirator (máy thở) giúp hô hấp, không giúp việc đi bộ (walk)."
+              "explanation": "respirator (máy thở) giúp hô hấp, không giúp việc đi bộ (walk).",
+              "correctAnswer": "B"
             },
             {
               "id": "31",
-              "content": "11. They are taking a break outside. Why don't we do likewise?",
+              "content": "They are taking a break outside. Why don't we do likewise?",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "do likewise (làm tương tự) là một cách dùng chính xác."
+              "explanation": "do likewise (làm tương tự) là một cách dùng chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "32",
-              "content": "12. A month ago, I hurt myself playing soccer. The injury finally oppressed this week.",
+              "content": "A month ago, I hurt myself playing soccer. The injury finally oppressed this week.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "oppress là áp bức/đè nén, không thể dùng cho vết thương (injury)."
+              "explanation": "oppress là áp bức/đè nén, không thể dùng cho vết thương (injury).",
+              "correctAnswer": "B"
             },
             {
               "id": "33",
-              "content": "13. Strive to do worst on your test.",
+              "content": "Strive to do worst on your test.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "strive là cố gắng vươn lên, không ai cố gắng để đạt điểm tệ nhất (worst)."
+              "explanation": "strive là cố gắng vươn lên, không ai cố gắng để đạt điểm tệ nhất (worst).",
+              "correctAnswer": "B"
             },
             {
               "id": "34",
-              "content": "14. I strive to exercise at least twenty minutes each day to stay in shape.",
+              "content": "I strive to exercise at least twenty minutes each day to stay in shape.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "strive (phấn đấu/nỗ lực) tập thể dục là đúng."
+              "explanation": "strive (phấn đấu/nỗ lực) tập thể dục là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
-              "content": "15. Many deserts are barren landscapes. You find little more than dirt and rocks there.",
+              "content": "Many deserts are barren landscapes. You find little more than dirt and rocks there.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "barren (cằn cỗi), chỉ có đất và đá, không có cây cối là hợp lý."
+              "explanation": "barren (cằn cỗi), chỉ có đất và đá, không có cây cối là hợp lý.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Becoming a Healer</h1><p style=\"margin-bottom: 1rem;\">Years ago, I worked at a small health clinic in a remote country. I had gone there to treat an <b>obscure</b> syndrome. It attacked people's lungs, causing them to need a <b>respirator</b> to breathe. I was trying out a new <b>medication</b> to treat these people instead of using a respirator. If I was successful, I would become famous.</p><p style=\"margin-bottom: 1rem;\">Everything was going fine until war broke out in a nearby country. Many people from that country fled the <b>hostile</b> invading army. The army wanted to <b>dominate</b> the people, but the people didn't want to be <b>oppressed</b>. So they walked hundreds of miles across <b>barren</b> land to get away.</p><p style=\"margin-bottom: 1rem;\">Some of these people came to our clinic for treatment. I talked with them and learned of their difficulties. They did not beg or complain. I was impressed by their <b>dignity</b>.</p><p style=\"margin-bottom: 1rem;\">There was one woman I will never forget. Her son suffered from <b>malnutrition</b> and stomach pain, and she didn't know what to do. Neither did I. I was not <b>adept</b> at treating malnutrition. Nonetheless, when I saw her sadness, I knew I had to help her son.</p><p style=\"margin-bottom: 1rem;\">The woman had been feeding her son bread and water. She had a <b>misconception</b> that it would be enough for him. However, I knew that he needed to eat vegetables, too. So I took her outside and showed her a <b>dense</b> patch of <b>edible</b> plants. I taught her how to dig up the roots, <b>peel</b> them, and cook them for her son. I explained that she should increase her son's <b>intake</b> of these vegetables. <b>Likewise</b>, she should <b>strive</b> to get him some meat once a week to help him regain his strength.</p><p style=\"margin-bottom: 1rem;\">I sent her off with a <b>prescription</b> for some pain medicine, but she also left my office with some new <b>culinary</b> skills. A few weeks later, she returned to tell me her son was healthy again. As thanks, she gave me a beautiful <b>ceramic</b> bowl.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Becoming a Healer</h1>        <p style=\"margin-bottom: 1rem;\">Years ago, I worked at a small health clinic in a remote country. I had gone there to treat an <b>obscure</b> syndrome. It attacked people's lungs, causing them to need a <b>respirator</b> to breathe. I was trying out a new <b>medication</b> to treat these people instead of using a respirator. If I was successful, I would become famous.</p>    <p style=\"margin-bottom: 1rem;\">Everything was going fine until war broke out in a nearby country. Many people from that country fled the <b>hostile</b> invading army. The army wanted to <b>dominate</b> the people, but the people didn't want to be <b>oppressed</b>. So they walked hundreds of miles across <b>barren</b> land to get away.</p>    <p style=\"margin-bottom: 1rem;\">Some of these people came to our clinic for treatment. I talked with them and learned of their difficulties. They did not beg or complain. I was impressed by their <b>dignity</b>.</p>    <p style=\"margin-bottom: 1rem;\">There was one woman I will never forget. Her son suffered from <b>malnutrition</b> and stomach pain, and she didn't know what to do. Neither did I. I was not <b>adept</b> at treating malnutrition. Nonetheless, when I saw her sadness, I knew I had to help her son.</p>    <p style=\"margin-bottom: 1rem;\">The woman had been feeding her son bread and water. She had a <b>misconception</b> that it would be enough for him. However, I knew that he needed to eat vegetables, too. So I took her outside and showed her a <b>dense</b> patch of <b>edible</b> plants. I taught her how to dig up the roots, <b>peel</b> them, and cook them for her son. I explained that she should increase her son's <b>intake</b> of these vegetables. <b>Likewise</b>, she should <b>strive</b> to get him some meat once a week to help him regain his strength.</p>    <p style=\"margin-bottom: 1rem;\">I sent her off with a <b>prescription</b> for some pain medicine, but she also left my office with some new <b>culinary</b> skills. A few weeks later, she returned to tell me her son was healthy again. As thanks, she gave me a beautiful <b>ceramic</b> bowl.</p></div>",
       "imageUrl": "/unit8_vol5_story.png",
       "sections": [
         {
           "id": "sec5_reading_tf",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
-              "content": "1. The respirator helped people with the obscure syndrome, and the doctor hoped the medication would do likewise.",
+              "content": "The respirator helped people with the obscure syndrome, and the doctor hoped the medication would do likewise.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Doctor muốn dùng medication để thay thế respirator với hiệu quả tương tự."
+              "explanation": "Căn bệnh khiến người ta cần dùng máy thở (respirator) để thở. Bác sĩ đang thử một loại thuốc mới để điều trị thay vì dùng máy thở, hy vọng nó sẽ giúp họ tương tự (do likewise). Nhận định này là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
-              "content": "2. The hostile doctor wanted to dominate and oppress the people.",
+              "content": "The hostile doctor wanted to dominate and oppress the people.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bài đọc viết là quân đội (the hostile invading army) muốn dominate và oppress người dân, không phải bác sĩ."
+              "explanation": "Đội quân xâm lược thù địch (hostile invading army) mới là phía muốn thống trị (dominate) và áp bức (oppress) người dân, chứ không phải bác sĩ. Vì vậy nhận định này sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "38",
-              "content": "3. The doctor was not adept at treating malnutrition before meeting the mother and her son.",
+              "content": "The doctor was not adept at treating malnutrition before meeting the mother and her son.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài đọc có câu: 'I was not adept at treating malnutrition.'"
+              "explanation": "Trong đoạn 4, bác sĩ thừa nhận bản thân không giỏi/thành thạo (not adept) trong việc điều trị bệnh suy dinh dưỡng. Nhận định này đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
-              "content": "4. The doctor showed the woman a dense patch of barren land.",
+              "content": "The doctor showed the woman a dense patch of barren land.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bác sĩ chỉ cho người phụ nữ thấy một bụi cây có thể ăn được (dense patch of edible plants), không phải barren land."
+              "explanation": "Bác sĩ dẫn người phụ nữ ra ngoài và chỉ cho cô ấy một bãi cây có thể ăn được mọc dày đặc (dense patch of edible plants), không phải mảnh đất cằn cỗi (barren land). Nhận định sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "40",
-              "content": "5. The woman gave the doctor a ceramic bowl to show off her pottery skills.",
+              "content": "The woman gave the doctor a ceramic bowl to show off her pottery skills.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bà ấy tặng cái bát gốm để cảm ơn (As thanks, she gave me a beautiful ceramic bowl), chứ không phải để khoe kỹ năng."
+              "explanation": "Người phụ nữ tặng cái bát gốm (ceramic bowl) để cảm ơn (as thanks) bác sĩ vì đã cứu con bà, không phải để khoe kỹ năng làm gốm. Vậy nhận định sai.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_qa",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
-              "content": "1. Instead of a respirator, what did the doctor use to treat the syndrome?",
+              "content": "Instead of a respirator, what did the doctor use to treat the syndrome?",
               "options": [
                 "A ceramic bowl",
                 "A new medication",
                 "Surgery",
                 "Edible plants"
               ],
-              "correctAnswer": "B",
-              "explanation": "I was trying out a new medication to treat these people instead of using a respirator."
+              "explanation": "Bác sĩ thử nghiệm một loại thuốc mới (a new medication) để điều trị cho những người bệnh thay vì dùng máy thở. Đáp án B là chính xác.",
+              "correctAnswer": "B"
             },
             {
               "id": "42",
-              "content": "2. What misconception did the woman have about her son's food intake?",
+              "content": "What misconception did the woman have about her son's food intake?",
               "options": [
                 "He didn't need to eat.",
                 "Meat was toxic.",
                 "Bread and water would be enough.",
                 "He could eat only roots."
               ],
-              "correctAnswer": "C",
-              "explanation": "The woman had been feeding her son bread and water. She had a misconception that it would be enough for him."
+              "explanation": "Người phụ nữ có quan niệm sai lầm (misconception) rằng chỉ cho con ăn bánh mì và uống nước là đủ. Do đó đáp án là Bread and water would be enough.",
+              "correctAnswer": "C"
             },
             {
               "id": "43",
-              "content": "3. Why did the doctor teach the woman to peel and cook the roots?",
+              "content": "Why did the doctor teach the woman to peel and cook the roots?",
               "options": [
                 "To pass the time.",
                 "To prepare them for sale.",
                 "To increase her son's intake of vegetables.",
                 "To show culinary expertise."
               ],
-              "correctAnswer": "C",
-              "explanation": "He knew that he needed to eat vegetables... I explained that she should increase her son's intake of these vegetables."
+              "explanation": "Bác sĩ dạy cô cách sơ chế và nấu vì ông muốn tăng lượng rau củ nạp vào cơ thể cậu bé (increase her son's intake of these vegetables). Ta chọn đáp án C.",
+              "correctAnswer": "C"
             },
             {
               "id": "44",
-              "content": "4. What kind of prescription did the doctor give to the woman?",
+              "content": "What kind of prescription did the doctor give to the woman?",
               "options": [
                 "A prescription for pain medicine.",
                 "A prescription for new glasses.",
                 "A prescription for antibiotics.",
                 "A prescription for sleeping pills."
               ],
-              "correctAnswer": "A",
-              "explanation": "I sent her off with a prescription for some pain medicine."
+              "explanation": "Bác sĩ tiễn cô ấy về cùng với một đơn thuốc (prescription) gồm thuốc giảm đau (pain medicine). Chọn đáp án A.",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
-              "content": "5. Why did the doctor ask the woman to strive to get meat for her son?",
+              "content": "Why did the doctor ask the woman to strive to get meat for her son?",
               "options": [
                 "Because he liked the taste.",
                 "Because they had too much meat.",
                 "To help him regain his strength.",
                 "To practice culinary skills."
               ],
-              "correctAnswer": "C",
-              "explanation": "she should strive to get him some meat once a week to help him regain his strength."
+              "explanation": "Bác sĩ khuyên cô cố gắng kiếm chút thịt mỗi tuần để giúp con trai lấy lại sức (regain his strength). Vậy chọn đáp án C.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

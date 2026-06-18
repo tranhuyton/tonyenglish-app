@@ -15,7 +15,6 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "welcome",
                 "allow"
               ],
-              "correctAnswer": "B",
-              "explanation": "Radiate có nghĩa là phát ra, tỏa ra (năng lượng, nhiệt độ). Đồng nghĩa với release."
+              "explanation": "Radiate có nghĩa là phát ra, tỏa ra (năng lượng, nhiệt độ). Đồng nghĩa với release.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "mouth",
                 "width"
               ],
-              "correctAnswer": "D",
-              "explanation": "Breadth là bề rộng, chiều rộng. Đồng nghĩa với width."
+              "explanation": "Breadth là bề rộng, chiều rộng. Đồng nghĩa với width.",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "sounds",
                 "places"
               ],
-              "correctAnswer": "A",
-              "explanation": "Spectrum là quang phổ (dải màu sắc). Tương đương với colors."
+              "explanation": "Spectrum là quang phổ (dải màu sắc). Tương đương với colors.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "scissors",
                 "image"
               ],
-              "correctAnswer": "B",
-              "explanation": "Comet là sao chổi, một vật thể ngoài vũ trụ giống như sao băng (meteor)."
+              "explanation": "Comet là sao chổi, một vật thể ngoài vũ trụ giống như sao băng (meteor).",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -74,8 +73,8 @@
                 "fast",
                 "legal"
               ],
-              "correctAnswer": "A",
-              "explanation": "Atom là nguyên tử, hạt cơ bản nhỏ nhất. Đồng nghĩa với hạt (particle)."
+              "explanation": "Atom là nguyên tử, hạt cơ bản nhỏ nhất. Đồng nghĩa với hạt (particle).",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -86,8 +85,8 @@
                 "rank",
                 "cloud"
               ],
-              "correctAnswer": "C",
-              "explanation": "Status là địa vị, tình trạng, thứ hạng. Đồng nghĩa với rank."
+              "explanation": "Status là địa vị, tình trạng, thứ hạng. Đồng nghĩa với rank.",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
@@ -98,8 +97,8 @@
                 "delicious",
                 "huge"
               ],
-              "correctAnswer": "D",
-              "explanation": "Astronomical mang nghĩa vô cùng to lớn (thuộc về thiên văn). Đồng nghĩa với huge."
+              "explanation": "Astronomical mang nghĩa vô cùng to lớn (thuộc về thiên văn). Đồng nghĩa với huge.",
+              "correctAnswer": "D"
             },
             {
               "id": "8",
@@ -110,8 +109,8 @@
                 "bury",
                 "burn"
               ],
-              "correctAnswer": "C",
-              "explanation": "Embed là cắm vào, cấy vào, gắn chặt vào. Đồng nghĩa với việc chôn sâu (bury)."
+              "explanation": "Embed là cắm vào, cấy vào, gắn chặt vào. Đồng nghĩa với việc chôn sâu (bury).",
+              "correctAnswer": "C"
             },
             {
               "id": "9",
@@ -122,8 +121,8 @@
                 "mass",
                 "ball"
               ],
-              "correctAnswer": "D",
-              "explanation": "Sphere là hình cầu, có hình dáng giống như quả bóng (ball)."
+              "explanation": "Sphere là hình cầu, có hình dáng giống như quả bóng (ball).",
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -134,16 +133,16 @@
                 "cloths",
                 "liquids"
               ],
-              "correctAnswer": "A",
-              "explanation": "Debris là mảnh vỡ, vụn vỡ. Đồng nghĩa với pieces (các mảnh nhỏ)."
+              "explanation": "Debris là mảnh vỡ, vụn vỡ. Đồng nghĩa với pieces (các mảnh nhỏ).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "spouse",
                 "hill"
               ],
-              "correctAnswer": "D",
-              "explanation": "Crater là miệng hố, chỗ lõm sâu. Trái nghĩa là đồi, núi đất (hill)."
+              "explanation": "Crater là miệng hố, chỗ lõm sâu. Trái nghĩa là đồi, núi đất (hill).",
+              "correctAnswer": "D"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "light",
                 "hole"
               ],
-              "correctAnswer": "C",
-              "explanation": "Gloom là sự bóng tối, u ám. Trái nghĩa là ánh sáng (light)."
+              "explanation": "Gloom là sự bóng tối, u ám. Trái nghĩa là ánh sáng (light).",
+              "correctAnswer": "C"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "home",
                 "card"
               ],
-              "correctAnswer": "B",
-              "explanation": "Solitary là đơn độc, một mình. Trái nghĩa là tập thể, nhóm (group)."
+              "explanation": "Solitary là đơn độc, một mình. Trái nghĩa là tập thể, nhóm (group).",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "next",
                 "free"
               ],
-              "correctAnswer": "B",
-              "explanation": "Gigantic là khổng lồ. Trái nghĩa là bé xíu (tiny)."
+              "explanation": "Gigantic là khổng lồ. Trái nghĩa là bé xíu (tiny).",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -202,8 +201,8 @@
                 "get",
                 "stand"
               ],
-              "correctAnswer": "D",
-              "explanation": "Roam là đi lang thang, di chuyển không mục đích. Trái nghĩa là đứng yên (stand)."
+              "explanation": "Roam là đi lang thang, di chuyển không mục đích. Trái nghĩa là đứng yên (stand).",
+              "correctAnswer": "D"
             },
             {
               "id": "16",
@@ -214,8 +213,8 @@
                 "phone",
                 "point"
               ],
-              "correctAnswer": "A",
-              "explanation": "Fragment là mảnh vỡ, phần nhỏ. Trái nghĩa là toàn bộ (whole)."
+              "explanation": "Fragment là mảnh vỡ, phần nhỏ. Trái nghĩa là toàn bộ (whole).",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -226,8 +225,8 @@
                 "sing",
                 "make"
               ],
-              "correctAnswer": "B",
-              "explanation": "Despair là sự tuyệt vọng. Trái nghĩa là niềm hy vọng (hope)."
+              "explanation": "Despair là sự tuyệt vọng. Trái nghĩa là niềm hy vọng (hope).",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -238,8 +237,8 @@
                 "particle",
                 "agreement"
               ],
-              "correctAnswer": "C",
-              "explanation": "Galaxy là dải ngân hà cực kì to lớn. Trái nghĩa là một hạt rất nhỏ (particle)."
+              "explanation": "Galaxy là dải ngân hà cực kì to lớn. Trái nghĩa là một hạt rất nhỏ (particle).",
+              "correctAnswer": "C"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "problem",
                 "schedule"
               ],
-              "correctAnswer": "A",
-              "explanation": "Crescent là hình bán nguyệt (trăng khuyết). Trái nghĩa với hình tròn hoàn thiện (circle)."
+              "explanation": "Crescent là hình bán nguyệt (trăng khuyết). Trái nghĩa với hình tròn hoàn thiện (circle).",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -262,16 +261,16 @@
                 "center",
                 "helmet"
               ],
-              "correctAnswer": "C",
-              "explanation": "Circumference là chu vi, đường viền ngoài. Trái nghĩa là ở trung tâm (center)."
+              "explanation": "Circumference là chu vi, đường viền ngoài. Trái nghĩa là ở trung tâm (center).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -282,8 +281,8 @@
                 "An ant",
                 "A movie"
               ],
-              "correctAnswer": "A",
-              "explanation": "Vật có tính chất khổng lồ (astronomical) có thể là một hành tinh (A planet)."
+              "explanation": "Vật có tính chất khổng lồ (astronomical) có thể là một hành tinh (A planet).",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -294,8 +293,8 @@
                 "A star",
                 "A motorcycle"
               ],
-              "correctAnswer": "C",
-              "explanation": "Bạn sẽ tìm thấy một ngôi sao (A star) trong dải ngân hà (galaxy)."
+              "explanation": "Bạn sẽ tìm thấy một ngôi sao (A star) trong dải ngân hà (galaxy).",
+              "correctAnswer": "C"
             },
             {
               "id": "23",
@@ -306,8 +305,8 @@
                 "A candle",
                 "A cap"
               ],
-              "correctAnswer": "C",
-              "explanation": "Một ngọn nến (A candle) sẽ giúp nhìn qua bóng tối (gloom)."
+              "explanation": "Một ngọn nến (A candle) sẽ giúp nhìn qua bóng tối (gloom).",
+              "correctAnswer": "C"
             },
             {
               "id": "24",
@@ -318,8 +317,8 @@
                 "A golf club",
                 "A television set"
               ],
-              "correctAnswer": "A",
-              "explanation": "Quả địa cầu (A globe) có dạng hình cầu (sphere)."
+              "explanation": "Quả địa cầu (A globe) có dạng hình cầu (sphere).",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -330,132 +329,132 @@
                 "Strong",
                 "Skinny"
               ],
-              "correctAnswer": "B",
-              "explanation": "Một người có chu vi vòng eo lớn thì có thể được miêu tả là béo (Fat)."
+              "explanation": "Một người có chu vi vòng eo lớn thì có thể được miêu tả là béo (Fat).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Điền từ",
           "questions": [
             {
               "id": "26",
-              "content": "1. The night was extremely dark because little light came from the curved shaped moon. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "crescent"
                 }
-              ]
+              ],
+              "content": "1. The night was extremely dark because little light came from the curved shaped moon. (app[1])"
             },
             {
               "id": "27",
-              "content": "2. They moved without a purpose around the mall while waiting for their friend to get off of work. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "roamed"
                 }
-              ]
+              ],
+              "content": "2. They moved without a purpose around the mall while waiting for their friend to get off of work. (app[1])"
             },
             {
               "id": "28",
-              "content": "3. The moon has large holes on the surface. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "craters"
                 }
-              ]
+              ],
+              "content": "3. The moon has large holes on the surface. (app[1])"
             },
             {
               "id": "29",
-              "content": "4. The distance from one side to the other of a baby’s hand is very small. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "breadth"
                 }
-              ]
+              ],
+              "content": "4. The distance from one side to the other of a baby’s hand is very small. (app[1])"
             },
             {
               "id": "30",
-              "content": "5. Mom couldn’t fix the bowl because a small part of it was missing. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "fragment"
                 }
-              ]
+              ],
+              "content": "5. Mom couldn’t fix the bowl because a small part of it was missing. (app[1])"
             },
             {
               "id": "31",
-              "content": "6. A lot of energy is stored within just one simple smallest unit of matter. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "atom"
                 }
-              ]
+              ],
+              "content": "6. A lot of energy is stored within just one simple smallest unit of matter. (app[1])"
             },
             {
               "id": "32",
-              "content": "7. The bee’s stinger was placed firmly within the skin of his right hand. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "embedded"
                 }
-              ]
+              ],
+              "content": "7. The bee’s stinger was placed firmly within the skin of his right hand. (app[1])"
             },
             {
               "id": "33",
-              "content": "8. Guarding the camp was a lonely job, so he gladly accepted the young man’s company. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "solitary"
                 }
-              ]
+              ],
+              "content": "8. Guarding the camp was a lonely job, so he gladly accepted the young man’s company. (app[1])"
             },
             {
               "id": "34",
-              "content": "9. When it’s low on fuel, the heater emits a small level of heat. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "radiates"
                 }
-              ]
+              ],
+              "content": "9. When it’s low on fuel, the heater emits a small level of heat. (app[1])"
             },
             {
               "id": "35",
-              "content": "10. He was so concerned about his position to others in school that he studied very hard. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "status"
                 }
-              ]
+              ],
+              "content": "10. He was so concerned about his position to others in school that he studied very hard. (app[1])"
             }
-          ]
+          ],
+          "questionType": "Điền từ"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How Comet Got His Tail</h1><p style=\"margin-bottom: 1rem;\">A <b>solitary</b> rock <b>roamed</b> through the cold <b>gloom</b> of outer space. It slowly drifted through the <b>debris</b> of broken asteroids with a feeling of sadness. In the vast and beautiful <b>galaxy</b>, it was only a tiny rock. It felt like an insignificant <b>atom</b>.</p><p style=\"margin-bottom: 1rem;\">In its journeys it encountered many amazing objects. It flew by beautiful <b>crescent</b> moons that were covered with <b>craters</b> and moon dust.</p><p style=\"margin-bottom: 1rem;\">“Why can’t I be as beautiful as them?” it thought.</p><p style=\"margin-bottom: 1rem;\">The rock passed a <b>gigantic</b> planet. The <b>sphere</b> had a <b>circumference</b> hundreds of times larger than the <b>breadth</b> of the small rock.</p><p style=\"margin-bottom: 1rem;\">“Why can’t I be as large as that?” it wondered.</p><p style=\"margin-bottom: 1rem;\">The rock was filled with <b>despair</b>. It was surrounded by beauty and greatness, yet it was just a small and ugly <b>fragment</b> of rock.</p><p style=\"margin-bottom: 1rem;\">One day, it approached the area of an <b>astronomical</b> star.</p><p style=\"margin-bottom: 1rem;\">“What’s wrong?” the star asked.</p><p style=\"margin-bottom: 1rem;\">“Oh, I wish I had a higher <b>status</b> in the galaxy. All the other objects are so beautiful and large,” the rock replied. “But I’m just an ugly rock.”</p><p style=\"margin-bottom: 1rem;\">The star considered the problem.</p><p style=\"margin-bottom: 1rem;\">At last it said, “You don’t have to worry anymore. I think I can help.” The star <b>radiated</b> its light brighter and hotter than it had ever done before. “Come a little closer,” the star said to the rock.</p><p style=\"margin-bottom: 1rem;\">The rock drifted closer to the star. Suddenly, the ice that was <b>embedded</b> in the rock’s tiny cracks melted and became steam. Then the steam extended behind the <b>comet</b> to form a brilliant tail. The tail shined with all the colors of the <b>spectrum</b>.</p><p style=\"margin-bottom: 1rem;\">The little rock had become a beautiful <b>comet</b>. It looked so amazing. It realized that the star helped it change its appearance. “Thank you,” the comet said and then flew away with its new beautiful tail following behind it like a galactic cape.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How Comet Got His Tail</h1>        <p style=\"margin-bottom: 1rem;\">A <b>solitary</b> rock <b>roamed</b> through the cold <b>gloom</b> of outer space. It slowly drifted through the <b>debris</b> of broken asteroids with a feeling of sadness. In the vast and beautiful <b>galaxy</b>, it was only a tiny rock. It felt like an insignificant <b>atom</b>.</p>    <p style=\"margin-bottom: 1rem;\">In its journeys it encountered many amazing objects. It flew by beautiful <b>crescent</b> moons that were covered with <b>craters</b> and moon dust.</p>    <p style=\"margin-bottom: 1rem;\">“Why can’t I be as beautiful as them?” it thought.</p>    <p style=\"margin-bottom: 1rem;\">The rock passed a <b>gigantic</b> planet. The <b>sphere</b> had a <b>circumference</b> hundreds of times larger than the <b>breadth</b> of the small rock.</p>    <p style=\"margin-bottom: 1rem;\">“Why can’t I be as large as that?” it wondered.</p>    <p style=\"margin-bottom: 1rem;\">The rock was filled with <b>despair</b>. It was surrounded by beauty and greatness, yet it was just a small and ugly <b>fragment</b> of rock.</p>    <p style=\"margin-bottom: 1rem;\">One day, it approached the area of an <b>astronomical</b> star.</p>    <p style=\"margin-bottom: 1rem;\">“What’s wrong?” the star asked.</p>    <p style=\"margin-bottom: 1rem;\">“Oh, I wish I had a higher <b>status</b> in the galaxy. All the other objects are so beautiful and large,” the rock replied. “But I’m just an ugly rock.”</p>    <p style=\"margin-bottom: 1rem;\">The star considered the problem.</p>    <p style=\"margin-bottom: 1rem;\">At last it said, “You don’t have to worry anymore. I think I can help.” The star <b>radiated</b> its light brighter and hotter than it had ever done before. “Come a little closer,” the star said to the rock.</p>    <p style=\"margin-bottom: 1rem;\">The rock drifted closer to the star. Suddenly, the ice that was <b>embedded</b> in the rock’s tiny cracks melted and became steam. Then the steam extended behind the <b>comet</b> to form a brilliant tail. The tail shined with all the colors of the <b>spectrum</b>.</p>    <p style=\"margin-bottom: 1rem;\">The little rock had become a beautiful <b>comet</b>. It looked so amazing. It realized that the star helped it change its appearance. “Thank you,” the comet said and then flew away with its new beautiful tail following behind it like a galactic cape.</p></div>",
       "imageUrl": "/unit23_vol5_story.png",
       "sections": [
         {
           "id": "sec5",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -464,8 +463,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Hòn đá nhỏ trôi qua những mảnh vỡ của các tiểu hành tinh (broken asteroids) chứ không phải nguyên tử (atoms)."
+              "explanation": "Đoạn 1 viết \"It slowly drifted through the debris of broken asteroids with a feeling of sadness.\" (Nó trôi dạt chậm rãi qua những mảnh vỡ của các tiểu hành tinh với một cảm giác buồn bã). Nó trôi qua mảnh vỡ của tiểu hành tinh (asteroids), không phải nguyên tử (atoms).",
+              "correctAnswer": "B"
             },
             {
               "id": "37",
@@ -474,8 +473,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Hành tinh khổng lồ đó có hình dạng là một hình cầu (sphere)."
+              "explanation": "Ở đoạn 4 \"The rock passed a gigantic planet. The sphere had a circumference hundreds of times larger...\" (Hòn đá đi ngang qua một hành tinh khổng lồ. Khối cầu đó có chu vi lớn gấp hàng trăm lần...). Ở đây \"sphere\" chính là đang gọi hành tinh đó.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -484,8 +483,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Băng cấy trong hòn đá tan chảy thành hơi nước, tạo thành chiếc đuôi tỏa sáng với mọi màu sắc quang phổ (The tail shined with all the colors of the spectrum)."
+              "explanation": "Trong đoạn 12, \"Suddenly, the ice that was embedded in the rock's tiny cracks melted and became steam... The tail shined with all the colors of the spectrum.\" Băng tan thành hơi nước (steam) tạo thành chiếc đuôi tỏa sáng đủ màu sắc, chứ không phải băng nổi bong bóng (bubbled).",
+              "correctAnswer": "B"
             },
             {
               "id": "39",
@@ -494,8 +493,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Ngôi sao đã tỏa ra ánh sáng nóng hơn và sáng hơn bao giờ hết."
+              "explanation": "Đoạn 11 có ghi \"The star radiated its light brighter and hotter than it had ever done before.\" (Ngôi sao tỏa ánh sáng rực rỡ và nóng bức hơn bao giờ hết). Thông tin này chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -504,16 +503,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Hòn đá nhỏ ước mình có một địa vị (status) cao hơn trong dải ngân hà."
+              "explanation": "Ở đoạn 9, hòn đá nói \"Oh, I wish I had a higher status in the galaxy.\" (Ôi, tôi ước mình có địa vị cao hơn trong thiên hà). Điều này hoàn toàn đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -524,8 +523,8 @@
                 "It felt sad and insignificant.",
                 "It felt tired and sleepy."
               ],
-              "correctAnswer": "C",
-              "explanation": "Hòn đá nhỏ cảm thấy buồn và cảm thấy mình chỉ là một hạt nhỏ bé không đáng kể (insignificant atom)."
+              "explanation": "Đoạn 1 cho biết \"It slowly drifted through the debris of broken asteroids with a feeling of sadness. In the vast and beautiful galaxy, it was only a tiny rock. It felt like an insignificant atom.\" Nó cảm thấy buồn và không có ý nghĩa gì (sad and insignificant).",
+              "correctAnswer": "C"
             },
             {
               "id": "42",
@@ -536,8 +535,8 @@
                 "The comets",
                 "The asteroids"
               ],
-              "correctAnswer": "B",
-              "explanation": "Dựa vào bài: \"It flew by beautiful crescent moons that were covered with craters...\""
+              "explanation": "Trong đoạn 2, bài viết \"It flew by beautiful crescent moons that were covered with craters and moon dust.\" (Nó bay qua những mặt trăng hình lưỡi liềm tuyệt đẹp được bao phủ bởi các miệng hố và bụi mặt trăng). Đối tượng được nhắc đến là các mặt trăng (The moons).",
+              "correctAnswer": "B"
             },
             {
               "id": "43",
@@ -548,8 +547,8 @@
                 "Ten times larger.",
                 "It was the same size."
               ],
-              "correctAnswer": "B",
-              "explanation": "Dựa vào bài: \"The sphere had a circumference hundreds of times larger than the breadth of the small rock.\""
+              "explanation": "Đoạn 4 có nói \"The sphere had a circumference hundreds of times larger than the breadth of the small rock.\" (Khối cầu có chu vi lớn hơn hàng trăm lần so với chiều rộng của hòn đá nhỏ).",
+              "correctAnswer": "B"
             },
             {
               "id": "44",
@@ -560,8 +559,8 @@
                 "Because it was surrounded by beauty, yet it was just a small ugly rock.",
                 "Because the star was going to destroy it."
               ],
-              "correctAnswer": "C",
-              "explanation": "Nó cảm thấy tuyệt vọng vì được bao quanh bởi cái đẹp, nhưng bản thân lại chỉ là một hòn đá nhỏ bé, xấu xí."
+              "explanation": "Trong đoạn 6 ghi \"The rock was filled with despair. It was surrounded by beauty and greatness, yet it was just a small and ugly fragment of rock.\" (Hòn đá tràn ngập sự tuyệt vọng. Nó được bao quanh bởi vẻ đẹp và sự vĩ đại, nhưng nó chỉ là một mảnh đá nhỏ và xấu xí).",
+              "correctAnswer": "C"
             },
             {
               "id": "45",
@@ -572,10 +571,11 @@
                 "It looked like a beautiful ribbon.",
                 "It looked like a shining sword."
               ],
-              "correctAnswer": "B",
-              "explanation": "Dựa vào câu cuối bài: \"...with its new beautiful tail following behind it like a galactic cape.\""
+              "explanation": "Câu cuối cùng của bài viết miêu tả \"flew away with its new beautiful tail following behind it like a galactic cape.\" (... bay đi với chiếc đuôi mới tuyệt đẹp theo sau giống như một chiếc áo choàng thiên hà).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

@@ -15,445 +15,445 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. What would be hard to tolerate?",
+              "content": "What would be hard to tolerate?",
               "options": [
                 "A nice summer day",
                 "A good movie",
                 "A tasty dinner",
                 "A broken leg"
               ],
-              "correctAnswer": "D",
-              "explanation": "tolerate nghĩa là chịu đựng; gãy chân (A broken leg) là điều khó chịu đựng."
+              "explanation": "tolerate nghĩa là chịu đựng; gãy chân (A broken leg) là điều khó chịu đựng.",
+              "correctAnswer": "D"
             },
             {
               "id": "2",
-              "content": "2. What is something that could be implemented?",
+              "content": "What is something that could be implemented?",
               "options": [
                 "A plan",
                 "A cloud",
                 "A school",
                 "A storm"
               ],
-              "correctAnswer": "A",
-              "explanation": "implement nghĩa là thi hành/thực hiện; kế hoạch (A plan) là thứ có thể thực hiện."
+              "explanation": "implement nghĩa là thi hành/thực hiện; kế hoạch (A plan) là thứ có thể thực hiện.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
-              "content": "3. What has a ridge?",
+              "content": "What has a ridge?",
               "options": [
                 "A person",
                 "A mountain",
                 "A swamp",
                 "Fog"
               ],
-              "correctAnswer": "B",
-              "explanation": "ridge nghĩa là dải núi/chóp núi; ngọn núi (A mountain) có dải núi."
+              "explanation": "ridge nghĩa là dải núi/chóp núi; ngọn núi (A mountain) có dải núi.",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
-              "content": "4. What would be peculiar to find in the ocean?",
+              "content": "What would be peculiar to find in the ocean?",
               "options": [
                 "A ship",
                 "A shark",
                 "A camel",
                 "A piece of coral"
               ],
-              "correctAnswer": "C",
-              "explanation": "peculiar nghĩa là kì lạ; tìm thấy lạc đà (A camel) trên đại dương là kì lạ."
+              "explanation": "peculiar nghĩa là kì lạ; tìm thấy lạc đà (A camel) trên đại dương là kì lạ.",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
-              "content": "5. What would impair vision?",
+              "content": "What would impair vision?",
               "options": [
                 "An eye test",
                 "Rough fabric",
                 "A strong smell",
                 "A bright light"
               ],
-              "correctAnswer": "D",
-              "explanation": "impair nghĩa là làm suy giảm/hư hại; ánh sáng chói lọi (A bright light) có thể làm hại thị lực."
+              "explanation": "impair nghĩa là làm suy giảm/hư hại; ánh sáng chói lọi (A bright light) có thể làm hại thị lực.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "1. fracture",
+              "content": "fracture",
               "options": [
                 "a failure",
                 "a break",
                 "an idea",
                 "a creation"
               ],
-              "correctAnswer": "B",
-              "explanation": "fracture nghĩa là chỗ gãy/rạn nứt, đồng nghĩa với a break."
+              "explanation": "fracture nghĩa là chỗ gãy/rạn nứt, đồng nghĩa với a break.",
+              "correctAnswer": "B"
             },
             {
               "id": "7",
-              "content": "2. limb",
+              "content": "limb",
               "options": [
                 "a party",
                 "an activity",
                 "a branch",
                 "a belief"
               ],
-              "correctAnswer": "C",
-              "explanation": "limb nghĩa là cành cây, đồng nghĩa với a branch."
+              "explanation": "limb nghĩa là cành cây, đồng nghĩa với a branch.",
+              "correctAnswer": "C"
             },
             {
               "id": "8",
-              "content": "3. thrust",
+              "content": "thrust",
               "options": [
                 "to push",
                 "to grow",
                 "to succeed",
                 "to fall"
               ],
-              "correctAnswer": "A",
-              "explanation": "thrust nghĩa là đẩy mạnh, đồng nghĩa với to push."
+              "explanation": "thrust nghĩa là đẩy mạnh, đồng nghĩa với to push.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
-              "content": "4. indigenous",
+              "content": "indigenous",
               "options": [
                 "rude",
                 "extreme",
                 "native",
                 "cheap"
               ],
-              "correctAnswer": "C",
-              "explanation": "indigenous nghĩa là bản địa, đồng nghĩa với native."
+              "explanation": "indigenous nghĩa là bản địa, đồng nghĩa với native.",
+              "correctAnswer": "C"
             },
             {
               "id": "10",
-              "content": "5. devise",
+              "content": "devise",
               "options": [
                 "to impress",
                 "a journey",
                 "to plan",
                 "confusing"
               ],
-              "correctAnswer": "C",
-              "explanation": "devise nghĩa là phát minh/nghĩ ra/lên kế hoạch, tương đương với to plan."
+              "explanation": "devise nghĩa là phát minh/nghĩ ra/lên kế hoạch, tương đương với to plan.",
+              "correctAnswer": "C"
             },
             {
               "id": "11",
-              "content": "6. optimism",
+              "content": "optimism",
               "options": [
                 "a good feeling",
                 "to love",
                 "to determine",
                 "to reveal"
               ],
-              "correctAnswer": "A",
-              "explanation": "optimism nghĩa là sự lạc quan, đồng nghĩa với một cảm giác tốt (a good feeling)."
+              "explanation": "optimism nghĩa là sự lạc quan, đồng nghĩa với một cảm giác tốt (a good feeling).",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
-              "content": "7. insight",
+              "content": "insight",
               "options": [
                 "a skill",
                 "height",
                 "a method",
                 "an understanding"
               ],
-              "correctAnswer": "D",
-              "explanation": "insight nghĩa là sự hiểu biết sâu sắc, đồng nghĩa với an understanding."
+              "explanation": "insight nghĩa là sự hiểu biết sâu sắc, đồng nghĩa với an understanding.",
+              "correctAnswer": "D"
             },
             {
               "id": "13",
-              "content": "8. altitude",
+              "content": "altitude",
               "options": [
                 "layer",
                 "height",
                 "station",
                 "freedom"
               ],
-              "correctAnswer": "B",
-              "explanation": "altitude nghĩa là độ cao, đồng nghĩa với height."
+              "explanation": "altitude nghĩa là độ cao, đồng nghĩa với height.",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
-              "content": "9. migraine",
+              "content": "migraine",
               "options": [
                 "a headache",
                 "a vehicle",
                 "a chore",
                 "a benefit"
               ],
-              "correctAnswer": "A",
-              "explanation": "migraine nghĩa là chứng đau nửa đầu, đồng nghĩa với a headache."
+              "explanation": "migraine nghĩa là chứng đau nửa đầu, đồng nghĩa với a headache.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
-              "content": "10. quest",
+              "content": "quest",
               "options": [
                 "a problem",
                 "a search",
                 "a hero",
                 "a story"
               ],
-              "correctAnswer": "B",
-              "explanation": "quest nghĩa là cuộc tìm kiếm, nhiệm vụ, đồng nghĩa với a search."
+              "explanation": "quest nghĩa là cuộc tìm kiếm, nhiệm vụ, đồng nghĩa với a search.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
-              "content": "1. The little girl loves her cat. She tolerates it when they are together.",
+              "content": "The little girl loves her cat. She tolerates it when they are together.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "tolerate nghĩa là chịu đựng; nếu cô bé yêu con mèo thì không dùng từ chịu đựng. Sai ngữ cảnh."
+              "explanation": "tolerate nghĩa là chịu đựng; nếu cô bé yêu con mèo thì không dùng từ chịu đựng. Sai ngữ cảnh.",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
-              "content": "2. Going away to college is scary, but I have optimism that I'll have a good time.",
+              "content": "Going away to college is scary, but I have optimism that I'll have a good time.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "optimism nghĩa là sự lạc quan; hoàn toàn phù hợp với ngữ cảnh."
+              "explanation": "optimism nghĩa là sự lạc quan; hoàn toàn phù hợp với ngữ cảnh.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
-              "content": "3. This migraine is killing me. My head hurts so badly that I can't think straight.",
+              "content": "This migraine is killing me. My head hurts so badly that I can't think straight.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "migraine (đau nửa đầu) phù hợp với ngữ cảnh 'my head hurts so badly'."
+              "explanation": "migraine (đau nửa đầu) phù hợp với ngữ cảnh 'my head hurts so badly'.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
-              "content": "4. My bike's tire is flat again. I guess I'll have to impair it.",
+              "content": "My bike's tire is flat again. I guess I'll have to impair it.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "impair nghĩa là làm hư hại, ở đây nên dùng từ như 'repair' (sửa chữa)."
+              "explanation": "impair nghĩa là làm hư hại, ở đây nên dùng từ như 'repair' (sửa chữa).",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
-              "content": "5. Her child is peculiar. He likes to wear his shoes on the wrong feet.",
+              "content": "Her child is peculiar. He likes to wear his shoes on the wrong feet.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "peculiar nghĩa là kì lạ; việc mang giày ngược chân là một điều kì lạ."
+              "explanation": "peculiar nghĩa là kì lạ; việc mang giày ngược chân là một điều kì lạ.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
-              "content": "6. The tree is getting too big for our yard! Ask Jim to cut off some of the limbs.",
+              "content": "The tree is getting too big for our yard! Ask Jim to cut off some of the limbs.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "limb nghĩa là nhánh cây; hoàn toàn hợp lý."
+              "explanation": "limb nghĩa là nhánh cây; hoàn toàn hợp lý.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
-              "content": "7. I fell off my bike, but I didn't break any bones. I just got a slight fracture on my toe.",
+              "content": "I fell off my bike, but I didn't break any bones. I just got a slight fracture on my toe.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "fracture chính là gãy xương/rạn xương, mâu thuẫn với câu trước 'didn't break any bones'."
+              "explanation": "fracture chính là gãy xương/rạn xương, mâu thuẫn với câu trước 'didn't break any bones'.",
+              "correctAnswer": "B"
             },
             {
               "id": "23",
-              "content": "8. This bush in my yard comes from another country. It's indigenous to my yard.",
+              "content": "This bush in my yard comes from another country. It's indigenous to my yard.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "indigenous nghĩa là bản địa, nhưng câu trước nói 'comes from another country', như vậy không thể là bản địa."
+              "explanation": "indigenous nghĩa là bản địa, nhưng câu trước nói 'comes from another country', như vậy không thể là bản địa.",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
-              "content": "9. From the mountain ridge, you can see the entire city below.",
+              "content": "From the mountain ridge, you can see the entire city below.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "ridge là dải núi; đứng từ đó có thể nhìn thấy thành phố bên dưới, hợp ngữ cảnh."
+              "explanation": "ridge là dải núi; đứng từ đó có thể nhìn thấy thành phố bên dưới, hợp ngữ cảnh.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
-              "content": "10. Mike is a very proficient reader. He finished the entire novel in just an hour.",
+              "content": "Mike is a very proficient reader. He finished the entire novel in just an hour.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "proficient (thành thạo) phù hợp với việc đọc xong một cuốn tiểu thuyết trong một giờ."
+              "explanation": "proficient (thành thạo) phù hợp với việc đọc xong một cuốn tiểu thuyết trong một giờ.",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
-              "content": "11. We were in awe of the professor's expertise on the subject.",
+              "content": "We were in awe of the professor's expertise on the subject.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "expertise là chuyên môn; hợp lý khi nói về một giáo sư."
+              "explanation": "expertise là chuyên môn; hợp lý khi nói về một giáo sư.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
-              "content": "12. You should thrust the baby when putting him in bed, so he doesn't wake up.",
+              "content": "You should thrust the baby when putting him in bed, so he doesn't wake up.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "thrust là đẩy mạnh; không ai đẩy mạnh một em bé khi đặt xuống giường."
+              "explanation": "thrust là đẩy mạnh; không ai đẩy mạnh một em bé khi đặt xuống giường.",
+              "correctAnswer": "B"
             },
             {
               "id": "28",
-              "content": "13. I will get married to my spouse one year from today.",
+              "content": "I will get married to my spouse one year from today.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "spouse là người bạn đời (vợ/chồng đã kết hôn), bạn không thể nói 'sẽ kết hôn với người vợ/chồng hiện tại'."
+              "explanation": "spouse là người bạn đời (vợ/chồng đã kết hôn), bạn không thể nói 'sẽ kết hôn với người vợ/chồng hiện tại'.",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "14. Australia has a very long coastline.",
+              "content": "Australia has a very long coastline.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "coastline (đường bờ biển), hợp lý vì Úc là một đảo quốc rộng lớn."
+              "explanation": "coastline (đường bờ biển), hợp lý vì Úc là một đảo quốc rộng lớn.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
-              "content": "15. She is on a quest to find her long lost brother.",
+              "content": "She is on a quest to find her long lost brother.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "quest là cuộc tìm kiếm; hoàn toàn hợp nghĩa."
+              "explanation": "quest là cuộc tìm kiếm; hoàn toàn hợp nghĩa.",
+              "correctAnswer": "A"
             },
             {
               "id": "31",
-              "content": "16. If you don't like your job, you should devise it.",
+              "content": "If you don't like your job, you should devise it.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "devise là nghĩ ra/lên kế hoạch; không hợp lý trong ngữ cảnh không thích công việc."
+              "explanation": "devise là nghĩ ra/lên kế hoạch; không hợp lý trong ngữ cảnh không thích công việc.",
+              "correctAnswer": "B"
             },
             {
               "id": "32",
-              "content": "17. She will have to get more altitude if she wants to swim faster.",
+              "content": "She will have to get more altitude if she wants to swim faster.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "altitude là độ cao, bơi lội thì không cần độ cao."
+              "explanation": "altitude là độ cao, bơi lội thì không cần độ cao.",
+              "correctAnswer": "B"
             },
             {
               "id": "33",
-              "content": "18. The workers implemented a new strategy to be more efficient.",
+              "content": "The workers implemented a new strategy to be more efficient.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "implement (thi hành/áp dụng) chiến lược mới là hoàn toàn đúng."
+              "explanation": "implement (thi hành/áp dụng) chiến lược mới là hoàn toàn đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
-              "content": "19. Nothing will deter me in my hunt for the perfect flower.",
+              "content": "Nothing will deter me in my hunt for the perfect flower.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "deter (cản trở); hợp lý, ý nói không gì cản trở được."
+              "explanation": "deter (cản trở); hợp lý, ý nói không gì cản trở được.",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
-              "content": "20. Her insight into our problem really helped us out.",
+              "content": "Her insight into our problem really helped us out.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "insight (sự thấu hiểu) giúp giải quyết vấn đề, rất hợp nghĩa."
+              "explanation": "insight (sự thấu hiểu) giúp giải quyết vấn đề, rất hợp nghĩa.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

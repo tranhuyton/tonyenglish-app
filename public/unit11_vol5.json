@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is opposite in meaning to the given word",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "colorful",
                 "cold"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"gorgeous\" mang nghĩa tuyệt đẹp, trái nghĩa là \"unpleasant\" (khó chịu, không đẹp)."
+              "explanation": "\"gorgeous\" mang nghĩa tuyệt đẹp, trái nghĩa là \"unpleasant\" (khó chịu, không đẹp).",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "to increase",
                 "to sleep"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"boost\" mang nghĩa thúc đẩy, tăng cường, trái nghĩa là \"to lower\" (hạ thấp, giảm xuống)."
+              "explanation": "\"boost\" mang nghĩa thúc đẩy, tăng cường, trái nghĩa là \"to lower\" (hạ thấp, giảm xuống).",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "planned",
                 "faked"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"spontaneous\" mang nghĩa tự phát, trái nghĩa là \"planned\" (được lên kế hoạch)."
+              "explanation": "\"spontaneous\" mang nghĩa tự phát, trái nghĩa là \"planned\" (được lên kế hoạch).",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "grand",
                 "free"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"multiple\" mang nghĩa nhiều, trái nghĩa là \"one\" (một)."
+              "explanation": "\"multiple\" mang nghĩa nhiều, trái nghĩa là \"one\" (một).",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "silly",
                 "avoidable"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"inevitable\" mang nghĩa không thể tránh khỏi, trái nghĩa là \"avoidable\" (có thể tránh được)."
+              "explanation": "\"inevitable\" mang nghĩa không thể tránh khỏi, trái nghĩa là \"avoidable\" (có thể tránh được).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "masterpiece",
                 "legacy"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"story about his life\" (câu chuyện về cuộc đời ông ấy) đồng nghĩa với \"biography\" (tiểu sử)."
+              "explanation": "\"story about his life\" (câu chuyện về cuộc đời ông ấy) đồng nghĩa với \"biography\" (tiểu sử).",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "gorgeous",
                 "multiple"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"awful, intense\" (tồi tệ, dữ dội) đồng nghĩa với \"acute\"."
+              "explanation": "\"awful, intense\" (tồi tệ, dữ dội) đồng nghĩa với \"acute\".",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "aggression",
                 "dominance"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"mean, violent behavior\" (hành vi hung hăng, bạo lực) đồng nghĩa với \"aggression\"."
+              "explanation": "\"mean, violent behavior\" (hành vi hung hăng, bạo lực) đồng nghĩa với \"aggression\".",
+              "correctAnswer": "C"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "dominance",
                 "masterpiece"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"good quality\" (phẩm chất tốt) đồng nghĩa với \"virtue\" (đức hạnh)."
+              "explanation": "\"good quality\" (phẩm chất tốt) đồng nghĩa với \"virtue\" (đức hạnh).",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "narrated",
                 "clapped"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"read aloud\" (đọc to) đồng nghĩa với \"narrated\" (được kể lại)."
+              "explanation": "\"read aloud\" (đọc to) đồng nghĩa với \"narrated\" (được kể lại).",
+              "correctAnswer": "C"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "virtue",
                 "biography"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"preference over another\" (sự ưu tiên hơn cái khác) đồng nghĩa với \"partiality\"."
+              "explanation": "\"preference over another\" (sự ưu tiên hơn cái khác) đồng nghĩa với \"partiality\".",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "spontaneous",
                 "inevitable"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"no longer used in modern time\" (không còn được sử dụng trong thời đại hiện nay) đồng nghĩa với \"outdated\" (lỗi thời)."
+              "explanation": "\"no longer used in modern time\" (không còn được sử dụng trong thời đại hiện nay) đồng nghĩa với \"outdated\" (lỗi thời).",
+              "correctAnswer": "B"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "dominance",
                 "banquet"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"result of his actions that continues to exist\" (kết quả hành động tiếp tục tồn tại) đồng nghĩa với \"legacy\" (di sản)."
+              "explanation": "\"result of his actions that continues to exist\" (kết quả hành động tiếp tục tồn tại) đồng nghĩa với \"legacy\" (di sản).",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "gorgeous",
                 "outdated"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"known for bad things\" (được biết đến vì những điều tồi tệ) đồng nghĩa với \"notorious\" (khét tiếng)."
+              "explanation": "\"known for bad things\" (được biết đến vì những điều tồi tệ) đồng nghĩa với \"notorious\" (khét tiếng).",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "narrate",
                 "clap"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"force\" (ép buộc) đồng nghĩa với \"compel\"."
+              "explanation": "\"force\" (ép buộc) đồng nghĩa với \"compel\".",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -220,8 +219,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. \"Notorious\" mang nghĩa tiêu cực (khét tiếng), không phù hợp với \"doing nice things\" (làm việc tốt)."
+              "explanation": "Incorrect. \"Notorious\" mang nghĩa tiêu cực (khét tiếng), không phù hợp với \"doing nice things\" (làm việc tốt).",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
@@ -230,8 +229,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Overall\" được dùng đúng (chi tiết tổng thể)."
+              "explanation": "Correct. \"Overall\" được dùng đúng (chi tiết tổng thể).",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -240,8 +239,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. \"Spontaneous\" mang nghĩa tự phát, không được lên kế hoạch trước, mâu thuẫn với \"planned... for weeks\"."
+              "explanation": "Incorrect. \"Spontaneous\" mang nghĩa tự phát, không được lên kế hoạch trước, mâu thuẫn với \"planned... for weeks\".",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Banquet\" (bữa tiệc lớn) phù hợp với bối cảnh ăn bít tết và tôm hùm."
+              "explanation": "Correct. \"Banquet\" (bữa tiệc lớn) phù hợp với bối cảnh ăn bít tết và tôm hùm.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -260,8 +259,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Clap\" (vỗ tay) được dùng đúng."
+              "explanation": "Correct. \"Clap\" (vỗ tay) được dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -270,8 +269,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Máy tính \"outdated\" (lỗi thời) không thể đi kèm phần mềm mới nhất (newest software)."
+              "explanation": "Incorrect. Máy tính \"outdated\" (lỗi thời) không thể đi kèm phần mềm mới nhất (newest software).",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -280,8 +279,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Masterpiece\" (kiệt tác) được dùng đúng."
+              "explanation": "Correct. \"Masterpiece\" (kiệt tác) được dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -290,8 +289,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Trốn vào tủ vì sợ không thể hiện \"dominance\" (sự thống trị)."
+              "explanation": "Incorrect. Trốn vào tủ vì sợ không thể hiện \"dominance\" (sự thống trị).",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
@@ -300,8 +299,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Boosts\" (nâng cao, thúc đẩy) được dùng đúng."
+              "explanation": "Correct. \"Boosts\" (nâng cao, thúc đẩy) được dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -310,8 +309,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. \"Gorgeous\" là tuyệt đẹp, không ai quay đi vì ghê tởm (disgust)."
+              "explanation": "Incorrect. \"Gorgeous\" là tuyệt đẹp, không ai quay đi vì ghê tởm (disgust).",
+              "correctAnswer": "B"
             },
             {
               "id": "26",
@@ -320,8 +319,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. \"Acute\" (dữ dội, cấp tính) không thể dùng cho một con chó con."
+              "explanation": "Incorrect. \"Acute\" (dữ dội, cấp tính) không thể dùng cho một con chó con.",
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -330,8 +329,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Partiality\" (sự yêu thích, thiên vị) được dùng đúng."
+              "explanation": "Correct. \"Partiality\" (sự yêu thích, thiên vị) được dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -340,8 +339,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Tiểu sử tự viết phải gọi là \"autobiography\", còn \"biography\" là do người khác viết."
+              "explanation": "Incorrect. Tiểu sử tự viết phải gọi là \"autobiography\", còn \"biography\" là do người khác viết.",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
@@ -350,8 +349,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Compelled\" (ép buộc, bắt buộc) được dùng đúng."
+              "explanation": "Correct. \"Compelled\" (ép buộc, bắt buộc) được dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -360,8 +359,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Hét lớn trong thư viện không phải là một \"virtue\" (đức tính tốt)."
+              "explanation": "Incorrect. Hét lớn trong thư viện không phải là một \"virtue\" (đức tính tốt).",
+              "correctAnswer": "B"
             },
             {
               "id": "31",
@@ -370,8 +369,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Multiple\" (nhiều lớp) được dùng đúng."
+              "explanation": "Correct. \"Multiple\" (nhiều lớp) được dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "32",
@@ -380,8 +379,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Narrates\" (kể lại) được dùng đúng."
+              "explanation": "Correct. \"Narrates\" (kể lại) được dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -390,8 +389,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. \"Legacy\" (di sản) là thứ để lại sau này, không dùng để nói về một bài kiểm tra trong tuần tới."
+              "explanation": "Incorrect. \"Legacy\" (di sản) là thứ để lại sau này, không dùng để nói về một bài kiểm tra trong tuần tới.",
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -400,8 +399,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Khi dẫn trước 100 điểm thì chiến thắng là \"inevitable\" (không thể tránh khỏi / chắc chắn)."
+              "explanation": "Correct. Khi dẫn trước 100 điểm thì chiến thắng là \"inevitable\" (không thể tránh khỏi / chắc chắn).",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -410,24 +409,24 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Aggression\" (sự hung hăng) được dùng đúng."
+              "explanation": "Correct. \"Aggression\" (sự hung hăng) được dùng đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Beethoven’s Gift</h1><p style=\"margin-bottom: 1rem;\">Beethoven was a great composer of classical music in the 1800s. Many <b>biographies</b> have been written that <b>narrate</b> his <b>dominance</b> in the music world. But do you know what really makes him special? Even though millions of people got to hear his <b>multiple masterpieces</b>, he never did. Beethoven wrote his best pieces after he went completely deaf!</p><p style=\"margin-bottom: 1rem;\">His <b>partiality</b> toward classical music developed when he was very young. He wasn’t interested in anything else as a child. When he was five, he learned how to play the piano. From then, nothing could stop his passion for writing and playing music.</p><p style=\"margin-bottom: 1rem;\">When Beethoven was twenty, he began to lose his hearing. He got <b>acute</b>, <b>spontaneous</b> pains in his ears. His hearing kept getting worse over time. It was <b>inevitable</b> that he would eventually lose it altogether. It was very hard for him to keep writing music. He lost the <b>virtue</b> of patience, and he became <b>notorious</b> for his <b>aggression</b>. Still, he never stopped trying. His passion for music <b>compelled</b> him to keep performing even after he went deaf. He couldn’t hear himself play, but he knew that his creations sounded <b>gorgeous</b>.</p><p style=\"margin-bottom: 1rem;\">His final concert was held at a huge <b>banquet</b>. He gave the musicians a cue, and they began to play. He directed the concert with all his heart. He couldn’t hear the music, but he said that he could feel it. <b>Overall</b>, performance was one of the finest in history. When it was over, he turned to the crowd. They <b>clapped</b> and cheered wildly. In that beautiful moment, the applause <b>boosted</b> his emotions, and he began to cry.</p><p style=\"margin-bottom: 1rem;\">In 1827, he suffered from lead poisoning. He didn’t survive the sickness, but his music did because great music never becomes <b>outdated</b>. Even though Beethoven is gone, his <b>legacy</b> will live on forever.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Beethoven’s Gift</h1>        <p style=\"margin-bottom: 1rem;\">Beethoven was a great composer of classical music in the 1800s. Many <b>biographies</b> have been written that <b>narrate</b> his <b>dominance</b> in the music world. But do you know what really makes him special? Even though millions of people got to hear his <b>multiple masterpieces</b>, he never did. Beethoven wrote his best pieces after he went completely deaf!</p>    <p style=\"margin-bottom: 1rem;\">His <b>partiality</b> toward classical music developed when he was very young. He wasn’t interested in anything else as a child. When he was five, he learned how to play the piano. From then, nothing could stop his passion for writing and playing music.</p>    <p style=\"margin-bottom: 1rem;\">When Beethoven was twenty, he began to lose his hearing. He got <b>acute</b>, <b>spontaneous</b> pains in his ears. His hearing kept getting worse over time. It was <b>inevitable</b> that he would eventually lose it altogether. It was very hard for him to keep writing music. He lost the <b>virtue</b> of patience, and he became <b>notorious</b> for his <b>aggression</b>. Still, he never stopped trying. His passion for music <b>compelled</b> him to keep performing even after he went deaf. He couldn’t hear himself play, but he knew that his creations sounded <b>gorgeous</b>.</p>    <p style=\"margin-bottom: 1rem;\">His final concert was held at a huge <b>banquet</b>. He gave the musicians a cue, and they began to play. He directed the concert with all his heart. He couldn’t hear the music, but he said that he could feel it. <b>Overall</b>, performance was one of the finest in history. When it was over, he turned to the crowd. They <b>clapped</b> and cheered wildly. In that beautiful moment, the applause <b>boosted</b> his emotions, and he began to cry.</p>    <p style=\"margin-bottom: 1rem;\">In 1827, he suffered from lead poisoning. He didn’t survive the sickness, but his music did because great music never becomes <b>outdated</b>. Even though Beethoven is gone, his <b>legacy</b> will live on forever.</p></div>",
       "imageUrl": "/unit11_vol5_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -436,8 +435,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False (Dựa theo sách/ngữ cảnh gốc là False vì câu chuyện nói về dominance in the music world, không phải những quyển tự truyện do người dân viết kể về sự thống trị của ông - thực tế chi tiết bài là Many biographies have been written that narrate his dominance, nhưng key đáp án là False)."
+              "explanation": "Tiểu sử (biographies) là thứ kể lại (narrate) sự thống trị của ông trong giới âm nhạc, chứ không phải mọi người (people) kể lại các cuốn tiểu sử. Do đó nhận định này sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "37",
@@ -446,8 +445,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Beethoven đã sáng tác nhiều kiệt tác (multiple masterpieces) vô cùng tuyệt vời."
+              "explanation": "Beethoven đã sáng tác nhiều kiệt tác (multiple masterpieces) và ông biết rằng những tác phẩm của mình nghe rất tuyệt vời (sounded gorgeous). Nhận định này hoàn toàn đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
@@ -456,8 +455,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Ông mất thính giác (lose his hearing), chứ không phải mất đức tính (virtue)."
+              "explanation": "Bài viết nói rằng việc ông mất đi hoàn toàn thính giác (lose his hearing) là điều không thể tránh khỏi (inevitable), chứ không phải mất đi đức tính (virtue). Vậy nhận định sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "39",
@@ -466,8 +465,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Ông trở nên nổi tiếng xấu (notorious) vì tính hung hăng (aggression) của mình."
+              "explanation": "Khi mất đi sự kiên nhẫn, ông trở nên mang tiếng xấu (notorious) vì sự nóng nảy, hung hăng của mình (aggression). Nhận định này là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -476,16 +475,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Âm nhạc vĩ đại không bao giờ lỗi thời (never becomes outdated)."
+              "explanation": "Âm nhạc vĩ đại thì không bao giờ lỗi thời (never becomes outdated). Câu nhận định nói âm nhạc vĩ đại 'bị lỗi thời' là sai hoàn toàn.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -496,8 +495,8 @@
                 "Painting",
                 "Acting"
               ],
-              "correctAnswer": "A",
-              "explanation": "Beethoven có sự yêu thích (partiality) với âm nhạc cổ điển (classical music)."
+              "explanation": "Khi còn rất trẻ, Beethoven đã phát triển sự yêu thích đặc biệt (partiality) đối với âm nhạc cổ điển (classical music). Chọn đáp án A.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -508,8 +507,8 @@
                 "Ten",
                 "Twenty"
               ],
-              "correctAnswer": "B",
-              "explanation": "Khi ông 5 tuổi (five), ông đã học cách chơi piano."
+              "explanation": "Ông học chơi đàn piano khi mới năm tuổi (five). Chọn đáp án B.",
+              "correctAnswer": "B"
             },
             {
               "id": "43",
@@ -520,8 +519,8 @@
                 "He laughed",
                 "He got angry"
               ],
-              "correctAnswer": "B",
-              "explanation": "Khi thấy đám đông vỗ tay và reo hò, ông đã bật khóc (he began to cry)."
+              "explanation": "Khi khán giả vỗ tay (clapped) và reo hò, cảm xúc của ông dâng trào và ông đã bật khóc (he began to cry). Chọn đáp án B.",
+              "correctAnswer": "B"
             },
             {
               "id": "44",
@@ -532,8 +531,8 @@
                 "His family",
                 "His teacher"
               ],
-              "correctAnswer": "B",
-              "explanation": "Niềm đam mê âm nhạc (passion for music) đã thúc đẩy ông tiếp tục biểu diễn."
+              "explanation": "Chính niềm đam mê âm nhạc (passion for music) đã thôi thúc (compelled) ông tiếp tục biểu diễn ngay cả khi đã bị điếc. Chọn đáp án B.",
+              "correctAnswer": "B"
             },
             {
               "id": "45",
@@ -544,10 +543,11 @@
                 "No one came",
                 "He played the violin"
               ],
-              "correctAnswer": "B",
-              "explanation": "Buổi biểu diễn cuối cùng của ông là một trong những màn trình diễn tuyệt vời nhất trong lịch sử (one of the finest in history)."
+              "explanation": "Buổi biểu diễn cuối cùng của ông được đánh giá là một trong những buổi biểu diễn tuyệt vời nhất trong lịch sử (one of the finest in history). Chọn đáp án B.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

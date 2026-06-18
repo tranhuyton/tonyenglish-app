@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "A new student",
                 "A boat"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"A new student\" (một học sinh mới) cần được giám sát (supervised) để hướng dẫn."
+              "explanation": "\"A new student\" (một học sinh mới) cần được giám sát (supervised) để hướng dẫn.",
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "A disease",
                 "A thought"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"situated\" nghĩa là được đặt/tọa lạc ở một vị trí, phù hợp nhất với \"A building\" (một tòa nhà)."
+              "explanation": "\"situated\" nghĩa là được đặt/tọa lạc ở một vị trí, phù hợp nhất với \"A building\" (một tòa nhà).",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "An illness",
                 "A holiday"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"appointed to\" nghĩa là được bổ nhiệm, nên đi với \"A job\" (một công việc)."
+              "explanation": "\"appointed to\" nghĩa là được bổ nhiệm, nên đi với \"A job\" (một công việc).",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "they discuss something",
                 "they sleep"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"confers\" nghĩa là bàn bạc, thảo luận, tương đương với \"discuss something\"."
+              "explanation": "\"confers\" nghĩa là bàn bạc, thảo luận, tương đương với \"discuss something\".",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "An airplane",
                 "A disc"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"cube\" là hình khối lập phương, thường là \"A box\" (một cái hộp)."
+              "explanation": "\"cube\" là hình khối lập phương, thường là \"A box\" (một cái hộp).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "masculine",
                 "muscular"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"one after another without interruption\" (liên tiếp nhau không ngắt quãng) tương đương với \"consecutive\"."
+              "explanation": "\"one after another without interruption\" (liên tiếp nhau không ngắt quãng) tương đương với \"consecutive\".",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "symmetry",
                 "posture"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"qualities related to men\" (phẩm chất liên quan đến nam giới) là \"masculine\" (nam tính)."
+              "explanation": "\"qualities related to men\" (phẩm chất liên quan đến nam giới) là \"masculine\" (nam tính).",
+              "correctAnswer": "B"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "muscular",
                 "crude"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"successful at existing together\" (tồn tại cùng nhau thành công) là \"compatible\" (tương thích, hòa hợp)."
+              "explanation": "\"successful at existing together\" (tồn tại cùng nhau thành công) là \"compatible\" (tương thích, hòa hợp).",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "consecutive",
                 "masculine"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"strong and fit\" (khỏe và cân đối) tương đương với \"muscular\" (vạm vỡ, cơ bắp)."
+              "explanation": "\"strong and fit\" (khỏe và cân đối) tương đương với \"muscular\" (vạm vỡ, cơ bắp).",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -142,8 +141,8 @@
                 "undergraduate",
                 "feedback"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"college student\" (sinh viên đại học) tương đương với \"undergraduate\" (sinh viên chưa tốt nghiệp đại học)."
+              "explanation": "\"college student\" (sinh viên đại học) tương đương với \"undergraduate\" (sinh viên chưa tốt nghiệp đại học).",
+              "correctAnswer": "C"
             },
             {
               "id": "11",
@@ -154,8 +153,8 @@
                 "cube",
                 "posture"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"permanent drawing on my skin\" (hình vẽ vĩnh viễn trên da) là \"tattoo\" (hình xăm)."
+              "explanation": "\"permanent drawing on my skin\" (hình vẽ vĩnh viễn trên da) là \"tattoo\" (hình xăm).",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -166,8 +165,8 @@
                 "ignorance",
                 "competence"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"standing position\" (tư thế đứng) tương đương với \"posture\" (tư thế)."
+              "explanation": "\"standing position\" (tư thế đứng) tương đương với \"posture\" (tư thế).",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -178,8 +177,8 @@
                 "feedback",
                 "competence"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"halves that are the exact same\" (các nửa giống hệt nhau) là sự đối xứng (\"symmetry\")."
+              "explanation": "\"halves that are the exact same\" (các nửa giống hệt nhau) là sự đối xứng (\"symmetry\").",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -190,8 +189,8 @@
                 "feedback",
                 "anthropology"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"lack of knowledge\" (thiếu kiến thức) tương đương với \"ignorance\" (sự ngu dốt, thiếu hiểu biết)."
+              "explanation": "\"lack of knowledge\" (thiếu kiến thức) tương đương với \"ignorance\" (sự ngu dốt, thiếu hiểu biết).",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -202,16 +201,16 @@
                 "compatible",
                 "muscular"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"not exact or detailed\" (không chính xác hoặc không chi tiết) là \"crude\" (sơ sài, thô)."
+              "explanation": "\"not exact or detailed\" (không chính xác hoặc không chi tiết) là \"crude\" (sơ sài, thô).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -220,8 +219,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Chương trình \"undergraduate\" (đại học) bao gồm nhiều chuyên ngành."
+              "explanation": "Correct. Chương trình \"undergraduate\" (đại học) bao gồm nhiều chuyên ngành.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -230,8 +229,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Conferred\" (bàn bạc, thảo luận) được dùng đúng."
+              "explanation": "Correct. \"Conferred\" (bàn bạc, thảo luận) được dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -240,8 +239,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Mưa không thể tạo ra hình khối lập phương (cube) trên cỏ."
+              "explanation": "Incorrect. Mưa không thể tạo ra hình khối lập phương (cube) trên cỏ.",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Hình xăm (tattoo) trông rất đậm trên làn da sáng."
+              "explanation": "Correct. Hình xăm (tattoo) trông rất đậm trên làn da sáng.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -260,8 +259,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Giáo viên cho \"feedback\" (nhận xét) là hợp lý."
+              "explanation": "Correct. Giáo viên cho \"feedback\" (nhận xét) là hợp lý.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -270,8 +269,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Bức tường \"situated\" (tọa lạc/được đặt) ở phía bắc sân."
+              "explanation": "Correct. Bức tường \"situated\" (tọa lạc/được đặt) ở phía bắc sân.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -280,8 +279,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Em bé không thể giám sát (supervised) mẹ mình."
+              "explanation": "Incorrect. Em bé không thể giám sát (supervised) mẹ mình.",
+              "correctAnswer": "B"
             },
             {
               "id": "23",
@@ -290,8 +289,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Sự đối xứng (symmetry) làm bình hoa trông hấp dẫn."
+              "explanation": "Correct. Sự đối xứng (symmetry) làm bình hoa trông hấp dẫn.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -300,8 +299,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Người cha tức giận sẽ không vỗ tay hoan hô (applauded) khi con gây rắc rối."
+              "explanation": "Incorrect. Người cha tức giận sẽ không vỗ tay hoan hô (applauded) khi con gây rắc rối.",
+              "correctAnswer": "B"
             },
             {
               "id": "25",
@@ -310,8 +309,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Quản lý bổ nhiệm (appointed) người cho vị trí mới."
+              "explanation": "Correct. Quản lý bổ nhiệm (appointed) người cho vị trí mới.",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -320,8 +319,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Một cô gái nam tính (masculine) lại mặc váy thì không hợp lý về mặt ngữ nghĩa ở đây."
+              "explanation": "Incorrect. Một cô gái nam tính (masculine) lại mặc váy thì không hợp lý về mặt ngữ nghĩa ở đây.",
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -330,8 +329,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Trong bản chỉnh sửa cuối (final revision), không ai cố tình làm tác phẩm của mình trở nên thô kệch (crude)."
+              "explanation": "Incorrect. Trong bản chỉnh sửa cuối (final revision), không ai cố tình làm tác phẩm của mình trở nên thô kệch (crude).",
+              "correctAnswer": "B"
             },
             {
               "id": "28",
@@ -340,8 +339,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Thuyền trưởng ra lệnh có tư thế đứng (posture) tốt hơn."
+              "explanation": "Correct. Thuyền trưởng ra lệnh có tư thế đứng (posture) tốt hơn.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -350,8 +349,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Ngôi sao cơ bắp (muscular) đóng vai siêu anh hùng."
+              "explanation": "Correct. Ngôi sao cơ bắp (muscular) đóng vai siêu anh hùng.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -360,8 +359,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Tượng đài (monument) được xây cho George Washington."
+              "explanation": "Correct. Tượng đài (monument) được xây cho George Washington.",
+              "correctAnswer": "A"
             },
             {
               "id": "31",
@@ -370,8 +369,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Sự thiếu hiểu biết (ignorance) không thể giúp ai đó lọt vào vòng chung kết giải đấu."
+              "explanation": "Incorrect. Sự thiếu hiểu biết (ignorance) không thể giúp ai đó lọt vào vòng chung kết giải đấu.",
+              "correctAnswer": "B"
             },
             {
               "id": "32",
@@ -380,8 +379,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Môn nhân chủng học (anthropology) là một môn học."
+              "explanation": "Correct. Môn nhân chủng học (anthropology) là một môn học.",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -390,8 +389,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Năng lực (competence) không phù hợp ngữ cảnh, phải là nỗi sợ (fear)."
+              "explanation": "Incorrect. Năng lực (competence) không phù hợp ngữ cảnh, phải là nỗi sợ (fear).",
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -400,8 +399,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Nếu họ ly hôn thì họ không hề hòa hợp (compatible)."
+              "explanation": "Incorrect. Nếu họ ly hôn thì họ không hề hòa hợp (compatible).",
+              "correctAnswer": "B"
             },
             {
               "id": "35",
@@ -410,24 +409,24 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Vô địch 3 năm liên tiếp (consecutive) là cách dùng hoàn toàn đúng."
+              "explanation": "Correct. Vô địch 3 năm liên tiếp (consecutive) là cách dùng hoàn toàn đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Brothers</h1><p style=\"margin-bottom: 1rem;\">John and Mark were brothers, but they were quite different people. Mark looked very <b>masculine</b>. He had a mustache and was very <b>muscular</b>. He was a sculptor. He made things out of stone. Mark was a good artist, but he was not very intelligent.</p><p style=\"margin-bottom: 1rem;\">John looked nothing like his brother. He was small and weak, but he was very smart. John was an <b>undergraduate</b> in college, and he studied <b>anthropology</b> and history. He knew a lot about ancient cultures. The brothers loved each other very much, but they thought they had nothing in common.</p><p style=\"margin-bottom: 1rem;\">One day, the mayor <b>appointed</b> Mark to build a <b>monument</b>: a statue of Egyptian Pharaoh, Tut. Mark agreed to do the job, but he had a problem. He had no idea who Pharaoh Tut was! However, he thought he had the <b>competence</b> to build a good statue anyway. He made some <b>crude</b> measurements and sculpted a statue of a very old man with a <b>tattoo</b> on his chest. Mark was proud of his work, but when John saw the statue, he laughed aloud.</p><p style=\"margin-bottom: 1rem;\">“What’s so funny?” Mark asked.</p><p style=\"margin-bottom: 1rem;\">John replied, “Your <b>ignorance</b> makes me laugh. Don’t you know that Tut was only a teenager when he was pharaoh? Let me help you. I’ll <b>supervise</b> your work. I’ll give you <b>feedback</b>, and we’ll make this a great monument.”</p><p style=\"margin-bottom: 1rem;\">Mark got another <b>cube</b> of stone. John told him what Tut looked like. “Make him tall with good <b>posture</b>,” John said. “And make sure there is <b>symmetry</b> in his body.”</p><p style=\"margin-bottom: 1rem;\">Mark <b>conferred</b> with John about every detail. For ten <b>consecutive</b> hours, the brothers worked. At last, the finished statue was <b>situated</b> in front of the museum. Everyone <b>applauded</b> the brothers’ good work.</p><p style=\"margin-bottom: 1rem;\">“We worked together very well. I guess we are <b>compatible</b> after all,” Mark said.</p><p style=\"margin-bottom: 1rem;\">John replied, “I agree! When we combine our talents, we are capable of greatness.”</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Brothers</h1>        <p style=\"margin-bottom: 1rem;\">John and Mark were brothers, but they were quite different people. Mark looked very <b>masculine</b>. He had a mustache and was very <b>muscular</b>. He was a sculptor. He made things out of stone. Mark was a good artist, but he was not very intelligent.</p>    <p style=\"margin-bottom: 1rem;\">John looked nothing like his brother. He was small and weak, but he was very smart. John was an <b>undergraduate</b> in college, and he studied <b>anthropology</b> and history. He knew a lot about ancient cultures. The brothers loved each other very much, but they thought they had nothing in common.</p>    <p style=\"margin-bottom: 1rem;\">One day, the mayor <b>appointed</b> Mark to build a <b>monument</b>: a statue of Egyptian Pharaoh, Tut. Mark agreed to do the job, but he had a problem. He had no idea who Pharaoh Tut was! However, he thought he had the <b>competence</b> to build a good statue anyway. He made some <b>crude</b> measurements and sculpted a statue of a very old man with a <b>tattoo</b> on his chest. Mark was proud of his work, but when John saw the statue, he laughed aloud.</p>    <p style=\"margin-bottom: 1rem;\">“What’s so funny?” Mark asked.</p>    <p style=\"margin-bottom: 1rem;\">John replied, “Your <b>ignorance</b> makes me laugh. Don’t you know that Tut was only a teenager when he was pharaoh? Let me help you. I’ll <b>supervise</b> your work. I’ll give you <b>feedback</b>, and we’ll make this a great monument.”</p>    <p style=\"margin-bottom: 1rem;\">Mark got another <b>cube</b> of stone. John told him what Tut looked like. “Make him tall with good <b>posture</b>,” John said. “And make sure there is <b>symmetry</b> in his body.”</p>    <p style=\"margin-bottom: 1rem;\">Mark <b>conferred</b> with John about every detail. For ten <b>consecutive</b> hours, the brothers worked. At last, the finished statue was <b>situated</b> in front of the museum. Everyone <b>applauded</b> the brothers’ good work.</p>    <p style=\"margin-bottom: 1rem;\">“We worked together very well. I guess we are <b>compatible</b> after all,” Mark said.</p>    <p style=\"margin-bottom: 1rem;\">John replied, “I agree! When we combine our talents, we are capable of greatness.”</p></div>",
       "imageUrl": "/unit12_vol5_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -436,8 +435,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Trong bài nói Mark looked very masculine, had a mustache and was very muscular."
+              "explanation": "Trong bài nói Mark trông rất nam tính (masculine), anh ấy có riết mép (mustache) và cơ thể rất vạm vỡ (muscular). Nhận định này đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -446,8 +445,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. John cười sự thiếu hiểu biết của Mark (Mark's ignorance), không phải của Pharaoh Tut."
+              "explanation": "John cười vì sự thiếu hiểu biết của Mark (Your ignorance), chứ không phải sự thiếu hiểu biết của Pharaoh Tut. Vậy nhận định này sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "38",
@@ -456,8 +455,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. John nói \"I'll supervise your work. I'll give you feedback\"."
+              "explanation": "John tự nhận việc giám sát (supervise) công việc của Mark, đưa ra nhận xét (feedback), đồng thời nhắc Mark về tư thế (posture) và tính đối xứng (symmetry). Câu này đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -466,8 +465,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Mark made some crude measurements and sculpted a statue... with a tattoo on his chest."
+              "explanation": "Mark đã thực hiện những phép đo sơ sài (crude measurements) và khắc một hình xăm (tattoo) lên ngực bức tượng ban đầu. Nhận định này đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
@@ -476,16 +475,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. John học anthropology and history, Mark mới làm điêu khắc (sculptor)."
+              "explanation": "John là một sinh viên đại học (undergraduate) học về nhân chủng học (anthropology) và lịch sử (history), chứ không học điêu khắc (sculpture). Nhận định sai.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
@@ -496,8 +495,8 @@
                 "They slept well.",
                 "They built a house."
               ],
-              "correctAnswer": "A",
-              "explanation": "Mọi người vỗ tay khen ngợi công sức lao động chăm chỉ và tác phẩm tốt của họ (applauded the brothers' good work)."
+              "explanation": "Mọi người vỗ tay (applauded) khen ngợi công sức lao động chăm chỉ của hai anh em trong 10 giờ liên tục để tạo ra tác phẩm tốt. Chọn đáp án A.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
@@ -508,8 +507,8 @@
                 "He thought he could teach.",
                 "He thought he could fight."
               ],
-              "correctAnswer": "B",
-              "explanation": "Mark thought he had the competence to build a good statue anyway."
+              "explanation": "Mark nghĩ rằng anh ấy có đủ năng lực (competence) để xây dựng một bức tượng tốt. Chọn đáp án B.",
+              "correctAnswer": "B"
             },
             {
               "id": "43",
@@ -520,8 +519,8 @@
                 "John told him to paint.",
                 "John told him to sleep."
               ],
-              "correctAnswer": "A",
-              "explanation": "Sau khi lấy một khối đá khác, John nói cho Mark biết Tut trông như thế nào."
+              "explanation": "Sau khi Mark lấy một khối đá (cube of stone) khác, John đã nói cho Mark biết Pharaoh Tut trông như thế nào. Chọn đáp án A.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
@@ -532,8 +531,8 @@
                 "About money.",
                 "About dinner."
               ],
-              "correctAnswer": "B",
-              "explanation": "Mark conferred with John about every detail."
+              "explanation": "Mark đã bàn bạc (conferred) với John về từng chi tiết nhỏ (about every detail). Chọn đáp án B.",
+              "correctAnswer": "B"
             },
             {
               "id": "45",
@@ -544,10 +543,11 @@
                 "He said they should never work again.",
                 "He asked for money."
               ],
-              "correctAnswer": "B",
-              "explanation": "John trả lời: \"When we combine our talents, we are capable of greatness.\""
+              "explanation": "John trả lời rằng khi hai anh em (những người hòa hợp - compatible) kết hợp tài năng lại với nhau, họ có khả năng tạo nên những điều vĩ đại. Chọn đáp án B.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

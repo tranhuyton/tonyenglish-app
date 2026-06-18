@@ -15,405 +15,405 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
-              "content": "1. Which person uses an anchor?",
+              "content": "Which person uses an anchor?",
               "options": [
                 "A mailman",
                 "A sailor",
                 "A writer",
                 "A priest"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"anchor\" (mỏ neo) là dụng cụ của thủy thủ (sailor) dùng trên thuyền."
+              "explanation": "\"anchor\" (mỏ neo) là dụng cụ của thủy thủ (sailor) dùng trên thuyền.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_2",
-              "content": "2. If your jacket is made of genuine leather, it______ .",
+              "content": "If your jacket is made of genuine leather, it______ .",
               "options": [
                 "is not expensive",
                 "falls apart easily",
                 "is real leather",
                 "is alive"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"genuine\" (thật, chính hãng) có nghĩa là đồ da thật (real leather)."
+              "explanation": "\"genuine\" (thật, chính hãng) có nghĩa là đồ da thật (real leather).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_3",
-              "content": "3. What might precipitate a fight?",
+              "content": "What might precipitate a fight?",
               "options": [
                 "Taking a nap",
                 "Sharing lunch",
                 "Doing homework",
                 "Name calling"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"precipitate\" (đẩy nhanh, gây ra) một cuộc đánh nhau thường là do chửi rủa, lăng mạ (name calling)."
+              "explanation": "\"precipitate\" (đẩy nhanh, gây ra) một cuộc đánh nhau thường là do chửi rủa, lăng mạ (name calling).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex1_4",
-              "content": "4. Where would you most likely see a buoy?",
+              "content": "Where would you most likely see a buoy?",
               "options": [
                 "On the ocean",
                 "On the street",
                 "At the store",
                 "In an airplane"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"buoy\" (phao cứu sinh, phao cảnh báo) thường được nhìn thấy trên đại dương (on the ocean)."
+              "explanation": "\"buoy\" (phao cứu sinh, phao cảnh báo) thường được nhìn thấy trên đại dương (on the ocean).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_5",
-              "content": "5. If a problem is frequent, then it happens,",
+              "content": "If a problem is frequent, then it happens,",
               "options": [
                 "several times",
                 "only once",
                 "almost never",
                 "in the afternoon"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"frequent\" (thường xuyên) nghĩa là xảy ra nhiều lần (several times)."
+              "explanation": "\"frequent\" (thường xuyên) nghĩa là xảy ra nhiều lần (several times).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_1",
-              "content": "1. I buy most of my clothes once owned.",
+              "content": "I buy most of my clothes once owned.",
               "options": [
                 "secondhand",
                 "genuine",
                 "frequent",
                 "intricate"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"once owned\" (từng thuộc về người khác) đồng nghĩa với secondhand (đồ cũ)."
+              "explanation": "\"once owned\" (từng thuộc về người khác) đồng nghĩa với secondhand (đồ cũ).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_2",
-              "content": "2. The enclosed area in the harbor for loading ships is very busy this time of day.",
+              "content": "The enclosed area in the harbor for loading ships is very busy this time of day.",
               "options": [
                 "dock",
                 "anchor",
                 "fore",
                 "slot"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"The enclosed area in the harbor for loading ships\" (khu vực bến cảng để chất hàng lên tàu) đồng nghĩa với dock (bến tàu)."
+              "explanation": "\"The enclosed area in the harbor for loading ships\" (khu vực bến cảng để chất hàng lên tàu) đồng nghĩa với dock (bến tàu).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_3",
-              "content": "3. Be sure not to lie about the facts about the crime. The police need to know everything in order to help us.",
+              "content": "Be sure not to lie about the facts about the crime. The police need to know everything in order to help us.",
               "options": [
                 "distort",
                 "offset",
                 "designate",
                 "submerge"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"lie about\" (nói dối về) đồng nghĩa với distort (xuyên tạc)."
+              "explanation": "\"lie about\" (nói dối về) đồng nghĩa với distort (xuyên tạc).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_4",
-              "content": "4. The women sat on the front part of the ship and enjoyed the warm sun.",
+              "content": "The women sat on the front part of the ship and enjoyed the warm sun.",
               "options": [
                 "fore",
                 "context",
                 "buoy",
                 "tactic"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"the front part\" (phần phía trước) đồng nghĩa với fore (phía trước tàu)."
+              "explanation": "\"the front part\" (phần phía trước) đồng nghĩa với fore (phía trước tàu).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_5",
-              "content": "5. I have to add a stop to our trip, so adjust your plans in a way that depends on the situation.",
+              "content": "I have to add a stop to our trip, so adjust your plans in a way that depends on the situation.",
               "options": [
                 "accordingly",
                 "frequent",
                 "intricate",
                 "genuine"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"in a way that depends on the situation\" (tùy theo tình huống) đồng nghĩa với accordingly (một cách phù hợp)."
+              "explanation": "\"in a way that depends on the situation\" (tùy theo tình huống) đồng nghĩa với accordingly (một cách phù hợp).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_6",
-              "content": "6. To understand this show, you have to know the general situation that relates to it.",
+              "content": "To understand this show, you have to know the general situation that relates to it.",
               "options": [
                 "context",
                 "grease",
                 "catastrophe",
                 "anchor"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"general situation\" (tình huống chung, bối cảnh) đồng nghĩa với context (ngữ cảnh, bối cảnh)."
+              "explanation": "\"general situation\" (tình huống chung, bối cảnh) đồng nghĩa với context (ngữ cảnh, bối cảnh).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_7",
-              "content": "7. The new sewing machine was made up of many small parts and details.",
+              "content": "The new sewing machine was made up of many small parts and details.",
               "options": [
                 "intricate",
                 "secondhand",
                 "frequent",
                 "genuine"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"many small parts and details\" (nhiều bộ phận và chi tiết nhỏ) đồng nghĩa với intricate (phức tạp, tinh xảo)."
+              "explanation": "\"many small parts and details\" (nhiều bộ phận và chi tiết nhỏ) đồng nghĩa với intricate (phức tạp, tinh xảo).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_8",
-              "content": "8. Let’s hope that our plans do not have a part of one occupying the space of the other.",
+              "content": "Let’s hope that our plans do not have a part of one occupying the space of the other.",
               "options": [
                 "overlap",
                 "offset",
                 "distort",
                 "precipitate"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"occupying the space of the other\" (chiếm không gian của cái khác) đồng nghĩa với overlap (chồng chéo)."
+              "explanation": "\"occupying the space of the other\" (chiếm không gian của cái khác) đồng nghĩa với overlap (chồng chéo).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_9",
-              "content": "9. The city has decided to give a particular description of this area as a non-smoking zone.",
+              "content": "The city has decided to give a particular description of this area as a non-smoking zone.",
               "options": [
                 "designate",
                 "submerge",
                 "offset",
                 "distort"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"give a particular description\" (chỉ định) đồng nghĩa với designate."
+              "explanation": "\"give a particular description\" (chỉ định) đồng nghĩa với designate.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_10",
-              "content": "10. I think the gears need a little more oily substance used to make parts work smoothly.",
+              "content": "I think the gears need a little more oily substance used to make parts work smoothly.",
               "options": [
                 "grease",
                 "anchor",
                 "buoy",
                 "slot"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"oily substance\" (chất nhờn, dầu mỡ) đồng nghĩa với grease."
+              "explanation": "\"oily substance\" (chất nhờn, dầu mỡ) đồng nghĩa với grease.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex3_1",
-              "content": "1. The key fit perfectly in the slot.",
+              "content": "The key fit perfectly in the slot.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"slot\" (khe, rãnh) dùng đúng cho chìa khóa."
+              "explanation": "\"slot\" (khe, rãnh) dùng đúng cho chìa khóa.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_2",
-              "content": "2. Jackets help to offset the effect of a cold wind.",
+              "content": "Jackets help to offset the effect of a cold wind.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"offset\" (bù đắp, làm giảm tác động) dùng đúng khi áo khoác chống lại gió lạnh."
+              "explanation": "\"offset\" (bù đắp, làm giảm tác động) dùng đúng khi áo khoác chống lại gió lạnh.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_3",
-              "content": "3. I need to distort my homework if I’m going to get it turned in by tomorrow.",
+              "content": "I need to distort my homework if I’m going to get it turned in by tomorrow.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"distort\" (xuyên tạc, bóp méo) không dùng cho việc làm bài tập về nhà."
+              "explanation": "\"distort\" (xuyên tạc, bóp méo) không dùng cho việc làm bài tập về nhà.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_4",
-              "content": "4. The parade was a catastrophe. It went smoothly, and everyone had a great time.",
+              "content": "The parade was a catastrophe. It went smoothly, and everyone had a great time.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"catastrophe\" (thảm họa) mâu thuẫn với việc buổi diễu hành diễn ra suôn sẻ (went smoothly)."
+              "explanation": "\"catastrophe\" (thảm họa) mâu thuẫn với việc buổi diễu hành diễn ra suôn sẻ (went smoothly).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_5",
-              "content": "5. They had to water the tree four times a day. It was a frequent chore.",
+              "content": "They had to water the tree four times a day. It was a frequent chore.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"frequent\" (thường xuyên) dùng đúng cho việc tưới cây 4 lần một ngày."
+              "explanation": "\"frequent\" (thường xuyên) dùng đúng cho việc tưới cây 4 lần một ngày.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_6",
-              "content": "6. The intricate bench was just a large, unpainted piece of wood.",
+              "content": "The intricate bench was just a large, unpainted piece of wood.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"intricate\" (tinh xảo, phức tạp) mâu thuẫn với một khúc gỗ thô không sơn (unpainted piece of wood)."
+              "explanation": "\"intricate\" (tinh xảo, phức tạp) mâu thuẫn với một khúc gỗ thô không sơn (unpainted piece of wood).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_7",
-              "content": "7. The weather precipitates a great weekend.",
+              "content": "The weather precipitates a great weekend.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"precipitates\" (gây ra, đẩy nhanh) thường đi với điều tiêu cực hoặc biến cố, không dùng với \"great weekend\"."
+              "explanation": "\"precipitates\" (gây ra, đẩy nhanh) thường đi với điều tiêu cực hoặc biến cố, không dùng với \"great weekend\".",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_8",
-              "content": "8. We walked to the docks to watch ships pull in and out.",
+              "content": "We walked to the docks to watch ships pull in and out.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"docks\" (bến tàu) dùng đúng với ngữ cảnh xem tàu cập bến."
+              "explanation": "\"docks\" (bến tàu) dùng đúng với ngữ cảnh xem tàu cập bến.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_9",
-              "content": "9. The lion submerged out of the bushes and attacked its prey.",
+              "content": "The lion submerged out of the bushes and attacked its prey.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"submerged\" (lặn xuống nước) không dùng cho sư tử phóng ra từ bụi rậm."
+              "explanation": "\"submerged\" (lặn xuống nước) không dùng cho sư tử phóng ra từ bụi rậm.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_10",
-              "content": "10. The secondhand book was brand new. I was the first to read it.",
+              "content": "The secondhand book was brand new. I was the first to read it.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"secondhand\" (đồ cũ) mâu thuẫn với \"brand new\" (hoàn toàn mới)."
+              "explanation": "\"secondhand\" (đồ cũ) mâu thuẫn với \"brand new\" (hoàn toàn mới).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_11",
-              "content": "11. She was noted for creating some imaginative tactics to claim victory.",
+              "content": "She was noted for creating some imaginative tactics to claim victory.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"tactics\" (chiến thuật) dùng đúng để giành chiến thắng."
+              "explanation": "\"tactics\" (chiến thuật) dùng đúng để giành chiến thắng.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_12",
-              "content": "12. The guide asked us to be very quiet, so we acted accordingly.",
+              "content": "The guide asked us to be very quiet, so we acted accordingly.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"accordingly\" (một cách phù hợp) dùng đúng cho việc làm theo lời hướng dẫn viên."
+              "explanation": "\"accordingly\" (một cách phù hợp) dùng đúng cho việc làm theo lời hướng dẫn viên.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_13",
-              "content": "13. The chef arranged the slices of bread so that they overlapped each other.",
+              "content": "The chef arranged the slices of bread so that they overlapped each other.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"overlapped\" (xếp chồng lên nhau) dùng đúng cho lát bánh mì."
+              "explanation": "\"overlapped\" (xếp chồng lên nhau) dùng đúng cho lát bánh mì.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_14",
-              "content": "14. We knew from the beginning that the genuine man was not who he claimed to be.",
+              "content": "We knew from the beginning that the genuine man was not who he claimed to be.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"genuine\" (chân thật) mâu thuẫn với việc người đàn ông đó không phải là người anh ta nhận (\"not who he claimed to be\")."
+              "explanation": "\"genuine\" (chân thật) mâu thuẫn với việc người đàn ông đó không phải là người anh ta nhận (\"not who he claimed to be\").",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_15",
-              "content": "15. The buoy over there warns ships that the water is too shallow.",
+              "content": "The buoy over there warns ships that the water is too shallow.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"buoy\" (phao cảnh báo) dùng đúng để cảnh báo tàu bè."
+              "explanation": "\"buoy\" (phao cảnh báo) dùng đúng để cảnh báo tàu bè.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_16",
-              "content": "16. We stood at the fore of the ship. At the front we could see where we were going.",
+              "content": "We stood at the fore of the ship. At the front we could see where we were going.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"fore\" (phần mũi tàu) đồng nghĩa với front, dùng đúng."
+              "explanation": "\"fore\" (phần mũi tàu) đồng nghĩa với front, dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_17",
-              "content": "17. The grease made it easy to find a good parking spot.",
+              "content": "The grease made it easy to find a good parking spot.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"grease\" (dầu mỡ bôi trơn) không liên quan gì đến việc tìm chỗ đậu xe."
+              "explanation": "\"grease\" (dầu mỡ bôi trơn) không liên quan gì đến việc tìm chỗ đậu xe.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_18",
-              "content": "18. The fireman who saved the family was designated the “hero of the month.”",
+              "content": "The fireman who saved the family was designated the “hero of the month.”",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"designated\" (được phong, được chỉ định) dùng đúng cho danh hiệu anh hùng."
+              "explanation": "\"designated\" (được phong, được chỉ định) dùng đúng cho danh hiệu anh hùng.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_19",
-              "content": "19. Check the context for spelling errors before you turn it in to the teacher.",
+              "content": "Check the context for spelling errors before you turn it in to the teacher.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"context\" (ngữ cảnh) bị dùng sai, đáng lẽ phải là \"content\" hoặc \"essay\"."
+              "explanation": "\"context\" (ngữ cảnh) bị dùng sai, đáng lẽ phải là \"content\" hoặc \"essay\".",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_20",
-              "content": "20. This looks like a good place to drop the boat’s anchor and relax in the sun.",
+              "content": "This looks like a good place to drop the boat’s anchor and relax in the sun.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"anchor\" (mỏ neo) dùng đúng khi thả neo thuyền để nghỉ ngơi."
+              "explanation": "\"anchor\" (mỏ neo) dùng đúng khi thả neo thuyền để nghỉ ngơi.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -427,127 +427,127 @@
           "id": "sec4",
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readA_1",
-              "content": "1. Jane thought she would precipitate a disaster if she omitted her frequent mistakes.",
+              "content": "Jane thought she would precipitate a disaster if she omitted her frequent mistakes.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Jane nghĩ mình sẽ gây ra thảm họa nếu cô ấy mắc lỗi thường xuyên (made her frequent mistakes), không phải bỏ qua chúng."
+              "explanation": "Trong đoạn 4, câu chuyện viết \"She thought she might make her usual mistakes, which would precipitate a disaster.\" (Cô ấy nghĩ mình có thể mắc những sai lầm thường ngày, điều này sẽ dẫn đến một thảm họa). Như vậy, cô ấy nghĩ mình sẽ gây ra thảm họa nếu MẮC PHẢI những lỗi thường xuyên chứ không phải là nếu bỏ qua (omitted) chúng. Do đó, câu này là sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_2",
-              "content": "2. Jane submerged the anchor and secured it by putting a rope in a slot.",
+              "content": "Jane submerged the anchor and secured it by putting a rope in a slot.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Jane đã học được cách thả neo (submerge the anchor) và cố định bằng sợi dây qua rãnh (slot)."
+              "explanation": "Trong đoạn 2, bài đọc nói rằng \"She learned how to submerge the anchor and secure it by putting a rope in a slot.\" (Cô ấy đã học cách thả mỏ neo xuống nước và cố định nó bằng cách luồn dây thừng vào một khe hở). Câu này hoàn toàn khớp với thông tin trong bài nên là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "readA_3",
-              "content": "3. Jane put grease on the intricate buoy.",
+              "content": "Jane put grease on the intricate buoy.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cô ấy bôi trơn (grease) lên các bánh răng phức tạp (intricate gears) của động cơ, không phải lên chiếc phao (buoy)."
+              "explanation": "Trong đoạn 2 có câu \"She learned how to put grease on the intricate gears of the motor.\" (Cô ấy đã học cách bôi trơn các bánh răng phức tạp của động cơ). Cô ấy bôi dầu mỡ lên các bánh răng phức tạp chứ không phải lên chiếc phao (buoy). Vì vậy, câu này là sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_4",
-              "content": "4. Mike thought of a tactic to test Jane’s skills in the context of a catastrophe.",
+              "content": "Mike thought of a tactic to test Jane’s skills in the context of a catastrophe.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mike đã nghĩ ra một chiến thuật (tactic) để kiểm tra kỹ năng của con gái trong tình huống thảm họa."
+              "explanation": "Trong đoạn 3, tác giả viết \"He thought of a tactic to test Jane's skills in the context of a catastrophe.\" (Ông ấy đã nghĩ ra một chiến thuật để kiểm tra kỹ năng của Jane trong bối cảnh một thảm họa). Thông tin này hoàn toàn chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "readA_5",
-              "content": "5. Mike designated the secondhand boat “Jane’s Pride.”",
+              "content": "Mike designated the secondhand boat “Jane’s Pride.”",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Ông ấy đã đặt tên (designated) con thuyền cũ là \"Jane's Pride\"."
+              "explanation": "Ở đoạn cuối cùng, bài đọc ghi \"He designated it 'Jane's Pride' and painted the name on the fore of the ship.\" (Ông ấy đã đặt tên nó là 'Niềm tự hào của Jane' và sơn tên đó lên mũi tàu). Tên cũ của con tàu là 'High Hopes' và nó là tàu cũ (secondhand boat), sau đó được Mike đổi tên. Câu này đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readB_1",
-              "content": "1. Where did Jane have to steer the boat to find help?",
+              "content": "Where did Jane have to steer the boat to find help?",
               "options": [
                 "To the dock",
                 "To the buoy",
                 "To the anchor",
                 "To the context"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bố Jane bảo cô phải đưa tàu về bến (dock) để tìm sự giúp đỡ."
+              "explanation": "Trong đoạn 3, bố của Jane đã hét lên \"You have to get back to the dock and find help!\" (Con phải quay lại bến tàu và tìm sự giúp đỡ!). Do đó, đáp án đúng là đưa thuyền về bến tàu (To the dock).",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_2",
-              "content": "2. What was the first thing Jane did after she decided to listen to her dad and act accordingly?",
+              "content": "What was the first thing Jane did after she decided to listen to her dad and act accordingly?",
               "options": [
                 "She pulled up the anchor with all of her might.",
                 "She put grease on the intricate gears.",
                 "She steered around buoys.",
                 "She overlapped the sails."
               ],
-              "correctAnswer": "A",
-              "explanation": "Việc đầu tiên Jane làm là dốc sức kéo mỏ neo lên (pulled up the anchor)."
+              "explanation": "Trong đoạn 4, bài đọc miêu tả \"However, she had to listen to her dad and act accordingly. She pulled up the anchor with all of her might.\" (Tuy nhiên, cô ấy phải nghe lời bố và hành động một cách phù hợp. Cô ấy đã kéo mỏ neo lên với tất cả sức lực của mình). Hành động đầu tiên của cô ấy là kéo mỏ neo.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_3",
-              "content": "3. On which part of the boat did they paint the name?",
+              "content": "On which part of the boat did they paint the name?",
               "options": [
                 "On the fore of the ship",
                 "On the anchor",
                 "On the slot",
                 "On the dock"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cái tên mới được vẽ ở phần mũi tàu (fore of the ship)."
+              "explanation": "Trong đoạn cuối, tác giả viết \"He designated it 'Jane's Pride' and painted the name on the fore of the ship.\" (Ông ấy đã đặt tên nó là 'Niềm tự hào của Jane' và sơn tên đó lên phần mũi của con tàu). Mũi tàu tiếng Anh là fore of the ship.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_4",
-              "content": "4. When Jane overlapped the sails, what was she trying to offset?",
+              "content": "When Jane overlapped the sails, what was she trying to offset?",
               "options": [
                 "The wind",
                 "The grease",
                 "The catastrophe",
                 "The frequent mistakes"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cô xếp chồng các cánh buồm (overlap the sails) để cản lại sức gió (offset the wind)."
+              "explanation": "Đoạn 4 có câu \"She remembered to overlap the sails to offset the wind.\" (Cô ấy nhớ phải xếp chồng các cánh buồm lên nhau để cản sức gió). Vì vậy, cô ấy muốn cản lại gió (The wind).",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_5",
-              "content": "5. What was the purpose of Mike deceiving his daughter?",
+              "content": "What was the purpose of Mike deceiving his daughter?",
               "options": [
                 "To prove to her that she was capable and important",
                 "To distort the truth",
                 "To test the intricate gears",
                 "To make her precipitate a disaster"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mục đích của Mike là chứng minh rằng con gái mình rất có năng lực và quan trọng (capable and important)."
+              "explanation": "Đầu đoạn 3 có nhắc đến lý do Mike làm việc này \"Mike wanted to prove to her that she was indeed capable and important.\" (Mike muốn chứng minh cho cô ấy thấy rằng cô ấy thực sự có năng lực và quan trọng). Đây là mục đích chính để ông lừa con gái mình.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

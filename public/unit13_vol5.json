@@ -15,393 +15,393 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. What is an external body part?",
+              "content": "What is an external body part?",
               "options": [
                 "A nose",
                 "A heart",
                 "A brain",
                 "A skull"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"external body part\" là một bộ phận cơ thể ở bên ngoài, nên đáp án là mũi (A nose)."
+              "explanation": "Từ external có nghĩa là thuộc về bên ngoài. Trong các lựa chọn, chỉ có chiếc mũi (A nose) là bộ phận nằm bên ngoài cơ thể, còn lại đều ở bên trong nhé. Đáp án chính xác là A.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
-              "content": "2. Which would NOT be considered a facility?",
+              "content": "Which would NOT be considered a facility?",
               "options": [
                 "A sports stadium",
                 "A surfboard",
                 "An auditorium",
                 "A library"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"facility\" là một cơ sở vật chất (như sân vận động, thư viện...), ván lướt sóng (surfboard) không phải là facility."
+              "explanation": "Từ facility mang ý nghĩa là một cơ sở vật chất hoặc tòa nhà được xây dựng cho mục đích cụ thể. Sân vận động, khán phòng hay thư viện đều là các cơ sở vật chất, chỉ có ván lướt sóng (A surfboard) là một đồ vật. Vậy đáp án đúng là B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
-              "content": "3. If you live in the southern hemisphere, you ______ .",
+              "content": "If you live in the southern hemisphere, you ______ .",
               "options": [
                 "are on the southern half of the earth",
                 "are warm all-year round",
                 "can’t travel very far north",
                 "are on your head"
               ],
-              "correctAnswer": "A",
-              "explanation": "Nếu bạn sống ở nam bán cầu (southern hemisphere), bạn đang ở nửa phía nam của trái đất."
+              "explanation": "Từ hemisphere có nghĩa là một nửa của trái đất. Vì vậy, nếu bạn sống ở southern hemisphere (Nam bán cầu), điều đó có nghĩa là bạn đang ở nửa phía nam của trái đất. Đáp án A là lựa chọn chuẩn xác nhất nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
-              "content": "4. What does a pedestrian need the most?",
+              "content": "What does a pedestrian need the most?",
               "options": [
                 "Good shoes",
                 "A driver’s license",
                 "A bus pass",
                 "Fuel"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"pedestrian\" là người đi bộ, vì thế thứ cần thiết nhất là một đôi giày tốt (Good shoes)."
+              "explanation": "Từ pedestrian dùng để chỉ người đi bộ trên đường. Chắc chắn người đi bộ thì sẽ rất cần một đôi giày tốt (Good shoes) để di chuyển thuận tiện. Các đáp án như bằng lái xe, thẻ xe buýt hay nhiên liệu đều không hợp lý bằng. Mình chọn A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
-              "content": "5. Which of the following is an example of crust?",
+              "content": "Which of the following is an example of crust?",
               "options": [
                 "Hard cheese",
                 "Outer part of a pizza",
                 "A shell",
                 "Pudding"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"crust\" là phần vỏ cứng bên ngoài của bánh mì, vỏ bánh pizza là một ví dụ."
+              "explanation": "Từ crust mang nghĩa là phần vỏ cứng bên ngoài, đặc biệt là của bánh mì hoặc bánh nướng. Trong các đáp án, phần rìa cứng bên ngoài của chiếc bánh pizza (Outer part of a pizza) chính là ví dụ tiêu biểu nhất cho từ này. Đáp án B là chính xác nha.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "1. You probably shouldn’t take a drink from the ______.",
+              "content": "You probably shouldn’t take a drink from the ______.",
               "options": [
                 "brook",
                 "hound",
                 "consumption",
                 "facility"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"brook\" là con suối nhỏ. Không nên uống nước từ con suối."
+              "explanation": "Câu này khuyên chúng ta không nên uống nước trực tiếp từ brook. Từ này có nghĩa là con suối nhỏ. Uống nước suối chưa qua xử lý có thể không tốt cho sức khỏe đâu nhé. Do đó đáp án A là phù hợp nhất.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
-              "content": "2. The muddy water is not fit for ______.",
+              "content": "The muddy water is not fit for ______.",
               "options": [
                 "pedestrians",
                 "consumption",
                 "escort",
                 "faculty"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"consumption\" là sự tiêu thụ/uống. Nước đục không thích hợp để uống."
+              "explanation": "Nước đục bùn (muddy water) thì chắc chắn là không phù hợp để uống. Từ consumption có nghĩa là sự tiêu thụ thức ăn hoặc thức uống. Khi ghép vào câu, ta được ý nghĩa hoàn chỉnh là nước đục không thích hợp cho việc sử dụng làm nước uống. Mình chọn B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "8",
-              "content": "3. When going to school, it is dangerous for small kids to be lone ______.",
+              "content": "When going to school, it is dangerous for small kids to be lone ______.",
               "options": [
                 "spectators",
                 "pedestrians",
                 "considerate",
                 "impersonal"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"pedestrians\" là người đi bộ. Trẻ em đi bộ một mình rất nguy hiểm."
+              "explanation": "Trẻ em đi bộ một mình trên đường đến trường sẽ rất nguy hiểm. Từ pedestrians mang nghĩa là người đi bộ, ghép vào đây cực kỳ hợp lý. Các từ như khán giả (spectators) hay các tính từ khác đều không đúng ngữ cảnh. Mình chọn đáp án B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
-              "content": "4. Parents should ______ them to school to ensure they arrive safely.",
+              "content": "Parents should ______ them to school to ensure they arrive safely.",
               "options": [
                 "escort",
                 "cater",
                 "entitle",
                 "degrade"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"escort\" là hộ tống, đi cùng để đảm bảo an toàn."
+              "explanation": "Để đảm bảo con cái đến trường an toàn, cha mẹ nên đi cùng để bảo vệ. Động từ escort mang nghĩa là hộ tống, đi cùng ai đó để đảm bảo an toàn cho họ. Lắp vào chỗ trống thì A là một đáp án hoàn toàn chính xác nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
-              "content": "5. When I go hunting, I always bring my ______.",
+              "content": "When I go hunting, I always bring my ______.",
               "options": [
                 "sanctuary",
                 "hound",
                 "brook",
                 "heap"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"hound\" là chó săn."
+              "explanation": "Khi đi săn thú (hunting), người ta thường mang theo chó săn để hỗ trợ. Trong các lựa chọn, từ hound có nghĩa là chó săn. Những từ còn lại như nơi trú ẩn, dòng suối hay một đống đều không hợp lý. Chốt đáp án B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "11",
-              "content": "6. My dog has a great smelling ability. It’s his best ______.",
+              "content": "My dog has a great smelling ability. It’s his best ______.",
               "options": [
                 "criteria",
                 "faculty",
                 "consumption",
                 "hemisphere"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"faculty\" ở đây mang nghĩa năng lực (thể chất/tinh thần)."
+              "explanation": "Khả năng ngửi thính bén của chú chó là một năng lực bẩm sinh tuyệt vời. Từ faculty mang ý nghĩa là năng lực, khả năng về thể chất hoặc tinh thần. Do đó, đây là đáp án phù hợp nhất để điền vào chỗ trống nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
-              "content": "7. When we got to the stadium, I was amazed at the number of ______.",
+              "content": "When we got to the stadium, I was amazed at the number of ______.",
               "options": [
                 "pedestrians",
                 "spectators",
                 "ornaments",
                 "crust"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"spectators\" là khán giả xem thể thao."
+              "explanation": "Khi đến sân vận động (stadium), thứ khiến người ta kinh ngạc thường là số lượng lớn khán giả đến xem. Từ spectators có nghĩa là khán giả theo dõi một sự kiện, rất phù hợp với ngữ cảnh tại sân vận động. Đáp án B là chuẩn xác nhất nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "13",
-              "content": "8. There must have been 50,000 people at the sports ______.",
+              "content": "There must have been 50,000 people at the sports ______.",
               "options": [
                 "sanctuary",
                 "facility",
                 "brook",
                 "heap"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"facility\" là cơ sở (thể thao)."
+              "explanation": "Câu này đang nói về một địa điểm thể thao có sức chứa lên đến 50,000 người. Từ facility mang ý nghĩa là cơ sở vật chất, tòa nhà dành cho mục đích cụ thể. Sports facility chính là khu liên hợp thể thao. Mình chọn B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
-              "content": "9. Because the dormitory was so big, I was afraid it would be ______.",
+              "content": "Because the dormitory was so big, I was afraid it would be ______.",
               "options": [
                 "considerate",
                 "impersonal",
                 "external",
                 "crude"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"impersonal\" mang nghĩa thiếu thân thiện, xa cách."
+              "explanation": "Ký túc xá quá rộng lớn thường khiến người ta có cảm giác xa cách, thiếu sự thân thiện. Tính từ impersonal diễn tả sự lạnh nhạt, không mang dấu ấn cá nhân hoặc không thân thiện. Phù hợp nhất với tâm lý e ngại trong câu này là đáp án B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
-              "content": "10. But I was wrong. Everyone was very nice, helpful, and ______.",
+              "content": "But I was wrong. Everyone was very nice, helpful, and ______.",
               "options": [
                 "considerate",
                 "impersonal",
                 "muscular",
                 "masculine"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"considerate\" là chu đáo, ân cần."
+              "explanation": "Câu này thể hiện sự tương phản với nỗi lo ở câu trước. Tác giả nhận ra mọi người rất tốt bụng, hay giúp đỡ và chu đáo. Tính từ considerate có nghĩa là ân cần, biết quan tâm đến người khác. Đây là từ thích hợp nhất để bổ sung ý nghĩa tích cực cho câu, mình chọn A nha.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
-              "content": "1. cater",
+              "content": "cater",
               "options": [
                 "impressive",
                 "to provide",
                 "faraway",
                 "to shame"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"cater\" (cung cấp, phục vụ) đồng nghĩa với \"to provide\"."
+              "explanation": "Từ cater có nghĩa là cung cấp, phục vụ những thứ người khác cần. Động từ có ý nghĩa tương đương nhất trong các lựa chọn là to provide (cung cấp). Do đó đáp án đúng là B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
-              "content": "2. degrade",
+              "content": "degrade",
               "options": [
                 "motherly",
                 "likely",
                 "ugly",
                 "to shame"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"degrade\" (làm bẽ mặt, hạ nhục) đồng nghĩa với \"to shame\"."
+              "explanation": "Động từ degrade mang ý nghĩa là làm ai đó bẽ mặt, cảm thấy xấu hổ hoặc bị hạ thấp giá trị. Lựa chọn có nghĩa tương đồng nhất là to shame (làm cho xấu hổ). Vậy mình chọn đáp án D nha.",
+              "correctAnswer": "D"
             },
             {
               "id": "18",
-              "content": "3. heap",
+              "content": "heap",
               "options": [
                 "a flash",
                 "a jar",
                 "a pile",
                 "a tool"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"heap\" (đống) đồng nghĩa với \"a pile\"."
+              "explanation": "Từ heap dùng để chỉ một đống đồ vật chất chồng lên nhau. Nghĩa của từ này hoàn toàn tương đương với cụm từ a pile (một đống). Các lựa chọn khác không hề liên quan. Mình khoanh C nhé.",
+              "correctAnswer": "C"
             },
             {
               "id": "19",
-              "content": "4. entitle",
+              "content": "entitle",
               "options": [
                 "to make happy",
                 "to succeed",
                 "to flee",
                 "to give rights"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"entitle\" (cho quyền) đồng nghĩa với \"to give rights\"."
+              "explanation": "Động từ entitle có nghĩa là ban cho ai đó cái quyền được làm hoặc sở hữu một thứ gì đó. Cụm từ to give rights mang ý nghĩa tương tự là trao quyền. Chắc chắn đáp án chính xác là D nha.",
+              "correctAnswer": "D"
             },
             {
               "id": "20",
-              "content": "5. criteria",
+              "content": "criteria",
               "options": [
                 "sadness",
                 "letter",
                 "market",
                 "factors"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"criteria\" (tiêu chí) đồng nghĩa với \"factors\" (các yếu tố)."
+              "explanation": "Từ criteria chỉ những tiêu chuẩn, tiêu chí dùng để làm cơ sở đánh giá một sự việc. Từ đồng nghĩa phù hợp nhất trong số các đáp án là factors (các yếu tố). Do đó, mình chọn đáp án D nhé.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
-              "content": "1. We went to the track to watch the *<i>racing dogs</i>* run.",
+              "content": "We went to the track to watch the *<i>racing dogs</i>* run.",
               "options": [
                 "hounds",
                 "pedestrians",
                 "spectators",
                 "criteria"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"racing dogs\" (chó đua/chó săn) đồng nghĩa với \"hounds\"."
+              "explanation": "Cụm từ in nghiêng racing dogs nhắc đến những chú chó được dùng trong các cuộc đua hoặc đi săn. Từ vựng có ý nghĩa tương ứng chính xác là hounds (những chú chó săn). Vậy đáp án là A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
-              "content": "2. The *<i>outer part of a loaf of bread</i>* was a dark brown and smelled like wheat and honey.",
+              "content": "The *<i>outer part of a loaf of bread</i>* was a dark brown and smelled like wheat and honey.",
               "options": [
                 "crust",
                 "ornament",
                 "heap",
                 "sanctuary"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"outer part of a loaf of bread\" (vỏ bánh mì) là \"crust\"."
+              "explanation": "Cụm từ in nghiêng diễn tả phần vỏ cứng bên ngoài của một ổ bánh mì. Từ vựng chỉ khái niệm này chính là crust. Các từ còn lại hoàn toàn không phù hợp, nên mình chọn A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
-              "content": "3. The baseball player was yelled at by an angry *<i>person who watches a sports event</i>*.",
+              "content": "The baseball player was yelled at by an angry *<i>person who watches a sports event</i>*.",
               "options": [
                 "pedestrian",
                 "spectator",
                 "hound",
                 "faculty"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"person who watches a sports event\" (người xem sự kiện thể thao) là khán giả (\"spectator\")."
+              "explanation": "Người theo dõi một sự kiện thể thao được gọi là khán giả. Từ vựng tiếng Anh tương ứng với khái niệm này là spectator. Do đó, đáp án chuẩn xác nhất là B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
-              "content": "4. People who celebrate Christmas hang colorful *<i>attractive objects</i>* on their trees.",
+              "content": "People who celebrate Christmas hang colorful *<i>attractive objects</i>* on their trees.",
               "options": [
                 "criteria",
                 "facilities",
                 "ornaments",
                 "crusts"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"attractive objects\" (các đồ vật trang trí bắt mắt) là \"ornaments\"."
+              "explanation": "Những đồ vật nhỏ, đẹp mắt dùng để trang trí cây thông Noel được miêu tả là attractive objects. Từ mang ý nghĩa đồ trang trí chính là ornaments. Mình chọn đáp án C nhé.",
+              "correctAnswer": "C"
             },
             {
               "id": "25",
-              "content": "5. What are the *<i>factors on which you judge</i>* for becoming a member in your club?",
+              "content": "What are the *<i>factors on which you judge</i>* for becoming a member in your club?",
               "options": [
                 "criteria",
                 "faculties",
                 "sanctuaries",
                 "brooks"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"factors on which you judge\" (các yếu tố dùng để đánh giá) là tiêu chí (\"criteria\")."
+              "explanation": "Những yếu tố được sử dụng làm thước đo để bạn đưa ra quyết định hay đánh giá được gọi là tiêu chí. Trong tiếng Anh, từ này là criteria. Vậy đáp án chính xác là A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
-              "content": "6. The church was made into a *<i>place people can go to be safe</i>* after the hurricane.",
+              "content": "The church was made into a *<i>place people can go to be safe</i>* after the hurricane.",
               "options": [
                 "facility",
                 "sanctuary",
                 "hemisphere",
                 "heap"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"place people can go to be safe\" (nơi trú ẩn an toàn) là \"sanctuary\"."
+              "explanation": "Nơi mà mọi người có thể tìm đến để được an toàn sau cơn bão là một nơi trú ẩn. Từ mang ý nghĩa nơi trú ẩn an toàn chính là sanctuary. Mình chọn đáp án B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "27",
-              "content": "7. Concentration is an important *<i>mental ability</i>* to have when studying for a test.",
+              "content": "Concentration is an important *<i>mental ability</i>* to have when studying for a test.",
               "options": [
                 "faculty",
                 "consumption",
                 "escort",
                 "criteria"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"mental ability\" (năng lực trí tuệ) là \"faculty\"."
+              "explanation": "Năng lực về mặt tinh thần hoặc trí tuệ để tập trung khi học bài được diễn đạt bằng cụm từ mental ability. Từ vựng có nghĩa tương đương là faculty. Vậy mình chọn đáp án A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
-              "content": "8. The messy girl kept her clothes in a *<i>pile</i>* on the floor.",
+              "content": "The messy girl kept her clothes in a *<i>pile</i>* on the floor.",
               "options": [
                 "brook",
                 "heap",
                 "crust",
                 "sanctuary"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"pile\" (đống) đồng nghĩa với \"heap\"."
+              "explanation": "Cụm từ in nghiêng pile có nghĩa là một đống đồ vật lộn xộn. Từ vựng mang ý nghĩa tương tự để chỉ một đống là heap. Đây là đáp án chính xác nhất, chọn B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "9. The boy sat by the *<i>small stream</i>* and tossed stones into it.",
+              "content": "The boy sat by the *<i>small stream</i>* and tossed stones into it.",
               "options": [
                 "brook",
                 "hemisphere",
                 "facility",
                 "ornament"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"small stream\" (dòng suối nhỏ) là \"brook\"."
+              "explanation": "Dòng suối nhỏ chảy qua được diễn tả bằng cụm từ small stream. Từ vựng tương ứng với khái niệm này là brook. Các từ khác không có nghĩa liên quan, nên mình chọn A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
-              "content": "10. Buying the house will *<i>give the rights to me</i>* to redecorate it any way I want.",
+              "content": "Buying the house will *<i>give the rights to me</i>* to redecorate it any way I want.",
               "options": [
                 "degrade",
                 "cater",
                 "entitle",
                 "escort"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"give the rights to me\" (cho tôi quyền) đồng nghĩa với \"entitle\"."
+              "explanation": "Việc mua lại căn nhà sẽ trao cho người mua quyền lợi được trang trí lại nó. Cụm từ give the rights to me mang ý nghĩa trao quyền, hoàn toàn tương đương với động từ entitle. Mình chọn đáp án C nhé.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -415,127 +415,127 @@
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
-              "content": "1. Elvis possessed the criteria to be a spectator.",
+              "content": "Elvis possessed the criteria to be a spectator.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Chú chó Elvis hội tụ đủ tiêu chuẩn để làm chó đua (racing dog), không phải để làm khán giả (spectator)."
+              "explanation": "Câu này sai nhé. Dựa vào bài đọc, ngay dòng thứ hai đã viết He possessed all the criteria to be a great racing dog. Điều này có nghĩa Elvis có đủ tiêu chuẩn để làm một chú chó đua xuất sắc, chứ không phải để làm khán giả (spectator). Vậy đáp án là False.",
+              "correctAnswer": "B"
             },
             {
               "id": "32",
-              "content": "2. Elvis’s owner was not considerate, and he degraded the dog.",
+              "content": "Elvis’s owner was not considerate, and he degraded the dog.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Người chủ không chu đáo và thường xuyên hạ nhục, mắng mỏ chú chó."
+              "explanation": "Câu này hoàn toàn đúng. Trong bài có đoạn mô tả người chủ cũ: Elvis's owner wasn't a considerate person. He degraded the dog all the time. Nghĩa là ông ta không hề chu đáo và luôn hạ nhục chú chó của mình. Mình chọn True nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
-              "content": "3. Elvis followed the brook to the big, impersonal city where pedestrians yelled at him.",
+              "content": "Elvis followed the brook to the big, impersonal city where pedestrians yelled at him.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Elvis đi theo con suối vào thành phố và bị người đi bộ xua đuổi."
+              "explanation": "Nhận định này chính xác. Bài đọc có ghi chú chó He decided to follow a brook into the city. Khi đến nơi, chú chó nhận ra thành phố là một nơi impersonal (xa cách, thiếu tình người) và Pedestrians yelled at him (Những người đi bộ la mắng chú). Đáp án là True nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
-              "content": "4. In the interior of the facility, there was a heap of ornaments and bread crusts for consumption.",
+              "content": "In the interior of the facility, there was a heap of ornaments and bread crusts for consumption.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Trong khu nhà có một đống xương ngon và vỏ bánh mì để ăn (heap of tasty bones and bread crusts), ornaments (đồ trang trí) được treo trên trần nhà chứ không phải để ăn."
+              "explanation": "Câu này sai nha. Bài đọc miêu tả rằng shiny ornaments hung from the ceiling (những món đồ trang trí lấp lánh treo trên trần nhà). Còn đồ ăn được nhắc đến là There was a heap of tasty bones and bread crusts for consumption (Có một đống xương ngon và vỏ bánh mì để ăn). Hai thứ này hoàn toàn tách biệt. Vậy đáp án là False.",
+              "correctAnswer": "B"
             },
             {
               "id": "35",
-              "content": "5. The old woman wanted to cater to Elvis’s needs at the sanctuary for old hounds.",
+              "content": "The old woman wanted to cater to Elvis’s needs at the sanctuary for old hounds.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Bà lão muốn đưa Elvis đến nơi trú ẩn và chăm sóc mọi nhu cầu của chú chó."
+              "explanation": "Câu này đúng nhé. Khi gặp Elvis, bà lão đã nói: I can take you to a sanctuary for old dogs like you. I'll cater to all your needs. Tức là bà muốn đưa chú đến nơi trú ẩn và chăm lo mọi nhu cầu của chú. Mình chọn True nha.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
-              "content": "1. What was true of Elvis’s faculties when he started getting old?",
+              "content": "What was true of Elvis’s faculties when he started getting old?",
               "options": [
                 "His faculties were not as strong as they used to be.",
                 "He became smarter.",
                 "He became faster.",
                 "He lost his teeth."
               ],
-              "correctAnswer": "A",
-              "explanation": "Các năng lực (faculties) của chú chó không còn mạnh như trước."
+              "explanation": "Dựa vào đoạn thứ hai của bài, ta thấy câu His faculties were not as strong as they used to be. Điều này giải thích rằng khi già đi, các năng lực thể chất của chú chó không còn được mạnh mẽ như xưa nữa. Do đó, đáp án A là sự lựa chọn chính xác nhất nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
-              "content": "2. What did the old woman believe Elvis was entitled to?",
+              "content": "What did the old woman believe Elvis was entitled to?",
               "options": [
                 "Elvis was entitled to a worse life.",
                 "Elvis was entitled to a better life.",
                 "Elvis was entitled to a new collar.",
                 "Elvis was entitled to nothing."
               ],
-              "correctAnswer": "B",
-              "explanation": "Bà lão nói với Elvis rằng: \"You're entitled to a better life than this.\""
+              "explanation": "Khi bắt gặp chú chó đáng thương, bà lão tốt bụng đã nói: You're entitled to a better life than this. Nghĩa là bà tin rằng chú chó xứng đáng được hưởng một cuộc sống tốt đẹp hơn hiện tại. So sánh với các đáp án, B là câu trả lời chuẩn xác nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "38",
-              "content": "3. What happened at all the races in the northern hemisphere?",
+              "content": "What happened at all the races in the northern hemisphere?",
               "options": [
                 "He always lost.",
                 "He never lost a race in the northern hemisphere.",
                 "He never participated.",
                 "He got injured."
               ],
-              "correctAnswer": "B",
-              "explanation": "Khi còn trẻ, Elvis chưa bao giờ thua một cuộc đua nào ở bắc bán cầu."
+              "explanation": "Bài đọc miêu tả sự xuất sắc của Elvis thời trẻ bằng câu: He was so good that he never lost a race in the northern hemisphere. Nghĩa là chú chó này chưa từng thua một cuộc đua nào ở khu vực Bắc bán cầu. Vậy đáp án đúng là B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "39",
-              "content": "4. Where was Elvis escorted to?",
+              "content": "Where was Elvis escorted to?",
               "options": [
                 "He was escorted to the forest.",
                 "He was escorted to a beautiful facility.",
                 "He was escorted to the pound.",
                 "He was escorted to the river."
               ],
-              "correctAnswer": "B",
-              "explanation": "Người phụ nữ dẫn Elvis đến một cơ sở vật chất tuyệt đẹp (beautiful facility) là khu trú ẩn dành cho chó."
+              "explanation": "Đoạn cuối của bài đọc bắt đầu bằng câu: The woman escorted Elvis to a beautiful facility. Câu này cho biết bà lão đã hộ tống chú chó đến một cơ sở vật chất vô cùng xinh đẹp dành cho những chú chó già. Từ đó, mình dễ dàng chọn được đáp án B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "40",
-              "content": "5. What was on the external door?",
+              "content": "What was on the external door?",
               "options": [
                 "There was a sign that said, \"No Dogs Allowed.\"",
                 "There was a sign that said, \"Dogs Welcome!\"",
                 "There was a sign that said, \"Keep Out.\"",
                 "There was a sign that said, \"Beware of Dog.\""
               ],
-              "correctAnswer": "B",
-              "explanation": "Bên ngoài cánh cửa có tấm biển ghi \"Dogs Welcome!\"."
+              "explanation": "Căn cứ vào bài đọc, ta thấy có thông tin: There was a sign on the external door that said, Dogs Welcome!. Nghĩa là trên cánh cửa bên ngoài có treo một tấm biển với dòng chữ chào đón những chú chó. So sánh với các lựa chọn, đáp án B phản ánh chính xác nhất chi tiết này nhé.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

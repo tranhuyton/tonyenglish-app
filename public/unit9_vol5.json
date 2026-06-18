@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "Some bread",
                 "Space ships"
               ],
-              "correctAnswer": "B",
-              "explanation": "archaic nghĩa là cổ xưa/lỗi thời; Kim tự tháp Ai Cập (Egyptian pyramid) là một thứ cổ xưa."
+              "explanation": "archaic nghĩa là cổ xưa/lỗi thời; Kim tự tháp Ai Cập (Egyptian pyramid) là một thứ cổ xưa.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "A chair",
                 "A doll"
               ],
-              "correctAnswer": "A",
-              "explanation": "brass là đồng thau, thường dùng làm nhạc cụ như kèn saxophone."
+              "explanation": "brass là đồng thau, thường dùng làm nhạc cụ như kèn saxophone.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "A television",
                 "Diamonds"
               ],
-              "correctAnswer": "B",
-              "explanation": "component là thành phần/linh kiện; dây điện (wires) là một linh kiện của radio."
+              "explanation": "component là thành phần/linh kiện; dây điện (wires) là một linh kiện của radio.",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "Castles",
                 "Soda"
               ],
-              "correctAnswer": "C",
-              "explanation": "medieval (thời trung cổ) thì có lâu đài (castles)."
+              "explanation": "medieval (thời trung cổ) thì có lâu đài (castles).",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
@@ -74,16 +73,16 @@
                 "the sea",
                 "the moon"
               ],
-              "correctAnswer": "C",
-              "explanation": "peninsula (bán đảo) là dải đất nhô ra biển, nên bạn sẽ ở gần biển (the sea)."
+              "explanation": "peninsula (bán đảo) là dải đất nhô ra biển, nên bạn sẽ ở gần biển (the sea).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is OPPOSITE in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
@@ -94,8 +93,8 @@
                 "to pull apart",
                 "to move"
               ],
-              "correctAnswer": "C",
-              "explanation": "weave là dệt/kết lại, trái nghĩa với to pull apart (kéo rời ra/tháo ra)."
+              "explanation": "weave là dệt/kết lại, trái nghĩa với to pull apart (kéo rời ra/tháo ra).",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
@@ -106,8 +105,8 @@
                 "ruling",
                 "supervisory"
               ],
-              "correctAnswer": "A",
-              "explanation": "managerial là thuộc về quản lý (cấp cao), trái nghĩa với entry-level (cấp thấp/mới vào làm)."
+              "explanation": "managerial là thuộc về quản lý (cấp cao), trái nghĩa với entry-level (cấp thấp/mới vào làm).",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -118,8 +117,8 @@
                 "sin",
                 "lowliness"
               ],
-              "correctAnswer": "D",
-              "explanation": "prestige là uy tín/thanh thế, trái nghĩa với lowliness (sự thấp kém/hèn mọn)."
+              "explanation": "prestige là uy tín/thanh thế, trái nghĩa với lowliness (sự thấp kém/hèn mọn).",
+              "correctAnswer": "D"
             },
             {
               "id": "9",
@@ -130,8 +129,8 @@
                 "disadvantage",
                 "boost"
               ],
-              "correctAnswer": "B",
-              "explanation": "drawback là khuyết điểm/bất lợi, trái nghĩa với benefit (lợi ích). (Lưu ý: sách in đáp án là C - disadvantage nhưng đó là từ đồng nghĩa, từ trái nghĩa đúng là B)."
+              "explanation": "drawback là khuyết điểm/bất lợi, trái nghĩa với benefit (lợi ích). (Lưu ý: sách in đáp án là C - disadvantage nhưng đó là từ đồng nghĩa, từ trái nghĩa đúng là B).",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
@@ -142,16 +141,16 @@
                 "stale",
                 "bright"
               ],
-              "correctAnswer": "B",
-              "explanation": "obsolete là lỗi thời, trái nghĩa với innovative (tân tiến/đổi mới)."
+              "explanation": "obsolete là lỗi thời, trái nghĩa với innovative (tân tiến/đổi mới).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is SIMILAR in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -162,8 +161,8 @@
                 "angry",
                 "dark"
               ],
-              "correctAnswer": "B",
-              "explanation": "benevolent (nhân từ/tốt bụng) đồng nghĩa với kind."
+              "explanation": "benevolent (nhân từ/tốt bụng) đồng nghĩa với kind.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -174,8 +173,8 @@
                 "ignore",
                 "decrease"
               ],
-              "correctAnswer": "D",
-              "explanation": "diminish (giảm bớt) đồng nghĩa với decrease."
+              "explanation": "diminish (giảm bớt) đồng nghĩa với decrease.",
+              "correctAnswer": "D"
             },
             {
               "id": "13",
@@ -186,8 +185,8 @@
                 "picture",
                 "disadvantage"
               ],
-              "correctAnswer": "A",
-              "explanation": "radical (mang tính căn bản, hoàn toàn mới lạ) đồng nghĩa với new."
+              "explanation": "radical (mang tính căn bản, hoàn toàn mới lạ) đồng nghĩa với new.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -198,8 +197,8 @@
                 "amazing",
                 "sudden"
               ],
-              "correctAnswer": "C",
-              "explanation": "spectacular (ngoạn mục/đẹp mắt) đồng nghĩa với amazing."
+              "explanation": "spectacular (ngoạn mục/đẹp mắt) đồng nghĩa với amazing.",
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -210,16 +209,16 @@
                 "equipment",
                 "sale"
               ],
-              "correctAnswer": "A",
-              "explanation": "fad (mốt nhất thời) đồng nghĩa với trend (xu hướng)."
+              "explanation": "fad (mốt nhất thời) đồng nghĩa với trend (xu hướng).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
@@ -230,8 +229,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "medieval (thời trung cổ) phù hợp với kỵ sĩ và áo giáp (Knights in armor)."
+              "explanation": "medieval (thời trung cổ) phù hợp với kỵ sĩ và áo giáp (Knights in armor).",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -242,8 +241,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "radical (căn bản/đổi mới hoàn toàn), nhưng vế trước lại nói 'hasn't made any changes' là mâu thuẫn."
+              "explanation": "radical (căn bản/đổi mới hoàn toàn), nhưng vế trước lại nói 'hasn't made any changes' là mâu thuẫn.",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -254,8 +253,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "impose on someone (áp đặt/làm phiền ai đó), câu này dùng chính xác."
+              "explanation": "impose on someone (áp đặt/làm phiền ai đó), câu này dùng chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -266,8 +265,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "refute (bác bỏ/chứng minh là sai), không hợp nghĩa với việc 'vì tôi không rửa bát'."
+              "explanation": "refute (bác bỏ/chứng minh là sai), không hợp nghĩa với việc 'vì tôi không rửa bát'.",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -278,16 +277,16 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "capitalism (chủ nghĩa tư bản), người dân có thể sở hữu sản phẩm họ muốn là đúng ý nghĩa."
+              "explanation": "capitalism (chủ nghĩa tư bản), người dân có thể sở hữu sản phẩm họ muốn là đúng ý nghĩa.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_wordlist",
           "title": "Exercise 5: Choose the word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -298,8 +297,8 @@
                 "components",
                 "fad"
               ],
-              "correctAnswer": "A",
-              "explanation": "Một dải đất có 3 mặt giáp biển gọi là bán đảo (peninsula)."
+              "explanation": "Một dải đất có 3 mặt giáp biển gọi là bán đảo (peninsula).",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -310,8 +309,8 @@
                 "refuted",
                 "weave"
               ],
-              "correctAnswer": "A",
-              "explanation": "Làm giảm đi (reduce) tương đương với diminish."
+              "explanation": "Làm giảm đi (reduce) tương đương với diminish.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -322,8 +321,8 @@
                 "fad",
                 "capitalism"
               ],
-              "correctAnswer": "A",
-              "explanation": "Sự phụ thuộc (reliance) tương đương với dependence."
+              "explanation": "Sự phụ thuộc (reliance) tương đương với dependence.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -334,8 +333,8 @@
                 "prestige",
                 "brass"
               ],
-              "correctAnswer": "A",
-              "explanation": "Nhược điểm (disadvantages) tương đương với drawbacks."
+              "explanation": "Nhược điểm (disadvantages) tương đương với drawbacks.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -346,8 +345,8 @@
                 "prestige",
                 "medieval"
               ],
-              "correctAnswer": "B",
-              "explanation": "Một lượng lớn (amount/tỷ lệ) học sinh tương đương với proportion."
+              "explanation": "Một lượng lớn (amount/tỷ lệ) học sinh tương đương với proportion.",
+              "correctAnswer": "B"
             },
             {
               "id": "26",
@@ -358,8 +357,8 @@
                 "brass",
                 "capitalism"
               ],
-              "correctAnswer": "B",
-              "explanation": "Các bộ phận (parts) tương đương với components."
+              "explanation": "Các bộ phận (parts) tương đương với components.",
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -370,8 +369,8 @@
                 "impose",
                 "diminish"
               ],
-              "correctAnswer": "C",
-              "explanation": "Cắt ngang và làm phiền (interrupt and intrude) tương đương với impose."
+              "explanation": "Cắt ngang và làm phiền (interrupt and intrude) tương đương với impose.",
+              "correctAnswer": "C"
             },
             {
               "id": "28",
@@ -382,8 +381,8 @@
                 "weaved",
                 "imposed"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bác bỏ/chứng minh là sai (disproved) tương đương với refuted."
+              "explanation": "Bác bỏ/chứng minh là sai (disproved) tương đương với refuted.",
+              "correctAnswer": "A"
             },
             {
               "id": "29",
@@ -394,8 +393,8 @@
                 "obsolete",
                 "managerial"
               ],
-              "correctAnswer": "A",
-              "explanation": "Rất ấn tượng (very impressive) tương đương với spectacular."
+              "explanation": "Rất ấn tượng (very impressive) tương đương với spectacular.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -406,24 +405,24 @@
                 "medieval",
                 "radical"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tốt bụng và hào phóng (kind and generous) tương đương với benevolent."
+              "explanation": "Tốt bụng và hào phóng (kind and generous) tương đương với benevolent.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Weaving Machine</h1><p style=\"margin-bottom: 1rem;\">Mr. Joseph Franklin invented a machine that could <b>weave</b> cloth. It wove faster and straighter than anyone could weave by hand. He decided to take it to two cities on a <b>peninsula</b>, Netherton and Wilton. In these cities, a large <b>proportion</b> of the people worked in weaving. Joseph felt sure he could sell his machine there.</p><p style=\"margin-bottom: 1rem;\">Joseph first took his machine to the mayor of Netherton. \"Think of the money you will earn from this machine!\" Joseph said to him.</p><p style=\"margin-bottom: 1rem;\">But the mayor was a <b>benevolent</b> man. He knew about the people's <b>dependence</b> on weaving for their livelihood. If he bought the machine, the people would lose their jobs. So he refused to buy it.</p><p style=\"margin-bottom: 1rem;\">Joseph said, \"We are no longer in the <b>medieval</b> age! Soon everything will be made by machines. Cloth made by hand will soon be <b>obsolete</b>. If you don't change your <b>archaic</b> ways, your town's income will <b>diminish</b>!\"</p><p style=\"margin-bottom: 1rem;\">But the mayor said, \"I don't like <b>capitalism</b>. Don't <b>impose</b> your <b>radical</b> ideas on my town. Go away!\"</p><p style=\"margin-bottom: 1rem;\">So Joseph took his machine to the mayor at Wilton. This mayor thought Joseph's machine was <b>spectacular</b> and spent a long time looking at its different <b>components</b> made of <b>brass</b>. The mayor couldn't <b>refute</b> the fact that the machine had <b>drawbacks</b> that would affect the people's jobs. But he realized the machine could bring money and <b>prestige</b>. So he ordered Joseph to build twenty of them.</p><p style=\"margin-bottom: 1rem;\">Within a year, Wilton was a wealthy city, famous for its wonderful cloth. People no longer wove but worked in <b>managerial</b> jobs at cloth factories instead. Nobody bought the cloth from Netherton anymore. The people of Netherton became poor and hungry.</p><p style=\"margin-bottom: 1rem;\">Finally, the mayor of Netherton called Joseph and said, \"Now I realize that your machine is not just a passing <b>fad</b>. To succeed in business, we must be willing to change.\" He then ordered twenty weaving machines.</p><p style=\"margin-bottom: 1rem;\">After that, both Netherton and Wilton became rich cities, famous throughout the land for their wonderful cloth.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Weaving Machine</h1>        <p style=\"margin-bottom: 1rem;\">Mr. Joseph Franklin invented a machine that could <b>weave</b> cloth. It wove faster and straighter than anyone could weave by hand. He decided to take it to two cities on a <b>peninsula</b>, Netherton and Wilton. In these cities, a large <b>proportion</b> of the people worked in weaving. Joseph felt sure he could sell his machine there.</p>    <p style=\"margin-bottom: 1rem;\">Joseph first took his machine to the mayor of Netherton. \"Think of the money you will earn from this machine!\" Joseph said to him.</p>    <p style=\"margin-bottom: 1rem;\">But the mayor was a <b>benevolent</b> man. He knew about the people's <b>dependence</b> on weaving for their livelihood. If he bought the machine, the people would lose their jobs. So he refused to buy it.</p>    <p style=\"margin-bottom: 1rem;\">Joseph said, \"We are no longer in the <b>medieval</b> age! Soon everything will be made by machines. Cloth made by hand will soon be <b>obsolete</b>. If you don't change your <b>archaic</b> ways, your town's income will <b>diminish</b>!\"</p>    <p style=\"margin-bottom: 1rem;\">But the mayor said, \"I don't like <b>capitalism</b>. Don't <b>impose</b> your <b>radical</b> ideas on my town. Go away!\"</p>    <p style=\"margin-bottom: 1rem;\">So Joseph took his machine to the mayor at Wilton. This mayor thought Joseph's machine was <b>spectacular</b> and spent a long time looking at its different <b>components</b> made of <b>brass</b>. The mayor couldn't <b>refute</b> the fact that the machine had <b>drawbacks</b> that would affect the people's jobs. But he realized the machine could bring money and <b>prestige</b>. So he ordered Joseph to build twenty of them.</p>    <p style=\"margin-bottom: 1rem;\">Within a year, Wilton was a wealthy city, famous for its wonderful cloth. People no longer wove but worked in <b>managerial</b> jobs at cloth factories instead. Nobody bought the cloth from Netherton anymore. The people of Netherton became poor and hungry.</p>    <p style=\"margin-bottom: 1rem;\">Finally, the mayor of Netherton called Joseph and said, \"Now I realize that your machine is not just a passing <b>fad</b>. To succeed in business, we must be willing to change.\" He then ordered twenty weaving machines.</p>    <p style=\"margin-bottom: 1rem;\">After that, both Netherton and Wilton became rich cities, famous throughout the land for their wonderful cloth.</p></div>",
       "imageUrl": "/unit9_vol5_story.png",
       "sections": [
         {
           "id": "sec6_reading_tf",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -434,8 +433,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Ông thị trưởng Netherton nói: 'Don't impose your radical ideas on my town. Go away!'"
+              "explanation": "Thị trưởng Netherton yêu cầu Joseph đừng áp đặt (don't impose) những ý tưởng mới mẻ nhưng khác biệt (radical ideas) lên thị trấn của ông, chứ không phải muốn ông ta áp đặt. Nhận định này sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "32",
@@ -446,8 +445,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Joseph nói: 'We are no longer in the medieval age!... If you don't change your archaic ways...'"
+              "explanation": "Joseph thẳng thừng nói với thị trưởng Netherton rằng chúng ta không còn ở thời trung cổ (medieval age) nữa và khuyên ông nên thay đổi những cách thức cổ hủ (archaic ways) đó đi. Vậy nhận định là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -458,8 +457,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bài viết: 'The mayor couldn't refute the fact that the machine had drawbacks...'"
+              "explanation": "Thị trưởng Wilton không thể bác bỏ (couldn't refute) việc cái máy này có khuyết điểm sẽ làm ảnh hưởng đến công việc của người dân. Vì vậy câu nói ông ấy đã bác bỏ (refuted) là sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -470,8 +469,8 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài viết: 'People no longer wove but worked in managerial jobs at cloth factories instead.'"
+              "explanation": "Bài viết ghi rõ người dân không còn dệt vải nữa mà thay vào đó làm các công việc quản lý (managerial jobs) tại nhà máy. Nhận định này hoàn toàn chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -482,16 +481,16 @@
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng, cuối bài: 'both Netherton and Wilton became rich cities, famous throughout the land...'"
+              "explanation": "Đến cuối cùng, hệ thống kinh tế hướng tới lợi nhuận mới đã giúp cả hai thành phố trở nên giàu có và nổi tiếng khắp nơi (mang lại prestige). Do đó nhận định này là đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec7_reading_qa",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -502,8 +501,8 @@
                 "They worked in managerial jobs.",
                 "They made brass."
               ],
-              "correctAnswer": "B",
-              "explanation": "In these cities, a large proportion of the people worked in weaving."
+              "explanation": "Một tỷ lệ lớn người dân ở hai thành phố trên bán đảo làm nghề dệt vải (worked in weaving). Đáp án đúng là B.",
+              "correctAnswer": "B"
             },
             {
               "id": "37",
@@ -514,8 +513,8 @@
                 "Cloth made by hand",
                 "Machines"
               ],
-              "correctAnswer": "C",
-              "explanation": "Joseph said: 'Cloth made by hand will soon be obsolete.'"
+              "explanation": "Theo Joseph, những mảnh vải được làm thủ công bằng tay (cloth made by hand) sẽ sớm trở nên lỗi thời (obsolete) vì máy móc sẽ làm mọi thứ. Chọn đáp án C.",
+              "correctAnswer": "C"
             },
             {
               "id": "38",
@@ -526,8 +525,8 @@
                 "Weaving is too hard.",
                 "They wanted to be managers."
               ],
-              "correctAnswer": "A",
-              "explanation": "He knew about the people's dependence on weaving... If he bought the machine, the people would lose their jobs."
+              "explanation": "Vị thị trưởng nhân từ nhận ra sự phụ thuộc của người dân vào nghề dệt, và ông biết rằng nếu ông mua cái máy đó, người dân sẽ mất việc (lose their jobs). Ta chọn đáp án A.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -538,8 +537,8 @@
                 "He realized the machine could bring money and prestige.",
                 "It was archaic."
               ],
-              "correctAnswer": "C",
-              "explanation": "But he realized the machine could bring money and prestige."
+              "explanation": "Mặc dù chiếc máy có khuyết điểm (làm mất việc), thị trưởng Wilton vẫn nhận ra rằng nó có thể mang lại tiền bạc và danh tiếng (money and prestige) cho thành phố. Chọn đáp án C.",
+              "correctAnswer": "C"
             },
             {
               "id": "40",
@@ -550,10 +549,11 @@
                 "They were tired.",
                 "A storm destroyed the city."
               ],
-              "correctAnswer": "B",
-              "explanation": "Nobody bought the cloth from Netherton anymore. The people of Netherton became poor and hungry."
+              "explanation": "Nguồn thu nhập bị thu hẹp đi là do không còn ai mua vải từ Netherton nữa (Nobody bought the cloth from Netherton anymore). Do đó đáp án B là hợp lý.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

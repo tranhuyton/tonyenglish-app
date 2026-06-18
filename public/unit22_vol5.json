@@ -15,7 +15,6 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -26,8 +25,8 @@
                 "A statue",
                 "A victory"
               ],
-              "correctAnswer": "A",
-              "explanation": "Eliminate có nghĩa là loại bỏ. Bạn muốn loại bỏ một vấn đề (a problem), không phải món quà hay chiến thắng."
+              "explanation": "Eliminate có nghĩa là loại bỏ. Bạn muốn loại bỏ một vấn đề (a problem), không phải món quà hay chiến thắng.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -38,8 +37,8 @@
                 "A cat",
                 "A housefly"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nectar là mật hoa. Ong (bee) là loài thu thập mật hoa."
+              "explanation": "Nectar là mật hoa. Ong (bee) là loài thu thập mật hoa.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -50,8 +49,8 @@
                 "rarely follow the rules",
                 "are extremely smart"
               ],
-              "correctAnswer": "B",
-              "explanation": "Ethics là đạo đức. Nếu bạn có đạo đức tốt, bạn biết phân biệt đúng sai (know right from wrong)."
+              "explanation": "Ethics là đạo đức. Nếu bạn có đạo đức tốt, bạn biết phân biệt đúng sai (know right from wrong).",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -62,8 +61,8 @@
                 "Organization",
                 "Swimming"
               ],
-              "correctAnswer": "C",
-              "explanation": "Administrative liên quan đến quản lý, hành chính. Tổ chức (organization) là từ có liên quan nhất."
+              "explanation": "Administrative liên quan đến quản lý, hành chính. Tổ chức (organization) là từ có liên quan nhất.",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
@@ -74,20 +73,19 @@
                 "A lonely person",
                 "Loud music"
               ],
-              "correctAnswer": "A",
-              "explanation": "Erosion là sự xói mòn. Một cơn gió mạnh (strong wind) hoặc nước chảy có thể gây ra xói mòn."
+              "explanation": "Erosion là sự xói mòn. Một cơn gió mạnh (strong wind) hoặc nước chảy có thể gây ra xói mòn.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
           "content": "Word bank: cholesterol, prone, framework, administration, explicit, deceptive, coalition, mechanisms, straightforward, manufactures",
-          "questionType": "Điền từ",
           "questions": [
             {
               "id": "6",
-              "content": "I learned about all the different things the factory (app[1]). They make big machinery as well as tiny parts and (app[2]).",
               "blanks": [
                 {
                   "id": "1",
@@ -97,11 +95,11 @@
                   "id": "2",
                   "answer": "mechanisms"
                 }
-              ]
+              ],
+              "content": "I learned about all the different things the factory (app[1]). They make big machinery as well as tiny parts and (app[2])."
             },
             {
               "id": "7",
-              "content": "The students asked the school’s (app[1]) to buy a better kind of meat. The meat served there is too high in fat and (app[2]).",
               "blanks": [
                 {
                   "id": "1",
@@ -111,11 +109,11 @@
                   "id": "2",
                   "answer": "cholesterol"
                 }
-              ]
+              ],
+              "content": "The students asked the school’s (app[1]) to buy a better kind of meat. The meat served there is too high in fat and (app[2])."
             },
             {
               "id": "8",
-              "content": "I can’t stand companies that are (app[1]). Customers have to make sure they get (app[2]) information about all details.",
               "blanks": [
                 {
                   "id": "1",
@@ -125,11 +123,11 @@
                   "id": "2",
                   "answer": "explicit"
                 }
-              ]
+              ],
+              "content": "I can’t stand companies that are (app[1]). Customers have to make sure they get (app[2]) information about all details."
             },
             {
               "id": "9",
-              "content": "Citizens formed a (app[1]) because the city’s air was making people ill. Elderly people and infants were the most (app[2]) to becoming sick.",
               "blanks": [
                 {
                   "id": "1",
@@ -139,11 +137,11 @@
                   "id": "2",
                   "answer": "prone"
                 }
-              ]
+              ],
+              "content": "Citizens formed a (app[1]) because the city’s air was making people ill. Elderly people and infants were the most (app[2]) to becoming sick."
             },
             {
               "id": "10",
-              "content": "To solve our problem, we’ll first need a strong (app[1]). Our ideas need to be intelligent and (app[2]).",
               "blanks": [
                 {
                   "id": "1",
@@ -153,15 +151,16 @@
                   "id": "2",
                   "answer": "straightforward"
                 }
-              ]
+              ],
+              "content": "To solve our problem, we’ll first need a strong (app[1]). Our ideas need to be intelligent and (app[2])."
             }
-          ]
+          ],
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -170,8 +169,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Prone to có nghĩa là dễ bị mắc phải. Hút thuốc làm người ta dễ mắc bệnh hô hấp. Dùng đúng (C)."
+              "explanation": "Prone to có nghĩa là dễ bị mắc phải. Hút thuốc làm người ta dễ mắc bệnh hô hấp. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
@@ -180,8 +179,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Manufacture là sản xuất (tại nhà máy). Dùng đúng (C)."
+              "explanation": "Manufacture là sản xuất (tại nhà máy). Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -190,8 +189,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Deceptive là lừa dối, không thể miêu tả một người cởi mở và trung thực (open and honest). Sai (I)."
+              "explanation": "Deceptive là lừa dối, không thể miêu tả một người cởi mở và trung thực (open and honest). Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -200,8 +199,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cholesterol là mỡ trong máu. Ăn thức ăn nhanh làm tăng mức cholesterol. Dùng đúng (C)."
+              "explanation": "Cholesterol là mỡ trong máu. Ăn thức ăn nhanh làm tăng mức cholesterol. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -210,8 +209,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Straightforward là dễ hiểu, rõ ràng. Không thể nói là \"impossible to understand\". Sai (I)."
+              "explanation": "Straightforward là dễ hiểu, rõ ràng. Không thể nói là \"impossible to understand\". Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "16",
@@ -220,8 +219,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Framework là khuôn khổ, cơ cấu. Dùng đúng (C)."
+              "explanation": "Framework là khuôn khổ, cơ cấu. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -230,8 +229,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Minimize là giảm thiểu. Các doanh nghiệp muốn tăng (maximize) chứ không phải giảm số tiền họ kiếm được. Sai (I)."
+              "explanation": "Minimize là giảm thiểu. Các doanh nghiệp muốn tăng (maximize) chứ không phải giảm số tiền họ kiếm được. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
@@ -240,8 +239,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Notion là khái niệm, ý nghĩ, ý niệm. Dùng đúng (C)."
+              "explanation": "Notion là khái niệm, ý nghĩ, ý niệm. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -250,8 +249,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Acid là axit, hóa chất có khả năng phân hủy, hòa tan. Dùng đúng (C)."
+              "explanation": "Acid là axit, hóa chất có khả năng phân hủy, hòa tan. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -260,8 +259,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Ethics là đạo đức. Thẩm phán cần có đạo đức tốt. Dùng đúng (C)."
+              "explanation": "Ethics là đạo đức. Thẩm phán cần có đạo đức tốt. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
@@ -270,8 +269,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Coalition là liên minh, sự liên kết. Không thể \"đốt liên minh\" để tạo ra năng lượng. Sai (I)."
+              "explanation": "Coalition là liên minh, sự liên kết. Không thể \"đốt liên minh\" để tạo ra năng lượng. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
@@ -280,8 +279,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Explicit là rõ ràng, chi tiết. Lời khai của nhân chứng rõ ràng là phù hợp ngữ cảnh. Dùng đúng (C)."
+              "explanation": "Explicit là rõ ràng, chi tiết. Lời khai của nhân chứng rõ ràng là phù hợp ngữ cảnh. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -290,8 +289,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Administrative job là công việc hành chính. Dùng đúng (C)."
+              "explanation": "Administrative job là công việc hành chính. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -300,8 +299,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Eliminate là loại bỏ. Không thể loại bỏ tất cả nguyên liệu để làm bánh. Sai (I)."
+              "explanation": "Eliminate là loại bỏ. Không thể loại bỏ tất cả nguyên liệu để làm bánh. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "25",
@@ -310,8 +309,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Diabetes là bệnh tiểu đường. Các mũi tiêm giúp giảm lượng đường trong máu. Dùng đúng (C)."
+              "explanation": "Diabetes là bệnh tiểu đường. Các mũi tiêm giúp giảm lượng đường trong máu. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
@@ -320,8 +319,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Administration là chính quyền, ban quản lý. Tù nhân lập thành ban quản lý để chơi game thì không hợp lý. Sai (I)."
+              "explanation": "Administration là chính quyền, ban quản lý. Tù nhân lập thành ban quản lý để chơi game thì không hợp lý. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -330,8 +329,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Erosion là xói mòn. Lũ lụt bất ngờ gây ra xói mòn trong thung lũng. Dùng đúng (C)."
+              "explanation": "Erosion là xói mòn. Lũ lụt bất ngờ gây ra xói mòn trong thung lũng. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
@@ -340,8 +339,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Biotechnology là công nghệ sinh học (liên quan đến tế bào sống, sinh vật). Không thể làm từ đá và cát vô tri. Sai (I)."
+              "explanation": "Biotechnology là công nghệ sinh học (liên quan đến tế bào sống, sinh vật). Không thể làm từ đá và cát vô tri. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
@@ -350,8 +349,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mechanism là cơ cấu, bộ máy. Bộ máy cắt của máy cắt cỏ bị hỏng. Dùng đúng (C)."
+              "explanation": "Mechanism là cơ cấu, bộ máy. Bộ máy cắt của máy cắt cỏ bị hỏng. Dùng đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
@@ -360,24 +359,24 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nectar là mật hoa (do hoa tạo ra). Mật hoa không thể sinh ra những bông hoa đẹp nhất. Sai (I)."
+              "explanation": "Nectar là mật hoa (do hoa tạo ra). Mật hoa không thể sinh ra những bông hoa đẹp nhất. Sai (I).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The New Bioco</h1><p style=\"margin-bottom: 1rem;\">Jack got a new job at a <b>biotechnology</b> company called Bioco. Bioco <b>manufactured</b> drugs to treat <b>diabetes</b> and high <b>cholesterol</b>. Jack’s job was to use a tiny <b>mechanism</b> to get <b>nectar</b> from flowers. The nectar was a main ingredient in the drugs. Jack liked his job, and he thought that Bioco was a caring company. However, Jack soon learned that the company wasn’t as kind as he first thought.</p><p style=\"margin-bottom: 1rem;\">Bioco’s motto was “Make the Earth a Better Place.” However, this motto was <b>deceptive</b>. The company actually did a number of really bad things to the environment. The company produced a lot of smog and harmful <b>acid</b>. Bioco poured the acid in a nearby river, which caused <b>erosion</b> and made fish <b>prone</b> to illness.</p><p style=\"margin-bottom: 1rem;\">After a few weeks at the new job, Jack saw all the bad things Bioco was doing. He had always had strong <b>ethics</b>, and he knew he had to do something. One day, while the Bioco workers were eating in the cafeteria, Jack stood up and gave a speech. He said, “My fellow coworkers, I know you have all seen the evil things our company is doing. I have a <b>notion</b> that we can fix them if we form a <b>coalition</b>. We can go to the <b>administration</b> and tell them we’ll quit if they don’t <b>eliminate</b> the problems. They’ll have no choice but to listen to us.”</p><p style=\"margin-bottom: 1rem;\">Jack explained what they were to do. His coworkers liked his <b>explicit</b> plan. They went to the <b>administrative</b> offices and demanded that Bioco stop damaging the environment, or they all would quit. One supervisor said to them, “Thank you for being <b>straightforward</b> about this issue. Since I can’t afford to lose all of you workers, I guess we’ll just have to fix things.”</p><p style=\"margin-bottom: 1rem;\">Jack, his supervisor, and his coworkers spent the next month designing a new <b>framework</b> for the company. They cleaned up the acid from the river and <b>minimized</b> the amount of air pollution the company released. At last, the company motto became apt.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The New Bioco</h1>        <p style=\"margin-bottom: 1rem;\">Jack got a new job at a <b>biotechnology</b> company called Bioco. Bioco <b>manufactured</b> drugs to treat <b>diabetes</b> and high <b>cholesterol</b>. Jack’s job was to use a tiny <b>mechanism</b> to get <b>nectar</b> from flowers. The nectar was a main ingredient in the drugs. Jack liked his job, and he thought that Bioco was a caring company. However, Jack soon learned that the company wasn’t as kind as he first thought.</p>    <p style=\"margin-bottom: 1rem;\">Bioco’s motto was “Make the Earth a Better Place.” However, this motto was <b>deceptive</b>. The company actually did a number of really bad things to the environment. The company produced a lot of smog and harmful <b>acid</b>. Bioco poured the acid in a nearby river, which caused <b>erosion</b> and made fish <b>prone</b> to illness.</p>    <p style=\"margin-bottom: 1rem;\">After a few weeks at the new job, Jack saw all the bad things Bioco was doing. He had always had strong <b>ethics</b>, and he knew he had to do something. One day, while the Bioco workers were eating in the cafeteria, Jack stood up and gave a speech. He said, “My fellow coworkers, I know you have all seen the evil things our company is doing. I have a <b>notion</b> that we can fix them if we form a <b>coalition</b>. We can go to the <b>administration</b> and tell them we’ll quit if they don’t <b>eliminate</b> the problems. They’ll have no choice but to listen to us.”</p>    <p style=\"margin-bottom: 1rem;\">Jack explained what they were to do. His coworkers liked his <b>explicit</b> plan. They went to the <b>administrative</b> offices and demanded that Bioco stop damaging the environment, or they all would quit. One supervisor said to them, “Thank you for being <b>straightforward</b> about this issue. Since I can’t afford to lose all of you workers, I guess we’ll just have to fix things.”</p>    <p style=\"margin-bottom: 1rem;\">Jack, his supervisor, and his coworkers spent the next month designing a new <b>framework</b> for the company. They cleaned up the acid from the river and <b>minimized</b> the amount of air pollution the company released. At last, the company motto became apt.</p></div>",
       "imageUrl": "/unit22_vol5_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -386,8 +385,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Công ty sản xuất ra thuốc (drugs) để ĐIỀU TRỊ bệnh tiểu đường và mỡ máu cao, không phải sản xuất ra bệnh."
+              "explanation": "Trong đoạn 1, bài đọc ghi \"Bioco manufactured drugs to treat diabetes and high cholesterol.\" (Bioco sản xuất thuốc để điều trị bệnh tiểu đường và cholesterol cao). Công ty sản xuất THUỐC ĐIỀU TRỊ hai bệnh đó, chứ không phải sản xuất ra bệnh.",
+              "correctAnswer": "B"
             },
             {
               "id": "32",
@@ -396,8 +395,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Jack dùng một bộ máy (mechanism) để lấy mật hoa."
+              "explanation": "Đoạn 1 có câu \"Jack's job was to use a tiny mechanism to get nectar from flowers.\" (Công việc của Jack là sử dụng một cỗ máy siêu nhỏ để lấy mật từ những bông hoa).",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
@@ -406,8 +405,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Khuôn khổ mới bao gồm một kế hoạch rõ ràng để khắc phục các vấn đề về khói bụi và axit."
+              "explanation": "Trong đoạn 4 \"Jack explained what they were to do. His coworkers liked his explicit plan.\" và đoạn 5 \"Jack, his supervisor, and his coworkers spent the next month designing a new framework for the company. They cleaned up the acid from the river and minimized the amount of air pollution...\" Kế hoạch này là để giải quyết các vấn đề trên.",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
@@ -416,8 +415,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Axit thải ra đã gây xói mòn và khiến cá dễ mắc bệnh."
+              "explanation": "Đoạn 2 cho biết \"Bioco poured the acid in a nearby river, which caused erosion and made fish prone to illness.\" (Bioco đã đổ axit xuống một con sông gần đó, gây xói mòn và khiến cá dễ bị bệnh).",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -426,16 +425,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Sau khi công ty giảm thiểu ô nhiễm không khí (minimized air pollution), phương châm mới trở nên phù hợp."
+              "explanation": "Ở đoạn cuối ghi \"They cleaned up the acid from the river and minimized the amount of air pollution the company released. At last, the company motto became apt.\" (Họ đã dọn sạch axit khỏi sông và giảm thiểu lượng ô nhiễm không khí mà công ty thải ra. Cuối cùng, phương châm của công ty đã trở nên phù hợp). Công ty giảm ô nhiễm không khí chứ không phải làm giảm đạo đức (ethics) của Jack.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
@@ -446,8 +445,8 @@
                 "\"Eliminate all pollution.\"",
                 "\"Making money over ethics.\""
               ],
-              "correctAnswer": "A",
-              "explanation": "Dựa vào đoạn văn: Bioco’s motto was “Make the Earth a Better Place.”"
+              "explanation": "Đầu đoạn 2, tác giả viết \"Bioco's motto was 'Make the Earth a Better Place.' However, this motto was deceptive.\" (Phương châm của Bioco là 'Làm cho Trái Đất trở thành một nơi tốt đẹp hơn'. Tuy nhiên, phương châm này mang tính chất lừa dối).",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
@@ -458,8 +457,8 @@
                 "Jack stood up to give a speech.",
                 "Jack stood up to eat his food."
               ],
-              "correctAnswer": "C",
-              "explanation": "Dựa vào đoạn văn: Jack stood up and gave a speech."
+              "explanation": "Trong đoạn 3, bài có viết \"One day, while the Bioco workers were eating in the cafeteria, Jack stood up and gave a speech.\" (Một ngày nọ, trong lúc các công nhân của Bioco đang ăn trong quán cà phê, Jack đã đứng lên và có một bài phát biểu).",
+              "correctAnswer": "C"
             },
             {
               "id": "38",
@@ -470,8 +469,8 @@
                 "He thought they should just quit.",
                 "He wanted to call the police."
               ],
-              "correctAnswer": "B",
-              "explanation": "Jack nói rằng họ có thể khắc phục vấn đề nếu họ thành lập một liên minh (work together / form a coalition)."
+              "explanation": "Đoạn 3 Jack nói \"I have a notion that we can fix them if we form a coalition.\" (Tôi có một ý nghĩ là chúng ta có thể sửa chữa nếu chúng ta liên minh lại). Việc liên minh lại có nghĩa là tất cả cùng làm việc chung.",
+              "correctAnswer": "B"
             },
             {
               "id": "39",
@@ -482,8 +481,8 @@
                 "The workers threatened to quit.",
                 "The workers threatened to leak the secrets."
               ],
-              "correctAnswer": "C",
-              "explanation": "Công nhân đe dọa sẽ nghỉ việc (quit) nếu ban quản lý không loại bỏ các vấn đề."
+              "explanation": "Ở đoạn 3, \"We can go to the administration and tell them we'll quit if they don't eliminate the problems.\" (Chúng ta có thể đến gặp ban quản trị và nói với họ rằng chúng ta sẽ nghỉ việc nếu họ không loại bỏ những vấn đề này). Hành động đe dọa là nghỉ việc.",
+              "correctAnswer": "C"
             },
             {
               "id": "40",
@@ -494,10 +493,11 @@
                 "Since I can’t afford to lose all my workers, I guess we’ll just have to fix things.",
                 "He promised to raise their salaries."
               ],
-              "correctAnswer": "C",
-              "explanation": "Dựa vào đoạn văn, ông chủ nói: \"Since I can’t afford to lose all of you workers, I guess we’ll just have to fix things.\""
+              "explanation": "Trong đoạn 4, người quản lý nói \"Since I can't afford to lose all of you workers, I guess we'll just have to fix things.\" (Vì tôi không thể để mất tất cả các bạn công nhân, tôi đoán chúng ta sẽ phải khắc phục mọi thứ).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

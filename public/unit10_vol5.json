@@ -15,597 +15,597 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. What is a type of enterprise?",
+              "content": "What is a type of enterprise?",
               "options": [
                 "A church",
                 "A sign company",
                 "A textbook",
                 "A date"
               ],
-              "correctAnswer": "B",
-              "explanation": "enterprise là doanh nghiệp/công ty kinh doanh; công ty làm biển hiệu (A sign company) là một ví dụ."
+              "explanation": "enterprise là doanh nghiệp/công ty kinh doanh; công ty làm biển hiệu (A sign company) là một ví dụ.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
-              "content": "2. What kind of person would most people have contempt for?",
+              "content": "What kind of person would most people have contempt for?",
               "options": [
                 "A killer",
                 "A student",
                 "A farmer",
                 "A veterinarian"
               ],
-              "correctAnswer": "A",
-              "explanation": "contempt là sự khinh thường; mọi người thường khinh thường một kẻ giết người (A killer)."
+              "explanation": "contempt là sự khinh thường; mọi người thường khinh thường một kẻ giết người (A killer).",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
-              "content": "3. Which of these things would you most likely want to maximize?",
+              "content": "Which of these things would you most likely want to maximize?",
               "options": [
                 "Your foolishness",
                 "Your debt",
                 "Your income",
                 "Your weight"
               ],
-              "correctAnswer": "C",
-              "explanation": "maximize là tối đa hóa; bạn sẽ muốn tối đa hóa thu nhập của mình (Your income)."
+              "explanation": "maximize là tối đa hóa; bạn sẽ muốn tối đa hóa thu nhập của mình (Your income).",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
-              "content": "4. Where would you most likely find a ditch?",
+              "content": "Where would you most likely find a ditch?",
               "options": [
                 "By a road",
                 "In a person's backyard",
                 "In a tree",
                 "In a classroom"
               ],
-              "correctAnswer": "A",
-              "explanation": "ditch là mương/rãnh nước; thường được tìm thấy ở ven đường (By a road)."
+              "explanation": "ditch là mương/rãnh nước; thường được tìm thấy ở ven đường (By a road).",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
-              "content": "5. What might a person sow?",
+              "content": "What might a person sow?",
               "options": [
                 "Apple seeds",
                 "Dresses",
                 "Animals",
                 "Cake"
               ],
-              "correctAnswer": "A",
-              "explanation": "sow là gieo hạt; người ta gieo hạt táo (Apple seeds)."
+              "explanation": "sow là gieo hạt; người ta gieo hạt táo (Apple seeds).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "1. maximize",
+              "content": "maximize",
               "options": [
                 "victory",
                 "to fail",
                 "to climb",
                 "to make great"
               ],
-              "correctAnswer": "D",
-              "explanation": "maximize là tối đa hóa, tương đương với to make great."
+              "explanation": "maximize là tối đa hóa, tương đương với to make great.",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
-              "content": "2. sow",
+              "content": "sow",
               "options": [
                 "to plant",
                 "creation",
                 "uncommon",
                 "to understand"
               ],
-              "correctAnswer": "A",
-              "explanation": "sow là gieo trồng, tương đương với to plant."
+              "explanation": "sow là gieo trồng, tương đương với to plant.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
-              "content": "3. upcoming",
+              "content": "upcoming",
               "options": [
                 "slow",
                 "soon",
                 "complete",
                 "ready"
               ],
-              "correctAnswer": "B",
-              "explanation": "upcoming là sắp tới, tương đương với soon (sớm)."
+              "explanation": "upcoming là sắp tới, tương đương với soon (sớm).",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
-              "content": "4. exquisite",
+              "content": "exquisite",
               "options": [
                 "sure",
                 "beautiful",
                 "an animal",
                 "believable"
               ],
-              "correctAnswer": "B",
-              "explanation": "exquisite là tuyệt đẹp/tinh tế, tương đương với beautiful."
+              "explanation": "exquisite là tuyệt đẹp/tinh tế, tương đương với beautiful.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
-              "content": "5. enterprise",
+              "content": "enterprise",
               "options": [
                 "a car",
                 "a business",
                 "a channel",
                 "a group"
               ],
-              "correctAnswer": "B",
-              "explanation": "enterprise là doanh nghiệp, tương đương với a business."
+              "explanation": "enterprise là doanh nghiệp, tương đương với a business.",
+              "correctAnswer": "B"
             },
             {
               "id": "11",
-              "content": "6. ditch",
+              "content": "ditch",
               "options": [
                 "a ride",
                 "a river",
                 "a channel",
                 "a home"
               ],
-              "correctAnswer": "C",
-              "explanation": "ditch là mương nước, tương đương với a channel (kênh rãnh)."
+              "explanation": "ditch là mương nước, tương đương với a channel (kênh rãnh).",
+              "correctAnswer": "C"
             },
             {
               "id": "12",
-              "content": "7. contempt",
+              "content": "contempt",
               "options": [
                 "praise",
                 "taste",
                 "rating",
                 "no respect"
               ],
-              "correctAnswer": "D",
-              "explanation": "contempt là sự khinh thường, tương đương với no respect."
+              "explanation": "contempt là sự khinh thường, tương đương với no respect.",
+              "correctAnswer": "D"
             },
             {
               "id": "13",
-              "content": "8. spade",
+              "content": "spade",
               "options": [
                 "a fan",
                 "a tool",
                 "a trait",
                 "a fact"
               ],
-              "correctAnswer": "B",
-              "explanation": "spade là cái xẻng, là một công cụ (a tool)."
+              "explanation": "spade là cái xẻng, là một công cụ (a tool).",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
-              "content": "9. irrigate",
+              "content": "irrigate",
               "options": [
                 "to water",
                 "to write",
                 "to find",
                 "to destroy"
               ],
-              "correctAnswer": "A",
-              "explanation": "irrigate là tưới tiêu, tương đương với to water."
+              "explanation": "irrigate là tưới tiêu, tương đương với to water.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
-              "content": "10. simplicity",
+              "content": "simplicity",
               "options": [
                 "pride",
                 "faith",
                 "fondness",
                 "easiness"
               ],
-              "correctAnswer": "D",
-              "explanation": "simplicity là sự đơn giản, tương đương với easiness (sự dễ dàng)."
+              "explanation": "simplicity là sự đơn giản, tương đương với easiness (sự dễ dàng).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Check if the italicized word is used correctly. (True for Correct, False for Incorrect)",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
-              "content": "1. I think the soy beans would taste better if we cooked them first.",
+              "content": "I think the soy beans would taste better if we cooked them first.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "soy beans (đậu nành) là đúng ngữ cảnh thực phẩm."
+              "explanation": "soy beans (đậu nành) là đúng ngữ cảnh thực phẩm.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
-              "content": "2. Jim said he would finance their new store for a share of their profits.",
+              "content": "Jim said he would finance their new store for a share of their profits.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "finance (tài trợ/đầu tư tiền) vào cửa hàng mới là hợp lý."
+              "explanation": "finance (tài trợ/đầu tư tiền) vào cửa hàng mới là hợp lý.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
-              "content": "3. We all knew the precaution of our actions would be terrible.",
+              "content": "We all knew the precaution of our actions would be terrible.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "precaution (sự phòng ngừa), không dùng cho hậu quả hành động ('consequences' mới đúng)."
+              "explanation": "precaution (sự phòng ngừa), không dùng cho hậu quả hành động ('consequences' mới đúng).",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
-              "content": "4. The preliminary whistle blew, meaning the game was over.",
+              "content": "The preliminary whistle blew, meaning the game was over.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "preliminary (sơ bộ/mở đầu), trái ngược với việc trò chơi kết thúc (over)."
+              "explanation": "preliminary (sơ bộ/mở đầu), trái ngược với việc trò chơi kết thúc (over).",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
-              "content": "5. It can be difficult to keep track of monetary matters.",
+              "content": "It can be difficult to keep track of monetary matters.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "monetary matters (vấn đề tiền bạc) rất hợp lý."
+              "explanation": "monetary matters (vấn đề tiền bạc) rất hợp lý.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
-              "content": "6. The indifferent fan cheered loudly for his favorite team.",
+              "content": "The indifferent fan cheered loudly for his favorite team.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "indifferent (thờ ơ/lãnh đạm) thì không thể 'cheered loudly' (cổ vũ cuồng nhiệt)."
+              "explanation": "indifferent (thờ ơ/lãnh đạm) thì không thể 'cheered loudly' (cổ vũ cuồng nhiệt).",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
-              "content": "7. The capitalist believed that his efforts would lead to great profits in the future.",
+              "content": "The capitalist believed that his efforts would lead to great profits in the future.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "capitalist (nhà tư bản/nhà đầu tư) luôn mong chờ lợi nhuận (profits)."
+              "explanation": "capitalist (nhà tư bản/nhà đầu tư) luôn mong chờ lợi nhuận (profits).",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
-              "content": "8. The company accountant found an error in the bank statement.",
+              "content": "The company accountant found an error in the bank statement.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "accountant (kế toán viên) tìm lỗi trong sao kê ngân hàng là công việc của họ."
+              "explanation": "accountant (kế toán viên) tìm lỗi trong sao kê ngân hàng là công việc của họ.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
-              "content": "9. I need to dedicate my house before the winter season.",
+              "content": "I need to dedicate my house before the winter season.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "dedicate (cống hiến/dành trọn) không dùng cho căn nhà. Nên dùng từ như decorate hoặc renovate."
+              "explanation": "dedicate (cống hiến/dành trọn) không dùng cho căn nhà. Nên dùng từ như decorate hoặc renovate.",
+              "correctAnswer": "B"
             },
             {
               "id": "25",
-              "content": "10. The rain saturated the ground so much that it was as dry as a stone.",
+              "content": "The rain saturated the ground so much that it was as dry as a stone.",
               "options": [
                 "Correct",
                 "Incorrect",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "saturated (ngấm đẫm nước) trái ngược với cụm từ 'as dry as a stone' (khô như đá)."
+              "explanation": "saturated (ngấm đẫm nước) trái ngược với cụm từ 'as dry as a stone' (khô như đá).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Choose the word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
-              "content": "1. My favorite cake is made using flour from beans.",
+              "content": "My favorite cake is made using flour from beans.",
               "options": [
                 "soy",
                 "ditch",
                 "precaution",
                 "enterprise"
               ],
-              "correctAnswer": "A",
-              "explanation": "Flour from beans tương đương với bột đậu nành (soy)."
+              "explanation": "Flour from beans tương đương với bột đậu nành (soy).",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
-              "content": "2. The driver kept both hands on the wheel as a way to prevent something bad.",
+              "content": "The driver kept both hands on the wheel as a way to prevent something bad.",
               "options": [
                 "precaution",
                 "contempt",
                 "spade",
                 "accountant"
               ],
-              "correctAnswer": "A",
-              "explanation": "A way to prevent something bad là sự phòng ngừa (precaution)."
+              "explanation": "A way to prevent something bad là sự phòng ngừa (precaution).",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
-              "content": "3. People who keep financial accounts have many important duties in a business.",
+              "content": "People who keep financial accounts have many important duties in a business.",
               "options": [
                 "Capitalists",
                 "Accountants",
                 "Enterprises",
                 "Contempts"
               ],
-              "correctAnswer": "B",
-              "explanation": "Người giữ sổ sách tài chính là kế toán viên (Accountants)."
+              "explanation": "Người giữ sổ sách tài chính là kế toán viên (Accountants).",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "4. I wish I knew the money-related value of my gold collection.",
+              "content": "I wish I knew the money-related value of my gold collection.",
               "options": [
                 "monetary",
                 "preliminary",
                 "upcoming",
                 "indifferent"
               ],
-              "correctAnswer": "A",
-              "explanation": "Money-related là thuộc về tiền tệ (monetary)."
+              "explanation": "Money-related là thuộc về tiền tệ (monetary).",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
-              "content": "5. The preparation duties before the concert included testing the microphones.",
+              "content": "The preparation duties before the concert included testing the microphones.",
               "options": [
                 "preliminary",
                 "exquisite",
                 "saturated",
                 "indifferent"
               ],
-              "correctAnswer": "A",
-              "explanation": "Hoạt động chuẩn bị trước (preparation duties before) tương đương với preliminary (sơ bộ/mở màn)."
+              "explanation": "Hoạt động chuẩn bị trước (preparation duties before) tương đương với preliminary (sơ bộ/mở màn).",
+              "correctAnswer": "A"
             },
             {
               "id": "31",
-              "content": "6. The spilled juice completely soaked the small rug on the kitchen floor.",
+              "content": "The spilled juice completely soaked the small rug on the kitchen floor.",
               "options": [
                 "financed",
                 "saturated",
                 "dedicated",
                 "sowed"
               ],
-              "correctAnswer": "B",
-              "explanation": "Completely soaked (làm ướt sũng) tương đương với saturated."
+              "explanation": "Completely soaked (làm ướt sũng) tương đương với saturated.",
+              "correctAnswer": "B"
             },
             {
               "id": "32",
-              "content": "7. Many wealthy companies provided money for the private school.",
+              "content": "Many wealthy companies provided money for the private school.",
               "options": [
                 "financed",
                 "irrigated",
                 "maximized",
                 "dedicated"
               ],
-              "correctAnswer": "A",
-              "explanation": "Provided money (cung cấp tài chính) tương đương với financed."
+              "explanation": "Provided money (cung cấp tài chính) tương đương với financed.",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
-              "content": "8. That business person owns companies in many countries around the world.",
+              "content": "That business person owns companies in many countries around the world.",
               "options": [
                 "capitalist",
                 "accountant",
                 "spade",
                 "ditch"
               ],
-              "correctAnswer": "A",
-              "explanation": "Business person (nhà kinh doanh/đầu tư) tương đương với capitalist."
+              "explanation": "Business person (nhà kinh doanh/đầu tư) tương đương với capitalist.",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
-              "content": "9. She is lacking interest about what movie we choose to watch.",
+              "content": "She is lacking interest about what movie we choose to watch.",
               "options": [
                 "upcoming",
                 "indifferent",
                 "exquisite",
                 "preliminary"
               ],
-              "correctAnswer": "B",
-              "explanation": "Lacking interest (thiếu quan tâm) tương đương với indifferent."
+              "explanation": "Lacking interest (thiếu quan tâm) tương đương với indifferent.",
+              "correctAnswer": "B"
             },
             {
               "id": "35",
-              "content": "10. I want to decide to put the time and effort of myself to saving kittens.",
+              "content": "I want to decide to put the time and effort of myself to saving kittens.",
               "options": [
                 "dedicate",
                 "sow",
                 "irrigate",
                 "maximize"
               ],
-              "correctAnswer": "A",
-              "explanation": "Put the time and effort (cống hiến/dành nỗ lực) tương đương với dedicate."
+              "explanation": "Put the time and effort (cống hiến/dành nỗ lực) tương đương với dedicate.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Life on the Farm</h1><p style=\"margin-bottom: 1rem;\">Bill was an excellent <b>capitalist</b>. He <b>financed</b> a large aviation <b>enterprise</b> that made a lot of money. He knew how to <b>maximize</b> <b>monetary</b> gains in every business deal he made. Bill had one big problem, though. He was unhappy all the time. Bill knew that he had to do something about it, or he would be depressed for the rest of his life.</p><p style=\"margin-bottom: 1rem;\">One day, Bill was in his office when he heard a knock at the door. \"Come in!\" Bill said loudly.</p><p style=\"margin-bottom: 1rem;\">His <b>accountant</b>, Jane, walked in. Jane said, \"Sir, I haven't seen you smile in a year. What are you so sad about? Your company is doing very well.\"</p><p style=\"margin-bottom: 1rem;\">Bill told her, \"I'm <b>indifferent</b> about my company's success. I have <b>contempt</b> toward my job. I just want to do something I enjoy. I've always loved growing plants as a hobby. I'm going to quit my job and become a farmer!\"</p><p style=\"margin-bottom: 1rem;\">\"You're crazy!\" Jane said.</p><p style=\"margin-bottom: 1rem;\">\"I don't think so,\" Bill replied. \"I want the <b>simplicity</b> of a life on a farm. I'm tired of all this stress. Farming will make me happy.\"</p><p style=\"margin-bottom: 1rem;\">The very next day, Bill carried out the <b>preliminary</b> task of buying land and tools. Then he got to work. He <b>sowed</b> many types of seeds. He planted <b>soy</b>, cabbage, carrots, and onions. \"The <b>upcoming</b> summer is going to be very dry,\" thought Bill. \"I need to <b>irrigate</b> my crops as a <b>precaution</b>, in case it doesn't rain enough.\"</p><p style=\"margin-bottom: 1rem;\">He took his <b>spade</b> and dug a <b>ditch</b> down the middle of his farm. \"Water from the stream will flow down the ditch and <b>saturate</b> the soil around every plant,\" Bill thought.</p><p style=\"margin-bottom: 1rem;\">Bill <b>dedicated</b> himself to farming. After a year, his farm looked <b>exquisite</b>. Most importantly, Bill was happy. He finally had the life he always wanted.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Life on the Farm</h1>        <p style=\"margin-bottom: 1rem;\">Bill was an excellent <b>capitalist</b>. He <b>financed</b> a large aviation <b>enterprise</b> that made a lot of money. He knew how to <b>maximize</b> <b>monetary</b> gains in every business deal he made. Bill had one big problem, though. He was unhappy all the time. Bill knew that he had to do something about it, or he would be depressed for the rest of his life.</p>    <p style=\"margin-bottom: 1rem;\">One day, Bill was in his office when he heard a knock at the door. \"Come in!\" Bill said loudly.</p>    <p style=\"margin-bottom: 1rem;\">His <b>accountant</b>, Jane, walked in. Jane said, \"Sir, I haven't seen you smile in a year. What are you so sad about? Your company is doing very well.\"</p>    <p style=\"margin-bottom: 1rem;\">Bill told her, \"I'm <b>indifferent</b> about my company's success. I have <b>contempt</b> toward my job. I just want to do something I enjoy. I've always loved growing plants as a hobby. I'm going to quit my job and become a farmer!\"</p>    <p style=\"margin-bottom: 1rem;\">\"You're crazy!\" Jane said.</p>    <p style=\"margin-bottom: 1rem;\">\"I don't think so,\" Bill replied. \"I want the <b>simplicity</b> of a life on a farm. I'm tired of all this stress. Farming will make me happy.\"</p>    <p style=\"margin-bottom: 1rem;\">The very next day, Bill carried out the <b>preliminary</b> task of buying land and tools. Then he got to work. He <b>sowed</b> many types of seeds. He planted <b>soy</b>, cabbage, carrots, and onions. \"The <b>upcoming</b> summer is going to be very dry,\" thought Bill. \"I need to <b>irrigate</b> my crops as a <b>precaution</b>, in case it doesn't rain enough.\"</p>    <p style=\"margin-bottom: 1rem;\">He took his <b>spade</b> and dug a <b>ditch</b> down the middle of his farm. \"Water from the stream will flow down the ditch and <b>saturate</b> the soil around every plant,\" Bill thought.</p>    <p style=\"margin-bottom: 1rem;\">Bill <b>dedicated</b> himself to farming. After a year, his farm looked <b>exquisite</b>. Most importantly, Bill was happy. He finally had the life he always wanted.</p></div>",
       "imageUrl": "/unit10_vol5_story.png",
       "sections": [
         {
           "id": "sec5_reading_tf",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
-              "content": "1. Bill could maximize monetary gains in the aviation enterprise that he financed.",
+              "content": "Bill could maximize monetary gains in the aviation enterprise that he financed.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài viết: 'He financed a large aviation enterprise... He knew how to maximize monetary gains...'"
+              "explanation": "Bill đã tài trợ cho một doanh nghiệp hàng không và anh ấy biết cách tối đa hóa (maximize) lợi nhuận tiền tệ (monetary gains). Nhận định này hoàn toàn đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
-              "content": "2. Bill was indifferent about the farm's success.",
+              "content": "Bill was indifferent about the farm's success.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bill indifferent về thành công của *công ty* (company's success), không phải của trang trại."
+              "explanation": "Bill nói anh ấy thờ ơ (indifferent) với thành công của công ty anh ấy, chứ không phải với sự thành công của trang trại (farm's success). Câu này sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "38",
-              "content": "3. Bill irrigated his crops as a precaution for the upcoming rain in summer.",
+              "content": "Bill irrigated his crops as a precaution for the upcoming rain in summer.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Ông ấy tưới tiêu như một sự đề phòng cho mùa hè *khô ráo* (upcoming summer is going to be very dry), không phải upcoming rain."
+              "explanation": "Bill tưới tiêu (irrigate) như một biện pháp phòng ngừa (precaution) vì mùa hè sắp tới sẽ rất khô hạn (very dry), không phải vì trời sắp mưa (upcoming rain). Câu này sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "39",
-              "content": "4. Bill dug a ditch with a spade.",
+              "content": "Bill dug a ditch with a spade.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài viết ghi: 'He took his spade and dug a ditch...'"
+              "explanation": "Rõ ràng trong bài nói rằng Bill đã lấy chiếc xẻng (spade) của mình và đào một con mương (dug a ditch). Nhận định này đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
-              "content": "5. Bill sowed seeds and saturated the soy and cabbage plants.",
+              "content": "Bill sowed seeds and saturated the soy and cabbage plants.",
               "options": [
                 "True",
                 "False",
                 "Not Given",
                 "None of the above"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nước bão hoà vào đất (saturate the soil), ông ấy trồng soy và cabbage, nhưng câu nhận định nói ông ấy saturate cây thì không hoàn toàn đúng nghĩa như trong bài."
+              "explanation": "Mặc dù Bill đã gieo hạt, nhưng dòng nước làm ẩm ướt (saturate) phần đất (soil) xung quanh cây, không trực tiếp saturate bản thân cái cây. Vậy nên nhận định này chưa hoàn toàn chính xác.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_qa",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
-              "content": "1. What did the accountant say when Bill said he would stop being a capitalist and become a farmer?",
+              "content": "What did the accountant say when Bill said he would stop being a capitalist and become a farmer?",
               "options": [
                 "\"You're crazy!\"",
                 "\"That's exquisite!\"",
                 "\"Can I come too?\"",
                 "\"Don't dig a ditch!\""
               ],
-              "correctAnswer": "A",
-              "explanation": "\"You're crazy!\" Jane said."
+              "explanation": "Khi nghe Bill nói muốn bỏ làm nhà đầu tư tư bản (capitalist) để làm nông dân, nhân viên kế toán (accountant) Jane đã nói \"You're crazy!\" (Ông điên rồi!). Chọn đáp án A.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
-              "content": "2. What did Bill have contempt toward?",
+              "content": "What did Bill have contempt toward?",
               "options": [
                 "The farm",
                 "His job",
                 "His accountant",
                 "Money"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"I have contempt toward my job.\""
+              "explanation": "Trong đoạn 4, Bill nói anh ấy có sự khinh thường/chán ghét (contempt) đối với công việc của mình. Đáp án B là chính xác.",
+              "correctAnswer": "B"
             },
             {
               "id": "43",
-              "content": "3. What was the result of Bill dedicating himself to his exquisite farm?",
+              "content": "What was the result of Bill dedicating himself to his exquisite farm?",
               "options": [
                 "He became poor.",
                 "He was happy.",
                 "He bought an airplane.",
                 "He went back to work."
               ],
-              "correctAnswer": "B",
-              "explanation": "Most importantly, Bill was happy."
+              "explanation": "Kết quả của việc Bill cống hiến (dedicate) cho trang trại tuyệt đẹp của mình là cuối cùng anh ấy đã cảm thấy hạnh phúc (happy). Chọn đáp án B.",
+              "correctAnswer": "B"
             },
             {
               "id": "44",
-              "content": "4. What preliminary task did Bill perform?",
+              "content": "What preliminary task did Bill perform?",
               "options": [
                 "Buying an enterprise",
                 "Selling his car",
                 "Buying land and tools",
                 "Hiring a new accountant"
               ],
-              "correctAnswer": "C",
-              "explanation": "Bill carried out the preliminary task of buying land and tools."
+              "explanation": "Công việc chuẩn bị sơ bộ (preliminary task) mà Bill thực hiện là mua đất và dụng cụ (buying land and tools). Chọn đáp án C.",
+              "correctAnswer": "C"
             },
             {
               "id": "45",
-              "content": "5. What simplicity was important for Bill to get rid of his stress?",
+              "content": "What simplicity was important for Bill to get rid of his stress?",
               "options": [
                 "The simplicity of an office job",
                 "The simplicity of flying planes",
                 "The simplicity of a life on a farm",
                 "The simplicity of math"
               ],
-              "correctAnswer": "C",
-              "explanation": "I want the simplicity of a life on a farm. I'm tired of all this stress."
+              "explanation": "Sự đơn giản (simplicity) quan trọng giúp Bill thoát khỏi căng thẳng là một cuộc sống ở trang trại (a life on a farm). Ta chọn đáp án C.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

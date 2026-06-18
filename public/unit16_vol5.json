@@ -15,363 +15,363 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
-              "content": "1. Someone with integrity ______.",
+              "content": "Someone with integrity ______.",
               "options": [
                 "invents new things",
                 "tricks people",
                 "lies",
                 "is honest"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"integrity\" nghĩa là sự trung thực (honesty and good morals). Chọn D."
+              "explanation": "\"integrity\" nghĩa là sự trung thực (honesty and good morals). Chọn D.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex1_2",
-              "content": "2. What does a person with a good understanding of a budget take care of?",
+              "content": "What does a person with a good understanding of a budget take care of?",
               "options": [
                 "Their safety",
                 "Their possessions",
                 "Their money",
                 "Their pet"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"budget\" nghĩa là ngân sách, lượng tiền có sẵn để chi tiêu (money available to spend). Chọn C."
+              "explanation": "\"budget\" nghĩa là ngân sách, lượng tiền có sẵn để chi tiêu (money available to spend). Chọn C.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_3",
-              "content": "3. Which of the following might an archeological expert be interested in?",
+              "content": "Which of the following might an archeological expert be interested in?",
               "options": [
                 "Reading about ancient devices",
                 "Studying the effects of height and speed",
                 "Learning how to save lives",
                 "Finding his car keys"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"archeological\" liên quan đến khảo cổ học, nghiên cứu về các đồ tạo tác cổ đại (ancient devices). Chọn A."
+              "explanation": "\"archeological\" liên quan đến khảo cổ học, nghiên cứu về các đồ tạo tác cổ đại (ancient devices). Chọn A.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_4",
-              "content": "4. What does it mean to be a parachute addict?",
+              "content": "What does it mean to be a parachute addict?",
               "options": [
                 "To want to be on land",
                 "To want to jump from a plane with a parachute",
                 "To always ride in hot-air balloons",
                 "To want to be at sea"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"parachute addict\" nghĩa là người nghiện nhảy dù, muốn nhảy khỏi máy bay với dù (jump from a plane with a parachute). Chọn B."
+              "explanation": "\"parachute addict\" nghĩa là người nghiện nhảy dù, muốn nhảy khỏi máy bay với dù (jump from a plane with a parachute). Chọn B.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_5",
-              "content": "5. In order to refine an invention, one has to _______.",
+              "content": "In order to refine an invention, one has to _______.",
               "options": [
                 "spend money on it",
                 "make it better",
                 "be ignorant",
                 "know Italian"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"refine\" nghĩa là cải tiến, làm cho thứ gì đó tốt hơn (make it better). Chọn B."
+              "explanation": "\"refine\" nghĩa là cải tiến, làm cho thứ gì đó tốt hơn (make it better). Chọn B.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_1",
-              "content": "1. The teacher held classes in the [outdoor area surrounded by walls] on warm days.",
+              "content": "The teacher held classes in the [outdoor area surrounded by walls] on warm days.",
               "options": [
                 "courtyard",
                 "estate",
                 "parachute",
                 "budget"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"outdoor area surrounded by walls\" là định nghĩa của courtyard (sân trong)."
+              "explanation": "\"outdoor area surrounded by walls\" là định nghĩa của courtyard (sân trong).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_2",
-              "content": "2. The airport is usually [hectic] on Saturdays because many people were traveling.",
+              "content": "The airport is usually [hectic] on Saturdays because many people were traveling.",
               "options": [
                 "prehistoric",
                 "chaotic",
                 "archeological",
                 "friendly"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"hectic\" mang nghĩa hỗn loạn, tương đương với chaotic."
+              "explanation": "\"hectic\" mang nghĩa hỗn loạn, tương đương với chaotic.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_3",
-              "content": "3. The teacher made sure the correct answers [matched with] the questions on the test.",
+              "content": "The teacher made sure the correct answers [matched with] the questions on the test.",
               "options": [
                 "corresponded",
                 "cited",
                 "restricted",
                 "refined"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"matched with\" mang nghĩa phù hợp, tương ứng, tương đương với corresponded."
+              "explanation": "\"matched with\" mang nghĩa phù hợp, tương ứng, tương đương với corresponded.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_4",
-              "content": "4. The student [gave an example] from an interview she heard on the radio.",
+              "content": "The student [gave an example] from an interview she heard on the radio.",
               "options": [
                 "cited",
                 "knit",
                 "brainstormed",
                 "refined"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"gave an example\" mang nghĩa trích dẫn, đưa ra ví dụ, tương đương với cited."
+              "explanation": "\"gave an example\" mang nghĩa trích dẫn, đưa ra ví dụ, tương đương với cited.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_5",
-              "content": "5. The victim of the [crime of tricking] told the police about her experience.",
+              "content": "The victim of the [crime of tricking] told the police about her experience.",
               "options": [
                 "fraud",
                 "hydrogen",
                 "integrity",
                 "outlook"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"crime of tricking\" mang nghĩa tội phạm lừa đảo, tương đương với fraud."
+              "explanation": "\"crime of tricking\" mang nghĩa tội phạm lừa đảo, tương đương với fraud.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex3_1",
-              "content": "1. prehistoric",
+              "content": "prehistoric",
               "options": [
                 "large",
                 "old",
                 "upsetting",
                 "under"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"prehistoric\" nghĩa là thời tiền sử, tương đương với old (cũ, cổ xưa)."
+              "explanation": "\"prehistoric\" nghĩa là thời tiền sử, tương đương với old (cũ, cổ xưa).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_2",
-              "content": "2. outlook",
+              "content": "outlook",
               "options": [
                 "outside",
                 "plan",
                 "work",
                 "viewpoint"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"outlook\" nghĩa là quan điểm, cách nhìn nhận, tương đương với viewpoint."
+              "explanation": "\"outlook\" nghĩa là quan điểm, cách nhìn nhận, tương đương với viewpoint.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3_3",
-              "content": "3. proponent",
+              "content": "proponent",
               "options": [
                 "supporter",
                 "teacher",
                 "traveler",
                 "scientist"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"proponent\" nghĩa là người ủng hộ, tương đương với supporter."
+              "explanation": "\"proponent\" nghĩa là người ủng hộ, tương đương với supporter.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_4",
-              "content": "4. estate",
+              "content": "estate",
               "options": [
                 "gas",
                 "property",
                 "airplane",
                 "evidence"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"estate\" nghĩa là điền trang, tài sản đất đai, tương đương với property."
+              "explanation": "\"estate\" nghĩa là điền trang, tài sản đất đai, tương đương với property.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_5",
-              "content": "5. brainstorm",
+              "content": "brainstorm",
               "options": [
                 "to come up with",
                 "to read a lot",
                 "to get wet",
                 "to jump"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"brainstorm\" nghĩa là suy nghĩ, nảy ra ý tưởng, tương đương với to come up with."
+              "explanation": "\"brainstorm\" nghĩa là suy nghĩ, nảy ra ý tưởng, tương đương với to come up with.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex4_1",
-              "content": "1. The farmer lived on a large estate. It was given to him by his father.",
+              "content": "The farmer lived on a large estate. It was given to him by his father.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"estate\" (điền trang) dùng chính xác trong ngữ cảnh này."
+              "explanation": "\"estate\" (điền trang) dùng chính xác trong ngữ cảnh này.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_2",
-              "content": "2. The principal was a proponent of group learning. He wanted students to learn on their own.",
+              "content": "The principal was a proponent of group learning. He wanted students to learn on their own.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"proponent of group learning\" (người ủng hộ học nhóm) mâu thuẫn với \"learn on their own\" (tự học). Dùng sai."
+              "explanation": "\"proponent of group learning\" (người ủng hộ học nhóm) mâu thuẫn với \"learn on their own\" (tự học). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_3",
-              "content": "3. He wanted to refine the machine before he sold it. He spent three years improving it.",
+              "content": "He wanted to refine the machine before he sold it. He spent three years improving it.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"refine\" (cải tiến) đồng nghĩa với \"improving it\" (cải thiện nó). Dùng chính xác."
+              "explanation": "\"refine\" (cải tiến) đồng nghĩa với \"improving it\" (cải thiện nó). Dùng chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_4",
-              "content": "4. The seat belt restricted the child’s movement in the car. He was able to move a lot.",
+              "content": "The seat belt restricted the child’s movement in the car. He was able to move a lot.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"restricted\" (hạn chế) mâu thuẫn với \"able to move a lot\" (có thể di chuyển nhiều). Dùng sai."
+              "explanation": "\"restricted\" (hạn chế) mâu thuẫn với \"able to move a lot\" (có thể di chuyển nhiều). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_5",
-              "content": "5. After an accident in the laboratory, hydrogen filled the air. The gas was completely invisible.",
+              "content": "After an accident in the laboratory, hydrogen filled the air. The gas was completely invisible.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"hydrogen\" (khí hydro) là một loại khí (gas). Dùng chính xác."
+              "explanation": "\"hydrogen\" (khí hydro) là một loại khí (gas). Dùng chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_6",
-              "content": "6. The boy had a different outlook than his brother. He thought that people should try to save the environment, but his brother thought it wasn’t worth trying.",
+              "content": "The boy had a different outlook than his brother. He thought that people should try to save the environment, but his brother thought it wasn’t worth trying.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"outlook\" (quan điểm) được dùng chính xác để chỉ sự khác biệt trong suy nghĩ."
+              "explanation": "\"outlook\" (quan điểm) được dùng chính xác để chỉ sự khác biệt trong suy nghĩ.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_7",
-              "content": "7. The scientists found many archeological items in the desert. It would help them study modern societies.",
+              "content": "The scientists found many archeological items in the desert. It would help them study modern societies.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"archeological\" (thuộc về khảo cổ, đồ cổ) mâu thuẫn với \"modern societies\" (xã hội hiện đại). Dùng sai."
+              "explanation": "\"archeological\" (thuộc về khảo cổ, đồ cổ) mâu thuẫn với \"modern societies\" (xã hội hiện đại). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_8",
-              "content": "8. Brian brainstormed with his group. After an hour, they came up with a great idea.",
+              "content": "Brian brainstormed with his group. After an hour, they came up with a great idea.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"brainstormed\" (tập trung suy nghĩ) để đưa ra \"great idea\" (ý tưởng tuyệt vời). Dùng chính xác."
+              "explanation": "\"brainstormed\" (tập trung suy nghĩ) để đưa ra \"great idea\" (ý tưởng tuyệt vời). Dùng chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_9",
-              "content": "9. The people in the plane crash were saved by parachutes. They dropped safely to the ground using the device.",
+              "content": "The people in the plane crash were saved by parachutes. They dropped safely to the ground using the device.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"parachutes\" (cái dù) dùng để rơi an toàn xuống đất. Dùng chính xác."
+              "explanation": "\"parachutes\" (cái dù) dùng để rơi an toàn xuống đất. Dùng chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_10",
-              "content": "10. Ellen wanted to learn how to knit. She wanted to save people from fires.",
+              "content": "Ellen wanted to learn how to knit. She wanted to save people from fires.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"knit\" (đan len) không liên quan đến việc \"save people from fires\" (cứu người khỏi hỏa hoạn). Dùng sai."
+              "explanation": "\"knit\" (đan len) không liên quan đến việc \"save people from fires\" (cứu người khỏi hỏa hoạn). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_11",
-              "content": "11. The man was found guilty of fraud. He told people he was selling medicine, but it was only river water.",
+              "content": "The man was found guilty of fraud. He told people he was selling medicine, but it was only river water.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"fraud\" (lừa đảo) phù hợp với hành động bán nước sông giả làm thuốc. Dùng chính xác."
+              "explanation": "\"fraud\" (lừa đảo) phù hợp với hành động bán nước sông giả làm thuốc. Dùng chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_12",
-              "content": "12. The woman showed her integrity by lying to the police about her involvement in the crime.",
+              "content": "The woman showed her integrity by lying to the police about her involvement in the crime.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"integrity\" (sự trung thực) mâu thuẫn với hành động \"lying\" (nói dối). Dùng sai."
+              "explanation": "\"integrity\" (sự trung thực) mâu thuẫn với hành động \"lying\" (nói dối). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_13",
-              "content": "13. The chocolate addict ate chocolate bars about once a month.",
+              "content": "The chocolate addict ate chocolate bars about once a month.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"addict\" (người nghiện) mâu thuẫn với việc chỉ ăn một lần một tháng (once a month). Dùng sai."
+              "explanation": "\"addict\" (người nghiện) mâu thuẫn với việc chỉ ăn một lần một tháng (once a month). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_14",
-              "content": "14. The archeology expert was called to study some ancient bones. They are thought to belong to dinosaurs.",
+              "content": "The archeology expert was called to study some ancient bones. They are thought to belong to dinosaurs.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"archeology\" (khảo cổ học) liên quan đến nghiên cứu xương cổ đại (ancient bones). Dùng chính xác."
+              "explanation": "\"archeology\" (khảo cổ học) liên quan đến nghiên cứu xương cổ đại (ancient bones). Dùng chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_15",
-              "content": "15. The children ran into the courtyard when it started raining. They didn’t want to get wet.",
+              "content": "The children ran into the courtyard when it started raining. They didn’t want to get wet.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"courtyard\" (sân trong) là khu vực ngoài trời (outdoor area), chạy ra đó vẫn bị ướt (get wet). Dùng sai."
+              "explanation": "\"courtyard\" (sân trong) là khu vực ngoài trời (outdoor area), chạy ra đó vẫn bị ướt (get wet). Dùng sai.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -385,127 +385,127 @@
           "id": "sec5",
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readA_1",
-              "content": "1. Archeological evidence shows there were prehistoric parachutes in China.",
+              "content": "Archeological evidence shows there were prehistoric parachutes in China.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Không có bằng chứng khảo cổ nào (archeological evidence) cho thấy người Trung Quốc thực sự làm ra dù."
+              "explanation": "Không có bằng chứng khảo cổ nào (archeological evidence) cho thấy người Trung Quốc thực sự làm ra dù.",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_2",
-              "content": "2. Archeology experts cite an old Chinese book that describes a parachute that corresponds with modern parachutes.",
+              "content": "Archeology experts cite an old Chinese book that describes a parachute that corresponds with modern parachutes.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bản vẽ của Leonardo Da Vinci (Leonardo Da Vinci's drawing) mới tương đồng (corresponds) với thiết kế dù hiện đại, không phải cuốn sách cũ của Trung Quốc."
+              "explanation": "Bản vẽ của Leonardo Da Vinci (Leonardo Da Vinci's drawing) mới tương đồng (corresponds) với thiết kế dù hiện đại, không phải cuốn sách cũ của Trung Quốc.",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_3",
-              "content": "3. Sebastian brainstormed with scientists to invent a device that would allow people to jump from buildings safely.",
+              "content": "Sebastian brainstormed with scientists to invent a device that would allow people to jump from buildings safely.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Sebastian đã cùng các nhà khoa học suy nghĩ (brainstormed) để tạo ra thiết bị giúp người nhảy khỏi tòa nhà đang cháy an toàn."
+              "explanation": "Sebastian đã cùng các nhà khoa học suy nghĩ (brainstormed) để tạo ra thiết bị giúp người nhảy khỏi tòa nhà đang cháy an toàn.",
+              "correctAnswer": "A"
             },
             {
               "id": "readA_4",
-              "content": "4. On Sebastian’s first jump, he used a large blanket to restrict his speed as he traveled to the ground.",
+              "content": "On Sebastian’s first jump, he used a large blanket to restrict his speed as he traveled to the ground.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Lần nhảy đầu tiên, ông dùng hai chiếc ô (two umbrellas) chứ không phải cái chăn lớn (blanket)."
+              "explanation": "Lần nhảy đầu tiên, ông dùng hai chiếc ô (two umbrellas) chứ không phải cái chăn lớn (blanket).",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_5",
-              "content": "5. Jean-Pierre was a hot air balloon addict.",
+              "content": "Jean-Pierre was a hot air balloon addict.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trong bài đọc có đề cập Jean-Pierre là một người nghiện khinh khí cầu (hot air balloon addict)."
+              "explanation": "Trong bài đọc có đề cập Jean-Pierre là một người nghiện khinh khí cầu (hot air balloon addict).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readB_1",
-              "content": "1. Why did Sebastian use umbrellas on his first jump?",
+              "content": "Why did Sebastian use umbrellas on his first jump?",
               "options": [
                 "Because he had a small budget",
                 "Because he had a lot of integrity",
                 "Because he was a proponent of them",
                 "Because it was chaotic"
               ],
-              "correctAnswer": "A",
-              "explanation": "Sebastian dùng ô vì ngân sách của ông hạn hẹp (budget was limited)."
+              "explanation": "Sebastian dùng ô vì ngân sách của ông hạn hẹp (budget was limited).",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_2",
-              "content": "2. What did Sebastian think that a parachute would do?",
+              "content": "What did Sebastian think that a parachute would do?",
               "options": [
                 "Help him fly",
                 "Restrict the jumper's speed as they fell",
                 "Give him hydrogen gas",
                 "Become a prehistoric device"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sebastian nghĩ rằng chiếc dù sẽ hạn chế tốc độ (restrict speed) của người nhảy khi họ rơi xuống."
+              "explanation": "Sebastian nghĩ rằng chiếc dù sẽ hạn chế tốc độ (restrict speed) của người nhảy khi họ rơi xuống.",
+              "correctAnswer": "B"
             },
             {
               "id": "readB_3",
-              "content": "3. Where did Sebastian jump with the parachute he refined and knitted?",
+              "content": "Where did Sebastian jump with the parachute he refined and knitted?",
               "options": [
                 "In a prehistoric courtyard",
                 "From a hot air balloon",
                 "Off a tall building on a French estate",
                 "Into the sea"
               ],
-              "correctAnswer": "C",
-              "explanation": "Sebastian nhảy từ một tòa nhà cao tầng trong một điền trang ở Pháp (tall building on a French estate)."
+              "explanation": "Sebastian nhảy từ một tòa nhà cao tầng trong một điền trang ở Pháp (tall building on a French estate).",
+              "correctAnswer": "C"
             },
             {
               "id": "readB_4",
-              "content": "4. How was Jean-Pierre’s outlook different from Sebastian?",
+              "content": "How was Jean-Pierre’s outlook different from Sebastian?",
               "options": [
                 "He wanted to use parachutes to jump out of hot air balloons",
                 "He wanted to jump out of burning buildings",
                 "He wanted to use umbrellas",
                 "He didn't like parachutes"
               ],
-              "correctAnswer": "A",
-              "explanation": "Jean-Pierre ủng hộ việc dùng dù để thoát khỏi khinh khí cầu (jump out of hot air balloons) thay vì nhảy khỏi tòa nhà đang cháy."
+              "explanation": "Jean-Pierre ủng hộ việc dùng dù để thoát khỏi khinh khí cầu (jump out of hot air balloons) thay vì nhảy khỏi tòa nhà đang cháy.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_5",
-              "content": "5. Why did Jean-Pierre first use the parachute?",
+              "content": "Why did Jean-Pierre first use the parachute?",
               "options": [
                 "He wanted to test it",
                 "His hot air balloon burst and started to fall",
                 "He was pushed",
                 "He saw a Da Vinci drawing"
               ],
-              "correctAnswer": "B",
-              "explanation": "Jean-Pierre buộc phải dùng dù vì khinh khí cầu của ông bị nổ và bắt đầu rơi (balloon burst and started to fall)."
+              "explanation": "Jean-Pierre buộc phải dùng dù vì khinh khí cầu của ông bị nổ và bắt đầu rơi (balloon burst and started to fall).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

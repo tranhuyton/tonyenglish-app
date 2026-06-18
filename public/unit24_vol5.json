@@ -15,519 +15,519 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. Which of the following means the closest to mend?",
+              "content": "Which of the following means the closest to mend?",
               "options": [
                 "Repair",
                 "Highlight",
                 "Exchange",
                 "Plant"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mend là sửa chữa. Đồng nghĩa với repair."
+              "explanation": "Mend là sửa chữa. Đồng nghĩa với repair.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
-              "content": "2. Which of following would NOT be considered part of an office’s personnel?",
+              "content": "Which of following would NOT be considered part of an office’s personnel?",
               "options": [
                 "Cleaning staff",
                 "Technicians",
                 "Executives",
                 "Referees"
               ],
-              "correctAnswer": "D",
-              "explanation": "Personnel là nhân viên trong tổ chức văn phòng. Trọng tài (Referees) không thuộc nhân sự văn phòng."
+              "explanation": "Personnel là nhân viên trong tổ chức văn phòng. Trọng tài (Referees) không thuộc nhân sự văn phòng.",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
-              "content": "3. Plumbing involves work on_______ in a house or building.",
+              "content": "Plumbing involves work on_______ in a house or building.",
               "options": [
                 "electrical wiring",
                 "plants and bushes",
                 "water pipes",
                 "interior design"
               ],
-              "correctAnswer": "C",
-              "explanation": "Plumbing là hệ thống cấp nước, liên quan đến các đường ống nước (water pipes)."
+              "explanation": "Plumbing là hệ thống cấp nước, liên quan đến các đường ống nước (water pipes).",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
-              "content": "4. If something is trendy, then it is______ .",
+              "content": "If something is trendy, then it is______ .",
               "options": [
                 "outdated",
                 "in style",
                 "almost empty",
                 "very cheap"
               ],
-              "correctAnswer": "B",
-              "explanation": "Trendy là hợp thời trang, phổ biến. Đồng nghĩa với in style (thịnh hành)."
+              "explanation": "Trendy là hợp thời trang, phổ biến. Đồng nghĩa với in style (thịnh hành).",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
-              "content": "5. Which is NOT considered a utility?",
+              "content": "Which is NOT considered a utility?",
               "options": [
                 "Room service",
                 "Electrical service",
                 "Water service",
                 "Gas service"
               ],
-              "correctAnswer": "A",
-              "explanation": "Utility là dịch vụ tiện ích như điện, nước, khí đốt. Dịch vụ phòng (Room service) không phải là tiện ích công cộng."
+              "explanation": "Utility là dịch vụ tiện ích như điện, nước, khí đốt. Dịch vụ phòng (Room service) không phải là tiện ích công cộng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Điền từ",
           "questions": [
             {
               "id": "6",
-              "content": "1. His company gives work to about 100 people in the community. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "employs"
                 }
-              ]
+              ],
+              "content": "His company gives work to about 100 people in the community. (app[1])"
             },
             {
               "id": "7",
-              "content": "2. Joan was forced to leave from the auditorium for her hostile comments. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "expelled"
                 }
-              ]
+              ],
+              "content": "Joan was forced to leave from the auditorium for her hostile comments. (app[1])"
             },
             {
               "id": "8",
-              "content": "3. My new apartment in the city was complete with bed, sofa, and TV. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "furnished"
                 }
-              ]
+              ],
+              "content": "My new apartment in the city was complete with bed, sofa, and TV. (app[1])"
             },
             {
               "id": "9",
-              "content": "4. The prisoner’s condition for health and cleanliness was absolutely terrible. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "hygiene"
                 }
-              ]
+              ],
+              "content": "The prisoner’s condition for health and cleanliness was absolutely terrible. (app[1])"
             },
             {
               "id": "10",
-              "content": "5. I’m going to rent the apartment for only six months. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "lease"
                 }
-              ]
+              ],
+              "content": "I’m going to rent the apartment for only six months. (app[1])"
             },
             {
               "id": "11",
-              "content": "6. I need to fix the hole in my pants. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "mend"
                 }
-              ]
+              ],
+              "content": "I need to fix the hole in my pants. (app[1])"
             },
             {
               "id": "12",
-              "content": "7. He was lucky to find employees who are honest and hardworking. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "personnel"
                 }
-              ]
+              ],
+              "content": "He was lucky to find employees who are honest and hardworking. (app[1])"
             },
             {
               "id": "13",
-              "content": "8. We need to have our system of pipes that brings water into our house checked. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "plumbing"
                 }
-              ]
+              ],
+              "content": "We need to have our system of pipes that brings water into our house checked. (app[1])"
             },
             {
               "id": "14",
-              "content": "9. The popular and new fashion these days for men is boots. (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "trendy"
                 }
-              ]
+              ],
+              "content": "The popular and new fashion these days for men is boots. (app[1])"
             },
             {
               "id": "15",
-              "content": "10. Did you remember to pay the company that provides our water? (app[1])",
               "blanks": [
                 {
                   "id": "1",
                   "answer": "utility"
                 }
-              ]
+              ],
+              "content": "Did you remember to pay the company that provides our water? (app[1])"
             }
-          ]
+          ],
+          "questionType": "Điền từ"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
-              "content": "1. The sharp rocks mended his jeans into pieces.",
+              "content": "The sharp rocks mended his jeans into pieces.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Mend là sửa chữa. Những hòn đá sắc nhọn không thể \"sửa chữa\" chiếc quần thành từng mảnh được. Sai (I)."
+              "explanation": "Mend là sửa chữa. Những hòn đá sắc nhọn không thể \"sửa chữa\" chiếc quần thành từng mảnh được. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
-              "content": "2. The school sent a second bus whereby the students could get to school.",
+              "content": "The school sent a second bus whereby the students could get to school.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Whereby nghĩa là nhờ đó, qua đó. Đúng (C)."
+              "explanation": "Whereby nghĩa là nhờ đó, qua đó. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
-              "content": "3. He had poor hygiene. He never washed his hands or brushed his teeth.",
+              "content": "He had poor hygiene. He never washed his hands or brushed his teeth.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Hygiene là vệ sinh cá nhân. Không rửa tay, không đánh răng là poor hygiene. Đúng (C)."
+              "explanation": "Hygiene là vệ sinh cá nhân. Không rửa tay, không đánh răng là poor hygiene. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
-              "content": "4. The dam on the lake became bankrupt, and soon water broke through the cracks.",
+              "content": "The dam on the lake became bankrupt, and soon water broke through the cracks.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bankrupt là phá sản (về mặt tài chính). Con đập không thể phá sản được. Sai (I)."
+              "explanation": "Bankrupt là phá sản (về mặt tài chính). Con đập không thể phá sản được. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
-              "content": "5. The restaurant was a trendy place where all the rich and famous people went.",
+              "content": "The restaurant was a trendy place where all the rich and famous people went.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trendy là hợp thời, nổi tiếng. Nhà hàng là một nơi thịnh hành thu hút người nổi tiếng. Đúng (C)."
+              "explanation": "Trendy là hợp thời, nổi tiếng. Nhà hàng là một nơi thịnh hành thu hút người nổi tiếng. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
-              "content": "6. The first three cars to finish were given an award, but the forthcoming car got nothing.",
+              "content": "The first three cars to finish were given an award, but the forthcoming car got nothing.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Forthcoming là sắp tới (tương lai). Không dùng cho chiếc xe xếp thứ 4 (fourth). Từ đồng âm bị nhầm lẫn. Sai (I)."
+              "explanation": "Forthcoming là sắp tới (tương lai). Không dùng cho chiếc xe xếp thứ 4 (fourth). Từ đồng âm bị nhầm lẫn. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
-              "content": "7. She made a mistake and accidentally walked into the mandatory bathroom.",
+              "content": "She made a mistake and accidentally walked into the mandatory bathroom.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Mandatory là bắt buộc theo luật. Phòng tắm không thể là phòng bắt buộc theo luật. Sai (I)."
+              "explanation": "Mandatory là bắt buộc theo luật. Phòng tắm không thể là phòng bắt buộc theo luật. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "23",
-              "content": "8. After he furnished dinner, the host gave him some dessert.",
+              "content": "After he furnished dinner, the host gave him some dessert.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Furnish là trang bị đồ đạc nội thất. Không thể nói là trang bị bữa tối. Phải dùng từ finish. Sai (I)."
+              "explanation": "Furnish là trang bị đồ đạc nội thất. Không thể nói là trang bị bữa tối. Phải dùng từ finish. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
-              "content": "9. Rather than conforming to one religion, Mary chose what she liked from all of them.",
+              "content": "Rather than conforming to one religion, Mary chose what she liked from all of them.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Conform là tuân theo. Mary không tuân theo một tôn giáo nào mà tự chọn những gì cô ấy thích. Đúng (C)."
+              "explanation": "Conform là tuân theo. Mary không tuân theo một tôn giáo nào mà tự chọn những gì cô ấy thích. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
-              "content": "10. I knew something was wrong with the plumbing once the hot water stopped working.",
+              "content": "I knew something was wrong with the plumbing once the hot water stopped working.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Plumbing là hệ thống ống nước. Nước nóng ngưng chảy báo hiệu hệ thống ống nước có vấn đề. Đúng (C)."
+              "explanation": "Plumbing là hệ thống ống nước. Nước nóng ngưng chảy báo hiệu hệ thống ống nước có vấn đề. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
-              "content": "11. She graduated from university where she studied utility.",
+              "content": "She graduated from university where she studied utility.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Utility là các tiện ích công cộng. Không phải là một chuyên ngành học chính ở đại học. Sai (I)."
+              "explanation": "Utility là các tiện ích công cộng. Không phải là một chuyên ngành học chính ở đại học. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "27",
-              "content": "12. Because of an error, the game was given an extension of five more minutes.",
+              "content": "Because of an error, the game was given an extension of five more minutes.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Extension là sự gia hạn. Trận đấu được gia hạn thêm 5 phút. Đúng (C)."
+              "explanation": "Extension là sự gia hạn. Trận đấu được gia hạn thêm 5 phút. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
-              "content": "13. He’s very hygienic because he bathes once a week and seldom changes his clothes.",
+              "content": "He’s very hygienic because he bathes once a week and seldom changes his clothes.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Hygienic là hợp vệ sinh, sạch sẽ. Tắm mỗi tuần một lần và hiếm khi thay đồ thì không thể gọi là hygienic. Sai (I)."
+              "explanation": "Hygienic là hợp vệ sinh, sạch sẽ. Tắm mỗi tuần một lần và hiếm khi thay đồ thì không thể gọi là hygienic. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "14. The landlord owned several buildings throughout the capital city.",
+              "content": "The landlord owned several buildings throughout the capital city.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Landlord là chủ đất/chủ nhà. Đúng (C)."
+              "explanation": "Landlord là chủ đất/chủ nhà. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
-              "content": "15. The factory needed more workers. It had to employ twenty more people.",
+              "content": "The factory needed more workers. It had to employ twenty more people.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Employ là thuê người làm. Đúng (C)."
+              "explanation": "Employ là thuê người làm. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "31",
-              "content": "16. Tom didn’t want to talk about his father’s new job. He thought it was too personnel.",
+              "content": "Tom didn’t want to talk about his father’s new job. He thought it was too personnel.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nên dùng personal (cá nhân), không phải personnel (nhân sự). Sai (I)."
+              "explanation": "Nên dùng personal (cá nhân), không phải personnel (nhân sự). Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "32",
-              "content": "17. There was too much sugar in the recipe, so she leased the amount with a spoon.",
+              "content": "There was too much sugar in the recipe, so she leased the amount with a spoon.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "Lease là cho thuê tài sản. Ở đây muốn nói đến từ lessened (giảm bớt), dùng từ lease là sai. Sai (I)."
+              "explanation": "Lease là cho thuê tài sản. Ở đây muốn nói đến từ lessened (giảm bớt), dùng từ lease là sai. Sai (I).",
+              "correctAnswer": "B"
             },
             {
               "id": "33",
-              "content": "18. Because the rent was so expensive, all of the tenants are probably wealthy people.",
+              "content": "Because the rent was so expensive, all of the tenants are probably wealthy people.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tenants là những người thuê nhà. Đúng (C)."
+              "explanation": "Tenants là những người thuê nhà. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
-              "content": "19. They were expelled from the restaurant because they couldn’t pay their bill.",
+              "content": "They were expelled from the restaurant because they couldn’t pay their bill.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Expel là bị đuổi ra. Họ bị đuổi khỏi nhà hàng vì không trả tiền. Đúng (C)."
+              "explanation": "Expel là bị đuổi ra. Họ bị đuổi khỏi nhà hàng vì không trả tiền. Đúng (C).",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
-              "content": "20. In order to buy a house, most people have to get a mortgage.",
+              "content": "In order to buy a house, most people have to get a mortgage.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mortgage là khoản vay thế chấp. Để mua nhà thì phải vay thế chấp là đúng. Đúng (C)."
+              "explanation": "Mortgage là khoản vay thế chấp. Để mua nhà thì phải vay thế chấp là đúng. Đúng (C).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Resourceful Landlord</h1><p style=\"margin-bottom: 1rem;\">A kind <b>landlord</b> was afraid that he would lose his apartment building. He needed to make some <b>mandatory</b> repairs to the old building, or his <b>tenants</b> would have to leave by the end of the month. Without tenants to <b>lease</b> the rooms, the landlord would be unable to pay his <b>mortgage</b>. He’d be <b>bankrupt</b>, and the bank would take his building.</p><p style=\"margin-bottom: 1rem;\">But he didn’t have the money <b>whereby</b> he could <b>employ</b> the <b>personnel</b> needed to make the repairs. It would seem like he did not want to <b>conform</b> to the city’s codes before the <b>forthcoming</b> inspection. He had requested an <b>extension</b>, but it was denied by the city.</p><p style=\"margin-bottom: 1rem;\">He held a meeting with his tenants and explained the unfortunate situation. “If the building does not meet the appropriate standards for safety and <b>hygiene</b>,” he said, “the city will <b>expel</b> everyone.”</p><p style=\"margin-bottom: 1rem;\">The tenants were all sad for the kind old man.</p><p style=\"margin-bottom: 1rem;\">“Maybe we can help,” the hairdresser who lived on the first floor stated. The other tenants agreed.</p><p style=\"margin-bottom: 1rem;\">One tenant had worked for the city’s <b>utilities</b>. He knew a lot about <b>plumbing</b>, so that’s how he helped. Another tenant was a carpenter; he <b>mended</b> the holes in the floor and walls. Others cleaned the building from top to bottom so that it was more <b>hygienic</b>. They even <b>furnished</b> some of the apartments with new beds, dressers, and chairs. When they were done, all of the people dispersed, and the landlord went home to rest.</p><p style=\"margin-bottom: 1rem;\">When the deadline of the inspection arrived, the apartment building was hygienic and safe. The landlord couldn’t believe it. His old building now looked like one of the <b>trendiest</b> buildings in town.</p><p style=\"margin-bottom: 1rem;\">The building passed its inspection, and the landlord and the tenants had a big party.</p><p style=\"margin-bottom: 1rem;\">“Thank you all so much,” the landlord said during the party. “I could never have done it by myself. But by working together, we now all have a beautiful place to live.”</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Resourceful Landlord</h1>        <p style=\"margin-bottom: 1rem;\">A kind <b>landlord</b> was afraid that he would lose his apartment building. He needed to make some <b>mandatory</b> repairs to the old building, or his <b>tenants</b> would have to leave by the end of the month. Without tenants to <b>lease</b> the rooms, the landlord would be unable to pay his <b>mortgage</b>. He’d be <b>bankrupt</b>, and the bank would take his building.</p>    <p style=\"margin-bottom: 1rem;\">But he didn’t have the money <b>whereby</b> he could <b>employ</b> the <b>personnel</b> needed to make the repairs. It would seem like he did not want to <b>conform</b> to the city’s codes before the <b>forthcoming</b> inspection. He had requested an <b>extension</b>, but it was denied by the city.</p>    <p style=\"margin-bottom: 1rem;\">He held a meeting with his tenants and explained the unfortunate situation. “If the building does not meet the appropriate standards for safety and <b>hygiene</b>,” he said, “the city will <b>expel</b> everyone.”</p>    <p style=\"margin-bottom: 1rem;\">The tenants were all sad for the kind old man.</p>    <p style=\"margin-bottom: 1rem;\">“Maybe we can help,” the hairdresser who lived on the first floor stated. The other tenants agreed.</p>    <p style=\"margin-bottom: 1rem;\">One tenant had worked for the city’s <b>utilities</b>. He knew a lot about <b>plumbing</b>, so that’s how he helped. Another tenant was a carpenter; he <b>mended</b> the holes in the floor and walls. Others cleaned the building from top to bottom so that it was more <b>hygienic</b>. They even <b>furnished</b> some of the apartments with new beds, dressers, and chairs. When they were done, all of the people dispersed, and the landlord went home to rest.</p>    <p style=\"margin-bottom: 1rem;\">When the deadline of the inspection arrived, the apartment building was hygienic and safe. The landlord couldn’t believe it. His old building now looked like one of the <b>trendiest</b> buildings in town.</p>    <p style=\"margin-bottom: 1rem;\">The building passed its inspection, and the landlord and the tenants had a big party.</p>    <p style=\"margin-bottom: 1rem;\">“Thank you all so much,” the landlord said during the party. “I could never have done it by myself. But by working together, we now all have a beautiful place to live.”</p></div>",
       "imageUrl": "/unit24_vol5_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
-              "content": "1. If the tenants didn’t pay the mortgage, the landlord could not pay his lease and would be bankrupt.",
+              "content": "If the tenants didn’t pay the mortgage, the landlord could not pay his lease and would be bankrupt.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Nếu những người thuê nhà không trả tiền thuê nhà (lease), chủ nhà sẽ không thể trả tiền vay mua nhà thế chấp (mortgage) và sẽ bị phá sản."
+              "explanation": "Trong đoạn 1, \"Without tenants to lease the rooms, the landlord would be unable to pay his mortgage. He'd be bankrupt\" (Nếu không có người thuê các căn phòng, chủ nhà sẽ không thể trả tiền thế chấp. Ông ấy sẽ bị phá sản). Sự thật là chủ nhà phải trả tiền thế chấp (mortgage), còn người thuê trả tiền thuê (lease). Câu này đổi ngược vị trí nên sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "37",
-              "content": "2. The landlord did not have money whereby he could employ personnel.",
+              "content": "The landlord did not have money whereby he could employ personnel.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Chủ nhà không có tiền để có thể thuê nhân công (nhân sự) tiến hành sửa chữa."
+              "explanation": "Ở đoạn 2, bài viết \"But he didn't have the money whereby he could employ the personnel needed to make the repairs.\" (Nhưng ông ấy không có tiền để thuê nhân sự cần thiết để thực hiện việc sửa chữa). Câu này chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "38",
-              "content": "3. The city would expel everyone if the building did not pass the inspection for safety and hygiene.",
+              "content": "The city would expel everyone if the building did not pass the inspection for safety and hygiene.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Thành phố sẽ trục xuất (đuổi) mọi người ra khỏi đó nếu tòa nhà không vượt qua buổi kiểm tra an toàn và vệ sinh."
+              "explanation": "Trong đoạn 3, chủ nhà giải thích \"If the building does not meet the appropriate standards for safety and hygiene, the city will expel everyone.\" (Nếu tòa nhà không đáp ứng được các tiêu chuẩn phù hợp về an toàn và vệ sinh, thành phố sẽ trục xuất mọi người). Câu này đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
-              "content": "4. The hairdresser mended the holes in the floors and walls.",
+              "content": "The hairdresser mended the holes in the floors and walls.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Người thợ mộc (carpenter) là người vá các lỗ trên sàn và tường chứ không phải thợ cắt tóc."
+              "explanation": "Đoạn 6 cho biết \"Another tenant was a carpenter; he mended the holes in the floor and walls.\" (Một người thuê khác là thợ mộc; anh ấy đã vá các lỗ thủng trên sàn và tường). Người sửa chữa là thợ mộc, không phải là thợ làm tóc (hairdresser).",
+              "correctAnswer": "B"
             },
             {
               "id": "40",
-              "content": "5. After everyone helped to fix it, the building looked like one of the trendiest buildings in town.",
+              "content": "After everyone helped to fix it, the building looked like one of the trendiest buildings in town.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Sau khi sửa xong, tòa nhà trông giống như một trong những nơi thời thượng (trendy) nhất thị trấn."
+              "explanation": "Ở đoạn 7 ghi \"His old building now looked like one of the trendiest buildings in town.\" (Tòa nhà cũ của ông ấy giờ đây trông giống như một trong những tòa nhà hợp thời trang nhất trong thị trấn).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
-              "content": "1. In addition to dressers, what did the tenants furnish some of the apartments with?",
+              "content": "In addition to dressers, what did the tenants furnish some of the apartments with?",
               "options": [
                 "New televisions and stereos.",
                 "New beds and chairs.",
                 "New carpets and curtains.",
                 "New paintings and lamps."
               ],
-              "correctAnswer": "B",
-              "explanation": "Dựa vào văn bản: \"They even furnished some of the apartments with new beds, dressers, and chairs.\""
+              "explanation": "Trong đoạn 6 có chi tiết \"They even furnished some of the apartments with new beds, dressers, and chairs.\" (Họ thậm chí còn trang bị cho một số căn hộ giường, tủ quần áo và ghế mới). Vậy ngoài tủ ra còn có giường và ghế.",
+              "correctAnswer": "B"
             },
             {
               "id": "42",
-              "content": "2. If the landlord did not conform to the city’s mandatory hygienic standards, what would happen to the tenants?",
+              "content": "If the landlord did not conform to the city’s mandatory hygienic standards, what would happen to the tenants?",
               "options": [
                 "His tenants would have to leave by the end of the month.",
                 "His tenants would have to pay a fine.",
                 "His tenants would go to jail.",
                 "His tenants would buy the building."
               ],
-              "correctAnswer": "A",
-              "explanation": "Nếu chủ nhà không tuân thủ quy định bắt buộc, người thuê sẽ phải rời đi vào cuối tháng (his tenants would have to leave by the end of the month)."
+              "explanation": "Đoạn 1 viết \"He needed to make some mandatory repairs to the old building, or his tenants would have to leave by the end of the month.\" (Ông ấy cần thực hiện một số sửa chữa bắt buộc đối với tòa nhà cũ, nếu không những người thuê của ông sẽ phải chuyển đi vào cuối tháng).",
+              "correctAnswer": "A"
             },
             {
               "id": "43",
-              "content": "3. What happened to the landlord’s request for an extension to the forthcoming deadline?",
+              "content": "What happened to the landlord’s request for an extension to the forthcoming deadline?",
               "options": [
                 "The city approved it immediately.",
                 "He got a two-week extension.",
                 "He had requested an extension, but the city denied it.",
                 "He forgot to submit the request."
               ],
-              "correctAnswer": "C",
-              "explanation": "Dựa vào văn bản: \"He had requested an extension, but it was denied by the city.\""
+              "explanation": "Ở đoạn 2, bài đọc nói rõ \"He had requested an extension, but it was denied by the city.\" (Ông ấy đã yêu cầu gia hạn, nhưng nó đã bị thành phố từ chối).",
+              "correctAnswer": "C"
             },
             {
               "id": "44",
-              "content": "4. What did the tenant who had worked for the city’s utilities do to the building’s plumbing?",
+              "content": "What did the tenant who had worked for the city’s utilities do to the building’s plumbing?",
               "options": [
                 "He completely replaced the plumbing.",
                 "He charged the landlord for the plumbing repairs.",
                 "He repaired the building’s plumbing.",
                 "He broke the plumbing."
               ],
-              "correctAnswer": "C",
-              "explanation": "Người đã từng làm việc ở công ty tiện ích thành phố biết nhiều về hệ thống ống nước và đã sửa ống nước."
+              "explanation": "Trong đoạn 6 ghi \"One tenant had worked for the city's utilities. He knew a lot about plumbing, so that's how he helped.\" (Một người thuê nhà đã làm việc cho các tiện ích của thành phố. Anh ấy biết rất nhiều về hệ thống ống nước, vì vậy đó là cách anh ấy giúp đỡ).",
+              "correctAnswer": "C"
             },
             {
               "id": "45",
-              "content": "5. What did the landlord do after all of the people dispersed?",
+              "content": "What did the landlord do after all of the people dispersed?",
               "options": [
                 "He went to the city office to complain.",
                 "He went home to rest.",
                 "He threw a party right away.",
                 "He went to sleep in the lobby."
               ],
-              "correctAnswer": "B",
-              "explanation": "Dựa vào văn bản: \"When they were done, all of the people dispersed, and the landlord went home to rest.\""
+              "explanation": "Cuối đoạn 6 có viết \"When they were done, all of the people dispersed, and the landlord went home to rest.\" (Khi họ làm xong, tất cả mọi người giải tán và chủ nhà về nhà nghỉ ngơi).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

@@ -15,7 +15,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q1",
@@ -26,8 +25,8 @@
                 "They could feel happy.",
                 "They could feel peace."
               ],
-              "correctAnswer": "A",
-              "explanation": "deprive là tước đoạt. Tước đoạt thức ăn có thể dẫn đến cái chết."
+              "explanation": "deprive là tước đoạt. Tước đoạt thức ăn có thể dẫn đến cái chết.",
+              "correctAnswer": "A"
             },
             {
               "id": "q2",
@@ -38,8 +37,8 @@
                 "cool and slippery",
                 "warm and hard"
               ],
-              "correctAnswer": "A",
-              "explanation": "rugged là gồ ghề. Bề mặt gồ ghề sẽ có cảm giác rất thô ráp (very rough)."
+              "explanation": "rugged là gồ ghề. Bề mặt gồ ghề sẽ có cảm giác rất thô ráp (very rough).",
+              "correctAnswer": "A"
             },
             {
               "id": "q3",
@@ -50,8 +49,8 @@
                 "Making a speech",
                 "Making a guess"
               ],
-              "correctAnswer": "D",
-              "explanation": "speculate là suy đoán. Suy đoán tức là đưa ra phỏng đoán (Making a guess)."
+              "explanation": "speculate là suy đoán. Suy đoán tức là đưa ra phỏng đoán (Making a guess).",
+              "correctAnswer": "D"
             },
             {
               "id": "q4",
@@ -62,8 +61,8 @@
                 "On vacation",
                 "In their sleep"
               ],
-              "correctAnswer": "B",
-              "explanation": "oath là lời thề. Người ta thường lập lời thề trước tòa án (In court)."
+              "explanation": "oath là lời thề. Người ta thường lập lời thề trước tòa án (In court).",
+              "correctAnswer": "B"
             },
             {
               "id": "q5",
@@ -74,16 +73,16 @@
                 "soft",
                 "wet"
               ],
-              "correctAnswer": "D",
-              "explanation": "moisture là hơi ẩm. Bề mặt có hơi ẩm sẽ có cảm giác ướt (wet)."
+              "explanation": "moisture là hơi ẩm. Bề mặt có hơi ẩm sẽ có cảm giác ướt (wet).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q6",
@@ -94,8 +93,8 @@
                 "arid",
                 "moisture"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đi ngang qua thảo nguyên (prairie) khó khăn hơn so với vẻ bề ngoài."
+              "explanation": "Đi ngang qua thảo nguyên (prairie) khó khăn hơn so với vẻ bề ngoài.",
+              "correctAnswer": "A"
             },
             {
               "id": "q7",
@@ -106,8 +105,8 @@
                 "oath",
                 "eligible"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mặt đất rất gồ ghề (rugged)."
+              "explanation": "Mặt đất rất gồ ghề (rugged).",
+              "correctAnswer": "A"
             },
             {
               "id": "q8",
@@ -118,8 +117,8 @@
                 "arid",
                 "fast"
               ],
-              "correctAnswer": "C",
-              "explanation": "Nơi có khí hậu khô cằn (arid)."
+              "explanation": "Nơi có khí hậu khô cằn (arid).",
+              "correctAnswer": "C"
             },
             {
               "id": "q9",
@@ -130,8 +129,8 @@
                 "oath",
                 "prairie"
               ],
-              "correctAnswer": "A",
-              "explanation": "Nơi ẩm ướt mọi thứ được bao phủ bởi hơi ẩm (moisture)."
+              "explanation": "Nơi ẩm ướt mọi thứ được bao phủ bởi hơi ẩm (moisture).",
+              "correctAnswer": "A"
             },
             {
               "id": "q10",
@@ -142,8 +141,8 @@
                 "adjoin",
                 "speculate"
               ],
-              "correctAnswer": "A",
-              "explanation": "Người đến nhà thờ thường nhịn ăn (fast) trong hai tuần."
+              "explanation": "Người đến nhà thờ thường nhịn ăn (fast) trong hai tuần.",
+              "correctAnswer": "A"
             },
             {
               "id": "q11",
@@ -154,8 +153,8 @@
                 "prairie",
                 "inland"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đến nhà thờ lớn (cathedral) để cầu nguyện."
+              "explanation": "Đến nhà thờ lớn (cathedral) để cầu nguyện.",
+              "correctAnswer": "A"
             },
             {
               "id": "q12",
@@ -166,8 +165,8 @@
                 "abundant",
                 "ragged"
               ],
-              "correctAnswer": "C",
-              "explanation": "Nguồn cung cấp gỗ dồi dào (abundant)."
+              "explanation": "Nguồn cung cấp gỗ dồi dào (abundant).",
+              "correctAnswer": "C"
             },
             {
               "id": "q13",
@@ -178,8 +177,8 @@
                 "eligible",
                 "arid"
               ],
-              "correctAnswer": "A",
-              "explanation": "Quen với việc đốt lửa nhỏ khi gỗ khan hiếm (scarce)."
+              "explanation": "Quen với việc đốt lửa nhỏ khi gỗ khan hiếm (scarce).",
+              "correctAnswer": "A"
             },
             {
               "id": "q14",
@@ -190,8 +189,8 @@
                 "drought",
                 "moisture"
               ],
-              "correctAnswer": "A",
-              "explanation": "Phải tuyên thệ/thề (take an oath) để tham gia."
+              "explanation": "Phải tuyên thệ/thề (take an oath) để tham gia.",
+              "correctAnswer": "A"
             },
             {
               "id": "q15",
@@ -202,16 +201,16 @@
                 "rugged",
                 "arid"
               ],
-              "correctAnswer": "A",
-              "explanation": "Những người không hứa hẹn sẽ không đủ điều kiện (eligible)."
+              "explanation": "Những người không hứa hẹn sẽ không đủ điều kiện (eligible).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q16",
@@ -220,8 +219,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "prairie (thảo nguyên) là vùng đất bằng phẳng, không cần leo trèo bằng dây thừng."
+              "explanation": "prairie (thảo nguyên) là vùng đất bằng phẳng, không cần leo trèo bằng dây thừng.",
+              "correctAnswer": "B"
             },
             {
               "id": "q17",
@@ -230,8 +229,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "rugged dùng cho địa hình gồ ghề. Quần áo rách phải dùng ragged."
+              "explanation": "rugged dùng cho địa hình gồ ghề. Quần áo rách phải dùng ragged.",
+              "correctAnswer": "B"
             },
             {
               "id": "q18",
@@ -240,8 +239,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "eligible (đủ điều kiện). Đủ điều kiện để bỏ phiếu là cách dùng đúng."
+              "explanation": "eligible (đủ điều kiện). Đủ điều kiện để bỏ phiếu là cách dùng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q19",
@@ -250,8 +249,8 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "inland (vào sâu trong đất liền). Đi vào đất liền để đến thủ đô là hợp lý."
+              "explanation": "inland (vào sâu trong đất liền). Đi vào đất liền để đến thủ đô là hợp lý.",
+              "correctAnswer": "A"
             },
             {
               "id": "q20",
@@ -260,16 +259,16 @@
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "nonetheless (tuy nhiên, dù sao). Biết cô ấy không thích nhưng anh ta vẫn giúp là đúng."
+              "explanation": "nonetheless (tuy nhiên, dù sao). Biết cô ấy không thích nhưng anh ta vẫn giúp là đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q21",
@@ -280,8 +279,8 @@
                 "ample",
                 "inland"
               ],
-              "correctAnswer": "A",
-              "explanation": "hot and dry (nóng và khô) tương đương với arid (khô cằn)."
+              "explanation": "hot and dry (nóng và khô) tương đương với arid (khô cằn).",
+              "correctAnswer": "A"
             },
             {
               "id": "q22",
@@ -292,8 +291,8 @@
                 "oath",
                 "fast"
               ],
-              "correctAnswer": "A",
-              "explanation": "toward the center of the country (vào trung tâm đất nước) tương đương inland."
+              "explanation": "toward the center of the country (vào trung tâm đất nước) tương đương inland.",
+              "correctAnswer": "A"
             },
             {
               "id": "q23",
@@ -304,8 +303,8 @@
                 "cathedral",
                 "abbey"
               ],
-              "correctAnswer": "A",
-              "explanation": "time in which no rain fell (thời gian không có mưa) tương đương drought (hạn hán)."
+              "explanation": "time in which no rain fell (thời gian không có mưa) tương đương drought (hạn hán).",
+              "correctAnswer": "A"
             },
             {
               "id": "q24",
@@ -316,8 +315,8 @@
                 "oath",
                 "prairie"
               ],
-              "correctAnswer": "A",
-              "explanation": "house for the monks (nhà cho các nhà sư) tương đương abbey (tu viện)."
+              "explanation": "house for the monks (nhà cho các nhà sư) tương đương abbey (tu viện).",
+              "correctAnswer": "A"
             },
             {
               "id": "q25",
@@ -328,8 +327,8 @@
                 "speculate",
                 "deprive"
               ],
-              "correctAnswer": "A",
-              "explanation": "despite the punishment (bất chấp hình phạt) mang nghĩa mặc dù vậy, tương đương nonetheless."
+              "explanation": "despite the punishment (bất chấp hình phạt) mang nghĩa mặc dù vậy, tương đương nonetheless.",
+              "correctAnswer": "A"
             },
             {
               "id": "q26",
@@ -340,8 +339,8 @@
                 "adjoined",
                 "deprived"
               ],
-              "correctAnswer": "A",
-              "explanation": "guessed (đoán) tương đương speculated (suy đoán)."
+              "explanation": "guessed (đoán) tương đương speculated (suy đoán).",
+              "correctAnswer": "A"
             },
             {
               "id": "q27",
@@ -352,8 +351,8 @@
                 "arid",
                 "rugged"
               ],
-              "correctAnswer": "A",
-              "explanation": "more than enough (nhiều hơn đủ) tương đương ample (dư dả)."
+              "explanation": "more than enough (nhiều hơn đủ) tương đương ample (dư dả).",
+              "correctAnswer": "A"
             },
             {
               "id": "q28",
@@ -364,8 +363,8 @@
                 "speculate",
                 "deprive"
               ],
-              "correctAnswer": "A",
-              "explanation": "next to (kế bên) tương đương adjoined (giáp ranh)."
+              "explanation": "next to (kế bên) tương đương adjoined (giáp ranh).",
+              "correctAnswer": "A"
             },
             {
               "id": "q29",
@@ -376,8 +375,8 @@
                 "ample",
                 "eligible"
               ],
-              "correctAnswer": "A",
-              "explanation": "old and torn (cũ và rách) tương đương ragged."
+              "explanation": "old and torn (cũ và rách) tương đương ragged.",
+              "correctAnswer": "A"
             },
             {
               "id": "q30",
@@ -388,24 +387,24 @@
                 "grumbled",
                 "adjoined"
               ],
-              "correctAnswer": "A",
-              "explanation": "did not allow (không cho phép/tước đi) tương đương deprived."
+              "explanation": "did not allow (không cho phép/tước đi) tương đương deprived.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Helpful Abbey</h1><p style=\"margin-bottom: 1rem;\">It had not rained on the <b>prairie</b> for several months. Because of the <b>drought</b>, the climate had become very <b>arid</b>. There was no <b>moisture</b> left in the soil. No crops could grow in the dry ground. By wintertime, the people had nothing to eat.</p><p style=\"margin-bottom: 1rem;\">The hungry families heard about an <b>abbey</b> near the mountains where food and water was still <b>abundant</b>. So they traveled <b>inland</b>, across the prairie, to the abbey.</p><p style=\"margin-bottom: 1rem;\">At first only a few families arrived, seeking food and shelter. Then there was <b>ample</b> food. The monks fed them and let them sleep in the small <b>cathedral</b>.</p><p style=\"margin-bottom: 1rem;\">Soon, however, more families were arriving every day. These people had to travel farther, so they were in worse condition. The <b>rugged</b> journey had made their clothes <b>ragged</b>. They were cold and tired. The tiny cathedral was soon full.</p><p style=\"margin-bottom: 1rem;\">Food became <b>scarce</b>. The monks began to <b>grumble</b>. They began to <b>speculate</b> that there would be no food. “If more families come, we won’t make it through the winter,” said a young monk. “We must ask some of them to leave.”</p><p style=\"margin-bottom: 1rem;\">The abbot heard this. “We cannot do that,” he said. “It would be wrong to <b>deprive</b> them of food and shelter. We took an <b>oath</b> to help those that need help. All here are in need, so all are <b>eligible</b> to receive our food and shelter.”</p><p style=\"margin-bottom: 1rem;\">“But we won’t have enough,” the monk said.</p><p style=\"margin-bottom: 1rem;\">“That might be true, but we must help them <b>nonetheless</b>. We will <b>fast</b>,” the abbot replied. “Also, we will give our rooms in the abbey to those sleeping outside, and we will sleep in the churchyard that <b>adjoins</b> the cathedral.”</p><p style=\"margin-bottom: 1rem;\">The monks were reluctant at first, but they did what the oldest monk said. By the end of winter, there was still enough food and shelter for everyone. They learned that sometimes helping others means you must give more help than you first expected.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Helpful Abbey</h1>        <p style=\"margin-bottom: 1rem;\">It had not rained on the <b>prairie</b> for several months. Because of the <b>drought</b>, the climate had become very <b>arid</b>. There was no <b>moisture</b> left in the soil. No crops could grow in the dry ground. By wintertime, the people had nothing to eat.</p>    <p style=\"margin-bottom: 1rem;\">The hungry families heard about an <b>abbey</b> near the mountains where food and water was still <b>abundant</b>. So they traveled <b>inland</b>, across the prairie, to the abbey.</p>    <p style=\"margin-bottom: 1rem;\">At first only a few families arrived, seeking food and shelter. Then there was <b>ample</b> food. The monks fed them and let them sleep in the small <b>cathedral</b>.</p>    <p style=\"margin-bottom: 1rem;\">Soon, however, more families were arriving every day. These people had to travel farther, so they were in worse condition. The <b>rugged</b> journey had made their clothes <b>ragged</b>. They were cold and tired. The tiny cathedral was soon full.</p>    <p style=\"margin-bottom: 1rem;\">Food became <b>scarce</b>. The monks began to <b>grumble</b>. They began to <b>speculate</b> that there would be no food. “If more families come, we won’t make it through the winter,” said a young monk. “We must ask some of them to leave.”</p>    <p style=\"margin-bottom: 1rem;\">The abbot heard this. “We cannot do that,” he said. “It would be wrong to <b>deprive</b> them of food and shelter. We took an <b>oath</b> to help those that need help. All here are in need, so all are <b>eligible</b> to receive our food and shelter.”</p>    <p style=\"margin-bottom: 1rem;\">“But we won’t have enough,” the monk said.</p>    <p style=\"margin-bottom: 1rem;\">“That might be true, but we must help them <b>nonetheless</b>. We will <b>fast</b>,” the abbot replied. “Also, we will give our rooms in the abbey to those sleeping outside, and we will sleep in the churchyard that <b>adjoins</b> the cathedral.”</p>    <p style=\"margin-bottom: 1rem;\">The monks were reluctant at first, but they did what the oldest monk said. By the end of winter, there was still enough food and shelter for everyone. They learned that sometimes helping others means you must give more help than you first expected.</p></div>",
       "imageUrl": "/unit2_vol5_story.png",
       "sections": [
         {
           "id": "sec5_reading_A",
           "title": "Part A: Mark each statement True (T) or False (F).",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q31",
@@ -414,8 +413,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng với câu chuyện: 'Because of the drought, the climate had become very arid. There was no moisture left in the soil.'"
+              "explanation": "Câu này đúng. Theo đoạn 1, \"Because of the drought, the climate had become very arid. There was no moisture left in the soil.\" (Vì hạn hán, khí hậu trở nên rất khô cằn. Không còn hơi ẩm trong đất).",
+              "correctAnswer": "A"
             },
             {
               "id": "q32",
@@ -424,8 +423,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng với câu chuyện: 'traveled inland, across the prairie, to the abbey' nơi thức ăn vẫn abundant."
+              "explanation": "Câu này đúng. Theo đoạn 2, \"The hungry families heard about an abbey near the mountains where food and water was still abundant. So they traveled inland...\" (Các gia đình đang đói nghe nói về một tu viện... nơi thức ăn và nước uống vẫn còn dồi dào. Vì vậy họ đi sâu vào đất liền...).",
+              "correctAnswer": "A"
             },
             {
               "id": "q33",
@@ -434,8 +433,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Các nhà sư không tước đoạt (deprive) mà vẫn tiếp tục giúp đỡ họ (help the families nonetheless)."
+              "explanation": "Câu này sai. Theo đoạn 6 và 8, vị trụ trì nói \"It would be wrong to deprive them of food and shelter... we must help them nonetheless.\" (Thật sai trái nếu tước đoạt thức ăn và nơi ở của họ... dù sao đi nữa chúng ta vẫn phải giúp họ).",
+              "correctAnswer": "B"
             },
             {
               "id": "q34",
@@ -444,8 +443,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng với câu chuyện: 'At first... there was ample food. The monks fed them and let them sleep in the small cathedral.'"
+              "explanation": "Câu này đúng. Theo đoạn 3, \"At first only a few families arrived... Then there was ample food. The monks fed them and let them sleep in the small cathedral.\" (Lúc đầu chỉ có một vài gia đình đến... Lúc đó có dư dả thức ăn. Các nhà sư cho họ ăn và ngủ trong nhà thờ nhỏ).",
+              "correctAnswer": "A"
             },
             {
               "id": "q35",
@@ -454,16 +453,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng với câu chuyện: 'The rugged journey had made their clothes ragged.'"
+              "explanation": "Câu này đúng. Theo đoạn 4, \"The rugged journey had made their clothes ragged.\" (Hành trình gồ ghề đã làm cho quần áo của họ trở nên rách rưới).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_B",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q36",
@@ -474,8 +473,8 @@
                 "Only the rich",
                 "Only the healthy"
               ],
-              "correctAnswer": "A",
-              "explanation": "The abbot said, 'All were eligible.'"
+              "explanation": "Trong đoạn 6, vị trụ trì khẳng định: \"All here are in need, so all are eligible to receive our food and shelter.\" (Tất cả mọi người ở đây đều đang cần giúp đỡ, vì vậy tất cả đều đủ điều kiện nhận thức ăn và nơi ở của chúng ta).",
+              "correctAnswer": "A"
             },
             {
               "id": "q37",
@@ -486,8 +485,8 @@
                 "They would build more houses",
                 "They would dance"
               ],
-              "correctAnswer": "A",
-              "explanation": "When the monks grumbled, the young monk speculated that if more families came, then they wouldn't make it through the winter."
+              "explanation": "Theo đoạn 5, vị sư trẻ suy đoán: \"If more families come, we won’t make it through the winter\" (Nếu có thêm nhiều gia đình đến, chúng ta sẽ không thể sống sót qua mùa đông).",
+              "correctAnswer": "A"
             },
             {
               "id": "q38",
@@ -498,8 +497,8 @@
                 "Because they were being punished",
                 "To plant more trees"
               ],
-              "correctAnswer": "A",
-              "explanation": "The monks fasted and slept in the churchyard that adjoined the cathedral so that the families would have enough food and shelter."
+              "explanation": "Dựa vào đoạn 8, trụ trì quyết định \"We will fast... we will give our rooms in the abbey to those sleeping outside, and we will sleep in the churchyard that adjoins the cathedral\" để các gia đình có đủ thức ăn và chỗ ở.",
+              "correctAnswer": "A"
             },
             {
               "id": "q39",
@@ -510,8 +509,8 @@
                 "To travel inland",
                 "To ignore the poor"
               ],
-              "correctAnswer": "A",
-              "explanation": "The monks had taken an oath to help those that need help."
+              "explanation": "Trong đoạn 6, vị trụ trì nhắc lại lời thề: \"We took an oath to help those that need help.\" (Chúng ta đã lập lời thề sẽ giúp đỡ những người cần giúp đỡ).",
+              "correctAnswer": "A"
             },
             {
               "id": "q40",
@@ -522,10 +521,11 @@
                 "It is not worth it",
                 "They shouldn't help strangers"
               ],
-              "correctAnswer": "A",
-              "explanation": "They learned that sometimes helping others means you must give more help than you first expected."
+              "explanation": "Đoạn cuối của câu chuyện kết luận: \"They learned that sometimes helping others means you must give more help than you first expected.\" (Họ học được rằng đôi khi việc giúp đỡ người khác có nghĩa là bạn phải cho đi nhiều sự giúp đỡ hơn mức bạn mong đợi lúc đầu).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

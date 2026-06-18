@@ -15,507 +15,507 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q1",
-              "content": "1. You would have empathy if you______.",
+              "content": "You would have empathy if you______.",
               "options": [
                 "shared sad feelings",
                 "lost in a game",
                 "hurt your arm",
                 "ate a large meal"
               ],
-              "correctAnswer": "A",
-              "explanation": "empathy là sự thấu cảm, tương đương với chia sẻ cảm xúc buồn (shared sad feelings)."
+              "explanation": "empathy là sự thấu cảm, tương đương với chia sẻ cảm xúc buồn (shared sad feelings).",
+              "correctAnswer": "A"
             },
             {
               "id": "q2",
-              "content": "2. How would you feel if there was a dearth of food?",
+              "content": "How would you feel if there was a dearth of food?",
               "options": [
                 "Happy",
                 "Hungry",
                 "Full",
                 "Sleepy"
               ],
-              "correctAnswer": "B",
-              "explanation": "dearth là sự thiếu hụt. Thiếu hụt thức ăn sẽ cảm thấy đói (Hungry)."
+              "explanation": "dearth là sự thiếu hụt. Thiếu hụt thức ăn sẽ cảm thấy đói (Hungry).",
+              "correctAnswer": "B"
             },
             {
               "id": "q3",
-              "content": "3. If something is a convenience, then it makes______.",
+              "content": "If something is a convenience, then it makes______.",
               "options": [
                 "you very angry",
                 "you feel sick",
                 "a lot of money",
                 "a task easier"
               ],
-              "correctAnswer": "D",
-              "explanation": "convenience là sự thuận tiện. Sự thuận tiện làm cho công việc dễ dàng hơn (a task easier)."
+              "explanation": "convenience là sự thuận tiện. Sự thuận tiện làm cho công việc dễ dàng hơn (a task easier).",
+              "correctAnswer": "D"
             },
             {
               "id": "q4",
-              "content": "4. How would a resourceful person deal with a problem?",
+              "content": "How would a resourceful person deal with a problem?",
               "options": [
                 "Ignore it",
                 "Give up",
                 "Cry and ask for help",
                 "Find a solution"
               ],
-              "correctAnswer": "D",
-              "explanation": "resourceful là tháo vát. Người tháo vát sẽ tìm ra giải pháp (Find a solution)."
+              "explanation": "resourceful là tháo vát. Người tháo vát sẽ tìm ra giải pháp (Find a solution).",
+              "correctAnswer": "D"
             },
             {
               "id": "q5",
-              "content": "5. If something was deliberate, then it was______.",
+              "content": "If something was deliberate, then it was______.",
               "options": [
                 "done with pride",
                 "done easily",
                 "done on purpose",
                 "not done at all"
               ],
-              "correctAnswer": "C",
-              "explanation": "deliberate là cố ý, có chủ đích. Cố ý nghĩa là làm có chủ đích (done on purpose)."
+              "explanation": "deliberate là cố ý, có chủ đích. Cố ý nghĩa là làm có chủ đích (done on purpose).",
+              "correctAnswer": "C"
             },
             {
               "id": "q6",
-              "content": "6. How would you describe someone feeling a sense of outrage?",
+              "content": "How would you describe someone feeling a sense of outrage?",
               "options": [
                 "Peaceful",
                 "Upset",
                 "Tired",
                 "Arrogant"
               ],
-              "correctAnswer": "B",
-              "explanation": "outrage là phẫn nộ, tức giận. Cảm thấy phẫn nộ đồng nghĩa với việc bực tức (Upset)."
+              "explanation": "outrage là phẫn nộ, tức giận. Cảm thấy phẫn nộ đồng nghĩa với việc bực tức (Upset).",
+              "correctAnswer": "B"
             },
             {
               "id": "q7",
-              "content": "7. What fanciful idea might a doctor have?",
+              "content": "What fanciful idea might a doctor have?",
               "options": [
                 "Give a patient medicine",
                 "Be kind to them",
                 "Tell them to rest",
                 "Ask a fairy for advice"
               ],
-              "correctAnswer": "D",
-              "explanation": "fanciful là kỳ lạ, viển vông. Ý tưởng viển vông là hỏi xin lời khuyên từ tiên (Ask a fairy for advice)."
+              "explanation": "fanciful là kỳ lạ, viển vông. Ý tưởng viển vông là hỏi xin lời khuyên từ tiên (Ask a fairy for advice).",
+              "correctAnswer": "D"
             },
             {
               "id": "q8",
-              "content": "8. What would a tired person likely opt to do?",
+              "content": "What would a tired person likely opt to do?",
               "options": [
                 "Watch a movie",
                 "Exercise",
                 "Finish a book",
                 "Go to bed"
               ],
-              "correctAnswer": "D",
-              "explanation": "opt là chọn. Người mệt mỏi có thể sẽ chọn đi ngủ (Go to bed)."
+              "explanation": "opt là chọn. Người mệt mỏi có thể sẽ chọn đi ngủ (Go to bed).",
+              "correctAnswer": "D"
             },
             {
               "id": "q9",
-              "content": "9. To rectify hurting your friend, you would___",
+              "content": "To rectify hurting your friend, you would___",
               "options": [
                 "say sorry",
                 "laugh at him",
                 "hit him",
                 "ignore him"
               ],
-              "correctAnswer": "A",
-              "explanation": "rectify là sửa chữa, khắc phục. Khắc phục việc làm tổn thương bạn là nói xin lỗi (say sorry)."
+              "explanation": "rectify là sửa chữa, khắc phục. Khắc phục việc làm tổn thương bạn là nói xin lỗi (say sorry).",
+              "correctAnswer": "A"
             },
             {
               "id": "q10",
-              "content": "10. What might appall a teacher?",
+              "content": "What might appall a teacher?",
               "options": [
                 "Smart students",
                 "A happy student",
                 "A mean attitude",
                 "A long test"
               ],
-              "correctAnswer": "C",
-              "explanation": "appall là làm kinh hãi, phẫn nộ. Một giáo viên có thể bị phẫn nộ bởi thái độ thô lỗ (A mean attitude)."
+              "explanation": "appall là làm kinh hãi, phẫn nộ. Một giáo viên có thể bị phẫn nộ bởi thái độ thô lỗ (A mean attitude).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q11",
-              "content": "1. outrage",
+              "content": "outrage",
               "options": [
                 "idea",
                 "anger",
                 "beauty",
                 "personality"
               ],
-              "correctAnswer": "B",
-              "explanation": "outrage là sự phẫn nộ, tương đương với anger (sự tức giận)."
+              "explanation": "outrage là sự phẫn nộ, tương đương với anger (sự tức giận).",
+              "correctAnswer": "B"
             },
             {
               "id": "q12",
-              "content": "2. rectify",
+              "content": "rectify",
               "options": [
                 "to correct",
                 "to sadden",
                 "to bore",
                 "to be hard"
               ],
-              "correctAnswer": "A",
-              "explanation": "rectify là sửa chữa, tương đương với to correct."
+              "explanation": "rectify là sửa chữa, tương đương với to correct.",
+              "correctAnswer": "A"
             },
             {
               "id": "q13",
-              "content": "3. sustenance",
+              "content": "sustenance",
               "options": [
                 "belief",
                 "flowing",
                 "food and drink",
                 "torn"
               ],
-              "correctAnswer": "C",
-              "explanation": "sustenance là chất bổ dưỡng, thực phẩm, tương đương với food and drink."
+              "explanation": "sustenance là chất bổ dưỡng, thực phẩm, tương đương với food and drink.",
+              "correctAnswer": "C"
             },
             {
               "id": "q14",
-              "content": "4. dire",
+              "content": "dire",
               "options": [
                 "terrible",
                 "likely",
                 "large",
                 "small"
               ],
-              "correctAnswer": "A",
-              "explanation": "dire là thảm khốc, tồi tệ, tương đương với terrible."
+              "explanation": "dire là thảm khốc, tồi tệ, tương đương với terrible.",
+              "correctAnswer": "A"
             },
             {
               "id": "q15",
-              "content": "5. opt",
+              "content": "opt",
               "options": [
                 "to remove",
                 "to yell",
                 "to shout",
                 "to choose"
               ],
-              "correctAnswer": "D",
-              "explanation": "opt là lựa chọn, tương đương với to choose."
+              "explanation": "opt là lựa chọn, tương đương với to choose.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q16",
-              "content": "1. tedious",
+              "content": "tedious",
               "options": [
                 "fun",
                 "to read",
                 "to shrink",
                 "to love"
               ],
-              "correctAnswer": "A",
-              "explanation": "tedious là nhàm chán. Trái nghĩa là fun (vui vẻ)."
+              "explanation": "tedious là nhàm chán. Trái nghĩa là fun (vui vẻ).",
+              "correctAnswer": "A"
             },
             {
               "id": "q17",
-              "content": "2. appall",
+              "content": "appall",
               "options": [
                 "to greet",
                 "to lower",
                 "to please",
                 "to create"
               ],
-              "correctAnswer": "C",
-              "explanation": "appall là làm kinh hãi. Trái nghĩa là to please (làm hài lòng)."
+              "explanation": "appall là làm kinh hãi. Trái nghĩa là to please (làm hài lòng).",
+              "correctAnswer": "C"
             },
             {
               "id": "q18",
-              "content": "3. paltry",
+              "content": "paltry",
               "options": [
                 "worthless",
                 "large",
                 "ugly",
                 "absent"
               ],
-              "correctAnswer": "B",
-              "explanation": "paltry là ít ỏi, nhỏ nhặt. Trái nghĩa là large (lớn)."
+              "explanation": "paltry là ít ỏi, nhỏ nhặt. Trái nghĩa là large (lớn).",
+              "correctAnswer": "B"
             },
             {
               "id": "q19",
-              "content": "4. grueling",
+              "content": "grueling",
               "options": [
                 "rough",
                 "exact",
                 "easy",
                 "necessary"
               ],
-              "correctAnswer": "C",
-              "explanation": "grueling là cực nhọc. Trái nghĩa là easy (dễ dàng)."
+              "explanation": "grueling là cực nhọc. Trái nghĩa là easy (dễ dàng).",
+              "correctAnswer": "C"
             },
             {
               "id": "q20",
-              "content": "5. resourceful",
+              "content": "resourceful",
               "options": [
                 "foolish",
                 "realistic",
                 "impressive",
                 "surprising"
               ],
-              "correctAnswer": "A",
-              "explanation": "resourceful là tháo vát, khôn ngoan. Trái nghĩa là foolish (ngu ngốc)."
+              "explanation": "resourceful là tháo vát, khôn ngoan. Trái nghĩa là foolish (ngu ngốc).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q21",
-              "content": "1. I had a big breakfast. Many hours will elapse before I feel hungry again.",
+              "content": "I had a big breakfast. Many hours will elapse before I feel hungry again.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "elapse (trôi qua). Thời gian trôi qua trước khi đói lại. Sử dụng đúng."
+              "explanation": "elapse (trôi qua). Thời gian trôi qua trước khi đói lại. Sử dụng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q22",
-              "content": "2. Dan was a nice man, but no one would work for him because of his fanciful ideas.",
+              "content": "Dan was a nice man, but no one would work for him because of his fanciful ideas.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "fanciful (viển vông). Mọi người không làm việc cho anh ta vì ý tưởng viển vông. Sử dụng đúng."
+              "explanation": "fanciful (viển vông). Mọi người không làm việc cho anh ta vì ý tưởng viển vông. Sử dụng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q23",
-              "content": "3. I was very grateful for my birthday gifts. I griped about them to all of my friends.",
+              "content": "I was very grateful for my birthday gifts. I griped about them to all of my friends.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "gripe (phàn nàn). Biết ơn nhưng lại phàn nàn là mâu thuẫn. Sử dụng sai."
+              "explanation": "gripe (phàn nàn). Biết ơn nhưng lại phàn nàn là mâu thuẫn. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q24",
-              "content": "4. Because there was a dearth of food at home, the family went out to eat.",
+              "content": "Because there was a dearth of food at home, the family went out to eat.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "dearth (sự thiếu hụt). Vì thiếu thức ăn nên ra ngoài ăn. Sử dụng đúng."
+              "explanation": "dearth (sự thiếu hụt). Vì thiếu thức ăn nên ra ngoài ăn. Sử dụng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q25",
-              "content": "5. The puppy was happy to learn new tricks. Each one was very mundane for him.",
+              "content": "The puppy was happy to learn new tricks. Each one was very mundane for him.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "mundane (nhàm chán, bình thường). Cún con vui vẻ học thủ thuật mới nên không thể là nhàm chán. Sử dụng sai."
+              "explanation": "mundane (nhàm chán, bình thường). Cún con vui vẻ học thủ thuật mới nên không thể là nhàm chán. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q26",
-              "content": "6. Mother allotted me and my brother the money. Now she had all the money.",
+              "content": "Mother allotted me and my brother the money. Now she had all the money.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "allot (phân bổ). Mẹ đã phân bổ tiền cho tôi và em trai thì mẹ không thể còn tất cả tiền. Sử dụng sai."
+              "explanation": "allot (phân bổ). Mẹ đã phân bổ tiền cho tôi và em trai thì mẹ không thể còn tất cả tiền. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q27",
-              "content": "7. The boy was proud of his trophies. He displayed them in a cache for everyone to see.",
+              "content": "The boy was proud of his trophies. He displayed them in a cache for everyone to see.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "cache (nơi cất giấu). Trưng bày cúp cho mọi người xem ở nơi cất giấu bí mật là vô lý. Sử dụng sai."
+              "explanation": "cache (nơi cất giấu). Trưng bày cúp cho mọi người xem ở nơi cất giấu bí mật là vô lý. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q28",
-              "content": "8. Because he had planned for the trap to capture his victim, he was very deliberate.",
+              "content": "Because he had planned for the trap to capture his victim, he was very deliberate.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "deliberate (có chủ ý, tính toán). Lên kế hoạch bẫy là hành động có chủ ý. Sử dụng đúng."
+              "explanation": "deliberate (có chủ ý, tính toán). Lên kế hoạch bẫy là hành động có chủ ý. Sử dụng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q29",
-              "content": "9. The violent criminal was on the news this evening. His actions appalled most people.",
+              "content": "The violent criminal was on the news this evening. His actions appalled most people.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "appall (làm kinh hãi). Hành động của tên tội phạm bạo lực làm kinh hãi hầu hết mọi người. Sử dụng đúng."
+              "explanation": "appall (làm kinh hãi). Hành động của tên tội phạm bạo lực làm kinh hãi hầu hết mọi người. Sử dụng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q30",
-              "content": "10. That man is very selfish. He has empathy for every person he meets.",
+              "content": "That man is very selfish. He has empathy for every person he meets.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "empathy (sự đồng cảm). Người ích kỷ (selfish) thì không thể có sự đồng cảm với mọi người. Sử dụng sai."
+              "explanation": "empathy (sự đồng cảm). Người ích kỷ (selfish) thì không thể có sự đồng cảm với mọi người. Sử dụng sai.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Little Mice</h1><p style=\"margin-bottom: 1rem;\">Beth was a very <b>resourceful</b> and conservative mouse. She knew that winter was coming and that there would soon be a <b>dearth</b> of food. So she decided to make gathering food for winter her primary job. Gathering food was a <b>grueling</b> and <b>mundane</b> activity, but Beth made a <b>deliberate</b> effort because she knew that it was important. She <b>allotted</b> herself a few hours every day to collect beans. By winter, she had collected a massive pile and hid them in a <b>cache</b>.</p><p style=\"margin-bottom: 1rem;\">Beth had a sister named Mary. Mary lacked ambition. She had <b>fanciful</b> ideas about how she would survive winter. She thought that food would just come to her and that she could work at her own <b>convenience</b>. She <b>opted</b> to spend the days playing and dancing, instead of gathering beans. When the final hours of autumn <b>elapsed</b>, Mary had only a <b>paltry</b> amount of food stored away.</p><p style=\"margin-bottom: 1rem;\">Mary realized that her food supply was too small to last through winter. She visited her sister. Mary said, “Beth, I am in a <b>dire</b> situation. I didn’t gather enough food for winter. Will you let me share your beans? Please have some <b>empathy</b> for your sister!”</p><p style=\"margin-bottom: 1rem;\">Beth thought for a moment. Then she replied, “Mary, I am truly sorry for you. But I will not give you any of my beans. Instead, I will let you have my empty bag. You can still work hard and gather enough food for the winter. It will be <b>tedious</b>, but you will learn the value of hard work.”</p><p style=\"margin-bottom: 1rem;\">Beth’s words <b>appalled</b> Mary. Mary cried with <b>outrage</b>, “There is too much work! I won’t have any time to dance or play!”</p><p style=\"margin-bottom: 1rem;\">Beth said, “It is crucial that you gather enough food. You must have <b>sustenance</b> before you have fun. Go now, and <b>rectify</b> your situation.”</p><p style=\"margin-bottom: 1rem;\">Mary <b>griped</b> some more, but she knew that her sister was right. She took the bag and went to work gathering her own beans for the winter.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Little Mice</h1>        <p style=\"margin-bottom: 1rem;\">Beth was a very <b>resourceful</b> and conservative mouse. She knew that winter was coming and that there would soon be a <b>dearth</b> of food. So she decided to make gathering food for winter her primary job. Gathering food was a <b>grueling</b> and <b>mundane</b> activity, but Beth made a <b>deliberate</b> effort because she knew that it was important. She <b>allotted</b> herself a few hours every day to collect beans. By winter, she had collected a massive pile and hid them in a <b>cache</b>.</p>    <p style=\"margin-bottom: 1rem;\">Beth had a sister named Mary. Mary lacked ambition. She had <b>fanciful</b> ideas about how she would survive winter. She thought that food would just come to her and that she could work at her own <b>convenience</b>. She <b>opted</b> to spend the days playing and dancing, instead of gathering beans. When the final hours of autumn <b>elapsed</b>, Mary had only a <b>paltry</b> amount of food stored away.</p>    <p style=\"margin-bottom: 1rem;\">Mary realized that her food supply was too small to last through winter. She visited her sister. Mary said, “Beth, I am in a <b>dire</b> situation. I didn’t gather enough food for winter. Will you let me share your beans? Please have some <b>empathy</b> for your sister!”</p>    <p style=\"margin-bottom: 1rem;\">Beth thought for a moment. Then she replied, “Mary, I am truly sorry for you. But I will not give you any of my beans. Instead, I will let you have my empty bag. You can still work hard and gather enough food for the winter. It will be <b>tedious</b>, but you will learn the value of hard work.”</p>    <p style=\"margin-bottom: 1rem;\">Beth’s words <b>appalled</b> Mary. Mary cried with <b>outrage</b>, “There is too much work! I won’t have any time to dance or play!”</p>    <p style=\"margin-bottom: 1rem;\">Beth said, “It is crucial that you gather enough food. You must have <b>sustenance</b> before you have fun. Go now, and <b>rectify</b> your situation.”</p>    <p style=\"margin-bottom: 1rem;\">Mary <b>griped</b> some more, but she knew that her sister was right. She took the bag and went to work gathering her own beans for the winter.</p></div>",
       "imageUrl": "/unit1_vol5_story.png",
       "sections": [
         {
           "id": "sec5_reading_A",
           "title": "Part A: Mark each statement True (T) or False (F).",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q31",
-              "content": "1. Beth was resourceful and conservative, so she gathered a paltry pile of beans for her cache.",
+              "content": "Beth was resourceful and conservative, so she gathered a paltry pile of beans for her cache.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Câu chuyện nói Beth đã thu thập được một lượng lớn đậu (a massive pile)."
+              "explanation": "Câu này là sai. Dựa vào bài đọc ở đoạn 1 có viết \"By winter, she had collected a massive pile and hid them in a cache\". Beth đã thu thập được một đống thức ăn khổng lồ chứ không phải là một số lượng ít ỏi (paltry).",
+              "correctAnswer": "B"
             },
             {
               "id": "q32",
-              "content": "2. Because gathering food was tedious, Beth allotted a few hours of every day to do it.",
+              "content": "Because gathering food was tedious, Beth allotted a few hours of every day to do it.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng như câu chuyện: 'She allotted herself a few hours every day to collect beans.'"
+              "explanation": "Câu này đúng. Theo đoạn 1 của bài đọc, \"She allotted herself a few hours every day to collect beans\". Beth đã dành ra vài giờ mỗi ngày để thu thập đậu.",
+              "correctAnswer": "A"
             },
             {
               "id": "q33",
-              "content": "3. Beth did grueling and mundane work to overcome the dearth of food in the winter.",
+              "content": "Beth did grueling and mundane work to overcome the dearth of food in the winter.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng như câu chuyện, cô biết rằng mùa đông sẽ có sự thiếu hụt thức ăn (a dearth of food)."
+              "explanation": "Câu này đúng. Trong đoạn 1 có ghi \"Gathering food was a grueling and mundane activity... She knew that winter was coming and that there would soon be a dearth of food\". Cô ấy làm công việc vất vả và nhàm chán để vượt qua sự thiếu hụt thức ăn vào mùa đông.",
+              "correctAnswer": "A"
             },
             {
               "id": "q34",
-              "content": "4. Beth’s reply appalled Mary and made her reply in outrage.",
+              "content": "Beth’s reply appalled Mary and made her reply in outrage.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng như câu chuyện: 'Beth’s words appalled Mary. Mary cried with outrage'."
+              "explanation": "Câu này đúng. Ở đoạn 5 có câu \"Beth’s words appalled Mary. Mary cried with outrage\". Lời nói của Beth đã làm Mary sửng sốt và khiến cô ấy hét lên trong sự phẫn nộ.",
+              "correctAnswer": "A"
             },
             {
               "id": "q35",
-              "content": "5. When the hours of autumn elapsed, Mary had a massive amount of food.",
+              "content": "When the hours of autumn elapsed, Mary had a massive amount of food.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Theo câu chuyện, Mary chỉ có một lượng thức ăn ít ỏi (a paltry amount of food)."
+              "explanation": "Câu này là sai. Đoạn 2 ghi rõ \"When the final hours of autumn elapsed, Mary had only a paltry amount of food stored away\". Mary chỉ có một lượng nhỏ thức ăn chứ không phải một lượng lớn (massive).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_B",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q36",
-              "content": "1. What was Beth’s primary job?",
+              "content": "What was Beth’s primary job?",
               "options": [
                 "To play and dance",
                 "To gather food",
                 "To sleep all day",
                 "To complain to Mary"
               ],
-              "correctAnswer": "B",
-              "explanation": "Beth’s primary job was to gather food."
+              "explanation": "Trong đoạn 1 có câu \"So she decided to make gathering food for winter her primary job\". Vì vậy công việc chính của Beth là thu thập thức ăn. Đáp án là To gather food.",
+              "correctAnswer": "B"
             },
             {
               "id": "q37",
-              "content": "2. What fanciful idea did Mary opt to try?",
+              "content": "What fanciful idea did Mary opt to try?",
               "options": [
                 "She thought that food would just come to her, and she wouldn’t have to work.",
                 "She decided to plant a massive farm.",
                 "She opted to steal from her sister.",
                 "She chose to work twice as hard as Beth."
               ],
-              "correctAnswer": "A",
-              "explanation": "She thought that food would just come to her, and she wouldn’t have to work."
+              "explanation": "Ở đoạn 2, bài đọc chỉ ra rằng \"She had fanciful ideas about how she would survive winter. She thought that food would just come to her and that she could work at her own convenience\". Mary có suy nghĩ viển vông rằng thức ăn sẽ tự đến với mình.",
+              "correctAnswer": "A"
             },
             {
               "id": "q38",
-              "content": "3. What did Mary want her sister to have empathy about?",
+              "content": "What did Mary want her sister to have empathy about?",
               "options": [
                 "Her sore feet from dancing",
                 "Her lack of a warm house",
                 "Mary not having anything to eat",
                 "The boring work of gathering food"
               ],
-              "correctAnswer": "C",
-              "explanation": "Mary not having anything to eat."
+              "explanation": "Trong đoạn 3, Mary nói \"I didn’t gather enough food for winter. Will you let me share your beans? Please have some empathy for your sister!\". Mary muốn chị mình đồng cảm về việc mình không thu thập đủ thức ăn.",
+              "correctAnswer": "C"
             },
             {
               "id": "q39",
-              "content": "4. How did Mary rectify her dire situation and get sustenance?",
+              "content": "How did Mary rectify her dire situation and get sustenance?",
               "options": [
                 "She cried until Beth gave her the food.",
                 "Mary took the bag and went to work gathering beans.",
                 "She found another cache of food in the forest.",
                 "She continued to play and ignore the problem."
               ],
-              "correctAnswer": "B",
-              "explanation": "Mary took the bag and went to work gathering beans."
+              "explanation": "Ở đoạn cuối của câu chuyện, \"She took the bag and went to work gathering her own beans for the winter\". Mary đã cầm chiếc túi và tự đi thu thập đậu để khắc phục tình huống khó khăn của mình.",
+              "correctAnswer": "B"
             },
             {
               "id": "q40",
-              "content": "5. Even though she griped, what did Mary know at the end of the story?",
+              "content": "Even though she griped, what did Mary know at the end of the story?",
               "options": [
                 "She knew her sister was right.",
                 "She knew winter would be short.",
                 "She knew she could find a different friend.",
                 "She knew the beans were not tasty."
               ],
-              "correctAnswer": "A",
-              "explanation": "She knew her sister was right."
+              "explanation": "Trong đoạn cuối cùng, bài đọc ghi \"Mary griped some more, but she knew that her sister was right\". Mặc dù có phàn nàn thêm một chút, nhưng Mary biết rằng chị gái mình đã nói đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

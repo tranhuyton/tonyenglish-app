@@ -15,517 +15,517 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
-              "content": "1. Who would most likely serve in a corps?",
+              "content": "Who would most likely serve in a corps?",
               "options": [
                 "A teacher",
                 "A baby",
                 "A minister",
                 "A soldier"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"corps\" (quân đoàn) là một đơn vị quân đội, phù hợp với người lính (soldier)."
+              "explanation": "\"corps\" (quân đoàn) là một đơn vị quân đội, phù hợp với người lính (soldier).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex1_2",
-              "content": "2. What would you find near a compound?",
+              "content": "What would you find near a compound?",
               "options": [
                 "A fence",
                 "A napkin",
                 "A parade",
                 "A computer program"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"compound\" (khu vực có tường rào bao quanh) thường có hàng rào (fence) gần đó."
+              "explanation": "\"compound\" (khu vực có tường rào bao quanh) thường có hàng rào (fence) gần đó.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_3",
-              "content": "3. Which would you most likely see in an auditorium?",
+              "content": "Which would you most likely see in an auditorium?",
               "options": [
                 "A shark",
                 "A river",
                 "A crowd",
                 "A thumb"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"auditorium\" (khán phòng) là nơi diễn ra các sự kiện công cộng, nên sẽ thấy đám đông (crowd)."
+              "explanation": "\"auditorium\" (khán phòng) là nơi diễn ra các sự kiện công cộng, nên sẽ thấy đám đông (crowd).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_4",
-              "content": "4. Who would most likely be involved in combat?",
+              "content": "Who would most likely be involved in combat?",
               "options": [
                 "A warrior",
                 "A teacher",
                 "A swimmer",
                 "A highway"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"combat\" (chiến đấu) thường liên quan đến chiến binh (warrior)."
+              "explanation": "\"combat\" (chiến đấu) thường liên quan đến chiến binh (warrior).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_5",
-              "content": "5. Which of the following is a dumb thing to do?",
+              "content": "Which of the following is a dumb thing to do?",
               "options": [
                 "To go swimming",
                 "To chop wood",
                 "To play with matches",
                 "To trim your fingernails"
               ],
-              "correctAnswer": "C",
-              "explanation": "Nghịch diêm (play with matches) là một hành động nguy hiểm, ngu ngốc (dumb thing to do)."
+              "explanation": "Nghịch diêm (play with matches) là một hành động nguy hiểm, ngu ngốc (dumb thing to do).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_1",
-              "content": "1. foe",
+              "content": "foe",
               "options": [
                 "shovel",
                 "friend",
                 "room",
                 "thumb"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"foe\" (kẻ thù) trái nghĩa với friend (bạn bè)."
+              "explanation": "\"foe\" (kẻ thù) trái nghĩa với friend (bạn bè).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_2",
-              "content": "2. amnesty",
+              "content": "amnesty",
               "options": [
                 "education",
                 "prison",
                 "energy",
                 "highway"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"amnesty\" (sự ân xá) trái nghĩa với prison (bỏ tù)."
+              "explanation": "\"amnesty\" (sự ân xá) trái nghĩa với prison (bỏ tù).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_3",
-              "content": "3. combat",
+              "content": "combat",
               "options": [
                 "peace",
                 "brush",
                 "carpet",
                 "bird"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"combat\" (chiến đấu) trái nghĩa với peace (hòa bình)."
+              "explanation": "\"combat\" (chiến đấu) trái nghĩa với peace (hòa bình).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_4",
-              "content": "4. sacred",
+              "content": "sacred",
               "options": [
                 "brave",
                 "better",
                 "evil",
                 "warm"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"sacred\" (linh thiêng) trái nghĩa với evil (độc ác, tà ác)."
+              "explanation": "\"sacred\" (linh thiêng) trái nghĩa với evil (độc ác, tà ác).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_5",
-              "content": "5. distract",
+              "content": "distract",
               "options": [
                 "increase",
                 "pretend",
                 "return",
                 "focus"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"distract\" (làm sao nhãng) trái nghĩa với focus (tập trung)."
+              "explanation": "\"distract\" (làm sao nhãng) trái nghĩa với focus (tập trung).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex2_6",
-              "content": "6. dumb",
+              "content": "dumb",
               "options": [
                 "kind",
                 "wrong",
                 "loud",
                 "hurt"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"dumb\" (câm, không nói được) trái nghĩa với loud (ồn ào)."
+              "explanation": "\"dumb\" (câm, không nói được) trái nghĩa với loud (ồn ào).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_7",
-              "content": "7. commonplace",
+              "content": "commonplace",
               "options": [
                 "unusual",
                 "fresh",
                 "pleasant",
                 "actual"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"commonplace\" (bình thường, phổ biến) trái nghĩa với unusual (bất thường)."
+              "explanation": "\"commonplace\" (bình thường, phổ biến) trái nghĩa với unusual (bất thường).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_8",
-              "content": "8. hack",
+              "content": "hack",
               "options": [
                 "mend",
                 "sneeze",
                 "blame",
                 "dig"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"hack\" (chặt đứt, băm) trái nghĩa với mend (vá lại, sửa chữa)."
+              "explanation": "\"hack\" (chặt đứt, băm) trái nghĩa với mend (vá lại, sửa chữa).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_9",
-              "content": "9. aggressive",
+              "content": "aggressive",
               "options": [
                 "smart",
                 "tall",
                 "calm",
                 "young"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"aggressive\" (hung hăng) trái nghĩa với calm (bình tĩnh)."
+              "explanation": "\"aggressive\" (hung hăng) trái nghĩa với calm (bình tĩnh).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_10",
-              "content": "10. provoke",
+              "content": "provoke",
               "options": [
                 "mash",
                 "burn",
                 "tire",
                 "soothe"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"provoke\" (khiêu khích, chọc giận) trái nghĩa với soothe (làm dịu)."
+              "explanation": "\"provoke\" (khiêu khích, chọc giận) trái nghĩa với soothe (làm dịu).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex3_1",
-              "content": "1. realm",
+              "content": "realm",
               "options": [
                 "lunch",
                 "area",
                 "gown",
                 "idea"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"realm\" (lĩnh vực, vùng) đồng nghĩa với area."
+              "explanation": "\"realm\" (lĩnh vực, vùng) đồng nghĩa với area.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_2",
-              "content": "2. auditorium",
+              "content": "auditorium",
               "options": [
                 "market",
                 "assembly hall",
                 "music",
                 "present"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"auditorium\" (khán phòng) đồng nghĩa với assembly hall."
+              "explanation": "\"auditorium\" (khán phòng) đồng nghĩa với assembly hall.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_3",
-              "content": "3. rust",
+              "content": "rust",
               "options": [
                 "morning",
                 "speed",
                 "truth",
                 "decay"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"rust\" (rỉ sét) đồng nghĩa với decay (sự mục nát, phân rã)."
+              "explanation": "\"rust\" (rỉ sét) đồng nghĩa với decay (sự mục nát, phân rã).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3_4",
-              "content": "4. corps",
+              "content": "corps",
               "options": [
                 "basin",
                 "troop",
                 "pace",
                 "image"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"corps\" (quân đoàn) đồng nghĩa với troop."
+              "explanation": "\"corps\" (quân đoàn) đồng nghĩa với troop.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_5",
-              "content": "5. meditate",
+              "content": "meditate",
               "options": [
                 "think",
                 "bake",
                 "swim",
                 "sweep"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"meditate\" (ngồi thiền, suy ngẫm) đồng nghĩa với think."
+              "explanation": "\"meditate\" (ngồi thiền, suy ngẫm) đồng nghĩa với think.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_6",
-              "content": "6. compound",
+              "content": "compound",
               "options": [
                 "garbage",
                 "pasture",
                 "kilogram",
                 "camp"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"compound\" (khu vực có tường bao) đồng nghĩa với camp (doanh trại)."
+              "explanation": "\"compound\" (khu vực có tường bao) đồng nghĩa với camp (doanh trại).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3_7",
-              "content": "7. reign",
+              "content": "reign",
               "options": [
                 "bath",
                 "snow",
                 "rule",
                 "chalk"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"reign\" (triều đại, sự cai trị) đồng nghĩa với rule."
+              "explanation": "\"reign\" (triều đại, sự cai trị) đồng nghĩa với rule.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex3_8",
-              "content": "8. arena",
+              "content": "arena",
               "options": [
                 "stadium",
                 "boulder",
                 "camera",
                 "believable"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"arena\" (đấu trường) đồng nghĩa với stadium."
+              "explanation": "\"arena\" (đấu trường) đồng nghĩa với stadium.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_9",
-              "content": "9. nick",
+              "content": "nick",
               "options": [
                 "scratch",
                 "choice",
                 "grain",
                 "glove"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"nick\" (khía, vết xước) đồng nghĩa với scratch."
+              "explanation": "\"nick\" (khía, vết xước) đồng nghĩa với scratch.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_10",
-              "content": "10. captive",
+              "content": "captive",
               "options": [
                 "challenge",
                 "motor",
                 "prisoner",
                 "ticket"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"captive\" (tù nhân) đồng nghĩa với prisoner."
+              "explanation": "\"captive\" (tù nhân) đồng nghĩa với prisoner.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex4_1",
-              "content": "1. The arena was filled with adoring fans.",
+              "content": "The arena was filled with adoring fans.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"arena\" (đấu trường, sân vận động) dùng đúng khi nói về nơi chứa đầy người hâm mộ."
+              "explanation": "\"arena\" (đấu trường, sân vận động) dùng đúng khi nói về nơi chứa đầy người hâm mộ.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_2",
-              "content": "2. The wooden fence was covered in a thick layer of rust.",
+              "content": "The wooden fence was covered in a thick layer of rust.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"rust\" (rỉ sét) chỉ xảy ra với kim loại, không dùng cho hàng rào gỗ (wooden fence)."
+              "explanation": "\"rust\" (rỉ sét) chỉ xảy ra với kim loại, không dùng cho hàng rào gỗ (wooden fence).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_3",
-              "content": "3. His reign only lasted three years before he became sick and passed away.",
+              "content": "His reign only lasted three years before he became sick and passed away.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"reign\" (thời gian trị vì) dùng chính xác cho khoảng thời gian ông cai trị."
+              "explanation": "\"reign\" (thời gian trị vì) dùng chính xác cho khoảng thời gian ông cai trị.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_4",
-              "content": "4. You will like Jack. You both have so much commonplace together.",
+              "content": "You will like Jack. You both have so much commonplace together.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"commonplace\" (bình thường, tầm thường) bị dùng sai ngữ cảnh, lẽ ra nên dùng từ \"in common\" (điểm chung)."
+              "explanation": "\"commonplace\" (bình thường, tầm thường) bị dùng sai ngữ cảnh, lẽ ra nên dùng từ \"in common\" (điểm chung).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_5",
-              "content": "5. Her perfume was too strong. I was distracted by it during the meeting.",
+              "content": "Her perfume was too strong. I was distracted by it during the meeting.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"distracted\" (bị phân tâm) dùng chính xác khi mùi nước hoa làm mất tập trung."
+              "explanation": "\"distracted\" (bị phân tâm) dùng chính xác khi mùi nước hoa làm mất tập trung.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Soldier's Decision</h1><p style=\"margin-bottom: 1rem;\">A soldier was captured while fighting in an enemy king's land. It was well known that this king would make <b>captives</b> fight one another. This was <b>commonplace</b> during his <b>reign</b>. For these fights, the king had built several large <b>arenas</b>. He often awarded the winners by setting them free or even having them join his elite army <b>corps</b>.</p><p style=\"margin-bottom: 1rem;\">The soldier, however, decided he had seen too much violence. He now felt that all life was <b>sacred</b>. The night before his first match, he made a risky decision. He decided that he would not engage in <b>combat</b>. He knew he may never be set free, but it was a decision that he was willing to accept.</p><p style=\"margin-bottom: 1rem;\">In the morning, he was led from the prisoners' <b>compound</b> to one of the king's arenas. A gate coated in <b>rust</b> stood between him and the <b>auditorium</b>'s floor. He was worried, but he knew what he had to do.</p><p style=\"margin-bottom: 1rem;\">When the gate opened, he calmly walked to the center of the arena and sat. He started to <b>meditate</b>. His <b>foe</b> Darius, who was skilled in the <b>realm</b> of sword fighting and was typically not very <b>aggressive</b>, would not fight the quiet soldier until he attacked Darius first.</p><p style=\"margin-bottom: 1rem;\">Darius tried to <b>provoke</b> him by <b>hacking</b> at the air close to his head with his sword. But the soldier was not <b>distracted</b>. He sat quietly, as if he were <b>dumb</b>, and looked calmly up at the sky. Even when Darius <b>nicked</b> him on the cheek with the edge of his sword, the soldier did not move.</p><p style=\"margin-bottom: 1rem;\">At last he threw down his sword and shield and gave up.</p><p style=\"margin-bottom: 1rem;\">\"I can't fight someone who refuses to fight me!\" Darius shouted to the king.</p><p style=\"margin-bottom: 1rem;\">The king was very impressed with the soldier. Never in any battle had he seen someone so brave. As a result, he gave the peaceful soldier <b>amnesty</b>. The soldier's actions proved to the king and everyone in the arena that peace was more powerful than fighting.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Soldier's Decision</h1>        <p style=\"margin-bottom: 1rem;\">A soldier was captured while fighting in an enemy king's land. It was well known that this king would make <b>captives</b> fight one another. This was <b>commonplace</b> during his <b>reign</b>. For these fights, the king had built several large <b>arenas</b>. He often awarded the winners by setting them free or even having them join his elite army <b>corps</b>.</p>    <p style=\"margin-bottom: 1rem;\">The soldier, however, decided he had seen too much violence. He now felt that all life was <b>sacred</b>. The night before his first match, he made a risky decision. He decided that he would not engage in <b>combat</b>. He knew he may never be set free, but it was a decision that he was willing to accept.</p>    <p style=\"margin-bottom: 1rem;\">In the morning, he was led from the prisoners' <b>compound</b> to one of the king's arenas. A gate coated in <b>rust</b> stood between him and the <b>auditorium</b>'s floor. He was worried, but he knew what he had to do.</p>    <p style=\"margin-bottom: 1rem;\">When the gate opened, he calmly walked to the center of the arena and sat. He started to <b>meditate</b>. His <b>foe</b> Darius, who was skilled in the <b>realm</b> of sword fighting and was typically not very <b>aggressive</b>, would not fight the quiet soldier until he attacked Darius first.</p>    <p style=\"margin-bottom: 1rem;\">Darius tried to <b>provoke</b> him by <b>hacking</b> at the air close to his head with his sword. But the soldier was not <b>distracted</b>. He sat quietly, as if he were <b>dumb</b>, and looked calmly up at the sky. Even when Darius <b>nicked</b> him on the cheek with the edge of his sword, the soldier did not move.</p>    <p style=\"margin-bottom: 1rem;\">At last he threw down his sword and shield and gave up.</p>    <p style=\"margin-bottom: 1rem;\">\"I can't fight someone who refuses to fight me!\" Darius shouted to the king.</p>    <p style=\"margin-bottom: 1rem;\">The king was very impressed with the soldier. Never in any battle had he seen someone so brave. As a result, he gave the peaceful soldier <b>amnesty</b>. The soldier's actions proved to the king and everyone in the arena that peace was more powerful than fighting.</p></div>",
       "imageUrl": "/unit18_vol5_story.png",
       "sections": [
         {
           "id": "sec5",
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readA_1",
-              "content": "1. The gate between the soldier and the auditorium was coated with rust.",
+              "content": "The gate between the soldier and the auditorium was coated with rust.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Câu chuyện có chi tiết chiếc cổng sắt phủ rỉ sét (coated in rust)."
+              "explanation": "Câu chuyện có chi tiết chiếc cổng sắt phủ rỉ sét (coated in rust).",
+              "correctAnswer": "A"
             },
             {
               "id": "readA_2",
-              "content": "2. The prisoner was led from the arena to the compound.",
+              "content": "The prisoner was led from the arena to the compound.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Anh ta được dẫn từ khu trại giam (compound) tới đấu trường (arena), không phải ngược lại."
+              "explanation": "Anh ta được dẫn từ khu trại giam (compound) tới đấu trường (arena), không phải ngược lại.",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_3",
-              "content": "3. While he meditated, the soldier was distracted by his opponent.",
+              "content": "While he meditated, the soldier was distracted by his opponent.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Người lính không hề bị đối thủ làm xao nhãng (was not distracted)."
+              "explanation": "Người lính không hề bị đối thủ làm xao nhãng (was not distracted).",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_4",
-              "content": "4. The king gave the brave soldier amnesty and made him join his elite army corps.",
+              "content": "The king gave the brave soldier amnesty and made him join his elite army corps.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nhà vua chỉ ban lệnh ân xá (amnesty) cho anh, không bắt anh gia nhập đội quân tinh nhuệ."
+              "explanation": "Nhà vua chỉ ban lệnh ân xá (amnesty) cho anh, không bắt anh gia nhập đội quân tinh nhuệ.",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_5",
-              "content": "5. The quiet soldier felt that all life was sacred.",
+              "content": "The quiet soldier felt that all life was sacred.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Người lính cảm thấy mọi sự sống đều là thiêng liêng (sacred)."
+              "explanation": "Người lính cảm thấy mọi sự sống đều là thiêng liêng (sacred).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readB_1",
-              "content": "1. Why did the captive seem like he was dumb?",
+              "content": "Why did the captive seem like he was dumb?",
               "options": [
                 "He was quiet",
                 "He was aggressive",
                 "He didn't know how to fight",
                 "He didn't know the king"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tù binh có vẻ như bị câm (dumb) bởi vì anh ta rất im lặng (quiet)."
+              "explanation": "Tù binh có vẻ như bị câm (dumb) bởi vì anh ta rất im lặng (quiet).",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_2",
-              "content": "2. What was commonplace during the reign of the enemy king?",
+              "content": "What was commonplace during the reign of the enemy king?",
               "options": [
                 "Making captives fight one another",
                 "Giving amnesty",
                 "Meditating",
                 "Rust on gates"
               ],
-              "correctAnswer": "A",
-              "explanation": "Việc bắt các tù binh chiến đấu với nhau (making captives fight one another) là phổ biến (commonplace) dưới thời vị vua này."
+              "explanation": "Việc bắt các tù binh chiến đấu với nhau (making captives fight one another) là phổ biến (commonplace) dưới thời vị vua này.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_3",
-              "content": "3. In what realm did the soldier’s opponent Darius have skill?",
+              "content": "In what realm did the soldier’s opponent Darius have skill?",
               "options": [
                 "Sword fighting",
                 "Meditation",
                 "Magic",
                 "Archery"
               ],
-              "correctAnswer": "A",
-              "explanation": "Darius có kỹ năng trong lĩnh vực đấu kiếm (sword fighting)."
+              "explanation": "Darius có kỹ năng trong lĩnh vực đấu kiếm (sword fighting).",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_4",
-              "content": "4. Where did the soldier get nicked by his opponent?",
+              "content": "Where did the soldier get nicked by his opponent?",
               "options": [
                 "On his cheek",
                 "On his leg",
                 "On his arm",
                 "On his head"
               ],
-              "correctAnswer": "A",
-              "explanation": "Người lính bị đối thủ sượt nhẹ (nicked) vào má (on his cheek)."
+              "explanation": "Người lính bị đối thủ sượt nhẹ (nicked) vào má (on his cheek).",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_5",
-              "content": "5. What did the quiet soldier prove by refusing to engage his foe in combat?",
+              "content": "What did the quiet soldier prove by refusing to engage his foe in combat?",
               "options": [
                 "That peace can conquer violence",
                 "That he was a coward",
                 "That he was a traitor",
                 "That he wanted to join the army corps"
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh ta đã chứng minh rằng hòa bình có thể chiến thắng bạo lực (peace can conquer violence)."
+              "explanation": "Anh ta đã chứng minh rằng hòa bình có thể chiến thắng bạo lực (peace can conquer violence).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

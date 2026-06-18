@@ -15,433 +15,433 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q1",
-              "content": "1. What is geology the study of?",
+              "content": "What is geology the study of?",
               "options": [
                 "Earth’s life forms",
                 "Earth’s structures",
                 "Earth’s orbit",
                 "Earth’s atmosphere"
               ],
-              "correctAnswer": "B",
-              "explanation": "geology (địa chất học) nghiên cứu cấu trúc của Trái Đất."
+              "explanation": "geology (địa chất học) nghiên cứu cấu trúc của Trái Đất.",
+              "correctAnswer": "B"
             },
             {
               "id": "q2",
-              "content": "2. In physiology, you would probably study something like______ .",
+              "content": "In physiology, you would probably study something like______ .",
               "options": [
                 "the ocean’s waves",
                 "the soil",
                 "time and space",
                 "parts of living things"
               ],
-              "correctAnswer": "D",
-              "explanation": "physiology (sinh lý học) nghiên cứu về các bộ phận của sinh vật sống."
+              "explanation": "physiology (sinh lý học) nghiên cứu về các bộ phận của sinh vật sống.",
+              "correctAnswer": "D"
             },
             {
               "id": "q3",
-              "content": "3. Which of the following would NOT be considered celestial?",
+              "content": "Which of the following would NOT be considered celestial?",
               "options": [
                 "Stars",
                 "Comets",
                 "Navigation",
                 "Meteors"
               ],
-              "correctAnswer": "C",
-              "explanation": "celestial liên quan đến thiên thể, bầu trời. Điều hướng (Navigation) không phải là thiên thể."
+              "explanation": "celestial liên quan đến thiên thể, bầu trời. Điều hướng (Navigation) không phải là thiên thể.",
+              "correctAnswer": "C"
             },
             {
               "id": "q4",
-              "content": "4. What else does sociology deal with besides people and their culture?",
+              "content": "What else does sociology deal with besides people and their culture?",
               "options": [
                 "People’s problems",
                 "Plant reproduction",
                 "Alien life forms",
                 "Ocean currents"
               ],
-              "correctAnswer": "A",
-              "explanation": "sociology (xã hội học) nghiên cứu các vấn đề của con người."
+              "explanation": "sociology (xã hội học) nghiên cứu các vấn đề của con người.",
+              "correctAnswer": "A"
             },
             {
               "id": "q5",
-              "content": "5. If you excel at something, then that means you are______ .",
+              "content": "If you excel at something, then that means you are______ .",
               "options": [
                 "incompetent",
                 "brave",
                 "literate",
                 "good at something"
               ],
-              "correctAnswer": "D",
-              "explanation": "excel là xuất sắc. Xuất sắc nghĩa là giỏi về điều gì đó."
+              "explanation": "excel là xuất sắc. Xuất sắc nghĩa là giỏi về điều gì đó.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q6",
-              "content": "1. intellect",
+              "content": "intellect",
               "options": [
                 "name",
                 "ability",
                 "speed",
                 "growth"
               ],
-              "correctAnswer": "B",
-              "explanation": "intellect (trí tuệ) tương đương với ability (khả năng)."
+              "explanation": "intellect (trí tuệ) tương đương với ability (khả năng).",
+              "correctAnswer": "B"
             },
             {
               "id": "q7",
-              "content": "2. calculus",
+              "content": "calculus",
               "options": [
                 "content",
                 "religion",
                 "design",
                 "math"
               ],
-              "correctAnswer": "D",
-              "explanation": "calculus (giải tích) tương đương với math (toán học)."
+              "explanation": "calculus (giải tích) tương đương với math (toán học).",
+              "correctAnswer": "D"
             },
             {
               "id": "q8",
-              "content": "3. assert",
+              "content": "assert",
               "options": [
                 "state",
                 "explode",
                 "purchase",
                 "permit"
               ],
-              "correctAnswer": "A",
-              "explanation": "assert (khẳng định) tương đương với state (tuyên bố)."
+              "explanation": "assert (khẳng định) tương đương với state (tuyên bố).",
+              "correctAnswer": "A"
             },
             {
               "id": "q9",
-              "content": "4. cognitive",
+              "content": "cognitive",
               "options": [
                 "friendly",
                 "expensive",
                 "colorful",
                 "learning"
               ],
-              "correctAnswer": "D",
-              "explanation": "cognitive (nhận thức) tương quan với learning (học tập)."
+              "explanation": "cognitive (nhận thức) tương quan với learning (học tập).",
+              "correctAnswer": "D"
             },
             {
               "id": "q10",
-              "content": "5. diploma",
+              "content": "diploma",
               "options": [
                 "money",
                 "mammal",
                 "license",
                 "tower"
               ],
-              "correctAnswer": "C",
-              "explanation": "diploma (chứng chỉ) tương đương với license (giấy phép)."
+              "explanation": "diploma (chứng chỉ) tương đương với license (giấy phép).",
+              "correctAnswer": "C"
             },
             {
               "id": "q11",
-              "content": "6. mythology",
+              "content": "mythology",
               "options": [
                 "folklore",
                 "business",
                 "freedom",
                 "beauty"
               ],
-              "correctAnswer": "A",
-              "explanation": "mythology (thần thoại) tương đương với folklore (văn học dân gian)."
+              "explanation": "mythology (thần thoại) tương đương với folklore (văn học dân gian).",
+              "correctAnswer": "A"
             },
             {
               "id": "q12",
-              "content": "7. analytic",
+              "content": "analytic",
               "options": [
                 "official",
                 "ancient",
                 "logical",
                 "patient"
               ],
-              "correctAnswer": "C",
-              "explanation": "analytic (phân tích) tương đương với logical (hợp lý, logic)."
+              "explanation": "analytic (phân tích) tương đương với logical (hợp lý, logic).",
+              "correctAnswer": "C"
             },
             {
               "id": "q13",
-              "content": "8. harness",
+              "content": "harness",
               "options": [
                 "use",
                 "expand",
                 "discover",
                 "insist"
               ],
-              "correctAnswer": "A",
-              "explanation": "harness (khai thác) tương đương với use (sử dụng)."
+              "explanation": "harness (khai thác) tương đương với use (sử dụng).",
+              "correctAnswer": "A"
             },
             {
               "id": "q14",
-              "content": "9. competent",
+              "content": "competent",
               "options": [
                 "brave",
                 "capable",
                 "handsome",
                 "broken"
               ],
-              "correctAnswer": "B",
-              "explanation": "competent (có năng lực) tương đương với capable (có khả năng)."
+              "explanation": "competent (có năng lực) tương đương với capable (có khả năng).",
+              "correctAnswer": "B"
             },
             {
               "id": "q15",
-              "content": "10. collision",
+              "content": "collision",
               "options": [
                 "hammer",
                 "scar",
                 "school",
                 "crash"
               ],
-              "correctAnswer": "D",
-              "explanation": "collision (sự va chạm) tương đương với crash."
+              "explanation": "collision (sự va chạm) tương đương với crash.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q16",
-              "content": "1. In physiology, we studied various types of rock and the process that made them.",
+              "content": "In physiology, we studied various types of rock and the process that made them.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "physiology (sinh lý học) không nghiên cứu về các loại đá. Sử dụng sai."
+              "explanation": "physiology (sinh lý học) không nghiên cứu về các loại đá. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q17",
-              "content": "2. She feared that if no one married her, she’d be a bachelor her entire life.",
+              "content": "She feared that if no one married her, she’d be a bachelor her entire life.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "bachelor chỉ người đàn ông độc thân, không dùng cho phụ nữ. Sử dụng sai."
+              "explanation": "bachelor chỉ người đàn ông độc thân, không dùng cho phụ nữ. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q18",
-              "content": "3. Many old factories harnessed rivers and streams to power their equipment.",
+              "content": "Many old factories harnessed rivers and streams to power their equipment.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "harness (khai thác, sử dụng). Khai thác sông suối để làm năng lượng là đúng."
+              "explanation": "harness (khai thác, sử dụng). Khai thác sông suối để làm năng lượng là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q19",
-              "content": "4. Her knowledge of different societies came from her work in sociology.",
+              "content": "Her knowledge of different societies came from her work in sociology.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "sociology (xã hội học) nghiên cứu về các xã hội khác nhau là đúng."
+              "explanation": "sociology (xã hội học) nghiên cứu về các xã hội khác nhau là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q20",
-              "content": "5. If the two bikes hadn’t turned at the last moment, there would have been a collision.",
+              "content": "If the two bikes hadn’t turned at the last moment, there would have been a collision.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "collision (sự va chạm). Nếu không rẽ kịp sẽ có va chạm là đúng."
+              "explanation": "collision (sự va chạm). Nếu không rẽ kịp sẽ có va chạm là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q21",
-              "content": "6. In geology, we learned about the importance of our bones.",
+              "content": "In geology, we learned about the importance of our bones.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "geology (địa chất học) nghiên cứu về đá, không phải về xương. Sử dụng sai."
+              "explanation": "geology (địa chất học) nghiên cứu về đá, không phải về xương. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q22",
-              "content": "7. The only proof that the new rocket would work was theoretical.",
+              "content": "The only proof that the new rocket would work was theoretical.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "theoretical (trên lý thuyết). Bằng chứng duy nhất chỉ nằm trên lý thuyết là đúng."
+              "explanation": "theoretical (trên lý thuyết). Bằng chứng duy nhất chỉ nằm trên lý thuyết là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q23",
-              "content": "8. The car excelled every time he stepped on the gas pedal.",
+              "content": "The car excelled every time he stepped on the gas pedal.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "excel (xuất sắc) không dùng để miêu tả xe ô tô tăng tốc. Sử dụng sai."
+              "explanation": "excel (xuất sắc) không dùng để miêu tả xe ô tô tăng tốc. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q24",
-              "content": "9. Learning about calculus in my literature class was a really enjoyable time.",
+              "content": "Learning about calculus in my literature class was a really enjoyable time.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "calculus (giải tích) không thể được học trong lớp văn học (literature). Sử dụng sai."
+              "explanation": "calculus (giải tích) không thể được học trong lớp văn học (literature). Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q25",
-              "content": "10. The test proved that Mark was keener than his older brother Dave.",
+              "content": "The test proved that Mark was keener than his older brother Dave.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "keen (thông minh, sắc sảo). Bài kiểm tra chứng minh Mark thông minh hơn là đúng."
+              "explanation": "keen (thông minh, sắc sảo). Bài kiểm tra chứng minh Mark thông minh hơn là đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q26",
-              "content": "1. She really learned a lot from just one class of the beliefs and stories of different cultures.",
+              "content": "She really learned a lot from just one class of the beliefs and stories of different cultures.",
               "options": [
                 "mythology",
                 "geology",
                 "sociology",
                 "physiology"
               ],
-              "correctAnswer": "A",
-              "explanation": "beliefs and stories of different cultures tương đương với mythology."
+              "explanation": "beliefs and stories of different cultures tương đương với mythology.",
+              "correctAnswer": "A"
             },
             {
               "id": "q27",
-              "content": "2. When he states the fact with confidence that flowers can grow here, you believe him.",
+              "content": "When he states the fact with confidence that flowers can grow here, you believe him.",
               "options": [
                 "asserts",
                 "excels",
                 "harnesses",
                 "deprives"
               ],
-              "correctAnswer": "A",
-              "explanation": "states the fact with confidence tương đương với asserts."
+              "explanation": "states the fact with confidence tương đương với asserts.",
+              "correctAnswer": "A"
             },
             {
               "id": "q28",
-              "content": "3. The tests will prove whether or not his discovery is real and not just based on theory.",
+              "content": "The tests will prove whether or not his discovery is real and not just based on theory.",
               "options": [
                 "theoretical",
                 "analytic",
                 "cognitive",
                 "celestial"
               ],
-              "correctAnswer": "A",
-              "explanation": "based on theory tương đương với theoretical."
+              "explanation": "based on theory tương đương với theoretical.",
+              "correctAnswer": "A"
             },
             {
               "id": "q29",
-              "content": "4. The dangerous thing about nuclear power is the radiation waste it produces.",
+              "content": "The dangerous thing about nuclear power is the radiation waste it produces.",
               "options": [
                 "radioactive",
                 "competent",
                 "keen",
                 "celestial"
               ],
-              "correctAnswer": "A",
-              "explanation": "radiation tương đương với radioactive."
+              "explanation": "radiation tương đương với radioactive.",
+              "correctAnswer": "A"
             },
             {
               "id": "q30",
-              "content": "5. John has good learning skills that have helped him in his studies.",
+              "content": "John has good learning skills that have helped him in his studies.",
               "options": [
                 "cognitive",
                 "analytic",
                 "theoretical",
                 "radioactive"
               ],
-              "correctAnswer": "A",
-              "explanation": "learning skills tương quan với cognitive."
+              "explanation": "learning skills tương quan với cognitive.",
+              "correctAnswer": "A"
             },
             {
               "id": "q31",
-              "content": "6. The stars and moon in outer space objects lit the path so I could see where I was walking.",
+              "content": "The stars and moon in outer space objects lit the path so I could see where I was walking.",
               "options": [
                 "celestial",
                 "competent",
                 "analytic",
                 "theoretical"
               ],
-              "correctAnswer": "A",
-              "explanation": "outer space objects tương đương với celestial."
+              "explanation": "outer space objects tương đương với celestial.",
+              "correctAnswer": "A"
             },
             {
               "id": "q32",
-              "content": "7. Having a certificate of completed studies will give him more options for the future.",
+              "content": "Having a certificate of completed studies will give him more options for the future.",
               "options": [
                 "diploma",
                 "intellect",
                 "collision",
                 "mythology"
               ],
-              "correctAnswer": "A",
-              "explanation": "certificate of completed studies tương đương với diploma."
+              "explanation": "certificate of completed studies tương đương với diploma.",
+              "correctAnswer": "A"
             },
             {
               "id": "q33",
-              "content": "8. Albert Einstein’s ideas about time and space changed both science and the world.",
+              "content": "Albert Einstein’s ideas about time and space changed both science and the world.",
               "options": [
                 "relativity",
                 "calculus",
                 "geology",
                 "sociology"
               ],
-              "correctAnswer": "A",
-              "explanation": "ideas about time and space của Einstein gọi là relativity."
+              "explanation": "ideas about time and space của Einstein gọi là relativity.",
+              "correctAnswer": "A"
             },
             {
               "id": "q34",
-              "content": "9. You have to be very intelligent in order to solve this puzzle in a short amount of time.",
+              "content": "You have to be very intelligent in order to solve this puzzle in a short amount of time.",
               "options": [
                 "keen",
                 "competent",
                 "celestial",
                 "radioactive"
               ],
-              "correctAnswer": "A",
-              "explanation": "intelligent tương đương với keen."
+              "explanation": "intelligent tương đương với keen.",
+              "correctAnswer": "A"
             },
             {
               "id": "q35",
-              "content": "10. Every day the unmarried men came to her home to see which of them she might choose.",
+              "content": "Every day the unmarried men came to her home to see which of them she might choose.",
               "options": [
                 "bachelors",
                 "intellects",
                 "collisions",
                 "diplomas"
               ],
-              "correctAnswer": "A",
-              "explanation": "unmarried men tương đương với bachelors."
+              "explanation": "unmarried men tương đương với bachelors.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -455,127 +455,127 @@
           "id": "sec5_reading_A",
           "title": "Part A: Mark each statement True (T) or False (F).",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q36",
-              "content": "1. The bachelor excelled at calculus, physiology, and theoretical science, such as relativity.",
+              "content": "The bachelor excelled at calculus, physiology, and theoretical science, such as relativity.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng với câu chuyện: 'I excel at everything... I’ve mastered calculus and physiology. I even understand the great theoretical teachings... relativity.'"
+              "explanation": "Câu này đúng. Theo đoạn 2, \"I excel at everything... I’ve mastered calculus and physiology. I even understand the great theoretical teachings... relativity.\" (Tôi xuất sắc trong mọi thứ... Tôi đã thành thạo giải tích và sinh lý học. Tôi thậm chí còn hiểu các học thuyết khoa học vĩ đại... như thuyết tương đối).",
+              "correctAnswer": "A"
             },
             {
               "id": "q37",
-              "content": "2. He knew the movements of radioactive materials and how to harness the power of celestial objects.",
+              "content": "He knew the movements of radioactive materials and how to harness the power of celestial objects.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Anh ta biết về 'movements of celestial objects' và 'harness the power of radioactive substances', câu hỏi đã đổi ngược hai khái niệm này."
+              "explanation": "Câu này sai. Đoạn 2 ghi rõ: \"movements of celestial objects... harness the power of radioactive substances\" (sự chuyển động của các thiên thể... khai thác sức mạnh của các chất phóng xạ). Câu hỏi đã tráo đổi hai khái niệm này cho nhau.",
+              "correctAnswer": "B"
             },
             {
               "id": "q38",
-              "content": "3. The bachelor thought the drivers in the collision were not competent.",
+              "content": "The bachelor thought the drivers in the collision were not competent.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng với câu chuyện: 'They really must not be very competent.'"
+              "explanation": "Câu này đúng. Trong đoạn 5, anh ta nghĩ: \"Those idiots should have been more alert. They really must not be very competent.\" (Những tên ngốc đó đáng lẽ phải cảnh giác hơn. Bọn họ chắc hẳn không có chút năng lực nào).",
+              "correctAnswer": "A"
             },
             {
               "id": "q39",
-              "content": "4. Studying mythology, sociology, and geology gave the bachelor a wonderful feeling.",
+              "content": "Studying mythology, sociology, and geology gave the bachelor a wonderful feeling.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Việc giúp đỡ người khác mới mang lại cảm giác tuyệt vời, không phải việc học."
+              "explanation": "Câu này sai. Theo đoạn 8, \"Studying mythology, sociology, and geology didn’t give him this wonderful feeling. It was the act of helping others...\" (Việc nghiên cứu thần thoại, xã hội học và địa chất không mang lại cho anh cảm giác tuyệt vời này. Chính hành động giúp đỡ người khác...).",
+              "correctAnswer": "B"
             },
             {
               "id": "q40",
-              "content": "5. The bachelor’s intellect and not his cognitive talents had made him feel this great.",
+              "content": "The bachelor’s intellect and not his cognitive talents had made him feel this great.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Chính hành động giúp đỡ người khác (the act of helping others), chứ không phải tài năng nhận thức (cognitive talents), đã làm anh cảm thấy như vậy."
+              "explanation": "Câu này sai. Đoạn 8 giải thích rõ: \"It was the act of helping others, not his cognitive skills, that gave him this great feeling.\" (Chính hành động giúp đỡ người khác, chứ không phải kỹ năng nhận thức, đã mang lại cho anh cảm giác tuyệt vời này).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_B",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q41",
-              "content": "1. What did the keen bachelor assert after receiving his diploma?",
+              "content": "What did the keen bachelor assert after receiving his diploma?",
               "options": [
                 "He asserted to everyone he met that he was the smartest person in town.",
                 "He asserted he wanted to travel the world.",
                 "He asserted he would become a doctor.",
                 "He asserted he wanted to get married."
               ],
-              "correctAnswer": "A",
-              "explanation": "As soon as he had received his diploma, he asserted to everyone he met that he was the smartest person in town."
+              "explanation": "Theo đoạn 1, \"As soon as he had received his diploma, he asserted to everyone he met that he was the smartest person in town.\" (Ngay sau khi nhận được bằng tốt nghiệp, anh ta đã tuyên bố với tất cả những người mình gặp rằng anh ta là người thông minh nhất thị trấn).",
+              "correctAnswer": "A"
             },
             {
               "id": "q42",
-              "content": "2. What happened while the bachelor was strolling through town?",
+              "content": "What happened while the bachelor was strolling through town?",
               "options": [
                 "He witnessed a collision between two cars.",
                 "He met an old friend.",
                 "He found a lot of money.",
                 "He bought a new book."
               ],
-              "correctAnswer": "A",
-              "explanation": "One day while strolling through the town, the bachelor witnessed a collision between two cars."
+              "explanation": "Trong đoạn 4, \"One day while walking through town, the bachelor witnessed a collision between two cars.\" (Một ngày nọ khi đang đi dạo qua thị trấn, anh chàng độc thân đã chứng kiến một vụ va chạm giữa hai chiếc ô tô).",
+              "correctAnswer": "A"
             },
             {
               "id": "q43",
-              "content": "3. How did the bachelor feel after saving the drivers?",
+              "content": "How did the bachelor feel after saving the drivers?",
               "options": [
                 "He felt the best he had in his entire life.",
                 "He felt very tired and hungry.",
                 "He felt angry at them.",
                 "He felt like he wasted his time."
               ],
-              "correctAnswer": "A",
-              "explanation": "The bachelor felt the best he had in his entire life."
+              "explanation": "Dựa vào đoạn 8, \"The drivers were saved, and the bachelor felt the best he had in his entire life.\" (Các tài xế đã được cứu, và anh chàng độc thân cảm thấy tuyệt vời nhất trong cả cuộc đời mình).",
+              "correctAnswer": "A"
             },
             {
               "id": "q44",
-              "content": "4. Despite his analytic abilities, what did the bachelor fail to notice about his life?",
+              "content": "Despite his analytic abilities, what did the bachelor fail to notice about his life?",
               "options": [
                 "He failed to notice he was missing something very important in his life.",
                 "He failed to notice his clothes were dirty.",
                 "He failed to notice the beautiful weather.",
                 "He failed to notice his family."
               ],
-              "correctAnswer": "A",
-              "explanation": "Despite his analytic abilities, he failed to notice he was missing something very important in his life."
+              "explanation": "Theo đoạn 3, \"Though his analytic abilities were great, he failed to notice he was missing something very important in his life.\" (Mặc dù khả năng phân tích của anh rất tốt, anh lại không nhận ra mình đang thiếu một thứ rất quan trọng trong cuộc đời).",
+              "correctAnswer": "A"
             },
             {
               "id": "q45",
-              "content": "5. Besides a brain, what did the bachelor realize was important to have in life?",
+              "content": "Besides a brain, what did the bachelor realize was important to have in life?",
               "options": [
                 "He realized that you must also have a heart.",
                 "He realized he needed a lot of money.",
                 "He realized he needed to read more books.",
                 "He realized he must have a car."
               ],
-              "correctAnswer": "A",
-              "explanation": "Besides a brain, the bachelor realized that you must also have a heart."
+              "explanation": "Trong đoạn cuối cùng, anh ta suy nghĩ: \"Having only a brain is not enough... You must also have a heart.\" (Chỉ có bộ não thôi là chưa đủ... Bạn còn phải có một trái tim).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

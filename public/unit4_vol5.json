@@ -15,433 +15,433 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q1",
-              "content": "1. merchandise",
+              "content": "merchandise",
               "options": [
                 "stores",
                 "money",
                 "goods",
                 "fame"
               ],
-              "correctAnswer": "C",
-              "explanation": "merchandise (hàng hóa) tương đương với goods."
+              "explanation": "merchandise (hàng hóa) tương đương với goods.",
+              "correctAnswer": "C"
             },
             {
               "id": "q2",
-              "content": "2. corrupt",
+              "content": "corrupt",
               "options": [
                 "healthy",
                 "bad",
                 "angry",
                 "nice"
               ],
-              "correctAnswer": "B",
-              "explanation": "corrupt (tham nhũng, đồi bại) mang nghĩa xấu (bad)."
+              "explanation": "corrupt (tham nhũng, đồi bại) mang nghĩa xấu (bad).",
+              "correctAnswer": "B"
             },
             {
               "id": "q3",
-              "content": "3. rubbish",
+              "content": "rubbish",
               "options": [
                 "trash",
                 "power",
                 "food",
                 "truth"
               ],
-              "correctAnswer": "A",
-              "explanation": "rubbish (rác rưởi) tương đương với trash."
+              "explanation": "rubbish (rác rưởi) tương đương với trash.",
+              "correctAnswer": "A"
             },
             {
               "id": "q4",
-              "content": "4. transaction",
+              "content": "transaction",
               "options": [
                 "meeting",
                 "friend",
                 "test",
                 "sale"
               ],
-              "correctAnswer": "D",
-              "explanation": "transaction (giao dịch) tương đương với sale (việc bán hàng)."
+              "explanation": "transaction (giao dịch) tương đương với sale (việc bán hàng).",
+              "correctAnswer": "D"
             },
             {
               "id": "q5",
-              "content": "5. revenue",
+              "content": "revenue",
               "options": [
                 "concert",
                 "guide",
                 "income",
                 "trade"
               ],
-              "correctAnswer": "C",
-              "explanation": "revenue (doanh thu) tương đương với income (thu nhập)."
+              "explanation": "revenue (doanh thu) tương đương với income (thu nhập).",
+              "correctAnswer": "C"
             },
             {
               "id": "q6",
-              "content": "6. manipulate",
+              "content": "manipulate",
               "options": [
                 "control",
                 "explain",
                 "decrease",
                 "attempt"
               ],
-              "correctAnswer": "A",
-              "explanation": "manipulate (thao túng, điều khiển) tương đương với control."
+              "explanation": "manipulate (thao túng, điều khiển) tương đương với control.",
+              "correctAnswer": "A"
             },
             {
               "id": "q7",
-              "content": "7. infrastructure",
+              "content": "infrastructure",
               "options": [
                 "education",
                 "science",
                 "religion",
                 "roads"
               ],
-              "correctAnswer": "D",
-              "explanation": "infrastructure (cơ sở hạ tầng) bao gồm đường sá (roads)."
+              "explanation": "infrastructure (cơ sở hạ tầng) bao gồm đường sá (roads).",
+              "correctAnswer": "D"
             },
             {
               "id": "q8",
-              "content": "8. headquarters",
+              "content": "headquarters",
               "options": [
                 "material",
                 "base",
                 "dream",
                 "section"
               ],
-              "correctAnswer": "B",
-              "explanation": "headquarters (trụ sở chính) tương đương với base."
+              "explanation": "headquarters (trụ sở chính) tương đương với base.",
+              "correctAnswer": "B"
             },
             {
               "id": "q9",
-              "content": "9. audit",
+              "content": "audit",
               "options": [
                 "enjoy",
                 "leave",
                 "inspect",
                 "prepare"
               ],
-              "correctAnswer": "C",
-              "explanation": "audit (kiểm toán, kiểm tra) tương đương với inspect."
+              "explanation": "audit (kiểm toán, kiểm tra) tương đương với inspect.",
+              "correctAnswer": "C"
             },
             {
               "id": "q10",
-              "content": "10. incentive",
+              "content": "incentive",
               "options": [
                 "reason",
                 "product",
                 "waste",
                 "idea"
               ],
-              "correctAnswer": "A",
-              "explanation": "incentive (khuyến khích, động lực) tương đương với reason (lý do để làm gì đó)."
+              "explanation": "incentive (khuyến khích, động lực) tương đương với reason (lý do để làm gì đó).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q11",
-              "content": "1. This is the affluent area of the city. It is where most of the poor people live.",
+              "content": "This is the affluent area of the city. It is where most of the poor people live.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "affluent (giàu có). Khu vực giàu có không thể là nơi hầu hết người nghèo sống. Sử dụng sai."
+              "explanation": "affluent (giàu có). Khu vực giàu có không thể là nơi hầu hết người nghèo sống. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q12",
-              "content": "2. He added his trash to the large pile of rubbish.",
+              "content": "He added his trash to the large pile of rubbish.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "rubbish (rác thải). Thêm rác vào đống rác lớn là sử dụng đúng."
+              "explanation": "rubbish (rác thải). Thêm rác vào đống rác lớn là sử dụng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q13",
-              "content": "3. The company automated by hiring twenty new workers.",
+              "content": "The company automated by hiring twenty new workers.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "automate (tự động hóa). Tự động hóa là dùng máy móc, không phải thuê thêm công nhân. Sử dụng sai."
+              "explanation": "automate (tự động hóa). Tự động hóa là dùng máy móc, không phải thuê thêm công nhân. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q14",
-              "content": "4. This painting is an important part of the city’s infrastructure.",
+              "content": "This painting is an important part of the city’s infrastructure.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "infrastructure (cơ sở hạ tầng). Bức tranh không phải là cơ sở hạ tầng. Sử dụng sai."
+              "explanation": "infrastructure (cơ sở hạ tầng). Bức tranh không phải là cơ sở hạ tầng. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q15",
-              "content": "5. The subsidy helped the company recover some of the money it had lost.",
+              "content": "The subsidy helped the company recover some of the money it had lost.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "subsidy (tiền trợ cấp). Tiền trợ cấp giúp công ty phục hồi số tiền đã mất là sử dụng đúng."
+              "explanation": "subsidy (tiền trợ cấp). Tiền trợ cấp giúp công ty phục hồi số tiền đã mất là sử dụng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q16",
-              "content": "6. The store sold most of its merchandise in the sale over the weekend.",
+              "content": "The store sold most of its merchandise in the sale over the weekend.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "merchandise (hàng hóa). Cửa hàng bán phần lớn hàng hóa của mình là đúng."
+              "explanation": "merchandise (hàng hóa). Cửa hàng bán phần lớn hàng hóa của mình là đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q17",
-              "content": "7. The cook violated the two sauces together into one delicious sauce.",
+              "content": "The cook violated the two sauces together into one delicious sauce.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "violate (vi phạm). Trộn hai loại nước sốt không dùng từ vi phạm. Sử dụng sai."
+              "explanation": "violate (vi phạm). Trộn hai loại nước sốt không dùng từ vi phạm. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q18",
-              "content": "8. She took the food out of the refrigerator and then disposed the door.",
+              "content": "She took the food out of the refrigerator and then disposed the door.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "dispose (vứt bỏ). Cô ấy không thể vứt bỏ cánh cửa tủ lạnh sau khi lấy thức ăn. Sử dụng sai."
+              "explanation": "dispose (vứt bỏ). Cô ấy không thể vứt bỏ cánh cửa tủ lạnh sau khi lấy thức ăn. Sử dụng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "q19",
-              "content": "9. The company’s bank records were audited.",
+              "content": "The company’s bank records were audited.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "audit (kiểm toán). Hồ sơ ngân hàng của công ty được kiểm toán là sử dụng đúng."
+              "explanation": "audit (kiểm toán). Hồ sơ ngân hàng của công ty được kiểm toán là sử dụng đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q20",
-              "content": "10. Bigger kids sometimes find it easy to manipulate smaller children.",
+              "content": "Bigger kids sometimes find it easy to manipulate smaller children.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "manipulate (thao túng). Trẻ lớn đôi khi dễ dàng thao túng trẻ nhỏ là sử dụng đúng."
+              "explanation": "manipulate (thao túng). Trẻ lớn đôi khi dễ dàng thao túng trẻ nhỏ là sử dụng đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q21",
-              "content": "1. violate",
+              "content": "violate",
               "options": [
                 "borrow",
                 "respect",
                 "approve",
                 "explain"
               ],
-              "correctAnswer": "B",
-              "explanation": "violate (vi phạm) trái nghĩa với respect (tôn trọng, tuân thủ)."
+              "explanation": "violate (vi phạm) trái nghĩa với respect (tôn trọng, tuân thủ).",
+              "correctAnswer": "B"
             },
             {
               "id": "q22",
-              "content": "2. affluent",
+              "content": "affluent",
               "options": [
                 "smart",
                 "quick",
                 "poor",
                 "evil"
               ],
-              "correctAnswer": "C",
-              "explanation": "affluent (giàu có) trái nghĩa với poor (nghèo)."
+              "explanation": "affluent (giàu có) trái nghĩa với poor (nghèo).",
+              "correctAnswer": "C"
             },
             {
               "id": "q23",
-              "content": "3. dispose",
+              "content": "dispose",
               "options": [
                 "keep",
                 "make",
                 "feed",
                 "speak"
               ],
-              "correctAnswer": "A",
-              "explanation": "dispose (vứt bỏ) trái nghĩa với keep (giữ lại)."
+              "explanation": "dispose (vứt bỏ) trái nghĩa với keep (giữ lại).",
+              "correctAnswer": "A"
             },
             {
               "id": "q24",
-              "content": "4. administrator",
+              "content": "administrator",
               "options": [
                 "singer",
                 "student",
                 "mother",
                 "worker"
               ],
-              "correctAnswer": "D",
-              "explanation": "administrator (người quản lý) trái nghĩa với worker (công nhân)."
+              "explanation": "administrator (người quản lý) trái nghĩa với worker (công nhân).",
+              "correctAnswer": "D"
             },
             {
               "id": "q25",
-              "content": "5. legitimate",
+              "content": "legitimate",
               "options": [
                 "free",
                 "pretty",
                 "wrong",
                 "alert"
               ],
-              "correctAnswer": "C",
-              "explanation": "legitimate (hợp pháp, đúng đắn) trái nghĩa với wrong (sai trái)."
+              "explanation": "legitimate (hợp pháp, đúng đắn) trái nghĩa với wrong (sai trái).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q26",
-              "content": "1. Getting to play with her friends was something to make her want to clean her room.",
+              "content": "Getting to play with her friends was something to make her want to clean her room.",
               "options": [
                 "incentive",
                 "revenue",
                 "rubbish",
                 "transaction"
               ],
-              "correctAnswer": "A",
-              "explanation": "something to make her want (điều khiến cô ấy muốn) tương đương incentive (động lực)."
+              "explanation": "something to make her want (điều khiến cô ấy muốn) tương đương incentive (động lực).",
+              "correctAnswer": "A"
             },
             {
               "id": "q27",
-              "content": "2. The act of selling something took place right before the shop closed.",
+              "content": "The act of selling something took place right before the shop closed.",
               "options": [
                 "transaction",
                 "retail",
                 "manipulate",
                 "infrastructure"
               ],
-              "correctAnswer": "A",
-              "explanation": "act of selling something (hành động bán cái gì đó) tương đương transaction."
+              "explanation": "act of selling something (hành động bán cái gì đó) tương đương transaction.",
+              "correctAnswer": "A"
             },
             {
               "id": "q28",
-              "content": "3. By the end of the meeting, they had made into law the repair of the highways.",
+              "content": "By the end of the meeting, they had made into law the repair of the highways.",
               "options": [
                 "legislated",
                 "violated",
                 "automated",
                 "audited"
               ],
-              "correctAnswer": "A",
-              "explanation": "made into law (đưa vào luật) tương đương legislated."
+              "explanation": "made into law (đưa vào luật) tương đương legislated.",
+              "correctAnswer": "A"
             },
             {
               "id": "q29",
-              "content": "4. She illegally persuaded the guard, so he would let her into the secret meeting.",
+              "content": "She illegally persuaded the guard, so he would let her into the secret meeting.",
               "options": [
                 "bribed",
                 "disposed",
                 "audited",
                 "manipulated"
               ],
-              "correctAnswer": "A",
-              "explanation": "illegally persuaded (thuyết phục bất hợp pháp bằng tiền) tương đương bribed."
+              "explanation": "illegally persuaded (thuyết phục bất hợp pháp bằng tiền) tương đương bribed.",
+              "correctAnswer": "A"
             },
             {
               "id": "q30",
-              "content": "5. It was a good year for the banks, but it was a bad year for places that sell things to the public.",
+              "content": "It was a good year for the banks, but it was a bad year for places that sell things to the public.",
               "options": [
                 "retail",
                 "revenue",
                 "subsidy",
                 "merchandise"
               ],
-              "correctAnswer": "A",
-              "explanation": "places that sell things to the public (nơi bán hàng cho công chúng) tương đương retail."
+              "explanation": "places that sell things to the public (nơi bán hàng cho công chúng) tương đương retail.",
+              "correctAnswer": "A"
             },
             {
               "id": "q31",
-              "content": "6. The person who controls the company is a very efficient manager.",
+              "content": "The person who controls the company is a very efficient manager.",
               "options": [
                 "administrator",
                 "corrupt",
                 "affluent",
                 "legitimate"
               ],
-              "correctAnswer": "A",
-              "explanation": "person who controls the company (người điều hành công ty) tương đương administrator."
+              "explanation": "person who controls the company (người điều hành công ty) tương đương administrator.",
+              "correctAnswer": "A"
             },
             {
               "id": "q32",
-              "content": "7. The papers that she needed were at the building where the bosses worked.",
+              "content": "The papers that she needed were at the building where the bosses worked.",
               "options": [
                 "headquarters",
                 "infrastructure",
                 "retail",
                 "rubbish"
               ],
-              "correctAnswer": "A",
-              "explanation": "building where the bosses worked tương đương headquarters."
+              "explanation": "building where the bosses worked tương đương headquarters.",
+              "correctAnswer": "A"
             },
             {
               "id": "q33",
-              "content": "8. The law-breaking company was stealing money from many of its investors.",
+              "content": "The law-breaking company was stealing money from many of its investors.",
               "options": [
                 "corrupt",
                 "affluent",
                 "legitimate",
                 "retail"
               ],
-              "correctAnswer": "A",
-              "explanation": "law-breaking (phạm luật, đồi bại) tương đương corrupt."
+              "explanation": "law-breaking (phạm luật, đồi bại) tương đương corrupt.",
+              "correctAnswer": "A"
             },
             {
               "id": "q34",
-              "content": "9. Shawn is working for a law-following organization in a bad part of town.",
+              "content": "Shawn is working for a law-following organization in a bad part of town.",
               "options": [
                 "legitimate",
                 "affluent",
                 "corrupt",
                 "automated"
               ],
-              "correctAnswer": "A",
-              "explanation": "law-following (tuân thủ luật pháp) tương đương legitimate."
+              "explanation": "law-following (tuân thủ luật pháp) tương đương legitimate.",
+              "correctAnswer": "A"
             },
             {
               "id": "q35",
-              "content": "10. The money made by our company was even better than last year’s.",
+              "content": "The money made by our company was even better than last year’s.",
               "options": [
                 "revenue",
                 "subsidy",
                 "merchandise",
                 "transaction"
               ],
-              "correctAnswer": "A",
-              "explanation": "money made by our company (tiền công ty kiếm được) tương đương revenue."
+              "explanation": "money made by our company (tiền công ty kiếm được) tương đương revenue.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -455,127 +455,127 @@
           "id": "sec5_reading_A",
           "title": "Part A: Mark each statement True (T) or False (F).",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q36",
-              "content": "1. Mr. Rabbit was an administrator at a big factory that made different kinds of merchandise.",
+              "content": "Mr. Rabbit was an administrator at a big factory that made different kinds of merchandise.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Ông Lợn (Mr. Pig) mới là administrator, không phải ông Thỏ."
+              "explanation": "Câu này sai. Theo đoạn 1, \"Mr. Pig was an administrator at a big factory...\" (Ông Lợn mới là người quản lý tại nhà máy lớn).",
+              "correctAnswer": "B"
             },
             {
               "id": "q37",
-              "content": "2. Some of the changes made to the factory were legitimate.",
+              "content": "Some of the changes made to the factory were legitimate.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Theo câu chuyện, các thay đổi hầu hết không tốt và một số không hợp pháp (not legitimate)."
+              "explanation": "Câu này sai. Ở đoạn 3 có ghi: \"However, most were not very nice, and some were not legitimate.\" (Tuy nhiên, hầu hết các thay đổi đều không tốt và một số không hợp pháp). Câu hỏi nói \"Some of the changes... were legitimate\" là trái với thông tin trong bài.",
+              "correctAnswer": "B"
             },
             {
               "id": "q38",
-              "content": "3. Mr. Pig bribed some corrupt senators into legislating special subsidies for his factory.",
+              "content": "Mr. Pig bribed some corrupt senators into legislating special subsidies for his factory.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng với câu chuyện."
+              "explanation": "Câu này đúng. Trong đoạn 4, \"Next, he bribed some corrupt senators into legislating special subsidies for the factory.\" (Tiếp theo, ông ta hối lộ một số thượng nghị sĩ tham nhũng để ban hành các khoản trợ cấp đặc biệt cho nhà máy).",
+              "correctAnswer": "A"
             },
             {
               "id": "q39",
-              "content": "4. Mr. Pig violated the law by disposing of the factory’s rubbish in the ocean.",
+              "content": "Mr. Pig violated the law by disposing of the factory’s rubbish in the ocean.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Ông ta vứt rác xuống sông (in the river), không phải đại dương (ocean)."
+              "explanation": "Câu này sai. Cuối đoạn 4 có viết: \"...he violated the law by throwing it into the river to save money.\" (ông ta đã vi phạm luật bằng cách ném rác xuống sông để tiết kiệm tiền). Rác bị ném xuống sông (river), không phải đại dương (ocean).",
+              "correctAnswer": "B"
             },
             {
               "id": "q40",
-              "content": "5. At first, changes to the factory’s infrastructure created less revenue.",
+              "content": "At first, changes to the factory’s infrastructure created less revenue.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Ban đầu các thay đổi này tạo ra nhiều doanh thu hơn (created more revenue)."
+              "explanation": "Câu này sai. Ở đầu đoạn 5 có ghi: \"At first, all the changes to the factory’s infrastructure created more revenue.\" (Lúc đầu, tất cả những thay đổi đối với cơ sở hạ tầng của nhà máy đã tạo ra nhiều doanh thu hơn).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading_B",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q41",
-              "content": "1. During their meeting at headquarters, what incentive did Mr. Pig’s affluent boss give him?",
+              "content": "During their meeting at headquarters, what incentive did Mr. Pig’s affluent boss give him?",
               "options": [
                 "His boss told him, 'If the factory makes more money, then you will too.'",
                 "His boss gave him a new car",
                 "His boss told him he could take a vacation",
                 "His boss gave him a raise"
               ],
-              "correctAnswer": "A",
-              "explanation": "His boss told him, 'If the factory makes more money, then you will too.'"
+              "explanation": "Theo đoạn 2, sếp của ông ta nói: \"If the factory makes more money, then you will too... It was a great incentive.\" (Nếu nhà máy kiếm được nhiều tiền hơn, thì anh cũng vậy... Đó là một động lực tuyệt vời).",
+              "correctAnswer": "A"
             },
             {
               "id": "q42",
-              "content": "2. What happened to the other animals after Pig automated his factory?",
+              "content": "What happened to the other animals after Pig automated his factory?",
               "options": [
                 "After Pig automated his factory, the other animals had no jobs.",
                 "They got more jobs",
                 "They were promoted",
                 "They got better tools to work"
               ],
-              "correctAnswer": "A",
-              "explanation": "After Pig automated his factory, the other animals had no jobs."
+              "explanation": "Trong đoạn 4, sau khi tự động hóa toàn bộ nhà máy: \"Machines now made everything, and the other animals... had no jobs.\" (Bây giờ máy móc làm mọi thứ, và các động vật khác... không còn việc làm).",
+              "correctAnswer": "A"
             },
             {
               "id": "q43",
-              "content": "3. According to the officials who audited Pig’s factory, why did he manipulate the law?",
+              "content": "According to the officials who audited Pig’s factory, why did he manipulate the law?",
               "options": [
                 "According to the officials, Pig manipulated the law in order to get more money.",
                 "Pig manipulated the law to help the animals",
                 "Pig manipulated the law to build a new factory",
                 "Pig manipulated the law by mistake"
               ],
-              "correctAnswer": "A",
-              "explanation": "According to the officials, Pig manipulated the law in order to get more money."
+              "explanation": "Ở cuối đoạn 6, \"...when they audited the company, they discovered that Pig had manipulated the law in order to get more money.\" (...khi họ kiểm toán công ty, họ phát hiện ra rằng Lợn đã thao túng luật pháp để kiếm thêm tiền).",
+              "correctAnswer": "A"
             },
             {
               "id": "q44",
-              "content": "4. What happened to Mr. Pig and his factory when all transactions stopped?",
+              "content": "What happened to Mr. Pig and his factory when all transactions stopped?",
               "options": [
                 "When all transactions stopped, the factory lost money, and Pig lost his job.",
                 "Pig got a promotion",
                 "Pig was sent to another country",
                 "Pig bought a new house"
               ],
-              "correctAnswer": "A",
-              "explanation": "When all transactions stopped, the factory lost money, and Pig lost his job."
+              "explanation": "Theo đoạn cuối: \"All transactions with Pig’s factory stopped. The factory lost money, and Pig lost his job.\" (Mọi giao dịch với nhà máy của Lợn đều dừng lại. Nhà máy bị mất tiền và Lợn mất việc).",
+              "correctAnswer": "A"
             },
             {
               "id": "q45",
-              "content": "5. Why could the stores no longer sell goods at retail?",
+              "content": "Why could the stores no longer sell goods at retail?",
               "options": [
                 "Because the machines didn't make products as well as the workers, and customers were disappointed.",
                 "Because they were too expensive.",
                 "Because they ran out of materials.",
                 "Because the stores were closed."
               ],
-              "correctAnswer": "A",
-              "explanation": "Because the machines didn't make products as well as the workers, and customers were disappointed."
+              "explanation": "Trong đoạn 5, \"It seemed that the machines couldn’t make products as well as the workers. The customers were disappointed with the factory’s merchandise.\" (Dường như máy móc không thể làm ra sản phẩm tốt như con người. Khách hàng đã thất vọng với hàng hóa của nhà máy).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

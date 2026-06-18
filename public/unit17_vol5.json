@@ -15,483 +15,483 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
-              "content": "1. Which is a place that you would graduate from?",
+              "content": "Which is a place that you would graduate from?",
               "options": [
                 "An island",
                 "A school",
                 "A house",
                 "A party"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"graduate from\" (tốt nghiệp từ) thường kết hợp với trường học (school)."
+              "explanation": "\"graduate from\" (tốt nghiệp từ) thường kết hợp với trường học (school).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_2",
-              "content": "2. Which of the following has a shaft?",
+              "content": "Which of the following has a shaft?",
               "options": [
                 "A calendar",
                 "A keyboard",
                 "A basketball",
                 "A pool stick"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"shaft\" (trục, tay cầm) là bộ phận của gậy bi-a (pool stick)."
+              "explanation": "\"shaft\" (trục, tay cầm) là bộ phận của gậy bi-a (pool stick).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex1_3",
-              "content": "3. What is one responsibility of a referee?",
+              "content": "What is one responsibility of a referee?",
               "options": [
                 "To make sure a game is fair",
                 "To stop crime",
                 "To guard athletes",
                 "To be a good parent"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"referee\" (trọng tài) có trách nhiệm đảm bảo trận đấu công bằng."
+              "explanation": "\"referee\" (trọng tài) có trách nhiệm đảm bảo trận đấu công bằng.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_4",
-              "content": "4. Why might somebody hire an attorney?",
+              "content": "Why might somebody hire an attorney?",
               "options": [
                 "To watch security tapes",
                 "To pay for their bills",
                 "To prove they didn't do a crime",
                 "To help them decorate their home"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"attorney\" (luật sư) được thuê để chứng minh sự trong sạch (prove they didn't do a crime)."
+              "explanation": "\"attorney\" (luật sư) được thuê để chứng minh sự trong sạch (prove they didn't do a crime).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_5",
-              "content": "5. How would you describe chronic pain?",
+              "content": "How would you describe chronic pain?",
               "options": [
                 "It hurts a lot.",
                 "It hurts all the time.",
                 "It hurts in the morning.",
                 "It hurts only when it is cold."
               ],
-              "correctAnswer": "B",
-              "explanation": "\"chronic\" (mãn tính, kéo dài) nghĩa là đau liên tục trong thời gian dài."
+              "explanation": "\"chronic\" (mãn tính, kéo dài) nghĩa là đau liên tục trong thời gian dài.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_1",
-              "content": "1. kin",
+              "content": "kin",
               "options": [
                 "relatives",
                 "boxes",
                 "friends",
                 "principals"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"kin\" (người thân) tương đương với relatives."
+              "explanation": "\"kin\" (người thân) tương đương với relatives.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_2",
-              "content": "2. chronic",
+              "content": "chronic",
               "options": [
                 "useless",
                 "unskilled",
                 "constant",
                 "again"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"chronic\" (mãn tính, liên tục) tương đương với constant."
+              "explanation": "\"chronic\" (mãn tính, liên tục) tương đương với constant.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_3",
-              "content": "3. attorney",
+              "content": "attorney",
               "options": [
                 "police officer",
                 "lawyer",
                 "teacher",
                 "instructor"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"attorney\" (luật sư) tương đương với lawyer."
+              "explanation": "\"attorney\" (luật sư) tương đương với lawyer.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_4",
-              "content": "4. gossip",
+              "content": "gossip",
               "options": [
                 "plans",
                 "an untrue talk",
                 "culture",
                 "evil"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"gossip\" (lời đồn) tương đương với an untrue talk."
+              "explanation": "\"gossip\" (lời đồn) tương đương với an untrue talk.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_5",
-              "content": "5. sever",
+              "content": "sever",
               "options": [
                 "to watch",
                 "to cut off",
                 "to keep",
                 "to hit"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"sever\" (cắt đứt) tương đương với to cut off."
+              "explanation": "\"sever\" (cắt đứt) tương đương với to cut off.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_6",
-              "content": "6. stab",
+              "content": "stab",
               "options": [
                 "to cut",
                 "to prove",
                 "to get help",
                 "to wonder"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"stab\" (đâm, cắt) tương đương với to cut."
+              "explanation": "\"stab\" (đâm, cắt) tương đương với to cut.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_7",
-              "content": "7. theme",
+              "content": "theme",
               "options": [
                 "a book",
                 "a preview",
                 "a main idea",
                 "a perspective"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"theme\" (chủ đề, ý chính) tương đương với a main idea."
+              "explanation": "\"theme\" (chủ đề, ý chính) tương đương với a main idea.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_8",
-              "content": "8. suspicion",
+              "content": "suspicion",
               "options": [
                 "lunch money",
                 "classes",
                 "mistrust",
                 "clothes"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"suspicion\" (sự nghi ngờ) tương đương với mistrust."
+              "explanation": "\"suspicion\" (sự nghi ngờ) tương đương với mistrust.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_9",
-              "content": "9. guardian",
+              "content": "guardian",
               "options": [
                 "a protector",
                 "a judge",
                 "intelligence",
                 "truth"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"guardian\" (người bảo vệ) tương đương với a protector."
+              "explanation": "\"guardian\" (người bảo vệ) tương đương với a protector.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_10",
-              "content": "10. terminate",
+              "content": "terminate",
               "options": [
                 "to wait",
                 "to end",
                 "to destroy",
                 "to hurt"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"terminate\" (chấm dứt) tương đương với to end."
+              "explanation": "\"terminate\" (chấm dứt) tương đương với to end.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Fill in the blanks with the correct words.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex3_1",
-              "content": "1. Mr. Wilson _______ from the university over 15 years ago.",
+              "content": "Mr. Wilson _______ from the university over 15 years ago.",
               "options": [
                 "graduated",
                 "donor",
                 "tuition",
                 "stimulus"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"graduated\" (tốt nghiệp) phù hợp với ngữ cảnh từ trường đại học (university)."
+              "explanation": "\"graduated\" (tốt nghiệp) phù hợp với ngữ cảnh từ trường đại học (university).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_2",
-              "content": "2. He has always been a generous _______ and wants to improve the school.",
+              "content": "He has always been a generous _______ and wants to improve the school.",
               "options": [
                 "donor",
                 "gossip",
                 "discipline",
                 "implicated"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"donor\" (người hiến tặng) phù hợp với tính từ generous (hào phóng)."
+              "explanation": "\"donor\" (người hiến tặng) phù hợp với tính từ generous (hào phóng).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_3",
-              "content": "3. The university recently decreased its _______.",
+              "content": "The university recently decreased its _______.",
               "options": [
                 "tuition",
                 "chronic",
                 "graffiti",
                 "terminate"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"tuition\" (học phí) phù hợp với việc giảm chi phí tại trường đại học."
+              "explanation": "\"tuition\" (học phí) phù hợp với việc giảm chi phí tại trường đại học.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_4",
-              "content": "4. It was supposed to be a _______ for more students to study there.",
+              "content": "It was supposed to be a _______ for more students to study there.",
               "options": [
                 "stimulus",
                 "gossip",
                 "discipline",
                 "shaft"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"stimulus\" (động lực) giúp thu hút thêm sinh viên đến học thuật."
+              "explanation": "\"stimulus\" (động lực) giúp thu hút thêm sinh viên đến học thuật.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_5",
-              "content": "5. Laurie was _______ in a terrible thing.",
+              "content": "Laurie was _______ in a terrible thing.",
               "options": [
                 "implicated",
                 "severed",
                 "stabbed",
                 "graduated"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"implicated\" (dính líu) vào một việc tồi tệ (a terrible thing)."
+              "explanation": "\"implicated\" (dính líu) vào một việc tồi tệ (a terrible thing).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_6",
-              "content": "6. She was caught leaving _______ on the school wall.",
+              "content": "She was caught leaving _______ on the school wall.",
               "options": [
                 "graffiti",
                 "tuition",
                 "gossip",
                 "chronic"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"graffiti\" (hình vẽ bậy) trên bức tường trường học (school wall)."
+              "explanation": "\"graffiti\" (hình vẽ bậy) trên bức tường trường học (school wall).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_7",
-              "content": "7. Elliot had _______ problems at school.",
+              "content": "Elliot had _______ problems at school.",
               "options": [
                 "chronic",
                 "implicated",
                 "terminate",
                 "donor"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"chronic problems\" (vấn đề mãn tính, kéo dài) ở trường học."
+              "explanation": "\"chronic problems\" (vấn đề mãn tính, kéo dài) ở trường học.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_8",
-              "content": "8. His parents decided to show more _______.",
+              "content": "His parents decided to show more _______.",
               "options": [
                 "discipline",
                 "graffiti",
                 "tuition",
                 "stimulus"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"discipline\" (kỷ luật) được phụ huynh áp dụng để giáo dục con cái."
+              "explanation": "\"discipline\" (kỷ luật) được phụ huynh áp dụng để giáo dục con cái.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_9",
-              "content": "9. Hannah was tired of hearing _______ about her neighbors.",
+              "content": "Hannah was tired of hearing _______ about her neighbors.",
               "options": [
                 "gossip",
                 "donor",
                 "discipline",
                 "stimulus"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"gossip\" (lời đồn) về những người hàng xóm (neighbors)."
+              "explanation": "\"gossip\" (lời đồn) về những người hàng xóm (neighbors).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_10",
-              "content": "10. She decided to _______ that behavior and think about better things.",
+              "content": "She decided to _______ that behavior and think about better things.",
               "options": [
                 "terminate",
                 "sever",
                 "stab",
                 "graduate"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"terminate\" (chấm dứt) hành vi đó (that behavior)."
+              "explanation": "\"terminate\" (chấm dứt) hành vi đó (that behavior).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Exercise 4: Write Correct if the italicized word is used correctly. Write Incorrect if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex4_1",
-              "content": "1. I may not be able to go to college next year. I don’t have enough money for tuition.",
+              "content": "I may not be able to go to college next year. I don’t have enough money for tuition.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"tuition\" (học phí) dùng chính xác khi nói về tiền học đại học."
+              "explanation": "\"tuition\" (học phí) dùng chính xác khi nói về tiền học đại học.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_2",
-              "content": "2. The boy’s parents didn’t know how to control him. They taught him discipline.",
+              "content": "The boy’s parents didn’t know how to control him. They taught him discipline.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"didn't know how to control\" (không biết cách kiểm soát) mâu thuẫn với việc đã dạy \"discipline\" (kỷ luật). Dùng sai."
+              "explanation": "\"didn't know how to control\" (không biết cách kiểm soát) mâu thuẫn với việc đã dạy \"discipline\" (kỷ luật). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_3",
-              "content": "3. He was a donor. He received gifts from people all of the time.",
+              "content": "He was a donor. He received gifts from people all of the time.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"donor\" (người hiến tặng) mâu thuẫn với \"received gifts\" (nhận quà). Dùng sai."
+              "explanation": "\"donor\" (người hiến tặng) mâu thuẫn với \"received gifts\" (nhận quà). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_4",
-              "content": "4. His new stove will be a stimulus for him to cook at home more often.",
+              "content": "His new stove will be a stimulus for him to cook at home more often.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"stimulus\" (động lực) dùng chính xác cho việc khích lệ nấu ăn."
+              "explanation": "\"stimulus\" (động lực) dùng chính xác cho việc khích lệ nấu ăn.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_5",
-              "content": "5. Ellen didn’t like the color of her walls, so she painted graffiti on them.",
+              "content": "Ellen didn’t like the color of her walls, so she painted graffiti on them.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"graffiti\" (vẽ bậy nơi công cộng) không dùng để chỉ việc sơn lại tường nhà. Dùng sai."
+              "explanation": "\"graffiti\" (vẽ bậy nơi công cộng) không dùng để chỉ việc sơn lại tường nhà. Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_6",
-              "content": "6. Jason was implicated in the bank robbery. Several people saw him do it.",
+              "content": "Jason was implicated in the bank robbery. Several people saw him do it.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"implicated\" (bị dính líu, bị cáo buộc) dùng chính xác trong ngữ cảnh vụ cướp ngân hàng."
+              "explanation": "\"implicated\" (bị dính líu, bị cáo buộc) dùng chính xác trong ngữ cảnh vụ cướp ngân hàng.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_7",
-              "content": "7. Besides her parents, Olivia had no other kin. She only had one sister.",
+              "content": "Besides her parents, Olivia had no other kin. She only had one sister.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"kin\" (người thân) mâu thuẫn với việc có một người em gái (sister). Dùng sai."
+              "explanation": "\"kin\" (người thân) mâu thuẫn với việc có một người em gái (sister). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_8",
-              "content": "8. The gardener picked up the tool by the shaft. It was easiest to hold that way.",
+              "content": "The gardener picked up the tool by the shaft. It was easiest to hold that way.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"shaft\" (cán, tay cầm) dùng chính xác cho công cụ làm vườn."
+              "explanation": "\"shaft\" (cán, tay cầm) dùng chính xác cho công cụ làm vườn.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_9",
-              "content": "9. The man was sent to prison for stabbing someone. The person was hurt but survived.",
+              "content": "The man was sent to prison for stabbing someone. The person was hurt but survived.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"stabbing\" (đâm) dùng chính xác trong tội phạm gây thương tích."
+              "explanation": "\"stabbing\" (đâm) dùng chính xác trong tội phạm gây thương tích.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_10",
-              "content": "10. The theme of the book was forgiveness.",
+              "content": "The theme of the book was forgiveness.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"theme\" (chủ đề) dùng chính xác cho sách."
+              "explanation": "\"theme\" (chủ đề) dùng chính xác cho sách.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_11",
-              "content": "11. Leslie’s father is a policeman. He is a guardian of crime.",
+              "content": "Leslie’s father is a policeman. He is a guardian of crime.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"guardian of crime\" (người bảo vệ tội phạm) là sai, cảnh sát bảo vệ pháp luật. Dùng sai."
+              "explanation": "\"guardian of crime\" (người bảo vệ tội phạm) là sai, cảnh sát bảo vệ pháp luật. Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_12",
-              "content": "12. I took a knife and severed the line from the pole to the fish’s mouth.",
+              "content": "I took a knife and severed the line from the pole to the fish’s mouth.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"severed\" (cắt đứt) dùng chính xác khi dùng dao cắt dây."
+              "explanation": "\"severed\" (cắt đứt) dùng chính xác khi dùng dao cắt dây.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_13",
-              "content": "13. The food was being held on suspicion of committing two crimes in the city.",
+              "content": "The food was being held on suspicion of committing two crimes in the city.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"suspicion\" (nghi ngờ) về việc phạm tội không thể dùng cho đồ ăn (food). Dùng sai."
+              "explanation": "\"suspicion\" (nghi ngờ) về việc phạm tội không thể dùng cho đồ ăn (food). Dùng sai.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_14",
-              "content": "14. I spoke to my fellow teachers, and we all agreed to support the students at the rally.",
+              "content": "I spoke to my fellow teachers, and we all agreed to support the students at the rally.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"fellow\" (đồng nghiệp) dùng chính xác khi nói về giáo viên khác."
+              "explanation": "\"fellow\" (đồng nghiệp) dùng chính xác khi nói về giáo viên khác.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_15",
-              "content": "15. The referee said the player had broken the rules.",
+              "content": "The referee said the player had broken the rules.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"referee\" (trọng tài) dùng chính xác trong thể thao."
+              "explanation": "\"referee\" (trọng tài) dùng chính xác trong thể thao.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -505,127 +505,127 @@
           "id": "sec5",
           "title": "Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readA_1",
-              "content": "1. A donor gave the school a painting with a sports theme as a stimulus for students to play sports.",
+              "content": "A donor gave the school a painting with a sports theme as a stimulus for students to play sports.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Hiệu trưởng (principal) mới là người treo bức tranh như một động lực (stimulus) cho sinh viên, không phải người hiến tặng (donor)."
+              "explanation": "Hiệu trưởng (principal) mới là người treo bức tranh như một động lực (stimulus) cho sinh viên, không phải người hiến tặng (donor).",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_2",
-              "content": "2. The painting showed a referee congratulating two athletes.",
+              "content": "The painting showed a referee congratulating two athletes.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bức tranh vẽ một trọng tài đang chúc mừng hai vận động viên."
+              "explanation": "Bức tranh vẽ một trọng tài đang chúc mừng hai vận động viên.",
+              "correctAnswer": "A"
             },
             {
               "id": "readA_3",
-              "content": "3. Billy was implicated in the crime because a fellow student received a packet with a videotape showing him doing it.",
+              "content": "Billy was implicated in the crime because a fellow student received a packet with a videotape showing him doing it.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Billy bị dính líu vì một bạn học (fellow student) nói rằng cô ấy nghĩ đã nhìn thấy cậu làm việc đó, không phải do cuộn băng."
+              "explanation": "Billy bị dính líu vì một bạn học (fellow student) nói rằng cô ấy nghĩ đã nhìn thấy cậu làm việc đó, không phải do cuộn băng.",
+              "correctAnswer": "B"
             },
             {
               "id": "readA_4",
-              "content": "4. Everybody gossiped about Billy, and even some of our kin think he did it.",
+              "content": "Everybody gossiped about Billy, and even some of our kin think he did it.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mọi người đồn đoán (gossiped) và thậm chí một số người thân (kin) cũng nghĩ cậu ta làm."
+              "explanation": "Mọi người đồn đoán (gossiped) và thậm chí một số người thân (kin) cũng nghĩ cậu ta làm.",
+              "correctAnswer": "A"
             },
             {
               "id": "readA_5",
-              "content": "5. The principal threatened to terminate Billy’s education if his parents didn’t pay his tuition.",
+              "content": "The principal threatened to terminate Billy’s education if his parents didn’t pay his tuition.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Hiệu trưởng đe dọa chấm dứt học tập nếu cha mẹ không trả tiền cho bức tranh (pay for the painting), không phải học phí (tuition)."
+              "explanation": "Hiệu trưởng đe dọa chấm dứt học tập nếu cha mẹ không trả tiền cho bức tranh (pay for the painting), không phải học phí (tuition).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "readB_1",
-              "content": "1. What did the principal say about Billy?",
+              "content": "What did the principal say about Billy?",
               "options": [
                 "That he was a chronic liar",
                 "That he was a guardian",
                 "That he was an attorney",
                 "That he had a lot of discipline"
               ],
-              "correctAnswer": "A",
-              "explanation": "Hiệu trưởng nói rằng Billy là một kẻ nói dối mãn tính (chronic liar)."
+              "explanation": "Hiệu trưởng nói rằng Billy là một kẻ nói dối mãn tính (chronic liar).",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_2",
-              "content": "2. What was Mr. Meyers’ suspicion?",
+              "content": "What was Mr. Meyers’ suspicion?",
               "options": [
                 "That the tape from the security cameras would show who really did the crime",
                 "That Billy was guilty",
                 "That the graffiti was beautiful",
                 "That the tuition was too high"
               ],
-              "correctAnswer": "A",
-              "explanation": "Sự nghi ngờ (suspicion) của ông Meyers là đoạn băng từ camera an ninh sẽ cho thấy ai thực sự làm việc đó."
+              "explanation": "Sự nghi ngờ (suspicion) của ông Meyers là đoạn băng từ camera an ninh sẽ cho thấy ai thực sự làm việc đó.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_3",
-              "content": "3. What did the videotape show?",
+              "content": "What did the videotape show?",
               "options": [
                 "Another boy leaving graffiti, stabbing it, and severing the string",
                 "Billy doing the crime",
                 "A donor giving the painting",
                 "A referee in a game"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đoạn băng cho thấy một cậu bé khác đang vẽ bậy, đâm (stab) bức tranh và cắt đứt (sever) sợi dây."
+              "explanation": "Đoạn băng cho thấy một cậu bé khác đang vẽ bậy, đâm (stab) bức tranh và cắt đứt (sever) sợi dây.",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_4",
-              "content": "4. What did the attorney suggest to the principal about the boy responsible for the crime?",
+              "content": "What did the attorney suggest to the principal about the boy responsible for the crime?",
               "options": [
                 "That he needed discipline",
                 "That he should be a fellow student",
                 "That he was a chronic liar",
                 "That he should pay the tuition"
               ],
-              "correctAnswer": "A",
-              "explanation": "Luật sư gợi ý rằng cậu bé thực sự chịu trách nhiệm cần phải được rèn kỷ luật (discipline)."
+              "explanation": "Luật sư gợi ý rằng cậu bé thực sự chịu trách nhiệm cần phải được rèn kỷ luật (discipline).",
+              "correctAnswer": "A"
             },
             {
               "id": "readB_5",
-              "content": "5. Why did Billy say he wanted his major to be law when he went to university?",
+              "content": "Why did Billy say he wanted his major to be law when he went to university?",
               "options": [
                 "So he could be a guardian of justice like Mr. Meyers",
                 "So he could be a referee",
                 "So he could stop gossip",
                 "So he could sever the rope"
               ],
-              "correctAnswer": "A",
-              "explanation": "Billy muốn học luật để có thể trở thành người bảo vệ công lý (guardian of justice) giống như ông Meyers."
+              "explanation": "Billy muốn học luật để có thể trở thành người bảo vệ công lý (guardian of justice) giống như ông Meyers.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

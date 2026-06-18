@@ -15,383 +15,383 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. What is marble often used for?",
+              "content": "What is marble often used for?",
               "options": [
                 "To make cars",
                 "To make boats",
                 "To make statues",
                 "To make fires"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"marble\" (đá hoa cương) thường dùng để làm tượng (statues) hoặc lát sàn nhà."
+              "explanation": "Marble (đá cẩm thạch) là một loại đá cứng thường được các nhà điêu khắc sử dụng để tạc tượng (To make statues). Các đáp án khác như làm ô tô, thuyền hay đốt lửa đều sai hoàn toàn. Mình chọn C nhé.",
+              "correctAnswer": "C"
             },
             {
               "id": "2",
-              "content": "2. Accessories like earrings, purses, and ______ often make clothes look nicer.",
+              "content": "Accessories like earrings, purses, and ______ often make clothes look nicer.",
               "options": [
                 "computers",
                 "shoes",
                 "eye color",
                 "muscles"
               ],
-              "correctAnswer": "B",
-              "explanation": "Phụ kiện (accessories) giúp quần áo đẹp hơn, ví dụ như khuyên tai, ví, và giày (shoes)."
+              "explanation": "Accessories là phụ kiện. Hoa tai, ví và giày (shoes) là những phụ kiện quen thuộc giúp bộ trang phục trông đẹp hơn. Trong các đáp án thì chỉ có giày là phụ kiện thời trang. Đáp án đúng là B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
-              "content": "3. What does it mean to update something?",
+              "content": "What does it mean to update something?",
               "options": [
                 "To put away",
                 "To leave as it is",
                 "To make more modern",
                 "To break"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"update\" nghĩa là cập nhật, làm cho hiện đại hơn (To make more modern)."
+              "explanation": "Động từ update có nghĩa là cập nhật, làm cho một thứ gì đó trở nên mới mẻ hoặc hiện đại hơn. Tương đương với cụm từ To make more modern. Mình chọn C nhé.",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
-              "content": "4. What is something that should not be imported?",
+              "content": "What is something that should not be imported?",
               "options": [
                 "Fruits",
                 "Shoes",
                 "Ideas",
                 "Diseases"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"import\" là mang từ nơi khác/nước ngoài vào. Dịch bệnh (diseases) là thứ không nên mang vào."
+              "explanation": "Động từ import có nghĩa là nhập khẩu hoặc mang một thứ gì đó từ ngoài vào. Trong số các lựa chọn thì dịch bệnh (Diseases) là thứ tuyệt đối không nên bị mang vào trong nước. Đáp án D là hợp lý nhất nha.",
+              "correctAnswer": "D"
             },
             {
               "id": "5",
-              "content": "5. Naval forces are designed to ______ a country from danger.",
+              "content": "Naval forces are designed to ______ a country from danger.",
               "options": [
                 "protect",
                 "fly",
                 "incorporate",
                 "lead"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"Naval forces\" (hải quân) được thiết kế để bảo vệ (protect) đất nước khỏi nguy hiểm."
+              "explanation": "Lực lượng hải quân (Naval forces) được thành lập với mục đích bảo vệ đất nước khỏi những mối nguy hiểm. Từ mang nghĩa bảo vệ là protect. Mình chọn A nhé.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Fill in the blanks with the correct words.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "1. The equipment in the school was so old that Isla ______ that it would not be...",
+              "content": "The equipment in the school was so old that Isla ______ that it would not be...",
               "options": [
                 "inferred",
                 "inflated",
                 "facilitate",
                 "adequate"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"inferred\" (suy luận). Vì thiết bị cũ kĩ nên Isla đã suy luận rằng..."
+              "explanation": "Dựa vào tình trạng thiết bị cũ kỹ, Isla đã suy luận ra một điều. Động từ infer mang nghĩa suy luận, rút ra kết luận. Chia quá khứ thành inferred lắp vào đây cực kỳ hợp lý. Mình chọn A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
-              "content": "2. ...______ for students to use.",
+              "content": "...______ for students to use.",
               "options": [
                 "saturated",
                 "adequate",
                 "fleet",
                 "innate"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"adequate\" (đầy đủ/đủ tốt). ...nó không đủ tốt cho học sinh sử dụng."
+              "explanation": "Từ adequate mang nghĩa là đầy đủ, đạt tiêu chuẩn hoặc đáp ứng được yêu cầu. Thiết bị quá cũ nên sẽ không đủ tiêu chuẩn cho học sinh sử dụng. Đáp án B là chính xác nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "8",
-              "content": "3. Marilyn had a(n) ______ love for education.",
+              "content": "Marilyn had a(n) ______ love for education.",
               "options": [
                 "innate",
                 "saturated",
                 "inflated",
                 "naval"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"innate\" (bẩm sinh). Tình yêu giáo dục bẩm sinh."
+              "explanation": "Từ innate dùng để chỉ một phẩm chất hoặc năng khiếu bẩm sinh, ăn sâu vào bản chất. Tình yêu mãnh liệt bẩm sinh dành cho giáo dục thì dùng innate love là rất chính xác. Mình chọn A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
-              "content": "4. She read many books to ______ her learning.",
+              "content": "She read many books to ______ her learning.",
               "options": [
                 "import",
                 "facilitate",
                 "update",
                 "infer"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"facilitate\" (làm cho dễ dàng/tạo điều kiện). Để giúp ích/tạo điều kiện cho việc học."
+              "explanation": "Facilitate có nghĩa là tạo điều kiện thuận lợi hoặc giúp cho việc gì đó diễn ra dễ dàng hơn. Cô ấy đọc nhiều sách để giúp việc học thuật lợi hơn. Đáp án B chuẩn xác nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
-              "content": "5. Larry took a pen out of the ______ in his backpack...",
+              "content": "Larry took a pen out of the ______ in his backpack...",
               "options": [
                 "pouch",
                 "mast",
                 "fleet",
                 "dilemma"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"pouch\" (cái túi/ngăn nhỏ). Lấy bút ra từ ngăn nhỏ của balo."
+              "explanation": "Pouch là một cái túi nhỏ. Larry lấy một cây bút ra khỏi cái túi nhỏ trong chiếc ba lô của mình. Các từ khác như cột buồm (mast) hay hạm đội (fleet) không thể nằm trong ba lô được. Mình khoanh A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "11",
-              "content": "6. ...and used it to ______ the information on the form.",
+              "content": "...and used it to ______ the information on the form.",
               "options": [
                 "infer",
                 "update",
                 "inflate",
                 "import"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"update\" (cập nhật). Dùng bút để cập nhật thông tin trên biểu mẫu."
+              "explanation": "Anh ấy dùng bút để cập nhật thông tin trên tờ đơn. Từ có nghĩa cập nhật chính là update. Mình chọn B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
-              "content": "7. The ______ was used to being out at sea.",
+              "content": "The ______ was used to being out at sea.",
               "options": [
                 "fleet",
                 "mast",
                 "pouch",
                 "accessory"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"fleet\" (hạm đội). Hạm đội đã quen với việc ở ngoài biển khơi."
+              "explanation": "Từ fleet mang nghĩa là một hạm đội hoặc một đoàn tàu. Một đoàn tàu thì dĩ nhiên đã quen thuộc với việc lênh đênh trên biển. Đáp án A là hợp lý nhất nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
-              "content": "8. As a result, they didn’t mind having their clothes ______ with sea water.",
+              "content": "As a result, they didn’t mind having their clothes ______ with sea water.",
               "options": [
                 "adequate",
                 "saturated",
                 "innate",
                 "elaborate"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"saturated\" (ướt sũng). Bị ướt sũng nước biển."
+              "explanation": "Saturated có nghĩa là ướt đẫm, thấm đẫm. Họ không ngại việc quần áo của mình bị ướt đẫm nước biển. Mình chọn B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
-              "content": "9. After the fire, nothing was left of the ship except for its tall ______.",
+              "content": "After the fire, nothing was left of the ship except for its tall ______.",
               "options": [
                 "mast",
                 "fleet",
                 "grid",
                 "marble"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"mast\" (cột buồm). Chỉ còn lại cái cột buồm cao."
+              "explanation": "Mast là cột buồm của con tàu. Sau trận hỏa hoạn, tàu bị thiêu rụi chỉ còn lại cái cột buồm cao ngất ngưởng. Đáp án A hoàn toàn phù hợp nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
-              "content": "10. Soon, the sailors ______ a rescue boat and sailed to safety.",
+              "content": "Soon, the sailors ______ a rescue boat and sailed to safety.",
               "options": [
                 "inferred",
                 "inflated",
                 "facilitated",
                 "updated"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"inflated\" (bơm phồng). Bơm phồng chiếc thuyền cứu sinh."
+              "explanation": "Inflate có nghĩa là bơm phồng lên. Các thủy thủ đã bơm phồng một chiếc thuyền cứu hộ (thường là xuồng cao su) để thoát đến nơi an toàn. Mình khoanh B nhé.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
-              "content": "1. adequate",
+              "content": "adequate",
               "options": [
                 "smart",
                 "enough",
                 "new",
                 "safe"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"adequate\" là đầy đủ, tương đương \"enough\"."
+              "explanation": "Từ adequate có nghĩa là đầy đủ, đáp ứng được yêu cầu. Từ đồng nghĩa gần nhất là enough (đủ). Mình chọn B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
-              "content": "2. facilitate",
+              "content": "facilitate",
               "options": [
                 "to make easier",
                 "to do first",
                 "to try once",
                 "to find out"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"facilitate\" là tạo điều kiện dễ dàng hơn, tương đương \"to make easier\"."
+              "explanation": "Facilitate là làm cho việc gì đó trở nên dễ dàng và thuận tiện hơn. Cụm từ to make easier giải thích chính xác ý nghĩa này. Đáp án là A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
-              "content": "3. elaborate",
+              "content": "elaborate",
               "options": [
                 "beautiful",
                 "small",
                 "detailed",
                 "welcoming"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"elaborate\" là kỹ lưỡng, nhiều chi tiết, tương đương \"detailed\"."
+              "explanation": "Tính từ elaborate chỉ sự tỉ mỉ, trau chuốt và có nhiều chi tiết phức tạp. Từ đồng nghĩa tương ứng là detailed (chi tiết). Mình chọn C nha.",
+              "correctAnswer": "C"
             },
             {
               "id": "19",
-              "content": "4. dilemma",
+              "content": "dilemma",
               "options": [
                 "two parts",
                 "contradiction",
                 "problem",
                 "rescue"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"dilemma\" là tình thế tiến thoái lưỡng nan/vấn đề nan giải, tương đương \"problem\"."
+              "explanation": "Dilemma mang nghĩa là tình thế tiến thoái lưỡng nan, một vấn đề khó giải quyết. Trong các đáp án thì problem (vấn đề) là gần nghĩa nhất. Mình khoanh C nhé.",
+              "correctAnswer": "C"
             },
             {
               "id": "20",
-              "content": "5. inflate",
+              "content": "inflate",
               "options": [
                 "to fill with air",
                 "to enter",
                 "to put away",
                 "to utilize"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"inflate\" là bơm hơi, tương đương \"to fill with air\"."
+              "explanation": "Động từ inflate có nghĩa là thổi phồng, bơm phồng lên bằng không khí. Cụm từ to fill with air diễn tả rất chuẩn xác hành động này. Đáp án là A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
-              "content": "6. innate",
+              "content": "innate",
               "options": [
                 "strong",
                 "natural",
                 "evil",
                 "full"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"innate\" là bẩm sinh, tự nhiên có, tương đương \"natural\"."
+              "explanation": "Innate là bẩm sinh, thuộc về bản chất tự nhiên của một người. Từ có nghĩa tương đồng là natural (tự nhiên). Mình chọn B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
-              "content": "7. saturated",
+              "content": "saturated",
               "options": [
                 "wet",
                 "likely",
                 "uncommon",
                 "unable to change"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"saturated\" là ướt sũng, tương đương \"wet\"."
+              "explanation": "Tính từ saturated chỉ trạng thái ướt sũng, ngậm đầy nước. Trạng thái này giống với từ wet (ướt). Mình chọn A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
-              "content": "8. pouch",
+              "content": "pouch",
               "options": [
                 "a costume",
                 "an animal",
                 "a bag",
                 "a part"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"pouch\" là cái túi/bao nhỏ, tương đương \"a bag\"."
+              "explanation": "Pouch là một chiếc túi nhỏ, ví nhỏ dùng để đựng đồ. Từ tương đương là a bag (cái túi). Đáp án C là chính xác nhé.",
+              "correctAnswer": "C"
             },
             {
               "id": "24",
-              "content": "9. nausea",
+              "content": "nausea",
               "options": [
                 "improvement",
                 "strength",
                 "lost",
                 "sickness"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"nausea\" là cảm giác buồn nôn, bệnh, tương đương \"sickness\"."
+              "explanation": "Danh từ nausea là cảm giác buồn nôn, say sóng hoặc ốm mệt. Từ đồng nghĩa phù hợp nhất là sickness (sự ốm yếu, bệnh). Mình khoanh D nha.",
+              "correctAnswer": "D"
             },
             {
               "id": "25",
-              "content": "10. fleet",
+              "content": "fleet",
               "options": [
                 "shipbuilder",
                 "structure",
                 "group",
                 "underwater"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"fleet\" là đội/nhóm tàu, tương đương \"group\"."
+              "explanation": "Fleet là một hạm đội tàu, tức là một nhóm (group) các con tàu hoạt động cùng nhau. Do đó đáp án C là lựa chọn hợp lý nhất nhé.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
-              "content": "1. The cardboard box was made from a tough metal.",
+              "content": "The cardboard box was made from a tough metal.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Cardboard là giấy bìa cứng, không thể làm từ kim loại (metal)."
+              "explanation": "Cardboard là bìa các tông (làm từ giấy), trong khi câu lại miêu tả nó được làm từ kim loại cứng (tough metal). Câu này sai hoàn toàn về mặt ngữ nghĩa nên mình chọn B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "27",
-              "content": "2. The man had an acquisition for being mean to the people that he met.",
+              "content": "The man had an acquisition for being mean to the people that he met.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Acquisition mang nghĩa thu nhận, mua được (vật phẩm), không dùng cho tính cách (mean)."
+              "explanation": "Acquisition có nghĩa là sự giành được, sự mua lại (tài sản). Sử dụng từ này để miêu tả tính cách xấu tính (mean) là sai ngữ cảnh. Mình chọn B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "28",
-              "content": "3. The man helped the old woman infer the large object on the shelf.",
+              "content": "The man helped the old woman infer the large object on the shelf.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Infer là suy luận, không thể giúp ai đó \"suy luận\" một vật thể lớn trên kệ theo ngữ cảnh nhấc đồ lên."
+              "explanation": "Infer mang nghĩa suy luận, suy diễn. Việc dùng từ này cho hành động lấy hay tác động lên một vật thể lớn trên kệ là không có nghĩa. Đáp án B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "4. We used the grid on the map to help us locate the museum.",
+              "content": "We used the grid on the map to help us locate the museum.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Grid là lưới tọa độ trên bản đồ giúp xác định vị trí."
+              "explanation": "Grid là hệ thống lưới tọa độ trên bản đồ dùng để xác định vị trí. Câu này dùng từ cực kỳ chuẩn xác để định vị bảo tàng. Mình chọn A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
-              "content": "5. The painting was elaborate. The artist paid attention to every detail.",
+              "content": "The painting was elaborate. The artist paid attention to every detail.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Elaborate là tỉ mỉ, rất nhiều chi tiết."
+              "explanation": "Elaborate là tỉ mỉ, công phu, nhiều chi tiết. Vế sau miêu tả người họa sĩ chú ý đến từng chi tiết nhỏ. Sự kết hợp này hoàn hảo. Mình khoanh A nha.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -405,127 +405,127 @@
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
-              "content": "1. Ernest usually used his fleet for his firm that imported marble statues from other countries.",
+              "content": "Ernest usually used his fleet for his firm that imported marble statues from other countries.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Công ty của Ernest nhập khẩu các bức tượng đá hoa cương từ nước ngoài."
+              "explanation": "Ngay phần đầu bài đọc đã cung cấp thông tin: Usually, he used them for his firm, which imported marble statues from other countries. Câu này lặp lại chính xác dữ kiện đó nên đáp án là True nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "32",
-              "content": "2. His favorite ship had updated accessories like a new grid.",
+              "content": "His favorite ship had updated accessories like a new grid.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Chiếc thuyền anh thích nhất có một bản cập nhật mới là thiết bị hiển thị tọa độ bản đồ (grid)."
+              "explanation": "Bài đọc mô tả chiếc tàu yêu thích của Ernest: It also had some new updates... a device with a small grid to show the ship's exact location. Tức là tàu được cập nhật thêm các phụ kiện mới như lưới tọa độ. Mình chọn True nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
-              "content": "3. When Ernest saw the old man standing next to the mast, he decided to go home.",
+              "content": "When Ernest saw the old man standing next to the mast, he decided to go home.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Khi thấy họ vẫy tay, anh đã quyết định giúp họ thoát khỏi khó khăn (dilemma), không phải đi về nhà."
+              "explanation": "Khi thấy ông lão và cậu bé, Ernest cho rằng họ đang gặp nạn và quyết định lái tàu đến để cứu (He began sailing toward them). Anh ấy không hề quay về nhà ngay lúc đó. Đáp án là False nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "34",
-              "content": "4. Ernest offered the man and the boy a boat that inflates to facilitate their rescue.",
+              "content": "Ernest offered the man and the boy a boat that inflates to facilitate their rescue.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Ernest ném cho họ một chiếc thuyền phao (có thể bơm phồng - inflate) để hỗ trợ cứu hộ."
+              "explanation": "Bài đọc ghi rằng Ernest đã ném một gói đồ xuống và hét lên: Here! You can inflate this boat to get you back to land. Việc này nhằm giúp đỡ và tạo điều kiện cứu hộ họ. Do đó câu này là True nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
-              "content": "5. Ernest had the innate desire to make a lot of money.",
+              "content": "Ernest had the innate desire to make a lot of money.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Ernest có khát khao bẩm sinh (innate desire) là giúp đỡ người khác, không phải kiếm thật nhiều tiền."
+              "explanation": "Trong truyện có viết: Ernest had an innate desire to help people. Bản chất bẩm sinh của anh là mong muốn giúp đỡ mọi người, chứ không phải là khao khát kiếm thật nhiều tiền. Mình chọn False nhé.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
-              "content": "1. What was on the side of Ernest’s favorite ship?",
+              "content": "What was on the side of Ernest’s favorite ship?",
               "options": [
                 "There was an elaborate painting of a naval battle.",
                 "There was a sign.",
                 "There was a map.",
                 "There was a name."
               ],
-              "correctAnswer": "A",
-              "explanation": "Bên hông thuyền có một bức tranh cầu kỳ (elaborate painting) vẽ cảnh một trận hải chiến (naval battle)."
+              "explanation": "Bài đọc có câu mô tả chiếc tàu: It had an elaborate painting on the side that showed a naval battle. Tức là bên hông tàu có một bức bích họa tinh xảo về một trận thủy chiến. Đáp án A là chính xác nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
-              "content": "2. How does the author describe the clothes of the people in the boat?",
+              "content": "How does the author describe the clothes of the people in the boat?",
               "options": [
                 "Their clothes were dry.",
                 "Their clothes were saturated with seawater.",
                 "Their clothes were new.",
                 "Their clothes were colorful."
               ],
-              "correctAnswer": "B",
-              "explanation": "Quần áo của họ ướt sũng (saturated) nước biển."
+              "explanation": "Tác giả miêu tả trang phục của hai người trên chiếc thuyền nhỏ bằng câu: Both of their clothes were saturated with sea water. Quần áo của họ đã ướt đẫm nước biển. Mình khoanh B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "38",
-              "content": "3. What did Ernest think was wrong with the boy?",
+              "content": "What did Ernest think was wrong with the boy?",
               "options": [
                 "He thought the boy was suffering from nausea.",
                 "He thought the boy was hungry.",
                 "He thought the boy was thirsty.",
                 "He thought the boy was sleeping."
               ],
-              "correctAnswer": "A",
-              "explanation": "Vì thấy cậu bé chúi đầu ra mép thuyền, Ernest suy luận rằng cậu bị say sóng / buồn nôn (nausea)."
+              "explanation": "Thấy cậu bé gục đầu bên mép thuyền, Ernest suy luận: Ernest inferred that the boy was suffering from nausea. Anh tưởng cậu bé đang bị buồn nôn do say sóng. Vậy đáp án A là chuẩn xác nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
-              "content": "4. Where did the people in the small boat keep their fish?",
+              "content": "Where did the people in the small boat keep their fish?",
               "options": [
                 "In a bucket.",
                 "In a cooler.",
                 "There were several large fish in a pouch in the boat.",
                 "On the floor."
               ],
-              "correctAnswer": "C",
-              "explanation": "Họ giữ những con cá lớn trong một chiếc túi (pouch) trên thuyền."
+              "explanation": "Đoạn gần cuối bài có nhắc đến: Still, there were several large fish in a pouch in the boat. Những người đi thuyền nhỏ giữ vài con cá lớn trong một cái túi. Đáp án C miêu tả đúng chi tiết này nhé.",
+              "correctAnswer": "C"
             },
             {
               "id": "40",
-              "content": "5. What did Ernest learn at the end of the story?",
+              "content": "What did Ernest learn at the end of the story?",
               "options": [
                 "Ernest learned it's better not to offer help unless it was asked for.",
                 "Ernest learned to fish better.",
                 "Ernest learned to stay home.",
                 "Ernest learned to sail faster."
               ],
-              "correctAnswer": "A",
-              "explanation": "Ernest học được bài học rằng không nên tự ý giúp người khác khi họ không yêu cầu, nếu không có khi lại làm hỏng việc của họ (như làm con cá sợ chạy mất)."
+              "explanation": "Câu kết luận của bài đọc là: He learned that it's better not to help unless asked to. Ernest nhận ra bài học rằng tốt nhất là không nên giúp đỡ nếu chưa được yêu cầu. Sự lựa chọn A hoàn toàn khớp với ý nghĩa này nha.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

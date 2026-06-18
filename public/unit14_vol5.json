@@ -15,539 +15,539 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. informative",
+              "content": "informative",
               "options": [
                 "thoughtless",
                 "careful",
                 "helpful",
                 "thoughtful"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"informative\" mang ý nghĩa cung cấp nhiều thông tin bổ ích, đồng nghĩa với \"helpful\" (hữu ích)."
+              "explanation": "Từ informative (cung cấp nhiều thông tin hữu ích) đồng nghĩa với helpful (hữu ích). Mình chọn C nhé.",
+              "correctAnswer": "C"
             },
             {
               "id": "2",
-              "content": "2. coordinate",
+              "content": "coordinate",
               "options": [
                 "to work together",
                 "to break",
                 "to listen",
                 "to finish"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"coordinate\" nghĩa là phối hợp làm việc chung, đồng nghĩa với \"to work together\"."
+              "explanation": "Động từ coordinate có nghĩa là phối hợp làm việc. Nghĩa này tương đương với to work together. Vậy đáp án là A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
-              "content": "3. premise",
+              "content": "premise",
               "options": [
                 "an important part",
                 "a solution",
                 "an idea",
                 "a purpose"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"premise\" (tiền đề) là một ý tưởng (an idea) mà cái khác được dựa trên đó."
+              "explanation": "Từ premise mang nghĩa là tiền đề, hay một ý tưởng cơ sở (an idea). Do đó đáp án chuẩn xác nhất là C nhé.",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
-              "content": "4. aspect",
+              "content": "aspect",
               "options": [
                 "a valued thing",
                 "a feature",
                 "an idea",
                 "a location"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"aspect\" (khía cạnh) đồng nghĩa với \"a feature\" (đặc điểm, khía cạnh)."
+              "explanation": "Từ aspect diễn tả một khía cạnh hoặc đặc điểm của điều gì đó. Từ đồng nghĩa phù hợp nhất là a feature. Chọn đáp án B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
-              "content": "5. imprint",
+              "content": "imprint",
               "options": [
                 "effect",
                 "prison",
                 "presence",
                 "amount"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"imprint\" mang ý nghĩa dấu ấn hay hiệu ứng, đồng nghĩa với \"effect\" (ảnh hưởng, hiệu ứng)."
+              "explanation": "Danh từ imprint có nghĩa là dấu ấn hoặc ảnh hưởng để lại. Từ có ý nghĩa tương đương là effect (tác động, ảnh hưởng). Mình chọn A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
-              "content": "6. rack",
+              "content": "rack",
               "options": [
                 "a baker",
                 "a holder",
                 "a shelter",
                 "a waiter"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"rack\" (giá, kệ) là đồ vật để chứa/giữ đồ đạc, đồng nghĩa với \"a holder\"."
+              "explanation": "Từ rack dùng để chỉ một cái giá đỡ hoặc kệ đựng đồ. Cụm từ a holder mang ý nghĩa tương tự. Đáp án là B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "7",
-              "content": "7. optic",
+              "content": "optic",
               "options": [
                 "visual",
                 "tight",
                 "medical",
                 "restful"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"optic\" liên quan đến thị giác/mắt, đồng nghĩa với \"visual\" (thuộc về thị giác)."
+              "explanation": "Tính từ optic liên quan đến thị giác hoặc con mắt. Nghĩa này tương đương với visual. Chắc chắn đáp án đúng là A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
-              "content": "8. Braille",
+              "content": "Braille",
               "options": [
                 "sign language",
                 "hearing aid",
                 "plant",
                 "a system of writing"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"Braille\" là hệ thống chữ nổi (a system of writing) dành cho người khiếm thị."
+              "explanation": "Braille là hệ thống chữ nổi dành cho người khiếm thị. Do đó nó là a system of writing (một hệ thống chữ viết). Mình khoanh D nha.",
+              "correctAnswer": "D"
             },
             {
               "id": "9",
-              "content": "9. bud",
+              "content": "bud",
               "options": [
                 "tree",
                 "sprout",
                 "bark",
                 "leaves"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"bud\" là nụ hoặc chồi cây, đồng nghĩa với \"sprout\" (chồi/mầm)."
+              "explanation": "Từ bud có nghĩa là chồi non hoặc nụ hoa. Từ mang nghĩa tương đồng là sprout (mầm, chồi). Vậy đáp án là B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
-              "content": "10. wax",
+              "content": "wax",
               "options": [
                 "bee substance",
                 "fire",
                 "ice",
                 "water"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"wax\" là sáp, thường liên quan đến sáp ong (\"bee substance\")."
+              "explanation": "Danh từ wax là sáp, ví dụ như sáp ong. Cụm từ bee substance (chất do ong tạo ra) là một cách giải nghĩa rất hợp lý. Mình chọn A nha.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "1. disprove",
+              "content": "disprove",
               "options": [
                 "to invent",
                 "to validate",
                 "to lie",
                 "untrue"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"disprove\" là bác bỏ, chứng minh sai. Trái nghĩa là \"to validate\" (chứng minh đúng, phê chuẩn)."
+              "explanation": "Động từ disprove có nghĩa là bác bỏ, chứng minh là sai. Ngược nghĩa với nó là to validate (xác nhận, chứng minh là đúng). Mình chọn B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
-              "content": "2. revere",
+              "content": "revere",
               "options": [
                 "to disrespect",
                 "to go fast",
                 "to keep",
                 "to put away"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"revere\" là tôn kính, ngưỡng mộ. Trái nghĩa là \"to disrespect\" (thiếu tôn trọng)."
+              "explanation": "Từ revere mang nghĩa là tôn kính, kính trọng. Trái nghĩa hoàn toàn là to disrespect (thiếu tôn trọng). Đáp án là A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
-              "content": "3. humanitarian",
+              "content": "humanitarian",
               "options": [
                 "animal",
                 "parasite",
                 "assistant",
                 "artist"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"humanitarian\" thuộc về nhân đạo/con người, trong ngữ cảnh này từ trái nghĩa là \"animal\" (động vật)."
+              "explanation": "Tính từ humanitarian liên quan đến nhân đạo, vì con người. Trái ngược với con người có thể hiểu là animal (động vật). Đây là đáp án hợp lý nhất trong các lựa chọn. Mình khoanh A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
-              "content": "4. simultaneous",
+              "content": "simultaneous",
               "options": [
                 "frightening",
                 "slow",
                 "preceding",
                 "lost"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"simultaneous\" là diễn ra đồng thời cùng lúc. Trái nghĩa là \"preceding\" (diễn ra trước)."
+              "explanation": "Tính từ simultaneous nghĩa là đồng thời, xảy ra cùng lúc. Ngược nghĩa với nó là preceding (xảy ra trước). Vậy đáp án là C nha.",
+              "correctAnswer": "C"
             },
             {
               "id": "15",
-              "content": "5. Renaissance",
+              "content": "Renaissance",
               "options": [
                 "last",
                 "modern",
                 "art",
                 "expensive"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"Renaissance\" là thời kỳ phục hưng (quá khứ). Trái nghĩa là \"modern\" (hiện đại)."
+              "explanation": "Renaissance là thời kỳ Phục hưng (trong quá khứ). Trái ngược với thời xưa cũ chính là modern (hiện đại). Mình chọn B nhé.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "16",
-              "content": "1. We received humanitarian relief after I got a terrible haircut.",
+              "content": "We received humanitarian relief after I got a terrible haircut.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Cắt tóc xấu không phải thảm họa để nhận cứu trợ nhân đạo (humanitarian relief)."
+              "explanation": "Cứu trợ nhân đạo (humanitarian relief) dành cho những thảm họa lớn chứ không dùng cho việc cắt tóc hỏng. Câu này dùng sai từ nên mình chọn B (Incorrect) nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
-              "content": "2. The boy waited for the Renaissance, which was going to start in the future.",
+              "content": "The boy waited for the Renaissance, which was going to start in the future.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Renaissance (thời Phục hưng) là một thời kỳ trong lịch sử, không thể diễn ra trong tương lai."
+              "explanation": "Renaissance là thời kỳ Phục hưng đã xảy ra trong lịch sử, không thể bắt đầu trong tương lai được. Do đó câu này sai nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
-              "content": "3. Alice placed the ball on the rack where all her sport equipment was stored.",
+              "content": "Alice placed the ball on the rack where all her sport equipment was stored.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Rack\" (giá để đồ) dùng để lưu trữ thiết bị thể thao."
+              "explanation": "Alice đặt quả bóng lên cái giá đỡ (rack) để đồ thể thao. Việc dùng từ rack ở đây là hoàn toàn chính xác. Mình chọn A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
-              "content": "4. The woman liked the premise of the show, but she thought the acting was bad.",
+              "content": "The woman liked the premise of the show, but she thought the acting was bad.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Premise\" (tiền đề/cốt truyện) của buổi diễn."
+              "explanation": "Premise ở đây là tiền đề, ý tưởng chính của bộ phim. Câu này dùng từ rất hợp lý, mình chọn A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
-              "content": "5. The boy was scared by the simultaneous sound of the thunder and the phone.",
+              "content": "The boy was scared by the simultaneous sound of the thunder and the phone.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Simultaneous\" (diễn ra cùng lúc) của sấm và tiếng điện thoại."
+              "explanation": "Âm thanh của sấm sét và tiếng điện thoại reo lên cùng một lúc (simultaneous). Từ này được dùng hoàn toàn đúng ngữ cảnh. Đáp án là A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "21",
-              "content": "6. The map was informative and helped them from getting lost.",
+              "content": "The map was informative and helped them from getting lost.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Bản đồ cung cấp nhiều thông tin (informative)."
+              "explanation": "Tấm bản đồ cung cấp nhiều thông tin hữu ích (informative) giúp họ không bị lạc. Cách dùng từ này rất chính xác. Mình chọn A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
-              "content": "7. The teacher disproved her expectations. He did exactly what she thought he would.",
+              "content": "The teacher disproved her expectations. He did exactly what she thought he would.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Làm đúng những gì người khác nghĩ thì phải là proved (chứng minh đúng), không phải disproved (chứng minh sai)."
+              "explanation": "Disprove là bác bỏ, chứng minh điều gì đó sai. Nhưng vế sau lại nói thầy giáo làm đúng như cô ấy dự đoán, nên dùng từ disprove là sai logic. Câu này chọn B nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "23",
-              "content": "8. Kelly had only met her uncle once and didn’t know much about him. She revered him.",
+              "content": "Kelly had only met her uncle once and didn’t know much about him. She revered him.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Chỉ gặp một lần và không biết nhiều thì không thể \"revered\" (tôn sùng, kính trọng sâu sắc)."
+              "explanation": "Revere là tôn kính. Kelly chỉ mới gặp chú một lần và không biết nhiều, nên việc tôn kính sâu sắc ngay lập tức là không hợp lý. Mình chọn B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
-              "content": "9. In spring, all of the plants in the garden are covered with tiny buds.",
+              "content": "In spring, all of the plants in the garden are covered with tiny buds.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Mùa xuân cây cối đâm chồi (tiny buds)."
+              "explanation": "Vào mùa xuân, cây cối đâm chồi nảy lộc. Từ buds (nụ, chồi non) được dùng cực kỳ chính xác. Đáp án là A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
-              "content": "10. The skeptic didn’t believe that the magician could actually make someone disappear.",
+              "content": "The skeptic didn’t believe that the magician could actually make someone disappear.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Skeptic\" (người hay hoài nghi) sẽ không tin vào phép thuật."
+              "explanation": "Skeptic là người hay hoài nghi. Việc một người hoài nghi không tin vào phép thuật là rất logic. Câu này dùng từ đúng, mình khoanh A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
-              "content": "11. He didn’t think about the aspects of smoking. Later he realized the disadvantages.",
+              "content": "He didn’t think about the aspects of smoking. Later he realized the disadvantages.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Aspects\" (các khía cạnh) của việc hút thuốc."
+              "explanation": "Aspects mang nghĩa là các khía cạnh. Việc không suy nghĩ kỹ về các khía cạnh của việc hút thuốc là một cách diễn đạt hợp lý. Mình chọn A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
-              "content": "12. The new hearing aid provides a wide range of optic choices.",
+              "content": "The new hearing aid provides a wide range of optic choices.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Máy trợ thính (hearing aid) không liên quan đến quang học hay thị giác (optic)."
+              "explanation": "Hearing aid là máy trợ thính (dành cho tai), trong khi optic liên quan đến thị giác (mắt). Sự kết hợp này sai hoàn toàn. Câu này chọn B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "28",
-              "content": "13. The bad dream left an imprint on Jared. He had forgot it by noon of the same day.",
+              "content": "The bad dream left an imprint on Jared. He had forgot it by noon of the same day.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. Nếu để lại \"imprint\" (dấu ấn sâu sắc khó quên) thì không thể quên ngay vào buổi trưa."
+              "explanation": "Imprint là dấu ấn sâu đậm. Nếu cơn ác mộng để lại dấu ấn mà đến trưa anh ấy đã quên sạch thì rất mâu thuẫn. Do đó dùng từ này là sai nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "14. He had to specify to the waiter whether he wanted onions in his food or not.",
+              "content": "He had to specify to the waiter whether he wanted onions in his food or not.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Specify\" (chỉ rõ) việc có muốn ăn hành hay không."
+              "explanation": "Specify nghĩa là chỉ rõ, nói cụ thể. Khách hàng cần nói rõ với bồi bàn là có lấy hành hay không. Câu này rất chuẩn xác, mình chọn A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "30",
-              "content": "15. The fruits looked real, but they were made of wax.",
+              "content": "The fruits looked real, but they were made of wax.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Quả làm từ sáp (made of wax)."
+              "explanation": "Những trái cây trông như thật nhưng lại được làm từ sáp (wax). Việc làm hoa quả giả bằng sáp rất phổ biến nên câu này dùng đúng. Mình khoanh A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "31",
-              "content": "16. Her understanding has been a real asset in her successful career.",
+              "content": "Her understanding has been a real asset in her successful career.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Trí tuệ/sự hiểu biết là một tài sản giá trị (\"asset\")."
+              "explanation": "Asset không chỉ là tài sản vật chất mà còn là những phẩm chất quý giá. Sự thấu hiểu của cô ấy là một điểm cộng lớn cho sự nghiệp. Cách dùng này hoàn toàn đúng nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "32",
-              "content": "17. I did an experiment to prove my hypotheses.",
+              "content": "I did an experiment to prove my hypotheses.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Thực hiện thí nghiệm để chứng minh các giả thuyết (hypotheses)."
+              "explanation": "Experiment là thí nghiệm, hypotheses là các giả thuyết. Làm thí nghiệm để chứng minh giả thuyết là quá chuẩn xác. Mình chọn A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "33",
-              "content": "18. Please use the spatial spoon to turn the eggs.",
+              "content": "Please use the spatial spoon to turn the eggs.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "B",
-              "explanation": "Incorrect. \"Spatial\" liên quan đến không gian, không dùng cho cái muỗng (spoon) nấu ăn (thường là spatula)."
+              "explanation": "Spatial có nghĩa là thuộc về không gian. Dùng từ này để miêu tả một chiếc thìa nấu ăn là vô nghĩa. Câu này sai nên chọn B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "34",
-              "content": "19. Braille has helped many blind people enjoy literature.",
+              "content": "Braille has helped many blind people enjoy literature.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. Hệ thống chữ nổi \"Braille\" giúp người khiếm thị."
+              "explanation": "Braille là chữ nổi dành cho người khiếm thị. Việc chữ nổi giúp họ thưởng thức văn học là điều tuyệt vời và hợp lý. Mình chọn A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
-              "content": "20. If you coordinate all of sounds, you can make music.",
+              "content": "If you coordinate all of sounds, you can make music.",
               "options": [
                 "Correct",
                 "Incorrect"
               ],
-              "correctAnswer": "A",
-              "explanation": "Correct. \"Coordinate\" (phối hợp) các âm thanh lại tạo thành âm nhạc."
+              "explanation": "Coordinate có nghĩa là phối hợp. Phối hợp các âm thanh lại với nhau sẽ tạo ra âm nhạc. Câu này sử dụng từ rất chuẩn. Mình chọn A nha.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Day Without Sight</h1><p style=\"margin-bottom: 1rem;\">On Friday afternoon, Sam’s teacher had a special assignment.</p><p style=\"margin-bottom: 1rem;\">“Next week, we’ll be studying <b>humanitarian</b> efforts around the world since the time of the <b>Renaissance</b>, including those to help the blind,” she said. “Over the weekend, I want each of you to wear a blindfold for an entire day. The <b>premise</b> of this experiment is that it will help you understand what it’s like to be blind,” she said.</p><p style=\"margin-bottom: 1rem;\">Sam was a <b>skeptic</b>. He really didn’t think the assignment would be too challenging. On Saturday morning, Sam took a piece of cloth and tied it around his head to cover his eyes. Then he went into the kitchen for breakfast. He heard the voices of his parents and brothers but couldn’t <b>specify</b> where each voice was coming from. He thought about how important hearing is for blind people.</p><p style=\"margin-bottom: 1rem;\">“Could you pass me the newspaper, please?” he asked. Just then, he remembered he couldn’t see the words on the page. He wondered if <b>Braille</b> newspapers were ever made.</p><p style=\"margin-bottom: 1rem;\">After finishing breakfast, his brothers asked him to play soccer. As he followed them, he accidentally walked into the baker’s <b>rack</b>. He also found that he couldn’t play soccer. He wouldn’t be able to <b>coordinate</b> his actions without being able to see. Without his <b>optic</b> senses, he had no <b>spatial</b> awareness. Furthermore, he couldn’t do <b>simultaneous</b> activities because he had to make sure he was safe first.</p><p style=\"margin-bottom: 1rem;\">He sat on the lawn. Suddenly, he realized that though he couldn’t see, his other senses worked perfectly fine. In fact, he began to realize new and different <b>aspects</b> of common objects. For example, he took a flower <b>bud</b> and felt it with his finger. He realized for the first time that it seemed to be covered with <b>wax</b>.</p><p style=\"margin-bottom: 1rem;\">His <b>hypothesis</b> about being blind was <b>disproved</b>. The <b>informative</b> experiment had an <b>imprint</b> on him. It showed him sight was an <b>asset</b> that should be appreciated and taught him to <b>revere</b> the talents of blind people.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Day Without Sight</h1>        <p style=\"margin-bottom: 1rem;\">On Friday afternoon, Sam’s teacher had a special assignment.</p>    <p style=\"margin-bottom: 1rem;\">“Next week, we’ll be studying <b>humanitarian</b> efforts around the world since the time of the <b>Renaissance</b>, including those to help the blind,” she said. “Over the weekend, I want each of you to wear a blindfold for an entire day. The <b>premise</b> of this experiment is that it will help you understand what it’s like to be blind,” she said.</p>    <p style=\"margin-bottom: 1rem;\">Sam was a <b>skeptic</b>. He really didn’t think the assignment would be too challenging. On Saturday morning, Sam took a piece of cloth and tied it around his head to cover his eyes. Then he went into the kitchen for breakfast. He heard the voices of his parents and brothers but couldn’t <b>specify</b> where each voice was coming from. He thought about how important hearing is for blind people.</p>    <p style=\"margin-bottom: 1rem;\">“Could you pass me the newspaper, please?” he asked. Just then, he remembered he couldn’t see the words on the page. He wondered if <b>Braille</b> newspapers were ever made.</p>    <p style=\"margin-bottom: 1rem;\">After finishing breakfast, his brothers asked him to play soccer. As he followed them, he accidentally walked into the baker’s <b>rack</b>. He also found that he couldn’t play soccer. He wouldn’t be able to <b>coordinate</b> his actions without being able to see. Without his <b>optic</b> senses, he had no <b>spatial</b> awareness. Furthermore, he couldn’t do <b>simultaneous</b> activities because he had to make sure he was safe first.</p>    <p style=\"margin-bottom: 1rem;\">He sat on the lawn. Suddenly, he realized that though he couldn’t see, his other senses worked perfectly fine. In fact, he began to realize new and different <b>aspects</b> of common objects. For example, he took a flower <b>bud</b> and felt it with his finger. He realized for the first time that it seemed to be covered with <b>wax</b>.</p>    <p style=\"margin-bottom: 1rem;\">His <b>hypothesis</b> about being blind was <b>disproved</b>. The <b>informative</b> experiment had an <b>imprint</b> on him. It showed him sight was an <b>asset</b> that should be appreciated and taught him to <b>revere</b> the talents of blind people.</p></div>",
       "imageUrl": "/unit14_vol5_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "36",
-              "content": "1. Sam’s class is going to study humanitarian efforts since the time of the Renaissance next week.",
+              "content": "Sam’s class is going to study humanitarian efforts since the time of the Renaissance next week.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Giáo viên nói: \"Next week, we'll be studying humanitarian efforts around the world since the time of the Renaissance...\""
+              "explanation": "Bài đọc có đoạn giáo viên nói: Next week, we'll be studying humanitarian efforts around the world since the time of the Renaissance. Câu này nhắc lại y hệt thông tin trong bài, nên đáp án là True nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "37",
-              "content": "2. At first, Sam’s hypothesis is that the assignment is going to be difficult.",
+              "content": "At first, Sam’s hypothesis is that the assignment is going to be difficult.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Ban đầu Sam là người hoài nghi (skeptic) và nghĩ rằng bài tập này sẽ không có gì thử thách (didn't think the assignment would be too challenging)."
+              "explanation": "Trong bài ghi rõ: Sam was a skeptic. He really didn't think the assignment would be too challenging. Nghĩa là cậu bé không hề nghĩ bài tập này khó. Vậy câu nhận định này là False nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "38",
-              "content": "3. When Sam goes into the kitchen, he reads a Braille newspaper.",
+              "content": "When Sam goes into the kitchen, he reads a Braille newspaper.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Khi xin báo, cậu mới nhận ra mình không thể đọc chữ trên giấy, và cậu chỉ tự hỏi không biết có báo bằng chữ Braille không."
+              "explanation": "Khi ở bếp, Sam nhờ lấy tờ báo và nhận ra mình không thể đọc được. Cậu chỉ thắc mắc: He wondered if Braille newspapers were ever made (Cậu tự hỏi liệu có báo chữ nổi hay không). Sam hoàn toàn chưa đọc báo chữ nổi nào. Đáp án là False nhé.",
+              "correctAnswer": "B"
             },
             {
               "id": "39",
-              "content": "4. Sam runs into the baker’s rack on his way outside.",
+              "content": "Sam runs into the baker’s rack on his way outside.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Trên đường ra ngoài chơi bóng, cậu vô tình đâm vào chiếc kệ bánh (baker's rack)."
+              "explanation": "Bài đọc kể lại rằng: As he followed them, he accidentally walked into the baker's rack. Cậu bé đã vô tình đụng trúng cái kệ bánh. Do đó câu này là True nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "40",
-              "content": "5. Without his sense of sight, Sam has better spatial awareness and can coordinate his movements more easily.",
+              "content": "Without his sense of sight, Sam has better spatial awareness and can coordinate his movements more easily.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Không có thị giác, Sam hoàn toàn không có nhận thức không gian (no spatial awareness) và không thể phối hợp (couldn't coordinate) hành động của mình."
+              "explanation": "Ngược lại hoàn toàn nhé. Bài đọc nhấn mạnh: He wouldn't be able to coordinate his actions without being able to see. Without his optic senses, he had no spatial awareness. Khi không nhìn thấy, cậu mất đi khả năng cảm nhận không gian và khó phối hợp hành động. Đáp án là False.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "41",
-              "content": "1. What was the premise of the experiment, according to Sam’s teacher?",
+              "content": "What was the premise of the experiment, according to Sam’s teacher?",
               "options": [
                 "The premise was to help the students understand what it’s like to be blind.",
                 "The premise was to learn how to cook.",
                 "The premise was to learn to run.",
                 "The premise was to sleep in the dark."
               ],
-              "correctAnswer": "A",
-              "explanation": "Tiền đề (premise) của thí nghiệm là giúp học sinh hiểu cảm giác bị mù sẽ như thế nào."
+              "explanation": "Giáo viên của Sam giải thích: The premise of this experiment is that it will help you understand what it's like to be blind. Tức là tiền đề của thí nghiệm này nhằm giúp học sinh hiểu được cảm giác của người khiếm thị. Đáp án A là chính xác nhất nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "42",
-              "content": "2. What did Sam realize when he couldn’t specify where the voices were coming from?",
+              "content": "What did Sam realize when he couldn’t specify where the voices were coming from?",
               "options": [
                 "He realized he was deaf.",
                 "He realized how important hearing was for blind people.",
                 "He realized everyone was gone.",
                 "He realized he liked quiet."
               ],
-              "correctAnswer": "B",
-              "explanation": "Sam nhận ra rằng thính giác (hearing) là vô cùng quan trọng đối với những người mù."
+              "explanation": "Khi không thể xác định tiếng nói phát ra từ đâu, bài đọc ghi nhận suy nghĩ của Sam: He thought about how important hearing is for blind people. Cậu bé nhận ra thính giác quan trọng đến mức nào đối với người mù. Vậy mình khoanh B nha.",
+              "correctAnswer": "B"
             },
             {
               "id": "43",
-              "content": "3. Why wasn’t Sam able to perform simultaneous activities?",
+              "content": "Why wasn’t Sam able to perform simultaneous activities?",
               "options": [
                 "Because he had to make sure he was safe first.",
                 "Because he was tired.",
                 "Because his hands were tied.",
                 "Because his parents told him not to."
               ],
-              "correctAnswer": "A",
-              "explanation": "Sam không thể làm nhiều việc cùng lúc (simultaneous activities) vì trước tiên cậu phải đảm bảo mình được an toàn."
+              "explanation": "Đoạn văn có nêu lý do rõ ràng: he couldn't do simultaneous activities because he had to make sure he was safe first. Cậu bé phải đảm bảo an toàn cho bản thân trước tiên nên không thể làm nhiều việc cùng lúc. Mình chọn A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "44",
-              "content": "4. What aspect of the flower bud did Sam notice after he realized all his other senses worked fine?",
+              "content": "What aspect of the flower bud did Sam notice after he realized all his other senses worked fine?",
               "options": [
                 "Sam noticed that the bud seemed to be covered with wax.",
                 "Sam noticed that the bud was red.",
                 "Sam noticed that the bud smelled bad.",
                 "Sam noticed that the bud was cold."
               ],
-              "correctAnswer": "A",
-              "explanation": "Sam nhận ra rằng nụ hoa (bud) dường như được bao phủ bởi một lớp sáp (wax)."
+              "explanation": "Khi dùng tay sờ nụ hoa, Sam phát hiện ra một đặc điểm: He realized for the first time that it seemed to be covered with wax. Cậu cảm thấy nụ hoa như được phủ một lớp sáp. Đáp án A miêu tả đúng chi tiết này nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "45",
-              "content": "5. After Sam’s theory was disproved, what was the impact the experiment had on him?",
+              "content": "After Sam’s theory was disproved, what was the impact the experiment had on him?",
               "options": [
                 "It showed him sight was an asset that should be appreciated and taught him to revere the talents of blind people.",
                 "It showed him he should never wear a blindfold.",
                 "It showed him how to read Braille.",
                 "It made him want to stay inside forever."
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài học cho thấy thị giác là một tài sản quý giá (asset) cần được trân trọng và dạy cậu biết ngưỡng mộ (revere) tài năng của những người mù."
+              "explanation": "Câu cuối cùng của bài đã tóm tắt lại bài học của Sam: It showed him sight was an asset that should be appreciated and taught him to revere the talents of blind people. Thí nghiệm đã giúp cậu trân trọng đôi mắt và kính trọng tài năng của người khiếm thị. Đáp án A là sự lựa chọn đúng đắn nhất nhé.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

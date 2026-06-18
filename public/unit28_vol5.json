@@ -15,7 +15,6 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
@@ -26,8 +25,8 @@
                 "A cow",
                 "A coyote"
               ],
-              "correctAnswer": "B",
-              "explanation": "Trong thủy cung (aquarium), bạn có thể tìm thấy một con mực (A squid)."
+              "explanation": "Trong thủy cung (aquarium), bạn có thể tìm thấy một con mực (A squid).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_2",
@@ -38,8 +37,8 @@
                 "Miss class",
                 "Get less sleep"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bạn có thể học nhiều hơn (Study more) để cải thiện điểm số."
+              "explanation": "Bạn có thể học nhiều hơn (Study more) để cải thiện điểm số.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_3",
@@ -50,8 +49,8 @@
                 "Getting a degree",
                 "Dating"
               ],
-              "correctAnswer": "C",
-              "explanation": "Kết quả cuối cùng (ultimate result) của việc học đại học là lấy được bằng cấp (Getting a degree)."
+              "explanation": "Kết quả cuối cùng (ultimate result) của việc học đại học là lấy được bằng cấp (Getting a degree).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_4",
@@ -62,8 +61,8 @@
                 "You can never get outside.",
                 "It will float."
               ],
-              "correctAnswer": "A",
-              "explanation": "Cách nhiệt (insulate) cho ngôi nhà vào mùa đông giúp giữ không khí lạnh ở bên ngoài."
+              "explanation": "Cách nhiệt (insulate) cho ngôi nhà vào mùa đông giúp giữ không khí lạnh ở bên ngoài.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_5",
@@ -74,16 +73,16 @@
                 "A shy teenager",
                 "A dead person"
               ],
-              "correctAnswer": "A",
-              "explanation": "Một người quan trọng (An important person) có khả năng cao xuất bản tự truyện (autobiography) của họ."
+              "explanation": "Một người quan trọng (An important person) có khả năng cao xuất bản tự truyện (autobiography) của họ.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_1",
@@ -94,8 +93,8 @@
                 "a friend",
                 "a follower"
               ],
-              "correctAnswer": "B",
-              "explanation": "recipient là người nhận, ngược lại là người cho (a giver)."
+              "explanation": "recipient là người nhận, ngược lại là người cho (a giver).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_2",
@@ -106,8 +105,8 @@
                 "to find",
                 "to declare"
               ],
-              "correctAnswer": "C",
-              "explanation": "misplace là làm mất, ngược lại là tìm thấy (to find)."
+              "explanation": "misplace là làm mất, ngược lại là tìm thấy (to find).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_3",
@@ -118,8 +117,8 @@
                 "lacking",
                 "behaving well"
               ],
-              "correctAnswer": "D",
-              "explanation": "naughty là hư hỏng, nghịch ngợm, ngược lại là cư xử tốt (behaving well)."
+              "explanation": "naughty là hư hỏng, nghịch ngợm, ngược lại là cư xử tốt (behaving well).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex2_4",
@@ -130,8 +129,8 @@
                 "answers",
                 "tallness"
               ],
-              "correctAnswer": "A",
-              "explanation": "longevity là tuổi thọ cao, sống lâu, ngược lại là cuộc đời ngắn ngủi (short life)."
+              "explanation": "longevity là tuổi thọ cao, sống lâu, ngược lại là cuộc đời ngắn ngủi (short life).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_5",
@@ -142,8 +141,8 @@
                 "to agree",
                 "to move around"
               ],
-              "correctAnswer": "B",
-              "explanation": "thrive là phát triển mạnh, làm tốt, ngược lại là làm tệ (to do bad)."
+              "explanation": "thrive là phát triển mạnh, làm tốt, ngược lại là làm tệ (to do bad).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_6",
@@ -154,8 +153,8 @@
                 "kind",
                 "smart"
               ],
-              "correctAnswer": "A",
-              "explanation": "gracious là tử tế, tốt bụng, ngược lại là keo kiệt, xấu tính (mean)."
+              "explanation": "gracious là tử tế, tốt bụng, ngược lại là keo kiệt, xấu tính (mean).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_7",
@@ -166,8 +165,8 @@
                 "everyday",
                 "average"
               ],
-              "correctAnswer": "A",
-              "explanation": "norm là chuẩn mực, bình thường, ngược lại là bất thường (abnormal)."
+              "explanation": "norm là chuẩn mực, bình thường, ngược lại là bất thường (abnormal).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_8",
@@ -178,8 +177,8 @@
                 "to reassure",
                 "to trust"
               ],
-              "correctAnswer": "B",
-              "explanation": "intrigue là gây hứng thú, tò mò, ngược lại là gây nhàm chán (to bore)."
+              "explanation": "intrigue là gây hứng thú, tò mò, ngược lại là gây nhàm chán (to bore).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_9",
@@ -190,8 +189,8 @@
                 "random",
                 "planned"
               ],
-              "correctAnswer": "D",
-              "explanation": "arbitrary là ngẫu nhiên, tùy tiện, ngược lại là có kế hoạch (planned)."
+              "explanation": "arbitrary là ngẫu nhiên, tùy tiện, ngược lại là có kế hoạch (planned).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex2_10",
@@ -202,16 +201,16 @@
                 "to ignore",
                 "to build"
               ],
-              "correctAnswer": "C",
-              "explanation": "probe là thăm dò, hỏi han, ngược lại là phớt lờ (to ignore)."
+              "explanation": "probe là thăm dò, hỏi han, ngược lại là phớt lờ (to ignore).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex3_1",
@@ -220,8 +219,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Misplace (làm mất) tiền sẽ khiến bạn không còn nó, chứ không phải luôn có nó."
+              "explanation": "I (Incorrect). Misplace (làm mất) tiền sẽ khiến bạn không còn nó, chứ không phải luôn có nó.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_2",
@@ -230,8 +229,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Đười ươi (orangutans) đu đưa trên cây."
+              "explanation": "C (Correct). Đười ươi (orangutans) đu đưa trên cây.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_3",
@@ -240,8 +239,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Hổ (tigers) không sống trong thủy cung (aquarium)."
+              "explanation": "I (Incorrect). Hổ (tigers) không sống trong thủy cung (aquarium).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_4",
@@ -250,8 +249,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Người tham lam không bao giờ giúp đỡ ai thì không thể yêu thích lòng bác ái (philanthropy)."
+              "explanation": "I (Incorrect). Người tham lam không bao giờ giúp đỡ ai thì không thể yêu thích lòng bác ái (philanthropy).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_5",
@@ -260,8 +259,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Chiếc hộp bị vỡ khi chất quá tải (overloaded) sách."
+              "explanation": "C (Correct). Chiếc hộp bị vỡ khi chất quá tải (overloaded) sách.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_6",
@@ -270,8 +269,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Cơ chế của máy tính gây hứng thú (intrigue) cho tôi."
+              "explanation": "C (Correct). Cơ chế của máy tính gây hứng thú (intrigue) cho tôi.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_7",
@@ -280,8 +279,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Longevity là tuổi thọ (thời gian sống), không đo bằng centimet (độ dài)."
+              "explanation": "I (Incorrect). Longevity là tuổi thọ (thời gian sống), không đo bằng centimet (độ dài).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_8",
@@ -290,8 +289,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Cây sẽ không thể phát triển mạnh mẽ (thrive) nếu không được tưới nước."
+              "explanation": "I (Incorrect). Cây sẽ không thể phát triển mạnh mẽ (thrive) nếu không được tưới nước.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_9",
@@ -300,8 +299,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Cô bé hư hỏng (naughty) thì không thể luôn vâng lời (obeyed) mẹ."
+              "explanation": "I (Incorrect). Cô bé hư hỏng (naughty) thì không thể luôn vâng lời (obeyed) mẹ.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_10",
@@ -310,8 +309,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Kết quả cuối cùng (ultimate result)."
+              "explanation": "C (Correct). Kết quả cuối cùng (ultimate result).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_11",
@@ -320,8 +319,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Cải thiện (improve) cuộc sống."
+              "explanation": "C (Correct). Cải thiện (improve) cuộc sống.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_12",
@@ -330,8 +329,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Trả tiền xăng trước khi bơm là một điều bình thường/chuẩn mực (norm)."
+              "explanation": "C (Correct). Trả tiền xăng trước khi bơm là một điều bình thường/chuẩn mực (norm).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_13",
@@ -340,8 +339,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Probe là thăm dò, hỏi han. Nếu không muốn nghe thì sẽ không probe."
+              "explanation": "I (Incorrect). Probe là thăm dò, hỏi han. Nếu không muốn nghe thì sẽ không probe.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_14",
@@ -350,8 +349,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Xếp hàng chờ đến lượt là một quy ước xã hội (social convention)."
+              "explanation": "C (Correct). Xếp hàng chờ đến lượt là một quy ước xã hội (social convention).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_15",
@@ -360,8 +359,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Chó là động vật có vú, không phải là loài bò sát (reptile)."
+              "explanation": "I (Incorrect). Chó là động vật có vú, không phải là loài bò sát (reptile).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_16",
@@ -370,8 +369,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Cách âm (insulated) bằng chăn để ngăn tiếng ồn."
+              "explanation": "C (Correct). Cách âm (insulated) bằng chăn để ngăn tiếng ồn.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_17",
@@ -380,8 +379,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Người nhận (recipient) giải đặc biệt."
+              "explanation": "C (Correct). Người nhận (recipient) giải đặc biệt.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_18",
@@ -390,8 +389,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Autobiography là tự truyện (tự mình viết về mình). Nếu viết về bố thì gọi là biography (tiểu sử)."
+              "explanation": "I (Incorrect). Autobiography là tự truyện (tự mình viết về mình). Nếu viết về bố thì gọi là biography (tiểu sử).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_19",
@@ -400,8 +399,8 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Nghĩ ra những luật lệ tùy tiện (arbitrary rules)."
+              "explanation": "C (Correct). Nghĩ ra những luật lệ tùy tiện (arbitrary rules).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_20",
@@ -410,24 +409,24 @@
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Nhân viên cửa hàng rất tử tế (gracious)."
+              "explanation": "C (Correct). Nhân viên cửa hàng rất tử tế (gracious).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lottery</h1><p style=\"margin-bottom: 1rem;\">Joe was watching television when he heard a knock at the door. He thought, \"Who could that be? It's probably one of the <b>naughty</b> neighborhood children.\" Joe stood up and walked to the door. When he opened it, he saw a beautiful woman.</p><p style=\"margin-bottom: 1rem;\">She said, \"Good morning, Joe! I have great news. You're the <b>recipient</b> of this check for one million dollars! You won the lottery!\"</p><p style=\"margin-bottom: 1rem;\">Joe couldn't believe it. His mind was <b>overloaded</b> with emotions. Joe said, \"Thank you! Thank you!\"</p><p style=\"margin-bottom: 1rem;\">After he calmed down, Joe made a photocopy of the check in case he <b>misplaced</b> the original one. He sat and thought about what he wanted to do with the money. He didn't want to spend it in an <b>arbitrary</b> way. Joe thought, \"I know there are others who need this money more than I do. I've always loved animals, so I think I'll buy things for the zoo!\"</p><p style=\"margin-bottom: 1rem;\">Joe knew that the zoo was in bad shape. The cages were too small, and they weren't <b>insulated</b> from the cold. Animals couldn't <b>thrive</b> in such conditions.</p><p style=\"margin-bottom: 1rem;\">He took out some stationery and wrote a letter to the zoo. He offered to help the zoo buy huge cages for the large mammals and <b>reptiles</b>. He offered to buy healthy food for the <b>orangutans</b> to increase their <b>longevity</b>. He even said that he would buy new glass walls for the <b>aquarium</b> because the old ones were cracked.</p><p style=\"margin-bottom: 1rem;\">Joe's act of <b>philanthropy</b> <b>intrigued</b> the zookeeper. He <b>probed</b> Joe to learn why he spent his money to <b>improve</b> the zoo. It wasn't a social <b>convention</b> for a person to be so <b>gracious</b>.</p><p style=\"margin-bottom: 1rem;\">Joe told the zookeeper, \"I know it's not the <b>norm</b>, but my <b>ultimate</b> decision to help these animals is better than anything I could have done for myself. If I ever write an <b>autobiography</b>, I will write that this was the happiest day of my life.\"</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lottery</h1>        <p style=\"margin-bottom: 1rem;\">Joe was watching television when he heard a knock at the door. He thought, \"Who could that be? It's probably one of the <b>naughty</b> neighborhood children.\" Joe stood up and walked to the door. When he opened it, he saw a beautiful woman.</p>    <p style=\"margin-bottom: 1rem;\">She said, \"Good morning, Joe! I have great news. You're the <b>recipient</b> of this check for one million dollars! You won the lottery!\"</p>    <p style=\"margin-bottom: 1rem;\">Joe couldn't believe it. His mind was <b>overloaded</b> with emotions. Joe said, \"Thank you! Thank you!\"</p>    <p style=\"margin-bottom: 1rem;\">After he calmed down, Joe made a photocopy of the check in case he <b>misplaced</b> the original one. He sat and thought about what he wanted to do with the money. He didn't want to spend it in an <b>arbitrary</b> way. Joe thought, \"I know there are others who need this money more than I do. I've always loved animals, so I think I'll buy things for the zoo!\"</p>    <p style=\"margin-bottom: 1rem;\">Joe knew that the zoo was in bad shape. The cages were too small, and they weren't <b>insulated</b> from the cold. Animals couldn't <b>thrive</b> in such conditions.</p>    <p style=\"margin-bottom: 1rem;\">He took out some stationery and wrote a letter to the zoo. He offered to help the zoo buy huge cages for the large mammals and <b>reptiles</b>. He offered to buy healthy food for the <b>orangutans</b> to increase their <b>longevity</b>. He even said that he would buy new glass walls for the <b>aquarium</b> because the old ones were cracked.</p>    <p style=\"margin-bottom: 1rem;\">Joe's act of <b>philanthropy</b> <b>intrigued</b> the zookeeper. He <b>probed</b> Joe to learn why he spent his money to <b>improve</b> the zoo. It wasn't a social <b>convention</b> for a person to be so <b>gracious</b>.</p>    <p style=\"margin-bottom: 1rem;\">Joe told the zookeeper, \"I know it's not the <b>norm</b>, but my <b>ultimate</b> decision to help these animals is better than anything I could have done for myself. If I ever write an <b>autobiography</b>, I will write that this was the happiest day of my life.\"</p></div>",
       "imageUrl": "/unit28_vol5_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec4_1",
@@ -436,8 +435,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Joe là người nhận tấm séc vì anh đã trúng xổ số."
+              "explanation": "Đúng rồi. Ở đoạn 2, cô gái đã nói You're the recipient of this check... You won the lottery! Joe là người nhận được tấm séc vì đã trúng xổ số.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec4_2",
@@ -446,8 +445,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Anh ấy muốn mua kính mới cho thuỷ cung vì những cái cũ đã bị nứt."
+              "explanation": "Đúng nhé. Đoạn 6 có trích dẫn rõ he would buy new glass walls for the aquarium because the old ones were cracked. Anh ấy muốn mua kính mới cho thuỷ cung vì những cái cũ đã bị nứt.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec4_3",
@@ -456,8 +455,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Nếu viết tự truyện (autobiography), anh ấy sẽ viết rằng ngày trúng số và giúp đỡ động vật là ngày hạnh phúc nhất đời anh."
+              "explanation": "Sai nha. Đoạn cuối cùng Joe có nói If I ever write an autobiography, I will write that this was the happiest day of my life. Nghĩa là nếu viết tự truyện, anh ấy sẽ kể lại rằng đây là ngày hạnh phúc nhất đời anh, chứ không phải viết về các chuẩn mực của thủy cung.",
+              "correctAnswer": "B"
             },
             {
               "id": "sec4_4",
@@ -466,8 +465,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Anh ấy photo tấm séc phòng trường hợp làm mất (misplaced) bản gốc."
+              "explanation": "Đúng rồi. Ở đoạn 4 bài đọc viết Joe made a photocopy of the check in case he misplaced the original one. Anh đã photo tấm séc để phòng trường hợp làm mất bản gốc.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec4_5",
@@ -476,16 +475,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Khi mở cửa, anh ấy nhìn thấy một người phụ nữ xinh đẹp mang theo tấm séc."
+              "explanation": "Sai nhé. Đoạn 1 viết When he opened it, he saw a beautiful woman. Joe cứ nghĩ là những đứa trẻ nghịch ngợm gõ cửa, nhưng khi mở cửa thì lại thấy một người phụ nữ xinh đẹp.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec5_1",
@@ -496,8 +495,8 @@
                 "Joe thought they wanted his money.",
                 "Joe thought they were lost."
               ],
-              "correctAnswer": "A",
-              "explanation": "Joe nghĩ những đứa trẻ nghịch ngợm hàng xóm đang trêu đùa anh."
+              "explanation": "Đoạn 1 diễn tả suy nghĩ của Joe It's probably one of the naughty neighborhood children. Dù không nói thẳng ra chữ \"playing a trick\", nhưng Joe nghĩ rằng những đứa trẻ nghịch ngợm hàng xóm đang trêu đùa gõ cửa nhà anh. Chọn đáp án A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_2",
@@ -508,8 +507,8 @@
                 "He took out some stationery to draw a picture.",
                 "He took out some stationery to write a check."
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh lấy giấy bút ra để viết một lá thư gửi cho sở thú."
+              "explanation": "Trong đoạn 6 có câu He took out some stationery and wrote a letter to the zoo. Anh ấy lấy giấy bút ra với mục đích viết một lá thư gửi cho sở thú. Chọn đáp án A.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_3",
@@ -520,8 +519,8 @@
                 "He bought bigger trees for them.",
                 "He bought new cages for them."
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh ấy đã mua thức ăn tốt cho đười ươi để giúp chúng sống lâu hơn."
+              "explanation": "Đoạn 6 cũng viết He offered to buy healthy food for the orangutans to increase their longevity. Anh ấy muốn mua thức ăn tốt cho đười ươi để giúp chúng sống lâu hơn. Đáp án đúng là A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_4",
@@ -532,8 +531,8 @@
                 "He probed Joe to ask for more money.",
                 "He probed Joe to sell him a ticket."
               ],
-              "correctAnswer": "A",
-              "explanation": "Nhân viên sở thú gạn hỏi để tìm hiểu lý do tại sao Joe dùng tiền cho sở thú thay vì cho bản thân."
+              "explanation": "Ở đoạn 7, nhân viên sở thú đã gạn hỏi: He probed Joe to learn why he spent his money to improve the zoo. Nhân viên sở thú muốn biết tại sao Joe lại dùng tiền của mình để cải tạo sở thú. Chọn đáp án A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_5",
@@ -544,10 +543,11 @@
                 "He would describe this day as the luckiest day.",
                 "He would describe this day as the most confusing day."
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh ấy sẽ miêu tả ngày hôm nay là ngày hạnh phúc nhất trong cuộc đời anh."
+              "explanation": "Đoạn cuối cùng trích dẫn lời Joe If I ever write an autobiography, I will write that this was the happiest day of my life. Anh ấy sẽ miêu tả ngày này là ngày hạnh phúc nhất trong cuộc đời. Mình chọn đáp án A.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

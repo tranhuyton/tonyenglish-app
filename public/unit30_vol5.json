@@ -15,433 +15,433 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
-              "content": "1. If you are an enigma, you are ______.",
+              "content": "If you are an enigma, you are ______.",
               "options": [
                 "funny",
                 "mysterious",
                 "dishonest",
                 "sleepy"
               ],
-              "correctAnswer": "B",
-              "explanation": "enigma là điều bí ẩn (mysterious)."
+              "explanation": "enigma là điều bí ẩn (mysterious).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_2",
-              "content": "2. If someone is too talkative during a movie, then others may ______.",
+              "content": "If someone is too talkative during a movie, then others may ______.",
               "options": [
                 "get sleepy",
                 "get angry",
                 "start to sing",
                 "join in"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nếu ai đó quá nói nhiều (talkative) trong rạp phim, người khác sẽ nổi giận (get angry)."
+              "explanation": "Nếu ai đó quá nói nhiều (talkative) trong rạp phim, người khác sẽ nổi giận (get angry).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_3",
-              "content": "3. If someone has shivers, what should they do?",
+              "content": "If someone has shivers, what should they do?",
               "options": [
                 "Stop running",
                 "Put on a sweater",
                 "Be quiet",
                 "Sit down"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nếu ai đó bị run lẩy bẩy (shivers) do lạnh, họ nên mặc áo len (Put on a sweater)."
+              "explanation": "Nếu ai đó bị run lẩy bẩy (shivers) do lạnh, họ nên mặc áo len (Put on a sweater).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_4",
-              "content": "4. How should someone deal with another that is overwhelming them?",
+              "content": "How should someone deal with another that is overwhelming them?",
               "options": [
                 "Ask for help",
                 "Forget it",
                 "Keep quite",
                 "Cry"
               ],
-              "correctAnswer": "A",
-              "explanation": "Khi bị áp đảo/quá tải (overwhelming), nên nhờ giúp đỡ (Ask for help)."
+              "explanation": "Khi bị áp đảo/quá tải (overwhelming), nên nhờ giúp đỡ (Ask for help).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_5",
-              "content": "5. Which of the following would have the most innocence?",
+              "content": "Which of the following would have the most innocence?",
               "options": [
                 "A grandparent",
                 "A sea captain",
                 "A teen",
                 "A president"
               ],
-              "correctAnswer": "C",
-              "explanation": "Một thiếu niên (A teen) có sự ngây thơ (innocence) nhiều nhất trong số các lựa chọn."
+              "explanation": "Một thiếu niên (A teen) có sự ngây thơ (innocence) nhiều nhất trong số các lựa chọn.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_6",
-              "content": "6. What would someone consider a burden?",
+              "content": "What would someone consider a burden?",
               "options": [
                 "Working two jobs",
                 "A happy child",
                 "Resting",
                 "Taking a walk"
               ],
-              "correctAnswer": "A",
-              "explanation": "Làm hai công việc cùng lúc (Working two jobs) có thể được coi là gánh nặng (a burden)."
+              "explanation": "Làm hai công việc cùng lúc (Working two jobs) có thể được coi là gánh nặng (a burden).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_7",
-              "content": "7. If someone exercised a moderate amount, they would be ______.",
+              "content": "If someone exercised a moderate amount, they would be ______.",
               "options": [
                 "stressed",
                 "healthy",
                 "very ill",
                 "a good leader"
               ],
-              "correctAnswer": "B",
-              "explanation": "Tập thể dục ở mức vừa phải (moderate) sẽ giúp khỏe mạnh (healthy)."
+              "explanation": "Tập thể dục ở mức vừa phải (moderate) sẽ giúp khỏe mạnh (healthy).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_8",
-              "content": "8. Who would you probably see at a reunion?",
+              "content": "Who would you probably see at a reunion?",
               "options": [
                 "Your family",
                 "The police",
                 "Your boss",
                 "Your barber"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bạn thường gặp gia đình (Your family) ở buổi đoàn tụ (reunion)."
+              "explanation": "Bạn thường gặp gia đình (Your family) ở buổi đoàn tụ (reunion).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_9",
-              "content": "9. Where would a crook most likely end up for doing something wrong?",
+              "content": "Where would a crook most likely end up for doing something wrong?",
               "options": [
                 "At church",
                 "In jail",
                 "In school",
                 "On vacation"
               ],
-              "correctAnswer": "B",
-              "explanation": "Kẻ lừa đảo/tội phạm (a crook) thường sẽ phải vào tù (In jail)."
+              "explanation": "Kẻ lừa đảo/tội phạm (a crook) thường sẽ phải vào tù (In jail).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_10",
-              "content": "10. What is a boat most likely to tow behind it?",
+              "content": "What is a boat most likely to tow behind it?",
               "options": [
                 "A trailer",
                 "A water skier",
                 "A fisherman",
                 "A rocket"
               ],
-              "correctAnswer": "B",
-              "explanation": "Thuyền thường sẽ kéo (tow) một người lướt ván nước (A water skier) theo sau."
+              "explanation": "Thuyền thường sẽ kéo (tow) một người lướt ván nước (A water skier) theo sau.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_1",
-              "content": "1. I met a very friendly girl on my first day of school.",
+              "content": "I met a very friendly girl on my first day of school.",
               "options": [
                 "sociable",
                 "fragile",
                 "talkative",
                 "moderate"
               ],
-              "correctAnswer": "A",
-              "explanation": "friendly (thân thiện) tương đương với sociable."
+              "explanation": "friendly (thân thiện) tương đương với sociable.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_2",
-              "content": "2. Marty walked heavily across the kitchen to the back door.",
+              "content": "Marty walked heavily across the kitchen to the back door.",
               "options": [
                 "tramped",
                 "towed",
                 "rigged",
                 "crafted"
               ],
-              "correctAnswer": "A",
-              "explanation": "walked heavily (bước đi nặng nề) tương đương với tramped."
+              "explanation": "walked heavily (bước đi nặng nề) tương đương với tramped.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_3",
-              "content": "3. That lovely dresser was skillfully made from oak.",
+              "content": "That lovely dresser was skillfully made from oak.",
               "options": [
                 "crafted",
                 "merged",
                 "rigged",
                 "towed"
               ],
-              "correctAnswer": "A",
-              "explanation": "skillfully made (làm một cách khéo léo) tương đương với crafted."
+              "explanation": "skillfully made (làm một cách khéo léo) tương đương với crafted.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_4",
-              "content": "4. The man had dishonestly changed the game so that he would win every time.",
+              "content": "The man had dishonestly changed the game so that he would win every time.",
               "options": [
                 "rigged",
                 "merged",
                 "crafted",
                 "towed"
               ],
-              "correctAnswer": "A",
-              "explanation": "dishonestly changed (thay đổi một cách gian lận) tương đương với rigged."
+              "explanation": "dishonestly changed (thay đổi một cách gian lận) tương đương với rigged.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_5",
-              "content": "5. The paint colors combined to make new ones on the canvas.",
+              "content": "The paint colors combined to make new ones on the canvas.",
               "options": [
                 "merged",
                 "crafted",
                 "rigged",
                 "towed"
               ],
-              "correctAnswer": "A",
-              "explanation": "combined (kết hợp) tương đương với merged."
+              "explanation": "combined (kết hợp) tương đương với merged.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex3_1",
-              "content": "1. fragile",
+              "content": "fragile",
               "options": [
                 "sturdy",
                 "strong",
                 "robust",
                 "weak"
               ],
-              "correctAnswer": "D",
-              "explanation": "fragile là mong manh, dễ vỡ (weak)."
+              "explanation": "fragile là mong manh, dễ vỡ (weak).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3_2",
-              "content": "2. shiver",
+              "content": "shiver",
               "options": [
                 "jump",
                 "fall",
                 "shake",
                 "stand"
               ],
-              "correctAnswer": "C",
-              "explanation": "shiver là run rẩy (shake)."
+              "explanation": "shiver là run rẩy (shake).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex3_3",
-              "content": "3. currency",
+              "content": "currency",
               "options": [
                 "money",
                 "recent",
                 "waves",
                 "spend"
               ],
-              "correctAnswer": "A",
-              "explanation": "currency là tiền tệ (money)."
+              "explanation": "currency là tiền tệ (money).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_4",
-              "content": "4. overwhelm",
+              "content": "overwhelm",
               "options": [
                 "too much",
                 "not enough",
                 "completed",
                 "unfinished"
               ],
-              "correctAnswer": "A",
-              "explanation": "overwhelm là áp đảo, làm quá tải (too much)."
+              "explanation": "overwhelm là áp đảo, làm quá tải (too much).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_5",
-              "content": "5. sociable",
+              "content": "sociable",
               "options": [
                 "rude",
                 "friendly",
                 "cunning",
                 "wise"
               ],
-              "correctAnswer": "B",
-              "explanation": "sociable là hòa đồng, thân thiện (friendly)."
+              "explanation": "sociable là hòa đồng, thân thiện (friendly).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_6",
-              "content": "6. craft",
+              "content": "craft",
               "options": [
                 "to bend",
                 "to make",
                 "to ruin",
                 "to stir"
               ],
-              "correctAnswer": "B",
-              "explanation": "craft là chế tác, làm thủ công (to make)."
+              "explanation": "craft là chế tác, làm thủ công (to make).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_7",
-              "content": "7. enigma",
+              "content": "enigma",
               "options": [
                 "public",
                 "dramatic",
                 "mystery",
                 "parent"
               ],
-              "correctAnswer": "C",
-              "explanation": "enigma là điều bí ẩn (mystery)."
+              "explanation": "enigma là điều bí ẩn (mystery).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex3_8",
-              "content": "8. crook",
+              "content": "crook",
               "options": [
                 "thief",
                 "hermit",
                 "wizard",
                 "warrior"
               ],
-              "correctAnswer": "A",
-              "explanation": "crook là kẻ lừa đảo, kẻ trộm (thief)."
+              "explanation": "crook là kẻ lừa đảo, kẻ trộm (thief).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_9",
-              "content": "9. merge",
+              "content": "merge",
               "options": [
                 "to pull apart",
                 "to float",
                 "to carry",
                 "to combine"
               ],
-              "correctAnswer": "D",
-              "explanation": "merge là hòa nhập, kết hợp (to combine)."
+              "explanation": "merge là hòa nhập, kết hợp (to combine).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3_10",
-              "content": "10. burden",
+              "content": "burden",
               "options": [
                 "a deal",
                 "a resolution",
                 "an order",
                 "a hard responsibility"
               ],
-              "correctAnswer": "D",
-              "explanation": "burden là gánh nặng, trách nhiệm nặng nề (a hard responsibility)."
+              "explanation": "burden là gánh nặng, trách nhiệm nặng nề (a hard responsibility).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Exercise 4: Write C if the italicized word is used correctly. Write I if the word is used incorrectly.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex4_1",
-              "content": "1. Let’s compromise and do exactly what I want.",
+              "content": "Let’s compromise and do exactly what I want.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Compromise là thỏa hiệp (nhượng bộ), không thể là \"làm chính xác những gì tôi muốn\"."
+              "explanation": "I (Incorrect). Compromise là thỏa hiệp (nhượng bộ), không thể là \"làm chính xác những gì tôi muốn\".",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_2",
-              "content": "2. Jill’s perception of the movie was opposite to many viewers.",
+              "content": "Jill’s perception of the movie was opposite to many viewers.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Cách nhìn nhận (perception) về bộ phim."
+              "explanation": "C (Correct). Cách nhìn nhận (perception) về bộ phim.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_3",
-              "content": "3. The temperature in here is too moderate. I’m freezing!",
+              "content": "The temperature in here is too moderate. I’m freezing!",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Moderate là vừa phải, ôn hòa. Nếu nhiệt độ ôn hòa thì không thể \"chết cóng\" (freezing) được."
+              "explanation": "I (Incorrect). Moderate là vừa phải, ôn hòa. Nếu nhiệt độ ôn hòa thì không thể \"chết cóng\" (freezing) được.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_4",
-              "content": "4. We had a reunion yesterday. I haven’t seen her for years.",
+              "content": "We had a reunion yesterday. I haven’t seen her for years.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Reunion là đoàn tụ (thường dùng cho gia đình/tập thể). Nếu chỉ gặp một người bạn cũ thì thường không dùng reunion."
+              "explanation": "I (Incorrect). Reunion là đoàn tụ (thường dùng cho gia đình/tập thể). Nếu chỉ gặp một người bạn cũ thì thường không dùng reunion.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_5",
-              "content": "5. Tonya’s new car is a hybrid that runs on gas and electricity.",
+              "content": "Tonya’s new car is a hybrid that runs on gas and electricity.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Xe lai (hybrid) chạy bằng xăng và điện."
+              "explanation": "C (Correct). Xe lai (hybrid) chạy bằng xăng và điện.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_6",
-              "content": "6. It is such burden to drive two hours to work each day.",
+              "content": "It is such burden to drive two hours to work each day.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Lái xe hai giờ mỗi ngày là một gánh nặng (burden)."
+              "explanation": "C (Correct). Lái xe hai giờ mỗi ngày là một gánh nặng (burden).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_7",
-              "content": "7. The enigma was so simple that a child could find a solution.",
+              "content": "The enigma was so simple that a child could find a solution.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Enigma là điều bí ẩn, khó hiểu. Không thể đơn giản đến mức trẻ con cũng giải được."
+              "explanation": "I (Incorrect). Enigma là điều bí ẩn, khó hiểu. Không thể đơn giản đến mức trẻ con cũng giải được.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_8",
-              "content": "8. Her innocence reminded many of us when we were young.",
+              "content": "Her innocence reminded many of us when we were young.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Sự ngây thơ (innocence) của cô bé."
+              "explanation": "C (Correct). Sự ngây thơ (innocence) của cô bé.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_9",
-              "content": "9. I crafted the airplane out of pieces of old wood.",
+              "content": "I crafted the airplane out of pieces of old wood.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "A",
-              "explanation": "C (Correct). Tôi chế tạo/lắp ráp (crafted) chiếc máy bay từ gỗ."
+              "explanation": "C (Correct). Tôi chế tạo/lắp ráp (crafted) chiếc máy bay từ gỗ.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_10",
-              "content": "10. The snake tramped quietly on its stomach.",
+              "content": "The snake tramped quietly on its stomach.",
               "options": [
                 "C",
                 "I"
               ],
-              "correctAnswer": "B",
-              "explanation": "I (Incorrect). Tramp là bước đi nặng nề, ồn ào. Rắn không có chân và trườn nhẹ nhàng nên không thể tramp."
+              "explanation": "I (Incorrect). Tramp là bước đi nặng nề, ồn ào. Rắn không có chân và trườn nhẹ nhàng nên không thể tramp.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -455,127 +455,127 @@
           "id": "sec5",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec5_1",
-              "content": "1. The woman’s perception was that though the man was talkative and sociable, he was also an enigma.",
+              "content": "The woman’s perception was that though the man was talkative and sociable, he was also an enigma.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Mặc dù ông ta nói nhiều và hòa đồng, nhưng vẫn là một người bí ẩn (enigma)."
+              "explanation": "Đúng nha. Đoạn 4 viết The man was an enigma. The young woman's perception of him was that he was a sociable person. He was talkative, yet something was strange. Cô gái nhận thấy ông ta nói nhiều, hòa đồng nhưng vẫn là một người bí ẩn.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_2",
-              "content": "2. When the young woman returned, she was overwhelmed by the moderate water level.",
+              "content": "When the young woman returned, she was overwhelmed by the moderate water level.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Cô ấy bị quá tải (overwhelmed) bởi mực nước đã dâng lên rất cao, chứ không phải ở mức vừa phải (moderate)."
+              "explanation": "Sai rồi. Đoạn 1 viết she was overwhelmed by how high the water had risen. Cô ấy bị quá tải (overwhelmed) vì mực nước dâng lên quá cao chứ không phải là mức vừa phải (moderate).",
+              "correctAnswer": "B"
             },
             {
               "id": "sec5_3",
-              "content": "3. The fragile young woman thought she might be a burden to the man.",
+              "content": "The fragile young woman thought she might be a burden to the man.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Cô gái yếu ớt (fragile) nghĩ mình có thể trở thành gánh nặng (burden) cho người đàn ông."
+              "explanation": "Đúng nhé. Trong đoạn 3 và 5, ông ta gọi cô là A fragile young lady, và cô đáp lại I don't want to be a burden to you, sir (Tôi không muốn làm gánh nặng cho ông).",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_4",
-              "content": "4. While crafting the bridge, the man merged the pieces with amazing speed.",
+              "content": "While crafting the bridge, the man merged the pieces with amazing speed.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Anh ta đã lắp ráp các bộ phận của cây cầu với tốc độ đáng kinh ngạc."
+              "explanation": "Đúng rồi. Đoạn 6 miêu tả He merged the pieces of the bridge together with amazing speed. Anh ta đã lắp ráp (merged) các bộ phận của cây cầu với tốc độ đáng kinh ngạc.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_5",
-              "content": "5. The woman tramped across the bridge and had a happy reunion with the man.",
+              "content": "The woman tramped across the bridge and had a happy reunion with the man.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Cô bước qua cầu và có một cuộc đoàn tụ (reunion) vui vẻ với chó và con bò của mình, chứ không phải với người đàn ông."
+              "explanation": "Sai nha. Đoạn cuối ghi The woman tramped across the bridge... and had a happy reunion with her dog and cow. Cô bước qua cầu và đoàn tụ (reunion) với chó và bò của mình chứ không phải với người đàn ông.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec6_1",
-              "content": "1. What did the man change into a hybrid of after the dog crossed the bridge?",
+              "content": "What did the man change into a hybrid of after the dog crossed the bridge?",
               "options": [
                 "The man turned into a hybrid of a human and a fish.",
                 "The man turned into a hybrid of a human and a bird.",
                 "The man turned into a hybrid of a bear and a fish.",
                 "The man turned into a hybrid of a dog and a fish."
               ],
-              "correctAnswer": "A",
-              "explanation": "Người đàn ông biến thành một sinh vật lai (hybrid) giữa người và cá."
+              "explanation": "Ở đoạn 11, tác giả viết He suddenly changed into a hybrid of a human and a fish. Tức là người đàn ông đã biến thành một sinh vật lai (hybrid) giữa người và cá. Chọn đáp án A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_2",
-              "content": "2. Why was the young woman unable to tow her cow across the river?",
+              "content": "Why was the young woman unable to tow her cow across the river?",
               "options": [
                 "She was overwhelmed by how high the water had risen.",
                 "The cow was too heavy to tow.",
                 "The river was moving too fast.",
                 "She didn't have a rope."
               ],
-              "correctAnswer": "A",
-              "explanation": "Cô ấy bị choáng ngợp (overwhelmed) bởi mực nước đã dâng lên rất cao nên không thể kéo bò qua sông."
+              "explanation": "Đoạn 1 giải thích she was overwhelmed by how high the water had risen. Cô ấy bị choáng ngợp vì mực nước dâng cao nên không thể kéo con bò của mình qua sông. Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_3",
-              "content": "3. What currency did the man ask to compromise?",
+              "content": "What currency did the man ask to compromise?",
               "options": [
                 "He asked for the first living thing that crosses the bridge.",
                 "He asked for a piece of bread.",
                 "He asked for money.",
                 "He asked for the cow."
               ],
-              "correctAnswer": "A",
-              "explanation": "Loại \"tiền tệ\" (currency) ông ta yêu cầu là sinh vật sống đầu tiên bước qua cây cầu."
+              "explanation": "Trong đoạn 8, ông ta yêu cầu: The only currency I need is the first living thing that crosses the bridge. Loại tiền tệ (currency) duy nhất mà ông ta muốn là sinh vật sống đầu tiên đi qua cây cầu. Chọn đáp án A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_4",
-              "content": "4. Why did the young woman shiver?",
+              "content": "Why did the young woman shiver?",
               "options": [
                 "She shivered because she realized that he had taken advantage of her innocence and rigged a trap for her.",
                 "She shivered because the water was cold.",
                 "She shivered because the demon was scary.",
                 "She shivered because the dog ran away."
               ],
-              "correctAnswer": "A",
-              "explanation": "Cô ấy rùng mình (shivered) vì nhận ra ông ta đã lợi dụng sự ngây thơ của cô và gài bẫy (rigged) cô."
+              "explanation": "Đoạn 9 giải thích She shivered because she realized that he had taken advantage of her innocence and rigged the deal somehow. Cô gái rùng mình vì nhận ra hắn đã lợi dụng sự ngây thơ (innocence) của cô và gài bẫy cô. Mình chọn đáp án A.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_5",
-              "content": "5. What did the water demon call the woman just before he dove into the river?",
+              "content": "What did the water demon call the woman just before he dove into the river?",
               "options": [
                 "He called her a \"crook.\"",
                 "He called her a \"thief.\"",
                 "He called her a \"liar.\"",
                 "He called her a \"genius.\""
               ],
-              "correctAnswer": "A",
-              "explanation": "Con quỷ nước đã gọi cô là một kẻ lừa đảo (\"crook\") trước khi lặn xuống sông."
+              "explanation": "Đoạn 11 ghi lại tiếng hét của con quỷ nước: \"You crook!\" he shouted. Tức là hắn gọi cô là một kẻ lừa đảo (crook) trước khi lặn xuống sông. Đáp án đúng là A.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

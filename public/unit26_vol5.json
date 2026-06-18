@@ -15,7 +15,6 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
@@ -26,8 +25,8 @@
                 "Headaches",
                 "Hunger"
               ],
-              "correctAnswer": "B",
-              "explanation": "Laughter (tiếng cười) là thứ thường tái diễn (recur) khi xem một bộ phim hài."
+              "explanation": "Laughter (tiếng cười) là thứ thường tái diễn (recur) khi xem một bộ phim hài.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_2",
@@ -38,8 +37,8 @@
                 "A bird",
                 "A kite"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mặt trăng (The moon) xoay quanh (orbit) Trái đất."
+              "explanation": "Mặt trăng (The moon) xoay quanh (orbit) Trái đất.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_3",
@@ -50,8 +49,8 @@
                 "To whistle",
                 "To exercise"
               ],
-              "correctAnswer": "B",
-              "explanation": "Chim vỗ (flap) cánh để bay (To fly)."
+              "explanation": "Chim vỗ (flap) cánh để bay (To fly).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_4",
@@ -62,8 +61,8 @@
                 "A ghost",
                 "An eclipse"
               ],
-              "correctAnswer": "C",
-              "explanation": "Con ma (A ghost) là một hiện tượng siêu nhiên (supernatural)."
+              "explanation": "Con ma (A ghost) là một hiện tượng siêu nhiên (supernatural).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_5",
@@ -74,16 +73,16 @@
                 "tell others it was a good movie",
                 "pay money"
               ],
-              "correctAnswer": "A",
-              "explanation": "Overview (tổng quan) là việc mô tả những phần quan trọng nhất của bộ phim."
+              "explanation": "Overview (tổng quan) là việc mô tả những phần quan trọng nhất của bộ phim.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
           "content": "Word Bank: globe, behalf, rite, overview, provided, loaf, inward, relevant, oracles, orbit",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_1",
@@ -94,8 +93,8 @@
                 "rite",
                 "overview"
               ],
-              "correctAnswer": "A",
-              "explanation": "globe (địa cầu). Chuyến đi vòng quanh nửa vòng trái đất."
+              "explanation": "globe (địa cầu). Chuyến đi vòng quanh nửa vòng trái đất.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_2",
@@ -106,8 +105,8 @@
                 "rite",
                 "overview"
               ],
-              "correctAnswer": "B",
-              "explanation": "on my behalf (thay mặt tôi). Sarah sẽ nộp bài tập thay tôi."
+              "explanation": "on my behalf (thay mặt tôi). Sarah sẽ nộp bài tập thay tôi.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_3",
@@ -118,8 +117,8 @@
                 "rite",
                 "overview"
               ],
-              "correctAnswer": "C",
-              "explanation": "rite (nghi lễ). Chứng kiến một nghi lễ Ai Cập cổ đại."
+              "explanation": "rite (nghi lễ). Chứng kiến một nghi lễ Ai Cập cổ đại.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_4",
@@ -130,8 +129,8 @@
                 "rite",
                 "overview"
               ],
-              "correctAnswer": "D",
-              "explanation": "overview (tổng quan). Được cung cấp một bản tóm tắt ngắn gọn."
+              "explanation": "overview (tổng quan). Được cung cấp một bản tóm tắt ngắn gọn.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex2_5",
@@ -142,8 +141,8 @@
                 "inward",
                 "relevant"
               ],
-              "correctAnswer": "A",
-              "explanation": "provided (cung cấp). Anh ấy cung cấp những lát bánh mì."
+              "explanation": "provided (cung cấp). Anh ấy cung cấp những lát bánh mì.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_6",
@@ -154,8 +153,8 @@
                 "inward",
                 "relevant"
               ],
-              "correctAnswer": "B",
-              "explanation": "loaf (ổ bánh mì). Bằng cách nướng một ổ bánh mì."
+              "explanation": "loaf (ổ bánh mì). Bằng cách nướng một ổ bánh mì.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_7",
@@ -166,8 +165,8 @@
                 "inward",
                 "relevant"
               ],
-              "correctAnswer": "C",
-              "explanation": "inward (bên trong). Giữ kín suy nghĩ và cảm xúc bên trong."
+              "explanation": "inward (bên trong). Giữ kín suy nghĩ và cảm xúc bên trong.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_8",
@@ -178,8 +177,8 @@
                 "inward",
                 "relevant"
               ],
-              "correctAnswer": "D",
-              "explanation": "relevant (có liên quan/quan trọng). Dù im lặng, chúng vẫn rất quan trọng."
+              "explanation": "relevant (có liên quan/quan trọng). Dù im lặng, chúng vẫn rất quan trọng.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex2_9",
@@ -190,8 +189,8 @@
                 "globe",
                 "rite"
               ],
-              "correctAnswer": "A",
-              "explanation": "oracles (nhà tiên tri). Người xưa thường hỏi các nhà tiên tri."
+              "explanation": "oracles (nhà tiên tri). Người xưa thường hỏi các nhà tiên tri.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_10",
@@ -202,16 +201,16 @@
                 "globe",
                 "rite"
               ],
-              "correctAnswer": "B",
-              "explanation": "orbit (quay quanh quỹ đạo). Khoa học giải thích cách các hành tinh quay quanh mặt trời."
+              "explanation": "orbit (quay quanh quỹ đạo). Khoa học giải thích cách các hành tinh quay quanh mặt trời.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex3_1",
@@ -222,8 +221,8 @@
                 "vast",
                 "different"
               ],
-              "correctAnswer": "A",
-              "explanation": "relevant có nghĩa là có liên quan, quan trọng (important)."
+              "explanation": "relevant có nghĩa là có liên quan, quan trọng (important).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_2",
@@ -234,8 +233,8 @@
                 "large",
                 "nice"
               ],
-              "correctAnswer": "B",
-              "explanation": "horizontal có nghĩa là nằm ngang, bằng phẳng (flat)."
+              "explanation": "horizontal có nghĩa là nằm ngang, bằng phẳng (flat).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3_3",
@@ -246,8 +245,8 @@
                 "a body",
                 "a ceremony"
               ],
-              "correctAnswer": "D",
-              "explanation": "rite có nghĩa là nghi lễ (ceremony)."
+              "explanation": "rite có nghĩa là nghi lễ (ceremony).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3_4",
@@ -258,8 +257,8 @@
                 "to blink",
                 "to react"
               ],
-              "correctAnswer": "A",
-              "explanation": "stall có nghĩa là làm dừng lại (to stop)."
+              "explanation": "stall có nghĩa là làm dừng lại (to stop).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3_5",
@@ -270,16 +269,16 @@
                 "a supply",
                 "a car"
               ],
-              "correctAnswer": "C",
-              "explanation": "inventory có nghĩa là hàng tồn kho, nguồn cung cấp (supply)."
+              "explanation": "inventory có nghĩa là hàng tồn kho, nguồn cung cấp (supply).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Exercise 4: Choose the word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex4_1",
@@ -290,8 +289,8 @@
                 "horizontal",
                 "preview"
               ],
-              "correctAnswer": "A",
-              "explanation": "earlier có nghĩa là trước đó, tương đương với previous."
+              "explanation": "earlier có nghĩa là trước đó, tương đương với previous.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_2",
@@ -302,8 +301,8 @@
                 "horizontal",
                 "preview"
               ],
-              "correctAnswer": "B",
-              "explanation": "người cho lời khuyên về tương lai tương đương với nhà tiên tri (oracle)."
+              "explanation": "người cho lời khuyên về tương lai tương đương với nhà tiên tri (oracle).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_3",
@@ -314,8 +313,8 @@
                 "horizontal",
                 "preview"
               ],
-              "correctAnswer": "C",
-              "explanation": "flat and level with the ground có nghĩa là nằm ngang (horizontal)."
+              "explanation": "flat and level with the ground có nghĩa là nằm ngang (horizontal).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex4_4",
@@ -326,8 +325,8 @@
                 "horizontal",
                 "preview"
               ],
-              "correctAnswer": "D",
-              "explanation": "viewing before it was available có nghĩa là xem trước (preview)."
+              "explanation": "viewing before it was available có nghĩa là xem trước (preview).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex4_5",
@@ -338,8 +337,8 @@
                 "hum",
                 "provide"
               ],
-              "correctAnswer": "A",
-              "explanation": "piece of bread tương đương với ổ bánh mì (loaf)."
+              "explanation": "piece of bread tương đương với ổ bánh mì (loaf).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_6",
@@ -350,8 +349,8 @@
                 "hum",
                 "provide"
               ],
-              "correctAnswer": "B",
-              "explanation": "not expressed or shown thoughts tương đương với suy nghĩ nội tâm (inward)."
+              "explanation": "not expressed or shown thoughts tương đương với suy nghĩ nội tâm (inward).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex4_7",
@@ -362,8 +361,8 @@
                 "hum",
                 "provide"
               ],
-              "correctAnswer": "C",
-              "explanation": "make a low, continuous noise tương đương với ngân nga (hum)."
+              "explanation": "make a low, continuous noise tương đương với ngân nga (hum).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex4_8",
@@ -374,8 +373,8 @@
                 "hum",
                 "provide"
               ],
-              "correctAnswer": "D",
-              "explanation": "supply tương đương với cung cấp (provide)."
+              "explanation": "supply tương đương với cung cấp (provide).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex4_9",
@@ -386,8 +385,8 @@
                 "hum",
                 "rite"
               ],
-              "correctAnswer": "A",
-              "explanation": "stop the process tương đương với làm dừng lại, trì hoãn (stall)."
+              "explanation": "stop the process tương đương với làm dừng lại, trì hoãn (stall).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex4_10",
@@ -398,24 +397,24 @@
                 "hum",
                 "rite"
               ],
-              "correctAnswer": "B",
-              "explanation": "large mass of ice tương đương với sông băng (glacier)."
+              "explanation": "large mass of ice tương đương với sông băng (glacier).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cosmo's Flight</h1><p style=\"margin-bottom: 1rem;\">When Cosmo woke up, he was crying. He had a dream that he was falling. This dream had <b>recurred</b> for the <b>previous</b> five nights. Cosmo was scared that his dreams were a <b>preview</b> of what was going to happen on his flight the next day.</p><p style=\"margin-bottom: 1rem;\">Cosmo was a <b>supernatural</b> being who was about to turn 15 years old. In his culture, boys of his age were required to participate in an important <b>rite</b>. They were given wings and instructed to <b>orbit</b> the Earth. After successful flights, the boys officially became men. Cosmo certainly wanted to be a man, but he was scared. He went to the <b>oracle</b> of a god named Dano. Cosmo said, \"I'm not sure I can make such a long trip. What if I get tired? What if my strength <b>stalls</b>, and I can't stay in the air. I'll crash and die!\"</p><p style=\"margin-bottom: 1rem;\">Dano replied, \"Don't be afraid. You have all the <b>relevant</b> skills in your personal <b>inventory</b> that have been building up over the years. To ease your worry, let me tell you a little about what will happen tomorrow. You'll begin over Africa. You'll keep flying north until you come to the Himalayas. The mountaintops will look like small <b>loaves</b> of bread at such a high distance. The rivers of the world will look like pieces of blue string that cross the <b>globe</b>. Keep your body <b>horizontal</b> when flying against the winds of the Pacific Ocean. Keep your eyes open and enjoy the beauty of the Earth. You will be fine, you'll see.\"</p><p style=\"margin-bottom: 1rem;\">Cosmo replied, \"Thanks for the <b>overview</b> of my journey, I'll do my best.\"</p><p style=\"margin-bottom: 1rem;\">The next morning, Cosmo was <b>provided</b> with a divine set of wings and sent on his way. He <b>flapped</b> his wings and went high above the Earth. He flew over mountains, oceans, and <b>glaciers</b>. After a while, his <b>inward</b> thoughts were no longer about falling. He was actually having fun! He began to <b>hum</b> a song as he enjoyed the view. When he reached home, his tribe was there to greet him.</p><p style=\"margin-bottom: 1rem;\">The chief said, \"On <b>behalf</b> of the tribe, I declare you a man. We're proud of you, Cosmo!\" Cosmo was proud of himself, too.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Cosmo's Flight</h1>        <p style=\"margin-bottom: 1rem;\">When Cosmo woke up, he was crying. He had a dream that he was falling. This dream had <b>recurred</b> for the <b>previous</b> five nights. Cosmo was scared that his dreams were a <b>preview</b> of what was going to happen on his flight the next day.</p>    <p style=\"margin-bottom: 1rem;\">Cosmo was a <b>supernatural</b> being who was about to turn 15 years old. In his culture, boys of his age were required to participate in an important <b>rite</b>. They were given wings and instructed to <b>orbit</b> the Earth. After successful flights, the boys officially became men. Cosmo certainly wanted to be a man, but he was scared. He went to the <b>oracle</b> of a god named Dano. Cosmo said, \"I'm not sure I can make such a long trip. What if I get tired? What if my strength <b>stalls</b>, and I can't stay in the air. I'll crash and die!\"</p>    <p style=\"margin-bottom: 1rem;\">Dano replied, \"Don't be afraid. You have all the <b>relevant</b> skills in your personal <b>inventory</b> that have been building up over the years. To ease your worry, let me tell you a little about what will happen tomorrow. You'll begin over Africa. You'll keep flying north until you come to the Himalayas. The mountaintops will look like small <b>loaves</b> of bread at such a high distance. The rivers of the world will look like pieces of blue string that cross the <b>globe</b>. Keep your body <b>horizontal</b> when flying against the winds of the Pacific Ocean. Keep your eyes open and enjoy the beauty of the Earth. You will be fine, you'll see.\"</p>    <p style=\"margin-bottom: 1rem;\">Cosmo replied, \"Thanks for the <b>overview</b> of my journey, I'll do my best.\"</p>    <p style=\"margin-bottom: 1rem;\">The next morning, Cosmo was <b>provided</b> with a divine set of wings and sent on his way. He <b>flapped</b> his wings and went high above the Earth. He flew over mountains, oceans, and <b>glaciers</b>. After a while, his <b>inward</b> thoughts were no longer about falling. He was actually having fun! He began to <b>hum</b> a song as he enjoyed the view. When he reached home, his tribe was there to greet him.</p>    <p style=\"margin-bottom: 1rem;\">The chief said, \"On <b>behalf</b> of the tribe, I declare you a man. We're proud of you, Cosmo!\" Cosmo was proud of himself, too.</p></div>",
       "imageUrl": "/unit26_vol5_story.png",
       "sections": [
         {
           "id": "sec5",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec5_1",
@@ -424,8 +423,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Cosmo sợ rằng những giấc mơ của cậu là điềm báo trước (preview)."
+              "explanation": "Đúng nhé. Ở đoạn 1 có ghi Cosmo was scared that his dreams were a preview of what was going to happen on his flight the next day. Cosmo rất sợ những giấc mơ lặp đi lặp lại của mình là điềm báo trước cho chuyến bay.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_2",
@@ -434,8 +433,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Những cậu bé có năng lực siêu nhiên đều phải tham gia một nghi lễ quan trọng."
+              "explanation": "Đúng rồi. Đoạn 2 giải thích In his culture, boys of his age were required to participate in an important rite. Những cậu bé có năng lực siêu nhiên đều phải tham gia một nghi lễ quan trọng này.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_3",
@@ -444,8 +443,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Dano bảo Cosmo giữ cơ thể nằm ngang khi bay ngược gió ở Thái Bình Dương (Pacific Ocean), không phải Ấn Độ Dương."
+              "explanation": "Sai nha. Đoạn 3 Dano nói Keep your body horizontal when flying against the winds of the Pacific Ocean. Tức là giữ cơ thể nằm ngang khi bay ngược gió ở Thái Bình Dương (Pacific Ocean) chứ không phải Ấn Độ Dương (Indian Ocean).",
+              "correctAnswer": "B"
             },
             {
               "id": "sec5_4",
@@ -454,8 +453,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Cosmo là người vỗ cánh và bay quanh địa cầu, không phải Dano."
+              "explanation": "Sai nhé. Trong bài đọc, Cosmo mới là người vỗ cánh và bay quanh địa cầu chứ không phải Dano (nhà tiên tri). Đoạn 5 ghi rõ The next morning, Cosmo was provided with a divine set of wings... He flapped his wings.",
+              "correctAnswer": "B"
             },
             {
               "id": "sec5_5",
@@ -464,16 +463,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Cosmo ngân nga (hummed) một giai điệu chứ không phải hát (sang) khi bay."
+              "explanation": "Sai rồi. Đoạn 5 có nhắc He began to hum a song as he enjoyed the view. Cosmo chỉ ngân nga (hum) một giai điệu thôi chứ không hát thành lời (sing) khi bay.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec6_1",
@@ -484,8 +483,8 @@
                 "His inward thoughts about flying too fast.",
                 "His inward thoughts about the cold."
               ],
-              "correctAnswer": "A",
-              "explanation": "Những suy nghĩ nội tâm của Cosmo về việc bị rơi không còn liên quan nữa khi cậu bắt đầu tận hưởng."
+              "explanation": "Ở đoạn 5 có câu After a while, his inward thoughts were no longer about falling. He was actually having fun! Khi bắt đầu thấy vui vẻ, những suy nghĩ nội tâm của Cosmo về việc bị rơi không còn nữa. Chọn đáp án A nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_2",
@@ -496,8 +495,8 @@
                 "They will look like big clouds.",
                 "They will look like white hats."
               ],
-              "correctAnswer": "A",
-              "explanation": "Dano nói rằng những đỉnh núi Himalaya trông sẽ giống như những ổ bánh mì (loaves of bread)."
+              "explanation": "Đoạn 3 Dano dặn The mountaintops will look like small loaves of bread at such a high distance. Nhìn từ trên cao, những đỉnh núi Himalaya trông sẽ giống hệt những ổ bánh mì nhỏ (loaves of bread). Đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_3",
@@ -508,8 +507,8 @@
                 "\"I'll be careful.\"",
                 "\"I'll come back soon.\""
               ],
-              "correctAnswer": "A",
-              "explanation": "Cosmo nói: \"Cháu sẽ cố gắng hết sức.\" (I'll do my best)."
+              "explanation": "Đoạn 4 có trích dẫn lời nói của cậu bé: Cosmo replied, \"Thanks for the overview of my journey, I'll do my best.\" Cậu hứa sẽ cố gắng hết sức (I'll do my best). Chọn đáp án A nha.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_4",
@@ -520,8 +519,8 @@
                 "Silver ribbons.",
                 "Deep blue lines."
               ],
-              "correctAnswer": "A",
-              "explanation": "Nhà tiên tri bảo rằng những dòng sông trông sẽ giống những sợi dây màu xanh lam."
+              "explanation": "Trong đoạn 3, nhà tiên tri bảo The rivers of the world will look like pieces of blue string that cross the globe. Những dòng sông trông sẽ giống như những sợi dây màu xanh lam (Pieces of blue string). Đáp án A đúng nhé.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_5",
@@ -532,10 +531,11 @@
                 "He declared Cosmo a hero.",
                 "He declared Cosmo an adult."
               ],
-              "correctAnswer": "A",
-              "explanation": "Trưởng làng thay mặt bộ lạc tuyên bố Cosmo đã trở thành một người đàn ông (a man)."
+              "explanation": "Đoạn cuối cùng trích lời trưởng làng: The chief said, \"On behalf of the tribe, I declare you a man.\" Vị trưởng làng đã thay mặt bộ lạc tuyên bố Cosmo đã trở thành một người đàn ông thực thụ (a man). Chọn đáp án A.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }
