@@ -1,0 +1,79 @@
+{
+  "title": "Model Atmosphere Shows Signs of Life",
+  "type": "SplitScreen",
+  "content": {
+    "passage": "Life could exist on planets that are much farther from their stars than the Earth is from the Sun. Planetary scientists at NASA's Ames Research Center in California have developed models for climates on other planets that make the existence of life in other solar systems much more likely.\n\nThe scientists, James Kasting, O. Brian Toon and James Pollack, have increased by more than 75 million kilometres the distance an Earth-sized planet may be from a star and yet support life. The atmosphere on such a planet could be unlikely to support human life, but it could support some forms of life, according to the researchers. \"We're saying that these planets may be habitable, but not necessarily inhabited,\" Kasting, an atmospheric physicist, told New Scientist.\n\nThe models suggest that the concentrations of carbon dioxide in the atmosphere would be enough to warm planets and prevent water from freezing as far away as the orbit of Mars from the Sun - an average distance of 228 million kilometres. The average distance of Earth from the Sun is 150 million kilometres.\n\nIn the past, scientists doubted that \"civilizations\" could exist in other solar systems because the chance of an Earth-like planet evolving is slim. Michael Hart of NASA's Goddard Space Flight Center in Maryland has calculated that if the Earth were 5 per cent closer to the Sun, its oceans would evaporate, or if it were 1 per cent farther away, glaciation would take over. Hart's work suggests that only a narrow range of orbits - within a few million kilometres either side of the Earth's orbit of the Sun - would provide a habitable environment in another solar system.\n\nBut the scientists at Ames have pushed the range of orbits for Earth-like planets by more than 50 per cent. Habitable planets could be found from 0.95 to 1.5 astronomical units, they say. One astronomical unit (AU) is the distance from the Earth to the Sun. 1.5 AU is about the distance from the Sun to Mars.\n\nThe work at Ames might also help to explain what planetary scientists call the \"Goldilocks paradox\". Earth and its two neighbouring planets, Mars and Venus, were formed at the same time, about 4.6 billion years ago, from the same ingredients, including water, carbon dioxide and nitrogen. But only Earth developed life. Mars is too cold. Venus is too hot, but Earth is just right, like Goldilock's porridge.\n\nThe scientists say that earlier models, including Hart's, failed to include the stabilizing effect of the exchange of carbon dioxide between the atmosphere and the silicate rocks in the Earth's crust. This exchange helps to regulate atmospheric and surface temperatures. Exchange of CO2 also regulated temperatures in the early history of Venus and Mars before Venus became too hot and Mars became too cold.\n\nIn its first few hundred million years, Venus may have had a thin atmosphere and hot oceans, like the Earth, that were capable of supporting life. The scientists have developed a new model called \"wet greenhouse\" to explain how Venus evolved into its current hell-like state where clouds of sulphuric acid fill the sky and surface temperatures reach 460°C. The model challenges the generally accepted \"runaway greenhouse\" model that Fred Hoyle first suggested in the 1950s.\n\nAccording to the \"runaway greenhouse\", Venus has always had a heavy atmosphere which traps the Sun's heat. In primordial times, the atmosphere was a mix of water vapour and CO2. The water vapour would have risen to the upper atmosphere, well above the level at which water condenses. Ultraviolet radiation from the magnetically active young Sun would have split the water molecules into hydrogen and oxygen and the hydrogen would have escaped into space. The result would be a dry planet, with no oceans and high concentrations of CO2 in the atmosphere.\n\nBut, say Kasting and his colleagues, there are two problems with this model. Where is the oxygen stored and why is there no surplus water? Escape of hydrogen from the stratosphere would have ceased when the level of water vapour in the lower atmosphere reached about 20 per cent of saturation. The stratosphere would have become dry but water should have remained in the Venusian atmosphere.\n\nBy adding a mechanism to recycle CO2 on early Venus as happens today on Earth - the two objections can be met. The water carried by the lumps of rock from which Venus formed could well have condensed out to form oceans with at least one tenth of the volume of those currently on Earth. The oceans were hot, about 100°C but the pressure of the atmosphere would have prevented excessive evaporation.\n\nAn exchange of CO2 occurred for several hundred million years between the atmosphere and carbonate rocks on the surface of the planet. The process, known as \"weathering\", reduced the density of the Venusian atmosphere to about that of the Earth. The thinner atmosphere allowed most of the hydrogen to escape. The remainder escaped more slowly over the next few billion years, so that Venus now has about 100,000 times less water than Earth. According to Kasting and his colleagues, the early interaction between the atmosphere and the surface rocks may also have locked up most of the planet's oxygen.\n\nAfter the water was gone, exchange of CO2 would have ceased and the level of CO2 in the atmosphere would have risen causing a severe \"greenhouse\" effect. Clouds of sulphuric acid would also have evolved. On Mars, according to the model, carbonates were recycled for about a billion years but eventually, the exchange broke down because the planet was too small to retain its internal heat. The CO2 has become trapped in carbonate rocks. The thin atmosphere caused the planet's surface to freeze.",
+    "questions": [
+      {
+        "question": "Questions 1-3\n\nLook at the reading passage, and answer the following questions.\n\n1. List the three elements that were formed on the Earth 4.6 billion years ago.\n1) [1] 2) [2] 3) [3]",
+        "options": [
+          "water",
+          "carbon dioxide",
+          "nitrogen",
+          "oxygen",
+          "hydrogen",
+          "sulphuric acid"
+        ],
+        "answers": [
+          "water",
+          "carbon dioxide",
+          "nitrogen"
+        ]
+      },
+      {
+        "question": "2. What helps regulate atmospheric exchange and surface temperature?\n[1]",
+        "options": [
+          "exchange of carbon dioxide",
+          "escape of hydrogen",
+          "ultraviolet radiation",
+          "greenhouse effect"
+        ],
+        "answers": [
+          "exchange of carbon dioxide"
+        ]
+      },
+      {
+        "question": "3. What was the effect of \"weathering\" on Venus?\n[1]",
+        "options": [
+          "reduced the density of the Venusian atmosphere",
+          "caused a severe greenhouse effect",
+          "split the water molecules",
+          "trapped the Sun's heat"
+        ],
+        "answers": [
+          "reduced the density of the Venusian atmosphere"
+        ]
+      },
+      {
+        "question": "Questions 4-13\n\nThe table below gives information concerning the planets. Use the reading passage to help you fill in the table.\n\n| | Distance from the Sun | Effects of Distance on Planets | Periods of the Exchange of CO2 Occurs | Reason of Breakdown of CO2 Exchange | Surface Temperature |\n|---|---|---|---|---|---|\n| Earth | 4. [1] | 6. [2] | constantly | / / / / / / / / / / | / / / / / / / |\n| Mars | 5. [3] | 7. [4] | 9. [5] | 11. [6] | freezing |\n| Venus | no information given | 8. [7] | 10. [8] | 12. [9] | 13. [10] |",
+        "options": [
+          "150 million kilometres",
+          "just right",
+          "228 million kilometres",
+          "too cold",
+          "about a billion years",
+          "planet too small to retain internal heat",
+          "too hot",
+          "several hundred million years",
+          "water was gone",
+          "460°C",
+          "100°C",
+          "clouds of sulphuric acid"
+        ],
+        "answers": [
+          "150 million kilometres",
+          "just right",
+          "228 million kilometres",
+          "too cold",
+          "about a billion years",
+          "planet too small to retain internal heat",
+          "too hot",
+          "several hundred million years",
+          "water was gone",
+          "460°C"
+        ]
+      }
+    ]
+  },
+  "test_type": "SplitScreen (Standard)"
+}

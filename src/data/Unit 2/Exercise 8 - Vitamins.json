@@ -1,6 +1,6 @@
 {
   "title": "Exercise 8 - Vitamins",
-  "test_type": "IELTS-Listening",
+  "test_type": "Standard",
   "content_json": {
     "parts": [
       {
@@ -11,7 +11,7 @@
           {
             "id": "1",
             "title": "Questions 1-13",
-            "content": "",
+            "content": "<p><strong>Vitamins</strong></p>\n<p>Food contains only minute quantities of the substances called vitamins, but they are vital for good health. For example, if you eat [example] meat, bread, sugar and fat, you may become ill with a disease called scurvy. This is caused by [1] in vitamin C, which is found in fruit and vegetables.</p>\n<p>About fifty different vitamins have been identified, and a deficiency in many of these can [2] illness. Vitamin A is most important for good eyesight, but is also important for general good health. Liver contains [3] vitamin A, but vitamin A is also found in fish, meat, milk, butter, some fruits and vegetables.</p>\n<p>Vitamin B, in fact, consists of twelve different chemicals, which are [4], cheese, butter, whole-wheat flour and vegetables. If a person has [5] vitamin B in his diet, this may affect his whole body, particularly the skin, [6] and the heart. Deficiency in vitamin B results in a disease called beriberi.</p>\n<p>Vitamin C prevents scurvy and helps to heal injuries. Some doctors believe that large quantities of [7] help people to avoid colds. Fruits and uncooked vegetables are rich in vitamin C, but when they are [8], or left for a long time, they lose most of their vitamins.</p>\n<p>Vitamin D is essential for [9] and teeth and is found in fish, liver, oil and milk. Vitamin D is the only vitamin which the body can make [10], but it can only do this if there is sufficient sunlight. A lack of both sunlight and vitamin D can [11] in a disease called rickets, which causes bones to soften and to be deformed.</p>\n<p>Vitamins are only needed in very small quantities. A quantity sufficient for [12] would weigh only a quarter of a kilogram. Vitamins can be manufactured and are sold as additions to our food, but a well-balanced diet will provide [13] vitamins.</p>\n",
             "questionType": "Kéo thả",
             "questions": [
               {

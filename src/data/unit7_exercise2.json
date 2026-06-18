@@ -1,0 +1,82 @@
+{
+  "title": "The Life Cycle of a City",
+  "type": "SplitScreen",
+  "content": {
+    "passage": "1 Already more than 20% of mankind live in urban areas with populations greater than 100,000, and this figure is expected to increase to at least 40% by the year 2000. The rural-urban population shift in the US (Fig. 1) typifies the trend to urbanization in a developed country. But this trend is not limited to developed countries. In developing countries too (Fig. 2), where the population is still predominantly rural, rapid urbanization is occurring. In fact, urbanization in developing countries is taking place more rapidly than that in developed countries. In the former, the population of large cities is doubling every 10 to 15 years, and that of many urban slums every 5 to 7 years.\n\n2 These major population shifts within a country or throughout the world — both in developed and developing countries — affect the life cycles of cities. Jay W. Forrester (1969) has developed a crude computer model (Fig. 3) for an urban system in an industrialized nation. He analysed a hypothetical city to see how factors such as new and old industry, worker employment, managerial-professional employment and housing interacted over a period of 250 years. Data for each variable were collected, and the projected changes were calculated and plotted with the aid of a computer. The model shows that after a slight lag phase (while initial colonizers are building and slowly expanding the population), there is a dynamic growth phase (the “J curve”) as industry, housing and employment increase dramatically for a number of years.\n\n![Graphs](/images/unit7_exercise2_graphs.png)\n\n3 The short-term, economically-motivated decisions made in this growth phase often have undesirable long-term effects. The original housing deteriorates, and new affluence and the availability of cars and other forms of transportation enable the managerial and skilled labour classes to build a new ring of houses outside the old city. The availability of vacated housing in the now deteriorating inner city allows an influx of unskilled workers, mostly from the rural areas (or, in the case of some developed countries, unskilled immigrants from developing countries). This occupancy by newcomers prevents the demolition of old housing, and further hinders industrial and business expansion within the city. Unemployment rises, generating welfare expenditure, but a reduced tax base from which to finance such expenditure. So local business taxes are raised, and the remaining landowners flee the city to avoid high taxes. This further decreases the likelihood of new industry, and unemployment rises again.\n\n4 The stage is now set for the second phase of deterioration. The oldest inner city housing eventually deteriorates to the point where it must be demolished. It is usually replaced with housing and office buildings for managerial and professional workers. This provides little employment for the working class, and they move outward into the second ring of housing. Middle and upper classes then develop a new housing ring further from the inner city as stagnation increases.\n\n5 Forrester's preliminary and admittedly crude model shows that the normal practice of raising local taxes may be self-defeating, in that it drives out persons and industries capable of supporting the city. Building expensive motorways and mass transit systems from the suburbs to the inner city can also be counterproductive by making the flight to the suburbs easier. Allowing old housing to stand, or converting it to low-rent housing projects, may also be self-defeating in the long run. The migration of additional underemployed persons into a city is controlled by the availability of housing. By removing old housing and refusing to replace it, a city can stop or slow migration of the unskilled, and at the same time provide space for new industries, which can then generate jobs or taxes for the benefit of existing unemployed citizens.",
+    "questions": [
+      {
+        "question": "Questions 1-4\n\nAnswer the questions.\n\n1. Since when has half or more of the US population lived in urban areas?\n[1]\n2. In what countries is the process of urbanization faster?\n[2]\n3. In 1980, approximately how many people lived in urban areas in developing countries?\n[3]\n4. Which one of the curves in the model graph is a J curve? Please tick one letter.\n[4]",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answers": [
+          "1918",
+          "developing countries",
+          "1000 million",
+          "B"
+        ],
+        "types": [
+          "text",
+          "text",
+          "text",
+          "select"
+        ]
+      },
+      {
+        "question": "Questions 5-14\n\nIn the left column below are the phases in The Life Cycle of a City as described by Forrester (A-L). Put the phases in chronological order in the blanks provided in the column on the right. Some of the blanks have been filled in for you.\n\nA. The original housing deteriorates.\nB. The remaining landowners flee the city.\nC. A slight lag phase.\nD. An influx of unskilled workers.\nE. A dynamic growth of industry, housing, and employment.\nF. A new ring of houses outside the old city is built.\nG. Local business taxes are raised.\nH. Working class people move outward into the second ring of housing.\nI. Unemployment and welfare expenditure rise.\nJ. Old inner city houses are demolished and replaced by office buildings.\nK. Unemployment rises again.\nL. A new housing ring is developed further from the inner city.\n\nPhase 1: [1]\nPhase 2: [2]\nPhase 3: [3]\nPhase 4: F\nPhase 5: [4]\nPhase 6: [5]\nPhase 7: [6]\nPhase 8: [7]\nPhase 9: K\nPhase 10: [8]\nPhase 11: [9]\nPhase 12: [10]",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L"
+        ],
+        "answers": [
+          "C",
+          "E",
+          "A",
+          "D",
+          "I",
+          "G",
+          "B",
+          "J",
+          "H",
+          "L"
+        ]
+      },
+      {
+        "question": "Questions 15-16\n\nAnswer the questions.\n\n15. How long does the slight lag phase last approximately?\n[1]\n16. What affects the life cycles of cities the most? (Answer in three words.)\n[2]",
+        "answers": [
+          "50 years",
+          "major population shifts"
+        ]
+      },
+      {
+        "question": "Questions 17-21\n\nIf the author agrees with Forrester's model, would he support or reject the following ideas? Please tick the appropriate letter.\n\nA. Support\nB. Reject\nC. Can't Be Inferred from the Text\n\n17. raising taxes [1]\n18. building motorways [2]\n19. converting old houses [3]\n20. demolishing old houses [4]\n21. increasing urban population [5]",
+        "options": [
+          "A",
+          "B",
+          "C"
+        ],
+        "answers": [
+          "B",
+          "B",
+          "B",
+          "A",
+          "B"
+        ]
+      }
+    ]
+  },
+  "test_type": "SplitScreen (Standard)"
+}

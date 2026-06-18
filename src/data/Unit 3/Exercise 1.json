@@ -1,0 +1,143 @@
+{
+  "title": "Exercise 1 - Are You a Machine of Many Parts?",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<p><b>1</b> What will future historians remember about the impact of science during the last decade of the 20th century? They will not be much concerned with many of the marvels that currently preoccupy us, such as the miraculous increase in the power of home computers and the unexpected growth of the Internet. Nor will they dwell much on global warming, the loss of biodiversity and other examples of our penchant for destruction. Instead, the end of the 20th century will be recognized as the time when, for better or worse, science began to bring about a fundamental shift in our perception of ourselves.</p><br><p><b>2</b> It will be the third time that science has forced us to re-evaluate who we are. The first time, of course, was the revolution that began with Copernicus in 1543 and continued with Kepler, Galileo and Newton. Despite the Church's opposition, we came to realize that the Earth does not lie at the centre of the universe. Instead, we gradually found we live on a small planet on the edge of a minor galaxy, circling one star in a universe that contains billions of others. Our unique position in the universe was gone for ever.</p><br><p><b>3</b> A few centuries later, we were moved even further from stage centre. The Darwinian revolution removed us from our position as a unique creation of God. Instead, we discovered we were just another part of the animal kingdom proud to have \"a miserable ape for a grandfather\", as Thomas Huxley put it in 1860. We know now just how close to the apes we are — over 90% of our genes are the same as those of the chimpanzee.</p><br><p><b>4</b> Increasing knowledge of our own genetics is one of the driving forces in the third great conceptual shift that will soon take place. Others are the growing knowledge of the way our minds work, our new ability to use knowledge of the nervous system to design drugs that affect specific states of mind and the creation of sophisticated scanners which enable us to see what is happening inside our brains. In the third revolution, we are taking our own selves to pieces and finding the parts which make up the machine that is us.</p><br><p><b>5</b> Much of the new knowledge from genetics, molecular biology and the neuro-sciences is esoteric. But its cultural impact is already running ahead of science. People begin to see themselves not as wholes with a moral centre but the result of the combined action of parts for which they have little responsibility.</p><br><p><b>6</b> It's Nobody's Fault is the title of a popular American book on \"difficult\" children. Many different children, the book explains, are not actually difficult but are suffering from Attention Deficit Disorder (ADD). There is nothing wrong with them or the way they have been brought up. Rather, the part of the brain which controls attention is short of a particular neurotransmitter.</p><br><p><b>7</b> ADD is currently the world's fastest growing psychological problem. In the United States, a survey showed that 1.5m children between the ages of five and eighteen were being treated with a drug, Ritalin, for the disorder. Since then the number taking the drug is believed to have doubled.</p><br><p><b>8</b> You might, as many people do, question the way in which the disorder has been diagnosed on such a staggering scale. But that is not the point. The cultural shift is that people are not responsible for their disorders, only for obtaining treatment for the parts of them that have gone wrong.</p><br><p><b>9</b> The more we know about the parts of ourselves, the more cures for our defects will appear. Prozac is one example. The best-selling Listening to Prozac claimed the drug \"can transform pessimists into optimists, turn loners into extroverts\". And Prozac, the book explained, \"was not so much discovered as planfully created, through the efforts of a large pharmaceutical firm ... the likely result of this form of research is not medicines that correct particular illnesses but medicines that affect clusters of functions in the human brain.\"</p><br><p><b>10</b> Even when a treatment is not to hand, the notion that we are made of \"clusters of functions\" remains strong. Genetic analysis supports this view. A gene linked to alcoholism has been located and a Gallup poll has revealed that the great majority of Americans consider alcoholism to be a disease. There are claims of genes too for obesity, homosexuality and even for laziness.</p><br><p><b>11</b> Some claims about genes may be silly. Or you may think that the current conceptual shift is just a re-run of old arguments about the relative roles of nature and nurture. Instead, take one drug, Viagra, as an example of the new way of thinking about ourselves. If you suffer from impotence, it might have a variety of physiological causes. Or you might just be anxious about sexual performance. But Viagra does not make such fine distinctions: it acts at the level of the chemical reactions that control the blood flow needed to maintain an erection.</p><br><p><b>12</b> Once we can dissect ourselves into parts and know how the parts work, it really does not matter what was the initial cause of the problem. If you own a car and the brakes wear out quickly, it is not important whether you've been driving the car too hard or you bought cheap brake shoes to begin with. You just need to change the brakes.</p><br><p><b>13</b> The more direct means we have of changing who we are, through changing the parts that we are composed of, the harder becomes the question of who was the person who made the decision to change, before becoming someone else. This will be the real issue for the 21st century: who are we, if we are the sum of our parts and science has given us the power to change those parts?</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-10",
+            "content": "",
+            "questionType": "Trắc nghiệm",
+            "questions": [
+              {
+                "id": "1",
+                "content": "What is the most important scientific progress in the 20th century?",
+                "options": [
+                  "A. The development of computer technology.",
+                  "B. The birth and growth of the Internet.",
+                  "C. Mankind's ability to control global warming.",
+                  "D. People's new knowledge of themselves."
+                ],
+                "answer": "D. People's new knowledge of themselves.",
+                "explanation": "Trong đoạn 1, tác giả viết: \"Instead, the end of the 20th century will be recognized as the time when, for better or worse, science began to bring about a fundamental shift in our perception of ourselves.\" (Thay vào đó, cuối thế kỷ 20 sẽ được công nhận là thời kỳ mà, dù tốt hay xấu, khoa học đã bắt đầu mang lại một sự thay đổi cơ bản trong nhận thức của chúng ta về bản thân). Các lựa chọn A, B, C được nhắc đến ở đầu đoạn 1 như là những thứ mà các nhà sử học tương lai sẽ không quá quan tâm (\"will not be much concerned with\"). Do đó, đáp án D là chính xác nhất."
+              },
+              {
+                "id": "2",
+                "content": "What did Copernicus discover?",
+                "options": [
+                  "A. The Earth does not lie at the centre of the universe.",
+                  "B. The Church was wrong about the history of mankind.",
+                  "C. Human beings live on a small planet.",
+                  "D. Mankind have a unique position in the universe."
+                ],
+                "answer": "A. The Earth does not lie at the centre of the universe.",
+                "explanation": "Trong đoạn 2, tác giả đề cập đến \"the revolution that began with Copernicus in 1543\" và hệ quả của nó: \"we came to realize that the Earth does not lie at the centre of the universe.\" (chúng ta đã nhận ra rằng Trái đất không nằm ở trung tâm của vũ trụ). Đáp án A thể hiện chính xác khám phá này. Lựa chọn C là sự phát hiện dần dần sau đó (\"Instead, we gradually found...\"), không phải trực tiếp là khám phá của Copernicus."
+              },
+              {
+                "id": "3",
+                "content": "What did Darwin discover?",
+                "options": [
+                  "A. Human beings were a unique creation of God.",
+                  "B. Human beings and apes shared a common ancestor.",
+                  "C. Human beings were lucky while apes were miserable.",
+                  "D. Human beings and chimpanzees were nearly identical."
+                ],
+                "answer": "B. Human beings and apes shared a common ancestor.",
+                "explanation": "Đoạn 3 nhắc đến cách mạng Darwin đã loại bỏ vị trí của chúng ta như một tạo vật độc nhất của Chúa (\"removed us from our position as a unique creation of God\"). Thay vào đó, chúng ta phát hiện ra mình chỉ là một phần của vương quốc động vật và có \"một con vượn khốn khổ làm ông nội\" (\"a miserable ape for a grandfather\"). Điều này mang ý nghĩa ẩn dụ rằng con người và loài vượn có chung một tổ tiên. Lựa chọn D nói về 90% gen giống nhau là kiến thức mà \"We know now\" (chúng ta biết hiện nay) chứ không phải do Darwin khám phá. Vì vậy B là đáp án đúng."
+              },
+              {
+                "id": "4",
+                "content": "Which of the following is NOT \"one of the driving forces in the third great conceptual shift\"? (Paragraph 4)",
+                "options": [
+                  "A. Knowledge of our own genetics.",
+                  "B. Knowledge of the way our minds work.",
+                  "C. Knowledge of how to use sophisticated scanners.",
+                  "D. Knowledge of how to design drugs that affect specific states of mind."
+                ],
+                "answer": "C. Knowledge of how to use sophisticated scanners.",
+                "explanation": "Trong đoạn 4 liệt kê các động lực: 1. \"Increasing knowledge of our own genetics\" (đáp án A), 2. \"growing knowledge of the way our minds work\" (đáp án B), 3. \"ability to use knowledge of the nervous system to design drugs...\" (đáp án D), và 4. \"the creation of sophisticated scanners\" (sự tạo ra các máy quét tinh vi). Lựa chọn C nói về \"Knowledge of how to use\" (Kiến thức về cách sử dụng) chứ không phải là \"sự tạo ra\" (creation) như trong bài, do đó C là đáp án đúng cho câu hỏi tìm yếu tố KHÔNG PHẢI (NOT) là động lực."
+              },
+              {
+                "id": "5",
+                "content": "Which of the following is likely to be the main idea of the book It's Nobody's Fault?",
+                "options": [
+                  "A. Many children are suffering from ADD.",
+                  "B. ADD is the problem for the problematic children.",
+                  "C. Some people's brains do not have neurotransmitters.",
+                  "D. The way people are brought up determines their behaviour."
+                ],
+                "answer": "B. ADD is the problem for the problematic children.",
+                "explanation": "Trong đoạn 6, bài đọc đề cập đến cuốn sách \"It's Nobody's Fault\" viết về những đứa trẻ \"khó tính\" (\"difficult\" children). Cuốn sách giải thích rằng những đứa trẻ này thực ra không phải khó tính mà là do chúng đang mắc chứng ADD: \"Many different children... are not actually difficult but are suffering from Attention Deficit Disorder (ADD).\" Điều này tương đương với ý B: ADD chính là nguyên nhân gây ra vấn đề ở những đứa trẻ có biểu hiện \"có vấn đề\"."
+              },
+              {
+                "id": "6",
+                "content": "How many people are taking Ritalin in the US?",
+                "options": [
+                  "A. Less than 1.5 million people.",
+                  "B. 1.5 million of the people aged 5-18.",
+                  "C. 3 million of the people aged 5-18.",
+                  "D. More than 3 million teenagers."
+                ],
+                "answer": "C. 3 million of the people aged 5-18.",
+                "explanation": "Đoạn 7 cung cấp thông tin: một cuộc khảo sát cho thấy có 1,5 triệu trẻ em từ 5 đến 18 tuổi (\"1.5m children between the ages of five and eighteen\") đã được điều trị bằng Ritalin. Câu tiếp theo nói rằng số lượng dùng thuốc này được tin là đã tăng gấp đôi (\"the number taking the drug is believed to have doubled\"). Gấp đôi của 1,5 triệu là 3 triệu người trong độ tuổi đó. Do đó, đáp án C là chính xác."
+              },
+              {
+                "id": "7",
+                "content": "Which of the following reflects the cultural shift?",
+                "options": [
+                  "A. More people are diagnosed to be suffering from mental disorders.",
+                  "B. People are not responsible for the problems they have.",
+                  "C. More people are seeking mental treatment.",
+                  "D. People begin to question the accuracy of doctors' diagnoses."
+                ],
+                "answer": "B. People are not responsible for the problems they have.",
+                "explanation": "Trong đoạn 8, tác giả nêu rõ: \"The cultural shift is that people are not responsible for their disorders, only for obtaining treatment...\" (Sự thay đổi về văn hóa là con người không phải chịu trách nhiệm cho những căn bệnh/rối loạn của mình, mà chỉ có trách nhiệm tìm kiếm phương pháp điều trị...). Do đó, đáp án B phản ánh chính xác nhất ý của tác giả về sự thay đổi văn hóa (\"cultural shift\")."
+              },
+              {
+                "id": "8",
+                "content": "What is Prozac?",
+                "options": [
+                  "A. A book.",
+                  "B. A medicine.",
+                  "C. A type of people.",
+                  "D. A mental disorder."
+                ],
+                "answer": "B. A medicine.",
+                "explanation": "Trong đoạn 9, khi nói về các phương pháp chữa trị khiếm khuyết, tác giả lấy Prozac làm ví dụ. Mặc dù có nhắc tới cuốn sách bán chạy mang tên \"Listening to Prozac\", bản thân Prozac được tác giả gọi rõ là \"the drug\" (loại thuốc) trong câu: \"...claimed the drug can transform...\". Vì vậy, Prozac là một loại thuốc (A medicine)."
+              },
+              {
+                "id": "9",
+                "content": "Genetic analysis seems to have confirmed that there is a gene in our body that is responsible for",
+                "options": [
+                  "A. alcoholism.",
+                  "B. obesity.",
+                  "C. homosexuality.",
+                  "D. laziness."
+                ],
+                "answer": "A. alcoholism.",
+                "explanation": "Trong đoạn 10, tác giả viết: \"Genetic analysis supports this view. A gene linked to alcoholism has been located...\" (Phân tích di truyền ủng hộ quan điểm này. Một gen liên quan đến chứng nghiện rượu đã được định vị/tìm thấy). Về các lựa chọn B, C, D, tác giả chỉ nói là \"There are claims of genes too for...\" (Chỉ mới có những tuyên bố/đồn đoán về gen cho...), tức là chưa được xác nhận (\"confirmed\") chắc chắn như chứng nghiện rượu. Do đó, đáp án A là chính xác."
+              },
+              {
+                "id": "10",
+                "content": "Which of the following does the drug Viagra illustrate?",
+                "options": [
+                  "A. \"Some claims about genes may be silly.\" (Paragraph 11)",
+                  "B. We have a \"new way of thinking about ourselves\". (Paragraph 11)",
+                  "C. A physical disorder \"might have a variety of physiological causes\". (Paragraph 11)",
+                  "D. \"People ... are ... obtaining treatment for the parts of them that have gone wrong.\" (Paragraph 8)"
+                ],
+                "answer": "D. \"People ... are ... obtaining treatment for the parts of them that have gone wrong.\" (Paragraph 8)",
+                "explanation": "Trong đoạn 11 và 12, Viagra được dùng làm ví dụ (\"illustrate\") cho tư duy mới. Nó hoạt động bằng cách sửa chữa một \"bộ phận\" hỏng (kiểm soát phản ứng hóa học bơm máu) mà không quan tâm đến nguyên nhân sâu xa (do sinh lý hay tâm lý). Ví dụ ẩn dụ về việc thay phanh xe bị hỏng ở đoạn 12 tiếp tục củng cố tư tưởng này. Điều đó minh họa rõ nét nhất cho ý tưởng trung tâm ở đoạn 8: mọi người giải quyết vấn đề bằng cách \"obtaining treatment for the parts of them that have gone wrong\" (tìm kiếm sự điều trị cho các bộ phận bị hỏng hóc). Do đó, đáp án D là chính xác nhất."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

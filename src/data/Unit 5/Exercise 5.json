@@ -1,0 +1,71 @@
+{
+  "title": "Exercise 5 - A New Learning Tool",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "A New Learning Tool",
+        "content": "<p><b>1</b> Students at 62 large university campuses across the United States can take heart: They may never have to take notes in a lecture again.</p><br><p><b>2</b> An upstart Internet venture calling itself <i>http://www.studentu.com</i> is hiring students this semester and paying them to take notes in as many as 50 core courses per campus.</p><br><p><b>3</b> The note-takers post their jottings electronically, within 24 hours, on a central website.</p><br><p><b>4</b> Among the dozens of notes already listed are those taken Tuesday during Professor John Syer's course on world politics at California State University in Sacramento and on Aug. 24 during Professor Robert Schwebach's lecture on financial markets at Colorado State University.</p><br><p><b>5</b> The service, which first went on-line Wednesday, is free.</p><br><p><b>6</b> And the stenographers, most of them hired through their fraternities and enrolled in the courses, are paid $300 a semester to open their notebooks to the world.</p><br><p><b>7</b> The creator of the site, Oran Wolf, a 27-year-old graduate of the University of Texas at Austin, who hopes to earn a profit partly through advertising, said he started the service to help students augment their own notes or to help them catch up after a sick day.</p><br><p><b>8</b> But he conceded that his offerings could be abused by those with less legitimate excuses, like chronic oversleeping or lingering hangovers.</p><br><p><b>9</b> \"I definitely don't believe students should skip class,\" Mr. Wolf said this week from his Houston office, as he admitted that he, too, on occasion, had done just that.</p><br><p><b>10</b> \"It is important for them to attend the class, use this information as supplements to the course and if they do that, they are going to get A's.\"</p><br><p><b>11</b> There is no shortage of critics who believe that the arrival of Mr. Wolf's venture — along with other websites that sell sample term papers and synopses of great books — signals nothing less than the erosion of liberal education, if not civilization.</p><br><p><b>12</b> But Mark Edmundson, a professor of English at the University of Virginia, one of the schools where Mr. Wolf has set up shop, thinks the problem lies more with universities — and their reliance, often for financial reasons, on 300-student lecture courses — than on those trying to beat the system.</p><br><p><b>13</b> \"There's something sleazy about students taking notes and selling them on the web,\" Mr. Edmundson said.</p><br><p><b>14</b> \"But if you can buy the notes and satisfy the course requirements, maybe the course should have been distributed as a book, rather than having this charade of somebody standing up and going through a lecture that, for all purposes, doesn't change from year to year, and doesn't allow students the possibility of discussion.\"</p><br><p><b>15</b> Peter Wood, a professor of anthropology and the associate provost at Boston University, which is also on Mr. Wolf's list, said the university might consider taking legal action once notes from the school appear on the site — which, as of Wednesday, they had not.</p><br><p><b>16</b> \"I am troubled by it because I, like thousands of faculty members, spent a great deal of time developing my courses within a specific intellectual context, a context that I control,\" he said.</p><br><p><b>17</b> Mr. Wolf said the seeds of his idea were first sown while he was studying economics at Austin, when he had occasionally taken advantage of a similar service there: For $30 per class, a private note-taking firm would arrange for him to get paper copies of any notes that he might have missed.</p><br><p><b>18</b> After graduating in 1995 and moving to Houston, he learned that the university there had no such service, and so he founded his own. Initially taking 10 hours of notes a day himself, he quickly expanded his operation to include about 3,000 subscribers — they, too, paid $30 for each of 120 classes — and about 40 note-takers.</p><br><p><b>19</b> Mr. Wolf said professors at the University of Houston were initially wary of helping him and his note-takers gain access to classes, if they were not enrolled.</p><br><p><b>20</b> But he said he won them over when they realized that attendance did not drop as a result.</p><br><p><b>21</b> When Mr. Wolf discovered that such services were rare on other campuses, he said he decided to take his operation national.</p><br><p><b>22</b> With an investment from New Strategy, a Houston company that has nurtured other web companies, and rolling banner of advertisements that includes the Capital One Visa Platinium Card, Mr. Wolf began recruiting note-takers at fraternities at 62 of the largest colleges and universities throughout the United States.</p><br><p><b>23</b> Because he has assembled his operation so quickly, using students already in courses, Mr. Wolf said he would not be asking professors for permission to broadcast their notes.</p><br><p><b>24</b> Thus, many are likely to be as surprised as Professor Syer at Sacramento who learned from a reporter Wednesday that his introduction to the world's 10 largest countries had been reproduced by an anonymous note-taker for all to see.</p><br><p><b>25</b> \"I'm not unalterably opposed to this dissemination,\" he said.</p><br><p><b>26</b> \"I'd just like to know how wide my audience is. I'm going to get up there and take on the policies of the US government, the policies of the Indonesian government, the policies of the Chinese government.\"</p><br><p><b>27</b> \"If I think this is something that is going to be quoted globally,\" he said, \"it may change what I say.\"</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-8",
+            "content": "<p><i>Do the following statements agree with the view of the writer in the passage? Please write</i></p><p><i><b>YES</b> if the statement agrees with the view of the writer;<br><b>NO</b> if the statement contradicts the view of the writer;<br><b>NOT GIVEN</b> if it is impossible to say what the writer thinks about this.</i></p><br><p>1. Students who wish to visit the website offering notes of major college courses must pay a fee. [1]</p><p>2. Mr. Wolf used to oversleep chronically. [2]</p><p>3. Many people believe that the kind of service offered by Mr. Wolf is detrimental to the education of arts. [3]</p><p>4. Professor Mark Edmundson believes that such websites pose a major threat to the present educational system. [4]</p><p>5. Students who take notes for Mr. Wolf were denied access to classes. [5]</p><p>6. By broadcasting notes without permission from the professors, Mr. Wolf might get involved in lawsuits. [6]</p><p>7. Professor Syer was indignant when he learned that notes of his lecture were posted on the Internet. [7]</p><p>8. Professor Syer will adjust to the demand on the Internet and change the content of his lecture. [8]</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 5 cho biết: \"The service, which first went on-line Wednesday, is free.\" (Dịch vụ này hoàn toàn miễn phí), trái ngược với nhận định là sinh viên phải trả phí. Vì vậy đáp án là NO."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Đoạn 9 chỉ đề cập ông Wolf thừa nhận thỉnh thoảng có cúp học (\"on occasion, had done just that\"), nhưng không có thông tin nói rằng ông ấy thường xuyên ngủ quên (oversleep chronically). Do đó thông tin này là NOT GIVEN."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 11 nói rằng: \"There is no shortage of critics who believe that the arrival of Mr. Wolf's venture ... signals nothing less than the erosion of liberal education...\" (Có rất nhiều nhà phê bình tin rằng dịch vụ này báo hiệu sự xói mòn của nền giáo dục khai phóng). \"Erosion\" (sự xói mòn) mang nghĩa tiêu cực (detrimental), và \"liberal education\" tương đương với \"education of arts\". Vì vậy đáp án là YES."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 12 chỉ ra Giáo sư Mark Edmundson cho rằng vấn đề nằm ở chính các trường đại học nhiều hơn là ở những trang web này (\"thinks the problem lies more with universities... than on those trying to beat the system\"). Điều này trái ngược với quan điểm coi các trang web là mối đe dọa lớn. Vì vậy đáp án là NO."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 19 và 20 nói rằng các giáo sư lúc đầu dè chừng nhưng sau đó ông Wolf đã thuyết phục được họ cho phép người ghi chú vào lớp (\"won them over\"). Hơn nữa, đoạn 6 có nhắc đến phần lớn người ghi chú là những người đã đăng ký khóa học đó (\"enrolled in the courses\"). Không có thông tin họ bị từ chối vào lớp. Đáp án là NO."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 15 đề cập việc Peter Wood nói trường đại học có thể cân nhắc \"taking legal action\" (thực hiện hành động pháp lý/kiện cáo) nếu các ghi chú của trường xuất hiện trên trang web. Điều này xác nhận rằng ông Wolf có nguy cơ vướng vào kiện cáo pháp lý. Đáp án là YES."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 25 trích lời Giáo sư Syer: \"I'm not unalterably opposed to this dissemination\" (Tôi không hoàn toàn phản đối việc phổ biến này). Điều này cho thấy ông ấy không hề phẫn nộ (indignant) về việc đó. Đáp án là NO."
+              },
+              {
+                "id": "8",
+                "content": "[8]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 27 trích lời Giáo sư Syer: \"it may change what I say\" (nó CÓ THỂ làm thay đổi những gì tôi nói), không phải là sự khẳng định chắc chắn (will adjust and change) như trong câu hỏi. Vì vậy đáp án là NO."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

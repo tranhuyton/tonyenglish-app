@@ -1,0 +1,71 @@
+{
+  "title": "Exercise 1 - Energy, Fission and Fusion",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Energy, Fission and Fusion",
+        "content": "<p><b>A</b> Almost all the energy that living things make use of comes in the beginning from the sun. The chief exception is the gravitational pull of the earth itself, and of the moon upon the waters of the earth. The sun gives out enormous quantities of energy in the form of radiation — rays of light and other forms of energy.</p><br><p><b>B</b> Green plants have the power, through the process called photosynthesis, to change the energy of sunlight into chemical energy. This is stored in the plant in the form of organic molecules. Some of the plants are eaten and the stored energy used by herbivorous animals — or by human beings. Human beings are omnivorous, that is their food and therefore, their energy can come from either plant or animal sources. But that energy originated in the sun.</p><br><p><b>C</b> To satisfy human needs, other kinds of energy are needed — mechanical, driving and heating. The energy for heating, or for driving heat engines, usually comes from a fuel and most fuels were once living things. Fuel obtained in this way, with the exception of wood and other fresh organic matter, is called fossil fuel and includes oil, natural gas and coal. All of these are the very ancient buried remains of animal or plant life. They are finite and the processes by which they were made are not repeatable. They are yet another form of solar or sun energy.</p><br><p><b>D</b> The energy given out by the sun is created by the process known as nuclear fusion. Fusion means \"joining together\". The opposite process is nuclear fission, meaning \"splitting apart\" or \"dividing\". If either fission or fusion takes place quickly, the result is a great and sudden release of energy — an explosion, in fact. Both kinds of nuclear event can be created on earth but so far the only one that can be slowed down and controlled is fission.</p><br><p><b>E</b> Nuclear fission is the splitting of the nucleus of an atom. Only a few elements are suitable for use in this way, the most important ones being Uranium-235, Uranium-233 and Plutonium-239. When a nucleus of one of these elements is struck by a free neutron, it breaks down into two lighter nuclei which fly apart at high speed, colliding with surrounding atoms. Their kinetic energy is converted into heat energy. At the same time, two or three free neutrons are released and one of them enters the nucleus of a neighbouring atom, causing fission to occur again; and so on. The reaction spreads very quickly, with more and more heat energy released. This is called a \"chain\" reaction because the splitting of each nucleus is linked to another, and another and another.</p><br><p><b>F</b> If this reaction takes place in an atomic bomb, where nothing is done to slow it down, the result is a violent explosion that can destroy a town in a few seconds. Fission can also, however, take place within a construction called a nuclear reactor, or atomic pile. Here the highly fissile material (U-235, U-233, Pu-239) is surrounded by a substance that is non-fissile, for instance graphite. This material is called a moderator. The neutrons lose some of their energy and speed through colliding with the atoms of the moderator. Energy — heat energy — is still created on an enormous scale, but no explosion takes place. The moderator has another function: by slowing down the speed of the free neutrons, it makes it more likely that one of them will collide with the nucleus of a neighbouring atom to continue the chain reaction.</p><br><p><b>G</b> The chief advantage of nuclear energy is that it does not depend on any local factors. A nuclear reactor, unlike an oil-well or a coal mine, does not have to be sited on top of a fossil-fuel source; unlike the solar energy unit, it does not have to go out of production when the sun is not shining; unlike hydroelectric power, it does not depend on a large flow of water which may be reduced during some seasons of the year. With an atomic power station, the only limiting factor is that of safety.</p><br><p><b>H</b> In the opposite process, nuclear fusion, two nuclei come together to form a new nucleus of a different kind and this process also releases energy on an enormous scale. Fusion can only occur under conditions of very great heat — at least 50,000,000 degrees Celsius. (The temperature at the centre of the sun is estimated as 130,000,000 degrees Celsius.) A fusion reaction on earth has already been created — the hydrogen bomb. This is an uncontrolled reaction. It is not yet possible to produce a controlled fusion reaction that can be used for the production of useful energy.</p><br><p><b>I</b> Nuclear energy can be thought of as a kind of square. Three of the quarters of the square are known and used, but the fourth cannot yet be used.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 9-16",
+            "content": "<p><i>Decide if each of the following statements is true or false according to the information provided in the passage. Please write</i></p><p><b>TRUE</b> if the statement is true;<br><b>FALSE</b> if the statement is false;<br><b>NOT GIVEN</b> if the information is not given in the passage.</p><br><p>9. The purpose of the moderator is to prevent the escape of dangerous radiation. [1]</p><p>10. Few elements are suitable for use as atomic fuel. [2]</p><p>11. Fossil fuels cannot last for ever. [3]</p><p>12. An atomic power station can supply the same quantity of energy all the year round. [4]</p><p>13. The sun's energy is released by the process of nuclear fission. [5]</p><p>14. All organic fuels are fossil fuels. [6]</p><p>15. A hydroelectric power station can be built anywhere. [7]</p><p>16. Graphite is a non-fissile material. [8]</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "FALSE",
+                "explanation": "Đoạn F nêu rằng chất điều hòa (moderator) có tác dụng làm giảm năng lượng và tốc độ của các neutron tự do, và giúp chúng dễ dàng va chạm với hạt nhân của nguyên tử lân cận để tiếp tục phản ứng dây chuyền, chứ không phải để ngăn chặn bức xạ nguy hiểm thoát ra."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "TRUE",
+                "explanation": "Đoạn E khẳng định rằng chỉ có một vài nguyên tố (\"Only a few elements\") là phù hợp để sử dụng theo cách này (làm nhiên liệu nguyên tử), phù hợp với câu hỏi."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "TRUE",
+                "explanation": "Đoạn C chỉ ra rằng nhiên liệu hóa thạch là có hạn (\"finite\") và quá trình tạo ra chúng không thể lặp lại, nghĩa là chúng không thể tồn tại mãi mãi."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "TRUE",
+                "explanation": "Đoạn G giải thích nhà máy điện nguyên tử không bị ảnh hưởng bởi các yếu tố thời tiết như mặt trời hay lượng nước chảy theo mùa, do đó nó có thể cung cấp năng lượng liên tục quanh năm."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "FALSE",
+                "explanation": "Đoạn D khẳng định năng lượng của mặt trời được tạo ra bởi quá trình nhiệt hạch (\"nuclear fusion\"), chứ không phải phân hạch (\"nuclear fission\")."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "FALSE",
+                "explanation": "Đoạn C ghi rõ nhiên liệu thu được theo cách này, ngoại trừ gỗ và các vật chất hữu cơ tươi khác (\"with the exception of wood and other fresh organic matter\"), được gọi là nhiên liệu hóa thạch. Do đó không phải tất cả nhiên liệu hữu cơ đều là nhiên liệu hóa thạch."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "FALSE",
+                "explanation": "Đoạn G cho biết thủy điện (\"hydroelectric power\") phụ thuộc vào dòng chảy lớn của nước, do đó không thể xây dựng ở bất cứ đâu, trái ngược với nhà máy điện nguyên tử."
+              },
+              {
+                "id": "8",
+                "content": "[8]",
+                "correctAnswer": "TRUE",
+                "explanation": "Đoạn F nêu rõ vật liệu dễ phân hạch được bao quanh bởi một chất không phân hạch (\"non-fissile\"), ví dụ như than chì (\"graphite\")."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "title": "Exercise 9 - Thermostats",
-  "test_type": "IELTS-Listening",
+  "test_type": "Standard",
   "content_json": {
     "parts": [
       {
@@ -11,7 +11,7 @@
           {
             "id": "1",
             "title": "Questions 1-13",
-            "content": "",
+            "content": "<p><strong>Thermostats</strong></p>\n<p>Heat causes substances to expand. This is because heat causes the atoms and [example] in the substance to move more quickly. As a consequence, they take up more space. This is true for gases, [1] and solids, but gases expand much more than liquids, and liquids much more than solids. When a substance is cooled, the molecules [2] and as a result the substance contracts.</p>\n<p>Thermostats make use of the principle of expansion. The function of [3] is to maintain a constant temperature over a period of time. They are used in refrigerators, [4] and many industrial processes.</p>\n<p>When different materials are heated, some [5] more than others. For example, if brass is heated by one degree Celsius, it will expand by [6] of its length. Heating copper, on the other hand, will cause it to expand by [7] of this. One kind of thermostat contains a strip of brass and a strip of copper which are joined to form a \"bimetallic strip\". When the strip is [8], the different metals expand by different amounts. As a result, the strip is forced to [9] towards the side which expands less. This bending can be used to operate a valve or open and close an electrical circuit.</p>\n<p>Such a bimetallic strip is used in central heating systems. It [10] the heaters when the air reaches a certain temperature, and switches them on when the temperature falls. One end of [11] can move while the other is fixed. The free end completes an electrical circuit which controls the gas or [12] burner. The strip bends as it is heated. At a certain temperature, the strip bends sufficiently to break the contact, thereby [13] the burner.</p>\n<p>When the air cools, the strip contracts until it makes contact and switches the burner on again.</p>\n",
             "questionType": "Kéo thả",
             "questions": [
               {

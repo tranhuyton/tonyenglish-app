@@ -1,0 +1,83 @@
+{
+  "title": "Exercise 3 - Biogas: a Solution to Many Problems",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Part 1",
+        "content": "<p><b>1</b> In almost all developing countries, the lack of adequate supplies of cheap, convenient and reliable fuel is a major problem. Rural communities depend largely on kerosene, wood and dung for their cooking and lighting needs. But kerosene is now priced out of reach of many people and wood, except in heavily forested areas, is in short supply. The search for firewood occupies a large part of the working day and has resulted in widespread deforestation.</p><br><p><b>2</b> Dung is in constant supply wherever there are farm animals and, when dried, it is convenient to store and use. But burning dung destroys its value as fertilizer, thus depriving the soil of a much needed source of humus and nitrogen.</p><br><p><b>3</b> Rural areas of developing countries are also plagued by a lack of adequate sanitation. Improper waste disposal spreads disease, contaminates water sources and provides breeding grounds for disease-carrying insects.</p><br><p><b>4</b> The problem of improving environmental hygiene, conserving resources and finding alternative sources of fuel may be unrelated. Their solutions, however, are not, as many countries experimenting with biogas technology are discovering. Biogas, a mixture of methane and carbon dioxide, is produced by the fermentation of organic matter. The process of anaerobic fermentation is a natural one, occurring whenever living matter decomposes. By containing the matter — and the process — in a digester or biogas plant, the combustible gas can be trapped and used as fuel for household lighting and cooking. The digested slurry that remains can be used on the land as a soil conditioner and fertilizer.</p><br><p><b>5</b> Biogas plants have attracted much interest in recent years and they are in use in several Asian countries: 36,000 are reported in rural areas of India, 27,000 in Korea and more than 80,000 in China. In most countries, the value of the gas has been the prime factor leading to their adoption: 70 per cent of India's plants, for instance, were built during the energy and fertilizer crisis of 1975-76 — although their use in that country dates back to 1951. Similarly in Thailand and Korea, biogas is being investigated as an alternative to costly charcoal and to save compost materials from being burned.</p><br><p><b>6</b> In Japan and China, reducing pollution from animal wastes has been an important factor. Privies, hen houses and pigpens are built in proximity to the fermentation chamber in China. Examinations of the digested slurry have shown that the total number of parasite eggs was reduced by 93.6 per cent, hookworms by 99 per cent and no schistosome flukes were found.</p><br><p><b>7</b> The greatest benefits from biogas systems, however, are probably to be derived from the manurial value of the slurry, although it is not widely used outside of India and China. Vegetable farmers near Calcutta found that the digested slurry produced bigger and better tasting peas than did other fertilizers and the weight of root vegetables increased by nearly 300 per cent.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-10",
+            "content": "<p>The production of biogas by [1] of animal and vegetable wastes is a technology that has been largely developed and used in the [2] countries. Only very recently have scientists in the industrialized nations begun to show an interest — presumably because of the \"energy [3]\".</p><br><p>Family-sized biogas [4] first came into widespread use in India in the 1950s in an effort to make a cleaner and efficient use of cattle [5]. The programme really expanded in the 1970s, and today there are as many as 100,000 plants throughout the world. Most are in domestic use to provide fuel for [6], but some larger units are operated in order to recycle wastes, supply fertilizer, control pollution and improve [7]. One Chinese study has shown that digestion of animal [8] in the air-tight digesters greatly reduces health hazards from parasitic diseases. One Indian study has estimated that the value of the [9] obtained is in itself greater than the cost of producing the [10]. Thus, the system is economically sound, in addition to other benefits such as a cleaner, healthier environment.</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "fermentation",
+                "explanation": "Đoạn 4 chỉ ra rằng \"Biogas... is produced by the fermentation of organic matter.\" (Khí sinh học được sản xuất bằng quá trình lên men các chất hữu cơ). Do đó, từ cần điền là \"fermentation\"."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "developing",
+                "explanation": "Đoạn 1 và 3 nhắc đến các vấn đề ở \"developing countries\" (các nước đang phát triển) và đoạn 4 nói về việc nhiều nước thử nghiệm công nghệ khí sinh học này. Cụm từ phù hợp điền vào là \"developing\"."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "crisis",
+                "explanation": "Đoạn 5 có nhắc đến \"energy and fertilizer crisis\" (khủng hoảng năng lượng và phân bón). Sự quan tâm gia tăng có thể là do \"energy crisis\" (khủng hoảng năng lượng). Từ cần điền là \"crisis\"."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "plants",
+                "explanation": "Đoạn 5 đề cập đến \"Biogas plants\" (các nhà máy/hệ thống khí sinh học) và việc chúng được sử dụng phổ biến ở Ấn Độ (India) từ năm 1951 (the 1950s). Do đó, từ cần điền là \"plants\"."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "dung",
+                "explanation": "Đoạn 2 nói về \"Dung\" (phân động vật). Việc sản xuất khí sinh học giúp xử lý phân gia súc (cattle dung) một cách sạch sẽ và hiệu quả. Từ cần điền là \"dung\"."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "cooking and lighting",
+                "explanation": "Đoạn 4 ghi rõ khí sinh học được \"used as fuel for household lighting and cooking\" (sử dụng làm nhiên liệu cho việc thắp sáng và nấu ăn trong gia đình). Từ cần điền là \"cooking and lighting\"."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "sanitation",
+                "explanation": "Đoạn 3 đề cập đến \"lack of adequate sanitation\" (thiếu điều kiện vệ sinh đầy đủ) và đoạn 4 nói về \"improving environmental hygiene\" (cải thiện vệ sinh môi trường). Có thể điền \"sanitation\" hoặc \"hygiene\"."
+              },
+              {
+                "id": "8",
+                "content": "[8]",
+                "correctAnswer": "wastes",
+                "explanation": "Đoạn 6 nhắc đến việc giảm ô nhiễm từ \"animal wastes\" (chất thải động vật) ở Trung Quốc. Quá trình này giúp giảm đáng kể các nguy cơ về sức khỏe. Có thể điền \"wastes\" hoặc \"slurry\"."
+              },
+              {
+                "id": "9",
+                "content": "[9]",
+                "correctAnswer": "fertilizer",
+                "explanation": "Đoạn 7 nhấn mạnh \"manurial value\" (giá trị phân bón) thu được từ chất cặn bã (slurry) còn tốt hơn nhiều loại phân bón (fertilizers) khác. Từ cần điền là \"fertilizer\"."
+              },
+              {
+                "id": "10",
+                "content": "[10]",
+                "correctAnswer": "biogas",
+                "explanation": "Thông qua toàn bộ nội dung, đặc biệt là đoạn 4 và 7, có thể thấy giá trị của phân bón thu được còn lớn hơn cả chi phí sản xuất \"biogas\" (khí sinh học). Từ cần điền là \"biogas\"."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "title": "Exercise 4 - Talk to Kids about Drugs? Parents Just Don't Do It",
+  "test_type": "SplitScreen (Standard)",
+  "content_json": {
+    "parts": [
+      {
+        "id": "1",
+        "title": "Talk to Kids about Drugs? Parents Just Don't Do It",
+        "content": "<p><b>1</b> Most teens act as if they would rather look after themselves than talk to their parents about touchy subjects like drugs or sex. Don't be deterred, says Rhonda Sykes, associate clinical director for Hazelden Chicago, a drug treatment centre for adolescents. \"Teens don't say, 'Thanks for the great advice.' But they do hear what their parents are saying.\"</p><br><p><b>2</b> No butts. Brandi Domiano, a 16-year-old from Old Forge, Pa., who has never tried cigarettes or alcohol, credits her mother for the choices she makes now. \"When I was in sixth grade, my mother would talk to me about how bad drinking and smoking are for me,\" Domiano says. Her mother also gave her books to read about the harmful effects of drugs.</p><br><p><b>3</b> Experts agree conversations about drugs should begin early and continue throughout adolescence. \"Start talking about it when the child is around age 8,\" says Richard Gallagher, director of the Parenting Institute at New York University Child Study Center. Explain the difference between legal drugs prescribed by doctors and illegal drugs used for fun. Let your children know that other kids may offer these substances to them and that you want them to stay away from drugs because of the harmful effects on health and well-being, Gallagher says.</p><br><p><b>4</b> Many parents will have to do homework on the dangers of drugs. \"The only thing worse than no information is bad information,\" says Paul Ciborowski, professor of counselling at Long Island University. Ask youth counsellors and teachers which drugs are common at your child's school so you can emphasize the right ones. The Internet can provide research on the ill effects of certain drugs (see www.usnews.com for links).</p><br><p><b>5</b> Resist the temptation to lecture. Ask lots of questions, and listen to your child's opinions and feelings. And make sure your kids get the message that you're talking about the topic because you're concerned and you want them to be safe.</p><br><p><b>6</b> Kids may fire back with the dreaded question: \"Did you do drugs when you were young?\" \"No need to let it all hang out,\" Ciborowski says. Be honest, but don't spell out everything. Stress lessons you learned, and talk about people you knew who had a hard time because they used drugs. \"Real stories of people who were separated from their families or had to do jail time are what keep me off drugs,\" says Thomas Brennan, 16, of New York City.</p><br><p><b>7</b> Parents should also be warned not to assume that all kids use drugs. According to the latest findings from the University of Michigan Institute for Social Research, 55 per cent of high school seniors say they have tried illicit drugs. In the past year, close to 40 per cent smoked marijuana, almost 6 per cent used inhalants, 8 per cent took LSD, 6 per cent used cocaine, 1 per cent took heroin, and close to 6 per cent say they used MDMA, also known as Ecstasy.</p><br><p><b>8</b> Conveying the idea that all kids use drugs may make your child feel pressure to join in. And parents aren't the only ones guilty of exaggerating; 25 per cent of the teenagers in our poll said most teens use drugs on a regular basis. But only 8 per cent said close friends are frequent users.</p><br><p><b>9</b> Ultimately, your child will decide whether to try drugs, and even the best parents cannot always prevent it. But don't give up. Once Laura Langanki became aware of Jake's drug use, she battled back, spending her savings to get him into a residential rehabilitation programme. At 18, he just celebrated his 18<sup>th</sup> month of sobriety. When asked to complete an essay assignment on a significant person in his life, he chose to write about his mom.</p>",
+        "sections": [
+          {
+            "id": "1",
+            "title": "Questions 1-12",
+            "content": "<p><i>Do the following statements agree with the view of the writer of the passage? Please write</i></p><p><b>YES</b> <i>if the statement agrees with the view of the writer;</i></p><p><b>NO</b> <i>if the statement does not agree with the view of the writer;</i></p><p><b>NOT GIVEN</b> <i>if there is no information about this in the passage.</i></p><br><p>1. Jake's case is an example of parents' ignorance and negligence. [1]</p><p>2. According to a US News poll, a third of the teenagers surveyed thought their parents talk a lot with them about drugs. [2]</p><p>3. What parents have done to keep their child away from drugs is not adequate. [3]</p><p>4. School education on the dangers of drugs is the most effective way to keep children away from drugs. [4]</p><p>5. Teenagers become aware of sex issues through communication with their parents. [5]</p><p>6. Brandi's case is an example of effective communication between parents and children. [6]</p><p>7. Paul Ciborowski feels that parents should know more about drugs before they can talk with their children about the issue. [7]</p><p>8. Parents' lecturing on the issue of drugs is very effective. [8]</p><p>9. Paul Ciborowski feels that parents should lie about their own drug-using history when talking with their kids. [9]</p><p>10. Ecstasy is worse than crystal methamphetamine because it's more addictive. [10]</p><p>11. Parents are likely to exaggerate the picture of drug use in schools. [11]</p><p>12. For most children, their first try of drugs was through their close friends. [12]</p>",
+            "questionType": "Điền khuyết",
+            "questions": [
+              {
+                "id": "1",
+                "content": "[1]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 9 kể về Laura Langanki đã dốc tiền tiết kiệm để đưa con trai Jake vào chương trình cai nghiện, và cậu đã cai nghiện thành công. Đây là ví dụ về nỗ lực và sự quan tâm của phụ huynh, không phải là sự thiếu hiểu biết hay lơ là (ignorance and negligence)."
+              },
+              {
+                "id": "2",
+                "content": "[2]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 8 đề cập đến việc 25% thanh thiếu niên trong một cuộc khảo sát nói rằng hầu hết thanh thiếu niên thường xuyên sử dụng ma túy, chứ không nói 1/3 nghĩ rằng cha mẹ nói chuyện nhiều với họ về ma túy."
+              },
+              {
+                "id": "3",
+                "content": "[3]",
+                "correctAnswer": "YES",
+                "explanation": "Tiêu đề bài viết \"Parents Just Don't Do It\" cùng nội dung các đoạn nhắc nhở cha mẹ (như đoạn 4 khuyên cha mẹ phải tự tìm hiểu thông tin) cho thấy rằng những gì phụ huynh đang làm để tránh cho con khỏi ma túy là chưa đủ."
+              },
+              {
+                "id": "4",
+                "content": "[4]",
+                "correctAnswer": "NO",
+                "explanation": "Bài đọc nhấn mạnh vai trò và cách giao tiếp giữa cha mẹ và con cái ở nhà, chứ không khẳng định giáo dục tại trường học là cách hiệu quả nhất (the most effective way)."
+              },
+              {
+                "id": "5",
+                "content": "[5]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Đoạn 1 có nhắc đến \"drugs or sex\" như những chủ đề nhạy cảm, nhưng không nói rõ thanh thiếu niên có nhận thức được các vấn đề tình dục thông qua giao tiếp với cha mẹ hay không."
+              },
+              {
+                "id": "6",
+                "content": "[6]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 2 kể việc Brandi (16 tuổi) không dùng ma túy hay rượu là nhờ mẹ cô đã nói chuyện với cô từ năm lớp 6. Đây chính là một ví dụ về giao tiếp hiệu quả."
+              },
+              {
+                "id": "7",
+                "content": "[7]",
+                "correctAnswer": "YES",
+                "explanation": "Ở đoạn 4, Paul Ciborowski nói \"Thông tin tồi tệ là thứ duy nhất tệ hơn việc không có thông tin\" và khuyên cha mẹ nên tìm hiểu về các loại ma túy (do homework on the dangers of drugs) trước khi nói chuyện với con."
+              },
+              {
+                "id": "8",
+                "content": "[8]",
+                "correctAnswer": "NO",
+                "explanation": "Đoạn 5 đưa ra lời khuyên rõ ràng: \"Resist the temptation to lecture\" (Hãy cố gắng cưỡng lại việc thuyết giáo), cho thấy việc thuyết giáo là không hiệu quả."
+              },
+              {
+                "id": "9",
+                "content": "[9]",
+                "correctAnswer": "NO",
+                "explanation": "Ở đoạn 6, Paul Ciborowski khuyên: \"Be honest, but don't spell out everything\" (Hãy thành thật, nhưng không cần kể chi tiết mọi thứ), chứ không khuyên cha mẹ nên nói dối (lie)."
+              },
+              {
+                "id": "10",
+                "content": "[10]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Đoạn 7 có nhắc đến MDMA (Ecstasy), nhưng không so sánh với crystal methamphetamine (ma túy đá) hay đánh giá mức độ gây nghiện của chúng."
+              },
+              {
+                "id": "11",
+                "content": "[11]",
+                "correctAnswer": "YES",
+                "explanation": "Đoạn 8 có câu: \"And parents aren't the only ones guilty of exaggerating...\" ngầm thừa nhận rằng phụ huynh có xu hướng phóng đại bức tranh sử dụng ma túy."
+              },
+              {
+                "id": "12",
+                "content": "[12]",
+                "correctAnswer": "NOT GIVEN",
+                "explanation": "Bài đọc có đề cập đến việc bạn bè mời mọc hoặc tỉ lệ bạn thân dùng ma túy thường xuyên (đoạn 8), nhưng không khẳng định hầu hết trẻ em lần đầu thử ma túy là thông qua bạn bè thân thiết."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

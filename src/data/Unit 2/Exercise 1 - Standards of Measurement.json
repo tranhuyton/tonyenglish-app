@@ -1,6 +1,6 @@
 {
   "title": "Exercise 1 - Standards of Measurement",
-  "test_type": "IELTS-Listening",
+  "test_type": "Standard",
   "content_json": {
     "parts": [
       {
@@ -11,7 +11,7 @@
           {
             "id": "1",
             "title": "Questions 1-13",
-            "content": "",
+            "content": "<p><strong>Standards of Measurement</strong></p>\n<p>In early times, measurements were made by comparing things with parts of <i>(example)</i>. Early units of measurement included the distance from the elbow to the fingers, the width of the hand and [1] of the fingers.</p>\n<p>Some of these human measurements are still used. For example, [2] is based on the length of half the thumb. A foot was originally [3] of a man's foot. A mile was one thousand walking steps.</p>\n<p>These units were only [4], because their standard — the human body — was not constant. Governments tried to [5] them by using rods of fixed lengths. But these rods still varied from [6] to country.</p>\n<p>During the French Revolution, scientists looked for a [7] which did not change. They chose the distance from [8] to the North Pole, which is one quarter of the circumference of the Earth. One ten-millionth of this was called [9] and became the basic unit of the metric system. Other metric [10] are based on it. For example, the centimetre is one hundredth of a metre. A gram — the unit of [11] — is the mass of one cubic centimetre of water.</p>\n<p>A standard metre was marked on a platinum bar. The accuracy of [12] was checked by comparing them with this bar. Nowadays the metre is standardized by comparing it with another [13] — the wavelength of a certain kind of light.</p>\n",
             "questionType": "Kéo thả",
             "questions": [
               {

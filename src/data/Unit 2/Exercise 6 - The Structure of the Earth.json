@@ -1,6 +1,6 @@
 {
   "title": "Exercise 6 - The Structure of the Earth",
-  "test_type": "IELTS-Listening",
+  "test_type": "Standard",
   "content_json": {
     "parts": [
       {
@@ -11,7 +11,7 @@
           {
             "id": "1",
             "title": "Questions 1-13",
-            "content": "",
+            "content": "<p>The Earth is a solid sphere. It is [example] three concentric spheres or layers. These are called the core, the mantle, and the crust. The solid sphere is [1], which is called atmosphere.</p>\n<p>We know most about the crust of the Earth which is the [2] sphere. This layer is very thin compared with the diameter of the whole Earth. It is only about 10 km thick [3] and about 30 km thick on land. It consists of rock which contains [4] minerals. These are usually in compounds called oxides, containing oxygen, or sulphides, [5].</p>\n<p>The mantle is [6] the crust. It is about 300 km thick. It consists mainly of rocks, but we do not know much about their composition.</p>\n<p>The core, which is situated [7], seems to be divided into two parts. The inner core is about [8]. We believe that it is mainly composed of iron, but it also contains [9]. The layer surrounding the inner core is called the [10] and is approximately 2,000 km thick. It is probably composed of [11] and nickel. However, the metals in the inner core seem to be rigid, [12]. This is because they are under very high pressure, which [13] in spite of the high temperatures at the centre of the Earth.</p>\n",
             "questionType": "Kéo thả",
             "questions": [
               {

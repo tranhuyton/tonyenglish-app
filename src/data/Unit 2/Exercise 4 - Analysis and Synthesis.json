@@ -1,6 +1,6 @@
 {
   "title": "Exercise 4 - Analysis and Synthesis",
-  "test_type": "IELTS-Listening",
+  "test_type": "Standard",
   "content_json": {
     "parts": [
       {
@@ -11,7 +11,7 @@
           {
             "id": "1",
             "title": "Questions 1-13",
-            "content": "",
+            "content": "<h3>Analysis and Synthesis</h3>\n<p>Two of the main procedures carried out by chemists are analysis and synthesis. Analysis is (example) exactly what a substance consists of in terms of mixtures, compounds and elements. Synthesis is making [1] from simpler ones. Such complex materials include [2] and \"synthetic\" fibres.</p>\n<p>In both analysis and [3], it is often necessary to separate solids from liquids. Some solid substances seem to [4] when they are mixed with a liquid. They dissolve to form a solution, as when salt dissolves in [5] to form a salt solution. An insoluble substance can be separated from [6] by filtration. The insoluble substance remains on [7] while the liquid, or filtrate, passes through.</p>\n<p>A dissolved substance, or solute, can be [8] from the liquid in which it is dissolved by boiling away the solvent. This process is evaporation. Alternatively, [9] can be separated by distillation. In this process, the liquid is boiled [10] it evaporates. The vapour is then cooled so that it condenses again.</p>\n<p>Two or more liquids mixed together can be separated by fractional distillation, [11] they boil at different temperatures. The liquid which boils [12] is separated first, then the one with the next lowest boiling point, and so on. This process is used for separating petrol, paraffin and [13] from crude oil in refineries.</p>\n",
             "questionType": "Kéo thả",
             "questions": [
               {

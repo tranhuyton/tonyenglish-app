@@ -1,6 +1,6 @@
 {
   "title": "Exercise 5 - The Properties of Elements, Compounds and Mixtures",
-  "test_type": "IELTS-Listening",
+  "test_type": "Standard",
   "content_json": {
     "parts": [
       {
@@ -11,7 +11,7 @@
           {
             "id": "1",
             "title": "Questions 1-13",
-            "content": "",
+            "content": "<p><strong>The Properties of Elements, Compounds and Mixtures</strong></p>\n<p>A substance may be an element, a compound or a mixture. An element, (example) nitrogen or iron, cannot be broken down into simpler substances. When [1] elements combine, they form a compound.</p>\n<p>When elements combine to [2], there is a chemical reaction. Some properties of the elements change [3]. For example, the element chlorine (Cl) is a poisonous yellow gas. Sodium (Na), [4], is a soft silvery-white metal which [5] with water. However, if these elements combine, they form [6], or salt. This is a harmless white substance.</p>\n<p>When substances are mixed without a chemical reaction, they do not change their properties. Thus [7] sand and salt is yellowish-white in colour. It tastes both salty and gritty. If we put the mixture in water, the salt [8], because it is soluble. But the sand will not.</p>\n<p>Every substance has [9] and a boiling point. The former is the temperature at which it changes [10]. The latter is the temperature at which it changes [11]. These changes are called changes of state. Sometimes the properties of a substance change [12]. For example, if the temperature of oxygen falls below -183°C, it changes from [13] to a bluish liquid, which is highly magnetic.</p>\n",
             "questionType": "Kéo thả",
             "questions": [
               {

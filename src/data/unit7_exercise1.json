@@ -1,0 +1,71 @@
+{
+  "title": "Earthquakes",
+  "type": "SplitScreen",
+  "content": {
+    "passage": "1 Every year earthquakes are responsible for a large number of deaths and a vast amount of destruction in various parts of the world. Most of these damaging earthquakes occur either in a narrow belt which surrounds the Pacific Ocean or in a line which extends from Burma to the Alps in Europe. Some of the destruction is directly caused by the quake itself. An example of this is the collapse of buildings as a result of vibration. Other damage results from landslides, tsunamis (large ocean waves) or major fires which are initiated by the quake.\n\n2 There are about a million quakes a year. Fortunately, however, not all of them are destructive. The intensity of an earthquake is measured on the Richter Scale, which goes from 0 upward. The highest magnitude recorded to date is 8.9. Major damage generally occurs from quakes ranging upwards from 6.0. Exceptions to this are those whose epicentres are located far from inhabited areas.\n\n3 The actual cause of the quake itself is the rupturing or breaking of rocks at or below the earth's surface. This is produced by pressure which scientists believe may be due to a number of reasons, two of which are the expansion and contraction of the earth's crust and continental drift.\n\n4 In order to minimize the damage and to alleviate some of the suffering resulting from earthquakes, scientists are working on ways to enable accurate prediction. Two of the instruments presently in use to achieve this goal are seismographs and tiltmeters. The former records any shaking of the earth; by means of calculations seismologists can accurately indicate the exact time, location and size of an earthquake. The latter, as the name suggests, is used to record any changes in the tilt of the land.",
+    "questions": [
+      {
+        "question": "Questions 1-5\n\nChoose from the list in the following box the main title of the passage and the title of each of the four paragraphs of the passage.\n\nA. Earthquake Zones\nB. Earthquake Statistics\nC. Continental Drift\nD. Earthquakes\nE. Earthquake Instrument\nF. The Cause of Pressure\nG. The Cause of Earthquake\nH. Earthquake Epicentre\nI. Earthquake Destruction\nJ. The Richter Scale\nK. Predicting Earthquake\n\n1. The main title: [1]\n2. Title for 1st paragraph: [2]\n3. Title for 2nd paragraph: [3]\n4. Title for 3rd paragraph: [4]\n5. Title for 4th paragraph: [5]",
+        "options": [
+          "A. Earthquake Zones",
+          "B. Earthquake Statistics",
+          "C. Continental Drift",
+          "D. Earthquakes",
+          "E. Earthquake Instrument",
+          "F. The Cause of Pressure",
+          "G. The Cause of Earthquake",
+          "H. Earthquake Epicentre",
+          "I. Earthquake Destruction",
+          "J. The Richter Scale",
+          "K. Predicting Earthquake"
+        ],
+        "answers": [
+          "D. Earthquakes",
+          "I. Earthquake Destruction",
+          "B. Earthquake Statistics",
+          "G. The Cause of Earthquake",
+          "K. Predicting Earthquake"
+        ]
+      },
+      {
+        "question": "Questions 6-12\n\nUsing words or phrases from the passage, fill in the boxes in the following diagram to indicate the possible sequences of events before and after an earthquake.\n\n[1] & continental drift\n|\n[2]\n|\n[3]\n|\nearthquakes\n/ | \\ \\\n[4] [5] [6] [7]",
+        "options": [
+          "expansion and contraction of the earth's crust",
+          "pressure",
+          "rupturing of rocks",
+          "collapse of buildings",
+          "landslides",
+          "tsunamis",
+          "major fires"
+        ],
+        "answers": [
+          "expansion and contraction of the earth's crust",
+          "pressure",
+          "rupturing of rocks",
+          "collapse of buildings",
+          "landslides",
+          "tsunamis",
+          "major fires"
+        ]
+      },
+      {
+        "question": "Questions 13-20\n\nPlease indicate whether the following statements are true or false according to the information contained in the reading passage by putting a T or an F in the spaces provided.\n\n13. Pressure occurs as a result of expansion and contraction of the earth's crust and continental drift.\n[1]\n14. Pressure results from the rupturing of rocks below the earth's surface.\n[2]\n15. Earthquakes result from rocks below the earth's surface rupturing.\n[3]\n16. Expansion and contraction of the earth's crust and continental drift are believed to be the indirect causes of earthquakes.\n[4]\n17. The collapse of buildings, landslides, tsunamis and fires can all be caused by earthquakes.\n[5]\n18. Earthquakes are produced by the rupturing of rocks below the earth's surface.\n[6]\n19. Earthquakes produce rupturing of rocks below the earth's surface.\n[7]\n20. The rupturing of rocks below the earth's surface is due to pressure which causes continental drift and expansion and contraction of the earth's crust.\n[8]",
+        "options": [
+          "T",
+          "F"
+        ],
+        "answers": [
+          "T",
+          "F",
+          "T",
+          "T",
+          "T",
+          "T",
+          "F",
+          "F"
+        ]
+      }
+    ]
+  },
+  "test_type": "SplitScreen (Standard)"
+}
