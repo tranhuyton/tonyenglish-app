@@ -1,0 +1,297 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit25_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit25_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">circulate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sə́ːrkjəlèit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To circulate something is to spread it quickly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fan helped to circulate cool air through the room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consequent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑ́nsikwènt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Consequent means happening because of a different situation.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her consequent rash came after she touched the poison ivy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">derive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diráiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To derive something from another source means to get it from that thing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Red's nickname was derived from the color of her hair.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">drown</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[droun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To drown is to die from not being able to breathe underwater.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He would have drowned if the sailors would not have rescued him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dynasty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dáinəsti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dynasty is a series of rulers who are all from the same family.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The ancient Egyptians had a dynasty that lasted for many years.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fraction</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[frǽkʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fraction is a small part of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Only a fraction of the cake was gone.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frost</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[frɔːst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Frost is a white layer of ice that forms during very cold weather.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the morning, the trees were all covered with frost.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">illusion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ilúːʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An illusion is something that looks real, but doesn't actually exist.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some pictures create an illusion for the eyes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">invade</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[invéid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To invade is to take over a place by force.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The enemy forces tried to invade our country through the air.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lieutenant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[luːténənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A lieutenant is a rank in the military or police, or a person with that rank.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lieutenant was a good leader, and his soldiers respected him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">marine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[məríːn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The word marine describes something related to the sea.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A healthy ocean is full of marine animals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">merit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mérit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The merit of something or someone is their good qualities.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The actor received an award for his merits in the movie.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">navy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[néivi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A navy is the part of a country's military that fights at sea.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My country is known for our strong navy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">polar</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[póulər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Polar relates to the cold places on Earth's north and south ends.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Only a few people live in the Earth's northern polar region.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ray</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A ray is a line of light that comes from a bright object.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sun's warm rays covered the beach.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">resign</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rizáin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To resign means to quit a job.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After I officially resigned from work, I said goodbye to my boss.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">suicide</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[súːəsàid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Suicide is the act of killing oneself.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some people feel so sad that they think suicide is the only answer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tremble</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trémbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tremble is to shake as a result of cold weather.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Harry was not used to the cold, so he trembled most of the day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">underlying</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌ̀ndərláiiŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is underlying, it is a hidden cause of something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her underlying fear of flying reduced her traveling options.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">via</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[víːə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To travel via something means to travel through or using something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We arrived in the city from the airport via the train.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "relates to the cold places on Earth",
+              "options": [
+                "polar",
+                "marine",
+                "frost",
+                "underlying"
+              ],
+              "explanation": "polar nghĩa là thuộc về vùng cực (relates to the cold places on Earth).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2",
+              "content": "a small part of something",
+              "options": [
+                "fraction",
+                "merit",
+                "ray",
+                "dynasty"
+              ],
+              "explanation": "fraction nghĩa là phần nhỏ, phân số (a small part of something).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "something that appears real but is not",
+              "options": [
+                "resign",
+                "circulate",
+                "derive",
+                "illusion"
+              ],
+              "explanation": "illusion nghĩa là ảo giác (something that appears real but is not).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "4",
+              "content": "to get from another source",
+              "options": [
+                "frost",
+                "illusion",
+                "derive",
+                "invade"
+              ],
+              "explanation": "derive nghĩa là bắt nguồn từ, lấy từ (to get from another source).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "5",
+              "content": "to die in the water from lack of air",
+              "options": [
+                "via",
+                "drown",
+                "suicide",
+                "underlying"
+              ],
+              "explanation": "drown nghĩa là chết đuối (to die in the water from lack of air).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2",
+          "title": "Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "invade",
+              "options": [
+                "to come from",
+                "to kill oneself",
+                "to take over another country",
+                "to happen because of something else"
+              ],
+              "explanation": "invade nghĩa là xâm lược (to take over another country).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "7",
+              "content": "dynasty",
+              "options": [
+                "thin layer of ice",
+                "a group of rulers from the same family",
+                "a person that knows about the sea",
+                "very cold"
+              ],
+              "explanation": "dynasty nghĩa là triều đại (a group of rulers from the same family).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "merit",
+              "options": [
+                "a low ranking officer",
+                "a good quality",
+                "a part of a whole",
+                "a hidden problem"
+              ],
+              "explanation": "merit nghĩa là phẩm chất tốt, công trạng (a good quality).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "9",
+              "content": "resign",
+              "options": [
+                "to quit",
+                "to die underwater",
+                "to shake",
+                "to move from place to place"
+              ],
+              "explanation": "resign nghĩa là từ chức (to quit).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "ray",
+              "options": [
+                "a way to get through",
+                "something that seems to be something else",
+                "a group of soldiers at sea",
+                "a line of light"
+              ],
+              "explanation": "ray nghĩa là tia sáng (a line of light).",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How Did Greenland Get Its Name?</h1>        <p style=\"margin-bottom: 1rem;\">The nation of Greenland isn't very green. The sun's <b>rays</b> don't shine there for three whole months. As a result, it's covered with snow, ice and <b>frost</b>. Then how was the name <b>derived</b>? It started with a Viking named Erik the Red. Erik had many <b>merits</b>. However, there was an <b>underlying</b> problem ... he got angry easily. People were scared of him. However, he was married to the niece of a very powerful man. So everybody tried to be nice to him.</p>    <p style=\"margin-bottom: 1rem;\">One day, Erik fought with his neighbor and killed him. His <b>consequent</b> punishment was to leave Iceland.</p>    <p style=\"margin-bottom: 1rem;\">Many stories <b>circulated</b> about a land west of Iceland. But only a <b>fraction</b> of the people in Iceland believed them. Still, Erik wanted to find it.</p>    <p style=\"margin-bottom: 1rem;\">Erik sailed toward the land <b>via</b> the Atlantic Ocean. His <b>marine</b> knowledge was good, but the trip was hard. Some of his men <b>drowned</b>. Erik's <b>lieutenant</b> wanted to <b>resign</b> from his position. Others thought about committing <b>suicide</b>.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, Erik thought he saw something.</p>    <p style=\"margin-bottom: 1rem;\">\"I don't believe it,\" said Erik. \"It must be an <b>illusion</b>.\" But it was no trick—it was the new land!</p>    <p style=\"margin-bottom: 1rem;\">Erik <b>trembled</b> in the cold <b>polar</b> air. He saw that there was ice everywhere. He realized that the ice could keep enemies out. Not even the best <b>navy</b> could <b>invade</b> the new land. He could start a new <b>dynasty</b> in his name. But how could he convince people to live here?</p>    <p style=\"margin-bottom: 1rem;\">\"I'll call it 'Greenland,'\" he said. Erik's plan worked. Within two years, over a thousand people moved to Greenland. In the end, Greenland got its name all because of a trick.</p></div>",
+      "imageUrl": "/unit25_v3_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "The sun's rays don't ever shine on Greenland.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Sai (F). Dựa vào bài đọc, The sun's rays don't shine there for three whole months. Tức là mặt trời chỉ không chiếu sáng trong 3 tháng, chứ không phải là không bao giờ chiếu sáng (don't ever shine).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "12",
+              "content": "Erik the Red wanted to start a dynasty in his name in Iceland.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Sai (F). Dựa vào bài đọc, Erik muốn bắt đầu một vương triều mang tên mình ở vùng đất mới là Greenland, chứ không phải ở Iceland.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "13",
+              "content": "Erik the Red's consequent punishment for killing his neighbor was to leave Iceland for Denmark.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Sai (F). Bài đọc cho biết His consequent punishment was to leave Iceland (Hình phạt của ông là phải rời khỏi Iceland), nhưng không hề nhắc đến việc phải đi tới Đan Mạch (Denmark).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "Erik's lieutenant thought about resigning.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Đúng (T). Bài đọc có nhắc đến việc viên trung úy của Erik muốn từ chức: Erik's lieutenant wanted to resign from his position.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "The ice around Greenland protected it from being invaded by navies.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Đúng (T). Erik nhận ra băng giá có thể ngăn cản kẻ thù: Not even the best navy could invade the new land.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "Greenland's name was derived from Erik's favorite color.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Sai (F). Erik đặt tên Greenland không phải vì màu sắc yêu thích, mà để đánh lừa và thuyết phục mọi người đến đây sinh sống (In the end, Greenland got its name all because of a trick).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec4",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "17",
+              "content": "According to the story, what was Erik's underlying problem?",
+              "options": [
+                "He traveled via ship.",
+                "He had many merits.",
+                "He got angry easily.",
+                "He circulated stories that weren't true."
+              ],
+              "explanation": "Dựa vào đoạn đầu tiên, bài đọc viết rõ: However, there was an underlying problem ... he got angry easily (Tuy nhiên, có một vấn đề sâu xa... ông ấy rất dễ nổi giận). Vì vậy đáp án chính xác là phương án này.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "18",
+              "content": "All of the following happened to people on Erik's ship EXCEPT:",
+              "options": [
+                "they wanted to resign",
+                "they found gold",
+                "they drowned",
+                "they thought about suicide"
+              ],
+              "explanation": "Bài đọc nhắc đến việc một số người bị chết đuối (drowned), muốn từ chức (resign), hoặc muốn tự tử (committing suicide). Không có chi tiết nào nói về việc họ tìm thấy vàng.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "19",
+              "content": "What did Erik think he was looking at when he first saw Greenland?",
+              "options": [
+                "A fraction",
+                "An illusion",
+                "Frost",
+                "A marine bird"
+              ],
+              "explanation": "Khi nhìn thấy vùng đất mới, Erik đã nói: I don't believe it ... It must be an illusion (Tôi không tin được ... Nó hẳn là một ảo giác).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "20",
+              "content": "Why did Erik want to bring more people to Greenland?",
+              "options": [
+                "To help them grow food",
+                "So he could set up a dynasty",
+                "To explore more land",
+                "To protect them from the Vikings"
+              ],
+              "explanation": "Erik muốn đưa nhiều người đến sống ở Greenland để ông có thể bắt đầu một vương triều mang tên mình (He could start a new dynasty in his name).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 25",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit26_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit26_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accuse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈkyuːz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To accuse someone of something is to blame them for doing it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She accused her brother of breaking her computer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adjust</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈdʒʌst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To adjust something means to change it so it is better.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He adjusted the old guitar to make it sound better.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">amuse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈmyuːz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To amuse someone means to do something that is funny or entertaining.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The singer was very good. She amused the crowd.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">coral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɔːrəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Coral is the hard, colorful material formed by the shells of animals.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The diver admired the beautiful coral under the water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cotton</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑːtn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cotton is a cloth made from the fibers of the cotton plant.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I like to wear clothes made from cotton in the summer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crash</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kræʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To crash means to hit and break something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a loud noise when the car crashed into the tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deck</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dek]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A deck is a wooden floor built outside of a house or the floor of a ship.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A ship will store many supplies below its deck.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">engage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈɡeɪdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To engage in something means to do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Dad was engaged in sawing a piece of wood in half.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">firm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɜːrm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is firm, it is solid but not too hard.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He sleeps better on a firm bed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fuel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfjuːəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fuel is something that creates heat or energy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Heat is the fuel that comes from fire.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grand</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɡrænd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is grand, it is big and liked by people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The grand mountain rose high into the sky.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hurricane</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhɜːrəkeɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hurricane is a bad storm that happens over the ocean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wind from the hurricane bent the palm tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">loss</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɔːs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A loss means the act or an instance of losing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I suffered a big loss while I was gambling.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">plain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pleɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is simple, it is plain and not decorated.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He bought a pair of plain white shoes over the weekend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">reef</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[riːf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A reef is a group of rocks or coral that rise to or near the ocean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He walked along the reef and looked at the water below.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shut</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃʌt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To shut something means to close it tightly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please shut the door; the air outside is cold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">strict</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strɪkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is strict, they make sure others follow rules.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher is strict. She does not let students talk in class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">surf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɜːrf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To surf means to use a special board to ride on waves in the ocean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students went to the beach to surf during their vacation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">task</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tæsk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A task is a piece of work to be done that is usually difficult.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My task for the weekend was to clean the entire back yard.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">zone</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[zoʊn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A zone is an area that has different qualities from the ones around it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Firefighters often work in danger zones.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the word that is a better fit for each sentence.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1a",
+              "content": "The _________ for the car is gas.",
+              "options": [
+                "fuel",
+                "cotton",
+                "loss",
+                "ensure"
+              ],
+              "explanation": "Nhiên liệu cho xe hơi là xăng. 'fuel' (nhiên liệu) phù hợp với ngữ cảnh.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "1b",
+              "content": "My favorite shirt is made out of _________.",
+              "options": [
+                "fuel",
+                "cotton",
+                "loss",
+                "ensure"
+              ],
+              "explanation": "Chiếc áo yêu thích của tôi được làm từ bông. 'cotton' (bông/vải cotton) chỉ chất liệu làm áo.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2a",
+              "content": "The _________ of his job made Steve worry about money.",
+              "options": [
+                "loss",
+                "ensure",
+                "coral",
+                "reef"
+              ],
+              "explanation": "Việc mất việc làm khiến Steve lo lắng về tiền bạc. 'loss' (sự mất mát) hợp lý với tình huống lo lắng về tiền bạc.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2b",
+              "content": "She wanted to _________ that her car was safe, so she locked the door.",
+              "options": [
+                "loss",
+                "ensure",
+                "coral",
+                "reef"
+              ],
+              "explanation": "Cô ấy muốn đảm bảo rằng xe của mình an toàn, vì vậy cô đã khóa cửa. 'ensure' (đảm bảo) đi với mệnh đề 'that...'.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "3a",
+              "content": "The boy found a piece of colorful _________ in the ocean.",
+              "options": [
+                "coral",
+                "reef",
+                "amuse",
+                "surfed"
+              ],
+              "explanation": "Cậu bé tìm thấy một mảnh san hô đầy màu sắc dưới đại dương. 'coral' (san hô) thường được tìm thấy ở đại dương.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3b",
+              "content": "That group of rocks coming out of the ocean is a _________.",
+              "options": [
+                "coral",
+                "reef",
+                "amuse",
+                "surfed"
+              ],
+              "explanation": "Nhóm đá nhô lên từ đại dương đó là một rạn san hô. 'reef' (rạn san hô/đá ngầm) phù hợp với định nghĩa nhóm đá trên biển.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "4a",
+              "content": "Funny stories always _________ me.",
+              "options": [
+                "amuse",
+                "surfed",
+                "task",
+                "shut"
+              ],
+              "explanation": "Những câu chuyện hài hước luôn làm tôi vui vẻ. 'amuse' (làm cho vui) phù hợp với chủ ngữ 'funny stories'.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4b",
+              "content": "I _________ quite a bit when I was in Hawaii last summer.",
+              "options": [
+                "amuse",
+                "surfed",
+                "task",
+                "shut"
+              ],
+              "explanation": "Tôi đã lướt sóng khá nhiều khi ở Hawaii mùa hè năm ngoái. 'surfed' (lướt sóng) là hoạt động phổ biến ở Hawaii.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5a",
+              "content": "I was given the _________ of editing his entire manuscript.",
+              "options": [
+                "task",
+                "shut",
+                "fuel",
+                "cotton"
+              ],
+              "explanation": "Tôi được giao nhiệm vụ chỉnh sửa toàn bộ bản thảo của anh ấy. 'task' (nhiệm vụ) đi với cấu trúc 'given the task of...'.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "5b",
+              "content": "Don't forget to _________ the door on your way out.",
+              "options": [
+                "task",
+                "shut",
+                "fuel",
+                "cotton"
+              ],
+              "explanation": "Đừng quên đóng cửa khi bạn ra ngoài. 'shut' (đóng) đi cùng với tân ngữ 'the door'.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
+          "content": "Word Bank: accuse, grand, strict, ensure, shut",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "There are _________ rules about what people may wear at fancy parties.",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "explanation": "Có những quy định nghiêm ngặt về trang phục mọi người được mặc tại các bữa tiệc sang trọng. 'strict' (nghiêm ngặt) bổ nghĩa cho 'rules'.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex2_2",
+              "content": "Instead of normal things, people must _________ that they wear...",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "explanation": "Thay vì những thứ bình thường, mọi người phải đảm bảo rằng họ mặc... 'ensure' (đảm bảo) kết hợp với mệnh đề 'that...'.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex2_3",
+              "content": "...that they wear _________ clothing.",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "explanation": "...rằng họ mặc trang phục lộng lẫy. 'grand' (lộng lẫy, sang trọng) phù hợp với bối cảnh bữa tiệc sang trọng.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "ex2_4",
+              "content": "If a man wears the wrong clothes, people will _________ him of ruining the evening.",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "explanation": "Nếu một người đàn ông mặc sai trang phục, mọi người sẽ buộc tội anh ta làm hỏng buổi tối. Cấu trúc 'accuse someone of something' (buộc tội ai về việc gì).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "ex2_5",
+              "content": "They will make him leave and _________ the door behind him.",
+              "options": [
+                "strict",
+                "ensure",
+                "grand",
+                "accuse",
+                "shut"
+              ],
+              "explanation": "Họ sẽ yêu cầu anh ta rời đi và đóng cửa lại sau lưng. 'shut' (đóng) đi với tân ngữ 'the door'.",
+              "correctAnswer": "E"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "He blamed me of taking the last piece of pie. (ac__________)",
+              "options": [
+                "accused",
+                "plain",
+                "amuse",
+                "adjust"
+              ],
+              "explanation": "'accused' (buộc tội) đồng nghĩa với 'blamed'. Cấu trúc 'accuse someone of something'.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3_2",
+              "content": "The man's bedroom was very simple. (pla____)",
+              "options": [
+                "plain",
+                "accused",
+                "amuse",
+                "adjust"
+              ],
+              "explanation": "'plain' (giản dị, đơn sơ) đồng nghĩa với 'simple'.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3_3",
+              "content": "The clown likes to entertain children. (amu____)",
+              "options": [
+                "amuse",
+                "adjust",
+                "engaged",
+                "cotton"
+              ],
+              "explanation": "'amuse' (làm cho vui, giải trí) đồng nghĩa với 'entertain'.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3_4",
+              "content": "I need to change the way I run so I can be faster. (adj______)",
+              "options": [
+                "adjust",
+                "engaged",
+                "cotton",
+                "hurricane"
+              ],
+              "explanation": "'adjust' (điều chỉnh) đồng nghĩa với 'change' để làm cho thứ gì đó tốt hơn.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3_5",
+              "content": "During their free time, the children did many different activities. (en___________ in)",
+              "options": [
+                "engaged",
+                "cotton",
+                "hurricane",
+                "shut"
+              ],
+              "explanation": "'engaged in' (tham gia vào) đồng nghĩa với việc 'did' (thực hiện) các hoạt động.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3_6",
+              "content": "This cloth dress is one of my favorites. (co_________)",
+              "options": [
+                "cotton",
+                "hurricane",
+                "shut",
+                "crash"
+              ],
+              "explanation": "'cotton' (vải bông) là chất liệu vải (cloth) quen thuộc.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3_7",
+              "content": "The bad storm over the ocean almost reached the land. (hu_______________)",
+              "options": [
+                "hurricane",
+                "shut",
+                "crash",
+                "zone"
+              ],
+              "explanation": "'hurricane' (bão nhiệt đới) đồng nghĩa với 'bad storm over the ocean' (cơn bão lớn trên đại dương).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3_8",
+              "content": "Tightly close the window before the rain starts! (s______)",
+              "options": [
+                "shut",
+                "crash",
+                "zone",
+                "accused"
+              ],
+              "explanation": "'shut' (đóng) đồng nghĩa với 'tightly close' (đóng chặt).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3_9",
+              "content": "He will hit something and break his bike if he closes his eyes while riding. (c_____)",
+              "options": [
+                "crash",
+                "zone",
+                "accused",
+                "plain"
+              ],
+              "explanation": "'crash' (đâm sầm, va chạm) đồng nghĩa với 'hit something and break'.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex3_10",
+              "content": "The army fights in the war area. (z____)",
+              "options": [
+                "zone",
+                "crash",
+                "accused",
+                "plain"
+              ],
+              "explanation": "'zone' (khu vực) đồng nghĩa với 'area'.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Two Captains</h1>        <p style=\"margin-bottom: 1rem;\">Once there were two ships. Both ships carried <b>cotton</b>. The captains were very different. Thomas was <b>strict</b>. He made his crew <b>engage</b> in difficult <b>tasks</b>. \"Make sure the ship's <b>deck</b> is <b>firm</b> and that nothing falls! Put more <b>fuel</b> in the tank!\" he said. His ship was very <b>plain</b>, but he never had a problem with it.</p>    <p style=\"margin-bottom: 1rem;\">The second captain, William, was not serious. He had a <b>grand</b> ship, and he loved having fun. His crew <b>amused</b> him by singing and dancing. But his crew never fixed anything on the ship. They just wanted to <b>surf</b>.</p>    <p style=\"margin-bottom: 1rem;\">One day, Thomas saw a <b>hurricane</b> ahead. He knew that his ship needed to turn around. But he was sure William did not see the storm. He <b>adjusted</b> the dials on the radio and called his friend. Thomas said, \"You'll hit the <b>reef</b>. It's made completely of <b>coral</b>. Turn around to ensure that you do not <b>crash</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">William said, \"We will go under the <b>deck</b> and <b>shut</b> the door. We will dance and sing until we are past the danger <b>zone</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">When William's ship got to the <b>hurricane</b>, the wind blew it into the <b>reef</b>. The ship <b>crashed</b>, and water flowed below the <b>deck</b>. William's crew <b>accused</b> him of being a bad captain. The <b>loss</b> of the ship taught William a lesson. There are times to have fun, but there are also times to be serious.</p></div>",
+      "imageUrl": "/unit26_story.png",
+      "sections": [
+        {
+          "id": "sec_reading",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "rc_1",
+              "content": "1. What is this story about?",
+              "options": [
+                "a. Why surfing amuses William",
+                "b. How Thomas is too strict to be a captain",
+                "c. Why people should be serious sometimes",
+                "d. Why hurricanes form over the ocean"
+              ],
+              "explanation": "Câu chuyện kể về hai vị thuyền trưởng, trong đó sự thiếu nghiêm túc của thuyền trưởng William đã dẫn đến hậu quả tồi tệ là đắm tàu. Từ đó, tác giả đưa ra bài học ở cuối bài: There are times to have fun, but there are also times to be serious (Có lúc để vui chơi, nhưng cũng có lúc phải nghiêm túc). Do đó đáp án C là chính xác.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "rc_2",
+              "content": "2. Why did Thomas turn his ship around?",
+              "options": [
+                "a. He saw the hurricane and did not want to crash.",
+                "b. He wanted to go to the reef.",
+                "c. He could not shut the door.",
+                "d. He wanted to engage in other activities."
+              ],
+              "explanation": "Dựa vào câu văn: One day, Thomas saw a hurricane ahead. He knew that his ship needed to turn around (Một ngày nọ, Thomas nhìn thấy một cơn bão phía trước. Anh ấy biết rằng tàu của mình cần phải quay lại). Kèm theo lời cảnh báo của anh với William sau đó: Turn around to ensure that you do not crash. Vì vậy đáp án A là chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "rc_3",
+              "content": "3. Why did William's crew accuse him of being a bad captain?",
+              "options": [
+                "a. William did not go into the storm's danger zone.",
+                "b. William caused the loss of the ship.",
+                "c. He did not succeed in getting the cotton to its destination.",
+                "d. He ensured his crew that they would not crash."
+              ],
+              "explanation": "Dựa vào câu văn: The ship crashed, and water flowed below the deck. William's crew accused him of being a bad captain (Con tàu bị vỡ, và nước tràn xuống dưới boong. Thủy thủ đoàn của William buộc tội anh là một thuyền trưởng tồi). Sự thờ ơ của William đã làm mất con tàu, do đó đáp án B là chính xác.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "rc_4",
+              "content": "4. According to the passage, all of the following are true about Thomas EXCEPT",
+              "options": [
+                "a. he told his crew to put fuel in the tank",
+                "b. he had his crew make sure the deck was firm",
+                "c. he adjusted the radio dial to call William",
+                "d. he sang and danced to songs from an opera"
+              ],
+              "explanation": "Bài đọc cho biết Thomas yêu cầu đổ thêm nhiên liệu (Put more fuel in the tank), đảm bảo boong tàu vững chắc (Make sure the ship's deck is firm), và anh đã điều chỉnh bộ đàm (He adjusted the dials on the radio). Việc hát và nhảy múa là của thủy thủ đoàn của William (His crew amused him by singing and dancing), không phải của Thomas. Do đó đáp án D là chính xác.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "rc_5",
+              "content": "5. What happened when William's ship reached the hurricane?",
+              "options": [
+                "When his ship reached the hurricane the wind blew it into the reef, and it crashed.",
+                "The ship safely sailed through the storm.",
+                "Thomas's ship rescued William's crew.",
+                "The crew started singing and dancing."
+              ],
+              "explanation": "Dựa vào câu văn: When William's ship got to the hurricane, the wind blew it into the reef. The ship crashed... (Khi con tàu của William tiến vào cơn bão, gió đã thổi nó vào rạn san hô. Con tàu đã bị vỡ...). Vậy đáp án A là chính xác.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 26",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

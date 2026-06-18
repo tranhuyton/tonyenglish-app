@@ -1,0 +1,352 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit30_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit30_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">appeal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈpiːl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To appeal to someone is to be interesting or attractive to them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sleeping all day appeals to me, but I have to go to school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">assume</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈsjuːm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To assume something is to think that it is true, even with no proof.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I assume you are both familiar with this plan.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">borrow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbɑːroʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To borrow something is to take it and then give it back later.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Can I borrow a pencil to use today? I’ll give it back to you tomorrow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">client</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈklaɪənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A client is a person or business that pays another to do a service.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She has many clients who enjoy coming to her salon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">downtown</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌdaʊnˈtaʊn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The downtown is the center of most cities.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The downtown is filled with many tall buildings.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dull</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʌl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is dull, it is not exciting.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The movie was very dull. I fell asleep watching it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">embarrass</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪmˈbærəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To embarrass someone is to make them feel ashamed or foolish.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was embarrassed when he couldn’t remember her name.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fare</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɛr]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fare is an amount of money paid to use a bus, train, or taxi.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since he is a senior, my grandfather pays a low fare for the bus.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">former</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfɔːrmər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Former describes something that used to be but is not any more.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hotel, a former castle, was built over 200 years ago.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">formula</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfɔːrmjələ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A formula is a set mathematical way or method of solving a problem.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I learned a new formula that may help us with our problem.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">found</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[faʊnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To found a company or organization means to start it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The pilgrims founded one of the first colonies in the United States.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">invest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈvest]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To invest means to use money in a way that will bring a profit later.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I invested money in a new building that should bring me a profit.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">loan</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[loʊn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A loan is the act of lending something, usually money.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I got a loan from the bank.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">practical</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpræktɪkəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is practical, it is useful in normal life.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Learning English is practical; you can use it in many places.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">quarter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkwɔːrtər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A quarter is 25 cents.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He paid a quarter for the candy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">salary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsæləri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A salary is how much money a person makes at his or her job.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He got a new job with a better salary.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scholarship</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈskɑːlərʃɪp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A scholarship is money given to one so they can go to school.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I got a scholarship to help me pay for university.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">temporary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtempəreri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is temporary, it exists for a short time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This car is only temporary; I’ll get a new one soon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">treasure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtreʒər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A treasure is a collection of valuable things, especially jewels or gold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They became very rich when they found the buried treasure.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">urge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɜːrdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To urge someone is to try very hard to get them to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He urged them to believe his story.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "salary",
+              "options": [
+                "a system of beliefs",
+                "to give but receive back later",
+                "the money one makes at a job",
+                "to make a person feel stupid"
+              ],
+              "explanation": "salary nghĩa là lương (the money one makes at a job).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "2",
+              "content": "former",
+              "options": [
+                "in the past",
+                "useful",
+                "to establish something",
+                "boring"
+              ],
+              "explanation": "former nghĩa là trước đây (in the past).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "formula",
+              "options": [
+                "to believe without proof",
+                "existing for a short time",
+                "a mathematical rule",
+                "the center of a city"
+              ],
+              "explanation": "formula nghĩa là công thức (a mathematical rule).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "4",
+              "content": "practical",
+              "options": [
+                "the way it used to be",
+                "useful",
+                "to complain",
+                "money for school"
+              ],
+              "explanation": "practical nghĩa là thực tế, hữu ích (useful).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "borrow",
+              "options": [
+                "to be wanted",
+                "to take for a short time",
+                "a system of beliefs",
+                "the center of a town"
+              ],
+              "explanation": "borrow nghĩa là mượn (to take for a short time).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "6",
+              "content": "assume",
+              "options": [
+                "to believe without proof",
+                "to establish",
+                "25 cents",
+                "to try to get someone to act"
+              ],
+              "explanation": "assume nghĩa là cho rằng, giả định (to believe without proof).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "7",
+              "content": "downtown",
+              "options": [
+                "a group of letter or numbers",
+                "to encourage",
+                "food with a lot of sugar",
+                "the center of a city"
+              ],
+              "explanation": "downtown nghĩa là trung tâm thành phố (the center of a city).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "8",
+              "content": "dull",
+              "options": [
+                "boring",
+                "the money you make at a job",
+                "to take for a short time",
+                "a valuable collection"
+              ],
+              "explanation": "dull nghĩa là buồn tẻ (boring).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "9",
+              "content": "treasure",
+              "options": [
+                "money for school",
+                "to lend something and get back later",
+                "a valuable collection",
+                "a system of beliefs"
+              ],
+              "explanation": "treasure nghĩa là kho báu (a valuable collection).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "10",
+              "content": "temporary",
+              "options": [
+                "a small amount of money",
+                "to believe without proof",
+                "existing for a short time",
+                "to give but get back later"
+              ],
+              "explanation": "temporary nghĩa là tạm thời (existing for a short time).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Check the one that suits the blank naturally.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "The lawyer is very busy because_____.",
+              "options": [
+                "she has many clients",
+                "she makes a good salary"
+              ],
+              "explanation": "client là khách hàng. Luật sư bận rộn vì cô ấy có nhiều khách hàng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "I want to make more money, so_____.",
+              "options": [
+                "I will invest some of my money",
+                "I assume that I did"
+              ],
+              "explanation": "invest là đầu tư. Muốn có thêm tiền thì sẽ đầu tư.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "I didn’t like the book;_____.",
+              "options": [
+                "it was only temporary",
+                "it was very dull"
+              ],
+              "explanation": "dull là nhàm chán. Không thích cuốn sách vì nó nhàm chán.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "This math problem is hard,_____.",
+              "options": [
+                "and I wish I had a formula",
+                "so I need a scholarship"
+              ],
+              "explanation": "formula là công thức. Bài toán khó nên ước gì có công thức.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "I don’t need more money._____.",
+              "options": [
+                "I will found a bakery",
+                "I have enough cash"
+              ],
+              "explanation": "cash là tiền mặt. Không cần thêm tiền vì đã có đủ tiền mặt.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Fill in the blanks with the correct words.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "If something is _____, you can use it often.",
+              "options": [
+                "urge",
+                "borrow",
+                "practical",
+                "appeal",
+                "downtown"
+              ],
+              "explanation": "practical: thực tế, hữu ích (có thể sử dụng thường xuyên).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "17",
+              "content": "You can _____ my hat, but you have to give it back to me.",
+              "options": [
+                "urge",
+                "borrow",
+                "practical",
+                "appeal",
+                "downtown"
+              ],
+              "explanation": "borrow: mượn. (Mượn mũ và sau đó trả lại).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "18",
+              "content": "I like living _____; it is an exciting place.",
+              "options": [
+                "urge",
+                "borrow",
+                "practical",
+                "appeal",
+                "downtown"
+              ],
+              "explanation": "downtown: trung tâm thành phố. (Nơi thú vị để sống).",
+              "correctAnswer": "E"
+            },
+            {
+              "id": "19",
+              "content": "I _____ you to save money; you might need it later.",
+              "options": [
+                "urge",
+                "borrow",
+                "practical",
+                "appeal",
+                "downtown"
+              ],
+              "explanation": "urge: thúc giục, khuyên nhủ. (Khuyên nên tiết kiệm tiền).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "Does flying _____ to you? I've always wanted to try it.",
+              "options": [
+                "urge",
+                "borrow",
+                "practical",
+                "appeal",
+                "downtown"
+              ],
+              "explanation": "appeal: hấp dẫn, lôi cuốn. (Việc bay lượn có hấp dẫn bạn không?).",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Taxi Driver</h1>        <p style=\"margin-bottom: 1rem;\">Peter's job was driving a taxi <b>downtown</b>. He made a small <b>salary</b>. But he liked his job because it wasn't <b>dull</b>. Every day, he saw new things that <b>appealed</b> to him. Peter was <b>practical</b> about the future. \"Maybe I can get a <b>scholarship</b> to college,\" he thought. \"I could learn mathematical <b>formulas</b> and get a job at a bank. I could help <b>clients</b> <b>invest</b> their money.\"</p>    <p style=\"margin-bottom: 1rem;\">Peter stopped to pick up a passenger. \"Where to?\" he asked.</p>    <p style=\"margin-bottom: 1rem;\">\"Go to the Fourth Street Bank. And don't talk to me. I've had a rough day,\" the man said. Peter was angry, but he had a peaceful philosophy. When they stopped, the man's <b>fare</b> came to $10.25. He put his hands in his pockets. \"I can't find my wallet!\" he said. \"I can't pay the <b>fare</b>!\"</p>    <p style=\"margin-bottom: 1rem;\">Peter said, \"Maybe I'll give you a <b>temporary</b> <b>loan</b>. You can <b>borrow</b> ten dollars and a <b>quarter</b> from me.\"</p>    <p style=\"margin-bottom: 1rem;\">The man was <b>embarrassed</b>, saying, \"I was mean to you, but now I want to help you. I <b>founded</b> this bank. I want to give you one thousand dollars.\"</p>    <p style=\"margin-bottom: 1rem;\">That much money was like a <b>treasure</b> to Peter. The man <b>urged</b> him to take the money, but he didn't.</p>    <p style=\"margin-bottom: 1rem;\">\"You're an honest person,\" the man said. \"I <b>assumed</b> you would take it. I want you to work for me.\"</p>    <p style=\"margin-bottom: 1rem;\">The next day, Peter started his job at the bank. He was happy to be done with his <b>former</b> job.</p></div>",
+      "imageUrl": "/unit30_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is this story about?",
+              "options": [
+                "How a poor taxi driver got a new job by being kind",
+                "Why a dull job with a high salary appeals to people",
+                "How to get a scholarship to go to college",
+                "Why it is important not to borrow money"
+              ],
+              "explanation": "Câu chuyện kể về việc Peter - một người lái taxi nghèo - đã có được công việc mới ở ngân hàng nhờ lòng tốt và sự trung thực của mình khi giúp đỡ một vị khách không có tiền trả cước. Do đó đáp án A là chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "What does Peter do downtown?",
+              "options": [
+                "He drives a taxi.",
+                "He studies math formulas.",
+                "He grumbles about his job.",
+                "He drives people around for a quarter."
+              ],
+              "explanation": "Dựa vào câu đầu tiên của bài đọc: Peter's job was driving a taxi downtown (Công việc của Peter là lái taxi ở trung tâm thành phố). Do đó đáp án A là chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "Why does the man give Peter a job?",
+              "options": [
+                "He assumes that Peter is practical.",
+                "He didn't want to give Peter a treasure.",
+                "Peter showed that he was honest.",
+                "Peter loaned him twenty five cents."
+              ],
+              "explanation": "Sau khi Peter từ chối nhận số tiền lớn mà người đàn ông tặng, ông ta đã nói: You're an honest person... I want you to work for me (Cậu là một người trung thực... Tôi muốn cậu làm việc cho tôi). Sự trung thực của Peter chính là lý do anh được nhận việc. Do đó đáp án C là chính xác.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "24",
+              "content": "Why does Peter like his job?",
+              "options": [
+                "He invested a lot of money in it.",
+                "It is only a temporary job.",
+                "He can embarrass other people by being rude.",
+                "It is never dull and he meets many people."
+              ],
+              "explanation": "Dựa vào đoạn văn: But he liked his job because it wasn't dull. Every day, he saw new things that appealed to him (Nhưng anh ấy thích công việc của mình vì nó không hề nhàm chán. Mỗi ngày, anh đều thấy những điều mới mẻ hấp dẫn mình). Do đó đáp án D là chính xác.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "25",
+              "content": "What does the man urge Peter to do?",
+              "options": [
+                "He urged Peter to leave the bank.",
+                "He urged Peter to take the money.",
+                "He urged Peter to buy a car.",
+                "He urged Peter to sleep all day."
+              ],
+              "explanation": "Dựa vào câu văn: The man urged him to take the money, but he didn't (Người đàn ông thúc giục anh nhận tiền, nhưng anh đã không nhận). Do đó đáp án B là chính xác.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 30",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

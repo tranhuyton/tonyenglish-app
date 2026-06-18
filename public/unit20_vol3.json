@@ -1,0 +1,533 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit20_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit20_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🐻</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cub</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kʌb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cub is a baby animal, such as a bear or lion.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lion cub was crying for its mother.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌅</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dawn</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɔ:n]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Dawn is the time of day when the sun rises.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At dawn, the sun gently rose over the farm.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😞</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dissatisfied</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dissætisfaid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are dissatisfied, you are not happy with something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was dissatisfied with their decision to work on Sunday.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😌</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ease</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[i:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is done with ease, it is not hard to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The monkey climbed the tree with ease.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👁️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">evident</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[evidənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is evident, it is easy to see or understand.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was evident from the look on his face that he was unhappy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">❄️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hail</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[heil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hail is ice that falls from the sky when rain freezes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hail from the storm was the size of golf balls.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🐺</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">howl</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[haul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To howl means to make a long, loud sound like a wolf or a dog.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wolf howled at the moon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🦘</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">leap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[li:p]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To leap means to jump a long distance.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He had to leap over the gap to reach the other side of the hill.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👑</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">magnificent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mægnifəsənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is magnificent, it is beautiful and grand.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man gave his wife a pair of magnificent diamond earrings.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👇</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beneath</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bini:θ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is beneath something else, it is under it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The largest part of an iceberg lies beneath the waterline.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💧</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">necessity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nisesəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A necessity is something that is needed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Fresh water is a necessity for life.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🎯</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">outcome</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[autkʌm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An outcome is the end of an action or event.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The outcome of his latest business plan was a complete failure.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">📚</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pail]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pile is a large group of things on top of one another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The pile of cups was beginning to tilt.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🧠</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">profound</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəfaund]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is profound, it is very intelligent.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ For a little boy, Jeremy has some profound thoughts.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">✊</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">seize</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[si:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To seize something means to grab it quickly or strongly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man seized as much money as he could before anyone could see.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🤗</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">squeeze</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skwi:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To squeeze something means to press it together and hold it tightly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When Clara saw her cat, she gave it a big squeeze.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🌟</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">supreme</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[supri:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is supreme, it is the highest or best.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The supreme officer was in charge of keeping the citizens calm.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">👏</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">terrific</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tərifik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is terrific, it is very good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My youngest daughter is a terrific painter.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">🧬</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">trait</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[treit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A trait is part of someone’s personality.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ One trait of Salvador’s personality is his cheerfulness.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">❤️</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vital</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vaitl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is vital, it is necessary for life.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The heart is a vital organ.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "a part of one's personality",
+              "options": [
+                "trait",
+                "profound",
+                "necessity",
+                "magnificent"
+              ],
+              "explanation": "trait nghĩa là đặc điểm tính cách (a part of one's personality).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2",
+              "content": "to press together",
+              "options": [
+                "vital",
+                "squeeze",
+                "terrific",
+                "trait"
+              ],
+              "explanation": "squeeze nghĩa là vắt, ép, bóp (to press together).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "3",
+              "content": "to jump a long distance",
+              "options": [
+                "squeeze",
+                "seize",
+                "howl",
+                "leap"
+              ],
+              "explanation": "leap nghĩa là nhảy xa (to jump a long distance).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "4",
+              "content": "frozen rain",
+              "options": [
+                "hail",
+                "dissatisfied",
+                "outcome",
+                "dawn"
+              ],
+              "explanation": "hail nghĩa là mưa đá (frozen rain).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "5",
+              "content": "the condition of being with little or no problem",
+              "options": [
+                "dawn",
+                "beneath",
+                "ease",
+                "pile"
+              ],
+              "explanation": "ease nghĩa là dễ dàng (the condition of being with little or no problem).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "1. The princess looked beautiful and grand in her new dress.\n2. It is a needed thing to hold your breath when swimming under water.\n3. The tribe honored their highest and best chief.\n4. The runner was pleased with the end of the race.\n5. The answer to this problem is easy to understand.\n6. My father will be unhappy if I do not clean my bedroom.\n7. The police grab criminals that try to run away.\n8. The early news program comes on TV at the time the sun rises.\n9. We covered the trap with a large group of sticks and grass.\n10. The lion protected her baby animal from the hunters.",
+          "questions": [
+            {
+              "id": "6",
+              "content": "The princess looked beautiful and grand in her new dress.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "beautiful and grand đồng nghĩa với magnificent.",
+              "correctAnswer": "magnificent"
+            },
+            {
+              "id": "7",
+              "content": "It is a needed thing to hold your breath when swimming under water.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "a needed thing đồng nghĩa với necessity.",
+              "correctAnswer": "necessity"
+            },
+            {
+              "id": "8",
+              "content": "The tribe honored their highest and best chief.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "highest and best đồng nghĩa với supreme.",
+              "correctAnswer": "supreme"
+            },
+            {
+              "id": "9",
+              "content": "The runner was pleased with the end of the race.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "the end đồng nghĩa với outcome.",
+              "correctAnswer": "outcome"
+            },
+            {
+              "id": "10",
+              "content": "The answer to this problem is easy to understand.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "easy to understand đồng nghĩa với evident.",
+              "correctAnswer": "evident"
+            },
+            {
+              "id": "11",
+              "content": "My father will be unhappy if I do not clean my bedroom.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "unhappy đồng nghĩa với dissatisfied.",
+              "correctAnswer": "dissatisfied"
+            },
+            {
+              "id": "12",
+              "content": "The police grab criminals that try to run away.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "grab đồng nghĩa với seize.",
+              "correctAnswer": "seize"
+            },
+            {
+              "id": "13",
+              "content": "The early news program comes on TV at the time the sun rises.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "the time the sun rises đồng nghĩa với dawn.",
+              "correctAnswer": "dawn"
+            },
+            {
+              "id": "14",
+              "content": "We covered the trap with a large group of sticks and grass.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "a large group đồng nghĩa với pile.",
+              "correctAnswer": "pile"
+            },
+            {
+              "id": "15",
+              "content": "The lion protected her baby animal from the hunters.",
+              "options": [
+                "magnificent",
+                "necessity",
+                "supreme",
+                "outcome",
+                "evident",
+                "dissatisfied",
+                "seize",
+                "dawn",
+                "pile",
+                "cub"
+              ],
+              "explanation": "baby animal đồng nghĩa với cub.",
+              "correctAnswer": "cub"
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the answer that best fits the question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "If you complete a task with no problem, then it was done with what?",
+              "options": [
+                "Necessity",
+                "Dawn",
+                "Ease",
+                "Leap"
+              ],
+              "explanation": "If you complete a task with no problem, then it was done with ease.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "17",
+              "content": "Which of the following is the one that a police officer would seize?",
+              "options": [
+                "A mechanic",
+                "A criminal",
+                "A cold",
+                "A teacher"
+              ],
+              "explanation": "A police officer would seize a criminal.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "18",
+              "content": "How would you describe something magnificent?",
+              "options": [
+                "Very lovely",
+                "Small and dirty",
+                "Having a bad smell",
+                "Extremely smart"
+              ],
+              "explanation": "Magnificent means beautiful and grand, similar to very lovely.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "A leap is most similar to which of the following?",
+              "options": [
+                "Sprint",
+                "Jump",
+                "Squat",
+                "Climb"
+              ],
+              "explanation": "A leap is most similar to a jump.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "20",
+              "content": "Which of these would be considered profound?",
+              "options": [
+                "A puddle on the ground",
+                "A blank sheet of paper",
+                "New shoes",
+                "A great idea"
+              ],
+              "explanation": "A profound thought is intelligent, like a great idea.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "21",
+              "content": "If you squeeze someone, it may mean what?",
+              "options": [
+                "You like them.",
+                "You are hungry.",
+                "You are very tired.",
+                "You want to go home."
+              ],
+              "explanation": "If you squeeze (hug) someone, it may mean you like them.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "If you are beneath your friend, then where is he?",
+              "options": [
+                "He's above me.",
+                "He's below me.",
+                "He's beside me.",
+                "He's nowhere to be found."
+              ],
+              "explanation": "If you are beneath your friend, then he's above you.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "What kind of animal will usually howl?",
+              "options": [
+                "A duck",
+                "A parrot",
+                "An ostrich",
+                "A wolf"
+              ],
+              "explanation": "A wolf will usually howl.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "24",
+              "content": "Which is the most vital for human survival?",
+              "options": [
+                "Food",
+                "Water",
+                "A heart",
+                "Money"
+              ],
+              "explanation": "Water is the most vital for human survival among these options.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "25",
+              "content": "What is something that would make you feel terrific?",
+              "options": [
+                "Making a friend happy",
+                "Being late for class",
+                "Pushing someone down",
+                "Breaking your finger"
+              ],
+              "explanation": "Making a friend happy would make you feel terrific.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Little Wolf and Mother Wolf</h1>        <p style=\"margin-bottom: 1rem;\">Mother Wolf was a <b>magnificent</b> animal. She had all the <b>traits</b> of a <b>terrific</b> hunter. She was very strong and fast. She knew how to hide and how to <b>seize</b> prey. Mother Wolf was the forest’s <b>supreme</b> creature. Her skills were <b>evident</b> to all the other animals.</p>    <p style=\"margin-bottom: 1rem;\">Mother Wolf lived in a den <b>beneath</b> a tree with her <b>cub</b>, Little Wolf. At <b>dawn</b>, Little Wolf and Mother Wolf were eating breakfast. Little Wolf looked sad. Mother Wolf said, “What is wrong, my <b>cub</b>?”</p>    <p style=\"margin-bottom: 1rem;\">Little Wolf said, “I want to be big like you. You can run and <b>leap</b> better than anyone. You can <b>howl</b> so loudly. Being big is a <b>necessity</b>, and I am so small.”</p>    <p style=\"margin-bottom: 1rem;\">Mother Wolf said, “Don’t be <b>dissatisfied</b> with your size. Being small can be very helpful sometimes.”</p>    <p style=\"margin-bottom: 1rem;\">Just then, rain and <b>hail</b> began to fall. The tree was hit by lightning. It fell on the wolves’ den. Little Wolf was scared. The wolves knew that escaping the den was <b>vital</b>. Mother Wolf said, “Little Wolf, I cannot move the heavy <b>pile</b> of branches. But you can escape with <b>ease</b>. You can get out and find help!”</p>    <p style=\"margin-bottom: 1rem;\">Little Wolf crawled out of the den and called all the large animals for help. They went to the den and pulled away the branches. Mother Wolf came out and said, “Thank you Little Wolf! You saved my life!” She softly <b>squeezed</b> Little Wolf and kissed her.</p>    <p style=\"margin-bottom: 1rem;\">Little Wolf smiled. She said, “Mother, this <b>outcome</b> has taught me a <b>profound</b> lesson. Even though I’m small, I’m still important.”</p></div>",
+      "imageUrl": "/unit20_v3_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "1. Mother Wolf was a magnificent animal.\n2. Little Wolf knew how to seize prey.\n3. Mother Wolf couldn't move the pile of branches.\n4. Mother Wolf made a den inside of a tree.\n5. The large animals pulled the branches away.\n6. Little Wolf saved Mother Wolf's life.",
+          "questions": [
+            {
+              "id": "26",
+              "content": "Mother Wolf was a magnificent animal.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Bài đọc mở đầu bằng câu: Mother Wolf was a magnificent animal. (Sói Mẹ là một loài động vật tuyệt vời). Vì thế nhận định này là đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "27",
+              "content": "Little Wolf knew how to seize prey.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Trong bài có câu mô tả Sói Mẹ: She knew how to hide and how to seize prey (Cô ấy biết cách ẩn nấp và vồ mồi). Vậy kỹ năng vồ mồi (seize prey) là của Sói Mẹ chứ không phải Sói Nhỏ. Nhận định này sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "28",
+              "content": "Mother Wolf couldn't move the pile of branches.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Sói Mẹ đã nói: I cannot move the heavy pile of branches. (Mẹ không thể di chuyển đống cành cây nặng nề này). Do đó, nhận định này là đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "29",
+              "content": "Mother Wolf made a den inside of a tree.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Bài đọc viết: Mother Wolf lived in a den beneath a tree with her cub... (Sói Mẹ sống trong một cái hang dưới một cái cây...). Vậy hang nằm ở dưới gốc cây chứ không phải bên trong cái cây (inside of a tree). Nhận định này sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "30",
+              "content": "The large animals pulled the branches away.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Trong bài có nói: They went to the den and pulled away the branches. (Họ - những loài động vật lớn - đã đến hang và kéo những cành cây ra). Nhận định này đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "31",
+              "content": "Little Wolf saved Mother Wolf's life.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Sói Mẹ đã nói với Sói Nhỏ: Thank you Little Wolf! You saved my life! (Cảm ơn Sói Nhỏ! Con đã cứu mạng mẹ!). Vì vậy nhận định này đúng (True).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec5_reading",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "32",
+              "content": "Which is NOT a trait of a terrific hunter like Mother Wolf?",
+              "options": [
+                "Being strong",
+                "Being small",
+                "Being fast",
+                "Being big"
+              ],
+              "explanation": "Mother Wolf được miêu tả là to lớn, khỏe mạnh (strong) và nhanh nhẹn (fast). Vì vậy, trở nên nhỏ bé (being small) không phải là đặc điểm của một thợ săn tuyệt vời như cô ấy. Đáp án B là chính xác.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "33",
+              "content": "Little Wolf was scared because ____________.",
+              "options": [
+                "Mother Wolf became ill",
+                "the snow filled the ground",
+                "a tree fell on the den",
+                "a hunter was chasing them"
+              ],
+              "explanation": "Bài đọc có viết: The tree was hit by lightning. It fell on the wolves' den. Little Wolf was scared. (Cái cây bị sét đánh trúng. Nó đổ sập xuống hang của bầy sói. Sói Nhỏ rất sợ hãi). Do đó đáp án C là chính xác.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "34",
+              "content": "Why did Little Wolf feel sad?",
+              "options": [
+                "She could leap like her mother.",
+                "She wanted to howl at the animals.",
+                "She was dissatisfied with her mother.",
+                "She thought she was useless."
+              ],
+              "explanation": "Sói Nhỏ cảm thấy buồn vì cậu cho rằng: Being big is a necessity, and I am so small (Trở nên to lớn là một điều cần thiết, mà mình lại quá nhỏ bé). Cậu cảm thấy mình vô dụng (useless) khi không to lớn và mạnh mẽ như mẹ. Vậy đáp án là D.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "35",
+              "content": "According to the reading, why did Mother Wolf squeeze her cub?",
+              "options": [
+                "Because Little Wolf was laughing",
+                "Because Little Wolf smiled",
+                "Because Little Wolf was hurt",
+                "Because Little Wolf saved her"
+              ],
+              "explanation": "Sói Mẹ đã nói: Thank you Little Wolf! You saved my life! She softly squeezed Little Wolf and kissed her. (Cảm ơn Sói Nhỏ! Con đã cứu mạng mẹ! Sói mẹ nhẹ nhàng ôm và hôn Sói Nhỏ). Sói mẹ ôm con vì bé đã cứu mạng mình. Đáp án D là đúng.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Volume 3 - Unit 20",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

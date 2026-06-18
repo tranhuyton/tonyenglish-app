@@ -1,0 +1,477 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit6_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit6_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ələ:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To alert someone is to tell or warn them about something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fire alarm alerted us that there was a problem.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">broadcast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[brɔ:dkæst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A broadcast is a television or radio show.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We watched the broadcast of the local news on TV.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bulletin</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bulətin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bulletin is a news report that talks about very recent and important events.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a live bulletin reporting on the economy of the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bump</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bʌmp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bump is a small raised area on a surface.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The monkey got a bump on his head because he was hit by a rock.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chop</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃap]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To chop something means to cut it into pieces with a tool.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom chopped some vegetables to put into the stew.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">closet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klazit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A closet is a small room used to store things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Marie has many clothes inside of her closet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">console</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənsoul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To console someone who is sad means to make them comforted.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When my dog ran away, my dad consoled me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">district</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[distrikt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A district is a small part of a city, county, state, or country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I live in a residential district of Seattle, Washington.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">drawer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[drɔ:ər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A drawer is a small part in furniture that is used to store things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I put my clothes into the empty drawers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">endure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[endjuər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To endure something tough means to do or go through it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She had to endure her husband shouting all day long.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">execute</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eksikju:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To execute someone means to kill them as a legal punishment.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some people are executed for serious crimes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grasp</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[græsp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To grasp something means to hold it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He grasped the bag of money tightly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rear</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[riər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is in the rear of something, it is in the back.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man loaded the rear of his truck with boxes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">senator</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[senətər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A senator is someone who makes laws for a state.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The young senator promised to make laws that would help the people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">skull</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skʌl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A skull is the hard part of your head. Your brain is inside of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The brain is protected by the skull.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stir</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stə:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To stir something means to mix it using something small, like a spoon.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom stirred the batter until it was smooth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tæp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tap something is to hit it lightly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He tapped the keys of the keyboard to write a short word.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tremendous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trimendəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is tremendous, it is very large.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Earth’s oceans are filled with a tremendous amount of water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">underneath</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʌndərni:θ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is underneath something else, it is below or lower than it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The roots of a tree are located underneath the ground.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">worm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wə:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A worm is a small animal with a long, thin body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Worms are often used to help catch fish.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_wordlist_0",
+          "title": "Exercise 1: Choose the word that is a better fit for each blank.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w0_q1",
+              "content": "The ___________ lived in one of the poorest ___________ in the country.",
+              "options": [
+                "senator / districts",
+                "districts / senator",
+                "skull / tapped",
+                "tapped / skull"
+              ],
+              "explanation": "senator (thượng nghị sĩ) chỉ người, sống ở districts (quận/khu vực) nghèo nhất.",
+              "correctAnswer": "SENATOR / DISTRICTS"
+            },
+            {
+              "id": "w0_q2",
+              "content": "When he ___________ his fist on the top of his ___________ , it made a funny sound.",
+              "options": [
+                "tapped / skull",
+                "skull / tapped",
+                "underneath / worm",
+                "worm / underneath"
+              ],
+              "explanation": "tapped (gõ nhẹ) nắm đấm lên skull (hộp sọ) tạo ra âm thanh buồn cười.",
+              "correctAnswer": "TAPPED / SKULL"
+            },
+            {
+              "id": "w0_q3",
+              "content": "If you want to find a ___________ , try looking ___________ rocks or pieces of wood.",
+              "options": [
+                "underneath / worm",
+                "worm / underneath",
+                "consoled / broadcast",
+                "broadcast / consoled"
+              ],
+              "explanation": "Tìm worm (con giun) bằng cách nhìn underneath (bên dưới) các hòn đá.",
+              "correctAnswer": "WORM / UNDERNEATH"
+            },
+            {
+              "id": "w0_q4",
+              "content": "She ___________ her children by watching a humorous ___________ with them after school.",
+              "options": [
+                "consoled / broadcast",
+                "broadcast / consoled",
+                "execute / tremendous",
+                "tremendous / execute"
+              ],
+              "explanation": "consoled (an ủi) bọn trẻ bằng cách xem một broadcast (chương trình phát sóng) hài hước.",
+              "correctAnswer": "CONSOLED / BROADCAST"
+            },
+            {
+              "id": "w0_q5",
+              "content": "She felt ___________ sorrow after her husband was ___________ for his crime.",
+              "options": [
+                "tremendous / executed",
+                "execute / tremendous",
+                "endure / bulletin",
+                "bulletin / endure"
+              ],
+              "explanation": "felt tremendous (to lớn) sorrow khi chồng bị executed (xử tử).",
+              "correctAnswer": "TREMENDOUS / EXECUTED"
+            },
+            {
+              "id": "w0_q6",
+              "content": "He decided to listen to the news ___________ because he could no longer ___________ the boredom of being home alone.",
+              "options": [
+                "bulletin / endure",
+                "endure / bulletin",
+                "grasp / stir",
+                "stir / grasp"
+              ],
+              "explanation": "Nghe news bulletin (bản tin) vì không thể endure (chịu đựng) sự nhàm chán.",
+              "correctAnswer": "BULLETIN / ENDURE"
+            },
+            {
+              "id": "w0_q7",
+              "content": "The soup was very thick. He had to ___________ the spoon with both hands in order to ___________ it.",
+              "options": [
+                "grasp / stir",
+                "stir / grasp",
+                "alerted / rear",
+                "rear / alerted"
+              ],
+              "explanation": "grasp (nắm chặt) cái thìa để stir (khuấy) súp.",
+              "correctAnswer": "GRASP / STIR"
+            },
+            {
+              "id": "w0_q8",
+              "content": "The television news ___________ us of the storm. We put the car in the ___________ of the house where it would be protected.",
+              "options": [
+                "alerted / rear",
+                "rear / alerted",
+                "chop / drawer",
+                "drawer / chop"
+              ],
+              "explanation": "Bản tin alerted (cảnh báo) về cơn bão, đỗ xe ở rear (phía sau) nhà.",
+              "correctAnswer": "ALERTED / REAR"
+            },
+            {
+              "id": "w0_q9",
+              "content": "She looked at all the tools in the ___________ but could not find anything to use to ___________ the meat.",
+              "options": [
+                "drawer / chop",
+                "chop / drawer",
+                "bump / closet",
+                "closet / bump"
+              ],
+              "explanation": "Tìm trong drawer (ngăn kéo) nhưng không có dụng cụ để chop (băm/thái) thịt.",
+              "correctAnswer": "DRAWER / CHOP"
+            },
+            {
+              "id": "w0_q10",
+              "content": "Many toys had been piled beneath the carpet in the ___________ . The ___________ I got from hitting my head on the door was painful.",
+              "options": [
+                "closet / bump",
+                "bump / closet",
+                "drawer / chop",
+                "chop / drawer"
+              ],
+              "explanation": "Đồ chơi trong closet (tủ quần áo), vết bump (sưng/u) trên đầu rất đau.",
+              "correctAnswer": "CLOSET / BUMP"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_1",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w1_q1",
+              "content": "The mother _comforted_ her crying child.",
+              "options": [
+                "consoled",
+                "alerted",
+                "tapped",
+                "endured"
+              ],
+              "explanation": "comforted có nghĩa là an ủi, tương đương với consoled.",
+              "correctAnswer": "CONSOLED"
+            },
+            {
+              "id": "w1_q2",
+              "content": "Every Sunday, the family watched a television _show_ about animals.",
+              "options": [
+                "broadcast",
+                "bulletin",
+                "drawer",
+                "closet"
+              ],
+              "explanation": "show ở đây chỉ chương trình phát sóng, tương đương với broadcast.",
+              "correctAnswer": "BROADCAST"
+            },
+            {
+              "id": "w1_q3",
+              "content": "I couldn’t find my coat in the _small room_.",
+              "options": [
+                "closet",
+                "drawer",
+                "district",
+                "rear"
+              ],
+              "explanation": "small room để đồ đạc quần áo là closet (tủ đồ, phòng để đồ).",
+              "correctAnswer": "CLOSET"
+            },
+            {
+              "id": "w1_q4",
+              "content": "John left his paper _lower than_ his school books.",
+              "options": [
+                "underneath",
+                "rear",
+                "tremendous",
+                "bump"
+              ],
+              "explanation": "lower than có nghĩa là bên dưới, tương đương underneath.",
+              "correctAnswer": "UNDERNEATH"
+            },
+            {
+              "id": "w1_q5",
+              "content": "The _person who makes laws_ sat behind a large desk.",
+              "options": [
+                "senator",
+                "worm",
+                "district",
+                "broadcast"
+              ],
+              "explanation": "Người làm luật là senator (thượng nghị sĩ).",
+              "correctAnswer": "SENATOR"
+            },
+            {
+              "id": "w1_q6",
+              "content": "In order to get over the wall, the cat had to make a _very large_ jump.",
+              "options": [
+                "tremendous",
+                "alert",
+                "bump",
+                "rear"
+              ],
+              "explanation": "very large có nghĩa là to lớn, tương đương với tremendous.",
+              "correctAnswer": "TREMENDOUS"
+            },
+            {
+              "id": "w1_q7",
+              "content": "Harold slowed the car down as he drove over the _small raised part_.",
+              "options": [
+                "bump",
+                "skull",
+                "drawer",
+                "closet"
+              ],
+              "explanation": "small raised part là phần nhô lên, tương đương với bump (chỗ xóc/u sưng).",
+              "correctAnswer": "BUMP"
+            },
+            {
+              "id": "w1_q8",
+              "content": "There is very little rain in my _part of the state_.",
+              "options": [
+                "district",
+                "closet",
+                "drawer",
+                "rear"
+              ],
+              "explanation": "part of the state là một khu vực, quận, tương đương với district.",
+              "correctAnswer": "DISTRICT"
+            },
+            {
+              "id": "w1_q9",
+              "content": "Because he committed such a horrible crime, he was _killed by the legal system_.",
+              "options": [
+                "executed",
+                "chopped",
+                "grasped",
+                "stirred"
+              ],
+              "explanation": "killed by the legal system có nghĩa là bị xử tử (executed).",
+              "correctAnswer": "EXECUTED"
+            },
+            {
+              "id": "w1_q10",
+              "content": "The cook _cut into pieces_ the vegetables for his soup.",
+              "options": [
+                "chopped",
+                "tapped",
+                "grasped",
+                "alerted"
+              ],
+              "explanation": "cut into pieces có nghĩa là chặt, băm nhỏ (chopped).",
+              "correctAnswer": "CHOPPED"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Exercise 3: Choose the answer that best fits the question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w2_q1",
+              "content": "Which of the following best describes a news program?",
+              "options": [
+                "Grasp",
+                "Bulletin",
+                "Tap",
+                "Alert"
+              ],
+              "explanation": "Bulletin là một bản tin (news program).",
+              "correctAnswer": "B. BULLETIN"
+            },
+            {
+              "id": "w2_q2",
+              "content": "Which one do you put things into?",
+              "options": [
+                "A drawer",
+                "A bump",
+                "A district",
+                "A worm"
+              ],
+              "explanation": "Drawer (ngăn kéo) là nơi dùng để cất giữ đồ đạc.",
+              "correctAnswer": "A. A DRAWER"
+            },
+            {
+              "id": "w2_q3",
+              "content": "Which of the following describes something in the back?",
+              "options": [
+                "Endure",
+                "Skull",
+                "Rear",
+                "Tremendous"
+              ],
+              "explanation": "Rear có nghĩa là ở phía sau (in the back).",
+              "correctAnswer": "C. REAR"
+            },
+            {
+              "id": "w2_q4",
+              "content": "Which of the following does an alarm do for people?",
+              "options": [
+                "Alert them",
+                "Console them",
+                "Execute them",
+                "Tap them"
+              ],
+              "explanation": "Alarm (báo động) có chức năng alert (cảnh báo) mọi người.",
+              "correctAnswer": "A. ALERT THEM"
+            },
+            {
+              "id": "w2_q5",
+              "content": "Which of the following means to go through something difficult?",
+              "options": [
+                "Chop",
+                "Broadcast",
+                "Stir",
+                "Endure"
+              ],
+              "explanation": "Endure có nghĩa là chịu đựng, vượt qua khó khăn (go through something difficult).",
+              "correctAnswer": "D. ENDURE"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Senator and the Worm</h1>        <p style=\"margin-bottom: 1rem;\">A rich <strong>senator</strong> lived in a big house. He had more money than anyone in his <strong>district</strong>. One day, he was sitting on a chair listening to a radio <strong>broadcast</strong>. As he listened to the news <strong>bulletin</strong>, a <strong>worm</strong> crawled from <strong>underneath</strong> the chair and onto his head.</p>    <p style=\"margin-bottom: 1rem;\">His cook was in the kitchen stirring some spaghetti sauce. Suddenly, a cry from the <strong>senator</strong> <strong>alerted</strong> him. He ran to the <strong>rear</strong> of the house where the <strong>senator</strong> was sitting.</p>    <p style=\"margin-bottom: 1rem;\">The cook looked and saw the <strong>worm</strong>. He tried to <strong>console</strong> the <strong>senator</strong>. \"I'll take it off right away,\" he said.</p>    <p style=\"margin-bottom: 1rem;\">\"No!\" shouted the <strong>senator</strong>. \"I want you to kill it.\"</p>    <p style=\"margin-bottom: 1rem;\">\"But it's only a <strong>worm</strong>,\" the cook said. \"Why should we <strong>execute</strong> it? It hasn't committed a crime.\"</p>    <p style=\"margin-bottom: 1rem;\">The <strong>senator</strong> could not <strong>endure</strong> the <strong>worm</strong> on his head. \"Hurry!\" he shouted.</p>    <p style=\"margin-bottom: 1rem;\">The cook looked through several <strong>drawers</strong>, but found nothing. Then he ran to the <strong>closet</strong> and took out a pipe. He returned to the <strong>senator</strong> and lifted the pipe over his head. He knew he couldn't just <strong>tap</strong> the <strong>worm</strong>. He was going to hit it hard. He <strong>grasped</strong> the pipe tightly.</p>    <p style=\"margin-bottom: 1rem;\">\"What are you waiting for?\" said the <strong>senator</strong>. \"Kill it!\"</p>    <p style=\"margin-bottom: 1rem;\">The cook swung the pipe at the <strong>senator</strong>'s head.</p>    <p style=\"margin-bottom: 1rem;\">\"Oh, no,\" the <strong>worm</strong> said. \"He's going to <strong>chop</strong> me in half.\" It jumped off the <strong>senator</strong>'s head.</p>    <p style=\"margin-bottom: 1rem;\">There was a <strong>tremendous</strong> noise. \"Owww!\" cried the <strong>senator</strong>.</p>    <p style=\"margin-bottom: 1rem;\">A <strong>bump</strong> rose upon his <strong>skull</strong>. Meanwhile, the <strong>worm</strong> crawled outside.</p>    <p style=\"margin-bottom: 1rem;\">\"That was close,\" said the <strong>worm</strong>. \"Instead of being nice, he wanted to hurt me. Now, that man has a big <strong>bump</strong> on his head.\"</p></div>",
+      "imageUrl": "/unit6_v3_story.png",
+      "sections": [
+        {
+          "id": "sec_story",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "s1_q1",
+              "content": "Part A: 1. The senator had a lot of money.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Mở đầu câu chuyện là \"A rich senator lived in a big house. He had more money than anyone in his district.\" (Một vị thượng nghị sĩ giàu có sống trong một ngôi nhà lớn. Ông ấy có nhiều tiền hơn bất kỳ ai trong khu vực của mình). Vì vậy câu này là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q2",
+              "content": "Part A: 2. The senator was listening to a radio broadcast.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Cùng đoạn đó có nói \"One day, he was sitting on a chair listening to a radio broadcast.\" (Một ngày nọ, ông đang ngồi trên ghế nghe đài phát thanh). Câu này hoàn toàn trùng khớp với bài đọc, nên đáp án là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q3",
+              "content": "Part A: 3. The senator wanted the cook to kill the worm.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Vị thượng nghị sĩ đã hét lên: \"No! I want you to kill it.\" (Không! Tôi muốn anh giết nó). Vậy là ông ấy thực sự muốn người đầu bếp giết con giun. Đáp án là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q4",
+              "content": "Part A: 4. The cook found a pipe in one of the drawers.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Bài đọc viết \"The cook looked through several drawers, but found nothing. Then he ran to the closet and took out a pipe.\" (Người đầu bếp tìm trong vài ngăn kéo, nhưng không thấy gì. Sau đó, anh ta chạy đến tủ quần áo và lấy ra một cái ống). Ống nước được tìm thấy trong tủ đồ (closet) chứ không phải ngăn kéo (drawers). Câu này là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q5",
+              "content": "Part A: 5. The cook knew he was going to tap the worm.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Câu văn nói rõ \"He knew he couldn't just tap the worm. He was going to hit it hard.\" (Anh ta biết mình không thể chỉ gõ nhẹ vào con giun. Anh ta định đánh nó thật mạnh). Vì vậy câu này ngược lại với bài đọc. Đáp án là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q6",
+              "content": "Part A: 6. The worm was chopped in half on the senator’s head.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Khi bị đánh, con giun nói \"He's going to chop me in half. It jumped off the senator's head.\" (Ông ta định chặt tôi ra làm đôi. Nó nhảy khỏi đầu của thượng nghị sĩ). Con giun đã nhảy ra trước khi bị chặt làm đôi. Nên câu này là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q7",
+              "content": "Part B: 1. What was the senator doing when the worm crawled onto his head?",
+              "options": [
+                "Listening to the radio",
+                "Watching a broadcast",
+                "Looking in the closet",
+                "Consoling the cook"
+              ],
+              "explanation": "Đoạn đầu kể rằng \"As he listened to the news bulletin, a worm crawled from underneath the chair and onto his head.\" (Khi ông ấy đang nghe bản tin, một con giun đã bò từ dưới ghế lên đầu ông ấy). Bản tin này phát trên đài, nên ông ấy đang nghe đài (Listening to the radio).",
+              "correctAnswer": "A. LISTENING TO THE RADIO"
+            },
+            {
+              "id": "s1_q8",
+              "content": "Part B: 2. Which of the following did the cook NOT do?",
+              "options": [
+                "Stir some spaghetti sauce",
+                "Look through several drawers",
+                "Hit the senator’s skull",
+                "Execute the worm"
+              ],
+              "explanation": "Ở cuối truyện, con giun đã nhảy ra ngoài an toàn nên người đầu bếp đã không giết được con giun (Execute the worm). Mặc dù anh ta có khuấy sốt mì Ý (stir some spaghetti sauce), tìm ngăn kéo (look through several drawers) và đánh trúng đầu thượng nghị sĩ (hit the senator's skull). Đáp án là Execute the worm.",
+              "correctAnswer": "D. EXECUTE THE WORM"
+            },
+            {
+              "id": "s1_q9",
+              "content": "Part B: 3. Why did the senator tell the cook to hurry?",
+              "options": [
+                "He was hiding in the rear of the house.",
+                "He knew he had to alert the cook.",
+                "He couldn’t endure the worm on his head.",
+                "He had heard a tremendous noise."
+              ],
+              "explanation": "Trong bài có giải thích \"The senator could not endure the worm on his head. 'Hurry!' he shouted.\" (Vị thượng nghị sĩ không thể chịu đựng được con giun trên đầu mình. 'Nhanh lên!' ông ấy hét). Vậy lý do là ông ấy không thể chịu đựng thêm (He couldn't endure the worm on his head).",
+              "correctAnswer": "C. HE COULDN’T ENDURE THE WORM ON HIS HEAD."
+            },
+            {
+              "id": "s1_q10",
+              "content": "Part B: 4. After the cook hit the senator, where did the worm go?",
+              "options": [
+                "Into the kitchen",
+                "Underneath the chair",
+                "Outside the house",
+                "Onto the cook’s head"
+              ],
+              "explanation": "Cùng lúc thượng nghị sĩ bị đánh trúng đầu thì \"Meanwhile, the worm crawled outside.\" (Trong khi đó, con giun đã bò ra ngoài). Vậy con giun bò ra bên ngoài ngôi nhà (Outside the house).",
+              "correctAnswer": "C. OUTSIDE THE HOUSE"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 6: Volume 3",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

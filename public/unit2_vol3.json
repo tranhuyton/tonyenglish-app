@@ -1,0 +1,453 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit2_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit2_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">acquire</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkwaiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To acquire something is to gain possession of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Tina acquired a strange package yesterday.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">awkward</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:kwərd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is awkward, it is embarrassing and uncomfortable.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After dropping his coffee cup, Robbie felt awkward.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">caretaker</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɛərtəikər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A caretaker is a person who takes care of very young, old, or sick people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandmother's caretaker helps her get around the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deceive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disi:v]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To deceive someone is to make them believe something that is not true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He tried to deceive his friends as they were playing a game.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">discourage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diskə:ridʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To discourage someone is to make them feel less excited about something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mr. Perry discouraged the students from quitting school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fake</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is fake, it is made to look real in order to trick people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The model was wearing fake eyelashes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hatred</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[heitrid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Hatred is a strong feeling of not liking someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have a hatred for the taste of medicine.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hut</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hʌt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hut is a house made of wood, grass, or mud that has only one or two rooms.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We all went into the hut to sleep.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inferior</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[infiəriər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is inferior, it is not as good as something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Cars built a hundred years ago are inferior to ones built today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lodge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lɑdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A lodge is a house in the mountains, used by people who hunt or fish.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ During our ski trip, we stayed at a lodge.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">neglect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[niglekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To neglect someone or something is to not take care of it properly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ William neglected his room, so it is a complete mess.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">newcomer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nju:kʌmər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A newcomer is a person who has recently arrived at a place or a group.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students happily welcomed the newcomer to the school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">offense</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əfens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An offense is behavior that is wrong or breaks a law.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Stealing a car is a very serious offense.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overlook</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvərluk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To overlook something is to not notice it, or to not realize that it is important.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Brenda overlooked the last step and had a bad fall.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">repay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ripei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To repay is to pay back or to reward someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She repaid her friend for all of his hard work with a small gift.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ridiculous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ridikjələs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is ridiculous, it is silly or strange.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Steve looked ridiculous with those huge blue sunglasses.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">satisfactory</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sætisfæktəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is satisfactory, it is good enough.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mina often received satisfactory grades since she studied so hard.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shepherd</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃepərd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shepherd is a person who protects and cares for sheep.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The shepherd moved the sheep to another field.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">venture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ventʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To venture is to go to a place that may be dangerous.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Even though it was dangerous, they ventured up the mountain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wheat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwi:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Wheat is a plant which makes grain. Wheat grain is used to make bread.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The field of golden wheat was ready to be harvested.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_wordlist_0",
+          "title": "Exercise 1: Part A. Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w0_q1",
+              "content": "1. a strong feeling of not liking someone or something",
+              "options": [
+                "deceive",
+                "repay",
+                "offense",
+                "hatred"
+              ],
+              "explanation": "Hatred means a strong feeling of dislike (sự căm ghét).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "w0_q2",
+              "content": "2. not as good as",
+              "options": [
+                "inferior",
+                "hatred",
+                "satisfactory",
+                "venture"
+              ],
+              "explanation": "Inferior means not as good as something else (thấp kém hơn).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "w0_q3",
+              "content": "3. to get something",
+              "options": [
+                "overlook",
+                "discourage",
+                "lodge",
+                "acquire"
+              ],
+              "explanation": "To acquire is to get or gain possession of something (đạt được, giành được).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "w0_q4",
+              "content": "4. to go to a dangerous place",
+              "options": [
+                "wheat",
+                "venture",
+                "newcomer",
+                "caretaker"
+              ],
+              "explanation": "To venture is to go to a place that may be dangerous (liều lĩnh đi vào).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w0_q5",
+              "content": "5. a plant that makes grain",
+              "options": [
+                "fake",
+                "wheat",
+                "shepherd",
+                "hut"
+              ],
+              "explanation": "Wheat is a plant used to make grain (lúa mì).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_1",
+          "title": "Exercise 1: Part B. Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w1_q1",
+              "content": "1. satisfactory",
+              "options": [
+                "to pretend",
+                "to care for",
+                "good enough",
+                "project"
+              ],
+              "explanation": "Satisfactory means good enough (vừa ý, thỏa đáng).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "w1_q2",
+              "content": "2. newcomer",
+              "options": [
+                "not comfortable",
+                "someone new to a place",
+                "not as good as",
+                "a glass lamp"
+              ],
+              "explanation": "A newcomer is a person who has recently arrived (người mới đến).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w1_q3",
+              "content": "3. repay",
+              "options": [
+                "to give back",
+                "to not pay attention to",
+                "a house for hunting",
+                "a bad thing that someone does"
+              ],
+              "explanation": "To repay means to give back or reward (trả đền, báo đáp).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "w1_q4",
+              "content": "4. fake",
+              "options": [
+                "to fail to notice",
+                "not real",
+                "to get",
+                "to protect"
+              ],
+              "explanation": "Fake means not real (giả mạo).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w1_q5",
+              "content": "5. discouraged",
+              "options": [
+                "high place",
+                "to dislike a lot",
+                "not real",
+                "less excited"
+              ],
+              "explanation": "Discouraged means made to feel less excited or confident (bị làm nản lòng).",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Exercise 2: Circle two words that are related in each group.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w2_q1",
+              "content": "1.",
+              "options": [
+                "discourage",
+                "lodge",
+                "venture",
+                "hut"
+              ],
+              "explanation": "Lodge và hut đều chỉ các loại nhà gỗ, lều nhỏ.",
+              "correctAnswer": "B, D"
+            },
+            {
+              "id": "w2_q2",
+              "content": "2.",
+              "options": [
+                "shepherd",
+                "caretaker",
+                "repay",
+                "wheat"
+              ],
+              "explanation": "Shepherd và caretaker đều chỉ người chăm sóc, trông nom.",
+              "correctAnswer": "A, B"
+            },
+            {
+              "id": "w2_q3",
+              "content": "3.",
+              "options": [
+                "offense",
+                "fake",
+                "hatred",
+                "deceive"
+              ],
+              "explanation": "Fake (giả) và deceive (lừa dối) có ý nghĩa liên quan đến sự dối trá.",
+              "correctAnswer": "B, D"
+            },
+            {
+              "id": "w2_q4",
+              "content": "4.",
+              "options": [
+                "acquire",
+                "awkward",
+                "newcomer",
+                "ridiculous"
+              ],
+              "explanation": "Awkward (kỳ cục) và ridiculous (nực cười) có nghĩa gần giống nhau.",
+              "correctAnswer": "B, D"
+            },
+            {
+              "id": "w2_q5",
+              "content": "5.",
+              "options": [
+                "overlook",
+                "inferior",
+                "neglect",
+                "satisfactory"
+              ],
+              "explanation": "Overlook (bỏ qua) và neglect (bỏ bê) đều liên quan đến sự thiếu chú ý.",
+              "correctAnswer": "A, C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_3",
+          "title": "Exercise 3: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w3_q1",
+              "content": "1. The girl didn't like the ________, so she played a joke on them. She put ________ bugs in their drinks. (fake / newcomers)",
+              "options": [
+                "newcomers / fake",
+                "fake / newcomers"
+              ],
+              "explanation": "newcomers (người mới đến) và fake (giả mạo).",
+              "correctAnswer": "NEWCOMERS / FAKE"
+            },
+            {
+              "id": "w3_q2",
+              "content": "2. Dave hoped to ________ a new house. The ________ where he lived was too old. (acquire / lodge)",
+              "options": [
+                "acquire / lodge",
+                "lodge / acquire"
+              ],
+              "explanation": "acquire (sở hữu) và lodge (căn nhà gỗ).",
+              "correctAnswer": "ACQUIRE / LODGE"
+            },
+            {
+              "id": "w3_q3",
+              "content": "3. She was eager to ________ the boy that had helped her repair her bike. While others had simply ________ her, he was happy to help. (repay / neglected)",
+              "options": [
+                "repay / neglected",
+                "neglected / repay"
+              ],
+              "explanation": "repay (đền đáp) và neglected (bỏ mặc).",
+              "correctAnswer": "REPAY / NEGLECTED"
+            },
+            {
+              "id": "w3_q4",
+              "content": "4. Going to jail ________ the man from any ________ in the future. (offenses / discouraged)",
+              "options": [
+                "discouraged / offenses",
+                "offenses / discouraged"
+              ],
+              "explanation": "discouraged (làm nản lòng) và offenses (hành vi vi phạm).",
+              "correctAnswer": "DISCOURAGED / OFFENSES"
+            },
+            {
+              "id": "w3_q5",
+              "content": "5. In the middle of the storm, the ________ looked for his lost sheep by ________ up the mountain. (shepherd / venturing)",
+              "options": [
+                "shepherd / venturing",
+                "venturing / shepherd"
+              ],
+              "explanation": "shepherd (người chăn cừu) và venturing (đánh liều, đi đến nơi nguy hiểm).",
+              "correctAnswer": "SHEPHERD / VENTURING"
+            },
+            {
+              "id": "w3_q6",
+              "content": "6. My little brother tried to ________ us by dressing in Dad's clothes, but he just looked ________. (deceive / ridiculous)",
+              "options": [
+                "deceive / ridiculous",
+                "ridiculous / deceive"
+              ],
+              "explanation": "deceive (lừa phỉnh) và ridiculous (nực cười).",
+              "correctAnswer": "DECEIVE / RIDICULOUS"
+            },
+            {
+              "id": "w3_q7",
+              "content": "7. The farmer built his ________ close to the ________ field so he could constantly watch it. (wheat / hut)",
+              "options": [
+                "hut / wheat",
+                "wheat / hut"
+              ],
+              "explanation": "hut (túp lều) và wheat (lúa mì).",
+              "correctAnswer": "HUT / WHEAT"
+            },
+            {
+              "id": "w3_q8",
+              "content": "8. After the ________ started a small fire in the kitchen, he felt very ________. (awkward / caretaker)",
+              "options": [
+                "caretaker / awkward",
+                "awkward / caretaker"
+              ],
+              "explanation": "caretaker (người trông nom) và awkward (lúng túng, bối rối).",
+              "correctAnswer": "CARETAKER / AWKWARD"
+            },
+            {
+              "id": "w3_q9",
+              "content": "9. Most shoppers tend to ________ any products that they think are ________ to similar things. (overlook / inferior)",
+              "options": [
+                "overlook / inferior",
+                "inferior / overlook"
+              ],
+              "explanation": "overlook (bỏ qua) và inferior (kém chất lượng hơn).",
+              "correctAnswer": "OVERLOOK / INFERIOR"
+            },
+            {
+              "id": "w3_q10",
+              "content": "10. She had a ________ for food with tomatoes, but everything else on the menu was ________. (hatred / satisfactory)",
+              "options": [
+                "hatred / satisfactory",
+                "satisfactory / hatred"
+              ],
+              "explanation": "hatred (sự căm ghét) và satisfactory (đủ tốt, thỏa đáng).",
+              "correctAnswer": "HATRED / SATISFACTORY"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Shepherd and the Wild Sheep</h1>        <p style=\"margin-bottom: 1rem;\">Once there was a <strong>shepherd</strong>. Every night he counted and gathered his sheep. He was sure never to <strong>overlook</strong> any of them. One night, he saw some wild sheep had joined his herd. He hoped to <strong>acquire</strong> the <strong>newcomers</strong>.</p>    <p style=\"margin-bottom: 1rem;\">It snowed that night. In the morning, the <strong>shepherd</strong> couldn't take his sheep out of his <strong>lodge</strong>. Instead, he had to feed them inside. He gave a small amount of <strong>wheat</strong> to his own sheep. But he gave more of the food to the wild sheep. He thought the extra <strong>wheat</strong> would <strong>discourage</strong> them from leaving.</p>    <p style=\"margin-bottom: 1rem;\">It snowed for several days. During that time, the <strong>shepherd</strong>'s sheep ate very little. The wild sheep, however, ate very well.</p>    <p style=\"margin-bottom: 1rem;\">At last, the snow melted, and they <strong>ventured</strong> outdoors. As soon as he opened the door of his <strong>hut</strong>, the wild sheep started to run away.</p>    <p style=\"margin-bottom: 1rem;\">\"Wait! This is how you <strong>repay</strong> me? After I treated you so kindly, why do you run away?\" the <strong>shepherd</strong> asked. His voice was full of <strong>hatred</strong>.</p>    <p style=\"margin-bottom: 1rem;\">The wild sheep stopped and turned toward the <strong>shepherd</strong>.</p>    <p style=\"margin-bottom: 1rem;\">\"We're leaving because you fed us better than your own sheep,\" one of the wild sheep replied. \"You tried to <strong>deceive</strong> us with your <strong>ridiculous</strong> plan. Yesterday you treated us kindly, but tomorrow you might be different. If more wild sheep joined your herd, you would treat us as <strong>inferior</strong> sheep.\"</p>    <p style=\"margin-bottom: 1rem;\">As the wild sheep ran away, the <strong>shepherd</strong> understood his <strong>offense</strong>. He knew this <strong>awkward</strong> situation was his own fault. He had not been a <strong>satisfactory</strong> <strong>caretaker</strong>. He was a <strong>fake</strong> friend to the wild sheep. Because of this, he had <strong>neglected</strong> his own herd.</p></div>",
+      "imageUrl": "/unit2_v3_story.png",
+      "sections": [
+        {
+          "id": "sec_story",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "s1_q1",
+              "content": "1. The shepherd counted his sheep because he didn't want to overlook any of them.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Câu văn trong bài là \"He was sure never to overlook any of them.\" (Ông ấy chắc chắn không bao giờ bỏ sót bất kỳ con nào trong số chúng). Việc đếm cừu giúp ông ấy không bỏ sót. Do đó câu này là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q2",
+              "content": "2. The shepherd couldn't take the sheep outside because it was dark outside.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Bài đọc nói rằng \"It snowed that night. In the morning, the shepherd couldn't take his sheep out of his lodge.\" (Đêm đó trời có tuyết. Buổi sáng, người chăn cừu không thể đưa những con cừu của mình ra khỏi nhà). Lý do là vì trời có tuyết, chứ không phải vì trời tối. Do vậy câu này là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q3",
+              "content": "3. The shepherd gave a little wheat to the wild sheep. But he gave his own sheep more.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Trong bài có nói \"He gave a small amount of wheat to his own sheep. But he gave more of the food to the wild sheep.\" (Ông ấy chỉ cho bầy cừu của mình một lượng nhỏ lúa mì. Nhưng ông ấy lại cho bầy cừu hoang nhiều thức ăn hơn). Câu hỏi viết ngược lại, nên câu này là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q4",
+              "content": "4. The wild sheep ran away from the shepherd after the snow melted.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Cùng xem câu \"At last, the snow melted, and they ventured outdoors. As soon as he opened the door of his hut, the wild sheep started to run away.\" (Cuối cùng, tuyết tan, và họ bước ra ngoài. Ngay khi ông mở cửa túp lều, những con cừu hoang đã bắt đầu bỏ chạy). Điều này hoàn toàn khớp, nên đáp án là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q5",
+              "content": "5. The wild sheep thought the shepherd had neglected his own sheep.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Con cừu hoang đã nói \"Yesterday you treated us kindly, but tomorrow you might be different. If more wild sheep joined your herd, you would treat us as inferior sheep.\" (Hôm qua ông đối xử tốt với chúng tôi, nhưng ngày mai ông có thể sẽ khác. Nếu có thêm nhiều cừu hoang gia nhập đàn, ông sẽ coi chúng tôi là những con cừu thấp kém). Hành động đối xử bất công đã chứng tỏ sự bỏ bê của người chăn cừu đối với bầy cừu của chính mình. Đáp án là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q6",
+              "content": "6. The shepherd never knew what he had done wrong.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Đoạn cuối bài viết \"As the wild sheep ran away, the shepherd understood his offense.\" (Khi những con cừu hoang bỏ chạy, người chăn cừu đã hiểu ra lỗi lầm của mình). Như vậy ông ấy biết mình làm sai điều gì. Câu này là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q7",
+              "content": "7. What was the shepherd's hope for the wild sheep?",
+              "options": [
+                "That they wouldn't be awkward",
+                "That they would feel hatred for him",
+                "That he could acquire them",
+                "That he could repay them"
+              ],
+              "explanation": "Câu đầu bài viết \"He hoped to acquire the newcomers.\" (Ông ấy hy vọng có thể thu nạp được những thành viên mới này). Vậy ông ấy muốn có được bầy cừu hoang. Đáp án đúng là That he could acquire them.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "s1_q8",
+              "content": "8. How did the shepherd hope to discourage the wild sheep from running away?",
+              "options": [
+                "By giving them extra food",
+                "By locking them in his hut",
+                "By selling his own sheep",
+                "By being their friend"
+              ],
+              "explanation": "Bài đọc giải thích \"He thought the extra wheat would discourage them from leaving.\" (Ông ấy nghĩ rằng việc cho thêm lúa mì sẽ làm chúng nản lòng mà không rời đi). Vậy ông ấy dùng thêm thức ăn (extra food) để giữ chúng lại.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q9",
+              "content": "9. All of the following describe what kind of caretaker the shepherd was EXCEPT__",
+              "options": [
+                "fake",
+                "ridiculous",
+                "inferior",
+                "satisfactory"
+              ],
+              "explanation": "Ở đoạn cuối, tác giả kết luận \"He had not been a satisfactory caretaker. He was a fake friend to the wild sheep.\" (Ông ấy không phải là một người chăm sóc tốt. Ông ấy là một người bạn giả tạo đối với bầy cừu hoang). Do đó, từ KHÔNG mô tả ông ta là satisfactory (đáng hài lòng, tốt).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "s1_q10",
+              "content": "10. What was the shepherd's offense?",
+              "options": [
+                "He never acquired the wild sheep.",
+                "He trapped the sheep in his lodge.",
+                "He hurt the wild sheep.",
+                "He did not care for his own sheep."
+              ],
+              "explanation": "Câu chốt của bài là \"Because of this, he had neglected his own herd.\" (Chính vì điều này, ông ấy đã bỏ bê bầy cừu của mình). Đó chính là lỗi lầm lớn nhất của ông ấy. Đáp án đúng là He did not care for his own sheep.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 2: Volume 3",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

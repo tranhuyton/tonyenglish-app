@@ -1,0 +1,481 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit18_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit18_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">1</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">armor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[d:rmar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Armor is metal worn by soldiers to protect the body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The soldier wore armor to protect his body.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">2</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">blaze</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bleiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To blaze means to burn brightly or powerfully.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The small fire soon blazed into a large dangerous one.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">3</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">boom</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bu:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To boom means to make a loud, deep sound.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The firecrackers made a loud boom when they exploded.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">4</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cliff</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klif]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cliff is a high and often flat wall of rock.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wolf stood at the cliff and howled.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">5</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flame</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fleim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A flame is part of fire.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The torch was filled with yellow and orange flames.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">6</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">independence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[indipendsns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Independence is the state of being free from the control of others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After leaving home, Sophia had a great feeling of independence.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">7</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">invasion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[invei3an]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An invasion is an attack by a group from another country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In Korea, walls were built around cities to protect them from invasions.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">8</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">knight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A knight is a soldier of high rank and skill who usually serves a king.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was the best soldier, so the king made him a knight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">9</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lightning</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[laitnirj]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Lightning is the bright light seen during a storm.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lightning flashed above the water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">10</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rebel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rebal]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rebel is a person who fights the government in order to change it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The rebel had enough of the government's unfair polices.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">11</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">retreat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ritn:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To retreat means to run away because you have been beaten in a fight.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The army retreated because they were losing the battle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">12</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">revolution</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[revalu:Jan]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A revolution is a change to the political system by a group of people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The revolution in Russia led to the creation of the Soviet Union.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">13</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spear</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spiax]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A spear is a long stick with a blade on one end that is used as a weapon.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The soldier was holding a spear in his hand.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">14</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steep</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sti-.p]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is steep, then its slope or angle rises or falls sharply.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He rode his bike up the steep hill to reach the top.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">15</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">summit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sAmit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A summit is the highest part of a hill or mountain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Snow covered the summit of the mountain even during the summer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">16</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thunder</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eAnda:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Thunder is the loud noise heard during a storm.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The sound of the thunder startled me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">17</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">troops</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tru:ps]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Troops are soldiers that fight in groups in a battle.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The troops were all prepared to go into battle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">18</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">warrior</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[w 5(:)ria:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A warrior is a brave soldier or fighter.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The samurai were some of the most skilled warriors in the ancient world.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">19</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">withdraw</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[widdro:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To withdraw means to leave a place, usually during war.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After losing the battle, the enemy withdrew back to its own country.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">20</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">yield</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[jhid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To yield something means to give up control of it or to give it away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He had to yield his turn because he was in checkmate.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "u18_ex1",
+          "title": "Exercise 1: Circle two words that are related in each group.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u18_ex1_1",
+              "content": "1.\na. withdraw\nb. armor\nc. steep\nd. retreat",
+              "options": [
+                "a, b",
+                "b, c",
+                "c, d",
+                "a, d"
+              ],
+              "explanation": "withdraw và retreat đều có nghĩa là rút lui (to leave a place / run away).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "u18_ex1_2",
+              "content": "2.\na. blaze\nb. flame\nc. summit\nd. independence",
+              "options": [
+                "a, b",
+                "b, c",
+                "c, d",
+                "a, d"
+              ],
+              "explanation": "blaze và flame đều liên quan đến ngọn lửa, cháy.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_ex1_3",
+              "content": "3.\na. cliff\nb. spear\nc. rebel\nd. revolution",
+              "options": [
+                "a, b",
+                "b, c",
+                "c, d",
+                "a, d"
+              ],
+              "explanation": "rebel (người nổi loạn) và revolution (cuộc cách mạng) đều liên quan đến sự chống đối, đổi mới.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "u18_ex1_4",
+              "content": "4.\na. yield\nb. knight\nc. warrior\nd. boom",
+              "options": [
+                "a, b",
+                "b, c",
+                "c, d",
+                "a, d"
+              ],
+              "explanation": "knight (hiệp sĩ) và warrior (chiến binh) đều là những người lính tham gia chiến đấu.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u18_ex1_5",
+              "content": "5.\na. thunder\nb. troop\nc. lightning\nd. steep",
+              "options": [
+                "a, b",
+                "b, c",
+                "c, d",
+                "a, c"
+              ],
+              "explanation": "thunder (sấm) và lightning (chớp) đều là hiện tượng thời tiết trong cơn bão.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "u18_ex2_a",
+          "title": "Exercise 2 Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u18_ex2_a_1",
+              "content": "1. to give up control",
+              "options": [
+                "revolution",
+                "flame",
+                "yield",
+                "independence"
+              ],
+              "explanation": "yield: to give up control of it or to give it away.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "u18_ex2_a_2",
+              "content": "2. to make a loud, deep sound",
+              "options": [
+                "boom",
+                "spear",
+                "cliff",
+                "blaze"
+              ],
+              "explanation": "boom: to make a loud, deep sound.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_ex2_a_3",
+              "content": "3. the highest point",
+              "options": [
+                "knight",
+                "retreat",
+                "steep",
+                "summit"
+              ],
+              "explanation": "summit: the highest part of a hill or mountain.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "u18_ex2_a_4",
+              "content": "4. a flat wall of rock",
+              "options": [
+                "lightning",
+                "cliff",
+                "armor",
+                "withdraw"
+              ],
+              "explanation": "cliff: a high and often flat wall of rock.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u18_ex2_a_5",
+              "content": "5. someone who disagrees with those in charge",
+              "options": [
+                "thunder",
+                "invasion",
+                "rebel",
+                "troop"
+              ],
+              "explanation": "rebel: a person who fights the government in order to change it.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "u18_ex2_b",
+          "title": "Exercise 2 Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u18_ex2_b_1",
+              "content": "1. flame",
+              "options": [
+                "a small piece of fire",
+                "the total amount",
+                "a long stick",
+                "a loud sound"
+              ],
+              "explanation": "flame: part of fire.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_ex2_b_2",
+              "content": "2. spear",
+              "options": [
+                "metal worn to protect",
+                "a brave soldier",
+                "a sharp weapon",
+                "to give up control"
+              ],
+              "explanation": "spear: a long stick with a blade on one end that is used as a weapon.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "u18_ex2_b_3",
+              "content": "3. withdraw",
+              "options": [
+                "to leave a place",
+                "a group of soldiers",
+                "to burn brightly",
+                "to stab with a point"
+              ],
+              "explanation": "withdraw: to leave a place, usually during war.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_ex2_b_4",
+              "content": "4. lightning",
+              "options": [
+                "a mountain",
+                "to run away",
+                "a high flat rock",
+                "what you see during a storm"
+              ],
+              "explanation": "lightning: the bright light seen during a storm.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "u18_ex2_b_5",
+              "content": "5. knight",
+              "options": [
+                "a king",
+                "a skilled soldier",
+                "a strange event",
+                "a group attack"
+              ],
+              "explanation": "knight: a soldier of high rank and skill who usually serves a king.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "u18_ex3",
+          "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u18_ex3_1",
+              "content": "1. Miguel did not want to [give up control of] his managerial powers.",
+              "options": [
+                "yield",
+                "withdraw",
+                "retreat",
+                "boom"
+              ],
+              "explanation": "yield: to give up control of it.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_ex3_2",
+              "content": "2. With his [long pointed stick with a blade at the end], he was able to defend himself.",
+              "options": [
+                "armor",
+                "spear",
+                "knight",
+                "cliff"
+              ],
+              "explanation": "spear: a long stick with a blade on one end.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u18_ex3_3",
+              "content": "3. During the storm we heard [loud noises].",
+              "options": [
+                "lightning",
+                "flames",
+                "thunder",
+                "blazes"
+              ],
+              "explanation": "thunder: the loud noise heard during a storm.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "u18_ex3_4",
+              "content": "4. The army was beaten, so it [ran away] to a safe place.",
+              "options": [
+                "invaded",
+                "retreated",
+                "yielded",
+                "rebelled"
+              ],
+              "explanation": "retreat: to run away because you have been beaten in a fight.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u18_ex3_5",
+              "content": "5. The [soldiers who fought in groups] during the battle were exhausted after the conflict.",
+              "options": [
+                "troops",
+                "knights",
+                "rebels",
+                "summit"
+              ],
+              "explanation": "troops: soldiers that fight in groups in a battle.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_ex3_6",
+              "content": "6. The [metal we wore to protect our body] was heavy and hot during the summer.",
+              "options": [
+                "armor",
+                "spear",
+                "flame",
+                "troops"
+              ],
+              "explanation": "armor: metal worn by soldiers to protect the body.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_ex3_7",
+              "content": "7. We walked carefully down the [sharp angle] of the mountain.",
+              "options": [
+                "steep",
+                "summit",
+                "cliff",
+                "retreat"
+              ],
+              "explanation": "steep: its slope or angle rises or falls sharply.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_ex3_8",
+              "content": "8. A feeling of [being free] came over all the people after the election of a new prime minister.",
+              "options": [
+                "invasion",
+                "revolution",
+                "independence",
+                "rebel"
+              ],
+              "explanation": "independence: the state of being free from the control of others.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "u18_ex3_9",
+              "content": "9. The soldiers managed to hold off the [attack from another group].",
+              "options": [
+                "revolution",
+                "invasion",
+                "summit",
+                "lightning"
+              ],
+              "explanation": "invasion: an attack by a group from another country.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u18_ex3_10",
+              "content": "10. We heard a [loud sound] when the hammer hit the brick wall.",
+              "options": [
+                "blaze",
+                "boom",
+                "yield",
+                "thunder"
+              ],
+              "explanation": "boom: to make a loud, deep sound.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Knight’s Plan</h1>        <p style=\"margin-bottom: 1rem;\">A town was fighting for their <b>independence</b> from another country. Several <b>rebels</b> started a <b>revolution</b>. However, they were afraid of an <b>invasion</b> from a lot of <b>troops</b>. They didn’t have enough <b>warriors</b> to stop them, so they asked a <b>knight</b> for help.</p>    <p style=\"margin-bottom: 1rem;\">The knight made a plan. A tall mountain was outside the town. The road near the top was very narrow. <b>Cliffs</b> rose on both sides of it.</p>    <p style=\"margin-bottom: 1rem;\">“We must trick the enemy. They have to follow us up the mountain,” the knight explained. “On the narrow path, only a few can attack us at one time.”</p>    <p style=\"margin-bottom: 1rem;\">The people agreed with the knight’s plan.</p>    <p style=\"margin-bottom: 1rem;\">The knight put on his <b>armor</b>, and the warriors got their <b>spears</b>. When the enemy attacked, the knight and warriors acted as if they were afraid. They quickly <b>withdrew</b> toward the mountain.</p>    <p style=\"margin-bottom: 1rem;\">The enemy troops followed them up the <b>steep</b> path. Soon, the enemy became tired.</p>    <p style=\"margin-bottom: 1rem;\">At the <b>summit</b>, the knight and his troops stopped. The enemy was close behind them. But now they were tired. Also, only a few could attack because the path was narrow. The knight and the warriors fought the enemy.</p>    <p style=\"margin-bottom: 1rem;\">But there were too many troops.</p>    <p style=\"margin-bottom: 1rem;\">The knight was afraid. If the warriors <b>yielded</b> the path to the enemy, the town would be lost.</p>    <p style=\"margin-bottom: 1rem;\">A storm suddenly came over the mountain. There was strong wind and rain. <b>Thunder</b> <b>boomed</b>. <b>Lightning</b> struck some trees near the enemy. The trees <b>blazed</b>. The <b>flames</b> scared the enemy and they <b>retreated</b>. They ran down the mountain, out of the town, and never returned.</p>    <p style=\"margin-bottom: 1rem;\">The knight explained, “With a little luck, a good plan beats even a big army.”</p></div>",
+      "imageUrl": "/unit18_v3_story.png",
+      "sections": [
+        {
+          "id": "u18_rc_a",
+          "title": "Reading Comprehension Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u18_rc_a_1",
+              "content": "1. The town was afraid of an invasion.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Theo bài đọc: 'they were afraid of an invasion from a lot of troops.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_rc_a_2",
+              "content": "2. The town agreed with the knight’s plan.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Theo bài đọc: 'The people agreed with the knight’s plan.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_rc_a_3",
+              "content": "3. The warriors wore armor, and the knight used a spear.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Sự thật: The knight wore armor, and the warriors used spears.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u18_rc_a_4",
+              "content": "4. The path to the summit was steep.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Theo bài đọc: 'The enemy troops followed them up the steep path.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_rc_a_5",
+              "content": "5. Some rebels started a revolution for their independence.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Theo bài đọc: 'A town was fighting for their independence... Several rebels started a revolution.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_rc_a_6",
+              "content": "6. Sounds from the trees scared the enemy.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Sự thật: The flames scared the enemy.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "u18_rc_b",
+          "title": "Reading Comprehension Part B: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u18_rc_b_1",
+              "content": "1. Why was the narrow path important to the knight’s plan?\na. Few soldiers could attack from it.\nb. It led to a high cliff.\nc. It was a safe place to hide.\nd. The enemy troops were afraid of it.",
+              "options": [
+                "a. Few soldiers could attack from it.",
+                "b. It led to a high cliff.",
+                "c. It was a safe place to hide.",
+                "d. The enemy troops were afraid of it."
+              ],
+              "explanation": "Theo bài đọc: 'On the narrow path, only a few can attack us at one time.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u18_rc_b_2",
+              "content": "2. After they withdrew to the mountain, where did the knight and warriors stop?\na. Between two cliffs\nb. At the summit\nc. Near the bottom\nd. Out of the town",
+              "options": [
+                "a. Between two cliffs",
+                "b. At the summit",
+                "c. Near the bottom",
+                "d. Out of the town"
+              ],
+              "explanation": "Theo bài đọc: 'At the summit, the knight and his troops stopped.'",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u18_rc_b_3",
+              "content": "3. Why didn’t the enemy think there was a trap?\na. They had more troops.\nb. They thought the soldiers were scared.\nc. They were tired.\nd. They were scared.",
+              "options": [
+                "a. They had more troops.",
+                "b. They thought the soldiers were scared.",
+                "c. They were tired.",
+                "d. They were scared."
+              ],
+              "explanation": "Hiệp sĩ và các chiến binh vờ như đang sợ hãi và rút lui nhanh chóng, khiến quân địch tin rằng họ bỏ chạy vì sợ chứ không phải là một cái bẫy.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u18_rc_b_4",
+              "content": "4. All of the following happened after the storm came EXCEPT______.\na. thunder boomed\nb. the trees blazed\nc. the knight retreated\nd. lightning struck",
+              "options": [
+                "a. thunder boomed",
+                "b. the trees blazed",
+                "c. the knight retreated",
+                "d. lightning struck"
+              ],
+              "explanation": "Người rút lui là kẻ thù (the enemy retreated), không phải hiệp sĩ.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 18",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

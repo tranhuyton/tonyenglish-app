@@ -1,0 +1,417 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">anticipate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æntísəpèit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To anticipate something is to think that it will happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Carrie anticipated the arrival of her baby.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">barrel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bǽrəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A barrel is a round thing that you can keep liquids in.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was an empty barrel outside the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">beam</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bi:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A beam is a heavy bar.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Modern skyscrapers are made with several beams.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">casual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kǽʒuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is casual, it is relaxed or simple.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ You can wear casual clothes to the party like jeans.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">caution</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɔ́:ʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Caution is care and attention in order to avoid danger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please use the power saw with caution. It is very dangerous.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contrary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑ́ntreri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is contrary to something else, it is the opposite.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It isn't warm outside at all. On the contrary, it is quite cold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deliberate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dilíbərit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you are deliberate, you do something on purpose.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Bernie made a deliberate attempt to injure Andy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dissolve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dizɑ́lv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dissolve something is to mix it into a liquid and disappear.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I dissolved the pill in a glass of water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">explode</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksplóud]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something explodes, it blows up.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My new radio exploded when I plugged it in.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fasten</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fǽsn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To fasten something is to close it or put it in the correct place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Elizabeth fastened her seat belt.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">germ</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒə:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A germ is something that makes you sick.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Germs are on everything that you touch.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">kit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A kit is a set of all the things needed to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Is there a first aid kit in your office?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">puff</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pʌf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A puff is a little bit of smoke or steam.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A puff of smoke came from the burnt match.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rag</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ræg]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rag is a small towel.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Please use a rag to clean the dust off the table.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scatter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skǽtər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To scatter something is to make it go in many places.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I accidentally scattered all of my pills.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sent]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A scent is a smell.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Julie enjoyed the scent of the flowers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">steel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sti:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Steel is a shiny gray metal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The new apartment building was made with steel.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">swift</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[swift]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is swift, it is fast.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The swift horse easily jumped over the hurdle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">toss</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tɔ:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you toss something, you throw it softly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He tossed a coin into the air.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">triumph</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tráiəmf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Triumph is what you feel when you win or finish something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He raised the award in triumph at the end of his speech.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_wordlist_0",
+          "title": "Part A: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w0_q1",
+              "content": "1. anticipate",
+              "options": [
+                "to win",
+                "to wait for",
+                "to blow up",
+                "to go everywhere"
+              ],
+              "explanation": "anticipate (mong đợi, dự đoán) = to wait for",
+              "correctAnswer": "B. TO WAIT FOR"
+            },
+            {
+              "id": "w0_q2",
+              "content": "2. kit",
+              "options": [
+                "something that makes you sick",
+                "set of things needed to do something",
+                "a round container",
+                "a smell"
+              ],
+              "explanation": "kit (bộ dụng cụ) = set of things needed to do something",
+              "correctAnswer": "B. SET OF THINGS NEEDED TO DO SOMETHING"
+            },
+            {
+              "id": "w0_q3",
+              "content": "3. steel",
+              "options": [
+                "a large bar",
+                "a small towel",
+                "shiny metal",
+                "opposite"
+              ],
+              "explanation": "steel (thép) = shiny metal",
+              "correctAnswer": "C. SHINY METAL"
+            },
+            {
+              "id": "w0_q4",
+              "content": "4. contrary",
+              "options": [
+                "careful",
+                "the opposite",
+                "fast",
+                "to lockdown"
+              ],
+              "explanation": "contrary (ngược lại) = the opposite",
+              "correctAnswer": "B. THE OPPOSITE"
+            },
+            {
+              "id": "w0_q5",
+              "content": "5. toss",
+              "options": [
+                "to throw",
+                "small amount",
+                "to smell",
+                "smoke"
+              ],
+              "explanation": "toss (quăng, ném) = to throw",
+              "correctAnswer": "A. TO THROW"
+            },
+            {
+              "id": "w0_q6",
+              "content": "6. triumph",
+              "options": [
+                "to win",
+                "the opposite",
+                "to lock something in place",
+                "a heavy metal bar"
+              ],
+              "explanation": "triumph (chiến thắng) = to win",
+              "correctAnswer": "A. TO WIN"
+            },
+            {
+              "id": "w0_q7",
+              "content": "7. scatter",
+              "options": [
+                "careful",
+                "metal",
+                "relaxed or simple",
+                "to go in many places"
+              ],
+              "explanation": "scatter (phân tán, rải rác) = to go in many places",
+              "correctAnswer": "D. TO GO IN MANY PLACES"
+            },
+            {
+              "id": "w0_q8",
+              "content": "8. casual",
+              "options": [
+                "a large bar",
+                "not fancy",
+                "relaxed or simple",
+                "opposite"
+              ],
+              "explanation": "casual (thông thường, tự nhiên) = relaxed or simple",
+              "correctAnswer": "C. RELAXED OR SIMPLE"
+            },
+            {
+              "id": "w0_q9",
+              "content": "9. rag",
+              "options": [
+                "careful",
+                "a small towel",
+                "on purpose",
+                "to expect something"
+              ],
+              "explanation": "rag (giẻ lau) = a small towel",
+              "correctAnswer": "B. A SMALL TOWEL"
+            },
+            {
+              "id": "w0_q10",
+              "content": "10. beam",
+              "options": [
+                "to throw",
+                "metal",
+                "to be careful",
+                "a heavy metal bar"
+              ],
+              "explanation": "beam (cột, xà) = a heavy metal bar",
+              "correctAnswer": "D. A HEAVY METAL BAR"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_1",
+          "title": "Part B: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w1_q1",
+              "content": "1. a round container",
+              "options": [
+                "scent",
+                "kit",
+                "beam",
+                "barrel"
+              ],
+              "explanation": "barrel: thùng rỗng, hình trụ",
+              "correctAnswer": "D. BARREL"
+            },
+            {
+              "id": "w1_q2",
+              "content": "2. on purpose",
+              "options": [
+                "deliberate",
+                "casual",
+                "swift",
+                "contrary"
+              ],
+              "explanation": "deliberate: cố ý",
+              "correctAnswer": "A. DELIBERATE"
+            },
+            {
+              "id": "w1_q3",
+              "content": "3. something that makes you sick",
+              "options": [
+                "puff",
+                "rag",
+                "germs",
+                "triumph"
+              ],
+              "explanation": "germs: vi trùng",
+              "correctAnswer": "C. GERMS"
+            },
+            {
+              "id": "w1_q4",
+              "content": "4. to lock something in place",
+              "options": [
+                "anticipate",
+                "fasten",
+                "scatter",
+                "explode"
+              ],
+              "explanation": "fasten: thắt chặt, khóa chặt",
+              "correctAnswer": "B. FASTEN"
+            },
+            {
+              "id": "w1_q5",
+              "content": "5. to mix in a liquid and disappear",
+              "options": [
+                "caution",
+                "toss",
+                "dissolve",
+                "steel"
+              ],
+              "explanation": "dissolve: hòa tan",
+              "correctAnswer": "C. DISSOLVE"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Part C: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w2_q1",
+              "content": "1. When the house burned, a large heavy bar fell from the ceiling.",
+              "options": [
+                "beam",
+                "kit",
+                "rag",
+                "puff"
+              ],
+              "explanation": "a large heavy bar = beam (cái xà)",
+              "correctAnswer": "A. BEAM"
+            },
+            {
+              "id": "w2_q2",
+              "content": "2. Joshua smiled in great emotion and feeling after he got a good grade on his science test.",
+              "options": [
+                "triumph",
+                "caution",
+                "scent",
+                "contrary"
+              ],
+              "explanation": "great emotion and feeling (after winning) = triumph (sự chiến thắng)",
+              "correctAnswer": "A. TRIUMPH"
+            },
+            {
+              "id": "w2_q3",
+              "content": "3. She walked on the ice with care so she wouldn't fall.",
+              "options": [
+                "triumph",
+                "caution",
+                "kit",
+                "barrel"
+              ],
+              "explanation": "with care = caution (sự cẩn thận)",
+              "correctAnswer": "B. CAUTION"
+            },
+            {
+              "id": "w2_q4",
+              "content": "4. It was scary when the car blew up, but luckily no one was hurt.",
+              "options": [
+                "scattered",
+                "dissolved",
+                "fastened",
+                "exploded"
+              ],
+              "explanation": "blew up = exploded (nổ tung)",
+              "correctAnswer": "D. EXPLODED"
+            },
+            {
+              "id": "w2_q5",
+              "content": "5. I used a small towel from the sink to clean up the milk I spilled.",
+              "options": [
+                "rag",
+                "scent",
+                "beam",
+                "puff"
+              ],
+              "explanation": "a small towel = rag (giẻ lau)",
+              "correctAnswer": "A. RAG"
+            },
+            {
+              "id": "w2_q6",
+              "content": "6. The basketball player was fast and stole the ball.",
+              "options": [
+                "casual",
+                "swift",
+                "contrary",
+                "deliberate"
+              ],
+              "explanation": "fast = swift (nhanh chóng)",
+              "correctAnswer": "B. SWIFT"
+            },
+            {
+              "id": "w2_q7",
+              "content": "7. You can wear relaxed and simple clothes to the school.",
+              "options": [
+                "swift",
+                "casual",
+                "deliberate",
+                "contrary"
+              ],
+              "explanation": "relaxed and simple = casual (đơn giản, bình thường)",
+              "correctAnswer": "B. CASUAL"
+            },
+            {
+              "id": "w2_q8",
+              "content": "8. I really like the smell of this candle.",
+              "options": [
+                "scent",
+                "kit",
+                "rag",
+                "puff"
+              ],
+              "explanation": "smell = scent (mùi hương)",
+              "correctAnswer": "A. SCENT"
+            },
+            {
+              "id": "w2_q9",
+              "content": "9. My cat made her food go in many places.",
+              "options": [
+                "scattered",
+                "fastened",
+                "anticipated",
+                "dissolved"
+              ],
+              "explanation": "go in many places = scattered (phân tán, rải rác)",
+              "correctAnswer": "A. SCATTERED"
+            },
+            {
+              "id": "w2_q10",
+              "content": "10. When we lit the fire, a little smoke came out of the chimney.",
+              "options": [
+                "puff",
+                "rag",
+                "barrel",
+                "germ"
+              ],
+              "explanation": "a little smoke = puff (luồng khói)",
+              "correctAnswer": "A. PUFF"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Ice Cream Cone Explosion</h1>        <p style=\"margin-bottom: 1rem;\">One day, John walked to his uncle's ice cream shop. When he reached the sidewalk, he caught the <strong>scent</strong> of ice cream cones and <strong>anticipated</strong> eating some ice cream.</p>    <p style=\"margin-bottom: 1rem;\">Sam opened the door. Uncle John had a new, <strong>steel</strong> machine. \"What is that?\"</p>    <p style=\"margin-bottom: 1rem;\">\"It's a cone maker. I built it from a <strong>kit</strong>. You take flour from the <strong>barrel</strong> and put it in this pan,\" Uncle John said. \"Then add water and sugar here and stir it so the sugar <strong>dissolves</strong>. Next, you <strong>fasten</strong> down the <strong>beam</strong>.\" Uncle John wanted to look <strong>casual</strong>, but he was excited. He made a few <strong>swift</strong> motions and turned it on. There was a <strong>puff</strong> of smoke, and then cones came out the other end.</p>    <p style=\"margin-bottom: 1rem;\">\"Is it hard to use?\" Sam asked.</p>    <p style=\"margin-bottom: 1rem;\">\"On the <strong>contrary</strong>. It's easy to use. Want to try?\"</p>    <p style=\"margin-bottom: 1rem;\">Sam washed his hands with <strong>caution</strong>. He made a <strong>deliberate</strong> attempt to keep <strong>germs</strong> out of the dough. Soon, Sam had his first cone. He smiled in <strong>triumph</strong>!</p>    <p style=\"margin-bottom: 1rem;\">Uncle John tried to turn the machine off, but it just kept making cones. Sam and Uncle John put them on the counter, then on chairs. Before long, cones <strong>scattered</strong> all over the floor.</p>    <p style=\"margin-bottom: 1rem;\">They tried everything to stop it, but it wouldn't stop!</p>    <p style=\"margin-bottom: 1rem;\">\"What are we going to do?\" he said.</p>    <p style=\"margin-bottom: 1rem;\">\"Kick it!\" yelled Sam. Uncle John lifted his foot and gave the machine a kick. It made a funny noise and <strong>exploded</strong>. They were both covered with dough.</p>    <p style=\"margin-bottom: 1rem;\">Uncle John laughed when he knew Sam was OK. He <strong>tossed</strong> Sam a <strong>rag</strong> to clean his face and smiled. \"I guess we have enough cones now!\"</p></div>",
+      "imageUrl": "/unit11_v3_story.png",
+      "sections": [
+        {
+          "id": "sec_story",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "s1_q1",
+              "content": "Mark each statement T for true or F for false.",
+              "options": [
+                "1.T 2.T 3.F 4.F 5.T 6.T",
+                "1.F 2.T 3.T 4.F 5.T 6.F",
+                "1.T 2.F 3.T 4.T 5.F 6.T",
+                "1.F 2.F 3.F 4.T 5.T 6.T"
+              ],
+              "explanation": "Đáp án đúng là lựa chọn A (1.T 2.T 3.F 4.F 5.T 6.T). Cụ thể các thông tin trong bài như sau:\n1. True: Đoạn 1 viết 'he caught the scent of ice cream cones'.\n2. True: Đoạn 3 bác John nói 'I built it from a kit'.\n3. False: Trong đoạn 3 bác John hướng dẫn 'Next, you fasten down the beam', nghĩa là bạn phải khóa thanh gạt lại.\n4. False: Đoạn 6 nói rõ 'Sam washed his hands with caution. He made a deliberate attempt to keep germs out of the dough', Sam đã cẩn thận rửa tay để loại bỏ vi khuẩn.\n5. True: Đoạn 7 viết 'Before long, cones scattered all over the floor'.\n6. True: Đoạn 11 viết 'He tossed Sam a rag to clean his face'.",
+              "correctAnswer": "A. 1.T 2.T 3.F 4.F 5.T 6.T"
+            },
+            {
+              "id": "s1_q2",
+              "content": "1. Why did Uncle John toss a rag to Sam?",
+              "options": [
+                "To clean the floor",
+                "To dissolve the sugar",
+                "To clean his face",
+                "To clean the steel"
+              ],
+              "explanation": "Đáp án: To clean his face. Đoạn cuối cùng của truyện có viết: 'He tossed Sam a rag to clean his face' (Ông ném cho Sam một chiếc giẻ để lau mặt).",
+              "correctAnswer": "C. TO CLEAN HIS FACE"
+            },
+            {
+              "id": "s1_q3",
+              "content": "2. What did Sam anticipate?",
+              "options": [
+                "Going to the shop",
+                "Getting an ice cream cone",
+                "Working with his uncle",
+                "The machine exploding"
+              ],
+              "explanation": "Đáp án: Getting an ice cream cone. Ở đoạn 1, tác giả mô tả: '...he caught the scent of ice cream cones and anticipated eating some ice cream.' Nghĩa là Sam đã ngửi thấy mùi hương và rất háo hức mong đợi được ăn một vài cây kem.",
+              "correctAnswer": "B. GETTING AN ICE CREAM CONE"
+            },
+            {
+              "id": "s1_q4",
+              "content": "3. What did the machine do?",
+              "options": [
+                "Break the barrel",
+                "Give a bad scent",
+                "Scatter dough",
+                "Give a puff of smoke"
+              ],
+              "explanation": "Đáp án: Give a puff of smoke. Theo đoạn 3, sau khi bác John khởi động máy thì: 'There was a puff of smoke' (Có một luồng khói phà ra).",
+              "correctAnswer": "D. GIVE A PUFF OF SMOKE"
+            },
+            {
+              "id": "s1_q5",
+              "content": "4. What did Uncle John say about the machine?",
+              "options": [
+                "It's easy to use.",
+                "It was swift.",
+                "It was deliberate.",
+                "It was contrary."
+              ],
+              "explanation": "Đáp án: It's easy to use. Trong đoạn 5, bác John tự tin nói về cỗ máy: 'On the contrary. It's easy to use.' (Ngược lại chứ. Nó rất dễ sử dụng).",
+              "correctAnswer": "A. IT'S EASY TO USE."
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 11: Volume 3",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

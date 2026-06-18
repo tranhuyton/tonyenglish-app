@@ -1,0 +1,477 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit9_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit9_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ail</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To ail a person or group is to cause difficulty or pain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My brother went to the doctor to see what was ailing him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ally</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ælai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An ally is someone who agrees to help or support you.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was happy to find many allies who shared the same opinion as me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">boast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[boust]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To boast is to talk about how good you are.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We all became tired of listening to him boast about himself all day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bounce</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bauns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bounce is to move something up and away from a surface after hitting it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Owen bounced the ball on the ground.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bully</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[buli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bully is a person who is mean to others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The two bullies always picked on the smaller, weaker kids.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">carbohydrate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ka:rbouhaidreit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Carbohydrates are substances in foods like bread that give you energy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Carbohydrates like rice are a good source of energy for active people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crawl</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[krɔ:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To crawl is to move slowly on your hands and knees.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The baby crawled across the floor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">defeat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[difi:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To defeat someone is to beat them in a game or battle.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The champion defeated the challenger in the boxing match.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[daial]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dial is the front of a clock.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I looked at the dial to see what time it was.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dominant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɑmənənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone or something is dominant, they are stronger than others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The gorilla is one of the dominant animals in the jungle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mercy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɝ:si]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you show mercy, you choose not to punish or harm someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He asked his boss for mercy and to not fire him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nod</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nɑd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To nod is to move your head up and down.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I nodded my head as I listened to the song.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">opponent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əpounənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An opponent is someone who fights against you.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ On the field, our opponents were too good for us.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">quarrel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kwɔ:rəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To quarrel is to argue or fight.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Billy quarreled with his wife about buying a new house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rival</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[raivəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A rival is someone that is trying to keep you from getting what you want.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The three rivals were all competing for the same job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɔ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a part of your body is sore, it hurts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After lifting the heavy box, Mona's back was sore.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sting</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stiŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sting is to cause pain by pushing a sharp part into the skin.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The needle stung my arm and made me say, \"Ouch!\"</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">strain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To strain is to try very hard.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Casey strained to lift the heavy box.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">torture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tɔ:rtʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Torture is something that causes you physical or mental pain.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Greg thought that writing the essay was torture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wrestle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[resəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To wrestle is to play a game where you try to push someone to the floor.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dad loved to wrestle when he was in high school.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_wordlist_0",
+          "title": "Part A: Choose the word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w0_q1",
+              "content": "someone who helps you",
+              "options": [
+                "bully",
+                "ally",
+                "bounce",
+                "quarrel"
+              ],
+              "explanation": "\"ally\" nghĩa là đồng minh, người giúp đỡ bạn.",
+              "correctAnswer": "ALLY"
+            },
+            {
+              "id": "w0_q2",
+              "content": "to move your head up and down",
+              "options": [
+                "wrestle",
+                "strain",
+                "nod",
+                "defeat"
+              ],
+              "explanation": "\"nod\" nghĩa là gật đầu.",
+              "correctAnswer": "NOD"
+            },
+            {
+              "id": "w0_q3",
+              "content": "to move on your hands and knees",
+              "options": [
+                "crawl",
+                "boast",
+                "torture",
+                "mercy"
+              ],
+              "explanation": "\"crawl\" nghĩa là bò, trườn.",
+              "correctAnswer": "CRAWL"
+            },
+            {
+              "id": "w0_q4",
+              "content": "to move something up and away after hitting it",
+              "options": [
+                "sore",
+                "sting",
+                "defeat",
+                "bounce"
+              ],
+              "explanation": "\"bounce\" nghĩa là nảy lên.",
+              "correctAnswer": "BOUNCE"
+            },
+            {
+              "id": "w0_q5",
+              "content": "to cause difficulty or pain",
+              "options": [
+                "rival",
+                "ail",
+                "whistle",
+                "carbohydrate"
+              ],
+              "explanation": "\"ail\" nghĩa là gây khó khăn hay đau đớn cho ai đó.",
+              "correctAnswer": "AIL"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_1",
+          "title": "Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w1_q1",
+              "content": "boast",
+              "options": [
+                "to go on your hands",
+                "to be mean to people",
+                "to move you head",
+                "to talk about yourself"
+              ],
+              "explanation": "\"boast\" nghĩa là khoác lác, nói nhiều về bản thân.",
+              "correctAnswer": "TO TALK ABOUT YOURSELF"
+            },
+            {
+              "id": "w1_q2",
+              "content": "dominant",
+              "options": [
+                "to be hurt",
+                "a friend",
+                "stronger",
+                "a fight"
+              ],
+              "explanation": "\"dominant\" nghĩa là vượt trội, mạnh hơn.",
+              "correctAnswer": "STRONGER"
+            },
+            {
+              "id": "w1_q3",
+              "content": "defeat",
+              "options": [
+                "to feel tired",
+                "to try hard",
+                "to beat",
+                "a face"
+              ],
+              "explanation": "\"defeat\" nghĩa là đánh bại.",
+              "correctAnswer": "TO BEAT"
+            },
+            {
+              "id": "w1_q4",
+              "content": "mercy",
+              "options": [
+                "someone on the other side",
+                "to push to the ground",
+                "to not give punishment",
+                "to feel terrible"
+              ],
+              "explanation": "\"mercy\" nghĩa là lòng khoan dung, không trừng phạt.",
+              "correctAnswer": "TO NOT GIVE PUNISHMENT"
+            },
+            {
+              "id": "w1_q5",
+              "content": "carbohydrate",
+              "options": [
+                "to win",
+                "to move off of something",
+                "to cause an injury",
+                "food"
+              ],
+              "explanation": "\"carbohydrate\" là tinh bột (có trong thức ăn).",
+              "correctAnswer": "FOOD"
+            },
+            {
+              "id": "w1_q6",
+              "content": "quarrel",
+              "options": [
+                "an argument",
+                "a face of a clock",
+                "to move your head",
+                "to talk about yourself"
+              ],
+              "explanation": "\"quarrel\" nghĩa là cuộc cãi vã, tranh luận.",
+              "correctAnswer": "AN ARGUMENT"
+            },
+            {
+              "id": "w1_q7",
+              "content": "strain",
+              "options": [
+                "to try very hard",
+                "a friend",
+                "stronger",
+                "to move something up and away"
+              ],
+              "explanation": "\"strain\" nghĩa là cố gắng hết sức.",
+              "correctAnswer": "TO TRY VERY HARD"
+            },
+            {
+              "id": "w1_q8",
+              "content": "rival",
+              "options": [
+                "to move the head up and down",
+                "to try hard",
+                "food",
+                "one who keeps another from getting something"
+              ],
+              "explanation": "\"rival\" nghĩa là đối thủ.",
+              "correctAnswer": "ONE WHO KEEPS ANOTHER FROM GETTING SOMETHING"
+            },
+            {
+              "id": "w1_q9",
+              "content": "wrestle",
+              "options": [
+                "someone on the other side",
+                "to push to the ground",
+                "to be hurt",
+                "to feel terrible"
+              ],
+              "explanation": "\"wrestle\" nghĩa là vật lộn, đẩy ai đó xuống đất.",
+              "correctAnswer": "TO PUSH TO THE GROUND"
+            },
+            {
+              "id": "w1_q10",
+              "content": "sore",
+              "options": [
+                "not giving another punishment",
+                "to be hurt",
+                "to cause an injury",
+                "to move on the floor"
+              ],
+              "explanation": "\"sore\" nghĩa là bị đau nhức.",
+              "correctAnswer": "TO BE HURT"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w2_q1",
+              "content": "Carol is always talking about how good she is to other people.",
+              "options": [
+                "boasting",
+                "bouncing",
+                "crawling",
+                "straining"
+              ],
+              "explanation": "\"boasting\" (khoác lác) đồng nghĩa với việc luôn nói tốt về bản thân.",
+              "correctAnswer": "BOASTING"
+            },
+            {
+              "id": "w2_q2",
+              "content": "Jerry is a person who enjoys being mean to classmates.",
+              "options": [
+                "bully",
+                "ally",
+                "opponent",
+                "rival"
+              ],
+              "explanation": "\"bully\" (kẻ bắt nạt) đồng nghĩa với người thích làm điều ác với bạn học.",
+              "correctAnswer": "BULLY"
+            },
+            {
+              "id": "w2_q3",
+              "content": "Foods like bread and rice give you a lot of energy for an active lifestyle.",
+              "options": [
+                "Carbohydrates",
+                "Dials",
+                "Tortures",
+                "Mercies"
+              ],
+              "explanation": "\"Carbohydrates\" (tinh bột) như bánh mì và gạo cung cấp năng lượng.",
+              "correctAnswer": "CARBOHYDRATES"
+            },
+            {
+              "id": "w2_q4",
+              "content": "We were all sad after our team was beaten in the game.",
+              "options": [
+                "defeated",
+                "ailed",
+                "nodded",
+                "bounced"
+              ],
+              "explanation": "\"defeated\" đồng nghĩa với bị đánh bại (was beaten).",
+              "correctAnswer": "DEFEATED"
+            },
+            {
+              "id": "w2_q5",
+              "content": "I was caused pain by a sharp point as I was walking through the grass barefoot.",
+              "options": [
+                "stung",
+                "strained",
+                "quarreled",
+                "wrestled"
+              ],
+              "explanation": "\"stung\" (bị chích, đốt) đồng nghĩa với bị đau bởi một vật nhọn.",
+              "correctAnswer": "STUNG"
+            },
+            {
+              "id": "w2_q6",
+              "content": "Look at the numbers on the clock face to see what time it is.",
+              "options": [
+                "dial",
+                "sore",
+                "boast",
+                "mercy"
+              ],
+              "explanation": "\"dial\" (mặt đồng hồ) đồng nghĩa với mặt của đồng hồ.",
+              "correctAnswer": "DIAL"
+            },
+            {
+              "id": "w2_q7",
+              "content": "If you can't speak, then move your head up and down for yes and no.",
+              "options": [
+                "nod",
+                "crawl",
+                "bounce",
+                "wrestle"
+              ],
+              "explanation": "\"nod\" (gật đầu) đồng nghĩa với di chuyển đầu lên xuống.",
+              "correctAnswer": "NOD"
+            },
+            {
+              "id": "w2_q8",
+              "content": "The person who was fighting against me tried to catch me off guard.",
+              "options": [
+                "rival",
+                "ally",
+                "bully",
+                "carbohydrate"
+              ],
+              "explanation": "\"rival\" (đối thủ) đồng nghĩa với người đang chiến đấu chống lại bạn.",
+              "correctAnswer": "RIVAL"
+            },
+            {
+              "id": "w2_q9",
+              "content": "I tried very hard to lift the heavy boxes from the desk.",
+              "options": [
+                "strained",
+                "boasted",
+                "crawled",
+                "nodded"
+              ],
+              "explanation": "\"strained\" (cố sức) đồng nghĩa với việc cố gắng hết sức.",
+              "correctAnswer": "STRAINED"
+            },
+            {
+              "id": "w2_q10",
+              "content": "Sitting through his long, boring speech was a horrible mental pain.",
+              "options": [
+                "torture",
+                "mercy",
+                "quarrel",
+                "dial"
+              ],
+              "explanation": "\"torture\" (sự tra tấn) đồng nghĩa với nỗi đau tinh thần tồi tệ.",
+              "correctAnswer": "TORTURE"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dalton vs. the Bully</h1>        <p style=\"margin-bottom: 1rem;\">Dalton was a nice boy, but sometimes the other boys made fun of him because he was so tall and skinny. Dalton's biggest problem was Mitch. He was a <strong>bully</strong> who <strong>boasted</strong> about his strength. He <strong>quarreled</strong> with the other boys. Sometimes, if boys gave Mitch their lunch money, he would have <strong>mercy</strong> and leave them alone.</p>    <p style=\"margin-bottom: 1rem;\">One day, the boys learned about a special Middle School Olympics. Their gym class was going to be in it. Many kids were excited. But Dalton thought it sounded like <strong>torture</strong>.</p>    <p style=\"margin-bottom: 1rem;\">That morning, Dalton ate plenty of <strong>carbohydrates</strong> for breakfast. He entered the gym and looked at the <strong>dial</strong> on the clock. It was time to begin. The teacher asked if they were ready. Everyone nodded, except Dalton.</p>    <p style=\"margin-bottom: 1rem;\">\"I got stung by a bee. I need to see the nurse.\" said Dalton. He made it up so he wouldn't have to play.</p>    <p style=\"margin-bottom: 1rem;\">\"I don't believe you. Get ready to play,\" responded the coach.</p>    <p style=\"margin-bottom: 1rem;\">First, they <strong>wrestled</strong>. Then they jumped, <strong>crawled</strong> and played other games. But Mitch was <strong>dominant</strong> in every event.</p>    <p style=\"margin-bottom: 1rem;\">They <strong>strained</strong> all morning to <strong>defeat</strong> him. By lunch, they were <strong>sore</strong>. Their entire bodies <strong>ailed</strong> them. They thought about how to win. They knew the last game of the day was volleyball. Kids who used to be Dalton's <strong>rivals</strong> became his allies. They wanted him to help them beat Mitch. Dalton was going to be Mitch's <strong>opponent</strong>.</p>    <p style=\"margin-bottom: 1rem;\">The game started. Every time Mitch tried to hit the ball over the net, Dalton stopped it. Finally, Mitch used all of his strength. But the ball <strong>bounced</strong> off Dalton's hands and back into Mitch's face! Finally Mitch was <strong>defeated</strong>.</p></div>",
+      "imageUrl": "/unit9_v3_story.png",
+      "sections": [
+        {
+          "id": "sec_story",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "s1_q1",
+              "content": "Part A: 1. Mitch was a bully.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Đáp án: True. Ngay trong đoạn 1, tác giả đã viết rõ: 'He was a bully who boasted about his strength.' Vì vậy, nhận định Mitch là một kẻ bắt nạt là hoàn toàn chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q2",
+              "content": "Part A: 2. Everyone was nice to Dalton.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Đáp án: False. Ở ngay câu đầu tiên của đoạn 1, chúng ta thấy: 'sometimes the other boys made fun of him' (đôi khi những cậu bé khác chế nhạo cậu ấy). Do đó, không phải ai cũng đối xử tốt với Dalton.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q3",
+              "content": "Part A: 3. Dalton became ailed when a bee stung him.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Đáp án: False. Đoạn 4 viết: 'I got stung by a bee. I need to see the nurse. said Dalton. He made it up so he wouldn't have to play.' Dalton chỉ bịa ra chuyện bị ong đốt để trốn thi đấu chứ không hề bị ốm đau gì thật.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q4",
+              "content": "Part A: 4. Dalton's biggest problem was being tall.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Đáp án: False. Đoạn 1 có ghi: 'Dalton's biggest problem was Mitch.' Vấn đề lớn nhất của Dalton không phải là chiều cao, mà chính là cậu bạn bắt nạt tên Mitch.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q5",
+              "content": "Part A: 5. When they wrestled, Mitch was dominant.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Đáp án đúng theo bài đọc là True. Theo đoạn 6: 'First, they wrestled... But Mitch was dominant in every event.' Do đó Mitch chiếm ưu thế ở mọi phần thi, bao gồm cả môn vật.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q6",
+              "content": "Part A: 6. The boys felt sore at lunchtime.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Đáp án: True. Đoạn 7 viết: 'By lunch, they were sore.' Nghĩa là đến giờ ăn trưa, cả người họ đều cảm thấy đau nhức. Thông tin này hoàn toàn chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q7",
+              "content": "Part B: 1. Which of the following was NOT part of their Olympics?",
+              "options": [
+                "Wrestling",
+                "Volleyball",
+                "Crawling",
+                "Speed skating"
+              ],
+              "explanation": "Đáp án: Speed skating. Đoạn 6 liệt kê các môn thể thao: 'First, they wrestled. Then they jumped, crawled and played other games.' Trong các lựa chọn, môn trượt băng tốc độ (speed skating) không hề được nhắc đến trong cuộc thi.",
+              "correctAnswer": "SPEED SKATING"
+            },
+            {
+              "id": "s1_q8",
+              "content": "Part B: 2. What did boys give Mitch so he would have mercy on them?",
+              "options": [
+                "A dial",
+                "Money",
+                "A whistle",
+                "Carbohydrates"
+              ],
+              "explanation": "Đáp án: Money. Trong đoạn 1 có ghi: 'if boys gave Mitch their lunch money, he would have mercy and leave them alone.' Nghĩa là các cậu bé phải đưa tiền ăn trưa thì Mitch mới tha cho họ.",
+              "correctAnswer": "MONEY"
+            },
+            {
+              "id": "s1_q9",
+              "content": "Part B: 3. Where did the Olympics happen?",
+              "options": [
+                "In the gym",
+                "At the bully's school",
+                "At their rival's field",
+                "At Dalton's house"
+              ],
+              "explanation": "Đáp án: In the gym. Ở đoạn 3, tác giả có kể: 'He entered the gym... It was time to begin.' Cuộc thi Olympic của trường trung học đã được tổ chức ở trong phòng thể dục (gym).",
+              "correctAnswer": "IN THE GYM"
+            },
+            {
+              "id": "s1_q10",
+              "content": "Part B: 4. What did the boys want to do to Mitch?",
+              "options": [
+                "Be his opponent",
+                "Show him mercy",
+                "Defeat him",
+                "Strain against him"
+              ],
+              "explanation": "Đáp án: Defeat him. Trong đoạn 7, tác giả viết: 'They wanted him to help them beat Mitch.' Cụm từ beat Mitch đồng nghĩa với defeat him, tức là họ muốn đánh bại Mitch.",
+              "correctAnswer": "DEFEAT HIM"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 9: Volume 3",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

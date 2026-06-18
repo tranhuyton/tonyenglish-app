@@ -1,0 +1,277 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit3_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit3_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bloom</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[blu:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a plant blooms, it makes flowers.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Roses look so pretty when they bloom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compact</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kampaekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is compact, it is smaller than normal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A laptop computer is much more compact than a desktop model.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">decay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dikei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To decay is to be destroyed naturally.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The old wooden house was slowly decaying.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dessert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dize:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Dessert is a sweet food that you eat after a meal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Kayla wants ice cream for dessert.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dip something is to put part of it into a liquid for a short time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Laurel dipped her strawberry into the chocolate.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">distant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[distent]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is distant, it is far away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Michael could barely see the distant island.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">eclipse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iklips]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An eclipse is an occasion when the moon moves in front of the sun.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A complete eclipse of the sun is a very rare occurrence.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fairy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feari]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fairy is a small, magic creature with wings.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are usually fairies in fantasy stories.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">curl</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kerl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A curl is a small piece of something with a round shape.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The colorful ribbons were bent into curls.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grace</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[greis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Grace is a quality of moving in a smooth, relaxed and attractive way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The ballerina danced with grace.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">leisure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[li:39:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Leisure is time when you do not have to do work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Eve likes to listen to music in her leisure time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mankind</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[maenkaind]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Mankind is all of the world’s people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All of mankind has to work to make this a better world.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">passion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paejan]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Passion is a very strong feeling of wanting to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She had a passion for dancing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pillow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pilou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pillow is something that you put your head on when you sleep.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I travel, I usually take along my favorite pillow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pulse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pAls]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pulse is the beat of the heart.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The doctor checked the patient’s pulse by feeling his wrist.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">refresh</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rifrej]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To refresh someone is to make them feel less hot or tired.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The baby was refreshed after taking a cool bath.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sneeze</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sni:z]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sneeze is to suddenly blow air out of your nose and mouth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He sneezed after smelling the flower.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spais]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A spice is a flavor for food and drinks.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Two common spices found in many homes are salt and pepper.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">whistle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwisl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To whistle is to make a sound by putting your lips together and blowing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ As he was listening to music, Daryl whistled.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wool</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Wool is the hair that a sheep has.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Grandma wants to use the blue wool to knit me a sweater.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_wordlist_0",
+          "title": "Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w0_q1",
+              "content": "far away",
+              "options": [
+                "compact",
+                "leisure",
+                "distant",
+                "passion"
+              ],
+              "explanation": "“far away” có nghĩa là xa xôi, xa cách. Từ đồng nghĩa là “distant”.",
+              "correctAnswer": "DISTANT"
+            },
+            {
+              "id": "w0_q2",
+              "content": "a sweet thing to eat",
+              "options": [
+                "dessert",
+                "wool",
+                "mankind",
+                "bloom"
+              ],
+              "explanation": "“a sweet thing to eat” là đồ ngọt để ăn. Đáp án là “dessert” (món tráng miệng).",
+              "correctAnswer": "DESSERT"
+            },
+            {
+              "id": "w0_q3",
+              "content": "a small magical creature",
+              "options": [
+                "pulse",
+                "pillow",
+                "grace",
+                "fairy"
+              ],
+              "explanation": "“a small magical creature” là sinh vật ma thuật nhỏ bé. Đáp án là “fairy” (tiên nữ).",
+              "correctAnswer": "FAIRY"
+            },
+            {
+              "id": "w0_q4",
+              "content": "an event that covers the sun",
+              "options": [
+                "whistle",
+                "decay",
+                "eclipse",
+                "curl"
+              ],
+              "explanation": "“an event that covers the sun” là sự kiện che khuất mặt trời. Đáp án là “eclipse” (nhật thực).",
+              "correctAnswer": "ECLIPSE"
+            },
+            {
+              "id": "w0_q5",
+              "content": "to make someone feel less tired",
+              "options": [
+                "spice",
+                "refresh",
+                "dip",
+                "sneeze"
+              ],
+              "explanation": "“to make someone feel less tired” là làm cho ai đó bớt mệt mỏi. Đáp án là “refresh” (làm sảng khoái).",
+              "correctAnswer": "REFRESH"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_1",
+          "title": "Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w1_q1",
+              "content": "whistle",
+              "options": [
+                "a flavor",
+                "to make noise with one’s lips",
+                "people",
+                "a flower"
+              ],
+              "explanation": "“whistle” là huýt sáo, tức là tạo ra âm thanh bằng môi.",
+              "correctAnswer": "TO MAKE NOISE WITH ONE’S LIPS"
+            },
+            {
+              "id": "w1_q2",
+              "content": "compact",
+              "options": [
+                "far",
+                "not at work",
+                "small",
+                "to help tired people"
+              ],
+              "explanation": "“compact” có nghĩa là nhỏ gọn (small).",
+              "correctAnswer": "SMALL"
+            },
+            {
+              "id": "w1_q3",
+              "content": "wool",
+              "options": [
+                "sheep’s hair",
+                "magic creature",
+                "something to eat",
+                "strong feeling"
+              ],
+              "explanation": "“wool” là len, lông cừu.",
+              "correctAnswer": "SHEEP’S HAIR"
+            },
+            {
+              "id": "w1_q4",
+              "content": "grace",
+              "options": [
+                "to chase after",
+                "to get old and rot",
+                "a nice way to move",
+                "in the shape of a circle"
+              ],
+              "explanation": "“grace” là vẻ duyên dáng, di chuyển uyển chuyển (a nice way to move).",
+              "correctAnswer": "A NICE WAY TO MOVE"
+            },
+            {
+              "id": "w1_q5",
+              "content": "dip",
+              "options": [
+                "to blow out air",
+                "something soft for your head",
+                "to put in and out",
+                "one of the things on your feet"
+              ],
+              "explanation": "“dip” là nhúng vào rồi rút ra.",
+              "correctAnswer": "TO PUT IN AND OUT"
+            },
+            {
+              "id": "w1_q6",
+              "content": "spice",
+              "options": [
+                "a flavor added to food or drink",
+                "something with a round shape",
+                "to make one feel less tired",
+                "a sweet thing to eat"
+              ],
+              "explanation": "“spice” là gia vị, hương vị thêm vào thức ăn.",
+              "correctAnswer": "A FLAVOR ADDED TO FOOD OR DRINK"
+            },
+            {
+              "id": "w1_q7",
+              "content": "leisure",
+              "options": [
+                "time when you do not have to work",
+                "to become naturally destroyed",
+                "the hair of sheep",
+                "a feeling of wanting"
+              ],
+              "explanation": "“leisure” là thời gian rảnh rỗi, không phải làm việc.",
+              "correctAnswer": "TIME WHEN YOU DO NOT HAVE TO WORK"
+            },
+            {
+              "id": "w1_q8",
+              "content": "curl",
+              "options": [
+                "to get old and fall apart",
+                "something with a curve",
+                "something small",
+                "to go after"
+              ],
+              "explanation": "“curl” là lọn tóc xoăn hoặc vật có hình uốn cong.",
+              "correctAnswer": "SOMETHING WITH A CURVE"
+            },
+            {
+              "id": "w1_q9",
+              "content": "pillow",
+              "options": [
+                "something you sleep on",
+                "the quality of moving well",
+                "an event that covers the sun",
+                "far away"
+              ],
+              "explanation": "“pillow” là cái gối để ngủ.",
+              "correctAnswer": "SOMETHING YOU SLEEP ON"
+            },
+            {
+              "id": "w1_q10",
+              "content": "pulse",
+              "options": [
+                "not at work",
+                "a magic creature",
+                "the beat of one’s heart",
+                "to go away"
+              ],
+              "explanation": "“pulse” là nhịp tim.",
+              "correctAnswer": "THE BEAT OF ONE’S HEART"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Tiny Tina</h1>        <p style=\"margin-bottom: 1rem;\">In a <strong>distant</strong> land, there was a kingdom where fairies lived. Tina was a <strong>fairy</strong>. She had yellow <strong>curls</strong> and wore a dress made of <strong>wool</strong>. She always moved with <strong>grace</strong>. However, because of her <strong>compact</strong> size, she was scared of <strong>mankind</strong>.</p>    <p style=\"margin-bottom: 1rem;\">One day, there was an <strong>eclipse</strong> of the sun. The fairies didn’t know what was happening. They were scared, so they ran away.</p>    <p style=\"margin-bottom: 1rem;\">Tina looked for a place to hide. She found a garden with flowers <strong>blooming</strong>. Tina had a <strong>passion</strong> for flowers. She decided to hide there. She became sleepy and made a <strong>pillow</strong> with some leaves. She <strong>whistled</strong> happily as she worked, and she fell asleep.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, somebody <strong>sneezed</strong>. The sound woke Tina up. She saw a very big face looking at her! Tina was so scared that she couldn’t move. She could feel her <strong>pulse</strong> going very fast.</p>    <p style=\"margin-bottom: 1rem;\">The big woman went into her house. When she came back, she gave Tina a cup.</p>    <p style=\"margin-bottom: 1rem;\">The woman sat on the ground among some <strong>decaying</strong> leaves. Tina dipped a finger in the cup and tasted it. It was tea with all kinds of delicious <strong>spices</strong> in it. Tina felt <strong>refreshed</strong> after drinking the tea.</p>    <p style=\"margin-bottom: 1rem;\">“I’m Wilma,” the lady said. “I spend all my <strong>leisure</strong> time in my garden cutting flowers. Would you like some <strong>dessert</strong>?”</p>    <p style=\"margin-bottom: 1rem;\">Tina said yes. She was hungry, and she wasn’t frightened anymore. She took a bite of cake and relaxed. “How did you get to my garden?”</p>    <p style=\"margin-bottom: 1rem;\">Tina told Wilma how she got lost.</p>    <p style=\"margin-bottom: 1rem;\">“That’s terrible! Let us take you home.”</p>    <p style=\"margin-bottom: 1rem;\">“Actually, I think that I want to stay with you,” Tina said. She wasn’t scared of big people anymore. Wilma and Tina lived happily ever after.</p></div>",
+      "imageUrl": "/unit3_v3_story.png",
+      "sections": [
+        {
+          "id": "sec_story",
+          "title": "Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "s1_q1",
+              "content": "Why did Tina suddenly wake up?",
+              "options": [
+                "She felt refreshed",
+                "She heard someone sneeze",
+                "The leaves were decayed",
+                "She had a fast pulse"
+              ],
+              "explanation": "Câu văn trong bài ghi rõ \"Suddenly, somebody sneezed. The sound woke Tina up.\" (Đột nhiên, có ai đó hắt hơi. Âm thanh đó đã đánh thức Tina dậy). Vì vậy, lý do cô ấy tỉnh giấc là do nghe thấy tiếng hắt hơi. Đáp án chính xác là She heard someone sneeze.",
+              "correctAnswer": "SHE HEARD SOMEONE SNEEZE"
+            },
+            {
+              "id": "s1_q2",
+              "content": "All of the following describe Tina EXCEPT ___.",
+              "options": [
+                "she had curls in her hair",
+                "she moved with grace",
+                "she did not like tea with spice",
+                "she was compact"
+              ],
+              "explanation": "Bài đọc viết \"Tina dipped a finger in the cup and tasted it. It was tea with all kinds of delicious spices in it. Tina felt refreshed after drinking the tea.\" (Tina nhúng một ngón tay vào cốc và nếm thử. Đó là trà có đủ loại gia vị thơm ngon. Tina cảm thấy sảng khoái sau khi uống). Như vậy cô ấy rất thích loại trà này, việc nói cô ấy không thích (did not like) là thông tin sai.",
+              "correctAnswer": "SHE DID NOT LIKE TEA WITH SPICE"
+            },
+            {
+              "id": "s1_q3",
+              "content": "What does Wilma do with the flowers?",
+              "options": [
+                "She makes dessert with them",
+                "She cuts them",
+                "She dips them in gold",
+                "She lets them decay"
+              ],
+              "explanation": "Trong bài, bà Wilma đã nói \"I spend all my leisure time in my garden cutting flowers.\" (Tôi dành toàn bộ thời gian rảnh rỗi trong khu vườn của mình để cắt hoa). Vì vậy, hành động bà ấy làm với những bông hoa là cắt chúng (She cuts them).",
+              "correctAnswer": "SHE CUTS THEM"
+            },
+            {
+              "id": "s1_q4",
+              "content": "Where did Tina live before she met Wilma?",
+              "options": [
+                "In Wilma’s garden",
+                "In a tiny house",
+                "On a street with big cars",
+                "In a distant country"
+              ],
+              "explanation": "Ngay câu đầu tiên của bài đọc đã giới thiệu \"In a distant land, there was a kingdom where fairies lived.\" (Ở một vùng đất xa xôi, có một vương quốc nơi các nàng tiên sinh sống). Vùng đất xa xôi (distant land) cũng đồng nghĩa với distant country.",
+              "correctAnswer": "IN A DISTANT COUNTRY"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 3: Volume 3",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit21_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit21_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">accustomed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkʌ́stəmd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When you become accustomed to something, you are in the habit of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Grandfather is accustomed to reading the newspaper every morning.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">affirm</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əfə́:rm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To affirm is to say that something is true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Using a graph, Malcolm affirmed the success of the company.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">astonished</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əstɑ́niʃt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is astonished, they are very surprised or shocked.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was astonished when he pulled the live rabbit out of his hat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bang</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bæŋ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bang is to hit something to make a noise.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The drummer banged on his drum as he marched in the parade.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">clan</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klæn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A clan is a group of relatives or friends.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Lee clan meets every year to celebrate the New Year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dim</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is dim, it does not give out much light.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Working in a dim room is bad for your eyes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">emphasis</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[émfəsis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Emphasis is special attention or importance.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students put special emphasis on chapter 4 because it will be on the test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[féibəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fable is a short story that teaches a lesson.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the fable about the tortoise and the hare, the lesson is consistency.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">feast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fi:st]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A feast is a large meal for many people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ At Thanksgiving, I enjoy a wonderful feast with my family.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">glow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[glou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To glow is to make a soft light.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The small flame glowed softly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hollow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hɑ́lou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is hollow, it has an empty space inside.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Straws are hollow, so liquid can flow through them.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">instinct</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ínstiŋkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Instinct is the natural way that people behave without thinking about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Cats hunt mice because of instinct.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">joint</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒɔint]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A joint is a place of the body where the bones meet, such as the knee.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Two important bones in your leg meet at a joint in your knee.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">leak</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[li:k]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To leak is to let a liquid or gas pass through a flaw.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The pipe leaks from many places.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">physician</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fizíʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A physician is a doctor.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The physician said I would feel better if I took my medicine.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sacrifice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sǽkrəfàis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sacrifice something valuable is to give it up to get something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her parents sacrificed a lot of money in order for her to go to college.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stiff</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stif]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is stiff, it is hard to move.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bird was standing on the tree's stiff branch.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stroke</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[strouk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To stroke is to move a hand over something or someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She stroked her cheek to see if there was something on it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tragic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trǽdʒik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is tragic, it is connected with death and suffering.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The airplane crashed in a tragic accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tune</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tju:n]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tune is a song.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students played a familiar tune for the audience.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. stroke",
+              "options": [
+                "to surprise",
+                "to move a hand",
+                "a light",
+                "to speak"
+              ],
+              "explanation": "b",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2",
+              "content": "2. sacrifice",
+              "options": [
+                "to give up",
+                "to allow",
+                "to cry",
+                "to say"
+              ],
+              "explanation": "a",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "3. joint",
+              "options": [
+                "very sad",
+                "a large meal",
+                "a short story",
+                "where two bones meet"
+              ],
+              "explanation": "d",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "4",
+              "content": "4. emphasis",
+              "options": [
+                "family",
+                "a song",
+                "a doctor",
+                "special attention"
+              ],
+              "explanation": "d",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "5",
+              "content": "5. hollow",
+              "options": [
+                "natural",
+                "cannot move",
+                "to connect",
+                "empty"
+              ],
+              "explanation": "d",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "dim"
+                }
+              ],
+              "content": "1. She avoided walking in [low-light] areas."
+            },
+            {
+              "id": "7",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "accustomed"
+                }
+              ],
+              "content": "2. Since she's lived in hot places all her life, she's [used to] warm weather."
+            },
+            {
+              "id": "8",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "leak"
+                }
+              ],
+              "content": "3. The holes in the old pipes let water [pass through] onto the bathroom floor."
+            },
+            {
+              "id": "9",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "stiff"
+                }
+              ],
+              "content": "4. Her back felt [hard to move] after she slept on the floor."
+            },
+            {
+              "id": "10",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "clan"
+                }
+              ],
+              "content": "5. He was happy to go home and see the [group of family and friends]."
+            },
+            {
+              "id": "11",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "astonished"
+                }
+              ],
+              "content": "6. The very [shocked] crowd watched as the magician performed his tricks."
+            },
+            {
+              "id": "12",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "feast"
+                }
+              ],
+              "content": "7. The school served a [large meal] in honor of the new principal."
+            },
+            {
+              "id": "13",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "glowing"
+                }
+              ],
+              "content": "8. The only thing that I could see in the dark night was my flashlight [making light]."
+            },
+            {
+              "id": "14",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "tragic"
+                }
+              ],
+              "content": "9. It was a very [sad event] when his parents passed away in the accident."
+            },
+            {
+              "id": "15",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "instincts"
+                }
+              ],
+              "content": "10. Her [natural behavior] told her to leave the room as soon as possible."
+            }
+          ],
+          "questionType": "Điền từ"
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Choose the word that is a better fit for each blank.",
+          "content": "",
+          "questions": [
+            {
+              "id": "26",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "fable"
+                },
+                {
+                  "id": "2",
+                  "answer": "astonished"
+                }
+              ],
+              "content": "1. fable / astonished\nThe [fable] was about a young boy with magic powers. At first nobody believed him, but everyone was [astonished] when he made a cat disappear."
+            },
+            {
+              "id": "27",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "banged"
+                },
+                {
+                  "id": "2",
+                  "answer": "instincts"
+                }
+              ],
+              "content": "2. instincts / banged\nAfter hearing the bad news, she [banged] her fist on the table in anger. Things would go wrong, her [instincts] told her."
+            },
+            {
+              "id": "28",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "feast"
+                },
+                {
+                  "id": "2",
+                  "answer": "accustomed"
+                }
+              ],
+              "content": "3. accustomed / feast\nThough the food was good, he felt sick after the [feast]. He just wasn't [accustomed] to eating so much at one time."
+            },
+            {
+              "id": "29",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "physician"
+                },
+                {
+                  "id": "2",
+                  "answer": "joint"
+                }
+              ],
+              "content": "4. joint / physician\nThe [physician] stretched out my arm, looking at my elbow. He wanted to make sure that my pain wasn't a problem with the [joint]."
+            },
+            {
+              "id": "30",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "emphasis"
+                },
+                {
+                  "id": "2",
+                  "answer": "affirm"
+                }
+              ],
+              "content": "5. affirm / emphasis\nThe university placed a special [emphasis] on student safety. They wanted to [affirm] that they were interested in protecting students."
+            },
+            {
+              "id": "31",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "hollow"
+                },
+                {
+                  "id": "2",
+                  "answer": "stiff"
+                }
+              ],
+              "content": "6. stiff / hollow\nHe wanted to find out where his sister went after school, so he hid in a [hollow] tree in the schoolyard. However, when he came out, he felt [stiff] all over."
+            },
+            {
+              "id": "32",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "clan"
+                },
+                {
+                  "id": "2",
+                  "answer": "tunes"
+                }
+              ],
+              "content": "7. clan / tunes\nThe entire [clan] was excited about her wedding. While they drove to the church, they sang happy [tunes]."
+            },
+            {
+              "id": "33",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "dim"
+                },
+                {
+                  "id": "2",
+                  "answer": "stroked"
+                }
+              ],
+              "content": "8. dim / stroked\nIn the [dim] light, it was hard to find the earring she'd dropped on the floor. She [stroked] the ground until she finally felt it."
+            },
+            {
+              "id": "34",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "tragic"
+                },
+                {
+                  "id": "2",
+                  "answer": "sacrifices"
+                }
+              ],
+              "content": "9. tragic / sacrifices\nThe boy suffered from a [tragic] illness. Still, his family made [sacrifices] to make sure he was always comfortable."
+            },
+            {
+              "id": "35",
+              "blanks": [
+                {
+                  "id": "1",
+                  "answer": "leak"
+                },
+                {
+                  "id": "2",
+                  "answer": "glowing"
+                }
+              ],
+              "content": "10. leak / glowing\nHe shut the door to make sure that no light could [leak] into the room. However, he could still see the moon [glowing] outside of his window."
+            }
+          ],
+          "questionType": "Điền từ"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Old Man with a Bump</h1>        <p style=\"margin-bottom: 1rem;\">An old man had a large bump on his face. He went to the best <b>physician</b> in town. He gave the old man <b>tragic</b> news: \"I can't do anything. You'll have to get <b>accustomed</b> to it.\"</p>    <p style=\"margin-bottom: 1rem;\">One day, the old man went into the forest. Suddenly, the light became <b>dim</b>. It was going to rain. So he found a <b>hollow</b> tree to sit under. It <b>leaked</b> a little, but there was no other place he could wait.</p>    <p style=\"margin-bottom: 1rem;\">When the rain stopped, his <b>joints</b> felt <b>stiff</b> from sitting. Suddenly, he heard a <b>tune</b> coming from far away. Many <b>fables</b> said monsters lived in the forest. No one could <b>affirm</b> that the stories were true, though. Still, his <b>instincts</b> told him that there was something out there. He walked farther into the forest. Then he saw a fire <b>glowing</b>. He was <b>astonished</b> to see a <b>clan</b> of monsters. They were having a great <b>feast</b> and <b>banging</b> on drums.</p>    <p style=\"margin-bottom: 1rem;\">He stood behind a tree, spying on them. Then the leader asked, \"Who's the best dancer here?\"</p>    <p style=\"margin-bottom: 1rem;\">\"Me!\" the man yelled, coming from behind the tree. He started to dance. When he was finished, the leader said, \"I want you to dance every night. In order to make sure you return, I'm going to keep something you love.\"</p>    <p style=\"margin-bottom: 1rem;\">\"Please don't take my bump,\" he begged. \"I can't <b>sacrifice</b> it. It's good luck!\" He exclaimed, pointing at it for <b>emphasis</b>.</p>    <p style=\"margin-bottom: 1rem;\">The monsters agreed that they had to take his bump. After they did, the man <b>stroked</b> his face to make sure it was gone. He had tricked them! He never went back, and he never had to worry about his bump again.</p></div>",
+      "imageUrl": "/unit21_v3_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Reading Comprehension - Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. The physician told the old man there was nothing he could do.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Bài đọc có câu: I can't do anything (Tôi không thể làm gì được cả). Lời của bác sĩ hoàn toàn trùng khớp với nhận định. Nhận định này đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "2. The old man waited in the hollow tree even though it leaked a little.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Trong bài viết: It leaked a little, but there was no other place he could wait. (Nó bị dột một chút, nhưng không có nơi nào khác để ông có thể chờ). Nhận định này đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "3. The old man's joints were stiff from walking in the forest.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Trong bài có câu: When the rain stopped, his joints felt stiff from sitting. (Khi mưa tạnh, các khớp xương của ông cảm thấy cứng nhắc vì ngồi lâu). Vậy ông bị cứng khớp do ngồi lâu chứ không phải do đi bộ. Nhận định này sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "19",
+              "content": "4. The old man's instincts told him to return home immediately.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Bài đọc viết: Still, his instincts told him that there was something out there. (Tuy nhiên, bản năng của ông mách bảo rằng có thứ gì đó ngoài kia) và sau đó ông đi sâu hơn vào rừng chứ không phải lập tức về nhà. Nhận định này sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "20",
+              "content": "5. The man danced for the clan of monsters.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Bài đọc nói rõ ông lão bước ra và He started to dance (Ông bắt đầu nhảy). Vậy nhận định ông lão nhảy cho bầy quái vật xem là đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "21",
+              "content": "6. The monsters took away the man's tragic bump.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "explanation": "Cuối cùng thì The monsters agreed that they had to take his bump. (Lũ quái vật đồng ý rằng chúng phải lấy cái bướu của ông). Nhận định này là đúng (True).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec4",
+          "title": "Reading Comprehension - Part B: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "22",
+              "content": "1. What advice did the doctor give the old man?",
+              "options": [
+                "To bang",
+                "To make",
+                "To sacrifice",
+                "To get accustomed to it"
+              ],
+              "explanation": "Bác sĩ đã thông báo một tin buồn và khuyên ông lão: You'll have to get accustomed to it (Ông sẽ phải làm quen với nó thôi). Vậy đáp án D là đúng.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "23",
+              "content": "2. Why did the man have to wait inside a hollow tree?",
+              "options": [
+                "The light became dim.",
+                "It began to rain.",
+                "He was hiding from monsters.",
+                "His joints hurt."
+              ],
+              "explanation": "Bài đọc viết: It was going to rain. So he found a hollow tree to sit under. (Trời sắp mưa. Vì thế ông đã tìm một cái cây rỗng để ngồi trú). Đáp án B là chính xác.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "24",
+              "content": "3. Why did the old man come out from behind the tree?",
+              "options": [
+                "To run away",
+                "To eat",
+                "To dance",
+                "To play music"
+              ],
+              "explanation": "Khi thủ lĩnh bầy quái vật hỏi ai là người nhảy giỏi nhất, ông lão đã bước ra khỏi gốc cây, hét lên: Me! (Là ta!) và He started to dance (Ông bắt đầu nhảy). Vì thế ông bước ra là để nhảy (To dance). Đáp án C là chính xác.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "25",
+              "content": "4. Why does the old man stroke his face at the end of the story?",
+              "options": [
+                "To astonish the monsters",
+                "To make sure the bump is gone",
+                "For emphasis",
+                "To affirm that the bump is there"
+              ],
+              "explanation": "Cuối câu chuyện, tác giả viết: After they did, the man stroked his face to make sure it was gone. (Sau khi lũ quái vật lấy cái bướu đi, ông vuốt mặt để chắc chắn rằng nó đã biến mất). Do đó đáp án B là đúng.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 21",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

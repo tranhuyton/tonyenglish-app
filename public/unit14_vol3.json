@@ -1,0 +1,419 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit14_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit14_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">apprentice</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈprentis]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An apprentice is a person who learns how to do a job from a skilled person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mark is an apprentice chef at the restaurant.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">assure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈʃuər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To assure someone is to tell them something is true to make them less worried.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He assured the boss that the building would be done on time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bandage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈbændidʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bandage is a piece of cloth used to stop bleeding.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you cut yourself, please get a bandage from the first-aid kit.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bleed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bliːd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bleed is to lose blood.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you are not careful, you will cut your finger and bleed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bond</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɑnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bond with someone is to become friends with them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The women bonded after several hours of conversation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chef</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃef]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A chef is a person who cooks in a restaurant.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Tom is a chef at the restaurant near my house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crown</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kraun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A crown is the hat worn by a king or queen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The crown is made of gold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">departure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diˈpɑːrtʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A departure is the act of leaving a place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They were excited about their departure back home.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diligent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdilədʒənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is diligent, they work hard and are careful.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Craig has always been a very diligent person at work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">emperor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈempərər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An emperor is the leader of a group of countries.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The emperor Julius Caesar was in control of ancient Rome.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fiber</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfaibər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fiber is a thread of a substance used to make clothes or rope.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mat was made from tiny fibers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">horrible</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhɔːrəbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is horrible, it is very bad.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The assignment was horrible. I hated it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impolite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌimpəˈlait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is impolite, they are rude.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Roger is impolite to everyone he meets.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">kneel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[niːl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To kneel is to put one or both knees on the ground.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Daryl got down on one knee and asked Nina to marry him.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">luxury</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈlʌkʃəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A luxury is an expensive thing that you do not need.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We stayed at a luxury resort for our honeymoon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">massive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmæsiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is massive, it is very big.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The wheels on his truck were massive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">panic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpænik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To panic is to feel so nervous or afraid that you cannot think clearly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Everyone panicked when the house caught on fire.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">priority</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[praiˈɔːrəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A priority is something that is more important than other things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My priority is to get good grades in school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">robe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[roub]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A robe is a long, loose piece of clothing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many people wear robes in the morning.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scold</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skould]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To scold means to criticize one angrily because they have done wrong.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Jesse was scolded by the teacher for not paying attention.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_wordlist_0",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w0_q1",
+              "content": "hardworking",
+              "options": [
+                "diligent",
+                "massive",
+                "horrible",
+                "impolite"
+              ],
+              "explanation": "diligent: chăm chỉ",
+              "correctAnswer": "A. DILIGENT"
+            },
+            {
+              "id": "w0_q2",
+              "content": "to lose control because of stress",
+              "options": [
+                "bleed",
+                "kneel",
+                "panic",
+                "bond"
+              ],
+              "explanation": "panic: hoảng loạn",
+              "correctAnswer": "C. PANIC"
+            },
+            {
+              "id": "w0_q3",
+              "content": "a person learning a job",
+              "options": [
+                "emperor",
+                "apprentice",
+                "chef",
+                "thread"
+              ],
+              "explanation": "apprentice: người học việc",
+              "correctAnswer": "B. APPRENTICE"
+            },
+            {
+              "id": "w0_q4",
+              "content": "someone in control of a large area of land",
+              "options": [
+                "priority",
+                "luxury",
+                "assure",
+                "emperor"
+              ],
+              "explanation": "emperor: hoàng đế",
+              "correctAnswer": "D. EMPEROR"
+            },
+            {
+              "id": "w0_q5",
+              "content": "to angrily tell someone that they did something wrong",
+              "options": [
+                "scold",
+                "bandage",
+                "crown",
+                "robe"
+              ],
+              "explanation": "scold: la mắng",
+              "correctAnswer": "A. SCOLD"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_1",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w1_q1",
+              "content": "The dinner plates with designs made of gold were a [treat but not needed].",
+              "options": [
+                "luxury",
+                "crown",
+                "chef",
+                "massive"
+              ],
+              "explanation": "luxury: xa xỉ phẩm",
+              "correctAnswer": "LUXURY"
+            },
+            {
+              "id": "w1_q2",
+              "content": "The king wore a large, golden [hat].",
+              "options": [
+                "crown",
+                "robe",
+                "fiber",
+                "bandage"
+              ],
+              "explanation": "crown: vương miện",
+              "correctAnswer": "CROWN"
+            },
+            {
+              "id": "w1_q3",
+              "content": "Joan is a [person who gets paid to cook in a restaurant].",
+              "options": [
+                "chef",
+                "apprentice",
+                "emperor",
+                "bond"
+              ],
+              "explanation": "chef: đầu bếp",
+              "correctAnswer": "CHEF"
+            },
+            {
+              "id": "w1_q4",
+              "content": "George started to [lose blood] when he cut his finger.",
+              "options": [
+                "bleed",
+                "kneel",
+                "panic",
+                "assure"
+              ],
+              "explanation": "bleed: chảy máu",
+              "correctAnswer": "BLEED"
+            },
+            {
+              "id": "w1_q5",
+              "content": "The book was so [bad] that I couldn't read the whole thing.",
+              "options": [
+                "horrible",
+                "impolite",
+                "massive",
+                "diligent"
+              ],
+              "explanation": "horrible: tồi tệ",
+              "correctAnswer": "HORRIBLE"
+            },
+            {
+              "id": "w1_q6",
+              "content": "It is [rude] to walk away when someone is talking to you.",
+              "options": [
+                "impolite",
+                "horrible",
+                "diligent",
+                "massive"
+              ],
+              "explanation": "impolite: bất lịch sự",
+              "correctAnswer": "IMPOLITE"
+            },
+            {
+              "id": "w1_q7",
+              "content": "Everyone is supposed to [get down on one knee] when the king walks past.",
+              "options": [
+                "kneel",
+                "bleed",
+                "scold",
+                "panic"
+              ],
+              "explanation": "kneel: quỳ gối",
+              "correctAnswer": "KNEEL"
+            },
+            {
+              "id": "w1_q8",
+              "content": "Her new boat is [very big]. Twenty people can ride on it.",
+              "options": [
+                "massive",
+                "diligent",
+                "horrible",
+                "impolite"
+              ],
+              "explanation": "massive: to lớn",
+              "correctAnswer": "MASSIVE"
+            },
+            {
+              "id": "w1_q9",
+              "content": "He wanted to [become friends] with his new co-workers.",
+              "options": [
+                "bond",
+                "assure",
+                "panic",
+                "scold"
+              ],
+              "explanation": "bond: gắn kết",
+              "correctAnswer": "BOND"
+            },
+            {
+              "id": "w1_q10",
+              "content": "The long [threads] were woven into a warm scarf.",
+              "options": [
+                "fiber",
+                "bandage",
+                "robe",
+                "luxury"
+              ],
+              "explanation": "fiber: sợi",
+              "correctAnswer": "FIBER"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Exercise 3: Choose the answer that best fits the question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w2_q1",
+              "content": "Why would someone need a bandage?",
+              "options": [
+                "They have overeaten.",
+                "They have a cut.",
+                "They are sweaty.",
+                "They are sleepy."
+              ],
+              "explanation": "băng gạc được dùng khi bị đứt tay",
+              "correctAnswer": "B. THEY HAVE A CUT."
+            },
+            {
+              "id": "w2_q2",
+              "content": "If someone panics, what might they do?",
+              "options": [
+                "Remain calm",
+                "Begin telling jokes",
+                "Take a quick nap to save energy",
+                "Scream and lose control"
+              ],
+              "explanation": "người hoảng loạn thường la hét và mất kiểm soát",
+              "correctAnswer": "D. SCREAM AND LOSE CONTROL"
+            },
+            {
+              "id": "w2_q3",
+              "content": "Where would you probably not see someone wearing a robe?",
+              "options": [
+                "At the office",
+                "In a hospital",
+                "At home",
+                "In a king and queen's castle"
+              ],
+              "explanation": "áo choàng thường không mặc ở văn phòng",
+              "correctAnswer": "A. AT THE OFFICE"
+            },
+            {
+              "id": "w2_q4",
+              "content": "What is a good way to bond with a person?",
+              "options": [
+                "To find something you both like",
+                "To argue often",
+                "To tell rumors about them",
+                "To fight with them"
+              ],
+              "explanation": "tìm sở thích chung là cách tốt để gắn kết",
+              "correctAnswer": "A. TO FIND SOMETHING YOU BOTH LIKE"
+            },
+            {
+              "id": "w2_q5",
+              "content": "Which answer below would not be considered an important priority?",
+              "options": [
+                "Paying your bills",
+                "Having at least three meals a day",
+                "Drinking plenty of liquids",
+                "Having ice cream"
+              ],
+              "explanation": "ăn kem không phải là ưu tiên quan trọng",
+              "correctAnswer": "D. HAVING ICE CREAM"
+            },
+            {
+              "id": "w2_q6",
+              "content": "Which of the following best describes an apprentice?",
+              "options": [
+                "An experienced chef",
+                "A woman learning to drive",
+                "A married man",
+                "A girl learning a new job"
+              ],
+              "explanation": "apprentice là người đang học việc",
+              "correctAnswer": "D. A GIRL LEARNING A NEW JOB"
+            },
+            {
+              "id": "w2_q7",
+              "content": "What will usually happen if someone is diligent?",
+              "options": [
+                "Success",
+                "Sadness",
+                "Failure",
+                "Laughter"
+              ],
+              "explanation": "chăm chỉ thường dẫn đến thành công",
+              "correctAnswer": "A. SUCCESS"
+            },
+            {
+              "id": "w2_q8",
+              "content": "If you kneel, what does that make you become?",
+              "options": [
+                "Taller",
+                "Older",
+                "Smaller",
+                "Younger"
+              ],
+              "explanation": "quỳ gối làm bạn trông thấp (nhỏ bé) hơn",
+              "correctAnswer": "C. SMALLER"
+            },
+            {
+              "id": "w2_q9",
+              "content": "If you are assuring someone of something, what are you doing?",
+              "options": [
+                "Making them feel less worried",
+                "Relieving a high fever",
+                "Dreaming with them",
+                "Playing with them"
+              ],
+              "explanation": "cam đoan giúp người khác bớt lo lắng",
+              "correctAnswer": "A. MAKING THEM FEEL LESS WORRIED"
+            },
+            {
+              "id": "w2_q10",
+              "content": "Besides a departure time, airplane tickets will also have what other kind of time?",
+              "options": [
+                "A fun time",
+                "A sleep time",
+                "A movie time",
+                "An arrival time"
+              ],
+              "explanation": "vé máy bay có giờ khởi hành và giờ đến",
+              "correctAnswer": "D. AN ARRIVAL TIME"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Helpful Apprentice</h1>        <p style=\"margin-bottom: 1rem;\">There was once a small restaurant. People said that the best <strong>chef</strong> in the world worked there. But the <strong>chef</strong> was a <strong>horrible</strong> person to work for. He was <strong>impolite</strong> and <strong>scolded</strong> his workers all the time.</p>    <p style=\"margin-bottom: 1rem;\">The <strong>chef</strong> had a young <strong>apprentice</strong>. The <strong>apprentice</strong>'s first <strong>priority</strong> was to make the best food in the world. He was happy to have a good teacher, but he didn't like the <strong>chef</strong>. The boy was a <strong>diligent</strong> worker, but the <strong>chef</strong> <strong>scolded</strong> him more than anyone else.</p>    <p style=\"margin-bottom: 1rem;\">Then one day, the <strong>chef</strong> got great news. The <strong>emperor</strong> wanted to have dinner there that night. He was very excited. He was working very fast, and he made a mistake. He cut his hand with a knife, and it started to <strong>bleed</strong>. The <strong>apprentice</strong> gave him a <strong>bandage</strong>, but the <strong>chef</strong> still couldn't cook.</p>    <p style=\"margin-bottom: 1rem;\">The <strong>chef</strong> started to <strong>panic</strong>. The <strong>apprentice</strong> tried to <strong>assure</strong> him. \"Everything will be OK,\" he said. But the <strong>chef</strong> was still afraid. Then they started to work together. They began to <strong>bond</strong>. The <strong>chef</strong> told the <strong>apprentice</strong> what to do. The boy cooked a great meal.</p>    <p style=\"margin-bottom: 1rem;\">As soon as they finished, the <strong>emperor</strong> arrived. He wore a beautiful <strong>robe</strong> made of soft <strong>fibers</strong>. He also had a <strong>massive</strong> <strong>crown</strong>. Everyone in the restaurant <strong>kneeled</strong> when the <strong>emperor</strong> came in. The <strong>chef</strong> and the boy brought out his food. The <strong>emperor</strong> was used to luxuries. Would he like the food?</p>    <p style=\"margin-bottom: 1rem;\">The <strong>emperor</strong> loved the food. After his <strong>departure</strong>, the <strong>chef</strong> was very proud and very thankful to his new friend, the <strong>apprentice</strong>.</p></div>",
+      "imageUrl": "/unit14_v3_story.png",
+      "sections": [
+        {
+          "id": "sec_story",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "s1_q1",
+              "content": "Part A: Mark each statement T for true or F for false.",
+              "options": [
+                "1. The apprentice helped the chef make food for the Emperor.",
+                "2. The chef was a massive person that everyone hated.",
+                "3. The Emperor had a crown and a robe.",
+                "4. The chef's finger was bleeding and needed a bandage.",
+                "5. The chef was very polite and always scolded his workers.",
+                "6. The apprentice was a diligent worker."
+              ],
+              "explanation": "Xác định đúng/sai dựa vào nội dung câu chuyện.",
+              "correctAnswer": "1. T, 2. F (THE CHEF WAS A HORRIBLE PERSON THAT EVERYONE HATED.), 3. T, 4. T, 5. F (THE CHEF WAS VERY IMPOLITE AND ALWAYS SCOLDED HIS WORKERS.), 6. T"
+            },
+            {
+              "id": "s1_q2",
+              "content": "Part B: 1. Why was the restaurant famous?",
+              "options": [
+                "It served beautiful fibers.",
+                "The chef was very impolite.",
+                "The best chef in the world worked there.",
+                "The Emperor ate there."
+              ],
+              "explanation": "Nhà hàng nổi tiếng vì có đầu bếp giỏi nhất thế giới.",
+              "correctAnswer": "C. THE BEST CHEF IN THE WORLD WORKED THERE."
+            },
+            {
+              "id": "s1_q3",
+              "content": "Part B: 2. Why did the chef panic before the Emperor arrived?",
+              "options": [
+                "The apprentice assured him things were good.",
+                "He wanted to bond with the apprentice.",
+                "The Emperor was a horrible person.",
+                "He cut himself and couldn't cook."
+              ],
+              "explanation": "Đầu bếp hoảng loạn vì ông bị đứt tay và không thể nấu.",
+              "correctAnswer": "D. HE CUT HIMSELF AND COULDN'T COOK."
+            },
+            {
+              "id": "s1_q4",
+              "content": "Part B: 3. What was the apprentice's first priority?",
+              "options": [
+                "To fill the restaurant with luxuries.",
+                "To cook great food.",
+                "To bond with the chef.",
+                "To make a meal for the Emperor."
+              ],
+              "explanation": "Ưu tiên hàng đầu của người học việc là nấu món ăn ngon nhất thế giới.",
+              "correctAnswer": "B. TO COOK GREAT FOOD."
+            },
+            {
+              "id": "s1_q5",
+              "content": "Part B: 4. Why was the chef a bad person to work for?",
+              "options": [
+                "He was the best chef in the world.",
+                "He often cooked for the Emperor.",
+                "He often scolded his workers.",
+                "He wanted everyone to be diligent."
+              ],
+              "explanation": "Đầu bếp rất tệ vì ông thường xuyên mắng chửi nhân viên.",
+              "correctAnswer": "C. HE OFTEN SCOLDED HIS WORKERS."
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 14: Volume 3",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

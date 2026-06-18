@@ -1,0 +1,405 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit1_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit1_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əraiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To arise is to happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Difficulties arose with his computer because it was old.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">benefactor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[benəfæktər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A benefactor is a person who gives money to help someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The student's benefactor gave him money to spend on his studies.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">blacksmith</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[blæksmiθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A blacksmith is a person who makes things out of metal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The blacksmith pounded the piece of metal until it was flat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">charitable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃærətəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is charitable, they help people who are in need.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister was charitable enough to help me buy my first house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chimney</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃimni]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A chimney is a tall pipe used to carry smoke out of a building.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The cat was on the roof sitting next to the chimney.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compensate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑmpənseit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To compensate is to pay someone for the time they spent doing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her boss compensated her for the extra work she did last week.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">encounter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkauntər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you encounter something, you meet or come close to it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I encountered a sea turtle while I was swimming.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exceed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[iksi:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To exceed is to be more than something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since I exceeded my limit, I decided to get rid of my credit cards.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">forge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ:rdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To forge is to make or produce, especially with difficulty.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Stacy and Heather forged their friendship when they were teenagers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">humble</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hʌmbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">People who are humble do not believe that they are better than other people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Even though Bob is the smartest boy in his class, he is humble.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">iron</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aiərn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Iron is a strong metal that is used to make many objects.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The horse had shoes made of iron.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ladder</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[lædər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A ladder is an object that is used to climb up and down things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He used a ladder to climb to the top of his tree house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">modest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑdist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If people are modest, they do not think that they are too important.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Derek is very modest for someone who is so rich.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">occupy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɑkjəpai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To occupy a place is to live, work, or be there.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Kevin and Alice occupied the chairs and had a long discussion.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">penny</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[peni]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A penny is a coin worth one cent.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ U.S. President Abraham Lincoln is on the penny.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">preach</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pri:tʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To preach is to talk about and promote a religious idea.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Aaron often preached about living an honest life.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">prosper</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑspər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To prosper is to be successful or make a lot of money.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Frank's new business finally prospered after many years of hard work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">province</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prɑvins]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A province is a small area that is controlled by a country.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Canada is divided into several different provinces.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">satisfaction</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sætisfækʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Satisfaction is a feeling you get when you do or receive something good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Brad was filled with satisfaction when he saw what was for dinner.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sustain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səstein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sustain something is to keep it going.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Wind power is a clean way to sustain a city with energy.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_wordlist_0",
+          "title": "Exercise 1: Part A. Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w0_q1",
+              "content": "to make or produce with difficulty",
+              "options": [
+                "prosper",
+                "arise",
+                "penny",
+                "forge"
+              ],
+              "explanation": "Forge có nghĩa là tạo ra, làm ra (đặc biệt là với sự nỗ lực và khó khăn).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "w0_q2",
+              "content": "a person who works with metal",
+              "options": [
+                "iron",
+                "blacksmith",
+                "charitable",
+                "benefactor"
+              ],
+              "explanation": "Blacksmith là thợ rèn, người làm việc với kim loại.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w0_q3",
+              "content": "to keep something going",
+              "options": [
+                "exceed",
+                "sustain",
+                "preach",
+                "occupy"
+              ],
+              "explanation": "Sustain nghĩa là duy trì, giữ cho một thứ gì đó tiếp tục.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w0_q4",
+              "content": "a small area that is part of a country",
+              "options": [
+                "ladder",
+                "province",
+                "encounter",
+                "compensate"
+              ],
+              "explanation": "Province là tỉnh, một khu vực nhỏ thuộc quyền kiểm soát của một quốc gia.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w0_q5",
+              "content": "thinking oneself not to be too important",
+              "options": [
+                "humble",
+                "satisfaction",
+                "chimney",
+                "modest"
+              ],
+              "explanation": "Modest nghĩa là khiêm tốn, không cho rằng bản thân mình quá quan trọng.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_1",
+          "title": "Exercise 1: Part B. Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w1_q1",
+              "content": "benefactor",
+              "options": [
+                "giver",
+                "an area",
+                "money",
+                "too much"
+              ],
+              "explanation": "Benefactor là người hảo tâm, người cho tiền hoặc giúp đỡ người khác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "w1_q2",
+              "content": "compensate",
+              "options": [
+                "where smoke goes",
+                "to shape metal",
+                "a tool used to climb",
+                "to pay someone in return"
+              ],
+              "explanation": "Compensate có nghĩa là đền bù, trả công cho ai đó.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "w1_q3",
+              "content": "occupy",
+              "options": [
+                "to be rich",
+                "to happen",
+                "to see someone you know",
+                "to be in a place"
+              ],
+              "explanation": "Occupy là chiếm giữ, cư ngụ hoặc ở tại một nơi nào đó.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "w1_q4",
+              "content": "iron",
+              "options": [
+                "a baby",
+                "a type of metal",
+                "a good feeling",
+                "a person who makes things with metal"
+              ],
+              "explanation": "Iron là sắt, một loại kim loại mạnh mẽ.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w1_q5",
+              "content": "exceed",
+              "options": [
+                "to keep something going",
+                "to not talk about yourself too much",
+                "to be kind to others",
+                "to go past a certain limit"
+              ],
+              "explanation": "Exceed nghĩa là vượt quá một giới hạn nào đó.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Exercise 2: Choose the answer that best fits the question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w2_q1",
+              "content": "Which of the following is a form of money?",
+              "options": [
+                "A province",
+                "A penny",
+                "A blacksmith",
+                "A ladder"
+              ],
+              "explanation": "Penny là đồng xu, một dạng tiền tệ.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w2_q2",
+              "content": "If you meet a boy on the street, you _____ him.",
+              "options": [
+                "exceed",
+                "occupy",
+                "encounter",
+                "sustain"
+              ],
+              "explanation": "Encounter mang nghĩa là bắt gặp, chạm trán hoặc tình cờ gặp.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "w2_q3",
+              "content": "Which of the following is a good feeling?",
+              "options": [
+                "Modest",
+                "Humble",
+                "Satisfaction",
+                "Charitable"
+              ],
+              "explanation": "Satisfaction (sự thỏa mãn) là một cảm giác rất tốt.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "w2_q4",
+              "content": "Which one is part of a house?",
+              "options": [
+                "Forge",
+                "Compensate",
+                "Arise",
+                "Chimney"
+              ],
+              "explanation": "Chimney là ống khói, một bộ phận của ngôi nhà.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "w2_q5",
+              "content": "Which word relates to the word religion?",
+              "options": [
+                "Iron",
+                "Preach",
+                "Benefactor",
+                "Prosper"
+              ],
+              "explanation": "Preach (giảng đạo) là từ có liên quan đến tôn giáo (religion).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w2_q6",
+              "content": "Which of the following means to happen?",
+              "options": [
+                "Sustain",
+                "Arise",
+                "Province",
+                "Prosper"
+              ],
+              "explanation": "Arise có nghĩa là xảy ra, nảy sinh.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "w2_q7",
+              "content": "Which of the following do people use to reach high places?",
+              "options": [
+                "A chimney",
+                "A blacksmith",
+                "A benefactor",
+                "A ladder"
+              ],
+              "explanation": "A ladder (cái thang) được dùng để leo lên những nơi cao.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "w2_q8",
+              "content": "If you are smart with your money, then what will happen to you?",
+              "options": [
+                "You will occupy a jail cell",
+                "You will forge a strong relationship",
+                "You will prosper",
+                "You will become humble"
+              ],
+              "explanation": "Nếu khôn ngoan với tiền bạc, bạn sẽ trở nên thịnh vượng (prosper).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "w2_q9",
+              "content": "If someone gives money to others, we could say that they are _____.",
+              "options": [
+                "charitable",
+                "modest",
+                "prosper",
+                "exceed"
+              ],
+              "explanation": "Người hay cho tiền người khác được gọi là người từ thiện, nhân từ (charitable).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "w2_q10",
+              "content": "Which of the following describes someone who thinks they are no better than others?",
+              "options": [
+                "Benefactor",
+                "Satisfaction",
+                "Humble",
+                "Compensate"
+              ],
+              "explanation": "Humble chỉ người khiêm tốn, không nghĩ rằng mình tốt hơn người khác.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Real St. Nick</h1>        <p style=\"margin-bottom: 1rem;\">At Christmas, children wait for St. Nicholas to bring gifts down the <strong>chimney</strong>. But it's not just a story. St. Nicholas was a real person.</p>    <p style=\"margin-bottom: 1rem;\">A long time ago, a man named Marcus occupied a house with his family. He was not <strong>modest</strong>. He always told everybody he was the strongest man in the <strong>province</strong>.</p>    <p style=\"margin-bottom: 1rem;\">He worked hard, but he could barely <strong>sustain</strong> his family. He wanted to save money and <strong>prosper</strong>. Still, he could never earn a <strong>penny</strong> more than he needed.</p>    <p style=\"margin-bottom: 1rem;\">One day, Marcus made an agreement with a <strong>blacksmith</strong>. The <strong>blacksmith</strong> had a lot of work to do. But he couldn't do it all by himself. Marcus wanted to help him <strong>forge</strong> <strong>iron</strong>. The <strong>blacksmith</strong> agreed to <strong>compensate</strong> him with a lot of money.</p>    <p style=\"margin-bottom: 1rem;\">In the same town, there was a man named Nicholas. At an early age, Nicholas started <strong>preaching</strong>. But he also believed that he should be <strong>humble</strong> and <strong>charitable</strong>. He learned that helping people gave him even more <strong>satisfaction</strong> than <strong>preaching</strong>.</p>    <p style=\"margin-bottom: 1rem;\">One day, Nicholas <strong>encountered</strong> Marcus. Marcus told Nicholas about his agreement with the <strong>blacksmith</strong>. \"I worked hard for him,\" Marcus said, \"but a problem arose. Even though I worked for him, he didn't pay me.\"</p>    <p style=\"margin-bottom: 1rem;\">Nicholas wanted to help Marcus. That night, he went back to Marcus's house. He brought a bag of gold. It <strong>exceeded</strong> the amount that Marcus needed. Nicholas climbed up a <strong>ladder</strong> and dropped the bag of gold down the <strong>chimney</strong>. Marcus thanked his <strong>benefactor</strong>.</p>    <p style=\"margin-bottom: 1rem;\">Soon, people found out about Nicholas's gift. He became well known and loved. Even today, people still give secret gifts to children. And we say they are from St. Nicholas.</p></div>",
+      "imageUrl": "/unit1_v3_story.png",
+      "sections": [
+        {
+          "id": "sec_story",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "s1_q1",
+              "content": "Marcus occupied a home with Nicholas.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Câu văn trong bài là \"A long time ago, a man named Marcus occupied a house with his family.\" (Cách đây rất lâu, một người đàn ông tên là Marcus đã ở trong một ngôi nhà cùng với gia đình của ông ấy). Như vậy Marcus sống với gia đình chứ không phải sống cùng Nicholas nhé. Do đó câu này là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q2",
+              "content": "Marcus told Nicholas about his problem when he encountered Nicholas.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Trong bài có viết \"One day, Nicholas encountered Marcus. Marcus told Nicholas about his agreement with the blacksmith.\" (Một ngày nọ, Nicholas tình cờ gặp Marcus. Marcus đã kể cho Nicholas nghe về thỏa thuận của ông ấy với người thợ rèn). Đoạn tiếp theo Marcus kể về rắc rối của mình. Vì vậy câu này là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q3",
+              "content": "A problem arose for Marcus because he enjoyed preaching.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Theo bài đọc, \"Even though I worked for him, he didn't pay me.\" (Mặc dù tôi đã làm việc cho ông ta, ông ta lại không trả tiền cho tôi). Vấn đề nảy sinh là do người thợ rèn không trả tiền công cho Marcus, chứ không phải vì ông ấy thích giảng đạo (preaching là việc của Nicholas). Nên câu này là Sai (False) nha.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q4",
+              "content": "Nicholas got a lot of satisfaction from being charitable and humble.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Bạn hãy xem câu \"He learned that helping people gave him even more satisfaction than preaching.\" (Anh ấy nhận ra rằng việc giúp đỡ mọi người mang lại cho anh ấy nhiều sự thỏa mãn hơn cả việc giảng đạo). Giúp đỡ mọi người chính là thể hiện sự nhân từ (charitable). Câu này là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q5",
+              "content": "Marcus was compensated by the blacksmith for helping forge iron.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Marcus đã phàn nàn rằng \"Even though I worked for him, he didn't pay me.\" (Mặc dù tôi đã làm việc cho ông ta, ông ta lại không trả tiền cho tôi). Điều đó có nghĩa là Marcus không hề được đền bù (compensated) cho công sức rèn sắt của mình. Do vậy đáp án là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q6",
+              "content": "The money that Nicholas gave Marcus exceeded the amount he needed.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Trong bài ghi rất rõ \"It exceeded the amount that Marcus needed.\" (Số tiền đó vượt quá số lượng mà Marcus cần). Từ \"exceeded\" nghĩa là vượt quá. Vì vậy câu này hoàn toàn Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q7",
+              "content": "Which of the following is true about the job Marcus did?",
+              "options": [
+                "He made pennies.",
+                "He was compensated unfairly.",
+                "He preached to people.",
+                "He barely sustained his family."
+              ],
+              "explanation": "Ở đoạn 3 có câu \"He worked hard, but he could barely sustain his family.\" (Ông ấy làm việc chăm chỉ, nhưng hầu như không thể nuôi sống nổi gia đình mình). Điều này hoàn toàn khớp với đáp án He barely sustained his family nhé.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "s1_q8",
+              "content": "Why didn't Nicolas tell people that he gave money away?",
+              "options": [
+                "He prospered.",
+                "He didn't want to be modest.",
+                "He wanted to be humble.",
+                "He wasn't popular in the province."
+              ],
+              "explanation": "Đoạn 5 của bài có nói \"But he also believed that he should be humble and charitable.\" (Nhưng anh ấy cũng tin rằng mình nên khiêm tốn và nhân từ). Nicholas muốn giữ sự khiêm tốn (humble) nên không nói cho mọi người biết về việc mình tặng tiền.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "s1_q9",
+              "content": "What was dropped down the chimney?",
+              "options": [
+                "A penny",
+                "A ladder",
+                "Gold",
+                "A benefactor"
+              ],
+              "explanation": "Câu văn trong bài là \"Nicholas climbed up a ladder and dropped the bag of gold down the chimney.\" (Nicholas leo lên một cái thang và thả túi vàng xuống ống khói). Từ đó chúng ta thấy thứ được thả xuống ống khói chính là vàng (Gold).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "s1_q10",
+              "content": "Why did Marcus want more money?",
+              "options": [
+                "To buy more iron",
+                "To feed his family",
+                "To give it away",
+                "To become a blacksmith"
+              ],
+              "explanation": "Bài đọc nói rằng \"He worked hard, but he could barely sustain his family. He wanted to save money and prosper.\" (Ông ấy làm việc chăm chỉ, nhưng hầu như không thể nuôi sống nổi gia đình mình. Ông ấy muốn tiết kiệm tiền và trở nên thịnh vượng). Mục đích ban đầu của việc muốn có tiền là để nuôi gia đình (To feed his family) nha.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 1: Volume 3",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

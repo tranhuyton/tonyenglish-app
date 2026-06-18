@@ -1,0 +1,477 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit15_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit15_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">affair</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈfɛər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An affair is an event or a thing that happened.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My wife and I attended a formal affair over the weekend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">assembly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈsembli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An assembly is a group that is together for the same reason.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students had an assembly to talk about their interests.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bless</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bles]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bless is to ask God for protection or help.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The angel blessed the newborn baby to keep it safe.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cereal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsiəriəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cereal is a food that you mix with milk and eat for breakfast.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Cereal is a fast and common breakfast food enjoyed in the U.S.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cheerful</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈtʃɪərfəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is cheerful, they are happy or feel good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The children were cheerful because they didn't have to go to school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">diameter</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[daɪˈæmɪtər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The diameter of a round thing is the length across its center.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The diameter of the tree was about 22 centimeters.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exploit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪkˈsplɔɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To exploit something is to use it for greedy reasons rather than good reasons.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The company exploits their workers and makes them stay 12 hours a day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">famine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfæmɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A famine is a long time with little or no food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The farmers couldn't grow any food on the dry soil, so there was a famine.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">harvest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhɑːrvɪst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A harvest is the act of collecting food from farming.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They had a lot of wheat from the last harvest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">merry</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmeri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone is merry, they are very happy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They felt merry because the weather was great.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nut</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nʌt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A nut is a hard seed or fruit that comes from some trees and bushes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ To eat a nut, first you have to crack its shell.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pardon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈpɑːrdn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pardon is a way to ask someone to repeat what was said before.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Pardon me teacher, but could you repeat what you just said?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pharaoh</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfeəroʊ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pharaoh was a king in ancient Egypt.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The pharaohs ruled Egypt for thousands of years.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ripe</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[raɪp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a fruit is ripe, it is ready to be eaten.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The cherries were nice and ripe.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">roast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[roʊst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To roast something is to cook it in an oven or over a fire.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom roasted a turkey for the holiday dinner.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">routine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ruːˈtiːn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A routine is a way of doing things that is the same every time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My father's daily routine includes shaving right before breakfast.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scheme</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skiːm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A scheme is a plan or design.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mickey and Minnie came up with a scheme to solve the problem.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">slim</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[slɪm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something or someone is slim, they are thin.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Look at my new cell phone. It's very slim.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stove</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stoʊv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A stove is a device used to cook food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our new stove helps us to cook food much faster than before.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">theft</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θeft]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A theft is a criminal act that involves someone stealing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The theft of his TV took place when he was at work.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_wordlist_0",
+          "title": "Part A: Circle two words that are related in each group.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w0_q1",
+              "content": "a. theft b. nut c. cereal d. routine",
+              "options": [
+                "theft, nut",
+                "nut, cereal",
+                "cereal, routine",
+                "theft, routine"
+              ],
+              "explanation": "nut (hạt) và cereal (ngũ cốc) đều là các loại thức ăn.",
+              "correctAnswer": "NUT, CEREAL"
+            },
+            {
+              "id": "w0_q2",
+              "content": "a. roast b. pharaoh c. stove d. pardon",
+              "options": [
+                "roast, stove",
+                "pharaoh, pardon",
+                "roast, pharaoh",
+                "stove, pardon"
+              ],
+              "explanation": "roast (nướng) và stove (bếp) đều liên quan đến nấu ăn.",
+              "correctAnswer": "ROAST, STOVE"
+            },
+            {
+              "id": "w0_q3",
+              "content": "a. assembly b. affair c. bless d. exploit",
+              "options": [
+                "assembly, bless",
+                "affair, exploit",
+                "assembly, affair",
+                "bless, exploit"
+              ],
+              "explanation": "assembly (cuộc họp) và affair (sự kiện) đều chỉ các sự kiện tập trung đông người.",
+              "correctAnswer": "ASSEMBLY, AFFAIR"
+            },
+            {
+              "id": "w0_q4",
+              "content": "a. exploit b. famine c. merry d. cheerful",
+              "options": [
+                "exploit, famine",
+                "merry, cheerful",
+                "famine, merry",
+                "exploit, cheerful"
+              ],
+              "explanation": "merry và cheerful đều có nghĩa là vui vẻ.",
+              "correctAnswer": "MERRY, CHEERFUL"
+            },
+            {
+              "id": "w0_q5",
+              "content": "a. scheme b. slim c. ripe d. harvest",
+              "options": [
+                "scheme, slim",
+                "ripe, harvest",
+                "slim, ripe",
+                "scheme, harvest"
+              ],
+              "explanation": "ripe (chín) và harvest (thu hoạch) đều liên quan đến mùa màng, nông nghiệp.",
+              "correctAnswer": "RIPE, HARVEST"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_1",
+          "title": "Part B: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w1_q1",
+              "content": "The sun has a larger length across its center than the Earth.",
+              "options": [
+                "diameter",
+                "routine",
+                "theft",
+                "scheme"
+              ],
+              "explanation": "length across its center nghĩa là đường kính (diameter).",
+              "correctAnswer": "DIAMETER"
+            },
+            {
+              "id": "w1_q2",
+              "content": "The criminal act of taking something stunned the classroom of friends.",
+              "options": [
+                "bless",
+                "famine",
+                "theft",
+                "assembly"
+              ],
+              "explanation": "criminal act of taking something nghĩa là hành vi trộm cắp (theft).",
+              "correctAnswer": "THEFT"
+            },
+            {
+              "id": "w1_q3",
+              "content": "Her new plan may just solve our year-long problem.",
+              "options": [
+                "affair",
+                "scheme",
+                "routine",
+                "nut"
+              ],
+              "explanation": "plan nghĩa là kế hoạch (scheme).",
+              "correctAnswer": "SCHEME"
+            },
+            {
+              "id": "w1_q4",
+              "content": "The woman wanted the religious man to ask God for help for her.",
+              "options": [
+                "bless",
+                "pardon",
+                "exploit",
+                "roast"
+              ],
+              "explanation": "ask God for help nghĩa là cầu nguyện, ban phước (bless).",
+              "correctAnswer": "BLESS"
+            },
+            {
+              "id": "w1_q5",
+              "content": "During the long time with no food, her family had to move to the city.",
+              "options": [
+                "harvest",
+                "cereal",
+                "famine",
+                "assembly"
+              ],
+              "explanation": "long time with no food nghĩa là nạn đói (famine).",
+              "correctAnswer": "FAMINE"
+            },
+            {
+              "id": "w1_q6",
+              "content": "The oil company used for greedy reasons the resources of the poor country.",
+              "options": [
+                "exploited",
+                "blessed",
+                "roasted",
+                "pardoned"
+              ],
+              "explanation": "used for greedy reasons nghĩa là bóc lột, lợi dụng (exploited).",
+              "correctAnswer": "EXPLOITED"
+            },
+            {
+              "id": "w1_q7",
+              "content": "Since he is very skinny, most of his clothes don't fit him too well.",
+              "options": [
+                "cheerful",
+                "slim",
+                "ripe",
+                "merry"
+              ],
+              "explanation": "skinny nghĩa là mảnh khảnh, gầy (slim).",
+              "correctAnswer": "SLIM"
+            },
+            {
+              "id": "w1_q8",
+              "content": "My thing that I do everyday consists of going to work, the health club, and finally home.",
+              "options": [
+                "routine",
+                "affair",
+                "diameter",
+                "scheme"
+              ],
+              "explanation": "thing that I do everyday nghĩa là thói quen hàng ngày (routine).",
+              "correctAnswer": "ROUTINE"
+            },
+            {
+              "id": "w1_q9",
+              "content": "Would you repeat what you just said to me? I didn't quite understand.",
+              "options": [
+                "pardon",
+                "bless",
+                "exploit",
+                "roast"
+              ],
+              "explanation": "repeat what you just said nghĩa là yêu cầu nhắc lại, xin lỗi vì không nghe rõ (pardon).",
+              "correctAnswer": "PARDON"
+            },
+            {
+              "id": "w1_q10",
+              "content": "In history class, the students learned about the kings of ancient Egypt.",
+              "options": [
+                "pharaohs",
+                "thefts",
+                "assemblies",
+                "famines"
+              ],
+              "explanation": "kings of ancient Egypt nghĩa là các pharaoh (pharaohs).",
+              "correctAnswer": "PHARAOHS"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Part C: Choose the word that is a better fit for each blank.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w2_q1",
+              "content": "After picking the ________ fruit, the cook ________ it in the oven.",
+              "options": [
+                "ripe, roasted",
+                "roasted, ripe",
+                "ripe, ripe",
+                "roasted, roasted"
+              ],
+              "explanation": "Trái cây chín (ripe) được hái, sau đó được nướng (roasted) trong lò.",
+              "correctAnswer": "RIPE, ROASTED"
+            },
+            {
+              "id": "w2_q2",
+              "content": "The boy didn't hear what the police said, so he asked, \"________ me. Did they say that there had been a ________ in his home?\"",
+              "options": [
+                "theft, pardon",
+                "pardon, theft",
+                "pardon, pardon",
+                "theft, theft"
+              ],
+              "explanation": "Pardon me dùng để xin lỗi và yêu cầu nhắc lại. Theft là vụ trộm.",
+              "correctAnswer": "PARDON, THEFT"
+            },
+            {
+              "id": "w2_q3",
+              "content": "During the ________, only the ________ had enough food to eat.",
+              "options": [
+                "famine, pharaoh",
+                "pharaoh, famine",
+                "famine, famine",
+                "pharaoh, pharaoh"
+              ],
+              "explanation": "Trong nạn đói (famine), chỉ có nhà vua (pharaoh) mới có đủ thức ăn.",
+              "correctAnswer": "FAMINE, PHARAOH"
+            },
+            {
+              "id": "w2_q4",
+              "content": "He wasn't allowed to use the ________, so he made himself a bowl of ________ instead.",
+              "options": [
+                "cereal, stove",
+                "stove, cereal",
+                "cereal, cereal",
+                "stove, stove"
+              ],
+              "explanation": "Không được dùng bếp (stove) nên cậu ấy làm một bát ngũ cốc (cereal).",
+              "correctAnswer": "STOVE, CEREAL"
+            },
+            {
+              "id": "w2_q5",
+              "content": "After eating much of the food from the ________, she was no longer very ________.",
+              "options": [
+                "slim, harvest",
+                "harvest, slim",
+                "harvest, harvest",
+                "slim, slim"
+              ],
+              "explanation": "Sau khi ăn nhiều thức ăn từ vụ thu hoạch (harvest), cô ấy không còn gầy (slim) nữa.",
+              "correctAnswer": "HARVEST, SLIM"
+            },
+            {
+              "id": "w2_q6",
+              "content": "You can tell the size of the food inside a ________ if you measure the ________ of its shell.",
+              "options": [
+                "nut, diameter",
+                "diameter, nut",
+                "nut, nut",
+                "diameter, diameter"
+              ],
+              "explanation": "Đo đường kính (diameter) của vỏ hạt (nut) để biết kích thước phần nhân bên trong.",
+              "correctAnswer": "NUT, DIAMETER"
+            },
+            {
+              "id": "w2_q7",
+              "content": "The party was such a happy ________; everyone seemed so ________.",
+              "options": [
+                "affair, merry",
+                "merry, affair",
+                "affair, affair",
+                "merry, merry"
+              ],
+              "explanation": "Bữa tiệc là một sự kiện (affair) vui vẻ, mọi người đều rất vui (merry).",
+              "correctAnswer": "AFFAIR, MERRY"
+            },
+            {
+              "id": "w2_q8",
+              "content": "Her daily ________ included visiting her grandmother and asking God to ________ her so she would stay healthy.",
+              "options": [
+                "routine, bless",
+                "bless, routine",
+                "routine, routine",
+                "bless, bless"
+              ],
+              "explanation": "Thói quen hàng ngày (routine) của cô ấy là đến thăm bà và xin Chúa ban phước (bless).",
+              "correctAnswer": "ROUTINE, BLESS"
+            },
+            {
+              "id": "w2_q9",
+              "content": "The king had a plan to ________ the people, but the people had an ________ to stop him.",
+              "options": [
+                "exploit, assembly",
+                "assembly, exploit",
+                "exploit, exploit",
+                "assembly, assembly"
+              ],
+              "explanation": "Nhà vua muốn bóc lột (exploit) người dân, nhưng họ đã tổ chức một cuộc họp (assembly) để ngăn lại.",
+              "correctAnswer": "EXPLOIT, ASSEMBLY"
+            },
+            {
+              "id": "w2_q10",
+              "content": "She was ________ because everything about her ________ had worked.",
+              "options": [
+                "cheerful, scheme",
+                "scheme, cheerful",
+                "cheerful, cheerful",
+                "scheme, scheme"
+              ],
+              "explanation": "Cô ấy vui vẻ (cheerful) vì kế hoạch (scheme) của cô ấy đã thành công.",
+              "correctAnswer": "CHEERFUL, SCHEME"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Why Monkey Has No Home</h1>        <p style=\"margin-bottom: 1rem;\">For five years, there was a <strong>famine</strong>. The farmers asked people to <strong>bless</strong> them and finally, they had a good <strong>harvest</strong>. Since there was now plenty of food, the <strong>pharaoh</strong> decided to have a party. The party was a happy <strong>affair</strong>. For five days they had a huge feast.</p>    <p style=\"margin-bottom: 1rem;\">Monkey was very happy. Because of the <strong>famine</strong>, he was very <strong>slim</strong>. He wanted to eat a lot of food.</p>    <p style=\"margin-bottom: 1rem;\">When he arrived at the feast, hundreds of long tables were filled with food. There were <strong>nuts</strong>, bowls of <strong>cereal</strong>, and <strong>ripe</strong> fruit. He could also smell hot <strong>roasted</strong> meat cooking on the <strong>stove</strong>.</p>    <p style=\"margin-bottom: 1rem;\">The <strong>assembly</strong> of animals was <strong>merry</strong>. However, during the feast, Monkey thought of a <strong>scheme</strong> to <strong>exploit</strong> the <strong>pharaoh</strong>'s kindness. He decided to steal some of the food and then eat it at home.</p>    <p style=\"margin-bottom: 1rem;\">All the animals were <strong>cheerful</strong>. They didn't notice that monkey was hiding food. After the feast, Monkey took the food to his house and ate it. He repeated this <strong>routine</strong> every day for four days.</p>    <p style=\"margin-bottom: 1rem;\">But on the fifth day, the <strong>pharaoh</strong> had a surprise. He was going to give all the animals a home. Monkey was very excited. But when he arrived at the <strong>pharaoh</strong>'s home, he could not get through the door. The <strong>diameter</strong> of his waist was wider than the doorway. He was too fat!</p>    <p style=\"margin-bottom: 1rem;\">Monkey asked the <strong>pharaoh</strong> to forgive him for his <strong>theft</strong>. But the <strong>pharaoh</strong> said no.</p>    <p style=\"margin-bottom: 1rem;\">\"<strong>Pardon</strong>?\" asked the monkey. He didn't understand why the <strong>pharaoh</strong> was being unkind.</p>    <p style=\"margin-bottom: 1rem;\">\"Everybody else will have a home now, but not you. Now you know that greed gets you nothing,\" explained the <strong>pharaoh</strong>.</p></div>",
+      "imageUrl": "/unit15_v3_story.png",
+      "sections": [
+        {
+          "id": "sec_story",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "s1_q1",
+              "content": "The pharaoh's party was a sad affair.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Bữa tiệc của pharaoh là một sự kiện vui vẻ (happy affair), không phải buồn tẻ (sad).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q2",
+              "content": "There was plenty of ripe fruit at the party from the harvest.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Có rất nhiều trái cây chín (ripe fruit) tại bữa tiệc từ vụ thu hoạch.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q3",
+              "content": "The assembly of animals was merry.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Cuộc tụ tập của các loài động vật rất vui vẻ (merry).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q4",
+              "content": "Monkey repeated his routine for five days.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Khỉ chỉ lặp lại thói quen đó trong bốn ngày (four days), không phải năm ngày.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q5",
+              "content": "The diameter of Monkey's waist was wider than the doorway.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Đường kính eo của khỉ thực sự rộng hơn cả khung cửa.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q6",
+              "content": "The pharaoh asked Monkey, \"Pardon?\"",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Khỉ là người đã hỏi 'Pardon?' chứ không phải pharaoh.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q7",
+              "content": "The pharaoh gave a party for all the animals because _____.",
+              "options": [
+                "they blessed the farmers",
+                "the famine ended",
+                "he wanted to exploit the animals",
+                "they were too slim"
+              ],
+              "explanation": "Pharaoh tổ chức bữa tiệc vì nạn đói đã kết thúc (the famine ended).",
+              "correctAnswer": "B. THE FAMINE ENDED"
+            },
+            {
+              "id": "s1_q8",
+              "content": "What did Monkey do with the food?",
+              "options": [
+                "He hid it under the table.",
+                "He took it to his house.",
+                "He gave it to the pharaoh.",
+                "He cooked it in the stove."
+              ],
+              "explanation": "Khỉ đã mang thức ăn về nhà của mình (took it to his house).",
+              "correctAnswer": "B. HE TOOK IT TO HIS HOUSE."
+            },
+            {
+              "id": "s1_q9",
+              "content": "The tables were full of all of the following EXCEPT _____.",
+              "options": [
+                "vegetables",
+                "ripe fruit",
+                "cereal",
+                "roasted meat"
+              ],
+              "explanation": "Trên bàn có trái cây chín, ngũ cốc và thịt nướng, không có rau (vegetables).",
+              "correctAnswer": "A. VEGETABLES"
+            },
+            {
+              "id": "s1_q10",
+              "content": "What stopped Monkey from entering the party on the fifth day?",
+              "options": [
+                "A locked door",
+                "The pharaoh",
+                "His fat waist",
+                "The other animals"
+              ],
+              "explanation": "Eo quá béo (fat waist) khiến khỉ không thể lọt qua cửa.",
+              "correctAnswer": "C. HIS FAT WAIST"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 15: Volume 3",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

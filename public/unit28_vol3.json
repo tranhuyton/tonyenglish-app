@@ -1,0 +1,413 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit28_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit28_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ache</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something aches, it hurts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mindy's head ached because she bumped it against the wall.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">arctic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[a:rktik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is arctic, it is from far north near the North Pole.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is cold when the arctic winds blow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">canal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənæl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A canal is a path for water to travel through.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The city of Venice, Italy, has many canals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chemist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kemist]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A chemist is a scientist who works with chemicals.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My mother is a successful chemist who helps invent new products.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chill</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A chill is a feeling of cold.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The chill from the cold wind made Bill shiver.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">congress</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑŋgris]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Congress is a group of leaders in a government.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Congress makes laws for people to follow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dairy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɛəri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is dairy, it is made from milk.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Things like milk and cheese are dairy foods.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">descend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To descend is to go downward.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I descended the stairs to get out of the building.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grocer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[grousər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A grocer is a person who sells food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our grocer, Mr. Smith, is a very kind man.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hesitate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hezəteit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To hesitate is to wait for a short time before doing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He hesitated for a moment before he decided which choice to make.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">institution</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[instətju:ʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An institution is an organization that works to help a city or group of people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Banks are vital institutions that businesses and people use every day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">jog</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒɑg]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To jog is to run slowly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He jogs every day so he can be healthier.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">merchant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mər:tʃənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A merchant is a person who sells things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The merchant was selling used cars.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">poke</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pouk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To poke something is to push it with your finger.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I poked my finger on a thumb tack.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">postpone</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[poustpoun]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To postpone something is to make it happen later than planned.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They postponed the meeting until Elena arrived.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">splash</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[splæʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a liquid splashes, it bursts and hits something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some green paint splashed upon the floor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stubborn</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stʌbərn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If people are stubborn, they don't change their minds easily.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Both of my parents are stubborn. They never give in to each other.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">suburb</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sʌbərb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A suburb is a small part of a large city.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I grew up in the suburbs only a few minutes outside of the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tide</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[taid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The tide is the level of the water in the sea.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The tide continued to crawl upon the beach little by little.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tragedy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[trædʒədi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tragedy is a very sad event.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was a tragedy when his house was struck by lightning and burned.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "very cold",
+              "options": [
+                "a. arctic",
+                "b. grocer",
+                "c. canal",
+                "d. tide"
+              ],
+              "explanation": "Từ 'arctic' (tính từ) có nghĩa là rất lạnh (very cold).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2",
+              "content": "a person who sells things",
+              "options": [
+                "a. dairy",
+                "b. merchant",
+                "c. tragedy",
+                "d. congress"
+              ],
+              "explanation": "Từ 'merchant' (danh từ) có nghĩa là người bán hàng, thương gia (a person who sells things).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "3",
+              "content": "something very bad",
+              "options": [
+                "a. chemist",
+                "b. chill",
+                "c. tragedy",
+                "d. tide"
+              ],
+              "explanation": "Từ 'tragedy' (danh từ) có nghĩa là thảm kịch, một điều rất tồi tệ (something very bad).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "4",
+              "content": "to go down",
+              "options": [
+                "a. hesitate",
+                "b. descend",
+                "c. institution",
+                "d. splash"
+              ],
+              "explanation": "Từ 'descend' (động từ) có nghĩa là đi xuống (to go down).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "to run",
+              "options": [
+                "a. postpone",
+                "b. suburb",
+                "c. poke",
+                "d. jog"
+              ],
+              "explanation": "Từ 'jog' (động từ) có nghĩa là chạy bộ, chạy chậm (to run slowly).",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Part B: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "hesitate",
+              "options": [
+                "a. an organization",
+                "b. to feel pain",
+                "c. to wait for a moment",
+                "d. to make something happen later"
+              ],
+              "explanation": "Từ 'hesitate' (động từ) có nghĩa là ngập ngừng, chần chừ chờ đợi một lát trước khi làm gì đó (to wait for a short time before doing something).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "7",
+              "content": "canal",
+              "options": [
+                "a. to go down",
+                "b. a path for water",
+                "c. things made from milk",
+                "d. a small city"
+              ],
+              "explanation": "Từ 'canal' (danh từ) có nghĩa là kênh đào, đường dẫn nước (a path for water to travel through).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "chill",
+              "options": [
+                "a. a group of leaders",
+                "b. a feeling of cold",
+                "c. a person who sells food",
+                "d. to run"
+              ],
+              "explanation": "Từ 'chill' (danh từ) có nghĩa là sự ớn lạnh, cảm giác lạnh (a feeling of cold).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "9",
+              "content": "stubborn",
+              "options": [
+                "a. a very bad thing",
+                "b. a person who sells things",
+                "c. when water hits something",
+                "d. not changing your mind"
+              ],
+              "explanation": "Từ 'stubborn' (tính từ) có nghĩa là bướng bỉnh, ngoan cố, không dễ dàng thay đổi ý định (don't change their minds easily).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "10",
+              "content": "poke",
+              "options": [
+                "a. to make something later",
+                "b. the level of the sea",
+                "c. to push with your finger",
+                "d. a scientist"
+              ],
+              "explanation": "Từ 'poke' (động từ) có nghĩa là chọc, nhấn bằng ngón tay (to push it with your finger).",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "The party was planned for tonight, but it was moved to a later time.",
+              "options": [
+                "postponed",
+                "descended",
+                "splashed",
+                "hesitated"
+              ],
+              "explanation": "Cụm từ 'moved to a later time' (dời sang thời gian muộn hơn) đồng nghĩa với 'postponed' (bị hoãn lại).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "I was recently elected to the group of people who make laws in a government.",
+              "options": [
+                "institution",
+                "suburb",
+                "congress",
+                "merchant"
+              ],
+              "explanation": "Cụm từ 'group of people who make laws in a government' (nhóm người làm luật trong chính phủ) đồng nghĩa với 'congress' (quốc hội).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "13",
+              "content": "My grandfather was a person who sold things.",
+              "options": [
+                "grocer",
+                "merchant",
+                "chemist",
+                "congress"
+              ],
+              "explanation": "Cụm từ 'a person who sold things' (người bán hàng hóa) đồng nghĩa với 'merchant' (thương gia).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "The hospital is an important organization in the town.",
+              "options": [
+                "suburb",
+                "tragedy",
+                "institution",
+                "canal"
+              ],
+              "explanation": "Từ 'organization' (tổ chức) đồng nghĩa với 'institution' (cơ sở, tổ chức).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "15",
+              "content": "The scientist who works with chemicals created a new formula for health.",
+              "options": [
+                "chemist",
+                "merchant",
+                "grocer",
+                "congress"
+              ],
+              "explanation": "Cụm từ 'scientist who works with chemicals' (nhà khoa học làm việc với hóa chất) đồng nghĩa với 'chemist' (nhà hóa học).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "The foods made from milk section is in the back of the supermarket.",
+              "options": [
+                "dairy",
+                "arctic",
+                "stubborn",
+                "chill"
+              ],
+              "explanation": "Cụm từ 'foods made from milk' (thức ăn làm từ sữa) đồng nghĩa với 'dairy' (sản phẩm từ sữa).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "Don't burst the water inside the tub.",
+              "options": [
+                "splash",
+                "descend",
+                "poke",
+                "jog"
+              ],
+              "explanation": "Cụm từ 'burst the water' (làm văng nước) đồng nghĩa với 'splash' (làm bắn nước, văng nước).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "She lives in the small parts of the large city.",
+              "options": [
+                "canal",
+                "institution",
+                "suburb",
+                "congress"
+              ],
+              "explanation": "Cụm từ 'small parts of the large city' (những khu vực nhỏ của thành phố lớn) đồng nghĩa với 'suburb' (vùng ngoại ô).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "19",
+              "content": "The level of the water in the sea rises and falls every day.",
+              "options": [
+                "tide",
+                "canal",
+                "chill",
+                "tragedy"
+              ],
+              "explanation": "Cụm từ 'level of the water in the sea' (mực nước trên biển) đồng nghĩa với 'tide' (thủy triều).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "It hurts in my lower back.",
+              "options": [
+                "aches",
+                "chills",
+                "pokes",
+                "splashes"
+              ],
+              "explanation": "Từ 'hurts' (bị đau) đồng nghĩa với 'aches' (đau nhức).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Boy Who Saved the Town</h1>        <p style=\"margin-bottom: 1rem;\">Marcus lived in a small <b>suburb</b> near the sea. He was a <b>stubborn</b> boy, and he only cared about himself. His father worked as a <b>chemist</b> for an <b>institution</b> and wanted Marcus to get a job there. Instead, the boy delivered milk. Each morning he took <b>dairy</b> products to the <b>grocers</b>.</p>    <p style=\"margin-bottom: 1rem;\">One day, Marcus was <b>jogging</b> down the street with a gallon of milk to give to a <b>merchant</b>. He didn't want to be late. He ran down a path beside a large <b>canal</b>. A wall there kept water from coming into the town during high <b>tide</b>. But Marcus saw a small hole in the wall. Marcus knew that if the wall broke, it would be a <b>tragedy</b> for the town.</p>    <p style=\"margin-bottom: 1rem;\">At first, he <b>hesitated</b>. He had to choose between helping himself and helping the town. There was only one way to save the town. It seemed crazy to him, but it was the only thing he could do. He <b>poked</b> his finger into the hole. This didn't fix the problem forever, but it did <b>postpone</b> the tragedy.</p>    <p style=\"margin-bottom: 1rem;\">His finger <b>ached</b>. He felt the <b>chill</b> of the <b>arctic</b> water as it <b>splashed</b> him. There was no one else around. He knew he had to wait until the tide <b>descended</b>. It was very difficult, but Marcus stayed there and saved the town.</p>    <p style=\"margin-bottom: 1rem;\">Once the tide had descended, Marcus told everyone what happened. A group of people went to the wall. They saw the hole and fixed it. Everyone was very happy with Marcus. The local <b>congress</b> even gave him a gift for saving the town. He was a hero.</p></div>",
+      "imageUrl": "/unit28_v3_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Part A: Mark each statement True or False.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "Marcus only postponed the tragedy for a short time.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Đúng (T). Bài đọc có nhắc đến việc hành động của cậu không giải quyết vấn đề mãi mãi, mà chỉ trì hoãn thảm kịch (This didn't fix the problem forever, but it did postpone the tragedy).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "The chill of the arctic water made Marcus take his finger out of the wall.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Sai (F). Nước lạnh làm ngón tay Marcus đau, nhưng cậu không hề rút tay ra mà đã đợi cho đến khi thủy triều rút xuống (He knew he had to wait until the tide descended. It was very difficult, but Marcus stayed there and saved the town).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "23",
+              "content": "Marcus worked in an institution with his father.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Sai (F). Marcus không làm việc cùng cha trong viện nghiên cứu. Thay vào đó, cậu làm công việc giao sữa (Instead, the boy delivered milk).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "24",
+              "content": "In the end, everyone was very angry with Marcus.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Sai (F). Cuối cùng, mọi người đều rất vui mừng với Marcus và cậu trở thành anh hùng (Everyone was very happy with Marcus ... He was a hero).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "25",
+              "content": "Marcus didn't want to be late taking the milk to the merchant.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Đúng (T). Bài đọc ghi rõ: He didn't want to be late (Cậu ấy không muốn bị trễ giờ giao sữa cho thương gia).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "26",
+              "content": "Marcus ran down a path by a canal.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "explanation": "Đúng (T). Dựa vào bài đọc: He ran down a path beside a large canal (Cậu chạy dọc theo một con đường mòn bên cạnh một con kênh lớn).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec5_reading",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "27",
+              "content": "Why was Marcus jogging down the street with a gallon of milk?",
+              "options": [
+                "a. He liked to run beside a large canal.",
+                "b. He had to give it to the grocer soon.",
+                "c. He was a stubborn boy.",
+                "d. He had to make it home before the tide descended."
+              ],
+              "explanation": "Dựa vào câu văn: One day, Marcus was jogging down the street with a gallon of milk to give to a merchant. He didn't want to be late. Cậu đang mang sữa đến cho người bán hàng và không muốn bị trễ. Do đó đáp án B là chính xác.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "28",
+              "content": "Why did Marcus hesitate to poke his finger into the wall?",
+              "options": [
+                "a. He didn't know who to save, himself or the town.",
+                "b. He didn't want to get in trouble.",
+                "c. He didn't want a gift from congress.",
+                "d. The arctic water was so cold."
+              ],
+              "explanation": "Khi định dùng ngón tay bịt lỗ thủng, cậu đã ngập ngừng vì phải đấu tranh giữa việc tự lo cho bản thân hay giúp đỡ thị trấn (He had to choose between helping himself and helping the town). Do đó đáp án A là chính xác.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "29",
+              "content": "What was Marcus's job?",
+              "options": [
+                "a. He was a chemist.",
+                "b. He was a grocer in the suburb.",
+                "c. He did things to help the town.",
+                "d. He took dairy products to merchants in town."
+              ],
+              "explanation": "Công việc của Marcus là giao sữa và các sản phẩm từ sữa cho các cửa hàng (Each morning he took dairy products to the grocers). Do đó đáp án D là chính xác.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "30",
+              "content": "Why did Marcus's finger ache?",
+              "options": [
+                "a. He was very stubborn.",
+                "b. The hole was very small.",
+                "c. The water was very cold.",
+                "d. He knew he would be in trouble."
+              ],
+              "explanation": "Ngón tay cậu đau do nước biển Bắc Cực rất lạnh tạt vào (He felt the chill of the arctic water as it splashed him). Do đó đáp án C là chính xác.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 28",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

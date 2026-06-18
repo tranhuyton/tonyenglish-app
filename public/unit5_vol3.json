@@ -1,0 +1,477 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit5_v3_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit5_v3_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">acquaint</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[akweint]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To acquaint is to get to know something or someone.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Nancy acquainted herself with the new computer.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cemetery</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[semateri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cemetery is where people are buried when they die.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some people are scared of cemeteries.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">curse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ka:rs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To curse someone or something is to hope that bad things happen to them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The witch cursed the village.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disguise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[disgaiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A disguise is something you wear so people cannot tell who you are.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Everyone knew that it was Dad in the Santa disguise.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fancy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[faensi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is fancy, it is nicer than normal.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Their table was all set for a fancy dinner.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flashlight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flaeflait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A flashlight is a small electric light that you carry in your hand.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We took a flashlight when we went camping.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hood</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hud]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hood is part of a coat that goes over your head.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She put on her hood to keep her head warm.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inhabitant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inhaebatant]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An inhabitant is a person who lives in a certain place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The number of inhabitants in the countryside is increasing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nourish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[na:rif]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To nourish something is to give it food that it needs to live.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A good mother will nourish her baby every day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pirate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paiarat]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pirate is a sailor who steals things from other boats.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Pirates are very scary characters.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">publication</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pAblakeijan]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A publication is something printed, like a newspaper or book.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She's been a subscriber to that publication for over ten years.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">riddle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ridl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A riddle is a question that is difficult to answer but meant to be funny.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I could not answer Wendy's riddle, but it made me laugh.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rot]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something rots, it slowly gets softer and is destroyed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The old log began to rot in the forest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scare</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skaear]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To scare means to cause one to feel frightened.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was scared by the sight of the monster.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shortly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fo:rtli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something will happen shortly, it will happen very soon.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My workday will end shortly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">skeleton</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skelatn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A skeleton is the bones of a body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is a skeleton in the science classroom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spoil</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spoil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something spoils, it turns bad or rots.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We left the fruit out too long, and it spoiled.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">starve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sta:rv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a person starves, they do not get enough to eat and sometimes die.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ During the war, many people starved.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thrill</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eril]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A thrill is an exciting feeling.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boys enjoy the thrill of surfing a big wave.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">💡</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wicked</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wikid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is wicked, it is very bad or evil.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My boss is a very wicked man.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec_wordlist_0",
+          "title": "Exercise 1: Choose the word that is the better fit for each blank.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w0_q1",
+              "content": "1. Mary ____________ the creature that came into her yard and ____________ her dog.",
+              "options": [
+                "cursed / scared",
+                "scared / cursed",
+                "curses / scares",
+                "cursing / scary"
+              ],
+              "explanation": "cursed (nguyền rủa), scared (làm hoảng sợ).",
+              "correctAnswer": "CURSED / SCARED"
+            },
+            {
+              "id": "w0_q2",
+              "content": "2. I don't like to walk in the ____________. I always think about the ____________ that are under the ground there.",
+              "options": [
+                "cemetery / skeletons",
+                "skeletons / cemetery",
+                "cemeteries / skeleton",
+                "skeleton / cemeteries"
+              ],
+              "explanation": "cemetery (nghĩa trang), skeletons (bộ xương).",
+              "correctAnswer": "CEMETERY / SKELETONS"
+            },
+            {
+              "id": "w0_q3",
+              "content": "3. My mother bought me a ____________ new coat. My favorite part is the warm ____________.",
+              "options": [
+                "fancy / hood",
+                "hood / fancy",
+                "fancies / hoods",
+                "hoods / fancies"
+              ],
+              "explanation": "fancy (lộng lẫy/đẹp đẽ), hood (mũ trùm đầu).",
+              "correctAnswer": "FANCY / HOOD"
+            },
+            {
+              "id": "w0_q4",
+              "content": "4. When my friend stayed at my house, we sat with a ____________. Instead of sleeping, we sat and told ____________ for an hour!",
+              "options": [
+                "flashlight / riddles",
+                "riddles / flashlight",
+                "flashlights / riddle",
+                "riddle / flashlights"
+              ],
+              "explanation": "flashlight (đèn pin), riddles (câu đố).",
+              "correctAnswer": "FLASHLIGHT / RIDDLES"
+            },
+            {
+              "id": "w0_q5",
+              "content": "5. Judy wanted to find a ____________ that was scary. Finally, she decided to dress like a ____________ witch.",
+              "options": [
+                "disguise / wicked",
+                "wicked / disguise",
+                "disguises / wickedness",
+                "wickedness / disguises"
+              ],
+              "explanation": "disguise (đồ hóa trang), wicked (độc ác).",
+              "correctAnswer": "DISGUISE / WICKED"
+            },
+            {
+              "id": "w0_q6",
+              "content": "6. We planted a vegetable garden to help ____________ our family. But many of the plants ____________ before we could eat them.",
+              "options": [
+                "nourish / rotted",
+                "rotted / nourish",
+                "nourishes / rotting",
+                "rotting / nourishes"
+              ],
+              "explanation": "nourish (nuôi dưỡng), rotted (đã thối rữa).",
+              "correctAnswer": "NOURISH / ROTTED"
+            },
+            {
+              "id": "w0_q7",
+              "content": "7. The poor family was ____________ after all of their food ____________.",
+              "options": [
+                "starving / spoiled",
+                "spoiled / starving",
+                "starves / spoils",
+                "spoils / starves"
+              ],
+              "explanation": "starving (chết đói), spoiled (đã hỏng).",
+              "correctAnswer": "STARVING / SPOILED"
+            },
+            {
+              "id": "w0_q8",
+              "content": "8. Tim loves being an ____________ of that town. Shortly after he moved there, he made many friends.",
+              "options": [
+                "inhabitant / shortly",
+                "shortly / inhabitant",
+                "inhabitants / short",
+                "short / inhabitants"
+              ],
+              "explanation": "inhabitant (cư dân), shortly (không lâu sau).",
+              "correctAnswer": "INHABITANT / SHORTLY"
+            },
+            {
+              "id": "w0_q9",
+              "content": "9. I entered a contest that was in my favorite ____________. Imagine the ____________ when I won!",
+              "options": [
+                "publication / thrill",
+                "thrill / publication",
+                "publications / thrills",
+                "thrills / publications"
+              ],
+              "explanation": "publication (ấn phẩm), thrill (sự phấn khích).",
+              "correctAnswer": "PUBLICATION / THRILL"
+            },
+            {
+              "id": "w0_q10",
+              "content": "10. Christie ____________ me with her city's library. Since then, I have read every book they have about ____________.",
+              "options": [
+                "acquainted / pirates",
+                "pirates / acquainted",
+                "acquaints / pirate",
+                "pirate / acquaints"
+              ],
+              "explanation": "acquainted (làm quen), pirates (cướp biển).",
+              "correctAnswer": "ACQUAINTED / PIRATES"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_1",
+          "title": "Exercise 2: Choose the answer that best fits the question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w1_q1",
+              "content": "1. Which of the following best describes an evil person?",
+              "options": [
+                "Shortly",
+                "Curse",
+                "Fancy",
+                "Wicked"
+              ],
+              "explanation": "Wicked có nghĩa là độc ác.",
+              "correctAnswer": "D. WICKED"
+            },
+            {
+              "id": "w1_q2",
+              "content": "2. Which one is a feeling?",
+              "options": [
+                "A thrill",
+                "A hood",
+                "A flashlight",
+                "An inhabitant"
+              ],
+              "explanation": "Thrill là một cảm giác hồi hộp, phấn khích.",
+              "correctAnswer": "A. A THRILL"
+            },
+            {
+              "id": "w1_q3",
+              "content": "3. Which one can you wear?",
+              "options": [
+                "A cemetery",
+                "A disguise",
+                "A publication",
+                "A riddle"
+              ],
+              "explanation": "Disguise (đồ cải trang) là thứ có thể mặc được.",
+              "correctAnswer": "B. A DISGUISE"
+            },
+            {
+              "id": "w1_q4",
+              "content": "4. Which of the following is most related to death?",
+              "options": [
+                "Spoil",
+                "Acquaint",
+                "Starve",
+                "Nourish"
+              ],
+              "explanation": "Starve (chết đói) là từ liên quan nhiều nhất đến cái chết trong các từ đã cho.",
+              "correctAnswer": "C. STARVE"
+            },
+            {
+              "id": "w1_q5",
+              "content": "5. Which of the following is most commonly related to the ocean?",
+              "options": [
+                "Rot",
+                "Scare",
+                "Skeleton",
+                "Pirate"
+              ],
+              "explanation": "Pirate (hải tặc) liên quan đến đại dương.",
+              "correctAnswer": "D. PIRATE"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec_wordlist_2",
+          "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "w2_q1",
+              "content": "1. Mom says we need to hurry because the game will start very soon.",
+              "options": [
+                "shortly",
+                "riddles",
+                "curse",
+                "fancy"
+              ],
+              "explanation": "very soon đồng nghĩa với shortly.",
+              "correctAnswer": "SHORTLY"
+            },
+            {
+              "id": "w2_q2",
+              "content": "2. It's a good idea to get to know with co-workers.",
+              "options": [
+                "acquaint",
+                "inhabitant",
+                "scared",
+                "hood"
+              ],
+              "explanation": "get to know đồng nghĩa với acquaint.",
+              "correctAnswer": "ACQUAINT"
+            },
+            {
+              "id": "w2_q3",
+              "content": "3. My little brother bothered me all day by asking me to solve his difficult questions.",
+              "options": [
+                "riddles",
+                "publication",
+                "flashlight",
+                "starve"
+              ],
+              "explanation": "difficult questions đồng nghĩa với riddles.",
+              "correctAnswer": "RIDDLES"
+            },
+            {
+              "id": "w2_q4",
+              "content": "4. A reporter at that newspaper won a prize.",
+              "options": [
+                "publication",
+                "cemetery",
+                "disguise",
+                "pirate"
+              ],
+              "explanation": "newspaper là một dạng publication (ấn phẩm).",
+              "correctAnswer": "PUBLICATION"
+            },
+            {
+              "id": "w2_q5",
+              "content": "5. I am an individual who lives in the central part of town.",
+              "options": [
+                "inhabitant",
+                "skeleton",
+                "spoil",
+                "rot"
+              ],
+              "explanation": "individual who lives in đồng nghĩa với inhabitant.",
+              "correctAnswer": "INHABITANT"
+            },
+            {
+              "id": "w2_q6",
+              "content": "6. He was crying because he was caused to feel fright.",
+              "options": [
+                "scared",
+                "wicked",
+                "thrill",
+                "curse"
+              ],
+              "explanation": "caused to feel fright đồng nghĩa với scared.",
+              "correctAnswer": "SCARED"
+            },
+            {
+              "id": "w2_q7",
+              "content": "7. I want to buy that really nice dress I saw in the store.",
+              "options": [
+                "fancy",
+                "shortly",
+                "acquaint",
+                "nourish"
+              ],
+              "explanation": "really nice đồng nghĩa với fancy.",
+              "correctAnswer": "FANCY"
+            },
+            {
+              "id": "w2_q8",
+              "content": "8. I need a light I can carry to see in the dark cabin.",
+              "options": [
+                "flashlight",
+                "hood",
+                "disguise",
+                "riddle"
+              ],
+              "explanation": "light I can carry đồng nghĩa với flashlight.",
+              "correctAnswer": "FLASHLIGHT"
+            },
+            {
+              "id": "w2_q9",
+              "content": "9. The children were afraid that the witch would hope bad things would happen to them.",
+              "options": [
+                "curse",
+                "rot",
+                "scare",
+                "starve"
+              ],
+              "explanation": "hope bad things would happen đồng nghĩa với curse.",
+              "correctAnswer": "CURSE"
+            },
+            {
+              "id": "w2_q10",
+              "content": "10. The part of your coat that covers your head keeps your head nice and warm.",
+              "options": [
+                "hood",
+                "fancy",
+                "skeleton",
+                "cemetery"
+              ],
+              "explanation": "part of your coat that covers your head đồng nghĩa với hood.",
+              "correctAnswer": "HOOD"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Trick-or-treat!</h1>        <p style=\"margin-bottom: 1rem;\">Many different cultures have had traditions about the dead. People in places like Ireland, China, Egypt and Mexico believed that souls needed food. They thought the food <strong>nourished</strong> them on their journey from cemeteries to heaven. People had to put out good things for souls to eat. However, if the food rotted or <strong>spoiled</strong>, the soul got mad. The <strong>wicked</strong> soul might <strong>curse</strong> the family and make them <strong>starve</strong> during the winter.</p>    <p style=\"margin-bottom: 1rem;\">In other places, people begged for food on a holiday that remembers the souls of dead saints. People wore <strong>disguises</strong> with <strong>hoods</strong> that covered their faces. If they did not get food, they played a trick on the home. For this reason, the activity is known as \"trick-or-treating.\" <strong>Shortly</strong> after people first began trick-or-treating, parents started sending their children to beg on that day. Housewives gave the children food if they performed a song or a dance. When people moved to America from all over the world, they brought this tradition with them.</p>    <p style=\"margin-bottom: 1rem;\"><strong>Inhabitants</strong> of villages started trick-or-treating in the early 1900s. In 1939 a children's <strong>publication</strong> <strong>acquainted</strong> the whole country with the tradition. It became very popular.</p>    <p style=\"margin-bottom: 1rem;\">Today, trick-or-treaters are not begging for food, and they are not <strong>scared</strong> of souls. They just enjoy the <strong>thrill</strong> of dressing up like creatures and getting candy. Ghosts and <strong>skeletons</strong> are favorite costumes. But some children wear <strong>fancy</strong> <strong>disguises</strong>, like <strong>pirates</strong>. They carry <strong>flashlights</strong> instead of fires. In some places, children still perform songs or <strong>riddles</strong> to get candy. But most of the time, they just say \"Trick-or-Treat!\"</p></div>",
+      "imageUrl": "/unit5_v3_story.png",
+      "sections": [
+        {
+          "id": "sec_story",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "s1_q1",
+              "content": "Part A - 1. People from places like Iceland, Italy, Kenya and Canada believed souls needed food.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Bài đọc viết \"People in places like Ireland, China, Egypt and Mexico believed that souls needed food.\" (Người dân ở những nơi như Ireland, Trung Quốc, Ai Cập và Mexico tin rằng các linh hồn cần thức ăn). Danh sách quốc gia trong câu hỏi hoàn toàn sai. Vì vậy câu này là Sai (False) nha.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q2",
+              "content": "Part A - 2. Many cultures believed that souls needed food to nourish them on their journey back to life.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Trong bài có nói \"They thought the food nourished them on their journey from cemeteries to heaven.\" (Họ nghĩ rằng thức ăn sẽ nuôi dưỡng chúng trong cuộc hành trình từ nghĩa trang lên thiên đường). Tức là hành trình lên thiên đường chứ không phải là hành trình trở lại cuộc sống (journey back to life). Nên câu này là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q3",
+              "content": "Part A - 3. Housewives gave children food if they did chores around their homes.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Câu văn trong bài là \"Housewives gave the children food if they performed a song or a dance.\" (Các bà nội trợ sẽ cho bọn trẻ thức ăn nếu chúng biểu diễn một bài hát hoặc một điệu nhảy). Bọn trẻ không hề làm việc nhà (did chores). Nên câu này là Sai (False).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q4",
+              "content": "Part A - 4. Shortly after a children's publication wrote about trick-or-treating, it became popular.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Bài đọc giải thích \"In 1939 a children's publication acquainted the whole country with the tradition. It became very popular.\" (Năm 1939, một ấn phẩm dành cho trẻ em đã giúp cả nước làm quen với truyền thống này. Nó trở nên rất phổ biến). Điều này hoàn toàn khớp với câu hỏi. Đáp án là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q5",
+              "content": "Part A - 5. Children often wear fancy disguises for trick-or-treating today.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Ở đoạn cuối có nhắc đến \"But some children wear fancy disguises, like pirates.\" (Nhưng một số trẻ em mặc những bộ đồ hóa trang lộng lẫy, chẳng hạn như cướp biển). Do đó câu này là Đúng (True).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "s1_q6",
+              "content": "Part A - 6. Inhabitants from villages started trick-or-treating in the 1940s.",
+              "options": [
+                "True",
+                "False",
+                "Not Given",
+                "None of the above"
+              ],
+              "explanation": "Xem lại đoạn 3 của bài viết: \"Inhabitants of villages started trick-or-treating in the early 1900s.\" (Cư dân của các ngôi làng đã bắt đầu trò 'trick-or-treat' vào đầu những năm 1900). Chứ không phải vào những năm 1940. Vậy câu này là Sai (False) nhé.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "s1_q7",
+              "content": "Part B - 1. Which of the following is the most popular disguise?",
+              "options": [
+                "Hood",
+                "Skeleton",
+                "Creature",
+                "Pirate"
+              ],
+              "explanation": "Câu văn nói rõ \"Ghosts and skeletons are favorite costumes.\" (Ma và bộ xương là những trang phục được yêu thích nhất). Vậy trong các lựa chọn thì bộ xương (Skeleton) là câu trả lời chính xác.",
+              "correctAnswer": "B. SKELETON"
+            },
+            {
+              "id": "s1_q8",
+              "content": "Part B - 2. Why did souls need food?",
+              "options": [
+                "Theirs rotted",
+                "They were starving",
+                "For their long journey to heaven",
+                "To obtain new bodies"
+              ],
+              "explanation": "Lý do được nhắc tới ở đoạn 1: \"They thought the food nourished them on their journey from cemeteries to heaven.\" (Họ nghĩ rằng thức ăn nuôi dưỡng các linh hồn trong cuộc hành trình từ nghĩa trang lên thiên đường). Vậy linh hồn cần thức ăn cho hành trình dài lên thiên đường (For their long journey to heaven).",
+              "correctAnswer": "C. FOR THEIR LONG JOURNEY TO HEAVEN"
+            },
+            {
+              "id": "s1_q9",
+              "content": "Part B - 3. What did the souls do when they left cemeteries?",
+              "options": [
+                "Got new bodies",
+                "Dug up skeletons",
+                "Went to heaven",
+                "Got acquainted with people"
+              ],
+              "explanation": "Cùng câu văn phía trên \"their journey from cemeteries to heaven.\" (cuộc hành trình của họ từ nghĩa trang lên thiên đường). Tức là sau khi rời nghĩa trang, họ sẽ đến thiên đường. Đáp án là Went to heaven.",
+              "correctAnswer": "C. WENT TO HEAVEN"
+            },
+            {
+              "id": "s1_q10",
+              "content": "Part B - 4. Why do children perform riddles when they trick-or-treat?",
+              "options": [
+                "To get candy",
+                "To get flashlights",
+                "To get costumes",
+                "To get a thrill"
+              ],
+              "explanation": "Đoạn cuối bài viết có nói \"In some places, children still perform songs or riddles to get candy.\" (Ở một số nơi, trẻ em vẫn biểu diễn các bài hát hoặc câu đố để nhận được kẹo). Mục đích là để có được kẹo (To get candy).",
+              "correctAnswer": "A. TO GET CANDY"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 5: Volume 3",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}
