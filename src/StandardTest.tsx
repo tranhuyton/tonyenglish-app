@@ -1416,18 +1416,28 @@ const handleFinish = async () => {
                                    });
                                  }
                                } else {
-                                 if (Array.isArray(sec.questions)) {
-                                   sec.questions.forEach((q: any) => {
-                                     let qContent = String(q.content || '').trim();
-                                     if (qContent) {
-                                       if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
-                                         qContent += ` [${q.id}]`;
-                                       }
-                                       rawContentText += (rawContentText ? '<br><br>' : '') + qContent;
-                                     }
-                                   });
-                                 }
-                               }
+                                  if (Array.isArray(sec.questions)) {
+                                    let hasContent = false;
+                                    sec.questions.forEach((q: any) => {
+                                      let qContent = String(q.content || '').trim();
+                                      if (qContent) {
+                                        if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
+                                          qContent += ` [${q.id}]`;
+                                        }
+                                        if (!hasContent) {
+                                          rawContentText += (rawContentText ? '<ul class="list-disc pl-6 space-y-3 mt-4 mb-2 text-slate-700"><li>' : '<ul class="list-disc pl-6 space-y-3 mb-2 text-slate-700"><li>');
+                                        } else {
+                                          rawContentText += '</li><li>';
+                                        }
+                                        rawContentText += qContent;
+                                        hasContent = true;
+                                      }
+                                    });
+                                    if (hasContent) {
+                                      rawContentText += '</li></ul>';
+                                    }
+                                  }
+                                }
                                
                                const hasInlineBrackets = /\[\s*\d+\s*\]/.test(rawContentText);
                                const isInlineDroplist = sec.questionType === "Droplist" && hasInlineBrackets;
