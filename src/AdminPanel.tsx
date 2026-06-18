@@ -415,7 +415,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
   };
 
   const fetchGlobalLectures = async () => {
-    const { data } = await supabase.from('lectures').select('*, courses(title)').order('order_index', { ascending: true }).order('created_at', { ascending: false });
+    const { data } = await supabase.from('lectures').select('*, courses(title), lecture_modules(title)').order('order_index', { ascending: true }).order('created_at', { ascending: false });
     setGlobalLectures(data || []);
   };
 
@@ -1820,7 +1820,12 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                           <tr key={lec.id} className={`hover:bg-slate-50 transition-colors group ${selectedLectures.includes(lec.id) ? 'bg-blue-50/30' : ''}`}>
                             <td className="px-4 md:px-6 py-4 text-center text-[12px] md:text-[13px] font-bold text-slate-400">{(lectureCurrentPage - 1) * lectureItemsPerPage + index + 1}</td>
                             <td className="px-2 py-4"><input type="checkbox" className="rounded border-slate-300 cursor-pointer" checked={selectedLectures.includes(lec.id)} onChange={() => handleSelectOneLecture(lec.id)} /></td>
-                            <td className="px-4 md:px-6 py-4 font-bold text-[#0a5482] text-[13px] md:text-[14px]">{lec.title}</td>
+                            <td className="px-4 md:px-6 py-4">
+                               <div className="font-bold text-[#0a5482] text-[13px] md:text-[14px] flex items-center gap-2">
+                                  {lec.title}
+                               </div>
+                               <div className="text-[10px] md:text-[11px] text-slate-400 mt-1 font-medium uppercase tracking-tight">{lec.lecture_modules ? `Đã gán: ${lec.lecture_modules.title}` : 'Chưa gán học phần'}</div>
+                            </td>
                             <td className="px-4 md:px-6 py-4">{lec.courses ? <span className="px-2 py-1 bg-slate-100 border border-slate-200 rounded text-[10px] md:text-[11px] font-bold text-slate-600">{lec.courses.title}</span> : <span className="text-[10px] md:text-[11px] italic text-slate-400">-- Trống --</span>}</td>
                             <td className="px-4 md:px-6 py-4 text-center text-[11px] md:text-[12px] font-bold text-slate-500">HTML</td>
                             <td className="px-4 md:px-6 py-4"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(lec.created_at)}</div></td>
