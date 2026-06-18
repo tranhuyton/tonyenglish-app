@@ -442,10 +442,10 @@ const handleFinish = async () => {
              total++; 
              questionTypeStats[qType].total++;
              
-             const uAns = String(answers[String(q.id)] || '').trim().toUpperCase();
-             const cAns = String(q.correctAnswer || '').trim().toUpperCase();
+             const uAns = String(answers[String(q.id)] || '').trim();
+             const cAns = String(q.correctAnswer || '').trim();
              
-             if (uAns === cAns && cAns !== '') { 
+             if (isAnswerCorrect(uAns, cAns)) { 
                  score++; 
                  questionTypeStats[qType].correct++; 
              }
@@ -1247,46 +1247,7 @@ const handleFinish = async () => {
                           />
                         )}
                         
-                        {part?.sections?.map((sec: any, sIdx: number) => {
-                          let displaySecTitle = sec.title;
-                          
-                          if (displaySecTitle && /Questions?\s+\d+/i.test(displaySecTitle)) {
-                              let firstIdx = null;
-                              let lastIdx = null;
-                              
-                              if (sec.questionType === "Điền từ" || sec.questionType === "Điền khuyết" || sec.questionType === "Kéo thả vào Part") {
-                                  const matches = Array.from(String(sec.content || sec.questions?.[0]?.content || '').matchAll(/\[(\d+)\]/g));
-                                  if (matches.length > 0) {
-                                      firstIdx = questionIndexMap[matches[0][1]];
-                                      lastIdx = questionIndexMap[matches[matches.length - 1][1]];
-                                  }
-                              } else if (sec.questions?.length > 0) {
-                                  firstIdx = questionIndexMap[sec.questions[0].id];
-                                  lastIdx = questionIndexMap[sec.questions[sec.questions.length - 1].id];
-                              }
-                              
-                              if (firstIdx && lastIdx) {
-                                  displaySecTitle = displaySecTitle.replace(/Questions?\s+\d+(-\d+)?/i, firstIdx === lastIdx ? `Question ${firstIdx}` : `Questions ${firstIdx}-${lastIdx}`);
-                              }
-                          }
-
-                          return (
-                            <div key={sec?.id || sIdx} className="mb-8">
-                              {/* Removed displaySecTitle to avoid duplicating with the right pane */}
-                              
-                              {sec?.imageUrl && (
-                                  <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />
-                              )}
-                              
-                              {sec?.content && !["Điền từ", "Điền khuyết", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
-                                <div 
-                                    className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed bg-white p-5 rounded-xl border border-slate-200 shadow-sm" 
-                                    dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} 
-                                />
-                              )}
-                            </div>
-                          )
-                        })}
+                        {/* Removed part?.sections?.map from left pane. Instructions belong in the right pane. */}
                       </div>
                     );
                   })}
@@ -1350,13 +1311,7 @@ const handleFinish = async () => {
                               let firstIdx = null;
                               let lastIdx = null;
                               
-                              if (sec.questionType === "Điền từ" || sec.questionType === "Điền khuyết" || sec.questionType === "Kéo thả vào Part") {
-                                  const matches = Array.from(String(sec.content || sec.questions?.[0]?.content || '').matchAll(/\[(\d+)\]/g));
-                                  if (matches.length > 0) {
-                                      firstIdx = questionIndexMap[matches[0][1]];
-                                      lastIdx = questionIndexMap[matches[matches.length - 1][1]];
-                                  }
-                              } else if (sec.questions?.length > 0) {
+                              if (sec.questions?.length > 0) {
                                   firstIdx = questionIndexMap[sec.questions[0].id];
                                   lastIdx = questionIndexMap[sec.questions[sec.questions.length - 1].id];
                               }
@@ -1375,16 +1330,14 @@ const handleFinish = async () => {
                                  </div>
                              )}
 
-                             {/* NỘI DUNG SECTION SANG BÊN PHẢI NẾU LÀ LISTENING */}
-                             {isListening && (
-                                 <div className="mb-6">
-                                    {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
-                                    {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
-                                    {sec?.content && !["Điền từ", "Điền khuyết", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
-                                       <div className="text-slate-600 text-[15px] leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} />
-                                    )}
-                                 </div>
-                             )}
+                             {/* NỘI DUNG VÀ HÌNH ẢNH SECTION (CHO CẢ LISTENING VÀ READING) */}
+                             <div className="mb-6">
+                                {isListening && displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
+                                {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
+                                {sec?.content && !["Điền từ", "Điền khuyết", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
+                                   <div className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed mb-6 bg-white p-5 rounded-xl border border-slate-200 shadow-sm" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} />
+                                )}
+                             </div>
                              
                              {/* DẠNG BÀI INLINE: Điền từ, Kéo thả, Matching, Inline Droplist */}
                              {(() => {

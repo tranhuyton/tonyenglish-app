@@ -455,10 +455,10 @@ const handleFinish = async () => {
              total++; 
              questionTypeStats[qType].total++;
              
-             const uAns = String(answers[String(q.id)] || '').trim().toUpperCase();
-             const cAns = String(q.correctAnswer || '').trim().toUpperCase();
+             const uAns = String(answers[String(q.id)] || '').trim();
+             const cAns = String(q.correctAnswer || '').trim();
              
-             if (uAns === cAns && cAns !== '') { 
+             if (isAnswerCorrect(uAns, cAns)) { 
                  score++; 
                  questionTypeStats[qType].correct++; 
              }
@@ -1262,13 +1262,7 @@ const handleFinish = async () => {
                               let firstIdx = null;
                               let lastIdx = null;
                               
-                              if (sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") {
-                                  const matches = Array.from(String(sec.content || sec.questions?.[0]?.content || '').matchAll(/\[(\d+)\]/g));
-                                  if (matches.length > 0) {
-                                      firstIdx = questionIndexMap[matches[0][1]];
-                                      lastIdx = questionIndexMap[matches[matches.length - 1][1]];
-                                  }
-                              } else if (sec.questions?.length > 0) {
+                              if (sec.questions?.length > 0) {
                                   firstIdx = questionIndexMap[sec.questions[0].id];
                                   lastIdx = questionIndexMap[sec.questions[sec.questions.length - 1].id];
                               }
@@ -1358,13 +1352,7 @@ const handleFinish = async () => {
                               let firstIdx = null;
                               let lastIdx = null;
                               
-                              if (sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") {
-                                  const matches = Array.from(String(sec.content || sec.questions?.[0]?.content || '').matchAll(/\[(\d+)\]/g));
-                                  if (matches.length > 0) {
-                                      firstIdx = questionIndexMap[matches[0][1]];
-                                      lastIdx = questionIndexMap[matches[matches.length - 1][1]];
-                                  }
-                              } else if (sec.questions?.length > 0) {
+                              if (sec.questions?.length > 0) {
                                   firstIdx = questionIndexMap[sec.questions[0].id];
                                   lastIdx = questionIndexMap[sec.questions[sec.questions.length - 1].id];
                               }
