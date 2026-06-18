@@ -80,7 +80,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. angry",
+              "content": "6. angry",
               "options": [
                 "happy",
                 "low",
@@ -89,6 +89,54 @@
               ],
               "explanation": "<b>mad</b> là từ đồng nghĩa với <b>angry</b>, có nghĩa là tức giận.",
               "correctAnswer": "C"
+            },
+            {
+              "id": "7",
+              "content": "7. moment",
+              "options": [
+                "a hole with water in it",
+                "a short time",
+                "at the center",
+                "at the end"
+              ],
+              "explanation": "Từ 'moment' có nghĩa là 'một lúc, một lát', đồng nghĩa với 'a short time' (một khoảng thời gian ngắn).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "8. promise",
+              "options": [
+                "to say “good job”",
+                "to say “I will”",
+                "to say “the end”",
+                "to say “maybe”"
+              ],
+              "explanation": "Từ 'promise' có nghĩa là 'hứa hẹn', tương đương với 'to say \"I will\"' (nói \"Tôi sẽ làm\").",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "9",
+              "content": "9. reply",
+              "options": [
+                "to answer",
+                "to get to a place",
+                "to look for in order to kill",
+                "to try to fight or hurt"
+              ],
+              "explanation": "Từ 'reply' có nghĩa là 'trả lời', đồng nghĩa với 'to answer' (trả lời).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "10. safe",
+              "options": [
+                "fool",
+                "having much or many",
+                "not seen",
+                "not worried about being hurt"
+              ],
+              "explanation": "Từ 'safe' có nghĩa là 'an toàn', tương đương với 'not worried about being hurt' (không lo lắng bị tổn thương).",
+              "correctAnswer": "D"
             }
           ],
           "questionType": "Trắc nghiệm"
@@ -99,8 +147,8 @@
           "content": "",
           "questions": [
             {
-              "id": "7",
-              "content": "1.",
+              "id": "11",
+              "content": "11.",
               "options": [
                 "A <b>clever</b> person can solve a puzzle easily.",
                 "When a plane <b>arrives</b>, it leaves the ground and goes into the sky."
@@ -109,8 +157,8 @@
               "correctAnswer": "A"
             },
             {
-              "id": "8",
-              "content": "2.",
+              "id": "12",
+              "content": "12.",
               "options": [
                 "At noon, the sun is near the <b>bottom</b> of the sky.",
                 "If I break my brother's bike, he will be <b>angry</b>."
@@ -119,8 +167,8 @@
               "correctAnswer": "B"
             },
             {
-              "id": "9",
-              "content": "3.",
+              "id": "13",
+              "content": "13.",
               "options": [
                 "It is easy to <b>hide</b> in a dark place.",
                 "Many kinds of fish are <b>afraid</b> of water."
@@ -129,8 +177,8 @@
               "correctAnswer": "A"
             },
             {
-              "id": "10",
-              "content": "4.",
+              "id": "14",
+              "content": "14.",
               "options": [
                 "At night, your parents may say, \"<b>Hide</b> your eyes and go to sleep.\"",
                 "Heavy things will go down to the <b>bottom</b> of the ocean."
@@ -139,8 +187,8 @@
               "correctAnswer": "B"
             },
             {
-              "id": "11",
-              "content": "5.",
+              "id": "15",
+              "content": "15.",
               "options": [
                 "It is <b>cruel</b> to keep a dog in a small cage all day.",
                 "Your mother will be <b>angry</b> when you get good grades in school."
@@ -149,8 +197,8 @@
               "correctAnswer": "A"
             },
             {
-              "id": "12",
-              "content": "6.",
+              "id": "16",
+              "content": "16.",
               "options": [
                 "Animals cannot <b>hunt</b> because they do not have hands.",
                 "It is a good idea to arrive early for class."
@@ -159,8 +207,8 @@
               "correctAnswer": "B"
             },
             {
-              "id": "13",
-              "content": "7.",
+              "id": "17",
+              "content": "17.",
               "options": [
                 "People sometimes <b>attack</b> pictures to email messages.",
                 "Some people are <b>afraid</b> of spiders."
@@ -169,8 +217,8 @@
               "correctAnswer": "B"
             },
             {
-              "id": "14",
-              "content": "8.",
+              "id": "18",
+              "content": "18.",
               "options": [
                 "A <b>moment</b> is like a second or two.",
                 "New shoes are usually not very comfortable or <b>clever</b>."
@@ -179,8 +227,8 @@
               "correctAnswer": "A"
             },
             {
-              "id": "15",
-              "content": "9.",
+              "id": "19",
+              "content": "19.",
               "options": [
                 "Small animals do not usually <b>attack</b> big animals.",
                 "There are twelve <b>moments</b> in a year."
@@ -189,8 +237,8 @@
               "correctAnswer": "A"
             },
             {
-              "id": "16",
-              "content": "10.",
+              "id": "20",
+              "content": "20.",
               "options": [
                 "A <b>cruel</b> person will try to help others at all times.",
                 "You can use a gun to <b>hunt</b> in the forest."
@@ -215,8 +263,20 @@
           "content": "",
           "questions": [
             {
-              "id": "17",
-              "content": "1. What did all the animals say to the lion?",
+              "id": "21",
+              "content": "21. What is this story about?",
+              "options": [
+                "How a clever rabbit tricked a cruel lion",
+                "How rabbits learned to hide from lions",
+                "How a rabbit pleased an angry lion",
+                "How to be safe when you hunt in the forest"
+              ],
+              "explanation": "Câu hỏi yêu cầu tìm nội dung chính của câu chuyện. Xuyên suốt bài đọc là quá trình một con thỏ thông minh đã lừa được con sư tử độc ác để cứu các loài vật khác. Vì vậy, đáp án A là câu trả lời chính xác nhất.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "22. What did all the animals say to the lion?",
               "options": [
                 "They said they wanted him to be their king.",
                 "They said that the rabbit would be there in a moment.",
@@ -227,8 +287,8 @@
               "correctAnswer": "C"
             },
             {
-              "id": "18",
-              "content": "2. Why did the rabbit take the lion to the well in the middle of the forest?",
+              "id": "23",
+              "content": "23. Why did the rabbit take the lion to the well in the middle of the forest?",
               "options": [
                 "So a lot of animals could see the rabbit walking with the lion",
                 "So the lion could attack the \"other\" lion",
@@ -239,8 +299,8 @@
               "correctAnswer": "B"
             },
             {
-              "id": "19",
-              "content": "3. Which of the following is true at the end of the story?",
+              "id": "24",
+              "content": "24. Which of the following is true at the end of the story?",
               "options": [
                 "The lion attacked another lion, and they both got hurt.",
                 "The lion cannot reply to the rabbit, so the rabbit wins.",
@@ -249,6 +309,18 @@
               ],
               "explanation": "Đoạn cuối bài viết: 'The rabbit went back to the other animals. They were very pleased... They were safe.' (Thỏ quay về, các con vật rất hài lòng, và chúng đã được an toàn).",
               "correctAnswer": "C"
+            },
+            {
+              "id": "25",
+              "content": "25. What did the lion see when it looked in the well?",
+              "options": [
+                "Its own reflection",
+                "A clever rabbit",
+                "Many small animals",
+                "A deep dark hole"
+              ],
+              "explanation": "Khi sư tử nhìn xuống giếng, nó đã nhìn thấy hình ảnh phản chiếu của chính mình dưới nước (its own reflection) và tưởng lầm đó là một con sư tử khác.",
+              "correctAnswer": "A"
             }
           ],
           "questionType": "Trắc nghiệm"
