@@ -1802,7 +1802,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
               <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
                 <div className="overflow-x-auto custom-scrollbar flex-1" style={{ WebkitOverflowScrolling: 'touch' }}>
-                  <table className="w-full text-left border-collapse min-w-[800px] md:min-w-[1000px]">
+                  <table className="w-full xl:w-[95%] 2xl:w-[85%] mx-auto text-left border-collapse min-w-[800px] md:min-w-[1000px]">
                     <thead className="sticky top-0 bg-[#f8fafc] text-[10px] md:text-[11px] font-black uppercase text-slate-400 tracking-widest border-b border-slate-200 shadow-[0_1px_2px_rgba(0,0,0,0.05)] z-10">
                       <tr>
                         <th className="px-4 md:px-6 py-3 md:py-4 w-10 text-center">#</th>
