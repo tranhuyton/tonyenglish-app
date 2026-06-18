@@ -1811,7 +1811,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         <th className="px-4 md:px-6 py-3 md:py-4">CẬP NHẬT</th>
                         <th className="px-4 md:px-6 py-3 md:py-4 text-center">TRẠNG THÁI</th>
                         <th className="px-4 md:px-6 py-3 md:py-4 text-center">THỨ TỰ</th>
-                        <th className="px-4 md:px-6 py-3 md:py-4 text-right">THAO TÁC</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4 text-left">THAO TÁC</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
@@ -1826,7 +1826,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(lec.created_at)}</div></td>
                             <td className="px-4 md:px-6 py-4 text-center"><button onClick={() => handleToggleLectureStatus(lec.id, lec.is_published)} className={`text-[10px] md:text-[12px] font-bold px-2 py-1 md:px-3 rounded transition-colors ${lec.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{lec.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
                             <td className="px-4 md:px-6 py-4 text-center"><input type="number" defaultValue={lec.order_index || 0} onBlur={e => handleUpdateLectureOrder(lec.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
-                            <td className="px-4 md:px-6 py-4 text-right space-x-1 md:space-x-2 whitespace-nowrap">
+                            <td className="px-4 md:px-6 py-4 text-left space-x-1 md:space-x-2 whitespace-nowrap">
                                <button onClick={() => setEditingLecture(lec)} className="text-[#2bd6eb] font-bold text-[10px] md:text-xs bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 transition">Sửa</button>
                                <button onClick={() => handleDuplicateLecture(lec)} className="text-emerald-600 font-bold text-[10px] md:text-xs bg-white border border-emerald-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-emerald-50 transition">Nhân bản</button>
                                <button onClick={() => handlePermanentDeleteLecture(lec.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100">Xóa</button>
@@ -1912,7 +1912,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
 
               <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden z-10 relative">
                 <div className="overflow-x-auto custom-scrollbar" style={{ WebkitOverflowScrolling: 'touch' }}>
-                  <table className="w-full text-left border-collapse min-w-[900px] md:min-w-[1000px]">
+                  <table className="w-full xl:w-[95%] 2xl:w-[85%] mx-auto text-left border-collapse min-w-[900px] md:min-w-[1000px]">
                     <thead className="bg-[#f8fafc] text-[10px] md:text-[11px] font-black uppercase text-slate-400 tracking-widest border-b border-slate-200">
                       <tr>
                         <th className="px-3 md:px-4 py-3 md:py-4 w-10 text-center">#</th>
@@ -1923,7 +1923,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                         <th className="px-4 md:px-6 py-3 md:py-4">CẬP NHẬT</th>
                         <th className="px-4 md:px-6 py-3 md:py-4 text-center">TRẠNG THÁI</th>
                         <th className="px-4 md:px-6 py-3 md:py-4 text-center">THỨ TỰ</th>
-                        <th className="px-4 md:px-6 py-3 md:py-4 text-right">THAO TÁC</th>
+                        <th className="px-4 md:px-6 py-3 md:py-4 text-left">THAO TÁC</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
@@ -1943,7 +1943,7 @@ export default function AdminPanel({ onNavigate, onStartTest }: { onNavigate?: (
                             <td className="px-4 md:px-6 py-4 md:py-5"><div className="text-[10px] md:text-[11px] text-slate-500 font-medium">{formatDateTime(test.created_at)}</div></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><button onClick={() => handleToggleTestVisibility(test)} className={`text-[10px] md:text-[12px] font-bold px-2 md:px-3 py-1 rounded transition-colors ${test.is_published ? 'text-emerald-600 bg-emerald-50 hover:bg-emerald-100' : 'text-slate-500 bg-slate-100 hover:bg-slate-200'}`}>{test.is_published ? 'Hiển thị' : 'Đang ẩn'}</button></td>
                             <td className="px-4 md:px-6 py-4 md:py-5 text-center"><input type="number" defaultValue={test.order_index || 0} onBlur={e => handleUpdateTestOrder(test.id, parseInt(e.target.value) || 0)} className="w-10 md:w-12 text-center text-[12px] md:text-[13px] font-bold border border-slate-200 rounded py-1 outline-none focus:border-[#2bd6eb]" /></td>
-                            <td className="px-4 md:px-6 py-4 md:py-5 text-right space-x-1 md:space-x-2 whitespace-nowrap">
+                            <td className="px-4 md:px-6 py-4 md:py-5 text-left space-x-1 md:space-x-2 whitespace-nowrap">
                                  <button onClick={async () => { if (test.test_type === 'IGCSE-Science' || test.test_type === 'IGCSE-Math' || test.test_type === 'IGCSE-Direct') { setIgcseEditingTestId(test.id); setIgcseEditorOpen(true); } else { const { data: fullTest } = await supabase.from('tests').select('*').eq('id', test.id).single(); if (fullTest) setEditingTest(fullTest); else alert('Lỗi tải dữ liệu đề thi!'); } }} className="text-[#2bd6eb] bg-white border border-[#2bd6eb] px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-blue-50 font-bold text-[10px] md:text-xs transition shadow-sm">Sửa</button>
                                  <button onClick={() => handleDuplicateTest(test)} className="text-emerald-600 font-bold text-[10px] md:text-xs bg-white border border-emerald-300 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-emerald-50 transition shadow-sm">Nhân bản</button>
                                  <button onClick={() => handleDeleteTest(test.id)} className="text-red-500 font-bold text-[10px] md:text-xs bg-white border border-red-200 px-2 md:px-3 py-1 md:py-1.5 rounded hover:bg-red-50 transition md:opacity-0 group-hover:opacity-100 shadow-sm">Xóa</button>
