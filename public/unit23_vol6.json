@@ -26,7 +26,7 @@
                 "open",
                 "clear"
               ],
-              "correctAnswer": "hot",
+              "correctAnswer": "B",
               "explanation": "frigid (extremely cold) is the opposite of hot."
             },
             {
@@ -38,7 +38,7 @@
                 "likely",
                 "quick"
               ],
-              "correctAnswer": "straight",
+              "correctAnswer": "A",
               "explanation": "wavy is the opposite of straight."
             },
             {
@@ -50,7 +50,7 @@
                 "nice",
                 "soft"
               ],
-              "correctAnswer": "soft",
+              "correctAnswer": "D",
               "explanation": "crisp (hard in a pleasant way) is the opposite of soft."
             },
             {
@@ -62,7 +62,7 @@
                 "friend",
                 "agreement"
               ],
-              "correctAnswer": "original",
+              "correctAnswer": "B",
               "explanation": "replicate (to do it in the exact same way as someone before) is the opposite of original."
             },
             {
@@ -74,7 +74,7 @@
                 "close",
                 "fight"
               ],
-              "correctAnswer": "take away",
+              "correctAnswer": "A",
               "explanation": "allocate (put aside for a purpose) is the opposite of take away."
             }
           ]
@@ -94,7 +94,7 @@
                 "discord",
                 "cavity"
               ],
-              "correctAnswer": "locker",
+              "correctAnswer": "A",
               "explanation": "locker (n): a small cabinet with a lock."
             },
             {
@@ -106,7 +106,7 @@
                 "frigid",
                 "multicultural"
               ],
-              "correctAnswer": "discord",
+              "correctAnswer": "A",
               "explanation": "discord (n): disagreement or fighting."
             },
             {
@@ -118,7 +118,7 @@
                 "locker",
                 "omission"
               ],
-              "correctAnswer": "blizzard",
+              "correctAnswer": "A",
               "explanation": "blizzard (n): a severe snow storm with strong winds."
             },
             {
@@ -130,7 +130,7 @@
                 "appetizing",
                 "glacial"
               ],
-              "correctAnswer": "multicultural",
+              "correctAnswer": "A",
               "explanation": "multicultural (adj): relating to many different cultures."
             },
             {
@@ -142,7 +142,7 @@
                 "discord",
                 "locker"
               ],
-              "correctAnswer": "cavity",
+              "correctAnswer": "A",
               "explanation": "cavity (n): a hole or space in something."
             },
             {
@@ -154,7 +154,7 @@
                 "generate",
                 "pierce"
               ],
-              "correctAnswer": "courtesy",
+              "correctAnswer": "A",
               "explanation": "courtesy (n): excellence of manners or social conduct."
             },
             {
@@ -166,7 +166,7 @@
                 "allocate",
                 "generate"
               ],
-              "correctAnswer": "oversee",
+              "correctAnswer": "A",
               "explanation": "oversee (v): make sure that it is being done properly."
             },
             {
@@ -178,7 +178,7 @@
                 "replicate",
                 "allocate"
               ],
-              "correctAnswer": "generate",
+              "correctAnswer": "A",
               "explanation": "generate (v): to cause it to develop or begin."
             },
             {
@@ -190,7 +190,7 @@
                 "wavy",
                 "concentric"
               ],
-              "correctAnswer": "frigid",
+              "correctAnswer": "A",
               "explanation": "frigid (adj): extremely cold."
             },
             {
@@ -202,7 +202,7 @@
                 "replicate",
                 "generate"
               ],
-              "correctAnswer": "pierce",
+              "correctAnswer": "A",
               "explanation": "pierce (v): make a hole in it using a sharp object."
             }
           ]
@@ -496,7 +496,7 @@
                 "Colored lights were inserted in the cavities in the roof.",
                 "Nearby warm rooms were a courtesy to people who got too cold."
               ],
-              "correctAnswer": "Tools were allocated to each worker.",
+              "correctAnswer": "A",
               "explanation": "Tools were allocated to each worker."
             },
             {
@@ -508,7 +508,7 @@
                 "They got right to work.",
                 "Erik stores his belongings in his ice locker."
               ],
-              "correctAnswer": "Colored lights were inserted in the cavities in the roof.",
+              "correctAnswer": "A",
               "explanation": "Colored lights were inserted in the cavities in the roof."
             },
             {
@@ -520,7 +520,7 @@
                 "Tools were allocated to each worker.",
                 "Erik stores his belongings in his ice locker."
               ],
-              "correctAnswer": "They got right to work.",
+              "correctAnswer": "A",
               "explanation": "They got right to work."
             },
             {
@@ -532,7 +532,7 @@
                 "Tools were allocated to each worker.",
                 "Colored lights were inserted in the cavities in the roof."
               ],
-              "correctAnswer": "Nearby warm rooms were a courtesy to people who got too cold.",
+              "correctAnswer": "A",
               "explanation": "Nearby warm rooms were a courtesy to people who got too cold."
             },
             {
@@ -544,7 +544,7 @@
                 "Colored lights were inserted in the cavities in the roof.",
                 "Nearby warm rooms were a courtesy to people who got too cold."
               ],
-              "correctAnswer": "Erik stores his belongings in his ice locker.",
+              "correctAnswer": "A",
               "explanation": "Erik stores his belongings in his ice locker."
             }
           ]

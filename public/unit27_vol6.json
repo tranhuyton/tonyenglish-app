@@ -26,7 +26,7 @@
                 "turn it upside down",
                 "drop it"
               ],
-              "correctAnswer": "turn it upside down",
+              "correctAnswer": "C",
               "explanation": "invert (v): turn it upside down."
             },
             {
@@ -38,7 +38,7 @@
                 "Carrots",
                 "Water"
               ],
-              "correctAnswer": "Water",
+              "correctAnswer": "D",
               "explanation": "funnel (n): object with a wide top and narrow bottom for pouring liquids."
             },
             {
@@ -50,7 +50,7 @@
                 "Its food",
                 "Its ally"
               ],
-              "correctAnswer": "Its food",
+              "correctAnswer": "C",
               "explanation": "prey (n): animals hunted and eaten by another creature."
             },
             {
@@ -62,7 +62,7 @@
                 "Favorite foods",
                 "Hobbies"
               ],
-              "correctAnswer": "Eye color",
+              "correctAnswer": "B",
               "explanation": "hereditary (adj): a trait passed onto children from parents."
             },
             {
@@ -74,7 +74,7 @@
                 "try to end it",
                 "want to sing it"
               ],
-              "correctAnswer": "like to smell it",
+              "correctAnswer": "A",
               "explanation": "fragrant (adj): has a pleasant smell."
             },
             {
@@ -86,7 +86,7 @@
                 "A builder",
                 "An electrician"
               ],
-              "correctAnswer": "A chef",
+              "correctAnswer": "B",
               "explanation": "seasoning (n): a mix of salt, herbs, and spices to improve taste."
             },
             {
@@ -98,7 +98,7 @@
                 "A vice president",
                 "A Manager"
               ],
-              "correctAnswer": "A vice president",
+              "correctAnswer": "C",
               "explanation": "deputy (n): the second-highest-ranking person."
             },
             {
@@ -110,7 +110,7 @@
                 "Toys",
                 "Soda"
               ],
-              "correctAnswer": "Salts",
+              "correctAnswer": "B",
               "explanation": "sodium (n): an element used to make substances such as salt."
             },
             {
@@ -122,7 +122,7 @@
                 "At the zoo",
                 "In a church"
               ],
-              "correctAnswer": "In a church",
+              "correctAnswer": "D",
               "explanation": "hymn (n): a religious song praising a god."
             },
             {
@@ -134,7 +134,7 @@
                 "betrays you",
                 "is ill"
               ],
-              "correctAnswer": "insults you",
+              "correctAnswer": "B",
               "explanation": "sarcastic (adj): the opposite of what is actually meant, often insulting."
             }
           ]
@@ -154,7 +154,7 @@
                 "procession",
                 "fragrant"
               ],
-              "correctAnswer": "seasoning",
+              "correctAnswer": "A",
               "explanation": "seasoning is an ingredient."
             },
             {
@@ -166,7 +166,7 @@
                 "earls",
                 "prey"
               ],
-              "correctAnswer": "vinegar",
+              "correctAnswer": "A",
               "explanation": "vinegar is a liquid you pour."
             },
             {
@@ -178,7 +178,7 @@
                 "tyrant",
                 "procession"
               ],
-              "correctAnswer": "hymns",
+              "correctAnswer": "A",
               "explanation": "hymns are songs you sing."
             },
             {
@@ -190,7 +190,7 @@
                 "seasoning",
                 "vinegar"
               ],
-              "correctAnswer": "hereditary",
+              "correctAnswer": "A",
               "explanation": "passed from mother to child means it is hereditary."
             },
             {
@@ -202,7 +202,7 @@
                 "earls",
                 "hymns"
               ],
-              "correctAnswer": "archer",
+              "correctAnswer": "A",
               "explanation": "an archer is someone who hunts with a bow."
             },
             {
@@ -214,7 +214,7 @@
                 "tyrant",
                 "seasoning"
               ],
-              "correctAnswer": "prey",
+              "correctAnswer": "A",
               "explanation": "prey is hunted and shot."
             },
             {
@@ -226,7 +226,7 @@
                 "hereditary",
                 "archer"
               ],
-              "correctAnswer": "procession",
+              "correctAnswer": "A",
               "explanation": "people line up in a procession."
             },
             {
@@ -238,7 +238,7 @@
                 "seasoning",
                 "tyrant"
               ],
-              "correctAnswer": "earls",
+              "correctAnswer": "A",
               "explanation": "earls are noblemen."
             },
             {
@@ -250,7 +250,7 @@
                 "hymns",
                 "procession"
               ],
-              "correctAnswer": "tyrant",
+              "correctAnswer": "A",
               "explanation": "a tyrant acts strictly and harshly."
             },
             {
@@ -262,7 +262,7 @@
                 "archer",
                 "earls"
               ],
-              "correctAnswer": "fragrant",
+              "correctAnswer": "A",
               "explanation": "fragrant means smelling pleasant."
             }
           ]
@@ -282,7 +282,7 @@
                 "archer",
                 "tyranny"
               ],
-              "correctAnswer": "vinegar",
+              "correctAnswer": "A",
               "explanation": "vinegar: a strong tasting liquid made from sour wine."
             },
             {
@@ -294,7 +294,7 @@
                 "ancestry",
                 "prophet"
               ],
-              "correctAnswer": "analogy",
+              "correctAnswer": "A",
               "explanation": "analogy: a connection made to show that things are similar."
             },
             {
@@ -306,7 +306,7 @@
                 "earl",
                 "deputy"
               ],
-              "correctAnswer": "archer",
+              "correctAnswer": "A",
               "explanation": "archer: a person who uses a bow and arrows."
             },
             {
@@ -318,7 +318,7 @@
                 "analogy",
                 "conspiracy"
               ],
-              "correctAnswer": "tyranny",
+              "correctAnswer": "A",
               "explanation": "tyranny: a cruel and unfair government."
             },
             {
@@ -330,7 +330,7 @@
                 "prophet",
                 "archer"
               ],
-              "correctAnswer": "conspiracy",
+              "correctAnswer": "A",
               "explanation": "conspiracy: a secret plan to do something illegal."
             },
             {
@@ -342,7 +342,7 @@
                 "earl",
                 "deputy"
               ],
-              "correctAnswer": "ancestry",
+              "correctAnswer": "A",
               "explanation": "ancestry: the series of people from whom a person descended."
             },
             {
@@ -354,7 +354,7 @@
                 "analogy",
                 "archer"
               ],
-              "correctAnswer": "prophet",
+              "correctAnswer": "A",
               "explanation": "prophet: a person chosen by God."
             },
             {
@@ -366,7 +366,7 @@
                 "ancestry",
                 "prophet"
               ],
-              "correctAnswer": "tyrant",
+              "correctAnswer": "A",
               "explanation": "tyrant: a person who treats people in a cruel, harsh, and unfair way."
             },
             {
@@ -378,7 +378,7 @@
                 "tyrant",
                 "deputy"
               ],
-              "correctAnswer": "earl",
+              "correctAnswer": "A",
               "explanation": "earl: a nobleman from Britain."
             },
             {
@@ -390,7 +390,7 @@
                 "archer",
                 "earl"
               ],
-              "correctAnswer": "deputy",
+              "correctAnswer": "A",
               "explanation": "deputy: the second-highest-ranking person."
             }
           ]
@@ -534,7 +534,7 @@
                 "He was an expert archer.",
                 "He grabbed the officer and threw him."
               ],
-              "correctAnswer": "All the people in his ancestry were famous warriors.",
+              "correctAnswer": "A",
               "explanation": "All the people in his ancestry were famous warriors."
             },
             {
@@ -546,7 +546,7 @@
                 "\"He is an expert archer.\"",
                 "\"He has magical strength.\""
               ],
-              "correctAnswer": "\"He looks as strong as an ox!\"",
+              "correctAnswer": "A",
               "explanation": "\"He looks as strong as an ox!\""
             },
             {
@@ -558,7 +558,7 @@
                 "\"I'll try my best.\"",
                 "\"This smells bad.\""
               ],
-              "correctAnswer": "\"Wow, this is fragrant.\"",
+              "correctAnswer": "A",
               "explanation": "\"Wow, this is fragrant.\""
             },
             {
@@ -570,7 +570,7 @@
                 "\"Wow, this is fragrant.\"",
                 "\"I am still great.\""
               ],
-              "correctAnswer": "\"I'm too old to fight! I'm not confident that I can do it.\"",
+              "correctAnswer": "A",
               "explanation": "\"I'm too old to fight! I'm not confident that I can do it.\""
             },
             {
@@ -582,7 +582,7 @@
                 "Michael realized he was an earl.",
                 "Michael realized he was too old to fight."
               ],
-              "correctAnswer": "Michael realized he really was still great. He just needed to believe in himself.",
+              "correctAnswer": "A",
               "explanation": "Michael realized he really was still great. He just needed to believe in himself."
             }
           ]

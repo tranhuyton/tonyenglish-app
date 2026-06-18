@@ -26,7 +26,7 @@
                 "A singer",
                 "A gangster"
               ],
-              "correctAnswer": "A host",
+              "correctAnswer": "B",
               "explanation": "hospitable (adj): friendly to strangers. A host is someone who would most likely be hospitable."
             },
             {
@@ -38,7 +38,7 @@
                 "100 degrees",
                 "132 degrees"
               ],
-              "correctAnswer": "0 degrees",
+              "correctAnswer": "A",
               "explanation": "centigrade (n): a scale where water freezes at 0 degrees."
             },
             {
@@ -50,7 +50,7 @@
                 "It would be sandy.",
                 "It would be snowy."
               ],
-              "correctAnswer": "It would be wet.",
+              "correctAnswer": "A",
               "explanation": "condense (v): to make a gas into a liquid. The ground would be wet."
             },
             {
@@ -62,7 +62,7 @@
                 "Throw a party",
                 "Pack clothes"
               ],
-              "correctAnswer": "Pack clothes",
+              "correctAnswer": "D",
               "explanation": "beforehand (adv): in advance. You should pack clothes beforehand."
             },
             {
@@ -74,7 +74,7 @@
                 "A swimmer",
                 "A superhero"
               ],
-              "correctAnswer": "A musician",
+              "correctAnswer": "A",
               "explanation": "concerto (n): music for a solo instrument and orchestra. A musician would perform it."
             }
           ]
@@ -94,7 +94,7 @@
                 "abbey",
                 "frown"
               ],
-              "correctAnswer": "abbey",
+              "correctAnswer": "C",
               "explanation": "monastery and abbey are both buildings for monks."
             },
             {
@@ -106,7 +106,7 @@
                 "quiet",
                 "tiny"
               ],
-              "correctAnswer": "spiral",
+              "correctAnswer": "A",
               "explanation": "winding and spiral both refer to a twisting course."
             },
             {
@@ -118,7 +118,7 @@
                 "region",
                 "bay"
               ],
-              "correctAnswer": "bay",
+              "correctAnswer": "D",
               "explanation": "cove and bay both refer to a part of the sea enclosed by land."
             },
             {
@@ -130,7 +130,7 @@
                 "toss",
                 "farther"
               ],
-              "correctAnswer": "road",
+              "correctAnswer": "A",
               "explanation": "freeway is a type of road."
             },
             {
@@ -142,7 +142,7 @@
                 "large home",
                 "field"
               ],
-              "correctAnswer": "large home",
+              "correctAnswer": "C",
               "explanation": "manor means a large house."
             },
             {
@@ -154,7 +154,7 @@
                 "cheerful",
                 "moisture"
               ],
-              "correctAnswer": "package",
+              "correctAnswer": "B",
               "explanation": "parcel and package are similar."
             },
             {
@@ -166,7 +166,7 @@
                 "bridge",
                 "infant's center"
               ],
-              "correctAnswer": "infant's center",
+              "correctAnswer": "D",
               "explanation": "nursery and infant's center are places for children."
             },
             {
@@ -178,7 +178,7 @@
                 "cheerful",
                 "tired"
               ],
-              "correctAnswer": "cheerful",
+              "correctAnswer": "C",
               "explanation": "vivacious means talkative and cheerful."
             },
             {
@@ -190,7 +190,7 @@
                 "join",
                 "outside"
               ],
-              "correctAnswer": "outside",
+              "correctAnswer": "D",
               "explanation": "exterior means the outside surface."
             },
             {
@@ -202,7 +202,7 @@
                 "join",
                 "walk"
               ],
-              "correctAnswer": "close",
+              "correctAnswer": "A",
               "explanation": "zip means to close with a zipper."
             }
           ]
@@ -222,7 +222,7 @@
                 "vivacious",
                 "winding"
               ],
-              "correctAnswer": "outstretched",
+              "correctAnswer": "A",
               "explanation": "outstretched means extended."
             },
             {
@@ -234,7 +234,7 @@
                 "deteriorating",
                 "zipping"
               ],
-              "correctAnswer": "chattering",
+              "correctAnswer": "A",
               "explanation": "chattering means talking quickly."
             },
             {
@@ -246,7 +246,7 @@
                 "cove",
                 "profile"
               ],
-              "correctAnswer": "freeway",
+              "correctAnswer": "A",
               "explanation": "freeway is a road where cars drive fast."
             },
             {
@@ -258,7 +258,7 @@
                 "manor",
                 "parcel"
               ],
-              "correctAnswer": "monastery",
+              "correctAnswer": "A",
               "explanation": "monastery is a building where monks live."
             },
             {
@@ -270,7 +270,7 @@
                 "hearty",
                 "vivacious"
               ],
-              "correctAnswer": "winding",
+              "correctAnswer": "A",
               "explanation": "winding means twisting."
             },
             {
@@ -282,7 +282,7 @@
                 "cove",
                 "freeway"
               ],
-              "correctAnswer": "profile",
+              "correctAnswer": "A",
               "explanation": "profile means an outline of a face, usually from the side."
             },
             {
@@ -294,7 +294,7 @@
                 "chattered",
                 "zipped"
               ],
-              "correctAnswer": "deteriorated",
+              "correctAnswer": "A",
               "explanation": "deteriorated means became worse."
             },
             {
@@ -306,7 +306,7 @@
                 "nursery",
                 "monastery"
               ],
-              "correctAnswer": "exterior",
+              "correctAnswer": "A",
               "explanation": "exterior is the outside surface."
             },
             {
@@ -318,7 +318,7 @@
                 "winding",
                 "hospitable"
               ],
-              "correctAnswer": "hearty",
+              "correctAnswer": "A",
               "explanation": "hearty means loud and happy."
             },
             {
@@ -330,7 +330,7 @@
                 "winding",
                 "hospitable"
               ],
-              "correctAnswer": "vivacious",
+              "correctAnswer": "A",
               "explanation": "vivacious means talkative and cheerful."
             }
           ]
@@ -416,7 +416,7 @@
                 "It went to the cove.",
                 "It went to the manor."
               ],
-              "correctAnswer": "The dark and winding trail went to the monastery.",
+              "correctAnswer": "A",
               "explanation": "The dark and winding trail went to the monastery."
             },
             {
@@ -428,7 +428,7 @@
                 "The child took her hand.",
                 "The doctor took her hand."
               ],
-              "correctAnswer": "The monk took the nurse's outstretched hand and welcomed her with a hearty voice.",
+              "correctAnswer": "A",
               "explanation": "The monk took the nurse's outstretched hand and welcomed her with a hearty voice."
             },
             {
@@ -440,7 +440,7 @@
                 "She was vivacious.",
                 "She felt hearty."
               ],
-              "correctAnswer": "When she saw the profile of a man coming to answer the door, the nurse was filled with fear.",
+              "correctAnswer": "A",
               "explanation": "When she saw the profile of a man coming to answer the door, the nurse was filled with fear."
             },
             {
@@ -452,7 +452,7 @@
                 "Tears had condensed.",
                 "Clouds had condensed."
               ],
-              "correctAnswer": "Rain had condensed on the exterior of the monastery's windows.",
+              "correctAnswer": "A",
               "explanation": "Rain had condensed on the exterior of the monastery's windows."
             },
             {
@@ -464,7 +464,7 @@
                 "Clothes were in the parcel.",
                 "Money was in the parcel."
               ],
-              "correctAnswer": "Medicine was in the parcel that the nurse took back to the manor.",
+              "correctAnswer": "A",
               "explanation": "Medicine was in the parcel that the nurse took back to the manor."
             }
           ]

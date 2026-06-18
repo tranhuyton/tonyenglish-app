@@ -1,1 +1,603 @@
-{"basicInfo": {"skill": "Standard-Reading", "title": "Unit 29: Volume 6", "category": "exercise", "timeLimit": 0}, "parts": [{"id": "part1", "title": "Word List", "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit29_vol6_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit29_vol6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">analogous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[anæləgəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is analogous to another thing, then it is like it in certain ways.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The relationship with his teacher was analogous to that of a son and mother.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">binoculars</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bənɑkjələrz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Binoculars are a device used for seeing things that are far away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He could see the ship on the horizon only if he used his binoculars.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bulk</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bʌlk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The bulk of something is its great size.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The large elephant moved its bulk with legs as strong as tree trunks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">comprise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmpraiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something comprises something else, it consists of or is made up of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our school’s football team is mostly comprised with seniors.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">depict</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dipikt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To depict something means to show or portray it, often using art.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The statue’s face depicted the general’s determination and courage.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dju:əl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is dual, then it is made up of two parts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The room had a dual function. It was a living room, but at night it was a bedroom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Fahrenheit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[færənhait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fahrenheit temperature is a scale where water freezes at 32° and boils at 212°.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the temperature dropped to 32° Fahrenheit, it started snowing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fulfill</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fulfil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To fulfill something means to achieve or finish it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The professor did not fulfill his promise not to miss a single class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grove</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[grouv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A grove is a small group of trees.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All the trees in this grove are apple trees.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Ore is the raw form of rock or material from which a valuable metal is taken.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The factory melted the ore and used it to make iron products.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">outback</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[autbæk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The outback is the wild inland region of Australia where very few people live.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many Australian farmers use the outback to raise cattle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">outweigh</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[autwei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To outweigh something means to exceed it in value, amount, or importance.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Finding a warm place to sleep outweighed the need to find something to eat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">paradox</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pærədɑks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A paradox is a true statement or real event that seems illogical.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The paradox of her work was that the less she worked, the more she got done.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pier</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[piər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pier is a structure that extends into a body of water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you want to catch bigger fish, then go to the far end of the pier.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shortcut</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃɔ:rtkʌt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shortcut is a route that is shorter than the main route.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We got to the house first because we took a shortcut through the forest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tariff</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tærif]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tariff is a tax or fee paid on certain imports or exports.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our tariff on imported wool makes foreign wool more expensive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thermometer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θə:rmɑmitə:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A thermometer is a device that measures temperature.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The thermometer outside the window indicated that it was a hot day today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tilt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tilt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tilt something means to tip it into a sloping position.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She tilted her glass and almost spilled some of the wine inside.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vice versa</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vaisivə:rsə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a statement is vice versa, then its two main ideas are switched with one another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Students learn from their teachers, and vice versa.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">whereabouts</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwɛərəbauts]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The whereabouts of someone or something is the place where they are.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The police looked for the lost dog, but its whereabouts were still unknown.</div></div></div></div></div></div>", "sections": [{"id": "sec1_wordlist", "title": "Exercise 1: Choose the answer that best fits the question.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "1", "content": "1. Binoculars help you to see things that are ________.", "options": ["close by", "under the sea", "faraway", "covered in mud"], "correctAnswer": "faraway", "explanation": "faraway (c)"}, {"id": "2", "content": "2. If you have dual responsibilities, then you have ________ things to take care of.", "options": ["two", "three", "ten", "twelve"], "correctAnswer": "two", "explanation": "two (a)"}, {"id": "3", "content": "3. Which of the following is about the same as a tariff?", "options": ["A salary", "A tax", "A surplus", "A bonus"], "correctAnswer": "A tax", "explanation": "A tax (b)"}, {"id": "4", "content": "4. Where would you most likely see a pier?", "options": ["In the water", "On a plane", "Under the ground", "On a road"], "correctAnswer": "In the water", "explanation": "In the water (a)"}, {"id": "5", "content": "5. Fahrenheit is used to measure ________.", "options": ["height", "distance", "weight", "temperature"], "correctAnswer": "temperature", "explanation": "temperature (d)"}]}, {"id": "sec2_wordlist", "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.", "content": "Word Bank: outback, thermometer, vice versa, ore, outweighed, whereabouts, grove, fulfill, Fahrenheit, shortcut", "questionType": "Trắc nghiệm", "questions": [{"id": "6", "content": "1. When the food is ready, its temperature should be 140 degrees ________.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "Fahrenheit", "explanation": "Fahrenheit"}, {"id": "7", "content": "2. You can use that ________ to determine when it is hot enough.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "thermometer", "explanation": "thermometer"}, {"id": "8", "content": "3. There are not many forests in the Australian ________.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "outback", "explanation": "outback"}, {"id": "9", "content": "4. But there might be a ________ wherever there is enough water.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "grove", "explanation": "grove"}, {"id": "10", "content": "5. She didn’t have much time to get to the house to ________ her promise.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "fulfill", "explanation": "fulfill"}, {"id": "11", "content": "6. Therefore, she took a(n) ________ that would get her there in no time.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "shortcut", "explanation": "shortcut"}, {"id": "12", "content": "7. The need to create more jobs ________ the need to spend more money.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "outweighed", "explanation": "outweighed"}, {"id": "13", "content": "8. But in other years it was ________.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "vice versa", "explanation": "vice versa"}, {"id": "14", "content": "9. According to legend, gold was made from the cave’s ________.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "ore", "explanation": "ore"}, {"id": "15", "content": "10. However, today its ________ have been forgotten.", "options": ["Fahrenheit", "thermometer", "outback", "grove", "fulfill", "shortcut", "outweighed", "vice versa", "ore", "whereabouts"], "correctAnswer": "whereabouts", "explanation": "whereabouts"}]}, {"id": "sec3_wordlist", "title": "Exercise 3: Choose the one that is similar in meaning to the given word.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "16", "content": "1. comprise", "options": ["return", "consist", "explain", "favor"], "correctAnswer": "consist", "explanation": "consist (b)"}, {"id": "17", "content": "2. tilt", "options": ["mix", "dig", "lean", "grip"], "correctAnswer": "lean", "explanation": "lean (c)"}, {"id": "18", "content": "3. pier", "options": ["dock", "cake", "chef", "fort"], "correctAnswer": "dock", "explanation": "dock (a)"}, {"id": "19", "content": "4. analogous", "options": ["metric", "powerful", "secure", "similar"], "correctAnswer": "similar", "explanation": "similar (d)"}, {"id": "20", "content": "5. paradox", "options": ["illogical", "cattle", "calendar", "feather"], "correctAnswer": "illogical", "explanation": "illogical (a)"}]}, {"id": "sec4_wordlist", "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "21", "content": "1. These mines produce several types of valuable raw forms of rock.", "options": ["ore", "tariff", "binoculars", "depicted"], "correctAnswer": "ore", "explanation": "ore"}, {"id": "22", "content": "2. The company had to pay a tax on exports for the steel it shipped to Europe.", "options": ["tariff", "whereabouts", "dual", "comprised"], "correctAnswer": "tariff", "explanation": "tariff"}, {"id": "23", "content": "3. She used the device used for seeing things far away to observe the small bird.", "options": ["thermometer", "binoculars", "paradox", "bulk"], "correctAnswer": "binoculars", "explanation": "binoculars"}, {"id": "24", "content": "4. The painting portrayed what the beach looked like twenty years ago.", "options": ["depicted", "tariff", "binoculars", "dual"], "correctAnswer": "depicted", "explanation": "depicted"}, {"id": "25", "content": "5. He had sent a letter from the city three days earlier. But his precise location was still a mystery.", "options": ["whereabouts", "ore", "comprised", "paradox"], "correctAnswer": "whereabouts", "explanation": "whereabouts"}, {"id": "26", "content": "6. The two-part plan involves scientists from both universities.", "options": ["dual", "bulk", "thermometer", "depicted"], "correctAnswer": "dual", "explanation": "dual"}, {"id": "27", "content": "7. The meal was made up mostly of beans and vegetables.", "options": ["comprised", "binoculars", "tariff", "ore"], "correctAnswer": "comprised", "explanation": "comprised"}, {"id": "28", "content": "8. If you’re sick, take your temperature. The device for measuring temperature is in the cabinet.", "options": ["thermometer", "paradox", "bulk", "whereabouts"], "correctAnswer": "thermometer", "explanation": "thermometer"}, {"id": "29", "content": "9. His promotion was a real event opposite to common knowledge due to his sparse knowledge.", "options": ["paradox", "dual", "tariff", "ore"], "correctAnswer": "paradox", "explanation": "paradox"}, {"id": "30", "content": "10. It was difficult to lift the great mass that had accumulated in his backpack.", "options": ["bulk", "thermometer", "comprised", "depicted"], "correctAnswer": "bulk", "explanation": "bulk"}]}]}, {"id": "part2", "title": "Comprehensive Reading", "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Shortcut</h1><p style=\"margin-bottom: 1rem;\">A truck driver was driving cargo from the <b>outback</b> to the coast. His load was <b>comprised</b> of many types of <b>ore</b>. He needed a huge truck to carry its <b>bulk</b> to a ship waiting at a <b>pier</b> on the country’s eastern coast. At the border between two counties, he’d have to pay a <b>tariff</b> on the cargo. However, he could keep his money if he avoided the station at the border. He worried about getting in trouble for not paying the <b>tariff</b>, but the thought of extra money <b>outweighed</b> this concern.</p><p style=\"margin-bottom: 1rem;\">He took out his road map. To his surprise, it <b>depicted</b> a small road that had a <b>dual</b> advantage. It not only avoided the border station but also was a shorter route to the coast. He decided to take the <b>shortcut</b>.</p><p style=\"margin-bottom: 1rem;\">However, along his journey, he soon ran into problems. First, he had to cross a small wooden bridge. His truck weighed too much for the bridge. It was <b>analogous</b> to an elephant trying to stand on a tree branch. The bridge started to break as the truck crossed, and the trailer <b>tilted</b> to the right. Fortunately, the truck made it safely across, but most of the <b>ore</b> fell into the river below.</p><p style=\"margin-bottom: 1rem;\">Next, it was a very hot day. The <b>thermometer</b> read over 100 degrees <b>Fahrenheit</b>. The truck’s engine became too hot, so the driver parked it in the shade of a <b>grove</b> of trees until it cooled down.</p><p style=\"margin-bottom: 1rem;\">Later, he took a wrong turn. He stopped and took out his <b>binoculars</b>. He scanned his surroundings and eventually discovered a landmark that led him back to the proper route.</p><p style=\"margin-bottom: 1rem;\">Finally, he arrived at the <b>pier</b>, but the ship wasn’t there. When he asked about the ship’s <b>whereabouts</b>, a man said that it had left thirty minutes ago. He had not <b>fulfilled</b> his duty. He realized then the <b>paradox</b> of the <b>shortcut</b>. The shortest route can be the longest, and <b>vice versa</b>, a long route may be the fastest.</p></div>", "imageUrl": "/unit29_vol6_story.png", "sections": [{"id": "sec5", "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "31", "content": "1. The driver’s load was comprised of many types of ore.", "options": ["T", "F"], "correctAnswer": "T", "explanation": "T"}, {"id": "32", "content": "2. The paradox of the shortcut was that the shortest route could be the longest but not vice versa.", "options": ["T", "F"], "correctAnswer": "F", "explanation": "F, The paradox of the shortcut was that the shortest route could be the longest and vice versa."}, {"id": "33", "content": "3. The thermometer read under 100 degrees Fahrenheit.", "options": ["T", "F"], "correctAnswer": "F", "explanation": "F, The thermometer read over 100 degrees Fahrenheit."}, {"id": "34", "content": "4. When the trailer tilted, the driver’s binoculars fell into the river.", "options": ["T", "F"], "correctAnswer": "F", "explanation": "F, When the trailer tilted, most of the ore fell into the river."}, {"id": "35", "content": "5. The driver had fulfilled his duty.", "options": ["T", "F"], "correctAnswer": "F", "explanation": "F, The driver had not fulfilled his duty."}]}, {"id": "sec6", "title": "Part B: Answer the questions.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "36", "content": "1. What was the truck crossing the bridge analogous to?", "options": ["It was analogous to an elephant trying to stand on a tree branch.", "It was analogous to a bird flying in the sky.", "It was analogous to a fish swimming in the sea.", "It was analogous to a horse running in the field."], "correctAnswer": "It was analogous to an elephant trying to stand on a tree branch.", "explanation": "It was analogous to an elephant trying to stand on a tree branch."}, {"id": "37", "content": "2. What outweighed the driver’s concern of being punished for not paying the tariff?", "options": ["The thought of extra money outweighed this concern.", "The thought of a faster trip.", "The fear of getting lost.", "The beauty of the scenery."], "correctAnswer": "The thought of extra money outweighed this concern.", "explanation": "The thought of extra money outweighed this concern."}, {"id": "38", "content": "3. What was the dual advantage of the route depicted on the map?", "options": ["It not only avoided the border station but also was a shorter route to the coast.", "It avoided the traffic and police.", "It was scenic and fast.", "It had better roads and less wind."], "correctAnswer": "It not only avoided the border station but also was a shorter route to the coast.", "explanation": "It not only avoided the border station but also was a shorter route to the coast."}, {"id": "39", "content": "4. What made the driver park his truck in a grove of trees while in the outback?", "options": ["The truck's engine became too hot.", "He was very tired.", "He wanted to take pictures.", "He needed to eat lunch."], "correctAnswer": "The truck's engine became too hot.", "explanation": "The truck's engine became too hot."}, {"id": "40", "content": "5. Why couldn’t the driver determine the ship’s whereabouts at the pier?", "options": ["The driver couldn't locate the ship's whereabouts at the pier because it had left thirty minutes ago.", "The pier was destroyed.", "It was too dark.", "The ship sank."], "correctAnswer": "The driver couldn't locate the ship's whereabouts at the pier because it had left thirty minutes ago.", "explanation": "The driver couldn't locate the ship's whereabouts at the pier because it had left thirty minutes ago."}]}]}]}
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 29: Volume 6",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit29_vol6_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit29_vol6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">analogous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[anæləgəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is analogous to another thing, then it is like it in certain ways.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The relationship with his teacher was analogous to that of a son and mother.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">binoculars</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bənɑkjələrz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Binoculars are a device used for seeing things that are far away.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He could see the ship on the horizon only if he used his binoculars.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bulk</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bʌlk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The bulk of something is its great size.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The large elephant moved its bulk with legs as strong as tree trunks.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">comprise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəmpraiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something comprises something else, it consists of or is made up of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our school’s football team is mostly comprised with seniors.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">depict</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dipikt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To depict something means to show or portray it, often using art.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The statue’s face depicted the general’s determination and courage.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dju:əl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is dual, then it is made up of two parts.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The room had a dual function. It was a living room, but at night it was a bedroom.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">Fahrenheit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[færənhait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fahrenheit temperature is a scale where water freezes at 32° and boils at 212°.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the temperature dropped to 32° Fahrenheit, it started snowing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fulfill</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fulfil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To fulfill something means to achieve or finish it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The professor did not fulfill his promise not to miss a single class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grove</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[grouv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A grove is a small group of trees.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All the trees in this grove are apple trees.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɔ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Ore is the raw form of rock or material from which a valuable metal is taken.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The factory melted the ore and used it to make iron products.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">outback</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[autbæk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The outback is the wild inland region of Australia where very few people live.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many Australian farmers use the outback to raise cattle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">outweigh</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[autwei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To outweigh something means to exceed it in value, amount, or importance.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Finding a warm place to sleep outweighed the need to find something to eat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">paradox</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pærədɑks]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A paradox is a true statement or real event that seems illogical.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The paradox of her work was that the less she worked, the more she got done.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pier</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[piər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A pier is a structure that extends into a body of water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If you want to catch bigger fish, then go to the far end of the pier.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shortcut</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃɔ:rtkʌt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shortcut is a route that is shorter than the main route.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We got to the house first because we took a shortcut through the forest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tariff</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tærif]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tariff is a tax or fee paid on certain imports or exports.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our tariff on imported wool makes foreign wool more expensive.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thermometer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θə:rmɑmitə:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A thermometer is a device that measures temperature.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The thermometer outside the window indicated that it was a hot day today.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tilt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tilt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To tilt something means to tip it into a sloping position.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She tilted her glass and almost spilled some of the wine inside.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vice versa</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vaisivə:rsə]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a statement is vice versa, then its two main ideas are switched with one another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Students learn from their teachers, and vice versa.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">whereabouts</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwɛərəbauts]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The whereabouts of someone or something is the place where they are.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The police looked for the lost dog, but its whereabouts were still unknown.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. Binoculars help you to see things that are ________.",
+              "options": [
+                "close by",
+                "under the sea",
+                "faraway",
+                "covered in mud"
+              ],
+              "correctAnswer": "C",
+              "explanation": "faraway (c)"
+            },
+            {
+              "id": "2",
+              "content": "2. If you have dual responsibilities, then you have ________ things to take care of.",
+              "options": [
+                "two",
+                "three",
+                "ten",
+                "twelve"
+              ],
+              "correctAnswer": "A",
+              "explanation": "two (a)"
+            },
+            {
+              "id": "3",
+              "content": "3. Which of the following is about the same as a tariff?",
+              "options": [
+                "A salary",
+                "A tax",
+                "A surplus",
+                "A bonus"
+              ],
+              "correctAnswer": "B",
+              "explanation": "A tax (b)"
+            },
+            {
+              "id": "4",
+              "content": "4. Where would you most likely see a pier?",
+              "options": [
+                "In the water",
+                "On a plane",
+                "Under the ground",
+                "On a road"
+              ],
+              "correctAnswer": "A",
+              "explanation": "In the water (a)"
+            },
+            {
+              "id": "5",
+              "content": "5. Fahrenheit is used to measure ________.",
+              "options": [
+                "height",
+                "distance",
+                "weight",
+                "temperature"
+              ],
+              "correctAnswer": "D",
+              "explanation": "temperature (d)"
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
+          "content": "Word Bank: outback, thermometer, vice versa, ore, outweighed, whereabouts, grove, fulfill, Fahrenheit, shortcut",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "6",
+              "content": "1. When the food is ready, its temperature should be 140 degrees ________.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "A",
+              "explanation": "Fahrenheit"
+            },
+            {
+              "id": "7",
+              "content": "2. You can use that ________ to determine when it is hot enough.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "B",
+              "explanation": "thermometer"
+            },
+            {
+              "id": "8",
+              "content": "3. There are not many forests in the Australian ________.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "C",
+              "explanation": "outback"
+            },
+            {
+              "id": "9",
+              "content": "4. But there might be a ________ wherever there is enough water.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "D",
+              "explanation": "grove"
+            },
+            {
+              "id": "10",
+              "content": "5. She didn’t have much time to get to the house to ________ her promise.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "E",
+              "explanation": "fulfill"
+            },
+            {
+              "id": "11",
+              "content": "6. Therefore, she took a(n) ________ that would get her there in no time.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "F",
+              "explanation": "shortcut"
+            },
+            {
+              "id": "12",
+              "content": "7. The need to create more jobs ________ the need to spend more money.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "G",
+              "explanation": "outweighed"
+            },
+            {
+              "id": "13",
+              "content": "8. But in other years it was ________.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "H",
+              "explanation": "vice versa"
+            },
+            {
+              "id": "14",
+              "content": "9. According to legend, gold was made from the cave’s ________.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "I",
+              "explanation": "ore"
+            },
+            {
+              "id": "15",
+              "content": "10. However, today its ________ have been forgotten.",
+              "options": [
+                "Fahrenheit",
+                "thermometer",
+                "outback",
+                "grove",
+                "fulfill",
+                "shortcut",
+                "outweighed",
+                "vice versa",
+                "ore",
+                "whereabouts"
+              ],
+              "correctAnswer": "J",
+              "explanation": "whereabouts"
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the one that is similar in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. comprise",
+              "options": [
+                "return",
+                "consist",
+                "explain",
+                "favor"
+              ],
+              "correctAnswer": "B",
+              "explanation": "consist (b)"
+            },
+            {
+              "id": "17",
+              "content": "2. tilt",
+              "options": [
+                "mix",
+                "dig",
+                "lean",
+                "grip"
+              ],
+              "correctAnswer": "C",
+              "explanation": "lean (c)"
+            },
+            {
+              "id": "18",
+              "content": "3. pier",
+              "options": [
+                "dock",
+                "cake",
+                "chef",
+                "fort"
+              ],
+              "correctAnswer": "A",
+              "explanation": "dock (a)"
+            },
+            {
+              "id": "19",
+              "content": "4. analogous",
+              "options": [
+                "metric",
+                "powerful",
+                "secure",
+                "similar"
+              ],
+              "correctAnswer": "D",
+              "explanation": "similar (d)"
+            },
+            {
+              "id": "20",
+              "content": "5. paradox",
+              "options": [
+                "illogical",
+                "cattle",
+                "calendar",
+                "feather"
+              ],
+              "correctAnswer": "A",
+              "explanation": "illogical (a)"
+            }
+          ]
+        },
+        {
+          "id": "sec4_wordlist",
+          "title": "Exercise 4: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. These mines produce several types of valuable raw forms of rock.",
+              "options": [
+                "ore",
+                "tariff",
+                "binoculars",
+                "depicted"
+              ],
+              "correctAnswer": "A",
+              "explanation": "ore"
+            },
+            {
+              "id": "22",
+              "content": "2. The company had to pay a tax on exports for the steel it shipped to Europe.",
+              "options": [
+                "tariff",
+                "whereabouts",
+                "dual",
+                "comprised"
+              ],
+              "correctAnswer": "A",
+              "explanation": "tariff"
+            },
+            {
+              "id": "23",
+              "content": "3. She used the device used for seeing things far away to observe the small bird.",
+              "options": [
+                "thermometer",
+                "binoculars",
+                "paradox",
+                "bulk"
+              ],
+              "correctAnswer": "B",
+              "explanation": "binoculars"
+            },
+            {
+              "id": "24",
+              "content": "4. The painting portrayed what the beach looked like twenty years ago.",
+              "options": [
+                "depicted",
+                "tariff",
+                "binoculars",
+                "dual"
+              ],
+              "correctAnswer": "A",
+              "explanation": "depicted"
+            },
+            {
+              "id": "25",
+              "content": "5. He had sent a letter from the city three days earlier. But his precise location was still a mystery.",
+              "options": [
+                "whereabouts",
+                "ore",
+                "comprised",
+                "paradox"
+              ],
+              "correctAnswer": "A",
+              "explanation": "whereabouts"
+            },
+            {
+              "id": "26",
+              "content": "6. The two-part plan involves scientists from both universities.",
+              "options": [
+                "dual",
+                "bulk",
+                "thermometer",
+                "depicted"
+              ],
+              "correctAnswer": "A",
+              "explanation": "dual"
+            },
+            {
+              "id": "27",
+              "content": "7. The meal was made up mostly of beans and vegetables.",
+              "options": [
+                "comprised",
+                "binoculars",
+                "tariff",
+                "ore"
+              ],
+              "correctAnswer": "A",
+              "explanation": "comprised"
+            },
+            {
+              "id": "28",
+              "content": "8. If you’re sick, take your temperature. The device for measuring temperature is in the cabinet.",
+              "options": [
+                "thermometer",
+                "paradox",
+                "bulk",
+                "whereabouts"
+              ],
+              "correctAnswer": "A",
+              "explanation": "thermometer"
+            },
+            {
+              "id": "29",
+              "content": "9. His promotion was a real event opposite to common knowledge due to his sparse knowledge.",
+              "options": [
+                "paradox",
+                "dual",
+                "tariff",
+                "ore"
+              ],
+              "correctAnswer": "A",
+              "explanation": "paradox"
+            },
+            {
+              "id": "30",
+              "content": "10. It was difficult to lift the great mass that had accumulated in his backpack.",
+              "options": [
+                "bulk",
+                "thermometer",
+                "comprised",
+                "depicted"
+              ],
+              "correctAnswer": "A",
+              "explanation": "bulk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Shortcut</h1><p style=\"margin-bottom: 1rem;\">A truck driver was driving cargo from the <b>outback</b> to the coast. His load was <b>comprised</b> of many types of <b>ore</b>. He needed a huge truck to carry its <b>bulk</b> to a ship waiting at a <b>pier</b> on the country’s eastern coast. At the border between two counties, he’d have to pay a <b>tariff</b> on the cargo. However, he could keep his money if he avoided the station at the border. He worried about getting in trouble for not paying the <b>tariff</b>, but the thought of extra money <b>outweighed</b> this concern.</p><p style=\"margin-bottom: 1rem;\">He took out his road map. To his surprise, it <b>depicted</b> a small road that had a <b>dual</b> advantage. It not only avoided the border station but also was a shorter route to the coast. He decided to take the <b>shortcut</b>.</p><p style=\"margin-bottom: 1rem;\">However, along his journey, he soon ran into problems. First, he had to cross a small wooden bridge. His truck weighed too much for the bridge. It was <b>analogous</b> to an elephant trying to stand on a tree branch. The bridge started to break as the truck crossed, and the trailer <b>tilted</b> to the right. Fortunately, the truck made it safely across, but most of the <b>ore</b> fell into the river below.</p><p style=\"margin-bottom: 1rem;\">Next, it was a very hot day. The <b>thermometer</b> read over 100 degrees <b>Fahrenheit</b>. The truck’s engine became too hot, so the driver parked it in the shade of a <b>grove</b> of trees until it cooled down.</p><p style=\"margin-bottom: 1rem;\">Later, he took a wrong turn. He stopped and took out his <b>binoculars</b>. He scanned his surroundings and eventually discovered a landmark that led him back to the proper route.</p><p style=\"margin-bottom: 1rem;\">Finally, he arrived at the <b>pier</b>, but the ship wasn’t there. When he asked about the ship’s <b>whereabouts</b>, a man said that it had left thirty minutes ago. He had not <b>fulfilled</b> his duty. He realized then the <b>paradox</b> of the <b>shortcut</b>. The shortest route can be the longest, and <b>vice versa</b>, a long route may be the fastest.</p></div>",
+      "imageUrl": "/unit29_vol6_story.png",
+      "sections": [
+        {
+          "id": "sec5",
+          "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "31",
+              "content": "1. The driver’s load was comprised of many types of ore.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "T",
+              "explanation": "T"
+            },
+            {
+              "id": "32",
+              "content": "2. The paradox of the shortcut was that the shortest route could be the longest but not vice versa.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "F",
+              "explanation": "F, The paradox of the shortcut was that the shortest route could be the longest and vice versa."
+            },
+            {
+              "id": "33",
+              "content": "3. The thermometer read under 100 degrees Fahrenheit.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "F",
+              "explanation": "F, The thermometer read over 100 degrees Fahrenheit."
+            },
+            {
+              "id": "34",
+              "content": "4. When the trailer tilted, the driver’s binoculars fell into the river.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "F",
+              "explanation": "F, When the trailer tilted, most of the ore fell into the river."
+            },
+            {
+              "id": "35",
+              "content": "5. The driver had fulfilled his duty.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "F",
+              "explanation": "F, The driver had not fulfilled his duty."
+            }
+          ]
+        },
+        {
+          "id": "sec6",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "36",
+              "content": "1. What was the truck crossing the bridge analogous to?",
+              "options": [
+                "It was analogous to an elephant trying to stand on a tree branch.",
+                "It was analogous to a bird flying in the sky.",
+                "It was analogous to a fish swimming in the sea.",
+                "It was analogous to a horse running in the field."
+              ],
+              "correctAnswer": "A",
+              "explanation": "It was analogous to an elephant trying to stand on a tree branch."
+            },
+            {
+              "id": "37",
+              "content": "2. What outweighed the driver’s concern of being punished for not paying the tariff?",
+              "options": [
+                "The thought of extra money outweighed this concern.",
+                "The thought of a faster trip.",
+                "The fear of getting lost.",
+                "The beauty of the scenery."
+              ],
+              "correctAnswer": "A",
+              "explanation": "The thought of extra money outweighed this concern."
+            },
+            {
+              "id": "38",
+              "content": "3. What was the dual advantage of the route depicted on the map?",
+              "options": [
+                "It not only avoided the border station but also was a shorter route to the coast.",
+                "It avoided the traffic and police.",
+                "It was scenic and fast.",
+                "It had better roads and less wind."
+              ],
+              "correctAnswer": "A",
+              "explanation": "It not only avoided the border station but also was a shorter route to the coast."
+            },
+            {
+              "id": "39",
+              "content": "4. What made the driver park his truck in a grove of trees while in the outback?",
+              "options": [
+                "The truck's engine became too hot.",
+                "He was very tired.",
+                "He wanted to take pictures.",
+                "He needed to eat lunch."
+              ],
+              "correctAnswer": "A",
+              "explanation": "The truck's engine became too hot."
+            },
+            {
+              "id": "40",
+              "content": "5. Why couldn’t the driver determine the ship’s whereabouts at the pier?",
+              "options": [
+                "The driver couldn't locate the ship's whereabouts at the pier because it had left thirty minutes ago.",
+                "The pier was destroyed.",
+                "It was too dark.",
+                "The ship sank."
+              ],
+              "correctAnswer": "A",
+              "explanation": "The driver couldn't locate the ship's whereabouts at the pier because it had left thirty minutes ago."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

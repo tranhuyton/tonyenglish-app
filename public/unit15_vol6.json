@@ -1,1 +1,475 @@
-{"basicInfo": {"skill": "Standard-Reading", "title": "Unit 15: Volume 6", "category": "exercise", "timeLimit": 0}, "parts": [{"id": "part1", "title": "Word List", "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit15_vol6_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit15_vol6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adhere</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[adhiar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To adhere means to act in the way that a rule or agreement says is right.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If the new employees wish to succeed, they must adhere to the boss’s rules.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">administer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[administar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To administer means to take responsibility for organizing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher’s assistant will administer the test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compassionate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kampaejanit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people are compassionate, they feel pity and sympathy for others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The compassionate nurse tried to make the sick man feel comfortable.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contaminate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kantaemaneit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To contaminate something means to put dirty or harmful chemicals into it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lake was contaminated when pollutants entered into the water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deficiency</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[difijansi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A deficiency is a lack of something, especially something that is needed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Your snack has a deficiency of any real nutrients.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">epidemic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[epademik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An epidemic is an outbreak of a disease that spreads quickly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was difficult to stop the flu epidemic.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hazard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[haezard]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hazard is something that could be dangerous to a person’s health or safety.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Smoking cigarettes poses many health hazards.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">imperative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[imperativ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is imperative, it is extremely important and must be done.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was imperative for him to find a job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intestines</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intestinz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Intestines are tubes through which food passes after it leaves the stomach.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Whatever you eat goes into your intestines.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">manifest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[maenafest]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To manifest means to make something visible or obvious.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The holiday season manifested joy in the children.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">metabolic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[metabalik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is metabolic, it relates to a person’s or animal’s metabolism.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People who have a low metabolic rate will gain weight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overcrowded</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvarkraudid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a place is overcrowded, it has too many people or things in it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lobby was overcrowded with people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">paramount</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paeramaunt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is paramount, it is more important than anything else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The safety of passengers must be paramount when designing a car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">practitioner</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[praektijanar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A practitioner is a doctor.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She made an appointment with the practitioner to treat her cough.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">provision</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pravi3an]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The provision of something is the act of giving it to people in need or want.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That department is responsible for the provision of emergency supplies.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">replenish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ripienij]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To replenish something means to make it full or complete again.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We planted nearly one hundred seeds to replenish the garden after the fire.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sterile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stern]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is sterile, it is completely clean and free from germs.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hospital room looked quite sterile.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">upgrade</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[Apgreid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To upgrade something means to improve it or make it more efficient.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He upgraded to a real fancy car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">viable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vaiabal]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is viable, it is capable of doing what it is intended to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her method of solving the math problem seemed viable.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">voluntary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[valanteri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is voluntary, it is done by choice but is not required.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many people attended the voluntary boat safety class.</div></div></div></div></div></div>", "sections": [{"id": "sec1_wordlist", "title": "Exercise 1: Choose the answer that best fits the question.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "1", "content": "1. What can start an epidemic?", "options": ["A kingdom", "A virus", "A fire", "A storm"], "correctAnswer": "A virus", "explanation": "b. A virus"}, {"id": "2", "content": "2. What is found inside intestines?", "options": ["Books", "Students", "Food", "Electronics"], "correctAnswer": "Food", "explanation": "c. Food"}, {"id": "3", "content": "3. If you replenish an empty refrigerator, you", "options": ["turn the temperature down", "fill it with food", "clean it with a sponge", "replace the light bulb"], "correctAnswer": "fill it with food", "explanation": "b. fill it with food"}, {"id": "4", "content": "4. What is a hazard on a street?", "options": ["A stop sign", "A hole in the ground", "A carpool lane", "A crosswalk"], "correctAnswer": "A hole in the ground", "explanation": "b. A hole in the ground"}, {"id": "5", "content": "5. What can contaminate the air?", "options": ["A poison", "A flower", "A mosquito", "A flag"], "correctAnswer": "A poison", "explanation": "a. A poison"}, {"id": "6", "content": "6. Which of the following is the most serious to have a deficiency of?", "options": ["Children", "Addresses", "Vitamins", "Pencils"], "correctAnswer": "Vitamins", "explanation": "c. Vitamins"}, {"id": "7", "content": "7. What process is metabolic?", "options": ["Sitting quietly", "Learning to spell", "Sleeping", "Digesting food"], "correctAnswer": "Digesting food", "explanation": "d. Digesting food"}, {"id": "8", "content": "8. What is paramount when swimming underwater?", "options": ["Not getting wet", "Holding your breath", "Breathing regularly", "Stretching your limbs"], "correctAnswer": "Holding your breath", "explanation": "b. Holding your breath"}, {"id": "9", "content": "9. What needs to be sterile?", "options": ["A hospital room", "An ocean", "A bicycle rack", "The soil"], "correctAnswer": "A hospital room", "explanation": "a. A hospital room"}, {"id": "10", "content": "10. What does a practitioner do?", "options": ["Make furniture", "Fight crime", "Make laws", "Treat the sick"], "correctAnswer": "Treat the sick", "explanation": "d. Treat the sick"}]}, {"id": "sec2_wordlist", "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "11", "content": "1. voluntary", "options": ["heavy", "required", "obvious", "chosen"], "correctAnswer": "required", "explanation": "b. required"}, {"id": "12", "content": "2. imperative", "options": ["unimportant", "faulty", "mastered", "uncaring"], "correctAnswer": "unimportant", "explanation": "a. unimportant"}, {"id": "13", "content": "3. compassionate", "options": ["likely", "distant", "afraid", "uncaring"], "correctAnswer": "uncaring", "explanation": "d. uncaring"}, {"id": "14", "content": "4. sterile", "options": ["not fair", "not clean", "not free", "not working"], "correctAnswer": "not clean", "explanation": "b. not clean"}, {"id": "15", "content": "5. overcrowded", "options": ["empty", "costly", "silly", "bland"], "correctAnswer": "empty", "explanation": "a. empty"}]}, {"id": "sec3_wordlist", "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "16", "content": "1. They need to improve and make more efficient the medical devices in the hospital.", "options": ["upgrade", "administer", "replenish", "manifest"], "correctAnswer": "upgrade", "explanation": "upgrade"}, {"id": "17", "content": "2. To save the boy, rushing into the burning house is extremely important and must be done.", "options": ["viable", "paramount", "imperative", "voluntary"], "correctAnswer": "imperative", "explanation": "imperative"}, {"id": "18", "content": "3. Handing out rain jackets was a necessary act of giving.", "options": ["hazard", "deficiency", "provision", "epidemic"], "correctAnswer": "provision", "explanation": "provision"}, {"id": "19", "content": "4. Sometimes, cold weather can be made visible or obvious in the most unlikely places.", "options": ["contaminate", "manifest", "adhere", "upgrade"], "correctAnswer": "manifest", "explanation": "manifest"}, {"id": "20", "content": "5. The theory seems capable of doing what it needs to do to me.", "options": ["viable", "metabolic", "sterile", "overcrowded"], "correctAnswer": "viable", "explanation": "viable"}, {"id": "21", "content": "6. You must act in a way that is right according to the rules of the game.", "options": ["administer", "adhere", "replenish", "contaminate"], "correctAnswer": "adhere", "explanation": "adhere"}, {"id": "22", "content": "7. Joining the choir will be an action that is done by choice.", "options": ["imperative", "voluntary", "compassionate", "sterile"], "correctAnswer": "voluntary", "explanation": "voluntary"}, {"id": "23", "content": "8. The amusement park was no fun because it was occupied by too many people.", "options": ["overcrowded", "viable", "metabolic", "sterile"], "correctAnswer": "overcrowded", "explanation": "overcrowded"}, {"id": "24", "content": "9. Who is going to take responsibility for organizing the protest?", "options": ["administer", "upgrade", "manifest", "adhere"], "correctAnswer": "administer", "explanation": "administer"}, {"id": "25", "content": "10. The criminal was certainly not feeling pity or sympathy for suffering people.", "options": ["compassionate", "voluntary", "paramount", "imperative"], "correctAnswer": "compassionate", "explanation": "compassionate"}]}]}, {"id": "part2", "title": "Comprehensive Reading", "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Epidemic in Zimbabwe</h1><p style=\"margin-bottom: 1rem;\">In August of 2008, a deadly cholera <b>epidemic</b> <b>manifested</b> in Zimbabwe. A severe health <b>hazard</b> caused the outbreak. There was an extreme lack of clean drinking water in the <b>overcrowded</b> urban cities. Garbage and chemicals got into the public water supplies and <b>contaminated</b> them. Since people did not have access to other sources, they had to drink the dirty water.</p><p style=\"margin-bottom: 1rem;\">The outbreak spread rapidly and infected almost 16,000 people. The illness caused extreme pain in people’s <b>intestines</b>. It also caused a <b>deficiency</b> of important fluids in sick people’s bodies. Without the proper fluids and minerals, <b>metabolic</b> processes stopped working correctly. People were unable to digest food properly or <b>replenish</b> their lost nutrients. If they had not received <b>viable</b> treatment, they would have been likely to die. It was <b>imperative</b> for help to come soon.</p><p style=\"margin-bottom: 1rem;\">However, the government of Zimbabwe was unable to provide help to its people. The government didn’t have a plan to stop the spread of cholera. In addition, the country was too poor to get clean water or medication for the sick. The people seemed to be doomed.</p><p style=\"margin-bottom: 1rem;\">Luckily, many other countries recognized the <b>paramount</b> need to contain the outbreak. Dozens of <b>voluntary</b> <b>practitioners</b> from Britain, France, the United States, and other countries went to Zimbabwe to treat the disease. Through the <b>provision</b> of <b>sterile</b> drinking water and medication, people finally got the treatment they badly needed. The <b>compassionate</b> doctors were able to save the lives of thousands. By January of 2009, the <b>epidemic</b> was almost completely contained.</p><p style=\"margin-bottom: 1rem;\">Today, the Zimbabwean government is working with other countries to prevent future <b>epidemics</b>. They are cleaning up the water supply and learning how to avoid health <b>hazards</b>. The system used to filter water is being <b>upgraded</b>. The government now <b>administers</b> the water supply plants and makes sure that they <b>adhere</b> to strict safety guidelines. Hopefully, future instances of cholera will be treated before they start deadly <b>epidemics</b>.</p></div>", "imageUrl": "/unit15_vol6_story.png", "sections": [{"id": "sec4", "title": "Part A: Mark each statement T for true or F for false.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "26", "content": "1. The health hazard was a lack of sterile drinking water in overcrowded urban cities.", "options": ["T", "F"], "correctAnswer": "T", "explanation": "T"}, {"id": "27", "content": "2. A deficiency of contaminated water caused metabolic processes to stop working correctly.", "options": ["T", "F"], "correctAnswer": "F", "explanation": "F: A deficiency of important fluids caused metabolic processes to stop working correctly."}, {"id": "28", "content": "3. It was imperative that people received viable treatment quickly.", "options": ["T", "F"], "correctAnswer": "T", "explanation": "T"}, {"id": "29", "content": "4. The government used to filter water is being upgraded.", "options": ["T", "F"], "correctAnswer": "F", "explanation": "F: The system used to filter water is being upgraded."}, {"id": "30", "content": "5. The government now administers water supply plants to make sure they adhere to guidelines.", "options": ["T", "F"], "correctAnswer": "T", "explanation": "T"}]}, {"id": "sec5", "title": "Part B: Answer the questions.", "content": "", "questionType": "Trắc nghiệm", "questions": [{"id": "31", "content": "1. What paramount need did other countries recognize?", "options": ["Countries recognized the paramount need to contain the outbreak.", "Countries recognized the need to build a new hospital.", "Countries recognized the need to start a war.", "Countries recognized the need to abandon Zimbabwe."], "correctAnswer": "Countries recognized the paramount need to contain the outbreak.", "explanation": "Countries recognized the paramount need to contain the outbreak."}, {"id": "32", "content": "2. When did the cholera epidemic manifest itself in Zimbabwe?", "options": ["in August of 2008", "in January of 2009", "in December of 2007", "in March of 2010"], "correctAnswer": "in August of 2008", "explanation": "in August of 2008"}, {"id": "33", "content": "3. Where did the voluntary practitioners come from?", "options": ["Britain, France, the United States, and other countries.", "Only from Britain.", "From the neighboring countries.", "From Asia and Australia."], "correctAnswer": "Britain, France, the United States, and other countries.", "explanation": "Britain, France, the United States, and other countries."}, {"id": "34", "content": "4. What were infected people unable to replenish in their intestines?", "options": ["Infected people were unable to replenish lost nutrients.", "Infected people were unable to replenish blood.", "Infected people were unable to replenish air.", "Infected people were unable to replenish bad bacteria."], "correctAnswer": "Infected people were unable to replenish lost nutrients.", "explanation": "Infected people were unable to replenish lost nutrients."}, {"id": "35", "content": "5. What provisions did the compassionate doctors provide?", "options": ["The doctors provided sterile drinking water and medication.", "The doctors provided beds and blankets.", "The doctors provided books and pencils.", "The doctors provided toys and games."], "correctAnswer": "The doctors provided sterile drinking water and medication.", "explanation": "The doctors provided sterile drinking water and medication."}]}]}]}
+{
+  "basicInfo": {
+    "skill": "Standard-Reading",
+    "title": "Unit 15: Volume 6",
+    "category": "exercise",
+    "timeLimit": 0
+  },
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit15_vol6_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit15_vol6_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">adhere</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[adhiar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To adhere means to act in the way that a rule or agreement says is right.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ If the new employees wish to succeed, they must adhere to the boss’s rules.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">administer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[administar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To administer means to take responsibility for organizing something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher’s assistant will administer the test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">compassionate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kampaejanit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When people are compassionate, they feel pity and sympathy for others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The compassionate nurse tried to make the sick man feel comfortable.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contaminate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kantaemaneit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To contaminate something means to put dirty or harmful chemicals into it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lake was contaminated when pollutants entered into the water.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deficiency</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[difijansi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A deficiency is a lack of something, especially something that is needed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Your snack has a deficiency of any real nutrients.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">epidemic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[epademik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An epidemic is an outbreak of a disease that spreads quickly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was difficult to stop the flu epidemic.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">hazard</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[haezard]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A hazard is something that could be dangerous to a person’s health or safety.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Smoking cigarettes poses many health hazards.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">imperative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[imperativ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is imperative, it is extremely important and must be done.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was imperative for him to find a job.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intestines</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intestinz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Intestines are tubes through which food passes after it leaves the stomach.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Whatever you eat goes into your intestines.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">manifest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[maenafest]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To manifest means to make something visible or obvious.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The holiday season manifested joy in the children.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">metabolic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[metabalik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is metabolic, it relates to a person’s or animal’s metabolism.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People who have a low metabolic rate will gain weight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overcrowded</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvarkraudid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a place is overcrowded, it has too many people or things in it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The lobby was overcrowded with people.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">paramount</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[paeramaunt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is paramount, it is more important than anything else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The safety of passengers must be paramount when designing a car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">practitioner</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[praektijanar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A practitioner is a doctor.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She made an appointment with the practitioner to treat her cough.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">provision</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pravi3an]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The provision of something is the act of giving it to people in need or want.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That department is responsible for the provision of emergency supplies.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">replenish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ripienij]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To replenish something means to make it full or complete again.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We planted nearly one hundred seeds to replenish the garden after the fire.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sterile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stern]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is sterile, it is completely clean and free from germs.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The hospital room looked quite sterile.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">upgrade</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[Apgreid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To upgrade something means to improve it or make it more efficient.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He upgraded to a real fancy car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">viable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vaiabal]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is viable, it is capable of doing what it is intended to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her method of solving the math problem seemed viable.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">voluntary</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[valanteri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is voluntary, it is done by choice but is not required.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Many people attended the voluntary boat safety class.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the answer that best fits the question.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. What can start an epidemic?",
+              "options": [
+                "A kingdom",
+                "A virus",
+                "A fire",
+                "A storm"
+              ],
+              "correctAnswer": "B",
+              "explanation": "b. A virus"
+            },
+            {
+              "id": "2",
+              "content": "2. What is found inside intestines?",
+              "options": [
+                "Books",
+                "Students",
+                "Food",
+                "Electronics"
+              ],
+              "correctAnswer": "C",
+              "explanation": "c. Food"
+            },
+            {
+              "id": "3",
+              "content": "3. If you replenish an empty refrigerator, you",
+              "options": [
+                "turn the temperature down",
+                "fill it with food",
+                "clean it with a sponge",
+                "replace the light bulb"
+              ],
+              "correctAnswer": "B",
+              "explanation": "b. fill it with food"
+            },
+            {
+              "id": "4",
+              "content": "4. What is a hazard on a street?",
+              "options": [
+                "A stop sign",
+                "A hole in the ground",
+                "A carpool lane",
+                "A crosswalk"
+              ],
+              "correctAnswer": "B",
+              "explanation": "b. A hole in the ground"
+            },
+            {
+              "id": "5",
+              "content": "5. What can contaminate the air?",
+              "options": [
+                "A poison",
+                "A flower",
+                "A mosquito",
+                "A flag"
+              ],
+              "correctAnswer": "A",
+              "explanation": "a. A poison"
+            },
+            {
+              "id": "6",
+              "content": "6. Which of the following is the most serious to have a deficiency of?",
+              "options": [
+                "Children",
+                "Addresses",
+                "Vitamins",
+                "Pencils"
+              ],
+              "correctAnswer": "C",
+              "explanation": "c. Vitamins"
+            },
+            {
+              "id": "7",
+              "content": "7. What process is metabolic?",
+              "options": [
+                "Sitting quietly",
+                "Learning to spell",
+                "Sleeping",
+                "Digesting food"
+              ],
+              "correctAnswer": "D",
+              "explanation": "d. Digesting food"
+            },
+            {
+              "id": "8",
+              "content": "8. What is paramount when swimming underwater?",
+              "options": [
+                "Not getting wet",
+                "Holding your breath",
+                "Breathing regularly",
+                "Stretching your limbs"
+              ],
+              "correctAnswer": "B",
+              "explanation": "b. Holding your breath"
+            },
+            {
+              "id": "9",
+              "content": "9. What needs to be sterile?",
+              "options": [
+                "A hospital room",
+                "An ocean",
+                "A bicycle rack",
+                "The soil"
+              ],
+              "correctAnswer": "A",
+              "explanation": "a. A hospital room"
+            },
+            {
+              "id": "10",
+              "content": "10. What does a practitioner do?",
+              "options": [
+                "Make furniture",
+                "Fight crime",
+                "Make laws",
+                "Treat the sick"
+              ],
+              "correctAnswer": "D",
+              "explanation": "d. Treat the sick"
+            }
+          ]
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Choose the one that is opposite in meaning to the given word.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. voluntary",
+              "options": [
+                "heavy",
+                "required",
+                "obvious",
+                "chosen"
+              ],
+              "correctAnswer": "B",
+              "explanation": "b. required"
+            },
+            {
+              "id": "12",
+              "content": "2. imperative",
+              "options": [
+                "unimportant",
+                "faulty",
+                "mastered",
+                "uncaring"
+              ],
+              "correctAnswer": "A",
+              "explanation": "a. unimportant"
+            },
+            {
+              "id": "13",
+              "content": "3. compassionate",
+              "options": [
+                "likely",
+                "distant",
+                "afraid",
+                "uncaring"
+              ],
+              "correctAnswer": "D",
+              "explanation": "d. uncaring"
+            },
+            {
+              "id": "14",
+              "content": "4. sterile",
+              "options": [
+                "not fair",
+                "not clean",
+                "not free",
+                "not working"
+              ],
+              "correctAnswer": "B",
+              "explanation": "b. not clean"
+            },
+            {
+              "id": "15",
+              "content": "5. overcrowded",
+              "options": [
+                "empty",
+                "costly",
+                "silly",
+                "bland"
+              ],
+              "correctAnswer": "A",
+              "explanation": "a. empty"
+            }
+          ]
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "16",
+              "content": "1. They need to improve and make more efficient the medical devices in the hospital.",
+              "options": [
+                "upgrade",
+                "administer",
+                "replenish",
+                "manifest"
+              ],
+              "correctAnswer": "A",
+              "explanation": "upgrade"
+            },
+            {
+              "id": "17",
+              "content": "2. To save the boy, rushing into the burning house is extremely important and must be done.",
+              "options": [
+                "viable",
+                "paramount",
+                "imperative",
+                "voluntary"
+              ],
+              "correctAnswer": "C",
+              "explanation": "imperative"
+            },
+            {
+              "id": "18",
+              "content": "3. Handing out rain jackets was a necessary act of giving.",
+              "options": [
+                "hazard",
+                "deficiency",
+                "provision",
+                "epidemic"
+              ],
+              "correctAnswer": "C",
+              "explanation": "provision"
+            },
+            {
+              "id": "19",
+              "content": "4. Sometimes, cold weather can be made visible or obvious in the most unlikely places.",
+              "options": [
+                "contaminate",
+                "manifest",
+                "adhere",
+                "upgrade"
+              ],
+              "correctAnswer": "B",
+              "explanation": "manifest"
+            },
+            {
+              "id": "20",
+              "content": "5. The theory seems capable of doing what it needs to do to me.",
+              "options": [
+                "viable",
+                "metabolic",
+                "sterile",
+                "overcrowded"
+              ],
+              "correctAnswer": "A",
+              "explanation": "viable"
+            },
+            {
+              "id": "21",
+              "content": "6. You must act in a way that is right according to the rules of the game.",
+              "options": [
+                "administer",
+                "adhere",
+                "replenish",
+                "contaminate"
+              ],
+              "correctAnswer": "B",
+              "explanation": "adhere"
+            },
+            {
+              "id": "22",
+              "content": "7. Joining the choir will be an action that is done by choice.",
+              "options": [
+                "imperative",
+                "voluntary",
+                "compassionate",
+                "sterile"
+              ],
+              "correctAnswer": "B",
+              "explanation": "voluntary"
+            },
+            {
+              "id": "23",
+              "content": "8. The amusement park was no fun because it was occupied by too many people.",
+              "options": [
+                "overcrowded",
+                "viable",
+                "metabolic",
+                "sterile"
+              ],
+              "correctAnswer": "A",
+              "explanation": "overcrowded"
+            },
+            {
+              "id": "24",
+              "content": "9. Who is going to take responsibility for organizing the protest?",
+              "options": [
+                "administer",
+                "upgrade",
+                "manifest",
+                "adhere"
+              ],
+              "correctAnswer": "A",
+              "explanation": "administer"
+            },
+            {
+              "id": "25",
+              "content": "10. The criminal was certainly not feeling pity or sympathy for suffering people.",
+              "options": [
+                "compassionate",
+                "voluntary",
+                "paramount",
+                "imperative"
+              ],
+              "correctAnswer": "A",
+              "explanation": "compassionate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Epidemic in Zimbabwe</h1><p style=\"margin-bottom: 1rem;\">In August of 2008, a deadly cholera <b>epidemic</b> <b>manifested</b> in Zimbabwe. A severe health <b>hazard</b> caused the outbreak. There was an extreme lack of clean drinking water in the <b>overcrowded</b> urban cities. Garbage and chemicals got into the public water supplies and <b>contaminated</b> them. Since people did not have access to other sources, they had to drink the dirty water.</p><p style=\"margin-bottom: 1rem;\">The outbreak spread rapidly and infected almost 16,000 people. The illness caused extreme pain in people’s <b>intestines</b>. It also caused a <b>deficiency</b> of important fluids in sick people’s bodies. Without the proper fluids and minerals, <b>metabolic</b> processes stopped working correctly. People were unable to digest food properly or <b>replenish</b> their lost nutrients. If they had not received <b>viable</b> treatment, they would have been likely to die. It was <b>imperative</b> for help to come soon.</p><p style=\"margin-bottom: 1rem;\">However, the government of Zimbabwe was unable to provide help to its people. The government didn’t have a plan to stop the spread of cholera. In addition, the country was too poor to get clean water or medication for the sick. The people seemed to be doomed.</p><p style=\"margin-bottom: 1rem;\">Luckily, many other countries recognized the <b>paramount</b> need to contain the outbreak. Dozens of <b>voluntary</b> <b>practitioners</b> from Britain, France, the United States, and other countries went to Zimbabwe to treat the disease. Through the <b>provision</b> of <b>sterile</b> drinking water and medication, people finally got the treatment they badly needed. The <b>compassionate</b> doctors were able to save the lives of thousands. By January of 2009, the <b>epidemic</b> was almost completely contained.</p><p style=\"margin-bottom: 1rem;\">Today, the Zimbabwean government is working with other countries to prevent future <b>epidemics</b>. They are cleaning up the water supply and learning how to avoid health <b>hazards</b>. The system used to filter water is being <b>upgraded</b>. The government now <b>administers</b> the water supply plants and makes sure that they <b>adhere</b> to strict safety guidelines. Hopefully, future instances of cholera will be treated before they start deadly <b>epidemics</b>.</p></div>",
+      "imageUrl": "/unit15_vol6_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Part A: Mark each statement T for true or F for false.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "26",
+              "content": "1. The health hazard was a lack of sterile drinking water in overcrowded urban cities.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "T",
+              "explanation": "T"
+            },
+            {
+              "id": "27",
+              "content": "2. A deficiency of contaminated water caused metabolic processes to stop working correctly.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "F",
+              "explanation": "F: A deficiency of important fluids caused metabolic processes to stop working correctly."
+            },
+            {
+              "id": "28",
+              "content": "3. It was imperative that people received viable treatment quickly.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "T",
+              "explanation": "T"
+            },
+            {
+              "id": "29",
+              "content": "4. The government used to filter water is being upgraded.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "F",
+              "explanation": "F: The system used to filter water is being upgraded."
+            },
+            {
+              "id": "30",
+              "content": "5. The government now administers water supply plants to make sure they adhere to guidelines.",
+              "options": [
+                "T",
+                "F"
+              ],
+              "correctAnswer": "T",
+              "explanation": "T"
+            }
+          ]
+        },
+        {
+          "id": "sec5",
+          "title": "Part B: Answer the questions.",
+          "content": "",
+          "questionType": "Trắc nghiệm",
+          "questions": [
+            {
+              "id": "31",
+              "content": "1. What paramount need did other countries recognize?",
+              "options": [
+                "Countries recognized the paramount need to contain the outbreak.",
+                "Countries recognized the need to build a new hospital.",
+                "Countries recognized the need to start a war.",
+                "Countries recognized the need to abandon Zimbabwe."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Countries recognized the paramount need to contain the outbreak."
+            },
+            {
+              "id": "32",
+              "content": "2. When did the cholera epidemic manifest itself in Zimbabwe?",
+              "options": [
+                "in August of 2008",
+                "in January of 2009",
+                "in December of 2007",
+                "in March of 2010"
+              ],
+              "correctAnswer": "A",
+              "explanation": "in August of 2008"
+            },
+            {
+              "id": "33",
+              "content": "3. Where did the voluntary practitioners come from?",
+              "options": [
+                "Britain, France, the United States, and other countries.",
+                "Only from Britain.",
+                "From the neighboring countries.",
+                "From Asia and Australia."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Britain, France, the United States, and other countries."
+            },
+            {
+              "id": "34",
+              "content": "4. What were infected people unable to replenish in their intestines?",
+              "options": [
+                "Infected people were unable to replenish lost nutrients.",
+                "Infected people were unable to replenish blood.",
+                "Infected people were unable to replenish air.",
+                "Infected people were unable to replenish bad bacteria."
+              ],
+              "correctAnswer": "A",
+              "explanation": "Infected people were unable to replenish lost nutrients."
+            },
+            {
+              "id": "35",
+              "content": "5. What provisions did the compassionate doctors provide?",
+              "options": [
+                "The doctors provided sterile drinking water and medication.",
+                "The doctors provided beds and blankets.",
+                "The doctors provided books and pencils.",
+                "The doctors provided toys and games."
+              ],
+              "correctAnswer": "A",
+              "explanation": "The doctors provided sterile drinking water and medication."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
