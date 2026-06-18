@@ -1322,7 +1322,7 @@ const handleFinish = async () => {
 
           {/* PANEL PHẢI (CÂU HỎI VÀ NỘI DUNG LISTENING) */}
           <div 
-              className={`bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1 min-h-0 ${isListening ? 'md:pr-[312px] lg:pr-[352px]' : ''}`} 
+              className={`bg-[#f8fafc] overflow-y-auto custom-scrollbar scroll-smooth w-full md:w-auto flex-1 min-h-0 min-w-0 ${isListening ? 'md:pr-[312px] lg:pr-[352px]' : ''}`} 
               id="questions-container" 
               ref={rightPaneRef} 
               style={showLeftPane && window.innerWidth > 768 ? { width: `calc(${100 - leftWidth}% - 8px)`, flex: 'none' } : { flex: 1 }}
