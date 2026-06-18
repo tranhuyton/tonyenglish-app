@@ -1,0 +1,337 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit8_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit8_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">broad</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[brɔ:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is broad, it is wide.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The river is very long and broad.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bush</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[buʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bush is a plant with many thin branches. It is smaller than a tree.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dad and I planted some small bushes around the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">capable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[keipəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is capable of something, they can do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The Olympic athlete is capable of lifting a lot of weight.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cheat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃi:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To cheat is to be dishonest so that you can win or do well.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They cheated on the test by sharing answers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">concentrate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnsəntreit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To concentrate on someone or something is to give your full attention.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I could not concentrate on my homework because the room was so loud.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">conclude</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənklu:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To conclude is to arrive at a logical end by looking at evidence.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I saw crumbs on my dog’s face, so I concluded that he ate my cookie.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">confident</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kɑnfidənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Confident means that one believes they can do something without failing.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was confident she could climb the mountain due to her training.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">considerable</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənsidərəbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is considerable, it is large in size, amount or extent.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They paid a considerable amount of money for that car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convey</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənvei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To convey is to communicate or make ideas known.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That picture of a crying child conveys a feeling of sadness.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">definite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[defənit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is definite, it is certain or sure to be true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is a definite connection between hard work and success.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">delight</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dilait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Delight is a feeling of being very happy with something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He felt such delight after getting a promotion at work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">destination</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[destəneiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A destination is the place where someone or something is going to.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The destination of this plane is Munich, Germany.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dictate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dikteit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dictate something is to read it aloud so it can be written down.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He dictated his speech so his secretary could write it down.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">edge</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[edʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The edge of something is the part of it that is farthest from the center.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He ran to the edge of the cliff.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">path</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pæθ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A path is a way from one place to another that people can walk along.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We followed a path through the woods.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">resort</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rizɔ:rt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To resort to something is to depend on it in order to solve a problem.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I hope they don’t resort to violence to end the argument.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shadow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃædou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shadow is the dark area that is made when something blocks light.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man’s shadow was taller than he was.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">succeed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səksi:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To succeed is to complete something that you planned or tried to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He will continue to work on the robot until he succeeds.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">suspect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səspekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To suspect something is to believe that it is true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I suspect that those kids stole the money.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">valley</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[væli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A valley is a low area of land between two mountains or hills.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We looked at the valley below from the top of the mountain.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist_ex1",
+          "title": "Exercise 1: Fill in the blanks with the correct words from the word bank.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "1. This river will take us through the_________________ .",
+              "options": [
+                "valley",
+                "bush",
+                "edge",
+                "resort"
+              ],
+              "explanation": "valley: a low area of land between two mountains or hills.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2",
+              "content": "2. The doctor must_________________during surgery to keep the patient alive.",
+              "options": [
+                "convey",
+                "concentrate",
+                "broad",
+                "capable"
+              ],
+              "explanation": "concentrate: to give your full attention.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "3",
+              "content": "3. The sign was so_________________ we couldn’t see around it.",
+              "options": [
+                "broad",
+                "capable",
+                "resort",
+                "edge"
+              ],
+              "explanation": "broad: wide.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "4. People can_________________ their happiness by smiling.",
+              "options": [
+                "path",
+                "convey",
+                "concentrate",
+                "bush"
+              ],
+              "explanation": "convey: to communicate or make ideas known.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "5. What is the_________________ of this train?",
+              "options": [
+                "destination",
+                "valley",
+                "edge",
+                "resort"
+              ],
+              "explanation": "destination: the place where someone or something is going to.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "6",
+              "content": "6. We walked to the_________________ of the cliff and looked down.",
+              "options": [
+                "path",
+                "bush",
+                "edge",
+                "valley"
+              ],
+              "explanation": "edge: the part of it that is farthest from the center.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "7",
+              "content": "7. The hikers walked along the_________________ in the forest.",
+              "options": [
+                "bush",
+                "path",
+                "destination",
+                "broad"
+              ],
+              "explanation": "path: a way from one place to another that people can walk along.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "8. I planted a _________________ in my yard last weekend.",
+              "options": [
+                "bush",
+                "valley",
+                "capable",
+                "concentrate"
+              ],
+              "explanation": "bush: a plant with many thin branches.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "9",
+              "content": "9. She is_________________ of running faster than any boy in her class.",
+              "options": [
+                "capable",
+                "broad",
+                "convey",
+                "resort"
+              ],
+              "explanation": "capable: able to do something.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "10. If the boys can’t agree, they will__________________ to fighting.",
+              "options": [
+                "resort",
+                "convey",
+                "concentrate",
+                "destination"
+              ],
+              "explanation": "resort to: to depend on it in order to solve a problem.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec1_wordlist_ex2",
+          "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "1. He wants to win so much that he will not obey the rules to do it.",
+              "options": [
+                "cheat",
+                "shadow",
+                "suspect",
+                "succeed"
+              ],
+              "explanation": "cheat: to be dishonest so that you can win or do well.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "2. I’m going to stand in the dark area of the tree because the sun is too hot here.",
+              "options": [
+                "shadow",
+                "dictate",
+                "confident",
+                "delight"
+              ],
+              "explanation": "shadow: the dark area that is made when something blocks light.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "3. The police believe it’s true that the clerk stole the money.",
+              "options": [
+                "suspect",
+                "conclude",
+                "definite",
+                "considerable"
+              ],
+              "explanation": "suspect: to believe that it is true.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "14",
+              "content": "4. If we do what we are trying to do, we will become very rich!",
+              "options": [
+                "succeed",
+                "cheat",
+                "dictate",
+                "shadow"
+              ],
+              "explanation": "succeed: to complete something that you planned or tried to do.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "5. Please read aloud the questions so the students can write them down.",
+              "options": [
+                "dictate",
+                "convey",
+                "suspect",
+                "confident"
+              ],
+              "explanation": "dictate: to read it aloud so it can be written down.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "6. I am sure I can do something because I have practiced for years.",
+              "options": [
+                "confident",
+                "definite",
+                "considerable",
+                "delight"
+              ],
+              "explanation": "confident: believes they can do something without failing.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "7. After seeing the evidence, you must decide if the man is innocent.",
+              "options": [
+                "conclude",
+                "suspect",
+                "succeed",
+                "cheat"
+              ],
+              "explanation": "conclude: to arrive at a logical end by looking at evidence.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "8. It was a good feeling knowing that I had saved enough money to go on a trip.",
+              "options": [
+                "delight",
+                "shadow",
+                "dictate",
+                "confident"
+              ],
+              "explanation": "delight: a feeling of being very happy with something.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "9. This horse is a certain winner.",
+              "options": [
+                "definite",
+                "considerable",
+                "delight",
+                "suspect"
+              ],
+              "explanation": "definite: certain or sure to be true.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "10. The large size of the box made it difficult to move.",
+              "options": [
+                "considerable",
+                "confident",
+                "conclude",
+                "cheat"
+              ],
+              "explanation": "considerable: large in size, amount or extent.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Tricky Turtle</h1>        <p style=\"margin-bottom: 1rem;\">Ricky the rabbit and Tera the turtle met by the <b>edge</b> of the river. “No one is <b>capable</b> of beating me in a race!” Ricky said. He was <b>confident</b>—his smile <b>conveyed</b> that.</p>    <p style=\"margin-bottom: 1rem;\">“I can beat you,” Tera said.</p>    <p style=\"margin-bottom: 1rem;\">Ricky laughed with <b>delight</b>.</p>    <p style=\"margin-bottom: 1rem;\">Tera said, “We will race tomorrow. The <b>destination</b> is the hill.”</p>    <p style=\"margin-bottom: 1rem;\">Ricky agreed. Tera <b>concentrated</b> on winning the race. She was not faster than Ricky. She needed a <b>definite</b> way to <b>succeed</b>. She told her family about the race, “I have <b>concluded</b> that I have to <b>resort</b> to something bad. I will <b>cheat</b>.” She <b>dictated</b> her instructions to them.</p>    <p style=\"margin-bottom: 1rem;\">At the race, they all wore white feathers. They looked exactly the same! Then, her family members hid in <b>shadows</b> on the <b>path</b>.</p>    <p style=\"margin-bottom: 1rem;\">The race began. Tera was soon far behind. However, Tera’s brother hid behind a <b>bush</b> in the <b>valley</b> below. When Ricky got close, Tera’s brother began to run. He looked just like Tera! Ricky ran as fast as he could along the <b>path</b>. But, to him, it seemed like Tera was always ahead. Ricky had used a <b>considerable</b> amount of energy.</p>    <p style=\"margin-bottom: 1rem;\">He reached the top, but Tera’s sister was already there. “Well, you win,” Ricky said.</p>    <p style=\"margin-bottom: 1rem;\">Later, Tera had a <b>broad</b> smile on her face. Ricky never <b>suspected</b>. He had been tricked by a family of slow turtles.</p></div>",
+      "imageUrl": "/unit8_story.png",
+      "sections": [
+        {
+          "id": "sec2_reading",
+          "title": "Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "1. What is this story about?",
+              "options": [
+                "A confident rabbit",
+                "A rabbit that cheats in a race",
+                "A turtle that rests in shadows",
+                "A turtle with a crazy idea and a broad family"
+              ],
+              "explanation": "Theo đáp án khóa là (a) A confident rabbit.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "2. Where was the final destination of the race?",
+              "options": [
+                "The edge of the river",
+                "Behind the first bush",
+                "The middle of the valley",
+                "The top of the hill"
+              ],
+              "explanation": "The destination is the hill (đỉnh đồi).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "23",
+              "content": "3. Why was Tera the Turtle angry?",
+              "options": [
+                "Because Ricky the rabbit said no one was capable of beating him",
+                "Because she thought that the path of the race was too difficult",
+                "Because she knew Rabbit would resort to cheating",
+                "Because her family wouldn’t gather when she asked them to"
+              ],
+              "explanation": "Ricky the rabbit said 'No one is capable of beating me in a race!'.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "24",
+              "content": "4. What did Tera say to her family?",
+              "options": [
+                "She concluded that she must concentrate on the race.",
+                "She conveyed that Rabbit would cheat.",
+                "She told them about her definite plan to succeed.",
+                "She said the race would take a considerable amount of energy."
+              ],
+              "explanation": "She needed a definite way to succeed. She told her family about the race...",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 8",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

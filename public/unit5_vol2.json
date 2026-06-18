@@ -1,0 +1,209 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit5_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit5_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ancestor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ænsestər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An ancestor is a family member from the past.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My ancestors came from Germany.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">angle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æŋgl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An angle is the direction from which you look at something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The giraffe turned its head to see from another angle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">boot</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bu:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A boot is a heavy shoe that goes over your ankle.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He wore boots so that his feet wouldn't get wet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">border</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɔ:rdər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A border is the edge of an area.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The postcard had a pretty green border of pine needles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">congratulate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənˈgræʧəˌleɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To congratulate someone is to tell them that you are happy for them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Bill and Angela congratulated each other on a job well done.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">frame</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[freim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A frame is a border for a picture or mirror.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have to get a frame for my friend's picture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">heaven</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hevən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Heaven is the place that some people believe people go when they die.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When I die, I hope that I go to heaven.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">incredible</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inkredəbl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is incredible, it is hard to believe they are true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have an incredible story to tell you about my vacation.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">legend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[leʤənd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A legend is a story from the past.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is a well-known legend about a king and his queen.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">praise</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[preiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To praise is to show that you like someone or something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The coach praised both athletes after a good practice.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">proceed</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prəˈsiːd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To proceed is to go in a certain direction.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My son and I proceeded to the beach so we could go fishing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pure</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pjuər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is pure, it is very clear and beautiful.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The rose was pure. It had no dirt or imperfections.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">relative</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[relətiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A relative is a family member.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My relatives came by to see the new baby.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">senior</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[si:njər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If one is senior, they are the oldest or have been there the longest.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because he got his job first, Bob is the senior chef.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">silent</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sailənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is silent, they make no sound.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since no one was home, the house was silent.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sink</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sink]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sink into something is to slowly fall into it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boat had a hole in it, and it sank into the ocean.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">superior</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səpiəriər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If someone or something is superior, they are better than another.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I think cooking outdoors is superior to cooking indoors.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">surround</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[səraund]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To surround something is to close in on it from all sides.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We surrounded the suspect on all four sides.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">thick</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[θik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is thick, it is wide and solid.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The fog was so thick that I couldn't see through it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wrap</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ræp]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To wrap is to cover something on all sides.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I wrapped his gift and put a bow on it.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "praise",
+              "options": [
+                "a picture border",
+                "to cover",
+                "to show you like something",
+                "to go in a direction"
+              ],
+              "explanation": "praise: to show that you like someone or something.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "2",
+              "content": "thick",
+              "options": [
+                "wide and solid",
+                "having no sound",
+                "clean and untouched",
+                "better or more important"
+              ],
+              "explanation": "thick: wide and solid.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "incredible",
+              "options": [
+                "oldest",
+                "hard to believe",
+                "wide and solid",
+                "clear and beautiful"
+              ],
+              "explanation": "incredible: hard to believe they are true.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "4",
+              "content": "border",
+              "options": [
+                "a heavy shoe",
+                "a story from the past",
+                "an edge",
+                "a family member"
+              ],
+              "explanation": "border: the edge of an area.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "5",
+              "content": "heaven",
+              "options": [
+                "of great value",
+                "a place people go when they die",
+                "a family member",
+                "an edge"
+              ],
+              "explanation": "heaven: the place that some people believe people go when they die.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "6",
+              "content": "surround",
+              "options": [
+                "to show you like something",
+                "to close in from all sides",
+                "to say you are happy for someone",
+                "to cover"
+              ],
+              "explanation": "surround: to close in on it from all sides.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "7",
+              "content": "ancestor",
+              "options": [
+                "a family member from the past",
+                "of great value",
+                "a heavy shoe",
+                "to slowly fall in"
+              ],
+              "explanation": "ancestor: a family member from the past.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "8",
+              "content": "boot",
+              "options": [
+                "an edge",
+                "a story from the past",
+                "a family member",
+                "a heavy shoe"
+              ],
+              "explanation": "boot: a heavy shoe that goes over your ankle.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "9",
+              "content": "proceed",
+              "options": [
+                "to cover",
+                "to go in a direction",
+                "to close in from all sides",
+                "to show you like something"
+              ],
+              "explanation": "proceed: to go in a certain direction.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "10",
+              "content": "silent",
+              "options": [
+                "more important",
+                "oldest",
+                "having no sound",
+                "hard to believe"
+              ],
+              "explanation": "silent: they make no sound.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">May 29, 1953</h1>        <p style=\"margin-bottom: 1rem;\">Today is the most important day of my life. I finally climbed Mt. Everest, the tallest mountain in the world.</p>    <p style=\"margin-bottom: 1rem;\">The top of the mountain was amazing. It felt like we were close to <b>heaven</b>. The snow was so <b>thick</b> that my <b>boots</b> <b>sank</b>. The air was <b>silent</b>. I looked at the beauty that <b>surrounded</b> me. Maybe my story will be a <b>legend</b> someday.</p>    <p style=\"margin-bottom: 1rem;\">I want people to remember this forever. I was the <b>senior</b> explorer in my group, and I knew we needed proof of our climb. I took many pictures with my camera. I'll put them in a <b>frame</b> and hang them.</p>    <p style=\"margin-bottom: 1rem;\">On the mountain, the air was very cold. I <b>wrapped</b> my coat around my body.</p>    <p style=\"margin-bottom: 1rem;\">I looked over the side of the mountaintop. From that <b>angle</b>, I saw the <b>border</b> of the clouds touch the rocks below. The snow was <b>thick</b>. It looked <b>pure</b>. There was no sign of modern life. Thousands of years ago, my <b>ancestors</b> saw the world this way.</p>    <p style=\"margin-bottom: 1rem;\">After fifteen minutes, I knew it was time to <b>proceed</b> down the mountain. The whole team <b>congratulated</b> us. My <b>superior</b>, John Hunt, <b>praised</b> us all. I sent messages to my <b>relatives</b> to tell them that I was safe. But it was hard to leave the mountain so quickly. I wanted to enjoy the <b>incredible</b> sight even longer.</p></div>",
+      "imageUrl": "/unit5_story.png",
+      "sections": [
+        {
+          "id": "sec2_reading",
+          "title": "Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "What is this story about?",
+              "options": [
+                "Edmund Hillary's incredible experience",
+                "The lives of Edmund Hillary's ancestors",
+                "The legend of Mt. Everest",
+                "How to use a camera when surrounded by snow"
+              ],
+              "explanation": "The story is about Edmund Hillary's incredible experience climbing Mt. Everest.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "What did Hillary see from the angle over the side of the mountaintop?",
+              "options": [
+                "The sun in the east",
+                "His boots on the rocks below",
+                "His picture in a frame",
+                "The border of the clouds touching the rocks"
+              ],
+              "explanation": "He saw the border of the clouds touch the rocks below.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "13",
+              "content": "Hillary was happy to do all of the following EXCEPT__________",
+              "options": [
+                "proceed down the mountain",
+                "get praise from his superior",
+                "hear his team congratulate him",
+                "send messages to his relatives"
+              ],
+              "explanation": "He says 'But it was hard to leave the mountain so quickly', implying he wasn't happy to proceed down.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "14",
+              "content": "According to the passage, the air at the top of the mountain was",
+              "options": [
+                "silent",
+                "thick",
+                "pure",
+                "senior"
+              ],
+              "explanation": "The passage states: 'The air was silent.'",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 5",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

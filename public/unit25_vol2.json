@@ -1,0 +1,342 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit25_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit25_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">admit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədmít]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To admit something means to say that it is true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I had to admit that I stole his idea.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bin</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bin is a container that holds things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He put his trash in the bin.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bowl</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[boul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bowl is a deep, round dish that holds food or liquid.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I ate a bowl of cereal for breakfast.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cabin</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kæbin]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A cabin is a small house made of wood.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandfather owns a small cabin in the country.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cash</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kæʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cash is money in the form of paper or coins.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was able to save up enough cash to buy my mother a gift.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">criminal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[krímənl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A criminal is a person who does something against the law.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The police made sure the criminal couldn't move his hands.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dozen</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʌzən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dozen is a group of twelve things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mom brought home a dozen donuts for us as a treat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">elder</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[éldər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An elder is a person who is older than the people around them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Uncle Ray is my elder so I always try to be respectful.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">facial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[féiʃəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is facial, it is related to a person's face.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I could tell from his facial features that he was angry.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fence is a structure around a house or field.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The farmer put up a fence so that no one could walk on her field.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inspire</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inspáiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To inspire means to make a person want to do something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was inspired to write a poem after watching the sunrise.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mere</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[miər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is mere, it is small or not important.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We lost the game by a mere two points.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">neat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ni:t]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is neat, it is very clean or organized well.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister always keeps her bedroom very neat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">occasion</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əkéiʒən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An occasion is a time when something important happens.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her graduation was an occasion to have a good time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">penalty</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pénalti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A penalty is a punishment, given when someone breaks a rule or law.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I had to pay a $100 penalty for parking in the wrong spot.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rude</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ru:d]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is rude, they are mean and not polite.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The children at the bus stop were very rude.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">settle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sétl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To settle a problem means to end it by finding a solution.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It took three of our best executives all day to settle the problem.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">vehicle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ví:ikəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A vehicle is a thing that moves people or things to another place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A ferry is a vehicle that takes people from one island to another.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wallet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wɑ:lit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A wallet is a thing that holds money and fits in a pocket.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I keep my money in a wallet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">yell</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[jel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To yell is to say something very loudly.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The coach yelled at his team for their poor performance.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1 - Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "a group of twelve",
+              "options": [
+                "bin",
+                "neat",
+                "cash",
+                "dozen"
+              ],
+              "explanation": "dozen nghĩa là một tá, nhóm 12 thứ.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "2",
+              "content": "to say loudly",
+              "options": [
+                "yell",
+                "inspire",
+                "admit",
+                "settle"
+              ],
+              "explanation": "yell nghĩa là hét lớn.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "relating to the face",
+              "options": [
+                "bowl",
+                "facial",
+                "mere",
+                "neat"
+              ],
+              "explanation": "facial thuộc về khuôn mặt.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "4",
+              "content": "not polite",
+              "options": [
+                "settle",
+                "vehicle",
+                "rude",
+                "elder"
+              ],
+              "explanation": "rude nghĩa là thô lỗ, không lịch sự.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "5",
+              "content": "an older person",
+              "options": [
+                "criminal",
+                "elder",
+                "penalty",
+                "fence"
+              ],
+              "explanation": "elder nghĩa là người lớn tuổi hơn.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 1 - Part B: Fill in the blanks with the correct words from the word bank.",
+          "content": "WORD BANK: mere, penalty, inspire, bowl, neat",
+          "questions": [
+            {
+              "id": "6",
+              "content": "I love sports, and I want to ______ children to play sports, too.",
+              "options": [
+                "mere",
+                "penalty",
+                "inspire",
+                "bowl",
+                "neat"
+              ],
+              "explanation": "inspire (truyền cảm hứng) cho trẻ em chơi thể thao.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "7",
+              "content": "Mia's ______ for not stopping at a red light was $50.",
+              "options": [
+                "mere",
+                "penalty",
+                "inspire",
+                "bowl",
+                "neat"
+              ],
+              "explanation": "penalty (hình phạt) vì vượt đèn đỏ là 50 đô la.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "After he took a shower and got dressed, my brother looked very ______.",
+              "options": [
+                "mere",
+                "penalty",
+                "inspire",
+                "bowl",
+                "neat"
+              ],
+              "explanation": "neat (gọn gàng, sạch sẽ) sau khi tắm và mặc đồ.",
+              "correctAnswer": "E"
+            },
+            {
+              "id": "9",
+              "content": "The cat ate his food out of a black ______.",
+              "options": [
+                "mere",
+                "penalty",
+                "inspire",
+                "bowl",
+                "neat"
+              ],
+              "explanation": "bowl (cái bát) màu đen để đựng thức ăn.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "10",
+              "content": "He was only given a ______ five dollars for his hard work.",
+              "options": [
+                "mere",
+                "penalty",
+                "inspire",
+                "bowl",
+                "neat"
+              ],
+              "explanation": "mere (vỏn vẹn) năm đô la.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. My beans yelled when I dropped them.",
+                "b. I keep all of my money in my wallet."
+              ],
+              "explanation": "Ví là nơi để cất tiền (wallet).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "12",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. The rude boy always said 'please' and 'thank you'.",
+                "b. The fence around the house needed to be painted."
+              ],
+              "explanation": "Hàng rào (fence) cần được sơn.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "13",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. The criminal was sent to jail.",
+                "b. I can admit to a race because I am fast."
+              ],
+              "explanation": "Tội phạm (criminal) bị gửi đến nhà tù.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "14",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. The man built a cabin in the forest.",
+                "b. The cash tasted good tonight."
+              ],
+              "explanation": "Người đàn ông xây một túp lều (cabin) trong rừng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. The penalty for your birthday is a big cake.",
+                "b. The coach kept the footballs in a large bin."
+              ],
+              "explanation": "Huấn luyện viên cất những quả bóng trong một cái thùng lớn (bin).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "16",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. We were nice to the rude man, but he was mean to us.",
+                "b. The wallet made his dinner taste better."
+              ],
+              "explanation": "Người thô lỗ (rude) thì xấu tính với chúng tôi.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. The strong fence let all of the sheep go into the field.",
+                "b. It was loud at the party, so he had to yell for me to hear him."
+              ],
+              "explanation": "Trời ồn nên anh ấy phải hét lên (yell).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "18",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. When he does something wrong, he always admits it.",
+                "b. The mean cabin told the boy to go away."
+              ],
+              "explanation": "Khi làm sai, anh ta luôn thừa nhận (admits).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. If you cheat during the game, there will be a penalty.",
+                "b. Criminals are always nice to people."
+              ],
+              "explanation": "Nếu gian lận sẽ có hình phạt (penalty).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. She liked to bin her toys.",
+                "b. I do not have enough cash to buy a car."
+              ],
+              "explanation": "Tôi không có đủ tiền mặt (cash) để mua xe.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Criminal</h1>        <p style=\"margin-bottom: 1rem;\">A man had been in jail because he stole things. The <b>criminal</b> never felt bad.</p>    <p style=\"margin-bottom: 1rem;\">One day, he escaped and ran into the woods. He found a <b>cabin</b> with a <b>fence</b>. The <b>cabin</b> was very <b>neat</b>. Inside, the <b>criminal</b> found a <b>bowl</b> of fruit, a bottle of milk, and a <b>dozen</b> eggs. He ate the fruit and drank the milk. But the eggs smelled funny, so he put them in the trash <b>bin</b>. Soon, he heard the sound of a <b>vehicle</b>'s motor.</p>    <p style=\"margin-bottom: 1rem;\">An old man came in and saw the <b>criminal</b>. The old man <b>yelled</b>, \"Why are you in my house?\" The <b>criminal</b> lied, \"I am a policeman.\" The old man replied, \"I am your <b>elder</b>. You cannot fool me. You are the <b>criminal</b>.\" The <b>criminal</b>'s <b>facial</b> expression became very sad.</p>    <p style=\"margin-bottom: 1rem;\">He <b>admitted</b> that he was a <b>criminal</b>. He said, \"I'm sorry. It was <b>rude</b> for me to come into your home. Please take the <b>cash</b> from my <b>wallet</b>. It is a <b>mere</b> amount, but it will <b>settle</b> our problem.\" The old man said, \"I do not want your money. I just want to <b>inspire</b> you to be good. There will be no <b>penalty</b> for taking my food.\"</p>    <p style=\"margin-bottom: 1rem;\">On this <b>occasion</b>, the <b>criminal</b> realized that he had been bad. He listened to the old man and never stole from anyone ever again.</p></div>",
+      "imageUrl": "/unit25_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Reading Comprehension: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is this story about?",
+              "options": [
+                "a. Why elders are smarter than young people",
+                "b. How a criminal changed and learned to be good",
+                "c. Why you should not go to places with fences",
+                "d. Why you should admit when you are rude"
+              ],
+              "explanation": "Câu chuyện kể về một tên tội phạm đã thay đổi và học cách trở thành người tốt.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "22",
+              "content": "Why did the old man yell at the criminal?",
+              "options": [
+                "a. Because he saw a stranger in his house",
+                "b. Because he reported the criminal to the police",
+                "c. Because the criminal took his money",
+                "d. Because he made an occasion to be bad"
+              ],
+              "explanation": "Theo bài, ông lão hét lên: 'Why are you in my house?' (Tại sao anh lại ở trong nhà tôi?).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "What did the old man do with the criminal at the end of the story?",
+              "options": [
+                "a. The old man reported the criminal to the police.",
+                "b. The old man made an occasion to be bad.",
+                "c. The old man convinced the thief to never steal again.",
+                "d. The old man took the criminal's money."
+              ],
+              "explanation": "Ông lão đã truyền cảm hứng và thuyết phục được tên trộm không bao giờ ăn cắp nữa.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "24",
+              "content": "According to the passage, the criminal did all of the following EXCEPT",
+              "options": [
+                "a. he ate the fruit that was in the bowl",
+                "b. he drank the milk that was in the bottle",
+                "c. he heard the motor from the vehicle",
+                "d. he fell asleep in the cabin"
+              ],
+              "explanation": "Tội phạm đã ăn trái cây, uống sữa, nghe thấy tiếng động cơ xe, nhưng không hề ngủ trong túp lều.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "25",
+              "content": "What did the old man inspire the criminal to do?",
+              "options": [
+                "a. to pay a penalty",
+                "b. to be good and tell the truth",
+                "c. to build a fence",
+                "d. to clean the bin"
+              ],
+              "explanation": "Ông lão đã truyền cảm hứng để hắn trở thành người tốt và nói sự thật.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 25",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit11_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit11_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">admission</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ədmíʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Admission is the act of allowing to enter a place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The admission ticket to the movie was $5.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">astronomy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əstrɑ́nəmi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Astronomy is the study of the stars and planets.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Harold loved watching the stars, so he decided to study astronomy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">blame</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bleim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To blame someone for something bad is to say they did it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My mom blamed me for something I didn’t do.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chemistry</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kémistri]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Chemistry the study of and reaction to substances.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In chemistry class, the professor taught us about chemical reactions.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">despite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dispáit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">prep.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something happens despite what you do, it happens anyway.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We still played the game despite the cold weather.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dinosaur</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dáinəsɔ̀:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A dinosaur is a very big animal that lived millions of years ago.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I like to see the dinosaur bones at the museum.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">exhibit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[igzíbit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An exhibit is a display of interesting things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was an animal exhibit at the fair.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fame</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fame is reputation one has gained among the public.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He had fame and fortune, but he was not happy.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">forecast</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔ́:rkæ̀st]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A forecast is an idea about what the weather will be like in the future.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The forecast says that it will rain all week.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">genius</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒí:njəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A genius is a very smart person.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since she was a genius, she easily passed all of her school exams.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gentle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒéntl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Someone who is gentle is kind and calm.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He is very gentle with the baby.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">geography</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒiɑ́grəfi]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Geography is the study of where things are.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I had to draw a map for geography class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">interfere</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ìntərfíər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To interfere is to cause problems and keep something from happening.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My little sister always interferes when I’m trying to study.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">lightly</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[láitli]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To do something lightly is to not push very hard.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Draw lightly so you do not tear your paper.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">principal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prínsəpəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A principal is a person in charge of a school.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My school’s principal can be very strict with the rules.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">row</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A row is a line of things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ James put all of his toy soldiers into neat rows.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shelf</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃelf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shelf is a place on a wall where you put things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I keep my clothes on a shelf in my closet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">spite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[spait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you do something out of spite, you want to be mean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He snuck into his sister’s room and stole her bag out of spite.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">super</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sú:pər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Super means really good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dad said I did a super job cleaning the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wet</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wet]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is wet, it has water on it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since my dog was wet, he tried to shake all the water off his body.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Check the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "",
+              "options": [
+                "a. We learned about grammar in astronomy class.",
+                "b. Do not interfere when I am working."
+              ],
+              "explanation": "interfere có nghĩa là xen vào, cản trở. astronomy là thiên văn học, không học ngữ pháp.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2",
+              "content": "",
+              "options": [
+                "a. It was very kind of him to spite his sister.",
+                "b. Which shelf should I put this on?"
+              ],
+              "explanation": "shelf là cái kệ. spite là ác ý.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "3",
+              "content": "",
+              "options": [
+                "a. Do you have a shelf in your yard?",
+                "b. In astronomy class, I learned about the Solar System."
+              ],
+              "explanation": "astronomy học về hệ mặt trời.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "4",
+              "content": "",
+              "options": [
+                "a. He drank all the milk in the fridge to spite me.",
+                "b. Mrs. Joyner is a strict principal, but she is actually very nice."
+              ],
+              "explanation": "The answer key states Exercise 2 Q4 is b.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "5",
+              "content": "",
+              "options": [
+                "a. The loud music interferes with my concentration.",
+                "b. It is against his principals to be dishonest."
+              ],
+              "explanation": "interfere nghĩa là làm cản trở. principal ở câu b bị sai chính tả so với principles.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Choose the word that is a better fit for each sentence.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "Oil and water do not have a good ______ together. / We should go ______ the weather.",
+              "options": [
+                "chemistry / despite",
+                "despite / chemistry"
+              ],
+              "explanation": "chemistry: hóa học/sự hòa hợp. despite: mặc dù.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "7",
+              "content": "I wanted to see the bird ______. / My daughter has gained ______ to an Ivy League university.",
+              "options": [
+                "admission / exhibit",
+                "exhibit / admission"
+              ],
+              "explanation": "exhibit: cuộc triển lãm. admission: sự nhận vào.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "I wish I could see a real ______ at the zoo. / I learned about a South American country in my ______ book.",
+              "options": [
+                "geography / dinosaur",
+                "dinosaur / geography"
+              ],
+              "explanation": "dinosaur: khủng long. geography: địa lý.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "9",
+              "content": "Be very ______ with the old dishes. / ______ push the dirt in around the flowers.",
+              "options": [
+                "lightly / gentle",
+                "gentle / lightly"
+              ],
+              "explanation": "gentle: nhẹ nhàng. lightly: một cách nhẹ nhàng.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "10",
+              "content": "I don’t know if I would enjoy ______. / My son is a ______.",
+              "options": [
+                "genius / fame",
+                "fame / genius"
+              ],
+              "explanation": "fame: sự nổi tiếng. genius: thiên tài.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Dinosaur Drawings</h1>        <p style=\"margin-bottom: 1rem;\">It was the worst morning ever. When Carl woke up, he realized that he didn’t do his <b>astronomy</b> and <b>chemistry</b> homework. Also, the <b>forecast</b> called for rain and that would affect baseball practice. Suddenly, his mother yelled, “Take out the garbage right now!” When Carl returned from taking the garbage outside, he was all <b>wet</b>. “What a terrible day,” he said.</p>    <p style=\"margin-bottom: 1rem;\">He walked to class. He put his umbrella on the <b>shelf</b> and sat in the third <b>row</b>. But the teacher asked why Carl’s umbrella was on the floor. He told her not to <b>blame</b> him. But she sent him to the <b>principal</b> out of <b>spite</b>.</p>    <p style=\"margin-bottom: 1rem;\">Next, he took a <b>geography</b> test. <b>Despite</b> studying, Carl didn’t know the answers. He started drawing <b>lightly</b> on his paper.</p>    <p style=\"margin-bottom: 1rem;\">Carl drew a huge <b>dinosaur</b>. What if it were real? He saw it in his mind. Carl’s class said he was a <b>genius</b> for having a <b>dinosaur</b>. It could <b>interfere</b> with math class, too! Soon, Carl’s <b>fame</b> spread through school.</p>    <p style=\"margin-bottom: 1rem;\">He taught his <b>dinosaur</b> to be very <b>gentle</b> and put it on <b>exhibit</b>. But <b>admission</b> would only be given to those classmates who paid him a fee. His idea was <b>super</b>.</p>    <p style=\"margin-bottom: 1rem;\">“It’s time to turn in your tests,” the teacher said. Carl looked at his paper. As he was dreaming in class, he hadn’t finished the test!</p></div>",
+      "imageUrl": "/unit11_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "What is this story about?",
+              "options": [
+                "a. A wet classroom",
+                "b. A boy who is a genius",
+                "c. A bell that keeps ringing",
+                "d. A day that was not super"
+              ],
+              "explanation": "The story starts with 'It was the worst morning ever' and describes Carl's bad day.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "12",
+              "content": "What does Carl think his dinosaur can do?",
+              "options": [
+                "a. Make money for him on admission fees",
+                "b. Interfere with taking out the garbage",
+                "c. Take the blame for failing geography",
+                "d. Reach things on the top shelf"
+              ],
+              "explanation": "Carl thinks 'admission would only be given to those classmates who paid him a fee.'",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "What did Carl do?",
+              "options": [
+                "a. Break a jar at breakfast",
+                "b. Draw lightly on his test paper",
+                "c. Forget his hat on the bus",
+                "d. Stay after school for being late"
+              ],
+              "explanation": "The story says 'He started drawing lightly on his paper.'",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "Despite Carl studying for his test, what happened?",
+              "options": [
+                "a. His teacher was not gentle with him.",
+                "b. He had to sit in the last row.",
+                "c. The exhibit did not earn him any fame.",
+                "d. He did not do well on his geography test."
+              ],
+              "explanation": "The story says 'Despite studying, Carl didn’t know the answers.'",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 11",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

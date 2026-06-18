@@ -1,0 +1,402 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit21_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit21_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">astronaut</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aestranoit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An astronaut is a person that goes into outer space.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The astronaut was walking on the moon.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">awake</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aweik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When you are awake, you are not asleep.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Sometimes I lay awake in bed because I am not tired.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">courage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ka:nd3]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When you have courage, you are not afraid.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man had the courage to touch the lion.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">float</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flout]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To float is to move on top of water without sinking.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy’s toy boat floated in the pool.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grant</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[graent]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To grant something is to allow someone to have it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher granted us a break after studying hard all day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">gravity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[graevati]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Gravity is the force that makes things fall to Earth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There is no gravity in space.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">jewel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[d3u:el]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A jewel is a beautiful stone that is worth a lot of money.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A diamond is one of the most expensive jewels in the world.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">miner</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mainar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A miner is a person who works in a mine.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The miner was looking for gold.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mineral</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mineral]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mineral is a type of substance found in the Earth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Rocks are made up of different kinds of minerals.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">participate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pa:rtisepeit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To participate is to take part in something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The students participated in the school play.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">permission</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[peimmjsn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Permission means the act of allowing the doing of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have permission to drive my mom’s car.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pour</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pox]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To pour a liquid means to make it come out of a container.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I poured some milk into my sister’s cup.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">presence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[prezans]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Someone or something’s presence is the fact they are there.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The presence of dark clouds meant it would rain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">raw</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ro:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a material is raw, it is natural and has not been processed.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The company dumped raw sewage into the river.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">satellite</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[saetelait]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A satellite is something that is sent into space to get information.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The satellite was traveling around the earth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scale</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skeil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The scale of something is its size, especially when it is very large.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was surprised by the scale of the buildings in the downtown area.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">skip</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skip]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To skip something is to not do it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He skipped work to get more sleep.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stretch</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stretj]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To stretch is to make your arms or legs reach out.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She stretched her body before exercising.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">telescope</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[telaskdup]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A telescope is a tool people use to look at the stars.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ With a telescope, you can see the moon and stars easily.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">underground</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[Andargraund]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is underground, it is below the surface of the Earth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Subway trains travel underground.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "ex1_1",
+              "content": "1. permission",
+              "options": [
+                "to not be scared",
+                "the act of allowing the doing of something",
+                "to not be asleep",
+                "something sent into space"
+              ],
+              "explanation": "Từ permission nghĩa là sự cho phép.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex1_2",
+              "content": "2. scale",
+              "options": [
+                "size",
+                "below the earth",
+                "a chemical",
+                "an expensive stone"
+              ],
+              "explanation": "Từ scale nghĩa là kích thước, quy mô.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex1_3",
+              "content": "3. courage",
+              "options": [
+                "to be alert",
+                "the act of allowing the doing of something",
+                "to take part in an activity",
+                "bravery"
+              ],
+              "explanation": "Từ courage nghĩa là lòng can đảm.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "ex1_4",
+              "content": "4. satellite",
+              "options": [
+                "to not do something",
+                "something sent into space",
+                "to take part in an activity",
+                "the act of allowing the doing of something"
+              ],
+              "explanation": "Từ satellite nghĩa là vệ tinh nhân tạo.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex1_5",
+              "content": "5. pour",
+              "options": [
+                "a chemical in the earth",
+                "a tool for looking",
+                "to move liquid",
+                "to be afraid"
+              ],
+              "explanation": "Từ pour nghĩa là đổ (chất lỏng).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "ex1_6",
+              "content": "6. raw",
+              "options": [
+                "a tool for looking",
+                "natural",
+                "a man in space",
+                "something in a place"
+              ],
+              "explanation": "Từ raw nghĩa là thô sơ, nguyên chất tự nhiên.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex1_7",
+              "content": "7. telescope",
+              "options": [
+                "a tube for water",
+                "a spirit",
+                "a tool for looking",
+                "a man in space"
+              ],
+              "explanation": "Từ telescope là kính viễn vọng (dùng để nhìn).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "ex1_8",
+              "content": "8. awake",
+              "options": [
+                "to not do something",
+                "not asleep",
+                "not afraid",
+                "the act of allowing the doing of something"
+              ],
+              "explanation": "Từ awake nghĩa là thức giấc.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex1_9",
+              "content": "9. gravity",
+              "options": [
+                "a chart of numbers",
+                "a spirit",
+                "to move on top of water",
+                "a powerful force"
+              ],
+              "explanation": "Từ gravity là trọng lực (một lực hút).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "ex1_10",
+              "content": "10. presence",
+              "options": [
+                "a man in space",
+                "a worker in a mine",
+                "a spirit",
+                "the fact of being present"
+              ],
+              "explanation": "Từ presence là sự hiện diện.",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Choose the word that is a better fit for each sentence.",
+          "content": "",
+          "questions": [
+            {
+              "id": "ex2_1",
+              "content": "1. The movie had ____________ flying in heaven and singing beautiful songs.",
+              "options": [
+                "angels",
+                "astronauts"
+              ],
+              "explanation": "angels phù hợp ngữ cảnh câu.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex2_2",
+              "content": "2. I watched a TV show about how people trained to become ____________ .",
+              "options": [
+                "angels",
+                "astronauts"
+              ],
+              "explanation": "astronauts phù hợp ngữ cảnh câu.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex2_3",
+              "content": "3. Russia was the first country to send a ____________ into space.",
+              "options": [
+                "satellite",
+                "participate"
+              ],
+              "explanation": "satellite phù hợp ngữ cảnh câu.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex2_4",
+              "content": "4. The teacher asked all of us to ____________ in writing the story.",
+              "options": [
+                "satellite",
+                "participate"
+              ],
+              "explanation": "participate phù hợp ngữ cảnh câu.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex2_5",
+              "content": "5. My mother gave me ____________ to attend the party.",
+              "options": [
+                "permission",
+                "grants"
+              ],
+              "explanation": "permission phù hợp ngữ cảnh câu.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex2_6",
+              "content": "6. The man at the door ____________ people permission to enter the building.",
+              "options": [
+                "permission",
+                "grants"
+              ],
+              "explanation": "grants phù hợp ngữ cảnh câu.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex2_7",
+              "content": "7. We are studying ____________ that we use in everyday life.",
+              "options": [
+                "minerals",
+                "jewels"
+              ],
+              "explanation": "minerals phù hợp ngữ cảnh câu.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "ex2_8",
+              "content": "8. The woman keeps her ____________ in a safe place.",
+              "options": [
+                "minerals",
+                "jewels"
+              ],
+              "explanation": "jewels phù hợp ngữ cảnh câu.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex2_9",
+              "content": "9. The water ____________ broke, and now the street is flooded.",
+              "options": [
+                "telescope",
+                "pipe"
+              ],
+              "explanation": "pipe phù hợp ngữ cảnh câu.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex2_10",
+              "content": "10. Thomas got a ____________ from his grandfather on his birthday.",
+              "options": [
+                "telescope",
+                "pipe"
+              ],
+              "explanation": "telescope phù hợp ngữ cảnh câu.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
+          "content": "WORD BANK: jewel, participate, permission, underground, awake.\n\nOne day I saw an ad in the newspaper. It was for a treasure hunt in some (1)____________ caves. I really wanted to (2)____________ , but I had to get my parents’ (3)____________. They said I could do it. The night before the hunt, I was (4)____________ all night long. I kept wondering what we’d be looking for. Maybe it would be a big (5)____________ or gold. When I got to the hunt, there were a lot of other kids there. We were given maps. Each map led to a different place. My treasure turned out to be a book called Treasure Island. I was a little disappointed. But I had fun looking for it!",
+          "questions": [
+            {
+              "id": "ex3_1",
+              "content": "(1)____________",
+              "options": [
+                "jewel",
+                "participate",
+                "permission",
+                "underground",
+                "awake"
+              ],
+              "explanation": "underground phù hợp ngữ cảnh.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "ex3_2",
+              "content": "(2)____________",
+              "options": [
+                "jewel",
+                "participate",
+                "permission",
+                "underground",
+                "awake"
+              ],
+              "explanation": "participate phù hợp ngữ cảnh.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "ex3_3",
+              "content": "(3)____________",
+              "options": [
+                "jewel",
+                "participate",
+                "permission",
+                "underground",
+                "awake"
+              ],
+              "explanation": "permission phù hợp ngữ cảnh.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "ex3_4",
+              "content": "(4)____________",
+              "options": [
+                "jewel",
+                "participate",
+                "permission",
+                "underground",
+                "awake"
+              ],
+              "explanation": "awake phù hợp ngữ cảnh.",
+              "correctAnswer": "E"
+            },
+            {
+              "id": "ex3_5",
+              "content": "(5)____________",
+              "options": [
+                "jewel",
+                "participate",
+                "permission",
+                "underground",
+                "awake"
+              ],
+              "explanation": "jewel phù hợp ngữ cảnh.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">From the Earth to the Stars</h1>        <p style=\"margin-bottom: 1rem;\">Jeremy was from a family of <b>miners</b>. Like them, he worked <b>underground</b> during the day. His job was to gather <b>raw</b> <b>minerals</b> and <b>jewels</b>. Each night after work, he lay <b>awake</b> in an open field. With his <b>telescope</b>, he looked at the stars. He was amazed by the <b>scale</b> of space. He wished someday he might travel there.</p>    <p style=\"margin-bottom: 1rem;\">One day there was an accident in the mine. Water <b>poured</b> into the mine. Everything was dark. Jeremy <b>stretched</b> out and grabbed a piece of wood. It kept him from sinking. Jeremy felt a <b>presence</b> nearby.</p>    <p style=\"margin-bottom: 1rem;\">“I am an angel,” said a voice.</p>    <p style=\"margin-bottom: 1rem;\">“What?” Jeremy exclaimed.</p>    <p style=\"margin-bottom: 1rem;\">“You must never come <b>underground</b> again. Have the <b>courage</b> to make your wishes come true.”</p>    <p style=\"margin-bottom: 1rem;\">For a long time he <b>floated</b> in silence. Then he heard other voices. The other <b>miners</b> were coming to rescue him.</p>    <p style=\"margin-bottom: 1rem;\">The next day Jeremy <b>skipped</b> work. He decided to become an <b>astronaut</b>.</p>    <p style=\"margin-bottom: 1rem;\">For the next two years, he studied hard. One day, he was given <b>permission</b> to <b>participate</b> in a mission to space. His wish had been <b>granted</b>.</p>    <p style=\"margin-bottom: 1rem;\">His spaceship left the ground. It went higher until there was no more <b>gravity</b>. He saw <b>satellites</b> <b>floating</b> next to the ship.</p>    <p style=\"margin-bottom: 1rem;\">Then Jeremy saw a beautiful angel outside his spaceship. It smiled at Jeremy. For some minutes, Jeremy could not speak. Finally, he said, “Thank you.”</p></div>",
+      "imageUrl": "/unit21_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Reading Comprehension: Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "rc_1",
+              "content": "1. What is this story about?",
+              "options": [
+                "Why satellites are useful",
+                "How a man escaped gravity",
+                "Why a telescope is a useful thing",
+                "How a miner became an astronaut"
+              ],
+              "explanation": "Câu chuyện kể về hành trình của Jeremy từ một người thợ mỏ (miner) trở thành một phi hành gia (astronaut). Anh từng làm việc dưới hầm mỏ nhưng có ước mơ bay vào vũ trụ, và cuối cùng giấc mơ đã thành hiện thực: \"He decided to become an astronaut... His wish had been granted.\"",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "rc_2",
+              "content": "2. Why did Jeremy stop going underground?",
+              "options": [
+                "It kept him awake all night long.",
+                "He could not find any jewels or minerals.",
+                "An angel told him to stop working there and make his dreams come true.",
+                "He stopped having the courage to skip work."
+              ],
+              "explanation": "Jeremy ngừng làm việc dưới hầm mỏ vì một thiên thần đã khuyên anh không bao giờ quay lại đó nữa và hãy dũng cảm thực hiện ước mơ của mình. Bằng chứng nằm ở câu nói của thiên thần: “You must never come underground again. Have the courage to make your wishes come true.”",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "rc_3",
+              "content": "3. In the second paragraph, we can infer that Jeremy_____________ .",
+              "options": [
+                "did not know how to float",
+                "could not see the angel",
+                "broke the pipe by accident",
+                "felt the presence of the workers"
+              ],
+              "explanation": "Trong đoạn thứ hai, chúng ta có thể suy luận rằng Jeremy không nhìn thấy thiên thần vì lúc đó hầm mỏ bị ngập nước và \"Everything was dark\" (Mọi thứ đều tối đen), anh chỉ \"felt a presence nearby\" (cảm thấy có sự hiện diện gần đó) rồi nghe thấy một giọng nói (\"said a voice\").",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "rc_4",
+              "content": "4. According to the passage, all the following are true EXCEPT_____________ .",
+              "options": [
+                "Jeremy was granted permission to leave the mine",
+                "Jeremy used a telescope to watch the stars",
+                "Jeremy stretched out to grab the wood",
+                "Jeremy was amazed by the scale of space"
+              ],
+              "explanation": "Khẳng định sai là Jeremy được cho phép rời khỏi hầm mỏ (Jeremy was granted permission to leave the mine). Thực tế, sau tai nạn, anh đã tự mình bỏ việc: \"The next day Jeremy skipped work. He decided to become an astronaut.\" Anh không xin phép ai cả.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "rc_5",
+              "content": "5. What did Jeremy participate in after finishing astronaut school?",
+              "options": [
+                "He participated in a mission to outer space.",
+                "He gathered raw minerals and jewels.",
+                "He watched the stars with his telescope.",
+                "He worked underground."
+              ],
+              "explanation": "Sau khi hoàn thành việc học làm phi hành gia trong hai năm, Jeremy đã tham gia vào một nhiệm vụ bay vào không gian vũ trụ. Bằng chứng là câu: \"One day, he was given permission to participate in a mission to space.\"",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 21",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit24_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit24_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bath</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[baee]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bath is water in a tub. People take a bath to get clean.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After playing in the dirt, the boy took a bath.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bend</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bend]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bend is to move something so it is not straight.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Lee bent over and picked up the paper on the ground.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chew</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[t/u:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To chew is to move your mouth to break up food.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I always chew my food carefully before swallowing it.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disabled</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diseibald]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When a person is disabled, they cannot do what a normal person can do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The disabled man used a wheelchair to move around.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fantastic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fasntaestik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is fantastic, it is really good.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The student did a fantastic job on his project and got an award.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fiction</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fi'kjan]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Fiction is a story that is not true.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I enjoy reading works of fiction because they are very entertaining.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flag</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flaeg]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A flag is a piece of colored cloth that represents something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Our country has a beautiful flag.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inspect</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[inspekt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To inspect is to look at something carefully.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mechanic inspected our car to see if it had any problems.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">journal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[d3a:msl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A journal is a type of magazine that deals with an academic subject.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Mi-young was busy working on an article for an art journal.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">liquid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[h'kwid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A liquid is a substance that is neither solid nor gas.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Water is the most important liquid for life.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">marvel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[maxvsl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To marvel at something is to feel surprise and interest in it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We marveled at her excellent piano playing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nutrient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nyu:triant]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A nutrient is something that a living thing needs to keep it alive.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Vegetables are full of important nutrients.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">overcome</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ouvarkAm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To overcome a problem is to successfully fix it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She overcame her shyness and spoke in front of the class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">recall</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[riko:i]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To recall something is to remember it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She was trying to recall what she had told her friend.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">regret</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ngret]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To regret something is to wish that it didn’t happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I regret that I was mean to my sister.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">soul</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[soul]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A soul is a person’s spirit.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Some people believe that the soul lives after the body dies.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sufficient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[safijsnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is sufficient, you have enough of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After eating a sufficient amount of food, I left the table.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">surgery</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[safari]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Surgery is medical treatment when the doctor cuts open your body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I needed surgery to repair my leg after the accident.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tough</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tAf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is tough, it is difficult.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man passed his driving test even though it was very tough.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tube</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[t/u:b]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tube is a pipe through which water or air passes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The pile of tubes was going to be put in the ground.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Check (V) the better response for each question.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "Why do you look so clean?",
+              "options": [
+                "I was using a journal.",
+                "I just took a bath."
+              ],
+              "explanation": "Tắm rửa giúp sạch sẽ.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2",
+              "content": "Can you touch your toes?",
+              "options": [
+                "I marvel at my abilities.",
+                "No, I can't bend that far."
+              ],
+              "explanation": "Bend (cúi gập) liên quan đến việc chạm ngón chân.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "3",
+              "content": "Do you remember the movie we saw together?",
+              "options": [
+                "Yes, I recall it was wonderful.",
+                "No, I think it was fiction."
+              ],
+              "explanation": "Recall có nghĩa là remember (nhớ lại).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "What do you think we need for our classroom?",
+              "options": [
+                "We should have a flag in the corner.",
+                "Yes, I think it is fantastic."
+              ],
+              "explanation": "Flag (lá cờ) phù hợp để đặt trong lớp học.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "5",
+              "content": "How do you feel about your new car?",
+              "options": [
+                "It uses sufficient gas.",
+                "I regret buying it."
+              ],
+              "explanation": "Regret (hối hận) nói lên cảm xúc về chiếc xe mới.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 2: Fill in the blanks with the correct words from the word bank.",
+          "content": "Word bank: chew, inspected, nutrients, overcome, surgery",
+          "questions": [
+            {
+              "id": "6",
+              "content": "Franklin felt pain in his stomach. The doctor _____ him to find the cause.",
+              "options": [
+                "inspected",
+                "chew",
+                "nutrients",
+                "overcome",
+                "surgery"
+              ],
+              "explanation": "inspected (kiểm tra)",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "7",
+              "content": "His doctor said Franklin needed to _____ his food more slowly.",
+              "options": [
+                "inspected",
+                "chew",
+                "nutrients",
+                "overcome",
+                "surgery"
+              ],
+              "explanation": "chew (nhai)",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "8",
+              "content": "If he did, he could get all the _____ he needed.",
+              "options": [
+                "inspected",
+                "chew",
+                "nutrients",
+                "overcome",
+                "surgery"
+              ],
+              "explanation": "nutrients (chất dinh dưỡng)",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "9",
+              "content": "It would also help him _____ his pain.",
+              "options": [
+                "inspected",
+                "chew",
+                "nutrients",
+                "overcome",
+                "surgery"
+              ],
+              "explanation": "overcome (vượt qua)",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "10",
+              "content": "If Franklin didn't listen, the doctor would have to perform _____.",
+              "options": [
+                "inspected",
+                "chew",
+                "nutrients",
+                "overcome",
+                "surgery"
+              ],
+              "explanation": "surgery (phẫu thuật)",
+              "correctAnswer": "E"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 3: Complete the sentences.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "When you want to learn about history, _____",
+              "options": [
+                "you should read an academic journal",
+                "you should read fiction"
+              ],
+              "explanation": "journal (tạp chí học thuật) phù hợp với lịch sử.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "In front of a government building, _____",
+              "options": [
+                "there is usually a flag",
+                "there are usually baths"
+              ],
+              "explanation": "flag (lá cờ) trước tòa nhà chính phủ.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "When people die, _____",
+              "options": [
+                "they have to get surgery",
+                "their soul goes to heaven"
+              ],
+              "explanation": "soul (linh hồn).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "A lot of people eat too quickly. _____",
+              "options": [
+                "They hardly chew their food",
+                "They only drink liquids"
+              ],
+              "explanation": "chew (nhai) quá ít khi ăn nhanh.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "The movie was better than we imagined. _____",
+              "options": [
+                "It was sufficient",
+                "It was fantastic"
+              ],
+              "explanation": "fantastic (tuyệt vời).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "16",
+              "content": "This is an important decision. _____",
+              "options": [
+                "I feel like I need to bend forward",
+                "I don't want to have to regret making a mistake"
+              ],
+              "explanation": "regret (hối hận) khi quyết định sai.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "17",
+              "content": "Before you buy a car, _____",
+              "options": [
+                "marvel at it",
+                "inspect it carefully"
+              ],
+              "explanation": "inspect (kiểm tra).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "18",
+              "content": "After the accident, _____",
+              "options": [
+                "Ali was disabled",
+                "Ali had a tube"
+              ],
+              "explanation": "disabled (khuyết tật).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "Memorize this address, _____",
+              "options": [
+                "then you will feel tough",
+                "so you will be able to recall it in the future"
+              ],
+              "explanation": "recall (nhớ lại).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "20",
+              "content": "He climbed the mountain _____",
+              "options": [
+                "and overcame his fear of heights",
+                "to get more nutrients"
+              ],
+              "explanation": "overcame (vượt qua).",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \">\n<h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Doctor's Cure</h1>        <p style=\"margin-bottom: 1rem;\">James Fry was a fantastic doctor. His surgeries helped many disabled people overcome their injuries. He also wrote for a popular medical journal. James was very busy. His son, Steve, rarely saw him.</p>    <p style=\"margin-bottom: 1rem;\">One day, James was walking and inspecting a patient's file. There was water all over the floor. James slipped on the liquid and fell. He fell on a broken glass tube. He was hurt.</p>    <p style=\"margin-bottom: 1rem;\">Steve came to visit him in the hospital. James said, \"It will be tough for me to stay in bed. But I can hardly bend my legs.\"</p>    <p style=\"margin-bottom: 1rem;\">\"Then let's watch a movie.\" Steve said. It made them laugh together. Steve said, \"I have to leave, but here's some fiction to read.\"</p>    <p style=\"margin-bottom: 1rem;\">James started to recall fun parts of life. He marveled at small things, like food. He was too busy to notice them before. \"Steve,\" he said, \"you get more nutrients when you chew slowly. But I think it makes food taste better, too!\"</p>    <p style=\"margin-bottom: 1rem;\">Weeks later, James said, \"Steve, I haven't spent enough time with you. I regret this. Even my soul feels better when you visit. But I have spent sufficient time here. We should go home.\"</p>    <p style=\"margin-bottom: 1rem;\">Outside, there was a warm breeze. James watched a flag blow.</p>    <p style=\"margin-bottom: 1rem;\">Finally, James said, \"I'm not ready to work. I'm going to take a long bath. And then we'll watch a movie together.\"</p>\n</div>",
+      "imageUrl": "/unit24_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Reading Comprehension: Answer the questions based on the story.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is this story about?",
+              "options": [
+                "A doctor who needs surgery",
+                "A boy with a fantastic comedy video",
+                "A doctor who recalls fun things",
+                "A disabled boy who overcomes injuries"
+              ],
+              "explanation": "Câu chuyện về một bác sĩ (James) bị thương và nhớ lại những điều vui vẻ trong cuộc sống.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "22",
+              "content": "What does James notice now that he isn't busy?",
+              "options": [
+                "Food tastes better when you chew it slowly.",
+                "Reading fiction is tough.",
+                "He regrets not working more.",
+                "His soul feels worse than before."
+              ],
+              "explanation": "Anh ấy nhận ra thức ăn ngon hơn khi nhai chậm.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "How did James get hurt?",
+              "options": [
+                "He didn't get enough nutrients.",
+                "He slipped and fell on a broken tube.",
+                "He didn't spend sufficient time at the hospital.",
+                "He slipped on liquid after a bath."
+              ],
+              "explanation": "Anh ấy trượt ngã và rơi vào ống thủy tinh bị vỡ.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "24",
+              "content": "What does James do when he leaves the hospital?",
+              "options": [
+                "He inspects a patient's file.",
+                "He shows Steve that he can bend his legs.",
+                "He watches a flag blow in the breeze.",
+                "He marvels at the taste of food."
+              ],
+              "explanation": "Bên ngoài có làn gió ấm, James nhìn lá cờ bay (He watches a flag blow).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "25",
+              "content": "What did the movie do to James and Steve?",
+              "options": [
+                "It made them laugh together.",
+                "It made them cry.",
+                "It made them angry.",
+                "It put them to sleep."
+              ],
+              "explanation": "Bộ phim làm họ cười cùng nhau.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 24",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

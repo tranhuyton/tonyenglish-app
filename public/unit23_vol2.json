@@ -1,0 +1,161 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit23_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit23_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">alike</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈlaɪk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If two things or people are alike, they are similar in some way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ People often think my sister and I look alike.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">annoy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əˈnɔɪ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To annoy someone means to bother them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The flies buzzing around John’s head annoyed him very much.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">architecture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈɑːrkɪtektʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Architecture is the style or way a building is made.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The architecture of the church is amazing.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">artificial</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌɑːrtɪˈfɪʃl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is artificial, it is made to look like something natural.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That soccer field has artificial grass, but it looks real.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tʃeɪn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A chain is a series of connected loops often used to keep things in place.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The scary dog was secured with a chain.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">distinct</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈstɪŋkt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is distinct, it is easily noticed or different from other things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That girl has distinct pink hair.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">distinguish</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dɪˈstɪŋɡwɪʃ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To distinguish is to recognize differences between things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The twins look exactly the same. It is hard to distinguish between them.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dust</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʌst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Dust is very tiny pieces of dirt or other matter.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the old house, the dust was thick on the floor and chairs.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">excitement</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪkˈsaɪtmənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Excitement means to feel a lot of happiness about something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Did you see the excitement in her when the team scored?</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">heal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hiːl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To heal means to make a part of the body healthy again after injury.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After my broken arm heals, I can play baseball again.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">inherit</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ɪnˈherɪt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To inherit is to get something from someone who has died.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She inherited her mother’s gold earrings.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">manner</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈmænər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A manner is the way someone does something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His manner of not looking at someone while speaking, is a bit rude.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mount</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[maʊnt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Something mounts when it becomes stronger over time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His fear mounted as the monster crawled out from under his bed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">roof</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ruːf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A roof is the outside top part of a building.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The roof was covered with snow.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shortage</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈʃɔːrtɪdʒ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shortage is a lack of something you need or want.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Since there was a shortage of food, people were hungry.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">solid</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsɑːlɪd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is solid, it is made of firm material.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The safe looked to be quite solid.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">stock</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[stɑːk]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A stock is a stored amount of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ They keep a stock of rice so they’ll always have something to eat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">substance</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈsʌbstəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A substance is any specific material or mixture of materials.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Water is an important substance for all living things.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">tomb</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tuːm]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A tomb is a grave where a dead person is buried.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Their whole family is buried inside the tomb.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wound</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[wuːnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A wound is an injury to the body.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He had many wounds after the car accident.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "the top of a building",
+              "options": [
+                "dust",
+                "roof",
+                "tomb",
+                "chain"
+              ],
+              "explanation": "roof nghĩa là mái nhà (the top of a building).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2",
+              "content": "an injury to the body",
+              "options": [
+                "substance",
+                "distinct",
+                "wound",
+                "artificial"
+              ],
+              "explanation": "wound nghĩa là vết thương (an injury to the body).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "3",
+              "content": "a feeling of happiness",
+              "options": [
+                "excitement",
+                "inherit",
+                "manner",
+                "architecture"
+              ],
+              "explanation": "excitement nghĩa là sự phấn khích (a feeling of happiness).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "a stored amount",
+              "options": [
+                "shortage",
+                "manner",
+                "alike",
+                "stock"
+              ],
+              "explanation": "stock nghĩa là kho dự trữ (a stored amount).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "5",
+              "content": "someone who steals",
+              "options": [
+                "annoy",
+                "excitement",
+                "mount",
+                "thief"
+              ],
+              "explanation": "thief nghĩa là kẻ trộm (someone who steals).",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Clever Thief</h1>        <p style=\"margin-bottom: 1rem;\">A new king <b>inherited</b> a lot of gold. He loved his gold very much. He even wanted to keep it after he died. Therefore, he had a large <b>tomb</b> built for himself and his riches.</p>    <p style=\"margin-bottom: 1rem;\">However, the <b>tomb</b>'s builder had a plan. Most of the stones were <b>solid</b>, but he put one special stone on the <b>roof</b>. It was made of a lighter <b>substance</b>.</p>    <p style=\"margin-bottom: 1rem;\">When the <b>tomb</b> was done, the king moved in his <b>stock</b> of gold. One night, the builder went to the <b>tomb</b>. His <b>excitement</b> <b>mounted</b>. Because all the stones looked <b>alike</b>, he had left a <b>distinct</b> mark on the <b>artificial</b> block. The mark helped him <b>distinguish</b> the difference in the <b>architecture</b>.</p>    <p style=\"margin-bottom: 1rem;\">The builder lifted the stone. Using a <b>chain</b>, he climbed into the <b>tomb</b>. He filled his pockets with gold.</p>    <p style=\"margin-bottom: 1rem;\">The builder followed this <b>manner</b> night after night. Soon, the king noticed a <b>shortage</b> in his gold. This <b>annoyed</b> the king.</p>    <p style=\"margin-bottom: 1rem;\">At last he hired a guard to hide inside the <b>tomb</b>. When the builder entered the <b>tomb</b>, the guard <b>wounded</b> him. He climbed a pole to the <b>roof</b>. The builder left drops of blood in the <b>dust</b>. The guard followed them and caught him.</p>    <p style=\"margin-bottom: 1rem;\">When the builder <b>healed</b>, he explained to the king that he didn't keep any of the gold. He had given it all away to the poor.</p></div>",
+      "imageUrl": "/unit23_story.png",
+      "sections": [
+        {
+          "id": "sec3",
+          "title": "Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "What is this story about?",
+              "options": [
+                "The manner in which a king inherited his riches",
+                "Different kinds of architecture",
+                "How a builder tricked a king",
+                "Why a tomb had a large pole"
+              ],
+              "explanation": "How a builder tricked a king là nội dung chính của câu chuyện.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "7",
+              "content": "What distinguished the artificial block from the real blocks?",
+              "options": [
+                "A distinct mark on one of the blocks",
+                "The different color of its substance",
+                "The amount of dust on it",
+                "The solid gold pieces in it"
+              ],
+              "explanation": "A distinct mark on one of the blocks (Một dấu hiệu khác biệt trên một trong các khối đá).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "8",
+              "content": "How did the king know his gold was missing?",
+              "options": [
+                "He found a chain in the tomb.",
+                "There was a hole in the roof.",
+                "There was a shortage of guards.",
+                "His stock of gold had decreased."
+              ],
+              "explanation": "His stock of gold had decreased (Kho vàng của ông đã giảm đi).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "9",
+              "content": "The builder was caught because",
+              "options": [
+                "he and another man looked alike",
+                "he mounted the wrong tomb",
+                "a guard wounded him",
+                "he stopped to heal the king's wound"
+              ],
+              "explanation": "a guard wounded him (một người lính gác đã làm anh ta bị thương).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "10",
+              "content": "Why was the king annoyed?",
+              "options": [
+                "He lost his crown.",
+                "He found dust in his tomb.",
+                "He didn't know how the gold could be gone.",
+                "The builder talked to him rudely."
+              ],
+              "explanation": "The king was annoyed because he didn't know how the gold could be gone.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 23",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

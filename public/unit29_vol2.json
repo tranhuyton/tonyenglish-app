@@ -1,0 +1,337 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit29_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit29_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">abstract</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[æbstrækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If ideas are abstract, they are based on general ways of thinking.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The idea of beauty is abstract and changes over time.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">annual</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ænjuəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is annual, it happens once a year.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The only time I see my aunts and uncles is at our annual family picnic.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">clay</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klei]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Clay is a type of heavy, wet soil used to make pots.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She made a bowl out of the clay.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">cloth</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[klɔ(:)θ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Cloth is material used to make clothes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His shirt is made of a very soft type of cloth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">curtain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kə:rtən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A curtain is a cloth hung over a window or used to divide a room.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She opened the curtains to let light into the room.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">deserve</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dizə:rv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To deserve is to be worthy of something as a result of one’s actions.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The dog deserved a bone for behaving very well.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">feather</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[feðər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Feathers are the things covering birds’ bodies.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ That bird has orange feathers on its chest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fertile</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fə:rtl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If land is fertile, it is able to produce good crops and plants.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The farmer grew many vegetables in the fertile soil.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flood</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[flʌd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A flood is an event in which water covers an area which is usually dry.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After three days of rain, there was a flood in the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">furniture</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fə:rnitʃər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Furniture is the things used in a house such as tables and chairs.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ His living room only had a few simple pieces of furniture.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">grave</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[greiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A grave is the place where a dead person is buried.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We visit our grandfather’s grave each year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ideal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[aidi:əl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is ideal, it is the best that it can possibly be.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ This house is an ideal place for my family. It has everything we need.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">intelligence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[intelədʒəns]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Intelligence is the ability to learn and understand things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Because of his high intelligence, he finished school early.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">nowadays</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[nauədeiz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adv.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something happens nowadays, it happens at the present time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ In the past people walked everywhere. Nowadays, they use cars.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">obtain</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əbtein]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To obtain is to get something you want or need.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ After I passed the test, I obtained my driver’s license.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">religious</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rilidʒəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is religious, it has to do with religion.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The holy man spoke about religious topics.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">romantic</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[roumæntik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is romantic, it has to do with love.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The young couple went to see a romantic movie.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shell</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃel]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shell is a hard covering that protects the body of some sea creatures.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There were many pretty shells on the beach.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shore</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ʃɔ:r]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A shore is the edge of a large body of water.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ All of the boats were floating near the shore.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">wheel</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[hwi:l]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A wheel is a round thing on a vehicle that turns when it moves.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ A car has four wheels.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Exercise 1: Part A: Write a word that is similar in meaning to the underlined part.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "I need your help to move the tables and chairs.",
+              "options": [
+                "furniture",
+                "cloth",
+                "curtains",
+                "intelligence"
+              ],
+              "explanation": "furniture (n): tables and chairs.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "2",
+              "content": "This problem will test your ability to understand.",
+              "options": [
+                "intelligence",
+                "romantic",
+                "feathers",
+                "abstract"
+              ],
+              "explanation": "intelligence (n): ability to learn and understand things.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "I don’t like to be in dark rooms with covers over the windows.",
+              "options": [
+                "curtains",
+                "shells",
+                "clay",
+                "cloth"
+              ],
+              "explanation": "curtains (n): cloth hung over a window.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "Tom and Rob are the best roommates.",
+              "options": [
+                "ideal",
+                "religious",
+                "annual",
+                "fertile"
+              ],
+              "explanation": "ideal (adj): the best that it can possibly be.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "5",
+              "content": "I need to get a ticket before I can board the train.",
+              "options": [
+                "obtain",
+                "deserve",
+                "flood",
+                "grave"
+              ],
+              "explanation": "obtain (v): get something you want or need.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Exercise 1: Part B: Fill in the blanks with the correct words from the word bank.",
+          "content": "WORD BANK: clay, cloth, fertile, graves, flood. Jimmy went on a trip to Egypt. There, he visited the great pyramids. Inside them were the 1._________ of old kings. He also visited a village near the river and learned about a recent 2._________. People grew many crops on this 3._________ land. They used 4._________ pots to carry water from the river into their homes. One friendly man gave Jimmy a white 5._________ to cover his head from the hot sun. It was a wonderful trip.",
+          "questions": [
+            {
+              "id": "6",
+              "content": "Inside them were the _______ of old kings.",
+              "options": [
+                "graves",
+                "clay",
+                "cloth",
+                "fertile"
+              ],
+              "explanation": "graves: the place where a dead person is buried.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "7",
+              "content": "He also visited a village near the river and learned about a recent _______.",
+              "options": [
+                "flood",
+                "graves",
+                "clay",
+                "cloth"
+              ],
+              "explanation": "flood: an event in which water covers an area which is usually dry.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "8",
+              "content": "People grew many crops on this _______ land.",
+              "options": [
+                "fertile",
+                "flood",
+                "graves",
+                "clay"
+              ],
+              "explanation": "fertile: able to produce good crops and plants.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "9",
+              "content": "They used _______ pots to carry water from the river into their homes.",
+              "options": [
+                "clay",
+                "fertile",
+                "flood",
+                "graves"
+              ],
+              "explanation": "clay: a type of heavy, wet soil used to make pots.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "One friendly man gave Jimmy a white _______ to cover his head from the hot sun.",
+              "options": [
+                "cloth",
+                "clay",
+                "fertile",
+                "flood"
+              ],
+              "explanation": "cloth: material used to make clothes.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2: Check (V) the sentence with the bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Many people wear a shell before going out into the rain.",
+                "b. In the past three years, the city has had two floods."
+              ],
+              "explanation": "A flood is an event in which water covers an area which is usually dry.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "12",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Nowadays, many students like using the Internet to do research.",
+                "b. Many groups have annual meetings every month."
+              ],
+              "explanation": "Nowadays means at the present time.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Some dogs have interesting feathers.",
+                "b. You cannot ride a bicycle if it doesn’t have wheels."
+              ],
+              "explanation": "A wheel is a round thing on a vehicle that turns when it moves.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Churches don’t let people read religious books.",
+                "b. Birds use their feathers to help them fly."
+              ],
+              "explanation": "Feathers are the things covering birds' bodies.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "15",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Many people enjoy watching romantic movies.",
+                "b. If you get good grades, you don’t deserve to graduate."
+              ],
+              "explanation": "Romantic means it has to do with love.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. A crab is an example of an animal that has a shell.",
+                "b. People never go fishing near the shore."
+              ],
+              "explanation": "A shell is a hard covering that protects the body of some sea creatures.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "17",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. People who do bad things deserve to be punished.",
+                "b. Mountains and hills are examples of floods."
+              ],
+              "explanation": "Deserve means to be worthy of something as a result of one's actions.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Horses are more common than cars nowadays.",
+                "b. People who are religious go to church."
+              ],
+              "explanation": "Religious means having to do with religion.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "19",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. If you are romantic, you probably don’t like movies about love.",
+                "b. There are beaches along the shore of some oceans and lakes."
+              ],
+              "explanation": "A shore is the edge of a large body of water.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "20",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. You should see your doctor once a year for an annual checkup.",
+                "b. The wind makes the wheels of a car turn."
+              ],
+              "explanation": "Annual means it happens once a year.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Osiris and the Nile</h1>        <p style=\"margin-bottom: 1rem;\">Long ago, Osiris was the king of Egypt, and Isis was the queen. They ruled the <b>fertile</b> land by the Nile River. They had great <b>intelligence</b>, and they shared their <b>abstract</b> ideas with everyone. Osiris taught the Egyptians how to make <b>wheels</b> and <b>furniture</b>. Isis taught them how to make things from <b>clay</b> and <b>cloth</b>. The people thought they <b>deserved</b> a gift. So they built Osiris and Isis a pyramid. Everyone loved Osiris except his brother, Set. Set wanted to be king.</p>    <p style=\"margin-bottom: 1rem;\">Osiris made his <b>annual</b> trip around Egypt and led <b>religious</b> events. The villages gave him beautiful <b>shells</b> and colorful <b>feathers</b> as gifts.</p>    <p style=\"margin-bottom: 1rem;\">When Osiris returned, Set brought a beautiful wooden box from behind a <b>curtain</b>.</p>    <p style=\"margin-bottom: 1rem;\">\"If someone fits inside this box, I will give it to him or her,\" Set said.</p>    <p style=\"margin-bottom: 1rem;\">Osiris got in it. It was an <b>ideal</b> fit!</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, Set closed the box and threw it into the river. \"Now I will be king!\" Set said.</p>    <p style=\"margin-bottom: 1rem;\">The box washed up on a foreign <b>shore</b> after a <b>flood</b>. Isis brought his body home and <b>obtained</b> a <b>grave</b> for him in Egypt. The Egyptian gods thought Isis had done something very <b>romantic</b>.</p>    <p style=\"margin-bottom: 1rem;\">Because of her love, the gods made him the god of the underworld. Osiris returned every spring to help the farmers. Even <b>nowadays</b>, people say Osiris keeps their crops alive.</p></div>",
+      "imageUrl": "/unit29_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is this story about?",
+              "options": [
+                "a. Why Osiris built a pyramid for Isis",
+                "b. How Set created a grave for Osiris",
+                "c. How Osiris died and returned to make Egypt fertile",
+                "d. Why the gods thought Isis’ actions were romantic"
+              ],
+              "explanation": "The story mainly describes how Osiris was killed by Set, buried by Isis, and returned as the god of the underworld to help make the land fertile.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "22",
+              "content": "What happened each spring?",
+              "options": [
+                "a. Osiris gave people feathers and shells.",
+                "b. Set obtained furniture from people.",
+                "c. Set hid a box behind a curtain.",
+                "d. Osiris made an annual trip to villages."
+              ],
+              "explanation": "The passage states: 'Osiris made his annual trip around Egypt and led religious events.'",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "23",
+              "content": "In the last paragraph, we can infer that______________ .",
+              "options": [
+                "a. the shore is the ideal home for Osiris",
+                "b. Set had greater intelligence than the gods",
+                "c. the gods felt that Isis did a good deed",
+                "d. nowadays, the Egyptians don’t use Osiris’ abstract ideas"
+              ],
+              "explanation": "The gods thought Isis had done something very romantic and made him god of the underworld because of her love.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "24",
+              "content": "According to the passage, all the following are true EXCEPT",
+              "options": [
+                "a. the Egyptians made wheels",
+                "b. the Egyptians used clay pots",
+                "c. the Egyptians made cloth",
+                "d. the Egyptians built religious villages"
+              ],
+              "explanation": "The passage does not mention Egyptians building religious villages. They built a pyramid.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "25",
+              "content": "What did the Egyptians do for their king and queen?",
+              "options": [
+                "a. They made religious cloth.",
+                "b. They obtained furniture.",
+                "c. They built them a pyramid.",
+                "d. They threw them in a flood."
+              ],
+              "explanation": "The passage says: 'So they built Osiris and Isis a pyramid.'",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 29",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

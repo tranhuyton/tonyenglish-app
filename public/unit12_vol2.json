@@ -1,0 +1,337 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit12_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit12_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">abuse</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əbjúːz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To abuse someone or something means to hurt them on purpose.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The mean man abused his dog when it barked too loudly.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">afford</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əfɔ́ːrd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To afford something means you have enough money to pay for it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I've been saving my money, so I can afford to buy a new bike.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bake</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[beik]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To bake means to cook food with heat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My sister is a good cook. She bakes delicious cakes.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">bean</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[biːn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A bean is a plant seed that is good to eat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There are many different kinds of beans to eat.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">candle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kǽndl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A candle is a stick of wax that is lit on fire for light or heat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the lights went out, we lit some candles.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">convert</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kənvə́ːrt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To convert something means to change it into something else.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man converted his messy field into a garden of flowers.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">debt</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[det]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A debt is an amount of money that a person owes.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have not paid my gas bill. I owe a debt to the gas company.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">decrease</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dikríːs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To decrease something is to make it less than it was before.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Hiring more police officers has decreased crime in the city.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fault</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fɔːlt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fault is a mistake.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It is my fault that the cat ran away. I left the door open.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">fund</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[fʌnd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A fund is an amount of money that people have.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We all put money into our club's fund.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">generous</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dʒénərəs]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone is generous, they like to give things to people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The generous man donated several new computers to our school.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">ingredient</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ingríːdiənt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">An ingredient is something that is part of a food dish.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The main ingredients in cake are eggs, sugar and flour.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">insist</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[insíst]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To insist means to be firm in telling people what to do.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I insist that you try some of these cookies.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mess</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mes]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A mess is a condition that is not clean or neat.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Heather's room was a complete mess.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">metal</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[métl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Metal is a strong material people use to build things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Steel is a common metal that is used to build buildings.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">monitor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mɑ́nitər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To monitor people or things is to watch them closely.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The teacher monitors the students when they take tests.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">oppose</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[əpóuz]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To oppose something means to dislike it or act against it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I want to be a police officer because I oppose crime.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">passive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[pǽsiv]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If a person is passive, they do not take action to solve problems.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Marcie is so passive that she never solves her own problems.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">quantity</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kwɑ́ntəti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A quantity is a certain amount of something.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have a small quantity of milk in my glass.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sue</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[suː]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To sue someone is to take them to court for something wrong they did.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I sued the company after I slipped on a banana peel in their hallway.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1_wordlist",
+          "title": "Part A: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "a certain amount",
+              "options": [
+                "a. ingredient",
+                "b. quantity",
+                "c. metal",
+                "d. fault"
+              ],
+              "explanation": "quantity (n): một số lượng nhất định (a certain amount).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2",
+              "content": "to make less",
+              "options": [
+                "a. decrease",
+                "b. oppose",
+                "c. insist",
+                "d. abuse"
+              ],
+              "explanation": "decrease (v): làm giảm đi (to make less).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "3",
+              "content": "to watch closely",
+              "options": [
+                "a. bake",
+                "b. monitor",
+                "c. mess",
+                "d. afford"
+              ],
+              "explanation": "monitor (v): giám sát, theo dõi chặt chẽ (to watch closely).",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "4",
+              "content": "a plant seed",
+              "options": [
+                "a. sue",
+                "b. passive",
+                "c. bean",
+                "d. fund"
+              ],
+              "explanation": "bean (n): hạt đỗ, đậu (a plant seed).",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "5",
+              "content": "money you owe",
+              "options": [
+                "a. convert",
+                "b. debt",
+                "c. candle",
+                "d. generous"
+              ],
+              "explanation": "debt (n): món nợ, tiền nợ (money you owe).",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2_wordlist",
+          "title": "Part B: Circle two words that are related in each group.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "",
+              "options": [
+                "a. debt / b. fund",
+                "a. debt / c. bean",
+                "b. fund / d. abuse",
+                "c. bean / d. abuse"
+              ],
+              "explanation": "debt (nợ) và fund (quỹ) đều liên quan đến tiền bạc.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "7",
+              "content": "",
+              "options": [
+                "a. fault / b. abuse",
+                "b. abuse / c. monitor",
+                "c. monitor / d. sue",
+                "a. fault / d. sue"
+              ],
+              "explanation": "fault (lỗi) và sue (kiện) có liên quan đến nhau: ai đó có lỗi nên bị kiện.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "8",
+              "content": "",
+              "options": [
+                "a. afford / b. bake",
+                "b. bake / d. ingredient",
+                "c. insist / d. ingredient",
+                "a. afford / c. insist"
+              ],
+              "explanation": "bake (nướng) và ingredient (nguyên liệu) đều liên quan đến nấu ăn.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "9",
+              "content": "",
+              "options": [
+                "a. fault / b. decrease",
+                "b. decrease / c. quantity",
+                "c. quantity / d. convert",
+                "a. fault / d. convert"
+              ],
+              "explanation": "decrease (giảm) và quantity (số lượng) có liên quan đến nhau.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "10",
+              "content": "",
+              "options": [
+                "a. debt / b. monitor",
+                "b. monitor / c. afford",
+                "a. debt / c. afford",
+                "c. afford / d. generous"
+              ],
+              "explanation": "debt (nợ) và afford (đủ khả năng chi trả) đều liên quan đến tài chính.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3_wordlist",
+          "title": "Exercise 2: Check (V) the one that suits the blank naturally.",
+          "content": "",
+          "questions": [
+            {
+              "id": "11",
+              "content": "To make sure the door was built strong, ____________.",
+              "options": [
+                "a. it was made out of metal",
+                "b. it was monitored to the floor"
+              ],
+              "explanation": "made out of metal (được làm bằng kim loại) mang ý nghĩa cửa vững chắc.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "I was treated unfairly by my company, so ____________.",
+              "options": [
+                "a. we decreased the table",
+                "b. I decided to sue them in court"
+              ],
+              "explanation": "sue them in court (kiện họ ra tòa) vì bị đối xử bất công.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "13",
+              "content": "I went to the grocery store. ____________.",
+              "options": [
+                "a. I converted the milk",
+                "b. I got a small quantity of eggs"
+              ],
+              "explanation": "got a small quantity of eggs (mua một lượng nhỏ trứng) phù hợp với việc đi siêu thị.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "When your friend borrows money from you, ____________.",
+              "options": [
+                "a. he owes you a debt",
+                "b. he opposes you"
+              ],
+              "explanation": "owes you a debt (nợ bạn một khoản) phù hợp với việc mượn tiền.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "15",
+              "content": "The man wants to cook noodles. ____________.",
+              "options": [
+                "a. He will get the ingredients",
+                "b. He will insist the water"
+              ],
+              "explanation": "get the ingredients (lấy các nguyên liệu) hợp lý khi muốn nấu ăn.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "16",
+              "content": "I have enough money. ____________.",
+              "options": [
+                "a. My fund is too small",
+                "b. I can afford to buy the shirt"
+              ],
+              "explanation": "afford to buy the shirt (có đủ tiền để mua chiếc áo) phù hợp với câu trước đó.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "17",
+              "content": "When the oven was hot enough, ____________.",
+              "options": [
+                "a. it baked the potato",
+                "b. it made a mess in the kitchen"
+              ],
+              "explanation": "Lò nướng đủ nóng để nướng khoai tây (baked the potato).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "In case the power goes out, ____________.",
+              "options": [
+                "a. you should keep candles at home",
+                "b. you will be generous"
+              ],
+              "explanation": "Cần giữ nến (keep candles) ở nhà phòng khi mất điện.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "When the girl became hungry, ____________.",
+              "options": [
+                "a. she became passive and decided to do something about it",
+                "b. she cooked some beans"
+              ],
+              "explanation": "Cô gái nấu đậu (cooked some beans) khi đói.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "20",
+              "content": "My homework was not turned in.",
+              "options": [
+                "a. I abused it at home",
+                "b. It was all my fault"
+              ],
+              "explanation": "Đó là lỗi của tôi (my fault) khi không nộp bài tập.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Mean Chef</h1>        <p style=\"margin-bottom: 1rem;\">Once there was a chef, who was mean to his cooks. He was mean to the people who came in to eat. He charged too much for meals. Many people were not able to <b>afford</b> the cheapest <b>bean</b> dish. When his <b>metal</b> oven broke, he did not have it fixed. So everything <b>baked</b> in it burned. The only light was from <b>candles</b>, and the whole place was a <b>mess</b>. Sometimes, he didn't pay his waiters. Since they had no <b>funds</b>, they had many <b>debts</b>.</p>    <p style=\"margin-bottom: 1rem;\">The chef behaved this way all the time. He <b>monitored</b> the cooks and yelled if they did not do things his way.</p>    <p style=\"margin-bottom: 1rem;\">One day, the cooks decided that they were tired of the <b>abuse</b> and that they would not be <b>passive</b> anymore. Everyone <b>opposed</b> the chef. At first, they thought about <b>suing</b> him. Instead, they tied up the chef with rope. Now, they controlled the restaurant! They <b>decreased</b> the price of food. They used the best <b>ingredients</b> and made large <b>quantities</b> of food. They turned on the lights. The restaurant was <b>converted</b> into a happy place. For the first time, many people came to eat.</p>    <p style=\"margin-bottom: 1rem;\">The chef realized that the restaurant's problems were his <b>fault</b>. The chef learned an important lesson. The new, <b>generous</b> chef <b>insisted</b> on giving the customers a free meal.</p></div>",
+      "imageUrl": "/unit12_story.png",
+      "sections": [
+        {
+          "id": "sec4_reading",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "21",
+              "content": "What is this story about?",
+              "options": [
+                "a. How a mean chef was converted into a generous man",
+                "b. Why metal ovens bake food until it burns",
+                "c. Why waiters' funds are not enough to pay their debts",
+                "d. How simple beans brought a large quantity of customers"
+              ],
+              "explanation": "Câu chuyện kể về một bếp trưởng khó tính đã thay đổi (converted) thành một người hào phóng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "22",
+              "content": "Why could people not afford to eat at the restaurant?",
+              "options": [
+                "a. The chef insisted they take free food.",
+                "b. The chef made prices too high.",
+                "c. The chef monitored the cooks.",
+                "d. The chef got tied up."
+              ],
+              "explanation": "Bếp trưởng thu phí quá cao (charged too much) khiến khách không đủ tiền trả.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "23",
+              "content": "What did the chef learn at the end of the story?",
+              "options": [
+                "a. Electricity was better than using candles.",
+                "b. It was his fault that the restaurant did so well.",
+                "c. The waiters and cooks took over his restaurant.",
+                "d. Behaving in a nice way is better than being mean."
+              ],
+              "explanation": "Bếp trưởng đã học được bài học rằng cư xử tử tế thì tốt hơn là xấu tính (Behaving in a nice way is better than being mean).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "24",
+              "content": "According to the passage, all the following are true of the waiters and cooks EXCEPT ____________.",
+              "options": [
+                "a. they decreased prices",
+                "b. they used good ingredients",
+                "c. they were replaced by robots",
+                "d. they opposed the abuse of the chef"
+              ],
+              "explanation": "Trong bài không hề đề cập đến robots.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "25",
+              "content": "Why did the chef insist on giving his customers a free meal at the end of the story?",
+              "options": [
+                "a. He wanted to trick them.",
+                "b. He gave customers free meals to celebrate his big change.",
+                "c. He had too much food.",
+                "d. The food was going to spoil."
+              ],
+              "explanation": "Answer key là 'He gave customers free meals to celebrate his big change'.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 12",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

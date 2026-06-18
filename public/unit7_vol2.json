@@ -1,0 +1,489 @@
+{
+  "unit": 7,
+  "title": "Unit 7",
+  "reading": {
+    "title": "A Beautiful Bird",
+    "content_html": "<p style=\"margin-bottom: 1rem;\">Dr. Norton’s <strong>occupation</strong> was a <strong>scholar</strong> of <strong>biology</strong>. He learned about all animals on a daily <strong>basis</strong>. One day he met a sailor from a <strong>colony</strong> <strong>overseas</strong>. The man told Dr. Norton about a talking bird! The bird <strong>fascinated</strong> Dr. Norton, so he told his <strong>colleagues</strong> about it. They <strong>debated</strong> with him: no one thought a bird could talk. He tried to <strong>persuade</strong> them, but they laughed at him. <strong>Nevertheless</strong>, Dr. Norton believed the bird was real. His new <strong>mission</strong> was to find it. He wanted <strong>factual</strong> proof.</p><p style=\"margin-bottom: 1rem;\">The next day he <strong>departed</strong> for the <strong>colony</strong>. The sailor he had met told him to look for a man named Jai, who would be able to help him in his search. After a month of sailing, Dr. Norton finally reached the <strong>colony</strong> where he met Jai.</p><p style=\"margin-bottom: 1rem;\">“I can take you to where it lives. It lives by the <strong>volcano</strong>,” Jai said.</p><p style=\"margin-bottom: 1rem;\">They left the next day. A week later, they arrived at the <strong>volcano</strong>. Every day they walked around and looked for the bird, but they couldn’t find it. After one month, Dr. Norton could not find the bird, and this <strong>depressed</strong> him. He decided to go home. On the <strong>route</strong> back, he walked past some old <strong>ruins</strong>. He heard someone say, “Hello.”</p><p style=\"margin-bottom: 1rem;\">“Who are you?” he asked. Dr. Norton looked up and saw a bird!</p><p style=\"margin-bottom: 1rem;\">Dr. Norton put the talking bird into a <strong>cage</strong>. Then he returned home. He had made a <strong>significant</strong> discovery.</p>"
+  },
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 7: Volume 2"
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "title": "Circle two words that are related in each group.",
+      "questions": [
+        {
+          "answer": "b, c",
+          "options": [
+            "b, c",
+            "a, d",
+            "b, d",
+            "a, b",
+            "c, d"
+          ],
+          "question": "1. a. volcano b. scholar c. colleague d. cage",
+          "explanation": "scholar và colleague là hai từ liên quan đến công việc, người làm việc."
+        },
+        {
+          "answer": "a, d",
+          "options": [
+            "b, c",
+            "a, d",
+            "b, d",
+            "a, b",
+            "c, d"
+          ],
+          "question": "2. a. persuade b. basis c. mission d. debate",
+          "explanation": "persuade và debate đều liên quan đến tranh luận và thuyết phục."
+        },
+        {
+          "answer": "b, d",
+          "options": [
+            "b, c",
+            "a, d",
+            "b, d",
+            "a, b",
+            "c, d"
+          ],
+          "question": "3. a. depress b. colony c. occupation d. overseas",
+          "explanation": "colony và overseas đều liên quan đến một vùng đất, hải ngoại."
+        },
+        {
+          "answer": "a, b",
+          "options": [
+            "b, c",
+            "a, d",
+            "b, d",
+            "a, b",
+            "c, d"
+          ],
+          "question": "4. a. route b. depart c. cheer d. fascinate",
+          "explanation": "route và depart đều liên quan đến di chuyển, chuyến đi."
+        },
+        {
+          "answer": "b, c",
+          "options": [
+            "b, c",
+            "a, d",
+            "b, d",
+            "a, b",
+            "c, d"
+          ],
+          "question": "5. a. ruins b. factual c. significant d. nevertheless",
+          "explanation": "factual và significant đều là tính từ mô tả tầm quan trọng, thực tế."
+        }
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "title": "Write a word that is similar in meaning to the underlined part.",
+      "questions": [
+        {
+          "answer": "mission",
+          "options": [
+            "mission",
+            "colleague",
+            "route",
+            "factual"
+          ],
+          "question": "1. He had a very important job that he loved.",
+          "explanation": "important job đồng nghĩa với mission."
+        },
+        {
+          "answer": "colleagues",
+          "options": [
+            "colleagues",
+            "basis",
+            "ruins",
+            "debate"
+          ],
+          "question": "2. Linda was happy that she had good people at work.",
+          "explanation": "people at work đồng nghĩa với colleagues."
+        },
+        {
+          "answer": "route",
+          "options": [
+            "route",
+            "volcano",
+            "overseas",
+            "occupation"
+          ],
+          "question": "3. Bernie had never taken that way home before.",
+          "explanation": "way đồng nghĩa với route."
+        },
+        {
+          "answer": "factual",
+          "options": [
+            "factual",
+            "significant",
+            "depart",
+            "fascinate"
+          ],
+          "question": "4. This is a true movie about her life.",
+          "explanation": "true đồng nghĩa với factual."
+        },
+        {
+          "answer": "colony",
+          "options": [
+            "colony",
+            "cage",
+            "scholar",
+            "nevertheless"
+          ],
+          "question": "5. Our country used to have one other country under our control.",
+          "explanation": "country under our control đồng nghĩa với colony."
+        }
+      ]
+    },
+    {
+      "type": "multiple_choice",
+      "title": "Check the sentence with the bolded word that makes better sense.",
+      "questions": [
+        {
+          "answer": "a",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "1. a. Scholars can teach you many things that you didn’t know. b. Some people like to live in cities, while others like to live in ruins.",
+          "explanation": "Scholars (học giả) có thể dạy nhiều điều. Ruins là đống đổ nát, không ai sống ở đó."
+        },
+        {
+          "answer": "a",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "2. a. Most people fly on a plane when they go overseas. b. You should watch factual movies if you want to laugh.",
+          "explanation": "Mọi người thường đi máy bay khi ra nước ngoài (overseas)."
+        },
+        {
+          "answer": "a",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "3. a. Many people feel happy when they depart on a trip. b. Doctors never persuade people to take medicine.",
+          "explanation": "Mọi người thấy vui khi khởi hành (depart) đi chơi."
+        },
+        {
+          "answer": "b",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "4. a. If you travel overseas, you are still in the same country. b. Seeing new things fascinates most people.",
+          "explanation": "Thấy những điều mới mẻ thường lôi cuốn (fascinates) mọi người."
+        },
+        {
+          "answer": "a",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "5. a. Some people like to visit ruins to learn about the past. b. Getting something they want often depresses people.",
+          "explanation": "Người ta thường đến thăm di tích (ruins) để học về quá khứ."
+        },
+        {
+          "answer": "b",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "6. a. Some students like biology because they learn about rocks. b. When people debate about something, they have different ideas.",
+          "explanation": "Khi người ta tranh luận (debate), họ có những ý kiến khác nhau."
+        },
+        {
+          "answer": "b",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "7. a. You should see a scholar if you don’t want to do your homework. b. People who talk about sad things can depress you.",
+          "explanation": "Người nói về chuyện buồn có thể làm bạn chán nản (depress)."
+        },
+        {
+          "answer": "b",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "8. a. Some students debate to get their work done faster. b. I tried to persuade my friends to meet me for lunch today.",
+          "explanation": "Tôi cố gắng thuyết phục (persuade) bạn tôi gặp nhau ăn trưa."
+        },
+        {
+          "answer": "a",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "9. a. If you study biology, you will learn about different animals. b. People fall asleep when a movie fascinates them.",
+          "explanation": "Nếu bạn học sinh học (biology), bạn sẽ học về các động vật khác nhau."
+        },
+        {
+          "answer": "b",
+          "options": [
+            "a",
+            "b"
+          ],
+          "question": "10. a. If you depart late, you can get to school early. b. People who like to know the truth like factual stories.",
+          "explanation": "Người thích sự thật thường thích những câu chuyện có thật (factual)."
+        }
+      ]
+    },
+    {
+      "type": "reading_comprehension",
+      "title": "Answer the questions.",
+      "questions": [
+        {
+          "answer": "A scholar who finds a talking bird",
+          "options": [
+            "A route to a new place",
+            "A scholar who finds a talking bird",
+            "How to learn about biology",
+            "Why people debate each other"
+          ],
+          "question": "1. What is this story about?",
+          "explanation": "Câu chuyện kể về hành trình tìm kiếm một chú chim biết nói của tiến sĩ Norton. Bạn có thể thấy rõ điều này ngay từ đoạn đầu tiên: \"The man told Dr. Norton about a talking bird!\" (Người đàn ông đã kể cho tiến sĩ Norton về một con chim biết nói!) và \"His new mission was to find it.\" (Nhiệm vụ mới của ông là tìm ra nó). Cả câu chuyện sau đó đều xoay quanh việc ông lên đường, tìm kiếm và cuối cùng đã bắt được chú chim này. Do đó, đáp án đúng là \"A scholar who finds a talking bird\" (Một học giả tìm thấy một con chim biết nói)."
+        },
+        {
+          "answer": "He was on a mission to find the talking bird.",
+          "options": [
+            "He wanted to depart from his colleagues and start a new life.",
+            "He was on a mission to find the talking bird.",
+            "He wanted to see the volcano.",
+            "He wanted to discover some old ruins."
+          ],
+          "question": "2. Why did Dr. Norton go overseas?",
+          "explanation": "Tiến sĩ Norton ra nước ngoài vì ông có nhiệm vụ tìm kiếm chú chim biết nói. Trong đoạn 1 có viết: \"Nevertheless, Dr. Norton believed the bird was real. His new mission was to find it. He wanted factual proof.\" (Tuy nhiên, tiến sĩ Norton tin rằng con chim là có thật. Nhiệm vụ mới của ông là tìm ra nó. Ông ấy muốn bằng chứng thực tế.) và đoạn 2 tiếp tục: \"The next day he departed for the colony.\" (Ngày hôm sau ông lên đường đến thuộc địa). Do đó, đáp án chính xác là \"He was on a mission to find the talking bird.\" (Ông ấy có một nhiệm vụ là tìm con chim biết nói)."
+        },
+        {
+          "answer": "the bird would be the factual proof that would persuade his colleagues",
+          "options": [
+            "Jai didn’t like Dr. Norton but nevertheless cheered his discovery",
+            "finding the volcano was also a significant discovery",
+            "the bird would be the factual proof that would persuade his colleagues",
+            "the bird had fascinated people in the colony for a longtime"
+          ],
+          "question": "3. At the end of the story, we can infer that ____________.",
+          "explanation": "Ở cuối truyện, chúng ta có thể suy luận rằng chú chim chính là bằng chứng thực tế giúp ông thuyết phục các đồng nghiệp của mình. Ở đoạn 1, đồng nghiệp của ông đã không tin: \"They debated with him: no one thought a bird could talk.\" (Họ tranh luận với ông: không ai nghĩ một con chim có thể nói được) và ông cần bằng chứng: \"He wanted factual proof.\" Ở đoạn cuối cùng, khi ông bắt được chim và mang về: \"He had made a significant discovery.\" (Ông đã có một khám phá quan trọng). Điều này có nghĩa là con chim sẽ là bằng chứng rõ ràng nhất để thuyết phục họ. Vì vậy, đáp án đúng là \"the bird would be the factual proof that would persuade his colleagues\"."
+        },
+        {
+          "answer": "Jai fed bread to the talking bird",
+          "options": [
+            "Jai fed bread to the talking bird",
+            "Dr. Norton put the bird into a cage",
+            "Dr. Norton took a ship to the colony",
+            "the talking bird was in the ruins"
+          ],
+          "question": "4. According to the passage, all the following are true EXCEPT",
+          "explanation": "Chi tiết Jai cho chim ăn bánh mì không được nhắc đến trong bài đọc. Các chi tiết khác đều đúng: tiến sĩ Norton nhốt chú chim vào lồng (Dr. Norton put the talking bird into a cage); ông đi tàu biển đến thuộc địa (thể hiện qua câu After a month of sailing, Dr. Norton finally reached the colony...); và chú chim ở trong đống đổ nát (thể hiện qua đoạn 4 khi ông đi ngang qua khu di tích cũ: he walked past some old ruins. He heard someone say, Hello). Do bài yêu cầu tìm câu KHÔNG ĐÚNG (EXCEPT), đáp án chính xác là \"Jai fed bread to the talking bird\"."
+        }
+      ]
+    }
+  ],
+  "vocabulary": [
+    {
+      "type": "n.",
+      "word": "basis",
+      "example": "My grandfather gets his hearing checked on a yearly basis.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/basis.mp3",
+      "image_url": "",
+      "definition": "To do something on time’s basis is how often you do it.",
+      "pronunciation": "[beisis]"
+    },
+    {
+      "type": "n.",
+      "word": "biology",
+      "example": "We learned about the human heart in biology class.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/biology.mp3",
+      "image_url": "",
+      "definition": "Biology is the study of living things.",
+      "pronunciation": "[baiɑlədʒi]"
+    },
+    {
+      "type": "n.",
+      "word": "cage",
+      "example": "We put the parrots in their cage at night.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/cage.mp3",
+      "image_url": "",
+      "definition": "A cage is something that holds an animal so it cannot leave.",
+      "pronunciation": "[keidʒ]"
+    },
+    {
+      "type": "n.",
+      "word": "colleague",
+      "example": "My colleague helped me finish the job.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/colleague.mp3",
+      "image_url": "",
+      "definition": "A colleague is somebody you work with.",
+      "pronunciation": "[kɑli:g]"
+    },
+    {
+      "type": "n.",
+      "word": "colony",
+      "example": "The USA was at one time a colony of Great Britain.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/colony.mp3",
+      "image_url": "",
+      "definition": "A colony is a country controlled by another country.",
+      "pronunciation": "[kɑləni]"
+    },
+    {
+      "type": "v.",
+      "word": "debate",
+      "example": "The husband and wife debated over which TV to buy.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/debate.mp3",
+      "image_url": "",
+      "definition": "To debate is to seriously discuss something with someone.",
+      "pronunciation": "[dibeit]"
+    },
+    {
+      "type": "v.",
+      "word": "depart",
+      "example": "The plane departed for Italy at 3:00 this afternoon.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/depart.mp3",
+      "image_url": "",
+      "definition": "To depart is to leave some place so you can go to another place.",
+      "pronunciation": "[dipɑ:rt]"
+    },
+    {
+      "type": "v.",
+      "word": "depress",
+      "example": "The bad news from work depressed the man.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/depress.mp3",
+      "image_url": "",
+      "definition": "To depress someone is to make them sad.",
+      "pronunciation": "[dipres]"
+    },
+    {
+      "type": "adj.",
+      "word": "factual",
+      "example": "John learns about history from factual books.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/factual.mp3",
+      "image_url": "",
+      "definition": "When something is factual, it is true.",
+      "pronunciation": "[fæktʃuəl]"
+    },
+    {
+      "type": "v.",
+      "word": "fascinate",
+      "example": "The kitten was fascinated by the ball of yarn.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/fascinate.mp3",
+      "image_url": "",
+      "definition": "To fascinate someone is to make them really like something.",
+      "pronunciation": "[fæsəneit]"
+    },
+    {
+      "type": "n.",
+      "word": "mission",
+      "example": "The woman’s mission was to help sick people.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/mission.mp3",
+      "image_url": "",
+      "definition": "A mission is an important job that is sometimes far away.",
+      "pronunciation": "[miʃən]"
+    },
+    {
+      "type": "adv.",
+      "word": "nevertheless",
+      "example": "He is usually friendly. Nevertheless, he wasn’t this afternoon.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/nevertheless.mp3",
+      "image_url": "",
+      "definition": "You use nevertheless to show that something goes against a fact.",
+      "pronunciation": "[nevərðəles]"
+    },
+    {
+      "type": "n.",
+      "word": "occupation",
+      "example": "My father’s occupation is a dentist.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/occupation.mp3",
+      "image_url": "",
+      "definition": "An occupation is a person’s job.",
+      "pronunciation": "[ɑkjəpeiʃən]"
+    },
+    {
+      "type": "adv.",
+      "word": "overseas",
+      "example": "John often goes overseas for vacations.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/overseas.mp3",
+      "image_url": "",
+      "definition": "If you go overseas, you go to a country on the other side of an ocean.",
+      "pronunciation": "[ouvərsi:z]"
+    },
+    {
+      "type": "v.",
+      "word": "persuade",
+      "example": "The children persuaded their parents to buy them gifts.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/persuade.mp3",
+      "image_url": "",
+      "definition": "To persuade someone is to make them agree to do something.",
+      "pronunciation": "[pər:sweid]"
+    },
+    {
+      "type": "n.",
+      "word": "route",
+      "example": "I saw many new houses along the route to the city.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/route.mp3",
+      "image_url": "",
+      "definition": "A route is the way you go from one place to another.",
+      "pronunciation": "[ru:t]"
+    },
+    {
+      "type": "n.",
+      "word": "ruins",
+      "example": "I visited some interesting ruins in Greece.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/ruins.mp3",
+      "image_url": "",
+      "definition": "Ruins are old buildings that are not used anymore.",
+      "pronunciation": "[ru:inz]"
+    },
+    {
+      "type": "n.",
+      "word": "scholar",
+      "example": "The scholar knew much about art history.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/scholar.mp3",
+      "image_url": "",
+      "definition": "A scholar is a person who studies something and knows much about it.",
+      "pronunciation": "[skɑlər]"
+    },
+    {
+      "type": "adj.",
+      "word": "significant",
+      "example": "I read many significant novels as a literature major in university.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/significant.mp3",
+      "image_url": "",
+      "definition": "When someone or something is significant, they are important.",
+      "pronunciation": "[signifikənt]"
+    },
+    {
+      "type": "n.",
+      "word": "volcano",
+      "example": "When the volcano erupted, smoke and heat filled the air.",
+      "meaning": "",
+      "audio_url": "https://rbfsyvxtvyqvnwzcdwnd.supabase.co/storage/v1/object/public/vocabulary/vol_2/unit7/volcano.mp3",
+      "image_url": "",
+      "definition": "A volcano is a mountain with a hole on top where hot liquid comes out.",
+      "pronunciation": "[vɑlkeinou]"
+    }
+  ]
+}

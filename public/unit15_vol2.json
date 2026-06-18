@@ -1,0 +1,325 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit15_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit15_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">absorb</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[absorb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To absorb a liquid means to take it inside.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He used a sponge to absorb the water on the floor.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">boss</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[bɔ:s]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A boss is a person in charge of other people at work.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My boss is a nice person.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">committee</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kəˈmiti]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A committee is a group of people who meet together to make decisions.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The school's committee agreed on a new dress code for students.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">contract</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈkɑntrækt]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A contract is a written agreement between two people.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The woman signed a contract when she bought the house.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">crew</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kru:]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A crew is a group of workers.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My father has a crew. They help him build houses.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">devote</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[diˈvout]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To devote time to something means to spend a lot of time doing it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ She devotes two hours a day to playing the piano.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dig</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dig]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dig is to make a hole in the ground.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My dog digs in the yard so he can hide his bones.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">dine</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dain]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To dine means to eat dinner.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The young couple dined at their home.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">donate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdouneit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To donate is to give something to a charity or organization.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ We donate money to Christmas charities every year.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">double</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈdʌbəl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is double, it is twice as much, or twice as many.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I paid almost double the amount for that shirt.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">elevate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈeləveit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To elevate something is to put it at a higher level.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The man elevated the picture so he could see it better.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">flavor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈfleivər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A flavor is the taste of food or drinks.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The flavor of the ice cream was very good.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">foundation</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[faunˈdeiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A foundation is a group that provides money for research.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The foundation raised money to give scholarships to students.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">generation</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˌdʒenəˈreiʃən]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A generation is a group of people who live at the same time.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My grandparents are from a different generation than me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">handle</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈhændl]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A handle is the part of an object people hold while using it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The pot is very hot. So pick it up by the handle.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">layer</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ˈleiər]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A layer covers over something or is between two things.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ There was a layer of snow on the tops of the houses this morning.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">mud</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mʌd]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Mud is soft, wet dirt.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My brother played rugby in the mud. Now he's dirty.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">smooth</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[smu:ð]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If something is smooth, it has no bumps.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The baby's skin felt very smooth.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">soil</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sɔil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">Soil is the top layer of land on the Earth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy planted flowers in the soil and watered them every day.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">unique</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ju:ˈni:k]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If people or things are unique, they are not like the others.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Her dog is unique. I've never seen one quite like it.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u15_1_1",
+              "content": "1. someone who controls workers",
+              "options": [
+                "absorb",
+                "boss",
+                "generation",
+                "crew"
+              ],
+              "explanation": "boss: a person in charge of other people at work.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u15_1_2",
+              "content": "2. not like anything else",
+              "options": [
+                "flavor",
+                "foundation",
+                "mud",
+                "unique"
+              ],
+              "explanation": "unique: not like the others.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "u15_1_3",
+              "content": "3. to make two of something",
+              "options": [
+                "layer",
+                "dig",
+                "double",
+                "devote"
+              ],
+              "explanation": "double: twice as much, or twice as many.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "u15_1_4",
+              "content": "4. to eat something",
+              "options": [
+                "dine",
+                "precise",
+                "handle",
+                "contract"
+              ],
+              "explanation": "dine: to eat dinner.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u15_1_5",
+              "content": "5. to put something higher",
+              "options": [
+                "donate",
+                "elevate",
+                "committee",
+                "soil"
+              ],
+              "explanation": "elevate: to put it at a higher level.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Choose the right definition for the given word.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u15_2_1",
+              "content": "1. foundation",
+              "options": [
+                "special",
+                "a group that provides money for research",
+                "the part held in the hand",
+                "wet dirt"
+              ],
+              "explanation": "foundation: a group that provides money for research.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u15_2_2",
+              "content": "2. generation",
+              "options": [
+                "the same age group",
+                "without bumps",
+                "to eat",
+                "something used to cut"
+              ],
+              "explanation": "generation: a group of people who live at the same time.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u15_2_3",
+              "content": "3. committee",
+              "options": [
+                "a group of workmen",
+                "taste of food or drink",
+                "to put higher",
+                "a group that makes decisions"
+              ],
+              "explanation": "committee: a group of people who meet together to make decisions.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "u15_2_4",
+              "content": "4. donate",
+              "options": [
+                "to move dirt",
+                "an agreement",
+                "to give something",
+                "a single thickness"
+              ],
+              "explanation": "donate: to give something to a charity or organization.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "u15_2_5",
+              "content": "5. boss",
+              "options": [
+                "to give something",
+                "someone who controls workers",
+                "to give everything",
+                "dirt"
+              ],
+              "explanation": "boss: a person in charge of other people at work.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Check the one that suits the blank naturally.",
+          "content": "",
+          "questions": [
+            {
+              "id": "u15_3_1",
+              "content": "1. The sponge.",
+              "options": [
+                "absorbed all the water",
+                "contracted to save money"
+              ],
+              "explanation": "A sponge absorbs water.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u15_3_2",
+              "content": "2. They will help.",
+              "options": [
+                "They are the crew working on this job",
+                "They aren't in the same generation"
+              ],
+              "explanation": "A crew is a group of workers who help.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u15_3_3",
+              "content": "3. The food tastes better now.",
+              "options": [
+                "that you added more salt to give it some flavor",
+                "that you added some soil to make it grow"
+              ],
+              "explanation": "Salt gives flavor to food.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u15_3_4",
+              "content": "4. She was very special.",
+              "options": [
+                "She seldom spent time with the foundation",
+                "She had a unique skill that few people have"
+              ],
+              "explanation": "Unique means special, not like the others.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u15_3_5",
+              "content": "5. Dr. Dion started a",
+              "options": [
+                "boss at work",
+                "foundation to help sick children"
+              ],
+              "explanation": "A foundation is an organization.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u15_3_6",
+              "content": "6. We were able to",
+              "options": [
+                "devote no attention",
+                "dig very deep into the soft soil"
+              ],
+              "explanation": "You can dig into soft soil.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u15_3_7",
+              "content": "7. Where will you",
+              "options": [
+                "dine at for dinner",
+                "donate your table from"
+              ],
+              "explanation": "Dine means to eat dinner.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u15_3_8",
+              "content": "8. The rock was",
+              "options": [
+                "missing its handle",
+                "smooth and flat"
+              ],
+              "explanation": "A rock can be smooth.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u15_3_9",
+              "content": "9. You will get dirty.",
+              "options": [
+                "if you elevate your feet",
+                "if you play in the mud"
+              ],
+              "explanation": "Mud is wet dirt that makes you dirty.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "u15_3_10",
+              "content": "10. If you are cooking for more than two people,",
+              "options": [
+                "layer it with some milk",
+                "double the amount of water in the recipe"
+              ],
+              "explanation": "You should double the ingredients for more people.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Lucky Knife</h1>        <p style=\"margin-bottom: 1rem;\">I've <b>devoted</b> my life to studying past <b>generations</b>. Last year, I had a <b>unique</b> chance to work with my uncle. Our job was to find old treasures for a school's history <b>foundation</b>. He also hired a <b>crew</b> of students. They signed a <b>contract</b> to work with him. He was the <b>boss</b>. The place was strange, though. I <b>dined</b> on many things that I had never tasted before. They had an unusual <b>flavor</b>.</p>    <p style=\"margin-bottom: 1rem;\">We had been there about a month and hadn't found anything. One day, I began to <b>dig</b> in the <b>soil</b>. The ground's <b>layers</b> got wetter. Soon I was digging in the <b>mud</b>. My shovel began to get very heavy. It felt like it had <b>doubled</b> in weight because the ground had <b>absorbed</b> a lot of water.</p>    <p style=\"margin-bottom: 1rem;\">Finally, I saw something in the <b>mud</b>. It was an old knife! The <b>handle</b> felt <b>smooth</b> in my hand. I <b>elevated</b> it so I could see it better. There was writing on it.</p>    <p style=\"margin-bottom: 1rem;\">\"It says it will bring good luck,\" my uncle said with a smile. \"Why don't you keep it?\"</p>    <p style=\"margin-bottom: 1rem;\">I put it in my tent. The next day, we found many more things. There were pots, jewelry and weapons. My uncle <b>donated</b> all of the things to a special <b>committee</b>. Many newspapers wrote stories about it. It seemed the knife really did bring good luck!</p></div>",
+      "imageUrl": "/unit15_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Reading Comprehension",
+          "content": "",
+          "questions": [
+            {
+              "id": "u15_4_1",
+              "content": "1. What is this story about?",
+              "options": [
+                "How someone found an old knife",
+                "A generation of college students",
+                "A crew of committee workers digging in the mud",
+                "How a smooth knife handle feels"
+              ],
+              "explanation": "Cốt truyện chính xoay quanh việc nhân vật 'tôi' đi đào bới và phát hiện ra một con dao cổ mang lại may mắn (The Lucky Knife). Các chi tiết về bùn đất, tìm kiếm bảo vật và việc phát hiện ra con dao đều củng cố cho nội dung này. Do vậy, đáp án A (Cách một người tìm ra con dao cũ) là đúng.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u15_4_2",
+              "content": "2. All of the following are true EXCEPT.",
+              "options": [
+                "the college students signed a contract",
+                "the author's uncle worked for a foundation",
+                "the items found at the site were donated",
+                "the teen worked double the amount of everyone else"
+              ],
+              "explanation": "Chúng ta cùng kiểm tra các chi tiết nhé. Những sinh viên đã ký hợp đồng (They signed a contract to work with him), nên A đúng. Chú của tác giả làm việc cho một quỹ lịch sử (find old treasures for a school's history foundation), nên B đúng. Các món đồ tìm được đã được quyên góp (My uncle donated all of the things), nên C đúng. Không có đoạn nào nói rằng cậu thiếu niên này phải làm việc gấp đôi người khác, chỉ có cái xẻng của cậu ta nặng gấp đôi vì ngấm nước (It felt like it had doubled in weight). Vì vậy, D là câu sai và là đáp án cần chọn (EXCEPT).",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "u15_4_3",
+              "content": "3. What is probably true of the teen in the story?",
+              "options": [
+                "He could not read the writing on the knife.",
+                "He held a higher position than the other students.",
+                "He had to elevate the knife to see what it was.",
+                "He didn't want to devote his time to history"
+              ],
+              "explanation": "Khi tìm thấy con dao, nhân vật kể: There was writing on it. (Có chữ viết trên đó). Nhưng ngay sau đó, chính người chú mới là người giải thích ý nghĩa của dòng chữ: \"It says it will bring good luck,\" my uncle said. (Chú tôi nói, \"Dòng chữ nói rằng nó sẽ mang lại may mắn\"). Điều này ngụ ý rằng cậu thiếu niên không tự mình đọc hiểu được dòng chữ trên dao. Vì vậy, đáp án A (Cậu ta không thể đọc được chữ viết trên con dao) là phỏng đoán chính xác nhất.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "u15_4_4",
+              "content": "4. Where did the teen find the knife?",
+              "options": [
+                "On top of the soil",
+                "Under layers of dirt",
+                "In the museum",
+                "In his boss's tent"
+              ],
+              "explanation": "Đoạn 2 cho biết cậu đào sâu xuống đất (began to dig in the soil) và qua các lớp đất (The ground's layers got wetter). Cuối cùng cậu tìm thấy con dao trong bùn (Finally, I saw something in the mud). Điều này đồng nghĩa với việc cậu tìm thấy nó dưới những lớp đất bẩn. Vậy đáp án B (Dưới những lớp đất) là chính xác.",
+              "correctAnswer": "B"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 15",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}

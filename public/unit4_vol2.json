@@ -1,0 +1,365 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "Word List",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 32px; margin-bottom: 20px;\"><div style=\"display: flex; flex-direction: column; gap: 16px;\"><img src=\"/unit4_word_list_1.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /><img src=\"/unit4_word_list_2.png\" style=\"width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);\" /></div><div style=\"display: flex; flex-direction: column; gap: 24px; padding-top: 24px; border-top: 1px dashed #cbd5e1;\"><h3 style=\"font-size: 1.125rem; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.05em; margin: 0;\">Detailed Meanings</h3><div style=\"display: flex; flex-direction: column; gap: 24px;\"><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">chest</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[tjest]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The chest is the front part of a person’s body under the neck.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The water in the lake was as high as my chest.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">confidence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kartfidans]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">If you have confidence about something, you are sure of it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I have confidence that I did well on the test.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">consequence</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[kansikwens]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A consequence is a result of a choice or action.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ As a consequence of missing my bus, I had to find another way to work.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disaster</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[dizaestar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A disaster is a really bad thing that happens.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ When the car crashed, it was a disaster.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">disturb</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[distarb]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To disturb someone means to upset them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The loud noise disturbed me while I was working.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">estimate</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[estameit]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To estimate something means to make a guess about it.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The boy estimated that he was one meter tall.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">honor</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[ana/-]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When you honor people or things, you show respect for them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I honor my science teacher by working hard in class.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">impress</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[impres]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To impress someone means to make that person proud.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He was able to impress the girls with his new dance.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">marathon</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[mseraedn]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A marathon is a very long foot race just over 42 kilometers.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I ran a marathon, and now my legs are tired.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">narrow</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[naerou]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is narrow, it is very thin.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The bridge is too narrow for a car to drive over.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">pale</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[peil]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is pale, it does not have a bright color.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girl’s skin was very pale.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">rough</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[rAf]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When something is rough, it is not even or smooth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The rough ground hurt my feet.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">satisfy</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[saetisfai]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To satisfy someone means to make them happy.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It will satisfy my teacher if I finish all my homework.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">scream</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[skri:m]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To scream means to make a loud noise with your mouth.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ The girl saw a spider and screamed.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">sensitive</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sensativ]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">adj.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone or something is sensitive, they are easily hurt.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ My teeth are sensitive to cold things.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">shade</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[jeid]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">The shade is a dark area that something makes when it blocks the sun.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ It was hot outside, so the boy sat in the shade of a tree.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">supplement</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[sAplemant]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">v.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">To supplement something is to add something else to it in a good way.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ He supplements his diet with fresh fruits.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">terror</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[terar]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">When someone feels terror, they are scared.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I felt a sense of terror when the tiger chased me.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">threat</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[eret]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A threat is something bad that might happen.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ Due to the dark clouds, there was a threat of a bad storm.</div></div></div><div style=\"display: flex; gap: 16px; align-items: flex-start;\"><div style=\"width: 32px; height: 32px; flex-shrink: 0; background-color: #f8fafc; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-size: 16px;\">😎</div><div style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"display: flex; align-items: baseline; gap: 8px;\"><span style=\"font-size: 1.25rem; font-weight: 800; color: #65a30d;\">victim</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-family: monospace;\">[vi'ktim]</span><span style=\"font-size: 0.875rem; color: #94a3b8; font-style: italic;\">n.</span></div><div style=\"color: #475569; font-size: 0.95rem; line-height: 1.5;\">A victim is a person that had something bad happen to them.</div><div style=\"color: #64748b; font-size: 0.95rem; font-style: italic;\">→ I was a victim of a robbery.</div></div></div></div></div></div>",
+      "sections": [
+        {
+          "id": "sec1",
+          "title": "Exercise 1: Choose the right word for the given definition.",
+          "content": "",
+          "questions": [
+            {
+              "id": "1",
+              "content": "to make a guess",
+              "options": [
+                "threat",
+                "estimate",
+                "supplement",
+                "terror"
+              ],
+              "explanation": "estimate: to make a guess",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "2",
+              "content": "not having much color",
+              "options": [
+                "shade",
+                "rough",
+                "pale",
+                "narrow"
+              ],
+              "explanation": "pale: not having much color",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "3",
+              "content": "to make happy",
+              "options": [
+                "satisfy",
+                "disturb",
+                "impress",
+                "scream"
+              ],
+              "explanation": "satisfy: to make happy",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "4",
+              "content": "a long race",
+              "options": [
+                "chest",
+                "victim",
+                "marathon",
+                "consequence"
+              ],
+              "explanation": "marathon: a long race",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "5",
+              "content": "a bad ending",
+              "options": [
+                "confidence",
+                "sensitive",
+                "honor",
+                "disaster"
+              ],
+              "explanation": "disaster: a really bad thing that happens",
+              "correctAnswer": "D"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec2",
+          "title": "Exercise 2: Choose the word that is a better fit for each sentence.",
+          "content": "",
+          "questions": [
+            {
+              "id": "6",
+              "content": "There is always a ___ of falling when walking on an edge.",
+              "options": [
+                "terror",
+                "threat"
+              ],
+              "explanation": "threat: a bad thing that might happen",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "7",
+              "content": "I felt a sense of ___ when I woke up from the bad dream.",
+              "options": [
+                "terror",
+                "threat"
+              ],
+              "explanation": "terror: feeling scared",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "8",
+              "content": "The girl had ___ that she made the right decision.",
+              "options": [
+                "consequence",
+                "confidence"
+              ],
+              "explanation": "confidence: being sure of something",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "9",
+              "content": "His bad grade was a ___ of not studying for the test.",
+              "options": [
+                "consequence",
+                "confidence"
+              ],
+              "explanation": "consequence: result of a choice or action",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "10",
+              "content": "The man was a ___ of car theft.",
+              "options": [
+                "disaster",
+                "victim"
+              ],
+              "explanation": "victim: a person that had something bad happen to them",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "11",
+              "content": "When my house flooded, it was a ___.",
+              "options": [
+                "disaster",
+                "victim"
+              ],
+              "explanation": "disaster: a really bad thing that happens",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "12",
+              "content": "You should not ___ someone when they want to be alone.",
+              "options": [
+                "disturb",
+                "satisfy"
+              ],
+              "explanation": "disturb: to upset someone",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "13",
+              "content": "The boy wanted to ___ his hunger, so he ate a quick snack.",
+              "options": [
+                "disturb",
+                "satisfy"
+              ],
+              "explanation": "satisfy: to make happy/content",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "14",
+              "content": "The bumpy frog’s skin was very ___.",
+              "options": [
+                "sensitive",
+                "rough"
+              ],
+              "explanation": "rough: not even or smooth",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "15",
+              "content": "The man wore a coat because he was ___ to cold air.",
+              "options": [
+                "sensitive",
+                "rough"
+              ],
+              "explanation": "sensitive: easily hurt/affected",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        },
+        {
+          "id": "sec3",
+          "title": "Exercise 3: Check the sentence with bolded word that makes better sense.",
+          "content": "",
+          "questions": [
+            {
+              "id": "16",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Eating rotten eggs satisfies me.",
+                "b. A marathon can last for hours."
+              ],
+              "explanation": "marathon là cuộc thi chạy dài.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "17",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. I have confidence that I can win the race.",
+                "b. It was a disaster when the students did well on the test."
+              ],
+              "explanation": "confidence là sự tự tin.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "18",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. Some people scream when they watch a scary movie.",
+                "b. The narrow river was a mile wide."
+              ],
+              "explanation": "scream là hét lên vì sợ.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "19",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. A heart is inside a person’s chest.",
+                "b. My mother made a threat of giving me ice cream."
+              ],
+              "explanation": "chest là ngực.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "20",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. The consequence of stealing is being punished.",
+                "b. If you win a prize, then you are a victim."
+              ],
+              "explanation": "consequence là hậu quả.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "21",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. The boy wore pants on his chest.",
+                "b. She supplemented her salary by working part-time on Saturdays."
+              ],
+              "explanation": "supplement là bổ sung.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "22",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. The bully made several threats to scare his classmates.",
+                "b. It’s a marathon from my front door to my bedroom."
+              ],
+              "explanation": "threat là lời đe dọa.",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "23",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. When the girl did not know what to do, she had confidence.",
+                "b. The town was a disaster after the hurricane struck."
+              ],
+              "explanation": "disaster là thảm họa.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "24",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. You should always scream in the library.",
+                "b. The victim was badly hurt."
+              ],
+              "explanation": "victim là nạn nhân.",
+              "correctAnswer": "B"
+            },
+            {
+              "id": "25",
+              "content": "Which sentence makes better sense?",
+              "options": [
+                "a. It was hard to stay on the narrow path.",
+                "b. The boy created a consequence before the test started."
+              ],
+              "explanation": "narrow là hẹp.",
+              "correctAnswer": "A"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "Comprehensive Reading",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Deer and His Image</h1>        <p style=\"margin-bottom: 1rem;\">A deer told himself every day, \"I am the most handsome deer in the forest. My large <b>chest</b> is a symbol of my power. And my beautiful horns <b>impress</b> other animals.\"</p>    <p style=\"margin-bottom: 1rem;\">But he did not like his legs and hooves. \"My legs are <b>narrow</b>, and my hooves are ugly. They do not <b>satisfy</b> me.\"</p>    <p style=\"margin-bottom: 1rem;\">One day, the deer saw a big dog. The deer made some noise and <b>disturbed</b> the dog. The dog woke up and chased him. The deer felt <b>terror</b>. He <b>screamed</b>. He did not want to be a <b>victim</b>, so he ran into the forest. His strong legs helped him run fast. His <b>pale</b> brown hooves were hard, so they were not <b>sensitive</b> to <b>rough</b> rocks. However, his horns got caught in branches, slowing him down. His large <b>chest</b> could not fit between thick trees.</p>    <p style=\"margin-bottom: 1rem;\">The deer <b>estimated</b> that he ran for an hour. He felt like he was running a <b>marathon</b>. In the end, the deer escaped the <b>threat</b> of the dog. He sat in the <b>shade</b> of a tree. \"That was almost a <b>disaster</b>! I almost did not escape because of my <b>chest</b> and horns. My legs and hooves saved me.\" As a <b>consequence</b>, the deer learned to <b>honor</b> his fast legs and have <b>confidence</b> in his strong hooves. \"Pretty things only <b>supplement</b> important things,\" he thought.</p></div>",
+      "imageUrl": "/unit4_story.png",
+      "sections": [
+        {
+          "id": "sec4",
+          "title": "Reading Comprehension: Answer the questions.",
+          "content": "",
+          "questions": [
+            {
+              "id": "26",
+              "content": "What is this story about?",
+              "options": [
+                "a. Why a chest is a symbol of power",
+                "b. How a deer becomes a victim",
+                "c. Why deer have confidence in their horns",
+                "d. How a deer learned to honor useful things"
+              ],
+              "explanation": "Câu chuyện kể về bài học của chú nai khi nhận ra chân mới là thứ hữu ích nhất.",
+              "correctAnswer": "D"
+            },
+            {
+              "id": "27",
+              "content": "Why did the deer scream?",
+              "options": [
+                "a. He felt great terror.",
+                "b. He was sensitive.",
+                "c. He ran a marathon.",
+                "d. His legs were narrow."
+              ],
+              "explanation": "Nai la lên vì quá sợ hãi (terror).",
+              "correctAnswer": "A"
+            },
+            {
+              "id": "28",
+              "content": "What can we infer by the end of the story?",
+              "options": [
+                "a. The deer impressed the animals with his long run.",
+                "b. The deer was a victim of disaster.",
+                "c. The deer’s legs and hooves satisfied him.",
+                "d. The deer went back to disturb the dog again."
+              ],
+              "explanation": "Cuối cùng, nai đã rất hài lòng với đôi chân của mình.",
+              "correctAnswer": "C"
+            },
+            {
+              "id": "29",
+              "content": "According to the passage, all the following are true EXCEPT",
+              "options": [
+                "a. the deer’s hooves were pale",
+                "b. the deer sat in the shade of a tree",
+                "c. the deer experienced a bad consequence",
+                "d. the rough rocks decorated the forest"
+              ],
+              "explanation": "Nai không hề phải chịu hậu quả tồi tệ nào trong truyện.",
+              "correctAnswer": "C"
+            }
+          ],
+          "questionType": "Trắc nghiệm"
+        }
+      ]
+    }
+  ],
+  "basicInfo": {
+    "skill": "SplitScreen (Standard)",
+    "title": "Unit 4",
+    "category": "exercise",
+    "timeLimit": 0
+  }
+}
