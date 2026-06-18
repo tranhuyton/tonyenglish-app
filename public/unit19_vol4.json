@@ -88,7 +88,7 @@
           "questions": [
             {
               "id": "q6",
-              "content": "1. Scientists do not completely understand the **air that surrounds the Earth**.",
+              "content": "1. Scientists do not completely understand the *<i>air that surrounds the Earth</i>*.",
               "options": [
                 "cargo",
                 "atmosphere",
@@ -100,7 +100,7 @@
             },
             {
               "id": "q7",
-              "content": "2. The police officer said in a **definite way** that he arrived at exactly 1:15 PM.",
+              "content": "2. The police officer said in a *<i>definite way</i>* that he arrived at exactly 1:15 PM.",
               "options": [
                 "stated",
                 "flipped",
@@ -112,7 +112,7 @@
             },
             {
               "id": "q8",
-              "content": "3. The teacher asked the students to read three **divisions in a book**.",
+              "content": "3. The teacher asked the students to read three *<i>divisions in a book</i>*.",
               "options": [
                 "aisles",
                 "peas",
@@ -124,7 +124,7 @@
             },
             {
               "id": "q9",
-              "content": "4. Carolyn **told** me that she would be late to the meeting.",
+              "content": "4. Carolyn *<i>told</i>* me that she would be late to the meeting.",
               "options": [
                 "notified",
                 "retained",
@@ -136,7 +136,7 @@
             },
             {
               "id": "q10",
-              "content": "5. His mother brought his food to him on a **flat serving plate**.",
+              "content": "5. His mother brought his food to him on a *<i>flat serving plate</i>*.",
               "options": [
                 "raisin",
                 "tray",
@@ -148,7 +148,7 @@
             },
             {
               "id": "q11",
-              "content": "6. Gina was **affected with** guilt because her brother got hurt while she watched him.",
+              "content": "6. Gina was *<i>affected with</i>* guilt because her brother got hurt while she watched him.",
               "options": [
                 "afflicted by",
                 "stated",
@@ -160,7 +160,7 @@
             },
             {
               "id": "q12",
-              "content": "7. Islands like Bali, Hawaii, Brunei, and **the others similar**, rely on tourism.",
+              "content": "7. Islands like Bali, Hawaii, Brunei, and *<i>the others similar</i>*, rely on tourism.",
               "options": [
                 "authors",
                 "etc.",
@@ -172,7 +172,7 @@
             },
             {
               "id": "q13",
-              "content": "8. The flight attendant asked me to keep my bag out of the **space between the seats**.",
+              "content": "8. The flight attendant asked me to keep my bag out of the *<i>space between the seats</i>*.",
               "options": [
                 "breakdown",
                 "cargo",
@@ -184,7 +184,7 @@
             },
             {
               "id": "q14",
-              "content": "9. The computer's **failure to work** caused major problems at work.",
+              "content": "9. The computer's *<i>failure to work</i>* caused major problems at work.",
               "options": [
                 "breakdown",
                 "author",
@@ -196,7 +196,7 @@
             },
             {
               "id": "q15",
-              "content": "10. The **person who wrote the book** was nice enough to sign my copy of his book.",
+              "content": "10. The *<i>person who wrote the book</i>* was nice enough to sign my copy of his book.",
               "options": [
                 "author",
                 "pea",

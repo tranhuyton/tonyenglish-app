@@ -87,7 +87,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. I feel the best when the hours I sleep are **one after another without interruption**.",
+              "content": "1. I feel the best when the hours I sleep are *<i>one after another without interruption</i>*.",
               "options": [
                 "consecutive",
                 "crude",
@@ -99,7 +99,7 @@
             },
             {
               "id": "7",
-              "content": "2. Even though he was young, the boy’s facial features were **qualities related to men**.",
+              "content": "2. Even though he was young, the boy’s facial features were *<i>qualities related to men</i>*.",
               "options": [
                 "compatible",
                 "masculine",
@@ -111,7 +111,7 @@
             },
             {
               "id": "8",
-              "content": "3. My girlfriend and I are happy because we are **successful at existing together**.",
+              "content": "3. My girlfriend and I are happy because we are *<i>successful at existing together</i>*.",
               "options": [
                 "compatible",
                 "ignorant",
@@ -123,7 +123,7 @@
             },
             {
               "id": "9",
-              "content": "4. The **strong and fit** fireman carried the children out of the burning building.",
+              "content": "4. The *<i>strong and fit</i>* fireman carried the children out of the burning building.",
               "options": [
                 "muscular",
                 "crude",
@@ -135,7 +135,7 @@
             },
             {
               "id": "10",
-              "content": "5. The **college student** handbook lists the classes I need to take to get my degree.",
+              "content": "5. The *<i>college student</i>* handbook lists the classes I need to take to get my degree.",
               "options": [
                 "anthropology",
                 "competence",
@@ -147,7 +147,7 @@
             },
             {
               "id": "11",
-              "content": "6. My mother was shocked when she found out I had a **permanent drawing on my skin**.",
+              "content": "6. My mother was shocked when she found out I had a *<i>permanent drawing on my skin</i>*.",
               "options": [
                 "monument",
                 "tattoo",
@@ -159,7 +159,7 @@
             },
             {
               "id": "12",
-              "content": "7. The first thing Al noticed about the new employee was his bad **standing position**.",
+              "content": "7. The first thing Al noticed about the new employee was his bad *<i>standing position</i>*.",
               "options": [
                 "posture",
                 "symmetry",
@@ -171,7 +171,7 @@
             },
             {
               "id": "13",
-              "content": "8. This snowflake has **perfect halves that are the exact same** but mirror images.",
+              "content": "8. This snowflake has *<i>perfect halves that are the exact same</i>* but mirror images.",
               "options": [
                 "anthropology",
                 "symmetry",
@@ -183,7 +183,7 @@
             },
             {
               "id": "14",
-              "content": "9. He was embarrassed by his **lack of knowledge**.",
+              "content": "9. He was embarrassed by his *<i>lack of knowledge</i>*.",
               "options": [
                 "ignorance",
                 "competence",
@@ -195,7 +195,7 @@
             },
             {
               "id": "15",
-              "content": "10. The **not exact or detailed** measurements turned out to be good enough.",
+              "content": "10. The *<i>not exact or detailed</i>* measurements turned out to be good enough.",
               "options": [
                 "consecutive",
                 "crude",

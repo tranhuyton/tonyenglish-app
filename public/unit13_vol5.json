@@ -283,7 +283,7 @@
           "questions": [
             {
               "id": "21",
-              "content": "1. We went to the track to watch the **racing dogs** run.",
+              "content": "1. We went to the track to watch the *<i>racing dogs</i>* run.",
               "options": [
                 "hounds",
                 "pedestrians",
@@ -295,7 +295,7 @@
             },
             {
               "id": "22",
-              "content": "2. The **outer part of a loaf of bread** was a dark brown and smelled like wheat and honey.",
+              "content": "2. The *<i>outer part of a loaf of bread</i>* was a dark brown and smelled like wheat and honey.",
               "options": [
                 "crust",
                 "ornament",
@@ -307,7 +307,7 @@
             },
             {
               "id": "23",
-              "content": "3. The baseball player was yelled at by an angry **person who watches a sports event**.",
+              "content": "3. The baseball player was yelled at by an angry *<i>person who watches a sports event</i>*.",
               "options": [
                 "pedestrian",
                 "spectator",
@@ -319,7 +319,7 @@
             },
             {
               "id": "24",
-              "content": "4. People who celebrate Christmas hang colorful **attractive objects** on their trees.",
+              "content": "4. People who celebrate Christmas hang colorful *<i>attractive objects</i>* on their trees.",
               "options": [
                 "criteria",
                 "facilities",
@@ -331,7 +331,7 @@
             },
             {
               "id": "25",
-              "content": "5. What are the **factors on which you judge** for becoming a member in your club?",
+              "content": "5. What are the *<i>factors on which you judge</i>* for becoming a member in your club?",
               "options": [
                 "criteria",
                 "faculties",
@@ -343,7 +343,7 @@
             },
             {
               "id": "26",
-              "content": "6. The church was made into a **place people can go to be safe** after the hurricane.",
+              "content": "6. The church was made into a *<i>place people can go to be safe</i>* after the hurricane.",
               "options": [
                 "facility",
                 "sanctuary",
@@ -355,7 +355,7 @@
             },
             {
               "id": "27",
-              "content": "7. Concentration is an important **mental ability** to have when studying for a test.",
+              "content": "7. Concentration is an important *<i>mental ability</i>* to have when studying for a test.",
               "options": [
                 "faculty",
                 "consumption",
@@ -367,7 +367,7 @@
             },
             {
               "id": "28",
-              "content": "8. The messy girl kept her clothes in a **pile** on the floor.",
+              "content": "8. The messy girl kept her clothes in a *<i>pile</i>* on the floor.",
               "options": [
                 "brook",
                 "heap",
@@ -379,7 +379,7 @@
             },
             {
               "id": "29",
-              "content": "9. The boy sat by the **small stream** and tossed stones into it.",
+              "content": "9. The boy sat by the *<i>small stream</i>* and tossed stones into it.",
               "options": [
                 "brook",
                 "hemisphere",
@@ -391,7 +391,7 @@
             },
             {
               "id": "30",
-              "content": "10. Buying the house will **give the rights to me** to redecorate it any way I want.",
+              "content": "10. Buying the house will *<i>give the rights to me</i>* to redecorate it any way I want.",
               "options": [
                 "degrade",
                 "cater",

@@ -148,7 +148,7 @@
           "questions": [
             {
               "id": "11",
-              "content": "1. Factories built in the early 1900s contine to _unleash_ _chemicals_ _into_ the air.",
+              "content": "1. Factories built in the early 1900s contine to <u>unleash</u> <u>chemicals</u> <u>into</u> the air.",
               "options": [
                 "pollute",
                 "modify",
@@ -160,7 +160,7 @@
             },
             {
               "id": "12",
-              "content": "2. My soccer team is playing in a _competition_ next weekend.",
+              "content": "2. My soccer team is playing in a <u>competition</u> next weekend.",
               "options": [
                 "era",
                 "tournament",
@@ -172,7 +172,7 @@
             },
             {
               "id": "13",
-              "content": "3. When the new buildings are finished, they will be _the_ _same_ _distance_ _away_ _from_ _each_ _other_.",
+              "content": "3. When the new buildings are finished, they will be <u>the</u> <u>same</u> <u>distance</u> <u>away</u> <u>from</u> <u>each</u> <u>other</u>.",
               "options": [
                 "parallel",
                 "mobile",
@@ -184,7 +184,7 @@
             },
             {
               "id": "14",
-              "content": "4. In order for my science project to work, I need to _alter_ it.",
+              "content": "4. In order for my science project to work, I need to <u>alter</u> it.",
               "options": [
                 "pollute",
                 "modify",
@@ -196,7 +196,7 @@
             },
             {
               "id": "15",
-              "content": "5. Amy hurt Jane's feelings when she _made_ _fun_ _of_ her.",
+              "content": "5. Amy hurt Jane's feelings when she <u>made</u> <u>fun</u> <u>of</u> her.",
               "options": [
                 "ridiculed",
                 "incorporated",
@@ -208,7 +208,7 @@
             },
             {
               "id": "16",
-              "content": "6. In this _period_ _of_ _time_, it's more common for kids to play video games than read books.",
+              "content": "6. In this <u>period</u> <u>of</u> <u>time</u>, it's more common for kids to play video games than read books.",
               "options": [
                 "interval",
                 "territory",
@@ -220,7 +220,7 @@
             },
             {
               "id": "17",
-              "content": "7. Kate is very shy and doesn't like to _talk_ _to_ _and_ _do_ _things_ _with_ the other girls.",
+              "content": "7. Kate is very shy and doesn't like to <u>talk</u> <u>to</u> <u>and</u> <u>do</u> <u>things</u> <u>with</u> the other girls.",
               "options": [
                 "pollute",
                 "ridicule",
@@ -232,7 +232,7 @@
             },
             {
               "id": "18",
-              "content": "8. Tom wants to _add_ more colors _into_ his painting.",
+              "content": "8. Tom wants to <u>add</u> more colors <u>into</u> his painting.",
               "options": [
                 "incorporate",
                 "modify",
@@ -244,7 +244,7 @@
             },
             {
               "id": "19",
-              "content": "9. My grandfather used to race _cars_ across the long distances in endurance races.",
+              "content": "9. My grandfather used to race <u>cars</u> across the long distances in endurance races.",
               "options": [
                 "intervals",
                 "automobiles",
@@ -256,7 +256,7 @@
             },
             {
               "id": "20",
-              "content": "10. The _person_ _competing_ _for_ _the_ _job_ interviewed very well.",
+              "content": "10. The <u>person</u> <u>competing</u> <u>for</u> <u>the</u> <u>job</u> interviewed very well.",
               "options": [
                 "phenomenon",
                 "candidate",

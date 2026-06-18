@@ -59,3 +59,7 @@ div[class*="jodit-ui-dialog__footer"] button:first-child {
   .custom-scrollbar {
     -webkit-overflow-scrolling: touch;
   }
+
+u { text-decoration: underline !important; }
+i, em { font-style: italic !important; }
+b, strong { font-weight: bold !important; }

@@ -87,7 +87,7 @@
           "questions": [
             {
               "id": "6",
-              "content": "1. I would like to write a **story about his life** for my father someday.",
+              "content": "1. I would like to write a *<i>story about his life</i>* for my father someday.",
               "options": [
                 "biography",
                 "banquet",
@@ -123,7 +123,7 @@
             },
             {
               "id": "9",
-              "content": "4. The preacher strongly believed that kindness was the most important **good quality**.",
+              "content": "4. The preacher strongly believed that kindness was the most important *<i>good quality</i>*.",
               "options": [
                 "legacy",
                 "virtue",
@@ -135,7 +135,7 @@
             },
             {
               "id": "10",
-              "content": "5. The action in the play was **read aloud** by the teacher. The students read the rest.",
+              "content": "5. The action in the play was *<i>read aloud</i>* by the teacher. The students read the rest.",
               "options": [
                 "compelled",
                 "boosted",
@@ -147,7 +147,7 @@
             },
             {
               "id": "11",
-              "content": "6. The girl had a strong **preference over another** flavor for chocolate ice cream.",
+              "content": "6. The girl had a strong *<i>preference over another</i>* flavor for chocolate ice cream.",
               "options": [
                 "partiality",
                 "aggression",
@@ -159,7 +159,7 @@
             },
             {
               "id": "12",
-              "content": "7. Black and white TVs are **no longer used in modern time** because people prefer color TVs.",
+              "content": "7. Black and white TVs are *<i>no longer used in modern time</i>* because people prefer color TVs.",
               "options": [
                 "overall",
                 "outdated",
@@ -171,7 +171,7 @@
             },
             {
               "id": "13",
-              "content": "8. The great actor left behind a great **result of his actions that continues to exist**.",
+              "content": "8. The great actor left behind a great *<i>result of his actions that continues to exist</i>*.",
               "options": [
                 "masterpiece",
                 "legacy",
@@ -183,7 +183,7 @@
             },
             {
               "id": "14",
-              "content": "9. She is **known for bad things** because she likes to hang around the wrong people.",
+              "content": "9. She is *<i>known for bad things</i>* because she likes to hang around the wrong people.",
               "options": [
                 "acute",
                 "notorious",
@@ -195,7 +195,7 @@
             },
             {
               "id": "15",
-              "content": "10. I have no idea what would **force** Dan to act in such a mean way.",
+              "content": "10. I have no idea what would *<i>force</i>* Dan to act in such a mean way.",
               "options": [
                 "compel",
                 "boost",
