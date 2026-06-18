@@ -16,7 +16,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -27,8 +26,8 @@
                 "To perish",
                 "To disapprove"
               ],
-              "correctAnswer": "A",
-              "explanation": "weep: khóc."
+              "explanation": "weep: khóc.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -39,8 +38,8 @@
                 "On a roost",
                 "On a flight"
               ],
-              "correctAnswer": "C",
-              "explanation": "roost: chỗ chim đậu."
+              "explanation": "roost: chỗ chim đậu.",
+              "correctAnswer": "C"
             },
             {
               "id": "3",
@@ -51,8 +50,8 @@
                 "Trivial",
                 "Fond"
               ],
-              "correctAnswer": "B",
-              "explanation": "damp: ẩm ướt."
+              "explanation": "damp: ẩm ướt.",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -63,8 +62,8 @@
                 "To be oblivious",
                 "To be typical"
               ],
-              "correctAnswer": "A",
-              "explanation": "soar: bay lượn."
+              "explanation": "soar: bay lượn.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -75,8 +74,8 @@
                 "Slippery",
                 "Immoral"
               ],
-              "correctAnswer": "C",
-              "explanation": "slippery: trơn trượt."
+              "explanation": "slippery: trơn trượt.",
+              "correctAnswer": "C"
             },
             {
               "id": "6",
@@ -87,8 +86,8 @@
                 "A person",
                 "A smell"
               ],
-              "correctAnswer": "B",
-              "explanation": "rim: miệng ly, vành cốc."
+              "explanation": "rim: miệng ly, vành cốc.",
+              "correctAnswer": "B"
             },
             {
               "id": "7",
@@ -99,8 +98,8 @@
                 "A car",
                 "A lion"
               ],
-              "correctAnswer": "A",
-              "explanation": "beak: mỏ chim."
+              "explanation": "beak: mỏ chim.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -111,8 +110,8 @@
                 "They can live on land.",
                 "Some can live for close to 50 years"
               ],
-              "correctAnswer": "A",
-              "explanation": "typical: điển hình (cá thì bơi)."
+              "explanation": "typical: điển hình (cá thì bơi).",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
@@ -123,8 +122,8 @@
                 "A wife",
                 "A hurt woman"
               ],
-              "correctAnswer": "D",
-              "explanation": "moan: rên rỉ (do đau đớn)."
+              "explanation": "moan: rên rỉ (do đau đớn).",
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -135,16 +134,16 @@
                 "A judge",
                 "A fireman"
               ],
-              "correctAnswer": "B",
-              "explanation": "immoral: vô đạo đức (tội phạm)."
+              "explanation": "immoral: vô đạo đức (tội phạm).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -153,8 +152,8 @@
                 "oblivious / perish",
                 "perish / oblivious"
               ],
-              "correctAnswer": "B",
-              "explanation": "perish: chết; oblivious: không hay biết."
+              "explanation": "perish: chết; oblivious: không hay biết.",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
@@ -163,8 +162,8 @@
                 "roost / fond",
                 "fond / roost"
               ],
-              "correctAnswer": "A",
-              "explanation": "roost: chỗ đậu; fond of: thích."
+              "explanation": "roost: chỗ đậu; fond of: thích.",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -173,8 +172,8 @@
                 "rim / pit",
                 "pit / rim"
               ],
-              "correctAnswer": "A",
-              "explanation": "rim: miệng lon; pit: cái hố."
+              "explanation": "rim: miệng lon; pit: cái hố.",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
@@ -183,8 +182,8 @@
                 "soars / flight",
                 "flight / soars"
               ],
-              "correctAnswer": "A",
-              "explanation": "soar: bay lượn; flight: chuyến bay."
+              "explanation": "soar: bay lượn; flight: chuyến bay.",
+              "correctAnswer": "A"
             },
             {
               "id": "15",
@@ -193,8 +192,8 @@
                 "moan / weep",
                 "weep / moan"
               ],
-              "correctAnswer": "A",
-              "explanation": "moan: rên rỉ; weep: khóc."
+              "explanation": "moan: rên rỉ; weep: khóc.",
+              "correctAnswer": "A"
             },
             {
               "id": "16",
@@ -203,8 +202,8 @@
                 "typical / immoral",
                 "immoral / typical"
               ],
-              "correctAnswer": "A",
-              "explanation": "typical: điển hình; immoral: vô đạo đức."
+              "explanation": "typical: điển hình; immoral: vô đạo đức.",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
@@ -213,8 +212,8 @@
                 "except / beak",
                 "beak / except"
               ],
-              "correctAnswer": "A",
-              "explanation": "except for: ngoại trừ; beak: mỏ chim."
+              "explanation": "except for: ngoại trừ; beak: mỏ chim.",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
@@ -223,8 +222,8 @@
                 "trivial / disapprove",
                 "disapprove / trivial"
               ],
-              "correctAnswer": "A",
-              "explanation": "trivial: tầm thường; disapprove of: không tán thành."
+              "explanation": "trivial: tầm thường; disapprove of: không tán thành.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
@@ -233,8 +232,8 @@
                 "utterly / ivy",
                 "ivy / utterly"
               ],
-              "correctAnswer": "A",
-              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân."
+              "explanation": "utterly: hoàn toàn; ivy: cây thường xuân.",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
@@ -243,24 +242,24 @@
                 "slippery / damp",
                 "damp / slippery"
               ],
-              "correctAnswer": "A",
-              "explanation": "slippery: trơn trượt; damp: ẩm ướt."
+              "explanation": "slippery: trơn trượt; damp: ẩm ướt.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Tricky Fox</h1><p style=\"margin-bottom: 2rem;\">There was a fox that lived in the forest. Fox loved to play mean tricks on the other animals. One day, he used the sharp <b>rim</b> of a bottle to dig a <b>pit</b> in the ground. He hid in a tree until Rabbit came to the pit's edge. Then, he jumped out and pushed Rabbit into the pit. Fox laughed and ran away. The angry Rabbit climbed out and told the other animals what happened.</p><p style=\"margin-bottom: 2rem;\">The others said, \"That is <b>typical</b> behavior for Fox. He does mean things all the time. Sometimes, he is completely <b>immoral</b>. We all <b>disapprove</b> of his actions, so we should teach him a lesson. Tomorrow, we'll push Fox into that pit.\"</p><p style=\"margin-bottom: 2rem;\">The next day, all of the animals hid near the pit and waited for Fox. Fox was <b>oblivious</b> to the hidden animals. He walked up to the pit to see if Rabbit was still trapped. Just then, the other animals ran up to Fox and pushed him in. All the animals laughed and cheered, <b>except</b> Fox, of course.</p><p style=\"margin-bottom: 2rem;\">Fox couldn't get out! The walls of the pit were covered in <b>damp</b> <b>ivy</b>. It was too <b>slippery</b> for him to climb out. He was <b>utterly</b> helpless. He <b>moaned</b> and began to <b>weep</b>.</p><p style=\"margin-bottom: 2rem;\">At last, he saw Eagle watching him from her <b>roost</b>. He yelled, \"Eagle, please help me! If I don't get out of here, I will <b>perish</b>!\"</p><p style=\"margin-bottom: 2rem;\">Eagle said, \"You may think your tricks are <b>trivial</b>, but you hurt others when you do mean things. I'll help you if you promise to be nice.\"</p><p style=\"margin-bottom: 2rem;\">Fox said, \"I promise!\"</p><p style=\"margin-bottom: 2rem;\">Eagle began her <b>flight</b> to the bottom of the pit. She picked up Fox with her <b>beak</b> and <b>soared</b> out of the pit. She dropped Fox safely on the ground.</p><p style=\"margin-bottom: 2rem;\">Fox thanked Eagle and kept his promise. He was nice to the other animals.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Tricky Fox</h1>        <p style=\"margin-bottom: 1rem;\">There was a fox that lived in the forest. Fox loved to play mean tricks on the other animals. One day, he used the sharp <b>rim</b> of a bottle to dig a <b>pit</b> in the ground. He hid in a tree until Rabbit came to the pit's edge. Then, he jumped out and pushed Rabbit into the pit. Fox laughed and ran away. The angry Rabbit climbed out and told the other animals what happened.</p>    <p style=\"margin-bottom: 1rem;\">The others said, \"That is <b>typical</b> behavior for Fox. He does mean things all the time. Sometimes, he is completely <b>immoral</b>. We all <b>disapprove</b> of his actions, so we should teach him a lesson. Tomorrow, we'll push Fox into that pit.\"</p>    <p style=\"margin-bottom: 1rem;\">The next day, all of the animals hid near the pit and waited for Fox. Fox was <b>oblivious</b> to the hidden animals. He walked up to the pit to see if Rabbit was still trapped. Just then, the other animals ran up to Fox and pushed him in. All the animals laughed and cheered, <b>except</b> Fox, of course.</p>    <p style=\"margin-bottom: 1rem;\">Fox couldn't get out! The walls of the pit were covered in <b>damp</b> <b>ivy</b>. It was too <b>slippery</b> for him to climb out. He was <b>utterly</b> helpless. He <b>moaned</b> and began to <b>weep</b>.</p>    <p style=\"margin-bottom: 1rem;\">At last, he saw Eagle watching him from her <b>roost</b>. He yelled, \"Eagle, please help me! If I don't get out of here, I will <b>perish</b>!\"</p>    <p style=\"margin-bottom: 1rem;\">Eagle said, \"You may think your tricks are <b>trivial</b>, but you hurt others when you do mean things. I'll help you if you promise to be nice.\"</p>    <p style=\"margin-bottom: 1rem;\">Fox said, \"I promise!\"</p>    <p style=\"margin-bottom: 1rem;\">Eagle began her <b>flight</b> to the bottom of the pit. She picked up Fox with her <b>beak</b> and <b>soared</b> out of the pit. She dropped Fox safely on the ground.</p>    <p style=\"margin-bottom: 1rem;\">Fox thanked Eagle and kept his promise. He was nice to the other animals.</p></div>",
       "imageUrl": "/unit4_vol4_story.png",
       "sections": [
         {
           "id": "sec3_reading",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -269,8 +268,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trong bài: he used the sharp rim of a bottle to dig a pit in the ground."
+              "explanation": "Trong bài: he used the sharp rim of a bottle to dig a pit in the ground.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -279,8 +278,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Eagle had a roost near the pit, không phải Fox."
+              "explanation": "Eagle had a roost near the pit, không phải Fox.",
+              "correctAnswer": "B"
             },
             {
               "id": "23",
@@ -289,8 +288,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trong bài: The walls of the pit were covered in damp ivy. It was too slippery for him to climb out."
+              "explanation": "Trong bài: The walls of the pit were covered in damp ivy. It was too slippery for him to climb out.",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
@@ -299,8 +298,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trong bài: That is typical behavior for Fox. He does mean things all the time. Sometimes, he is completely immoral."
+              "explanation": "Trong bài: That is typical behavior for Fox. He does mean things all the time. Sometimes, he is completely immoral.",
+              "correctAnswer": "A"
             },
             {
               "id": "25",
@@ -309,8 +308,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Fox was oblivious to the hidden animals, không phải hố."
+              "explanation": "Fox was oblivious to the hidden animals, không phải hố.",
+              "correctAnswer": "B"
             },
             {
               "id": "26",
@@ -319,16 +318,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trong bài: Eagle began her flight to the bottom of the pit. She picked up Fox... và đưa anh ta ra ngoài."
+              "explanation": "Trong bài: Eagle began her flight to the bottom of the pit. She picked up Fox... và đưa anh ta ra ngoài.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "27",
@@ -339,8 +338,8 @@
                 "Rabbit sat on the edge.",
                 "Fox laughed and ran away."
               ],
-              "correctAnswer": "B",
-              "explanation": "Trong bài: Then, he jumped out and pushed Rabbit into the pit."
+              "explanation": "Trong bài: Then, he jumped out and pushed Rabbit into the pit.",
+              "correctAnswer": "B"
             },
             {
               "id": "28",
@@ -351,8 +350,8 @@
                 "She did not let Fox perish.",
                 "She gave Fox some rope to climb out."
               ],
-              "correctAnswer": "C",
-              "explanation": "Fox sắp chết (perish), và Eagle đã cứu anh ta ra khỏi hố."
+              "explanation": "Fox sắp chết (perish), và Eagle đã cứu anh ta ra khỏi hố.",
+              "correctAnswer": "C"
             },
             {
               "id": "29",
@@ -363,8 +362,8 @@
                 "He felt trivial.",
                 "He felt utterly helpless."
               ],
-              "correctAnswer": "D",
-              "explanation": "Trong bài: He was utterly helpless. He moaned and began to weep."
+              "explanation": "Trong bài: He was utterly helpless. He moaned and began to weep.",
+              "correctAnswer": "D"
             },
             {
               "id": "30",
@@ -375,10 +374,11 @@
                 "She made Fox promise to leave the forest.",
                 "She picked up Fox with her beak."
               ],
-              "correctAnswer": "D",
-              "explanation": "Trong bài: She picked up Fox with her beak and soared out of the pit."
+              "explanation": "Trong bài: She picked up Fox with her beak and soared out of the pit.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

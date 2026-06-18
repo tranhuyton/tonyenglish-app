@@ -16,329 +16,329 @@
           "id": "sec1",
           "title": "Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q1",
-              "content": "1. cargo",
+              "content": "cargo",
               "options": [
                 "space",
                 "items",
                 "air",
                 "list"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"cargo\" nghĩa là hàng hóa, do đó đáp án B. items là chính xác."
+              "explanation": "\"cargo\" nghĩa là hàng hóa, do đó đáp án B. items là chính xác.",
+              "correctAnswer": "B"
             },
             {
               "id": "q2",
-              "content": "2. retain",
+              "content": "retain",
               "options": [
                 "to keep",
                 "to join",
                 "to do",
                 "to press a switch"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"retain\" nghĩa là giữ lại, tương đương với \"to keep\"."
+              "explanation": "\"retain\" nghĩa là giữ lại, tương đương với \"to keep\".",
+              "correctAnswer": "A"
             },
             {
               "id": "q3",
-              "content": "3. vivid",
+              "content": "vivid",
               "options": [
                 "to not work",
                 "bright",
                 "end",
                 "vegetable"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"vivid\" có nghĩa là chói lọi, sống động, tương đương với \"bright\"."
+              "explanation": "\"vivid\" có nghĩa là chói lọi, sống động, tương đương với \"bright\".",
+              "correctAnswer": "B"
             },
             {
               "id": "q4",
-              "content": "4. raisin",
+              "content": "raisin",
               "options": [
                 "division",
                 "grape",
                 "air",
                 "writer"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"raisin\" nghĩa là nho khô, có liên quan đến \"grape\" (quả nho)."
+              "explanation": "\"raisin\" nghĩa là nho khô, có liên quan đến \"grape\" (quả nho).",
+              "correctAnswer": "B"
             },
             {
               "id": "q5",
-              "content": "5. idle",
+              "content": "idle",
               "options": [
                 "doing nothing",
                 "affected",
                 "plate",
                 "to have food come up"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"idle\" nghĩa là nhàn rỗi, không làm gì, tương đương với \"doing nothing\"."
+              "explanation": "\"idle\" nghĩa là nhàn rỗi, không làm gì, tương đương với \"doing nothing\".",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Write a word that is similar in meaning to the bold part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q6",
-              "content": "1. Scientists do not completely understand the *<i>air that surrounds the Earth</i>*.",
+              "content": "Scientists do not completely understand the *<i>air that surrounds the Earth</i>*.",
               "options": [
                 "cargo",
                 "atmosphere",
                 "chapter",
                 "breakdown"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"air that surrounds the Earth\" (không khí bao quanh Trái Đất) có nghĩa là bầu khí quyển, tức là \"atmosphere\"."
+              "explanation": "\"air that surrounds the Earth\" (không khí bao quanh Trái Đất) có nghĩa là bầu khí quyển, tức là \"atmosphere\".",
+              "correctAnswer": "B"
             },
             {
               "id": "q7",
-              "content": "2. The police officer said in a *<i>definite way</i>* that he arrived at exactly 1:15 PM.",
+              "content": "The police officer said in a *<i>definite way</i>* that he arrived at exactly 1:15 PM.",
               "options": [
                 "stated",
                 "flipped",
                 "notified",
                 "connected"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"said in a definite way\" (nói một cách chắc chắn) có nghĩa là tuyên bố, phát biểu, tương đương với \"stated\"."
+              "explanation": "\"said in a definite way\" (nói một cách chắc chắn) có nghĩa là tuyên bố, phát biểu, tương đương với \"stated\".",
+              "correctAnswer": "A"
             },
             {
               "id": "q8",
-              "content": "3. The teacher asked the students to read three *<i>divisions in a book</i>*.",
+              "content": "The teacher asked the students to read three *<i>divisions in a book</i>*.",
               "options": [
                 "aisles",
                 "peas",
                 "chapters",
                 "trays"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"divisions in a book\" (các phần trong một cuốn sách) có nghĩa là các chương sách, tức là \"chapters\"."
+              "explanation": "\"divisions in a book\" (các phần trong một cuốn sách) có nghĩa là các chương sách, tức là \"chapters\".",
+              "correctAnswer": "C"
             },
             {
               "id": "q9",
-              "content": "4. Carolyn *<i>told</i>* me that she would be late to the meeting.",
+              "content": "Carolyn *<i>told</i>* me that she would be late to the meeting.",
               "options": [
                 "notified",
                 "retained",
                 "vomited",
                 "betrayed"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"told\" (bảo, nói) trong ngữ cảnh này mang nghĩa thông báo cho ai đó biết, tương đương với \"notified\"."
+              "explanation": "\"told\" (bảo, nói) trong ngữ cảnh này mang nghĩa thông báo cho ai đó biết, tương đương với \"notified\".",
+              "correctAnswer": "A"
             },
             {
               "id": "q10",
-              "content": "5. His mother brought his food to him on a *<i>flat serving plate</i>*.",
+              "content": "His mother brought his food to him on a *<i>flat serving plate</i>*.",
               "options": [
                 "raisin",
                 "tray",
                 "aisle",
                 "cargo"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"flat serving plate\" (đĩa phẳng phục vụ thức ăn) chính là cái khay đựng đồ ăn, tức là \"tray\"."
+              "explanation": "\"flat serving plate\" (đĩa phẳng phục vụ thức ăn) chính là cái khay đựng đồ ăn, tức là \"tray\".",
+              "correctAnswer": "B"
             },
             {
               "id": "q11",
-              "content": "6. Gina was *<i>affected with</i>* guilt because her brother got hurt while she watched him.",
+              "content": "Gina was *<i>affected with</i>* guilt because her brother got hurt while she watched him.",
               "options": [
                 "afflicted by",
                 "stated",
                 "idle",
                 "vivid"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"affected with\" (bị ảnh hưởng, đau khổ bởi) mang nghĩa là bị giày vò, khổ sở, tương đương với \"afflicted by\"."
+              "explanation": "\"affected with\" (bị ảnh hưởng, đau khổ bởi) mang nghĩa là bị giày vò, khổ sở, tương đương với \"afflicted by\".",
+              "correctAnswer": "A"
             },
             {
               "id": "q12",
-              "content": "7. Islands like Bali, Hawaii, Brunei, and *<i>the others similar</i>*, rely on tourism.",
+              "content": "Islands like Bali, Hawaii, Brunei, and *<i>the others similar</i>*, rely on tourism.",
               "options": [
                 "authors",
                 "etc.",
                 "chapters",
                 "raisins"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"the others similar\" (những cái khác tương tự) mang nghĩa vân vân, tương đương với \"etc.\"."
+              "explanation": "\"the others similar\" (những cái khác tương tự) mang nghĩa vân vân, tương đương với \"etc.\".",
+              "correctAnswer": "B"
             },
             {
               "id": "q13",
-              "content": "8. The flight attendant asked me to keep my bag out of the *<i>space between the seats</i>*.",
+              "content": "The flight attendant asked me to keep my bag out of the *<i>space between the seats</i>*.",
               "options": [
                 "breakdown",
                 "cargo",
                 "aisle",
                 "atmosphere"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"space between the seats\" (khoảng trống giữa các ghế) chính là lối đi, tức là \"aisle\"."
+              "explanation": "\"space between the seats\" (khoảng trống giữa các ghế) chính là lối đi, tức là \"aisle\".",
+              "correctAnswer": "C"
             },
             {
               "id": "q14",
-              "content": "9. The computer's *<i>failure to work</i>* caused major problems at work.",
+              "content": "The computer's *<i>failure to work</i>* caused major problems at work.",
               "options": [
                 "breakdown",
                 "author",
                 "chapter",
                 "tray"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"failure to work\" (không hoạt động được) chính là sự hỏng hóc, sự cố, tức là \"breakdown\"."
+              "explanation": "\"failure to work\" (không hoạt động được) chính là sự hỏng hóc, sự cố, tức là \"breakdown\".",
+              "correctAnswer": "A"
             },
             {
               "id": "q15",
-              "content": "10. The *<i>person who wrote the book</i>* was nice enough to sign my copy of his book.",
+              "content": "The *<i>person who wrote the book</i>* was nice enough to sign my copy of his book.",
               "options": [
                 "author",
                 "pea",
                 "raisin",
                 "atmosphere"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"person who wrote the book\" (người viết cuốn sách) chính là tác giả, tức là \"author\"."
+              "explanation": "\"person who wrote the book\" (người viết cuốn sách) chính là tác giả, tức là \"author\".",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Isaac's First Plane Trip</h1><p style=\"margin-bottom: 1rem;\">Isaac's family was going on vacation. He was excited about the trip except for one thing. He had never been on a plane before. He was scared that his plane would have a <b>breakdown</b>.</p><p style=\"margin-bottom: 1rem;\">Isaac got onto the plane. He walked down the <b>aisle</b> until he found his seat. He sat down and <b>connected</b> the ends of his seat belt. After being <b>idle</b> for a few minutes, the pilot announced that they were ready to leave.</p><p style=\"margin-bottom: 1rem;\">He looked out the window at the <b>vivid</b> colors of the sky. He began to feel scared. The girl sitting next to him said, \"Hi, I'm Rachel! You look nervous, but you don't need to be. Flying is fun!\"</p><p style=\"margin-bottom: 1rem;\">\"I'm still a bit nervous,\" Issac said, \"and I'm getting hungry.\"</p><p style=\"margin-bottom: 1rem;\">\"The food service will begin soon. Just lower the <b>tray</b> on the seat in front of you, and <b>flip</b> this switch. Then they'll bring your dinner! Last time, they served chicken, <b>peas</b>, and a box of <b>raisins</b>,\" Rachel explained.</p><p style=\"margin-bottom: 1rem;\">Then the pilot <b>notified</b> the passengers of bad conditions in the <b>atmosphere</b>. \"We're tracking the weather: lightning, clouds, <b>etc.</b> The ride might get a bit rough,\" he <b>stated</b>.</p><p style=\"margin-bottom: 1rem;\">Suddenly, the plane started to shake. Isaac was badly <b>afflicted</b> by his fear. His stomach hurt, and he thought he might <b>vomit</b>. He couldn't believe that he was in such an <b>unfortunate</b> place. Finally, the shaking stopped. Isaac was still scared, but he tried to <b>retain</b> a good attitude.</p><p style=\"margin-bottom: 1rem;\">\"The first time I flew, the plane shook so bad that <b>cargo</b> started falling. My parents told me to listen to music and read a <b>chapter</b> in my book. It calmed me,\" Rachel said.</p><p style=\"margin-bottom: 1rem;\">Suddenly, the plane shook again. This time, Isaac followed Rachel's advice. He put on headphones and took out a book by his favorite <b>author</b>. The book and the music helped Isaac feel better. After a while, he didn't even notice the bad weather. The bad situation didn't feel so bad after someone helped him.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Isaac's First Plane Trip</h1>        <p style=\"margin-bottom: 1rem;\">Isaac's family was going on vacation. He was excited about the trip except for one thing. He had never been on a plane before. He was scared that his plane would have a <b>breakdown</b>.</p>    <p style=\"margin-bottom: 1rem;\">Isaac got onto the plane. He walked down the <b>aisle</b> until he found his seat. He sat down and <b>connected</b> the ends of his seat belt. After being <b>idle</b> for a few minutes, the pilot announced that they were ready to leave.</p>    <p style=\"margin-bottom: 1rem;\">He looked out the window at the <b>vivid</b> colors of the sky. He began to feel scared. The girl sitting next to him said, \"Hi, I'm Rachel! You look nervous, but you don't need to be. Flying is fun!\"</p>    <p style=\"margin-bottom: 1rem;\">\"I'm still a bit nervous,\" Issac said, \"and I'm getting hungry.\"</p>    <p style=\"margin-bottom: 1rem;\">\"The food service will begin soon. Just lower the <b>tray</b> on the seat in front of you, and <b>flip</b> this switch. Then they'll bring your dinner! Last time, they served chicken, <b>peas</b>, and a box of <b>raisins</b>,\" Rachel explained.</p>    <p style=\"margin-bottom: 1rem;\">Then the pilot <b>notified</b> the passengers of bad conditions in the <b>atmosphere</b>. \"We're tracking the weather: lightning, clouds, <b>etc.</b> The ride might get a bit rough,\" he <b>stated</b>.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, the plane started to shake. Isaac was badly <b>afflicted</b> by his fear. His stomach hurt, and he thought he might <b>vomit</b>. He couldn't believe that he was in such an <b>unfortunate</b> place. Finally, the shaking stopped. Isaac was still scared, but he tried to <b>retain</b> a good attitude.</p>    <p style=\"margin-bottom: 1rem;\">\"The first time I flew, the plane shook so bad that <b>cargo</b> started falling. My parents told me to listen to music and read a <b>chapter</b> in my book. It calmed me,\" Rachel said.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, the plane shook again. This time, Isaac followed Rachel's advice. He put on headphones and took out a book by his favorite <b>author</b>. The book and the music helped Isaac feel better. After a while, he didn't even notice the bad weather. The bad situation didn't feel so bad after someone helped him.</p></div>",
       "imageUrl": "/unit19_vol4_story.png",
       "sections": [
         {
           "id": "sec3",
           "title": "Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q16",
-              "content": "1. Isaac was scared the plane would have a breakdown.",
+              "content": "Isaac was scared the plane would have a breakdown.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). \"He was scared that his plane would have a breakdown.\""
+              "explanation": "Đúng vậy! Mình có thể thấy ngay ở đoạn mở đầu bài đọc: \"He was scared that his plane would have a breakdown.\" (Cậu bé sợ rằng máy bay của mình sẽ bị hỏng hóc). Câu này chứng tỏ nỗi sợ của Isaac hoàn toàn trùng khớp với phát biểu trong câu hỏi.",
+              "correctAnswer": "A"
             },
             {
               "id": "q17",
-              "content": "2. Isaac ate raisins and peas and read a book by his favorite author.",
+              "content": "Isaac ate raisins and peas and read a book by his favorite author.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). Cậu bé nghe nhạc và đọc sách, nhưng không có đoạn nào nói cậu đã ăn nho khô và đậu Hà Lan. Rachel chỉ nói về nho khô và đậu."
+              "explanation": "Phát biểu này không chính xác. Mặc dù ở đoạn cuối, bài đọc có nhắc đến việc \"He put on headphones and took out a book by his favorite author\" (Cậu bé đeo tai nghe và lấy ra một cuốn sách của tác giả yêu thích), nhưng không hề có chi tiết nào nói rằng cậu bé ăn nho khô và đậu. Chi tiết về thức ăn chỉ xuất hiện trong lời kể của Rachel khi cô bé nhắc đến bữa ăn trước đó của mình: \"Last time, they served chicken, peas, and a box of raisins\".",
+              "correctAnswer": "B"
             },
             {
               "id": "q18",
-              "content": "3. Rachel's parents suggested she read a chapter in her book when she was scared.",
+              "content": "Rachel's parents suggested she read a chapter in her book when she was scared.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). Rachel kể rằng: \"My parents told me to listen to music and read a chapter in my book.\""
+              "explanation": "Câu này hoàn toàn đúng. Trong đoạn văn kể về trải nghiệm của Rachel, cô bé chia sẻ: \"My parents told me to listen to music and read a chapter in my book\" (Bố mẹ tớ bảo tớ hãy nghe nhạc và đọc một chương trong sách). Lời khuyên này được đưa ra để giúp cô bé bình tĩnh lại khi thấy sợ hãi.",
+              "correctAnswer": "A"
             },
             {
               "id": "q19",
-              "content": "4. Isaac's fear went away as soon as he took a nap.",
+              "content": "Isaac's fear went away as soon as he took a nap.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). Nỗi sợ của Isaac không biến mất sau khi cậu chợp mắt, mà là sau khi làm theo lời khuyên của Rachel (nghe nhạc và đọc sách)."
+              "explanation": "Sai mất rồi. Nỗi sợ của Isaac không tan biến nhờ một giấc ngủ ngắn. Ở cuối bài, tác giả viết: \"He put on headphones and took out a book by his favorite author. The book and the music helped Isaac feel better\" (Cậu bé đeo tai nghe và lấy ra một cuốn sách của tác giả yêu thích. Cuốn sách và âm nhạc đã giúp Isaac cảm thấy tốt hơn). Cậu bé đã nghe nhạc và đọc sách thay vì ngủ trưa.",
+              "correctAnswer": "B"
             },
             {
               "id": "q20",
-              "content": "5. The pilot stated that the conditions in the atmosphere were sun, wind, etc.",
+              "content": "The pilot stated that the conditions in the atmosphere were sun, wind, etc.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). Phi công thông báo rằng: \"We're tracking the weather: lightning, clouds, etc.\""
+              "explanation": "Phát biểu này không đúng. Theo lời thông báo của phi công trong bài: \"We're tracking the weather: lightning, clouds, etc.\" (Chúng tôi đang theo dõi thời tiết: sấm chớp, mây, vân vân). Điều kiện thời tiết xấu được nhắc đến là sấm chớp và mây, chứ không phải nắng và gió.",
+              "correctAnswer": "B"
             },
             {
               "id": "q21",
-              "content": "6. Isaac was scared, but he tried to retain a good attitude.",
+              "content": "Isaac was scared, but he tried to retain a good attitude.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). Trong bài đọc có viết: \"Isaac was still scared, but he tried to retain a good attitude.\""
+              "explanation": "Câu này chính xác. Ở giữa bài đọc, tác giả có viết rõ ràng: \"Isaac was still scared, but he tried to retain a good attitude\" (Isaac vẫn còn sợ hãi, nhưng cậu bé đã cố gắng giữ một thái độ tốt). Dù sợ, cậu ấy vẫn nỗ lực bình tĩnh.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q22",
-              "content": "1. What would happen if Isaac flipped the switch?",
+              "content": "What would happen if Isaac flipped the switch?",
               "options": [
                 "The cargo would fall.",
                 "They would bring him his dinner.",
                 "He would vomit.",
                 "They would bring him some water."
               ],
-              "correctAnswer": "B",
-              "explanation": "Theo lời Rachel: \"Just lower the tray on the seat in front of you, and flip this switch. Then they'll bring your dinner!\""
+              "explanation": "Lựa chọn B là đáp án chính xác. Khi Rachel hướng dẫn Isaac cách gọi đồ ăn, cô bé nói: \"Just lower the tray on the seat in front of you, and flip this switch. Then they'll bring your dinner!\" (Chỉ cần hạ khay ăn trên ghế phía trước cậu xuống và gạt công tắc này. Sau đó họ sẽ mang bữa tối đến cho cậu!).",
+              "correctAnswer": "B"
             },
             {
               "id": "q23",
-              "content": "2. What did Isaac do as the plane left?",
+              "content": "What did Isaac do as the plane left?",
               "options": [
                 "He played with Rachel.",
                 "He was idle.",
                 "He fell asleep.",
                 "He looked at the vivid sky."
               ],
-              "correctAnswer": "D",
-              "explanation": "Sau khi được thông báo là đã sẵn sàng khởi hành, \"He looked out the window at the vivid colors of the sky.\""
+              "explanation": "Đáp án D là đúng nhất. Ngay sau khi phi công thông báo chuẩn bị khởi hành, đoạn văn tiếp theo miêu tả hành động của Isaac: \"He looked out the window at the vivid colors of the sky\" (Cậu bé nhìn ra cửa sổ ngắm nhìn những màu sắc rực rỡ của bầu trời).",
+              "correctAnswer": "D"
             },
             {
               "id": "q24",
-              "content": "3. What did Isaac think when the plane first started shaking?",
+              "content": "What did Isaac think when the plane first started shaking?",
               "options": [
                 "He was in an unfortunate place.",
                 "He was afflicted by pain.",
                 "The pilot made a mistake.",
                 "His food would fall off the tray."
               ],
-              "correctAnswer": "A",
-              "explanation": "Khi máy bay rung lắc lần đầu: \"He couldn't believe that he was in such an unfortunate place.\""
+              "explanation": "Đáp án A là câu trả lời chuẩn xác. Trong bài đọc, khi máy bay bắt đầu rung lắc lần đầu tiên, tác giả viết về suy nghĩ của Isaac: \"He couldn't believe that he was in such an unfortunate place\" (Cậu bé không thể tin được rằng mình lại đang ở một nơi xui xẻo đến vậy).",
+              "correctAnswer": "A"
             },
             {
               "id": "q25",
-              "content": "4. What happened the first time Rachel was on a plane?",
+              "content": "What happened the first time Rachel was on a plane?",
               "options": [
                 "The dinner service was late.",
                 "She had to wait in the aisle.",
                 "The cargo fell from above.",
                 "Her seat belt wasn't connected."
               ],
-              "correctAnswer": "C",
-              "explanation": "Rachel kể: \"The first time I flew, the plane shook so bad that cargo started falling.\""
+              "explanation": "Lựa chọn C là đáp án đúng. Rachel đã kể cho Isaac nghe về trải nghiệm lần đầu tiên đi máy bay của mình: \"The first time I flew, the plane shook so bad that cargo started falling\" (Lần đầu tiên tớ bay, máy bay rung lắc mạnh đến mức hành lý bắt đầu rơi xuống).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

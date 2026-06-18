@@ -17,7 +17,7 @@
       "id": "part2",
       "type": "STORY",
       "title": "The Teller and the Thieves",
-      "content": "<div style=\"display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px;\"><img src=\"/unit21_vol4_story.png\" style=\"width: 100%; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);\" /><div style=\"display: flex; flex-direction: column; gap: 16px; color: #334155; font-size: 1.05rem; line-height: 1.7;\"><p style=\"margin: 0;\">A teller at a bank suspected some of her fellow employees of not being very trustworthy. She thought they were stealing. In order to catch them, though, she needed some way to link them to the crime.</p><p style=\"margin: 0;\">She had a background in religion and folklore. She remembered that one religion's literature had a myth that chronicled how a group of thieves was captured.</p><p style=\"margin: 0;\">In the millennium-old story, coins of copper were covered with venom taken from a poisonous snake. The coins were left as bait for the robbers. When they touched the coins, the venom infected their bodies through their skin. The venom ran through their veins, and they all became very sick as if they had a disease. It made their skin purple. The police arrested whoever had purple skin.</p><p style=\"margin: 0;\">She knew she couldn't use venom because it might hurt someone. However, she thought of a way to update the old story. She decided to cover a sum of money with a special powder. If people touched the money, the powder would cause their skin to itch. She placed the stack of money in the bank's safe. No one was supposed to take money from the safe. If somebody did, then they had to be stealing.</p><p style=\"margin: 0;\">Within a few hours, three of her coworkers were scratching their hands and arms. They itched so badly that they couldn't even work. She checked the money, and it was gone. She told her boss what she had done, and he had the thieves arrested. He thanked her and promoted her.</p><p style=\"margin: 0;\">Because events from history often repeat, ancient literature had helped the teller solve a crime. She proved that stories from the past still relate with the problems of today, and they can be helpful in solving problems.</p></div></div>",
+      "content": "<div style=\"display: flex; flex-direction: column; gap: 24px; margin-bottom: 24px;\"><img src=\"/unit21_vol4_story.png\" style=\"width: 100%; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);\" /><div style=\"display: flex; flex-direction: column; gap: 16px; color: #334155; font-size: 1.05rem; line-height: 1.7;\"><p style=\"margin: 0;\">A teller at a bank suspected some of her fellow employees of not being very trustworthy. She thought they were stealing. In order to catch them, though, she needed some way to link them to the crime.</p>    <p style=\"margin: 0;\">She had a background in religion and folklore. She remembered that one religion's literature had a myth that chronicled how a group of thieves was captured.</p>    <p style=\"margin: 0;\">In the millennium-old story, coins of copper were covered with venom taken from a poisonous snake. The coins were left as bait for the robbers. When they touched the coins, the venom infected their bodies through their skin. The venom ran through their veins, and they all became very sick as if they had a disease. It made their skin purple. The police arrested whoever had purple skin.</p>    <p style=\"margin: 0;\">She knew she couldn't use venom because it might hurt someone. However, she thought of a way to update the old story. She decided to cover a sum of money with a special powder. If people touched the money, the powder would cause their skin to itch. She placed the stack of money in the bank's safe. No one was supposed to take money from the safe. If somebody did, then they had to be stealing.</p>    <p style=\"margin: 0;\">Within a few hours, three of her coworkers were scratching their hands and arms. They itched so badly that they couldn't even work. She checked the money, and it was gone. She told her boss what she had done, and he had the thieves arrested. He thanked her and promoted her.</p>    <p style=\"margin: 0;\">Because events from history often repeat, ancient literature had helped the teller solve a crime. She proved that stories from the past still relate with the problems of today, and they can be helpful in solving problems.</p></div></div>",
       "imageUrl": "/unit21_vol4_story.png"
     },
     {
@@ -29,85 +29,84 @@
           "id": "sec1",
           "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Điền từ",
           "questions": [
             {
               "id": "1",
               "content": "1. The reward for finding the lost dog was a very large specific amount.",
               "options": [],
-              "correctAnswer": "sum",
-              "explanation": "specific amount = sum (số tiền cụ thể)"
+              "explanation": "specific amount = sum (số tiền cụ thể)",
+              "correctAnswer": "sum"
             },
             {
               "id": "2",
               "content": "2. When his arm got crushed, it damaged a tube that carries blood to the heart was damaged.",
               "options": [],
-              "correctAnswer": "vein",
-              "explanation": "tube that carries blood to the heart = vein (tĩnh mạch)"
+              "explanation": "tube that carries blood to the heart = vein (tĩnh mạch)",
+              "correctAnswer": "vein"
             },
             {
               "id": "3",
               "content": "3. To which chart does this collection of data have a connection with?",
               "options": [],
-              "correctAnswer": "relate",
-              "explanation": "have a connection with = relate (có liên quan tới)"
+              "explanation": "have a connection with = relate (có liên quan tới)",
+              "correctAnswer": "relate"
             },
             {
               "id": "4",
               "content": "4. This book records the first years of the king's life.",
               "options": [],
-              "correctAnswer": "chronicles",
-              "explanation": "records = chronicles (ghi chép lại)"
+              "explanation": "records = chronicles (ghi chép lại)",
+              "correctAnswer": "chronicles"
             },
             {
               "id": "5",
               "content": "5. Since that pot is made out of a red-brown metal, it gets hot very quickly.",
               "options": [],
-              "correctAnswer": "copper",
-              "explanation": "red-brown metal = copper (đồng)"
+              "explanation": "red-brown metal = copper (đồng)",
+              "correctAnswer": "copper"
             },
             {
               "id": "6",
               "content": "6. The nation had a party because their country had existed for a thousand years.",
               "options": [],
-              "correctAnswer": "millennium",
-              "explanation": "a thousand years = millennium (thiên niên kỷ)"
+              "explanation": "a thousand years = millennium (thiên niên kỷ)",
+              "correctAnswer": "millennium"
             },
             {
               "id": "7",
               "content": "7. Her experience made her the best person for the new job.",
               "options": [],
-              "correctAnswer": "background",
-              "explanation": "experience = background (nền tảng kinh nghiệm/kiến thức)"
+              "explanation": "experience = background (nền tảng kinh nghiệm/kiến thức)",
+              "correctAnswer": "background"
             },
             {
               "id": "8",
               "content": "8. The poisonous substance from that fish will make you very sick.",
               "options": [],
-              "correctAnswer": "venom",
-              "explanation": "poisonous substance = venom (nọc độc)"
+              "explanation": "poisonous substance = venom (nọc độc)",
+              "correctAnswer": "venom"
             },
             {
               "id": "9",
               "content": "9. I wouldn't believe him. He's not very honest.",
               "options": [],
-              "correctAnswer": "trustworthy",
-              "explanation": "honest = trustworthy (đáng tin cậy)"
+              "explanation": "honest = trustworthy (đáng tin cậy)",
+              "correctAnswer": "trustworthy"
             },
             {
               "id": "10",
               "content": "10. The owners of the hotel decided to modernize the computer system.",
               "options": [],
-              "correctAnswer": "update",
-              "explanation": "modernize = update (cập nhật/hiện đại hóa)"
+              "explanation": "modernize = update (cập nhật/hiện đại hóa)",
+              "correctAnswer": "update"
             }
-          ]
+          ],
+          "questionType": "Điền từ"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -118,8 +117,8 @@
                 "c. Bait",
                 "d. Disease"
               ],
-              "correctAnswer": "C",
-              "explanation": "Bạn cần 'bait' (mồi) để câu cá."
+              "explanation": "Bạn cần 'bait' (mồi) để câu cá.",
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -130,8 +129,8 @@
                 "c. Infect",
                 "d. Promote"
               ],
-              "correctAnswer": "D",
-              "explanation": "'Promote' có nghĩa là được thăng chức (nâng lên vị trí cao hơn)."
+              "explanation": "'Promote' có nghĩa là được thăng chức (nâng lên vị trí cao hơn).",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
@@ -142,8 +141,8 @@
                 "c. A vein",
                 "d. Religion"
               ],
-              "correctAnswer": "A",
-              "explanation": "'Literature' (văn học) là thứ thường được tìm thấy trong thư viện."
+              "explanation": "'Literature' (văn học) là thứ thường được tìm thấy trong thư viện.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -154,8 +153,8 @@
                 "c. Relate",
                 "d. Background"
               ],
-              "correctAnswer": "A",
-              "explanation": "Quần áo không thoải mái đôi khi sẽ làm bạn bị 'itch' (ngứa)."
+              "explanation": "Quần áo không thoải mái đôi khi sẽ làm bạn bị 'itch' (ngứa).",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -166,172 +165,172 @@
                 "c. Folklore",
                 "d. A myth"
               ],
-              "correctAnswer": "A",
-              "explanation": "'A sum' (tổng) là kết quả của việc kết hợp các con số."
+              "explanation": "'A sum' (tổng) là kết quả của việc kết hợp các con số.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 3: Match the phrases to make complete sentences (Part A).",
           "content": "",
-          "questionType": "Điền từ",
           "questions": [
             {
               "id": "1",
               "content": "1. The bank teller_____ .\na. caused the boy to collapse\nb. to all necessary places in the body\nc. was once a small pond\nd. was over $300\ne. in engineering\nf. deposited Paul's money into his account\ng. from all of the insect bites\nh. of the heroic crime-fighter\ni. believe that there is a god\nj. is rich with tradition",
               "options": [],
-              "correctAnswer": "f",
-              "explanation": "The bank teller deposited Paul's money into his account."
+              "explanation": "The bank teller deposited Paul's money into his account.",
+              "correctAnswer": "f"
             },
             {
               "id": "2",
               "content": "2. Many religions_____ .",
               "options": [],
-              "correctAnswer": "i",
-              "explanation": "Many religions believe that there is a god."
+              "explanation": "Many religions believe that there is a god.",
+              "correctAnswer": "i"
             },
             {
               "id": "3",
               "content": "3. The nation's folklore_____ .",
               "options": [],
-              "correctAnswer": "j",
-              "explanation": "The nation's folklore is rich with tradition."
+              "explanation": "The nation's folklore is rich with tradition.",
+              "correctAnswer": "j"
             },
             {
               "id": "4",
               "content": "4. The factory's new worker had a background_____ .",
               "options": [],
-              "correctAnswer": "e",
-              "explanation": "The factory's new worker had a background in engineering."
+              "explanation": "The factory's new worker had a background in engineering.",
+              "correctAnswer": "e"
             },
             {
               "id": "5",
               "content": "5. Those veins pump blood_____ .",
               "options": [],
-              "correctAnswer": "b",
-              "explanation": "Those veins pump blood to all necessary places in the body."
+              "explanation": "Those veins pump blood to all necessary places in the body.",
+              "correctAnswer": "b"
             },
             {
               "id": "6",
               "content": "6. The snake's poisonous venom_____ .",
               "options": [],
-              "correctAnswer": "a",
-              "explanation": "The snake's poisonous venom caused the boy to collapse."
+              "explanation": "The snake's poisonous venom caused the boy to collapse.",
+              "correctAnswer": "a"
             },
             {
               "id": "7",
               "content": "7. The newspaper story chronicled the action_____ .",
               "options": [],
-              "correctAnswer": "h",
-              "explanation": "The newspaper story chronicled the action of the heroic crime-fighter."
+              "explanation": "The newspaper story chronicled the action of the heroic crime-fighter.",
+              "correctAnswer": "h"
             },
             {
               "id": "8",
               "content": "8. One of that culture's myths explains that the ocean_____ .",
               "options": [],
-              "correctAnswer": "c",
-              "explanation": "One of that culture's myths explains that the ocean was once a small pond."
+              "explanation": "One of that culture's myths explains that the ocean was once a small pond.",
+              "correctAnswer": "c"
             },
             {
               "id": "9",
               "content": "9. The total sum for staying three nights at the hotel_____ .",
               "options": [],
-              "correctAnswer": "d",
-              "explanation": "The total sum for staying three nights at the hotel was over $300."
+              "explanation": "The total sum for staying three nights at the hotel was over $300.",
+              "correctAnswer": "d"
             },
             {
               "id": "10",
               "content": "10. Her arm started to itch_____ .",
               "options": [],
-              "correctAnswer": "g",
-              "explanation": "Her arm started to itch from all of the insect bites."
+              "explanation": "Her arm started to itch from all of the insect bites.",
+              "correctAnswer": "g"
             }
-          ]
+          ],
+          "questionType": "Điền từ"
         },
         {
           "id": "sec4",
           "title": "Exercise 3: Match the clauses to make complete sentences (Part B).",
           "content": "",
-          "questionType": "Điền từ",
           "questions": [
             {
               "id": "1",
               "content": "1. If you don't stay away from school today,_____ .\na. because they were made from copper\nb. but no animals wanted the bait\nc. so everyone knew she was trustworthy\nd. it had to be updated\ne. then you might infect the other students\nf. so she could read their literature\ng. so he thought he'd caught a disease\nh. so his boss promoted him\ni. but it turned out that they didn't relate to each other\nj. then imagine how much might happen in a millennium",
               "options": [],
-              "correctAnswer": "e",
-              "explanation": "If you don't stay away from school today, then you might infect the other students."
+              "explanation": "If you don't stay away from school today, then you might infect the other students.",
+              "correctAnswer": "e"
             },
             {
               "id": "2",
               "content": "2. Because the calendar didn't list the new holidays,_____ .",
               "options": [],
-              "correctAnswer": "d",
-              "explanation": "Because the calendar didn't list the new holidays, it had to be updated."
+              "explanation": "Because the calendar didn't list the new holidays, it had to be updated.",
+              "correctAnswer": "d"
             },
             {
               "id": "3",
               "content": "3. The hunters put some food in the trap,_____ .",
               "options": [],
-              "correctAnswer": "b",
-              "explanation": "The hunters put some food in the trap, but no animals wanted the bait."
+              "explanation": "The hunters put some food in the trap, but no animals wanted the bait.",
+              "correctAnswer": "b"
             },
             {
               "id": "4",
               "content": "4. She learned to speak the country's language,_____ .",
               "options": [],
-              "correctAnswer": "f",
-              "explanation": "She learned to speak the country's language, so she could read their literature."
+              "explanation": "She learned to speak the country's language, so she could read their literature.",
+              "correctAnswer": "f"
             },
             {
               "id": "5",
               "content": "5. The police thought the two crimes might be connected,_____ .",
               "options": [],
-              "correctAnswer": "i",
-              "explanation": "The police thought the two crimes might be connected, but it turned out that they didn't relate to each other."
+              "explanation": "The police thought the two crimes might be connected, but it turned out that they didn't relate to each other.",
+              "correctAnswer": "i"
             },
             {
               "id": "6",
               "content": "6. The pipes were safe for carrying water_____ .",
               "options": [],
-              "correctAnswer": "a",
-              "explanation": "The pipes were safe for carrying water because they were made from copper."
+              "explanation": "The pipes were safe for carrying water because they were made from copper.",
+              "correctAnswer": "a"
             },
             {
               "id": "7",
               "content": "7. He had done great work for the company for three years,_____ .",
               "options": [],
-              "correctAnswer": "h",
-              "explanation": "He had done great work for the company for three years, so his boss promoted him."
+              "explanation": "He had done great work for the company for three years, so his boss promoted him.",
+              "correctAnswer": "h"
             },
             {
               "id": "8",
               "content": "8. She never shared her friends' secrets with anyone,_____ .",
               "options": [],
-              "correctAnswer": "c",
-              "explanation": "She never shared her friends' secrets with anyone, so everyone knew she was trustworthy."
+              "explanation": "She never shared her friends' secrets with anyone, so everyone knew she was trustworthy.",
+              "correctAnswer": "c"
             },
             {
               "id": "9",
               "content": "9. If you think a lot can happen in a hundred years,_____ .",
               "options": [],
-              "correctAnswer": "j",
-              "explanation": "If you think a lot can happen in a hundred years, then imagine how much might happen in a millennium."
+              "explanation": "If you think a lot can happen in a hundred years, then imagine how much might happen in a millennium.",
+              "correctAnswer": "j"
             },
             {
               "id": "10",
               "content": "10. He had a bad cough and a headache,_____ .",
               "options": [],
-              "correctAnswer": "g",
-              "explanation": "He had a bad cough and a headache, so he thought he'd caught a disease."
+              "explanation": "He had a bad cough and a headache, so he thought he'd caught a disease.",
+              "correctAnswer": "g"
             }
-          ]
+          ],
+          "questionType": "Điền từ"
         },
         {
           "id": "sec5",
           "title": "Reading Comprehension: Answer the questions. (Part A)",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -340,8 +339,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "A teller at a bank thought her fellow employees were stealing. (Not trustworthy)"
+              "explanation": "Phát biểu này sai (False). Ngay ở câu đầu tiên của bài đọc, tác giả đã viết: \"A teller at a bank suspected some of her fellow employees of not being very trustworthy\" (Một nữ giao dịch viên tại ngân hàng nghi ngờ một số đồng nghiệp của mình không thực sự đáng tin cậy). Cô ấy cho rằng họ đang trộm tiền.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -350,8 +349,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Theo bài đọc, cô nhớ lại một thần thoại từ văn học tôn giáo ghi chép lại cách những kẻ trộm bị bắt."
+              "explanation": "Đúng vậy (True). Khi nhắc đến kiến thức nền tảng của nhân vật, bài đọc có nói: \"She remembered that one religion's literature had a myth that chronicled how a group of thieves was captured\" (Cô nhớ rằng văn học của một tôn giáo có một câu chuyện thần thoại ghi chép lại cách một nhóm trộm bị bắt).",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -360,8 +359,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "The venom was taken from a poisonous snake."
+              "explanation": "Sai mất rồi (False). Nọc độc trong câu chuyện thần thoại không đến từ một loài cây. Bài đọc nêu rõ: \"In the millennium-old story, coins of copper were covered with venom taken from a poisonous snake\" (Trong câu chuyện nghìn năm tuổi đó, những đồng xu đồng được tẩm nọc độc lấy từ một con rắn độc).",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -370,8 +369,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng, các đồng xu được để lại làm mồi nhử cho bọn trộm."
+              "explanation": "Hoàn toàn chính xác (True). Theo lời kể trong bài: \"The coins were left as bait for the robbers\" (Những đồng xu được để lại làm mồi nhử bọn cướp). Khi bọn cướp chạm vào đồng xu, nọc độc sẽ ngấm qua da.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -380,8 +379,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Three of her coworkers were scratching their hands and arms."
+              "explanation": "Phát biểu này không chính xác (False). Không phải \"tất cả\" (all) đồng nghiệp đều bị ngứa. Bài văn viết: \"Within a few hours, three of her coworkers were scratching their hands and arms\" (Chỉ trong vài giờ, ba trong số các đồng nghiệp của cô đang gãi tay và cánh tay của họ). Nghĩa là chỉ có ba người (những kẻ đã lấy trộm tiền) bị ngứa mà thôi.",
+              "correctAnswer": "B"
             },
             {
               "id": "6",
@@ -390,16 +389,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng, cô đã chứng minh những câu chuyện quá khứ vẫn có thể liên quan và giúp giải quyết vấn đề hiện tại."
+              "explanation": "Đúng vậy (True). Ở đoạn cuối, tác giả có tổng kết: \"She proved that stories from the past still relate with the problems of today, and they can be helpful in solving problems\" (Cô đã chứng minh rằng những câu chuyện từ quá khứ vẫn có mối liên hệ với những vấn đề của ngày nay, và chúng có thể hữu ích trong việc giải quyết vấn đề).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Reading Comprehension: Answer the questions. (Part B)",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -410,8 +409,8 @@
                 "c. A boss who promoted a thief",
                 "d. A teller who used an old story to catch thieves"
               ],
-              "correctAnswer": "D",
-              "explanation": "Bài đọc kể về một nhân viên ngân hàng dùng một câu chuyện cổ để bắt những kẻ trộm."
+              "explanation": "Đáp án D là chuẩn xác nhất (Một giao dịch viên dùng một câu chuyện cổ để bắt trộm). Bài đọc kể về việc một cô giao dịch viên ngân hàng đã áp dụng ý tưởng từ một câu chuyện thần thoại ngàn năm tuổi để vạch mặt những đồng nghiệp có hành vi trộm cắp.",
+              "correctAnswer": "D"
             },
             {
               "id": "2",
@@ -422,8 +421,8 @@
                 "c. Copper coins",
                 "d. Purple skin"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cô ấy quyết định phủ một loại bột đặc biệt lên một khoản tiền (a sum of money)."
+              "explanation": "Lựa chọn B là đáp án đúng. Trong bài đọc, nhân vật nghĩ ra cách cải tiến câu chuyện cũ: \"She decided to cover a sum of money with a special powder\" (Cô quyết định phủ một loại bột đặc biệt lên một khoản tiền). Cô dùng khoản tiền đó làm mồi nhử thay vì dùng đồng xu tẩm nọc độc.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -434,8 +433,8 @@
                 "c. Because using real venom could hurt someone",
                 "d. Because she wanted to make the powder itch"
               ],
-              "correctAnswer": "C",
-              "explanation": "Cô ấy biết mình không thể dùng nọc độc (venom) vì nó có thể làm hại ai đó."
+              "explanation": "Đáp án C là lý do chính xác. Bài đọc viết: \"She knew she couldn't use venom because it might hurt someone\" (Cô biết mình không thể sử dụng nọc độc vì nó có thể làm hại ai đó). Vì vậy, cô mới nghĩ ra cách sửa đổi câu chuyện cũ bằng việc dùng bột gây ngứa.",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -446,10 +445,11 @@
                 "c. The boss stole the money",
                 "d. The boss thanked the teller and promoted her"
               ],
-              "correctAnswer": "D",
-              "explanation": "Người sếp cảm ơn cô và đã thăng chức cho cô (promoted her)."
+              "explanation": "Đáp án D hoàn toàn đúng. Sau khi cô giao dịch viên báo cáo sự việc, sếp của cô đã cho bắt những kẻ trộm. Bài văn viết: \"He thanked her and promoted her\" (Ông ấy cảm ơn và thăng chức cho cô).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

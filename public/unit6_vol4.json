@@ -16,7 +16,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1 - Part A: Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -27,8 +26,8 @@
                 "recipe",
                 "rail"
               ],
-              "correctAnswer": "B",
-              "explanation": "suit (bộ com-lê, bộ đồ) phù hợp với định nghĩa 'a set of clothes'."
+              "explanation": "suit (bộ com-lê, bộ đồ) phù hợp với định nghĩa 'a set of clothes'.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -39,8 +38,8 @@
                 "absolute",
                 "attentive"
               ],
-              "correctAnswer": "A",
-              "explanation": "folk (người, người dân) phù hợp với định nghĩa 'common people'."
+              "explanation": "folk (người, người dân) phù hợp với định nghĩa 'common people'.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -51,8 +50,8 @@
                 "shrink",
                 "envision"
               ],
-              "correctAnswer": "C",
-              "explanation": "shrink (co lại, nhỏ lại) phù hợp với định nghĩa 'to get smaller'."
+              "explanation": "shrink (co lại, nhỏ lại) phù hợp với định nghĩa 'to get smaller'.",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -63,8 +62,8 @@
                 "spark",
                 "role"
               ],
-              "correctAnswer": "B",
-              "explanation": "cape (áo choàng) phù hợp với định nghĩa 'a large cloth worn on the back'."
+              "explanation": "cape (áo choàng) phù hợp với định nghĩa 'a large cloth worn on the back'.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -75,16 +74,16 @@
                 "soaks",
                 "pudding"
               ],
-              "correctAnswer": "A",
-              "explanation": "evenly (đồng đều) phù hợp với định nghĩa 'happening at the same rate everywhere'."
+              "explanation": "evenly (đồng đều) phù hợp với định nghĩa 'happening at the same rate everywhere'.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 1 - Part B: Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -95,8 +94,8 @@
                 "to make wet",
                 "to imagine"
               ],
-              "correctAnswer": "B",
-              "explanation": "melt (tan chảy) nghĩa là 'to turn to liquid'."
+              "explanation": "melt (tan chảy) nghĩa là 'to turn to liquid'.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -107,8 +106,8 @@
                 "a sweet dessert",
                 "a set of instructions"
               ],
-              "correctAnswer": "A",
-              "explanation": "spark (tia lửa) nghĩa là 'a flash of fire'."
+              "explanation": "spark (tia lửa) nghĩa là 'a flash of fire'.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -119,8 +118,8 @@
                 "a normal purpose",
                 "a different part of a surface"
               ],
-              "correctAnswer": "A",
-              "explanation": "rail (lan can, thanh chắn) nghĩa là 'a horizontal bar'."
+              "explanation": "rail (lan can, thanh chắn) nghĩa là 'a horizontal bar'.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -131,8 +130,8 @@
                 "happening at the same rate",
                 "total and complete"
               ],
-              "correctAnswer": "D",
-              "explanation": "absolute (hoàn toàn, tuyệt đối) nghĩa là 'total and complete'."
+              "explanation": "absolute (hoàn toàn, tuyệt đối) nghĩa là 'total and complete'.",
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -143,16 +142,16 @@
                 "a feeling of happiness",
                 "personality"
               ],
-              "correctAnswer": "C",
-              "explanation": "pleasure (niềm vui) nghĩa là 'a feeling of happiness'."
+              "explanation": "pleasure (niềm vui) nghĩa là 'a feeling of happiness'.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 2 - Part A: Match the phrases to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -163,8 +162,8 @@
                 "for dessert last night.",
                 "of the fence."
               ],
-              "correctAnswer": "C",
-              "explanation": "Mom made chocolate pudding for dessert last night. (Mẹ làm bánh pudding sô-cô-la cho bữa tráng miệng tối qua.)"
+              "explanation": "Mom made chocolate pudding for dessert last night. (Mẹ làm bánh pudding sô-cô-la cho bữa tráng miệng tối qua.)",
+              "correctAnswer": "C"
             },
             {
               "id": "2",
@@ -175,8 +174,8 @@
                 "two hundred years ago.",
                 "for dessert last night."
               ],
-              "correctAnswer": "B",
-              "explanation": "He is very attentive during science class. (Anh ấy rất chú ý trong giờ khoa học.)"
+              "explanation": "He is very attentive during science class. (Anh ấy rất chú ý trong giờ khoa học.)",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -187,8 +186,8 @@
                 "as a politician.",
                 "of the fence."
               ],
-              "correctAnswer": "B",
-              "explanation": "People wore capes more often two hundred years ago. (Mọi người thường xuyên mặc áo choàng vào hai trăm năm trước.)"
+              "explanation": "People wore capes more often two hundred years ago. (Mọi người thường xuyên mặc áo choàng vào hai trăm năm trước.)",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -199,8 +198,8 @@
                 "flour, eggs and sugar.",
                 "could not be hurt from mean comments."
               ],
-              "correctAnswer": "D",
-              "explanation": "His strong spirit could not be hurt from mean comments. (Tinh thần mạnh mẽ của anh ấy không bị tổn thương bởi những bình luận ác ý.)"
+              "explanation": "His strong spirit could not be hurt from mean comments. (Tinh thần mạnh mẽ của anh ấy không bị tổn thương bởi những bình luận ác ý.)",
+              "correctAnswer": "D"
             },
             {
               "id": "5",
@@ -211,8 +210,8 @@
                 "as a politician.",
                 "of the fence."
               ],
-              "correctAnswer": "C",
-              "explanation": "I can’t envision you as a politician. (Tôi không thể hình dung bạn là một chính trị gia.)"
+              "explanation": "I can’t envision you as a politician. (Tôi không thể hình dung bạn là một chính trị gia.)",
+              "correctAnswer": "C"
             },
             {
               "id": "6",
@@ -223,8 +222,8 @@
                 "during science class.",
                 "to meet you."
               ],
-              "correctAnswer": "D",
-              "explanation": "It was a pleasure to meet you. (Rất hân hạnh được gặp bạn.)"
+              "explanation": "It was a pleasure to meet you. (Rất hân hạnh được gặp bạn.)",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
@@ -235,8 +234,8 @@
                 "to manage the team of employees.",
                 "to meet you."
               ],
-              "correctAnswer": "C",
-              "explanation": "His role at work is to manage the team of employees. (Vai trò của anh ấy tại nơi làm việc là quản lý đội ngũ nhân viên.)"
+              "explanation": "His role at work is to manage the team of employees. (Vai trò của anh ấy tại nơi làm việc là quản lý đội ngũ nhân viên.)",
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -247,8 +246,8 @@
                 "two hundred years ago.",
                 "of the fence."
               ],
-              "correctAnswer": "D",
-              "explanation": "The cat is sitting on the rail of the fence. (Con mèo đang ngồi trên thanh chắn hàng rào.)"
+              "explanation": "The cat is sitting on the rail of the fence. (Con mèo đang ngồi trên thanh chắn hàng rào.)",
+              "correctAnswer": "D"
             },
             {
               "id": "9",
@@ -259,8 +258,8 @@
                 "as a politician.",
                 "could not be hurt from mean comments."
               ],
-              "correctAnswer": "A",
-              "explanation": "For this recipe, I will need flour, eggs and sugar. (Với công thức này, tôi sẽ cần bột mì, trứng và đường.)"
+              "explanation": "For this recipe, I will need flour, eggs and sugar. (Với công thức này, tôi sẽ cần bột mì, trứng và đường.)",
+              "correctAnswer": "A"
             },
             {
               "id": "10",
@@ -271,16 +270,16 @@
                 "two hundred years ago.",
                 "could not be hurt from mean comments."
               ],
-              "correctAnswer": "A",
-              "explanation": "There were sparks flying out of the computer. (Có những tia lửa bắn ra từ máy tính.)"
+              "explanation": "There were sparks flying out of the computer. (Có những tia lửa bắn ra từ máy tính.)",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 2 - Part B: Match the clauses to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -291,8 +290,8 @@
                 "the soldiers spread out evenly.",
                 "but alas, I still didn’t do very well."
               ],
-              "correctAnswer": "B",
-              "explanation": "If you wash this silk shirt in hot water, it will shrink. (Nếu bạn giặt chiếc áo lụa này trong nước nóng, nó sẽ co lại.)"
+              "explanation": "If you wash this silk shirt in hot water, it will shrink. (Nếu bạn giặt chiếc áo lụa này trong nước nóng, nó sẽ co lại.)",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -303,8 +302,8 @@
                 "when folks meet with their families.",
                 "it will melt."
               ],
-              "correctAnswer": "B",
-              "explanation": "Tony didn’t practice the presentation, so it was an absolute disaster. (Tony đã không thực hành bài thuyết trình, vì vậy nó hoàn toàn là một thảm họa.)"
+              "explanation": "Tony didn’t practice the presentation, so it was an absolute disaster. (Tony đã không thực hành bài thuyết trình, vì vậy nó hoàn toàn là một thảm họa.)",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
@@ -315,8 +314,8 @@
                 "but alas, I still didn’t do very well.",
                 "it will melt."
               ],
-              "correctAnswer": "C",
-              "explanation": "I studied hard for the test, but alas, I still didn’t do very well. (Tôi đã học chăm chỉ cho bài kiểm tra, nhưng than ôi, tôi vẫn không làm tốt lắm.)"
+              "explanation": "I studied hard for the test, but alas, I still didn’t do very well. (Tôi đã học chăm chỉ cho bài kiểm tra, nhưng than ôi, tôi vẫn không làm tốt lắm.)",
+              "correctAnswer": "C"
             },
             {
               "id": "4",
@@ -327,8 +326,8 @@
                 "so it was an absolute disaster.",
                 "the soldiers spread out evenly."
               ],
-              "correctAnswer": "A",
-              "explanation": "Dan was very unlucky because he fell in a patch of rocks. (Dan rất không may mắn vì anh ấy bị ngã vào một bãi đá.)"
+              "explanation": "Dan was very unlucky because he fell in a patch of rocks. (Dan rất không may mắn vì anh ấy bị ngã vào một bãi đá.)",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -339,8 +338,8 @@
                 "when folks meet with their families.",
                 "it will shrink."
               ],
-              "correctAnswer": "C",
-              "explanation": "Christmas is an important holiday when folks meet with their families. (Giáng sinh là ngày lễ quan trọng khi người ta gặp gỡ gia đình của họ.)"
+              "explanation": "Christmas is an important holiday when folks meet with their families. (Giáng sinh là ngày lễ quan trọng khi người ta gặp gỡ gia đình của họ.)",
+              "correctAnswer": "C"
             },
             {
               "id": "6",
@@ -351,8 +350,8 @@
                 "so it was an absolute disaster.",
                 "it will melt."
               ],
-              "correctAnswer": "D",
-              "explanation": "If you put the butter near the fire, it will melt. (Nếu bạn để bơ gần lửa, nó sẽ tan chảy.)"
+              "explanation": "If you put the butter near the fire, it will melt. (Nếu bạn để bơ gần lửa, nó sẽ tan chảy.)",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
@@ -363,8 +362,8 @@
                 "that I had to soak it overnight.",
                 "so it was an absolute disaster."
               ],
-              "correctAnswer": "C",
-              "explanation": "This pan was so dirty that I had to soak it overnight. (Cái chảo này quá bẩn đến nỗi tôi phải ngâm nó qua đêm.)"
+              "explanation": "This pan was so dirty that I had to soak it overnight. (Cái chảo này quá bẩn đến nỗi tôi phải ngâm nó qua đêm.)",
+              "correctAnswer": "C"
             },
             {
               "id": "8",
@@ -375,8 +374,8 @@
                 "so I usually wear a suit.",
                 "it will melt."
               ],
-              "correctAnswer": "B",
-              "explanation": "To protect the kingdom, the soldiers spread out evenly. (Để bảo vệ vương quốc, binh lính dàn trải đồng đều.)"
+              "explanation": "To protect the kingdom, the soldiers spread out evenly. (Để bảo vệ vương quốc, binh lính dàn trải đồng đều.)",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -387,8 +386,8 @@
                 "but alas, I still didn’t do very well.",
                 "when I heard the pop."
               ],
-              "correctAnswer": "D",
-              "explanation": "I knew the television had broken when I heard the pop. (Tôi biết ti vi đã hỏng khi tôi nghe tiếng 'bốp'.)"
+              "explanation": "I knew the television had broken when I heard the pop. (Tôi biết ti vi đã hỏng khi tôi nghe tiếng 'bốp'.)",
+              "correctAnswer": "D"
             },
             {
               "id": "10",
@@ -399,24 +398,24 @@
                 "it will shrink.",
                 "so I usually wear a suit."
               ],
-              "correctAnswer": "D",
-              "explanation": "At work, we have to dress well, so I usually wear a suit. (Tại nơi làm việc, chúng tôi phải ăn mặc đẹp, vì vậy tôi thường mặc một bộ com-lê.)"
+              "explanation": "At work, we have to dress well, so I usually wear a suit. (Tại nơi làm việc, chúng tôi phải ăn mặc đẹp, vì vậy tôi thường mặc một bộ com-lê.)",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Jack Frost and the Pudding</h1><p style=\"margin-bottom: 2rem;\">Every winter, a magical boy with a wild <b>spirit</b> named Jack Frost arrives in town. He wears a white <b>cape</b>, and his <b>role</b> is to cover everything with frost and ice. But Jack Frost also gets <b>pleasure</b> from playing tricks on common <b>folks</b>.</p><p style=\"margin-bottom: 2rem;\">One dark winter evening, he was sitting on the <b>rail</b> of a fence near a river, pointing at some trees. When he did so, there was a <b>pop</b>, and the trees were <b>evenly</b> covered in frost.</p><p style=\"margin-bottom: 2rem;\">Then old Tom Muggins came along the path. He was carrying a basket of ingredients for his wife’s cake <b>recipe</b>. \"I’ll have some fun with him!\" said Jack Frost. He pointed, and suddenly there was a <b>patch</b> of ice on the path. Poor Tom slipped and fell into the river.</p><p style=\"margin-bottom: 2rem;\">The bags of flour, fruit and sugar fell open and got wet. A couple of eggs broke, and a stick of butter <b>shrank</b> in the water. Tom gathered the ingredients and climbed out of the river. The food made an <b>absolute</b> mess of the path. \"<b>Alas</b>!\" he cried. \"There’ll be no cake for me!\"</p><p style=\"margin-bottom: 2rem;\">Jack Frost laughed at poor Tom because his nice <b>suit</b> got <b>soaked</b> as well. \"Are you cold?\" he said. \"Don’t worry, I’ll make you warm!\" He pointed at the mess in Tom’s basket. Suddenly, there was a <b>spark</b>.</p><p style=\"margin-bottom: 2rem;\">What was left of the food caught fire! Jack Frost ran off laughing.</p><p style=\"margin-bottom: 2rem;\">Poor Tom sat by the fire. He could only <b>envision</b> how angry his wife would be. He wished he had been more <b>attentive</b> and noticed that Jack was around.</p><p style=\"margin-bottom: 2rem;\">Suddenly, a pleasant smell came from the basket. Tom looked inside. The butter was <b>melting</b> and the eggs were starting to cook! Even the fruit began to simmer. Soon there was a fat, brown <b>pudding</b> in the basket! Tom tasted it. It was delicious! He happily took it home for dessert. Although Jack Frost had tried to make Tom’s life difficult, Jack had actually made Tom a wonderful <b>pudding</b>!</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Jack Frost and the Pudding</h1>        <p style=\"margin-bottom: 1rem;\">Every winter, a magical boy with a wild <b>spirit</b> named Jack Frost arrives in town. He wears a white <b>cape</b>, and his <b>role</b> is to cover everything with frost and ice. But Jack Frost also gets <b>pleasure</b> from playing tricks on common <b>folks</b>.</p>    <p style=\"margin-bottom: 1rem;\">One dark winter evening, he was sitting on the <b>rail</b> of a fence near a river, pointing at some trees. When he did so, there was a <b>pop</b>, and the trees were <b>evenly</b> covered in frost.</p>    <p style=\"margin-bottom: 1rem;\">Then old Tom Muggins came along the path. He was carrying a basket of ingredients for his wife’s cake <b>recipe</b>. \"I’ll have some fun with him!\" said Jack Frost. He pointed, and suddenly there was a <b>patch</b> of ice on the path. Poor Tom slipped and fell into the river.</p>    <p style=\"margin-bottom: 1rem;\">The bags of flour, fruit and sugar fell open and got wet. A couple of eggs broke, and a stick of butter <b>shrank</b> in the water. Tom gathered the ingredients and climbed out of the river. The food made an <b>absolute</b> mess of the path. \"<b>Alas</b>!\" he cried. \"There’ll be no cake for me!\"</p>    <p style=\"margin-bottom: 1rem;\">Jack Frost laughed at poor Tom because his nice <b>suit</b> got <b>soaked</b> as well. \"Are you cold?\" he said. \"Don’t worry, I’ll make you warm!\" He pointed at the mess in Tom’s basket. Suddenly, there was a <b>spark</b>.</p>    <p style=\"margin-bottom: 1rem;\">What was left of the food caught fire! Jack Frost ran off laughing.</p>    <p style=\"margin-bottom: 1rem;\">Poor Tom sat by the fire. He could only <b>envision</b> how angry his wife would be. He wished he had been more <b>attentive</b> and noticed that Jack was around.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, a pleasant smell came from the basket. Tom looked inside. The butter was <b>melting</b> and the eggs were starting to cook! Even the fruit began to simmer. Soon there was a fat, brown <b>pudding</b> in the basket! Tom tasted it. It was delicious! He happily took it home for dessert. Although Jack Frost had tried to make Tom’s life difficult, Jack had actually made Tom a wonderful <b>pudding</b>!</p></div>",
       "imageUrl": "/unit6_vol4_story.png",
       "sections": [
         {
           "id": "sec1_reading",
           "title": "Reading Comprehension - Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -425,8 +424,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "F. Jack Frost likes playing tricks on folks."
+              "explanation": "F. Jack Frost likes playing tricks on folks.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -435,8 +434,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "T."
+              "explanation": "T.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -445,8 +444,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "F. Jack Frost’s role is to decorate everything with frost and ice."
+              "explanation": "F. Jack Frost’s role is to decorate everything with frost and ice.",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -455,8 +454,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "T."
+              "explanation": "T.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
@@ -465,8 +464,8 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "T."
+              "explanation": "T.",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -475,16 +474,16 @@
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "F. When Jack Frost set fire to the food, the butter started to melt."
+              "explanation": "F. When Jack Frost set fire to the food, the butter started to melt.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_reading",
           "title": "Reading Comprehension - Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -495,8 +494,8 @@
                 "A heavy coat",
                 "A red hat"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tom mặc 'a nice suit' (một bộ com-lê đẹp), theo chi tiết: 'Jack Frost laughed at poor Tom because his nice suit got soaked as well.'"
+              "explanation": "Tom mặc 'a nice suit' (một bộ com-lê đẹp), theo chi tiết: 'Jack Frost laughed at poor Tom because his nice suit got soaked as well.'",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
@@ -507,8 +506,8 @@
                 "Butter",
                 "Meat"
               ],
-              "correctAnswer": "D",
-              "explanation": "Meat (thịt) không phải là nguyên liệu của bánh pudding, các thành phần được nhắc đến gồm bột mì, trái cây, đường và bơ."
+              "explanation": "Meat (thịt) không phải là nguyên liệu của bánh pudding, các thành phần được nhắc đến gồm bột mì, trái cây, đường và bơ.",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
@@ -519,8 +518,8 @@
                 "The fruit",
                 "The sugar"
               ],
-              "correctAnswer": "B",
-              "explanation": "A stick of butter (một thanh bơ) đã co lại, theo câu: 'a stick of butter shrank in the water.'"
+              "explanation": "A stick of butter (một thanh bơ) đã co lại, theo câu: 'a stick of butter shrank in the water.'",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
@@ -531,10 +530,11 @@
                 "The trees became covered in frost.",
                 "A patch of ice formed."
               ],
-              "correctAnswer": "C",
-              "explanation": "The trees became covered in frost (cây cối bị bao phủ bởi sương giá). Chi tiết: 'there was a pop, and the trees were evenly covered in frost.'"
+              "explanation": "The trees became covered in frost (cây cối bị bao phủ bởi sương giá). Chi tiết: 'there was a pop, and the trees were evenly covered in frost.'",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

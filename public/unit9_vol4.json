@@ -16,7 +16,6 @@
           "id": "sec1_wordlist_9A",
           "title": "Exercise 1: Part A. Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1_9A",
@@ -27,8 +26,8 @@
                 "subject",
                 "display"
               ],
-              "correctAnswer": "A",
-              "explanation": "breeze nghĩa là gió nhẹ (a gentle wind)."
+              "explanation": "breeze nghĩa là gió nhẹ (a gentle wind).",
+              "correctAnswer": "A"
             },
             {
               "id": "2_9A",
@@ -39,8 +38,8 @@
                 "wage",
                 "whereas"
               ],
-              "correctAnswer": "C",
-              "explanation": "wage nghĩa là tiền lương (money for a job)."
+              "explanation": "wage nghĩa là tiền lương (money for a job).",
+              "correctAnswer": "C"
             },
             {
               "id": "3_9A",
@@ -51,8 +50,8 @@
                 "efficient",
                 "outraged"
               ],
-              "correctAnswer": "B",
-              "explanation": "majestic nghĩa là uy nghi, tráng lệ (big and beautiful)."
+              "explanation": "majestic nghĩa là uy nghi, tráng lệ (big and beautiful).",
+              "correctAnswer": "B"
             },
             {
               "id": "4_9A",
@@ -63,8 +62,8 @@
                 "pessimistic",
                 "alongside"
               ],
-              "correctAnswer": "A",
-              "explanation": "lively nghĩa là sôi nổi, tràn đầy năng lượng (full of energy)."
+              "explanation": "lively nghĩa là sôi nổi, tràn đầy năng lượng (full of energy).",
+              "correctAnswer": "A"
             },
             {
               "id": "5_9A",
@@ -75,16 +74,16 @@
                 "defy",
                 "whereas"
               ],
-              "correctAnswer": "D",
-              "explanation": "whereas nghĩa là trong khi đó, dùng để chỉ sự khác biệt (used to show how two things are different)."
+              "explanation": "whereas nghĩa là trong khi đó, dùng để chỉ sự khác biệt (used to show how two things are different).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec1_wordlist_9B",
           "title": "Exercise 1: Part B. Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1_9B",
@@ -95,8 +94,8 @@
                 "full of energy",
                 "large and beautiful"
               ],
-              "correctAnswer": "B",
-              "explanation": "pessimistic nghĩa là bi quan (believing that something bad will happen)."
+              "explanation": "pessimistic nghĩa là bi quan (believing that something bad will happen).",
+              "correctAnswer": "B"
             },
             {
               "id": "2_9B",
@@ -107,8 +106,8 @@
                 "to be beside",
                 "to be small or weak"
               ],
-              "correctAnswer": "A",
-              "explanation": "slap nghĩa là tát (to hit someone)."
+              "explanation": "slap nghĩa là tát (to hit someone).",
+              "correctAnswer": "A"
             },
             {
               "id": "3_9B",
@@ -119,8 +118,8 @@
                 "to be a sign",
                 "an unproven story"
               ],
-              "correctAnswer": "D",
-              "explanation": "rumor nghĩa là tin đồn (an unproven story)."
+              "explanation": "rumor nghĩa là tin đồn (an unproven story).",
+              "correctAnswer": "D"
             },
             {
               "id": "4_9B",
@@ -131,8 +130,8 @@
                 "showing contrast",
                 "believing something bad will happen"
               ],
-              "correctAnswer": "A",
-              "explanation": "outraged nghĩa là cực kỳ tức giận (angry)."
+              "explanation": "outraged nghĩa là cực kỳ tức giận (angry).",
+              "correctAnswer": "A"
             },
             {
               "id": "5_9B",
@@ -143,16 +142,16 @@
                 "helping someone",
                 "to go against"
               ],
-              "correctAnswer": "D",
-              "explanation": "defy nghĩa là chống đối, không tuân theo (to go against)."
+              "explanation": "defy nghĩa là chống đối, không tuân theo (to go against).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist_9",
           "title": "Exercise 3: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1_9_Ex3",
@@ -163,8 +162,8 @@
                 "Defy",
                 "An outrage"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nor (cũng không) được dùng để kết nối hai ý phủ định."
+              "explanation": "Nor (cũng không) được dùng để kết nối hai ý phủ định.",
+              "correctAnswer": "B"
             },
             {
               "id": "2_9_Ex3",
@@ -175,8 +174,8 @@
                 "Lively",
                 "Feeble"
               ],
-              "correctAnswer": "C",
-              "explanation": "Lively (sôi nổi, tràn đầy năng lượng) là một từ mang nghĩa tích cực."
+              "explanation": "Lively (sôi nổi, tràn đầy năng lượng) là một từ mang nghĩa tích cực.",
+              "correctAnswer": "C"
             },
             {
               "id": "3_9_Ex3",
@@ -187,8 +186,8 @@
                 "A wage",
                 "An outrage"
               ],
-              "correctAnswer": "B",
-              "explanation": "A subject (môn học) là thứ bạn có thể học ở trường."
+              "explanation": "A subject (môn học) là thứ bạn có thể học ở trường.",
+              "correctAnswer": "B"
             },
             {
               "id": "4_9_Ex3",
@@ -199,8 +198,8 @@
                 "Your herald",
                 "An efficient mouth"
               ],
-              "correctAnswer": "A",
-              "explanation": "Your appetite (sự thèm ăn) kiểm soát việc bạn ăn bao nhiêu."
+              "explanation": "Your appetite (sự thèm ăn) kiểm soát việc bạn ăn bao nhiêu.",
+              "correctAnswer": "A"
             },
             {
               "id": "5_9_Ex3",
@@ -211,24 +210,24 @@
                 "Slapped",
                 "Smashed"
               ],
-              "correctAnswer": "B",
-              "explanation": "To display (trưng bày, thể hiện) có nghĩa là bạn đang cho thấy điều gì đó."
+              "explanation": "To display (trưng bày, thể hiện) có nghĩa là bạn đang cho thấy điều gì đó.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Growing to be Great</h1><p style=\"margin-bottom: 2rem;\">When George was just a boy, he didn't have any parents. The <b>rumor</b> was that they died in a car accident. Many bad things could have happened to George, but he was lucky. He was sent to live <b>alongside</b> other children without parents. There were kind people to <b>assist</b> George and help him go forward with his life. However, he was a <b>pessimistic</b> and mean little boy.</p><p style=\"margin-bottom: 2rem;\">George was often <b>outraged</b>. He told mean <b>rumors</b> about the other kids. He <b>smashed</b> furniture and even <b>slapped</b> other boys. He <b>defied</b> anyone who tried to help him, and soon it was difficult for them to <b>forgive</b> him. But George did <b>display</b> a love for one thing. He loved to play baseball. <b>Whereas</b> he was lazy in school and liked neither the <b>subjects</b> <b>nor</b> the teachers, he was <b>lively</b> and happy when he played baseball.</p><p style=\"margin-bottom: 2rem;\">One of George's teachers noticed his talent. He began to work with the boy. At first they only talked about baseball. The teacher watched George play. He was a very <b>efficient</b> hitter. He almost never missed the ball. The teacher thought that George looked <b>majestic</b> when he played. When George hit the ball, it flew through the <b>breeze</b> as if it would never come down. In time, they began to talk about other things. They talked about George's family and his dreams for the future. They developed a very good relationship.</p><p style=\"margin-bottom: 2rem;\">As George got older, he began to grow. His <b>appetite</b> was huge. He ate and ate. He got stronger. Soon the other boys and even the teachers looked small and <b>feeble</b> next to him. Everyone thought that this heralded the start of a great baseball career.</p><p style=\"margin-bottom: 2rem;\">When George got his first job as a baseball player, he gave most of his <b>wages</b> to the people who had helped him as a boy. He hoped that other children would also find a way to live happy, successful lives.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Growing to be Great</h1>        <p style=\"margin-bottom: 1rem;\">When George was just a boy, he didn't have any parents. The <b>rumor</b> was that they died in a car accident. Many bad things could have happened to George, but he was lucky. He was sent to live <b>alongside</b> other children without parents. There were kind people to <b>assist</b> George and help him go forward with his life. However, he was a <b>pessimistic</b> and mean little boy.</p>    <p style=\"margin-bottom: 1rem;\">George was often <b>outraged</b>. He told mean <b>rumors</b> about the other kids. He <b>smashed</b> furniture and even <b>slapped</b> other boys. He <b>defied</b> anyone who tried to help him, and soon it was difficult for them to <b>forgive</b> him. But George did <b>display</b> a love for one thing. He loved to play baseball. <b>Whereas</b> he was lazy in school and liked neither the <b>subjects</b> <b>nor</b> the teachers, he was <b>lively</b> and happy when he played baseball.</p>    <p style=\"margin-bottom: 1rem;\">One of George's teachers noticed his talent. He began to work with the boy. At first they only talked about baseball. The teacher watched George play. He was a very <b>efficient</b> hitter. He almost never missed the ball. The teacher thought that George looked <b>majestic</b> when he played. When George hit the ball, it flew through the <b>breeze</b> as if it would never come down. In time, they began to talk about other things. They talked about George's family and his dreams for the future. They developed a very good relationship.</p>    <p style=\"margin-bottom: 1rem;\">As George got older, he began to grow. His <b>appetite</b> was huge. He ate and ate. He got stronger. Soon the other boys and even the teachers looked small and <b>feeble</b> next to him. Everyone thought that this heralded the start of a great baseball career.</p>    <p style=\"margin-bottom: 1rem;\">When George got his first job as a baseball player, he gave most of his <b>wages</b> to the people who had helped him as a boy. He hoped that other children would also find a way to live happy, successful lives.</p></div>",
       "imageUrl": "/unit9_vol4_story.png",
       "sections": [
         {
           "id": "sec3_comp_9",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1_9",
@@ -239,8 +238,8 @@
                 "George was a pessimistic student.",
                 "George didn't like the boys at school."
               ],
-              "correctAnswer": "A",
-              "explanation": "Chi tiết trong bài: 'One of George’s teachers noticed his talent. He began to work with the boy.'"
+              "explanation": "Chi tiết trong bài: 'One of George’s teachers noticed his talent. He began to work with the boy.'",
+              "correctAnswer": "A"
             },
             {
               "id": "2_9",
@@ -251,8 +250,8 @@
                 "When he was at school",
                 "When he got married"
               ],
-              "correctAnswer": "B",
-              "explanation": "Chi tiết trong bài: '...he was lively and happy when he played baseball.'"
+              "explanation": "Chi tiết trong bài: '...he was lively and happy when he played baseball.'",
+              "correctAnswer": "B"
             },
             {
               "id": "3_9",
@@ -263,8 +262,8 @@
                 "He was a very efficient hitter.",
                 "He usually defied his teachers."
               ],
-              "correctAnswer": "C",
-              "explanation": "Chi tiết trong bài: 'He was a very efficient hitter.'"
+              "explanation": "Chi tiết trong bài: 'He was a very efficient hitter.'",
+              "correctAnswer": "C"
             },
             {
               "id": "4_9",
@@ -275,10 +274,11 @@
                 "They went on a trip.",
                 "They died in a car accident."
               ],
-              "correctAnswer": "D",
-              "explanation": "Chi tiết trong bài: 'The rumor was that they died in a car accident.'"
+              "explanation": "Chi tiết trong bài: 'The rumor was that they died in a car accident.'",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

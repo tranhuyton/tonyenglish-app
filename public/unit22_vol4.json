@@ -16,261 +16,261 @@
           "id": "sec1_wordlist_ex1",
           "title": "Exercise 1: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_q1",
-              "content": "1. Appliances are `things that are bought` that usually last for many years.",
+              "content": "Appliances are `things that are bought` that usually last for many years.",
               "options": [
                 "goods",
                 "charity",
                 "victors",
                 "empire"
               ],
-              "correctAnswer": "A",
-              "explanation": "Từ cần điền là 'goods' (hàng hóa), đồng nghĩa với 'things that are bought' (những thứ được mua)."
+              "explanation": "Từ cần điền là 'goods' (hàng hóa), đồng nghĩa với 'things that are bought' (những thứ được mua).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_q2",
-              "content": "2. After making five cakes, all the sugar in the house was `used up`.",
+              "content": "After making five cakes, all the sugar in the house was `used up`.",
               "options": [
                 "heeded",
                 "depleted",
                 "mocked",
                 "reduced"
               ],
-              "correctAnswer": "B",
-              "explanation": "Từ cần điền là 'depleted' (cạn kiệt), đồng nghĩa với 'used up' (sử dụng hết)."
+              "explanation": "Từ cần điền là 'depleted' (cạn kiệt), đồng nghĩa với 'used up' (sử dụng hết).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_q3",
-              "content": "3. During the holidays, `offering financial help to others` is very common.",
+              "content": "During the holidays, `offering financial help to others` is very common.",
               "options": [
                 "unity",
                 "charity",
                 "temper",
                 "pity"
               ],
-              "correctAnswer": "B",
-              "explanation": "Từ cần điền là 'charity' (từ thiện), đồng nghĩa với 'offering financial help to others' (cung cấp hỗ trợ tài chính cho người khác)."
+              "explanation": "Từ cần điền là 'charity' (từ thiện), đồng nghĩa với 'offering financial help to others' (cung cấp hỗ trợ tài chính cho người khác).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_q4",
-              "content": "4. Because my views were different, I was `treated badly` by my classmates.",
+              "content": "Because my views were different, I was `treated badly` by my classmates.",
               "options": [
                 "hitchhiked",
                 "heeded",
                 "persecuted",
                 "mocked"
               ],
-              "correctAnswer": "C",
-              "explanation": "Từ cần điền là 'persecuted' (bị bức hại), đồng nghĩa với 'treated badly' (bị đối xử tệ)."
+              "explanation": "Từ cần điền là 'persecuted' (bị bức hại), đồng nghĩa với 'treated badly' (bị đối xử tệ).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_q5",
-              "content": "5. `The group that wins` this game will have to play the very best team.",
+              "content": "`The group that wins` this game will have to play the very best team.",
               "options": [
                 "scribes",
                 "goods",
                 "commerce",
                 "victors"
               ],
-              "correctAnswer": "D",
-              "explanation": "Từ cần điền là 'victors' (những người chiến thắng), đồng nghĩa với 'The group that wins' (nhóm chiến thắng)."
+              "explanation": "Từ cần điền là 'victors' (những người chiến thắng), đồng nghĩa với 'The group that wins' (nhóm chiến thắng).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex1_q6",
-              "content": "6. When his car ran out of gas, he `traveled by asking for rides` to the gas station.",
+              "content": "When his car ran out of gas, he `traveled by asking for rides` to the gas station.",
               "options": [
                 "hitchhiked",
                 "depleted",
                 "reduced",
                 "persecuted"
               ],
-              "correctAnswer": "A",
-              "explanation": "Từ cần điền là 'hitchhiked' (đi quá giang), đồng nghĩa với 'traveled by asking for rides' (đi bằng cách xin đi nhờ xe)."
+              "explanation": "Từ cần điền là 'hitchhiked' (đi quá giang), đồng nghĩa với 'traveled by asking for rides' (đi bằng cách xin đi nhờ xe).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_q7",
-              "content": "7. Though it might seem like fun at the time, it's not nice to `tease in a cruel way` people.",
+              "content": "Though it might seem like fun at the time, it's not nice to `tease in a cruel way` people.",
               "options": [
                 "heed",
                 "mock",
                 "condemn",
                 "pity"
               ],
-              "correctAnswer": "B",
-              "explanation": "Từ cần điền là 'mock' (chế nhạo), đồng nghĩa với 'tease in a cruel way' (trêu chọc một cách tàn nhẫn)."
+              "explanation": "Từ cần điền là 'mock' (chế nhạo), đồng nghĩa với 'tease in a cruel way' (trêu chọc một cách tàn nhẫn).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_q8",
-              "content": "8. The warm weather `lessened` the snow that covered the ground.",
+              "content": "The warm weather `lessened` the snow that covered the ground.",
               "options": [
                 "depleted",
                 "persecuted",
                 "reduced",
                 "condemned"
               ],
-              "correctAnswer": "C",
-              "explanation": "Từ cần điền là 'reduced' (làm giảm đi), đồng nghĩa với 'lessened' (làm ít đi)."
+              "explanation": "Từ cần điền là 'reduced' (làm giảm đi), đồng nghĩa với 'lessened' (làm ít đi).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_q9",
-              "content": "9. `The state of working together` the groups showed helped them to solve their problems.",
+              "content": "`The state of working together` the groups showed helped them to solve their problems.",
               "options": [
                 "economy",
                 "empire",
                 "unity",
                 "commerce"
               ],
-              "correctAnswer": "C",
-              "explanation": "Từ cần điền là 'unity' (sự đoàn kết), đồng nghĩa với 'The state of working together' (trạng thái làm việc cùng nhau)."
+              "explanation": "Từ cần điền là 'unity' (sự đoàn kết), đồng nghĩa với 'The state of working together' (trạng thái làm việc cùng nhau).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_q10",
-              "content": "10. `The many countries ruled by one person` was beginning to slowly fall apart.",
+              "content": "`The many countries ruled by one person` was beginning to slowly fall apart.",
               "options": [
                 "empire",
                 "throne",
                 "charity",
                 "victor"
               ],
-              "correctAnswer": "A",
-              "explanation": "Từ cần điền là 'empire' (đế chế), đồng nghĩa với 'The many countries ruled by one person' (nhiều quốc gia do một người cai trị)."
+              "explanation": "Từ cần điền là 'empire' (đế chế), đồng nghĩa với 'The many countries ruled by one person' (nhiều quốc gia do một người cai trị).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec1_wordlist_ex2",
           "title": "Exercise 2: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_q1",
-              "content": "1. Who is someone who would NOT sit on a throne?",
+              "content": "Who is someone who would NOT sit on a throne?",
               "options": [
                 "A king",
                 "A queen",
                 "A chef",
                 "An emperor"
               ],
-              "correctAnswer": "C",
-              "explanation": "Throne là ngai vàng. Vua, Nữ hoàng và Hoàng đế đều ngồi trên ngai vàng, chỉ có 'A chef' (đầu bếp) là không."
+              "explanation": "Throne là ngai vàng. Vua, Nữ hoàng và Hoàng đế đều ngồi trên ngai vàng, chỉ có 'A chef' (đầu bếp) là không.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_q2",
-              "content": "2. All of the following describe something that's cozy EXCEPT _____.",
+              "content": "All of the following describe something that's cozy EXCEPT _____.",
               "options": [
                 "relaxing",
                 "large",
                 "comfortable",
                 "warm"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cozy nghĩa là ấm cúng, thư giãn, thoải mái. 'Large' (rộng lớn) không miêu tả sự ấm cúng."
+              "explanation": "Cozy nghĩa là ấm cúng, thư giãn, thoải mái. 'Large' (rộng lớn) không miêu tả sự ấm cúng.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_q3",
-              "content": "3. What is something that you might heed?",
+              "content": "What is something that you might heed?",
               "options": [
                 "Food",
                 "Money",
                 "Fun",
                 "Advice"
               ],
-              "correctAnswer": "D",
-              "explanation": "Heed nghĩa là chú ý, lắng nghe, làm theo. Người ta thường 'heed advice' (nghe theo lời khuyên)."
+              "explanation": "Heed nghĩa là chú ý, lắng nghe, làm theo. Người ta thường 'heed advice' (nghe theo lời khuyên).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex2_q4",
-              "content": "4. If someone can't control their temper, then they are likely to easily become _____.",
+              "content": "If someone can't control their temper, then they are likely to easily become _____.",
               "options": [
                 "upset",
                 "proud",
                 "happy",
                 "sleepy"
               ],
-              "correctAnswer": "A",
-              "explanation": "Temper là sự nóng giận. Nếu không kiểm soát được sự nóng giận, người ta rất dễ trở nên 'upset' (tức giận, buồn bực)."
+              "explanation": "Temper là sự nóng giận. Nếu không kiểm soát được sự nóng giận, người ta rất dễ trở nên 'upset' (tức giận, buồn bực).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_q5",
-              "content": "5. Which of the following is something a scribe would use?",
+              "content": "Which of the following is something a scribe would use?",
               "options": [
                 "Goods",
                 "An oven",
                 "A pen",
                 "Nails"
               ],
-              "correctAnswer": "C",
-              "explanation": "Scribe là người sao chép tài liệu, vì vậy họ sẽ cần sử dụng 'A pen' (cái bút)."
+              "explanation": "Scribe là người sao chép tài liệu, vì vậy họ sẽ cần sử dụng 'A pen' (cái bút).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Scribe's Warning</h1><p style=\"margin-bottom: 1rem;\">A great and powerful <b>empire</b> needed the wood from its western areas to build palaces and homes for the emperor and his friends. However, the <b>empire</b> had <b>depleted</b> many of the forests. The trees were important to the western areas' <b>economy</b>. With no trees to sell, the <b>commerce</b> in that area was <b>reduced</b>. Citizens could no longer purchase the <b>goods</b> that they needed to survive. Their life became difficult.</p><p style=\"margin-bottom: 1rem;\">A poor <b>scribe</b> from the area wanted to help. He <b>hitchhiked</b> to the capital to ask the emperor for <b>charity</b>. He was invited to the palace. It was large and <b>cozy</b>. Tables were loaded with food, and fires burned warmly in every fireplace.</p><p style=\"margin-bottom: 1rem;\">The emperor sat up upon his <b>throne</b>, and the <b>scribe</b> stood in front of him.</p><p style=\"margin-bottom: 1rem;\">\"I've come to ask for help,\" the <b>scribe</b> said. \"We're all very poor and hungry. You've used up all of the forests, and now we have nothing to sell.\"</p><p style=\"margin-bottom: 1rem;\">Then he added a warning. \"If we don't receive help, I'm afraid that the entire <b>empire</b> will suffer. We must establish some <b>unity</b>.\"</p><p style=\"margin-bottom: 1rem;\">Upon hearing the <b>scribe</b>'s request, the emperor's bad <b>temper</b> surfaced. He <b>mocked</b> the <b>scribe</b>. \"You think I should help,\" he said and laughed. \"You should just be happy to belong to this great <b>empire</b>. You will get nothing from me.\"</p><p style=\"margin-bottom: 1rem;\">The emperor felt no <b>pity</b> for the citizens of the western area. They were <b>condemned</b> to starve. The <b>scribe</b> returned home with nothing.</p><p style=\"margin-bottom: 1rem;\">Not long after, an enemy invaded the <b>empire</b> from the west. They were marching to the capital. Because the citizens felt <b>persecuted</b> by the emperor, they remained <b>neutral</b>. They didn't fight the invaders but allowed them to march freely to the capital.</p><p style=\"margin-bottom: 1rem;\">The emperor was defeated. If he had <b>heeded</b> the words of the <b>scribe</b>, then the citizens might have been the <b>victors</b>. But because he had treated them badly, they treated him badly in return.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Scribe's Warning</h1>        <p style=\"margin-bottom: 1rem;\">A great and powerful <b>empire</b> needed the wood from its western areas to build palaces and homes for the emperor and his friends. However, the <b>empire</b> had <b>depleted</b> many of the forests. The trees were important to the western areas' <b>economy</b>. With no trees to sell, the <b>commerce</b> in that area was <b>reduced</b>. Citizens could no longer purchase the <b>goods</b> that they needed to survive. Their life became difficult.</p>    <p style=\"margin-bottom: 1rem;\">A poor <b>scribe</b> from the area wanted to help. He <b>hitchhiked</b> to the capital to ask the emperor for <b>charity</b>. He was invited to the palace. It was large and <b>cozy</b>. Tables were loaded with food, and fires burned warmly in every fireplace.</p>    <p style=\"margin-bottom: 1rem;\">The emperor sat up upon his <b>throne</b>, and the <b>scribe</b> stood in front of him.</p>    <p style=\"margin-bottom: 1rem;\">\"I've come to ask for help,\" the <b>scribe</b> said. \"We're all very poor and hungry. You've used up all of the forests, and now we have nothing to sell.\"</p>    <p style=\"margin-bottom: 1rem;\">Then he added a warning. \"If we don't receive help, I'm afraid that the entire <b>empire</b> will suffer. We must establish some <b>unity</b>.\"</p>    <p style=\"margin-bottom: 1rem;\">Upon hearing the <b>scribe</b>'s request, the emperor's bad <b>temper</b> surfaced. He <b>mocked</b> the <b>scribe</b>. \"You think I should help,\" he said and laughed. \"You should just be happy to belong to this great <b>empire</b>. You will get nothing from me.\"</p>    <p style=\"margin-bottom: 1rem;\">The emperor felt no <b>pity</b> for the citizens of the western area. They were <b>condemned</b> to starve. The <b>scribe</b> returned home with nothing.</p>    <p style=\"margin-bottom: 1rem;\">Not long after, an enemy invaded the <b>empire</b> from the west. They were marching to the capital. Because the citizens felt <b>persecuted</b> by the emperor, they remained <b>neutral</b>. They didn't fight the invaders but allowed them to march freely to the capital.</p>    <p style=\"margin-bottom: 1rem;\">The emperor was defeated. If he had <b>heeded</b> the words of the <b>scribe</b>, then the citizens might have been the <b>victors</b>. But because he had treated them badly, they treated him badly in return.</p></div>",
       "imageUrl": "/unit22_vol4_story.png",
       "sections": [
         {
           "id": "sec2_reading_comp",
           "title": "Reading Comprehension: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "rc_q1",
-              "content": "1. Why were the citizens hungry?",
+              "content": "Why were the citizens hungry?",
               "options": [
                 "Commerce was high.",
                 "They couldn't buy goods.",
                 "Prices were reduced.",
                 "They were too cozy."
               ],
-              "correctAnswer": "B",
-              "explanation": "Chi tiết trong bài: 'With no trees to sell, the commerce in that area was reduced. Citizens could no longer purchase the goods that they needed to survive.' Do không thể mua hàng hóa nên họ bị đói."
+              "explanation": "Lựa chọn B là chính xác nhất. Đoạn văn mở đầu nói rằng người dân ở phía tây không có cây để bán, dẫn đến nền thương mại bị giảm sút. Hậu quả là: \"Citizens could no longer purchase the goods that they needed to survive\" (Người dân không còn có thể mua những hàng hóa mà họ cần để sinh tồn). Do đó, họ bị đói.",
+              "correctAnswer": "B"
             },
             {
               "id": "rc_q2",
-              "content": "2. The emperor's palace was all of the following EXCEPT _____.",
+              "content": "The emperor's palace was all of the following EXCEPT _____.",
               "options": [
                 "large and cozy",
                 "made with wood",
                 "cold and dark",
                 "in the capital"
               ],
-              "correctAnswer": "C",
-              "explanation": "Bài đọc miêu tả cung điện: 'It was large and cozy. Tables were loaded with food, and fires burned warmly in every fireplace.' (Cung điện lớn, ấm cúng và có lửa cháy ấm áp). Vậy cung điện không hề 'cold and dark' (lạnh lẽo và tối tăm)."
+              "explanation": "Đáp án C là lựa chọn cần tìm vì nó nói ngược lại với bài đọc. Cung điện của hoàng đế được miêu tả là \"large and cozy\" (rộng lớn và ấm cúng), và nằm ở \"capital\" (thủ đô) nơi hoàng đế ngự trị. Hơn nữa, nó được xây bằng \"wood from its western areas\" (gỗ từ các khu vực phía tây). Do đó, \"cold and dark\" (lạnh lẽo và tối tăm) là đặc điểm KHÔNG đúng về cung điện này.",
+              "correctAnswer": "C"
             },
             {
               "id": "rc_q3",
-              "content": "3. When the emperor heard the scribe's request, how did he behave?",
+              "content": "When the emperor heard the scribe's request, how did he behave?",
               "options": [
                 "He felt pity.",
                 "He asked for unity.",
                 "He remained neutral.",
                 "He showed his temper."
               ],
-              "correctAnswer": "D",
-              "explanation": "Chi tiết trong bài: 'Upon hearing the scribe’s request, the emperor’s bad temper surfaced.' (Khi nghe lời yêu cầu của người sao chép, hoàng đế đã nổi nóng)."
+              "explanation": "Đáp án D là phản ứng của hoàng đế. Khi nghe lời thỉnh cầu, bài văn viết: \"Upon hearing the scribe's request, the emperor's bad temper surfaced\" (Khi nghe yêu cầu của người thư lại, tính khí nóng nảy tồi tệ của hoàng đế đã bộc lộ). Ông ta không hề thương xót (felt no pity) mà còn chế nhạo người thư lại.",
+              "correctAnswer": "D"
             },
             {
               "id": "rc_q4",
-              "content": "4. At the end of the story, what happened to the emperor?",
+              "content": "At the end of the story, what happened to the emperor?",
               "options": [
                 "He was defeated.",
                 "He changed his evil ways.",
                 "He became rich.",
                 "He got married."
               ],
-              "correctAnswer": "A",
-              "explanation": "Chi tiết ở cuối bài đọc: 'The emperor was defeated.' (Hoàng đế đã bị đánh bại do người dân không giúp đỡ ông)."
+              "explanation": "Đáp án A là kết cục của hoàng đế. Ở cuối câu chuyện, khi kẻ thù tấn công thủ đô, người dân đã không chiến đấu bảo vệ ông ta. Kết quả được tác giả nêu rõ: \"The emperor was defeated\" (Hoàng đế đã bị đánh bại).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

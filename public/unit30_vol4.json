@@ -16,193 +16,193 @@
           "id": "sec1_wordlist",
           "title": "Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. Which of the following is a kind of storm?",
+              "content": "Which of the following is a kind of storm?",
               "options": [
                 "A typhoon",
                 "A bill",
                 "A sergeant",
                 "A boundary"
               ],
-              "correctAnswer": "A",
-              "explanation": "typhoon nghĩa là bão nhiệt đới."
+              "explanation": "typhoon nghĩa là bão nhiệt đới.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
-              "content": "2. Which of the following would come from a farm?",
+              "content": "Which of the following would come from a farm?",
               "options": [
                 "Organic vegetables",
                 "Wool textiles",
                 "A person’s wardrobe",
                 "Short telegraphs"
               ],
-              "correctAnswer": "A",
-              "explanation": "organic vegetables là rau hữu cơ, xuất phát từ nông trại."
+              "explanation": "organic vegetables là rau hữu cơ, xuất phát từ nông trại.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
-              "content": "3. Which of the following would help students taking a test?",
+              "content": "Which of the following would help students taking a test?",
               "options": [
                 "Reading in chaos",
                 "Sheer luck",
                 "Taking martial arts classes",
                 "Consistent studying"
               ],
-              "correctAnswer": "D",
-              "explanation": "consistent studying nghĩa là việc học tập đều đặn, kiên định."
+              "explanation": "consistent studying nghĩa là việc học tập đều đặn, kiên định.",
+              "correctAnswer": "D"
             },
             {
               "id": "4",
-              "content": "4. Who should expect to receive something?",
+              "content": "Who should expect to receive something?",
               "options": [
                 "A brave sergeant",
                 "A dead man’s heir",
                 "A man with a strong stance",
                 "A man who needs a bill"
               ],
-              "correctAnswer": "B",
-              "explanation": "heir là người thừa kế."
+              "explanation": "heir là người thừa kế.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
-              "content": "5. Which of the following would be loudest?",
+              "content": "Which of the following would be loudest?",
               "options": [
                 "Cooked poultry",
                 "A scrambling woman",
                 "A doomed project",
                 "Wailing children"
               ],
-              "correctAnswer": "D",
-              "explanation": "wail là khóc lóc lớn tiếng."
+              "explanation": "wail là khóc lóc lớn tiếng.",
+              "correctAnswer": "D"
             },
             {
               "id": "6",
-              "content": "6. Which word is not related to martial arts?",
+              "content": "Which word is not related to martial arts?",
               "options": [
                 "Taekwondo",
                 "Karate",
                 "Judo",
                 "Tango"
               ],
-              "correctAnswer": "D",
-              "explanation": "martial arts là võ thuật. Tango là điệu nhảy."
+              "explanation": "martial arts là võ thuật. Tango là điệu nhảy.",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
-              "content": "7. What can a person get from poultry?",
+              "content": "What can a person get from poultry?",
               "options": [
                 "Meat",
                 "Fruit",
                 "Pants",
                 "Soldiers"
               ],
-              "correctAnswer": "A",
-              "explanation": "poultry là gia cầm, cung cấp thịt (meat)."
+              "explanation": "poultry là gia cầm, cung cấp thịt (meat).",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
-              "content": "8. What is part of a person’s wardrobe?",
+              "content": "What is part of a person’s wardrobe?",
               "options": [
                 "A dog",
                 "A vegetable",
                 "A dress",
                 "A teacher"
               ],
-              "correctAnswer": "C",
-              "explanation": "wardrobe là tủ quần áo. A dress là chiếc váy."
+              "explanation": "wardrobe là tủ quần áo. A dress là chiếc váy.",
+              "correctAnswer": "C"
             },
             {
               "id": "9",
-              "content": "9. Where would you most likely find a sergeant?",
+              "content": "Where would you most likely find a sergeant?",
               "options": [
                 "In a store",
                 "In an army",
                 "In a factory",
                 "In a class"
               ],
-              "correctAnswer": "B",
-              "explanation": "sergeant là trung sĩ trong quân đội."
+              "explanation": "sergeant là trung sĩ trong quân đội.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
-              "content": "10. Which situation is full of chaos?",
+              "content": "Which situation is full of chaos?",
               "options": [
                 "A man driving a car",
                 "Students reading",
                 "A girl walking",
                 "Armies fighting"
               ],
-              "correctAnswer": "D",
-              "explanation": "chaos là sự hỗn loạn, phù hợp với cảnh quân đội chiến đấu."
+              "explanation": "chaos là sự hỗn loạn, phù hợp với cảnh quân đội chiến đấu.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Heirs</h1><p style=\"margin-bottom: 2rem;\">Martin, Paul and Tom were brothers. They were very different, but they were <b>consistent</b> about two things. They couldn't succeed in business, and they never agreed about anything. Martin was a hardworking farmer, growing <b>organic</b> vegetables and raising <b>poultry</b>. But he was disorganized and forgot to pay his <b>bills</b>. Paul owned a <b>textile</b> factory that produced clothes. He was organized, but he was greedy and took too much clothing. His <b>wardrobe</b> was filled with his own products. Tom was once a <b>sergeant</b> in the army. He ran a <b>martial</b> arts school, but his <b>stance</b> on discipline was too strong. He had almost no students.</p><p style=\"margin-bottom: 2rem;\">One day, they received a <b>telegraph</b> saying that their father had died. They were <b>heirs</b> to his old farm. They planned to sell it as soon as possible, so they went to see it even though there was a terrible storm. The house didn't look great, but there was a lot of land. There was so much, in fact, that they could barely see its <b>boundary</b>.</p><p style=\"margin-bottom: 2rem;\">Suddenly, the storm got worse. The <b>sheer</b> force of the wind almost knocked them over. Martin said, \"Look, it's a <b>typhoon</b>!\" Paul said, \"No, it's a <b>cyclone</b>.\" Tom said, \"No, it's a <b>tornado</b>!\" They argued until Paul began to <b>wail</b> and said, \"Whatever it is, it's coming right at us! We're <b>doomed</b>!\" The three brothers <b>scrambled</b> inside the old house. Martin said, \"If we survive, we must stop fighting. This farm could be great if we fixed it up. With my hard work, Paul's organization and Tom's discipline, we could run a great business together!\" The storm finally ended. And luckily, it didn't wreck the farm.</p><p style=\"margin-bottom: 2rem;\">\"Just think,\" Martin said, \"it took the <b>chaos</b> of a typhoon to bring us together.\" Paul replied, \"You mean a cyclone brought us together.\" Tom said, \"Didn't I tell you both that it was a tornado?\" The brothers never agreed on what kind of storm it was, but by combining their skills, they started a successful farm.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Heirs</h1>        <p style=\"margin-bottom: 1rem;\">Martin, Paul and Tom were brothers. They were very different, but they were <b>consistent</b> about two things. They couldn't succeed in business, and they never agreed about anything. Martin was a hardworking farmer, growing <b>organic</b> vegetables and raising <b>poultry</b>. But he was disorganized and forgot to pay his <b>bills</b>. Paul owned a <b>textile</b> factory that produced clothes. He was organized, but he was greedy and took too much clothing. His <b>wardrobe</b> was filled with his own products. Tom was once a <b>sergeant</b> in the army. He ran a <b>martial</b> arts school, but his <b>stance</b> on discipline was too strong. He had almost no students.</p>    <p style=\"margin-bottom: 1rem;\">One day, they received a <b>telegraph</b> saying that their father had died. They were <b>heirs</b> to his old farm. They planned to sell it as soon as possible, so they went to see it even though there was a terrible storm. The house didn't look great, but there was a lot of land. There was so much, in fact, that they could barely see its <b>boundary</b>.</p>    <p style=\"margin-bottom: 1rem;\">Suddenly, the storm got worse. The <b>sheer</b> force of the wind almost knocked them over. Martin said, \"Look, it's a <b>typhoon</b>!\" Paul said, \"No, it's a <b>cyclone</b>.\" Tom said, \"No, it's a <b>tornado</b>!\" They argued until Paul began to <b>wail</b> and said, \"Whatever it is, it's coming right at us! We're <b>doomed</b>!\" The three brothers <b>scrambled</b> inside the old house. Martin said, \"If we survive, we must stop fighting. This farm could be great if we fixed it up. With my hard work, Paul's organization and Tom's discipline, we could run a great business together!\" The storm finally ended. And luckily, it didn't wreck the farm.</p>    <p style=\"margin-bottom: 1rem;\">\"Just think,\" Martin said, \"it took the <b>chaos</b> of a typhoon to bring us together.\" Paul replied, \"You mean a cyclone brought us together.\" Tom said, \"Didn't I tell you both that it was a tornado?\" The brothers never agreed on what kind of storm it was, but by combining their skills, they started a successful farm.</p></div>",
       "imageUrl": "/unit30_vol4_story.png",
       "sections": [
         {
           "id": "sec2",
           "title": "Answer the questions based on the story.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "1. The brothers were consistent about what two things?",
+              "content": "The brothers were consistent about what two things?",
               "options": [
                 "Good farming and arguing",
                 "Bad farming and business",
                 "Bad business and arguing",
                 "Good business and arguing"
               ],
-              "correctAnswer": "C",
-              "explanation": "Bài đọc viết: \"They couldn't succeed in business, and they never agreed about anything.\""
+              "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì).",
+              "correctAnswer": "C"
             },
             {
               "id": "12",
-              "content": "2. The brothers were almost knocked down by _________.",
+              "content": "The brothers were almost knocked down by _________.",
               "options": [
                 "Tom's bills",
                 "the chaos of the storm",
                 "Paul's wardrobe",
                 "the sheer force of the wind"
               ],
-              "correctAnswer": "D",
-              "explanation": "Bài đọc viết: \"The sheer force of the wind almost knocked them over.\""
+              "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ).",
+              "correctAnswer": "D"
             },
             {
               "id": "13",
-              "content": "3. Why wasn't Paul's textile factory successful?",
+              "content": "Why wasn't Paul's textile factory successful?",
               "options": [
                 "He was greedy and took home clothes.",
                 "He gave away too much money.",
                 "He was too disorganized.",
                 "He was too mean."
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài đọc viết: \"He was organized, but he was greedy and took too much clothing.\""
+              "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo).",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
-              "content": "4. Who was the father's heir?",
+              "content": "Who was the father's heir?",
               "options": [
                 "Martin",
                 "Tom",
                 "Paul",
                 "All three men"
               ],
-              "correctAnswer": "D",
-              "explanation": "Bài đọc viết: \"They were heirs to his old farm.\" (Cả ba anh em)."
+              "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

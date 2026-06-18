@@ -16,465 +16,465 @@
           "id": "sec1",
           "title": "Part A: Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec1_1",
-              "content": "1. to give something away",
+              "content": "to give something away",
               "options": [
                 "deposit",
                 "distribute",
                 "comprehensive",
                 "conserve"
               ],
-              "correctAnswer": "B",
-              "explanation": "to give something away nghĩa là phân phát đi (distribute)."
+              "explanation": "to give something away nghĩa là phân phát đi (distribute).",
+              "correctAnswer": "B"
             },
             {
               "id": "sec1_2",
-              "content": "2. extremely important",
+              "content": "extremely important",
               "options": [
                 "cumulative",
                 "federal",
                 "crucial",
                 "wooded"
               ],
-              "correctAnswer": "C",
-              "explanation": "extremely important nghĩa là cực kỳ quan trọng (crucial)."
+              "explanation": "extremely important nghĩa là cực kỳ quan trọng (crucial).",
+              "correctAnswer": "C"
             },
             {
               "id": "sec1_3",
-              "content": "3. where something begins",
+              "content": "where something begins",
               "options": [
                 "birthplace",
                 "formation",
                 "rainforest",
                 "equator"
               ],
-              "correctAnswer": "A",
-              "explanation": "where something begins nghĩa là nơi bắt nguồn (birthplace)."
+              "explanation": "where something begins nghĩa là nơi bắt nguồn (birthplace).",
+              "correctAnswer": "A"
             },
             {
               "id": "sec1_4",
-              "content": "4. a person’s goal",
+              "content": "a person’s goal",
               "options": [
                 "strategy",
                 "capacity",
                 "objective",
                 "frequency"
               ],
-              "correctAnswer": "C",
-              "explanation": "a person's goal nghĩa là mục tiêu (objective)."
+              "explanation": "a person's goal nghĩa là mục tiêu (objective).",
+              "correctAnswer": "C"
             },
             {
               "id": "sec1_5",
-              "content": "5. unusual and unfamiliar",
+              "content": "unusual and unfamiliar",
               "options": [
                 "oxygen",
                 "exotic",
                 "comparative",
                 "beneficial"
               ],
-              "correctAnswer": "B",
-              "explanation": "unusual and unfamiliar nghĩa là kỳ lạ, không quen thuộc (exotic)."
+              "explanation": "unusual and unfamiliar nghĩa là kỳ lạ, không quen thuộc (exotic).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Part B: Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec2_1",
-              "content": "1. strategy",
+              "content": "strategy",
               "options": [
                 "a plan",
                 "a goal",
                 "a line",
                 "a forest"
               ],
-              "correctAnswer": "A",
-              "explanation": "strategy (chiến lược) nghĩa là một kế hoạch (a plan)."
+              "explanation": "strategy (chiến lược) nghĩa là một kế hoạch (a plan).",
+              "correctAnswer": "A"
             },
             {
               "id": "sec2_2",
-              "content": "2. beneficial",
+              "content": "beneficial",
               "options": [
                 "filled with trees",
                 "good for you",
                 "unusual or exciting",
                 "containing many details"
               ],
-              "correctAnswer": "B",
-              "explanation": "beneficial (có lợi) nghĩa là tốt cho bạn (good for you)."
+              "explanation": "beneficial (có lợi) nghĩa là tốt cho bạn (good for you).",
+              "correctAnswer": "B"
             },
             {
               "id": "sec2_3",
-              "content": "3. formation",
+              "content": "formation",
               "options": [
                 "how something is made",
                 "the number of things inside something",
                 "where someone is born",
                 "how often something happens"
               ],
-              "correctAnswer": "A",
-              "explanation": "formation (sự hình thành) nghĩa là cách mà một thứ được tạo ra (how something is made)."
+              "explanation": "formation (sự hình thành) nghĩa là cách mà một thứ được tạo ra (how something is made).",
+              "correctAnswer": "A"
             },
             {
               "id": "sec2_4",
-              "content": "4. federal",
+              "content": "federal",
               "options": [
                 "made from added parts",
                 "coming from the government",
                 "very important",
                 "based on something else"
               ],
-              "correctAnswer": "B",
-              "explanation": "federal (thuộc liên bang) có nghĩa là đến từ chính phủ (coming from the government)."
+              "explanation": "federal (thuộc liên bang) có nghĩa là đến từ chính phủ (coming from the government).",
+              "correctAnswer": "B"
             },
             {
               "id": "sec2_5",
-              "content": "5. conserve",
+              "content": "conserve",
               "options": [
                 "to protect",
                 "to give",
                 "to put into",
                 "to breathe"
               ],
-              "correctAnswer": "A",
-              "explanation": "conserve (bảo tồn) nghĩa là bảo vệ (to protect)."
+              "explanation": "conserve (bảo tồn) nghĩa là bảo vệ (to protect).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 2: Choose the word that is similar in meaning to the bracketed part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec3_1",
-              "content": "1. I like going to the park because it’s [covered with trees], and I feel like I’m in the mountains.",
+              "content": "I like going to the park because it’s [covered with trees], and I feel like I’m in the mountains.",
               "options": [
                 "wooded",
                 "exotic",
                 "beneficial",
                 "cumulative"
               ],
-              "correctAnswer": "A",
-              "explanation": "covered with trees nghĩa là có nhiều cây cối, đồng nghĩa với wooded."
+              "explanation": "covered with trees nghĩa là có nhiều cây cối, đồng nghĩa với wooded.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec3_2",
-              "content": "2. Sam [gave away] party invitations to his friends.",
+              "content": "Sam [gave away] party invitations to his friends.",
               "options": [
                 "deposited",
                 "distributed",
                 "conserved",
                 "objective"
               ],
-              "correctAnswer": "B",
-              "explanation": "gave away nghĩa là phân phát, đồng nghĩa với distribute."
+              "explanation": "gave away nghĩa là phân phát, đồng nghĩa với distribute.",
+              "correctAnswer": "B"
             },
             {
               "id": "sec3_3",
-              "content": "3. The letter came from a [national government] office.",
+              "content": "The letter came from a [national government] office.",
               "options": [
                 "crucial",
                 "comparative",
                 "federal",
                 "comprehensive"
               ],
-              "correctAnswer": "C",
-              "explanation": "national government liên quan đến chính phủ, đồng nghĩa với federal."
+              "explanation": "national government liên quan đến chính phủ, đồng nghĩa với federal.",
+              "correctAnswer": "C"
             },
             {
               "id": "sec3_4",
-              "content": "4. The business’s [goal] is to earn more money this year than it did last year.",
+              "content": "The business’s [goal] is to earn more money this year than it did last year.",
               "options": [
                 "capacity",
                 "formation",
                 "objective",
                 "strategy"
               ],
-              "correctAnswer": "C",
-              "explanation": "goal nghĩa là mục tiêu, đồng nghĩa với objective."
+              "explanation": "goal nghĩa là mục tiêu, đồng nghĩa với objective.",
+              "correctAnswer": "C"
             },
             {
               "id": "sec3_5",
-              "content": "5. My mother grows [unusual and unfamiliar] flowers in her garden.",
+              "content": "My mother grows [unusual and unfamiliar] flowers in her garden.",
               "options": [
                 "crucial",
                 "exotic",
                 "federal",
                 "wooded"
               ],
-              "correctAnswer": "B",
-              "explanation": "unusual and unfamiliar nghĩa là kỳ lạ, đồng nghĩa với exotic."
+              "explanation": "unusual and unfamiliar nghĩa là kỳ lạ, đồng nghĩa với exotic.",
+              "correctAnswer": "B"
             },
             {
               "id": "sec3_6",
-              "content": "6. He needed [gas required for breathing] to help him survive.",
+              "content": "He needed [gas required for breathing] to help him survive.",
               "options": [
                 "equator",
                 "capacity",
                 "oxygen",
                 "birthplace"
               ],
-              "correctAnswer": "C",
-              "explanation": "gas required for breathing là khí ô-xy (oxygen)."
+              "explanation": "gas required for breathing là khí ô-xy (oxygen).",
+              "correctAnswer": "C"
             },
             {
               "id": "sec3_7",
-              "content": "7. This book about the history of India is [full of details].",
+              "content": "This book about the history of India is [full of details].",
               "options": [
                 "cumulative",
                 "comparative",
                 "comprehensive",
                 "beneficial"
               ],
-              "correctAnswer": "C",
-              "explanation": "full of details nghĩa là đầy đủ chi tiết, toàn diện (comprehensive)."
+              "explanation": "full of details nghĩa là đầy đủ chi tiết, toàn diện (comprehensive).",
+              "correctAnswer": "C"
             },
             {
               "id": "sec3_8",
-              "content": "8. I’m going to visit a small town in Ecuador that is near the [imaginary line].",
+              "content": "I’m going to visit a small town in Ecuador that is near the [imaginary line].",
               "options": [
                 "formation",
                 "frequency",
                 "birthplace",
                 "equator"
               ],
-              "correctAnswer": "D",
-              "explanation": "imaginary line là đường xích đạo (equator)."
+              "explanation": "imaginary line là đường xích đạo (equator).",
+              "correctAnswer": "D"
             },
             {
               "id": "sec3_9",
-              "content": "9. The number of shoes that Jane and Beth have is [judged based on something else].",
+              "content": "The number of shoes that Jane and Beth have is [judged based on something else].",
               "options": [
                 "comparative",
                 "cumulative",
                 "crucial",
                 "federal"
               ],
-              "correctAnswer": "A",
-              "explanation": "judged based on something else nghĩa là đánh giá một cách tương đối (comparative)."
+              "explanation": "judged based on something else nghĩa là đánh giá một cách tương đối (comparative).",
+              "correctAnswer": "A"
             },
             {
               "id": "sec3_10",
-              "content": "10. Eddie didn’t want to eat it, but he knew the broccoli would be [good for his health].",
+              "content": "Eddie didn’t want to eat it, but he knew the broccoli would be [good for his health].",
               "options": [
                 "exotic",
                 "beneficial",
                 "comprehensive",
                 "wooded"
               ],
-              "correctAnswer": "B",
-              "explanation": "good for his health nghĩa là có lợi cho sức khỏe (beneficial)."
+              "explanation": "good for his health nghĩa là có lợi cho sức khỏe (beneficial).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Exercise 3: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec4_1",
-              "content": "1. Which word has about the same meaning as capacity?",
+              "content": "Which word has about the same meaning as capacity?",
               "options": [
                 "open",
                 "expand",
                 "reduce",
                 "maximum amount"
               ],
-              "correctAnswer": "D",
-              "explanation": "capacity (sức chứa) gần nghĩa với maximum amount (lượng tối đa)."
+              "explanation": "capacity (sức chứa) gần nghĩa với maximum amount (lượng tối đa).",
+              "correctAnswer": "D"
             },
             {
               "id": "sec4_2",
-              "content": "2. Which of these can be cumulative?",
+              "content": "Which of these can be cumulative?",
               "options": [
                 "Snow",
                 "A plate",
                 "A radio",
                 "Air"
               ],
-              "correctAnswer": "A",
-              "explanation": "cumulative là tích lũy, tuyết (snow) có thể tích lũy rơi xuống thành đống."
+              "explanation": "cumulative là tích lũy, tuyết (snow) có thể tích lũy rơi xuống thành đống.",
+              "correctAnswer": "A"
             },
             {
               "id": "sec4_3",
-              "content": "3. What is something you would deposit into a closet?",
+              "content": "What is something you would deposit into a closet?",
               "options": [
                 "A television",
                 "Jackets",
                 "Money",
                 "Water"
               ],
-              "correctAnswer": "B",
-              "explanation": "deposit là đặt vào, ta có thể đặt áo khoác (jackets) vào tủ quần áo."
+              "explanation": "deposit là đặt vào, ta có thể đặt áo khoác (jackets) vào tủ quần áo.",
+              "correctAnswer": "B"
             },
             {
               "id": "sec4_4",
-              "content": "4. What is something you probably wouldn’t encounter in a rainforest?",
+              "content": "What is something you probably wouldn’t encounter in a rainforest?",
               "options": [
                 "Many trees",
                 "Monkeys",
                 "Humid weather",
                 "Kangaroos"
               ],
-              "correctAnswer": "D",
-              "explanation": "rainforest là rừng nhiệt đới, kangaroos sống ở Úc (chủ yếu đồng cỏ/sa mạc), hiếm gặp trong rừng nhiệt đới."
+              "explanation": "rainforest là rừng nhiệt đới, kangaroos sống ở Úc (chủ yếu đồng cỏ/sa mạc), hiếm gặp trong rừng nhiệt đới.",
+              "correctAnswer": "D"
             },
             {
               "id": "sec4_5",
-              "content": "5. In which place is there a high frequency of snowfall?",
+              "content": "In which place is there a high frequency of snowfall?",
               "options": [
                 "Antarctica",
                 "Spain",
                 "England",
                 "Australia"
               ],
-              "correctAnswer": "A",
-              "explanation": "frequency of snowfall là tần suất tuyết rơi, Nam Cực (Antarctica) có tần suất rất cao."
+              "explanation": "frequency of snowfall là tần suất tuyết rơi, Nam Cực (Antarctica) có tần suất rất cao.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Dying Forest</h1><p style=\"margin-bottom: 1rem;\"><b>Rainforests</b> provide much of the world’s <b>oxygen</b> supply. But the forests’ <b>exotic</b> trees and animals are being killed to make room for farmers and roads. People have been trying to <b>conserve</b> rainforests for years. But another type of forest—the cloud forest—is just as <b>beneficial</b> to humans. Cloud forests are also in danger of disappearing, but little is being done to save them.</p><p style=\"margin-bottom: 1rem;\">These forests are located at the tops of mountains, generally near the <b>equator</b>. These humid, <b>wooded</b> mountaintops are mainly in African and Central and South American countries. They are called “cloud forests” because their height allows for the <b>formation</b> of clouds among the trees.</p><p style=\"margin-bottom: 1rem;\">Rainforests produce large amounts of oxygen. Cloud forests produce <b>comparative</b> amounts of water. The trees in these forests pull water out of the clouds. The moisture gathers on the leaves. When it drips, it is <b>deposited</b> into streams. The streams flow into towns at the bottom of the mountain. Then, it’s <b>distributed</b> to people. The yearly <b>cumulative</b> rainfall in these areas is 173-198 centimeters. Cloud forests can pull in up to 60 percent of that. This water is <b>crucial</b> to the plants and the people in the area. It helps them survive.</p><p style=\"margin-bottom: 1rem;\">Cloud forests are also the <b>birthplace</b> of countless species of plants that can’t be found anywhere else. One small cloud forest has the <b>capacity</b> for as many types of plants as there are in all of Europe. There are so many, in fact, that scientists haven’t made a <b>comprehensive</b> list of them yet.</p><p style=\"margin-bottom: 1rem;\">These forests are being destroyed with increasing <b>frequency</b>. Trees are being cut down, and roads are being built in their place. Some people have an <b>objective</b> to get <b>federal</b> money to protect the forests. But they have had little success. Another <b>strategy</b> is to replace the destroyed plants. That, too, has been difficult because the plants are so unique. There’s plenty of work to be done, but saving the cloud forests is still a possibility.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">A Dying Forest</h1>        <p style=\"margin-bottom: 1rem;\"><b>Rainforests</b> provide much of the world’s <b>oxygen</b> supply. But the forests’ <b>exotic</b> trees and animals are being killed to make room for farmers and roads. People have been trying to <b>conserve</b> rainforests for years. But another type of forest—the cloud forest—is just as <b>beneficial</b> to humans. Cloud forests are also in danger of disappearing, but little is being done to save them.</p>    <p style=\"margin-bottom: 1rem;\">These forests are located at the tops of mountains, generally near the <b>equator</b>. These humid, <b>wooded</b> mountaintops are mainly in African and Central and South American countries. They are called “cloud forests” because their height allows for the <b>formation</b> of clouds among the trees.</p>    <p style=\"margin-bottom: 1rem;\">Rainforests produce large amounts of oxygen. Cloud forests produce <b>comparative</b> amounts of water. The trees in these forests pull water out of the clouds. The moisture gathers on the leaves. When it drips, it is <b>deposited</b> into streams. The streams flow into towns at the bottom of the mountain. Then, it’s <b>distributed</b> to people. The yearly <b>cumulative</b> rainfall in these areas is 173-198 centimeters. Cloud forests can pull in up to 60 percent of that. This water is <b>crucial</b> to the plants and the people in the area. It helps them survive.</p>    <p style=\"margin-bottom: 1rem;\">Cloud forests are also the <b>birthplace</b> of countless species of plants that can’t be found anywhere else. One small cloud forest has the <b>capacity</b> for as many types of plants as there are in all of Europe. There are so many, in fact, that scientists haven’t made a <b>comprehensive</b> list of them yet.</p>    <p style=\"margin-bottom: 1rem;\">These forests are being destroyed with increasing <b>frequency</b>. Trees are being cut down, and roads are being built in their place. Some people have an <b>objective</b> to get <b>federal</b> money to protect the forests. But they have had little success. Another <b>strategy</b> is to replace the destroyed plants. That, too, has been difficult because the plants are so unique. There’s plenty of work to be done, but saving the cloud forests is still a possibility.</p></div>",
       "imageUrl": "/unit27_vol4_story.png",
       "sections": [
         {
           "id": "sec5",
           "title": "Reading Comprehension: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec5_1",
-              "content": "1. Cloud forests provide much of the world’s oxygen supply.",
+              "content": "Cloud forests provide much of the world’s oxygen supply.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Rainforests provide much of the world's oxygen supply, not cloud forests."
+              "explanation": "Câu này sai. Bài đọc có ghi \"Rainforests provide much of the world’s oxygen supply.\" (Rừng nhiệt đới cung cấp phần lớn lượng ô-xy, không phải rừng mây).",
+              "correctAnswer": "B"
             },
             {
               "id": "sec5_2",
-              "content": "2. Cloud forests are located at the tops of mountains, generally near the equator.",
+              "content": "Cloud forests are located at the tops of mountains, generally near the equator.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. The text states: 'These forests are located at the tops of mountains, generally near the equator.'"
+              "explanation": "Câu này đúng. Bài đọc đề cập \"These forests are located at the tops of mountains, generally near the equator.\" (Những khu rừng này nằm trên đỉnh núi, thường là gần đường xích đạo).",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_3",
-              "content": "3. Cloud forests produce comparative amounts of water.",
+              "content": "Cloud forests produce comparative amounts of water.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. The text states: 'Cloud forests produce comparative amounts of water.'"
+              "explanation": "Câu này đúng. Bài đọc nói \"Cloud forests produce comparative amounts of water.\" (Rừng mây tạo ra lượng nước tương đương).",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_4",
-              "content": "4. These humid, wooded mountaintops are mainly in European and Asian countries.",
+              "content": "These humid, wooded mountaintops are mainly in European and Asian countries.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. They are mainly in African and Central and South American countries."
+              "explanation": "Câu này sai. Dẫn chứng trong bài: \"These humid, wooded mountaintops are mainly in African and Central and South American countries.\" (Nằm chủ yếu ở châu Phi, Trung và Nam Mỹ).",
+              "correctAnswer": "B"
             },
             {
               "id": "sec5_5",
-              "content": "5. Cloud forests are the birthplace of countless species of plants that can’t be found anywhere else.",
+              "content": "Cloud forests are the birthplace of countless species of plants that can’t be found anywhere else.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. The text explicitly mentions this."
+              "explanation": "Câu này đúng. Bài đọc khẳng định \"Cloud forests are also the birthplace of countless species of plants that can’t be found anywhere else.\" (Rừng mây là nơi sản sinh ra vô số loài thực vật không thể tìm thấy ở bất cứ nơi nào khác).",
+              "correctAnswer": "A"
             },
             {
               "id": "sec5_6",
-              "content": "6. One strategy to save the forests is to replace the destroyed plants.",
+              "content": "One strategy to save the forests is to replace the destroyed plants.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. The text says: 'Another strategy is to replace the destroyed plants.'"
+              "explanation": "Câu này đúng. \"Another strategy is to replace the destroyed plants.\" (Một chiến lược khác là thay thế những loại cây đã bị tiêu diệt).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Reading Comprehension: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "sec6_1",
-              "content": "1. What is true about cloud forests?",
+              "content": "What is true about cloud forests?",
               "options": [
                 "They are located at the tops of mountains near the equator.",
                 "They are mostly found in North America and Asia.",
                 "They produce the majority of the world's oxygen.",
                 "They are completely safe from destruction."
               ],
-              "correctAnswer": "A",
-              "explanation": "The text states: 'These forests are located at the tops of mountains, generally near the equator.'"
+              "explanation": "Dựa vào câu văn: \"These forests are located at the tops of mountains, generally near the equator.\"",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_2",
-              "content": "2. What do the trees in cloud forests pull out of the clouds?",
+              "content": "What do the trees in cloud forests pull out of the clouds?",
               "options": [
                 "Water",
                 "Oxygen",
                 "Dirt",
                 "Animals"
               ],
-              "correctAnswer": "A",
-              "explanation": "The text mentions: 'The trees in these forests pull water out of the clouds.'"
+              "explanation": "Trong bài ghi rất rõ: \"The trees in these forests pull water out of the clouds.\" (Cây cối trong khu rừng kéo nước ra khỏi những đám mây).",
+              "correctAnswer": "A"
             },
             {
               "id": "sec6_3",
-              "content": "3. Why are cloud forests being destroyed?",
+              "content": "Why are cloud forests being destroyed?",
               "options": [
                 "To gather more moisture.",
                 "To create new species of plants.",
                 "To make room for farmers and roads.",
                 "To conserve the area."
               ],
-              "correctAnswer": "C",
-              "explanation": "The text says trees are being killed 'to make room for farmers and roads', and similarly for cloud forests, 'Trees are being cut down, and roads are being built in their place.'"
+              "explanation": "Rừng đang bị phá hủy vì: \"Trees are being cut down, and roads are being built in their place.\" (Cây cối đang bị đốn hạ và đường sá được xây dựng).",
+              "correctAnswer": "C"
             },
             {
               "id": "sec6_4",
-              "content": "4. What is one strategy people use to try to save the forests?",
+              "content": "What is one strategy people use to try to save the forests?",
               "options": [
                 "Cutting down trees.",
                 "Distributing more water.",
                 "Moving the equator.",
                 "Getting federal money or replacing destroyed plants."
               ],
-              "correctAnswer": "D",
-              "explanation": "The text mentions two main strategies: getting federal money and replacing destroyed plants."
+              "explanation": "Các chiến lược được đề cập là \"to get federal money to protect the forests\" và \"replace the destroyed plants\".",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

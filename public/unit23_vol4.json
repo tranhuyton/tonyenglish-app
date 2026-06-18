@@ -16,509 +16,509 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. A professor at a university is probably ____________.",
+              "content": "A professor at a university is probably ____________.",
               "options": [
                 "a majority",
                 "an intellectual",
                 "a controversy",
                 "a factor"
               ],
-              "correctAnswer": "B",
-              "explanation": "intellectual (n): người trí thức. Một giáo sư đại học có thể là một người trí thức."
+              "explanation": "intellectual (n): người trí thức. Một giáo sư đại học có thể là một người trí thức.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
-              "content": "2. If every member of a family has a disease, the disease is ____________.",
+              "content": "If every member of a family has a disease, the disease is ____________.",
               "options": [
                 "accurate",
                 "identical",
                 "vast",
                 "genetic"
               ],
-              "correctAnswer": "D",
-              "explanation": "genetic (adj): thuộc về di truyền. Căn bệnh xuất hiện ở mọi thành viên trong gia đình là do di truyền."
+              "explanation": "genetic (adj): thuộc về di truyền. Căn bệnh xuất hiện ở mọi thành viên trong gia đình là do di truyền.",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
-              "content": "3. What would a farmer do if bugs were eating his plants?",
+              "content": "What would a farmer do if bugs were eating his plants?",
               "options": [
                 "Use a pesticide",
                 "Find a mammal",
                 "Raise offspring",
                 "Become a vegetarian"
               ],
-              "correctAnswer": "A",
-              "explanation": "pesticide (n): thuốc trừ sâu. Nông dân sẽ sử dụng thuốc trừ sâu để diệt bọ."
+              "explanation": "pesticide (n): thuốc trừ sâu. Nông dân sẽ sử dụng thuốc trừ sâu để diệt bọ.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
-              "content": "4. What is something that scientists do?",
+              "content": "What is something that scientists do?",
               "options": [
                 "Analyze chemicals",
                 "Multiply books",
                 "Reinforce messages",
                 "Regulate businesses"
               ],
-              "correctAnswer": "A",
-              "explanation": "analyze (v): phân tích. Các nhà khoa học thường phân tích hóa chất."
+              "explanation": "analyze (v): phân tích. Các nhà khoa học thường phân tích hóa chất.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
-              "content": "5. Which word is related to the term \"outer space\"?",
+              "content": "Which word is related to the term \"outer space\"?",
               "options": [
                 "Stricken",
                 "Evolve",
                 "Genome",
                 "Asteroid"
               ],
-              "correctAnswer": "D",
-              "explanation": "asteroid (n): tiểu hành tinh. Từ này liên quan đến không gian vũ trụ."
+              "explanation": "asteroid (n): tiểu hành tinh. Từ này liên quan đến không gian vũ trụ.",
+              "correctAnswer": "D"
             },
             {
               "id": "6",
-              "content": "6. What happens when something evolves?",
+              "content": "What happens when something evolves?",
               "options": [
                 "It studies more.",
                 "It disagrees.",
                 "It changes.",
                 "It gets stronger."
               ],
-              "correctAnswer": "C",
-              "explanation": "evolve (v): tiến hóa. Tiến hóa nghĩa là thay đổi theo thời gian."
+              "explanation": "evolve (v): tiến hóa. Tiến hóa nghĩa là thay đổi theo thời gian.",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
-              "content": "7. Which of these is a mammal?",
+              "content": "Which of these is a mammal?",
               "options": [
                 "A chicken",
                 "A snake",
                 "A spider",
                 "A monkey"
               ],
-              "correctAnswer": "D",
-              "explanation": "mammal (n): động vật có vú. Khỉ là một loài động vật có vú."
+              "explanation": "mammal (n): động vật có vú. Khỉ là một loài động vật có vú.",
+              "correctAnswer": "D"
             },
             {
               "id": "8",
-              "content": "8. What would a vegetarian eat?",
+              "content": "What would a vegetarian eat?",
               "options": [
                 "Steak",
                 "Sausage",
                 "Chicken",
                 "Corn"
               ],
-              "correctAnswer": "D",
-              "explanation": "vegetarian (n): người ăn chay. Người ăn chay sẽ ăn ngô (corn) thay vì thịt."
+              "explanation": "vegetarian (n): người ăn chay. Người ăn chay sẽ ăn ngô (corn) thay vì thịt.",
+              "correctAnswer": "D"
             },
             {
               "id": "9",
-              "content": "9. If something is accurate, it is ____________.",
+              "content": "If something is accurate, it is ____________.",
               "options": [
                 "long",
                 "false",
                 "correct",
                 "mysterious"
               ],
-              "correctAnswer": "C",
-              "explanation": "accurate (adj): chính xác. Nghĩa là đúng hoàn toàn (correct)."
+              "explanation": "accurate (adj): chính xác. Nghĩa là đúng hoàn toàn (correct).",
+              "correctAnswer": "C"
             },
             {
               "id": "10",
-              "content": "10. Which of these is usually considered vast?",
+              "content": "Which of these is usually considered vast?",
               "options": [
                 "The sky",
                 "A bedroom",
                 "A pool",
                 "The newspaper"
               ],
-              "correctAnswer": "A",
-              "explanation": "vast (adj): rộng lớn. Bầu trời thường được coi là rất rộng lớn."
+              "explanation": "vast (adj): rộng lớn. Bầu trời thường được coi là rất rộng lớn.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Match to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "e2a1",
-              "content": "1. The cheaper blouse is nearly identical ____________",
+              "content": "The cheaper blouse is nearly identical ____________",
               "options": [
                 "will be printed in a science textbook",
                 "to the one I found in that expensive store",
                 "are made of rock, ice and metal",
                 "crops cause illnesses in humans"
               ],
-              "correctAnswer": "B",
-              "explanation": "identical to...: giống hệt. Chiếc áo sơ mi rẻ hơn gần như giống hệt cái tôi tìm thấy trong cửa hàng đắt tiền đó."
+              "explanation": "identical to...: giống hệt. Chiếc áo sơ mi rẻ hơn gần như giống hệt cái tôi tìm thấy trong cửa hàng đắt tiền đó.",
+              "correctAnswer": "B"
             },
             {
               "id": "e2a2",
-              "content": "2. The zoo is full of mammals ____________",
+              "content": "The zoo is full of mammals ____________",
               "options": [
                 "that come from all over the world",
                 "a big machine to a tiny one",
                 "with an example from a scientific study",
                 "about each patient"
               ],
-              "correctAnswer": "A",
-              "explanation": "mammals that come from...: các loài động vật có vú đến từ khắp nơi trên thế giới."
+              "explanation": "mammals that come from...: các loài động vật có vú đến từ khắp nơi trên thế giới.",
+              "correctAnswer": "A"
             },
             {
               "id": "e2a3",
-              "content": "3. The computer has evolved from ____________",
+              "content": "The computer has evolved from ____________",
               "options": [
                 "with two broken legs and an injured arm",
                 "to the one I found in that expensive store",
                 "a big machine to a tiny one",
                 "big enough to fit at least 5,000 people"
               ],
-              "correctAnswer": "C",
-              "explanation": "evolved from a big machine to a tiny one: tiến hóa / phát triển từ một cỗ máy lớn thành một cái nhỏ xíu."
+              "explanation": "evolved from a big machine to a tiny one: tiến hóa / phát triển từ một cỗ máy lớn thành một cái nhỏ xíu.",
+              "correctAnswer": "C"
             },
             {
               "id": "e2a4",
-              "content": "4. My teacher said that asteroids ____________",
+              "content": "My teacher said that asteroids ____________",
               "options": [
                 "will be printed in a science textbook",
                 "are made of rock, ice and metal",
                 "about each patient",
                 "crops cause illnesses in humans"
               ],
-              "correctAnswer": "B",
-              "explanation": "asteroids are made of rock...: tiểu hành tinh được tạo thành từ đá, băng và kim loại."
+              "explanation": "asteroids are made of rock...: tiểu hành tinh được tạo thành từ đá, băng và kim loại.",
+              "correctAnswer": "B"
             },
             {
               "id": "e2a5",
-              "content": "5. Many pesticides that are used on ____________",
+              "content": "Many pesticides that are used on ____________",
               "options": [
                 "crops cause illnesses in humans",
                 "that come from all over the world",
                 "a big machine to a tiny one",
                 "with an example from a scientific study"
               ],
-              "correctAnswer": "A",
-              "explanation": "pesticides that are used on crops: thuốc trừ sâu được sử dụng trên cây trồng gây bệnh cho con người."
+              "explanation": "pesticides that are used on crops: thuốc trừ sâu được sử dụng trên cây trồng gây bệnh cho con người.",
+              "correctAnswer": "A"
             },
             {
               "id": "e2a6",
-              "content": "6. The woman reinforced her statement ____________",
+              "content": "The woman reinforced her statement ____________",
               "options": [
                 "about each patient",
                 "to the one I found in that expensive store",
                 "with an example from a scientific study",
                 "big enough to fit at least 5,000 people"
               ],
-              "correctAnswer": "C",
-              "explanation": "reinforced her statement with an example: củng cố tuyên bố của mình bằng một ví dụ từ một nghiên cứu khoa học."
+              "explanation": "reinforced her statement with an example: củng cố tuyên bố của mình bằng một ví dụ từ một nghiên cứu khoa học.",
+              "correctAnswer": "C"
             },
             {
               "id": "e2a7",
-              "content": "7. The doctor analyzes the daily report ____________",
+              "content": "The doctor analyzes the daily report ____________",
               "options": [
                 "are made of rock, ice and metal",
                 "about each patient",
                 "with two broken legs and an injured arm",
                 "will be printed in a science textbook"
               ],
-              "correctAnswer": "B",
-              "explanation": "analyzes the daily report about each patient: phân tích báo cáo hàng ngày về từng bệnh nhân."
+              "explanation": "analyzes the daily report about each patient: phân tích báo cáo hàng ngày về từng bệnh nhân.",
+              "correctAnswer": "B"
             },
             {
               "id": "e2a8",
-              "content": "8. The vast space of the room was ____________",
+              "content": "The vast space of the room was ____________",
               "options": [
                 "big enough to fit at least 5,000 people",
                 "crops cause illnesses in humans",
                 "that come from all over the world",
                 "a big machine to a tiny one"
               ],
-              "correctAnswer": "A",
-              "explanation": "vast space ... big enough to fit: không gian rộng lớn ... đủ lớn để chứa ít nhất 5.000 người."
+              "explanation": "vast space ... big enough to fit: không gian rộng lớn ... đủ lớn để chứa ít nhất 5.000 người.",
+              "correctAnswer": "A"
             },
             {
               "id": "e2a9",
-              "content": "9. My report on animal genomes ____________",
+              "content": "My report on animal genomes ____________",
               "options": [
                 "will be printed in a science textbook",
                 "with an example from a scientific study",
                 "to the one I found in that expensive store",
                 "are made of rock, ice and metal"
               ],
-              "correctAnswer": "A",
-              "explanation": "report on animal genomes will be printed: báo cáo về bộ gen động vật sẽ được in trong một cuốn sách giáo khoa."
+              "explanation": "report on animal genomes will be printed: báo cáo về bộ gen động vật sẽ được in trong một cuốn sách giáo khoa.",
+              "correctAnswer": "A"
             },
             {
               "id": "e2a10",
-              "content": "10. The accident left her stricken ____________",
+              "content": "The accident left her stricken ____________",
               "options": [
                 "about each patient",
                 "big enough to fit at least 5,000 people",
                 "with two broken legs and an injured arm",
                 "crops cause illnesses in humans"
               ],
-              "correctAnswer": "C",
-              "explanation": "stricken with two broken legs: bị thương nặng với hai chân gãy và một cánh tay bị thương."
+              "explanation": "stricken with two broken legs: bị thương nặng với hai chân gãy và một cánh tay bị thương.",
+              "correctAnswer": "C"
             },
             {
               "id": "e2b1",
-              "content": "11. A small group of kids wanted pizza, ____________",
+              "content": "A small group of kids wanted pizza, ____________",
               "options": [
                 "but the majority wanted hamburgers",
                 "but her offspring are very tall",
                 "since the news isn't accurate",
                 "so we must regulate their actions"
               ],
-              "correctAnswer": "A",
-              "explanation": "majority: đa số. Một nhóm nhỏ muốn ăn pizza, nhưng đa số lại muốn ăn hamburger."
+              "explanation": "majority: đa số. Một nhóm nhỏ muốn ăn pizza, nhưng đa số lại muốn ăn hamburger.",
+              "correctAnswer": "A"
             },
             {
               "id": "e2b2",
-              "content": "12. I don't read gossip magazines ____________",
+              "content": "I don't read gossip magazines ____________",
               "options": [
                 "but the flowers multiplied fast",
                 "since the news isn't accurate",
                 "but his brother is more of an intellectual",
                 "so dad thought it was genetic"
               ],
-              "correctAnswer": "B",
-              "explanation": "accurate: chính xác. Tôi không đọc các tạp chí ngồi lê đôi mách vì tin tức không chính xác."
+              "explanation": "accurate: chính xác. Tôi không đọc các tạp chí ngồi lê đôi mách vì tin tức không chính xác.",
+              "correctAnswer": "B"
             },
             {
               "id": "e2b3",
-              "content": "13. The people in this department can't be trusted, ____________",
+              "content": "The people in this department can't be trusted, ____________",
               "options": [
                 "but it caused a lot of controversy",
                 "but she didn't know he was a vegetarian",
                 "so we must regulate their actions",
                 "but the most important factor is its price"
               ],
-              "correctAnswer": "C",
-              "explanation": "regulate: quản lý, điều chỉnh. Những người ở bộ phận này không đáng tin, vì vậy chúng ta phải quản lý hành động của họ."
+              "explanation": "regulate: quản lý, điều chỉnh. Những người ở bộ phận này không đáng tin, vì vậy chúng ta phải quản lý hành động của họ.",
+              "correctAnswer": "C"
             },
             {
               "id": "e2b4",
-              "content": "14. There are many things to consider about the car, ____________",
+              "content": "There are many things to consider about the car, ____________",
               "options": [
                 "but the flowers multiplied fast",
                 "but the most important factor is its price",
                 "but his brother is more of an intellectual",
                 "so dad thought it was genetic"
               ],
-              "correctAnswer": "B",
-              "explanation": "factor: yếu tố. Có nhiều điều cần xem xét về chiếc xe, nhưng yếu tố quan trọng nhất là giá của nó."
+              "explanation": "factor: yếu tố. Có nhiều điều cần xem xét về chiếc xe, nhưng yếu tố quan trọng nhất là giá của nó.",
+              "correctAnswer": "B"
             },
             {
               "id": "e2b5",
-              "content": "15. The sisters both had the strange disease, ____________",
+              "content": "The sisters both had the strange disease, ____________",
               "options": [
                 "but it caused a lot of controversy",
                 "so we must regulate their actions",
                 "so dad thought it was genetic",
                 "but the majority wanted hamburgers"
               ],
-              "correctAnswer": "C",
-              "explanation": "genetic: mang tính di truyền. Cả hai chị em đều mắc căn bệnh lạ, nên bố nghĩ nó là do di truyền."
+              "explanation": "genetic: mang tính di truyền. Cả hai chị em đều mắc căn bệnh lạ, nên bố nghĩ nó là do di truyền.",
+              "correctAnswer": "C"
             },
             {
               "id": "e2b6",
-              "content": "16. James thought he made the right choice, ____________",
+              "content": "James thought he made the right choice, ____________",
               "options": [
                 "but it caused a lot of controversy",
                 "since the news isn't accurate",
                 "but the most important factor is its price",
                 "but her offspring are very tall"
               ],
-              "correctAnswer": "A",
-              "explanation": "controversy: sự tranh cãi. James nghĩ rằng anh ấy đã chọn đúng, nhưng nó đã gây ra rất nhiều tranh cãi."
+              "explanation": "controversy: sự tranh cãi. James nghĩ rằng anh ấy đã chọn đúng, nhưng nó đã gây ra rất nhiều tranh cãi.",
+              "correctAnswer": "A"
             },
             {
               "id": "e2b7",
-              "content": "17. Pam served steak and potatoes to Ben, ____________",
+              "content": "Pam served steak and potatoes to Ben, ____________",
               "options": [
                 "but the flowers multiplied fast",
                 "but his brother is more of an intellectual",
                 "so we must regulate their actions",
                 "but she didn't know he was a vegetarian"
               ],
-              "correctAnswer": "D",
-              "explanation": "vegetarian: người ăn chay. Pam phục vụ bít tết và khoai tây cho Ben, nhưng cô không biết anh là người ăn chay."
+              "explanation": "vegetarian: người ăn chay. Pam phục vụ bít tết và khoai tây cho Ben, nhưng cô không biết anh là người ăn chay.",
+              "correctAnswer": "D"
             },
             {
               "id": "e2b8",
-              "content": "18. Alice is a short woman, ____________",
+              "content": "Alice is a short woman, ____________",
               "options": [
                 "but her offspring are very tall",
                 "but it caused a lot of controversy",
                 "since the news isn't accurate",
                 "so dad thought it was genetic"
               ],
-              "correctAnswer": "A",
-              "explanation": "offspring: con cái. Alice là một phụ nữ thấp bé, nhưng con cái của cô ấy lại rất cao."
+              "explanation": "offspring: con cái. Alice là một phụ nữ thấp bé, nhưng con cái của cô ấy lại rất cao.",
+              "correctAnswer": "A"
             },
             {
               "id": "e2b9",
-              "content": "19. I thought it would take weeks for them to grow, ____________",
+              "content": "I thought it would take weeks for them to grow, ____________",
               "options": [
                 "but the flowers multiplied fast",
                 "but she didn't know he was a vegetarian",
                 "but the most important factor is its price",
                 "but his brother is more of an intellectual"
               ],
-              "correctAnswer": "A",
-              "explanation": "multiplied: nhân lên, phát triển. Tôi nghĩ sẽ mất nhiều tuần để chúng lớn lên, nhưng hoa phát triển rất nhanh."
+              "explanation": "multiplied: nhân lên, phát triển. Tôi nghĩ sẽ mất nhiều tuần để chúng lớn lên, nhưng hoa phát triển rất nhanh.",
+              "correctAnswer": "A"
             },
             {
               "id": "e2b10",
-              "content": "20. Daniel loves sports and parties, ____________",
+              "content": "Daniel loves sports and parties, ____________",
               "options": [
                 "so dad thought it was genetic",
                 "but his brother is more of an intellectual",
                 "but her offspring are very tall",
                 "but the majority wanted hamburgers"
               ],
-              "correctAnswer": "B",
-              "explanation": "intellectual: người trí thức. Daniel thích thể thao và tiệc tùng, nhưng anh trai cậu lại là một người trí thức."
+              "explanation": "intellectual: người trí thức. Daniel thích thể thao và tiệc tùng, nhưng anh trai cậu lại là một người trí thức.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the Dinosaurs Really Died</h1><p style=\"margin-bottom: 1rem;\">Many scientists and <b>intellectuals</b> think that dinosaurs died when an <b>asteroid</b> smashed into the Earth millions of years ago. However, recently, there has been some <b>controversy</b> over this theory. Some scientists think that it isn't <b>accurate</b>. They think that a tiny insect may have been the biggest <b>factor</b> in the death of these huge creatures. That insect was the mosquito.</p><p style=\"margin-bottom: 1rem;\">These scientists do think that an <b>asteroid</b> hit the Earth at the time of the dinosaurs. But that wasn't what killed all of them. At that time, insects, including the mosquito, were beginning to <b>evolve</b>. Today, we can <b>regulate</b> the number of mosquitoes with <b>pesticides</b>. But that was impossible millions of years ago. The mosquitoes <b>multiplied</b> quickly. And they were certainly not idle. Since there were so many mosquitoes, it was easy for them to bite many of the dinosaurs. When they bit another living thing, the mosquitoes passed along a deadly disease. So the dinosaurs were <b>stricken</b> with the disease. A <b>vast</b> <b>majority</b> of them, from the <b>vegetarians</b> to the meat eaters, died.</p><p style=\"margin-bottom: 1rem;\">To <b>reinforce</b> this idea, scientists stress how gradually the dinosaurs died. If an <b>asteroid</b> killed them, they would have died very quickly. But the number of dinosaurs decreased slowly. In addition, scientists have found <b>genetic</b> material of mosquitoes in fossils. This material proves that mosquitoes existed back then. Although there may have been other <b>factors</b>, the dinosaurs died mainly because of disease, the scientists say.</p><p style=\"margin-bottom: 1rem;\">No matter how it happened, the dinosaurs' death had a major impact on other living things. Many dinosaurs ate <b>mammals</b>. After the dinosaurs died, <b>mammals</b> were able to <b>evolve</b> and produce <b>offspring</b>. Birds also <b>evolved</b>. Scientists have <b>analyzed</b> the <b>genomes</b> of birds, and they discovered that birds have <b>identical</b> <b>genetic</b> material to some dinosaurs. So there may still be dinosaurs among us after all.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How the Dinosaurs Really Died</h1>        <p style=\"margin-bottom: 1rem;\">Many scientists and <b>intellectuals</b> think that dinosaurs died when an <b>asteroid</b> smashed into the Earth millions of years ago. However, recently, there has been some <b>controversy</b> over this theory. Some scientists think that it isn't <b>accurate</b>. They think that a tiny insect may have been the biggest <b>factor</b> in the death of these huge creatures. That insect was the mosquito.</p>    <p style=\"margin-bottom: 1rem;\">These scientists do think that an <b>asteroid</b> hit the Earth at the time of the dinosaurs. But that wasn't what killed all of them. At that time, insects, including the mosquito, were beginning to <b>evolve</b>. Today, we can <b>regulate</b> the number of mosquitoes with <b>pesticides</b>. But that was impossible millions of years ago. The mosquitoes <b>multiplied</b> quickly. And they were certainly not idle. Since there were so many mosquitoes, it was easy for them to bite many of the dinosaurs. When they bit another living thing, the mosquitoes passed along a deadly disease. So the dinosaurs were <b>stricken</b> with the disease. A <b>vast</b> <b>majority</b> of them, from the <b>vegetarians</b> to the meat eaters, died.</p>    <p style=\"margin-bottom: 1rem;\">To <b>reinforce</b> this idea, scientists stress how gradually the dinosaurs died. If an <b>asteroid</b> killed them, they would have died very quickly. But the number of dinosaurs decreased slowly. In addition, scientists have found <b>genetic</b> material of mosquitoes in fossils. This material proves that mosquitoes existed back then. Although there may have been other <b>factors</b>, the dinosaurs died mainly because of disease, the scientists say.</p>    <p style=\"margin-bottom: 1rem;\">No matter how it happened, the dinosaurs' death had a major impact on other living things. Many dinosaurs ate <b>mammals</b>. After the dinosaurs died, <b>mammals</b> were able to <b>evolve</b> and produce <b>offspring</b>. Birds also <b>evolved</b>. Scientists have <b>analyzed</b> the <b>genomes</b> of birds, and they discovered that birds have <b>identical</b> <b>genetic</b> material to some dinosaurs. So there may still be dinosaurs among us after all.</p></div>",
       "imageUrl": "/unit23_vol4_story.png",
       "sections": [
         {
           "id": "sec3",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "1. Some scientists think the asteroid theory isn't accurate.",
+              "content": "Some scientists think the asteroid theory isn't accurate.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Thông tin trong bài: \"Some scientists think that it isn't accurate.\" (Một số nhà khoa học cho rằng giả thuyết tiểu hành tinh là không chính xác.)"
+              "explanation": "Thông tin trong bài: \"Some scientists think that it isn't accurate.\" (Một số nhà khoa học cho rằng giả thuyết tiểu hành tinh là không chính xác.)",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
-              "content": "2. A huge creature may have been the biggest factor in the death of these tiny insects.",
+              "content": "A huge creature may have been the biggest factor in the death of these tiny insects.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Theo bài viết: \"A tiny insect may have been the biggest factor in the death of these huge creatures.\" (Một loài côn trùng nhỏ bé có thể là yếu tố lớn nhất gây ra cái chết của những sinh vật khổng lồ này, chứ không phải ngược lại.)"
+              "explanation": "Theo bài viết: \"A tiny insect may have been the biggest factor in the death of these huge creatures.\" (Một loài côn trùng nhỏ bé có thể là yếu tố lớn nhất gây ra cái chết của những sinh vật khổng lồ này, chứ không phải ngược lại.)",
+              "correctAnswer": "B"
             },
             {
               "id": "13",
-              "content": "3. Today, we can regulate the number of mosquitoes with pesticides.",
+              "content": "Today, we can regulate the number of mosquitoes with pesticides.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Thông tin trong bài: \"Today, we can regulate the number of mosquitoes with pesticides.\" (Ngày nay, chúng ta có thể kiểm soát số lượng muỗi bằng thuốc trừ sâu.)"
+              "explanation": "Thông tin trong bài: \"Today, we can regulate the number of mosquitoes with pesticides.\" (Ngày nay, chúng ta có thể kiểm soát số lượng muỗi bằng thuốc trừ sâu.)",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
-              "content": "4. A vast majority of mosquitoes, from the vegetarians to the meat eaters, died.",
+              "content": "A vast majority of mosquitoes, from the vegetarians to the meat eaters, died.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bài viết nói: \"A vast majority of them (dinosaurs), from the vegetarians to the meat eaters, died.\" (Đại đa số khủng long chết, chứ không phải muỗi.)"
+              "explanation": "Bài viết nói: \"A vast majority of them (dinosaurs), from the vegetarians to the meat eaters, died.\" (Đại đa số khủng long chết, chứ không phải muỗi.)",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
-              "content": "5. In addition, scientists have found the genetic material of mammals in fossils.",
+              "content": "In addition, scientists have found the genetic material of mammals in fossils.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Theo bài: \"In addition, scientists have found genetic material of mosquitoes in fossils.\" (Các nhà khoa học tìm thấy vật liệu di truyền của muỗi trong hóa thạch, không phải của động vật có vú.)"
+              "explanation": "Theo bài: \"In addition, scientists have found genetic material of mosquitoes in fossils.\" (Các nhà khoa học tìm thấy vật liệu di truyền của muỗi trong hóa thạch, không phải của động vật có vú.)",
+              "correctAnswer": "B"
             },
             {
               "id": "16",
-              "content": "6. Many dinosaurs ate mammals.",
+              "content": "Many dinosaurs ate mammals.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Thông tin trong bài: \"Many dinosaurs ate mammals.\" (Nhiều con khủng long đã ăn động vật có vú.)"
+              "explanation": "Thông tin trong bài: \"Many dinosaurs ate mammals.\" (Nhiều con khủng long đã ăn động vật có vú.)",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "17",
-              "content": "1. What might have been the biggest factor in the dinosaurs' death?",
+              "content": "What might have been the biggest factor in the dinosaurs' death?",
               "options": [
                 "Their genetic material",
                 "An asteroid",
                 "Other animals",
                 "Mosquitoes"
               ],
-              "correctAnswer": "D",
-              "explanation": "Dựa vào đoạn đầu: \"They think that a tiny insect may have been the biggest factor... That insect was the mosquito.\" (Họ nghĩ rằng một loài côn trùng nhỏ bé có thể là yếu tố lớn nhất... Đó là muỗi.)"
+              "explanation": "Dựa vào đoạn đầu: \"They think that a tiny insect may have been the biggest factor... That insect was the mosquito.\" (Họ nghĩ rằng một loài côn trùng nhỏ bé có thể là yếu tố lớn nhất... Đó là muỗi.)",
+              "correctAnswer": "D"
             },
             {
               "id": "18",
-              "content": "2. What do we do to regulate the number of mosquitoes?",
+              "content": "What do we do to regulate the number of mosquitoes?",
               "options": [
                 "We use pesticides.",
                 "We feed them to vegetarians.",
                 "We kill their offspring.",
                 "We analyze their genomes."
               ],
-              "correctAnswer": "A",
-              "explanation": "Dựa vào đoạn 2: \"Today, we can regulate the number of mosquitoes with pesticides.\" (Ngày nay, chúng ta dùng thuốc trừ sâu để kiểm soát số lượng muỗi.)"
+              "explanation": "Dựa vào đoạn 2: \"Today, we can regulate the number of mosquitoes with pesticides.\" (Ngày nay, chúng ta dùng thuốc trừ sâu để kiểm soát số lượng muỗi.)",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
-              "content": "3. How did the mosquitoes spread the deadly disease?",
+              "content": "How did the mosquitoes spread the deadly disease?",
               "options": [
                 "They produced offspring.",
                 "They bit many dinosaurs.",
                 "They ate birds.",
                 "They multiplied quickly."
               ],
-              "correctAnswer": "B",
-              "explanation": "Dựa vào đoạn 2: \"Since there were so many mosquitoes, it was easy for them to bite many of the dinosaurs. When they bit another living thing, the mosquitoes passed along a deadly disease.\" (Muỗi cắn nhiều khủng long và truyền bệnh chết người.)"
+              "explanation": "Dựa vào đoạn 2: \"Since there were so many mosquitoes, it was easy for them to bite many of the dinosaurs. When they bit another living thing, the mosquitoes passed along a deadly disease.\" (Muỗi cắn nhiều khủng long và truyền bệnh chết người.)",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
-              "content": "4. What proves that mosquitoes were around at the same time as dinosaurs?",
+              "content": "What proves that mosquitoes were around at the same time as dinosaurs?",
               "options": [
                 "Genetic material in fossils",
                 "Similar modern insects",
                 "Asteroids that hit the Earth",
                 "Genomes of birds"
               ],
-              "correctAnswer": "A",
-              "explanation": "Dựa vào đoạn 3: \"scientists have found genetic material of mosquitoes in fossils. This material proves that mosquitoes existed back then.\" (Vật liệu di truyền của muỗi trong hóa thạch chứng minh chúng đã tồn tại vào thời điểm đó.)"
+              "explanation": "Dựa vào đoạn 3: \"scientists have found genetic material of mosquitoes in fossils. This material proves that mosquitoes existed back then.\" (Vật liệu di truyền của muỗi trong hóa thạch chứng minh chúng đã tồn tại vào thời điểm đó.)",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

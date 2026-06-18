@@ -16,390 +16,390 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1 - Part A: Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. thorn",
+              "content": "thorn",
               "options": [
                 "a sharp part on a plant",
                 "a captain on a ship",
                 "someone who serves food",
                 "a piece of wood that moves a boat"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"thorn\" có nghĩa là cái gai. Chọn a. a sharp part on a plant (phần sắc nhọn trên cây)."
+              "explanation": "\"thorn\" có nghĩa là cái gai. Chọn a. a sharp part on a plant (phần sắc nhọn trên cây).",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
-              "content": "2. arc",
+              "content": "arc",
               "options": [
                 "a thin rope",
                 "a part of your mind",
                 "a circle in a rope",
                 "a curved shape"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"arc\" có nghĩa là hình cung. Chọn d. a curved shape (hình dạng cong)."
+              "explanation": "\"arc\" có nghĩa là hình cung. Chọn d. a curved shape (hình dạng cong).",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
-              "content": "3. raft",
+              "content": "raft",
               "options": [
                 "a waiter",
                 "an undesirable event",
                 "on fire",
                 "a floating platform"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"raft\" có nghĩa là cái bè. Chọn d. a floating platform (một nền tảng nổi)."
+              "explanation": "\"raft\" có nghĩa là cái bè. Chọn d. a floating platform (một nền tảng nổi).",
+              "correctAnswer": "D"
             },
             {
               "id": "4",
-              "content": "4. hay",
+              "content": "hay",
               "options": [
                 "oil",
                 "dry grass",
                 "a piece of wood in the ground",
                 "a fruit"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"hay\" có nghĩa là cỏ khô. Chọn b. dry grass (cỏ khô)."
+              "explanation": "\"hay\" có nghĩa là cỏ khô. Chọn b. dry grass (cỏ khô).",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
-              "content": "5. character",
+              "content": "character",
               "options": [
                 "where something is bought",
                 "personality",
                 "difficulties",
                 "skin and muscle"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"character\" có nghĩa là tính cách. Chọn b. personality (tính cách)."
+              "explanation": "\"character\" có nghĩa là tính cách. Chọn b. personality (tính cách).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 1 - Part B: Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "1. a piece of wood in the ground",
+              "content": "a piece of wood in the ground",
               "options": [
                 "admiral",
                 "flesh",
                 "stake",
                 "loop"
               ],
-              "correctAnswer": "C",
-              "explanation": "\"stake\" là cái cọc (một thanh gỗ cắm xuống đất). Chọn c."
+              "explanation": "\"stake\" là cái cọc (một thanh gỗ cắm xuống đất). Chọn c.",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
-              "content": "2. frightened",
+              "content": "frightened",
               "options": [
                 "wrecked",
                 "horrified",
                 "fiery",
                 "sour"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"horrified\" có nghĩa là hoảng sợ, kinh hoàng. Chọn b."
+              "explanation": "\"horrified\" có nghĩa là hoảng sợ, kinh hoàng. Chọn b.",
+              "correctAnswer": "B"
             },
             {
               "id": "8",
-              "content": "3. a curved shape",
+              "content": "a curved shape",
               "options": [
                 "arc",
                 "hay",
                 "kerosene",
                 "string"
               ],
-              "correctAnswer": "A",
-              "explanation": "\"arc\" là hình cung (hình dạng cong). Chọn a."
+              "explanation": "\"arc\" là hình cung (hình dạng cong). Chọn a.",
+              "correctAnswer": "A"
             },
             {
               "id": "9",
-              "content": "4. part of your mind that stops you from doing bad things",
+              "content": "part of your mind that stops you from doing bad things",
               "options": [
                 "character",
                 "conscience",
                 "accident",
                 "steward"
               ],
-              "correctAnswer": "B",
-              "explanation": "\"conscience\" là lương tâm (phần tâm trí ngăn bạn làm điều xấu). Chọn b."
+              "explanation": "\"conscience\" là lương tâm (phần tâm trí ngăn bạn làm điều xấu). Chọn b.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
-              "content": "5. something you use to move a boat",
+              "content": "something you use to move a boat",
               "options": [
                 "thorn",
                 "raft",
                 "grapefruit",
                 "paddle"
               ],
-              "correctAnswer": "D",
-              "explanation": "\"paddle\" là mái chèo (vật dùng để di chuyển thuyền). Chọn d."
+              "explanation": "\"paddle\" là mái chèo (vật dùng để di chuyển thuyền). Chọn d.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Điền từ",
           "questions": [
             {
               "id": "11",
-              "content": "1. Tom was promoted, and now he is an ____ (important sea officer that controls military ships).",
+              "content": "Tom was promoted, and now he is an ____ (important sea officer that controls military ships).",
               "options": [],
-              "correctAnswer": "admiral",
-              "explanation": "\"an important sea officer that controls military ships\" (một sĩ quan hải quân quan trọng điều khiển tàu quân sự) có nghĩa là \"admiral\" (đô đốc)."
+              "explanation": "\"an important sea officer that controls military ships\" (một sĩ quan hải quân quan trọng điều khiển tàu quân sự) có nghĩa là \"admiral\" (đô đốc).",
+              "correctAnswer": "admiral"
             },
             {
               "id": "12",
-              "content": "2. Some people thought that the meal was too ____ (sharp and unpleasant tasting).",
+              "content": "Some people thought that the meal was too ____ (sharp and unpleasant tasting).",
               "options": [],
-              "correctAnswer": "sour",
-              "explanation": "\"sharp and unpleasant tasting\" (có vị gắt và khó chịu) có nghĩa là \"sour\" (chua)."
+              "explanation": "\"sharp and unpleasant tasting\" (có vị gắt và khó chịu) có nghĩa là \"sour\" (chua).",
+              "correctAnswer": "sour"
             },
             {
               "id": "13",
-              "content": "3. The ____ (oil in lamps and stoves) is a very cheap form of heat.",
+              "content": "The ____ (oil in lamps and stoves) is a very cheap form of heat.",
               "options": [],
-              "correctAnswer": "kerosene",
-              "explanation": "\"oil in lamps and stoves\" (dầu dùng trong đèn và bếp) có nghĩa là \"kerosene\" (dầu hỏa)."
+              "explanation": "\"oil in lamps and stoves\" (dầu dùng trong đèn và bếp) có nghĩa là \"kerosene\" (dầu hỏa).",
+              "correctAnswer": "kerosene"
             },
             {
               "id": "14",
-              "content": "4. Why did you steal the woman's bag? Don't you have a ____ (mind that understands what is wrong)?",
+              "content": "Why did you steal the woman's bag? Don't you have a ____ (mind that understands what is wrong)?",
               "options": [],
-              "correctAnswer": "conscience",
-              "explanation": "\"a mind that understands what is wrong\" (tâm trí hiểu được điều gì là sai trái) là \"conscience\" (lương tâm)."
+              "explanation": "\"a mind that understands what is wrong\" (tâm trí hiểu được điều gì là sai trái) là \"conscience\" (lương tâm).",
+              "correctAnswer": "conscience"
             },
             {
               "id": "15",
-              "content": "5. Can you buy three yellow ____ (pieces of fruit that are like oranges) from the supermarket please?",
+              "content": "Can you buy three yellow ____ (pieces of fruit that are like oranges) from the supermarket please?",
               "options": [],
-              "correctAnswer": "grapefruits",
-              "explanation": "\"pieces of fruit that are like oranges\" (những quả giống như cam) là \"grapefruits\" (quả bưởi tây)."
+              "explanation": "\"pieces of fruit that are like oranges\" (những quả giống như cam) là \"grapefruits\" (quả bưởi tây).",
+              "correctAnswer": "grapefruits"
             },
             {
               "id": "16",
-              "content": "6. I hope that the ____ (waiter on the plane) will bring some water soon.",
+              "content": "I hope that the ____ (waiter on the plane) will bring some water soon.",
               "options": [],
-              "correctAnswer": "steward",
-              "explanation": "\"waiter on the plane\" (người phục vụ trên máy bay) là \"steward\" (tiếp viên)."
+              "explanation": "\"waiter on the plane\" (người phục vụ trên máy bay) là \"steward\" (tiếp viên).",
+              "correctAnswer": "steward"
             },
             {
               "id": "17",
-              "content": "7. After lightning struck the tree, the forest turned into a ____ (burning blaze).",
+              "content": "After lightning struck the tree, the forest turned into a ____ (burning blaze).",
               "options": [],
-              "correctAnswer": "fiery",
-              "explanation": "\"burning blaze\" (ngọn lửa đang bốc cháy) tương ứng với tính từ \"fiery\" (bốc cháy dữ dội)."
+              "explanation": "\"burning blaze\" (ngọn lửa đang bốc cháy) tương ứng với tính từ \"fiery\" (bốc cháy dữ dội).",
+              "correctAnswer": "fiery"
             },
             {
               "id": "18",
-              "content": "8. Use this ____ (thin rope) to tie the package.",
+              "content": "Use this ____ (thin rope) to tie the package.",
               "options": [],
-              "correctAnswer": "string",
-              "explanation": "\"thin rope\" (sợi dây thừng mỏng) có nghĩa là \"string\" (sợi dây)."
+              "explanation": "\"thin rope\" (sợi dây thừng mỏng) có nghĩa là \"string\" (sợi dây).",
+              "correctAnswer": "string"
             },
             {
               "id": "19",
-              "content": "9. I cleaned the rabbit's cage and left some ____ (dry grass) for it to eat.",
+              "content": "I cleaned the rabbit's cage and left some ____ (dry grass) for it to eat.",
               "options": [],
-              "correctAnswer": "hay",
-              "explanation": "\"dry grass\" (cỏ khô) có nghĩa là \"hay\"."
+              "explanation": "\"dry grass\" (cỏ khô) có nghĩa là \"hay\".",
+              "correctAnswer": "hay"
             },
             {
               "id": "20",
-              "content": "10. I threw the ball through the ____ (line in the shape of a circle).",
+              "content": "I threw the ball through the ____ (line in the shape of a circle).",
               "options": [],
-              "correctAnswer": "loop",
-              "explanation": "\"line in the shape of a circle\" (sợi dây có hình vòng tròn) có nghĩa là \"loop\" (vòng lặp)."
+              "explanation": "\"line in the shape of a circle\" (sợi dây có hình vòng tròn) có nghĩa là \"loop\" (vòng lặp).",
+              "correctAnswer": "loop"
             }
-          ]
+          ],
+          "questionType": "Điền từ"
         },
         {
           "id": "sec4_wordlist",
           "title": "Exercise 3: Fill in the blanks with the correct words from the word bank.",
           "content": "Word bank: character, accident, flesh, stake, wreck",
-          "questionType": "Điền từ",
           "questions": [
             {
               "id": "21",
-              "content": "1. I'm going to tie the cow to a ____ in the ground.",
+              "content": "I'm going to tie the cow to a ____ in the ground.",
               "options": [],
-              "correctAnswer": "stake",
-              "explanation": "\"stake\" là cái cọc. (Tôi sẽ buộc con bò vào một cái cọc trên mặt đất.)"
+              "explanation": "\"stake\" là cái cọc. (Tôi sẽ buộc con bò vào một cái cọc trên mặt đất.)",
+              "correctAnswer": "stake"
             },
             {
               "id": "22",
-              "content": "2. You shouldn't eat the chicken. The ____ is still pink.",
+              "content": "You shouldn't eat the chicken. The ____ is still pink.",
               "options": [],
-              "correctAnswer": "flesh",
-              "explanation": "\"flesh\" là thịt (của động vật). (Bạn không nên ăn thịt gà này. Thịt vẫn còn màu hồng.)"
+              "explanation": "\"flesh\" là thịt (của động vật). (Bạn không nên ăn thịt gà này. Thịt vẫn còn màu hồng.)",
+              "correctAnswer": "flesh"
             },
             {
               "id": "23",
-              "content": "3. New drivers are more likely to ____ their cars than experienced drivers.",
+              "content": "New drivers are more likely to ____ their cars than experienced drivers.",
               "options": [],
-              "correctAnswer": "wreck",
-              "explanation": "\"wreck\" là phá hủy, làm hỏng. (Những người mới lái xe dễ làm hỏng xe của họ hơn những người lái xe có kinh nghiệm.)"
+              "explanation": "\"wreck\" là phá hủy, làm hỏng. (Những người mới lái xe dễ làm hỏng xe của họ hơn những người lái xe có kinh nghiệm.)",
+              "correctAnswer": "wreck"
             },
             {
               "id": "24",
-              "content": "4. Many people were hurt in the boating ____.",
+              "content": "Many people were hurt in the boating ____.",
               "options": [],
-              "correctAnswer": "accident",
-              "explanation": "\"accident\" là tai nạn. (Nhiều người bị thương trong vụ tai nạn chèo thuyền.)"
+              "explanation": "\"accident\" là tai nạn. (Nhiều người bị thương trong vụ tai nạn chèo thuyền.)",
+              "correctAnswer": "accident"
             },
             {
               "id": "25",
-              "content": "5. My brother has a very friendly and cheerful ____.",
+              "content": "My brother has a very friendly and cheerful ____.",
               "options": [],
-              "correctAnswer": "character",
-              "explanation": "\"character\" là tính cách. (Anh trai tôi có tính cách rất thân thiện và vui vẻ.)"
+              "explanation": "\"character\" là tính cách. (Anh trai tôi có tính cách rất thân thiện và vui vẻ.)",
+              "correctAnswer": "character"
             }
-          ]
+          ],
+          "questionType": "Điền từ"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Monkey Island</h1><p style=\"margin-bottom: 2rem;\">In the middle of the ocean, there is a small island shaped like an <b>arc</b>. Here, monkeys play on the beach and in the trees. But how did the monkeys get there?</p><p style=\"margin-bottom: 2rem;\">Once, an English <b>admiral</b> was exploring Africa when he found hundreds of monkeys. The admiral's <b>character</b> was mean. He thought, \"I could sell these monkeys and become very rich! I'm going to take them to England.\"</p><p style=\"margin-bottom: 2rem;\">So the admiral set traps to catch the monkeys. He put <b>stakes</b> in the ground, tied <b>string</b> around them and made <b>loops</b> in the <b>string</b>. When the monkeys ran through the forest, their feet got caught in the <b>loops</b>, and they couldn't escape. Then the <b>admiral</b> put the monkeys in cages on his ship and sailed away.</p><p style=\"margin-bottom: 2rem;\">The cages were small and uncomfortable. There was no soft <b>hay</b> for the monkeys to sleep on. Instead, they slept on branches with sharp <b>thorns</b> that cut into the monkeys' <b>flesh</b>. For dinner, he gave them tiny pieces of <b>sour</b> <b>grapefruit</b> to eat. The monkeys grew hungry and weak.</p><p style=\"margin-bottom: 2rem;\">But one day, the <b>admiral</b> hired a new <b>steward</b>. He was a kind man with a good <b>conscience</b>. He was <b>horrified</b> to see the thin monkeys in the cages. So one night he let them out.</p><p style=\"margin-bottom: 2rem;\">The monkeys ran and played all over the ship! They attacked the <b>admiral</b> and the <b>steward</b> and ate their food. They completely <b>wrecked</b> the ship. One monkey ran into a <b>kerosene</b> lamp, and it fell over. The ship caught fire and began to sink! The whole crew was lost except for the monkeys.</p><p style=\"margin-bottom: 2rem;\">After the <b>accident</b>, the monkeys jumped onto a <b>raft</b>. They floated away from the <b>fiery</b> blaze of the ship. In the morning, they saw a little island in the distance. The monkeys used a piece of wood as a <b>paddle</b>, and they went toward it. They found the island shaped like an <b>arc</b>. They felt so happy to find a new home, and they still live there today.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Monkey Island</h1>        <p style=\"margin-bottom: 1rem;\">In the middle of the ocean, there is a small island shaped like an <b>arc</b>. Here, monkeys play on the beach and in the trees. But how did the monkeys get there?</p>    <p style=\"margin-bottom: 1rem;\">Once, an English <b>admiral</b> was exploring Africa when he found hundreds of monkeys. The admiral's <b>character</b> was mean. He thought, \"I could sell these monkeys and become very rich! I'm going to take them to England.\"</p>    <p style=\"margin-bottom: 1rem;\">So the admiral set traps to catch the monkeys. He put <b>stakes</b> in the ground, tied <b>string</b> around them and made <b>loops</b> in the <b>string</b>. When the monkeys ran through the forest, their feet got caught in the <b>loops</b>, and they couldn't escape. Then the <b>admiral</b> put the monkeys in cages on his ship and sailed away.</p>    <p style=\"margin-bottom: 1rem;\">The cages were small and uncomfortable. There was no soft <b>hay</b> for the monkeys to sleep on. Instead, they slept on branches with sharp <b>thorns</b> that cut into the monkeys' <b>flesh</b>. For dinner, he gave them tiny pieces of <b>sour</b> <b>grapefruit</b> to eat. The monkeys grew hungry and weak.</p>    <p style=\"margin-bottom: 1rem;\">But one day, the <b>admiral</b> hired a new <b>steward</b>. He was a kind man with a good <b>conscience</b>. He was <b>horrified</b> to see the thin monkeys in the cages. So one night he let them out.</p>    <p style=\"margin-bottom: 1rem;\">The monkeys ran and played all over the ship! They attacked the <b>admiral</b> and the <b>steward</b> and ate their food. They completely <b>wrecked</b> the ship. One monkey ran into a <b>kerosene</b> lamp, and it fell over. The ship caught fire and began to sink! The whole crew was lost except for the monkeys.</p>    <p style=\"margin-bottom: 1rem;\">After the <b>accident</b>, the monkeys jumped onto a <b>raft</b>. They floated away from the <b>fiery</b> blaze of the ship. In the morning, they saw a little island in the distance. The monkeys used a piece of wood as a <b>paddle</b>, and they went toward it. They found the island shaped like an <b>arc</b>. They felt so happy to find a new home, and they still live there today.</p></div>",
       "imageUrl": "/unit2_vol4_story.png",
       "sections": [
         {
           "id": "sec5_reading",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
-              "content": "1. The admiral thought that selling the monkeys would make him rich.",
+              "content": "The admiral thought that selling the monkeys would make him rich.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "T. Dựa vào đoạn văn: 'He thought, \"I could sell these monkeys and become very rich!\"'"
+              "explanation": "T. Dựa vào đoạn văn: 'He thought, \"I could sell these monkeys and become very rich!\"'",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
-              "content": "2. The admiral caught the monkeys using loops of string and stakes.",
+              "content": "The admiral caught the monkeys using loops of string and stakes.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "T. Theo đoạn văn: \"He put stakes in the ground, tied string around them and made loops in the string.\""
+              "explanation": "T. Theo đoạn văn: \"He put stakes in the ground, tied string around them and made loops in the string.\"",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
-              "content": "3. The admiral put hay in the monkeys' cages.",
+              "content": "The admiral put hay in the monkeys' cages.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "F. Theo đoạn văn: \"There was no soft hay for the monkeys to sleep on. Instead, they slept on branches with sharp thorns...\" Câu sửa lại: The admiral put branches with sharp thorns in the monkeys' cages."
+              "explanation": "F. Theo đoạn văn: \"There was no soft hay for the monkeys to sleep on. Instead, they slept on branches with sharp thorns...\" Câu sửa lại: The admiral put branches with sharp thorns in the monkeys' cages.",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "4. The steward had no conscience.",
+              "content": "The steward had no conscience.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "F. Theo đoạn văn: \"He was a kind man with a good conscience.\" Câu sửa lại: The steward had a good conscience."
+              "explanation": "F. Theo đoạn văn: \"He was a kind man with a good conscience.\" Câu sửa lại: The steward had a good conscience.",
+              "correctAnswer": "B"
             },
             {
               "id": "30",
-              "content": "5. The admiral was horrified because the monkeys were muscular.",
+              "content": "The admiral was horrified because the monkeys were muscular.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "B",
-              "explanation": "F. Theo đoạn văn: \"He [the steward] was horrified to see the thin monkeys in the cages.\" Câu sửa lại: The steward was horrified because the monkeys were thin and weak."
+              "explanation": "F. Theo đoạn văn: \"He [the steward] was horrified to see the thin monkeys in the cages.\" Câu sửa lại: The steward was horrified because the monkeys were thin and weak.",
+              "correctAnswer": "B"
             },
             {
               "id": "31",
-              "content": "6. The monkeys jumped on a raft after the accident.",
+              "content": "The monkeys jumped on a raft after the accident.",
               "options": [
                 "T",
                 "F"
               ],
-              "correctAnswer": "A",
-              "explanation": "T. Theo đoạn văn: \"After the accident, the monkeys jumped onto a raft.\""
+              "explanation": "T. Theo đoạn văn: \"After the accident, the monkeys jumped onto a raft.\"",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6_reading",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
-              "content": "1. Which adjective describes the admiral's character?",
+              "content": "Which adjective describes the admiral's character?",
               "options": [
                 "Generous",
                 "Mean",
                 "Sour",
                 "Fiery"
               ],
-              "correctAnswer": "B",
-              "explanation": "Mean. Dựa vào đoạn văn: 'The admiral's character was mean.'"
+              "explanation": "Mean. Dựa vào đoạn văn: 'The admiral's character was mean.'",
+              "correctAnswer": "B"
             },
             {
               "id": "33",
-              "content": "2. Where did the admiral plan to take the monkeys?",
+              "content": "Where did the admiral plan to take the monkeys?",
               "options": [
                 "To the wrecked ship",
                 "To England",
                 "To an island",
                 "To Africa"
               ],
-              "correctAnswer": "B",
-              "explanation": "To England. Dựa vào đoạn văn: 'I\\'m going to take them to England.'"
+              "explanation": "To England. Dựa vào đoạn văn: 'I\\'m going to take them to England.'",
+              "correctAnswer": "B"
             },
             {
               "id": "34",
-              "content": "3. What did the monkeys eat while they were in the cages?",
+              "content": "What did the monkeys eat while they were in the cages?",
               "options": [
                 "Thorns",
                 "Hay",
                 "Grapefruit",
                 "Flesh"
               ],
-              "correctAnswer": "C",
-              "explanation": "Grapefruit. Dựa vào đoạn văn: 'For dinner, he gave them tiny pieces of sour grapefruit to eat.'"
+              "explanation": "Grapefruit. Dựa vào đoạn văn: 'For dinner, he gave them tiny pieces of sour grapefruit to eat.'",
+              "correctAnswer": "C"
             },
             {
               "id": "35",
-              "content": "4. What shape was the island that the monkeys found?",
+              "content": "What shape was the island that the monkeys found?",
               "options": [
                 "A paddle",
                 "An arc",
                 "A circle",
                 "A rope"
               ],
-              "correctAnswer": "B",
-              "explanation": "An arc. Dựa vào đoạn văn: 'They found the island shaped like an arc.'"
+              "explanation": "An arc. Dựa vào đoạn văn: 'They found the island shaped like an arc.'",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

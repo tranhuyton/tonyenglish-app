@@ -16,385 +16,385 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q1",
-              "content": "1. I had the ___________ of going with them or staying home. I felt like an __________ for the choice I made.",
+              "content": "I had the ___________ of going with them or staying home. I felt like an __________ for the choice I made.",
               "options": [
                 "idiot / option",
                 "option / idiot",
                 "option / immense",
                 "immense / idiot"
               ],
-              "correctAnswer": "B",
-              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2."
+              "explanation": "option (lựa chọn) phù hợp với vế 1, idiot (kẻ ngốc) phù hợp với vế 2.",
+              "correctAnswer": "B"
             },
             {
               "id": "q2",
-              "content": "2. Because he liked to ___________ the kitten by pouring water on it, the boy's mother ___________ him for his cruel behavior.",
+              "content": "Because he liked to ___________ the kitten by pouring water on it, the boy's mother ___________ him for his cruel behavior.",
               "options": [
                 "admonished / torment",
                 "torment / perfect",
                 "torment / admonished",
                 "admonished / brag"
               ],
-              "correctAnswer": "C",
-              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2."
+              "explanation": "torment (hành hạ) phù hợp với vế 1, admonished (khiển trách) phù hợp với vế 2.",
+              "correctAnswer": "C"
             },
             {
               "id": "q3",
-              "content": "3. It was difficult to ___________ the dog's location because its cries ___________ off of the hills.",
+              "content": "It was difficult to ___________ the dog's location because its cries ___________ off of the hills.",
               "options": [
                 "echoed / pinpoint",
                 "pinpoint / echoed",
                 "pinpoint / switch",
                 "switch / echoed"
               ],
-              "correctAnswer": "B",
-              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2."
+              "explanation": "pinpoint (xác định chính xác) phù hợp với vế 1, echoed (vang dội) phù hợp với vế 2.",
+              "correctAnswer": "B"
             },
             {
               "id": "q4",
-              "content": "4. My sister likes to ___________ about how my mother and father think her behavior is ___________.",
+              "content": "My sister likes to ___________ about how my mother and father think her behavior is ___________.",
               "options": [
                 "brag / perfect",
                 "perfect / brag",
                 "perfect / eventual",
                 "brag / eventual"
               ],
-              "correctAnswer": "A",
-              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2."
+              "explanation": "brag (khoác lác) phù hợp với vế 1, perfect (hoàn hảo) phù hợp với vế 2.",
+              "correctAnswer": "A"
             },
             {
               "id": "q5",
-              "content": "5. When you ___________ the machine on, you need to ___________ because the machine is dangerous.",
+              "content": "When you ___________ the machine on, you need to ___________ because the machine is dangerous.",
               "options": [
                 "beware / switch",
                 "switch / beware",
                 "switch / conscious",
                 "conscious / beware"
               ],
-              "correctAnswer": "B",
-              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2."
+              "explanation": "switch (bật/tắt) phù hợp với vế 1, beware (cẩn thận) phù hợp với vế 2.",
+              "correctAnswer": "B"
             },
             {
               "id": "q6",
-              "content": "6. All of the accidents at the swimming pool led to the __________ closing of it and the end of a favorite summer __________.",
+              "content": "All of the accidents at the swimming pool led to the __________ closing of it and the end of a favorite summer __________.",
               "options": [
                 "eventual / pastime",
                 "pastime / eventual",
                 "pastime / awesome",
                 "eventual / awesome"
               ],
-              "correctAnswer": "A",
-              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2."
+              "explanation": "eventual (cuối cùng) phù hợp với vế 1, pastime (thú vui) phù hợp với vế 2.",
+              "correctAnswer": "A"
             },
             {
               "id": "q7",
-              "content": "7. The king wanted people to think that his power was __________ . He would put people in jail if they ___________ with him.",
+              "content": "The king wanted people to think that his power was __________ . He would put people in jail if they ___________ with him.",
               "options": [
                 "disagreed / awesome",
                 "awesome / disagreed",
                 "awesome / immense",
                 "disagreed / immense"
               ],
-              "correctAnswer": "B",
-              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2."
+              "explanation": "awesome (đáng kinh ngạc/đáng sợ) phù hợp với vế 1, disagreed (không đồng ý) phù hợp với vế 2.",
+              "correctAnswer": "B"
             },
             {
               "id": "q8",
-              "content": "8. Even though the little girl was trying to sneak up on her parents, her __________ steps made her parents ___________ of her.",
+              "content": "Even though the little girl was trying to sneak up on her parents, her __________ steps made her parents ___________ of her.",
               "options": [
                 "audible / conscious",
                 "conscious / audible",
                 "audible / thorough",
                 "conscious / thorough"
               ],
-              "correctAnswer": "A",
-              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2."
+              "explanation": "audible (có thể nghe thấy) phù hợp với vế 1, conscious (nhận thức) phù hợp với vế 2.",
+              "correctAnswer": "A"
             },
             {
               "id": "q9",
-              "content": "9. An ___________ tree fell across the road, forcing the travelers to take a more __________ route through the countryside.",
+              "content": "An ___________ tree fell across the road, forcing the travelers to take a more __________ route through the countryside.",
               "options": [
                 "indirect / immense",
                 "immense / indirect",
                 "immense / perfect",
                 "indirect / perfect"
               ],
-              "correctAnswer": "B",
-              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2."
+              "explanation": "immense (rất lớn) phù hợp với vế 1, indirect (gián tiếp/vòng vèo) phù hợp với vế 2.",
+              "correctAnswer": "B"
             },
             {
               "id": "q10",
-              "content": "10. The police could not find a single clue to the crime, which gave a ___________ as to how ___________ the thief had been.",
+              "content": "The police could not find a single clue to the crime, which gave a ___________ as to how ___________ the thief had been.",
               "options": [
                 "hint / thorough",
                 "thorough / hint",
                 "hint / option",
                 "thorough / option"
               ],
-              "correctAnswer": "A",
-              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2."
+              "explanation": "hint (gợi ý) phù hợp với vế 1, thorough (kỹ lưỡng) phù hợp với vế 2.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2: Part A Match the phrases to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q11",
-              "content": "1. You should beware",
+              "content": "You should beware",
               "options": [
                 "a. about which game was better",
                 "b. of the hole in the bridge",
                 "c. for talking during the test",
                 "d. was the reason for the bad smell"
               ],
-              "correctAnswer": "B",
-              "explanation": "beware of (cẩn thận với) phù hợp với 'the hole in the bridge'."
+              "explanation": "beware of (cẩn thận với) phù hợp với 'the hole in the bridge'.",
+              "correctAnswer": "B"
             },
             {
               "id": "q12",
-              "content": "2. My favorite pastime",
+              "content": "My favorite pastime",
               "options": [
                 "a. took an hour more to drive",
                 "b. fear that his home would be damaged",
                 "c. from her left hand to her right",
                 "d. is listening to music"
               ],
-              "correctAnswer": "D",
-              "explanation": "pastime (thú vui) phù hợp với 'listening to music'."
+              "explanation": "pastime (thú vui) phù hợp với 'listening to music'.",
+              "correctAnswer": "D"
             },
             {
               "id": "q13",
-              "content": "3. The doctor did a thorough check",
+              "content": "The doctor did a thorough check",
               "options": [
                 "a. about how good she is at sports",
                 "b. of the sick man's health",
                 "c. took an hour more to drive",
                 "d. fear that his home would be damaged"
               ],
-              "correctAnswer": "B",
-              "explanation": "thorough check (kiểm tra kỹ lưỡng) phù hợp với sức khỏe của bệnh nhân."
+              "explanation": "thorough check (kiểm tra kỹ lưỡng) phù hợp với sức khỏe của bệnh nhân.",
+              "correctAnswer": "B"
             },
             {
               "id": "q14",
-              "content": "4. The two friends disagreed",
+              "content": "The two friends disagreed",
               "options": [
                 "a. about which game was better",
                 "b. of the hole in the bridge",
                 "c. for talking during the test",
                 "d. was the reason for the bad smell"
               ],
-              "correctAnswer": "A",
-              "explanation": "disagreed about (không đồng tình về) phù hợp với việc trò chơi nào tốt hơn."
+              "explanation": "disagreed about (không đồng tình về) phù hợp với việc trò chơi nào tốt hơn.",
+              "correctAnswer": "A"
             },
             {
               "id": "q15",
-              "content": "5. She switched the bag",
+              "content": "She switched the bag",
               "options": [
                 "a. took an hour more to drive",
                 "b. fear that his home would be damaged",
                 "c. from her left hand to her right",
                 "d. is listening to music"
               ],
-              "correctAnswer": "C",
-              "explanation": "switched (chuyển đổi) từ tay trái sang tay phải."
+              "explanation": "switched (chuyển đổi) từ tay trái sang tay phải.",
+              "correctAnswer": "C"
             },
             {
               "id": "q16",
-              "content": "6. His proud sister brags",
+              "content": "His proud sister brags",
               "options": [
                 "a. about how good she is at sports",
                 "b. of the sick man's health",
                 "c. took an hour more to drive",
                 "d. fear that his home would be damaged"
               ],
-              "correctAnswer": "A",
-              "explanation": "brags about (khoe khoang về) khả năng chơi thể thao."
+              "explanation": "brags about (khoe khoang về) khả năng chơi thể thao.",
+              "correctAnswer": "A"
             },
             {
               "id": "q17",
-              "content": "7. An immense pile of garbage",
+              "content": "An immense pile of garbage",
               "options": [
                 "a. about which game was better",
                 "b. of the hole in the bridge",
                 "c. for talking during the test",
                 "d. was the reason for the bad smell"
               ],
-              "correctAnswer": "D",
-              "explanation": "immense pile of garbage (đống rác khổng lồ) là nguyên nhân gây mùi hôi."
+              "explanation": "immense pile of garbage (đống rác khổng lồ) là nguyên nhân gây mùi hôi.",
+              "correctAnswer": "D"
             },
             {
               "id": "q18",
-              "content": "8. The indirect route",
+              "content": "The indirect route",
               "options": [
                 "a. about how good she is at sports",
                 "b. of the sick man's health",
                 "c. took an hour more to drive",
                 "d. fear that his home would be damaged"
               ],
-              "correctAnswer": "C",
-              "explanation": "indirect route (đường vòng) mất thêm một giờ lái xe."
+              "explanation": "indirect route (đường vòng) mất thêm một giờ lái xe.",
+              "correctAnswer": "C"
             },
             {
               "id": "q19",
-              "content": "9. The awesome storm caused",
+              "content": "The awesome storm caused",
               "options": [
                 "a. about how good she is at sports",
                 "b. of the sick man's health",
                 "c. took an hour more to drive",
                 "d. fear that his home would be damaged"
               ],
-              "correctAnswer": "D",
-              "explanation": "awesome storm (cơn bão đáng sợ) gây ra nỗi sợ hãi."
+              "explanation": "awesome storm (cơn bão đáng sợ) gây ra nỗi sợ hãi.",
+              "correctAnswer": "D"
             },
             {
               "id": "q20",
-              "content": "10. She admonished the student",
+              "content": "She admonished the student",
               "options": [
                 "a. about which game was better",
                 "b. of the hole in the bridge",
                 "c. for talking during the test",
                 "d. was the reason for the bad smell"
               ],
-              "correctAnswer": "C",
-              "explanation": "admonished (khiển trách) học sinh vì nói chuyện trong giờ kiểm tra."
+              "explanation": "admonished (khiển trách) học sinh vì nói chuyện trong giờ kiểm tra.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 2: Part B Match the clauses to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q21",
-              "content": "1. He couldn't sleep at night",
+              "content": "He couldn't sleep at night",
               "options": [
                 "a. if they wanted to get a perfect grade",
                 "b. but he was conscious of the other boats",
                 "c. because bad dreams tormented him",
                 "d. then people might think you're an idiot"
               ],
-              "correctAnswer": "C",
-              "explanation": "bad dreams tormented him (những giấc mơ xấu hành hạ anh ta) khiến anh ta không thể ngủ."
+              "explanation": "bad dreams tormented him (những giấc mơ xấu hành hạ anh ta) khiến anh ta không thể ngủ.",
+              "correctAnswer": "C"
             },
             {
               "id": "q22",
-              "content": "2. We knew he broke his leg when he fell",
+              "content": "We knew he broke his leg when he fell",
               "options": [
                 "a. but it was just the echo of her voice",
                 "b. because there weren't any other options",
                 "c. so he could pinpoint his location in the wild",
                 "d. because the sound of the bone breaking was audible"
               ],
-              "correctAnswer": "D",
-              "explanation": "sound of the bone breaking was audible (tiếng gãy xương có thể nghe rõ)."
+              "explanation": "sound of the bone breaking was audible (tiếng gãy xương có thể nghe rõ).",
+              "correctAnswer": "D"
             },
             {
               "id": "q23",
-              "content": "3. He had to choose the blue car",
+              "content": "He had to choose the blue car",
               "options": [
                 "a. but it was just the echo of her voice",
                 "b. because there weren't any other options",
                 "c. so he could pinpoint his location in the wild",
                 "d. because the sound of the bone breaking was audible"
               ],
-              "correctAnswer": "B",
-              "explanation": "there weren't any other options (không còn lựa chọn nào khác)."
+              "explanation": "there weren't any other options (không còn lựa chọn nào khác).",
+              "correctAnswer": "B"
             },
             {
               "id": "q24",
-              "content": "4. The hiker always carried a compass and map,",
+              "content": "The hiker always carried a compass and map,",
               "options": [
                 "a. but it was just the echo of her voice",
                 "b. because there weren't any other options",
                 "c. so he could pinpoint his location in the wild",
                 "d. because the sound of the bone breaking was audible"
               ],
-              "correctAnswer": "C",
-              "explanation": "pinpoint his location (xác định vị trí chính xác) bằng la bàn và bản đồ."
+              "explanation": "pinpoint his location (xác định vị trí chính xác) bằng la bàn và bản đồ.",
+              "correctAnswer": "C"
             },
             {
               "id": "q25",
-              "content": "5. She didn't eat good food and didn't exercise,",
+              "content": "She didn't eat good food and didn't exercise,",
               "options": [
                 "a. and it led to her eventual illness",
                 "b. because they gave him so many hints",
                 "c. if they wanted to get a perfect grade",
                 "d. but he was conscious of the other boats"
               ],
-              "correctAnswer": "A",
-              "explanation": "led to her eventual illness (dẫn đến căn bệnh cuối cùng của cô ấy) do thói quen xấu."
+              "explanation": "led to her eventual illness (dẫn đến căn bệnh cuối cùng của cô ấy) do thói quen xấu.",
+              "correctAnswer": "A"
             },
             {
               "id": "q26",
-              "content": "6. The students had to answer all the questions correctly",
+              "content": "The students had to answer all the questions correctly",
               "options": [
                 "a. and it led to her eventual illness",
                 "b. because they gave him so many hints",
                 "c. if they wanted to get a perfect grade",
                 "d. but he was conscious of the other boats"
               ],
-              "correctAnswer": "C",
-              "explanation": "get a perfect grade (đạt điểm hoàn hảo) nếu trả lời đúng tất cả."
+              "explanation": "get a perfect grade (đạt điểm hoàn hảo) nếu trả lời đúng tất cả.",
+              "correctAnswer": "C"
             },
             {
               "id": "q27",
-              "content": "7. The captain did not see the ship approaching behind him,",
+              "content": "The captain did not see the ship approaching behind him,",
               "options": [
                 "a. and it led to her eventual illness",
                 "b. because they gave him so many hints",
                 "c. if they wanted to get a perfect grade",
                 "d. but he was conscious of the other boats"
               ],
-              "correctAnswer": "D",
-              "explanation": "conscious of the other boats (nhận thức được các thuyền khác)."
+              "explanation": "conscious of the other boats (nhận thức được các thuyền khác).",
+              "correctAnswer": "D"
             },
             {
               "id": "q28",
-              "content": "8. She thought someone was calling to her from the other cliff,",
+              "content": "She thought someone was calling to her from the other cliff,",
               "options": [
                 "a. because bad dreams tormented him",
                 "b. then people might think you're an idiot",
                 "c. but it was just the echo of her voice",
                 "d. because there weren't any other options"
               ],
-              "correctAnswer": "C",
-              "explanation": "echo of her voice (tiếng vang giọng nói của cô ấy)."
+              "explanation": "echo of her voice (tiếng vang giọng nói của cô ấy).",
+              "correctAnswer": "C"
             },
             {
               "id": "q29",
-              "content": "9. He knew his friends were having a surprise party for him",
+              "content": "He knew his friends were having a surprise party for him",
               "options": [
                 "a. and it led to her eventual illness",
                 "b. because they gave him so many hints",
                 "c. if they wanted to get a perfect grade",
                 "d. but he was conscious of the other boats"
               ],
-              "correctAnswer": "B",
-              "explanation": "gave him so many hints (đã cho anh ta quá nhiều gợi ý)."
+              "explanation": "gave him so many hints (đã cho anh ta quá nhiều gợi ý).",
+              "correctAnswer": "B"
             },
             {
               "id": "q30",
-              "content": "10. If you can't tie your own shoes by the time you're twelve years old",
+              "content": "If you can't tie your own shoes by the time you're twelve years old",
               "options": [
                 "a. because bad dreams tormented him",
                 "b. then people might think you're an idiot",
                 "c. but it was just the echo of her voice",
                 "d. because there weren't any other options"
               ],
-              "correctAnswer": "B",
-              "explanation": "people might think you're an idiot (mọi người có thể nghĩ bạn là kẻ ngốc)."
+              "explanation": "people might think you're an idiot (mọi người có thể nghĩ bạn là kẻ ngốc).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -408,125 +408,125 @@
           "id": "sec4",
           "title": "Reading Comprehension: Part A",
           "content": "Mark each statement T for true or F for false.",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q31",
-              "content": "1. The young man decided to hike in the national parks.",
+              "content": "The young man decided to hike in the national parks.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. He heard about people hiking in the national parks and decided to try it for himself."
+              "explanation": "True. He heard about people hiking in the national parks and decided to try it for himself.",
+              "correctAnswer": "A"
             },
             {
               "id": "q32",
-              "content": "2. The young man disagreed with the old man.",
+              "content": "The young man disagreed with the old man.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. The young man disagreed with the old man and bragged that he had a perfect understanding of the park."
+              "explanation": "True. The young man disagreed with the old man and bragged that he had a perfect understanding of the park.",
+              "correctAnswer": "A"
             },
             {
               "id": "q33",
-              "content": "3. The young man believed that his knowledge of the park's trails was thorough.",
+              "content": "The young man believed that his knowledge of the park's trails was thorough.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. He told the old man: 'I believe I have a thorough knowledge of these trails.'"
+              "explanation": "True. He told the old man: 'I believe I have a thorough knowledge of these trails.'",
+              "correctAnswer": "A"
             },
             {
               "id": "q34",
-              "content": "4. When the young man had an option of two trails, he always chose the easier one.",
+              "content": "When the young man had an option of two trails, he always chose the easier one.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Whenever he had to choose between an easy or difficult route, he always chose the more difficult option."
+              "explanation": "False. Whenever he had to choose between an easy or difficult route, he always chose the more difficult option.",
+              "correctAnswer": "B"
             },
             {
               "id": "q35",
-              "content": "5. The young man was tormented by the thought of the eventual storm.",
+              "content": "The young man was tormented by the thought of the eventual storm.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. The thought of the eventual storm tormented the young man."
+              "explanation": "True. The thought of the eventual storm tormented the young man.",
+              "correctAnswer": "A"
             },
             {
               "id": "q36",
-              "content": "6. When the young man got home, he knew that the old man had acted like an idiot.",
+              "content": "When the young man got home, he knew that the old man had acted like an idiot.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. When he arrived home, he knew that he had acted like an idiot (không phải là ông lão)."
+              "explanation": "False. When he arrived home, he knew that he had acted like an idiot (không phải là ông lão).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Reading Comprehension: Part B",
           "content": "Answer the questions.",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q37",
-              "content": "1. What did the young man choose as his new pastime?",
+              "content": "What did the young man choose as his new pastime?",
               "options": [
                 "a. Picking trails",
                 "b. Climbing mountains",
                 "c. Talking with old men",
                 "d. Hiking in parks"
               ],
-              "correctAnswer": "D",
-              "explanation": "A proud young man was looking for a new pastime. He heard about people hiking in the national parks and decided to try it for himself."
+              "explanation": "A proud young man was looking for a new pastime. He heard about people hiking in the national parks and decided to try it for himself.",
+              "correctAnswer": "D"
             },
             {
               "id": "q38",
-              "content": "2. Why did the old man admonish the young man?",
+              "content": "Why did the old man admonish the young man?",
               "options": [
                 "a. The young man was awesome.",
                 "b. The young man bragged that he was perfect.",
                 "c. The young man's route was too indirect.",
                 "d. The young man chose difficult trails."
               ],
-              "correctAnswer": "B",
-              "explanation": "The young man bragged that he had a perfect understanding of the park, so the old man admonished him for his pride."
+              "explanation": "The young man bragged that he had a perfect understanding of the park, so the old man admonished him for his pride.",
+              "correctAnswer": "B"
             },
             {
               "id": "q39",
-              "content": "3. Why did the young man become lost?",
+              "content": "Why did the young man become lost?",
               "options": [
                 "a. He was not conscious of where he went.",
                 "b. He pinpointed his location on his map.",
                 "c. He did not switch to an easier trail.",
                 "d. He listened to the old man's advice."
               ],
-              "correctAnswer": "A",
-              "explanation": "In addition, he was not conscious of which direction he was going. Because his course was so indirect, he had no idea where he was."
+              "explanation": "In addition, he was not conscious of which direction he was going. Because his course was so indirect, he had no idea where he was.",
+              "correctAnswer": "A"
             },
             {
               "id": "q40",
-              "content": "4. Which of the following gave a hint of an eventual storm?",
+              "content": "Which of the following gave a hint of an eventual storm?",
               "options": [
                 "a. The sudden strong winds",
                 "b. The sparse clouds in the sky",
                 "c. The weather getting colder",
                 "d. The lightining flashing in the sky"
               ],
-              "correctAnswer": "A",
-              "explanation": "The sun was going down, and sudden strong winds gave a hint that it might rain."
+              "explanation": "The sun was going down, and sudden strong winds gave a hint that it might rain.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

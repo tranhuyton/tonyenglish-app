@@ -16,313 +16,313 @@
           "id": "sec1",
           "title": "Part A: Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q1",
-              "content": "1. being the right thing to do",
+              "content": "being the right thing to do",
               "options": [
                 "a. jealousy",
                 "b. migrate",
                 "c. ethical",
                 "d. secluded"
               ],
-              "correctAnswer": "C",
-              "explanation": "ethical có nghĩa là đạo đức, hợp đạo lý (being the right thing to do)."
+              "explanation": "ethical có nghĩa là đạo đức, hợp đạo lý (being the right thing to do).",
+              "correctAnswer": "C"
             },
             {
               "id": "q2",
-              "content": "2. a wet area of land",
+              "content": "a wet area of land",
               "options": [
                 "a. swamp",
                 "b. institute",
                 "c. celebrity",
                 "d. species"
               ],
-              "correctAnswer": "A",
-              "explanation": "swamp có nghĩa là đầm lầy (a wet area of land)."
+              "explanation": "swamp có nghĩa là đầm lầy (a wet area of land).",
+              "correctAnswer": "A"
             },
             {
               "id": "q3",
-              "content": "3. able to make decisions quickly",
+              "content": "able to make decisions quickly",
               "options": [
                 "a. hardy",
                 "b. rural",
                 "c. extinct",
                 "d. decisive"
               ],
-              "correctAnswer": "D",
-              "explanation": "decisive có nghĩa là kiên quyết, quyết đoán (able to make decisions quickly)."
+              "explanation": "decisive có nghĩa là kiên quyết, quyết đoán (able to make decisions quickly).",
+              "correctAnswer": "D"
             },
             {
               "id": "q4",
-              "content": "4. respected by many people",
+              "content": "respected by many people",
               "options": [
                 "a. nurture",
                 "b. traverse",
                 "c. esteemed",
                 "d. overhead"
               ],
-              "correctAnswer": "C",
-              "explanation": "esteemed có nghĩa là được kính trọng (respected by many people)."
+              "explanation": "esteemed có nghĩa là được kính trọng (respected by many people).",
+              "correctAnswer": "C"
             },
             {
               "id": "q5",
-              "content": "5. a rule of behavior",
+              "content": "a rule of behavior",
               "options": [
                 "a. zoology",
                 "b. aircraft",
                 "c. concrete",
                 "d. principle"
               ],
-              "correctAnswer": "D",
-              "explanation": "principle có nghĩa là nguyên tắc (a rule of behavior)."
+              "explanation": "principle có nghĩa là nguyên tắc (a rule of behavior).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Part B: Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q6",
-              "content": "1. nurture",
+              "content": "nurture",
               "options": [
                 "a. to travel",
                 "b. respected",
                 "c. to care for",
                 "d. to die"
               ],
-              "correctAnswer": "C",
-              "explanation": "nurture có nghĩa là nuôi dưỡng (to care for)."
+              "explanation": "nurture có nghĩa là nuôi dưỡng (to care for).",
+              "correctAnswer": "C"
             },
             {
               "id": "q7",
-              "content": "2. secluded",
+              "content": "secluded",
               "options": [
                 "a. respected",
                 "b. correct",
                 "c. alone",
                 "d. to make decisions"
               ],
-              "correctAnswer": "C",
-              "explanation": "secluded có nghĩa là hẻo lánh, vắng vẻ (alone)."
+              "explanation": "secluded có nghĩa là hẻo lánh, vắng vẻ (alone).",
+              "correctAnswer": "C"
             },
             {
               "id": "q8",
-              "content": "3. species",
+              "content": "species",
               "options": [
                 "a. stones",
                 "b. an animal",
                 "c. wet land",
                 "d. a place to study"
               ],
-              "correctAnswer": "B",
-              "explanation": "species có nghĩa là loài thực vật/động vật (an animal)."
+              "explanation": "species có nghĩa là loài thực vật/động vật (an animal).",
+              "correctAnswer": "B"
             },
             {
               "id": "q9",
-              "content": "4. jealousy",
+              "content": "jealousy",
               "options": [
                 "a. knowing right and wrong",
                 "b. the act of wanting another person's things",
                 "c. famous",
                 "d. studying animals"
               ],
-              "correctAnswer": "B",
-              "explanation": "jealousy có nghĩa là sự ghen tị (the act of wanting another person's things)."
+              "explanation": "jealousy có nghĩa là sự ghen tị (the act of wanting another person's things).",
+              "correctAnswer": "B"
             },
             {
               "id": "q10",
-              "content": "5. overhead",
+              "content": "overhead",
               "options": [
                 "a. moving",
                 "b. above",
                 "c. able to fly",
                 "d. able to cope"
               ],
-              "correctAnswer": "B",
-              "explanation": "overhead có nghĩa là ở trên đầu (above)."
+              "explanation": "overhead có nghĩa là ở trên đầu (above).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 2: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q11",
-              "content": "1. How come we cannot see dinosaurs today?",
+              "content": "How come we cannot see dinosaurs today?",
               "options": [
                 "a. They are celebrities.",
                 "b. They are extinct.",
                 "c. It isn't ethical.",
                 "d. They have all traversed the desert."
               ],
-              "correctAnswer": "B",
-              "explanation": "Vì chúng đã tuyệt chủng (extinct)."
+              "explanation": "Vì chúng đã tuyệt chủng (extinct).",
+              "correctAnswer": "B"
             },
             {
               "id": "q12",
-              "content": "2. What should I do if I want to learn about animals?",
+              "content": "What should I do if I want to learn about animals?",
               "options": [
                 "a. Go to a swamp",
                 "b. Study zoology",
                 "c. Nurture babies",
                 "d. Be decisive"
               ],
-              "correctAnswer": "B",
-              "explanation": "Học về động vật học (zoology)."
+              "explanation": "Học về động vật học (zoology).",
+              "correctAnswer": "B"
             },
             {
               "id": "q13",
-              "content": "3. Which of these does NOT describe the countryside?",
+              "content": "Which of these does NOT describe the countryside?",
               "options": [
                 "a. It is very rural.",
                 "b. There are not a lot of buildings.",
                 "c. Birds often fly overhead.",
                 "d. There is a lot of concrete."
               ],
-              "correctAnswer": "D",
-              "explanation": "Ở vùng quê thường không có nhiều bê tông (concrete)."
+              "explanation": "Ở vùng quê thường không có nhiều bê tông (concrete).",
+              "correctAnswer": "D"
             },
             {
               "id": "q14",
-              "content": "4. If you want to camp in the mountains, you need to ________.",
+              "content": "If you want to camp in the mountains, you need to ________.",
               "options": [
                 "a. have principles",
                 "b. be hardy",
                 "c. feel jealousy",
                 "d. travel in an aircraft"
               ],
-              "correctAnswer": "B",
-              "explanation": "Để cắm trại trên núi cần phải cứng cáp, chịu được gian khổ (hardy)."
+              "explanation": "Để cắm trại trên núi cần phải cứng cáp, chịu được gian khổ (hardy).",
+              "correctAnswer": "B"
             },
             {
               "id": "q15",
-              "content": "5. Birds ________ to warmer parts of the country during the winter.",
+              "content": "Birds ________ to warmer parts of the country during the winter.",
               "options": [
                 "a. esteem",
                 "b. institute",
                 "c. species",
                 "d. migrate"
               ],
-              "correctAnswer": "D",
-              "explanation": "Chim di cư (migrate) đến những nơi ấm áp hơn vào mùa đông."
+              "explanation": "Chim di cư (migrate) đến những nơi ấm áp hơn vào mùa đông.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec4",
           "title": "Exercise 3: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q16",
-              "content": "1. You need to be ________ if you want to ________ the mountains.",
+              "content": "You need to be ________ if you want to ________ the mountains.",
               "options": [
                 "A. hardy / traverse",
                 "B. traverse / hardy"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi."
+              "explanation": "Cần cứng cáp (hardy) để đi xuyên qua (traverse) ngọn núi.",
+              "correctAnswer": "A"
             },
             {
               "id": "q17",
-              "content": "2. A(n) ________ is going to give a talk at the ________ of Drama.",
+              "content": "A(n) ________ is going to give a talk at the ________ of Drama.",
               "options": [
                 "A. institute / celebrity",
                 "B. celebrity / institute"
               ],
-              "correctAnswer": "B",
-              "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute)."
+              "explanation": "Người nổi tiếng (celebrity) phát biểu tại học viện (institute).",
+              "correctAnswer": "B"
             },
             {
               "id": "q18",
-              "content": "3. Many people ________ by ship or ________.",
+              "content": "Many people ________ by ship or ________.",
               "options": [
                 "A. aircraft / migrate",
                 "B. migrate / aircraft"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft)."
+              "explanation": "Nhiều người di cư (migrate) bằng tàu biển hoặc máy bay (aircraft).",
+              "correctAnswer": "B"
             },
             {
               "id": "q19",
-              "content": "4. She felt a lot of ________ because her sister was highly ________.",
+              "content": "She felt a lot of ________ because her sister was highly ________.",
               "options": [
                 "A. esteemed / jealousy",
                 "B. jealousy / esteemed"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed)."
+              "explanation": "Cô ấy cảm thấy ghen tị (jealousy) vì chị gái được kính trọng (esteemed).",
+              "correctAnswer": "B"
             },
             {
               "id": "q20",
-              "content": "5. They found the remains of ________ animals in the ________.",
+              "content": "They found the remains of ________ animals in the ________.",
               "options": [
                 "A. swamp / extinct",
                 "B. extinct / swamp"
               ],
-              "correctAnswer": "B",
-              "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp)."
+              "explanation": "Tìm thấy hóa thạch loài tuyệt chủng (extinct) trong đầm lầy (swamp).",
+              "correctAnswer": "B"
             },
             {
               "id": "q21",
-              "content": "6. You can see many different bird ________ in this ________ location.",
+              "content": "You can see many different bird ________ in this ________ location.",
               "options": [
                 "A. secluded / species",
                 "B. species / secluded"
               ],
-              "correctAnswer": "B",
-              "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded)."
+              "explanation": "Nhiều loài (species) chim ở nơi hẻo lánh (secluded).",
+              "correctAnswer": "B"
             },
             {
               "id": "q22",
-              "content": "7. He made a quick, ________ choice, but he was worried if it was the ________ thing to fire him over the holidays.",
+              "content": "He made a quick, ________ choice, but he was worried if it was the ________ thing to fire him over the holidays.",
               "options": [
                 "A. ethical / decisive",
                 "B. decisive / ethical"
               ],
-              "correctAnswer": "B",
-              "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical)."
+              "explanation": "Lựa chọn quyết đoán (decisive) nhưng anh lo sợ nó không hợp đạo lý (ethical).",
+              "correctAnswer": "B"
             },
             {
               "id": "q23",
-              "content": "8. He chose to study ________ because he has always liked to ________ animals.",
+              "content": "He chose to study ________ because he has always liked to ________ animals.",
               "options": [
                 "A. zoology / nurture",
                 "B. nurture / zoology"
               ],
-              "correctAnswer": "A",
-              "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật."
+              "explanation": "Học động vật học (zoology) vì thích nuôi dưỡng (nurture) động vật.",
+              "correctAnswer": "A"
             },
             {
               "id": "q24",
-              "content": "9. I like to be in ________ areas where there are no planes flying ________.",
+              "content": "I like to be in ________ areas where there are no planes flying ________.",
               "options": [
                 "A. overhead / rural",
                 "B. rural / overhead"
               ],
-              "correctAnswer": "B",
-              "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead)."
+              "explanation": "Vùng nông thôn (rural) không có máy bay bay trên đầu (overhead).",
+              "correctAnswer": "B"
             },
             {
               "id": "q25",
-              "content": "10. I don't like the ________ of covering the garden in ________.",
+              "content": "I don't like the ________ of covering the garden in ________.",
               "options": [
                 "A. concrete / principle",
                 "B. principle / concrete"
               ],
-              "correctAnswer": "B",
-              "explanation": "Không thích nguyên tắc (principle) phủ kín sân bằng bê tông (concrete)."
+              "explanation": "Không thích nguyên tắc (principle) phủ kín sân bằng bê tông (concrete).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -336,125 +336,125 @@
           "id": "sec5",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q26",
-              "content": "1. The journey on the aircraft to Australia took a short time.",
+              "content": "The journey on the aircraft to Australia took a short time.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Câu nói này sai vì mất đến 20 giờ để đến Úc."
+              "explanation": "Câu này sai vì chuyến đi bằng máy bay đến Úc mất tới 20 giờ. Trong bài có câu \"Firstly, she'd had to spend twenty uncomfortable hours on an aircraft getting here.\"",
+              "correctAnswer": "B"
             },
             {
               "id": "q27",
-              "content": "2. Eliza was a professor of zoology.",
+              "content": "Eliza was a professor of zoology.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Gilbert mới là giáo sư động vật học, không phải Eliza."
+              "explanation": "Câu này sai. Chồng của Eliza mới là giáo sư động vật học, không phải cô ấy. Bằng chứng trong bài là \"her husband was a zoology professor\".",
+              "correctAnswer": "B"
             },
             {
               "id": "q28",
-              "content": "3. Eliza was hardier than Gilbert.",
+              "content": "Eliza was hardier than Gilbert.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Eliza nói rằng 'I'm not hardy like you' (Em không chịu đựng giỏi như anh)."
+              "explanation": "Câu này sai vì Eliza thừa nhận mình không chịu đựng tốt như Gilbert. Cô ấy nói: \"I'm not hardy like you\".",
+              "correctAnswer": "B"
             },
             {
               "id": "q29",
-              "content": "4. The swamp was in a rural, secluded area.",
+              "content": "The swamp was in a rural, secluded area.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng, họ nghỉ ngơi dưới gốc cây tại nơi vắng vẻ, ở nông thôn."
+              "explanation": "Câu này đúng. Bài đọc có miêu tả đây là một nơi hẻo lánh và ở vùng nông thôn qua câu \"There were lots of birds in that secluded, rural place\".",
+              "correctAnswer": "A"
             },
             {
               "id": "q30",
-              "content": "5. Gilbert thought that the red lizard was an extinct species.",
+              "content": "Gilbert thought that the red lizard was an extinct species.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh ấy cho rằng đó là loài Red Swamp Lizard đã tuyệt chủng."
+              "explanation": "Câu này đúng. Gilbert tin rằng loài thằn lằn đỏ này đã tuyệt chủng. Anh ấy nói: \"That looks like a Red Swamp Lizard, but I thought that species was extinct\".",
+              "correctAnswer": "A"
             },
             {
               "id": "q31",
-              "content": "6. Gilbert nurtured the red lizard at the hotel.",
+              "content": "Gilbert nurtured the red lizard at the hotel.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng, Gilbert đã nuôi dưỡng và chăm sóc chú thằn lằn tại khách sạn."
+              "explanation": "Câu này đúng. Trong vài ngày sau đó, Gilbert đã cho ăn và chăm sóc chú thằn lằn tại khách sạn. Chi tiết trong bài là \"For the next few days, Gilbert fed and nurtured the lizard.\"",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec6",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q32",
-              "content": "1. What did Gilbert and Eliza see flying overhead?",
+              "content": "What did Gilbert and Eliza see flying overhead?",
               "options": [
                 "a. An aircraft",
                 "b. Birds",
                 "c. An extinct species",
                 "d. Butterflies"
               ],
-              "correctAnswer": "B",
-              "explanation": "Họ nhìn thấy chim bay lượn trên đầu (watched them flying overhead)."
+              "explanation": "Họ nhìn thấy những con chim bay lượn trên đầu. Trong bài có câu \"they watched them flying overhead\" ngay sau khi nhắc đến việc có rất nhiều chim ở đó.",
+              "correctAnswer": "B"
             },
             {
               "id": "q33",
-              "content": "2. How was Gilbert described after he found the lizard?",
+              "content": "How was Gilbert described after he found the lizard?",
               "options": [
                 "a. Full of jealousy",
                 "b. Highly esteemed",
                 "c. Decisive",
                 "d. Full of principles"
               ],
-              "correctAnswer": "C",
-              "explanation": "Gilbert rất quyết đoán (decisive) khi mang con thằn lằn về khách sạn."
+              "explanation": "Gilbert được miêu tả là người quả quyết khi tìm thấy chú thằn lằn. Bài đọc có câu \"But Gilbert was decisive and took the lizard back to the hotel\".",
+              "correctAnswer": "C"
             },
             {
               "id": "q34",
-              "content": "3. What did Gilbert think that the find would make him feel like?",
+              "content": "What did Gilbert think that the find would make him feel like?",
               "options": [
                 "a. A celebrity",
                 "b. Decisive",
                 "c. Ethical",
                 "d. Hardy"
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh ấy nghĩ mình sẽ trở thành một người nổi tiếng (celebrity)."
+              "explanation": "Gilbert nghĩ rằng phát hiện này sẽ giúp anh trở thành một người nổi tiếng. Câu văn dẫn chứng là \"He thought that this find would make him a highly esteemed celebrity at the Zoology Institute\".",
+              "correctAnswer": "A"
             },
             {
               "id": "q35",
-              "content": "4. Where did Gilbert want to take the red lizard?",
+              "content": "Where did Gilbert want to take the red lizard?",
               "options": [
                 "a. To the Zoology Institute",
                 "b. To the university",
                 "c. To a different swamp",
                 "d. To his home"
               ],
-              "correctAnswer": "A",
-              "explanation": "Gilbert muốn mang nó về Viện Động vật học (Zoology Institute)."
+              "explanation": "Gilbert muốn mang chú thằn lằn về Viện Động vật học. Anh ấy đã nói rõ: \"I'm going to take it back to the Zoology Institute\".",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

@@ -16,7 +16,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1 Part A. Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q_p0_s1_1",
@@ -27,8 +26,8 @@
                 "Growl",
                 "Stagger"
               ],
-              "correctAnswer": "C",
-              "explanation": "'Growl' có nghĩa là gầm gừ, tạo ra tiếng ồn."
+              "explanation": "'Growl' có nghĩa là gầm gừ, tạo ra tiếng ồn.",
+              "correctAnswer": "C"
             },
             {
               "id": "q_p0_s1_2",
@@ -39,8 +38,8 @@
                 "Cunning",
                 "Saucer"
               ],
-              "correctAnswer": "B",
-              "explanation": "'Predator' là động vật ăn thịt, ăn các động vật khác."
+              "explanation": "'Predator' là động vật ăn thịt, ăn các động vật khác.",
+              "correctAnswer": "B"
             },
             {
               "id": "q_p0_s1_3",
@@ -51,8 +50,8 @@
                 "Compassion",
                 "Sane"
               ],
-              "correctAnswer": "A",
-              "explanation": "'Equilibrium' có nghĩa là sự cân bằng."
+              "explanation": "'Equilibrium' có nghĩa là sự cân bằng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q_p0_s1_4",
@@ -63,8 +62,8 @@
                 "Tense",
                 "Moderation"
               ],
-              "correctAnswer": "D",
-              "explanation": "'Moderation' có nghĩa là sự điều độ, không quá mức."
+              "explanation": "'Moderation' có nghĩa là sự điều độ, không quá mức.",
+              "correctAnswer": "D"
             },
             {
               "id": "q_p0_s1_5",
@@ -75,16 +74,16 @@
                 "Snatch",
                 "Consent"
               ],
-              "correctAnswer": "D",
-              "explanation": "'Consent' có nghĩa là sự đồng ý."
+              "explanation": "'Consent' có nghĩa là sự đồng ý.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2 Part B. Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q_p0_s2_1",
@@ -95,8 +94,8 @@
                 "to not give",
                 "to express happiness"
               ],
-              "correctAnswer": "C",
-              "explanation": "'withhold' có nghĩa là giữ lại, không đưa cho (to not give)."
+              "explanation": "'withhold' có nghĩa là giữ lại, không đưa cho (to not give).",
+              "correctAnswer": "C"
             },
             {
               "id": "q_p0_s2_2",
@@ -107,8 +106,8 @@
                 "to give",
                 "to take"
               ],
-              "correctAnswer": "D",
-              "explanation": "'snatch' có nghĩa là chộp lấy, lấy đi (to take)."
+              "explanation": "'snatch' có nghĩa là chộp lấy, lấy đi (to take).",
+              "correctAnswer": "D"
             },
             {
               "id": "q_p0_s2_3",
@@ -119,8 +118,8 @@
                 "to agree with",
                 "to give something away"
               ],
-              "correctAnswer": "B",
-              "explanation": "'cherish' có nghĩa là trân trọng, yêu quý thứ gì đó quan trọng (to love something important)."
+              "explanation": "'cherish' có nghĩa là trân trọng, yêu quý thứ gì đó quan trọng (to love something important).",
+              "correctAnswer": "B"
             },
             {
               "id": "q_p0_s2_4",
@@ -131,8 +130,8 @@
                 "to take something away",
                 "to trip and almost fall"
               ],
-              "correctAnswer": "D",
-              "explanation": "'stagger' có nghĩa là loạng choạng, gần như ngã (to trip and almost fall)."
+              "explanation": "'stagger' có nghĩa là loạng choạng, gần như ngã (to trip and almost fall).",
+              "correctAnswer": "D"
             },
             {
               "id": "q_p0_s2_5",
@@ -143,16 +142,16 @@
                 "helping someone",
                 "to go against"
               ],
-              "correctAnswer": "A",
-              "explanation": "'saucer' là một cái đĩa nhỏ đựng tách (a small dish)."
+              "explanation": "'saucer' là một cái đĩa nhỏ đựng tách (a small dish).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3 Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q_p0_s3_1",
@@ -163,8 +162,8 @@
                 "consent / withhold",
                 "equilibrium / stagger"
               ],
-              "correctAnswer": "B",
-              "explanation": "'cherish' (trân trọng/thích) và 'moderation' (điều độ) phù hợp với ngữ cảnh: Tôi thích đi xem phim, nhưng ở mức độ vừa phải vì nó đắt."
+              "explanation": "'cherish' (trân trọng/thích) và 'moderation' (điều độ) phù hợp với ngữ cảnh: Tôi thích đi xem phim, nhưng ở mức độ vừa phải vì nó đắt.",
+              "correctAnswer": "B"
             },
             {
               "id": "q_p0_s3_2",
@@ -175,8 +174,8 @@
                 "growl / predator",
                 "snatch / saucer"
               ],
-              "correctAnswer": "C",
-              "explanation": "'growl' (gầm gừ) và 'predator' (thú săn mồi) phù hợp: Sư tử bắt đầu gầm gừ, và con nai biết có thú săn mồi để sợ."
+              "explanation": "'growl' (gầm gừ) và 'predator' (thú săn mồi) phù hợp: Sư tử bắt đầu gầm gừ, và con nai biết có thú săn mồi để sợ.",
+              "correctAnswer": "C"
             },
             {
               "id": "q_p0_s3_3",
@@ -187,8 +186,8 @@
                 "cunning / grind",
                 "cherish / moderation"
               ],
-              "correctAnswer": "A",
-              "explanation": "'sane' (tỉnh táo) và 'compassion' (lòng trắc ẩn) phù hợp: Người đàn ông tỉnh táo, nên cảm thấy thương cảm cho đứa trẻ đang chết đói."
+              "explanation": "'sane' (tỉnh táo) và 'compassion' (lòng trắc ẩn) phù hợp: Người đàn ông tỉnh táo, nên cảm thấy thương cảm cho đứa trẻ đang chết đói.",
+              "correctAnswer": "A"
             },
             {
               "id": "q_p0_s3_4",
@@ -199,8 +198,8 @@
                 "withhold / consent",
                 "snatch / saucer"
               ],
-              "correctAnswer": "D",
-              "explanation": "'snatch' (giật lấy) và 'saucer' (cái đĩa) phù hợp: Cậu bé định giật cái cốc từ em gái và làm đổ cái đĩa."
+              "explanation": "'snatch' (giật lấy) và 'saucer' (cái đĩa) phù hợp: Cậu bé định giật cái cốc từ em gái và làm đổ cái đĩa.",
+              "correctAnswer": "D"
             },
             {
               "id": "q_p0_s3_5",
@@ -211,8 +210,8 @@
                 "tumble / dizzy",
                 "equilibrium / stagger"
               ],
-              "correctAnswer": "A",
-              "explanation": "'core' (lõi) và 'foster' (nuôi dưỡng) phù hợp: Sâu trong lõi cây, có những khoáng chất nuôi dưỡng sự phát triển mới."
+              "explanation": "'core' (lõi) và 'foster' (nuôi dưỡng) phù hợp: Sâu trong lõi cây, có những khoáng chất nuôi dưỡng sự phát triển mới.",
+              "correctAnswer": "A"
             },
             {
               "id": "q_p0_s3_6",
@@ -223,8 +222,8 @@
                 "cunning / grind",
                 "consent / withhold"
               ],
-              "correctAnswer": "C",
-              "explanation": "'cunning' (xảo quyệt) và 'grind' (nghiền nát) phù hợp: Tên tội phạm xảo quyệt bắt đầu nghiền nát viên đá quý."
+              "explanation": "'cunning' (xảo quyệt) và 'grind' (nghiền nát) phù hợp: Tên tội phạm xảo quyệt bắt đầu nghiền nát viên đá quý.",
+              "correctAnswer": "C"
             },
             {
               "id": "q_p0_s3_7",
@@ -235,8 +234,8 @@
                 "cunning / grind",
                 "core / foster"
               ],
-              "correctAnswer": "B",
-              "explanation": "'tumbled' (lăn/ngã lộn nhào) và 'dizzy' (chóng mặt) phù hợp: Sau khi lăn xuống đồi, anh ta cảm thấy chóng mặt."
+              "explanation": "'tumbled' (lăn/ngã lộn nhào) và 'dizzy' (chóng mặt) phù hợp: Sau khi lăn xuống đồi, anh ta cảm thấy chóng mặt.",
+              "correctAnswer": "B"
             },
             {
               "id": "q_p0_s3_8",
@@ -247,8 +246,8 @@
                 "withhold / consent",
                 "sane / compassion"
               ],
-              "correctAnswer": "C",
-              "explanation": "'withhold' (giữ lại) và 'consent' (sự đồng ý) phù hợp: Người phụ nữ quyết định giữ lại sự cho phép và không đồng ý với yêu cầu của con gái."
+              "explanation": "'withhold' (giữ lại) và 'consent' (sự đồng ý) phù hợp: Người phụ nữ quyết định giữ lại sự cho phép và không đồng ý với yêu cầu của con gái.",
+              "correctAnswer": "C"
             },
             {
               "id": "q_p0_s3_9",
@@ -259,8 +258,8 @@
                 "tumbled / dizzy",
                 "cunning / grind"
               ],
-              "correctAnswer": "A",
-              "explanation": "'tense' (căng thẳng) và 'stumble' (vấp ngã) phù hợp: Người đàn ông cảm thấy căng thẳng sau khi con ngựa của anh ta vấp ngã."
+              "explanation": "'tense' (căng thẳng) và 'stumble' (vấp ngã) phù hợp: Người đàn ông cảm thấy căng thẳng sau khi con ngựa của anh ta vấp ngã.",
+              "correctAnswer": "A"
             },
             {
               "id": "q_p0_s3_10",
@@ -271,10 +270,11 @@
                 "tense / stumble",
                 "equilibrium / stagger"
               ],
-              "correctAnswer": "D",
-              "explanation": "'equilibrium' (thăng bằng) và 'stagger' (loạng choạng) phù hợp: Tôi cảm thấy mình không có thăng bằng, dẫn đến việc đi loạng choạng."
+              "explanation": "'equilibrium' (thăng bằng) và 'stagger' (loạng choạng) phù hợp: Tôi cảm thấy mình không có thăng bằng, dẫn đến việc đi loạng choạng.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -288,7 +288,6 @@
           "id": "sec1_reading",
           "title": "Part A. Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q_p1_s1_1",
@@ -297,8 +296,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Câu chuyện nói: 'He sat and watched people closely, like a predator.'"
+              "explanation": "Câu chuyện nói: 'He sat and watched people closely, like a predator.'",
+              "correctAnswer": "A"
             },
             {
               "id": "q_p1_s1_2",
@@ -307,8 +306,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Trong câu chuyện là người chủ quán (innkeeper): 'The scared innkeeper staggered outside and tumbled into the street.'"
+              "explanation": "Sai. Trong câu chuyện là người chủ quán (innkeeper): 'The scared innkeeper staggered outside and tumbled into the street.'",
+              "correctAnswer": "B"
             },
             {
               "id": "q_p1_s1_3",
@@ -317,8 +316,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Câu chuyện kể: 'He made the coffee and handed the traveler a saucer and a cup.'"
+              "explanation": "Câu chuyện kể: 'He made the coffee and handed the traveler a saucer and a cup.'",
+              "correctAnswer": "A"
             },
             {
               "id": "q_p1_s1_4",
@@ -327,8 +326,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. 'As he ran, the traveler snatched his coat.'"
+              "explanation": "Đúng. 'As he ran, the traveler snatched his coat.'",
+              "correctAnswer": "A"
             },
             {
               "id": "q_p1_s1_5",
@@ -337,8 +336,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Anh ấy muốn mang lại niềm vui và nói ra sự thật: 'He did not want to withhold the truth any longer. He just wanted to foster happiness.'"
+              "explanation": "Sai. Anh ấy muốn mang lại niềm vui và nói ra sự thật: 'He did not want to withhold the truth any longer. He just wanted to foster happiness.'",
+              "correctAnswer": "B"
             },
             {
               "id": "q_p1_s1_6",
@@ -347,16 +346,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Ông chủ quán nói: 'Oh, good. I cherish this coat.'"
+              "explanation": "Đúng. Ông chủ quán nói: 'Oh, good. I cherish this coat.'",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_reading",
           "title": "Part B. Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q_p1_s2_1",
@@ -367,8 +366,8 @@
                 "Some money",
                 "His coat"
               ],
-              "correctAnswer": "D",
-              "explanation": "Theo câu chuyện: 'As he ran, the traveler snatched his coat.'"
+              "explanation": "Theo câu chuyện: 'As he ran, the traveler snatched his coat.'",
+              "correctAnswer": "D"
             },
             {
               "id": "q_p1_s2_2",
@@ -379,8 +378,8 @@
                 "To be a predator",
                 "To sell it and make money"
               ],
-              "correctAnswer": "B",
-              "explanation": "Theo câu chuyện: 'The cunning traveler decided to teach the innkeeper a lesson.'"
+              "explanation": "Theo câu chuyện: 'The cunning traveler decided to teach the innkeeper a lesson.'",
+              "correctAnswer": "B"
             },
             {
               "id": "q_p1_s2_3",
@@ -391,8 +390,8 @@
                 "The young man was dizzy.",
                 "The young man's friend would repay him."
               ],
-              "correctAnswer": "D",
-              "explanation": "Người thanh niên hứa rằng bạn của anh ta sẽ trả lại tiền vào ngày mai: 'my friend will pay you back tomorrow'."
+              "explanation": "Người thanh niên hứa rằng bạn của anh ta sẽ trả lại tiền vào ngày mai: 'my friend will pay you back tomorrow'.",
+              "correctAnswer": "D"
             },
             {
               "id": "q_p1_s2_4",
@@ -403,10 +402,11 @@
                 "Because he was dizzy",
                 "To teach him a lesson"
               ],
-              "correctAnswer": "A",
-              "explanation": "Ông chủ quán pha cà phê và đưa tách cùng đĩa cho vị khách để uống."
+              "explanation": "Ông chủ quán pha cà phê và đưa tách cùng đĩa cho vị khách để uống.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

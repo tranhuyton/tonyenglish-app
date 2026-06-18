@@ -16,245 +16,245 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. ruin",
+              "content": "ruin",
               "options": [
                 "to damage",
                 "to hate",
                 "to fly",
                 "to cook"
               ],
-              "correctAnswer": "A",
-              "explanation": "ruin nghĩa là phá hỏng (to damage)."
+              "explanation": "ruin nghĩa là phá hỏng (to damage).",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
-              "content": "2. brick",
+              "content": "brick",
               "options": [
                 "a fast car",
                 "a hard piece of clay",
                 "a best friend",
                 "a favorite kind of toy"
               ],
-              "correctAnswer": "B",
-              "explanation": "brick nghĩa là viên gạch (a hard piece of clay)."
+              "explanation": "brick nghĩa là viên gạch (a hard piece of clay).",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
-              "content": "3. sprinkle",
+              "content": "sprinkle",
               "options": [
                 "to scatter",
                 "to create",
                 "to mend",
                 "to agree"
               ],
-              "correctAnswer": "A",
-              "explanation": "sprinkle nghĩa là rắc, rải (to scatter)."
+              "explanation": "sprinkle nghĩa là rắc, rải (to scatter).",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
-              "content": "4. injure",
+              "content": "injure",
               "options": [
                 "to run",
                 "to fall",
                 "to hurt",
                 "to roast"
               ],
-              "correctAnswer": "C",
-              "explanation": "injure nghĩa là làm bị thương (to hurt)."
+              "explanation": "injure nghĩa là làm bị thương (to hurt).",
+              "correctAnswer": "C"
             },
             {
               "id": "5",
-              "content": "5. slight",
+              "content": "slight",
               "options": [
                 "growing",
                 "minor",
                 "quick",
                 "risky"
               ],
-              "correctAnswer": "B",
-              "explanation": "slight nghĩa là nhẹ, nhỏ nhặt (minor)."
+              "explanation": "slight nghĩa là nhẹ, nhỏ nhặt (minor).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "1. How would a man show others an emotion?",
+              "content": "How would a man show others an emotion?",
               "options": [
                 "By flushing it",
                 "By injuring it",
                 "By ruining it",
                 "By expressing it"
               ],
-              "correctAnswer": "D",
-              "explanation": "express nghĩa là bày tỏ, biểu lộ cảm xúc (show emotion)."
+              "explanation": "express nghĩa là bày tỏ, biểu lộ cảm xúc (show emotion).",
+              "correctAnswer": "D"
             },
             {
               "id": "7",
-              "content": "2. Which of the following says that two former enemies become friends again?",
+              "content": "Which of the following says that two former enemies become friends again?",
               "options": [
                 "To reconcile",
                 "To shatter",
                 "To utter",
                 "To sparkle"
               ],
-              "correctAnswer": "A",
-              "explanation": "reconcile nghĩa là hòa giải (become friends again)."
+              "explanation": "reconcile nghĩa là hòa giải (become friends again).",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
-              "content": "3. How would you describe a girl who can stretch her leg behind her head?",
+              "content": "How would you describe a girl who can stretch her leg behind her head?",
               "options": [
                 "A little bit stale",
                 "Very flexible",
                 "More than slight",
                 "Ready to crumble"
               ],
-              "correctAnswer": "B",
-              "explanation": "flexible nghĩa là linh hoạt, dẻo dai (stretch easily)."
+              "explanation": "flexible nghĩa là linh hoạt, dẻo dai (stretch easily).",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
-              "content": "4. Which of these would you use to make bread?",
+              "content": "Which of these would you use to make bread?",
               "options": [
                 "A brick",
                 "Some dough",
                 "A fist",
                 "A lump"
               ],
-              "correctAnswer": "B",
-              "explanation": "dough nghĩa là bột nhào, dùng để làm bánh mì."
+              "explanation": "dough nghĩa là bột nhào, dùng để làm bánh mì.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
-              "content": "5. Which word describes something usually found on windows?",
+              "content": "Which word describes something usually found on windows?",
               "options": [
                 "Mixture",
                 "Crumble",
                 "Slight",
                 "Shutters"
               ],
-              "correctAnswer": "D",
-              "explanation": "shutters nghĩa là cửa chớp, thường ở trên cửa sổ."
+              "explanation": "shutters nghĩa là cửa chớp, thường ở trên cửa sổ.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "1. Before the project, the clay was one big __________. But when he was finished, he made a perfectly square __________.",
+              "content": "Before the project, the clay was one big __________. But when he was finished, he made a perfectly square __________.",
               "options": [
                 "brick / lump",
                 "lump / brick"
               ],
-              "correctAnswer": "B",
-              "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick)."
+              "explanation": "lump: cục, tảng; brick: viên gạch. Đất sét lúc đầu là một cục lớn (lump), sau đó anh ấy làm thành một viên gạch vuông vức (brick).",
+              "correctAnswer": "B"
             },
             {
               "id": "12",
-              "content": "2. Five minutes ago, the two senators were ___________ insults at each other, but now they have ___________ because they both agree with the new law.",
+              "content": "Five minutes ago, the two senators were ___________ insults at each other, but now they have ___________ because they both agree with the new law.",
               "options": [
                 "reconciled / uttering",
                 "uttering / reconciled"
               ],
-              "correctAnswer": "B",
-              "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải."
+              "explanation": "uttering: thốt ra (lời lăng mạ); reconciled: hòa giải. Năm phút trước họ buông lời xúc phạm nhau, giờ họ đã hòa giải.",
+              "correctAnswer": "B"
             },
             {
               "id": "13",
-              "content": "3. In the middle of the night, she got out of bed and opened the __________. She gazed at the sky where the stars __________ like tiny fires.",
+              "content": "In the middle of the night, she got out of bed and opened the __________. She gazed at the sky where the stars __________ like tiny fires.",
               "options": [
                 "shutters / sparkled",
                 "sparkled / shutters"
               ],
-              "correctAnswer": "A",
-              "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled)."
+              "explanation": "shutters: cửa chớp; sparkled: lấp lánh. Mở cửa chớp (shutters) để ngắm sao lấp lánh (sparkled).",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
-              "content": "4. The rice was not eaten soon enough, so it tasted __________. It made me feel sick and my face became __________.",
+              "content": "The rice was not eaten soon enough, so it tasted __________. It made me feel sick and my face became __________.",
               "options": [
                 "flushed / stale",
                 "stale / flushed"
               ],
-              "correctAnswer": "B",
-              "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed)."
+              "explanation": "stale: ôi thiu; flushed: đỏ mặt. Cơm cũ ôi thiu (stale) làm tôi ốm và đỏ bừng mặt (flushed).",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
-              "content": "5. The cook picked up the block of cheese and ___________ it into little pieces. Then he mixed them with the __________ before placing it in the oven.",
+              "content": "The cook picked up the block of cheese and ___________ it into little pieces. Then he mixed them with the __________ before placing it in the oven.",
               "options": [
                 "dough / crumbled",
                 "crumbled / dough"
               ],
-              "correctAnswer": "B",
-              "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough)."
+              "explanation": "crumbled: bóp vụn; dough: bột nhào. Phô mai bị bóp vụn (crumbled) và trộn với bột nhào (dough).",
+              "correctAnswer": "B"
             },
             {
               "id": "16",
-              "content": "6. When he started to ___________ the flour into the bowl, he slipped and dropped it. The bowl hit the ground and __________.",
+              "content": "When he started to ___________ the flour into the bowl, he slipped and dropped it. The bowl hit the ground and __________.",
               "options": [
                 "sift / shattered",
                 "shattered / sift"
               ],
-              "correctAnswer": "A",
-              "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered)."
+              "explanation": "sift: rây bột; shattered: vỡ tan tành. Rây bột (sift), rơi bát làm nó vỡ tan tành (shattered).",
+              "correctAnswer": "A"
             },
             {
               "id": "17",
-              "content": "7. He hit the punching bag with his __________. Since the bag was ___________, it did not break.",
+              "content": "He hit the punching bag with his __________. Since the bag was ___________, it did not break.",
               "options": [
                 "fist / flexible",
                 "flexible / fist"
               ],
-              "correctAnswer": "A",
-              "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible)."
+              "explanation": "fist: nắm đấm; flexible: linh hoạt. Đánh bằng nắm đấm (fist) vào bao cát dẻo dai (flexible).",
+              "correctAnswer": "A"
             },
             {
               "id": "18",
-              "content": "8. The __________ of ice cream and chocolate tastes good, but it will be even better if you __________ sugar on the top of it.",
+              "content": "The __________ of ice cream and chocolate tastes good, but it will be even better if you __________ sugar on the top of it.",
               "options": [
                 "sprinkle / mixture",
                 "mixture / sprinkle"
               ],
-              "correctAnswer": "B",
-              "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường."
+              "explanation": "mixture: hỗn hợp; sprinkle: rắc. Hỗn hợp (mixture) kem và socola sẽ ngon hơn nếu rắc (sprinkle) thêm đường.",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
-              "content": "9. The doctor ___________ a lot of concern for my hurt ankle, but I told him the pain was only __________.",
+              "content": "The doctor ___________ a lot of concern for my hurt ankle, but I told him the pain was only __________.",
               "options": [
                 "expressed / slight",
                 "slight / expressed"
               ],
-              "correctAnswer": "A",
-              "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight)."
+              "explanation": "expressed: bày tỏ; slight: nhẹ. Bác sĩ bày tỏ (expressed) sự lo lắng nhưng cơn đau chỉ rất nhẹ (slight).",
+              "correctAnswer": "A"
             },
             {
               "id": "20",
-              "content": "10. The ship was ___________ when it crashed into the island. Even though it was greatly damaged, none of the passengers were __________.",
+              "content": "The ship was ___________ when it crashed into the island. Even though it was greatly damaged, none of the passengers were __________.",
               "options": [
                 "injured / ruined",
                 "ruined / injured"
               ],
-              "correctAnswer": "B",
-              "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured)."
+              "explanation": "ruined: bị phá hỏng; injured: bị thương. Con tàu bị hỏng nặng (ruined) nhưng hành khách không ai bị thương (injured).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -268,125 +268,125 @@
           "id": "sec4_reading_A",
           "title": "Reading Comprehension Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
-              "content": "1. Because the bread was stale, the mother wanted them to bake fresh bread.",
+              "content": "Because the bread was stale, the mother wanted them to bake fresh bread.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). 'because the only bread in the house was stale, their mother told them they needed to bake fresh bread.'"
+              "explanation": "Câu này đúng. Người mẹ yêu cầu hai anh em nướng bánh mới vì bánh mì trong nhà đã bị ôi thiu. Bằng chứng trong bài là: however, because the only bread in the house was stale, their mother told them they needed to bake fresh bread.",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
-              "content": "2. The dough became a lump that was as hard as a brick.",
+              "content": "The dough became a lump that was as hard as a brick.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). 'the salt made it into a lump that was as hard as a brick.'"
+              "explanation": "Câu này cũng hoàn toàn chính xác. Lượng muối quá nhiều đã khiến bột nhào biến thành một tảng cứng như đá. Đoạn văn ghi rõ: the salt made it into a lump that was as hard as a brick.",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
-              "content": "3. The bread needed to be hard and sturdy.",
+              "content": "The bread needed to be hard and sturdy.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). Trong bài đọc, bột cần phải mềm và linh hoạt (The dough needed to be soft and flexible)."
+              "explanation": "Câu này sai nhé. Theo bài đọc, bột bánh đáng lẽ ra phải mềm và dẻo dai chứ không phải cứng nhắc. Câu văn chứng minh là: The dough needed to be soft and flexible.",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
-              "content": "4. The older brother uttered a sigh.",
+              "content": "The older brother uttered a sigh.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). Đó là người em trai thốt lên tiếng thở dài (The younger brother uttered a sigh)."
+              "explanation": "Câu này sai rồi. Thực ra người em trai mới là người buông tiếng thở dài, chứ không phải người anh. Trích đoạn trong bài viết: The younger brother uttered a sigh.",
+              "correctAnswer": "B"
             },
             {
               "id": "25",
-              "content": "5. The brothers had to clean the kitchen, so it may sparkle.",
+              "content": "The brothers had to clean the kitchen, so it may sparkle.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). Mẹ nói: 'I want this kitchen to be so clean that it may sparkle!'"
+              "explanation": "Câu này đúng. Do làm rối tung mọi thứ, người mẹ đã bắt họ phải dọn dẹp nhà bếp sạch sẽ đến mức sáng bóng. Bằng chứng là lời mẹ nói: I want this kitchen to be so clean that it may sparkle!",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
-              "content": "6. A major mistake only caused a slight problem.",
+              "content": "A major mistake only caused a slight problem.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). Bài đọc ghi: A slight mistake now became a major problem."
+              "explanation": "Câu này sai. Bài đọc nói ngược lại, một sai lầm nhỏ bé đã dẫn đến một vấn đề lớn. Tác giả có viết: A slight mistake now became a major problem.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading_B",
           "title": "Reading Comprehension Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "27",
-              "content": "1. What made the dough into a hard lump?",
+              "content": "What made the dough into a hard lump?",
               "options": [
                 "Not putting in enough water",
                 "Using too much salt",
                 "Expressing sadness",
                 "Not sifting the flour"
               ],
-              "correctAnswer": "B",
-              "explanation": "Trong bài: 'They were careless and sprinkled too much salt into the mixture... the salt made it into a lump that was as hard as a brick.'"
+              "explanation": "Nguyên nhân khiến khối bột trở nên cứng ngắc chính là việc cho quá nhiều muối. Trong bài có ghi: They were careless and sprinkled too much salt into the mixture... the salt made it into a lump that was as hard as a brick. Do đó đáp án B là chính xác nhất.",
+              "correctAnswer": "B"
             },
             {
               "id": "28",
-              "content": "2. What happened when the older brother hit the dough with his fist?",
+              "content": "What happened when the older brother hit the dough with his fist?",
               "options": [
                 "The dough hit the shutters.",
                 "A glass shattered",
                 "The brothers were injured.",
                 "The dough crumbled."
               ],
-              "correctAnswer": "B",
-              "explanation": "Anh ấy đập bột mạnh đến nỗi nó bay khỏi bàn và làm đổ vỡ một cái ly: 'knocked over a glass, which shattered.'"
+              "explanation": "Khi người anh đập tay vào khối bột, nó bay đi và làm rơi vỡ một chiếc cốc. Câu văn chứng minh là: he hit it so hard that it flew right off of the table and knocked over a glass, which shattered. Nên chọn đáp án B.",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "3. Why was the mother flushed with anger?",
+              "content": "Why was the mother flushed with anger?",
               "options": [
                 "The dough was hard.",
                 "The kitchen was ruined.",
                 "The brothers sighed.",
                 "The repair shop was closed."
               ],
-              "correctAnswer": "B",
-              "explanation": "Người mẹ tức giận vì nhà bếp đã bị phá hỏng. 'The brothers had ruined the kitchen. Just then their mother returned. She saw the mess and became flushed with anger.'"
+              "explanation": "Người mẹ đỏ bừng mặt tức giận vì hai anh em đã phá hỏng hoàn toàn khu bếp. Trích đoạn: The brothers had ruined the kitchen. Just then their mother returned. She saw the mess and became flushed with anger. Vậy nên đáp án B là đúng.",
+              "correctAnswer": "B"
             },
             {
               "id": "30",
-              "content": "4. When were the brothers reconciled with their mother?",
+              "content": "When were the brothers reconciled with their mother?",
               "options": [
                 "As she made fresh bread",
                 "When she returned from the store",
                 "Before she left the house",
                 "After they cleaned the kitchen"
               ],
-              "correctAnswer": "D",
-              "explanation": "Hai anh em hòa giải với mẹ sau khi lau dọn sàn nhà và bày tỏ sự hối lỗi: 'The brothers cleaned the floor and expressed their sorrow to their mother. Soon, they were reconciled.'"
+              "explanation": "Hai anh em đã làm hòa với mẹ sau khi lau dọn sàn nhà và nói lời xin lỗi. Bằng chứng trong bài là: The brothers cleaned the floor and expressed their sorrow to their mother. Soon, they were reconciled. Vì thế đáp án D là sự lựa chọn hợp lý nhất.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

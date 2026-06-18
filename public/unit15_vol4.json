@@ -16,517 +16,517 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the word that is a better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q1",
-              "content": "1. After weeks of hard work, the scientists must ________ the results of their ________.",
+              "content": "After weeks of hard work, the scientists must ________ the results of their ________.",
               "options": [
                 "await / research",
                 "research / await",
                 "await / misery",
                 "research / due"
               ],
-              "correctAnswer": "A",
-              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ)."
+              "explanation": "await là chờ đợi, research là nghiên cứu. 'await the results of their research' (chờ đợi kết quả nghiên cứu của họ).",
+              "correctAnswer": "A"
             },
             {
               "id": "q2",
-              "content": "2. After the death of her ________ pet, the woman felt nothing but ________ for many weeks.",
+              "content": "After the death of her ________ pet, the woman felt nothing but ________ for many weeks.",
               "options": [
                 "beloved / misery",
                 "misery / beloved",
                 "variety / complained",
                 "complain / variety"
               ],
-              "correctAnswer": "A",
-              "explanation": "beloved là yêu dấu, misery là sự khốn khổ."
+              "explanation": "beloved là yêu dấu, misery là sự khốn khổ.",
+              "correctAnswer": "A"
             },
             {
               "id": "q3",
-              "content": "3. The store had a ________ of canned vegetables, but the man ________ that they didn’t have his favorite brand.",
+              "content": "The store had a ________ of canned vegetables, but the man ________ that they didn’t have his favorite brand.",
               "options": [
                 "complained / variety",
                 "variety / complained",
                 "due / confused",
                 "confused / due"
               ],
-              "correctAnswer": "B",
-              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại."
+              "explanation": "variety là sự đa dạng, complained là đã phàn nàn. 'a variety of' là nhiều loại.",
+              "correctAnswer": "B"
             },
             {
               "id": "q4",
-              "content": "4. The new schedule ________ passengers who thought the train was ________ at 8 a.m.",
+              "content": "The new schedule ________ passengers who thought the train was ________ at 8 a.m.",
               "options": [
                 "confused / due",
                 "due / confused",
                 "establish / climate",
                 "climate / establish"
               ],
-              "correctAnswer": "A",
-              "explanation": "confused là làm bối rối, due là đến hạn (có mặt)."
+              "explanation": "confused là làm bối rối, due là đến hạn (có mặt).",
+              "correctAnswer": "A"
             },
             {
               "id": "q5",
-              "content": "5. The island was a great place to ________ a hotel since the ________ was warm throughout the year.",
+              "content": "The island was a great place to ________ a hotel since the ________ was warm throughout the year.",
               "options": [
                 "establish / climate",
                 "climate / establish",
                 "furnace / entire",
                 "entire / furnace"
               ],
-              "correctAnswer": "A",
-              "explanation": "establish là thành lập/xây dựng, climate là khí hậu."
+              "explanation": "establish là thành lập/xây dựng, climate là khí hậu.",
+              "correctAnswer": "A"
             },
             {
               "id": "q6",
-              "content": "6. ________ he had a lot of bad luck in the past, he refused to let ________ events stop him from moving forward.",
+              "content": "________ he had a lot of bad luck in the past, he refused to let ________ events stop him from moving forward.",
               "options": [
                 "Prior / although",
                 "Although / prior",
                 "Although / midst",
                 "Prior / mature"
               ],
-              "correctAnswer": "B",
-              "explanation": "Although là mặc dù, prior là trước đó."
+              "explanation": "Although là mặc dù, prior là trước đó.",
+              "correctAnswer": "B"
             },
             {
               "id": "q7",
-              "content": "7. The ________ was turned up to the highest temperature, but it couldn’t heat the ________ room.",
+              "content": "The ________ was turned up to the highest temperature, but it couldn’t heat the ________ room.",
               "options": [
                 "furnace / entire",
                 "entire / furnace",
                 "leash / measured",
                 "measured / leash"
               ],
-              "correctAnswer": "A",
-              "explanation": "furnace là lò sưởi, entire là toàn bộ."
+              "explanation": "furnace là lò sưởi, entire là toàn bộ.",
+              "correctAnswer": "A"
             },
             {
               "id": "q8",
-              "content": "8. In the ________ of a terrible war, the young boys had to ________ quickly.",
+              "content": "In the ________ of a terrible war, the young boys had to ________ quickly.",
               "options": [
                 "mature / midst",
                 "midst / mature",
                 "apply / buried",
                 "buried / apply"
               ],
-              "correctAnswer": "B",
-              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó."
+              "explanation": "midst là ở giữa, mature là trưởng thành. 'In the midst of' là ở giữa bối cảnh nào đó.",
+              "correctAnswer": "B"
             },
             {
               "id": "q9",
-              "content": "9. To make sure the dog’s ________ was long enough, Bob took out a ruler and ________ it.",
+              "content": "To make sure the dog’s ________ was long enough, Bob took out a ruler and ________ it.",
               "options": [
                 "measured / leash",
                 "leash / measured",
                 "leash / entire",
                 "entire / measured"
               ],
-              "correctAnswer": "B",
-              "explanation": "leash là dây xích chó, measured là đã đo đạc."
+              "explanation": "leash là dây xích chó, measured là đã đo đạc.",
+              "correctAnswer": "B"
             },
             {
               "id": "q10",
-              "content": "10. She insisted that they ________ her mother’s favorite perfume before they ________ her.",
+              "content": "She insisted that they ________ her mother’s favorite perfume before they ________ her.",
               "options": [
                 "buried / apply",
                 "apply / buried",
                 "apply / measure",
                 "measured / apply"
               ],
-              "correctAnswer": "B",
-              "explanation": "apply là bôi/thoa, buried là đã chôn cất."
+              "explanation": "apply là bôi/thoa, buried là đã chôn cất.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2 Part A: Match the phrases to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q11",
-              "content": "1. Although he didn’t know how to dance, _____",
+              "content": "Although he didn’t know how to dance, _____",
               "options": [
                 "he went to the party anyway",
                 "before new medicines can be created",
                 "food to choose from at the store",
                 "around seven in the morning"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mặc dù anh ấy không biết khiêu vũ, anh ấy vẫn đi dự tiệc."
+              "explanation": "Mặc dù anh ấy không biết khiêu vũ, anh ấy vẫn đi dự tiệc.",
+              "correctAnswer": "A"
             },
             {
               "id": "q12",
-              "content": "2. A furnace keeps _____",
+              "content": "A furnace keeps _____",
               "options": [
                 "a room warm during the winter",
                 "the team’s best player had to be replaced",
                 "many travelers want to vacation there",
                 "a dog from running away"
               ],
-              "correctAnswer": "A",
-              "explanation": "Lò sưởi giữ cho căn phòng ấm áp trong mùa đông."
+              "explanation": "Lò sưởi giữ cho căn phòng ấm áp trong mùa đông.",
+              "correctAnswer": "A"
             },
             {
               "id": "q13",
-              "content": "3. Florida’s warm climate makes _____",
+              "content": "Florida’s warm climate makes _____",
               "options": [
                 "always calmed her",
                 "many travelers want to vacation there",
                 "around seven in the morning",
                 "a dog from running away"
               ],
-              "correctAnswer": "B",
-              "explanation": "Khí hậu ấm áp của Florida khiến nhiều du khách muốn đi nghỉ tại đó."
+              "explanation": "Khí hậu ấm áp của Florida khiến nhiều du khách muốn đi nghỉ tại đó.",
+              "correctAnswer": "B"
             },
             {
               "id": "q14",
-              "content": "4. He wanted to establish _____",
+              "content": "He wanted to establish _____",
               "options": [
                 "food to choose from at the store",
                 "a school for blind children",
                 "around seven in the morning",
                 "the team’s best player had to be replaced"
               ],
-              "correctAnswer": "B",
-              "explanation": "Anh ấy muốn thành lập một trường học cho trẻ em khiếm thị."
+              "explanation": "Anh ấy muốn thành lập một trường học cho trẻ em khiếm thị.",
+              "correctAnswer": "B"
             },
             {
               "id": "q15",
-              "content": "5. The train was due to arrive at _____",
+              "content": "The train was due to arrive at _____",
               "options": [
                 "around seven in the morning",
                 "always calmed her",
                 "before new medicines can be created",
                 "a room warm during the winter"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đoàn tàu dự kiến đến vào khoảng 7 giờ sáng."
+              "explanation": "Đoàn tàu dự kiến đến vào khoảng 7 giờ sáng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q16",
-              "content": "6. A lot of research is needed _____",
+              "content": "A lot of research is needed _____",
               "options": [
                 "a dog from running away",
                 "food to choose from at the store",
                 "before new medicines can be created",
                 "always calmed her"
               ],
-              "correctAnswer": "C",
-              "explanation": "Cần rất nhiều nghiên cứu trước khi có thể tạo ra các loại thuốc mới."
+              "explanation": "Cần rất nhiều nghiên cứu trước khi có thể tạo ra các loại thuốc mới.",
+              "correctAnswer": "C"
             },
             {
               "id": "q17",
-              "content": "7. Shoppers have a variety of _____",
+              "content": "Shoppers have a variety of _____",
               "options": [
                 "food to choose from at the store",
                 "the team’s best player had to be replaced",
                 "a room warm during the winter",
                 "around seven in the morning"
               ],
-              "correctAnswer": "A",
-              "explanation": "Người mua sắm có nhiều loại thức ăn để lựa chọn tại cửa hàng."
+              "explanation": "Người mua sắm có nhiều loại thức ăn để lựa chọn tại cửa hàng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q18",
-              "content": "8. In the midst of the game _____",
+              "content": "In the midst of the game _____",
               "options": [
                 "the team’s best player had to be replaced",
                 "before new medicines can be created",
                 "a school for blind children",
                 "many travelers want to vacation there"
               ],
-              "correctAnswer": "A",
-              "explanation": "Giữa trận đấu, cầu thủ giỏi nhất của đội phải được thay ra."
+              "explanation": "Giữa trận đấu, cầu thủ giỏi nhất của đội phải được thay ra.",
+              "correctAnswer": "A"
             },
             {
               "id": "q19",
-              "content": "9. A leash keeps _____",
+              "content": "A leash keeps _____",
               "options": [
                 "a dog from running away",
                 "always calmed her",
                 "food to choose from at the store",
                 "around seven in the morning"
               ],
-              "correctAnswer": "A",
-              "explanation": "Dây xích giữ cho chó không chạy đi mất."
+              "explanation": "Dây xích giữ cho chó không chạy đi mất.",
+              "correctAnswer": "A"
             },
             {
               "id": "q20",
-              "content": "10. Her beloved sister _____",
+              "content": "Her beloved sister _____",
               "options": [
                 "before new medicines can be created",
                 "always calmed her",
                 "the team’s best player had to be replaced",
                 "a school for blind children"
               ],
-              "correctAnswer": "B",
-              "explanation": "Người em gái yêu dấu của cô ấy luôn khiến cô bình tĩnh lại."
+              "explanation": "Người em gái yêu dấu của cô ấy luôn khiến cô bình tĩnh lại.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 2 Part B: Match the clauses to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q21",
-              "content": "1. To determine if the new drug was safe, _____",
+              "content": "To determine if the new drug was safe, _____",
               "options": [
                 "scientists measured all the effects",
                 "but his prior works were very successful",
                 "because the pirate had buried it",
                 "so she applied makeup to her face"
               ],
-              "correctAnswer": "A",
-              "explanation": "Để xác định xem thuốc mới có an toàn không, các nhà khoa học đã đo lường mọi hiệu ứng."
+              "explanation": "Để xác định xem thuốc mới có an toàn không, các nhà khoa học đã đo lường mọi hiệu ứng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q22",
-              "content": "2. His newest book did not sell well, _____",
+              "content": "His newest book did not sell well, _____",
               "options": [
                 "so he became confused",
                 "but his prior works were very successful",
                 "so the diners complained to the waiter",
                 "but she became more serious as she matured"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cuốn sách mới nhất của ông bán không chạy, nhưng các tác phẩm trước đó thì rất thành công."
+              "explanation": "Cuốn sách mới nhất của ông bán không chạy, nhưng các tác phẩm trước đó thì rất thành công.",
+              "correctAnswer": "B"
             },
             {
               "id": "q23",
-              "content": "3. He wanted to finish the race, _____",
+              "content": "He wanted to finish the race, _____",
               "options": [
                 "so they drank the entire bowl of punch",
                 "but the pain in his ankle gave him too much misery",
                 "so she patiently awaited his letters",
                 "so she applied makeup to her face"
               ],
-              "correctAnswer": "B",
-              "explanation": "Anh muốn hoàn thành cuộc đua, nhưng cơn đau mắt cá chân mang lại quá nhiều đau khổ."
+              "explanation": "Anh muốn hoàn thành cuộc đua, nhưng cơn đau mắt cá chân mang lại quá nhiều đau khổ.",
+              "correctAnswer": "B"
             },
             {
               "id": "q24",
-              "content": "4. He lost his map, _____",
+              "content": "He lost his map, _____",
               "options": [
                 "so he became confused",
                 "because the pirate had buried it",
                 "but his prior works were very successful",
                 "so the diners complained to the waiter"
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh ấy mất bản đồ nên đã bị bối rối mất phương hướng."
+              "explanation": "Anh ấy mất bản đồ nên đã bị bối rối mất phương hướng.",
+              "correctAnswer": "A"
             },
             {
               "id": "q25",
-              "content": "5. The soup was cold, _____",
+              "content": "The soup was cold, _____",
               "options": [
                 "so she patiently awaited his letters",
                 "but the pain in his ankle gave him too much misery",
                 "so the diners complained to the waiter",
                 "so they drank the entire bowl of punch"
               ],
-              "correctAnswer": "C",
-              "explanation": "Súp bị nguội, vì thế các thực khách phàn nàn với người phục vụ."
+              "explanation": "Súp bị nguội, vì thế các thực khách phàn nàn với người phục vụ.",
+              "correctAnswer": "C"
             },
             {
               "id": "q26",
-              "content": "6. Sue was very silly as a child, _____",
+              "content": "Sue was very silly as a child, _____",
               "options": [
                 "but she became more serious as she matured",
                 "because the pirate had buried it",
                 "scientists measured all the effects",
                 "so he became confused"
               ],
-              "correctAnswer": "A",
-              "explanation": "Sue hồi nhỏ rất ngốc nghếch, nhưng cô trở nên nghiêm túc hơn khi trưởng thành."
+              "explanation": "Sue hồi nhỏ rất ngốc nghếch, nhưng cô trở nên nghiêm túc hơn khi trưởng thành.",
+              "correctAnswer": "A"
             },
             {
               "id": "q27",
-              "content": "7. No one could find the treasure _____",
+              "content": "No one could find the treasure _____",
               "options": [
                 "but his prior works were very successful",
                 "because the pirate had buried it",
                 "so the diners complained to the waiter",
                 "so she applied makeup to her face"
               ],
-              "correctAnswer": "B",
-              "explanation": "Không ai có thể tìm thấy kho báu vì tên cướp biển đã chôn nó."
+              "explanation": "Không ai có thể tìm thấy kho báu vì tên cướp biển đã chôn nó.",
+              "correctAnswer": "B"
             },
             {
               "id": "q28",
-              "content": "8. He said he would write to her, _____",
+              "content": "He said he would write to her, _____",
               "options": [
                 "but the pain in his ankle gave him too much misery",
                 "so she patiently awaited his letters",
                 "scientists measured all the effects",
                 "so they drank the entire bowl of punch"
               ],
-              "correctAnswer": "B",
-              "explanation": "Anh nói sẽ viết thư cho cô, vì thế cô kiên nhẫn chờ đợi thư của anh."
+              "explanation": "Anh nói sẽ viết thư cho cô, vì thế cô kiên nhẫn chờ đợi thư của anh.",
+              "correctAnswer": "B"
             },
             {
               "id": "q29",
-              "content": "9. She wanted to look older, _____",
+              "content": "She wanted to look older, _____",
               "options": [
                 "so she applied makeup to her face",
                 "so he became confused",
                 "but she became more serious as she matured",
                 "because the pirate had buried it"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cô ấy muốn trông lớn tuổi hơn, nên đã trang điểm lên mặt."
+              "explanation": "Cô ấy muốn trông lớn tuổi hơn, nên đã trang điểm lên mặt.",
+              "correctAnswer": "A"
             },
             {
               "id": "q30",
-              "content": "10. They were thirsty, _____",
+              "content": "They were thirsty, _____",
               "options": [
                 "so they drank the entire bowl of punch",
                 "scientists measured all the effects",
                 "but his prior works were very successful",
                 "so the diners complained to the waiter"
               ],
-              "correctAnswer": "A",
-              "explanation": "Họ đang khát nên đã uống toàn bộ bát nước uống (punch)."
+              "explanation": "Họ đang khát nên đã uống toàn bộ bát nước uống (punch).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Laika, the Space Dog</h1><p style=\"margin-bottom: 1rem;\">One of the world's most <b>beloved</b> space travelers was also the furriest. Laika was a little dog living on the streets of Moscow, Russia. She <b>matured</b> on the streets because no one would give her a home. She had to learn how to live without eating much. She found ways to keep warm in a very cold <b>climate</b>. Scientists thought a tough dog like Laika would do well in a project they were putting together.</p><p style=\"margin-bottom: 1rem;\">In a <b>prior</b> launch, Russia had put the first man-made object into space. Now, scientists wanted to see if a living thing could go to space. <b>Although</b> many facts about space had been learned, they weren't enough to help send humans to space safely.</p><p style=\"margin-bottom: 1rem;\">Laika and two other dogs were chosen to help scientists with their <b>research</b>. The animals were used in a <b>variety</b> of tests. In the end, though, only Laika would go to space. On November 3, 1957 the Sputnik 2 spaceship was <b>due</b> to leave Earth.</p><p style=\"margin-bottom: 1rem;\">Scientists carefully <b>applied</b> wires to Laika's skin to <b>measure</b> her body's reactions once she got into space. Laika also wore a special <b>leash</b>. Without it, she would float around in the spaceship. Soon after, Laika left the planet. Scientists on Earth <b>awaited</b> information from the ship.</p><p style=\"margin-bottom: 1rem;\">But in the <b>midst</b> of so much excitement, something very sad happened. Scientists were able to tell that Laika was under a lot of stress. The trip <b>confused</b> and scared her. Laika's <b>entire</b> ship had become as hot as a <b>furnace</b>. Scientists were powerless to help the dog in her <b>misery</b>. After about five hours, Laika died.</p><p style=\"margin-bottom: 1rem;\">Some have <b>complained</b> that the little dog should never have been used in the mission. Scientists knew that she would not survive the trip. Laika was never <b>buried</b>, but a memorial has been <b>established</b> in Moscow. There are many songs and books about her, too. It seems that Laika became a hero to many people.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Laika, the Space Dog</h1>        <p style=\"margin-bottom: 1rem;\">One of the world's most <b>beloved</b> space travelers was also the furriest. Laika was a little dog living on the streets of Moscow, Russia. She <b>matured</b> on the streets because no one would give her a home. She had to learn how to live without eating much. She found ways to keep warm in a very cold <b>climate</b>. Scientists thought a tough dog like Laika would do well in a project they were putting together.</p>    <p style=\"margin-bottom: 1rem;\">In a <b>prior</b> launch, Russia had put the first man-made object into space. Now, scientists wanted to see if a living thing could go to space. <b>Although</b> many facts about space had been learned, they weren't enough to help send humans to space safely.</p>    <p style=\"margin-bottom: 1rem;\">Laika and two other dogs were chosen to help scientists with their <b>research</b>. The animals were used in a <b>variety</b> of tests. In the end, though, only Laika would go to space. On November 3, 1957 the Sputnik 2 spaceship was <b>due</b> to leave Earth.</p>    <p style=\"margin-bottom: 1rem;\">Scientists carefully <b>applied</b> wires to Laika's skin to <b>measure</b> her body's reactions once she got into space. Laika also wore a special <b>leash</b>. Without it, she would float around in the spaceship. Soon after, Laika left the planet. Scientists on Earth <b>awaited</b> information from the ship.</p>    <p style=\"margin-bottom: 1rem;\">But in the <b>midst</b> of so much excitement, something very sad happened. Scientists were able to tell that Laika was under a lot of stress. The trip <b>confused</b> and scared her. Laika's <b>entire</b> ship had become as hot as a <b>furnace</b>. Scientists were powerless to help the dog in her <b>misery</b>. After about five hours, Laika died.</p>    <p style=\"margin-bottom: 1rem;\">Some have <b>complained</b> that the little dog should never have been used in the mission. Scientists knew that she would not survive the trip. Laika was never <b>buried</b>, but a memorial has been <b>established</b> in Moscow. There are many songs and books about her, too. It seems that Laika became a hero to many people.</p></div>",
       "imageUrl": "/unit15_vol4_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Reading Comprehension: Part A",
           "content": "Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q31",
-              "content": "1. Scientists did a variety of tests for research before the Sputnik 2 was due to leave.",
+              "content": "Scientists did a variety of tests for research before the Sputnik 2 was due to leave.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). Câu chuyện nói: 'The animals were used in a variety of tests... Sputnik 2 spaceship was due to leave Earth.'"
+              "explanation": "Câu này đúng. Các nhà khoa học đã thực hiện nhiều thử nghiệm nghiên cứu với các chú chó trước khi tàu vũ trụ khởi hành. Trong bài viết có đoạn: The animals were used in a variety of tests... Sputnik 2 spaceship was due to leave Earth.",
+              "correctAnswer": "A"
             },
             {
               "id": "q32",
-              "content": "2. Wires were applied to Laika’s leash so that scientists could find the ship.",
+              "content": "Wires were applied to Laika’s leash so that scientists could find the ship.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). Dây (wires) được gắn vào da của Laika (Laika's skin) để đo lường phản ứng của cơ thể cô ấy."
+              "explanation": "Câu này sai. Những sợi dây điện được gắn vào da của Laika chứ không phải vào dây xích, và mục đích là để đo lường phản ứng cơ thể của cô ấy chứ không phải để tìm kiếm con tàu. Bằng chứng là: Scientists carefully applied wires to Laika's skin to measure her body's reactions.",
+              "correctAnswer": "B"
             },
             {
               "id": "q33",
-              "content": "3. Although Laika could not be buried, a spaceship was established in her honor.",
+              "content": "Although Laika could not be buried, a spaceship was established in her honor.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). Một đài tưởng niệm (a memorial) được thành lập để vinh danh Laika, không phải một con tàu vũ trụ."
+              "explanation": "Câu này sai nhé. Bài đọc cho biết một đài tưởng niệm đã được xây dựng để vinh danh Laika, chứ không phải một con tàu vũ trụ. Trích đoạn trong bài là: Laika was never buried, but a memorial has been established in Moscow.",
+              "correctAnswer": "B"
             },
             {
               "id": "q34",
-              "content": "4. In the midst of the scientists’ excitement, Laika’s ship became too hot.",
+              "content": "In the midst of the scientists’ excitement, Laika’s ship became too hot.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). Câu chuyện viết: 'In the midst of so much excitement... Laika's entire ship had become as hot as a furnace.'"
+              "explanation": "Câu này hoàn toàn chính xác. Giữa lúc mọi người đang vô cùng phấn khích thì tàu của Laika trở nên nóng ran. Câu văn chứng minh là: But in the midst of so much excitement, something very sad happened... Laika's entire ship had become as hot as a furnace.",
+              "correctAnswer": "A"
             },
             {
               "id": "q35",
-              "content": "5. In a prior launch, scientists sent two other dogs into space.",
+              "content": "In a prior launch, scientists sent two other dogs into space.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). Trong lần phóng trước, Nga đã đưa vật thể nhân tạo (man-made object) đầu tiên vào không gian."
+              "explanation": "Câu này sai. Trong một lần phóng trước đó, các nhà khoa học Nga đã đưa một vật thể nhân tạo vào vũ trụ, chứ không phải đưa hai chú chó khác. Đoạn văn ghi rõ: In a prior launch, Russia had put the first man-made object into space.",
+              "correctAnswer": "B"
             },
             {
               "id": "q36",
-              "content": "6. Many people complained that Laika should not have gone to space.",
+              "content": "Many people complained that Laika should not have gone to space.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). Một số người đã phàn nàn (complained) rằng không bao giờ nên dùng chú chó nhỏ cho sứ mệnh này."
+              "explanation": "Câu này đúng. Rất nhiều người đã phàn nàn và cho rằng không nên đưa một chú chó nhỏ bé vào nhiệm vụ nguy hiểm này. Bằng chứng trong bài đọc là: Some have complained that the little dog should never have been used in the mission.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Reading Comprehension: Part B",
           "content": "Answer the questions.",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q37",
-              "content": "1. Why did scientists choose Laika for the mission?",
+              "content": "Why did scientists choose Laika for the mission?",
               "options": [
                 "She was tough.",
                 "She was a beloved space traveler.",
                 "The trip to space confused her.",
                 "She needed to wear a special leash."
               ],
-              "correctAnswer": "A",
-              "explanation": "Các nhà khoa học nghĩ rằng một chú chó kiên cường (tough) như Laika sẽ làm tốt trong dự án."
+              "explanation": "Các nhà khoa học nghĩ rằng một chú chó mạnh mẽ và kiên cường như Laika sẽ phù hợp với dự án. Trong bài có ghi: Scientists thought a tough dog like Laika would do well in a project they were putting together. Do đó đáp án A là chính xác.",
+              "correctAnswer": "A"
             },
             {
               "id": "q38",
-              "content": "2. Why did Laika die during the trip?",
+              "content": "Why did Laika die during the trip?",
               "options": [
                 "The ship became as hot as a furnace.",
                 "The scientists were under a lot of stress.",
                 "Living things cannot survive in space.",
                 "The scientists didn’t get information from her."
               ],
-              "correctAnswer": "A",
-              "explanation": "Cô ấy chết vì con tàu trở nên nóng như lò sưởi (as hot as a furnace)."
+              "explanation": "Laika đã thiệt mạng vì toàn bộ con tàu trở nên nóng rực như một cái lò sưởi. Câu văn chứng minh là: Laika's entire ship had become as hot as a furnace... After about five hours, Laika died. Nên chọn đáp án A.",
+              "correctAnswer": "A"
             },
             {
               "id": "q39",
-              "content": "3. Scientists made Laika wear a special leash because they ________.",
+              "content": "Scientists made Laika wear a special leash because they ________.",
               "options": [
                 "were awaiting information from the ship",
                 "were not able to bury her",
                 "didn’t want her to float around the ship",
                 "needed to adjust the climate"
               ],
-              "correctAnswer": "C",
-              "explanation": "Không có dây xích, cô ấy sẽ trôi nổi khắp con tàu (float around in the spaceship)."
+              "explanation": "Laika phải đeo một sợi dây xích đặc biệt vì nếu không cô ấy sẽ bị trôi lơ lửng xung quanh trong con tàu. Trích đoạn: Laika also wore a special leash. Without it, she would float around in the spaceship. Vậy nên đáp án C là hợp lý nhất.",
+              "correctAnswer": "C"
             },
             {
               "id": "q40",
-              "content": "4. Why did scientists apply wires to Laika’s skin?",
+              "content": "Why did scientists apply wires to Laika’s skin?",
               "options": [
                 "To measure her body’s reactions",
                 "To allow her to mature",
                 "To take her for the entire trip",
                 "To return her to Earth"
               ],
-              "correctAnswer": "A",
-              "explanation": "Các nhà khoa học gắn dây điện vào da Laika để đo lường các phản ứng của cơ thể cô ấy (measure her body's reactions)."
+              "explanation": "Các nhà khoa học gắn những sợi dây điện lên da của Laika để đo lường các phản ứng sinh lý của cơ thể cô bé khi vào không gian. Bằng chứng trong bài là: Scientists carefully applied wires to Laika's skin to measure her body's reactions. Vì thế đáp án A là chính xác.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

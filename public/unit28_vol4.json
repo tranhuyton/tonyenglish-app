@@ -16,397 +16,397 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1, Part A: Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. to ask someone to come",
+              "content": "to ask someone to come",
               "options": [
                 "worsen",
                 "scribble",
                 "linger",
                 "summon"
               ],
-              "correctAnswer": "D",
-              "explanation": "summon có nghĩa là triệu tập, yêu cầu ai đó đến (to ask someone to come)."
+              "explanation": "summon có nghĩa là triệu tập, yêu cầu ai đó đến (to ask someone to come).",
+              "correctAnswer": "D"
             },
             {
               "id": "2",
-              "content": "2. basic",
+              "content": "basic",
               "options": [
                 "verse",
                 "riot",
                 "avail",
                 "fundamental"
               ],
-              "correctAnswer": "D",
-              "explanation": "fundamental có nghĩa là cơ bản (basic)."
+              "explanation": "fundamental có nghĩa là cơ bản (basic).",
+              "correctAnswer": "D"
             },
             {
               "id": "3",
-              "content": "3. to get bigger",
+              "content": "to get bigger",
               "options": [
                 "expand",
                 "define",
                 "stark",
                 "organism"
               ],
-              "correctAnswer": "A",
-              "explanation": "expand có nghĩa là mở rộng, trở nên lớn hơn (to get bigger)."
+              "explanation": "expand có nghĩa là mở rộng, trở nên lớn hơn (to get bigger).",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
-              "content": "4. to be afraid",
+              "content": "to be afraid",
               "options": [
                 "dread",
                 "shrine",
                 "random",
                 "horrifying"
               ],
-              "correctAnswer": "A",
-              "explanation": "dread có nghĩa là khiếp sợ, e sợ (to be afraid)."
+              "explanation": "dread có nghĩa là khiếp sợ, e sợ (to be afraid).",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
-              "content": "5. not believing",
+              "content": "not believing",
               "options": [
                 "solitude",
                 "presently",
                 "incredulous",
                 "plague"
               ],
-              "correctAnswer": "C",
-              "explanation": "incredulous có nghĩa là hoài nghi, không tin (not believing)."
+              "explanation": "incredulous có nghĩa là hoài nghi, không tin (not believing).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 1, Part B: Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "6",
-              "content": "1. plague",
+              "content": "plague",
               "options": [
                 "a violent reaction",
                 "different",
                 "a disease",
                 "without reason"
               ],
-              "correctAnswer": "C",
-              "explanation": "plague có nghĩa là bệnh dịch (a disease)."
+              "explanation": "plague có nghĩa là bệnh dịch (a disease).",
+              "correctAnswer": "C"
             },
             {
               "id": "7",
-              "content": "2. solitude",
+              "content": "solitude",
               "options": [
                 "being alone",
                 "success",
                 "afraid",
                 "right now"
               ],
-              "correctAnswer": "A",
-              "explanation": "solitude có nghĩa là sự cô đơn, trạng thái ở một mình (being alone)."
+              "explanation": "solitude có nghĩa là sự cô đơn, trạng thái ở một mình (being alone).",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
-              "content": "3. define",
+              "content": "define",
               "options": [
                 "to last a longtime",
                 "to get bigger",
                 "to explain clearly",
                 "to make easier"
               ],
-              "correctAnswer": "C",
-              "explanation": "define có nghĩa là định nghĩa, giải thích rõ ràng (to explain clearly)."
+              "explanation": "define có nghĩa là định nghĩa, giải thích rõ ràng (to explain clearly).",
+              "correctAnswer": "C"
             },
             {
               "id": "9",
-              "content": "4. organism",
+              "content": "organism",
               "options": [
                 "a religious building",
                 "a living thing",
                 "not believing",
                 "to send for"
               ],
-              "correctAnswer": "B",
-              "explanation": "organism có nghĩa là sinh vật, thực thể sống (a living thing)."
+              "explanation": "organism có nghĩa là sinh vật, thực thể sống (a living thing).",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
-              "content": "5. horrifying",
+              "content": "horrifying",
               "options": [
                 "to get worse",
                 "basic",
                 "to write quickly",
                 "very unpleasant"
               ],
-              "correctAnswer": "D",
-              "explanation": "horrifying có nghĩa là kinh khủng, rất khó chịu (very unpleasant)."
+              "explanation": "horrifying có nghĩa là kinh khủng, rất khó chịu (very unpleasant).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 2: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "1. There was a ___________ in the city yesterday, but the ___________ was not damaged.",
+              "content": "There was a ___________ in the city yesterday, but the ___________ was not damaged.",
               "options": [
                 "riot / shrine",
                 "shrine / riot",
                 "plague / random",
                 "organism / summon"
               ],
-              "correctAnswer": "A",
-              "explanation": "riot (bạo loạn) và shrine (ngôi đền). Có một cuộc bạo loạn ở thành phố hôm qua, nhưng ngôi đền không bị phá hoại."
+              "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì).",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
-              "content": "2. For the book report, I ___________ the story and ___________ my purpose for writing it.",
+              "content": "For the book report, I ___________ the story and ___________ my purpose for writing it.",
               "options": [
                 "paraphrased / defined",
                 "defined / paraphrased",
                 "scribbled / lingered",
                 "worsened / dreaded"
               ],
-              "correctAnswer": "A",
-              "explanation": "paraphrased (diễn giải lại) và defined (định nghĩa, xác định rõ). Đối với báo cáo sách, tôi đã diễn giải lại câu chuyện và xác định rõ mục đích viết nó."
+              "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ).",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
-              "content": "3. There are 15 members in the group ___________ . We should ___________ it.",
+              "content": "There are 15 members in the group ___________ . We should ___________ it.",
               "options": [
                 "expand / presently",
                 "presently / expand",
                 "linger / scribble",
                 "avail / solitude"
               ],
-              "correctAnswer": "B",
-              "explanation": "presently (hiện tại) và expand (mở rộng). Hiện tại có 15 thành viên trong nhóm. Chúng ta nên mở rộng nó."
+              "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo).",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
-              "content": "4. His attempt to catch the train was to no ___________ . He sat in ___________ waiting for the next one.",
+              "content": "His attempt to catch the train was to no ___________ . He sat in ___________ waiting for the next one.",
               "options": [
                 "solitude / avail",
                 "avail / solitude",
                 "random / plague",
                 "shrine / riot"
               ],
-              "correctAnswer": "B",
-              "explanation": "avail (ích lợi) và solitude (sự cô đơn). Nỗ lực bắt chuyến tàu của anh ấy không thành công (to no avail). Anh ấy ngồi trong sự cô đơn chờ chuyến tiếp theo."
+              "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông).",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
-              "content": "5. The ___________ point of my speech was to show that people need to act. If we don’t do something, things will ___________ .",
+              "content": "The ___________ point of my speech was to show that people need to act. If we don’t do something, things will ___________ .",
               "options": [
                 "worsen / fundamental",
                 "fundamental / worsen",
                 "stark / incredulous",
                 "horrifying / dreaded"
               ],
-              "correctAnswer": "B",
-              "explanation": "fundamental (cơ bản) và worsen (tồi tệ hơn). Điểm cơ bản trong bài phát biểu của tôi là chỉ ra rằng mọi người cần hành động. Nếu không làm gì, mọi thứ sẽ tồi tệ hơn."
+              "explanation": "fundamental (cơ bản) và worsen (tồi tệ hơn). Điểm cơ bản trong bài phát biểu của tôi là chỉ ra rằng mọi người cần hành động. Nếu không làm gì, mọi thứ sẽ tồi tệ hơn.",
+              "correctAnswer": "B"
             },
             {
               "id": "16",
-              "content": "6. I tried to ___________ the information as fast as I could because I didn’t have time to ___________ .",
+              "content": "I tried to ___________ the information as fast as I could because I didn’t have time to ___________ .",
               "options": [
                 "linger / scribble",
                 "scribble / linger",
                 "paraphrase / define",
                 "summon / expand"
               ],
-              "correctAnswer": "B",
-              "explanation": "scribble (viết ngoáy) và linger (nán lại). Tôi cố viết ngoáy thông tin nhanh nhất có thể vì tôi không có thời gian nán lại."
+              "explanation": "scribble (viết ngoáy) và linger (nán lại). Tôi cố viết ngoáy thông tin nhanh nhất có thể vì tôi không có thời gian nán lại.",
+              "correctAnswer": "B"
             },
             {
               "id": "17",
-              "content": "7. After seeing that ___________ plane crash, I ___________ getting on an airplane.",
+              "content": "After seeing that ___________ plane crash, I ___________ getting on an airplane.",
               "options": [
                 "dreaded / horrifying",
                 "horrifying / dreaded",
                 "stark / incredulous",
                 "random / plague"
               ],
-              "correctAnswer": "B",
-              "explanation": "horrifying (kinh hoàng) và dreaded (khiếp sợ). Sau khi thấy vụ rơi máy bay kinh hoàng đó, tôi khiếp sợ việc lên máy bay."
+              "explanation": "horrifying (kinh hoàng) và dreaded (khiếp sợ). Sau khi thấy vụ rơi máy bay kinh hoàng đó, tôi khiếp sợ việc lên máy bay.",
+              "correctAnswer": "B"
             },
             {
               "id": "18",
-              "content": "8. She was ___________ that there could be such a ___________ contrast between boys’ and girls’ grades.",
+              "content": "She was ___________ that there could be such a ___________ contrast between boys’ and girls’ grades.",
               "options": [
                 "stark / incredulous",
                 "incredulous / stark",
                 "fundamental / worsen",
                 "presently / expand"
               ],
-              "correctAnswer": "B",
-              "explanation": "incredulous (hoài nghi) và stark (hoàn toàn, rõ rệt). Cô ấy không tin được (hoài nghi) rằng lại có sự tương phản rõ rệt như vậy giữa điểm của nam và nữ."
+              "explanation": "incredulous (hoài nghi) và stark (hoàn toàn, rõ rệt). Cô ấy không tin được (hoài nghi) rằng lại có sự tương phản rõ rệt như vậy giữa điểm của nam và nữ.",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
-              "content": "9. We had to ___________ scientists from around the world to study this new ___________ .",
+              "content": "We had to ___________ scientists from around the world to study this new ___________ .",
               "options": [
                 "organism / summon",
                 "summon / organism",
                 "avail / solitude",
                 "plague / random"
               ],
-              "correctAnswer": "B",
-              "explanation": "summon (triệu tập) và organism (sinh vật). Chúng tôi phải triệu tập các nhà khoa học trên toàn thế giới để nghiên cứu sinh vật mới này."
+              "explanation": "summon (triệu tập) và organism (sinh vật). Chúng tôi phải triệu tập các nhà khoa học trên toàn thế giới để nghiên cứu sinh vật mới này.",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
-              "content": "10. At first we thought it was ___________ that people were getting sick. Then we realized that a ___________ was spreading.",
+              "content": "At first we thought it was ___________ that people were getting sick. Then we realized that a ___________ was spreading.",
               "options": [
                 "plague / random",
                 "random / plague",
                 "riot / shrine",
                 "worsen / fundamental"
               ],
-              "correctAnswer": "B",
-              "explanation": "random (ngẫu nhiên) và plague (bệnh dịch). Lúc đầu chúng tôi nghĩ việc mọi người bị ốm là ngẫu nhiên. Sau đó chúng tôi nhận ra rằng một bệnh dịch đang lây lan."
+              "explanation": "random (ngẫu nhiên) và plague (bệnh dịch). Lúc đầu chúng tôi nghĩ việc mọi người bị ốm là ngẫu nhiên. Sau đó chúng tôi nhận ra rằng một bệnh dịch đang lây lan.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">Thucydides and the Plague of Athens</h1><p style=\"margin-bottom: 2rem;\">Thucydides was the world’s first historian. <b>Presently</b>, we get most of our knowledge about ancient Greece from his writing. But Thucydides didn’t just write about history, he lived through it. However, he almost didn’t survive one historical event: the <b>Plague</b> of Athens.</p><p style=\"margin-bottom: 2rem;\">In 430 BCE, an army attacked the city of Athens, where Thucydides lived. Thousands of people hid from the army behind Athens’ large walls. The city became very crowded as the population <b>expanded</b>. Then a <b>horrifying</b> disease broke out. People <b>summoned</b> doctors. But it was to no <b>avail</b> because no one understood how the disease spread.</p><p style=\"margin-bottom: 2rem;\">It seemed <b>random</b>. They didn’t know that it was an <b>organism</b>. Instead, they <b>defined</b> disease as a punishment from their gods. Thucydides was <b>incredulous</b> that gods caused the <b>plague</b>, but he explained why others believed it. There was an old, long verse which predicted the disease. To <b>paraphrase</b> it, the verse said the gods would send a disease during a war. As a result, large crowds gathered at <b>shrines</b> to ask the gods to stop the <b>plague</b>. But the situation only <b>worsened</b> because these people were so close to each other they became sick. That’s how they learned a <b>fundamental</b> lesson about the <b>plague</b>: it spread from person to person.</p><p style=\"margin-bottom: 2rem;\">People wanted to leave the crowded city, but they <b>dreaded</b> what the army outside would do to them. At this time, Thucydides got sick, too. He quickly <b>scribbled</b> down notes because he thought he would soon die. His writing shows a <b>stark</b> contrast between people’s behavior before and during the <b>plague</b>. There were <b>riots</b>, and people ignored laws. They didn’t think they’d live long enough to be punished. Many sick people were left to die in <b>solitude</b> because no one wanted to be near them. The <b>plague</b> <b>lingered</b> for two years. But luckily, Thucydides survived. Without his writing, we would know much less about ancient Greece and the <b>Plague</b> of Athens.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Thucydides and the Plague of Athens</h1>        <p style=\"margin-bottom: 1rem;\">Thucydides was the world’s first historian. <b>Presently</b>, we get most of our knowledge about ancient Greece from his writing. But Thucydides didn’t just write about history, he lived through it. However, he almost didn’t survive one historical event: the <b>Plague</b> of Athens.</p>    <p style=\"margin-bottom: 1rem;\">In 430 BCE, an army attacked the city of Athens, where Thucydides lived. Thousands of people hid from the army behind Athens’ large walls. The city became very crowded as the population <b>expanded</b>. Then a <b>horrifying</b> disease broke out. People <b>summoned</b> doctors. But it was to no <b>avail</b> because no one understood how the disease spread.</p>    <p style=\"margin-bottom: 1rem;\">It seemed <b>random</b>. They didn’t know that it was an <b>organism</b>. Instead, they <b>defined</b> disease as a punishment from their gods. Thucydides was <b>incredulous</b> that gods caused the <b>plague</b>, but he explained why others believed it. There was an old, long verse which predicted the disease. To <b>paraphrase</b> it, the verse said the gods would send a disease during a war. As a result, large crowds gathered at <b>shrines</b> to ask the gods to stop the <b>plague</b>. But the situation only <b>worsened</b> because these people were so close to each other they became sick. That’s how they learned a <b>fundamental</b> lesson about the <b>plague</b>: it spread from person to person.</p>    <p style=\"margin-bottom: 1rem;\">People wanted to leave the crowded city, but they <b>dreaded</b> what the army outside would do to them. At this time, Thucydides got sick, too. He quickly <b>scribbled</b> down notes because he thought he would soon die. His writing shows a <b>stark</b> contrast between people’s behavior before and during the <b>plague</b>. There were <b>riots</b>, and people ignored laws. They didn’t think they’d live long enough to be punished. Many sick people were left to die in <b>solitude</b> because no one wanted to be near them. The <b>plague</b> <b>lingered</b> for two years. But luckily, Thucydides survived. Without his writing, we would know much less about ancient Greece and the <b>Plague</b> of Athens.</p></div>",
       "imageUrl": "/unit28_vol4_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Reading Comprehension, Part A: Mark each statement True or False.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
-              "content": "1. Presently, a horrifying plague has broken out in Athens.",
+              "content": "Presently, a horrifying plague has broken out in Athens.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Thực tế là bệnh dịch đã bùng phát ở Athens vào năm 430 TCN, không phải hiện tại (presently)."
+              "explanation": "Câu này sai. Dịch bệnh xảy ra từ thời xưa. \"In 430 BCE, an army attacked the city of Athens... Then a horrifying disease broke out.\"",
+              "correctAnswer": "B"
             },
             {
               "id": "22",
-              "content": "2. At first, people thought the spread of the disease was random.",
+              "content": "At first, people thought the spread of the disease was random.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Lúc đầu mọi người nghĩ rằng sự lây lan của căn bệnh là ngẫu nhiên (random)."
+              "explanation": "Câu này đúng. Bài đọc có ghi \"It seemed random.\" (Trông nó có vẻ như ngẫu nhiên).",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
-              "content": "3. The people summoned doctors to no avail.",
+              "content": "The people summoned doctors to no avail.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mọi người đã triệu tập (summoned) các bác sĩ nhưng vô ích (to no avail)."
+              "explanation": "Câu này đúng. \"People summoned doctors. But it was to no avail because no one understood how the disease spread.\" (Họ đã gọi bác sĩ nhưng vô ích).",
+              "correctAnswer": "A"
             },
             {
               "id": "24",
-              "content": "4. Thucydides was incredulous that the plague was caused by an organism.",
+              "content": "Thucydides was incredulous that the plague was caused by an organism.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Thucydides không tin (incredulous) rằng bệnh dịch do các vị thần gây ra, chứ không phải do sinh vật (organism)."
+              "explanation": "Câu này sai. Ông không tin căn bệnh do chư thần gây ra. \"Thucydides was incredulous that gods caused the plague\" (Thucydides không tin rằng chư thần đã gây ra bệnh dịch).",
+              "correctAnswer": "B"
             },
             {
               "id": "25",
-              "content": "5. By gathering in shrines, people made the plague worse.",
+              "content": "By gathering in shrines, people made the plague worse.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bằng cách tụ tập ở các ngôi đền (shrines), mọi người đã làm cho bệnh dịch tồi tệ hơn."
+              "explanation": "Câu này đúng. \"But the situation only worsened because these people were so close to each other they became sick.\" (Nhưng tình hình trở nên tồi tệ hơn vì mọi người đứng quá gần nhau tại các đền thờ).",
+              "correctAnswer": "A"
             },
             {
               "id": "26",
-              "content": "6. Thucydides luckily survived the plague.",
+              "content": "Thucydides luckily survived the plague.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "May mắn thay, Thucydides đã sống sót qua trận dịch."
+              "explanation": "Câu này đúng. Đoạn cuối bài có ghi: \"But luckily, Thucydides survived.\" (Nhưng may mắn thay, Thucydides đã sống sót).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",
           "title": "Reading Comprehension, Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "27",
-              "content": "1. Why did Athens’ population expand?",
+              "content": "Why did Athens’ population expand?",
               "options": [
                 "Because the army moved into the city",
                 "Because people were hiding from the army",
                 "Because the army told people to enter",
                 "Because people dreaded the plague"
               ],
-              "correctAnswer": "B",
-              "explanation": "Dân số Athens tăng lên (expand) vì hàng ngàn người đã trốn quân đội (hiding from the army) đằng sau những bức tường lớn của Athens."
+              "explanation": "Dẫn chứng: \"Thousands of people hid from the army behind Athens’ large walls. The city became very crowded as the population expanded.\" (Hàng ngàn người trốn tránh quân đội sau những bức tường lớn khiến dân số tăng lên).",
+              "correctAnswer": "B"
             },
             {
               "id": "28",
-              "content": "2. Thucydides scribbled quickly because ________.",
+              "content": "Thucydides scribbled quickly because ________.",
               "options": [
                 "there were so many riots",
                 "he had to define the disease",
                 "he though he’d die soon",
                 "there were too many sick people"
               ],
-              "correctAnswer": "C",
-              "explanation": "Thucydides đã viết vội vàng (scribbled) vì ông nghĩ rằng mình sẽ sớm chết (thought he'd die soon)."
+              "explanation": "Dẫn chứng: \"He quickly scribbled down notes because he thought he would soon die.\" (Ông vội vàng viết tốc ký vì nghĩ mình sẽ sớm qua đời).",
+              "correctAnswer": "C"
             },
             {
               "id": "29",
-              "content": "3. What fundamental lesson did the people learn?",
+              "content": "What fundamental lesson did the people learn?",
               "options": [
                 "The plague was a punishment.",
                 "The plague was ended in the shrines.",
                 "The plague was from the army.",
                 "The plague was spread between people."
               ],
-              "correctAnswer": "D",
-              "explanation": "Bài học cơ bản (fundamental lesson) mà mọi người học được là bệnh dịch lây lan từ người sang người (spread between people)."
+              "explanation": "\"That’s how they learned a fundamental lesson about the plague: it spread from person to person.\" (Họ học được một bài học cơ bản là bệnh lây truyền từ người sang người).",
+              "correctAnswer": "D"
             },
             {
               "id": "30",
-              "content": "4. What is NOT true of Thucydides?",
+              "content": "What is NOT true of Thucydides?",
               "options": [
                 "He was the world’s first historian.",
                 "He thought gods caused the plague.",
                 "He survived the Plague of Athens.",
                 "He lived in the city of Athens."
               ],
-              "correctAnswer": "B",
-              "explanation": "Điều KHÔNG ĐÚNG là Thucydides nghĩ các vị thần đã gây ra bệnh dịch. Ông ấy không tin (incredulous) điều đó."
+              "explanation": "Ông không hề tin như vậy. \"Thucydides was incredulous that gods caused the plague\" (Ông hoài nghi việc chư thần gây ra dịch bệnh).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

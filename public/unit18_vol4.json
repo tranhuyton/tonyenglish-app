@@ -16,525 +16,525 @@
           "id": "u18_ex1_a",
           "title": "Exercise 1 Part A: Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "u18_ex1_a_1",
-              "content": "1. an underground room",
+              "content": "an underground room",
               "options": [
                 "a. accent",
                 "b. basement",
                 "c. a technique",
                 "d. errand"
               ],
-              "correctAnswer": "B",
-              "explanation": "basement: tầng hầm, một căn phòng được xây dưới lòng đất."
+              "explanation": "basement: tầng hầm, một căn phòng được xây dưới lòng đất.",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_ex1_a_2",
-              "content": "2. to think about something",
+              "content": "to think about something",
               "options": [
                 "a. complicate",
                 "b. reserve",
                 "c. ponder",
                 "d. slam"
               ],
-              "correctAnswer": "C",
-              "explanation": "ponder: suy nghĩ về một điều gì đó."
+              "explanation": "ponder: suy nghĩ về một điều gì đó.",
+              "correctAnswer": "C"
             },
             {
               "id": "u18_ex1_a_3",
-              "content": "3. the written words of a play or film",
+              "content": "the written words of a play or film",
               "options": [
                 "a. script",
                 "b. blank",
                 "c. barber",
                 "d. gloves"
               ],
-              "correctAnswer": "A",
-              "explanation": "script: kịch bản của một vở kịch hay bộ phim."
+              "explanation": "script: kịch bản của một vở kịch hay bộ phim.",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex1_a_4",
-              "content": "4. a group that sings",
+              "content": "a group that sings",
               "options": [
                 "a. hermits",
                 "b. leather",
                 "c. choir",
                 "d. staircases"
               ],
-              "correctAnswer": "C",
-              "explanation": "choir: dàn hợp xướng, một nhóm người hát cùng nhau."
+              "explanation": "choir: dàn hợp xướng, một nhóm người hát cùng nhau.",
+              "correctAnswer": "C"
             },
             {
               "id": "u18_ex1_a_5",
-              "content": "5. in a fair way",
+              "content": "in a fair way",
               "options": [
                 "a. comic",
                 "b. decline",
                 "c. searching",
                 "d. justly"
               ],
-              "correctAnswer": "D",
-              "explanation": "justly: một cách công bằng."
+              "explanation": "justly: một cách công bằng.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "u18_ex1_b",
           "title": "Exercise 1 Part B: Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "u18_ex1_b_1",
-              "content": "1. slam",
+              "content": "slam",
               "options": [
                 "a. to close loudly",
                 "b. to be careful",
                 "c. to close the eyes",
                 "d. to save"
               ],
-              "correctAnswer": "A",
-              "explanation": "slam: đóng sầm, đóng một cách mạnh bạo."
+              "explanation": "slam: đóng sầm, đóng một cách mạnh bạo.",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex1_b_2",
-              "content": "2. decline",
+              "content": "decline",
               "options": [
                 "a. to look for",
                 "b. to say no",
                 "c. to be right",
                 "d. fair"
               ],
-              "correctAnswer": "B",
-              "explanation": "decline: từ chối, nói không với lời mời hay đề nghị."
+              "explanation": "decline: từ chối, nói không với lời mời hay đề nghị.",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_ex1_b_3",
-              "content": "3. hermit",
+              "content": "hermit",
               "options": [
                 "a. clothing for your hands",
                 "b. something that is funny",
                 "c. a trip to do something",
                 "d. a person who is alone"
               ],
-              "correctAnswer": "D",
-              "explanation": "hermit: người ẩn dật, sống một mình."
+              "explanation": "hermit: người ẩn dật, sống một mình.",
+              "correctAnswer": "D"
             },
             {
               "id": "u18_ex1_b_4",
-              "content": "4. leather",
+              "content": "leather",
               "options": [
                 "a. a distinct way of speaking",
                 "b. material used to make clothing",
                 "c. an underground room",
                 "d. a piece of clothing for the hands"
               ],
-              "correctAnswer": "B",
-              "explanation": "leather: da, chất liệu làm từ da động vật để may mặc."
+              "explanation": "leather: da, chất liệu làm từ da động vật để may mặc.",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_ex1_b_5",
-              "content": "5. barber",
+              "content": "barber",
               "options": [
                 "a. a singing group",
                 "b. a person who cuts hair",
                 "c. a set of stairs",
                 "d. phrases that form a play"
               ],
-              "correctAnswer": "B",
-              "explanation": "barber: thợ cắt tóc."
+              "explanation": "barber: thợ cắt tóc.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "u18_ex2_a",
           "title": "Exercise 2 Part A: Match the phrases to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "u18_ex2_a_1",
-              "content": "1. The writer's comic stories_____",
+              "content": "The writer's comic stories_____",
               "options": [
                 "a. always make me laugh",
                 "b. led up to the second floor",
                 "c. before buying a new car",
                 "d. made him hard to understand"
               ],
-              "correctAnswer": "A",
-              "explanation": "Nhà văn viết truyện hài nên luôn làm tôi cười (always make me laugh)."
+              "explanation": "Nhà văn viết truyện hài nên luôn làm tôi cười (always make me laugh).",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_a_2",
-              "content": "2. Donna usually ran errands_____",
+              "content": "Donna usually ran errands_____",
               "options": [
                 "a. after hearing them sing in church",
                 "b. slept in small cave",
                 "c. just before I left the house",
                 "d. right before coming home from work"
               ],
-              "correctAnswer": "D",
-              "explanation": "Donna thường chạy việc vặt ngay trước khi đi làm về nhà (right before coming home from work)."
+              "explanation": "Donna thường chạy việc vặt ngay trước khi đi làm về nhà (right before coming home from work).",
+              "correctAnswer": "D"
             },
             {
               "id": "u18_ex2_a_3",
-              "content": "3. I tried to reserve_____",
+              "content": "I tried to reserve_____",
               "options": [
                 "a. some seats for this week's show",
                 "b. makes a great playroom",
                 "c. led up to the second floor",
                 "d. always make me laugh"
               ],
-              "correctAnswer": "A",
-              "explanation": "reserve some seats: đặt trước một vài chỗ ngồi."
+              "explanation": "reserve some seats: đặt trước một vài chỗ ngồi.",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_a_4",
-              "content": "4. She wanted to join the choir_____",
+              "content": "She wanted to join the choir_____",
               "options": [
                 "a. after hearing them sing in church",
                 "b. made him hard to understand",
                 "c. just before I left the house",
                 "d. before buying a new car"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tham gia dàn hợp xướng (choir) sau khi nghe họ hát ở nhà thờ."
+              "explanation": "Tham gia dàn hợp xướng (choir) sau khi nghe họ hát ở nhà thờ.",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_a_5",
-              "content": "5. A beautiful staircase_____",
+              "content": "A beautiful staircase_____",
               "options": [
                 "a. slept in small cave",
                 "b. led up to the second floor",
                 "c. right before coming home from work",
                 "d. some seats for this week's show"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cầu thang đẹp đẽ dẫn lên tầng 2 (led up to the second floor)."
+              "explanation": "Cầu thang đẹp đẽ dẫn lên tầng 2 (led up to the second floor).",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_ex2_a_6",
-              "content": "6. The speaker's strong accent_____",
+              "content": "The speaker's strong accent_____",
               "options": [
                 "a. made him hard to understand",
                 "b. always make me laugh",
                 "c. makes a great playroom",
                 "d. right before coming home from work"
               ],
-              "correctAnswer": "A",
-              "explanation": "Giọng địa phương quá nặng (strong accent) khiến anh ta khó bị hiểu."
+              "explanation": "Giọng địa phương quá nặng (strong accent) khiến anh ta khó bị hiểu.",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_a_7",
-              "content": "7. Roger pondered a long time_____",
+              "content": "Roger pondered a long time_____",
               "options": [
                 "a. led up to the second floor",
                 "b. before buying a new car",
                 "c. after hearing them sing in church",
                 "d. some seats for this week's show"
               ],
-              "correctAnswer": "B",
-              "explanation": "ponder: suy nghĩ cân nhắc trước khi mua ô tô mới."
+              "explanation": "ponder: suy nghĩ cân nhắc trước khi mua ô tô mới.",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_ex2_a_8",
-              "content": "8. The hermit_____",
+              "content": "The hermit_____",
               "options": [
                 "a. just before I left the house",
                 "b. makes a great playroom",
                 "c. slept in small cave",
                 "d. right before coming home from work"
               ],
-              "correctAnswer": "C",
-              "explanation": "hermit: người ẩn dật ngủ trong một hang nhỏ (slept in small cave)."
+              "explanation": "hermit: người ẩn dật ngủ trong một hang nhỏ (slept in small cave).",
+              "correctAnswer": "C"
             },
             {
               "id": "u18_ex2_a_9",
-              "content": "9. I remembered to make sure I had my gloves_____",
+              "content": "I remembered to make sure I had my gloves_____",
               "options": [
                 "a. just before I left the house",
                 "b. led up to the second floor",
                 "c. always make me laugh",
                 "d. after hearing them sing in church"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tôi nhớ mang găng tay trước khi rời khỏi nhà (just before I left the house)."
+              "explanation": "Tôi nhớ mang găng tay trước khi rời khỏi nhà (just before I left the house).",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_a_10",
-              "content": "10. The large basement_____",
+              "content": "The large basement_____",
               "options": [
                 "a. makes a great playroom",
                 "b. made him hard to understand",
                 "c. before buying a new car",
                 "d. some seats for this week's show"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tầng hầm rộng lớn có thể tạo thành một phòng chơi tuyệt vời (makes a great playroom)."
+              "explanation": "Tầng hầm rộng lớn có thể tạo thành một phòng chơi tuyệt vời (makes a great playroom).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "u18_ex2_b",
           "title": "Exercise 2 Part B: Match the clauses to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "u18_ex2_b_1",
-              "content": "1. I put some medicine in my eyes,_____",
+              "content": "I put some medicine in my eyes,_____",
               "options": [
                 "a. so I had to keep blinking them",
                 "b. so he cleaned the leather couch",
                 "c. but she declined",
                 "d. it was completely blank"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tôi nhỏ thuốc vào mắt nên tôi phải liên tục chớp mắt (keep blinking them)."
+              "explanation": "Tôi nhỏ thuốc vào mắt nên tôi phải liên tục chớp mắt (keep blinking them).",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_b_2",
-              "content": "2. The boy's mom yelled at him for getting mud on the couch,_____",
+              "content": "The boy's mom yelled at him for getting mud on the couch,_____",
               "options": [
                 "a. because Tony spent a lot of time on the script",
                 "b. so he cleaned the leather couch",
                 "c. so doing the homework was complicated",
                 "d. so he left the room and slammed the door"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cậu bé làm bẩn ghế bằng bùn nên mẹ la, do đó cậu phải làm sạch chiếc ghế da (cleaned the leather couch)."
+              "explanation": "Cậu bé làm bẩn ghế bằng bùn nên mẹ la, do đó cậu phải làm sạch chiếc ghế da (cleaned the leather couch).",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_ex2_b_3",
-              "content": "3. He asked Sara to see the scary movie,_____",
+              "content": "He asked Sara to see the scary movie,_____",
               "options": [
                 "a. so I went to see the barber",
                 "b. so he had to search for them for an hour",
                 "c. but she declined",
                 "d. so they justly shared the prize"
               ],
-              "correctAnswer": "C",
-              "explanation": "Anh ta rủ Sara xem phim kinh dị, nhưng cô ấy từ chối (declined)."
+              "explanation": "Anh ta rủ Sara xem phim kinh dị, nhưng cô ấy từ chối (declined).",
+              "correctAnswer": "C"
             },
             {
               "id": "u18_ex2_b_4",
-              "content": "4. He spent the period daydreaming. So when he turned in his test,_____",
+              "content": "He spent the period daydreaming. So when he turned in his test,_____",
               "options": [
                 "a. it was completely blank",
                 "b. so I had to keep blinking them",
                 "c. so he cleaned the leather couch",
                 "d. because Tony spent a lot of time on the script"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cậu ta mộng du cả tiết. Khi nộp bài kiểm tra thì nó hoàn toàn để trắng (completely blank)."
+              "explanation": "Cậu ta mộng du cả tiết. Khi nộp bài kiểm tra thì nó hoàn toàn để trắng (completely blank).",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_b_5",
-              "content": "5. The new play was great_____",
+              "content": "The new play was great_____",
               "options": [
                 "a. because Tony spent a lot of time on the script",
                 "b. so doing the homework was complicated",
                 "c. so he left the room and slammed the door",
                 "d. so I went to see the barber"
               ],
-              "correctAnswer": "A",
-              "explanation": "Vở kịch rất tuyệt vì Tony đã dành nhiều thời gian cho kịch bản (on the script)."
+              "explanation": "Vở kịch rất tuyệt vì Tony đã dành nhiều thời gian cho kịch bản (on the script).",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_b_6",
-              "content": "6. I didn't pay attention in class,_____",
+              "content": "I didn't pay attention in class,_____",
               "options": [
                 "a. so doing the homework was complicated",
                 "b. so he had to search for them for an hour",
                 "c. so they justly shared the prize",
                 "d. but she declined"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tôi không chú ý trong lớp nên làm bài tập về nhà trở nên phức tạp (was complicated)."
+              "explanation": "Tôi không chú ý trong lớp nên làm bài tập về nhà trở nên phức tạp (was complicated).",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_b_7",
-              "content": "7. My hair was a mess,_____",
+              "content": "My hair was a mess,_____",
               "options": [
                 "a. so I went to see the barber",
                 "b. it was completely blank",
                 "c. so I had to keep blinking them",
                 "d. so he cleaned the leather couch"
               ],
-              "correctAnswer": "A",
-              "explanation": "Tóc tôi rối bù nên tôi đến gặp thợ cắt tóc (went to see the barber)."
+              "explanation": "Tóc tôi rối bù nên tôi đến gặp thợ cắt tóc (went to see the barber).",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_b_8",
-              "content": "8. He couldn't stand the sound of the music,_____",
+              "content": "He couldn't stand the sound of the music,_____",
               "options": [
                 "a. so he left the room and slammed the door",
                 "b. because Tony spent a lot of time on the script",
                 "c. so he had to search for them for an hour",
                 "d. so doing the homework was complicated"
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh ta không chịu được tiếng nhạc nên rời phòng và đóng sầm cửa (slammed the door)."
+              "explanation": "Anh ta không chịu được tiếng nhạc nên rời phòng và đóng sầm cửa (slammed the door).",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_b_9",
-              "content": "9. Dean and Anne finished the race at the same time,_____",
+              "content": "Dean and Anne finished the race at the same time,_____",
               "options": [
                 "a. so they justly shared the prize",
                 "b. so I went to see the barber",
                 "c. but she declined",
                 "d. it was completely blank"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cả hai về đích cùng lúc nên họ được chia giải một cách công bằng (justly shared the prize)."
+              "explanation": "Cả hai về đích cùng lúc nên họ được chia giải một cách công bằng (justly shared the prize).",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_ex2_b_10",
-              "content": "10. He lost his glasses,_____",
+              "content": "He lost his glasses,_____",
               "options": [
                 "a. so he had to search for them for an hour",
                 "b. so he left the room and slammed the door",
                 "c. so I had to keep blinking them",
                 "d. because Tony spent a lot of time on the script"
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh ta làm mất kính nên phải tìm kiếm (search for) chúng cả giờ."
+              "explanation": "Anh ta làm mất kính nên phải tìm kiếm (search for) chúng cả giờ.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The School Play</h1><p style=\"margin-bottom: 2rem;\">Peter was excited. Next week he was going to audition for the school play. Everybody knew he was a great actor. He was sure he would get the lead role.</p><p style=\"margin-bottom: 2rem;\">Later, his friend Robby asked him, \"Have you seen the <b>script</b> for the play?\"</p><p style=\"margin-bottom: 2rem;\">\"Yes. The title is The Lost <b>Glove</b>—it's a <b>comic</b> play,\" replied Peter.</p><p style=\"margin-bottom: 2rem;\">Robby said, \"I want to play the part of the <b>hermit</b> because the <b>hermit</b> gets to talk with an <b>accent</b>!\"</p><p style=\"margin-bottom: 2rem;\">\"I want the lead role of the <b>barber</b>. I didn't know you liked acting. I thought you liked <b>choir</b> better,\" said Peter.</p><p style=\"margin-bottom: 2rem;\">\"Acting is also a hobby of mine. Do you want to practice with me? The <b>basement</b> at my house is quiet. It's perfect!\" Robby replied.</p><p style=\"margin-bottom: 2rem;\">\"I don't like practicing with others. It <b>complicates</b> the process for me,\" said Peter.</p><p style=\"margin-bottom: 2rem;\">Actually, Peter didn't want to practice at all. The teacher would surely <b>reserve</b> the lead part for him. A few days later, Robby came to his house.</p><p style=\"margin-bottom: 2rem;\">Robby said, \"Do you want to practice the scene on the <b>staircase</b>? It's the part where the migrant <b>searches</b> for a new job.\"</p><p style=\"margin-bottom: 2rem;\">Peter <b>declined</b> the invitation. \"I can't today. I need to do some <b>errands</b>.\" Then he <b>slammed</b> the door. It was just an excuse. Peter didn't want to help Robby.</p><p style=\"margin-bottom: 2rem;\">On the day of auditions, Peter wore his lucky <b>leather</b> jacket. He always got the best part when he wore it. The teacher told him to begin, but his mind was <b>blank</b>. He couldn't remember the lines!</p><p style=\"margin-bottom: 2rem;\">A week later, the teacher put a list of the parts on the wall. Peter read the list, looking for his name. He was shocked by what he saw. He <b>blinked</b> his eyes and looked again. He didn't get the lead part—Robby did! Peter <b>pondered</b> the situation and came to the idea that Robby <b>justly</b> received the part. He earned it by practicing. Next time, Peter would practice, too!</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The School Play</h1>        <p style=\"margin-bottom: 1rem;\">Peter was excited. Next week he was going to audition for the school play. Everybody knew he was a great actor. He was sure he would get the lead role.</p>    <p style=\"margin-bottom: 1rem;\">Later, his friend Robby asked him, \"Have you seen the <b>script</b> for the play?\"</p>    <p style=\"margin-bottom: 1rem;\">\"Yes. The title is The Lost <b>Glove</b>—it's a <b>comic</b> play,\" replied Peter.</p>    <p style=\"margin-bottom: 1rem;\">Robby said, \"I want to play the part of the <b>hermit</b> because the <b>hermit</b> gets to talk with an <b>accent</b>!\"</p>    <p style=\"margin-bottom: 1rem;\">\"I want the lead role of the <b>barber</b>. I didn't know you liked acting. I thought you liked <b>choir</b> better,\" said Peter.</p>    <p style=\"margin-bottom: 1rem;\">\"Acting is also a hobby of mine. Do you want to practice with me? The <b>basement</b> at my house is quiet. It's perfect!\" Robby replied.</p>    <p style=\"margin-bottom: 1rem;\">\"I don't like practicing with others. It <b>complicates</b> the process for me,\" said Peter.</p>    <p style=\"margin-bottom: 1rem;\">Actually, Peter didn't want to practice at all. The teacher would surely <b>reserve</b> the lead part for him. A few days later, Robby came to his house.</p>    <p style=\"margin-bottom: 1rem;\">Robby said, \"Do you want to practice the scene on the <b>staircase</b>? It's the part where the migrant <b>searches</b> for a new job.\"</p>    <p style=\"margin-bottom: 1rem;\">Peter <b>declined</b> the invitation. \"I can't today. I need to do some <b>errands</b>.\" Then he <b>slammed</b> the door. It was just an excuse. Peter didn't want to help Robby.</p>    <p style=\"margin-bottom: 1rem;\">On the day of auditions, Peter wore his lucky <b>leather</b> jacket. He always got the best part when he wore it. The teacher told him to begin, but his mind was <b>blank</b>. He couldn't remember the lines!</p>    <p style=\"margin-bottom: 1rem;\">A week later, the teacher put a list of the parts on the wall. Peter read the list, looking for his name. He was shocked by what he saw. He <b>blinked</b> his eyes and looked again. He didn't get the lead part—Robby did! Peter <b>pondered</b> the situation and came to the idea that Robby <b>justly</b> received the part. He earned it by practicing. Next time, Peter would practice, too!</p></div>",
       "imageUrl": "/unit18_vol4_story.png",
       "sections": [
         {
           "id": "u18_rc_a",
           "title": "Reading Comprehension Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "u18_rc_a_1",
-              "content": "1. The title of the script was The Big Barber.",
+              "content": "The title of the script was The Big Barber.",
               "options": [
                 "A. True",
                 "B. False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Trong bài viết: \"The title is The Lost Glove—it's a comic play,\" kịch bản có tên The Lost Glove, không phải The Big Barber."
+              "explanation": "Trong bài viết: \"The title is The Lost Glove—it's a comic play,\" kịch bản có tên The Lost Glove, không phải The Big Barber.",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_rc_a_2",
-              "content": "2. Robby wanted the part of the hermit because he would get to talk with an accent.",
+              "content": "Robby wanted the part of the hermit because he would get to talk with an accent.",
               "options": [
                 "A. True",
                 "B. False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Robby nói: \"I want to play the part of the hermit because the hermit gets to talk with an accent!\""
+              "explanation": "Robby nói: \"I want to play the part of the hermit because the hermit gets to talk with an accent!\"",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_rc_a_3",
-              "content": "3. Robby declined Peter's offer to practice together.",
+              "content": "Robby declined Peter's offer to practice together.",
               "options": [
                 "A. True",
                 "B. False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sự thật là Peter từ chối lời mời của Robby, chứ không phải Robby từ chối Peter."
+              "explanation": "Sự thật là Peter từ chối lời mời của Robby, chứ không phải Robby từ chối Peter.",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_rc_a_4",
-              "content": "4. The scene on the staircase was about the migrant searching for a new job.",
+              "content": "The scene on the staircase was about the migrant searching for a new job.",
               "options": [
                 "A. True",
                 "B. False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Robby nói: \"Do you want to practice the scene on the staircase? It's the part where the migrant searches for a new job.\""
+              "explanation": "Robby nói: \"Do you want to practice the scene on the staircase? It's the part where the migrant searches for a new job.\"",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_rc_a_5",
-              "content": "5. Peter's mind was blank during the audition.",
+              "content": "Peter's mind was blank during the audition.",
               "options": [
                 "A. True",
                 "B. False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài đọc viết: \"The teacher told him to begin, but his mind was blank.\""
+              "explanation": "Bài đọc viết: \"The teacher told him to begin, but his mind was blank.\"",
+              "correctAnswer": "A"
             },
             {
               "id": "u18_rc_a_6",
-              "content": "6. Peter felt that Robby justly received the lead role.",
+              "content": "Peter felt that Robby justly received the lead role.",
               "options": [
                 "A. True",
                 "B. False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài đọc viết: \"Peter pondered the situation and came to the idea that Robby justly received the part.\""
+              "explanation": "Bài đọc viết: \"Peter pondered the situation and came to the idea that Robby justly received the part.\"",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "u18_rc_b",
           "title": "Reading Comprehension Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "u18_rc_b_1",
-              "content": "1. Why did Peter decide not to practice?",
+              "content": "Why did Peter decide not to practice?",
               "options": [
                 "a. He didn't want the part.",
                 "b. He thought the teacher would give him the role.",
                 "c. He disliked Robby.",
                 "d. He wanted to be in the choir instead."
               ],
-              "correctAnswer": "B",
-              "explanation": "Peter nghĩ giáo viên chắc chắn sẽ giữ vai chính cho mình (The teacher would surely reserve the lead part for him)."
+              "explanation": "Peter nghĩ giáo viên chắc chắn sẽ giữ vai chính cho mình (The teacher would surely reserve the lead part for him).",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_rc_b_2",
-              "content": "2. Where did Robby suggest they practice together?",
+              "content": "Where did Robby suggest they practice together?",
               "options": [
                 "a. At the school",
                 "b. In his basement",
                 "c. At the theater",
                 "d. In the park"
               ],
-              "correctAnswer": "B",
-              "explanation": "Robby đề nghị: \"The basement at my house is quiet. It's perfect!\""
+              "explanation": "Robby đề nghị: \"The basement at my house is quiet. It's perfect!\"",
+              "correctAnswer": "B"
             },
             {
               "id": "u18_rc_b_3",
-              "content": "3. What was Peter's first excuse for not practicing with Robby?",
+              "content": "What was Peter's first excuse for not practicing with Robby?",
               "options": [
                 "a. He had to run errands.",
                 "b. He had to study for a test.",
                 "c. He said it complicated the process.",
                 "d. Robby lived too far away."
               ],
-              "correctAnswer": "C",
-              "explanation": "Lý do đầu tiên Peter đưa ra là: \"I don't like practicing with others. It complicates the process for me\""
+              "explanation": "Lý do đầu tiên Peter đưa ra là: \"I don't like practicing with others. It complicates the process for me\"",
+              "correctAnswer": "C"
             },
             {
               "id": "u18_rc_b_4",
-              "content": "4. What kind of play were the boys auditioning for?",
+              "content": "What kind of play were the boys auditioning for?",
               "options": [
                 "a. Romance",
                 "b. Comic",
                 "c. Drama",
                 "d. Action"
               ],
-              "correctAnswer": "B",
-              "explanation": "Peter mô tả kịch bản: \"The title is The Lost Glove—it's a comic play\""
+              "explanation": "Peter mô tả kịch bản: \"The title is The Lost Glove—it's a comic play\"",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

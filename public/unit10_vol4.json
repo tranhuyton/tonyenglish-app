@@ -17,245 +17,245 @@
           "id": "ex1_partA",
           "title": "Exercise 1 - Part A: Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "10_1_a_1",
-              "content": "1. a formal inspection",
+              "content": "a formal inspection",
               "options": [
                 "review",
                 "diagram",
                 "plea",
                 "longing"
               ],
-              "correctAnswer": "A",
-              "explanation": "a formal inspection (sự kiểm tra chính thức) đồng nghĩa với review (sự xem xét lại)."
+              "explanation": "a formal inspection (sự kiểm tra chính thức) đồng nghĩa với review (sự xem xét lại).",
+              "correctAnswer": "A"
             },
             {
               "id": "10_1_a_2",
-              "content": "2. to accept the truth",
+              "content": "to accept the truth",
               "options": [
                 "isolate",
                 "classify",
                 "construct",
                 "concede"
               ],
-              "correctAnswer": "D",
-              "explanation": "to accept the truth (chấp nhận sự thật) đồng nghĩa với concede (thừa nhận)."
+              "explanation": "to accept the truth (chấp nhận sự thật) đồng nghĩa với concede (thừa nhận).",
+              "correctAnswer": "D"
             },
             {
               "id": "10_1_a_3",
-              "content": "3. an idea about how something is",
+              "content": "an idea about how something is",
               "options": [
                 "decade",
                 "ferry",
                 "concept",
                 "particle"
               ],
-              "correctAnswer": "C",
-              "explanation": "an idea about how something is (một ý tưởng về điều gì đó) đồng nghĩa với concept (khái niệm)."
+              "explanation": "an idea about how something is (một ý tưởng về điều gì đó) đồng nghĩa với concept (khái niệm).",
+              "correctAnswer": "C"
             },
             {
               "id": "10_1_a_4",
-              "content": "4. knowing a lot about the world",
+              "content": "knowing a lot about the world",
               "options": [
                 "upright",
                 "sophisticated",
                 "handy",
                 "surrender"
               ],
-              "correctAnswer": "B",
-              "explanation": "knowing a lot about the world (biết nhiều về thế giới) đồng nghĩa với sophisticated (sành sỏi, tinh vi)."
+              "explanation": "knowing a lot about the world (biết nhiều về thế giới) đồng nghĩa với sophisticated (sành sỏi, tinh vi).",
+              "correctAnswer": "B"
             },
             {
               "id": "10_1_a_5",
-              "content": "5. important",
+              "content": "important",
               "options": [
                 "refrain",
                 "numerous",
                 "worthwhile",
                 "animate"
               ],
-              "correctAnswer": "C",
-              "explanation": "important (quan trọng) đồng nghĩa với worthwhile (đáng giá)."
+              "explanation": "important (quan trọng) đồng nghĩa với worthwhile (đáng giá).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "ex1_partB",
           "title": "Exercise 1 - Part B: Choose the right definition for the given word.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "10_1_b_1",
-              "content": "1. particle",
+              "content": "particle",
               "options": [
                 "a small piece of something",
                 "a drawing",
                 "a formal inspection",
                 "a strong feeling of want"
               ],
-              "correctAnswer": "A",
-              "explanation": "particle: hạt, một mẩu rất nhỏ (a small piece of something)."
+              "explanation": "particle: hạt, một mẩu rất nhỏ (a small piece of something).",
+              "correctAnswer": "A"
             },
             {
               "id": "10_1_b_2",
-              "content": "2. decade",
+              "content": "decade",
               "options": [
                 "an idea about something",
                 "a period of ten years",
                 "a type of boat",
                 "a thing that has life"
               ],
-              "correctAnswer": "B",
-              "explanation": "decade: thập kỷ, mười năm (a period of ten years)."
+              "explanation": "decade: thập kỷ, mười năm (a period of ten years).",
+              "correctAnswer": "B"
             },
             {
               "id": "10_1_b_3",
-              "content": "3. upright",
+              "content": "upright",
               "options": [
                 "important",
                 "to not do something",
                 "standing straight",
                 "a request"
               ],
-              "correctAnswer": "C",
-              "explanation": "upright: thẳng đứng (standing straight)."
+              "explanation": "upright: thẳng đứng (standing straight).",
+              "correctAnswer": "C"
             },
             {
               "id": "10_1_b_4",
-              "content": "4. isolate",
+              "content": "isolate",
               "options": [
                 "to separate",
                 "to group together by type",
                 "to give up",
                 "to accept the truth"
               ],
-              "correctAnswer": "A",
-              "explanation": "isolate: cách ly, tách ra (to separate)."
+              "explanation": "isolate: cách ly, tách ra (to separate).",
+              "correctAnswer": "A"
             },
             {
               "id": "10_1_b_5",
-              "content": "5. handy",
+              "content": "handy",
               "options": [
                 "to make something",
                 "common",
                 "plentiful",
                 "useful"
               ],
-              "correctAnswer": "D",
-              "explanation": "handy: tiện dụng, hữu ích (useful)."
+              "explanation": "handy: tiện dụng, hữu ích (useful).",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "ex2",
           "title": "Exercise 2: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "10_2_1",
-              "content": "1. animate / particle\nScientists thought that the tiny _________ was not a living thing, so they were very surprised to find that it was indeed _________.",
+              "content": "animate / particle\nScientists thought that the tiny _________ was not a living thing, so they were very surprised to find that it was indeed _________.",
               "options": [
                 "particle / animate",
                 "animate / particle"
               ],
-              "correctAnswer": "A",
-              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống)."
+              "explanation": "Dựa vào ngữ cảnh: the tiny particle (hạt rất nhỏ), living thing (vật sống) -> animate (có sự sống).",
+              "correctAnswer": "A"
             },
             {
               "id": "10_2_2",
-              "content": "2. handy / numerous\nMy uncle, the carpenter, keeps _________ tools in his truck. However, he keeps the most _________ ones on his tool belt at all times.",
+              "content": "handy / numerous\nMy uncle, the carpenter, keeps _________ tools in his truck. However, he keeps the most _________ ones on his tool belt at all times.",
               "options": [
                 "handy / numerous",
                 "numerous / handy"
               ],
-              "correctAnswer": "B",
-              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất)."
+              "explanation": "numerous tools (nhiều công cụ); the most handy ones (những công cụ tiện lợi nhất).",
+              "correctAnswer": "B"
             },
             {
               "id": "10_2_3",
-              "content": "3. classify / upright\nOne way that scientists _________ the different species of early humans is by how they walked. Homo Erectus, for example, walked _________.",
+              "content": "classify / upright\nOne way that scientists _________ the different species of early humans is by how they walked. Homo Erectus, for example, walked _________.",
               "options": [
                 "classify / upright",
                 "upright / classify"
               ],
-              "correctAnswer": "A",
-              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng)."
+              "explanation": "classify the different species (phân loại các loài); walked upright (đi thẳng đứng).",
+              "correctAnswer": "A"
             },
             {
               "id": "10_2_4",
-              "content": "4. longing / plea\nAfter sitting in the cell for just one hour, the prisoner felt a _________ to be free. He made a _________ to the officers to release him immediately.",
+              "content": "longing / plea\nAfter sitting in the cell for just one hour, the prisoner felt a _________ to be free. He made a _________ to the officers to release him immediately.",
               "options": [
                 "longing / plea",
                 "plea / longing"
               ],
-              "correctAnswer": "A",
-              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin)."
+              "explanation": "felt a longing (cảm thấy khao khát); made a plea (đưa ra lời cầu xin).",
+              "correctAnswer": "A"
             },
             {
               "id": "10_2_5",
-              "content": "5. sophisticated / worthwhile\nLearning how to speak another language is a _________ skill to have in the world of international business. It also can make one into a more _________ person.",
+              "content": "sophisticated / worthwhile\nLearning how to speak another language is a _________ skill to have in the world of international business. It also can make one into a more _________ person.",
               "options": [
                 "sophisticated / worthwhile",
                 "worthwhile / sophisticated"
               ],
-              "correctAnswer": "B",
-              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn)."
+              "explanation": "a worthwhile skill (một kỹ năng đáng giá); a more sophisticated person (một người sành sỏi / tinh tế hơn).",
+              "correctAnswer": "B"
             },
             {
               "id": "10_2_6",
-              "content": "6. review / concept\nJack had a great _________ for a new system, but his boss needs to conduct a thorough _________ to see if it will work.",
+              "content": "review / concept\nJack had a great _________ for a new system, but his boss needs to conduct a thorough _________ to see if it will work.",
               "options": [
                 "review / concept",
                 "concept / review"
               ],
-              "correctAnswer": "B",
-              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng)."
+              "explanation": "a great concept (một khái niệm/ý tưởng tuyệt vời); conduct a thorough review (tiến hành đánh giá kỹ lưỡng).",
+              "correctAnswer": "B"
             },
             {
               "id": "10_2_7",
-              "content": "7. diagram / isolate\nWilliam used a piece of white paper to _________ the different plants in the garden. That made it easier for him to draw a _________ of the leaves of each type of plant.",
+              "content": "diagram / isolate\nWilliam used a piece of white paper to _________ the different plants in the garden. That made it easier for him to draw a _________ of the leaves of each type of plant.",
               "options": [
                 "isolate / diagram",
                 "diagram / isolate"
               ],
-              "correctAnswer": "A",
-              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ)."
+              "explanation": "to isolate the different plants (cách ly / tách các loại cây khác nhau); draw a diagram (vẽ một biểu đồ / sơ đồ).",
+              "correctAnswer": "A"
             },
             {
               "id": "10_2_8",
-              "content": "8. constructed / decades\nThe great pyramids of Egypt were not _________ overnight. In fact, it took many _________ to complete them.",
+              "content": "constructed / decades\nThe great pyramids of Egypt were not _________ overnight. In fact, it took many _________ to complete them.",
               "options": [
                 "constructed / decades",
                 "decades / constructed"
               ],
-              "correctAnswer": "A",
-              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ)."
+              "explanation": "constructed overnight (được xây dựng qua đêm); many decades (nhiều thập kỷ).",
+              "correctAnswer": "A"
             },
             {
               "id": "10_2_9",
-              "content": "9. concede / ferry\nAs he drove his car onto the _________, John felt sad. He wanted to travel by airplane, but after looking at ticket prices, he had to _________ that air travel was just too expensive.",
+              "content": "concede / ferry\nAs he drove his car onto the _________, John felt sad. He wanted to travel by airplane, but after looking at ticket prices, he had to _________ that air travel was just too expensive.",
               "options": [
                 "concede / ferry",
                 "ferry / concede"
               ],
-              "correctAnswer": "B",
-              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận)."
+              "explanation": "onto the ferry (lên phà); had to concede (phải thừa nhận).",
+              "correctAnswer": "B"
             },
             {
               "id": "10_2_10",
-              "content": "10. refrain / surrender\nIn maintaining good health, it is important to _________ from eating unhealthy foods. But that doesn't mean you must _________ all of the foods that you enjoy.",
+              "content": "refrain / surrender\nIn maintaining good health, it is important to _________ from eating unhealthy foods. But that doesn't mean you must _________ all of the foods that you enjoy.",
               "options": [
                 "refrain / surrender",
                 "surrender / refrain"
               ],
-              "correctAnswer": "A",
-              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ)."
+              "explanation": "refrain from (kiềm chế, tránh); surrender (từ bỏ).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -269,125 +269,125 @@
           "id": "reading_comp_A",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "10_rc_A_1",
-              "content": "1. Anton's first microscope had an upright stand.",
+              "content": "Anton's first microscope had an upright stand.",
               "options": [
                 "T (True)",
                 "F (False)"
               ],
-              "correctAnswer": "A",
-              "explanation": "Thông tin trong bài: 'It had a lens in an upright stand.'"
+              "explanation": "Thông tin trong bài: 'It had a lens in an upright stand.'",
+              "correctAnswer": "A"
             },
             {
               "id": "10_rc_A_2",
-              "content": "2. Anton had a longing to become rich.",
+              "content": "Anton had a longing to become rich.",
               "options": [
                 "T (True)",
                 "F (False)"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sửa lại: Anton had a longing to become famous. (Thông tin trong bài: 'Soon, Anton felt a longing to build a more powerful microscope... He wanted to become famous.')"
+              "explanation": "Sửa lại: Anton had a longing to become famous. (Thông tin trong bài: 'Soon, Anton felt a longing to build a more powerful microscope... He wanted to become famous.')",
+              "correctAnswer": "B"
             },
             {
               "id": "10_rc_A_3",
-              "content": "3. The tiny particles Anton saw were bacteria.",
+              "content": "The tiny particles Anton saw were bacteria.",
               "options": [
                 "T (True)",
                 "F (False)"
               ],
-              "correctAnswer": "A",
-              "explanation": "Thông tin trong bài: 'Anton Van Leeuwenhoek had discovered bacteria.'"
+              "explanation": "Thông tin trong bài: 'Anton Van Leeuwenhoek had discovered bacteria.'",
+              "correctAnswer": "A"
             },
             {
               "id": "10_rc_A_4",
-              "content": "4. Anton classified the particles into different categories.",
+              "content": "Anton classified the particles into different categories.",
               "options": [
                 "T (True)",
                 "F (False)"
               ],
-              "correctAnswer": "A",
-              "explanation": "Thông tin trong bài: 'Then he classified them into different categories.'"
+              "explanation": "Thông tin trong bài: 'Then he classified them into different categories.'",
+              "correctAnswer": "A"
             },
             {
               "id": "10_rc_A_5",
-              "content": "5. The sophisticated scientists drew diagrams of the bacteria.",
+              "content": "The sophisticated scientists drew diagrams of the bacteria.",
               "options": [
                 "T (True)",
                 "F (False)"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sửa lại: Anton drew diagrams of the bacteria. (Thông tin trong bài: 'So he drew diagrams of the organisms and sent them to a group of scientists...')"
+              "explanation": "Sửa lại: Anton drew diagrams of the bacteria. (Thông tin trong bài: 'So he drew diagrams of the organisms and sent them to a group of scientists...')",
+              "correctAnswer": "B"
             },
             {
               "id": "10_rc_A_6",
-              "content": "6. Anton took a ferry to Holland.",
+              "content": "Anton took a ferry to Holland.",
               "options": [
                 "T (True)",
                 "F (False)"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sửa lại: The scientists took a ferry to Holland. (Thông tin trong bài: 'The men took a ferry to Holland and met Anton.')"
+              "explanation": "Sửa lại: The scientists took a ferry to Holland. (Thông tin trong bài: 'The men took a ferry to Holland and met Anton.')",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "reading_comp_B",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "10_rc_B_1",
-              "content": "1. Which is true about Anton's discovery?",
+              "content": "Which is true about Anton's discovery?",
               "options": [
                 "It isolated him from his work.",
                 "It was not worthwhile.",
                 "It was handy for his business.",
                 "It took him three decades to make it."
               ],
-              "correctAnswer": "D",
-              "explanation": "Dựa vào đoạn 2: 'He wanted to become famous. Three decades later, he did.'"
+              "explanation": "Dựa vào đoạn 2: 'He wanted to become famous. Three decades later, he did.'",
+              "correctAnswer": "D"
             },
             {
               "id": "10_rc_B_2",
-              "content": "2. Why was Anton's first microscope handy?",
+              "content": "Why was Anton's first microscope handy?",
               "options": [
                 "It made him rich.",
                 "It helped him look at cloth.",
                 "It was easy to construct.",
                 "It made him famous."
               ],
-              "correctAnswer": "B",
-              "explanation": "Dựa vào đoạn 1: 'It was handy for looking closely at cloth.'"
+              "explanation": "Dựa vào đoạn 1: 'It was handy for looking closely at cloth.'",
+              "correctAnswer": "B"
             },
             {
               "id": "10_rc_B_3",
-              "content": "3. What was Anton's plea to the scientists?",
+              "content": "What was Anton's plea to the scientists?",
               "options": [
                 "To buy his microscope",
                 "To send him animate organisms",
                 "To invite him to London",
                 "To see the particles with their own eyes"
               ],
-              "correctAnswer": "D",
-              "explanation": "Dựa vào đoạn cuối: 'Anton made a plea for them to come to Holland to see the organisms with their own eyes.'"
+              "explanation": "Dựa vào đoạn cuối: 'Anton made a plea for them to come to Holland to see the organisms with their own eyes.'",
+              "correctAnswer": "D"
             },
             {
               "id": "10_rc_B_4",
-              "content": "4. Why didn't Anton sell his concept of a powerful microscope?",
+              "content": "Why didn't Anton sell his concept of a powerful microscope?",
               "options": [
                 "He didn't want to surrender his secret.",
                 "Scientists needed to review it first.",
                 "He was already rich.",
                 "It wasn't perfected yet."
               ],
-              "correctAnswer": "A",
-              "explanation": "Dựa vào đoạn 3: 'However, Anton refrained from surrendering his secret to anyone. Instead, he wanted to use it to become famous.'"
+              "explanation": "Dựa vào đoạn 3: 'However, Anton refrained from surrendering his secret to anyone. Instead, he wanted to use it to become famous.'",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

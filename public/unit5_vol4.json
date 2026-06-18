@@ -16,7 +16,6 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
@@ -25,8 +24,8 @@
                 "cyberspace / operate",
                 "operate / cyberspace"
               ],
-              "correctAnswer": "B",
-              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'."
+              "explanation": "operate: vận hành, cyberspace: không gian mạng. 'Vận hành' một chiếc máy tính và có thể truy cập vào 'không gian mạng'.",
+              "correctAnswer": "B"
             },
             {
               "id": "2",
@@ -35,8 +34,8 @@
                 "recent / global",
                 "global / recent"
               ],
-              "correctAnswer": "A",
-              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn."
+              "explanation": "recent: gần đây, global: toàn cầu. Một nghiên cứu 'gần đây' cho thấy nạn đói 'toàn cầu' là một vấn đề lớn.",
+              "correctAnswer": "A"
             },
             {
               "id": "3",
@@ -45,8 +44,8 @@
                 "ignorant / weird",
                 "weird / ignorant"
               ],
-              "correctAnswer": "A",
-              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian."
+              "explanation": "ignorant: thiếu hiểu biết, weird: kỳ lạ. Mẹ tôi hoàn toàn 'thiếu hiểu biết' về máy tính, bà nghĩ rằng email và phòng chat là những cách 'kỳ lạ' để tiêu tốn thời gian.",
+              "correctAnswer": "A"
             },
             {
               "id": "4",
@@ -55,8 +54,8 @@
                 "edit / essays",
                 "essays / edit"
               ],
-              "correctAnswer": "B",
-              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình."
+              "explanation": "essays: các bài luận, edit: chỉnh sửa. Viết 'các bài luận' tuyệt vời và không bao giờ phải 'chỉnh sửa' tác phẩm của mình.",
+              "correctAnswer": "B"
             },
             {
               "id": "5",
@@ -65,8 +64,8 @@
                 "semester / index",
                 "index / semester"
               ],
-              "correctAnswer": "A",
-              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích."
+              "explanation": "semester: học kỳ, index: bảng chỉ mục. Báo cáo đến hạn vào cuối 'học kỳ', bạn nên xem trong 'bảng chỉ mục' để thấy nếu cuốn sách giúp ích.",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
@@ -75,8 +74,8 @@
                 "lecture / fainted",
                 "fainted / lecture"
               ],
-              "correctAnswer": "B",
-              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe."
+              "explanation": "fainted: ngất xỉu, lecture: bài giảng. Giáo viên của chúng tôi đã 'ngất xỉu' khi đang giảng 'bài giảng' về sức khỏe.",
+              "correctAnswer": "B"
             },
             {
               "id": "7",
@@ -85,8 +84,8 @@
                 "typewritten / highlighted",
                 "highlighted / typewritten"
               ],
-              "correctAnswer": "A",
-              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất."
+              "explanation": "typewritten: được đánh máy, highlighted: được làm nổi bật. Chúng được 'đánh máy' và cô ấy đã 'làm nổi bật' những phần quan trọng nhất.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
@@ -95,8 +94,8 @@
                 "gymnasium / resolution",
                 "resolution / gymnasium"
               ],
-              "correctAnswer": "B",
-              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn."
+              "explanation": "resolution: quyết tâm, gymnasium: phòng thể dục. Tôi đã 'quyết tâm' đến 'phòng thể dục' thường xuyên hơn.",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
@@ -105,8 +104,8 @@
                 "awhile / moral",
                 "moral / awhile"
               ],
-              "correctAnswer": "B",
-              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói."
+              "explanation": "moral: bài học đạo đức, awhile: một chút/một lát. 'Bài học đạo đức' của câu chuyện là nên suy nghĩ 'một chút' trước khi nói.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
@@ -115,16 +114,16 @@
                 "private / evaluated",
                 "evaluated / private"
               ],
-              "correctAnswer": "B",
-              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này."
+              "explanation": "evaluated: đánh giá, private: riêng tư. Chúng tôi đã 'đánh giá' công ty và đưa gợi ý vào tài liệu 'riêng tư' này.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2 Part A: Match the phrases to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
@@ -135,8 +134,8 @@
                 "to be nicer to people",
                 "the success of the project"
               ],
-              "correctAnswer": "D",
-              "explanation": "evaluated: đánh giá. 'The team evaluated the success of the project.' (Đội ngũ đã đánh giá sự thành công của dự án)."
+              "explanation": "evaluated: đánh giá. 'The team evaluated the success of the project.' (Đội ngũ đã đánh giá sự thành công của dự án).",
+              "correctAnswer": "D"
             },
             {
               "id": "12",
@@ -147,8 +146,8 @@
                 "aren't as important as real friends",
                 "ate soup with a knife"
               ],
-              "correctAnswer": "A",
-              "explanation": "moral: bài học đạo đức. 'The moral of the story is to be nicer to people.' (Bài học của câu chuyện là hãy tử tế hơn với mọi người)."
+              "explanation": "moral: bài học đạo đức. 'The moral of the story is to be nicer to people.' (Bài học của câu chuyện là hãy tử tế hơn với mọi người).",
+              "correctAnswer": "A"
             },
             {
               "id": "13",
@@ -159,8 +158,8 @@
                 "to be nicer to people",
                 "is halfway through the school year"
               ],
-              "correctAnswer": "B",
-              "explanation": "global: toàn cầu. 'The global economic problems are getting worse.' (Các vấn đề kinh tế toàn cầu đang trở nên tồi tệ hơn)."
+              "explanation": "global: toàn cầu. 'The global economic problems are getting worse.' (Các vấn đề kinh tế toàn cầu đang trở nên tồi tệ hơn).",
+              "correctAnswer": "B"
             },
             {
               "id": "14",
@@ -171,8 +170,8 @@
                 "this large machine",
                 "with a yellow pen"
               ],
-              "correctAnswer": "C",
-              "explanation": "operates: vận hành. 'Joe operates this large machine.' (Joe vận hành cỗ máy lớn này)."
+              "explanation": "operates: vận hành. 'Joe operates this large machine.' (Joe vận hành cỗ máy lớn này).",
+              "correctAnswer": "C"
             },
             {
               "id": "15",
@@ -183,8 +182,8 @@
                 "about birds",
                 "ate soup with a knife"
               ],
-              "correctAnswer": "C",
-              "explanation": "lecture: bài giảng. 'We went to a lecture about birds.' (Chúng tôi đã đi nghe một bài giảng về các loài chim)."
+              "explanation": "lecture: bài giảng. 'We went to a lecture about birds.' (Chúng tôi đã đi nghe một bài giảng về các loài chim).",
+              "correctAnswer": "C"
             },
             {
               "id": "16",
@@ -195,8 +194,8 @@
                 "to be nicer to people",
                 "aren't as important as real friends"
               ],
-              "correctAnswer": "D",
-              "explanation": "cyberspace: không gian mạng. 'The friends you meet in cyberspace aren't as important as real friends.' (Những người bạn trên mạng không quan trọng bằng bạn ngoài đời)."
+              "explanation": "cyberspace: không gian mạng. 'The friends you meet in cyberspace aren't as important as real friends.' (Những người bạn trên mạng không quan trọng bằng bạn ngoài đời).",
+              "correctAnswer": "D"
             },
             {
               "id": "17",
@@ -207,8 +206,8 @@
                 "ate soup with a knife",
                 "the success of the project"
               ],
-              "correctAnswer": "C",
-              "explanation": "weird: kỳ lạ. 'The weird kid at school ate soup with a knife.' (Đứa trẻ kỳ lạ ở trường ăn súp bằng dao)."
+              "explanation": "weird: kỳ lạ. 'The weird kid at school ate soup with a knife.' (Đứa trẻ kỳ lạ ở trường ăn súp bằng dao).",
+              "correctAnswer": "C"
             },
             {
               "id": "18",
@@ -219,8 +218,8 @@
                 "aren't as important as real friends",
                 "the success of the project"
               ],
-              "correctAnswer": "B",
-              "explanation": "highlight: làm nổi bật. 'You should highlight these words with a yellow pen.' (Bạn nên làm nổi bật những từ này bằng bút vàng)."
+              "explanation": "highlight: làm nổi bật. 'You should highlight these words with a yellow pen.' (Bạn nên làm nổi bật những từ này bằng bút vàng).",
+              "correctAnswer": "B"
             },
             {
               "id": "19",
@@ -231,8 +230,8 @@
                 "ate soup with a knife",
                 "to be nicer to people"
               ],
-              "correctAnswer": "B",
-              "explanation": "resolution: sự quyết tâm. 'I made a resolution to eat less chocolate.' (Tôi đã quyết tâm ăn ít sô-cô-la lại)."
+              "explanation": "resolution: sự quyết tâm. 'I made a resolution to eat less chocolate.' (Tôi đã quyết tâm ăn ít sô-cô-la lại).",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
@@ -243,16 +242,16 @@
                 "to eat less chocolate",
                 "aren't as important as real friends"
               ],
-              "correctAnswer": "A",
-              "explanation": "semester: học kỳ. 'The end of the first semester is halfway through the school year.' (Cuối học kỳ 1 là nửa chặng đường của năm học)."
+              "explanation": "semester: học kỳ. 'The end of the first semester is halfway through the school year.' (Cuối học kỳ 1 là nửa chặng đường của năm học).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 2 Part B: Match the clauses to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
@@ -263,8 +262,8 @@
                 "so I wrote an essay about rocks",
                 "it's private"
               ],
-              "correctAnswer": "A",
-              "explanation": "gymnasium: phòng thể dục. Muốn khỏe mạnh nên tôi đến phòng thể dục (so I went to the gymnasium)."
+              "explanation": "gymnasium: phòng thể dục. Muốn khỏe mạnh nên tôi đến phòng thể dục (so I went to the gymnasium).",
+              "correctAnswer": "A"
             },
             {
               "id": "22",
@@ -275,8 +274,8 @@
                 "if someone faints",
                 "it's private"
               ],
-              "correctAnswer": "A",
-              "explanation": "essay: bài luận. Địa chất là môn yêu thích nên tôi viết một bài luận về đá (so I wrote an essay about rocks)."
+              "explanation": "essay: bài luận. Địa chất là môn yêu thích nên tôi viết một bài luận về đá (so I wrote an essay about rocks).",
+              "correctAnswer": "A"
             },
             {
               "id": "23",
@@ -287,8 +286,8 @@
                 "so I looked under 'V' in the index",
                 "but he helped me edit it"
               ],
-              "correctAnswer": "D",
-              "explanation": "edit: chỉnh sửa. Bài báo cáo của tôi đầy lỗi, nhưng anh ấy đã giúp tôi chỉnh sửa (but he helped me edit it)."
+              "explanation": "edit: chỉnh sửa. Bài báo cáo của tôi đầy lỗi, nhưng anh ấy đã giúp tôi chỉnh sửa (but he helped me edit it).",
+              "correctAnswer": "D"
             },
             {
               "id": "24",
@@ -299,8 +298,8 @@
                 "you wait here awhile",
                 "if someone faints"
               ],
-              "correctAnswer": "B",
-              "explanation": "ignorant: thiếu hiểu biết. Anh tôi không thể giúp làm bài toán vì anh ấy thiếu hiểu biết về môn toán (because he's ignorant about math)."
+              "explanation": "ignorant: thiếu hiểu biết. Anh tôi không thể giúp làm bài toán vì anh ấy thiếu hiểu biết về môn toán (because he's ignorant about math).",
+              "correctAnswer": "B"
             },
             {
               "id": "25",
@@ -311,8 +310,8 @@
                 "if someone faints",
                 "you wait here awhile"
               ],
-              "correctAnswer": "C",
-              "explanation": "faints: ngất xỉu. Lớp học sơ cứu dạy chúng tôi phải làm gì nếu ai đó ngất xỉu (if someone faints)."
+              "explanation": "faints: ngất xỉu. Lớp học sơ cứu dạy chúng tôi phải làm gì nếu ai đó ngất xỉu (if someone faints).",
+              "correctAnswer": "C"
             },
             {
               "id": "26",
@@ -323,8 +322,8 @@
                 "so I went to the gymnasium",
                 "so you should find a more recent one"
               ],
-              "correctAnswer": "B",
-              "explanation": "index: mục lục / chỉ mục. Tìm thông tin về núi lửa bằng cách tra chữ 'V' ở phần mục lục cuối sách (so I looked under 'V' in the index)."
+              "explanation": "index: mục lục / chỉ mục. Tìm thông tin về núi lửa bằng cách tra chữ 'V' ở phần mục lục cuối sách (so I looked under 'V' in the index).",
+              "correctAnswer": "B"
             },
             {
               "id": "27",
@@ -335,8 +334,8 @@
                 "so I went to the gymnasium",
                 "so you should find a more recent one"
               ],
-              "correctAnswer": "D",
-              "explanation": "recent: gần đây. Sách giáo khoa đó quá cũ, nên tìm bản gần đây hơn (so you should find a more recent one)."
+              "explanation": "recent: gần đây. Sách giáo khoa đó quá cũ, nên tìm bản gần đây hơn (so you should find a more recent one).",
+              "correctAnswer": "D"
             },
             {
               "id": "28",
@@ -347,8 +346,8 @@
                 "so I wrote an essay about rocks",
                 "so I went to the gymnasium"
               ],
-              "correctAnswer": "B",
-              "explanation": "typewritten: đánh máy. Tôi cần máy tính vì bài luận của tôi phải được đánh máy (because my essay has to be typewritten)."
+              "explanation": "typewritten: đánh máy. Tôi cần máy tính vì bài luận của tôi phải được đánh máy (because my essay has to be typewritten).",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
@@ -359,8 +358,8 @@
                 "because my essay has to be typewritten",
                 "you wait here awhile"
               ],
-              "correctAnswer": "D",
-              "explanation": "awhile: một chốc / một lát. Tôi sẽ mang trà ra nếu bạn đợi ở đây một chốc (you wait here awhile)."
+              "explanation": "awhile: một chốc / một lát. Tôi sẽ mang trà ra nếu bạn đợi ở đây một chốc (you wait here awhile).",
+              "correctAnswer": "D"
             },
             {
               "id": "30",
@@ -371,24 +370,24 @@
                 "because my essay has to be typewritten",
                 "if someone faints"
               ],
-              "correctAnswer": "B",
-              "explanation": "private: riêng tư. Không được nói với ai thông tin này; nó là chuyện riêng tư (it's private)."
+              "explanation": "private: riêng tư. Không được nói với ai thông tin này; nó là chuyện riêng tư (it's private).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The Magic Computer</h1><p style=\"margin-bottom: 2rem;\">I had a difficult geography project to finish by the end of the <b>semester</b>. My teacher wanted it to be <b>typewritten</b>, so I went to the school computer room. But when I got there, all the computers were turned off. Apparently there was a <b>recent</b> problem, and technicians were fixing it.</p><p style=\"margin-bottom: 2rem;\">I knew of some <b>private</b> study rooms downstairs. They were small and dark, and the computers were very old, but I had no choice. At least the computers were <b>operating</b> correctly. I typed and <b>highlighted</b> the assignment’s title: “<b>Evaluate</b> the Government’s Response to <b>Global</b> Warming.” But I didn’t know what to write in my <b>essay</b>. Finally I decided to find a book to help me. I went to the library, checked the book <b>indexes</b> and eventually found a useful book. Then I returned to the computer.</p><p style=\"margin-bottom: 2rem;\">When I looked at the screen, I saw something so <b>weird</b> that I nearly <b>fainted</b>! The <b>essay</b> was complete! Had somebody in <b>cyberspace</b> written it? I didn’t know, but I was very happy. I printed it out and handed it in. I got an “A.”</p><p style=\"margin-bottom: 2rem;\">After that, I used the computer for all my assignments. I’d type the title, wait <b>awhile</b>, and the computer would do it. Every assignment was perfect; I never had to <b>edit</b> anything. I stopped paying attention to my teacher’s <b>lectures</b> and spent my extra time in the <b>gymnasium</b>. And my grades got better and better.</p><p style=\"margin-bottom: 2rem;\">A month later, I was walking into class when my friend said, “Are you prepared for the test?”</p><p style=\"margin-bottom: 2rem;\">“What test?” I asked.</p><p style=\"margin-bottom: 2rem;\">“The geography test!” he replied. “I hope you studied. It’s worth seventy percent of our final grade!”</p><p style=\"margin-bottom: 2rem;\">I failed the test, of course. I was completely <b>ignorant</b> about the subject.</p><p style=\"margin-bottom: 2rem;\">After that, I made a <b>resolution</b> never to use the magic computer again. The <b>moral</b> of this story is that if you cheat at school, you won’t learn anything.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The Magic Computer</h1>        <p style=\"margin-bottom: 1rem;\">I had a difficult geography project to finish by the end of the <b>semester</b>. My teacher wanted it to be <b>typewritten</b>, so I went to the school computer room. But when I got there, all the computers were turned off. Apparently there was a <b>recent</b> problem, and technicians were fixing it.</p>    <p style=\"margin-bottom: 1rem;\">I knew of some <b>private</b> study rooms downstairs. They were small and dark, and the computers were very old, but I had no choice. At least the computers were <b>operating</b> correctly. I typed and <b>highlighted</b> the assignment’s title: “<b>Evaluate</b> the Government’s Response to <b>Global</b> Warming.” But I didn’t know what to write in my <b>essay</b>. Finally I decided to find a book to help me. I went to the library, checked the book <b>indexes</b> and eventually found a useful book. Then I returned to the computer.</p>    <p style=\"margin-bottom: 1rem;\">When I looked at the screen, I saw something so <b>weird</b> that I nearly <b>fainted</b>! The <b>essay</b> was complete! Had somebody in <b>cyberspace</b> written it? I didn’t know, but I was very happy. I printed it out and handed it in. I got an “A.”</p>    <p style=\"margin-bottom: 1rem;\">After that, I used the computer for all my assignments. I’d type the title, wait <b>awhile</b>, and the computer would do it. Every assignment was perfect; I never had to <b>edit</b> anything. I stopped paying attention to my teacher’s <b>lectures</b> and spent my extra time in the <b>gymnasium</b>. And my grades got better and better.</p>    <p style=\"margin-bottom: 1rem;\">A month later, I was walking into class when my friend said, “Are you prepared for the test?”</p>    <p style=\"margin-bottom: 1rem;\">“What test?” I asked.</p>    <p style=\"margin-bottom: 1rem;\">“The geography test!” he replied. “I hope you studied. It’s worth seventy percent of our final grade!”</p>    <p style=\"margin-bottom: 1rem;\">I failed the test, of course. I was completely <b>ignorant</b> about the subject.</p>    <p style=\"margin-bottom: 1rem;\">After that, I made a <b>resolution</b> never to use the magic computer again. The <b>moral</b> of this story is that if you cheat at school, you won’t learn anything.</p></div>",
       "imageUrl": "/unit5_vol4_story.png",
       "sections": [
         {
           "id": "sec4_reading",
           "title": "Reading Comprehension Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "31",
@@ -397,8 +396,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). 'Apparently there was a recent problem, and technicians were fixing it.'"
+              "explanation": "Đúng (True). 'Apparently there was a recent problem, and technicians were fixing it.'",
+              "correctAnswer": "A"
             },
             {
               "id": "32",
@@ -407,8 +406,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). The private study rooms were downstairs."
+              "explanation": "Sai (False). The private study rooms were downstairs.",
+              "correctAnswer": "B"
             },
             {
               "id": "33",
@@ -417,8 +416,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). The computers in the private study rooms were operating correctly."
+              "explanation": "Sai (False). The computers in the private study rooms were operating correctly.",
+              "correctAnswer": "B"
             },
             {
               "id": "34",
@@ -427,8 +426,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). 'I typed and highlighted the assignment’s title: “Evaluate the Government’s Response to Global Warming.”'"
+              "explanation": "Đúng (True). 'I typed and highlighted the assignment’s title: “Evaluate the Government’s Response to Global Warming.”'",
+              "correctAnswer": "A"
             },
             {
               "id": "35",
@@ -437,8 +436,8 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai (False). The geography test was worth seventy percent of the final grade."
+              "explanation": "Sai (False). The geography test was worth seventy percent of the final grade.",
+              "correctAnswer": "B"
             },
             {
               "id": "36",
@@ -447,16 +446,16 @@
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng (True). 'I failed the test, of course. I was completely ignorant about the subject.'"
+              "explanation": "Đúng (True). 'I failed the test, of course. I was completely ignorant about the subject.'",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5_reading",
           "title": "Reading Comprehension Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "37",
@@ -467,8 +466,8 @@
                 "Typewritten",
                 "In black ink"
               ],
-              "correctAnswer": "C",
-              "explanation": "'My teacher wanted it to be typewritten...'"
+              "explanation": "'My teacher wanted it to be typewritten...'",
+              "correctAnswer": "C"
             },
             {
               "id": "38",
@@ -479,8 +478,8 @@
                 "Weird computers",
                 "Computer science"
               ],
-              "correctAnswer": "A",
-              "explanation": "Dự án yêu cầu 'Evaluate the Government’s Response to Global Warming.' nên liên quan tới Global warming (Trái đất nóng lên)."
+              "explanation": "Dự án yêu cầu 'Evaluate the Government’s Response to Global Warming.' nên liên quan tới Global warming (Trái đất nóng lên).",
+              "correctAnswer": "A"
             },
             {
               "id": "39",
@@ -491,8 +490,8 @@
                 "Plug it in",
                 "Wait awhile"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cậu bé không cần phải chỉnh sửa bài luận: 'Every assignment was perfect; I never had to edit anything.'"
+              "explanation": "Cậu bé không cần phải chỉnh sửa bài luận: 'Every assignment was perfect; I never had to edit anything.'",
+              "correctAnswer": "B"
             },
             {
               "id": "40",
@@ -503,10 +502,11 @@
                 "In the library",
                 "In cyberspace"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cậu bé bỏ bê bài giảng và dành thời gian rảnh ở phòng thể dục: '...spent my extra time in the gymnasium.'"
+              "explanation": "Cậu bé bỏ bê bài giảng và dành thời gian rảnh ở phòng thể dục: '...spent my extra time in the gymnasium.'",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

@@ -16,201 +16,201 @@
           "id": "sec1_wordlist",
           "title": "Part A: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q1",
-              "content": "1. What word below best describes a superhero?",
+              "content": "What word below best describes a superhero?",
               "options": [
                 "Mushrooms",
                 "Dew",
                 "Mighty",
                 "Reeds"
               ],
-              "correctAnswer": "C",
-              "explanation": "Mighty nghĩa là hùng mạnh (strong and large)."
+              "explanation": "Mighty nghĩa là hùng mạnh (strong and large).",
+              "correctAnswer": "C"
             },
             {
               "id": "q2",
-              "content": "2. Something that is easy to do is described as what?",
+              "content": "Something that is easy to do is described as what?",
               "options": [
                 "Drastic",
                 "Convenient",
                 "Poison",
                 "Urban"
               ],
-              "correctAnswer": "B",
-              "explanation": "Convenient nghĩa là tiện lợi, dễ dàng thực hiện."
+              "explanation": "Convenient nghĩa là tiện lợi, dễ dàng thực hiện.",
+              "correctAnswer": "B"
             },
             {
               "id": "q3",
-              "content": "3. What is an activity done in the water?",
+              "content": "What is an activity done in the water?",
               "options": [
                 "Sway",
                 "Fold",
                 "Exit",
                 "Wade"
               ],
-              "correctAnswer": "D",
-              "explanation": "Wade nghĩa là lội nước."
+              "explanation": "Wade nghĩa là lội nước.",
+              "correctAnswer": "D"
             },
             {
               "id": "q4",
-              "content": "4. Which covers a box?",
+              "content": "Which covers a box?",
               "options": [
                 "A den",
                 "A lid",
                 "A civilization",
                 "A flock"
               ],
-              "correctAnswer": "B",
-              "explanation": "Lid nghĩa là cái nắp đậy hộp."
+              "explanation": "Lid nghĩa là cái nắp đậy hộp.",
+              "correctAnswer": "B"
             },
             {
               "id": "q5",
-              "content": "5. Which word fits best? Koalas are _________ to Australia.",
+              "content": "Which word fits best? Koalas are _________ to Australia.",
               "options": [
                 "loom",
                 "shield",
                 "stormy",
                 "native"
               ],
-              "correctAnswer": "D",
-              "explanation": "Native nghĩa là bản địa. Koalas là động vật bản địa của Úc."
+              "explanation": "Native nghĩa là bản địa. Koalas là động vật bản địa của Úc.",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Kara Goes Camping</h1><p style=\"margin-bottom: 1rem;\">\"Kara, would you like to go camping with my family?\" asked Tracy. Kara had never been camping before, but she decided to go anyway. That weekend, they drove to Estes Park. When they arrived, Kara looked around. She felt so far from <b>civilization</b>.</p><p style=\"margin-bottom: 1rem;\">After they set up the camp, they went for a walk. Tracy's father, Mr. Grieves, showed them the <b>native</b> plants and animals. \"Look,\" he said, \"that's a fox's <b>den</b>. Do you see that bunch of <b>mushrooms</b> next to it. Don't touch them. They contain <b>poison</b>.\" Kara was bored. She didn't care about nature.</p><p style=\"margin-bottom: 1rem;\">As the day went on, <b>mighty</b> clouds soon <b>loomed</b> in the distance. \"It looks like <b>stormy</b> weather,\" said Tracy. \"We should go back.\" It suddenly began to rain. They used an umbrella to <b>shield</b> them from the rain. Back at the camp, they ate cold sandwiches for dinner and went to sleep.</p><p style=\"margin-bottom: 1rem;\">By morning, the rain had stopped. It was a <b>drastic</b> change from the previous day's weather. They <b>folded</b> their sleeping bags and put them in a box. Tracy closed the <b>lid</b> and told Kara, \"Today will be fun, I promise!\" Kara didn't believe her. She missed her <b>convenient</b> life in the city. She was used to an <b>urban</b> lifestyle.</p><p style=\"margin-bottom: 1rem;\">After breakfast, they went for a walk. The grass was covered with <b>dew</b>, and it gleamed in the sunlight. Finally, they reached a lake. Kara and Tracy <b>waded</b> into the water. The <b>reeds</b> <b>swayed</b> in the wind, and a <b>flock</b> of birds flew above. Kara felt very peaceful.</p><p style=\"margin-bottom: 1rem;\">That night, they made a fire. They sat around it while Mr. Grieves told scary stories. Kara had a lot of fun. Camping was a good way for friends to spend time together, she realized.</p><p style=\"margin-bottom: 1rem;\">The next day, it was time for them to leave. She felt sad while they <b>exited</b> the park. She didn't like camping at first, but she learned how fun it could be over the weekend.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Kara Goes Camping</h1>        <p style=\"margin-bottom: 1rem;\">\"Kara, would you like to go camping with my family?\" asked Tracy. Kara had never been camping before, but she decided to go anyway. That weekend, they drove to Estes Park. When they arrived, Kara looked around. She felt so far from <b>civilization</b>.</p>    <p style=\"margin-bottom: 1rem;\">After they set up the camp, they went for a walk. Tracy's father, Mr. Grieves, showed them the <b>native</b> plants and animals. \"Look,\" he said, \"that's a fox's <b>den</b>. Do you see that bunch of <b>mushrooms</b> next to it. Don't touch them. They contain <b>poison</b>.\" Kara was bored. She didn't care about nature.</p>    <p style=\"margin-bottom: 1rem;\">As the day went on, <b>mighty</b> clouds soon <b>loomed</b> in the distance. \"It looks like <b>stormy</b> weather,\" said Tracy. \"We should go back.\" It suddenly began to rain. They used an umbrella to <b>shield</b> them from the rain. Back at the camp, they ate cold sandwiches for dinner and went to sleep.</p>    <p style=\"margin-bottom: 1rem;\">By morning, the rain had stopped. It was a <b>drastic</b> change from the previous day's weather. They <b>folded</b> their sleeping bags and put them in a box. Tracy closed the <b>lid</b> and told Kara, \"Today will be fun, I promise!\" Kara didn't believe her. She missed her <b>convenient</b> life in the city. She was used to an <b>urban</b> lifestyle.</p>    <p style=\"margin-bottom: 1rem;\">After breakfast, they went for a walk. The grass was covered with <b>dew</b>, and it gleamed in the sunlight. Finally, they reached a lake. Kara and Tracy <b>waded</b> into the water. The <b>reeds</b> <b>swayed</b> in the wind, and a <b>flock</b> of birds flew above. Kara felt very peaceful.</p>    <p style=\"margin-bottom: 1rem;\">That night, they made a fire. They sat around it while Mr. Grieves told scary stories. Kara had a lot of fun. Camping was a good way for friends to spend time together, she realized.</p>    <p style=\"margin-bottom: 1rem;\">The next day, it was time for them to leave. She felt sad while they <b>exited</b> the park. She didn't like camping at first, but she learned how fun it could be over the weekend.</p></div>",
       "imageUrl": "/unit17_vol4_story.png",
       "sections": [
         {
           "id": "sec2_reading_tf",
           "title": "Part A: Mark each statement T for true or F for false. Rewrite the false statements to make them true.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q6",
-              "content": "1. Tracy invites Kara to visit a new civilization with her family.",
+              "content": "Tracy invites Kara to visit a new civilization with her family.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Tracy mời Kara đi cắm trại (go camping) chứ không phải đi thăm một nền văn minh mới."
+              "explanation": "Sai. Tracy mời Kara đi cắm trại (go camping) chứ không phải đi thăm một nền văn minh mới.",
+              "correctAnswer": "B"
             },
             {
               "id": "q7",
-              "content": "2. Tracy's father shows them native plants and animals.",
+              "content": "Tracy's father shows them native plants and animals.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Chi tiết trong bài: 'Tracy's father, Mr. Grieves, showed them the native plants and animals.'"
+              "explanation": "Đúng. Chi tiết trong bài: 'Tracy's father, Mr. Grieves, showed them the native plants and animals.'",
+              "correctAnswer": "A"
             },
             {
               "id": "q8",
-              "content": "3. The group returns to camp because mighty clouds were looming.",
+              "content": "The group returns to camp because mighty clouds were looming.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Chi tiết trong bài: 'mighty clouds soon loomed in the distance. \"It looks like stormy weather,\" said Tracy. \"We should go back.\"'"
+              "explanation": "Đúng. Chi tiết trong bài: 'mighty clouds soon loomed in the distance. \"It looks like stormy weather,\" said Tracy. \"We should go back.\"'",
+              "correctAnswer": "A"
             },
             {
               "id": "q9",
-              "content": "4. They used an umbrella to shield themselves from the rain.",
+              "content": "They used an umbrella to shield themselves from the rain.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Chi tiết trong bài: 'They used an umbrella to shield them from the rain.'"
+              "explanation": "Đúng. Chi tiết trong bài: 'They used an umbrella to shield them from the rain.'",
+              "correctAnswer": "A"
             },
             {
               "id": "q10",
-              "content": "5. The weather was stormy on the second day of camping.",
+              "content": "The weather was stormy on the second day of camping.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Ngày hôm sau trời tạnh mưa và thời tiết khác biệt rõ rệt: 'By morning, the rain had stopped. It was a drastic change from the previous day's weather.'"
+              "explanation": "Sai. Ngày hôm sau trời tạnh mưa và thời tiết khác biệt rõ rệt: 'By morning, the rain had stopped. It was a drastic change from the previous day's weather.'",
+              "correctAnswer": "B"
             },
             {
               "id": "q11",
-              "content": "6. Kara has a drastic change in opinion about camping at the end of the story.",
+              "content": "Kara has a drastic change in opinion about camping at the end of the story.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Đúng. Ban đầu cô không thích (She didn't like camping at first) nhưng cuối cùng thấy cắm trại rất vui (she learned how fun it could be over the weekend)."
+              "explanation": "Đúng. Ban đầu cô không thích (She didn't like camping at first) nhưng cuối cùng thấy cắm trại rất vui (she learned how fun it could be over the weekend).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_reading_mc",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "q12",
-              "content": "1. Which of the following does Kara NOT see during the trip?",
+              "content": "Which of the following does Kara NOT see during the trip?",
               "options": [
                 "A fox's den",
                 "A flock of birds",
                 "A bunch of mushrooms",
                 "An animal with poison"
               ],
-              "correctAnswer": "D",
-              "explanation": "Chi tiết trong bài: 'Do you see that bunch of mushrooms next to it. Don't touch them. They contain poison.' Kara thấy nấm có độc chứ không thấy động vật có độc."
+              "explanation": "Chi tiết trong bài: 'Do you see that bunch of mushrooms next to it. Don't touch them. They contain poison.' Kara thấy nấm có độc chứ không thấy động vật có độc.",
+              "correctAnswer": "D"
             },
             {
               "id": "q13",
-              "content": "2. What does Kara miss about her urban lifestyle?",
+              "content": "What does Kara miss about her urban lifestyle?",
               "options": [
                 "It is convenient.",
                 "It is easier to sleep.",
                 "It is far from civilization.",
                 "It isn't covered in dew."
               ],
-              "correctAnswer": "A",
-              "explanation": "Chi tiết trong bài: 'She missed her convenient life in the city. She was used to an urban lifestyle.'"
+              "explanation": "Chi tiết trong bài: 'She missed her convenient life in the city. She was used to an urban lifestyle.'",
+              "correctAnswer": "A"
             },
             {
               "id": "q14",
-              "content": "3. What does Kara see swaying in the water?",
+              "content": "What does Kara see swaying in the water?",
               "options": [
                 "Birds",
                 "Fish",
                 "Reeds",
                 "Lids"
               ],
-              "correctAnswer": "C",
-              "explanation": "Chi tiết trong bài: 'The reeds swayed in the wind...'"
+              "explanation": "Chi tiết trong bài: 'The reeds swayed in the wind...'",
+              "correctAnswer": "C"
             },
             {
               "id": "q15",
-              "content": "4. How does Kara feel as she exits the park?",
+              "content": "How does Kara feel as she exits the park?",
               "options": [
                 "Relieved",
                 "Angry",
                 "Tired",
                 "Sad"
               ],
-              "correctAnswer": "D",
-              "explanation": "Chi tiết trong bài: 'She felt sad while they exited the park.'"
+              "explanation": "Chi tiết trong bài: 'She felt sad while they exited the park.'",
+              "correctAnswer": "D"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

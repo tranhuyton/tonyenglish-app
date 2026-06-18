@@ -16,7 +16,6 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1_1",
@@ -25,8 +24,8 @@
                 "rapid",
                 "rate"
               ],
-              "correctAnswer": "A",
-              "explanation": "'rapid' (nhanh chóng) là tính từ phù hợp để mô tả sự gia tăng dân số."
+              "explanation": "'rapid' (nhanh chóng) là tính từ phù hợp để mô tả sự gia tăng dân số.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_1_2",
@@ -35,8 +34,8 @@
                 "rapid",
                 "rate"
               ],
-              "correctAnswer": "B",
-              "explanation": "'rate' (tốc độ) phù hợp với cụm từ 'at a fast rate' (với một tốc độ nhanh)."
+              "explanation": "'rate' (tốc độ) phù hợp với cụm từ 'at a fast rate' (với một tốc độ nhanh).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_2_1",
@@ -45,8 +44,8 @@
                 "contemporary",
                 "vary"
               ],
-              "correctAnswer": "A",
-              "explanation": "'contemporary' (đương đại/hiện đại) là tính từ bổ nghĩa cho 'laws'."
+              "explanation": "'contemporary' (đương đại/hiện đại) là tính từ bổ nghĩa cho 'laws'.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_2_2",
@@ -55,8 +54,8 @@
                 "contemporary",
                 "vary"
               ],
-              "correctAnswer": "B",
-              "explanation": "'vary' (khác nhau) là động từ chính của câu."
+              "explanation": "'vary' (khác nhau) là động từ chính của câu.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_3_1",
@@ -65,8 +64,8 @@
                 "humid",
                 "toxic"
               ],
-              "correctAnswer": "A",
-              "explanation": "'humid' (ẩm ướt) phù hợp với điều kiện khí hậu trên đảo."
+              "explanation": "'humid' (ẩm ướt) phù hợp với điều kiện khí hậu trên đảo.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_3_2",
@@ -75,8 +74,8 @@
                 "humid",
                 "toxic"
               ],
-              "correctAnswer": "B",
-              "explanation": "'toxic' (có độc) đi kèm với 'to humans' (đối với con người)."
+              "explanation": "'toxic' (có độc) đi kèm với 'to humans' (đối với con người).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_4_1",
@@ -85,8 +84,8 @@
                 "texture",
                 "aroma"
               ],
-              "correctAnswer": "A",
-              "explanation": "'texture' (kết cấu) phù hợp với tính từ 'smooth' (mịn màng)."
+              "explanation": "'texture' (kết cấu) phù hợp với tính từ 'smooth' (mịn màng).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_4_2",
@@ -95,8 +94,8 @@
                 "texture",
                 "aroma"
               ],
-              "correctAnswer": "B",
-              "explanation": "'aroma' (mùi hương) phù hợp với 'powerful' (mạnh mẽ/nồng)."
+              "explanation": "'aroma' (mùi hương) phù hợp với 'powerful' (mạnh mẽ/nồng).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_5_1",
@@ -105,8 +104,8 @@
                 "cluster",
                 "combined"
               ],
-              "correctAnswer": "A",
-              "explanation": "'A cluster of people' (một nhóm người)."
+              "explanation": "'A cluster of people' (một nhóm người).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_5_2",
@@ -115,8 +114,8 @@
                 "cluster",
                 "combined"
               ],
-              "correctAnswer": "B",
-              "explanation": "'combined' (kết hợp) là động từ phù hợp cho hành động kết hợp nỗ lực."
+              "explanation": "'combined' (kết hợp) là động từ phù hợp cho hành động kết hợp nỗ lực.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_6_1",
@@ -125,8 +124,8 @@
                 "soothing",
                 "subtle"
               ],
-              "correctAnswer": "B",
-              "explanation": "'subtle differences' (những sự khác biệt tinh tế)."
+              "explanation": "'subtle differences' (những sự khác biệt tinh tế).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_6_2",
@@ -135,8 +134,8 @@
                 "soothing",
                 "subtle"
               ],
-              "correctAnswer": "A",
-              "explanation": "'soothing effect' (tác dụng êm dịu), đồng nghĩa với 'calming'."
+              "explanation": "'soothing effect' (tác dụng êm dịu), đồng nghĩa với 'calming'.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_7_1",
@@ -145,8 +144,8 @@
                 "cultivated",
                 "odor"
               ],
-              "correctAnswer": "A",
-              "explanation": "'cultivated' (được trồng trọt) là dạng bị động phù hợp ở đây."
+              "explanation": "'cultivated' (được trồng trọt) là dạng bị động phù hợp ở đây.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_7_2",
@@ -155,8 +154,8 @@
                 "cultivated",
                 "odor"
               ],
-              "correctAnswer": "B",
-              "explanation": "'unpleasant odor' (mùi khó chịu)."
+              "explanation": "'unpleasant odor' (mùi khó chịu).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_8_1",
@@ -165,8 +164,8 @@
                 "beverage",
                 "palate"
               ],
-              "correctAnswer": "B",
-              "explanation": "'clean the palate' (làm sạch vòm miệng/khẩu vị) là một cụm từ phổ biến."
+              "explanation": "'clean the palate' (làm sạch vòm miệng/khẩu vị) là một cụm từ phổ biến.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_8_2",
@@ -175,8 +174,8 @@
                 "beverage",
                 "palate"
               ],
-              "correctAnswer": "A",
-              "explanation": "'beverage' (thức uống) ám chỉ nước trong câu này."
+              "explanation": "'beverage' (thức uống) ám chỉ nước trong câu này.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_9_1",
@@ -185,8 +184,8 @@
                 "condensed",
                 "divine"
               ],
-              "correctAnswer": "A",
-              "explanation": "'condensed way' (cách tóm tắt/ngắn gọn)."
+              "explanation": "'condensed way' (cách tóm tắt/ngắn gọn).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_9_2",
@@ -195,8 +194,8 @@
                 "condensed",
                 "divine"
               ],
-              "correctAnswer": "B",
-              "explanation": "'divine message' (thông điệp từ thần linh)."
+              "explanation": "'divine message' (thông điệp từ thần linh).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_10_1",
@@ -205,8 +204,8 @@
                 "paradise",
                 "plantations"
               ],
-              "correctAnswer": "A",
-              "explanation": "'natural paradise' (thiên đường tự nhiên)."
+              "explanation": "'natural paradise' (thiên đường tự nhiên).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_10_2",
@@ -215,16 +214,16 @@
                 "paradise",
                 "plantations"
               ],
-              "correctAnswer": "B",
-              "explanation": "'plantations' (đồn điền) là danh từ số nhiều phù hợp."
+              "explanation": "'plantations' (đồn điền) là danh từ số nhiều phù hợp.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2 Part A: Match the phrases to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2a_1",
@@ -235,8 +234,8 @@
                 "to insects and small animals",
                 "was too strong to be enjoyable"
               ],
-              "correctAnswer": "B",
-              "explanation": "Một tách trà dịu nhẹ rất tốt cho bệnh đau họng."
+              "explanation": "Một tách trà dịu nhẹ rất tốt cho bệnh đau họng.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2a_2",
@@ -247,8 +246,8 @@
                 "feels so smooth",
                 "was too strong to be enjoyable"
               ],
-              "correctAnswer": "D",
-              "explanation": "Mùi của pho mát quá nồng nên không thấy ngon."
+              "explanation": "Mùi của pho mát quá nồng nên không thấy ngon.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex2a_3",
@@ -259,8 +258,8 @@
                 "covered almost a third of the country",
                 "the shoulder of Taurus the Bull"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bề mặt của cái nồi cảm giác rất mịn."
+              "explanation": "Bề mặt của cái nồi cảm giác rất mịn.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2a_4",
@@ -271,8 +270,8 @@
                 "several species of flowers as a hobby",
                 "includes work from the 21st century"
               ],
-              "correctAnswer": "A",
-              "explanation": "Hóa chất này độc hại đối với côn trùng và động vật nhỏ."
+              "explanation": "Hóa chất này độc hại đối với côn trùng và động vật nhỏ.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2a_5",
@@ -283,8 +282,8 @@
                 "includes work from the 21st century",
                 "the shoulder of Taurus the Bull"
               ],
-              "correctAnswer": "C",
-              "explanation": "Lớp học văn học hư cấu đương đại bao gồm các tác phẩm từ thế kỷ 21."
+              "explanation": "Lớp học văn học hư cấu đương đại bao gồm các tác phẩm từ thế kỷ 21.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2a_6",
@@ -295,8 +294,8 @@
                 "covered almost a third of the country",
                 "to insects and small animals"
               ],
-              "correctAnswer": "B",
-              "explanation": "Tốc độ lớn lên của những bông hoa này nhanh đến kinh ngạc."
+              "explanation": "Tốc độ lớn lên của những bông hoa này nhanh đến kinh ngạc.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2a_7",
@@ -307,8 +306,8 @@
                 "the shoulder of Taurus the Bull",
                 "feels so smooth"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mẹ tôi trồng trọt một vài loài hoa như một sở thích."
+              "explanation": "Mẹ tôi trồng trọt một vài loài hoa như một sở thích.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2a_8",
@@ -319,8 +318,8 @@
                 "twenty workers who grew cotton",
                 "was too strong to be enjoyable"
               ],
-              "correctAnswer": "C",
-              "explanation": "Đồn điền này có hai mươi công nhân trồng bông."
+              "explanation": "Đồn điền này có hai mươi công nhân trồng bông.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2a_9",
@@ -331,8 +330,8 @@
                 "to insects and small animals",
                 "was surprisingly fast"
               ],
-              "correctAnswer": "A",
-              "explanation": "Khu rừng dày đặc và ẩm ướt bao phủ gần một phần ba diện tích quốc gia."
+              "explanation": "Khu rừng dày đặc và ẩm ướt bao phủ gần một phần ba diện tích quốc gia.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2a_10",
@@ -343,16 +342,16 @@
                 "twenty workers who grew cotton",
                 "is good for a sore throat"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cụm sao trên bầu trời tạo thành vai của chòm sao Kim Ngưu (Taurus the Bull)."
+              "explanation": "Cụm sao trên bầu trời tạo thành vai của chòm sao Kim Ngưu (Taurus the Bull).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 2 Part B: Match the clauses to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2b_1",
@@ -363,8 +362,8 @@
                 "and Jim thought it was a divine message",
                 "people call it a paradise"
               ],
-              "correctAnswer": "A",
-              "explanation": "Các nhà khoa học muốn tìm cách chữa trị căn bệnh, vì vậy họ đã kết hợp các hóa chất."
+              "explanation": "Các nhà khoa học muốn tìm cách chữa trị căn bệnh, vì vậy họ đã kết hợp các hóa chất.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_2",
@@ -375,8 +374,8 @@
                 "and she smelled the aroma of cookies",
                 "so economic growth was rapid"
               ],
-              "correctAnswer": "A",
-              "explanation": "Anh ấy đề nghị chia sẻ nước của mình, nhưng tôi muốn thức uống của riêng tôi."
+              "explanation": "Anh ấy đề nghị chia sẻ nước của mình, nhưng tôi muốn thức uống của riêng tôi.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_3",
@@ -387,8 +386,8 @@
                 "but the condensed version was shorter",
                 "and Jim thought it was a divine message"
               ],
-              "correctAnswer": "B",
-              "explanation": "Tôi thích mocha hơn cà phê vì nó có hương vị sô cô la thoang thoảng."
+              "explanation": "Tôi thích mocha hơn cà phê vì nó có hương vị sô cô la thoang thoảng.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2b_4",
@@ -399,8 +398,8 @@
                 "people call it a paradise",
                 "the effects of the medicine will vary"
               ],
-              "correctAnswer": "A",
-              "explanation": "Nhiều việc làm mới được tạo ra, nên sự tăng trưởng kinh tế rất nhanh."
+              "explanation": "Nhiều việc làm mới được tạo ra, nên sự tăng trưởng kinh tế rất nhanh.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_5",
@@ -411,8 +410,8 @@
                 "and Jim thought it was a divine message",
                 "so they combined the chemicals"
               ],
-              "correctAnswer": "B",
-              "explanation": "Bản báo cáo dài 10 trang, nhưng phiên bản tóm tắt thì ngắn hơn."
+              "explanation": "Bản báo cáo dài 10 trang, nhưng phiên bản tóm tắt thì ngắn hơn.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2b_6",
@@ -423,8 +422,8 @@
                 "but I wanted my own beverage",
                 "people call it a paradise"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bác sĩ yêu cầu anh ấy mở miệng, và bà ấy nhìn vào vòm miệng của anh."
+              "explanation": "Bác sĩ yêu cầu anh ấy mở miệng, và bà ấy nhìn vào vòm miệng của anh.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_7",
@@ -435,8 +434,8 @@
                 "so economic growth was rapid",
                 "the effects of the medicine will vary"
               ],
-              "correctAnswer": "B",
-              "explanation": "Cô ấy bước qua cửa, và ngửi thấy mùi thơm của bánh quy."
+              "explanation": "Cô ấy bước qua cửa, và ngửi thấy mùi thơm của bánh quy.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2b_8",
@@ -447,8 +446,8 @@
                 "and Jim thought it was a divine message",
                 "and she looked at his palate"
               ],
-              "correctAnswer": "A",
-              "explanation": "Vì hòn đảo quá ấm áp và xinh đẹp, mọi người gọi nó là một thiên đường."
+              "explanation": "Vì hòn đảo quá ấm áp và xinh đẹp, mọi người gọi nó là một thiên đường.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_9",
@@ -459,8 +458,8 @@
                 "people call it a paradise",
                 "and she smelled the aroma of cookies"
               ],
-              "correctAnswer": "A",
-              "explanation": "Vì cơ thể của các bệnh nhân rất khác nhau, nên tác dụng của thuốc sẽ khác nhau."
+              "explanation": "Vì cơ thể của các bệnh nhân rất khác nhau, nên tác dụng của thuốc sẽ khác nhau.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_10",
@@ -471,142 +470,143 @@
                 "so they combined the chemicals",
                 "people call it a paradise"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trời không mưa suốt mùa hè, và Jim nghĩ đó là một thông điệp từ thần linh."
+              "explanation": "Trời không mưa suốt mùa hè, và Jim nghĩ đó là một thông điệp từ thần linh.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">The History of Chocolate</h1><p style=\"margin-bottom: 2rem;\">Many people believe that chocolate originally came from Europe. However, chocolate, called the \"food of the gods,\" was first made in the Americas. The first chocolate was very different from <b>contemporary</b> chocolate.</p><p style=\"margin-bottom: 2rem;\">Wild chocolate trees can grow easily in the <b>humid</b> Amazon rainforest. <b>Clusters</b> of flowers growing on these trees turn to seeds. About 20 to 60 cacao beans can be found in the seeds. Cacao beans are the ingredient needed to create sweet, <b>soothing</b>, and delicious chocolate treats.</p><p style=\"margin-bottom: 2rem;\">The Mayan and Aztec cultures both thought that chocolate trees were brought from <b>paradise</b> by gods. The Mayans and Aztecs used the beans from this <b>divine</b> tree to create a special <b>beverage</b> with a very pleasant <b>odor</b>. Surprisingly, the Aztecs believed that it would be <b>toxic</b> to women and children.</p><p style=\"margin-bottom: 2rem;\">In the 1500s, the Spanish explorer Cortes met the Aztecs. Cortes became quite interested in the <b>plantations</b> where the Aztecs <b>cultivated</b> chocolate trees. When he returned to Europe, he took cacao beans with him. He introduced the people of Spain to the Aztecs’ chocolate <b>beverage</b>.</p><p style=\"margin-bottom: 2rem;\">Over the next 100 years or so, kings, queens, and members of the upper class enjoyed drinking chocolate. They enjoyed it even more once they learned to add sugar to the <b>beverage</b>! Soon, chocolate had spread all across Europe. New machines allowed chocolate makers to perfect their products and produce them at a very <b>rapid</b> <b>rate</b>. Preparing the beans in special ways brought out the <b>aroma</b> of chocolate. The beans were <b>combined</b> with <b>condensed</b> milk to give the chocolate a smooth <b>texture</b>.</p><p style=\"margin-bottom: 2rem;\">Today, <b>contemporary</b> chocolates with <b>subtle</b> flavors fill the shelves of expensive chocolate shops. The different types of chocolate available today <b>vary</b> widely. True chocolate lovers can tell which is best, though. They will tell you that the flavor of high quality chocolate stays on the <b>palate</b> long after you finish it.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">The History of Chocolate</h1>        <p style=\"margin-bottom: 1rem;\">Many people believe that chocolate originally came from Europe. However, chocolate, called the \"food of the gods,\" was first made in the Americas. The first chocolate was very different from <b>contemporary</b> chocolate.</p>    <p style=\"margin-bottom: 1rem;\">Wild chocolate trees can grow easily in the <b>humid</b> Amazon rainforest. <b>Clusters</b> of flowers growing on these trees turn to seeds. About 20 to 60 cacao beans can be found in the seeds. Cacao beans are the ingredient needed to create sweet, <b>soothing</b>, and delicious chocolate treats.</p>    <p style=\"margin-bottom: 1rem;\">The Mayan and Aztec cultures both thought that chocolate trees were brought from <b>paradise</b> by gods. The Mayans and Aztecs used the beans from this <b>divine</b> tree to create a special <b>beverage</b> with a very pleasant <b>odor</b>. Surprisingly, the Aztecs believed that it would be <b>toxic</b> to women and children.</p>    <p style=\"margin-bottom: 1rem;\">In the 1500s, the Spanish explorer Cortes met the Aztecs. Cortes became quite interested in the <b>plantations</b> where the Aztecs <b>cultivated</b> chocolate trees. When he returned to Europe, he took cacao beans with him. He introduced the people of Spain to the Aztecs’ chocolate <b>beverage</b>.</p>    <p style=\"margin-bottom: 1rem;\">Over the next 100 years or so, kings, queens, and members of the upper class enjoyed drinking chocolate. They enjoyed it even more once they learned to add sugar to the <b>beverage</b>! Soon, chocolate had spread all across Europe. New machines allowed chocolate makers to perfect their products and produce them at a very <b>rapid</b> <b>rate</b>. Preparing the beans in special ways brought out the <b>aroma</b> of chocolate. The beans were <b>combined</b> with <b>condensed</b> milk to give the chocolate a smooth <b>texture</b>.</p>    <p style=\"margin-bottom: 1rem;\">Today, <b>contemporary</b> chocolates with <b>subtle</b> flavors fill the shelves of expensive chocolate shops. The different types of chocolate available today <b>vary</b> widely. True chocolate lovers can tell which is best, though. They will tell you that the flavor of high quality chocolate stays on the <b>palate</b> long after you finish it.</p></div>",
       "imageUrl": "/unit1_vol4_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Reading Comprehension Part A: True or False",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "rc_a_1",
-              "content": "1. Wild chocolate trees grow well in humid weather.",
+              "content": "Wild chocolate trees grow well in humid weather.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cây sô cô la hoang dã phát triển tốt trong thời tiết ẩm ướt, điều này đúng theo bài đọc."
+              "explanation": "Cây sô cô la hoang dã phát triển tốt trong thời tiết ẩm ướt, điều này đúng theo bài đọc.",
+              "correctAnswer": "A"
             },
             {
               "id": "rc_a_2",
-              "content": "2. The Mayans and Aztecs said chocolate was a divine plant brought from paradise.",
+              "content": "The Mayans and Aztecs said chocolate was a divine plant brought from paradise.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Người Maya và Aztec cho rằng cây sô cô la là một loài cây thần thánh được mang đến từ thiên đường."
+              "explanation": "Người Maya và Aztec cho rằng cây sô cô la là một loài cây thần thánh được mang đến từ thiên đường.",
+              "correctAnswer": "A"
             },
             {
               "id": "rc_a_3",
-              "content": "3. The Mayans cultivated chocolate trees on plantations.",
+              "content": "The Mayans cultivated chocolate trees on plantations.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "The Aztecs cultivated chocolate trees on plantations, không phải người Mayans."
+              "explanation": "The Aztecs cultivated chocolate trees on plantations, không phải người Mayans.",
+              "correctAnswer": "B"
             },
             {
               "id": "rc_a_4",
-              "content": "4. Beans were combined with condensed milk to give chocolate a smooth texture.",
+              "content": "Beans were combined with condensed milk to give chocolate a smooth texture.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Hạt cacao được kết hợp với sữa đặc để tạo cho sô cô la có kết cấu mịn màng."
+              "explanation": "Hạt cacao được kết hợp với sữa đặc để tạo cho sô cô la có kết cấu mịn màng.",
+              "correctAnswer": "A"
             },
             {
               "id": "rc_a_5",
-              "content": "5. The first chocolate beverages were made in Europe.",
+              "content": "The first chocolate beverages were made in Europe.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Những thức uống sô cô la đầu tiên được làm ra bởi người Maya và Aztec ở châu Mỹ."
+              "explanation": "Những thức uống sô cô la đầu tiên được làm ra bởi người Maya và Aztec ở châu Mỹ.",
+              "correctAnswer": "B"
             },
             {
               "id": "rc_a_6",
-              "content": "6. The different types of chocolate available today vary widely.",
+              "content": "The different types of chocolate available today vary widely.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Các loại sô cô la khác nhau có sẵn ngày nay rất đa dạng và khác biệt."
+              "explanation": "Các loại sô cô la khác nhau có sẵn ngày nay rất đa dạng và khác biệt.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Reading Comprehension Part B: Choose the right answer.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "rc_b_1",
-              "content": "1. Which word is NOT used to describe chocolate in the reading?",
+              "content": "Which word is NOT used to describe chocolate in the reading?",
               "options": [
                 "Aroma",
                 "Delicious",
                 "Soothing",
                 "Sweet"
               ],
-              "correctAnswer": "A",
-              "explanation": "'Aroma' được dùng để nói về mùi thơm của sô cô la, không phải là tính từ trực tiếp mô tả nó như sweet, soothing, delicious."
+              "explanation": "'Aroma' được dùng để nói về mùi thơm của sô cô la, không phải là tính từ trực tiếp mô tả nó như sweet, soothing, delicious.",
+              "correctAnswer": "A"
             },
             {
               "id": "rc_b_2",
-              "content": "2. Which of the following did NOT consume chocolate as a beverage?",
+              "content": "Which of the following did NOT consume chocolate as a beverage?",
               "options": [
                 "Cortes",
                 "Europeans in the 1500s",
                 "Mayan gods",
                 "The Aztecs"
               ],
-              "correctAnswer": "C",
-              "explanation": "Không có chi tiết nào trong bài nói rằng các vị thần của người Maya đã tiêu thụ sô cô la dưới dạng đồ uống."
+              "explanation": "Không có chi tiết nào trong bài nói rằng các vị thần của người Maya đã tiêu thụ sô cô la dưới dạng đồ uống.",
+              "correctAnswer": "C"
             },
             {
               "id": "rc_b_3",
-              "content": "3. Which group of people believed that chocolate was toxic to women and children?",
+              "content": "Which group of people believed that chocolate was toxic to women and children?",
               "options": [
                 "Chocolate makers",
                 "Plantation owners",
                 "The upper class in Europe",
                 "The Aztecs"
               ],
-              "correctAnswer": "D",
-              "explanation": "Người Aztec tin rằng sô cô la có độc đối với phụ nữ và trẻ em."
+              "explanation": "Người Aztec tin rằng sô cô la có độc đối với phụ nữ và trẻ em.",
+              "correctAnswer": "D"
             },
             {
               "id": "rc_b_4",
-              "content": "4. What allowed chocolate to be produced at a rapid rate?",
+              "content": "What allowed chocolate to be produced at a rapid rate?",
               "options": [
                 "Cortes of Spain",
                 "Cacao beans",
                 "New machines",
                 "Kings and queens"
               ],
-              "correctAnswer": "C",
-              "explanation": "Máy móc mới (New machines) đã cho phép các nhà sản xuất làm ra sản phẩm với tốc độ nhanh chóng."
+              "explanation": "Máy móc mới (New machines) đã cho phép các nhà sản xuất làm ra sản phẩm với tốc độ nhanh chóng.",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

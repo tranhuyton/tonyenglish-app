@@ -16,517 +16,517 @@
           "id": "sec1",
           "title": "Exercise 1: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
-              "content": "1. Greg had the _____ of falling in a pool, though he didn’t know how to swim. The experience left him with _____ feelings about swimming pools.",
+              "content": "Greg had the _____ of falling in a pool, though he didn’t know how to swim. The experience left him with _____ feelings about swimming pools.",
               "options": [
                 "custom / stern",
                 "misfortune / negative",
                 "source / altogether",
                 "bruise / bound"
               ],
-              "correctAnswer": "B",
-              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó."
+              "explanation": "'misfortune' (sự bất hạnh) và 'negative' (tiêu cực) phù hợp với ngữ cảnh rơi xuống hồ bơi và cảm giác không tốt sau đó.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_2",
-              "content": "2. After one day, the _____ on her lip began to go away. In a week, it had disappeared _____.",
+              "content": "After one day, the _____ on her lip began to go away. In a week, it had disappeared _____.",
               "options": [
                 "bruise / altogether",
                 "hoop / disobedient",
                 "sake / custom",
                 "thump / per"
               ],
-              "correctAnswer": "A",
-              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn)."
+              "explanation": "'bruise' (vết bầm tím) mờ dần, và biến mất 'altogether' (hoàn toàn).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_3",
-              "content": "3. For the _____ of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices _____ person.",
+              "content": "For the _____ of fairness, we tried to divide the pizza equally. One pizza was enough to give three slices _____ person.",
               "options": [
                 "foresee / altogether",
                 "glimpse / per",
                 "sake / per",
                 "source / custom"
               ],
-              "correctAnswer": "C",
-              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người)."
+              "explanation": "'for the sake of' (vì mục đích/lợi ích của), và 'per person' (mỗi người).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_4",
-              "content": "4. A woman _____ with the child to behave in the store. The child, however, continued to be _____.",
+              "content": "A woman _____ with the child to behave in the store. The child, however, continued to be _____.",
               "options": [
                 "scraped / negative",
                 "pleaded / disobedient",
                 "stitched / stern",
                 "ripped / vehement"
               ],
-              "correctAnswer": "B",
-              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời)."
+              "explanation": "'plead' (van nài, nài nỉ) đứa trẻ ngoan ngoãn, nhưng nó vẫn 'disobedient' (không vâng lời).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_5",
-              "content": "5. They walked past a large river, which the guide said was the _____ of a waterfall. They finally _____ the waterfall when they reached the bottom of the hill.",
+              "content": "They walked past a large river, which the guide said was the _____ of a waterfall. They finally _____ the waterfall when they reached the bottom of the hill.",
               "options": [
                 "misfortune / stitched",
                 "hoop / altogether",
                 "custom / bind",
                 "source / glimpsed"
               ],
-              "correctAnswer": "D",
-              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó."
+              "explanation": "'source' (nguồn gốc) của thác nước và 'glimpse' (thoáng thấy) nó.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex1_6",
-              "content": "6. The girl wanted to make her plastic _____ look pretty, so she _____ cloth around it.",
+              "content": "The girl wanted to make her plastic _____ look pretty, so she _____ cloth around it.",
               "options": [
                 "bruise / scraped",
                 "thump / bound",
                 "hoop / stitched",
                 "sake / ripped"
               ],
-              "correctAnswer": "C",
-              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó."
+              "explanation": "'hoop' (cái vòng) bằng nhựa và 'stitch' (khâu) vải xung quanh nó.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_7",
-              "content": "7. The family was _____ tightly. For example, on Saturdays, it was their _____ to go to the park together.",
+              "content": "The family was _____ tightly. For example, on Saturdays, it was their _____ to go to the park together.",
               "options": [
                 "bound / custom",
                 "disobedient / source",
                 "stern / sake",
                 "vehement / misfortune"
               ],
-              "correctAnswer": "A",
-              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau."
+              "explanation": "'bound' (gắn kết) chặt chẽ và 'custom' (thói quen, tập quán) đi công viên cùng nhau.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_8",
-              "content": "8. The _____ teacher was angry to see the students passing notes. She took the note from the students and _____ it into pieces.",
+              "content": "The _____ teacher was angry to see the students passing notes. She took the note from the students and _____ it into pieces.",
               "options": [
                 "vehement / per",
                 "disobedient / pleaded",
                 "negative / glimpsed",
                 "stern / ripped"
               ],
-              "correctAnswer": "D",
-              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy."
+              "explanation": "Giáo viên 'stern' (nghiêm khắc) đã 'rip' (xé rách) tờ giấy.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex1_9",
-              "content": "9. The boy lost his balance and fell with a _____. When he got up, he noticed that he’d _____ his elbow.",
+              "content": "The boy lost his balance and fell with a _____. When he got up, he noticed that he’d _____ his elbow.",
               "options": [
                 "bruise / bound",
                 "thump / scraped",
                 "hoop / stitched",
                 "misfortune / foreseen"
               ],
-              "correctAnswer": "B",
-              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay."
+              "explanation": "Ngã tạo ra tiếng 'thump' (tiếng rơi bịch) và 'scrape' (làm xước) khuỷu tay.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_10",
-              "content": "10. The coach didn’t _____ the loss for his team. So, after the game, he was _____.",
+              "content": "The coach didn’t _____ the loss for his team. So, after the game, he was _____.",
               "options": [
                 "foresee / vehement",
                 "glimpse / negative",
                 "plead / disobedient",
                 "bind / altogether"
               ],
-              "correctAnswer": "A",
-              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ)."
+              "explanation": "Không 'foresee' (lường trước) thất bại, nên huấn luyện viên trở nên 'vehement' (kịch liệt, giận dữ).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2",
           "title": "Exercise 2 Part A: Match the phrases to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2a_1",
-              "content": "1. Kelly had the misfortune of breaking _____.",
+              "content": "Kelly had the misfortune of breaking _____.",
               "options": [
                 "her arm before the competition",
                 "eating dinner early on Sundays",
                 "bad weather this weekend",
                 "to use the computer"
               ],
-              "correctAnswer": "A",
-              "explanation": "misfortune of breaking her arm (sự rủi ro bị gãy tay)."
+              "explanation": "misfortune of breaking her arm (sự rủi ro bị gãy tay).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2a_2",
-              "content": "2. The disobedient dog ran away _____.",
+              "content": "The disobedient dog ran away _____.",
               "options": [
                 "to give her a better grade",
                 "bad weather this weekend",
                 "from its owner at the park",
                 "eating dinner early on Sundays"
               ],
-              "correctAnswer": "C",
-              "explanation": "disobedient dog (con chó không vâng lời) chạy khỏi chủ (from its owner)."
+              "explanation": "disobedient dog (con chó không vâng lời) chạy khỏi chủ (from its owner).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2a_3",
-              "content": "3. She felt bound to her friends because she had _____.",
+              "content": "She felt bound to her friends because she had _____.",
               "options": [
                 "bad weather this weekend",
                 "known them for a long time",
                 "to use the computer",
                 "eating dinner early on Sundays"
               ],
-              "correctAnswer": "B",
-              "explanation": "bound to her friends (gắn kết với bạn bè) vì biết họ lâu rồi."
+              "explanation": "bound to her friends (gắn kết với bạn bè) vì biết họ lâu rồi.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2a_4",
-              "content": "4. The weatherman didn’t foresee any _____.",
+              "content": "The weatherman didn’t foresee any _____.",
               "options": [
                 "to give her a better grade",
                 "bad weather this weekend",
                 "before it was completed",
                 "her arm before the competition"
               ],
-              "correctAnswer": "B",
-              "explanation": "foresee any bad weather (lường trước thời tiết xấu)."
+              "explanation": "foresee any bad weather (lường trước thời tiết xấu).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2a_5",
-              "content": "5. The family had a custom of _____.",
+              "content": "The family had a custom of _____.",
               "options": [
                 "eating dinner early on Sundays",
                 "to use the computer",
                 "off the window",
                 "gave one piece to his friend"
               ],
-              "correctAnswer": "A",
-              "explanation": "custom of eating dinner early (thói quen ăn tối sớm)."
+              "explanation": "custom of eating dinner early (thói quen ăn tối sớm).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2a_6",
-              "content": "6. She glimpsed at his painting _____.",
+              "content": "She glimpsed at his painting _____.",
               "options": [
                 "before it was completed",
                 "from its owner at the park",
                 "to give her a better grade",
                 "her arm before the competition"
               ],
-              "correctAnswer": "A",
-              "explanation": "glimpsed at his painting (nhìn lướt qua bức tranh) trước khi nó hoàn thành."
+              "explanation": "glimpsed at his painting (nhìn lướt qua bức tranh) trước khi nó hoàn thành.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2a_7",
-              "content": "7. Charlie ripped the paper in half and _____.",
+              "content": "Charlie ripped the paper in half and _____.",
               "options": [
                 "gave one piece to his friend",
                 "bad weather this weekend",
                 "off the window",
                 "to use the computer"
               ],
-              "correctAnswer": "A",
-              "explanation": "ripped the paper in half (xé giấy làm đôi) và đưa một nửa cho bạn."
+              "explanation": "ripped the paper in half (xé giấy làm đôi) và đưa một nửa cho bạn.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2a_8",
-              "content": "8. Jasmine pleaded with her teacher _____.",
+              "content": "Jasmine pleaded with her teacher _____.",
               "options": [
                 "her arm before the competition",
                 "to give her a better grade",
                 "eating dinner early on Sundays",
                 "before it was completed"
               ],
-              "correctAnswer": "B",
-              "explanation": "pleaded with her teacher (van nài giáo viên) cho điểm cao hơn."
+              "explanation": "pleaded with her teacher (van nài giáo viên) cho điểm cao hơn.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2a_9",
-              "content": "9. Leslie scraped the ice _____.",
+              "content": "Leslie scraped the ice _____.",
               "options": [
                 "to give her a better grade",
                 "bad weather this weekend",
                 "eating dinner early on Sundays",
                 "off the window"
               ],
-              "correctAnswer": "D",
-              "explanation": "scraped the ice off the window (cạo băng khỏi cửa sổ)."
+              "explanation": "scraped the ice off the window (cạo băng khỏi cửa sổ).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex2a_10",
-              "content": "10. George was vehement about being allowed _____.",
+              "content": "George was vehement about being allowed _____.",
               "options": [
                 "from its owner at the park",
                 "to use the computer",
                 "gave one piece to his friend",
                 "before it was completed"
               ],
-              "correctAnswer": "B",
-              "explanation": "vehement about being allowed to use the computer (kịch liệt về việc được cho phép dùng máy tính)."
+              "explanation": "vehement about being allowed to use the computer (kịch liệt về việc được cho phép dùng máy tính).",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3",
           "title": "Exercise 2 Part B: Match the clauses to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2b_1",
-              "content": "1. There was a tear in my shirt, _____.",
+              "content": "There was a tear in my shirt, _____.",
               "options": [
                 "but only 2 cans per week",
                 "so he had bruises on his arm",
                 "so my mom stitched it back together",
                 "because stern rules built character"
               ],
-              "correctAnswer": "C",
-              "explanation": "stitch it back together (khâu nó lại) vì áo bị rách (a tear)."
+              "explanation": "stitch it back together (khâu nó lại) vì áo bị rách (a tear).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2b_2",
-              "content": "2. She dropped the scissors on the carpet, _____.",
+              "content": "She dropped the scissors on the carpet, _____.",
               "options": [
                 "so there was a slight thump",
                 "because stern rules built character",
                 "but the sources were unreliable",
                 "so he tried jumping through the hoop"
               ],
-              "correctAnswer": "A",
-              "explanation": "rơi kéo gây ra 'a slight thump' (tiếng động nhỏ)."
+              "explanation": "rơi kéo gây ra 'a slight thump' (tiếng động nhỏ).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_3",
-              "content": "3. His parents were strict, _____.",
+              "content": "His parents were strict, _____.",
               "options": [
                 "but only 2 cans per week",
                 "because stern rules built character",
                 "so he had bruises on his arm",
                 "it filled him with negative dreams"
               ],
-              "correctAnswer": "B",
-              "explanation": "strict (nghiêm khắc) đồng nghĩa với 'stern rules'."
+              "explanation": "strict (nghiêm khắc) đồng nghĩa với 'stern rules'.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2b_4",
-              "content": "4. The website was good, _____.",
+              "content": "The website was good, _____.",
               "options": [
                 "but the sources were unreliable",
                 "because stern rules built character",
                 "so there was a slight thump",
                 "but only 2 cans per week"
               ],
-              "correctAnswer": "A",
-              "explanation": "trang web tốt nhưng 'sources' (nguồn) không đáng tin."
+              "explanation": "trang web tốt nhưng 'sources' (nguồn) không đáng tin.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_5",
-              "content": "5. The fight was horrifying, _____.",
+              "content": "The fight was horrifying, _____.",
               "options": [
                 "so my mom stitched it back together",
                 "it filled him with negative dreams",
                 "that was altogether different from mine",
                 "but the sources were unreliable"
               ],
-              "correctAnswer": "B",
-              "explanation": "trận đánh kinh hoàng khiến có 'negative dreams' (giấc mơ tiêu cực)."
+              "explanation": "trận đánh kinh hoàng khiến có 'negative dreams' (giấc mơ tiêu cực).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2b_6",
-              "content": "6. I enjoy soda, _____.",
+              "content": "I enjoy soda, _____.",
               "options": [
                 "but only 2 cans per week",
                 "because stern rules built character",
                 "so he had bruises on his arm",
                 "so my mom stitched it back together"
               ],
-              "correctAnswer": "A",
-              "explanation": "uống soda nhưng chỉ '2 cans per week' (2 lon mỗi tuần)."
+              "explanation": "uống soda nhưng chỉ '2 cans per week' (2 lon mỗi tuần).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_7",
-              "content": "7. He went to school despite being sick _____.",
+              "content": "He went to school despite being sick _____.",
               "options": [
                 "because the sake of his grade depended on it",
                 "that was altogether different from mine",
                 "so he tried jumping through the hoop",
                 "it filled him with negative dreams"
               ],
-              "correctAnswer": "A",
-              "explanation": "sake of his grade (vì lợi ích điểm số của anh ấy)."
+              "explanation": "sake of his grade (vì lợi ích điểm số của anh ấy).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_8",
-              "content": "8. They used a different system _____.",
+              "content": "They used a different system _____.",
               "options": [
                 "but only 2 cans per week",
                 "that was altogether different from mine",
                 "so he had bruises on his arm",
                 "because the sake of his grade depended on it"
               ],
-              "correctAnswer": "B",
-              "explanation": "different system (hệ thống khác) 'altogether different from mine' (hoàn toàn khác biệt với của tôi)."
+              "explanation": "different system (hệ thống khác) 'altogether different from mine' (hoàn toàn khác biệt với của tôi).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2b_9",
-              "content": "9. He liked showing off, _____.",
+              "content": "He liked showing off, _____.",
               "options": [
                 "so he tried jumping through the hoop",
                 "but only 2 cans per week",
                 "because stern rules built character",
                 "it filled him with negative dreams"
               ],
-              "correctAnswer": "A",
-              "explanation": "showing off (khoe khoang) nên nhảy qua 'hoop' (vòng)."
+              "explanation": "showing off (khoe khoang) nên nhảy qua 'hoop' (vòng).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2b_10",
-              "content": "10. He fell down the stairs, _____.",
+              "content": "He fell down the stairs, _____.",
               "options": [
                 "but the sources were unreliable",
                 "so he tried jumping through the hoop",
                 "so he had bruises on his arm",
                 "that was altogether different from mine"
               ],
-              "correctAnswer": "C",
-              "explanation": "ngã cầu thang nên có 'bruises' (vết bầm)."
+              "explanation": "ngã cầu thang nên có 'bruises' (vết bầm).",
+              "correctAnswer": "C"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif;\"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Gwen’s New Friends</h1><p style=\"margin-bottom: 1rem;\">Gwen walked into the gym for her next class. Coach Peeves said, “Today, we’re playing basketball. The <b>custom</b> is to let you choose your own teams. However, we’re going to do things differently.”</p><p style=\"margin-bottom: 1rem;\">The coach assigned each girl to a team. There were six girls <b>per</b> team. Gwen <b>glimpsed</b> at her teammates. She didn’t know any of them. All of her friends were on the other teams. She couldn’t believe her <b>misfortune</b>.</p><p style=\"margin-bottom: 1rem;\">“I feel sick. May I go to the nurse?” asked Gwen.</p><p style=\"margin-bottom: 1rem;\">The coach could <b>foresee</b> Gwen’s excuses. It wasn’t the first time Gwen tried to leave class. With a <b>stern</b> voice, the coach said, “No.”</p><p style=\"margin-bottom: 1rem;\">Gwen was <b>vehement</b>. “I don’t know any of these girls! Let me play on another team. Please!” she <b>pleaded</b>.</p><p style=\"margin-bottom: 1rem;\">“Gwen, don’t be <b>disobedient</b>. I don’t want to hear any more <b>negative</b> comments from you.”</p><p style=\"margin-bottom: 1rem;\">Gwen had no choice. Then a girl smiled at her. “Hi, I’m Stephanie. I was in your English class last year,” she said. Gwen remembered her. “For the <b>sake</b> of the team, please try your best. I know you’re a good player,” said Stephanie.</p><p style=\"margin-bottom: 1rem;\">When the game started, Gwen played as best as she could. She took a long shot. The ball sailed through the air and went right through the <b>hoop</b>!</p><p style=\"margin-bottom: 1rem;\">“That was awesome!” said one of her teammates. Later, Gwen fell with a loud <b>thump</b>.</p><p style=\"margin-bottom: 1rem;\">“Are you OK?” asked her teammates. They were worried.</p><p style=\"margin-bottom: 1rem;\">She had <b>ripped</b> her jeans. She had <b>scraped</b> her knee and had a small <b>bruise</b>.</p><p style=\"margin-bottom: 1rem;\">Gwen told her teammates, “My knee is fine, and I can <b>stitch</b> my pants later. Let’s keep playing!”</p><p style=\"margin-bottom: 1rem;\">By the end of the game, Gwen forgot <b>altogether</b> that she hadn’t wanted to play, and her team won! The victory <b>bound</b> Gwen’s team together. She had made a lot of new friends, and they were a <b>source</b> of happiness for her for many years.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif;\"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">Gwen’s New Friends</h1>        <p style=\"margin-bottom: 1rem;\">Gwen walked into the gym for her next class. Coach Peeves said, “Today, we’re playing basketball. The <b>custom</b> is to let you choose your own teams. However, we’re going to do things differently.”</p>    <p style=\"margin-bottom: 1rem;\">The coach assigned each girl to a team. There were six girls <b>per</b> team. Gwen <b>glimpsed</b> at her teammates. She didn’t know any of them. All of her friends were on the other teams. She couldn’t believe her <b>misfortune</b>.</p>    <p style=\"margin-bottom: 1rem;\">“I feel sick. May I go to the nurse?” asked Gwen.</p>    <p style=\"margin-bottom: 1rem;\">The coach could <b>foresee</b> Gwen’s excuses. It wasn’t the first time Gwen tried to leave class. With a <b>stern</b> voice, the coach said, “No.”</p>    <p style=\"margin-bottom: 1rem;\">Gwen was <b>vehement</b>. “I don’t know any of these girls! Let me play on another team. Please!” she <b>pleaded</b>.</p>    <p style=\"margin-bottom: 1rem;\">“Gwen, don’t be <b>disobedient</b>. I don’t want to hear any more <b>negative</b> comments from you.”</p>    <p style=\"margin-bottom: 1rem;\">Gwen had no choice. Then a girl smiled at her. “Hi, I’m Stephanie. I was in your English class last year,” she said. Gwen remembered her. “For the <b>sake</b> of the team, please try your best. I know you’re a good player,” said Stephanie.</p>    <p style=\"margin-bottom: 1rem;\">When the game started, Gwen played as best as she could. She took a long shot. The ball sailed through the air and went right through the <b>hoop</b>!</p>    <p style=\"margin-bottom: 1rem;\">“That was awesome!” said one of her teammates. Later, Gwen fell with a loud <b>thump</b>.</p>    <p style=\"margin-bottom: 1rem;\">“Are you OK?” asked her teammates. They were worried.</p>    <p style=\"margin-bottom: 1rem;\">She had <b>ripped</b> her jeans. She had <b>scraped</b> her knee and had a small <b>bruise</b>.</p>    <p style=\"margin-bottom: 1rem;\">Gwen told her teammates, “My knee is fine, and I can <b>stitch</b> my pants later. Let’s keep playing!”</p>    <p style=\"margin-bottom: 1rem;\">By the end of the game, Gwen forgot <b>altogether</b> that she hadn’t wanted to play, and her team won! The victory <b>bound</b> Gwen’s team together. She had made a lot of new friends, and they were a <b>source</b> of happiness for her for many years.</p></div>",
       "imageUrl": "/unit16_vol4_story.png",
       "sections": [
         {
           "id": "sec4",
           "title": "Part A: Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "rc_a1",
-              "content": "1. The custom was to allow the girls to choose their own teams.",
+              "content": "The custom was to allow the girls to choose their own teams.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài đọc viết: 'The custom is to let you choose your own teams.' (Đó là thói quen để các em tự chọn đội)."
+              "explanation": "Câu này hoàn toàn chính xác. Huấn luyện viên đã nói rằng tập quán hay thói quen thường lệ là để các học sinh tự chọn đội của mình. Trích đoạn trong bài là: The custom is to let you choose your own teams.",
+              "correctAnswer": "A"
             },
             {
               "id": "rc_a2",
-              "content": "2. Gwen told her teammates that she could stitch her pants later.",
+              "content": "Gwen told her teammates that she could stitch her pants later.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài đọc viết: '...and I can stitch my pants later.' (và mình có thể khâu quần sau)."
+              "explanation": "Câu này đúng. Gwen đã trấn an bạn bè rằng mình ổn và có thể tự khâu quần sau trận đấu. Bằng chứng là: Gwen told her teammates, My knee is fine, and I can stitch my pants later.",
+              "correctAnswer": "A"
             },
             {
               "id": "rc_a3",
-              "content": "3. There were eight girls per team.",
+              "content": "There were eight girls per team.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Bài đọc nói: 'There were six girls per team.' (Có sáu cô gái mỗi đội)."
+              "explanation": "Câu này sai nhé. Huấn luyện viên đã chia mỗi đội gồm sáu cô gái chứ không phải tám. Câu văn chứng minh là: There were six girls per team.",
+              "correctAnswer": "B"
             },
             {
               "id": "rc_a4",
-              "content": "4. Gwen pleaded to be on another team that had some of her friends.",
+              "content": "Gwen pleaded to be on another team that had some of her friends.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài đọc viết: '...Let me play on another team. Please! she pleaded.' (Hãy cho em chơi ở đội khác, cô nài nỉ)."
+              "explanation": "Câu này đúng. Khi thấy đội toàn người lạ, Gwen đã van nài xin được sang đội khác. Bằng chứng là đoạn: I don't know any of these girls! Let me play on another team. Please! she pleaded.",
+              "correctAnswer": "A"
             },
             {
               "id": "rc_a5",
-              "content": "5. Stephanie asked Gwen to lose on purpose for the sake of the team.",
+              "content": "Stephanie asked Gwen to lose on purpose for the sake of the team.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "Sai. Stephanie yêu cầu Gwen cố gắng hết sức (try your best) vì lợi ích của đội (for the sake of the team)."
+              "explanation": "Câu này sai. Thực tế, Stephanie đã động viên Gwen hãy cố gắng hết sức vì mục tiêu chung của đội. Trong bài có ghi: For the sake of the team, please try your best.",
+              "correctAnswer": "B"
             },
             {
               "id": "rc_a6",
-              "content": "6. Gwen ripped her jeans, scraped her knee, and got a bruise when she fell.",
+              "content": "Gwen ripped her jeans, scraped her knee, and got a bruise when she fell.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài đọc viết: 'She had ripped her jeans. She had scraped her knee and had a small bruise.'"
+              "explanation": "Câu này hoàn toàn đúng. Sau cú ngã, Gwen bị rách quần, trầy xước đầu gối và có một vết bầm nhỏ. Trích đoạn là: She had ripped her jeans. She had scraped her knee and had a small bruise.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec5",
           "title": "Part B: Answer the questions.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "rc_b1",
-              "content": "1. Why did Coach Peeves speak to Gwen in a stern voice?",
+              "content": "Why did Coach Peeves speak to Gwen in a stern voice?",
               "options": [
                 "For falling with a thump",
                 "For making negative comments",
                 "For choosing her own team",
                 "For having misfortune"
               ],
-              "correctAnswer": "B",
-              "explanation": "Huấn luyện viên cảnh báo Gwen không được ngang bướng và đưa ra nhận xét tiêu cực (negative comments)."
+              "explanation": "Huấn luyện viên Peeves dùng giọng nghiêm khắc để cảnh báo Gwen không được ngang bướng và ngừng đưa ra các bình luận tiêu cực. Câu văn chứng minh là: I don't want to hear any more negative comments from you. Nên đáp án B là đúng.",
+              "correctAnswer": "B"
             },
             {
               "id": "rc_b2",
-              "content": "2. How did Gwen know Stephanie?",
+              "content": "How did Gwen know Stephanie?",
               "options": [
                 "They were old friends.",
                 "They were vehement.",
                 "They could foresee the team.",
                 "They had an English class together."
               ],
-              "correctAnswer": "D",
-              "explanation": "Stephanie nói: 'I was in your English class last year.' (Mình học chung lớp tiếng Anh với cậu năm ngoái)."
+              "explanation": "Stephanie đã từng học chung lớp tiếng Anh với Gwen vào năm ngoái. Trích đoạn: Hi, I'm Stephanie. I was in your English class last year. Do đó đáp án D là sự lựa chọn chính xác.",
+              "correctAnswer": "D"
             },
             {
               "id": "rc_b3",
-              "content": "3. What happened after Gwen’s shot went through the hoop?",
+              "content": "What happened after Gwen’s shot went through the hoop?",
               "options": [
                 "She faced the stern coach.",
                 "Her teammate said it was awesome.",
                 "She changed teams.",
                 "She forgot about the rules altogether."
               ],
-              "correctAnswer": "B",
-              "explanation": "Bài đọc viết: 'That was awesome! said one of her teammates.' (Thật tuyệt vời! một đồng đội nói)."
+              "explanation": "Sau khi quả bóng bay lọt qua vòng lưới, một người đồng đội đã khen ngợi cô ấy. Trong bài viết: The ball sailed through the air and went right through the hoop! That was awesome! said one of her teammates. Vì thế chọn đáp án B.",
+              "correctAnswer": "B"
             },
             {
               "id": "rc_b4",
-              "content": "4. How were the girls on Gwen’s team bound together?",
+              "content": "How were the girls on Gwen’s team bound together?",
               "options": [
                 "They were all disobedient.",
                 "They won the game.",
                 "They chose a new team.",
                 "They all had bruises."
               ],
-              "correctAnswer": "B",
-              "explanation": "Bài đọc viết: 'The victory bound Gwen’s team together.' (Chiến thắng đã gắn kết đội của Gwen lại với nhau)."
+              "explanation": "Chiến thắng trong trận đấu chính là thứ đã kết nối và gắn chặt các cô gái trong đội của Gwen lại với nhau. Câu văn chứng minh: The victory bound Gwen's team together. Do đó đáp án B là hợp lý nhất.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

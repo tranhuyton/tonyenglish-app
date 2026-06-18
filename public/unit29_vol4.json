@@ -16,325 +16,325 @@
           "id": "sec1_ex1",
           "title": "Exercise 1: Choose the word that is the better fit for each blank.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "1",
-              "content": "1. A survey found that not very many people like the __________. So he is trying to think of ways to ___________ his image and make people like him.",
+              "content": "A survey found that not very many people like the __________. So he is trying to think of ways to ___________ his image and make people like him.",
               "options": [
                 "candidate / enhance",
                 "enhance / candidate",
                 "candidate / era",
                 "enhance / era"
               ],
-              "correctAnswer": "A",
-              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng."
+              "explanation": "candidate (ứng cử viên) và enhance (cải thiện) là đáp án đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "2",
-              "content": "2. We live in a(n) ___________ where people are very concerned about conserving our natural resources. Many people think using ___________ energy is a good way to do this.",
+              "content": "We live in a(n) ___________ where people are very concerned about conserving our natural resources. Many people think using ___________ energy is a good way to do this.",
               "options": [
                 "solar / era",
                 "era / solar",
                 "pollute / solar",
                 "era / pollute"
               ],
-              "correctAnswer": "B",
-              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng."
+              "explanation": "era (kỷ nguyên) và solar (thuộc về mặt trời) là đáp án đúng.",
+              "correctAnswer": "B"
             },
             {
               "id": "3",
-              "content": "3. The company doesn't want to ___________ the air anymore, so they are going to ___________ new rules for disposing waste.",
+              "content": "The company doesn't want to ___________ the air anymore, so they are going to ___________ new rules for disposing waste.",
               "options": [
                 "incorporate / pollute",
                 "pollute / incorporate",
                 "modify / incorporate",
                 "pollute / modify"
               ],
-              "correctAnswer": "B",
-              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng."
+              "explanation": "pollute (gây ô nhiễm) và incorporate (kết hợp/sáp nhập) là đáp án đúng.",
+              "correctAnswer": "B"
             },
             {
               "id": "4",
-              "content": "4. The ___________ files were locked in the basement. The information in them was about important customers and had to be kept ___________.",
+              "content": "The ___________ files were locked in the basement. The information in them was about important customers and had to be kept ___________.",
               "options": [
                 "corporate / confidential",
                 "confidential / corporate",
                 "mobile / confidential",
                 "corporate / mobile"
               ],
-              "correctAnswer": "A",
-              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng."
+              "explanation": "corporate (doanh nghiệp) và confidential (bí mật) là đáp án đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "5",
-              "content": "5. In the early 1900s, music records were an amazing ___________. People back then would have been even more amazed by today's ___________ music players.",
+              "content": "In the early 1900s, music records were an amazing ___________. People back then would have been even more amazed by today's ___________ music players.",
               "options": [
                 "phenomenon / mobile",
                 "mobile / phenomenon",
                 "automobile / phenomenon",
                 "phenomenon / automobile"
               ],
-              "correctAnswer": "A",
-              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng."
+              "explanation": "phenomenon (hiện tượng) và mobile (di động) là đáp án đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "6",
-              "content": "6. The old ___________ was very large and difficult to drive. Jane had trouble parking it between the ___________ lines in the parking lot.",
+              "content": "The old ___________ was very large and difficult to drive. Jane had trouble parking it between the ___________ lines in the parking lot.",
               "options": [
                 "automobile / parallel",
                 "parallel / automobile",
                 "automobile / territory",
                 "parallel / territory"
               ],
-              "correctAnswer": "A",
-              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng."
+              "explanation": "automobile (ô tô) và parallel (song song) là đáp án đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "7",
-              "content": "7. Ben didn't listen to my advice about ___________. Instead, he ___________ me and continued to drive fast, eventually causing an accident.",
+              "content": "Ben didn't listen to my advice about ___________. Instead, he ___________ me and continued to drive fast, eventually causing an accident.",
               "options": [
                 "transportation / ridiculed",
                 "ridiculed / transportation",
                 "guidelines / ridiculed",
                 "transportation / guidelines"
               ],
-              "correctAnswer": "A",
-              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng."
+              "explanation": "transportation (giao thông) và ridiculed (chế nhạo) là đáp án đúng.",
+              "correctAnswer": "A"
             },
             {
               "id": "8",
-              "content": "8. The ___________ for the race are very simple: just run as fast as you can. There will be short ___________ when you can stop for a drink of water.",
+              "content": "The ___________ for the race are very simple: just run as fast as you can. There will be short ___________ when you can stop for a drink of water.",
               "options": [
                 "intervals / guidelines",
                 "guidelines / intervals",
                 "guidelines / territories",
                 "intervals / territories"
               ],
-              "correctAnswer": "B",
-              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng."
+              "explanation": "guidelines (hướng dẫn) và intervals (khoảng thời gian) là đáp án đúng.",
+              "correctAnswer": "B"
             },
             {
               "id": "9",
-              "content": "9. The government decided to ___________ its borders. It made several of its ___________ smaller so that it could create a new one.",
+              "content": "The government decided to ___________ its borders. It made several of its ___________ smaller so that it could create a new one.",
               "options": [
                 "territories / modify",
                 "modify / territories",
                 "modify / interact",
                 "territories / interact"
               ],
-              "correctAnswer": "B",
-              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng."
+              "explanation": "modify (sửa đổi) và territories (lãnh thổ) là đáp án đúng.",
+              "correctAnswer": "B"
             },
             {
               "id": "10",
-              "content": "10. The baseball ___________ is always a lot of fun. It allows students from all over the city to ___________ with each other.",
+              "content": "The baseball ___________ is always a lot of fun. It allows students from all over the city to ___________ with each other.",
               "options": [
                 "tournament / interact",
                 "interact / tournament",
                 "tournament / modify",
                 "interact / modify"
               ],
-              "correctAnswer": "A",
-              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng."
+              "explanation": "tournament (giải đấu) và interact (tương tác) là đáp án đúng.",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec1_ex2",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "11",
-              "content": "1. Factories built in the early 1900s contine to <u>unleash</u> <u>chemicals</u> <u>into</u> the air.",
+              "content": "Factories built in the early 1900s contine to <u>unleash</u> <u>chemicals</u> <u>into</u> the air.",
               "options": [
                 "pollute",
                 "modify",
                 "incorporate",
                 "interact"
               ],
-              "correctAnswer": "A",
-              "explanation": "pollute có nghĩa tương tự (gây ô nhiễm)."
+              "explanation": "\"They couldn't succeed in business, and they never agreed about anything.\" (Họ không thể thành công trong kinh doanh và không bao giờ đồng ý về bất cứ điều gì).",
+              "correctAnswer": "A"
             },
             {
               "id": "12",
-              "content": "2. My soccer team is playing in a <u>competition</u> next weekend.",
+              "content": "My soccer team is playing in a <u>competition</u> next weekend.",
               "options": [
                 "era",
                 "tournament",
                 "territory",
                 "guideline"
               ],
-              "correctAnswer": "B",
-              "explanation": "tournament (giải đấu) tương đồng với competition."
+              "explanation": "\"The sheer force of the wind almost knocked them over.\" (Sức mạnh hoàn toàn của gió suýt nữa đã xô ngã họ).",
+              "correctAnswer": "B"
             },
             {
               "id": "13",
-              "content": "3. When the new buildings are finished, they will be <u>the</u> <u>same</u> <u>distance</u> <u>away</u> <u>from</u> <u>each</u> <u>other</u>.",
+              "content": "When the new buildings are finished, they will be <u>the</u> <u>same</u> <u>distance</u> <u>away</u> <u>from</u> <u>each</u> <u>other</u>.",
               "options": [
                 "parallel",
                 "mobile",
                 "corporate",
                 "confidential"
               ],
-              "correctAnswer": "A",
-              "explanation": "parallel (song song) có nghĩa là the same distance away from each other."
+              "explanation": "\"He was organized, but he was greedy and took too much clothing. His wardrobe was filled with his own products.\" (Anh ta có tổ chức nhưng lại tham lam và lấy quá nhiều quần áo).",
+              "correctAnswer": "A"
             },
             {
               "id": "14",
-              "content": "4. In order for my science project to work, I need to <u>alter</u> it.",
+              "content": "In order for my science project to work, I need to <u>alter</u> it.",
               "options": [
                 "pollute",
                 "modify",
                 "enhance",
                 "ridicule"
               ],
-              "correctAnswer": "B",
-              "explanation": "modify (sửa đổi) tương đồng với alter."
+              "explanation": "Cả ba người đều là người thừa kế. \"They were heirs to his old farm.\" (Họ là những người thừa kế trang trại cũ của ông).",
+              "correctAnswer": "B"
             },
             {
               "id": "15",
-              "content": "5. Amy hurt Jane's feelings when she <u>made</u> <u>fun</u> <u>of</u> her.",
+              "content": "Amy hurt Jane's feelings when she <u>made</u> <u>fun</u> <u>of</u> her.",
               "options": [
                 "ridiculed",
                 "incorporated",
                 "interacted",
                 "modified"
               ],
-              "correctAnswer": "A",
-              "explanation": "ridiculed (chế nhạo) tương đồng với made fun of."
+              "explanation": "ridiculed (chế nhạo) tương đồng với made fun of.",
+              "correctAnswer": "A"
             },
             {
               "id": "16",
-              "content": "6. In this <u>period</u> <u>of</u> <u>time</u>, it's more common for kids to play video games than read books.",
+              "content": "In this <u>period</u> <u>of</u> <u>time</u>, it's more common for kids to play video games than read books.",
               "options": [
                 "interval",
                 "territory",
                 "era",
                 "phenomenon"
               ],
-              "correctAnswer": "C",
-              "explanation": "era (kỷ nguyên/thời kỳ) tương đồng với period of time."
+              "explanation": "era (kỷ nguyên/thời kỳ) tương đồng với period of time.",
+              "correctAnswer": "C"
             },
             {
               "id": "17",
-              "content": "7. Kate is very shy and doesn't like to <u>talk</u> <u>to</u> <u>and</u> <u>do</u> <u>things</u> <u>with</u> the other girls.",
+              "content": "Kate is very shy and doesn't like to <u>talk</u> <u>to</u> <u>and</u> <u>do</u> <u>things</u> <u>with</u> the other girls.",
               "options": [
                 "pollute",
                 "ridicule",
                 "interact",
                 "enhance"
               ],
-              "correctAnswer": "C",
-              "explanation": "interact (tương tác) tương đồng với talk to and do things with."
+              "explanation": "interact (tương tác) tương đồng với talk to and do things with.",
+              "correctAnswer": "C"
             },
             {
               "id": "18",
-              "content": "8. Tom wants to <u>add</u> more colors <u>into</u> his painting.",
+              "content": "Tom wants to <u>add</u> more colors <u>into</u> his painting.",
               "options": [
                 "incorporate",
                 "modify",
                 "pollute",
                 "ridicule"
               ],
-              "correctAnswer": "A",
-              "explanation": "incorporate (kết hợp/thêm vào) tương đồng với add into."
+              "explanation": "incorporate (kết hợp/thêm vào) tương đồng với add into.",
+              "correctAnswer": "A"
             },
             {
               "id": "19",
-              "content": "9. My grandfather used to race <u>cars</u> across the long distances in endurance races.",
+              "content": "My grandfather used to race <u>cars</u> across the long distances in endurance races.",
               "options": [
                 "intervals",
                 "automobiles",
                 "guidelines",
                 "tournaments"
               ],
-              "correctAnswer": "B",
-              "explanation": "automobiles (ô tô) tương đồng với cars."
+              "explanation": "automobiles (ô tô) tương đồng với cars.",
+              "correctAnswer": "B"
             },
             {
               "id": "20",
-              "content": "10. The <u>person</u> <u>competing</u> <u>for</u> <u>the</u> <u>job</u> interviewed very well.",
+              "content": "The <u>person</u> <u>competing</u> <u>for</u> <u>the</u> <u>job</u> interviewed very well.",
               "options": [
                 "phenomenon",
                 "candidate",
                 "territory",
                 "era"
               ],
-              "correctAnswer": "B",
-              "explanation": "candidate (ứng viên) tương đồng với person competing for the job."
+              "explanation": "candidate (ứng viên) tương đồng với person competing for the job.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec1_ex3",
           "title": "Exercise 3: Choose the answer that best fits the question.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "21",
-              "content": "1. Which of the following means confidential?",
+              "content": "Which of the following means confidential?",
               "options": [
                 "soft",
                 "compete",
                 "moveable",
                 "secret"
               ],
-              "correctAnswer": "D",
-              "explanation": "confidential có nghĩa là secret (bí mật)."
+              "explanation": "Câu này sai. Dịch bệnh xảy ra từ thời xưa. \"In 430 BCE, an army attacked the city of Athens... Then a horrifying disease broke out.\"",
+              "correctAnswer": "D"
             },
             {
               "id": "22",
-              "content": "2. What is the word solar related to?",
+              "content": "What is the word solar related to?",
               "options": [
                 "Lines",
                 "Land",
                 "The sun",
                 "A car"
               ],
-              "correctAnswer": "C",
-              "explanation": "solar (thuộc về mặt trời) liên quan đến The sun."
+              "explanation": "Câu này đúng. Bài đọc có ghi \"It seemed random.\" (Trông nó có vẻ như ngẫu nhiên).",
+              "correctAnswer": "C"
             },
             {
               "id": "23",
-              "content": "3. Which of these is mobile?",
+              "content": "Which of these is mobile?",
               "options": [
                 "A tree",
                 "A bus",
                 "A building",
                 "A sidewalk"
               ],
-              "correctAnswer": "B",
-              "explanation": "mobile (di động) chỉ A bus (xe buýt)."
+              "explanation": "Câu này đúng. \"People summoned doctors. But it was to no avail because no one understood how the disease spread.\" (Họ đã gọi bác sĩ nhưng vô ích).",
+              "correctAnswer": "B"
             },
             {
               "id": "24",
-              "content": "4. Which of the following is a form of transportation?",
+              "content": "Which of the following is a form of transportation?",
               "options": [
                 "a friend",
                 "an airplane",
                 "a new job",
                 "a meal"
               ],
-              "correctAnswer": "B",
-              "explanation": "transportation (phương tiện giao thông) là an airplane (máy bay)."
+              "explanation": "Câu này sai. Ông không tin căn bệnh do chư thần gây ra. \"Thucydides was incredulous that gods caused the plague\" (Thucydides không tin rằng chư thần đã gây ra bệnh dịch).",
+              "correctAnswer": "B"
             },
             {
               "id": "25",
-              "content": "5. Which of these words are related to corporate?",
+              "content": "Which of these words are related to corporate?",
               "options": [
                 "Business",
                 "Time",
                 "Competition",
                 "Winning"
               ],
-              "correctAnswer": "A",
-              "explanation": "corporate (doanh nghiệp) liên quan đến Business."
+              "explanation": "Câu này đúng. \"But the situation only worsened because these people were so close to each other they became sick.\" (Nhưng tình hình trở nên tồi tệ hơn vì mọi người đứng quá gần nhau tại các đền thờ).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
@@ -348,125 +348,125 @@
           "id": "sec2_read_a",
           "title": "Reading Comprehension: Part A - Mark each statement T for true or F for false.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "26",
-              "content": "1. Teams from universities and corporate organizations gather in Australia every two years for a solar car race.",
+              "content": "Teams from universities and corporate organizations gather in Australia every two years for a solar car race.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Bài đọc cho biết 'teams from universities and corporate organizations gather in Australia every two years for a solar car race.'"
+              "explanation": "Câu này đúng. \"...teams from universities and corporate organizations gather in Australia every two years for a solar car race.\"",
+              "correctAnswer": "A"
             },
             {
               "id": "27",
-              "content": "2. Candidates for this tournament must design their own cars and keep all their plans confidential.",
+              "content": "Candidates for this tournament must design their own cars and keep all their plans confidential.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Bài có đoạn 'Candidates for this tournament must design their own cars. The teams keep all their plans confidential.'"
+              "explanation": "Câu này đúng. \"Candidates for this tournament must design their own cars. The teams keep all their plans confidential.\"",
+              "correctAnswer": "A"
             },
             {
               "id": "28",
-              "content": "3. The cars incorporate solar panels onto the outside that lie perpendicular to each other.",
+              "content": "The cars incorporate solar panels onto the outside that lie perpendicular to each other.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Các tấm năng lượng mặt trời nằm song song (parallel), không phải vuông góc (perpendicular)."
+              "explanation": "Câu này sai. Tấm pin nằm song song chứ không phải vuông góc. \"...incorporate solar panels onto the outside that lie parallel to each other.\"",
+              "correctAnswer": "B"
             },
             {
               "id": "29",
-              "content": "4. These cars drive over 300 kilometers across the Australian territories.",
+              "content": "These cars drive over 300 kilometers across the Australian territories.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Trong bài, họ đua qua hơn 3,000 kilometers."
+              "explanation": "Câu này sai. Khoảng cách là 3000km, không phải 300km. \"These cars race over 3,000 kilometers across the Australian territories.\"",
+              "correctAnswer": "B"
             },
             {
               "id": "30",
-              "content": "5. The objective of the race is to see how well the cars work under normal driving conditions.",
+              "content": "The objective of the race is to see how well the cars work under normal driving conditions.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "A",
-              "explanation": "True. Trong bài có câu 'The objective is to see how well the cars work under normal driving conditions.'"
+              "explanation": "Câu này đúng. \"The objective is to see how well the cars work under normal driving conditions.\"",
+              "correctAnswer": "A"
             },
             {
               "id": "31",
-              "content": "6. They must never stop at any intervals to charge their batteries.",
+              "content": "They must never stop at any intervals to charge their batteries.",
               "options": [
                 "True",
                 "False"
               ],
-              "correctAnswer": "B",
-              "explanation": "False. Bài có viết 'They must stop at certain intervals to charge their batteries.'"
+              "explanation": "Câu này sai. Họ phải dừng lại tại các khoảng cách nhất định để sạc pin. \"They must stop at certain intervals to charge their batteries.\"",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_read_b",
           "title": "Reading Comprehension: Part B - Answer the questions based on the story.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "32",
-              "content": "1. What is this reading about?",
+              "content": "What is this reading about?",
               "options": [
                 "Traditional automobiles",
                 "Gas pollution",
                 "The Solar Car Race",
                 "Fast driving"
               ],
-              "correctAnswer": "C",
-              "explanation": "Bài đọc nói về cuộc đua xe năng lượng mặt trời (The Solar Car Race)."
+              "explanation": "Toàn bộ bài đọc nói về The Solar Car Race, cuộc đua xe chạy bằng năng lượng mặt trời.",
+              "correctAnswer": "C"
             },
             {
               "id": "33",
-              "content": "2. What do the drivers have to heed during the race?",
+              "content": "What do the drivers have to heed during the race?",
               "options": [
                 "Strict guidelines",
                 "The weather",
                 "Other drivers",
                 "Strange phenomena"
               ],
-              "correctAnswer": "A",
-              "explanation": "Bài có nói 'The drivers have to heed strict guidelines.'"
+              "explanation": "Dẫn chứng: \"The drivers have to heed strict guidelines.\" (Các tài xế phải chú ý đến những hướng dẫn nghiêm ngặt).",
+              "correctAnswer": "A"
             },
             {
               "id": "34",
-              "content": "3. How are these cars different inside from normal cars?",
+              "content": "How are these cars different inside from normal cars?",
               "options": [
                 "They have large engines",
                 "They have a big cushion",
                 "They have a radio",
                 "They only have room for one person"
               ],
-              "correctAnswer": "D",
-              "explanation": "Bài đọc nói: 'The cars only have room for one person and are very simple inside'."
+              "explanation": "\"The cars only have room for one person and are very simple inside\" (Những chiếc xe này chỉ có chỗ cho một người).",
+              "correctAnswer": "D"
             },
             {
               "id": "35",
-              "content": "4. What will car makers eventually create according to the passage?",
+              "content": "What will car makers eventually create according to the passage?",
               "options": [
                 "Solar cars for the rest of us",
                 "Better gas cars",
                 "Spaceships",
                 "Motorcycles"
               ],
-              "correctAnswer": "A",
-              "explanation": "Câu cuối bài: 'car makers will eventually create solar cars for the rest of us.'"
+              "explanation": "Ở cuối bài: \"car makers will eventually create solar cars for the rest of us.\" (các nhà sản xuất sẽ tạo ra xe năng lượng mặt trời cho tất cả chúng ta).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }

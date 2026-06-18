@@ -16,521 +16,521 @@
           "id": "sec1_wordlist",
           "title": "Exercise 1: Choose the right word for the given definition.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex1_1",
-              "content": "1. to provide the things that someone needs to do something",
+              "content": "to provide the things that someone needs to do something",
               "options": [
                 "sort",
                 "enchant",
                 "equip",
                 "lure"
               ],
-              "correctAnswer": "C",
-              "explanation": "equip (v.): trang bị cho ai đó là cung cấp cho họ những thứ cần thiết để làm việc gì đó."
+              "explanation": "equip (v.): trang bị cho ai đó là cung cấp cho họ những thứ cần thiết để làm việc gì đó.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex1_2",
-              "content": "2. a safe place",
+              "content": "a safe place",
               "options": [
                 "genre",
                 "shelter",
                 "defense",
                 "culture"
               ],
-              "correctAnswer": "B",
-              "explanation": "shelter (n.): nơi trú ẩn là nơi an toàn khỏi nguy hiểm hoặc thời tiết xấu."
+              "explanation": "shelter (n.): nơi trú ẩn là nơi an toàn khỏi nguy hiểm hoặc thời tiết xấu.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex1_3",
-              "content": "3. holding a weapon",
+              "content": "holding a weapon",
               "options": [
                 "authoritative",
                 "vain",
                 "diverse",
                 "armed"
               ],
-              "correctAnswer": "D",
-              "explanation": "armed (adj.): được trang bị vũ khí, mang theo vũ khí."
+              "explanation": "armed (adj.): được trang bị vũ khí, mang theo vũ khí.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex1_4",
-              "content": "4. pieces of information",
+              "content": "pieces of information",
               "options": [
                 "details",
                 "impacts",
                 "applause",
                 "supplies"
               ],
-              "correctAnswer": "A",
-              "explanation": "details (n.): chi tiết, những mẩu thông tin."
+              "explanation": "details (n.): chi tiết, những mẩu thông tin.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex1_5",
-              "content": "5. a group working together",
+              "content": "a group working together",
               "options": [
                 "ceremony",
                 "alliance",
                 "exception",
                 "obstacle"
               ],
-              "correctAnswer": "B",
-              "explanation": "alliance (n.): liên minh là một nhóm người làm việc cùng nhau."
+              "explanation": "alliance (n.): liên minh là một nhóm người làm việc cùng nhau.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec2_wordlist",
           "title": "Exercise 2: Write a word that is similar in meaning to the underlined part.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex2_1",
-              "content": "1. Please (put into different groups) all the leaves you find.",
+              "content": "Please (put into different groups) all the leaves you find.",
               "options": [
                 "sort",
                 "impact",
                 "equip",
                 "lure"
               ],
-              "correctAnswer": "A",
-              "explanation": "sort (v.) đồng nghĩa với 'put into different groups' (phân loại)."
+              "explanation": "sort (v.) đồng nghĩa với 'put into different groups' (phân loại).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_2",
-              "content": "2. Everybody was (very interested) when Kate read that beautiful poem out loud.",
+              "content": "Everybody was (very interested) when Kate read that beautiful poem out loud.",
               "options": [
                 "armed",
                 "vain",
                 "enchanted",
                 "diverse"
               ],
-              "correctAnswer": "C",
-              "explanation": "enchanted (v.) đồng nghĩa với 'very interested' (mê hoặc, thích thú)."
+              "explanation": "enchanted (v.) đồng nghĩa với 'very interested' (mê hoặc, thích thú).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex2_3",
-              "content": "3. The performer heard great (sounds of people clapping their hands).",
+              "content": "The performer heard great (sounds of people clapping their hands).",
               "options": [
                 "defense",
                 "applause",
                 "alliance",
                 "ceremony"
               ],
-              "correctAnswer": "B",
-              "explanation": "applause (n.) đồng nghĩa với 'sounds of people clapping their hands' (tiếng vỗ tay)."
+              "explanation": "applause (n.) đồng nghĩa với 'sounds of people clapping their hands' (tiếng vỗ tay).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_4",
-              "content": "4. Tim takes a long time to get ready because he is so (concerned with how he looks).",
+              "content": "Tim takes a long time to get ready because he is so (concerned with how he looks).",
               "options": [
                 "vain",
                 "authoritative",
                 "diverse",
                 "armed"
               ],
-              "correctAnswer": "A",
-              "explanation": "vain (adj.) đồng nghĩa với 'concerned with how he looks' (tự phụ, kiêu ngạo, chú trọng vẻ bề ngoài)."
+              "explanation": "vain (adj.) đồng nghĩa với 'concerned with how he looks' (tự phụ, kiêu ngạo, chú trọng vẻ bề ngoài).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_5",
-              "content": "5. Ocean life is made up of a (wide variety of things).",
+              "content": "Ocean life is made up of a (wide variety of things).",
               "options": [
                 "vain",
                 "diverse",
                 "authoritative",
                 "armed"
               ],
-              "correctAnswer": "B",
-              "explanation": "diverse (adj.) đồng nghĩa với 'wide variety of things' (đa dạng)."
+              "explanation": "diverse (adj.) đồng nghĩa với 'wide variety of things' (đa dạng).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_6",
-              "content": "6. What is your favorite (kind or style) of music?",
+              "content": "What is your favorite (kind or style) of music?",
               "options": [
                 "obstacle",
                 "genre",
                 "culture",
                 "shelter"
               ],
-              "correctAnswer": "B",
-              "explanation": "genre (n.) đồng nghĩa với 'kind or style' (thể loại)."
+              "explanation": "genre (n.) đồng nghĩa với 'kind or style' (thể loại).",
+              "correctAnswer": "B"
             },
             {
               "id": "ex2_7",
-              "content": "7. The (special event) will start at 8 o’clock tonight.",
+              "content": "The (special event) will start at 8 o’clock tonight.",
               "options": [
                 "alliance",
                 "defense",
                 "exception",
                 "ceremony"
               ],
-              "correctAnswer": "D",
-              "explanation": "ceremony (n.) đồng nghĩa với 'special event' (buổi lễ, sự kiện đặc biệt)."
+              "explanation": "ceremony (n.) đồng nghĩa với 'special event' (buổi lễ, sự kiện đặc biệt).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex2_8",
-              "content": "8. The city’s only (action taken to protect itself) was to build a giant brick wall around it.",
+              "content": "The city’s only (action taken to protect itself) was to build a giant brick wall around it.",
               "options": [
                 "defense",
                 "impact",
                 "obstacle",
                 "detail"
               ],
-              "correctAnswer": "A",
-              "explanation": "defense (n.) đồng nghĩa với 'action taken to protect itself' (phòng thủ, bảo vệ)."
+              "explanation": "defense (n.) đồng nghĩa với 'action taken to protect itself' (phòng thủ, bảo vệ).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_9",
-              "content": "9. Ben went through many (problems) before he finished his project.",
+              "content": "Ben went through many (problems) before he finished his project.",
               "options": [
                 "obstacles",
                 "supplies",
                 "alliances",
                 "ceremonies"
               ],
-              "correctAnswer": "A",
-              "explanation": "obstacles (n.) đồng nghĩa với 'problems' (chướng ngại vật, vấn đề)."
+              "explanation": "obstacles (n.) đồng nghĩa với 'problems' (chướng ngại vật, vấn đề).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex2_10",
-              "content": "10. Most girls like to play with dolls, but Samantha is the one who (doesn’t conform).",
+              "content": "Most girls like to play with dolls, but Samantha is the one who (doesn’t conform).",
               "options": [
                 "exception",
                 "genre",
                 "culture",
                 "applause"
               ],
-              "correctAnswer": "A",
-              "explanation": "exception (n.) đồng nghĩa với 'the one who doesn’t conform' (ngoại lệ)."
+              "explanation": "exception (n.) đồng nghĩa với 'the one who doesn’t conform' (ngoại lệ).",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         },
         {
           "id": "sec3_wordlist",
           "title": "Exercise 3: Match the phrases and clauses to make complete sentences.",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "ex3a_1",
-              "content": "1. I’m going to try to lure my friends ____.",
+              "content": "I’m going to try to lure my friends ____.",
               "options": [
                 "into coming to the museum with me",
                 "into three equal groups",
                 "was not being able to read very well",
                 "was popularized by artists like Picasso and Dali"
               ],
-              "correctAnswer": "A",
-              "explanation": "lure (dụ dỗ) bạn bè đi đến bảo tàng."
+              "explanation": "lure (dụ dỗ) bạn bè đi đến bảo tàng.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3a_2",
-              "content": "2. Sort the pieces ____.",
+              "content": "Sort the pieces ____.",
               "options": [
                 "into coming to the museum with me",
                 "into three equal groups",
                 "was not being able to read very well",
                 "was popularized by artists like Picasso and Dali"
               ],
-              "correctAnswer": "B",
-              "explanation": "sort (phân loại) các mảnh thành ba nhóm bằng nhau."
+              "explanation": "sort (phân loại) các mảnh thành ba nhóm bằng nhau.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3a_3",
-              "content": "3. The biggest obstacle Mary faced ____.",
+              "content": "The biggest obstacle Mary faced ____.",
               "options": [
                 "into coming to the museum with me",
                 "into three equal groups",
                 "was not being able to read very well",
                 "was popularized by artists like Picasso and Dali"
               ],
-              "correctAnswer": "C",
-              "explanation": "obstacle (trở ngại) lớn nhất của Mary là không đọc tốt."
+              "explanation": "obstacle (trở ngại) lớn nhất của Mary là không đọc tốt.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex3a_4",
-              "content": "4. The genre of abstract art ____.",
+              "content": "The genre of abstract art ____.",
               "options": [
                 "into coming to the museum with me",
                 "into three equal groups",
                 "was not being able to read very well",
                 "was popularized by artists like Picasso and Dali"
               ],
-              "correctAnswer": "D",
-              "explanation": "genre (thể loại) nghệ thuật trừu tượng được phổ biến bởi các nghệ sĩ như Picasso và Dali."
+              "explanation": "genre (thể loại) nghệ thuật trừu tượng được phổ biến bởi các nghệ sĩ như Picasso và Dali.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3a_5",
-              "content": "5. The awards ceremony is ____.",
+              "content": "The awards ceremony is ____.",
               "options": [
                 "tonight at the Royal Crown Hotel",
                 "known for its interesting folk art",
                 "is to wear a lot of sunscreen",
                 "with pencils, scissors, and a lot of glue"
               ],
-              "correctAnswer": "A",
-              "explanation": "ceremony (buổi lễ) trao giải diễn ra vào tối nay tại khách sạn Royal Crown."
+              "explanation": "ceremony (buổi lễ) trao giải diễn ra vào tối nay tại khách sạn Royal Crown.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3a_6",
-              "content": "6. Mexican culture is ____.",
+              "content": "Mexican culture is ____.",
               "options": [
                 "tonight at the Royal Crown Hotel",
                 "known for its interesting folk art",
                 "is to wear a lot of sunscreen",
                 "with pencils, scissors, and a lot of glue"
               ],
-              "correctAnswer": "B",
-              "explanation": "culture (văn hóa) Mexico nổi tiếng với nghệ thuật dân gian thú vị."
+              "explanation": "culture (văn hóa) Mexico nổi tiếng với nghệ thuật dân gian thú vị.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3a_7",
-              "content": "7. The best defense against skin cancer ____.",
+              "content": "The best defense against skin cancer ____.",
               "options": [
                 "tonight at the Royal Crown Hotel",
                 "known for its interesting folk art",
                 "is to wear a lot of sunscreen",
                 "with pencils, scissors, and a lot of glue"
               ],
-              "correctAnswer": "C",
-              "explanation": "defense (phòng thủ) tốt nhất để chống ung thư da là thoa nhiều kem chống nắng."
+              "explanation": "defense (phòng thủ) tốt nhất để chống ung thư da là thoa nhiều kem chống nắng.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex3a_8",
-              "content": "8. The students were equipped ____.",
+              "content": "The students were equipped ____.",
               "options": [
                 "tonight at the Royal Crown Hotel",
                 "known for its interesting folk art",
                 "is to wear a lot of sunscreen",
                 "with pencils, scissors, and a lot of glue"
               ],
-              "correctAnswer": "D",
-              "explanation": "equip (trang bị) cho học sinh bút chì, kéo và nhiều hồ dán."
+              "explanation": "equip (trang bị) cho học sinh bút chì, kéo và nhiều hồ dán.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3a_9",
-              "content": "9. An armed man ran into ____.",
+              "content": "An armed man ran into ____.",
               "options": [
                 "the jewelry store and stole diamonds",
                 "talk about herself for hours and hours",
                 "with pencils, scissors, and a lot of glue",
                 "is to wear a lot of sunscreen"
               ],
-              "correctAnswer": "A",
-              "explanation": "Một người đàn ông có vũ trang (armed) lao vào cửa hàng trang sức và ăn trộm kim cương."
+              "explanation": "Một người đàn ông có vũ trang (armed) lao vào cửa hàng trang sức và ăn trộm kim cương.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3a_10",
-              "content": "10. The vain woman could ____.",
+              "content": "The vain woman could ____.",
               "options": [
                 "the jewelry store and stole diamonds",
                 "talk about herself for hours and hours",
                 "with pencils, scissors, and a lot of glue",
                 "is to wear a lot of sunscreen"
               ],
-              "correctAnswer": "B",
-              "explanation": "Người phụ nữ kiêu ngạo (vain) có thể nói về bản thân hàng giờ liền."
+              "explanation": "Người phụ nữ kiêu ngạo (vain) có thể nói về bản thân hàng giờ liền.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3b_1",
-              "content": "11. It started raining really hard, ____.",
+              "content": "It started raining really hard, ____.",
               "options": [
                 "so we ran inside for shelter",
                 "so he supplied them with blankets",
                 "and officer Jones is no exception",
                 "because he sounds authoritative when he speaks"
               ],
-              "correctAnswer": "A",
-              "explanation": "Trời mưa rất to nên chúng tôi chạy vào trong để trú ẩn (shelter)."
+              "explanation": "Trời mưa rất to nên chúng tôi chạy vào trong để trú ẩn (shelter).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3b_2",
-              "content": "12. He saw that the children were cold, ____.",
+              "content": "He saw that the children were cold, ____.",
               "options": [
                 "so we ran inside for shelter",
                 "so he supplied them with blankets",
                 "and officer Jones is no exception",
                 "because he sounds authoritative when he speaks"
               ],
-              "correctAnswer": "B",
-              "explanation": "Anh ấy thấy những đứa trẻ bị lạnh, vì vậy anh ấy đã cung cấp (supplied) chăn cho chúng."
+              "explanation": "Anh ấy thấy những đứa trẻ bị lạnh, vì vậy anh ấy đã cung cấp (supplied) chăn cho chúng.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3b_3",
-              "content": "13. Police officers work very hard, ____.",
+              "content": "Police officers work very hard, ____.",
               "options": [
                 "so we ran inside for shelter",
                 "so he supplied them with blankets",
                 "and officer Jones is no exception",
                 "because he sounds authoritative when he speaks"
               ],
-              "correctAnswer": "C",
-              "explanation": "Các sĩ quan cảnh sát làm việc rất chăm chỉ, và sĩ quan Jones cũng không phải là ngoại lệ (exception)."
+              "explanation": "Các sĩ quan cảnh sát làm việc rất chăm chỉ, và sĩ quan Jones cũng không phải là ngoại lệ (exception).",
+              "correctAnswer": "C"
             },
             {
               "id": "ex3b_4",
-              "content": "14. Everyone always trusts Seth ____.",
+              "content": "Everyone always trusts Seth ____.",
               "options": [
                 "so we ran inside for shelter",
                 "so he supplied them with blankets",
                 "and officer Jones is no exception",
                 "because he sounds authoritative when he speaks"
               ],
-              "correctAnswer": "D",
-              "explanation": "Mọi người luôn tin tưởng Seth vì giọng anh ấy nghe có vẻ rất có thẩm quyền (authoritative) khi nói."
+              "explanation": "Mọi người luôn tin tưởng Seth vì giọng anh ấy nghe có vẻ rất có thẩm quyền (authoritative) khi nói.",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3b_5",
-              "content": "15. Mother Teresa was a very well-known person, ____.",
+              "content": "Mother Teresa was a very well-known person, ____.",
               "options": [
                 "and her work impacted many lives",
                 "but I like a diverse selection",
                 "but it had so many details that he couldn't finish",
                 "but everyone else is enchanted by her"
               ],
-              "correctAnswer": "A",
-              "explanation": "Mẹ Teresa là một người rất nổi tiếng, và công việc của bà đã tác động (impacted) đến nhiều cuộc đời."
+              "explanation": "Mẹ Teresa là một người rất nổi tiếng, và công việc của bà đã tác động (impacted) đến nhiều cuộc đời.",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3b_6",
-              "content": "16. He only likes one type of music, ____.",
+              "content": "He only likes one type of music, ____.",
               "options": [
                 "and her work impacted many lives",
                 "but I like a diverse selection",
                 "but it had so many details that he couldn't finish",
                 "but everyone else is enchanted by her"
               ],
-              "correctAnswer": "B",
-              "explanation": "Anh ấy chỉ thích một loại nhạc, nhưng tôi thích sự lựa chọn đa dạng (diverse) hơn."
+              "explanation": "Anh ấy chỉ thích một loại nhạc, nhưng tôi thích sự lựa chọn đa dạng (diverse) hơn.",
+              "correctAnswer": "B"
             },
             {
               "id": "ex3b_7",
-              "content": "17. James tried to write the report last night, ____.",
+              "content": "James tried to write the report last night, ____.",
               "options": [
                 "and her work impacted many lives",
                 "but I like a diverse selection",
                 "but it had so many details that he couldn't finish",
                 "but everyone else is enchanted by her"
               ],
-              "correctAnswer": "C",
-              "explanation": "James đã cố gắng viết báo cáo vào đêm qua, nhưng nó có quá nhiều chi tiết (details) khiến anh ấy không thể hoàn thành."
+              "explanation": "James đã cố gắng viết báo cáo vào đêm qua, nhưng nó có quá nhiều chi tiết (details) khiến anh ấy không thể hoàn thành.",
+              "correctAnswer": "C"
             },
             {
               "id": "ex3b_8",
-              "content": "18. I don’t really like Jennifer, ____.",
+              "content": "I don’t really like Jennifer, ____.",
               "options": [
                 "and her work impacted many lives",
                 "but I like a diverse selection",
                 "but it had so many details that he couldn't finish",
                 "but everyone else is enchanted by her"
               ],
-              "correctAnswer": "D",
-              "explanation": "Tôi không thực sự thích Jennifer, nhưng mọi người khác đều bị cô ấy mê hoặc (enchanted)."
+              "explanation": "Tôi không thực sự thích Jennifer, nhưng mọi người khác đều bị cô ấy mê hoặc (enchanted).",
+              "correctAnswer": "D"
             },
             {
               "id": "ex3b_9",
-              "content": "19. Bob and Eric both want to beat James at the game, ____.",
+              "content": "Bob and Eric both want to beat James at the game, ____.",
               "options": [
                 "so they will form an alliance",
                 "and the crowd gave him great applause",
                 "and her work impacted many lives",
                 "but I like a diverse selection"
               ],
-              "correctAnswer": "A",
-              "explanation": "Cả Bob và Eric đều muốn đánh bại James trong trò chơi, vì vậy họ sẽ thành lập một liên minh (alliance)."
+              "explanation": "Cả Bob và Eric đều muốn đánh bại James trong trò chơi, vì vậy họ sẽ thành lập một liên minh (alliance).",
+              "correctAnswer": "A"
             },
             {
               "id": "ex3b_10",
-              "content": "20. The performer did a great job, ____.",
+              "content": "The performer did a great job, ____.",
               "options": [
                 "so they will form an alliance",
                 "and the crowd gave him great applause",
                 "and her work impacted many lives",
                 "but I like a diverse selection"
               ],
-              "correctAnswer": "B",
-              "explanation": "Người biểu diễn đã làm rất tốt và đám đông đã dành cho anh ấy những tràng pháo tay (applause) nồng nhiệt."
+              "explanation": "Người biểu diễn đã làm rất tốt và đám đông đã dành cho anh ấy những tràng pháo tay (applause) nồng nhiệt.",
+              "correctAnswer": "B"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     },
     {
       "id": "part2",
       "title": "Comprehensive Reading",
-      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 2.5rem; line-height: 1.2;\">How a Singer Helped Win the War</h1><p style=\"margin-bottom: 2rem;\">Sometimes famous people are <b>vain</b>. They only care about themselves. But Josephine Baker was an <b>exception</b>. In the 1930s and 1940s, Baker was one of the most famous women in France. She was a big part of the new jazz <b>genre</b> and <b>culture</b> and had a <b>diverse</b> group of fans. The French people especially loved her. And she loved France. So when World War II started, she wanted to help the nation that had given her so much.</p><p style=\"margin-bottom: 2rem;\">In 1940, <b>armed</b> German troops entered Paris. When this happened, some French people formed a secret <b>alliance</b>. It was called the French Resistance. The group worked for the <b>defense</b> of France. It helped the European and American armies fight the Germans.</p><p style=\"margin-bottom: 2rem;\">Baker was an important member of the Resistance. She had three jobs. The first was to carry messages to and from other members. The messages were written in code on her sheets of music. The second was to provide <b>shelter</b> and <b>supply</b> goods to Resistance members. It would have been dangerous if the Germans found them.</p><p style=\"margin-bottom: 2rem;\">Baker’s third job was the most important. Baker held concerts for European politicians and army members. She <b>lured</b> them in, promising an entertaining show. She <b>enchanted</b> them with her singing and dancing and got lots of <b>applause</b>.</p><p style=\"margin-bottom: 2rem;\">But Baker was always <b>equipped</b> with a small notebook at these concerts. She listened for <b>details</b> about the war and wrote them down. Baker <b>sorted</b> the details and gave <b>authoritative</b> reports to the Resistance.</p><p style=\"margin-bottom: 2rem;\">Some thought Baker’s fame would be an <b>obstacle</b>. The Germans knew who she was, but they didn’t think she was smart enough to work for the Resistance. So she could get information from the Germans easily. This helped the Resistance and the French army save lives and win the war.</p><p style=\"margin-bottom: 2rem;\">Baker had a big <b>impact</b> on the Resistance’s work. She got many awards for her help. When she died, the army had a special <b>ceremony</b> to thank her again for her bravery.</p></div>",
+      "content": "<div style=\"font-family: Arial, sans-serif; \"><h1 style=\"color: #d6334f; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;\">How a Singer Helped Win the War</h1>        <p style=\"margin-bottom: 1rem;\">Sometimes famous people are <b>vain</b>. They only care about themselves. But Josephine Baker was an <b>exception</b>. In the 1930s and 1940s, Baker was one of the most famous women in France. She was a big part of the new jazz <b>genre</b> and <b>culture</b> and had a <b>diverse</b> group of fans. The French people especially loved her. And she loved France. So when World War II started, she wanted to help the nation that had given her so much.</p>    <p style=\"margin-bottom: 1rem;\">In 1940, <b>armed</b> German troops entered Paris. When this happened, some French people formed a secret <b>alliance</b>. It was called the French Resistance. The group worked for the <b>defense</b> of France. It helped the European and American armies fight the Germans.</p>    <p style=\"margin-bottom: 1rem;\">Baker was an important member of the Resistance. She had three jobs. The first was to carry messages to and from other members. The messages were written in code on her sheets of music. The second was to provide <b>shelter</b> and <b>supply</b> goods to Resistance members. It would have been dangerous if the Germans found them.</p>    <p style=\"margin-bottom: 1rem;\">Baker’s third job was the most important. Baker held concerts for European politicians and army members. She <b>lured</b> them in, promising an entertaining show. She <b>enchanted</b> them with her singing and dancing and got lots of <b>applause</b>.</p>    <p style=\"margin-bottom: 1rem;\">But Baker was always <b>equipped</b> with a small notebook at these concerts. She listened for <b>details</b> about the war and wrote them down. Baker <b>sorted</b> the details and gave <b>authoritative</b> reports to the Resistance.</p>    <p style=\"margin-bottom: 1rem;\">Some thought Baker’s fame would be an <b>obstacle</b>. The Germans knew who she was, but they didn’t think she was smart enough to work for the Resistance. So she could get information from the Germans easily. This helped the Resistance and the French army save lives and win the war.</p>    <p style=\"margin-bottom: 1rem;\">Baker had a big <b>impact</b> on the Resistance’s work. She got many awards for her help. When she died, the army had a special <b>ceremony</b> to thank her again for her bravery.</p></div>",
       "imageUrl": "/unit11_vol4_story.png",
       "sections": [
         {
           "id": "sec_reading_1",
           "title": "Reading Comprehension",
           "content": "",
-          "questionType": "Trắc nghiệm",
           "questions": [
             {
               "id": "rc_1",
-              "content": "1. Which is true about Josephine Baker's first job for the Resistance?",
+              "content": "Which is true about Josephine Baker's first job for the Resistance?",
               "options": [
                 "Baker’s first job was to carry messages written in code to and from European politicians.",
                 "Baker’s first job was to carry messages written in code to and from Resistance members.",
                 "Baker's first job was to provide shelter.",
                 "Baker's first job was to supply goods."
               ],
-              "correctAnswer": "B",
-              "explanation": "Dựa vào bài đọc: 'The first was to carry messages to and from other members. The messages were written in code on her sheets of music.'"
+              "explanation": "Dựa vào bài đọc: 'The first was to carry messages to and from other members. The messages were written in code on her sheets of music.'",
+              "correctAnswer": "B"
             },
             {
               "id": "rc_2",
-              "content": "2. Which genre of music was Josephine Baker famous for?",
+              "content": "Which genre of music was Josephine Baker famous for?",
               "options": [
                 "She was famous for jazz music.",
                 "She was famous for blues music.",
                 "She was famous for rock music.",
                 "She was famous for country music."
               ],
-              "correctAnswer": "A",
-              "explanation": "Dựa vào bài: 'She was a big part of the new jazz genre and culture'."
+              "explanation": "Dựa vào bài: 'She was a big part of the new jazz genre and culture'.",
+              "correctAnswer": "A"
             },
             {
               "id": "rc_3",
-              "content": "3. What happened when the Germans entered Paris?",
+              "content": "What happened when the Germans entered Paris?",
               "options": [
                 "Armed soldiers fought them.",
                 "Baker lured them back to Germany.",
                 "The French formed a secret alliance.",
                 "They sent messages in code."
               ],
-              "correctAnswer": "C",
-              "explanation": "Dựa vào bài: 'In 1940, armed German troops entered Paris. When this happened, some French people formed a secret alliance.'"
+              "explanation": "Dựa vào bài: 'In 1940, armed German troops entered Paris. When this happened, some French people formed a secret alliance.'",
+              "correctAnswer": "C"
             },
             {
               "id": "rc_4",
-              "content": "4. What was Baker’s most important job?",
+              "content": "What was Baker’s most important job?",
               "options": [
                 "To provide shelter",
                 "To give authoritative reports",
                 "To write messages in code",
                 "To have a diverse group of fans"
               ],
-              "correctAnswer": "B",
-              "explanation": "Dựa vào bài: 'Baker’s third job was the most important... Baker sorted the details and gave authoritative reports to the Resistance.'"
+              "explanation": "Dựa vào bài: 'Baker’s third job was the most important... Baker sorted the details and gave authoritative reports to the Resistance.'",
+              "correctAnswer": "B"
             },
             {
               "id": "rc_5",
-              "content": "5. What happened when Baker died?",
+              "content": "What happened when Baker died?",
               "options": [
                 "The army had a special ceremony.",
                 "Baker had an impact on France.",
                 "Her fame became an obstacle.",
                 "The Resistance found her secret codes."
               ],
-              "correctAnswer": "A",
-              "explanation": "Dựa vào đoạn cuối: 'When she died, the army had a special ceremony to thank her again for her bravery.'"
+              "explanation": "Dựa vào đoạn cuối: 'When she died, the army had a special ceremony to thank her again for her bravery.'",
+              "correctAnswer": "A"
             }
-          ]
+          ],
+          "questionType": "Trắc nghiệm"
         }
       ]
     }
