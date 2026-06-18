@@ -191,7 +191,7 @@ export default function StandardSplitScreenTest({
   const basicInfo = contentJSON?.basicInfo || { title: "Standard Test", timeLimit: "60", skill: "" };
   const parts = Array.isArray(contentJSON?.parts) ? contentJSON.parts : [];
   
-  const isListening = false;
+  const isListening = basicInfo.skill?.toLowerCase() === 'listening' || basicInfo.category?.toLowerCase() === 'ielts-listening' || safeData?.test_type === 'IELTS-Listening';
   const globalAudio = basicInfo.audioUrl || parts[0]?.audioUrl;
 
   const hasAnyAudio = useMemo(() => {
@@ -593,7 +593,7 @@ const handleFinish = async () => {
             }
           });
         }
-        if (["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(s?.questionType)) {
+        if (["Điền từ", "Điền khuyết", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"].includes(s?.questionType)) {
           const combinedContent = String(s?.content || '') + ' ' + String(s?.questions?.[0]?.content || '');
           const matches = combinedContent.match(/\[\s*\d+\s*\]/g);
           if (matches) {
@@ -1254,7 +1254,7 @@ const handleFinish = async () => {
                               let firstIdx = null;
                               let lastIdx = null;
                               
-                              if (sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") {
+                              if (sec.questionType === "Điền từ" || sec.questionType === "Điền khuyết" || sec.questionType === "Kéo thả vào Part") {
                                   const matches = Array.from(String(sec.content || sec.questions?.[0]?.content || '').matchAll(/\[(\d+)\]/g));
                                   if (matches.length > 0) {
                                       firstIdx = questionIndexMap[matches[0][1]];
@@ -1278,7 +1278,7 @@ const handleFinish = async () => {
                                   <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />
                               )}
                               
-                              {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
+                              {sec?.content && !["Điền từ", "Điền khuyết", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
                                 <div 
                                     className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed bg-white p-5 rounded-xl border border-slate-200 shadow-sm" 
                                     dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} 
@@ -1350,7 +1350,7 @@ const handleFinish = async () => {
                               let firstIdx = null;
                               let lastIdx = null;
                               
-                              if (sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") {
+                              if (sec.questionType === "Điền từ" || sec.questionType === "Điền khuyết" || sec.questionType === "Kéo thả vào Part") {
                                   const matches = Array.from(String(sec.content || sec.questions?.[0]?.content || '').matchAll(/\[(\d+)\]/g));
                                   if (matches.length > 0) {
                                       firstIdx = questionIndexMap[matches[0][1]];
@@ -1380,7 +1380,7 @@ const handleFinish = async () => {
                                  <div className="mb-6">
                                     {displaySecTitle && <h4 className="font-bold text-[16px] text-slate-800 mb-4">{displaySecTitle}</h4>}
                                     {sec?.imageUrl && <img src={sec.imageUrl} className="max-w-full mb-4 rounded-xl shadow-sm border border-slate-200" alt="Section Image" />}
-                                    {sec?.content && !["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
+                                    {sec?.content && !["Điền từ", "Điền khuyết", "Kéo thả vào Part", "Kéo thả", "Matching"].includes(sec?.questionType) && !(sec?.questionType === "Droplist" && /\[\s*\d+\s*\]/.test(String(sec.content || ''))) && (
                                        <div className="text-slate-600 text-[15px] leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: cleanHtmlContent(sec.content || '') }} />
                                     )}
                                  </div>
@@ -1389,7 +1389,7 @@ const handleFinish = async () => {
                              {/* DẠNG BÀI INLINE: Điền từ, Kéo thả, Matching, Inline Droplist */}
                              {(() => {
                                // Build raw content text for inline types
-                               const inlineTypes = ["Điền từ", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"];
+                               const inlineTypes = ["Điền từ", "Điền khuyết", "Kéo thả vào Part", "Kéo thả", "Matching", "Droplist"];
                                if (!inlineTypes.includes(sec?.questionType)) return null;
                                
                                let rawContentText = '';
@@ -1407,7 +1407,7 @@ const handleFinish = async () => {
                                    sec.questions.forEach((q: any) => {
                                      let qContent = String(q.content || '').trim();
                                      if (qContent) {
-                                       if (sec.questionType === "Điền từ" && !/\[\s*\d+\s*\]/.test(qContent)) {
+                                       if ((sec.questionType === "Điền từ" || sec.questionType === "Điền khuyết") && !/\[\s*\d+\s*\]/.test(qContent)) {
                                          qContent += ` [${q.id}]`;
                                        }
                                        rawContentText += (rawContentText ? '<br><br>' : '') + qContent;
@@ -1425,7 +1425,7 @@ const handleFinish = async () => {
                                // Skip if this will be handled by block Droplist or block DragDrop sections below
                                if (isBlockDroplist || isBlockDragDrop) return null;
                                // Must have inline brackets for Điền từ too
-                               if ((sec.questionType === "Điền từ" || sec.questionType === "Kéo thả vào Part") && !hasInlineBrackets) return null;
+                               if ((sec.questionType === "Điền từ" || sec.questionType === "Điền khuyết" || sec.questionType === "Kéo thả vào Part") && !hasInlineBrackets) return null;
                                
                                return (
                                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 mb-6">
