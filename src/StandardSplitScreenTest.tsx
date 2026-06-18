@@ -745,9 +745,7 @@ const handleFinish = async () => {
 
   const onDrop = (qId: string) => {
     if (isReviewMode || !draggedOption) return;
-    const match = draggedOption.match(/^([A-Z])[\.\):]\s/);
-    const valueToSave = match ? match[1].toUpperCase() : draggedOption;
-    handleAnswer(qId, valueToSave);
+    handleAnswer(qId, draggedOption);
     setDraggedOption(null);
   };
 
