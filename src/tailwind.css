@@ -63,3 +63,30 @@ div[class*="jodit-ui-dialog__footer"] button:first-child {
 u { text-decoration: underline !important; }
 i, em { font-style: italic !important; }
 b, strong { font-weight: bold !important; }
+
+/* Global Table Styles to ensure borders are always visible in content */
+.content-area table,
+.prose table,
+table {
+  border-collapse: collapse !important;
+  width: auto !important;
+  min-width: 50%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content-area table th, .content-area table td,
+.prose table th, .prose table td,
+table th, table td {
+  border: 1px solid #94a3b8 !important; /* slate-400 */
+  padding: 10px 16px !important;
+  text-align: left;
+}
+
+.content-area table th,
+.prose table th,
+table th {
+  background-color: #f1f5f9 !important; /* slate-100 */
+  font-weight: 600 !important;
+}
+

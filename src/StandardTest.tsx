@@ -260,6 +260,8 @@ export default function StandardTest({
 
   const containerRef = useRef<HTMLDivElement>(null);
   const rightPaneRef = useRef<HTMLDivElement>(null);
+  const leftPaneRef = useRef<HTMLDivElement>(null);
+
 
   // Xử lý Fullscreen
   useEffect(() => {
@@ -923,6 +925,15 @@ const handleFinish = async () => {
             props[reactProp] = attr.value;
           }
         });
+
+        // Add specific tailwind classes for table elements
+        if (tagName === 'table') {
+          props.className = `${props.className || ''} w-full border-collapse border border-slate-400 my-4 text-[15px]`.trim();
+        } else if (tagName === 'th') {
+          props.className = `${props.className || ''} border border-slate-400 bg-slate-100 p-3 font-bold text-left text-slate-800`.trim();
+        } else if (tagName === 'td') {
+          props.className = `${props.className || ''} border border-slate-300 p-3 text-left align-top`.trim();
+        }
 
         const children = Array.from(el.childNodes).map((child, i) => renderNode(child, `${pathKey}-${i}`));
         const voidElements = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'];
